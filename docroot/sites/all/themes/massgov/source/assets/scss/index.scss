@@ -1,0 +1,29 @@
+$background: #ffffe0;
+
+body {
+    font-family: "Lucida Grande", sans-serif;
+    background: linear-gradient(to bottom, $background, white);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.states {
+    display: flex;
+    justify-content: center;
+}
+
+.state {
+    text-align: center;
+    cursor: pointer;
+    fill: #c99;
+
+    &:hover {
+        fill: #b88;
+    }
+
+    &:active {
+        fill: #9cc;
+    }
+}
