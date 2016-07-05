@@ -35,4 +35,4 @@ twigFunctionExt: function.php
 twigTagExt: tag.php
 twigTestExt: test.php
 styleguideKit: pattern-lab/styleguidekit-twig-default
-styleguideKitPath: 'C:\sandboxes\mayflower\docroot\sites\all\massgov\vendor/pattern-lab/styleguidekit-twig-default'
+styleguideKitPath: 'C:\sandboxes\mayflower\docroot\sites\all\themes\massgov\vendor/pattern-lab/styleguidekit-twig-default'
