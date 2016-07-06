@@ -1,3 +1,6 @@
 build*
 node_modules
 .DS_Store
+
+sites/all/themes/massgov/assets/css/
+sites/all/themes/massgov/assets/js/

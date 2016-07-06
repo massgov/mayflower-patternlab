@@ -1,7 +1,7 @@
 css:
   enabled: true
   src:
-    - scss/**/*.scss
+    - source/assets/scss/**/*.scss
     - source/_patterns/**/*.scss
   dest: dest/
   flattenDestOutput: true
@@ -19,7 +19,7 @@ css:
     - ./node_modules
   sassdoc: # http://sassdoc.com
     enabled: true
-    dest: dest/sassdoc
+    dest: assets/css/
     verbose: false
     basePath: https://github.com/phase2/pattern-lab-starter/blob/master/scss
 #    exclude:
@@ -32,16 +32,16 @@ css:
 js:
   enabled: true
   src:
-    - js/**/*.js
-  dest: dest/
-  destName: script.js
+    - source/assets/js-source/**/*.js
+  dest: assets/js
+  destName: index-generated.js
   sourceMapEmbed: false
   uglify: false
   babel: true
   eslint:
     enabled: true
     src:
-      - js/**/*.js
+      - source/assets/js-source/**/*.js
       - gulpfile.js
 patternLab:
   enabled: true

@@ -26,7 +26,7 @@ var gulp    = require("gulp"),
 
 // default configuration
 var defaults = {
-    root: path.resolve(__dirname, "../../sites/all/themes/massgov/source/assets"),
+    root: path.resolve(__dirname, "../../sites/all/themes/massgov/assets"),
     dest: path.resolve(__dirname, "../../sites/all/themes/massgov/assets"),
     rootTheme: path.resolve(__dirname, "../../sites/all/themes/massgov"),
     rootSite: path.resolve(__dirname, "../../"),
