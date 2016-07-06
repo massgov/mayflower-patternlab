@@ -27,9 +27,10 @@ var gulp    = require("gulp"),
 // default configuration
 var defaults = {
     root: path.resolve(__dirname, "../../sites/all/themes/massgov/source/assets"),
-    dest: path.resolve(__dirname, "../../sites/all/themes/massgov/public/assets"),
+    dest: path.resolve(__dirname, "../../sites/all/themes/massgov/assets"),
     rootTheme: path.resolve(__dirname, "../../sites/all/themes/massgov"),
-    tasks: ["js", "js-common", "css", "bower", "svg-sprite","patternlab"],
+    rootSite: path.resolve(__dirname, "../../"),
+    tasks: ["js", "js-common", "css", "bower", "svg-sprite"],
     env: "development", // "development", "production", "local"
     watch: false,
     browserSync: false
@@ -44,7 +45,8 @@ gulp.task("mg-local", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : true,
-        browserSync: true
+        browserSync: true,
+        tasks: defaults.tasks.concat("patternlab")
     });
 
     quench.build(config);
@@ -74,7 +76,8 @@ gulp.task("mg-build", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : false,
-        browserSync: false
+        browserSync: false,
+        tasks: defaults.tasks.concat("patternlab")
     });
 
     quench.build(config);

@@ -11,7 +11,7 @@ module.exports = function patternLabTask(config, env){
 
 
     gulp.task('patternlab', function() {
-        run('php ' + config.rootTheme + '/core/console --generate').exec(function() {
+        run('php ' + config.rootTheme + '/pattern-lab/core/console --generate').exec(function() {
             browserSync.reload();
         });
     });

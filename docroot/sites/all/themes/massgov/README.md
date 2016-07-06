@@ -1,63 +1,51 @@
-# Pattern Lab Twig Standard Edition for Drupal 
+[![Build Status](https://travis-ci.org/phase2/pattern-lab-starter.svg?branch=master)](https://travis-ci.org/phase2/pattern-lab-starter) [![Docs](https://readthedocs.org/projects/pattern-lab-starter/badge/?version=master)](http://pattern-lab-starter.readthedocs.io/en/master/?badge=master)
 
-The Standard Edition for Drupal gives developers and designers a clean and stable base from which to develop a Drupal compatible pattern library.
+## QuickStart
 
-## Prerequistes 
+    npm install
+    npm start
 
-- [`composer`](https://getcomposer.org)
+If you're using Drupal 8, get the [Component Libraries module](https://www.drupal.org/project/components):
 
-## First Time Install
+    drush dl components
+    drush en components -y
 
-1. Run `composer create-project pattern-lab/edition-drupal-standard FOLDERNAME` (Assuming you wanted it in a directory called `FOLDERNAME`).
-1. Select a starterkit from menu. If asked about replacing files, do it.
-1. Commit new files generated.
+That's it.
 
-## Using It
+## Orientation
 
-After installing and committing, others cloning the repo need to run `composer install` to install dependencies.
+- `source/_patterns/` - contains all Pattern Lab templates and the majority of the Sass files.
+- `scss/` - Sass files that aren't really tied to a component, so not in the above location.
+- `js/` - all js files here and transpiled by Babel and combined into a single `dest/script.js` file.
+- `images/icons/src/` - all SVGs here are combined into font icons and have classes and Sass mixins made for each based on file name. See `atoms/images/icons` in Pattern Lab.
+- `dest/sassdoc/` - Open this in a browser to see documentation on all Sass thanks to [SassDoc](http://sassdoc.com).
 
-## Helpful Commands
+## Commands
 
-These are some helpful commands you can use on the command line for working with Pattern Lab.
+Compile everything:
 
-### One line start
+```bash
+npm run compile
+```
 
-This will compile PL and watch for changes while running the local server:
+Start up watches and local server after compiling:
 
-    composer start
+```bash
+npm run start # or `npm start`
+```
 
-### Generate Pattern Lab
+Run Tests:
 
-To generate the front-end for Pattern Lab type:
+```bash
+npm run test # or `npm test`
+```
 
-    php core/console --generate
+Create a new component folder in Pattern Lab with scss, twig, md, & yml/json by running:
 
-### Start a server to view Pattern Lab
+```bash
+npm run new
+```
 
-You can use PHP's built-in web server to review your Pattern Lab project in a browser. In a separate window type:
+---
 
-    php core/console --server
-
-Then open [http://localhost:8080](http://localhost:8080) in your browser.
-
-### Install a StarterKit
-
-To install a near-empty StarterKit as a starting point for your project type:
-
-    php core/console --starterkit --init
-
-To install a specific StarterKit from GitHub type:
-
-    php core/console --starterkit --install <starterkit-vendor/starterkit-name>
-
-### Updating Pattern Lab
-
-	composer update
-
-## Other Documentation
-
-These are crucial pieces that contains documentation that is good to understand:
-
-- [`pattern-lab/patternengine-twig`](https://github.com/pattern-lab/patternengine-php-twig)
-- [`aleksip/plugin-data-transform`](https://github.com/aleksip/plugin-data-transform)
-- [Twig templating language](http://twig.sensiolabs.org/documentation)
+**Please see the `docs/` folder for more details!** - Docs folder is also [hosted here](http://pattern-lab-starter.readthedocs.io/en/master).

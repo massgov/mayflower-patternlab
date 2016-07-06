@@ -1,8 +1,20 @@
-.DS_Store
-.idea
-export/*
-public/*
-vendor/*
-source/styleguide/*
-config/*.json
+# Compiled files
+dest/
+scss/00-config/_icons.scss
 
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# Dependencies
+bower_components
+node_modules
+
+# Generated files
+*.sass-cache/
+
+#IDE plugins
+.idea
+atlassian-ide-plugin.xml
+
+source/styleguide/css
