@@ -12,8 +12,8 @@ var gulp           = require("gulp"),
 module.exports = function jsTask(config, env){
 
     var jsConfig = {
-        pages: config.root + "/js-source/index.js",
-        dest: config.dest + "/js",
+        pages: config.root + "/js/**/*.js",
+        dest: config.root + "/js",
         // js uglify options.
         uglify: {},
         // browserify options

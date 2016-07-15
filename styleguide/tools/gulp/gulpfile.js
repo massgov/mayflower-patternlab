@@ -29,7 +29,9 @@ var defaults = {
     root: path.resolve(__dirname, "../../source"),
     dest: path.resolve(__dirname, "../../public"),
     patternLabRoot: path.resolve(__dirname, "../../../styleguide"),
-    tasks: ["js", "js-common", "css", "bower", "svg-sprite"],
+    // removing js for now, but we may want to concatenate
+//    tasks: ["js", "js-common", "css", "bower", "svg-sprite"],
+    tasks: ["css", "bower", "svg-sprite"],
     env: "development", // "development", "production", "local"
     watch: false,
     browserSync: false
