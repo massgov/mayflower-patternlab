@@ -13,10 +13,10 @@ module.exports = function cssTask(config, env){
 
     // css settings
     var cssConfig = {
-        src: config.root + "/scss/**/*.scss",
-        dest: config.dest + "/css/",
+        src: config.root + "/css/**/*.scss",
+        dest: config.root + "/css/",
 
-        filename: "index.css",
+        filename: "style.css",
 
         sass: {
             outputStyle: env.development() ? "nested" : "compressed"
@@ -29,7 +29,7 @@ module.exports = function cssTask(config, env){
 
     // register the watch
     quench.registerWatcher("css", [
-        config.root + "/scss/**/*.scss"
+        config.root + "/css/scss/**/*.scss"
     ]);
 
 
@@ -42,16 +42,15 @@ module.exports = function cssTask(config, env){
             .pipe(sass(cssConfig.sass))
             .pipe(autoprefixer(cssConfig.autoprefixer))
             .pipe(pixrem("16px",{atrules: true, html: true}))
-            .pipe(concat(cssConfig.filename, {newLine: ""}))
-            .pipe(rename({
-                suffix: "-generated"
-            }));
+            .pipe(concat(cssConfig.filename, {newLine: ""}));
 
         // only add the header text if this css isn't compressed
         if (cssConfig.sass && cssConfig.sass.outputStyle !== "compressed"){
             gulpCss.pipe(header("/* This file is generated.  DO NOT EDIT. */ \n"));
         }
 
+        // right now this just generates the css file and requires the
+        // "php core/console --generate" command to move it to the public directory
         return gulpCss
             .pipe(sourcemaps.write("./"))
             .pipe(gulp.dest(cssConfig.dest))

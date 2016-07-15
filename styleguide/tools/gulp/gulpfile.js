@@ -27,7 +27,8 @@ var gulp    = require("gulp"),
 // default configuration
 var defaults = {
     root: path.resolve(__dirname, "../../source"),
-    dest: path.resolve(__dirname, "../../public/"),
+    dest: path.resolve(__dirname, "../../public"),
+    patternLabRoot: path.resolve(__dirname, "../../../styleguide"),
     tasks: ["js", "js-common", "css", "bower", "svg-sprite"],
     env: "development", // "development", "production", "local"
     watch: false,
@@ -43,7 +44,8 @@ gulp.task("default", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : true,
-        browserSync: true
+        browserSync: true,
+        tasks : defaults.tasks.concat("patternlab")
     });
 
     quench.build(config);
@@ -73,7 +75,8 @@ gulp.task("build", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : false,
-        browserSync: false
+        browserSync: false,
+        tasks : defaults.tasks.concat("patternlab")
     });
 
     quench.build(config);

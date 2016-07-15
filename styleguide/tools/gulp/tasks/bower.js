@@ -12,7 +12,7 @@ module.exports = function bowerTask(config, env){
 
     // bower config
     var bower =  {
-        root: config.root + "/polyfill",
+        root: config.root + "/js/polyfill",
         filename: "polyfill.js",
         dest: config.dest + "/js",
         uglify: {}
