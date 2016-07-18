@@ -38,3 +38,4 @@ ishControlsHide:
     - hay
 styleguideKit: pattern-lab/styleguidekit-twig-default
 styleguideKitPath: vendor/pattern-lab/styleguidekit-twig-default
+phpBin: 'C:\php'
