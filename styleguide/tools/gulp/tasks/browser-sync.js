@@ -11,7 +11,7 @@ var gulp           = require("gulp"),
 module.exports = function(config, env){
 
     // if not using proxy, use this as the server root
-    var serverRoot = path.resolve(config.root, "..");
+    var serverRoot = path.resolve(config.rootSite);
 
     // browserSync settings
     var settings = {

@@ -9,17 +9,15 @@ var gulp         = require('gulp'),
 
 module.exports = function patternLabTask(config, env){
 
-    console.log
-
     gulp.task('patternlab', function() {
-        run('php ' + config.patternLabRoot + '/core/console --generate').exec(function() {
+        run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec(function() {
             browserSync.reload();
         });
     });
 
     // register the watch
     quench.registerWatcher("patternlab", [
-        config.root + "/**/*.{twig,json}"
+        config.patternLabRoot + "/source/**/*.{twig,mustache,json}"
     ]);
 
 };

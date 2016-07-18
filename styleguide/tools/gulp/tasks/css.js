@@ -7,19 +7,27 @@ var gulp          = require("gulp"),
     debug         = require("gulp-debug"),
     header        = require("gulp-header"),
     concat        = require("gulp-concat"),
-    sourcemaps    = require("gulp-sourcemaps");
+    sourcemaps    = require("gulp-sourcemaps"),
+    normalize     = require('node-normalize-scss').includePaths,
+    neat          = require('node-neat').includePaths;
 
 module.exports = function cssTask(config, env){
 
+    var path = ['styles'];
+
+    path = path.concat(neat);
+    path = path.concat(normalize);
+
     // css settings
     var cssConfig = {
-        src: config.root + "/css/**/*.scss",
-        dest: config.root + "/css/",
+        src: config.root + "/scss/**/*.scss",
+        dest: config.dest + "/css/",
 
-        filename: "style.css",
+        filename: "index.css",
 
         sass: {
-            outputStyle: env.development() ? "nested" : "compressed"
+            outputStyle: env.development() ? "nested" : "compressed",
+            includePaths: path
         },
 
         autoprefixer: {
@@ -29,7 +37,7 @@ module.exports = function cssTask(config, env){
 
     // register the watch
     quench.registerWatcher("css", [
-        config.root + "/css/scss/**/*.scss"
+        config.root + "/scss/**/*.scss"
     ]);
 
 
@@ -42,15 +50,15 @@ module.exports = function cssTask(config, env){
             .pipe(sass(cssConfig.sass))
             .pipe(autoprefixer(cssConfig.autoprefixer))
             .pipe(pixrem("16px",{atrules: true, html: true}))
-            .pipe(concat(cssConfig.filename, {newLine: ""}));
+            .pipe(rename({
+                suffix: "-generated"
+            }));
 
         // only add the header text if this css isn't compressed
         if (cssConfig.sass && cssConfig.sass.outputStyle !== "compressed"){
             gulpCss.pipe(header("/* This file is generated.  DO NOT EDIT. */ \n"));
         }
 
-        // right now this just generates the css file and requires the
-        // "php core/console --generate" command to move it to the public directory
         return gulpCss
             .pipe(sourcemaps.write("./"))
             .pipe(gulp.dest(cssConfig.dest))
