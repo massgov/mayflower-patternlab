@@ -28,7 +28,7 @@ var gulp    = require("gulp"),
 var defaults = {
     root: path.resolve(__dirname, "../../source"),
     dest: path.resolve(__dirname, "../../public"),
-    patternLabRoot: path.resolve(__dirname, "../../../styleguide"),
+    patternLabRoot: path.resolve(__dirname, "../../"),
     // removing js for now, but we may want to concatenate
 //    tasks: ["js", "js-common", "css", "bower", "svg-sprite"],
     tasks: ["css", "bower", "svg-sprite"],
