@@ -8,7 +8,9 @@ module.exports = function copyTask(config, env){
     var copy = {
         src: [
             config.root + "/fonts/**/*.*",
-            config.root + "/images/**/*.*"
+            config.root + "/images/**/*.*",
+            config.root + "/js/vendor/**/*.*"
+
         ],
         dest: config.dest
     };

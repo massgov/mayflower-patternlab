@@ -12,8 +12,8 @@ var gulp           = require("gulp"),
 module.exports = function jsTask(config, env){
 
     var jsConfig = {
-        pages: config.root + "/js/**/*.js",
-        dest: config.root + "/js",
+        pages: config.root + "/js/*.js",
+        dest: config.dest + "/js",
         // js uglify options.
         uglify: {},
         // browserify options
@@ -25,8 +25,8 @@ module.exports = function jsTask(config, env){
 
     // register the watch
     quench.registerWatcher("js", [
-        config.root + "/js-source/**/*.js",
-        config.root + "/js-source/**/*.jsx"
+        config.root + "/js/**/*.js",
+        config.root + "/js/**/*.jsx"
     ]);
 
 
