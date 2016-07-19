@@ -5,3 +5,8 @@
     padding:10px 20px;
     text-transform: uppercase;
 }
+
+@mixin ma-reset-list {
+    list-style: none;
+    padding-left: 0;
+}
