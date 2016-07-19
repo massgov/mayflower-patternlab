@@ -22,10 +22,12 @@ module.exports = function(config, env){
 
         // watch these files and reload the browser when they change
         files: [
-            config.dest + "/**",
+            config.rootSite + "/assets/**",
+            config.rootSite + "/styleguide/**",
             // prevent browser sync from reloading twice when the regular file (eg. index.js)
             // and the map file (eg. index.js.map) are generated
-            "!**/*.map"
+            "!**/*.map",
+
         ]
     };
 
