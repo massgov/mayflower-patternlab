@@ -24,3 +24,4 @@ This living styleguide is built using PatternLab.
 * Mark-up is in the source/_patterns directory.
 * Front end assets can be found in the source/assets directory
 * Gulp will handle the conversion of files from source to public
+* Pattern Lab specific files are in the /public/styleguide directory (the styleguide.html file is automatically generated when twig templates are updated)
