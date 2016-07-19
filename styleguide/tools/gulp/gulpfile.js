@@ -32,7 +32,7 @@ var defaults = {
     rootSite: path.resolve(__dirname, "../../public"),
     // removing js for now, but we may want to concatenate
 //    tasks: ["js", "js-common", "css", "bower", "svg-sprite"],
-    tasks: ["css", "bower", "svg-sprite"],
+    tasks: ["css", "bower", "svg-sprite", "copy", "patternlab"],
     env: "development", // "development", "production", "local"
     watch: false,
     browserSync: false
@@ -47,8 +47,7 @@ gulp.task("default", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : true,
-        browserSync: true,
-        tasks : defaults.tasks.concat("patternlab")
+        browserSync: true
     });
 
     quench.build(config);
@@ -78,8 +77,7 @@ gulp.task("build", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : false,
-        browserSync: false,
-        tasks : defaults.tasks.concat("patternlab")
+        browserSync: false
     });
 
     quench.build(config);
