@@ -1,6 +1,6 @@
-@import "generic/variables";
-@import "generic/mixins";
-@import "generic/reset";
+@import "stock-pl/generic/variables";
+@import "stock-pl/generic/mixins";
+@import "stock-pl/generic/reset";
 
 
 
@@ -9,15 +9,15 @@
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
-@import "base/global-classes";
-@import "base/main";
-@import "base/links";
-@import "base/headings";
-@import "base/text";
-@import "base/lists";
-@import "base/media";
-@import "base/forms";
-@import "base/tables";
+@import "stock-pl/base/global-classes";
+@import "stock-pl/base/main";
+@import "stock-pl/base/links";
+@import "stock-pl/base/headings";
+@import "stock-pl/base/text";
+@import "stock-pl/base/lists";
+@import "stock-pl/base/media";
+@import "stock-pl/base/forms";
+@import "stock-pl/base/tables";
 
 
 
@@ -26,36 +26,36 @@
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
-@import "objects/layout";
+@import "stock-pl/objects/layout";
 
 
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
-@import "objects/header";
-@import "objects/nav";
-@import "objects/main";
-@import "objects/footer";
+@import "stock-pl/objects/header";
+@import "stock-pl/objects/nav";
+@import "stock-pl/objects/main";
+@import "stock-pl/objects/footer";
 
 
 
 /*------------------------------------*\
     $TEXT Styles
 \*------------------------------------*/
-@import "objects/text";
+@import "stock-pl/objects/text";
 
 
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-@import "objects/icons";
-@import "objects/buttons";
-@import "objects/blocks";
-@import "objects/lists";
-@import "objects/tooltip";
-@import "objects/accordion";
-@import "objects/tabs";
-@import "objects/sections";
-@import "objects/article";
-@import "objects/comments";
-@import "objects/messaging";
+@import "stock-pl/objects/icons";
+@import "stock-pl/objects/buttons";
+@import "stock-pl/objects/blocks";
+@import "stock-pl/objects/lists";
+@import "stock-pl/objects/tooltip";
+@import "stock-pl/objects/accordion";
+@import "stock-pl/objects/tabs";
+@import "stock-pl/objects/sections";
+@import "stock-pl/objects/article";
+@import "stock-pl/objects/comments";
+@import "stock-pl/objects/messaging";

@@ -18,8 +18,8 @@ module.exports = function svgSpriteTask(config, env){
 
     // svg config
     var svg = {
-        src   : config.root + "/img/svg-sprite/**/*.svg",
-        dest  : config.dest + "/img",
+        src   : config.root + "/images/svg-sprite/**/*.svg",
+        dest  : config.dest + "/images",
         filename : "svg-sprite.svg",
         svgmin: {},
         svgstore: {
@@ -29,7 +29,7 @@ module.exports = function svgSpriteTask(config, env){
 
     // register the watch
     quench.registerWatcher("svg-sprite", [
-        config.root + "/img/svg-sprite/**/*.svg"
+        config.root + "/imames/svg-sprite/**/*.svg"
     ]);
 
     // generate svg sprite

@@ -1,0 +1,37 @@
+.ma__callout {
+	border-bottom: 2px solid;
+
+	&__header {
+		text-align: center;
+
+		&:before,
+		&:after {
+			border-top: 4px solid;
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: calc(50% - 45px);
+		}
+
+		svg {
+			display: inline-block;
+			height: 45px;
+			margin: 0 10px;
+			vertical-align: middle;
+			width: 60px;
+		}
+	}
+
+	&__text {
+		font-size: rem(20);
+		font-weight: 400;
+		padding-top:38px;
+		padding-bottom: 50px;
+		text-align: center;
+
+		@media($bp-x-small-min) {
+			font-size: rem(28);
+			line-height: em(40,28);
+		}
+	}
+}

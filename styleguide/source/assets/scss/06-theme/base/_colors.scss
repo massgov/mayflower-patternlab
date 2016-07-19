@@ -1,0 +1,24 @@
+// Primary colors
+$c-blue-primary: #1258ae;
+$c-green-primary: #47896b;
+$c-gray-primary: #3d3d3d;
+
+//secondary colors
+$c-yellow-secondary: #f6b61c;
+
+//other global colors
+$c-white: white;
+$c-black: #141414;
+
+// 18F compliance we can't use variables with the color in the name
+$c-theme-primary-1: $c-blue-primary;
+$c-theme-primary-2: $c-green-primary;
+$c-theme-primary-3: $c-gray-primary;
+$c-theme-primary-4: $c-black;
+
+$c-theme-secondary-1: $c-yellow-secondary;
+
+$c-font-base: $c-black;
+$c-font-inverse: $c-white;
+
+

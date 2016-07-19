@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "name": "$c-blue-primary",
+      "value": "#1258ae"
+    },
+    {
+      "name": "$c-green-primary",
+      "value": "#47896b"
+    },
+    {
+      "name": "$c-gray-primary",
+      "value": "#3d3d3d"
+    },
+    {
+      "name": "$c-yellow-secondary",
+      "value": "#f6b61c"
+    }
+  ],
+  "meta": {
+    "description": ""
+  }
+}
