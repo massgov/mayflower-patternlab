@@ -5,7 +5,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-river.jpg",
+					"src": "/assets/images/sample/thumb-square-river.jpg",
 					"alt": "Post Thumbnail"	
 				}
 			},
@@ -19,7 +19,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-ivy.jpg",
+					"src": "/assets/images/sample/thumb-square-ivy.jpg",
 					"alt": "Ivy"	
 				}
 			},
@@ -33,7 +33,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-yosemite.jpg",
+					"src": "/assets/images/sample/thumb-square-yosemite.jpg",
 					"alt": "Yosemite"	
 				}
 			},
@@ -47,7 +47,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-fire.jpg",
+					"src": "/assets/images/sample/thumb-square-fire.jpg",
 					"alt": "Fire"	
 				}
 			},
@@ -61,7 +61,7 @@
 		{
 			"img": {
 				"square": {
-					"src": "../../images/sample/thumb-square-gear.jpg",
+					"src": "/assets/images/sample/thumb-square-gear.jpg",
 					"alt": "Camping Gear"	
 				}
 			},
