@@ -12,8 +12,8 @@ module.exports = function bowerTask(config, env){
 
     // bower config
     var bower =  {
-        root: config.root + "/js/polyfill",
-        filename: "polyfill.js",
+        root: config.root + "/js/vendor",
+        filename: "vendor.js",
         dest: config.dest + "/js",
         uglify: {}
     };
@@ -47,7 +47,7 @@ module.exports = function bowerTask(config, env){
         }
 
         // log the bower files to the gulp output
-        quench.logYellow("polyfill files", "\n\t" + bowerfiles.join("\n\t"));
+        quench.logYellow("vendor files", "\n\t" + bowerfiles.join("\n\t"));
 
         // make js
         return gulp.src(bowerfiles)
