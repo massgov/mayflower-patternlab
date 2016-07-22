@@ -134,8 +134,12 @@
     width: 20%;
   }
 
-  &__link {
+  &__top-link {
+    display: block;
+  }
 
+  &__link {
+    
   }
 
   &__sub-items {
@@ -143,6 +147,11 @@
     position: absolute;
     top: 100%;
     width: 100%;
+
+    &.is-closed {
+      @include ma-visually-hidden;
+    }
+
   }
 
   &__sub-item {
