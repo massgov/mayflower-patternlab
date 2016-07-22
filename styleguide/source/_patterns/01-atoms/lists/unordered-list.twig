@@ -1,0 +1,12 @@
+<ul>
+	{% for list in unorderedList %}
+		<li>{{list.text}}</li>
+		{% if list.sublist %}
+			<ul>
+				{% for sublist in list.sublist %}
+					<li>{{sublist.text}}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	{% endfor %}
+</ul>

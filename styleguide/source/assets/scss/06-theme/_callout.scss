@@ -1,20 +1,20 @@
 .ma__callout {
-    border-bottom-color: $c-theme-primary-3;
+  border-bottom-color: $c-theme-primary-3;
 
-    &__header {
+  &__header {
 
-        &:before,
-        &:after {
-            border-top-color: $c-theme-primary-3;
-        }
-
-        svg {
-            fill: $c-theme-secondary-1; 
-        }
+    &:before,
+    &:after {
+      border-top-color: $c-theme-primary-3;
     }
 
-    &__text {
-        color: $c-font-base;
-        font-family: $f-body-serif;
+    svg {
+      fill: $c-theme-secondary-1; 
     }
+  }
+
+  &__text {
+    color: $c-font-base;
+    font-family: $f-body-serif;
+  }
 }
