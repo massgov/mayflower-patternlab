@@ -3,5 +3,19 @@
   box-shadow: 2.8px 2.8px 8px rgba(1, 1, 1, 0.25);
   font-weight: 500;
   padding:10px 20px;
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+@mixin ma-reset-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+@mixin ma-visually-hidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
 }
