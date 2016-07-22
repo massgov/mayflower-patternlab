@@ -1,0 +1,91 @@
+#patternlab-body, 
+#patternlab-html {
+  background-color: #fff;
+}
+
+#sg-vp-wrap {
+  top:36px;
+}
+
+:not(pre)>code[class*=language-], 
+pre[class*=language-] {
+  background-color: #fff;
+}
+
+.sg-header {
+  background-color: #1258ae;
+  box-shadow: 0 2px 2px #ccc;
+}
+
+.sg-current-size,
+.sg-header a {
+  color:#fff;
+  font-size: .75rem;
+}
+
+.sg-input {
+  background-color: transparent;
+  color:#fff;
+  font-size: .75rem;
+}
+
+.sg-tools-toggle {
+  background-color: transparent;
+  height: 100%;
+}
+
+.sg-tools-toggle svg path{
+    fill: #fff;
+}
+
+.sg-modal {
+  background-color: transparent;
+  border-top: 2px solid #ccc;
+}
+
+.sg-modal .sg-pattern-title {
+  color: #1258ae;
+}
+
+.sg-modal .sg-pattern-breadcrumb {
+  font-size: 90%;
+}
+
+.sg-modal-close-btn {
+  background-color: transparent;
+  border: none;
+  z-index: 5;
+}
+.sg-modal-close-btn:hover {
+  background-color: transparent;
+}
+
+.sg-modal-close-btn svg {
+  height: 15px;
+  width: 15px;
+}
+
+.sg-modal-close-btn svg {
+  fill: grey;
+}
+
+.sg-modal.active .sg-modal-close-btn {
+  top: 0;
+}
+
+.sg-tabs-list {
+  z-index: 3;
+}
+
+.sg-tabs-list a {
+  border-bottom: 1px solid #ccc;
+}
+.sg-tab-title-active a {
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.sg-tabs-panel {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
