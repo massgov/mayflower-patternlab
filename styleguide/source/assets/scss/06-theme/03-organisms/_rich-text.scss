@@ -1,0 +1,7 @@
+h1, h2, h3, h4 {
+  position: relative;
+
+  &:after {
+    background-color: rgba(#4f9c78,.5);
+  }
+}

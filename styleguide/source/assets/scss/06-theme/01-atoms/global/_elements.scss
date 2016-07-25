@@ -6,6 +6,11 @@ a {
   color: $c-font-link;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @include ma-font(500);
+  color: $c-font-heading;
+}
+
 b, strong {
   @include ma-font(700);
 }
