@@ -1,20 +1,13 @@
+
 .ma__callout {
-  border-bottom-color: $c-theme-primary-3;
+  @include ma-font(800);
+  border-left-color: $c-theme-secondary-1;
+  color: $c-font-heading;
 
   &__header {
-
-    &:before,
-    &:after {
-      border-top-color: $c-theme-primary-3;
-    }
 
     svg {
       fill: $c-theme-secondary-1; 
     }
-  }
-
-  &__text {
-    color: $c-font-base;
-    font-family: $f-body-serif;
   }
 }

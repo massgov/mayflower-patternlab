@@ -1,17 +1,8 @@
 .ma__callout {
-  border-bottom: 2px solid;
+  border-left: 2px solid;
+  padding-left:38px;
 
   &__header {
-    text-align: center;
-
-    &:before,
-    &:after {
-      border-top: 4px solid;
-      content: "";
-      display: inline-block;
-      vertical-align: middle;
-      width: calc(50% - 45px);
-    }
 
     svg {
       display: inline-block;
@@ -24,14 +15,29 @@
 
   &__text {
     font-size: rem(20);
-    font-weight: 400;
+    line-height: 1.46;
     padding-top:38px;
     padding-bottom: 50px;
-    text-align: center;
 
     @media($bp-x-small-min) {
-      font-size: rem(28);
+      font-size: 1.625rem;
       line-height: em(40,28);
     }
+  }
+  
+  &__author,
+  &__auth-title {
+    display: block;
+    text-align: right;    
+  }
+
+  &__author {
+    font-size: 1.188rem;
+    line-height: 1.79;
+  }
+
+  &__auth-title {
+    font-size: 1.188rem;
+    line-height: 1.37;
   }
 }

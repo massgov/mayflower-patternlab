@@ -29,7 +29,7 @@ module.exports = function svgSpriteTask(config, env){
 
     // register the watch
     quench.registerWatcher("svg-sprite", [
-        config.root + "/imames/svg-sprite/**/*.svg"
+        config.root + "/images/svg-sprite/**/*.svg"
     ]);
 
     // generate svg sprite
