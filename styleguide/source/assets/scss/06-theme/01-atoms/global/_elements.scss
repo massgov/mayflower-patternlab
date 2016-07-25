@@ -5,3 +5,8 @@ body {
 a {
   color: $c-font-link;
 }
+
+b, strong {
+  @include ma-font(700);
+}
+
