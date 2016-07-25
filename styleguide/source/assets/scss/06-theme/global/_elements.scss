@@ -1,3 +1,7 @@
 body {
-  color: $c-font-base;
+  @include ma-font(400);
+}
+
+a {
+  color: $c-font-link;
 }
