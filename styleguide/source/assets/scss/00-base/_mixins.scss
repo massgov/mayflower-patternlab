@@ -5,3 +5,11 @@
   padding:10px 20px;
   text-transform: uppercase;
 }
+
+@mixing ma-container {
+
+  @media (min-width: 1240px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
