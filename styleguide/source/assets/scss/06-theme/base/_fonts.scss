@@ -1,4 +1,21 @@
+// Designer to Developer translations
+// Light => 300
+// Book => 400
+// Medium => 500
+// Bold => 700
+// Black => 800
 
-$f-body-serif: PTSerif, "Times New Roman", serif;
-$f-body-sans: PTSans, Arial, sans-serif;
-$f-display: Gotham, Arial, sans-serif;
+@mixin ma-font($weight) {
+  font-weight: $weight;
+
+  @if $weight == 400 {
+    font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+  } 
+  @else if $weight == 700 {
+    font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, sans-serif;
+  }
+  @else {
+    font-family: "Gotham A", "Gotham B", Helvetica, sans-serif;
+  }
+}
+
