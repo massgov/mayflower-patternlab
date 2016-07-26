@@ -3,6 +3,7 @@ body {
 }
 
 a {
+  @include ma-font(700);
   color: $c-font-link;
 }
 

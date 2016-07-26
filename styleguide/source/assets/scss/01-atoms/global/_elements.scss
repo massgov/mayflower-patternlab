@@ -3,6 +3,14 @@ body {
   line-height: 1.67;
 }
 
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -31,3 +39,4 @@ h4 {
 h5, h6 {
   font-size: 1.125rem;
 }
+
