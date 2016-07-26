@@ -2,9 +2,14 @@
   border: 3px solid;
   box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
   display: inline-block;
+  letter-spacing: 0.05em;
   padding: 0.7em 1.125em 0.6em;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 @mixing ma-container {
