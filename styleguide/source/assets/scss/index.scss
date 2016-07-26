@@ -1,13 +1,11 @@
-// Sass framework added in npm
-@import "bourbon";
-@import "neat";
-
 // normalize the css across browsers added in npm
 @import "normalize";
 
+// Sass frameworks added in npm
+@import "bourbon";
+@import "neat";
+
 // Base variables
-// @import "00-base/colors"; // should only be imported in the site's theme file
-// @import "00-base/fonts"; // should only be imported in the site's theme file
 @import "00-base/breakpoints";
 @import "00-base/mixins";
 @import "00-base/z-index";
@@ -21,6 +19,7 @@
 // Organisms - components
 @import "03-organisms/callout";
 @import "03-organisms/rich-text";
+@import "03-organisms/header";
 
 // Templates - page content types
 
