@@ -19,6 +19,10 @@
     {
       "name": "$c-theme-secondary-1",
       "value": "#f6c51b"
+    },
+    {
+      "name": "$c-gray-ececec",
+      "value": "#ececec"
     }
   ],
   "meta": {

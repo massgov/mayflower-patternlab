@@ -1,0 +1,75 @@
+.ma__footer {
+  padding: 40px 0;
+
+  &__container {
+    @include ma-container;
+    @include clearfix;
+  }
+
+  &__links {
+    @include span-columns(8);
+    float: right;
+    margin-right: 0;
+  }
+
+  &__info {
+    @include span-columns(3);
+  }
+
+  &__copyright {
+    font-size: 0.813rem;
+    line-height: 1.54;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.ma__footer-links {
+  @include clearfix;
+
+  &__items {
+    @include ma-reset-list;
+    float: left;
+    width: 33%;
+
+  }
+
+  &__item {
+    margin-bottom: 1.35em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+
+  }
+}
+
+.ma__site-logo {
+
+}
+
+.ma__social-links {
+
+  &__items {
+    @include ma-reset-list;
+    display: table;
+    width: 100%;
+  }
+
+  &__item {
+    display: table-cell;
+  }
+
+  &__link {
+    
+    svg {
+      height: 1.875rem;
+      width: 1.875rem;
+    }
+  }
+}

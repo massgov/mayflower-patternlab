@@ -1,0 +1,58 @@
+.ma__footer {
+  background-color: $c-bg-section;
+
+  &__links {
+    
+  }
+
+  &__info {
+
+  }
+
+  &__copyright {
+    @include ma-font(300);
+    color: $c-gray-primary;
+
+    b {
+      @include ma-font(500);
+    }
+  }
+}
+
+.ma__footer-links {
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    @include ma-font(500);
+    color: $c-font-link-subtle;
+  }
+}
+
+.ma__site-logo {
+
+}
+
+.ma__social-links {
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+
+    svg {
+      fill: $c-green-primary;    
+    }
+  }
+}

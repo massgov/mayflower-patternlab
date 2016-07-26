@@ -12,11 +12,21 @@
   }
 }
 
-@mixing ma-container {
+@mixin ma-container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 10px;
 
-  @media (min-width: 1240px) {
-    max-width: 1200px;
-    margin: 0 auto;
+  @media ($bp-x-small-min) {
+    padding: 0 20px;
+  }
+
+  @media ($bp-medium-min) {
+    padding: 0 30px;
+  }
+
+  @media ($bp-large-min) {
+    padding: 0 40px;
   }
 }
 

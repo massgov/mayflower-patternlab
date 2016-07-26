@@ -16,6 +16,12 @@ img {
   max-width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol {
+  margin-top: 0;
+}
+
 h1 {
   font-size: 3.625rem;
   line-height: 1.07; //62px
