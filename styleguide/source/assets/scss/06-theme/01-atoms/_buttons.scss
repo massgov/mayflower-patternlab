@@ -11,7 +11,7 @@
   color: $c-font-inverse;
 
   &:hover {
-    background-color: rgba($c-theme-primary-1,.85);
+    background-color: rgba($c-theme-primary-1,.75);
   }
 }
 
@@ -22,7 +22,7 @@
   color: $c-theme-primary-1;
 
   &:hover {
-    background-color: rgba($c-theme-primary-1,.5);
+    background-color: rgba($c-theme-primary-1,1);
     color: $c-font-inverse;
   }
 }
@@ -34,7 +34,7 @@
   color: $c-font-inverse;
 
   &:hover {
-    background-color: rgba($c-theme-primary-3,.85);
+    background-color: rgba($c-theme-primary-3,.75);
   }
 }
 
@@ -44,7 +44,7 @@
   color: $c-theme-primary-3;
 
   &:hover {
-    background-color: rgba($c-theme-primary-3,.5);
+    background-color: rgba($c-theme-primary-3,1);
     color: $c-font-inverse;
   }
 }
