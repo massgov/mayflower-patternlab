@@ -1,10 +1,23 @@
 @mixin ma-button {
-  border: none;
-  box-shadow: 2.8px 2.8px 8px rgba(1, 1, 1, 0.25);
-  font-weight: 500;
-  padding:10px 20px;
+  border: 3px solid;
+  box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
+  display: inline-block;
+  letter-spacing: 0.05em;
+  padding: 0.7em 1.125em 0.6em;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixing ma-container {
+
+  @media (min-width: 1240px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 @mixin ma-reset-list {

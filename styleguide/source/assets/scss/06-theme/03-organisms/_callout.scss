@@ -1,0 +1,13 @@
+
+.ma__callout {
+  @include ma-font(800);
+  border-left-color: $c-theme-secondary-1;
+  color: $c-font-heading;
+
+  &__header {
+
+    svg {
+      fill: $c-theme-secondary-1; 
+    }
+  }
+}

@@ -1398,7 +1398,7 @@ window.addEventListener("message", receiveIframeMessage, false);
     killDisco();
     killHay();
     fullMode = false;
-    sizeiframe(getRandom(minViewportWidth,500));
+    sizeiframe(getRandom(320,600));
   }
 
   $('#sg-size-s').on("click", function(e){
@@ -1416,7 +1416,7 @@ window.addEventListener("message", receiveIframeMessage, false);
     killDisco();
     killHay();
     fullMode = false;
-    sizeiframe(getRandom(500,800));
+    sizeiframe(getRandom(601,900));
   }
 
   $('#sg-size-m').on("click", function(e){
@@ -1434,7 +1434,7 @@ window.addEventListener("message", receiveIframeMessage, false);
     killDisco();
     killHay();
     fullMode = false;
-    sizeiframe(getRandom(800,1200));
+    sizeiframe(getRandom(901,1600));
   }
 
   $('#sg-size-l').on("click", function(e){

@@ -11,14 +11,14 @@
 @import "00-base/z-index";
 
 // Atoms - reusable styles
-@import "01-atoms/button-main";
-@import "01-atoms/button-secondary";
-@import "01-atoms/elements";
+@import "01-atoms/global/elements";
+@import "01-atoms/buttons";
 
 // Molecules - chunks of code that are used in Organisms/Components
 
 // Organisms - components
 @import "03-organisms/callout";
+@import "03-organisms/rich-text";
 @import "03-organisms/header";
 
 // Templates - page content types

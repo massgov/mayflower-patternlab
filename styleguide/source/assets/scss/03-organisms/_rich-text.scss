@@ -1,0 +1,24 @@
+.ma__rich-text {
+  h2, h3, h4 {
+    position: relative;
+    padding-bottom: .35em;
+
+    &:after {
+      content: "";
+      height: 3px;
+      position: absolute;
+        top: 100%;
+        left: 0.075em;
+      width: 2.25em;
+    }
+  }
+  ul {
+    padding-left: 20px;
+  }
+  ol {
+    padding-left: 40px;
+  }
+  li {
+    padding-left: 10px;
+  }
+}

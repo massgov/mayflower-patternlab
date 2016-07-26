@@ -1,0 +1,50 @@
+.ma__button,
+.ma__button-minor,
+.ma__button-alt,
+.ma__button-minor-alt {
+  @include ma-font(600);
+}
+
+.ma__button {
+  background-color: $c-theme-primary-1;
+  border-color: transparent;
+  color: $c-font-inverse;
+
+  &:hover {
+    background-color: rgba($c-theme-primary-1,.85);
+  }
+}
+
+.ma__button--minor,
+.ma__button-minor {
+  background-color: $c-font-inverse;
+  border-color: rgba($c-theme-primary-1,.5);
+  color: $c-theme-primary-1;
+
+  &:hover {
+    background-color: rgba($c-theme-primary-1,.5);
+    color: $c-font-inverse;
+  }
+}
+
+.ma__button--alt,
+.ma__button-alt {
+  background-color: $c-theme-primary-3;
+  border-color: transparent;
+  color: $c-font-inverse;
+
+  &:hover {
+    background-color: rgba($c-theme-primary-3,.85);
+  }
+}
+
+.ma__button-minor-alt {
+  background-color: $c-font-inverse;
+  border-color: rgba($c-theme-primary-3,.5);
+  color: $c-theme-primary-3;
+
+  &:hover {
+    background-color: rgba($c-theme-primary-3,.5);
+    color: $c-font-inverse;
+  }
+}

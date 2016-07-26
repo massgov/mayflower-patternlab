@@ -175,7 +175,7 @@ var build = module.exports.build = function build(_config) {
     }
 
     // load local.js config or initalize to empty object
-    var localJs = path.join(__dirname, "..", "local.js");
+    var localJs = path.join(__dirname, "local.js");
     config.local = fileExists(localJs) ? require(localJs) : {};
 
 

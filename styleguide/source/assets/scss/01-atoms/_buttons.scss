@@ -1,0 +1,17 @@
+.ma__button,
+.ma__button-alt,
+.ma__button--minor,
+.ma__button-minor,
+.ma__button-minor-alt {
+  @include ma-button();
+  font-size: 1.125rem;
+  line-height: 1.61;
+}
+
+.ma__button--small,
+.ma__button-alt--small,
+.ma__button-minor--small,
+.ma__button-minor-alt--small {
+  font-size: 1rem;
+  line-height: 1.4;
+}
