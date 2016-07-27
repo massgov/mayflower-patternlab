@@ -6,6 +6,7 @@
   padding: 0.7em 1.125em 0.6em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.4s ease;
 
   &:hover {
     text-decoration: none;
@@ -32,9 +33,13 @@
 }
 
 @mixin ma-link-underline {
-  border-bottom: 3px solid;
-  padding-bottom: 3px;
-  text-decoration: none;
+  transition: all 0.4s ease;
+  
+  &:hover {
+    border-bottom: 3px solid;
+    padding-bottom: 3px;
+    text-decoration: none;
+  }
 }
 
 @mixin ma-reset-list {

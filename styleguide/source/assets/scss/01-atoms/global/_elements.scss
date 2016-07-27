@@ -4,15 +4,7 @@ body {
 }
 
 a {
-  overflow-wrap: break-word;
   text-decoration: none;
-  transition: all 0.4s ease;
-  word-wrap: break-word;  
-  word-break: break-word;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 img {
