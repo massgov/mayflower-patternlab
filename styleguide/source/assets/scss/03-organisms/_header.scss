@@ -2,67 +2,87 @@
   @include clearfix;
   position: relative;
 
+  &__container {
+    @include ma-container;
+  }
   &__utility-nav {
-    padding-left: 130px;
+    position: absolute;
+      top: 0;
+    width: 100vw;
   }
 
   &__logo {
-    position: absolute;
-      top: 0;
-      left: 0;
+
   }
 
-  &__nav {
-    clear: both;
+  &__main-nav {
+
   }
+
   &__search {
-    padding-left: 130px;
     text-align: right;
   }
 }
 
-.ma__header-logo {
+.ma__site-logo {
 
-  &__link {
+  a {
     display: block;
     font-size: 0px;
   }
-
-  &__image {
-
-  }
 }
 
+
+$utility-nav-height: 43px;
+
 .ma__utility-nav {
-  @include clearfix;
   position: relative;
 
   &__items {
-    @include clearfix;
+    @include ma-container;
     @include ma-reset-list;
-    clear: both;
-    float: right;
+    height: $utility-nav-height;
+    text-align: right;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;    
+      width: 1%;
+    }
   }
 
   &__item {
-    float: left;
+    display: inline-block;
     padding-left: 20px;
+    vertical-align: middle;
   }
 
   &__link {
-
+    font-size: 1rem;
+    line-height: 2;
   }
 
   &__content-boxes {
     @include ma-reset-list;
-    clear: both;
-    position: relative;
   }
 
   &__content-box {
+    @include ma-container;
+    height: 180px;
+    margin-top: -$utility-nav-height;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    transition: all 1s;
+    visibility: visible;
+    z-index: $z-dropdown;
 
     &.is-closed {
-      @include ma-visually-hidden;
+      height: 0;
+      margin-top: 0;
+      visibility: hidden;
     }
   }
 
@@ -121,6 +141,8 @@
 }
 
 .ma__main-nav {
+  @include ma-container;
+
   &__items {
     @include ma-reset-list;
     display: table;

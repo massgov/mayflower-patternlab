@@ -1,0 +1,117 @@
+.ma__header {
+  padding-top: 43px; // height of the util nav
+  position: relative;
+
+  &__container {
+
+  }
+  &__utility-nav {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
+
+  &__logo {
+
+  }
+
+  &__main-nav {
+
+  }
+  &__search {
+
+  }
+}
+
+.ma__site-logo {
+
+  a {
+
+  }
+}
+
+.ma__utility-nav {
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    @include ma-font(500);
+    color: $c-font-inverse;
+  }
+
+  &__content-boxes {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
+
+  &__content-box {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
+
+  &__close {
+
+    span {
+
+    }
+
+    span[role="icon"] {
+
+    }
+  }
+}
+
+.ma__login-util {
+
+  &__description {
+
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__view-all {
+
+  }
+}
+
+.ma__header-search {
+
+}
+
+.ma__main-nav {
+ 
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__top-link {
+
+  }
+
+  &__link {
+    
+  }
+
+  &__sub-items {
+
+  }
+
+  &__sub-item {
+
+  }
+}
