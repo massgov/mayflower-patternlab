@@ -21,4 +21,10 @@
   li {
     padding-left: 10px;
   }
+
+  a:hover {
+    border-bottom: 3px solid;
+    padding-bottom: 3px;
+    text-decoration: none;
+  }
 }
