@@ -7,11 +7,15 @@
 @import "06-theme/00-base/colors";
 @import "06-theme/00-base/fonts";
 
-// themed atoms
+// Atoms - reusable styles
 @import "06-theme/01-atoms/global/elements";
 @import "06-theme/01-atoms/buttons";
 
-// themed organisms
+// Molecules - chunks of code that are used in Organisms/Components
+@import "06-theme/02-molecules/footer-links";
+@import "06-theme/02-molecules/social-links";
+
+// Organisms - components
 @import "06-theme/03-organisms/callout";
 @import "06-theme/03-organisms/rich-text";
 @import "06-theme/03-organisms/footer";

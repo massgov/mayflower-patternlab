@@ -1,0 +1,18 @@
+.ma__footer-links {
+
+  &__items {
+
+    @media ($bp-small-max) {
+      border-bottom-color: $c-bd-divider; 
+    }
+  }
+
+  &__link {
+    @include ma-font(500);
+    color: $c-font-link-subtle;
+
+    &:hover {
+      border-bottom-color: $c-font-link-subtle;
+    }
+  }
+}
