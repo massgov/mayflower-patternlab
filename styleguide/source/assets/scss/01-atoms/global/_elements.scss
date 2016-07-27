@@ -5,6 +5,7 @@ body {
 
 a {
   text-decoration: none;
+  transition: all 0.4s ease;
 
   &:hover {
     text-decoration: underline;
@@ -39,4 +40,3 @@ h4 {
 h5, h6 {
   font-size: 1.125rem;
 }
-
