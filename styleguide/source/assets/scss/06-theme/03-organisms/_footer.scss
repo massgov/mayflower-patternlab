@@ -43,6 +43,10 @@
   &__link {
     @include ma-font(500);
     color: $c-font-link-subtle;
+
+    &:hover {
+      border-bottom-color: $c-font-link-subtle;
+    }
   }
 }
 

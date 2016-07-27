@@ -23,8 +23,6 @@
   }
 
   a:hover {
-    border-bottom: 3px solid;
-    padding-bottom: 3px;
-    text-decoration: none;
+    @include ma-link-underline;
   }
 }

@@ -31,6 +31,12 @@
   }
 }
 
+@mixin ma-link-underline {
+  border-bottom: 3px solid;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
 @mixin ma-reset-list {
   list-style: none;
   padding-left: 0;

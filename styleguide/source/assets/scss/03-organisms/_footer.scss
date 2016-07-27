@@ -85,7 +85,10 @@
   }
 
   &__link {
-
+    
+    &:hover {
+      @include ma-link-underline;
+    }
   }
 }
 
