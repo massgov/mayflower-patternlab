@@ -6,4 +6,8 @@
       background-image: linear-gradient(-45deg, #fff 3%, rgba($c-theme-primary-2,.5) 3%, rgba($c-theme-primary-2,.5) 95%, #fff 95%);
     }
   }
+
+  a:hover {
+    border-bottom-color: rgba($c-font-link,.5);
+  }
 }
