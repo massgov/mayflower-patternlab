@@ -22,9 +22,13 @@
     padding-left: 10px;
   }
 
-  a:hover {
-    border-bottom: 3px solid;
-    padding-bottom: 3px;
-    text-decoration: none;
+  a {
+    @include ma-link-underline;
+    overflow-wrap: break-word;
+    word-wrap: break-word;  
+    word-break: break-word;
+
+    &:hover {
+    }
   }
 }

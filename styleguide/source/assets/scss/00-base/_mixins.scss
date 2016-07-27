@@ -6,17 +6,39 @@
   padding: 0.7em 1.125em 0.6em;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.4s ease;
 
   &:hover {
     text-decoration: none;
   }
 }
 
-@mixing ma-container {
+@mixin ma-container {
+  margin: 0 auto;
+  // grid max width plus the l/r padding for desktop
+  max-width: $max-width + 80px;  
+  padding: 0 10px;
 
-  @media (min-width: 1240px) {
-    max-width: 1200px;
-    margin: 0 auto;
+  @media ($bp-x-small-min) {
+    padding: 0 20px;
+  }
+
+  @media ($bp-medium-min) {
+    padding: 0 30px;
+  }
+
+  @media ($bp-large-min) {
+    padding: 0 40px;
+  }
+}
+
+@mixin ma-link-underline {
+  transition: all 0.4s ease;
+  
+  &:hover {
+    border-bottom: 3px solid;
+    padding-bottom: 3px;
+    text-decoration: none;
   }
 }
 

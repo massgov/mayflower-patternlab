@@ -1,0 +1,51 @@
+.ma__footer {
+  padding: 20px 0;
+
+  @media ($bp-small-min) {
+    padding: 40px 0;
+  }
+
+  &__container {
+    @include ma-container;
+    @include clearfix;
+  }
+
+  &__nav {
+    @media ($bp-large-min) {
+      @include span-columns(9);
+      float: right;
+      margin-right: 0;
+    }
+  }
+
+  &__info {
+    @media ($bp-large-min) {
+      @include span-columns(3);
+    }
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+    @media ($bp-large-max) {
+      text-align: center;
+    }
+  }
+
+  &__social {
+    margin: 0 auto 30px;
+    max-width: 480px;
+  }
+
+  &__copyright {
+    font-size: 0.813rem;
+    line-height: 1.54;
+
+    @media ($bp-large-max) {
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 0.25em;
+    }
+  }
+}

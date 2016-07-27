@@ -19,6 +19,14 @@
     {
       "name": "$c-theme-secondary-1",
       "value": "#f6c51b"
+    },
+    {
+      "name": "$c-gray-f2f2f2",
+      "value": "#f2f2f2"
+    },
+    {
+      "name": "$c-gray-dcdcdc",
+      "value": "#dcdcdc"
     }
   ],
   "meta": {

@@ -1,10 +1,15 @@
 #Style Guide
 This living styleguide is built using PatternLab.
 
+##Machine set up
+1. Install PHP
+2. Install NodeJS
+3. Install GulpJS
+
 ##Set up instructions
 1. Clone Repo
 2. Move into the styleguide directory `cd mayflower/styleguide`
-3. Install composer dependencies `composer install`
+3. Generate pattern lab default files `php core/console --generate`
 4. Install npm dependencies `npm install`
 
 ##Generate a styleguide

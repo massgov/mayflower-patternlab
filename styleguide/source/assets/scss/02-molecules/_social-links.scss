@@ -1,0 +1,25 @@
+.ma__social-links {
+
+  &__items {
+    @include ma-reset-list;
+    display: table;
+    width: 100%;
+  }
+
+  &__item {
+    display: table-cell;
+
+    @media ($bp-large-max) {
+      text-align: center;
+    }
+
+  }
+
+  &__link {
+    
+    svg {
+      height: 1.875rem;
+      width: 1.875rem;
+    }
+  }
+}

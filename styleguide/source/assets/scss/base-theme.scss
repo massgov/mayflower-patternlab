@@ -1,10 +1,22 @@
+// Base variables
+@import "00-base/breakpoints";
+@import "00-base/mixins";
+@import "00-base/z-index";
+
+// base theme variables
 @import "06-theme/00-base/colors";
 @import "06-theme/00-base/fonts";
 
+// Atoms - reusable styles
 @import "06-theme/01-atoms/global/elements";
-
 @import "06-theme/01-atoms/buttons";
 
+// Molecules - chunks of code that are used in Organisms/Components
+@import "06-theme/02-molecules/footer-links";
+@import "06-theme/02-molecules/social-links";
+
+// Organisms - components
 @import "06-theme/03-organisms/callout";
 @import "06-theme/03-organisms/rich-text";
+@import "06-theme/03-organisms/footer";
 
