@@ -9,6 +9,14 @@
 
   }
 
+  &__logo {
+
+  }
+
+  &__social {
+    
+  }
+
   &__copyright {
     @include ma-font(300);
     color: $c-gray-primary;
@@ -23,6 +31,9 @@
 
   &__items {
 
+    @media ($bp-small-max) {
+      border-bottom-color: $c-bd-divider; 
+    }
   }
 
   &__item {
@@ -36,7 +47,7 @@
 }
 
 .ma__site-logo {
-
+  
 }
 
 .ma__social-links {

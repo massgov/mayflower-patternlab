@@ -1,5 +1,9 @@
 .ma__footer {
-  padding: 40px 0;
+  padding: 20px 0;
+
+  @media ($bp-small-min) {
+    padding: 40px 0;
+  }
 
   &__container {
     @include ma-container;
@@ -7,21 +11,41 @@
   }
 
   &__links {
-    @include span-columns(8);
-    float: right;
-    margin-right: 0;
+    @media ($bp-large-min) {
+      @include span-columns(9);
+      float: right;
+      margin-right: 0;
+    }
   }
 
   &__info {
-    @include span-columns(3);
+    @media ($bp-large-min) {
+      @include span-columns(3);
+    }
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+    @media ($bp-large-max) {
+      text-align: center;
+    }
+  }
+
+  &__social {
+    margin: 0 auto 30px;
+    max-width: 480px;
   }
 
   &__copyright {
     font-size: 0.813rem;
     line-height: 1.54;
 
+    @media ($bp-large-max) {
+      text-align: center;
+    }
+
     p {
-      margin: 0;
+      margin-bottom: 0.25em;
     }
   }
 }
@@ -31,9 +55,25 @@
 
   &__items {
     @include ma-reset-list;
-    float: left;
-    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
 
+    @media ($bp-small-max) {
+      border-bottom: 1px solid; 
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    @media ($bp-small-min) {
+      @include span-columns(3 of 9);
+    }
+
+    @media ($bp-x-large-min) {
+      @include span-columns(2 of 9);
+      @include shift(1 of 9);
+    }
   }
 
   &__item {
@@ -63,6 +103,11 @@
 
   &__item {
     display: table-cell;
+
+    @media ($bp-large-max) {
+      text-align: center;
+    }
+
   }
 
   &__link {

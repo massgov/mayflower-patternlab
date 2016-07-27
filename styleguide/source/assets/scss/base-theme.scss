@@ -1,10 +1,17 @@
+// Base variables
+@import "00-base/breakpoints";
+@import "00-base/mixins";
+@import "00-base/z-index";
+
+// base theme variables
 @import "06-theme/00-base/colors";
 @import "06-theme/00-base/fonts";
 
+// themed atoms
 @import "06-theme/01-atoms/global/elements";
-
 @import "06-theme/01-atoms/buttons";
 
+// themed organisms
 @import "06-theme/03-organisms/callout";
 @import "06-theme/03-organisms/rich-text";
 @import "06-theme/03-organisms/footer";
