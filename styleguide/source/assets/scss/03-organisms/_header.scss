@@ -1,9 +1,12 @@
 .ma__header {
+  padding-top: 43px; // height of the util nav
   position: relative;
 
   &__container {
     @include clearfix;
     @include ma-container;
+    font-size: 0; // inline-block fix
+    padding: 20px 0 8px;
   }
   &__utility-nav {
     position: absolute;
@@ -12,10 +15,10 @@
   }
 
   &__logo {
+    @include span-columns(3);
     display: inline-block;
-    padding: 20px 0;
+    float: none;
     vertical-align: middle;
-    width: 23.79032%; // @include span-columns(3)
   }
 
   &__main-nav {
@@ -197,22 +200,63 @@ $header-search-height: 46px;
   &__items {
     @include ma-reset-list;
     display: table;
-    width: 100%;
+    margin-left: -10px;
+    width: calc(100% + 20px);
+
+    .flexbox & {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &__item {
     display: table-cell;
+    padding: 14px 12px;
     position: relative;
     text-align: center;
     width: 20%;
+
+    .flexbox & {
+      display: inline-block;
+      flex-shrink: 1;
+      flex-grow: 0;
+      flex-basis: auto;
+      text-align: left;
+      width: auto;
+    }
+
+    &.is-open {
+
+      &:after {
+        transform: translateY(-35%) rotate(-135deg);
+      }
+    }
+    &:after {
+      border-right: 3px solid green;
+      border-bottom: 3px solid green;
+      content: "";
+      display: inline-block;
+      height: .65em;
+      margin-top: 3px;
+      margin-left: 3px;
+      transform: translateY(-25%) rotate(45deg);
+      transform-origin: 75% 75%;
+      transition: all .5s;
+      vertical-align: middle;
+      width: .65em;
+    }
   }
 
   &__top-link {
-    display: block;
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1.45;
+    text-transform: uppercase;
+    vertical-align: middle;
+
   }
 
   &__link {
-    
   }
 
   &__sub-items {

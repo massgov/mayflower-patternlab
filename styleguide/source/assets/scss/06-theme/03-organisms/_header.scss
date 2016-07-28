@@ -1,6 +1,5 @@
 .ma__header {
-  padding-top: 43px; // height of the util nav
-  position: relative;
+  background-color: $c-bg-section;
 
   &__container {
 
@@ -108,14 +107,17 @@
 
   &__item {
 
+    &.is-open {
+      background-color: $c-white;
+    }
   }
 
   &__top-link {
+    color: $c-font-heading;
 
   }
 
   &__link {
-    
   }
 
   &__sub-items {
