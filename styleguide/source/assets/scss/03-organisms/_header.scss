@@ -256,22 +256,38 @@ $header-search-height: 46px;
 
   }
 
-  &__link {
-  }
-
-  &__sub-items {
+  &__subitems {
     @include ma-reset-list;
+    min-width: 295px;
     position: absolute;
-    top: 100%;
+      top: 100%;
+      left: 0;
     width: 100%;
 
     &.is-closed {
       @include ma-visually-hidden;
     }
+    
+    .ma__main-nav__item:last-child & {
+      left: inherit;
+      right: 0;
+    }
 
   }
 
-  &__sub-item {
+  &__subitem {
+    border-bottom: 1px solid;
+
+    &:last-child {
+      border-bottom: none;
+    }    
+  }
+
+  &__link {
+    display: block;
+    font-size: 1.125rem;
+    line-height: 1.33;
+    padding: 10px;
 
   }
 }

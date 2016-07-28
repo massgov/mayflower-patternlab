@@ -109,6 +109,7 @@
 
     &.is-open {
       background-color: $c-white;
+      box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
     }
   }
 
@@ -117,14 +118,21 @@
 
   }
 
+  &__subitems {
+    background-color: $c-white;
+    box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
+  }
+
+  &__subitem {
+    border-bottom-color: $c-bd-divider;
+  }
+
   &__link {
-  }
+    @include ma-font(500);
+    color: $c-font-base;
 
-  &__sub-items {
-
-  }
-
-  &__sub-item {
-
+    &:hover {
+      color: $c-font-link-subtle;
+    }
   }
 }
