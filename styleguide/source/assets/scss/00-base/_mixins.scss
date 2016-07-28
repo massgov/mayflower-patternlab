@@ -48,6 +48,17 @@
   padding-left: 0;
 }
 
+@mixin ma-valign-block {
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;    
+    width: 1%;
+  }
+}
+
 @mixin ma-visually-hidden { 
   position: absolute; 
   overflow: hidden; 

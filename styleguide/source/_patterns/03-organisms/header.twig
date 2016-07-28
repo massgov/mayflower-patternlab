@@ -6,8 +6,20 @@
     </div>
     <div class="ma__header__search">
       <section class="ma__header-search">
-        <input class="ma__header-search__input" type="text" /><!-- remove white-space
-        --><button class="ma__header-search__button">Search</button>
+        <label 
+            for="header-search"
+            class="ma__header-search__label">What can we help you find?</label>
+        <input 
+            id="header-search" 
+            class="ma__header-search__input"
+            placeholder="What can we help you find?" 
+            type="text" />
+        <a href="#" class="ma__header-search__button">
+          <span>Search</span>
+          <svg role="img" class="ma__header-search__icon">
+            <use xlink:href="/assets/images/svg-sprite.svg#search"></use>
+          </svg>
+        </a>
       </section>
     </div>
   </div>
@@ -70,12 +82,44 @@
   <nav class="ma__header__utility-nav">
     <section class="ma__utility-nav js-util-nav">
       <ul class="ma__utility-nav__items">
-        <li class="ma__utility-nav__item js-util-nav-toggle"><a class="ma__utility-nav__link" href="#" title="Site Settings">Site Settings</a></li>
-        <li class="ma__utility-nav__item js-util-nav-toggle"><a class="ma__utility-nav__link" href="#" title="Alerts">Alerts</a></li>
         <li class="ma__utility-nav__item js-util-nav-toggle">
-          <a class="ma__utility-nav__link" href="#" title="State Services">State Services</a>
+          <a class="ma__utility-nav__link" href="#" title="Site Settings">
+            <svg role="img">
+              <use xlink:href="/assets/images/svg-sprite.svg#settings"></use>
+            </svg>
+            <span>Site Settings</span>
+          </a>
         </li>
-        <li class="ma__utility-nav__item js-util-nav-toggle"><a class="ma__utility-nav__link" href="#" title="login to ...">Login to ...</a></li>
+        <li class="ma__utility-nav__item js-util-nav-toggle">
+          <a class="ma__utility-nav__link" href="#" title="Alerts">
+            <svg role="img">
+              <use xlink:href="/assets/images/svg-sprite.svg#alerts"></use>
+            </svg>
+            <span>
+              Alerts
+            </span>
+          </a>
+        </li>
+        <li class="ma__utility-nav__item js-util-nav-toggle">
+          <a class="ma__utility-nav__link" href="#" title="State Services">
+            <svg role="img">
+              <use xlink:href="/assets/images/svg-sprite.svg#building"></use>
+            </svg>
+            <span>
+              State Services
+            </span>
+          </a>
+        </li>
+        <li class="ma__utility-nav__item js-util-nav-toggle">
+          <a class="ma__utility-nav__link" href="#" title="login to ...">
+            <svg role="img">
+              <use xlink:href="/assets/images/svg-sprite.svg#login"></use>
+            </svg>
+            <span>
+              Login to ...
+            </span>
+          </a>
+        </li>
       </ul>
       <ul class="ma__utility-nav__content-boxes">
         <li class="ma__utility-nav__content-box js-util-nav-content is-closed"></li>

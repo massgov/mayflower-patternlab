@@ -1,8 +1,8 @@
 .ma__header {
-  @include clearfix;
   position: relative;
 
   &__container {
+    @include clearfix;
     @include ma-container;
   }
   &__utility-nav {
@@ -12,7 +12,10 @@
   }
 
   &__logo {
-
+    display: inline-block;
+    padding: 20px 0;
+    vertical-align: middle;
+    width: 23.79032%; // @include span-columns(3)
   }
 
   &__main-nav {
@@ -20,7 +23,10 @@
   }
 
   &__search {
+    display: inline-block;
     text-align: right;
+    vertical-align: middle;
+    width: 74.59677%; // @include span-columns(9)
   }
 }
 
@@ -40,17 +46,10 @@ $utility-nav-height: 43px;
 
   &__items {
     @include ma-container;
+    @include ma-valign-block;
     @include ma-reset-list;
     height: $utility-nav-height;
     text-align: right;
-
-    &:before {
-      content: "";
-      display: inline-block;
-      height: 100%;
-      vertical-align: middle;    
-      width: 1%;
-    }
   }
 
   &__item {
@@ -62,6 +61,17 @@ $utility-nav-height: 43px;
   &__link {
     font-size: 1rem;
     line-height: 2;
+
+    svg,
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    svg {
+      height: 1rem;
+      width: 20px;
+    }
   }
 
   &__content-boxes {
@@ -136,8 +146,49 @@ $utility-nav-height: 43px;
   }
 }
 
-.ma__header-search {
+$header-search-height: 46px;
 
+.ma__header-search {
+    float: right;
+    max-width: 560px;
+    position: relative;
+    width: 100%;
+
+    &__label {
+      @include ma-visually-hidden;
+    }
+
+    &__input {
+      font-size: 1rem;
+      height: $header-search-height;
+      padding: 0 128px 0 17px;
+      width: 100%;
+    }
+
+    &__button {
+      @include ma-valign-block;
+      border-left: 1px solid;
+      display: block;
+      font-size: 0.75rem;
+      height: $header-search-height;
+      padding: 14px;
+      position: absolute;
+        right: 0;
+        top: 0;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      span,
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    &__icon {
+      height: 20px;
+      width: 20px;
+    }
 }
 
 .ma__main-nav {

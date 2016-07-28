@@ -87,6 +87,17 @@
 
 .ma__header-search {
 
+    &__label {
+    }
+ 
+    &__input {
+
+    }
+    &__button {
+      @include ma-font(700);
+      color: $c-green-primary;
+      border-left-color: $c-bd-input;
+    }
 }
 
 .ma__main-nav {
