@@ -26,9 +26,9 @@ $max-width: 1240px; // use @include outer-container() which sets this and center
 
 // Organisms - components
 @import "03-organisms/callout";
-@import "03-organisms/rich-text";
 @import "03-organisms/header";
 @import "03-organisms/footer";
+@import "03-organisms/rich-text";
 
 // Templates - page content types
 

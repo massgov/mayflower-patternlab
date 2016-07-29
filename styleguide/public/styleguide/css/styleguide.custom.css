@@ -34,7 +34,7 @@ pre[class*=language-] {
 }
 
 .sg-modal {
-  background-color: transparent;
+  background-color: #fff;
   border-top: 2px solid #ccc;
 }
 

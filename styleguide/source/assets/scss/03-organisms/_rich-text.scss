@@ -1,15 +1,11 @@
 .ma__rich-text {
   h2, h3, h4 {
+    @include ma-underline-decorative;
     position: relative;
     padding-bottom: .35em;
 
     &:after {
-      content: "";
-      height: 3px;
-      position: absolute;
-        top: 100%;
-        left: 0.075em;
-      width: 2.25em;
+      width: 2.25em; // ma-underline-decorative override
     }
   }
   ul {
@@ -23,7 +19,7 @@
   }
 
   a {
-    @include ma-link-underline;
+    @include ma-underline-link;
     overflow-wrap: break-word;
     word-wrap: break-word;  
     word-break: break-word;

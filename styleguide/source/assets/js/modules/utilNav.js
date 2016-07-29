@@ -24,13 +24,8 @@ export default function (window,document,$,undefined) {
       let $content = $parent.find('.js-util-nav-content').eq(index);
 
       $content
-        .stop( true, true )
-        .slideUp(0,function() {
-          $content
-            .removeClass(closeClass)
-            .addClass(openClass)
-            .slideDown('fast');
-        });
+        .removeClass(closeClass)
+        .addClass(openClass);
     });
 
     $parent.find('.js-close-util-nav').on('click', function(e){
@@ -41,15 +36,9 @@ export default function (window,document,$,undefined) {
 
     function hide($content) {
       $parent.find("." + openClass).removeClass(openClass);
-      
       $content
-        .stop( true, true )
-        .slideUp('fast',function() {
-          $content
-            .addClass(closeClass)
-            .removeClass(openClass)
-            .slideDown(0);
-        });
+        .removeClass(openClass)
+        .addClass(closeClass);
     }
 
   });
