@@ -43,12 +43,9 @@
     color: $c-font-inverse;
   }
 
+  a,
+  &__content-box,
   &__content-boxes {
-    background-color: $c-theme-primary-1;
-    color: $c-font-inverse;
-  }
-
-  &__content-box {
     background-color: $c-theme-primary-1;
     color: $c-font-inverse;
   }
@@ -61,17 +58,25 @@
       opacity: 0.7;
     }
 
-    span[role="img"] {
+    span[role="presentation"] {
       @include ma-font(400);
 
+    }
+  }
+  &__content-title {
+    @include ma-font(500);
+
+    svg {
+      opacity: 0.7;
     }
   }
 }
 
 .ma__login-util {
 
-  &__description {
 
+  &__description {
+    @include ma-font(300);
   }
 
   &__items {
@@ -84,6 +89,14 @@
 
   &__view-all {
 
+    a {
+      @include ma-font(400);
+    }
+
+    &:after {
+      border-right-color: $c-white;
+      border-bottom-color: $c-white;
+    }
   }
 }
 

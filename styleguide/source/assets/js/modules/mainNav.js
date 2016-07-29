@@ -3,21 +3,28 @@ export default function (window,document,$,undefined) {
   $('.js-main-nav').each(function() {
     let openClass = "is-open",
         closeClass = "is-closed",
-        $parent = $(this);
+        $parent = $(this),
+        previousKey = null;
 
-    $parent.find('.js-main-nav-toggle').on('click mouseenter', function(e) {
-      e.preventdefault;
+    $parent.find('.js-main-nav-toggle').on('keydown mouseenter', function(e) {
+
 
       let $link = $(this),
           open = $link.hasClass(openClass),
           $openContent = $parent.find('.js-main-nav-content.' + openClass);
 
-      // hide other content
-      hide($openContent);
-      
-      if(open) { 
+      if(e.keyCode === 38 && open) {  // up arrow
+        // hide content
+        hide($openContent);
+      }
+
+      // key code 9 is the tab key
+      if(open || (typeof(e.keycode) !== "undefined" && e.keycode !== 9)) { 
         return;
       }
+
+      // hide content
+      hide($openContent);
       // add open class to this item
       $(this).addClass(openClass);
       // add open class to the correct content based on index
@@ -28,8 +35,8 @@ export default function (window,document,$,undefined) {
         .delay( 200 )
         .slideUp(0,function() {
           $content
-            .removeClass(closeClass)
             .addClass(openClass)
+            .removeClass(closeClass)
             .slideDown('fast');
         });
     });
@@ -37,6 +44,21 @@ export default function (window,document,$,undefined) {
     $parent.find('.js-main-nav-toggle').on('mouseleave', function(e) {
       let $openContent = $(this).find('.js-main-nav-content');
       hide($openContent);
+    });
+
+    $parent
+      .find('.js-main-nav-toggle')
+      .last()
+        .find('.js-main-nav-content li')
+        .last()
+          .find('a').on('keydown', function(e) {
+            e.stopPropagation();
+            // previous key was not a shift
+            if(e.keyCode === 9 && previousKey !== 16) {  // tab arrow\
+              let $openContent = $parent.find('.js-main-nav-content.' + openClass);
+              hide($openContent);
+            }
+            previousKey = e.keyCode;
     });
 
     function hide($content) {
@@ -47,7 +69,6 @@ export default function (window,document,$,undefined) {
         .slideUp('fast',function() {
           $content
             .addClass(closeClass)
-            .removeClass(openClass)
             .slideDown(0);
         });
     }

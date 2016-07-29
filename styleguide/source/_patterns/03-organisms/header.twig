@@ -1,5 +1,6 @@
 <!-- Begin .header -->
 <header class="ma__header">
+  <a class="ma__header__skip-nav" href="#main-content">skip navigation</a>
   <div class="ma__header__container">
     <div class="ma__header__logo">
       {% include "atoms-site-logo" %}
@@ -83,16 +84,23 @@
     <section class="ma__utility-nav js-util-nav">
       <ul class="ma__utility-nav__items">
         <li class="ma__utility-nav__item js-util-nav-toggle">
-          <a class="ma__utility-nav__link" href="#" title="Site Settings">
-            <svg role="img">
+          <a 
+            class="ma__utility-nav__link" 
+            href="#" 
+            tabindex="1"
+            title="Site Settings">
+            <svg role="presentation">
               <use xlink:href="/assets/images/svg-sprite.svg#settings"></use>
             </svg>
             <span>Site Settings</span>
           </a>
         </li>
         <li class="ma__utility-nav__item js-util-nav-toggle">
-          <a class="ma__utility-nav__link" href="#" title="Alerts">
-            <svg role="img">
+          <a class="ma__utility-nav__link" 
+            href="#" 
+            tabindex="2"
+            title="Alerts">
+            <svg role="presentation">
               <use xlink:href="/assets/images/svg-sprite.svg#alerts"></use>
             </svg>
             <span>
@@ -101,8 +109,11 @@
           </a>
         </li>
         <li class="ma__utility-nav__item js-util-nav-toggle">
-          <a class="ma__utility-nav__link" href="#" title="State Services">
-            <svg role="img">
+          <a class="ma__utility-nav__link" 
+            href="#" 
+            tabindex="3"
+            title="State Services">
+            <svg role="presentation">
               <use xlink:href="/assets/images/svg-sprite.svg#building"></use>
             </svg>
             <span>
@@ -111,8 +122,11 @@
           </a>
         </li>
         <li class="ma__utility-nav__item js-util-nav-toggle">
-          <a class="ma__utility-nav__link" href="#" title="login to ...">
-            <svg role="img">
+          <a class="ma__utility-nav__link" 
+            href="#" 
+            tabindex="4"
+            title="login to ...">
+            <svg role="presentation">
               <use xlink:href="/assets/images/svg-sprite.svg#login"></use>
             </svg>
             <span>
@@ -122,20 +136,32 @@
         </li>
       </ul>
       <ul class="ma__utility-nav__content-boxes">
-        <li class="ma__utility-nav__content-box js-util-nav-content is-closed"></li>
-        <li class="ma__utility-nav__content-box js-util-nav-content is-closed"></li>
-        <li class="ma__utility-nav__content-box js-util-nav-content is-closed"></li>
         <li class="ma__utility-nav__content-box js-util-nav-content is-closed">
-          <div class="ma__utility-nav__close js-close-util-nav"><span>Close</span><span role="img">+</span></div>
+          
+        </li>
+        <li class="ma__utility-nav__content-box js-util-nav-content is-closed">
+          
+        </li>
+        <li class="ma__utility-nav__content-box js-util-nav-content is-closed">
+          
+        </li>
+        <li class="ma__utility-nav__content-box js-util-nav-content is-closed">
+          <div class="ma__utility-nav__close js-close-util-nav"><span>Close</span><span role="presentation">+</span></div>
+          <div class="ma__utility-nav__content-title">
+            <svg role="presentation">
+              <use xlink:href="/assets/images/svg-sprite.svg#login"></use>
+            </svg>
+            <span>Login to...</span>
+          </div>
           <section class="ma__login-util">
-            <p class="ma__login-util__description">Thse are the top requested sites you can login to access state provided services</p>
+            <p class="ma__login-util__description">These are the top requested sites you can login to access state provided services</p>
             <ul class="ma__login-util__items">
               <li class="ma__login-util__item"><a href="#">Virtual Gateway</a></li>
               <li class="ma__login-util__item"><a href="#">Virtual Gateway</a></li>
               <li class="ma__login-util__item"><a href="#">Virtual Gateway</a></li>
             </ul>
             <div class="ma__login-util__view-all">
-              <a class="ma__button-main" href="#">View all logins</a>
+              <a href="#">View all logins</a>
             </div>
           </section>
         </li>
@@ -144,3 +170,4 @@
   </nav>
 </header>
 <!-- end .header -->
+<a name="main-content"></a>
