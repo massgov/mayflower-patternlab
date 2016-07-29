@@ -215,6 +215,8 @@ $header-search-height: 46px;
 
     &__button {
       @include ma-valign-block;
+      background: transparent;
+      border: none;
       border-left: 1px solid;
       display: block;
       font-size: 0.75rem;
