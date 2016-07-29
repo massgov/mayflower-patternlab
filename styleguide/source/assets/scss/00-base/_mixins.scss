@@ -17,22 +17,32 @@
   margin: 0 auto;
   // grid max width plus the l/r padding for desktop
   max-width: $max-width + 80px;  
-  padding: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @media ($bp-x-small-min) {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media ($bp-medium-min) {
-    padding: 0 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media ($bp-large-min) {
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
-@mixin ma-link-underline {
+@mixin ma-reset-list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+@mixin ma-underline-link {
   transition: all 0.4s ease;
   
   &:hover {
@@ -42,9 +52,37 @@
   }
 }
 
-@mixin ma-reset-list {
-  list-style: none;
-  padding-left: 0;
+// $bg is the color of the parent
+// $fg is the color of the line
+@mixin ma-underline-decorative($bg: transparent,$fg: transparent) {
+  
+  &:after {
+    @if($bg == transparent) {
+      content: "";
+      height: 3px;
+      position: absolute;
+        bottom: 0;
+        left: 0.075em;
+      width: 100%;
+    }
+    @else {
+      background-color: $fg;
+      background-color: rgba($fg,.5);
+      background-image: linear-gradient(-45deg, $bg 3%, rgba($fg,.5) 3%, rgba($fg,.5) 95%, $bg 95%);
+    }
+  }
+
+}
+
+@mixin ma-valign-block {
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;    
+    width: 1%;
+  }
 }
 
 @mixin ma-visually-hidden { 

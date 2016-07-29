@@ -1,0 +1,146 @@
+.ma__header {
+  background-color: $c-bg-section;
+
+  &__container {
+
+  }
+  &__utility-nav {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
+
+  &__logo {
+
+  }
+
+  &__main-nav {
+
+  }
+  &__search {
+
+  }
+}
+
+.ma__site-logo {
+
+  a {
+
+  }
+}
+
+.ma__utility-nav {
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    @include ma-font(500);
+    color: $c-font-inverse;
+  }
+
+  &__content-boxes {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
+
+  &__content-box {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
+
+  &__close {
+
+    span {
+      @include ma-font(700);
+      color: $c-white;
+      opacity: 0.7;
+    }
+
+    span[role="img"] {
+      @include ma-font(400);
+
+    }
+  }
+}
+
+.ma__login-util {
+
+  &__description {
+
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__view-all {
+
+  }
+}
+
+.ma__header-search {
+
+    &__label {
+    }
+ 
+    &__input {
+
+    }
+    &__button {
+      @include ma-font(700);
+      color: $c-green-primary;
+      border-left-color: $c-bd-input;
+    }
+}
+
+.ma__main-nav {
+ 
+  &__items {
+
+  }
+
+  &__item {
+
+    &.is-open {
+      background-color: $c-white;
+      box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+    }
+  }
+
+  &__top-link {
+    color: $c-font-heading;
+
+    &.is-active {
+      
+      @include ma-underline-decorative($c-bg-section ,$c-theme-primary-2);
+    }
+
+  }
+
+  &__subitems {
+    background-color: $c-white;
+    box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
+  }
+
+  &__subitem {
+    border-bottom-color: $c-bd-divider;
+  }
+
+  &__link {
+    @include ma-font(500);
+    color: $c-font-base;
+
+    &:hover {
+      color: $c-font-link-subtle;
+    }
+  }
+}

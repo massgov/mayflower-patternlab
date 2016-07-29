@@ -17,3 +17,7 @@ b, strong {
   @include ma-font(700);
 }
 
+input {
+  border: 0.063rem solid $c-bd-input;
+}
+
