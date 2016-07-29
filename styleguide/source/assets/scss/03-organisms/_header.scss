@@ -46,6 +46,7 @@ $utility-nav-height: 43px;
 
 .ma__utility-nav {
   position: relative;
+  // height: $utility-nav-height;
 
   &__items {
     @include ma-container;
@@ -78,13 +79,13 @@ $utility-nav-height: 43px;
   }
 
   &__content-boxes {
+    @include ma-container;
     @include ma-reset-list;
-    margin-top: -$utility-nav-height;
   }
 
   &__content-box {
-    @include ma-container;
-    height: 180px;
+    height: 140px;
+    margin-top: 0;
     margin-top: -$utility-nav-height;
     overflow: hidden;
     position: relative;
@@ -107,10 +108,13 @@ $utility-nav-height: 43px;
 
     span {
       display: inline-block;
+      font-size: 0.75rem;
+      margin-right: .5em;
+      text-transform: uppercase;
       vertical-align: middle;
     }
 
-    span[role="icon"] {
+    span[role="img"] {
       font-size: 2em;
       transform: rotate(45deg);
     }

@@ -56,10 +56,13 @@
   &__close {
 
     span {
-
+      @include ma-font(700);
+      color: $c-white;
+      opacity: 0.7;
     }
 
-    span[role="icon"] {
+    span[role="img"] {
+      @include ma-font(400);
 
     }
   }
