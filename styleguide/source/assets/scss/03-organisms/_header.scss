@@ -79,6 +79,7 @@ $utility-nav-height: 43px;
 
   &__content-boxes {
     @include ma-reset-list;
+    margin-top: -$utility-nav-height;
   }
 
   &__content-box {
@@ -254,6 +255,13 @@ $header-search-height: 46px;
     text-transform: uppercase;
     vertical-align: middle;
 
+    &.is-active {
+      @include ma-underline-decorative;
+
+      .is-open &:after {
+        display: none;
+      }
+    }
   }
 
   &__subitems {

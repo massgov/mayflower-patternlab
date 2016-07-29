@@ -116,6 +116,11 @@
   &__top-link {
     color: $c-font-heading;
 
+    &.is-active {
+      
+      @include ma-underline-decorative($c-bg-section ,$c-theme-primary-2);
+    }
+
   }
 
   &__subitems {

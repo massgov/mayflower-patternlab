@@ -35,7 +35,7 @@
   &__link {
     
     &:hover {
-      @include ma-link-underline;
+      @include ma-underline-link;
     }
   }
 }
