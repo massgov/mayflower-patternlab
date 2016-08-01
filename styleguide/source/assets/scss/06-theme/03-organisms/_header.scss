@@ -5,8 +5,6 @@
 
   }
   &__utility-nav {
-    background-color: $c-theme-primary-1;
-    color: $c-font-inverse;
   }
 
   &__logo {
@@ -19,6 +17,49 @@
   &__search {
 
   }
+
+  &__navigation {
+  }
+  
+
+}
+
+.ma__header-nav {
+  @media ($bp-medium-max) {
+    background-color: $c-bg-section;
+  }
+
+  &__button-container {
+    @media ($bp-medium-max) {
+      background-color: $c-theme-primary-1;
+    }
+
+  }
+
+  &__menu-button {
+    color: $c-font-inverse;
+
+    span,
+    span:before,
+    span:after {
+      background-color:  $c-font-inverse;
+    }
+    span {
+      .show-menu & {
+        background-color: transparent;
+      }
+    }
+    span:before {
+      .show-menu & {
+        background-color: $c-font-inverse;
+      }
+    }
+    span:after {
+      .show-menu & {
+        background-color: $c-font-inverse;
+      }
+    }
+  }
 }
 
 .ma__site-logo {
@@ -29,24 +70,45 @@
 }
 
 .ma__utility-nav {
+  @media( $bp-medium-min) {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
 
   &__items {
 
   }
 
   &__item {
-
+    @media ($bp-medium-max) {
+      &:hover {
+        background-color: $c-white;
+        box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+      }
+    }
   }
 
   &__link {
     @include ma-font(500);
-    color: $c-font-inverse;
+    color: $c-font-dark;
+    
+    svg {
+
+      @media( $bp-medium-max) {
+        stroke: $c-font-dark;
+      }
+    }
+
   }
 
   a,
   &__content, {
-    background-color: $c-theme-primary-1;
-    color: $c-font-inverse;
+    color: $c-font-dark;
+
+    @media( $bp-medium-min) {
+      background-color: $c-theme-primary-1;
+      color: $c-font-inverse;
+    }
   }
 
   &__close {
@@ -126,6 +188,7 @@
 
   &__item {
 
+    &:hover,
     &.is-open {
       background-color: $c-white;
       box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
@@ -133,7 +196,7 @@
   }
 
   &__top-link {
-    color: $c-font-heading;
+    color: $c-font-dark;
 
     &.is-active {
       

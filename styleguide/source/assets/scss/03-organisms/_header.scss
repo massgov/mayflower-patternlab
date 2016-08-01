@@ -1,3 +1,4 @@
+
 .ma__header {
   padding-top: 43px; // height of the util nav
   position: relative;
@@ -13,9 +14,12 @@
     padding: 20px 0 8px;
   }
   &__utility-nav {
-    position: absolute;
-      top: 0;
-    width: 100vw;
+
+    @media ($bp-medium-min){
+      position: absolute;
+        top: 0;
+      width: 100vw;
+    }
   }
 
   &__logo {
@@ -35,6 +39,90 @@
     vertical-align: middle;
     width: 74.59677%; // @include span-columns(9)
   }
+
+  &__navigation {
+
+  }
+}
+
+.ma__header-nav {
+
+  @media ($bp-medium-max){
+    height: 100vh;
+    position: fixed;
+      top:0;
+      right: 0;
+    padding-top: 40px;
+    width: 300px;
+  }
+
+  &__button-container {
+    @include ma-container;
+    height: 40px;
+    position: fixed;
+      top: 0;
+      left: 0;
+    text-align: right;
+    width: 100vw;
+    z-index: $z-dropdown;
+
+    @media ($bp-medium-min){
+      display:none;
+    }
+
+  }
+
+  &__menu-button {
+    background-color: transparent;
+    border: none;
+    height:35px;
+    line-height: 35px;
+    margin-top: 2px;
+    padding-right: 40px;
+    position:relative;
+      // right:10px;
+      // top:10px;
+    transition: transform 0.5s ease;
+    // width: 35px;
+
+    .show-menu & {
+      //transform: translateX($header-mobile-menu-width);
+    }
+
+    span,
+    span:before,
+    span:after {
+      border-radius: 1px;
+      cursor: pointer;
+      content: '';
+      display: block;
+      height: 5px;
+      position: absolute;
+        right: 0;
+      transition: all 500ms ease-in-out;
+      width: 35px;
+    }
+    span {
+      top:15px;
+
+    }
+    span:before {
+      top: -10px;
+
+      .show-menu & {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+    span:after {
+      bottom: -10px;
+
+      .show-menu & {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }
 
 .ma__site-logo {
@@ -53,22 +141,60 @@ $utility-nav-height: 43px;
   // height: $utility-nav-height;
 
   &__items {
-    @include ma-container;
-    @include ma-valign-block;
     @include ma-reset-list;
-    height: $utility-nav-height;
-    text-align: right;
+
+    @media ($bp-medium-min){
+      @include ma-container;
+      @include ma-valign-block;
+      height: $utility-nav-height;
+      text-align: right;
+    }
   }
 
   &__item {
-    display: inline-block;
-    padding-left: 20px;
-    vertical-align: middle;
+
+    @media ($bp-medium-max) {
+      padding-right: 15px;
+      position: relative;
+    }
+
+    @media ($bp-medium-min) {
+      display: inline-block;
+      padding-left: 20px;
+      vertical-align: middle;
+    }
   }
 
   &__link {
+    display: block;
     font-size: 1rem;
-    line-height: 2;
+    line-height: 1.45;
+
+    @media ($bp-medium-max) {
+      padding: 10px 20px;
+
+      &:after {
+        border-right: 3px solid green;
+        border-bottom: 3px solid green;
+        content: "";
+        display: inline-block;
+        height: .65em;
+        margin-top: 3px;
+        margin-left: 3px;
+        position: absolute;
+          right: 20px;
+          top: 10px;
+        transform: rotate(-45deg);
+        transform-origin: 75% 75%;
+        transition: all .5s;
+        vertical-align: middle;
+        width: .65em;
+      }
+    }
+
+    @media ($bp-medium-min) {
+      line-height: 2;
+    }
 
     svg,
     span {
@@ -267,43 +393,61 @@ $header-search-height: 46px;
 }
 
 .ma__main-nav {
-  @include ma-container;
+
+  @media ($bp-medium-min){
+    @include ma-container;
+  }
 
   &__items {
     @include ma-reset-list;
-    display: table;
-    margin-left: -10px;
-    width: calc(100% + 20px);
+    
+    @media ($bp-medium-min){
+      display: table;
+      margin-left: -10px;
+      width: calc(100% + 20px);
 
-    .flexbox & {
-      display: flex;
-      justify-content: space-between;
+      .flexbox & {
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 
   &__item {
-    display: table-cell;
-    padding: 14px 12px;
+    padding: 10px 0;
+    padding-right: 15px;
     position: relative;
-    text-align: center;
 
-    .flexbox & {
-      display: inline-block;
-      flex-shrink: 1;
-      flex-grow: 0;
-      flex-basis: auto;
+    @media ($bp-medium-max) {
+      font-size: 1rem;
     }
 
+    @media ($bp-medium-min) {
+      display: table-cell;
+      padding: 14px 12px;
+      text-align: center;
+
+      .flexbox & {
+        display: inline-block;
+        flex-shrink: 1;
+        flex-grow: 0;
+        flex-basis: auto;
+      }
+
+    }
     &.is-open {
 
       &:after {
-        transform: translateY(-35%) rotate(-135deg);
+        @media ($bp-medium-min) {
+          transform: translateY(-35%) rotate(-135deg);
+        }
       }
     }
     &:after {
       border-right: 3px solid green;
       border-bottom: 3px solid green;
       content: "";
+      cursor: pointer;
       display: inline-block;
       height: .65em;
       margin-top: 3px;
@@ -313,21 +457,40 @@ $header-search-height: 46px;
       transition: all .5s;
       vertical-align: middle;
       width: .65em;
+
+      @media ($bp-medium-max) {
+        position: absolute;
+          right: 20px;
+          top: 10px;
+        transform: rotate(-45deg);
+      }
     }
   }
 
   &__top-link {
-    display: inline-block;
-    font-size: 1.25rem;
+    display: block;
+    font-size: 1rem;
     line-height: 1.45;
     text-transform: uppercase;
-    vertical-align: middle;
+
+    @media ($bp-medium-max) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media ($bp-medium-min) {
+      display: inline-block;
+      font-size: 1.25rem;
+      vertical-align: middle;
+    }
 
     &.is-active {
-      @include ma-underline-decorative;
+      @media($bp-medium-min) {
+        @include ma-underline-decorative;
 
-      .is-open &:after {
-        display: none;
+        .is-open &:after {
+          display: none;
+        }
       }
     }
   }
