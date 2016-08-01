@@ -74,9 +74,12 @@
     color: $c-font-dark;
     
     svg {
+      fill: transparent;
+      stroke: $c-font-dark;
 
-      @media( $bp-medium-max) {
-        stroke: $c-font-dark;
+      @media( $bp-medium-min) {
+        fill: $c-font-inverse;
+        stroke: transparent;
       }
     }
 
@@ -110,6 +113,11 @@
 
     svg {
       opacity: 0.7;
+      fill: $c-font-base;
+
+      @media ($bp-medium-min) {
+        fill: $c-white;
+      }
     }
   }
 }
@@ -130,6 +138,14 @@
     a {
       background-color: rgba($c-white, 0.2);
       @include ma-font(500);
+    }
+
+    svg {
+        fill: $c-font-base;
+
+        @media ($bp-medium-min) {
+          fill: $c-font-inverse;
+        }
     }
   }
 
@@ -158,6 +174,10 @@
       @include ma-font(700);
       color: $c-green-primary;
       border-left-color: $c-bd-input;
+
+      svg {
+        fill: $c-green-primary;
+      }
     }
 }
 
