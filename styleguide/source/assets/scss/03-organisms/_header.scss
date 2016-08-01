@@ -82,33 +82,42 @@ $utility-nav-height: 43px;
     }
   }
 
-  &__content-boxes {
-    @include ma-container;
-    @include ma-reset-list;
-  }
-
-  &__content-box {
+  &__content {
+    display: block;
     height: 140px;
-    margin-top: 0;
-    margin-top: -$utility-nav-height;
     overflow: hidden;
-    position: relative;
-    width: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+    text-align: left;
     transition: all 1s;
     visibility: visible;
+    width: 100vw;
     z-index: $z-dropdown;
 
     &.is-closed {
       height: 0;
-      margin-top: 0;
+      margin-top: $utility-nav-height;
       visibility: hidden;
+    }
+    &[aria-hidden="true"] {
+      display: none;
+      top: -140px;
     }
   }
 
+  &__container {
+    @include ma-container;
+    position: relative;
+  }
+
   &__close {
+    background-color: transparent;
+    border: none;
+    padding: 0;
     position: absolute;
       top: 15px;
-      right: 0;
+      right: 40px;
 
     span {
       display: inline-block;
@@ -153,6 +162,7 @@ $utility-nav-height: 43px;
     display: inline-block;
     font-size: 1rem;
     line-height: 1.63;
+    margin-bottom: 0;
     vertical-align: middle;
     width: 350px;
   }
@@ -166,9 +176,13 @@ $utility-nav-height: 43px;
   }
 
   &__item {
-    float: left;
-    font-size: 1rem;
-    padding: 0 10px;
+    @include span-columns(2 of 6);
+    
+    a {
+      font-size: 1.125rem;
+      line-height: 1.67;
+      padding: 20px;
+    }
   }
 
   &__view-all {
@@ -261,15 +275,12 @@ $header-search-height: 46px;
     padding: 14px 12px;
     position: relative;
     text-align: center;
-    width: 20%;
 
     .flexbox & {
       display: inline-block;
       flex-shrink: 1;
       flex-grow: 0;
       flex-basis: auto;
-      text-align: left;
-      width: auto;
     }
 
     &.is-open {

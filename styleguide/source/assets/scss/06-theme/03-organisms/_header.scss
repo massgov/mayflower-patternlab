@@ -44,8 +44,7 @@
   }
 
   a,
-  &__content-box,
-  &__content-boxes {
+  &__content, {
     background-color: $c-theme-primary-1;
     color: $c-font-inverse;
   }
@@ -85,6 +84,10 @@
 
   &__item {
 
+    a {
+      background-color: rgba($c-white, 0.2);
+      @include ma-font(500);
+    }
   }
 
   &__view-all {
