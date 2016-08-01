@@ -90,7 +90,7 @@ $utility-nav-height: 43px;
       top: 0;
       left: 0;
     text-align: left;
-    transition: all 1s;
+    transition: visibility 1s, margin 1s, height 1s;
     visibility: visible;
     width: 100vw;
     z-index: $z-dropdown;
@@ -179,9 +179,20 @@ $utility-nav-height: 43px;
     @include span-columns(2 of 6);
     
     a {
+      display: inline-block;
       font-size: 1.125rem;
       line-height: 1.67;
-      padding: 20px;
+      padding: 15px;
+      padding-right: 2.5em;
+      position: relative;
+    }
+
+    svg {
+      height: 16px;
+      position: absolute;
+        top: 22px;
+        right: 20px;
+      width: 16px;
     }
   }
 
