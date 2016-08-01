@@ -1,32 +1,13 @@
 .ma__header {
   background-color: $c-bg-section;
-
-  &__container {
-
-  }
-  &__utility-nav {
-  }
-
-  &__logo {
-
-  }
-
-  &__main-nav {
-
-  }
-  &__search {
-
-  }
-
-  &__navigation {
-  }
-  
-
 }
 
 .ma__header-nav {
-  @media ($bp-medium-max) {
-    background-color: $c-bg-section;
+ 
+  &__container {
+    @media ($bp-medium-max) {
+      background-color: $c-bg-section;
+    }
   }
 
   &__button-container {
