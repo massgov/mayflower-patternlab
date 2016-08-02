@@ -32,9 +32,14 @@ export default function (window,document,$,undefined) {
     });
 
     $parent.find('.js-close-util-nav').on('click', function(e){
-      e.preventdefault;
+      e.preventDefault;
 
       hide( $(this).closest('.js-util-nav-content') );
+    });
+
+    $parent.find('.js-util-nav-toggle').on('mouseleave', function(e) {
+      let $openContent = $(this).find('.js-util-nav-content');
+      hide($openContent);
     });
 
     function hide($content) {

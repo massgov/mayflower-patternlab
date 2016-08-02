@@ -262,9 +262,33 @@
 
   }
 
+  &__back {
+    color: $c-font-inverse;
+
+    &:before {
+      border-left-color: $c-font-inverse;
+      border-top-color: $c-font-inverse;
+    }
+
+    span {
+      opacity: 0.7;
+    }
+  }
+
   &__subitems {
-    background-color: $c-white;
-    box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
+    background-color: $c-bg-section;
+
+    @media ($bp-medium-min) {
+      background-color: $c-white;
+      box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
+    }
+  }
+
+  &__container {
+
+    @media ($bp-medium-max) {
+      background-color: $c-white;
+    }
   }
 
   &__subitem {

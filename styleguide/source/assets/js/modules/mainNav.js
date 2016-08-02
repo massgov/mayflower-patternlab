@@ -1,13 +1,23 @@
 export default function (window,document,$,undefined) {
 
+  let windowWidth = $;
+
   $('.js-main-nav').each(function() {
     let openClass = "is-open",
         closeClass = "is-closed",
         $parent = $(this),
-        previousKey = null;
+        previousKey = null,
+        breakpoint = 780,
+        windowWidth = window.innerWidth;
+
+    $(window).resize(function(){
+      windowWidth = window.innerWidth;
+    });
 
     $parent.find('.js-main-nav-toggle').on('keydown mouseenter', function(e) {
-
+      if(windowWidth <= breakpoint) {
+        return;
+      }
 
       let $link = $(this),
           open = $link.hasClass(openClass),
@@ -28,22 +38,23 @@ export default function (window,document,$,undefined) {
       // add open class to this item
       $(this).addClass(openClass);
       // add open class to the correct content based on index
-      let $content = $link.find('.js-main-nav-content');
-
-      $content
-        .stop( true, true )
-        .delay( 200 )
-        .slideUp(0,function() {
-          $content
-            .addClass(openClass)
-            .removeClass(closeClass)
-            .slideDown('fast');
-        });
+      show($link.find('.js-main-nav-content'));
     });
 
     $parent.find('.js-main-nav-toggle').on('mouseleave', function(e) {
       let $openContent = $(this).find('.js-main-nav-content');
       hide($openContent);
+    });
+
+    $parent.find('.js-main-nav-toggle').on('click', function(e) {
+      if(windowWidth <= breakpoint) {
+        e.preventDefault;
+
+        let $content = $(this).find('.js-main-nav-content');
+        // add open class to this item
+        $(this).addClass(openClass);
+        show($content);  
+      }      
     });
 
     $parent
@@ -64,13 +75,35 @@ export default function (window,document,$,undefined) {
     function hide($content) {
       $parent.find("." + openClass).removeClass(openClass);
       
-      $content
+      if(windowWidth <= breakpoint) {
+        $content.addClass(closeClass);
+      } else {
+        $content
         .stop( true, true )
         .slideUp('fast',function() {
           $content
             .addClass(closeClass)
             .slideDown(0);
         });
+      }
+    }
+
+    function show($content) {
+      if(windowWidth <= breakpoint) {
+        $content
+          .addClass(openClass)
+          .removeClass(closeClass);
+      } else {
+        $content
+          .stop( true, true )
+          .delay( 200 )
+          .slideUp(0,function() {
+            $content
+              .addClass(openClass)
+              .removeClass(closeClass)
+              .slideDown('fast');
+          });
+      }
     }
 
   });
