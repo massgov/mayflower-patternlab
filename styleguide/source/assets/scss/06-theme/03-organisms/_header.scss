@@ -19,23 +19,30 @@
 
   &__menu-button {
     color: $c-font-inverse;
+    
+    span:first-child {
+      opacity: 0.7;
+    }
+  }
 
-    span,
-    span:before,
-    span:after {
+  &__menu-icon {
+    background-color:  $c-font-inverse;
+    
+    &:before,
+    &:after {
       background-color:  $c-font-inverse;
     }
-    span {
-      .show-menu & {
-        background-color: transparent;
-      }
+
+    .show-menu & {
+      background-color: transparent;
     }
-    span:before {
+
+    &:before {
       .show-menu & {
         background-color: $c-font-inverse;
       }
     }
-    span:after {
+    &:after {
       .show-menu & {
         background-color: $c-font-inverse;
       }
@@ -51,6 +58,7 @@
 }
 
 .ma__utility-nav {
+  
   @media( $bp-medium-min) {
     background-color: $c-theme-primary-1;
     color: $c-font-inverse;
@@ -67,12 +75,23 @@
         box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
       }
     }
+
   }
 
   &__link {
     @include ma-font(500);
     color: $c-font-dark;
     
+    @media( $bp-medium-min) {
+      background-color: $c-theme-primary-1;
+      color: $c-font-inverse;
+    }
+
+    &:after {
+      border-right-color: $c-theme-primary-2;
+      border-bottom-color: $c-theme-primary-2;
+    }
+
     svg {
       fill: transparent;
       stroke: $c-font-dark;
@@ -85,17 +104,36 @@
 
   }
 
-  a,
-  &__content, {
+  &__content {
+    background-color: $c-bg-section;
     color: $c-font-dark;
-
+    
     @media( $bp-medium-min) {
       background-color: $c-theme-primary-1;
       color: $c-font-inverse;
     }
+
+    a {
+      color: $c-font-dark;
+
+      @media( $bp-medium-min) {
+        color: $c-font-inverse;
+      }
+    }
+  }
+
+  &__container {
+    @media ($bp-medium-max) {
+      background-color: $c-white;
+    }
+
   }
 
   &__close {
+
+    @media ($bp-medium-max) {
+      display: none;
+    }
 
     span {
       @include ma-font(700);
@@ -108,6 +146,20 @@
 
     }
   }
+
+  &__back {
+    color: $c-font-inverse;
+
+    &:before {
+      border-left-color: $c-font-inverse;
+      border-top-color: $c-font-inverse;
+    }
+
+    span {
+      opacity: 0.7;
+    }
+  }
+
   &__content-title {
     @include ma-font(500);
 
@@ -172,11 +224,11 @@
     }
     &__button {
       @include ma-font(700);
-      color: $c-green-primary;
+      color: $c-theme-primary-2;
       border-left-color: $c-bd-input;
 
       svg {
-        fill: $c-green-primary;
+        fill: $c-theme-primary-2;
       }
     }
 }
@@ -193,6 +245,10 @@
     &.is-open {
       background-color: $c-white;
       box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+    }
+    &:after {
+      border-right-color: $c-theme-primary-2;
+      border-bottom-color: $c-theme-primary-2;
     }
   }
 

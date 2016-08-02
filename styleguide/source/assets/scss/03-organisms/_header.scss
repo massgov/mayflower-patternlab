@@ -1,3 +1,4 @@
+$header-mobile-controls-height: 40px;
 
 .ma__header {
   padding-top: 43px; // height of the util nav
@@ -35,21 +36,21 @@
 }
 
 $header-mobile-menu-width: 300px;
-$header-mobile-nav-height: 40px;
 
 .ma__header-nav {
 
 
   &__container {
     @media ($bp-medium-max){
-      height: calc(100vh - #{$header-mobile-nav-height});
+      height: calc(100vh - #{$header-mobile-controls-height});
       overflow-y: auto;
       position: fixed;
         top:0;
         right: -$header-mobile-menu-width;
-      margin-top: $header-mobile-nav-height;
+      margin-top: $header-mobile-controls-height;
       transition: right 0.5s ease;
       width: $header-mobile-menu-width;
+      z-index: $z-dropdown;
 
       .show-menu & {
         right: 0;
@@ -59,7 +60,7 @@ $header-mobile-nav-height: 40px;
 
   &__button-container {
     @include ma-container;
-    height: $header-mobile-nav-height;
+    height: $header-mobile-controls-height;
     position: fixed;
       top: 0;
       left: 0;
@@ -81,18 +82,22 @@ $header-mobile-nav-height: 40px;
     margin-top: 2px;
     padding-right: 40px;
     position:relative;
-      // right:10px;
-      // top:10px;
     transition: transform 0.5s ease;
-    // width: 35px;
+  }
 
-    .show-menu & {
-      //transform: translateX($header-mobile-menu-width);
-    }
+  &__menu-icon {
+    border-radius: 1px;
+    cursor: pointer;
+    display: block;
+    height: 3px;
+    position: absolute;
+      right: 0;
+    transition: all 500ms ease-in-out;
+    width: 30px;
+    top:17px;
 
-    span,
-    span:before,
-    span:after {
+    &:before,
+    &:after {
       border-radius: 1px;
       cursor: pointer;
       content: '';
@@ -103,11 +108,7 @@ $header-mobile-nav-height: 40px;
       transition: all 500ms ease-in-out;
       width: 30px;
     }
-    span {
-      top:17px;
-
-    }
-    span:before {
+    &:before {
       top: -8px;
 
       .show-menu & {
@@ -115,7 +116,7 @@ $header-mobile-nav-height: 40px;
         transform: rotate(45deg);
       }
     }
-    span:after {
+    &:after {
       bottom: -8px;
 
       .show-menu & {
@@ -149,7 +150,7 @@ body {
     width: 100%;
 
     &.show-menu {
-      left: -300px;
+      left: -$header-mobile-menu-width;
       overflow: hidden;
       position: fixed;
       height: 100vh;
@@ -171,7 +172,7 @@ $utility-nav-height: 43px;
 
 .ma__utility-nav {
   position: relative;
-  // height: $utility-nav-height;
+  z-index: $z-dropdown;
 
   &__items {
     @include ma-reset-list;
@@ -189,6 +190,7 @@ $utility-nav-height: 43px;
     @media ($bp-medium-max) {
       padding-right: 15px;
       position: relative;
+      z-index: $z-dropdown;
     }
 
     @media ($bp-medium-min) {
@@ -207,8 +209,8 @@ $utility-nav-height: 43px;
       padding: 10px 20px;
 
       &:after {
-        border-right: 3px solid green;
-        border-bottom: 3px solid green;
+        border-right: 3px solid;
+        border-bottom: 3px solid;
         content: "";
         display: inline-block;
         height: .65em;
@@ -243,37 +245,61 @@ $utility-nav-height: 43px;
 
   &__content {
     display: block;
-    height: 140px;
-    overflow: hidden;
-    position: absolute;
+    overflow-y: auto;
+    margin-top: $header-mobile-controls-height;
+    padding-left: 20px;
+    position: fixed;
       top: 0;
-      left: 0;
+      right: -280px;
     text-align: left;
-    transition: visibility 1s, margin 1s, height 1s;
-    visibility: visible;
-    width: 100vw;
+    transition: visibility .5s ease, right .5s ease;
+    width: 300px;
     z-index: $z-dropdown;
 
-    &.is-closed {
-      height: 0;
-      margin-top: $utility-nav-height;
-      visibility: hidden;
+    .show-menu & {
+      right: 0;
     }
-    &[aria-hidden="true"] {
-      display: none;
-      top: -140px;
+
+    &.is-closed {
+      visibility: hidden;
+      right: -280px;
+    }
+
+    @media ($bp-medium-min) {
+      height: 140px;
+      margin-top: 0;
+      overflow: hidden;
+      padding-left: 0;
+      position: absolute;
+        left: 0;
+      transition: visibility 1s, margin 1s, height 1s;
+      visibility: visible;
+      width: 100vw;
+
+      &.is-closed {
+        height: 0;
+        margin-top: $utility-nav-height;
+        right: 0;
+      }
+
+      &[aria-hidden="true"] {
+        display: none;
+      }
     }
   }
 
   &__container {
     @include ma-container;
     position: relative;
+    z-index: $z-dropdown;
+
+    @media ($bp-medium-max) {
+      height: calc(100vh - #{$header-mobile-controls-height});
+    }
   }
 
   &__close {
-    background-color: transparent;
-    border: none;
-    padding: 0;
+    @include ma-button-reset;
     position: absolute;
       top: 15px;
       right: 40px;
@@ -291,6 +317,37 @@ $utility-nav-height: 43px;
       line-height: 1em;
       margin-right: 0;
       transform: rotate(45deg);
+    }
+  }
+
+  &__back {
+    @include ma-button-reset;
+    padding-left: 20px;
+    position: fixed;
+      top: 5px;
+    z-index: $z-dropdown;
+
+
+    @media ($bp-medium-min) {
+      display: none;
+    }
+
+    &:before {
+      border-left: 3px solid;
+      border-top: 3px solid;
+      content: "";
+      display: inline-block;
+      height: .65em;
+      margin-top: 3px;
+      margin-left: 3px;
+      position: absolute;
+        left: 0;
+        top: 2px;
+      transform: rotate(-45deg);
+      transform-origin: 75% 75%;
+      transition: all .5s;
+      vertical-align: middle;
+      width: .65em;
     }
   }
 
@@ -477,8 +534,8 @@ $header-search-height: 46px;
       }
     }
     &:after {
-      border-right: 3px solid green;
-      border-bottom: 3px solid green;
+      border-right: 3px solid;
+      border-bottom: 3px solid;
       content: "";
       cursor: pointer;
       display: inline-block;
