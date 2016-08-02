@@ -1,23 +1,52 @@
 .ma__header {
   background-color: $c-bg-section;
+}
 
+.ma__header-nav {
+ 
   &__container {
+    @media ($bp-medium-max) {
+      background-color: $c-bg-section;
+    }
+  }
+
+  &__button-container {
+    @media ($bp-medium-max) {
+      background-color: $c-theme-primary-1;
+    }
 
   }
-  &__utility-nav {
-    background-color: $c-theme-primary-1;
+
+  &__menu-button {
     color: $c-font-inverse;
+    
+    span:first-child {
+      opacity: 0.7;
+    }
   }
 
-  &__logo {
+  &__menu-icon {
+    background-color:  $c-font-inverse;
+    
+    &:before,
+    &:after {
+      background-color:  $c-font-inverse;
+    }
 
-  }
+    .show-menu & {
+      background-color: transparent;
+    }
 
-  &__main-nav {
-
-  }
-  &__search {
-
+    &:before {
+      .show-menu & {
+        background-color: $c-font-inverse;
+      }
+    }
+    &:after {
+      .show-menu & {
+        background-color: $c-font-inverse;
+      }
+    }
   }
 }
 
@@ -29,31 +58,82 @@
 }
 
 .ma__utility-nav {
+  
+  @media( $bp-medium-min) {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
 
   &__items {
 
   }
 
   &__item {
+    @media ($bp-medium-max) {
+      &:hover {
+        background-color: $c-white;
+        box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+      }
+    }
 
   }
 
   &__link {
     @include ma-font(500);
-    color: $c-font-inverse;
+    color: $c-font-dark;
+    
+    @media( $bp-medium-min) {
+      background-color: $c-theme-primary-1;
+      color: $c-font-inverse;
+    }
+
+    &:after {
+      border-right-color: $c-theme-primary-2;
+      border-bottom-color: $c-theme-primary-2;
+    }
+
+    svg {
+      fill: transparent;
+      stroke: $c-font-dark;
+
+      @media( $bp-medium-min) {
+        fill: $c-font-inverse;
+        stroke: transparent;
+      }
+    }
+
   }
 
-  &__content-boxes {
-    background-color: $c-theme-primary-1;
-    color: $c-font-inverse;
+  &__content {
+    background-color: $c-bg-section;
+    color: $c-font-dark;
+    
+    @media( $bp-medium-min) {
+      background-color: $c-theme-primary-1;
+      color: $c-font-inverse;
+    }
+
+    a {
+      color: $c-font-dark;
+
+      @media( $bp-medium-min) {
+        color: $c-font-inverse;
+      }
+    }
   }
 
-  &__content-box {
-    background-color: $c-theme-primary-1;
-    color: $c-font-inverse;
+  &__container {
+    @media ($bp-medium-max) {
+      background-color: $c-white;
+    }
+
   }
 
   &__close {
+
+    @media ($bp-medium-max) {
+      display: none;
+    }
 
     span {
       @include ma-font(700);
@@ -61,17 +141,44 @@
       opacity: 0.7;
     }
 
-    span[role="img"] {
+    span[role="presentation"] {
       @include ma-font(400);
 
+    }
+  }
+
+  &__back {
+    color: $c-font-inverse;
+
+    &:before {
+      border-left-color: $c-font-inverse;
+      border-top-color: $c-font-inverse;
+    }
+
+    span {
+      opacity: 0.7;
+    }
+  }
+
+  &__content-title {
+    @include ma-font(500);
+
+    svg {
+      opacity: 0.7;
+      fill: $c-font-base;
+
+      @media ($bp-medium-min) {
+        fill: $c-white;
+      }
     }
   }
 }
 
 .ma__login-util {
 
-  &__description {
 
+  &__description {
+    @include ma-font(300);
   }
 
   &__items {
@@ -80,10 +187,30 @@
 
   &__item {
 
+    a {
+      background-color: rgba($c-white, 0.2);
+      @include ma-font(500);
+    }
+
+    svg {
+        fill: $c-font-base;
+
+        @media ($bp-medium-min) {
+          fill: $c-font-inverse;
+        }
+    }
   }
 
   &__view-all {
 
+    a {
+      @include ma-font(400);
+    }
+
+    &:after {
+      border-right-color: $c-white;
+      border-bottom-color: $c-white;
+    }
   }
 }
 
@@ -97,8 +224,12 @@
     }
     &__button {
       @include ma-font(700);
-      color: $c-green-primary;
+      color: $c-theme-primary-2;
       border-left-color: $c-bd-input;
+
+      svg {
+        fill: $c-theme-primary-2;
+      }
     }
 }
 
@@ -110,14 +241,19 @@
 
   &__item {
 
+    &:hover,
     &.is-open {
       background-color: $c-white;
       box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
     }
+    &:after {
+      border-right-color: $c-theme-primary-2;
+      border-bottom-color: $c-theme-primary-2;
+    }
   }
 
   &__top-link {
-    color: $c-font-heading;
+    color: $c-font-dark;
 
     &.is-active {
       
@@ -126,9 +262,33 @@
 
   }
 
+  &__back {
+    color: $c-font-inverse;
+
+    &:before {
+      border-left-color: $c-font-inverse;
+      border-top-color: $c-font-inverse;
+    }
+
+    span {
+      opacity: 0.7;
+    }
+  }
+
   &__subitems {
-    background-color: $c-white;
-    box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
+    background-color: $c-bg-section;
+
+    @media ($bp-medium-min) {
+      background-color: $c-white;
+      box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
+    }
+  }
+
+  &__container {
+
+    @media ($bp-medium-max) {
+      background-color: $c-white;
+    }
   }
 
   &__subitem {

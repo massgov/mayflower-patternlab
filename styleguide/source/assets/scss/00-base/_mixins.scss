@@ -13,6 +13,12 @@
   }
 }
 
+@mixin ma-button-reset {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
 @mixin ma-container {
   margin: 0 auto;
   // grid max width plus the l/r padding for desktop

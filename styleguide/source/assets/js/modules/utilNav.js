@@ -3,14 +3,15 @@ export default function (window,document,$,undefined) {
   $('.js-util-nav').each(function() {
     let openClass = "is-open",
         closeClass = "is-closed",
-        $parent = $(this);
+        $parent = $(this),
+        waitForIt = null;
 
-    $parent.find('.js-util-nav-toggle').on('click', function(e) {
+    $parent.find('.js-util-nav-toggle a').on('click', function(e) {
       e.preventdefault;
 
-      let index = $(this).index(),
-          open = $(this).hasClass(openClass),
-          $openContent = $parent.find('.js-util-nav-content.' + openClass);
+      let open = $(this).hasClass(openClass),
+        $content = $(this).next('.js-util-nav-content'),
+        $openContent = $parent.find('.js-util-nav-content.' + openClass);
 
       // hide other content
       hide($openContent);
@@ -21,17 +22,24 @@ export default function (window,document,$,undefined) {
       // add open class to this item
       $(this).addClass(openClass);
       // add open class to the correct content based on index
-      let $content = $parent.find('.js-util-nav-content').eq(index);
+      $content.attr("aria-hidden","false");
 
-      $content
-        .removeClass(closeClass)
-        .addClass(openClass);
+      setTimeout(function(){
+        $content
+          .removeClass(closeClass)
+          .addClass(openClass);
+      }, .1);
     });
 
     $parent.find('.js-close-util-nav').on('click', function(e){
-      e.preventdefault;
+      e.preventDefault;
 
       hide( $(this).closest('.js-util-nav-content') );
+    });
+
+    $parent.find('.js-util-nav-toggle').on('mouseleave', function(e) {
+      let $openContent = $(this).find('.js-util-nav-content');
+      hide($openContent);
     });
 
     function hide($content) {
@@ -39,6 +47,13 @@ export default function (window,document,$,undefined) {
       $content
         .removeClass(openClass)
         .addClass(closeClass);
+
+      if(waitForIt) {
+        clearTimeout(waitForIt);
+      }
+      waitForIt = setTimeout(function(){
+        $content.attr("aria-hidden","true");
+      }, 1000);
     }
 
   });
