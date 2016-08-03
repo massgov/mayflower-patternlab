@@ -14,15 +14,21 @@ $max-width: 1240px; // use @include outer-container() which sets this and center
 // Base variables
 @import "00-base/breakpoints";
 @import "00-base/mixins";
+@import "00-base/variables";
 @import "00-base/z-index";
 
 // Atoms - reusable styles
 @import "01-atoms/global/elements";
 @import "01-atoms/buttons";
+@import "01-atoms/site-logo";
 
 // Molecules - chunks of code that are used in Organisms/Components
 @import "02-molecules/footer-links";
+@import "02-molecules/header-search";
+@import "02-molecules/login-util";
+@import "02-molecules/main-nav";
 @import "02-molecules/social-links";
+@import "02-molecules/utility-nav";
 
 // Organisms - components
 @import "03-organisms/callout";

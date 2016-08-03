@@ -1,10 +1,7 @@
 .ma__header {
   background-color: $c-bg-section;
-}
 
-.ma__header-nav {
- 
-  &__container {
+  &__nav-container {
     @media ($bp-medium-max) {
       background-color: $c-bg-section;
     }
@@ -47,13 +44,6 @@
         background-color: $c-font-inverse;
       }
     }
-  }
-}
-
-.ma__site-logo {
-
-  a {
-
   }
 }
 
@@ -100,6 +90,7 @@
         fill: $c-font-inverse;
         opacity: .7;
         stroke: transparent;
+        opacity: .7;
       }
     }
 
@@ -144,6 +135,7 @@
 
     span[role="presentation"] {
       @include ma-font(400);
+      opacity: 1;
 
     }
   }
@@ -228,6 +220,14 @@
       color: $c-theme-primary-2;
       border-left-color: $c-bd-input;
 
+      &:hover {
+        background-color: $c-theme-primary-2;
+        color: $c-white;
+
+        svg {
+          fill: $c-white;
+        } 
+      }
       svg {
         fill: $c-theme-primary-2;
       }
@@ -236,6 +236,10 @@
 
 .ma__main-nav {
  
+  @media ($bp-medium-max) {
+    border-bottom-color: $c-bd-divider;
+  }
+
   &__items {
 
   }
@@ -301,6 +305,7 @@
     color: $c-font-base;
 
     &:hover {
+      background-color: $c-gray-f2f2f2;
       color: $c-font-link-subtle;
     }
   }
