@@ -1,0 +1,51 @@
+$header-search-height: 46px;
+
+.ma__header-search {
+    float: right;
+    max-width: 560px;
+    position: relative;
+    width: 100%;
+
+    &__label {
+      @include ma-visually-hidden;
+    }
+
+    &__input {
+      font-size: 1rem;
+      height: $header-search-height;
+      padding: 0 128px 0 17px;
+      width: 100%;
+    }
+
+    &__button {
+      @include ma-valign-block;
+      background: transparent;
+      border: none;
+      border-left: 2px solid;
+      display: block;
+      font-size: 0.75rem;
+      height: $header-search-height;
+      letter-spacing: .05em;
+      padding: 14px;
+      padding-left: 7px;
+      position: absolute;
+        right: 0;
+        top: 0;
+      text-transform: uppercase;
+      transition: background-color .4s, color .4s;
+      white-space: nowrap;
+
+      span,
+      svg {
+        display: inline-block;
+        transition: fill .4s;
+        vertical-align: middle;
+      }
+    }
+
+    &__icon {
+      height: 20px;
+      width: 20px;
+    }
+}
+

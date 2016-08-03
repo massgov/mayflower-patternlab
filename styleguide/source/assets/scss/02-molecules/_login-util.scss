@@ -1,0 +1,100 @@
+$bp-login-util-medium-min: "min-width:1121px";
+$bp-login-util-large-max: "max-width:1120px";
+
+.ma__login-util {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .no-flex {
+
+  }
+
+  &__description {
+    display: table-cell;
+    font-size: 1rem;
+    line-height: 1.63;
+    vertical-align: middle;
+
+    @media ($bp-login-util-medium-min) {
+      width: 350px;
+    }
+  }
+
+  &__items {
+    @include clearfix;
+    @include ma-reset-list;
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+
+    @media ($bp-login-util-medium-min) {
+      width: calc(100% - 500px);  // width of description and view all
+    }
+  }
+
+  &__item {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    @media ($bp-login-util-large-max) {
+
+      &:nth-child(2){
+        margin-right: 0;
+      }
+
+      &:nth-child(3){
+        display: none;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-size: 1.125rem;
+      line-height: 1.25;
+      margin-left: 15px;
+      padding: 15px;
+      padding-right: 2.5em;
+      position: relative;
+      text-align: left;
+      white-space: normal;
+    }
+
+    svg {
+      height: 16px;
+      position: absolute;
+        top: 50%;
+        right: 20px;
+      transform: translateY(-50%);
+      width: 16px;
+    }
+  }
+
+  &__view-all {
+    display: table-cell;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: right;
+    vertical-align: middle;
+    width: 90px;
+
+    @media ($bp-login-util-medium-min) {
+      width: 150px;
+    }
+
+    &:after {
+      border-right: 2px solid;
+      border-bottom: 2px solid;
+      content: "";
+      display: inline-block;
+      height: .5em;
+      margin-left: .25em;
+      transform: translateY(-50%) rotate(-45deg);
+      transform-origin: 75% 75%;
+      width: .5em;
+
+    }
+  }
+}
+
