@@ -5,9 +5,7 @@
         class="ma__utility-nav__link" 
         href="#" 
         title="Site Settings">
-        <svg role="presentation">
-          <use xlink:href="/assets/images/svg-sprite.svg#settings"></use>
-        </svg>
+        {% include "atoms-svg-settings" %}
         <span>Site Settings</span>
       </a>
       <div aria-hidden="true" class="ma__utility-nav__content js-util-nav-content is-closed">
@@ -15,13 +13,11 @@
           <button class="ma__utility-nav__close js-close-util-nav"><span>Close</span><span role="presentation">+</span></button>
           <button class="ma__utility-nav__back js-close-util-nav"><span>Back</span></button>
           <div class="ma__utility-nav__content-title">
-            <svg role="presentation">
-              <use xlink:href="/assets/images/svg-sprite.svg#settings"></use>
-            </svg>
+            {% include "atoms-svg-settings" %}
             <span>Site Settings</span>
           </div>
           <div class="ma__utility-nav__content-body">
-
+            {% include "molecules-settings-util" %}
           </div>
         </div>
       </div>
@@ -30,9 +26,7 @@
       <a class="ma__utility-nav__link" 
         href="#" 
         title="Alerts">
-        <svg role="presentation">
-          <use xlink:href="/assets/images/svg-sprite.svg#alerts"></use>
-        </svg>
+        {% include "atoms-svg-alerts" %}
         <span>
           Alerts
         </span>
@@ -42,9 +36,7 @@
           <button class="ma__utility-nav__close js-close-util-nav"><span>Close</span><span role="presentation">+</span></button>
           <button class="ma__utility-nav__back js-close-util-nav"><span>Back</span></button>
           <div class="ma__utility-nav__content-title">
-            <svg role="presentation">
-              <use xlink:href="/assets/images/svg-sprite.svg#alerts"></use>
-            </svg>
+            {% include "atoms-svg-alerts" %}
             <span>Alerts</span>
           </div>
           <div class="ma__utility-nav__content-body">
@@ -57,9 +49,7 @@
       <a class="ma__utility-nav__link" 
         href="#" 
         title="State Services">
-        <svg role="presentation">
-          <use xlink:href="/assets/images/svg-sprite.svg#building"></use>
-        </svg>
+        {% include "atoms-svg-building" %}
         <span>
           State Services
         </span>
@@ -69,9 +59,7 @@
           <button class="ma__utility-nav__close js-close-util-nav"><span>Close</span><span role="presentation">+</span></button>
           <button class="ma__utility-nav__back js-close-util-nav"><span>Back</span></button>
           <div class="ma__utility-nav__content-title">
-            <svg role="presentation">
-              <use xlink:href="/assets/images/svg-sprite.svg#building"></use>
-            </svg>
+            {% include "atoms-svg-building" %}
             <span>State Services</span>
           </div>
           <div class="ma__utility-nav__content-body">
@@ -84,9 +72,7 @@
       <a class="ma__utility-nav__link" 
         href="#" 
         title="login to ...">
-        <svg role="presentation">
-          <use xlink:href="/assets/images/svg-sprite.svg#login"></use>
-        </svg>
+        {% include "atoms-svg-login" %}
         <span>
           Login to ...
         </span>
@@ -96,9 +82,7 @@
           <button class="ma__utility-nav__close js-close-util-nav"><span>Close</span><span role="presentation">+</span></button>
           <button class="ma__utility-nav__back js-close-util-nav"><span>Back</span></button>
           <div class="ma__utility-nav__content-title">
-            <svg role="presentation">
-              <use xlink:href="/assets/images/svg-sprite.svg#login"></use>
-            </svg>
+            {% include "atoms-svg-login" %}
             <span>Login to...</span>
           </div>
           <div class="ma__utility-nav__content-body">
