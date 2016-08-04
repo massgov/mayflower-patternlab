@@ -1,5 +1,5 @@
 $bp-login-util-medium-min: "min-width:1121px";
-$bp-reduce-links-max: "max-width:1120px";
+$bp-login-util-reduce-links-max: "max-width:1120px";
 
 .ma__login-util {
 
@@ -51,7 +51,7 @@ $bp-reduce-links-max: "max-width:1120px";
       vertical-align: middle;
     }
 
-    @media ($bp-medium-min) and ($bp-reduce-links-max) {
+    @media ($bp-medium-min) and ($bp-login-util-reduce-links-max) {
 
       &:nth-child(2){
         margin-right: 0;
