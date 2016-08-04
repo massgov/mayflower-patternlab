@@ -10,9 +10,7 @@ var gulp         = require('gulp'),
 module.exports = function patternLabTask(config, env){
 
     gulp.task('patternlab', function() {
-        run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec(function() {
-            // browserSync.reload();
-        });
+        run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec();
     });
 
     // register the watch
