@@ -15,3 +15,27 @@
   font-size: 1rem;
   line-height: 1.4;
 }
+
+.ma__button-search {
+  border: 2px solid;
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: .05em;
+  padding: 14px;
+  padding-left: 7px;
+  text-transform: uppercase;
+  transition: background-color .4s, color .4s, border .4s;
+  white-space: nowrap;
+
+  span,
+  &__icon {
+    display: inline-block;
+    transition: fill .4s;
+    vertical-align: middle;
+  }
+
+  &__icon {
+    height: 20px;
+    width: 20px;
+  }
+}
