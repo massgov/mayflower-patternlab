@@ -1,18 +1,13 @@
 <section class="ma__header-search">
-  <form action="#">
+  <form action="#" class="js-header-search-form">
     <label 
-        for="header-search"
-        class="ma__header-search__label">What can we help you find?</label>
+        for="{{id}}"
+        class="ma__header-search__label">{{placeholder}}</label>
     <input 
-        id="header-search" 
+        id="{{id}}" 
         class="ma__header-search__input"
-        placeholder="What can we help you find?" 
+        placeholder="{{placeholder}}" 
         type="text" />
-    <button type="submit" class="ma__header-search__button">
-      <span>Search</span>
-      <svg role="img" class="ma__header-search__icon">
-        <use xlink:href="/assets/images/svg-sprite.svg#search"></use>
-      </svg>
-    </button>
+    {% include "atoms-button-search" %}
   </form>
 </section>

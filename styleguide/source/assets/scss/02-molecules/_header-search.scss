@@ -1,51 +1,69 @@
 $header-search-height: 46px;
+$bp-header-search-reduce-button: "max-width: 700px"; 
 
 .ma__header-search {
-    float: right;
-    max-width: 560px;
-    position: relative;
+  display: inline-block;
+  max-width: 560px;
+  position: relative;
+  width: 100%;
+
+  &__label {
+    @include ma-visually-hidden;
+  }
+
+  &__input {
+    font-size: 1rem;
+    height: $header-search-height;
+    padding-right: 128px;
+    padding-left: 17px;
     width: 100%;
 
-    &__label {
-      @include ma-visually-hidden;
-    }
-
-    &__input {
-      font-size: 1rem;
-      height: $header-search-height;
-      padding: 0 128px 0 17px;
-      width: 100%;
-    }
-
-    &__button {
-      @include ma-valign-block;
-      background: transparent;
-      border: none;
-      border-left: 2px solid;
-      display: block;
-      font-size: 0.75rem;
-      height: $header-search-height;
-      letter-spacing: .05em;
-      padding: 14px;
-      padding-left: 7px;
-      position: absolute;
-        right: 0;
-        top: 0;
-      text-transform: uppercase;
-      transition: background-color .4s, color .4s;
-      white-space: nowrap;
-
-      span,
-      svg {
-        display: inline-block;
-        transition: fill .4s;
-        vertical-align: middle;
+    @media ($bp-small-max) {
+      .ma__header__search & {
+        display:none;
       }
     }
 
-    &__icon {
-      height: 20px;
-      width: 20px;
+    @media ($bp-header-search-reduce-button) {
+      padding-right: 17px
     }
+  }
+
+  .ma__button-search {
+    display: block;
+    height: $header-search-height;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+      right: 0;
+      top: 0;
+
+    .ma__header__nav-search & {
+      border: none;
+      border-left: 2px solid;
+    }
+
+    .ma__header__search & {
+
+      @media ($bp-small-max) {
+        @include ma-valign-block;
+        display: inline-block;
+        position: static;
+        transition: opacity .4s;
+        vertical-align: middle;
+
+        .show-menu & {
+          opacity: 0;
+        }
+      }
+    }
+    
+    @media ($bp-small-min) and ($bp-header-search-reduce-button) {
+      .ma__header__search & span {
+        display: none;
+      }
+    }
+
+  }
 }
 
