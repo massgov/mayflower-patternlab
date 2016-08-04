@@ -262,7 +262,7 @@
 
     &.is-active {
       
-      @include ma-underline-decorative($c-bg-section ,$c-theme-primary-2);
+      @include ma-border-decorative($c-bg-section ,$c-theme-primary-2);
     }
 
   }

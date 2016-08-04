@@ -100,7 +100,7 @@
 
     &.is-active {
       @media($bp-medium-min) {
-        @include ma-underline-decorative;
+        @include ma-border-decorative;
 
         .is-open &:after {
           display: none;

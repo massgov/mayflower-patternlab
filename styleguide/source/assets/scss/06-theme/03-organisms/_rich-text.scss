@@ -1,7 +1,7 @@
 .ma__rich-text {
   h2, h3, h4 {
 
-    @include ma-underline-decorative($c-white, $c-theme-primary-2);
+    @include ma-border-decorative($c-white, $c-theme-primary-2);
   }
 
   a:hover {
