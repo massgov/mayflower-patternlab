@@ -1,0 +1,30 @@
+.ma__login-util {
+
+  &__description {
+    @include ma-font(300);
+  }
+
+  &__item {
+
+    a {
+      background-color: rgba($c-white, 0.2);
+      @include ma-font(500);
+    }
+
+    svg {
+      fill: $c-font-inverse;
+    }
+  }
+
+  &__view-all {
+
+    a {
+      @include ma-font(400);
+    }
+
+    &:after {
+      border-right-color: $c-white;
+      border-bottom-color: $c-white;
+    }
+  }
+}
