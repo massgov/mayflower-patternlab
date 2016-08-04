@@ -122,12 +122,13 @@ $utility-nav-height: 43px;
 
   &__container {
     @include ma-container;
-    margin-top: 15px;
     position: relative;
     z-index: $z-dropdown;
+    height: calc(100vh - #{$header-mobile-controls-height});
 
-    @media ($bp-medium-max) {
-      height: calc(100vh - #{$header-mobile-controls-height});
+    @media ($bp-medium-min) {
+      height: auto;
+      margin-top: 15px;
     }
   }
 
@@ -187,7 +188,11 @@ $utility-nav-height: 43px;
   &__content-title {
     font-size: 1.375rem;
     line-height: 1.45;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
+
+    @media ($bp-medium-min) {
+      padding-bottom: 5px;
+    }
 
     span, 
     svg {

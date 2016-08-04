@@ -98,25 +98,20 @@
 
   &__content {
     background-color: $c-bg-section;
-    color: $c-font-dark;
+    color: $c-font-inverse;
     
     @media( $bp-medium-min) {
       background-color: $c-theme-primary-1;
-      color: $c-font-inverse;
     }
 
     a {
-      color: $c-font-dark;
-
-      @media( $bp-medium-min) {
-        color: $c-font-inverse;
-      }
+      color: $c-font-inverse;
     }
   }
 
   &__container {
     @media ($bp-medium-max) {
-      background-color: $c-white;
+      background-color: $c-theme-primary-1;
     }
 
   }
@@ -158,11 +153,7 @@
 
     svg {
       opacity: 0.7;
-      fill: $c-font-base;
-
-      @media ($bp-medium-min) {
-        fill: $c-white;
-      }
+      fill: $c-white;
     }
   }
 }
@@ -186,11 +177,7 @@
     }
 
     svg {
-        fill: $c-font-base;
-
-        @media ($bp-medium-min) {
-          fill: $c-font-inverse;
-        }
+      fill: $c-font-inverse;
     }
   }
 

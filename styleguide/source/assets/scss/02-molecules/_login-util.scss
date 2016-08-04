@@ -1,20 +1,26 @@
 $bp-login-util-medium-min: "min-width:1121px";
-$bp-login-util-large-max: "max-width:1120px";
+$bp-reduce-links-max: "max-width:1120px";
 
 .ma__login-util {
-  display: table;
-  height: 100%;
-  width: 100%;
 
-  .no-flex {
-
+  @media ($bp-medium-min) {
+    display: table;
+    height: 100%;
+    width: 100%;
   }
 
   &__description {
-    display: table-cell;
     font-size: 1rem;
-    line-height: 1.63;
-    vertical-align: middle;
+    line-height: 1.25;
+    margin-bottom: 2em;
+
+    @media ($bp-medium-min) {
+      display: table-cell;
+      line-height: 1.63;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 300px;
+    }
 
     @media ($bp-login-util-medium-min) {
       width: 350px;
@@ -22,11 +28,15 @@ $bp-login-util-large-max: "max-width:1120px";
   }
 
   &__items {
-    @include clearfix;
     @include ma-reset-list;
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
+    margin-bottom: 1.75em;
+
+    @media ($bp-medium-min) {
+      display: table-cell;
+      margin-bottom: 0;
+      text-align: right;
+      vertical-align: middle;
+    }
 
     @media ($bp-login-util-medium-min) {
       width: calc(100% - 500px);  // width of description and view all
@@ -34,11 +44,14 @@ $bp-login-util-large-max: "max-width:1120px";
   }
 
   &__item {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
 
-    @media ($bp-login-util-large-max) {
+    @media ($bp-medium-min) {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    @media ($bp-medium-min) and ($bp-reduce-links-max) {
 
       &:nth-child(2){
         margin-right: 0;
@@ -50,15 +63,25 @@ $bp-login-util-large-max: "max-width:1120px";
     }
 
     a {
-      display: inline-block;
+      display: block;
       font-size: 1.125rem;
       line-height: 1.25;
-      margin-left: 15px;
+      margin-bottom: .5em;
       padding: 15px;
       padding-right: 2.5em;
       position: relative;
       text-align: left;
       white-space: normal;
+
+      @media ($bp-medium-min) {
+        display: inline-block;
+        margin-left: 15px;
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
     }
 
     svg {
@@ -72,28 +95,34 @@ $bp-login-util-large-max: "max-width:1120px";
   }
 
   &__view-all {
-    display: table-cell;
     font-size: 1rem;
     line-height: 1.5;
-    text-align: right;
     vertical-align: middle;
-    width: 90px;
 
+    @media ($bp-medium-min) {
+      display: table-cell;
+      text-align: right;
+      width: 90px;
+    }
     @media ($bp-login-util-medium-min) {
       width: 150px;
     }
 
-    &:after {
-      border-right: 2px solid;
-      border-bottom: 2px solid;
-      content: "";
-      display: inline-block;
-      height: .5em;
-      margin-left: .25em;
-      transform: translateY(-50%) rotate(-45deg);
-      transform-origin: 75% 75%;
-      width: .5em;
+    a {
+      @include ma-underline-link;
 
+      &:after {
+        border-right: 2px solid;
+        border-bottom: 2px solid;
+        content: "";
+        display: inline-block;
+        height: .5em;
+        margin-left: .25em;
+        transform: translateY(-50%) rotate(-45deg);
+        transform-origin: 75% 75%;
+        width: .5em;
+
+      }
     }
   }
 }
