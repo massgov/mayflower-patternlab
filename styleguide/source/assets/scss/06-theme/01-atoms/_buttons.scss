@@ -48,3 +48,23 @@
     color: $c-font-inverse;
   }
 }
+
+.ma__button-search {
+  @include ma-font(700);
+  background-color: $c-white;
+  border-color: $c-bd-input;
+  color: $c-theme-primary-2;
+
+  &:hover {
+    background-color: $c-theme-primary-2;
+    border-color: $c-theme-primary-2;
+    color: $c-white;
+
+    svg {
+      fill: $c-white;
+    } 
+  }
+  svg {
+    fill: $c-theme-primary-2;
+  }
+}

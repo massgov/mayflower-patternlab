@@ -1,0 +1,105 @@
+.ma__utility-nav {
+  
+  @media( $bp-medium-min) {
+    background-color: $c-theme-primary-1;
+    color: $c-font-inverse;
+  }
+
+  &__item {
+    @media ($bp-medium-max) {
+      &:hover {
+        background-color: $c-white;
+        box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+      }
+    }
+
+  }
+
+  &__link {
+    @include ma-font(500);
+    color: $c-font-dark;
+    
+    @media( $bp-medium-min) {
+      background-color: $c-theme-primary-1;
+      color: $c-font-inverse;
+    }
+
+    &:after {
+      border-right-color: $c-theme-primary-2;
+      border-bottom-color: $c-theme-primary-2;
+    }
+
+    svg {
+      fill: transparent;
+      stroke: $c-font-dark;
+
+      @media( $bp-medium-min) {
+        fill: $c-font-inverse;
+        opacity: .7;
+        stroke: transparent;
+        opacity: .7;
+      }
+    }
+  }
+
+  &__content {
+    background-color: $c-bg-section;
+    color: $c-font-inverse;
+    
+    @media( $bp-medium-min) {
+      background-color: $c-theme-primary-1;
+    }
+
+    a {
+      color: $c-font-inverse;
+    }
+  }
+
+  &__container {
+    @media ($bp-medium-max) {
+      background-color: $c-theme-primary-1;
+    }
+
+  }
+
+  &__close {
+
+    @media ($bp-medium-max) {
+      display: none;
+    }
+
+    span {
+      @include ma-font(700);
+      color: $c-white;
+      opacity: 0.7;
+    }
+
+    span[role="presentation"] {
+      @include ma-font(400);
+      opacity: 1;
+    }
+  }
+
+  &__back {
+    color: $c-font-inverse;
+
+    &:before {
+      border-left-color: $c-font-inverse;
+      border-top-color: $c-font-inverse;
+    }
+
+    span {
+      opacity: 0.7;
+    }
+  }
+
+  &__content-title {
+    @include ma-font(500);
+
+    svg {
+      opacity: 0.7;
+      fill: $c-white;
+    }
+  }
+}
+

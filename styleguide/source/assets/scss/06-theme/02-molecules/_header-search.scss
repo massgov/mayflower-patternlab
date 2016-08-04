@@ -1,0 +1,22 @@
+.ma__header-search {
+
+  .ma__button-search {
+    
+    .ma__header__nav-search & {
+      background-color: transparent;
+      border-left-color: $c-bd-input;
+    }
+
+    @media ($bp-small-min) {
+      .ma__header & {
+        background: transparent;
+        border-left-color: $c-bd-input;
+
+        &:hover {
+          background: $c-theme-primary-2;
+        }
+      }
+    }
+  }
+}
+

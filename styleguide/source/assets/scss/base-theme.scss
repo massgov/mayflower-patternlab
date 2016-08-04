@@ -13,7 +13,11 @@
 
 // Molecules - chunks of code that are used in Organisms/Components
 @import "06-theme/02-molecules/footer-links";
+@import "06-theme/02-molecules/header-search";
+@import "06-theme/02-molecules/login-util";
+@import "06-theme/02-molecules/main-nav";
 @import "06-theme/02-molecules/social-links";
+@import "06-theme/02-molecules/utility-nav";
 
 // Organisms - components
 @import "06-theme/03-organisms/callout";

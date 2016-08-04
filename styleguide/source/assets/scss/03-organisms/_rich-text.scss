@@ -1,6 +1,6 @@
 .ma__rich-text {
   h2, h3, h4 {
-    @include ma-underline-decorative;
+    @include ma-border-decorative;
     position: relative;
     padding-bottom: .35em;
 

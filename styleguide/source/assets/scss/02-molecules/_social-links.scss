@@ -16,7 +16,11 @@
   }
 
   &__link {
+    transition: opacity .4s;
     
+    &:hover {
+      opacity: .7;
+    }
     svg {
       height: 1.875rem;
       width: 1.875rem;
