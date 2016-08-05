@@ -1,0 +1,95 @@
+// theme styles
+.ma__settings-util {
+  
+  &__zoom {
+
+    button:first-child {
+
+    }
+
+
+  }
+
+  &__theme,
+  &__lang {
+
+    .ma__dropdown {
+      border-left-color: rgba($c-white,.2);
+    }
+  }
+
+  &__theme {
+
+  }
+
+  &__lang {
+
+  }
+
+  &__dropdown {
+
+  }
+
+  &__restore {
+
+    button {
+      color: $c-white;
+      
+      svg {
+        fill: $c-white;
+        opacity: .7;
+      }
+    }
+  }
+
+}
+
+// theme styles
+.ma__zoom-controls {
+
+  &__normal,
+  &__medium,
+  &__large {
+    @include ma-font(700);
+    background-color: transparent;
+    color: $c-white;
+
+    &:hover,
+    &.is-active {
+      background-color: rgba($c-white, 0.2);    
+    }
+  }
+
+  &__normal {
+
+  }
+
+  &__medium {
+
+  }
+
+  &__large {
+
+  }
+}
+
+.ma__dropdown {
+  @include ma-font(300);
+  
+  &__label {
+    @include ma-font(700);
+  }
+
+  &__link {
+    @include ma-font(300);
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+}

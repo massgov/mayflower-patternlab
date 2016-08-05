@@ -6,7 +6,7 @@ export default function (window,document,$,undefined) {
         $parent = $(this),
         waitForIt = null;
 
-    $parent.find('.js-util-nav-toggle a').on('click', function(e) {
+    $parent.find('.js-util-nav-toggle > a').on('click', function(e) {
       e.preventdefault;
 
       let open = $(this).hasClass(openClass),

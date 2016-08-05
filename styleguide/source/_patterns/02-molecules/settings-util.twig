@@ -1,38 +1,46 @@
 <section class="ma__settings-util">
   <div class="ma__settings-util__zoom">
-    <button>A</button>
-    <button>A</button>
-    <button>A</button>
+    <section class="ma__zoom-controls">
+      <button 
+        title="normal zoom" 
+        class="ma__zoom-controls__normal is-active">A</button>
+      <button 
+        title="medium zoom" 
+        class="ma__zoom-controls__medium">A</button>
+      <button 
+        title="large zoom" 
+        class="ma__zoom-controls__large">A</button>
+    </section>
   </div>
-  <div class="ma__settings-util__theme">
-    <div>Color Scheme:</div>
-    <div class="ma__settings-util__dropdown">
-      <a href="#">Default color scheme</a>
-      <ul>
-        <li>Default color scheme</li>
-        <li>White on Black scheme</li>
-        <li>Black on White scheme</li>
-      </ul>
-    </div>    
-  </div>
-  <div class="ma__settings-util__lang">
-    <div>Language:</div>
-    <div class="ma__settings-util__dropdown">
-      <a href="#">Default color scheme</a>
-      <ul>
-        <li>Default language: English</li>
-        <li>Francis</li>
-        <li>Deutch</li>
-        <li>Espanol</li>
-      </ul>
+  <div class="ma__settings-util__dropdown-controls">
+    <div class="ma__settings-util__theme">
+      <section class="ma__dropdown">
+        <span class="ma__dropdown__label">Color Scheme:</span>
+        <a class="ma__dropdown__link" href="#">Default color scheme</a>
+        <ul class="ma__dropdown__items">
+          <li class="ma__dropdown__item">Default color scheme</li>
+          <li class="ma__dropdown__item">White on Black scheme</li>
+          <li class="ma__dropdown__item">Black on White scheme</li>
+        </ul>
+      </section>    
+    </div>
+    <div class="ma__settings-util__lang">
+      <section class="ma__dropdown">
+        <span class="ma__dropdown__label">Language:</span>
+        <a class="ma__dropdown__link" href="#">Default language: English</a>
+        <ul class="ma__dropdown__items">
+          <li class="ma__dropdown__item">Default language: English</li>
+          <li class="ma__dropdown__item">Francis</li>
+          <li class="ma__dropdown__item">Deutch</li>
+          <li class="ma__dropdown__item">Espanol</li>
+        </ul>
+      </section>
     </div>
   </div>
   <div class="ma__settings-util__restore">
-    <button>
+    <button class="js-button-restore">
       <span>Restore Defaults</span>
       {% include "atoms-svg-restore" %}
     </button>
   </div>
-
-
 </section>

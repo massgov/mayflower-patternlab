@@ -1,0 +1,173 @@
+.ma__settings-util {
+
+  @media ($bp-medium-min) {
+    display: table;
+    height: 75px;
+    width: 100%;
+  }
+
+  &__zoom {
+    margin-bottom: 2rem;
+
+    @media ($bp-medium-min) {
+      display: table-cell;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 135px;
+    }
+  }
+
+  &__dropdown-controls {
+    @media ($bp-medium-min) {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &__theme,
+  &__lang {
+    display: inline-block;
+    opacity: .7;
+    vertical-align: middle;
+
+    @media ($bp-x-large-min) {
+      max-width: 49%;
+    }
+
+    .ma__dropdown {
+
+
+      @media ($bp-medium-min) {
+        border-left: 1px solid;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      &__label {
+        display: block;
+        line-height: 1.25;
+
+        @media ($bp-x-large-min) {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__theme {
+    margin-bottom: .75rem;
+
+    @media ($bp-medium-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__lang {
+    margin-bottom: 2rem;
+
+    @media ($bp-medium-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__restore {
+
+    @media ($bp-medium-min) {
+      display: table-cell;
+      text-align: right;
+      vertical-align: middle;
+      width: 150px;
+    }
+    
+    @media ($bp-medium-min) and ("max-width:900px") {
+      width: auto;
+    }
+
+    button {
+      @include ma-button-reset;
+      font-size: 1rem;
+      white-space: nowrap;
+
+      &:hover {
+        opacity: .7;
+      }
+      
+      span,
+      svg {
+        display: inline-block;
+        line-height: 1.75;
+        vertical-align: middle;
+      }
+
+      @media ($bp-medium-min) and ("max-width:900px") {
+        text-align: right;
+
+        span {
+          line-height: 1.2;
+          text-align: left;
+          white-space: normal;
+          width: 75px;
+        }
+      }
+    }
+  }
+}
+
+.ma__zoom-controls {
+  
+  &__normal,
+  &__medium,
+  &__large {
+    border: none;
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: baseline;
+    width: 1.5em;
+  }
+
+  &__normal {
+    font-size: 1.125rem;
+  }
+
+  &__medium {
+    font-size: 1.438rem;
+  }
+
+  &__large {
+    font-size: 1.75rem;
+  }
+}
+
+.ma__dropdown {
+  font-size: 0.875rem;
+  
+  &__label {
+    display: inline-block;
+    letter-spacing: .08em;
+    line-height: 1.7;
+    margin-right: 14px;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    @include ma-chevron;
+    display: inline-block;
+    letter-spacing: .075em;
+
+    &:after {
+      margin-left: .5em;
+    }
+  }
+
+  &__items {
+    @include ma-reset-list;
+    display: none;
+  }
+
+  &__item {
+
+  }
+
+}
+
+

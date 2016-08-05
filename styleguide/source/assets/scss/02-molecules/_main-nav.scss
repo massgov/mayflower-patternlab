@@ -24,6 +24,7 @@
   }
 
   &__item {
+    @include ma-chevron;
     padding: 10px 0;
     padding-right: 15px;
     position: relative;
@@ -51,28 +52,9 @@
       padding-right: 20px;
     }
 
-    &.is-open {
-
-      &:after {
-        @media ($bp-medium-min) {
-          transform: translateY(-45%) rotate(-135deg);
-        }
-      }
-    }
+    // chevron included above
     &:after {
-      border-right: 4px solid;
-      border-bottom: 4px solid;
-      content: "";
       cursor: pointer;
-      display: inline-block;
-      height: .65em;
-      margin-top: 3px;
-      margin-left: 3px;
-      transform: translateY(-45%) rotate(45deg);
-      transform-origin: 75% 75%;
-      transition: all .2s;
-      vertical-align: middle;
-      width: .65em;
 
       @media ($bp-medium-max) {
         position: absolute;
@@ -82,6 +64,15 @@
       }
       @media ($bp-medium-min) and ($bp-x-large-max) {
         display: none;
+      }
+    }
+
+    &.is-open {
+
+      &:after {
+        @media ($bp-medium-min) {
+          transform: translateY(-45%) rotate(-135deg);
+        }
       }
     }
   }
