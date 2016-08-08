@@ -1,18 +1,17 @@
 export default function (window,document,$,undefined) {
 
-  let windowWidth = $;
+  let windowWidth = window.innerWidth;
+
+  $(window).resize(function(){
+    windowWidth = window.innerWidth;
+  });
 
   $('.js-main-nav').each(function() {
     let openClass = "is-open",
         closeClass = "is-closed",
         $parent = $(this),
         previousKey = null,
-        breakpoint = 780,
-        windowWidth = window.innerWidth;
-
-    $(window).resize(function(){
-      windowWidth = window.innerWidth;
-    });
+        breakpoint = 780;
 
     $parent.find('.js-main-nav-toggle').on('keydown mouseenter', function(e) {
       if(windowWidth <= breakpoint) {

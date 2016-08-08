@@ -26,9 +26,11 @@
 
   &__theme,
   &__lang {
-    display: inline-block;
-    opacity: .7;
-    vertical-align: middle;
+    
+    @media ($bp-medium-min) {
+      display: inline-block;
+      vertical-align: middle;
+    }
 
     @media ($bp-x-large-min) {
       max-width: 49%;
@@ -41,15 +43,24 @@
         border-left: 1px solid;
         padding-left: 30px;
         padding-right: 30px;
+
+        &__items {
+          left: 30px;
+        }
       }
 
       &__label {
         display: block;
         line-height: 1.25;
+        opacity: .7;
 
         @media ($bp-x-large-min) {
           display: inline-block;
         }
+      }
+
+      &__link {
+        opacity: .7;
       }
     }
   }
@@ -70,7 +81,7 @@
     }
   }
 
-  &__restore {
+  &__buttons {
 
     @media ($bp-medium-min) {
       display: table-cell;
@@ -110,6 +121,10 @@
         }
       }
     }
+
+    button[type="submit"] {
+      @include ma-visually-hidden;
+    }
   }
 }
 
@@ -118,11 +133,19 @@
   &__normal,
   &__medium,
   &__large {
-    border: none;
     display: inline-block;
-    line-height: 1.5;
     vertical-align: baseline;
-    width: 1.5em;
+
+    input {
+      @include ma-visually-hidden;
+    }
+
+    span {
+      display: block;
+      line-height: 1.5;
+      text-align: center;
+      width: 1.5em;     
+    }
   }
 
   &__normal {
@@ -140,6 +163,7 @@
 
 .ma__dropdown {
   font-size: 0.875rem;
+  position: relative;
   
   &__label {
     display: inline-block;
@@ -147,27 +171,46 @@
     line-height: 1.7;
     margin-right: 14px;
     text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  &__field {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &__select {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+    z-index: 2;
   }
 
   &__link {
     @include ma-chevron;
     display: inline-block;
     letter-spacing: .075em;
+    padding-right: .5em;
 
     &:after {
       margin-left: .5em;
     }
   }
 
-  &__items {
-    @include ma-reset-list;
-    display: none;
+  &__select:focus + &__link {
+    outline-width: 2px;
+    outline-style: solid;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-style: auto;
+    }
   }
-
-  &__item {
-
-  }
-
 }
 
 

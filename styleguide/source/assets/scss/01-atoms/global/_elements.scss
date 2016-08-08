@@ -1,3 +1,14 @@
+:focus {
+  outline-width: 2px;
+  outline-style: solid;
+
+  /* WebKit gets its native focus styles.
+   */
+  @media (-webkit-min-device-pixel-ratio:0) {
+    outline-style: auto;
+  }
+}
+
 body {
   font-size: 1.125rem;
   line-height: 1.67;

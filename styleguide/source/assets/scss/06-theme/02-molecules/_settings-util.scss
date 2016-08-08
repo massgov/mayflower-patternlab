@@ -30,7 +30,7 @@
 
   }
 
-  &__restore {
+  &__buttons {
 
     button {
       color: $c-white;
@@ -54,8 +54,8 @@
     background-color: transparent;
     color: $c-white;
 
-    &:hover,
-    &.is-active {
+    &:hover span,
+    input:checked + span {
       background-color: rgba($c-white, 0.2);    
     }
   }
@@ -80,16 +80,21 @@
     @include ma-font(700);
   }
 
+  &__select {
+    @include ma-font(400);
+  }
+
   &__link {
     @include ma-font(300);
   }
 
-  &__items {
+  &__select:focus + &__link {
+    outline-color: Highlight;
 
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-color: -webkit-focus-ring-color;
+    }
   }
-
-  &__item {
-
-  }
-
 }
