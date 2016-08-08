@@ -1,0 +1,33 @@
+.ma__zoom-controls {
+  
+  &__normal,
+  &__medium,
+  &__large {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: baseline;
+
+    input {
+      @include ma-visually-hidden;
+    }
+
+    span {
+      display: block;
+      line-height: 1.5;
+      text-align: center;
+      width: 1.5em;     
+    }
+  }
+
+  &__normal {
+    font-size: 1.125rem;
+  }
+
+  &__medium {
+    font-size: 1.438rem;
+  }
+
+  &__large {
+    font-size: 1.75rem;
+  }
+}

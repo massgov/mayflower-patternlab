@@ -35,24 +35,14 @@ $utility-nav-height: 43px;
     line-height: 1.45;
 
     @media ($bp-medium-max) {
+      @include ma-chevron;
       padding: 10px 20px;
 
       &:after {
-        border-right: 4px solid;
-        border-bottom: 4px solid;
-        content: "";
-        display: inline-block;
-        height: .65em;
-        margin-top: 3px;
-        margin-left: 3px;
         position: absolute;
           right: 20px;
           top: 10px;
         transform: rotate(-45deg);
-        transform-origin: 75% 75%;
-        transition: all .5s;
-        vertical-align: middle;
-        width: .65em;
       }
     }
     @media ($bp-medium-min) {
@@ -100,23 +90,23 @@ $utility-nav-height: 43px;
     @media ($bp-medium-min) {
       height: 140px;
       margin-top: 0;
-      overflow: hidden;
+      overflow: visible;
       padding-left: 0;
       position: absolute;
         left: 0;
-      transition: visibility 1s, margin 1s, height 1s;
+      transition: visibility 1s, top 1s;
       visibility: visible;
       width: 100vw;
 
       &.is-closed {
-        height: 0;
-        margin-top: $utility-nav-height;
         right: 0;
+        top: -140px;
       }
 
       &[aria-hidden="true"] {
         display: none;
       }
+
     }
   }
 
@@ -136,19 +126,19 @@ $utility-nav-height: 43px;
     @include ma-button-reset;
     position: absolute;
       top: 0;
-      right: 40px;
+      right: 0;
 
     span {
       display: inline-block;
       font-size: 0.75rem;
-      margin-right: .35em;
+      margin-right: .45em;
       text-transform: uppercase;
       vertical-align: middle;
     }
 
     span[role="presentation"] {
       font-size: 2.5rem;
-      line-height: 1em;
+      line-height: .5em;
       margin-right: 0;
       transform: rotate(45deg);
     }
@@ -189,20 +179,16 @@ $utility-nav-height: 43px;
     font-size: 1.375rem;
     line-height: 1.45;
     padding-bottom: 20px;
+    position: relative;
 
     @media ($bp-medium-min) {
       padding-bottom: 5px;
     }
 
-    span, 
-    svg {
+    & > span, 
+    & > svg {
       display: inline-block;
       vertical-align: middle;
-    }
-
-    svg {
-      height: 16px;
-      width: 24px;
     }
   }
 

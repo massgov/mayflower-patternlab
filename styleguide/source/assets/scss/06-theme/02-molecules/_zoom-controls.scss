@@ -1,0 +1,16 @@
+// theme styles
+.ma__zoom-controls {
+
+  &__normal,
+  &__medium,
+  &__large {
+    @include ma-font(700);
+    background-color: transparent;
+    color: $c-white;
+
+    &:hover span,
+    input:checked + span {
+      background-color: rgba($c-white, 0.2);    
+    }
+  }
+}

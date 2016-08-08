@@ -1,3 +1,14 @@
+:focus {
+  outline-color: Highlight;
+
+  /* WebKit gets its native focus styles.
+   */
+  @media (-webkit-min-device-pixel-ratio:0) {
+    outline-color: -webkit-focus-ring-color;
+  }
+}
+
+
 body {
   @include ma-font(400);
   color: $c-font-base;

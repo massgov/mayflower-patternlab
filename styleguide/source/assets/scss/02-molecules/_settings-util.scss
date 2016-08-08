@@ -1,0 +1,129 @@
+.ma__settings-util {
+
+  @media ($bp-medium-min) {
+    display: table;
+    height: 75px;
+    width: 100%;
+  }
+
+  &__zoom {
+    margin-bottom: 2rem;
+
+    @media ($bp-medium-min) {
+      display: table-cell;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 135px;
+    }
+  }
+
+  &__dropdown-controls {
+    @media ($bp-medium-min) {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &__theme,
+  &__lang {
+    
+    @media ($bp-medium-min) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    @media ($bp-x-large-min) {
+      max-width: 49%;
+    }
+
+    .ma__dropdown {
+
+
+      @media ($bp-medium-min) {
+        border-left: 1px solid;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        &__items {
+          left: 30px;
+        }
+      }
+
+      &__label {
+        display: block;
+        line-height: 1.25;
+        opacity: .7;
+
+        @media ($bp-x-large-min) {
+          display: inline-block;
+        }
+      }
+
+      &__link {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__theme {
+    margin-bottom: .75rem;
+
+    @media ($bp-medium-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__lang {
+    margin-bottom: 2rem;
+
+    @media ($bp-medium-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__buttons {
+
+    @media ($bp-medium-min) {
+      display: table-cell;
+      text-align: right;
+      vertical-align: middle;
+      width: 150px;
+    }
+    
+    @media ($bp-medium-min) and ("max-width:900px") {
+      width: auto;
+    }
+
+    button {
+      @include ma-button-reset;
+      font-size: 1rem;
+      white-space: nowrap;
+
+      &:hover {
+        opacity: .7;
+      }
+      
+      span,
+      svg {
+        display: inline-block;
+        line-height: 1.75;
+        vertical-align: middle;
+      }
+
+      @media ($bp-medium-min) and ("max-width:900px") {
+        text-align: right;
+
+        span {
+          line-height: 1.2;
+          text-align: left;
+          white-space: normal;
+          width: 75px;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      @include ma-visually-hidden;
+    }
+  }
+}

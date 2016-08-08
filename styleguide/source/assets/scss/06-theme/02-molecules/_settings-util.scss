@@ -1,0 +1,23 @@
+// theme styles
+.ma__settings-util {
+
+  &__theme,
+  &__lang {
+
+    .ma__dropdown {
+      border-left-color: rgba($c-white,.2);
+    }
+  }
+
+  &__buttons {
+
+    button {
+      color: $c-white;
+      
+      svg {
+        fill: $c-white;
+        opacity: .7;
+      }
+    }
+  }
+}

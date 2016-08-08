@@ -1,0 +1,51 @@
+.ma__dropdown {
+  font-size: 0.875rem;
+  position: relative;
+  
+  &__label {
+    display: inline-block;
+    letter-spacing: .08em;
+    line-height: 1.7;
+    margin-right: 14px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  &__field {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+  }
+
+  &__select {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__link {
+    @include ma-chevron;
+    display: inline-block;
+    letter-spacing: .075em;
+    padding-right: .5em;
+
+    &:after {
+      margin-left: .5em;
+    }
+  }
+
+  &__select:focus + &__link {
+    outline-width: 2px;
+    outline-style: solid;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-style: auto;
+    }
+  }
+}

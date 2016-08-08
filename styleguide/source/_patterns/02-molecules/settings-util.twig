@@ -1,0 +1,39 @@
+<form action="#" class="js-site-setting-form">
+  <section class="ma__settings-util">
+    <div class="ma__settings-util__zoom">
+      {% include "molecules-zoom-controls" %}
+    </div>
+    <div class="ma__settings-util__dropdown-controls">
+      <div class="ma__settings-util__theme js-site-settings-theme">
+        {% include "molecules-dropdown" %}
+      </div>
+      <div class="ma__settings-util__lang js-site-settings-lang">
+        <!-- {% include "molecules-dropdown" %} -->
+        <section class="ma__dropdown js-dropdown">
+          <label 
+            for="lang-select" 
+            class="ma__dropdown__label">Language:</label>
+          <div class="ma__dropdown__field">
+            <select
+              id="lang-select"
+              name="lang-select"
+              class="ma__dropdown__select js-dropdown-select">
+              <option value="en">Default language: English</option>
+              <option value="fr">Francis</option>
+              <option value="de">Deutch</option>
+              <option value="es">Espanol</option>
+            </select>
+            <span class="ma__dropdown__link js-dropdown-link">Default language: English</span>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="ma__settings-util__buttons">
+      <button type="submit">submit</button>
+      <button class="js-button-reset" type="reset">
+        <span>Restore Defaults</span>
+        {% include "atoms-svg-restore" %}
+      </button>
+    </div>
+  </section> 
+</form>
