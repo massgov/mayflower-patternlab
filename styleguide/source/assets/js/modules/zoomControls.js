@@ -9,9 +9,19 @@ export default function (window,document,$,undefined) {
     let $parent = $(this),
         $inputs = $(this).find('input[type="radio"]');
 
+    $('html').attr("data-zoom", getCurrentValue());
+
     $inputs.on('change',function(){
-      $('html').attr("data-zoom",$(this).val());
+      $('html').attr("data-zoom", $(this).val());
     });
+
+    $parent.on('reset',function(){
+      $('html').attr("data-zoom", getCurrentValue());
+    });
+
+    function getCurrentValue() {
+      return $parent.find('input[type="radio"]:checked').val();
+    }
 
   });
 
