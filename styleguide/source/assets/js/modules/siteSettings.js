@@ -13,8 +13,6 @@ export default function (window,document,$,undefined) {
         cookieExpires = 365,
         cookieValue = JSON.parse(cookies.getCookie(cookieName) || "{}");
 
-    console.log(cookieValue);
-
     // set default values to match cookie values
     if(typeof(cookieValue.zoom) !== "undefined") {
       $zoomControls.find('input[value="' + cookieValue.zoom + '"]').prop('checked', true);
