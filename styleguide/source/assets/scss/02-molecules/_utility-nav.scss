@@ -131,14 +131,14 @@ $utility-nav-height: 43px;
     span {
       display: inline-block;
       font-size: 0.75rem;
-      margin-right: .35em;
+      margin-right: .45em;
       text-transform: uppercase;
       vertical-align: middle;
     }
 
     span[role="presentation"] {
       font-size: 2.5rem;
-      line-height: 1em;
+      line-height: .5em;
       margin-right: 0;
       transform: rotate(45deg);
     }
@@ -185,8 +185,8 @@ $utility-nav-height: 43px;
       padding-bottom: 5px;
     }
 
-    span, 
-    svg {
+    & > span, 
+    & > svg {
       display: inline-block;
       vertical-align: middle;
     }
