@@ -158,7 +158,7 @@ $bp-header-logo-min: "min-width: 1000px";
 
     }
 
-    @media ($bp-medium-min) {
+    @media ($bp-small-min) {
       display: none;
     }
   }
