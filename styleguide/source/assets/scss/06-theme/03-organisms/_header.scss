@@ -13,6 +13,19 @@
     }
   }
 
+  &__back-button {
+    color: $c-font-inverse;
+
+    &:before {
+      border-left-color: $c-font-inverse;
+      border-top-color: $c-font-inverse;
+    }
+
+    span {
+      opacity: 0.7;
+    }
+  }
+
   &__menu-button {
     color: $c-font-inverse;
     

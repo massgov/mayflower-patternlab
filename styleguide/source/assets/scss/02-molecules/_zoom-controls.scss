@@ -1,4 +1,8 @@
 .ma__zoom-controls {
+
+  @media ($bp-medium-max) {
+    display: none;
+  }  
   
   &__normal,
   &__medium,
