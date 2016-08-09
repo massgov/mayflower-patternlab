@@ -1,0 +1,93 @@
+$layout-three-columns: 3 * ($column + $gutter);
+$layout-six-columns: 6 * ($column + $gutter);
+
+.pre-content,
+.main-content,
+.post-content {
+  @include clearfix;
+  padding-bottom: 20px;
+  
+  @media ($bp-medium-min){
+    padding-bottom: 30px;
+  }
+  @media ($bp-large-min){
+    padding-bottom: 40px;
+  }
+}
+
+.main-content--restricted {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+.sub-nav {
+  padding-bottom: 20px;
+
+  &:first-child:nth-last-child(3) {
+    @media ($bp-small-min) {
+      float: left;
+      padding-right: $gutter;
+      width: $layout-three-columns; // three columns
+    }
+    @media ($bp-medium-min) {
+      padding-bottom: 30px;
+    }
+    @media ($bp-large-min) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.page-content {
+  padding-bottom: 20px;
+
+  &:first-child:nth-last-child(2) {
+    @media ($bp-small-min){
+      float:left;
+      padding-bottom: 0;
+      width: calc(100% - #{$layout-three-columns});
+    }
+  }
+
+  &:nth-child(2):nth-last-child(2) {
+    @media ($bp-small-min) {
+      float:left;
+      width: calc(100% - #{$layout-three-columns});
+    }
+
+    @media ($bp-medium-min) {
+      padding-bottom: 30px;
+    }
+    @media ($bp-large-min) {
+      padding-bottom: 0;
+      width: calc(100% - #{$layout-six-columns});
+    }
+  }
+}
+
+.sidebar {
+
+  // two column layout with sidebar on the right
+  &:last-child:nth-child(2) {
+    @media ($bp-small-min){
+      float: left;
+      padding-left: $gutter;
+      width: $layout-three-columns; // three columns
+    }
+  }
+
+  // three column layout with sidebar on the right
+  &:last-child:nth-child(3) {
+    
+    @media ($bp-large-max){
+      clear: both;
+    }
+
+    @media ($bp-large-min){
+      float: left;
+      padding-left: $gutter;
+      width: $layout-three-columns; // three columns
+    }
+  }
+
+}
