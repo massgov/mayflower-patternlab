@@ -67,7 +67,6 @@ $utility-nav-height: 43px;
 
   &__content {
     display: block;
-    overflow-y: auto;
     margin-top: $header-mobile-controls-height;
     padding-left: 20px;
     position: fixed;
@@ -112,12 +111,15 @@ $utility-nav-height: 43px;
 
   &__container {
     @include ma-container;
+    overflow-y: auto;
+    padding-bottom: 20px;
     position: relative;
     z-index: $z-dropdown;
     height: calc(100vh - #{$header-mobile-controls-height});
 
     @media ($bp-medium-min) {
       height: auto;
+      padding-bottom: 0;
       margin-top: 15px;
     }
   }
@@ -193,6 +195,9 @@ $utility-nav-height: 43px;
   }
 
   &__content-body {
-    height: 75px;
+
+    @media ($bp-medium-min) {
+      height: 75px;
+    }
   }
 }
