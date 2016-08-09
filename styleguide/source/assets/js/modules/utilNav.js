@@ -3,6 +3,7 @@ export default function (window,document,$,undefined) {
   $('.js-util-nav').each(function() {
     let openClass = "is-open",
         closeClass = "is-closed",
+        submenuClass = "show-submenu",
         $parent = $(this),
         waitForIt = null;
 
@@ -28,6 +29,7 @@ export default function (window,document,$,undefined) {
         $content
           .removeClass(closeClass)
           .addClass(openClass);
+        $('body').addClass(submenuClass)
       }, .1);
     });
 
@@ -37,7 +39,13 @@ export default function (window,document,$,undefined) {
       hide( $(this).closest('.js-util-nav-content') );
     });
 
+    $('.js-close-sub-nav').on('click', function(){
+      let $openContent = $parent.find('.js-util-nav-content.' + openClass);
+      hide($openContent);
+    });
+
     function hide($content) {
+      $('body').removeClass(submenuClass)
       $parent.find("." + openClass).removeClass(openClass);
       $content
         .removeClass(openClass)

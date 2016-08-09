@@ -9,6 +9,7 @@ export default function (window,document,$,undefined) {
   $('.js-main-nav').each(function() {
     let openClass = "is-open",
         closeClass = "is-closed",
+        submenuClass = "show-submenu",
         $parent = $(this),
         previousKey = null,
         breakpoint = 780;
@@ -41,8 +42,10 @@ export default function (window,document,$,undefined) {
     });
 
     $parent.find('.js-main-nav-toggle').on('mouseleave', function(e) {
-      let $openContent = $(this).find('.js-main-nav-content');
-      hide($openContent);
+      if(windowWidth > breakpoint) {
+        let $openContent = $(this).find('.js-main-nav-content');
+        hide($openContent);
+      }
     });
 
     $parent.find('.js-main-nav-toggle').on('click', function(e) {
@@ -71,7 +74,14 @@ export default function (window,document,$,undefined) {
             previousKey = e.keyCode;
     });
 
+    $('.js-close-sub-nav').on('click', function(){
+      let $openContent = $parent.find('.js-main-nav-content.' + openClass);
+      hide($openContent);
+    });
+
+
     function hide($content) {
+      $('body').removeClass(submenuClass)
       $parent.find("." + openClass).removeClass(openClass);
       
       if(windowWidth <= breakpoint) {
@@ -88,6 +98,7 @@ export default function (window,document,$,undefined) {
     }
 
     function show($content) {
+      $('body').addClass(submenuClass)
       if(windowWidth <= breakpoint) {
         $content
           .addClass(openClass)

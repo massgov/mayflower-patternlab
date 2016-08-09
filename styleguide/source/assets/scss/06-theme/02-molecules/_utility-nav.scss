@@ -80,19 +80,6 @@
     }
   }
 
-  &__back {
-    color: $c-font-inverse;
-
-    &:before {
-      border-left-color: $c-font-inverse;
-      border-top-color: $c-font-inverse;
-    }
-
-    span {
-      opacity: 0.7;
-    }
-  }
-
   &__content-title {
     @include ma-font(500);
 

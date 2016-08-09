@@ -146,37 +146,6 @@ $utility-nav-height: 43px;
     }
   }
 
-  &__back {
-    @include ma-button-reset;
-    padding-left: 20px;
-    position: fixed;
-      top: 5px;
-    z-index: $z-dropdown;
-
-
-    @media ($bp-medium-min) {
-      display: none;
-    }
-
-    &:before {
-      border-left: 3px solid;
-      border-top: 3px solid;
-      content: "";
-      display: inline-block;
-      height: .65em;
-      margin-top: 3px;
-      margin-left: 3px;
-      position: absolute;
-        left: 0;
-        top: 2px;
-      transform: rotate(-45deg);
-      transform-origin: 75% 75%;
-      transition: all .5s;
-      vertical-align: middle;
-      width: .65em;
-    }
-  }
-
   &__content-title {
     font-size: 1.375rem;
     line-height: 1.45;
