@@ -32,7 +32,7 @@ twigFilterExt: filter.php
 twigFunctionExt: function.php
 twigTagExt: tag.php
 twigTestExt: test.php
-ishMinimum: '240'
+ishMinimum: '320'
 ishMaximum: '2600'
 ishControlsHide:
     - hay

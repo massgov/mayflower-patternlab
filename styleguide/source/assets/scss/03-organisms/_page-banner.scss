@@ -10,23 +10,38 @@ $page-banner-inner-width: 612px;
     max-width: 1600px;
     position: relative;
 
-    &:after {
-      @include ma-container;
-      content: "";
-      height: 10px;
-      position: absolute;
-        bottom: -10px;
-        left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
+    @media($bp-medium-min) {
+      &:after {
+        @include ma-container;
+        content: "";
+        height: 10px;
+        position: absolute;
+          bottom: -10px;
+          left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+    }
+  }
+
+  &__title-container,
+  &__content {
+    margin: 0 30px;
+    padding: 0 45px;
+
+    @media($bp-small-min) {
+      margin: 0 60px;
+      padding: 0 70px;
+    }
+
+    @media($bp-medium-min) {
+      margin: 0 auto;
+      max-width: $page-banner-inner-width;
     }
   }
 
   &__title-container {
-    margin: 0 auto;
-    max-width: $page-banner-inner-width;
-    min-height: 400px;
-    padding: 0 70px;
+
   }
 
   &__icon {
@@ -40,12 +55,10 @@ $page-banner-inner-width: 612px;
   }
 
   &__content {
-    margin: 0 auto;
-    max-width: $page-banner-inner-width;
-    padding: 20px 70px 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
     position: relative;
     z-index: 1;
-
   }
 
   &__divider {
