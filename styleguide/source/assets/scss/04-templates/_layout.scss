@@ -15,7 +15,8 @@ $layout-six-columns: 6 * ($column + $gutter);
   }
 }
 
-.main-content--restricted {
+.main-content--two,
+.main-content--three {
   margin: 0 auto;
   max-width: $max-width;
 }
@@ -23,6 +24,7 @@ $layout-six-columns: 6 * ($column + $gutter);
 .sub-nav {
   padding-bottom: 20px;
 
+  .main-content--three &,
   &:first-child:nth-last-child(3) {
     @media ($bp-small-min) {
       float: left;
@@ -41,6 +43,11 @@ $layout-six-columns: 6 * ($column + $gutter);
 .page-content {
   padding-bottom: 20px;
 
+  @media ($bp-small-min) {
+    padding-bottom: 0;
+  }
+
+  .main-content--two &,
   &:first-child:nth-last-child(2) {
     @media ($bp-small-min){
       float:left;
@@ -49,9 +56,11 @@ $layout-six-columns: 6 * ($column + $gutter);
     }
   }
 
+  .main-content--three &,
   &:nth-child(2):nth-last-child(2) {
     @media ($bp-small-min) {
       float:left;
+      padding-bottom: 20px;
       width: calc(100% - #{$layout-three-columns});
     }
 
@@ -68,6 +77,7 @@ $layout-six-columns: 6 * ($column + $gutter);
 .sidebar {
 
   // two column layout with sidebar on the right
+  .main-content--two &,
   &:last-child:nth-child(2) {
     @media ($bp-small-min){
       float: left;
@@ -77,6 +87,7 @@ $layout-six-columns: 6 * ($column + $gutter);
   }
 
   // three column layout with sidebar on the right
+  .main-content--three &,
   &:last-child:nth-child(3) {
     
     @media ($bp-large-max){
