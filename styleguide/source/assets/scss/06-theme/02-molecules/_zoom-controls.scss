@@ -12,5 +12,16 @@
     input:checked + span {
       background-color: rgba($c-white, 0.2);    
     }
+
+    input:focus + span {
+      outline-color: Highlight;
+
+      /* WebKit gets its native focus styles.
+       */
+      @media (-webkit-min-device-pixel-ratio:0) {
+        outline-color: -webkit-focus-ring-color;
+      }
+    }
+
   }
 }

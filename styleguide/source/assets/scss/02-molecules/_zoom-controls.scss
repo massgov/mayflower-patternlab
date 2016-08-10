@@ -21,6 +21,18 @@
       text-align: center;
       width: 1.5em;     
     }
+    
+    input:focus + span {
+      outline-width: 2px;
+      outline-style: solid;
+
+      /* WebKit gets its native focus styles.
+       */
+      @media (-webkit-min-device-pixel-ratio:0) {
+        outline-style: auto;
+      }
+    }
+
   }
 
   &__normal {
