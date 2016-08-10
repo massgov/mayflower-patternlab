@@ -1,0 +1,32 @@
+$page-banner-inner-width: 612px;
+
+.page-banner {
+
+  &__background {
+    @include ma-border-decorative($c-white, $c-theme-primary-2);
+  }
+
+  &__title-container {
+    background-image: linear-gradient(180deg, transparent 120px, rgba($c-bg-section,.1) 51px, $c-bg-section)
+  }
+
+  &__icon {
+
+  }
+
+  &__title {
+
+  }
+
+  &__content {
+    background-color: $c-bg-section;
+  }
+
+  &__divider {
+    @include ma-border-decorative($c-bg-section, $c-theme-primary-2);
+  }
+
+  &__description {
+
+  }
+}
