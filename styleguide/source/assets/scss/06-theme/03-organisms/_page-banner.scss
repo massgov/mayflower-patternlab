@@ -1,6 +1,6 @@
 $page-banner-inner-width: 612px;
 
-.page-banner {
+.ma__page-banner {
 
   &__background {
     @include ma-border-decorative($c-white, $c-theme-primary-2);
