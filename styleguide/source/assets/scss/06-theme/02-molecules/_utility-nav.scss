@@ -72,6 +72,10 @@
       @include ma-font(700);
       color: $c-white;
       opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     span[role="presentation"] {

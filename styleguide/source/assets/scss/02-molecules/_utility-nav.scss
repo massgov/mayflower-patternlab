@@ -126,6 +126,7 @@ $utility-nav-height: 43px;
 
   &__close {
     @include ma-button-reset;
+    cursor: pointer;
     position: absolute;
       top: 0;
       right: 0;
