@@ -18,6 +18,9 @@ $bp-alerts-util-reduce-links-max: "max-width:1120px";
       line-height: 1.63;
       margin-bottom: 0;
       vertical-align: middle;
+      width: 70%;
+    }
+    @media ($bp-large-min) {
       width: 60%;
     }
   }
@@ -28,6 +31,9 @@ $bp-alerts-util-reduce-links-max: "max-width:1120px";
     @media ($bp-medium-min) {
       display: inline-block;
       vertical-align: middle;
+      width: 30%;
+    }
+    @media ($bp-large-min) {
       width: 40%;
     }
   }
