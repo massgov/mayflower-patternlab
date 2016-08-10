@@ -58,6 +58,7 @@ $bp-header-logo-min: "min-width: 1000px";
   }
 
   &__nav-container {
+    
     @media ($bp-medium-max){
       height: calc(100vh - #{$header-mobile-controls-height});
       overflow-y: auto;

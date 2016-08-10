@@ -11,10 +11,13 @@
   }
 
   &__nav {
+    margin-bottom: 20px;
+
     @media ($bp-large-min) {
       @include span-columns(9);
       float: right;
       margin-right: 0;
+      margin-bottom: 20px;
     }
   }
 

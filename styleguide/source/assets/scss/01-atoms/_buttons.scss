@@ -24,18 +24,18 @@
   padding: 14px;
   padding-left: 7px;
   text-transform: uppercase;
-  transition: background-color .4s, color .4s, border .4s;
+  transition: background-color .4s, color .4s, border .4s, fill .4s;
   white-space: nowrap;
 
   span,
   &__icon {
     display: inline-block;
-    transition: fill .4s;
     vertical-align: middle;
   }
 
   &__icon {
     height: 20px;
+    transition: fill .4s;
     width: 20px;
   }
 }

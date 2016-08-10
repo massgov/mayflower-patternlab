@@ -10,9 +10,10 @@ $page-banner-inner-width: 612px;
     max-width: 1600px;
     position: relative;
 
-    @media($bp-medium-min) {
-      &:after {
-        @include ma-container;
+    &:after {
+      @include ma-container;
+      
+      @media($bp-medium-min) {
         content: "";
         height: 10px;
         position: absolute;
