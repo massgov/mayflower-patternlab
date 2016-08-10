@@ -5,9 +5,14 @@ $utility-nav-height: 43px;
 
   &__items {
     @include ma-reset-list;
+    @include ma-container;
+
+    @media ($bp-medium-max){
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     @media ($bp-medium-min){
-      @include ma-container;
       @include ma-valign-block;
       height: $utility-nav-height;
       text-align: right;
