@@ -1,0 +1,26 @@
+.ma__top-tasks {
+
+  &__title {
+    @include ma-border-decorative($c-white, $c-theme-primary-2);
+
+    &:after {
+      opacity: .5;
+    }
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+
+  }
+
+  &__item + &__item {
+    border-left-color: $c-bd-divider;
+  }
+
+  &__link {
+
+  }
+}
