@@ -1,12 +1,12 @@
 <section class="ma__header-search">
   <form action="#" class="js-header-search-form">
     <label 
-        for="{{id}}"
-        class="ma__header-search__label">{{placeholder}}</label>
+        for="{{headerSearch.id}}"
+        class="ma__header-search__label">{{headerSearch}}</label>
     <input 
-        id="{{id}}" 
+        id="{{headerSearch.id}}" 
         class="ma__header-search__input"
-        placeholder="{{placeholder}}" 
+        placeholder="{{headerSearch.placeholder}}" 
         type="text" />
     {% include "atoms-button-search" %}
   </form>
