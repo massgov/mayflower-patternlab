@@ -27,8 +27,6 @@
 
   &__item {
     @include ma-chevron;
-    padding: 10px 0;
-    padding-right: 15px;
     position: relative;
 
     @media ($bp-medium-max) {
@@ -37,7 +35,6 @@
 
     @media ($bp-medium-min) {
       display: table-cell;
-      padding: 14px 12px;
       text-align: center;
 
       .flexbox & {
@@ -47,11 +44,6 @@
         flex-basis: auto;
       }
 
-    }
-
-    @media ($bp-large-min) {
-      padding-left: 20px;
-      padding-right: 20px;
     }
 
     // chevron included above
@@ -84,6 +76,8 @@
     font-size: 1rem;
     letter-spacing: .05em;
     line-height: 1.45;
+    padding: 10px 0;
+    padding-right: 15px;
     text-transform: uppercase;
 
     @media ($bp-medium-max) {
@@ -94,17 +88,21 @@
     @media ($bp-medium-min) {
       display: inline-block;
       font-size: 1.25rem;
+      padding: 14px 12px;
       vertical-align: middle;
-    }
 
-    &.is-active {
-      @media($bp-medium-min) {
+      &.is-active {
         @include ma-border-decorative;
 
         .is-open &:after {
           display: none;
         }
       }
+    }
+
+    @media ($bp-large-min) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 
