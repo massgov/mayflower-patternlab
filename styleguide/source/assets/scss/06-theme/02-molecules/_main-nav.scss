@@ -7,20 +7,20 @@
       background-color: $c-white;
       box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
     }
-    &:after {
-      border-right-color: $c-theme-primary-2;
-      border-bottom-color: $c-theme-primary-2;
+    &.is-active {
+      
+      @include ma-border-decorative($c-bg-section ,$c-theme-primary-2);
     }
   }
 
   &__top-link {
     color: $c-font-dark;
 
-    &.is-active {
-      
-      @include ma-border-decorative($c-bg-section ,$c-theme-primary-2);
+    // chevron
+    &:after {
+      border-right-color: $c-theme-primary-2;
+      border-bottom-color: $c-theme-primary-2;
     }
-
   }
 
   &__back {

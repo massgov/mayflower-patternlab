@@ -26,10 +26,8 @@
   }
 
   &__item {
-    @include ma-chevron;
-    padding: 10px 0;
-    padding-right: 15px;
     position: relative;
+    transition: background-color .4s;
 
     @media ($bp-medium-max) {
       font-size: 1rem;
@@ -37,7 +35,6 @@
 
     @media ($bp-medium-min) {
       display: table-cell;
-      padding: 14px 12px;
       text-align: center;
 
       .flexbox & {
@@ -47,6 +44,34 @@
         flex-basis: auto;
       }
 
+      &.is-active {
+        @include ma-border-decorative;
+      }
+      &.is-open:after {
+        display: none;
+      }
+    }
+  }
+
+  &__top-link {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: .05em;
+    line-height: 1.45;
+    padding: 10px 0;
+    padding-right: 15px;
+    text-transform: uppercase;
+
+    @media ($bp-medium-max) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @media ($bp-medium-min) {
+      display: inline-block;
+      font-size: 1.25rem;
+      padding: 14px 12px;
+      vertical-align: middle;
     }
 
     @media ($bp-large-min) {
@@ -54,7 +79,7 @@
       padding-right: 20px;
     }
 
-    // chevron included above
+    @include ma-chevron;
     &:after {
       cursor: pointer;
 
@@ -69,7 +94,7 @@
       }
     }
 
-    &.is-open {
+    .is-open & {
 
       &:after {
         @media ($bp-medium-min) {
@@ -77,35 +102,7 @@
         }
       }
     }
-  }
 
-  &__top-link {
-    display: block;
-    font-size: 1rem;
-    letter-spacing: .05em;
-    line-height: 1.45;
-    text-transform: uppercase;
-
-    @media ($bp-medium-max) {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
-
-    @media ($bp-medium-min) {
-      display: inline-block;
-      font-size: 1.25rem;
-      vertical-align: middle;
-    }
-
-    &.is-active {
-      @media($bp-medium-min) {
-        @include ma-border-decorative;
-
-        .is-open &:after {
-          display: none;
-        }
-      }
-    }
   }
 
   &__back {

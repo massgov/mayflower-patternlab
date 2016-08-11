@@ -1,0 +1,44 @@
+.ma__top-tasks {
+  @include ma-container;
+
+  &__title {
+    @include ma-border-decorative;
+    margin-bottom: 45px;
+    padding-bottom: .75em;
+    text-align: center;
+
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85px;
+    }
+  }
+
+  &__items {
+    @include ma-reset-list;
+    display: flex;
+      justify-content: space-between;
+
+    .no-flex & {
+      display: table;
+    }
+  }
+
+  &__item {
+    padding: 12px 40px 20px;
+    text-align: center;
+
+    .no-flex {
+      display: table-cell;
+      width: 25%;
+    }
+  }
+
+  &__item + &__item {
+    border-left: 1px solid;
+  }
+
+  &__link {
+
+  }
+}
