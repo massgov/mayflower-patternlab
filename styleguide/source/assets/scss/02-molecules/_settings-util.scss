@@ -25,7 +25,7 @@
 
   &__theme,
   &__lang {
-    
+
     @media ($bp-medium-min) {
       display: inline-block;
       vertical-align: middle;
@@ -59,7 +59,7 @@
       }
 
       &__link {
-        opacity: .7;
+        font-size:16px;
       }
     }
   }
@@ -88,7 +88,7 @@
       vertical-align: middle;
       width: 150px;
     }
-    
+
     @media ($bp-medium-min) and ("max-width:900px") {
       width: auto;
     }
@@ -100,8 +100,9 @@
 
       &:hover {
         opacity: .7;
+}
       }
-      
+
       span,
       svg {
         display: inline-block;
