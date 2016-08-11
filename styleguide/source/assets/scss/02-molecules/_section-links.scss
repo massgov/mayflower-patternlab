@@ -1,0 +1,60 @@
+.ma__section-links {
+  display: inline-block;
+  max-width: 400px;
+
+  &__banner {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__overlay {
+    height: 50%;
+    position: absolute;
+      bottom: 0;
+      right: -50%;
+    transform: rotate(-10deg);
+    transform-origin: bottom right;
+    width: 200%;
+  }
+
+  &__content {
+    padding: 30px;
+  }
+
+  &__banner + &__content {
+    padding-top: 0px;
+  }
+
+  &__title {
+    @include ma-border-decorative;
+    padding-bottom: 20px;
+
+    &:after {
+      width: 60px;
+    }
+
+    a:hover {
+      opacity: .7;
+    }
+  }
+
+  &__items {
+    @include ma-reset-list;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+
+  }
+
+  &__view-all {
+    text-align: right;
+  }
+}
