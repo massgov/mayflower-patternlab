@@ -26,8 +26,8 @@
   }
 
   &__item {
-    @include ma-chevron;
     position: relative;
+    transition: background-color .4s;
 
     @media ($bp-medium-max) {
       font-size: 1rem;
@@ -44,29 +44,11 @@
         flex-basis: auto;
       }
 
-    }
-
-    // chevron included above
-    &:after {
-      cursor: pointer;
-
-      @media ($bp-medium-max) {
-        position: absolute;
-          right: 20px;
-          top: 10px;
-        transform: rotate(-45deg);
+      &.is-active {
+        @include ma-border-decorative;
       }
-      @media ($bp-medium-min) and ($bp-x-large-max) {
+      &.is-open:after {
         display: none;
-      }
-    }
-
-    &.is-open {
-
-      &:after {
-        @media ($bp-medium-min) {
-          transform: translateY(-45%) rotate(-135deg);
-        }
       }
     }
   }
@@ -90,20 +72,37 @@
       font-size: 1.25rem;
       padding: 14px 12px;
       vertical-align: middle;
-
-      &.is-active {
-        @include ma-border-decorative;
-
-        .is-open &:after {
-          display: none;
-        }
-      }
     }
 
     @media ($bp-large-min) {
       padding-left: 20px;
       padding-right: 20px;
     }
+
+    @include ma-chevron;
+    &:after {
+      cursor: pointer;
+
+      @media ($bp-medium-max) {
+        position: absolute;
+          right: 20px;
+          top: 10px;
+        transform: rotate(-45deg);
+      }
+      @media ($bp-medium-min) and ($bp-x-large-max) {
+        display: none;
+      }
+    }
+
+    .is-open & {
+
+      &:after {
+        @media ($bp-medium-min) {
+          transform: translateY(-45%) rotate(-135deg);
+        }
+      }
+    }
+
   }
 
   &__back {
