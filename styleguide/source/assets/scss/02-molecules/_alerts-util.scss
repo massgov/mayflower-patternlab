@@ -2,7 +2,7 @@ $bp-alerts-util-reduce-links-max: "max-width:1120px";
 
 .ma__alerts-util {
   font-size: 0;
-  
+
   @media ($bp-medium-min) {
     @include ma-valign-block;
     height: 75px;
@@ -10,12 +10,11 @@ $bp-alerts-util-reduce-links-max: "max-width:1120px";
 
   &__description {
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.63;
     margin-bottom: 2em;
 
     @media ($bp-medium-min) {
       display: inline-block;
-      line-height: 1.63;
       margin-bottom: 0;
       vertical-align: middle;
       width: 70%;
@@ -41,7 +40,7 @@ $bp-alerts-util-reduce-links-max: "max-width:1120px";
   &__item {
     display: block;
     margin-bottom: 8px;
-    
+
     @media ($bp-medium-min) {
       display: inline-block;
       margin-left: 20px;
@@ -63,4 +62,3 @@ $bp-alerts-util-reduce-links-max: "max-width:1120px";
     }
   }
 }
-

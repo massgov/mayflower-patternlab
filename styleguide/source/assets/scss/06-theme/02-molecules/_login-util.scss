@@ -7,9 +7,8 @@
   &__item {
 
     a {
-      background-color: rgba($c-white, 0.2);
       @include ma-font(500);
-      transition: all 0.4s ease;
+      background-color: rgba($c-white, 0.2);
     }
 
     svg {

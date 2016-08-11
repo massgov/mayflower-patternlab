@@ -13,6 +13,7 @@
 @import "06-theme/01-atoms/buttons";
 
 // Molecules - chunks of code that are used in Organisms/Components
+@import "06-theme/02-molecules/alerts-util";
 @import "06-theme/02-molecules/dropdown";
 @import "06-theme/02-molecules/footer-links";
 @import "06-theme/02-molecules/header-search";
@@ -30,4 +31,3 @@
 @import "06-theme/03-organisms/page-banner";
 @import "06-theme/03-organisms/rich-text";
 @import "06-theme/03-organisms/top-tasks";
-
