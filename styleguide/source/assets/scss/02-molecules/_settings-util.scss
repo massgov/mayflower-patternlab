@@ -59,7 +59,7 @@
       }
 
       &__link {
-        font-size:16px;
+        font-size: 1rem;
       }
     }
   }
@@ -96,7 +96,7 @@
     button {
       @include ma-button-reset;
       @include ma-underline-link;
-      padding-bottom:5px;
+      padding-bottom: 5px;
       font-size: 1rem;
       white-space: nowrap;
 

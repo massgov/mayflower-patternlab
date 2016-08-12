@@ -82,7 +82,7 @@
     @include ma-chevron;
     &:after {
       cursor: pointer;
-      margin-left:6px;
+      margin-left: 6px;
 
       @media ($bp-medium-max) {
         position: absolute;
