@@ -1,0 +1,31 @@
+$bp-section-3up-large-min: "min-width:951px";
+$bp-section-3up-large-max: "max-width:950px";
+
+.ma__sections-3up {
+  @include ma-container;
+  @include clearfix;
+  display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+  & > * {
+    margin-bottom: 20px;
+
+    @media ($bp-small-min) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+      margin-bottom: 30px;
+    }
+
+    @media ($bp-small-min) and ($bp-section-3up-large-max) {
+      @include span-columns(4 of 8);
+      @include omega(2n);
+    }
+    @media ($bp-section-3up-large-min) {
+        margin-bottom: 40px;
+        @include span-columns(3 of 9);
+        @include omega(3n);
+    }
+  }
+}
