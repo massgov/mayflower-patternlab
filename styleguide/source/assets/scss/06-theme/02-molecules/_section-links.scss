@@ -1,15 +1,15 @@
 .ma__section-links {
+  background-color: $c-bg-section;
   
   &__banner {
 
   }
 
   &__overlay {
-    background-image: linear-gradient(190deg, rgba($c-bg-section,.2), $c-bg-section 50%);
+    background-image: linear-gradient(191deg, rgba($c-bg-section,.2), $c-bg-section 50%);
   }
 
   &__content {
-    background-color: $c-bg-section;
   }
 
   &__title {

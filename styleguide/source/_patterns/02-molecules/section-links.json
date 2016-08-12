@@ -1,0 +1,24 @@
+{
+  "sectionLinks": {
+    "image" : {
+      "src" : "/assets/images/placeholder/600x450-kitten.jpg",
+      "alt" : "Recreational Licenses & Permits"
+    },
+    "title" : {
+      "href" : "#",
+      "text" : "Recreational Licenses & Permits"
+    },
+    "links" : [{
+      "href" : "#",
+      "text" : "Boating"
+    },
+    {
+      "href" : "#",
+      "text" : "Fishing"
+    },
+    {
+      "href" : "#",
+      "text" : "Hunting"
+    }]
+  }
+}

@@ -1,6 +1,5 @@
 .ma__section-links {
-  display: inline-block;
-  max-width: 400px;
+  position: relative;
 
   &__banner {
     overflow: hidden;
@@ -14,15 +13,21 @@
   &__overlay {
     height: 50%;
     position: absolute;
-      bottom: 0;
+      bottom: -25%;
       right: -50%;
-    transform: rotate(-10deg);
-    transform-origin: bottom right;
+    transform: rotate(-11deg);
+    transform-origin: bottom center;
     width: 200%;
   }
 
   &__content {
-    padding: 30px;
+    padding: 10px;
+    padding-bottom: 40px;
+
+    @media ($bp-small-min) {
+      padding: 30px;
+      padding-bottom: 60px;
+    }
   }
 
   &__banner + &__content {
@@ -46,15 +51,21 @@
     @include ma-reset-list;
   }
 
-  &__item {
-    margin-bottom: 20px;
+  // skip the first item
+  &__item + &__item{
+    margin-top: 20px;
   }
 
   &__link {
 
   }
 
+  // needs to be positioned relative to section links to work with flexbox
   &__view-all {
+    position: absolute;
+      bottom: 0;
+      left: 0;
     text-align: right;
+    width: 100%;
   }
 }
