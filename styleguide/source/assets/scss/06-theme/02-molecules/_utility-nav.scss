@@ -1,5 +1,5 @@
 .ma__utility-nav {
-  
+
   @media( $bp-medium-min) {
     background-color: $c-theme-primary-1;
     color: $c-font-inverse;
@@ -18,7 +18,7 @@
   &__link {
     @include ma-font(500);
     color: $c-font-dark;
-    
+
     @media( $bp-medium-min) {
       background-color: $c-theme-primary-1;
       color: $c-font-inverse;
@@ -45,7 +45,7 @@
   &__content {
     background-color: $c-bg-section;
     color: $c-font-inverse;
-    
+
     @media( $bp-medium-min) {
       background-color: $c-theme-primary-1;
     }
@@ -80,7 +80,7 @@
 
     span[role="presentation"] {
       @include ma-font(400);
-      opacity: 1;
+      opacity: .7;
     }
   }
 
@@ -93,4 +93,3 @@
     }
   }
 }
-

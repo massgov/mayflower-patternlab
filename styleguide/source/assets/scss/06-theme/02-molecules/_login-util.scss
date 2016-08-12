@@ -7,8 +7,8 @@
   &__item {
 
     a {
-      background-color: rgba($c-white, 0.2);
       @include ma-font(500);
+      background-color: rgba($c-white, 0.2);
     }
 
     svg {

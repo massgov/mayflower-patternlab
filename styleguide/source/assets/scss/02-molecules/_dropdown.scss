@@ -1,7 +1,7 @@
 .ma__dropdown {
   font-size: 0.875rem;
   position: relative;
-  
+
   &__label {
     display: inline-block;
     letter-spacing: .08em;
@@ -30,11 +30,11 @@
   &__link {
     @include ma-chevron;
     display: inline-block;
-    letter-spacing: .075em;
     padding-right: .5em;
 
     &:after {
       margin-left: .5em;
+      opacity: .7;
     }
   }
 
