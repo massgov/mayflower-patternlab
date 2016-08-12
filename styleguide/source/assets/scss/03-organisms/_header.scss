@@ -58,12 +58,12 @@ $bp-header-logo-min: "min-width: 1000px";
   }
 
   &__nav-container {
-    
+
     @media ($bp-medium-max){
       height: calc(100vh - #{$header-mobile-controls-height});
       overflow-y: auto;
       position: fixed;
-        top:0;
+        top: 0;
         right: -$header-mobile-menu-width;
       margin-top: $header-mobile-controls-height;
       transition: right 0.5s ease;
@@ -87,17 +87,22 @@ $bp-header-logo-min: "min-width: 1000px";
     z-index: $z-dropdown;
 
     @media ($bp-medium-min){
-      display:none;
+      display: none;
     }
 
   }
 
   &__back-button {
     @include ma-button-reset;
+    font-size: .875rem;
+    height: 33px;
+    letter-spacing: .08em;
+    margin-left: 20px;
     padding-left: 20px;
     position: fixed;
       top: 5px;
       left: 100%; // hides the outline
+    text-transform: uppercase;
     transition: left .5s, visibility .5s;
     visibility: hidden;
     z-index: $z-dropdown;
@@ -112,7 +117,7 @@ $bp-header-logo-min: "min-width: 1000px";
       margin-left: 3px;
       position: absolute;
         left: 0;
-        top: 2px;
+        top: 6px;
       transform: rotate(-45deg);
       transform-origin: 75% 75%;
       vertical-align: middle;
@@ -131,11 +136,14 @@ $bp-header-logo-min: "min-width: 1000px";
   &__menu-button {
     background-color: transparent;
     border: none;
-    height:35px;
+    font-size: .875rem;
+    height: 35px;
+    letter-spacing: .08em;
     line-height: 35px;
     margin-top: 2px;
-    padding-right: 40px;
-    position:relative;
+    padding-right: 30px;
+    position: relative;
+    text-transform: uppercase;
     transition: transform 0.5s ease;
   }
 
@@ -147,12 +155,11 @@ $bp-header-logo-min: "min-width: 1000px";
     position: absolute;
       right: 0;
     transition: all 500ms ease-in-out;
-    width: 30px;
-    top:17px;
+    width: 20px;
+    top: 17px;
 
     &:before,
     &:after {
-      border-radius: 1px;
       cursor: pointer;
       content: '';
       display: block;
@@ -160,7 +167,7 @@ $bp-header-logo-min: "min-width: 1000px";
       position: absolute;
         right: 0;
       transition: all 500ms ease-in-out;
-      width: 30px;
+      width: 20px;
     }
     &:before {
       top: -8px;
@@ -224,8 +231,8 @@ body {
 
   @media ($bp-medium-max) {
     height: 100%;
-    position:relative;
-      left:0;
+    position: relative;
+      left: 0;
     transition: left 0.5s ease;
     width: 100%;
 
@@ -237,4 +244,3 @@ body {
     }
   }
 }
-

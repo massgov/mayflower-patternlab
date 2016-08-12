@@ -11,12 +11,11 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
 
   &__description {
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.63;
     margin-bottom: 2em;
 
     @media ($bp-medium-min) {
       display: table-cell;
-      line-height: 1.63;
       margin-bottom: 0;
       vertical-align: middle;
       width: 300px;
@@ -87,6 +86,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
 
     svg {
       height: 16px;
+      opacity: .7;
       position: absolute;
         top: 50%;
         right: 20px;

@@ -14,6 +14,7 @@
   }
 
   &__back-button {
+    @include ma-font(700);
     color: $c-font-inverse;
 
     &:before {
@@ -27,8 +28,9 @@
   }
 
   &__menu-button {
+    @include ma-font(700);
     color: $c-font-inverse;
-    
+
     span:first-child {
       opacity: 0.7;
     }
@@ -36,7 +38,7 @@
 
   &__menu-icon {
     background-color:  $c-font-inverse;
-    
+
     &:before,
     &:after {
       background-color:  $c-font-inverse;
