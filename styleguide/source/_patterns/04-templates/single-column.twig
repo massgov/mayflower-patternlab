@@ -1,20 +1,14 @@
 {% include "organisms-header" %}
 <div class="pre-content">
-  <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-    Pre Content
-  </div>
+  {% block preContent %}{% endblock %}
 </div>
 <div class="main-content">
   <div class="page-content">
-    <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-      Page Content
-    </div>
+    {% block pageContent %}{% endblock %}
   </div>
 </div>
 <div class="post-content">
-  <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-    Post Content
-  </div>
+  {% block postContent %}{% endblock %}
 </div>
 
 {% include "organisms-footer" %}
