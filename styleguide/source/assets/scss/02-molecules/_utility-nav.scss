@@ -118,6 +118,7 @@ $utility-nav-height: 43px;
     @include ma-container;
     overflow-y: auto;
     padding-bottom: 20px;
+    padding-top: 15px;
     position: relative;
     z-index: $z-dropdown;
     height: calc(100vh - #{$header-mobile-controls-height});
@@ -125,7 +126,8 @@ $utility-nav-height: 43px;
     @media ($bp-medium-min) {
       height: auto;
       padding-bottom: 0;
-      margin-top: 15px;
+      padding-top: 0;
+      margin-top: 10px;
     }
   }
 
@@ -142,6 +144,7 @@ $utility-nav-height: 43px;
       margin-right: .45em;
       text-transform: uppercase;
       vertical-align: middle;
+      letter-spacing: .08em;
     }
 
     span[role="presentation"] {
@@ -162,7 +165,7 @@ $utility-nav-height: 43px;
       padding-bottom: 5px;
     }
 
-    & > span, 
+    & > span,
     & > svg {
       display: inline-block;
       vertical-align: middle;
@@ -181,7 +184,7 @@ $utility-nav-height: 43px;
   &__content-body {
 
     @media ($bp-medium-min) {
-      height: 75px;
+      height: 80px;
     }
   }
 }

@@ -8,7 +8,7 @@
 
   &__items {
     @include ma-reset-list;
-    
+
     @media ($bp-medium-min){
       display: table;
       margin-left: -12px;
@@ -82,6 +82,7 @@
     @include ma-chevron;
     &:after {
       cursor: pointer;
+      margin-left: 6px;
 
       @media ($bp-medium-max) {
         position: absolute;
@@ -169,7 +170,7 @@
       &.is-closed {
         @include ma-visually-hidden;
       }
-      
+
       .ma__main-nav__item:last-child & {
         left: inherit;
         right: 0;
@@ -189,20 +190,23 @@
   &__subitem {
     border-bottom: 1px solid;
 
-    @media ($bp-medium-min) {
-      &:first-child {
+    &:first-child {
+      letter-spacing: .05em;
+      text-transform: uppercase;
+
+      @media ($bp-medium-min) {
         display: none;
       }
     }
-    
+
     &:last-child {
       border-bottom: none;
-    }    
+    }
   }
 
   &__link {
     display: block;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.33;
     padding: 10px 20px;
 

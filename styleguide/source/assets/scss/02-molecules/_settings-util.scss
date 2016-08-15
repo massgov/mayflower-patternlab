@@ -25,7 +25,7 @@
 
   &__theme,
   &__lang {
-    
+
     @media ($bp-medium-min) {
       display: inline-block;
       vertical-align: middle;
@@ -59,7 +59,7 @@
       }
 
       &__link {
-        opacity: .7;
+        font-size: 1rem;
       }
     }
   }
@@ -77,6 +77,10 @@
 
     @media ($bp-medium-min) {
       margin-bottom: 0;
+
+      .ma__dropdown {
+        padding-right: 0;
+      }
     }
   }
 
@@ -88,20 +92,21 @@
       vertical-align: middle;
       width: 150px;
     }
-    
+
     @media ($bp-medium-min) and ("max-width:900px") {
       width: auto;
     }
 
     button {
       @include ma-button-reset;
+      @include ma-underline-link;
+      padding-bottom: 5px;
       font-size: 1rem;
       white-space: nowrap;
 
       &:hover {
-        opacity: .7;
       }
-      
+
       span,
       svg {
         display: inline-block;
@@ -109,7 +114,7 @@
         vertical-align: middle;
       }
 
-      @media ($bp-medium-min) and ("max-width:900px") {
+      @media ($bp-medium-min) and ("max-width:1000px") {
         text-align: right;
 
         span {

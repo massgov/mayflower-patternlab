@@ -1,5 +1,5 @@
 .ma__utility-nav {
-  
+
   @media( $bp-medium-min) {
     background-color: $c-theme-primary-1;
     color: $c-font-inverse;
@@ -17,8 +17,8 @@
 
   &__link {
     @include ma-font(500);
-    color: $c-font-dark;
-    
+    color: $c-font-base;
+
     @media( $bp-medium-min) {
       background-color: $c-theme-primary-1;
       color: $c-font-inverse;
@@ -30,8 +30,7 @@
     }
 
     svg {
-      fill: transparent;
-      stroke: $c-font-dark;
+      fill: $c-theme-primary-1;
 
       @media( $bp-medium-min) {
         fill: $c-font-inverse;
@@ -45,7 +44,7 @@
   &__content {
     background-color: $c-bg-section;
     color: $c-font-inverse;
-    
+
     @media( $bp-medium-min) {
       background-color: $c-theme-primary-1;
     }
@@ -80,7 +79,7 @@
 
     span[role="presentation"] {
       @include ma-font(400);
-      opacity: 1;
+      opacity: .7;
     }
   }
 
@@ -93,4 +92,3 @@
     }
   }
 }
-

@@ -15,6 +15,7 @@ body {
 }
 
 a {
+  @include ma-link-transition;
   text-decoration: none;
 }
 

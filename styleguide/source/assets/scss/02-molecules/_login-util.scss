@@ -11,12 +11,11 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
 
   &__description {
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.63;
     margin-bottom: 2em;
 
     @media ($bp-medium-min) {
       display: table-cell;
-      line-height: 1.63;
       margin-bottom: 0;
       vertical-align: middle;
       width: 300px;
@@ -63,6 +62,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
     }
 
     a {
+      @include ma-link-transition;
       display: block;
       font-size: 1.125rem;
       line-height: 1.25;
@@ -86,6 +86,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
 
     svg {
       height: 16px;
+      opacity: .7;
       position: absolute;
         top: 50%;
         right: 20px;
@@ -112,18 +113,18 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       @include ma-underline-link;
 
       &:after {
-        border-right: 2px solid;
-        border-bottom: 2px solid;
+        border-right: 3px solid;
+        border-bottom: 3px solid;
         content: "";
         display: inline-block;
         height: .5em;
-        margin-left: .25em;
+        margin-left: .4em;
+        margin-bottom: -.09em;
+        opacity: .7;
         transform: translateY(-50%) rotate(-45deg);
         transform-origin: 75% 75%;
         width: .5em;
-
       }
     }
   }
 }
-
