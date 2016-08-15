@@ -1,16 +1,12 @@
-{% include "organisms-header" %}
-<div class="pre-content">
-  {% include "organisms-page-banner" %}
-</div>
-<div class="main-content">
-  <div class="page-content">
-    {% include "organisms-top-tasks" %}
-  </div>
-</div>
-<div class="post-content">
-  <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-    Post Content
-  </div>
-</div>
+{% extends 'templates-single-column' %}
 
-{% include "organisms-footer" %}
+{% block preContent %}
+  {% include "organisms-page-banner" %}
+{% endblock %}
+{% block pageContent %}
+  {% include "organisms-top-tasks" %}
+  {% include "organisms-sections-three-up" %}
+{% endblock %}
+{% block postContent %}
+
+{% endblock %}

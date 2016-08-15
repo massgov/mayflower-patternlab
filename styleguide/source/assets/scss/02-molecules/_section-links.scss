@@ -1,0 +1,76 @@
+.ma__section-links {
+  position: relative;
+
+  &__banner {
+    overflow: hidden;
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__overlay {
+    height: 50%;
+    position: absolute;
+      bottom: -25%;
+      right: -50%;
+    transform: rotate(-11deg);
+    transform-origin: bottom center;
+    width: 200%;
+  }
+
+  &__content {
+    padding: 10px;
+    padding-bottom: 40px;
+
+    @media ($bp-small-min) {
+      padding: 30px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__banner + &__content {
+    padding-top: 0px;
+  }
+
+  &__title {
+    @include ma-border-decorative;
+    padding-bottom: 20px;
+
+    &:after {
+      width: 60px;
+    }
+
+    a:hover {
+      opacity: .7;
+    }
+  }
+
+  &__items {
+    @include ma-reset-list;
+  }
+
+  // skip the first item
+  &__item + &__item{
+    margin-top: 20px;
+  }
+
+  &__link {
+
+  }
+
+  // needs to be positioned relative to section links to work with flexbox
+  &__view-all {
+    min-height: 40px;
+    position: absolute;
+      bottom: 0;
+      right: 0;
+    text-align: right;
+    width: 200px;
+
+    a {
+      padding: 10px 15px;
+    }
+  }
+}
