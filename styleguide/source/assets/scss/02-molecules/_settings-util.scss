@@ -77,6 +77,10 @@
 
     @media ($bp-medium-min) {
       margin-bottom: 0;
+
+      .ma__dropdown {
+        padding-right: 0;
+      }
     }
   }
 
@@ -110,7 +114,7 @@
         vertical-align: middle;
       }
 
-      @media ($bp-medium-min) and ("max-width:900px") {
+      @media ($bp-medium-min) and ("max-width:1000px") {
         text-align: right;
 
         span {
