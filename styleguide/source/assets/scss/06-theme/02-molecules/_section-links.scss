@@ -39,7 +39,7 @@
       color: $c-white;
       opacity: .7;
 
-      .no-cssgradients {
+      .no-cssgradients & {
         background-color: $c-theme-primary-2;
       }
     }
