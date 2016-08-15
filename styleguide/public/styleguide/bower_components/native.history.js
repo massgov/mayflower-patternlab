@@ -9,8 +9,7 @@
 (function(window,undefined){
 	"use strict";
 
-	// Localise Globals
-	var history = window.history = window.history||{};
+	var history = window.history;
 
 	// Check Existence
 	if ( typeof history.Adapter !== 'undefined' ) {
@@ -144,8 +143,7 @@
 		clearInterval = window.clearInterval,
 		JSON = window.JSON,
 		alert = window.alert,
-		history = window.history = window.history||{}, // Public history Object
-		history = window.history; // Old history Object
+		history = window.history;
 
 	try {
 		sessionStorage = window.sessionStorage; // This will throw an exception in some browsers when cookies/localStorage are explicitly disabled (i.e. Chrome)
