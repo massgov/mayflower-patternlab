@@ -1,6 +1,7 @@
 $page-banner-inner-width: 612px;
 
 .ma__page-banner {
+  position: relative;
   text-align: center;
 
   &__background {
@@ -8,7 +9,10 @@ $page-banner-inner-width: 612px;
     background-position: top center;
     margin: 0 auto;
     max-width: 1600px;
-    position: relative;
+    height: 400px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
 
     &:after {
       @include ma-container;
@@ -25,14 +29,15 @@ $page-banner-inner-width: 612px;
     }
   }
 
-  &__title-container,
   &__content {
     margin: 0 30px;
-    padding: 0 45px;
+    min-height: 400px;
+    padding: 0 45px 40px;
+    position: relative;
+    z-index: 1;
 
     @media($bp-small-min) {
       margin: 0 60px;
-      padding: 0 70px;
     }
 
     @media($bp-medium-min) {
@@ -41,25 +46,14 @@ $page-banner-inner-width: 612px;
     }
   }
 
-  &__title-container {
-
-  }
-
   &__icon {
-    font-size: 0;
-    padding: 40px 0 30px;
+    display: inline-block;
+    margin-bottom: 55px;
   }
 
   &__title {
     margin-bottom: 0;
     padding-bottom: 0.67em;
-  }
-
-  &__content {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    position: relative;
-    z-index: 1;
   }
 
   &__divider {
