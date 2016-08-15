@@ -1,0 +1,33 @@
+.ma__category-icon {
+  @include ma-valign-block;
+  font-size: 0;
+  height: 150px;
+  margin: 0 0 28px; // height of the after angled element
+  padding: 40px 10px 12px;
+  text-align: center;
+  width: 130px;
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:after {
+    border-top: 14px solid; // ~11 degrees
+    border-right: 65px solid transparent; // half width
+    border-bottom: 14px solid transparent; // ~11 degrees
+    border-left: 65px solid; //half width;
+
+    content: "";
+    display: block;
+    height: 0;
+    position: relative;
+      left: -10px;
+      bottom: -12px;
+    width: 0;
+  }
+
+  &--small {
+
+  }
+}
