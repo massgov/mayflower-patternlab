@@ -1,5 +1,6 @@
 .ma__top-tasks {
   @include ma-container;
+  margin-bottom: 65px;
 
   &__title {
     @include ma-border-decorative;

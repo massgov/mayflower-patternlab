@@ -33,6 +33,15 @@
   }
 
   &__view-all {
+    background-image: linear-gradient(-191deg, transparent, transparent 49%, $c-theme-primary-2 50%, $c-theme-primary-2 100%);
 
+    a {
+      color: $c-white;
+      opacity: .7;
+
+      .no-cssgradients {
+        background-color: $c-theme-primary-2;
+      }
+    }
   }
 }
