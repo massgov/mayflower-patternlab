@@ -6,10 +6,6 @@ $page-banner-inner-width: 612px;
     @include ma-border-decorative($c-white, $c-theme-primary-2);
   }
 
-  &__title-container {
-    background-image: linear-gradient(180deg, transparent 120px, rgba($c-bg-section,.1) 51px, $c-bg-section)
-  }
-
   &__icon {
 
   }
@@ -19,7 +15,11 @@ $page-banner-inner-width: 612px;
   }
 
   &__content {
-    background-color: $c-bg-section;
+    background-image: linear-gradient(180deg, transparent, transparent 130px, rgba($c-bg-section,.1) 131px, $c-bg-section 400px, $c-bg-section);
+
+    .no-cssgradients & {
+      background-color: rgba($c-bg-section,.6);
+    }
   }
 
   &__divider {
