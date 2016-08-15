@@ -118,6 +118,7 @@ $utility-nav-height: 43px;
     @include ma-container;
     overflow-y: auto;
     padding-bottom: 20px;
+    padding-top: 15px;
     position: relative;
     z-index: $z-dropdown;
     height: calc(100vh - #{$header-mobile-controls-height});

@@ -1,9 +1,9 @@
 @mixin ma-container {
   margin: 0 auto;
   // grid max width plus the l/r padding for desktop
-  max-width: $max-width + 80px;  
-  padding-left: 10px;
-  padding-right: 10px;
+  max-width: $max-width + 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media ($bp-x-small-min) {
     padding-left: 20px;
@@ -20,4 +20,3 @@
     padding-right: 40px;
   }
 }
-

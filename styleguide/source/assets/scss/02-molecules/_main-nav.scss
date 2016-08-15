@@ -190,8 +190,11 @@
   &__subitem {
     border-bottom: 1px solid;
 
-    @media ($bp-medium-min) {
-      &:first-child {
+    &:first-child {
+      letter-spacing: .05em;
+      text-transform: uppercase;
+
+      @media ($bp-medium-min) {
         display: none;
       }
     }
@@ -203,7 +206,7 @@
 
   &__link {
     display: block;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.33;
     padding: 10px 20px;
 
