@@ -167,6 +167,15 @@ $utility-nav-height: 43px;
       display: inline-block;
       vertical-align: middle;
     }
+
+    & > svg {
+      height: 20px;
+      width: 20px;
+
+      &.svg-login {
+        width: 25px;
+      }
+    }
   }
 
   &__content-body {
