@@ -1,4 +1,4 @@
-$layout-sidebar-width: 350px;
+$layout-sidebar-width: ($column * 3) + ($gutter * 2);
 
 .pre-content,
 .main-content,
@@ -34,7 +34,7 @@ $layout-sidebar-width: 350px;
   &:first-child:nth-last-child(2) {
     @media ($bp-small-min){
       float:left;
-      padding-right: $gutter;
+      padding-right: $column + ($gutter * 2);
       padding-bottom: 0;
       width: calc(100% - #{$layout-sidebar-width});
     }
