@@ -16,7 +16,7 @@ $page-banner-inner-width: 612px;
 
     &:after {
       @include ma-container;
-      
+
       @media($bp-medium-min) {
         content: "";
         height: 10px;
@@ -52,6 +52,7 @@ $page-banner-inner-width: 612px;
   }
 
   &__title {
+    font-size: 4.625rem;
     margin-bottom: 0;
     padding-bottom: 0.67em;
   }
@@ -64,8 +65,8 @@ $page-banner-inner-width: 612px;
   }
 
   &__description {
-    font-size: 1.125rem;
-    padding-top: 20px;
+    font-size: 1.375rem;
+    padding-top: 35px;
 
     & > :last-child {
       margin-bottom: 0;

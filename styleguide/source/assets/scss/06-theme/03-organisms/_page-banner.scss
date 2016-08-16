@@ -11,7 +11,7 @@ $page-banner-inner-width: 612px;
   }
 
   &__title {
-
+    @include ma-font(400);
   }
 
   &__content {
@@ -28,6 +28,6 @@ $page-banner-inner-width: 612px;
   }
 
   &__description {
-
+    @include ma-font(300);
   }
 }

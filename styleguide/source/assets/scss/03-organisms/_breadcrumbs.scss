@@ -16,7 +16,7 @@
 
   ul {
     @include ma-reset-list;
-    
+
     .pre-content & {
       border-top: 1px solid;
     }
@@ -34,7 +34,7 @@
     }
 
     &:last-child {
-     
+
       &:after {
         display: none;
       }
@@ -62,7 +62,7 @@
 
   a {
     display: inline-block;
-    font-size: 1rem;
+    font-size: .875rem;
     line-height: 1rem;
     margin-right: 5px;
     padding: 20px 0;
