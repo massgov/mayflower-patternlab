@@ -1,0 +1,18 @@
+.ma__breadcrumbs {
+
+  .pre-content & {
+    background-color: $c-bg-section;
+
+    ul {
+      border-top-color: $c-bd-divider;
+    }
+  }
+
+  li:last-child {
+     
+    a {
+      @include ma-font(400);
+      color: $c-font-base;
+    }
+  }
+}
