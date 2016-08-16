@@ -57,7 +57,14 @@
   }
 
   &__link {
+    @include ma-chevron;
+    display: inline-block;
+    padding-right: 15px;
 
+    &:after {
+      margin-right: -20px;
+      margin-left:5px;
+    }
   }
 
   // needs to be positioned relative to section links to work with flexbox
