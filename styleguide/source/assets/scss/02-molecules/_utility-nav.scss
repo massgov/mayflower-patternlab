@@ -46,8 +46,7 @@ $utility-nav-height: 43px;
       &:after {
         position: absolute;
           right: 20px;
-          top: 10px;
-        transform: rotate(-45deg);
+          top: 15px;
       }
     }
     @media ($bp-medium-min) {
@@ -98,13 +97,14 @@ $utility-nav-height: 43px;
       padding-left: 0;
       position: absolute;
         left: 0;
-      transition: visibility 1s, top 1s;
+      transition: visibility .6s, top .6s;
       visibility: visible;
       width: 100vw;
 
       &.is-closed {
         right: 0;
         top: -140px;
+        transition: visibility .3s, top .3s;
       }
 
       &[aria-hidden="true"] {

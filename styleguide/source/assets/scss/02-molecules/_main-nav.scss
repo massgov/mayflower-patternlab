@@ -87,8 +87,10 @@
       @media ($bp-medium-max) {
         position: absolute;
           right: 20px;
-          top: 10px;
-        transform: rotate(-45deg);
+          top: 15px;
+      }
+      @media ($bp-medium-min) {
+        transform: translateY(-45%) rotate(45deg);
       }
       @media ($bp-medium-min) and ($bp-x-large-max) {
         display: none;

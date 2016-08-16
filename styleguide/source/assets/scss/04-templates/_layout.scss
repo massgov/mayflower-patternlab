@@ -14,7 +14,11 @@ $layout-sidebar-width: 350px;
   }
 }
 
-.main-content--two {
+.post-content {
+  padding-bottom: 0;
+}
+
+.main-content--two
   margin: 0 auto;
   max-width: $max-width;
 }
