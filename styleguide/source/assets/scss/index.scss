@@ -39,6 +39,7 @@ $max-width: 1240px; // use @include outer-container() which sets this and center
 @import "02-molecules/zoom-controls";
 
 // Organisms - components
+@import "03-organisms/breadcrumbs";
 @import "03-organisms/callout";
 @import "03-organisms/header";
 @import "03-organisms/footer";

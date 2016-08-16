@@ -2,6 +2,24 @@ $header-mobile-menu-width: 300px;
 $header-logo-width: 210px;
 $bp-header-logo-min: "min-width: 1000px";
 
+body {
+
+  @media ($bp-medium-max) {
+    height: 100%;
+    position: relative;
+      left: 0;
+    transition: left 0.5s ease;
+    width: 100%;
+
+    &.show-menu {
+      left: -$header-mobile-menu-width;
+      overflow: hidden;
+      position: relative;
+      min-height: 100%;
+    }
+  }
+}
+
 .ma__header {
   padding-top: 43px; // height of the util nav
   position: relative;
@@ -227,20 +245,3 @@ $bp-header-logo-min: "min-width: 1000px";
   }
 }
 
-body {
-
-  @media ($bp-medium-max) {
-    height: 100%;
-    position: relative;
-      left: 0;
-    transition: left 0.5s ease;
-    width: 100%;
-
-    &.show-menu {
-      left: -$header-mobile-menu-width;
-      overflow: hidden;
-      position: relative;
-      min-height: 100%;
-    }
-  }
-}

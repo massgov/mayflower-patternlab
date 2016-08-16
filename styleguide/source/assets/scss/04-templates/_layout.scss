@@ -15,6 +15,10 @@ $layout-six-columns: 6 * ($column + $gutter);
   }
 }
 
+.post-content {
+  padding-bottom: 0;
+}
+
 .main-content--two,
 .main-content--three {
   margin: 0 auto;
