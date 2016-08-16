@@ -1,6 +1,7 @@
 {% extends 'templates-two-column' %}
 
 {% block preContent %}
+  {% include "organisms-breadcrumbs" with {breadcrumb:{class:"ma__breadcrumbs--page"}} %}
   {% include "organisms-page-header" %}
 {% endblock %}
 {% block pageContent %}

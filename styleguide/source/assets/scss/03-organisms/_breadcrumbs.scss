@@ -1,3 +1,4 @@
+
 .ma__breadcrumbs {
   .pre-content & {
     @media ($bp-medium-max) {
@@ -66,5 +67,12 @@
     line-height: 1rem;
     margin-right: 5px;
     padding: 20px 0;
+  }
+}
+
+.ma__breadcrumbs--page {
+  .pre-content & ul {
+    border-top: none;
+    border-bottom: 1px solid;
   }
 }
