@@ -9,4 +9,13 @@
     line-height: 1.39;
     text-transform: uppercase;
   }
+
+  &__content {
+
+    // styled like the h3;
+    h2 {
+      font-size: 1.75rem;
+      line-height: 1.214287; //34px
+    }
+  }
 }
