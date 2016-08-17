@@ -2,5 +2,11 @@
 
   &__title {
     @include ma-column-heading("right");
+    color: white;
+    font-family: Gotham;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.39;
+    text-transform: uppercase;
   }
 }

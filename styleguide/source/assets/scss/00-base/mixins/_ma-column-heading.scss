@@ -7,7 +7,7 @@
 
   @if($c-bg == transparent) {
     overflow: hidden;
-    padding: 20px;
+    padding: 18px 25px;
     position: relative;
     text-transform: uppercase;
     width: calc(100% + $offset);

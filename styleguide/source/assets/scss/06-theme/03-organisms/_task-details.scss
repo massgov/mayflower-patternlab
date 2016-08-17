@@ -1,6 +1,7 @@
 .ma__task-details {
 
   &__title {
+    @include ma-font(700);
     @include ma-column-heading("",$c-theme-primary-2);
     color: $c-font-inverse;
   }
