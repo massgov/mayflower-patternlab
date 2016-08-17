@@ -5,7 +5,7 @@
   &__title {
     @include ma-border-decorative;
     margin-bottom: 45px;
-    padding-bottom: .75em;
+    padding-bottom: .55em;
     text-align: center;
 
     &:after {
@@ -40,6 +40,6 @@
   }
 
   &__link {
-
+    font-size: 1.375rem;
   }
 }

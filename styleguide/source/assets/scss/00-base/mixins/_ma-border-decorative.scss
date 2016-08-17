@@ -4,7 +4,7 @@
   @if($fg == transparent) {
     position: relative;
   }
-  
+
   &:after {
     @if($fg == transparent) {
       content: "";
@@ -22,4 +22,3 @@
   }
 
 }
-
