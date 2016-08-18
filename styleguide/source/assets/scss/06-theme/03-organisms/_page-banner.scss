@@ -11,7 +11,7 @@ $page-banner-inner-width: 612px;
   }
 
   &__title {
-
+    @include ma-font(300);
   }
 
   &__content {
@@ -24,7 +24,6 @@ $page-banner-inner-width: 612px;
 
   &__divider {
     @include ma-border-decorative($c-bg-section, $c-theme-primary-2);
-    opacity: .5
   }
 
   &__description {
