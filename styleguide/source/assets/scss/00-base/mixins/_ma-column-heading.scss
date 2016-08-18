@@ -6,6 +6,9 @@
   $offset: 55px;
 
   @if($c-bg == transparent) {
+    font-size: 1.125rem;
+    line-height: 1.39;
+    margin-bottom: 50px;
     overflow: hidden;
     padding: 18px 25px;
     position: relative;
@@ -22,7 +25,7 @@
         position: absolute;
           top: 0;
           left: 100%;
-        transform: rotate(11deg);
+        transform: rotate(30deg);
         transform-origin: top left;
         width: 100%;
       }
@@ -30,7 +33,7 @@
     // left
     @else {
       margin-left: -$offset;
-      padding-left: $offset + 20px;
+      padding-left: $offset;
 
       &:before {
         content: "";
@@ -38,7 +41,7 @@
         position: absolute;
           bottom: 0;
           right: 100%;
-        transform: rotate(11deg);
+        transform: rotate(30deg);
         transform-origin: bottom right;
         width: 100%;
       }
