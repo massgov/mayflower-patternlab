@@ -115,8 +115,11 @@
   }
 } %}
 <section class="ma__sections-3up">
-  {% include "molecules-section-links" with sOne %}
-  {% include "molecules-section-links" with sTwo %}
-  {% include "molecules-section-links" with sThree %}
-  {% include "molecules-section-links" with sFour %}
+  <h2 class="ma__sections-3up__title">More in Visiting &amp; Exploring</h2>
+  <div class="ma__sections-3up__container">
+    {% include "molecules-section-links" with sOne %}
+    {% include "molecules-section-links" with sTwo %}
+    {% include "molecules-section-links" with sThree %}
+    {% include "molecules-section-links" with sFour %}
+  </div>
 </section>
