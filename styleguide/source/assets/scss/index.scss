@@ -4,17 +4,14 @@
 // Sass frameworks added in npm
 @import "bourbon";
 
-// Change the grid settings
-$column: 85px;
-$gutter: 20px;
-$max-width: 1240px; // use @include outer-container() which sets this and centers;
+// some variables adjust the settings in Neat
+@import "00-base/variables";
 
 @import "neat";
 
 // Base variables
 @import "00-base/breakpoints";
 @import "00-base/mixins";
-@import "00-base/variables";
 @import "00-base/z-index";
 
 // Atoms - reusable styles
