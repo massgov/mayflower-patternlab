@@ -2,6 +2,10 @@
   h2, h3, h4 {
 
     @include ma-border-decorative($c-white, $c-theme-primary-2);
+
+    &:after {
+      opacity: .5;
+    }
   }
 
   a:hover {
