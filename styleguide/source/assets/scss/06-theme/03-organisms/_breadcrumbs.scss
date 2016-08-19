@@ -16,3 +16,13 @@
     }
   }
 }
+.ma__breadcrumbs--page {
+
+  .pre-content & {
+    background-color: transparent;
+
+    ul {
+      border-bottom-color: $c-bd-divider;
+    }
+  }
+}

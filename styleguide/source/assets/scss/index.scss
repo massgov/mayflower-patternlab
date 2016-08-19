@@ -4,17 +4,14 @@
 // Sass frameworks added in npm
 @import "bourbon";
 
-// Change the grid settings
-$column: 85px;
-$gutter: 20px;
-$max-width: 1240px; // use @include outer-container() which sets this and centers;
+// some variables adjust the settings in Neat
+@import "00-base/variables";
 
 @import "neat";
 
 // Base variables
 @import "00-base/breakpoints";
 @import "00-base/mixins";
-@import "00-base/variables";
 @import "00-base/z-index";
 
 // Atoms - reusable styles
@@ -44,8 +41,11 @@ $max-width: 1240px; // use @include outer-container() which sets this and center
 @import "03-organisms/header";
 @import "03-organisms/footer";
 @import "03-organisms/page-banner";
+@import "03-organisms/page-header";
+@import "03-organisms/related-tasks";
 @import "03-organisms/rich-text";
 @import "03-organisms/sections-three-up";
+@import "03-organisms/task-details";
 @import "03-organisms/top-tasks";
 
 // Templates - page content types

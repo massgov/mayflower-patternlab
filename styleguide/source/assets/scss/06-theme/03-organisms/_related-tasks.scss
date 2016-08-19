@@ -1,0 +1,35 @@
+.ma__related-tasks {
+
+  &__title {
+    @include ma-column-heading("",$c-bg-comp-title);
+    @include ma-font(700);
+    color: $c-font-inverse;
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+    
+    & + & {
+      border-top-color: $c-bd-divider;
+    }
+  }
+
+  &__link {
+
+    span {
+
+    }
+
+    svg {
+      fill: $c-font-link;
+      opacity: .5;
+    }
+  }
+
+  &__description {
+    // @include ma-font(300);
+  }
+}

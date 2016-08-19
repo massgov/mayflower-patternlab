@@ -100,11 +100,11 @@
     button {
       @include ma-button-reset;
       @include ma-underline-link;
-      padding-bottom: 5px;
       font-size: 1rem;
       white-space: nowrap;
 
       &:hover {
+
       }
 
       span,

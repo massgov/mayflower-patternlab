@@ -1,5 +1,4 @@
-$layout-three-columns: 3 * ($column + $gutter);
-$layout-six-columns: 6 * ($column + $gutter);
+$layout-sidebar-width: ($column * 3) + ($gutter * 2);
 
 .pre-content,
 .main-content,
@@ -19,29 +18,8 @@ $layout-six-columns: 6 * ($column + $gutter);
   padding-bottom: 0;
 }
 
-.main-content--two,
-.main-content--three {
-  margin: 0 auto;
-  max-width: $max-width;
-}
-
-.sub-nav {
-  padding-bottom: 20px;
-
-  .main-content--three &,
-  &:first-child:nth-last-child(3) {
-    @media ($bp-small-min) {
-      float: left;
-      padding-right: $gutter;
-      width: $layout-three-columns; // three columns
-    }
-    @media ($bp-medium-min) {
-      padding-bottom: 30px;
-    }
-    @media ($bp-large-min) {
-      padding-bottom: 0;
-    }
-  }
+.main-content--two {
+  @include ma-container;
 }
 
 .page-content {
@@ -55,54 +33,17 @@ $layout-six-columns: 6 * ($column + $gutter);
   &:first-child:nth-last-child(2) {
     @media ($bp-small-min){
       float:left;
+      padding-right: $column + ($gutter * 2);
       padding-bottom: 0;
-      width: calc(100% - #{$layout-three-columns});
-    }
-  }
-
-  .main-content--three &,
-  &:nth-child(2):nth-last-child(2) {
-    @media ($bp-small-min) {
-      float:left;
-      padding-bottom: 20px;
-      width: calc(100% - #{$layout-three-columns});
-    }
-
-    @media ($bp-medium-min) {
-      padding-bottom: 30px;
-    }
-    @media ($bp-large-min) {
-      padding-bottom: 0;
-      width: calc(100% - #{$layout-six-columns});
+      width: calc(100% - #{$layout-sidebar-width});
     }
   }
 }
 
 .sidebar {
-
   // two column layout with sidebar on the right
-  .main-content--two &,
-  &:last-child:nth-child(2) {
-    @media ($bp-small-min){
-      float: left;
-      padding-left: $gutter;
-      width: $layout-three-columns; // three columns
-    }
+  @media ($bp-small-min){
+    float: left;
+    width: $layout-sidebar-width; 
   }
-
-  // three column layout with sidebar on the right
-  .main-content--three &,
-  &:last-child:nth-child(3) {
-    
-    @media ($bp-large-max){
-      clear: both;
-    }
-
-    @media ($bp-large-min){
-      float: left;
-      padding-left: $gutter;
-      width: $layout-three-columns; // three columns
-    }
-  }
-
 }

@@ -1,0 +1,41 @@
+// from index.scss
+// $column: 85px;
+// $gutter: 20px;
+
+.ma__task-details {
+  
+  &__title {
+    @include ma-column-heading("right");
+  }
+
+  &__content {
+    margin-left: $column-with-gutter * 2; 
+    position: relative;
+    // styled like the h3;
+    h2 {
+      font-size: 1.75rem;
+      line-height: 1.214287; //34px
+      padding-bottom: .6em;
+    }
+  }
+
+  &__anchor-links {
+    padding-right: $gutter * 2;
+    position: absolute;
+      right: 100%;
+    width: $column-with-gutter * 2;
+
+    a {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.63;
+      padding-bottom: 15px;
+    }
+
+    a + a {
+      border-top: 1px solid;
+      padding-top: 15px;
+    }
+
+  }
+}

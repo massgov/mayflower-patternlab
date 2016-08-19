@@ -1,25 +1,24 @@
 {% include "organisms-header" %}
 <div class="pre-content">
-  <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-    Pre Content
-  </div>
+  {% block preContent %}
+    {% include "base-placeholder" with {'placeholder':{'text':'Pre Content'}} %}
+  {% endblock %}
 </div>
 <div class="main-content main-content--two">
   <div class="page-content">
-    <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-      Page Content
-    </div>
+    {% block pageContent %}
+      {% include "base-placeholder" with {'placeholder':{'text':'Page content'}} %}
+    {% endblock %}
   </div>
   <div class="sidebar">
-    <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-      Sidebar
-    </div>
+    {% block sidebar %}
+      {% include "base-placeholder" with {'placeholder':{'text':'sidebar'}} %}
+    {% endblock %}
   </div>
 </div>
 <div class="post-content">
-  <div style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
-    Post Content
-  </div>
+  {% block postContent %}
+    {% include "base-placeholder" with {'placeholder':{'text':'Post Content'}} %}
+  {% endblock %}
 </div>
-
 {% include "organisms-footer" %}
