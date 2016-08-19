@@ -25,7 +25,9 @@
       <h3>Get it Done</h3>
       <p>You can get your Mass Parks Pass a couple different ways</p>
       <div class="ma__task-details__section-content">
-        {% include "molecules-task-step" %}
+        {% for taskStep in taskSteps %}
+          {% include "molecules-task-step" with taskStep %}
+        {% endfor %}
       </div>      
     </div>
     <div class="ma__task-details__section">

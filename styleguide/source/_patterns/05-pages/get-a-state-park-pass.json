@@ -10,5 +10,27 @@
   },{
     "text": "Get a State Park Pass",
     "href": "#"
-  }]
+  }],
+
+  "taskSteps": [{
+      "icon":"atoms-svg-profile",
+      "title":"In Person at State Parks",
+      "rte":"<p>Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check.</p>"
+    },
+    {
+      "icon":"atoms-svg-laptop",
+      "title":"Online",
+      "rte":"<p>You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days.</p>"
+    },
+    {
+      "icon":"atoms-svg-phone",
+      "title":"By Phone",
+      "rte":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel. </p>"
+    },
+    {
+      "icon":"atoms-svg-mail",
+      "title":"By Mail",
+      "rte":"<p><i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts.</p>"
+    }
+  ]
 }

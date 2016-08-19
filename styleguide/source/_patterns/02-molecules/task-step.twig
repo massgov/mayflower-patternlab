@@ -1,11 +1,9 @@
 <section class="ma__task-step">
   <div class="ma__task-step__icon">
-    {% include "atoms-svg-profile" %}
+    {% include taskStep.icon %}
   </div>
-  <h5 class="ma__task-step__title">In Person at State Parks</h5>
+  <h5 class="ma__task-step__title">{{taskStep.title}}</h5>
   <div class="ma__task-step__content">
-    <section class="ma__rich-text">
-      <p>Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check.</p>
-    </section>
+    <section class="ma__rich-text">{{taskStep.rte | raw}}</section>
   </div>
 </section>
