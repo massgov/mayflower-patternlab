@@ -21,4 +21,11 @@
       border-top-color: $c-bd-divider;
     }
   }
+
+  &__section {
+
+    h3 {
+      @include ma-border-decorative($c-white, $c-theme-primary-2);
+    }
+  }
 }

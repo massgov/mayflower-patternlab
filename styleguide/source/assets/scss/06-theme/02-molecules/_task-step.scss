@@ -1,0 +1,13 @@
+.ma__task-step {
+
+  &__icon {
+
+    svg {
+      fill: $c-theme-primary-2;
+    }
+  }
+
+  &__title {
+    color: $c-font-base;
+  }
+}

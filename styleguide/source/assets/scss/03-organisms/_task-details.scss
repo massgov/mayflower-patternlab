@@ -11,12 +11,6 @@
   &__content {
     margin-left: $column-with-gutter * 2; 
     position: relative;
-    // styled like the h3;
-    h2 {
-      font-size: 1.75rem;
-      line-height: 1.214287; //34px
-      padding-bottom: .6em;
-    }
   }
 
   &__anchor-links {
@@ -37,5 +31,18 @@
       padding-top: 15px;
     }
 
+  }
+
+  &__section {
+
+    h3 {
+      @include ma-border-decorative;
+      position: relative;
+      padding-bottom: .55em;
+
+      &:after {
+        width: 2.25em; // ma-underline-decorative override
+      }
+    }
   }
 }
