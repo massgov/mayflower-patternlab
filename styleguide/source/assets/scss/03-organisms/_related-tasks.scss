@@ -30,8 +30,12 @@
     }
 
     svg {
+      @include ma-link-transition;
       margin-right: -20px;
+    }
 
+    &:hover svg {
+      margin-left: 4px;
     }
   }
 
