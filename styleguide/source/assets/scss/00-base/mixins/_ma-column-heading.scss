@@ -16,8 +16,17 @@
     width: calc(100% + $offset);
 
     @if($side == "right") {
-      margin-right: -$offset;
-      padding-right: $offset + 20px;
+      padding-right: $offset;
+
+      @media ($bp-large-min) {
+        margin-right: -$offset + 20px;
+      }
+
+      @media($bp-x-large-min) {
+        margin-right: -$offset;
+        padding-right: $offset + 20px;
+
+      }
 
       &:after {
         content: "";
@@ -32,8 +41,16 @@
     }
     // left
     @else {
-      margin-left: -$offset;
       padding-left: $offset;
+      
+      @media ($bp-large-min) {
+        margin-left: -$offset + 20px;
+      }
+
+      @media($bp-x-large-min) {
+        margin-left: -$offset;
+        padding-left: $offset;
+      }
 
       &:before {
         content: "";

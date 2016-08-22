@@ -9,15 +9,29 @@
   }
 
   &__content {
-    margin-left: $column-with-gutter * 2; 
     position: relative;
+
+    @media ($bp-large-min) {
+      margin-left: 160px;
+    }
+
+    @media ($bp-x-large-min) {
+      margin-left: $column-with-gutter * 2; 
+    }
   }
 
   &__anchor-links {
-    padding-right: $gutter * 2;
-    position: absolute;
-      right: 100%;
-    width: $column-with-gutter * 2;
+
+    @media ($bp-large-min) {
+      padding-right: $gutter * 2;
+      position: absolute;
+        right: 100%;
+      width: 160px;
+    }
+    
+    @media ($bp-x-large-min) {
+      width: $column-with-gutter * 2;
+    }
 
     a {
       display: block;
