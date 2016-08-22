@@ -13,7 +13,7 @@
   }
 
   &__title {
-    @include ma-border-decorative($c-bg-section,$c-theme-secondary-1);
+    @include ma-border-decorative($c-bg-section,$c-theme-secondary-1,1);
 
     a {
       color: inherit;
