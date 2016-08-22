@@ -19,5 +19,8 @@
 
   &__link {
 
+    &:hover {
+      border-bottom-color: rgba($c-theme-primary-1,.5);
+    }
   }
 }

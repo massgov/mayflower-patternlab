@@ -3,7 +3,7 @@
   &__items {
 
     @media ($bp-small-max) {
-      border-bottom-color: $c-bd-divider; 
+      border-bottom-color: $c-bd-divider;
     }
   }
 
@@ -12,7 +12,7 @@
     color: $c-font-link-subtle;
 
     &:hover {
-      border-bottom-color: $c-font-link-subtle;
+      border-bottom-color: rgba($c-font-link-subtle,.5);
     }
   }
 }
