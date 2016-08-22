@@ -33,10 +33,7 @@
   }
 
   &__link {
-    
-    &:hover {
-      @include ma-underline-link;
-    }
+    @include ma-underline-link;
   }
 }
 
