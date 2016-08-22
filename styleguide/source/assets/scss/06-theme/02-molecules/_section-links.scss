@@ -1,6 +1,6 @@
 .ma__section-links {
   background-color: $c-bg-section;
-  
+
   &__banner {
 
   }
@@ -14,9 +14,10 @@
 
   &__title {
     @include ma-border-decorative($c-bg-section,$c-theme-secondary-1);
-    
+
     a {
       color: inherit;
+      @include ma-font(500);
     }
   }
 
@@ -30,6 +31,9 @@
 
   &__link {
 
+    &:hover {
+      border-bottom-color: rgba($c-theme-primary-1,.5);
+    }
   }
 
   &__view-all {

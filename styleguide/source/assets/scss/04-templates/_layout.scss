@@ -4,13 +4,13 @@ $layout-sidebar-width: ($column * 3) + ($gutter * 2);
 .main-content,
 .post-content {
   @include clearfix;
-  padding-bottom: 20px;
-  
+  padding-bottom: 40px;
+
   @media ($bp-medium-min){
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
   @media ($bp-large-min){
-    padding-bottom: 40px;
+    padding-bottom: 70px;
   }
 }
 
@@ -44,6 +44,6 @@ $layout-sidebar-width: ($column * 3) + ($gutter * 2);
   // two column layout with sidebar on the right
   @media ($bp-small-min){
     float: left;
-    width: $layout-sidebar-width; 
+    width: $layout-sidebar-width;
   }
 }

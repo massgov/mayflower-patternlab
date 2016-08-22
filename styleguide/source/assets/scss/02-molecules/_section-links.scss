@@ -36,6 +36,7 @@
 
   &__title {
     @include ma-border-decorative;
+    font-size: 1.75rem;
     padding-bottom: 20px;
 
     &:after {
@@ -53,21 +54,23 @@
 
   // skip the first item
   &__item + &__item{
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   &__link {
     @include ma-chevron;
+    @include ma-underline-link;
     display: inline-block;
+    padding-bottom: 0px;
     padding-right: 15px;
 
     &:after {
-      border-width: 2px;
-      height: 7px;
-      margin-right: -20px;
-      margin-left: 5px;
-      opacity: .7;
-      width: 7px;
+      border-width: 3px;
+      height: 9px;
+      margin-right: -13px;
+      margin-left: 7px;
+      opacity: .5;
+      width: 9px;
     }
   }
 
@@ -88,6 +91,10 @@
       transform: rotate(-11deg);
       transform-origin: top right;
       width: 200px;
+
+      &:hover {
+        opacity: .8;
+      }
 
     }
     svg {
