@@ -38,7 +38,6 @@ export default function (window,document,$,undefined) {
       $el.toggleClass('is-open');
     });
 
-
     // make the links sticky
     $(window).resize(function() {
       if(typeof debounceTimer === "number") {
@@ -59,14 +58,9 @@ export default function (window,document,$,undefined) {
       windowSize = $(window).innerWidth();
       upperLimit = $elParent.offset().top;
 
-console.log('elHeight',elHeight);
-console.log('$elParent.outerHeight(true)',$elParent.outerHeight(true));
-console.log($('.post-content').offset().top);
-
       if(windowSize <= 780) {
         headerBuffer = $('.js-sticky-header').height() || 0;
         upperLimit -= headerBuffer;
-console.log('headerBuffer',headerBuffer);
       }
 
       lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
@@ -74,8 +68,6 @@ console.log('headerBuffer',headerBuffer);
 
     function setPosition() {
       var windowTop = $(window).scrollTop();
-console.log('windowTop',windowTop);
-console.log('lowerLimit',lowerLimit);
       
       if(windowSize <= 780) {
         $elParent.css({'paddingTop':elHeight});
