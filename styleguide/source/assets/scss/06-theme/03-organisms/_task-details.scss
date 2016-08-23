@@ -15,8 +15,12 @@
         @include ma-font(700);
         color: $c-font-dark;
       }
+
+      &:hover {
+        color: $c-font-dark;
+      }
     }
-    
+
     a + a {
       border-top-color: $c-bd-divider;
     }

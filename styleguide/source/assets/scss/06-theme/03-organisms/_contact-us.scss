@@ -11,7 +11,7 @@
   }
 
   &__item {
-    
+
     & + & {
       border-top-color: $c-bd-divider;
     }
@@ -29,12 +29,12 @@
   &__email {
 
     &:hover {
-      border-color: $c-font-link;
+      border-color: rgba($c-font-link,.5);
     }
   }
-  
+
   &__address {
-    
+
     span {
 
     }

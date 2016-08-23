@@ -1,6 +1,6 @@
 .ma__contact-us {
   padding-bottom: 50px;
-  
+
   &__title {
     @include ma-column-heading("left");
   }
@@ -20,7 +20,7 @@
 
   &__name {
     font-size: 1.25rem;
-
+    line-height: 1.4;
   }
 
   &__phone,
@@ -31,14 +31,14 @@
   &__phone {
     white-space: nowrap;
   }
-  
+
   &__email {
     @include ma-underline-link;
   }
 
   &__address {
     font-size: 1rem;
-    
+
     span {
       display: inline-block;
     }
