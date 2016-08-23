@@ -58,19 +58,21 @@
   }
 
   &__link {
-    @include ma-chevron;
     @include ma-underline-link;
-    display: inline-block;
     padding-bottom: 0px;
-    padding-right: 15px;
 
-    &:after {
-      border-width: 3px;
-      height: 9px;
-      margin-right: -13px;
-      margin-left: 7px;
-      opacity: .5;
-      width: 9px;
+    span {
+      @include ma-chevron;
+      margin-right: -5px;
+
+      &:after {
+        border-width: 3px;
+        height: 9px;
+        margin-right: -13px;
+        margin-left: 7px;
+        opacity: .5;
+        width: 9px;
+      }
     }
   }
 

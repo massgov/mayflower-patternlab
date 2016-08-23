@@ -11,7 +11,7 @@
     <ul class="ma__section-links__items">
       {% for list in sectionLinks.links %}
       <li class="ma__section-links__item">
-        <a href="{{list.href}}" class="ma__section-links__link">{{list.text}}</a>
+        <a href="{{list.href}}" class="ma__section-links__link">{{list.text}}<span role="presentation"></span></a>
       </li>
       {% endfor %}
     </ul>
