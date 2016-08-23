@@ -19,17 +19,16 @@
 
   &__link {
 
-    span {
-
+    &:hover {
+      border-bottom-color: rgba($c-font-link,.5);
     }
 
     svg {
-      fill: $c-font-link;
-      opacity: .5;
+      fill: rgba($c-font-link,.5);
     }
   }
 
   &__description {
-    // @include ma-font(300);
+
   }
 }
