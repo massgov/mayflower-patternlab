@@ -2,13 +2,7 @@
   padding-bottom: 50px;
   
   &__title {
-    @media ($bp-large-max) {
-      @include ma-column-heading("right");
-    }
-
-    @media ($bp-large-min) {
-      @include ma-column-heading("left");
-    }
+    @include ma-column-heading("left");
   }
 
   &__items {
