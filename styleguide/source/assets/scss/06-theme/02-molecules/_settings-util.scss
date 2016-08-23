@@ -13,7 +13,11 @@
 
     button {
       color: $c-white;
-      
+
+        &:hover {
+          border-bottom-color: rgba($c-white,.5);
+        }
+
       svg {
         fill: $c-white;
         opacity: .7;
