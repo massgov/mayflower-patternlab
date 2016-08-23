@@ -11,7 +11,7 @@
   &__content {
     position: relative;
 
-    @media ($bp-large-min) {
+    @media ($bp-medium-min) {
       margin-left: 160px;
     }
 
@@ -21,34 +21,113 @@
   }
 
   &__anchor-links {
+    @include clearfix;
+    margin-bottom: 30px;
+    position: relative;
+    transition: all .2s;
+    width: 100%;
+    z-index: $z-sticky-content;
 
-    @media ($bp-large-min) {
+    @media ($bp-medium-max) {
+      left: 0;
+    }
+
+    @media ($bp-medium-min) {
+      margin-left: -160px;
+      margin-bottom: 0;
       padding-right: $gutter * 2;
       position: absolute;
-        right: 100%;
+        top: 0;
       width: 160px;
     }
     
     @media ($bp-x-large-min) {
+      margin-left: -$column-with-gutter * 2;
       width: $column-with-gutter * 2;
     }
 
-    a {
-      display: block;
-      font-size: 1rem;
-      line-height: 1.63;
-      padding-bottom: 15px;
+    &[data-sticky='middle'] {
+      position: fixed;
+        top: 40px;
     }
 
-    a + a {
-      border-top: 1px solid;
-      padding-top: 15px;
+    &[data-sticky='bottom'] {
+      position: absolute;
+        top: auto; // height of one line of text
+        bottom: -30px; // compensate for bottom margin
+    }
+
+    @media ($bp-medium-min) {
+      &[data-sticky='middle'] {
+          top: 15px;
+      }
+
+      &[data-sticky='bottom'] {
+          top: auto;
+          bottom: -15px;
+      }
+    }
+
+    &.is-open {
+      
+      a {
+        display: block;
+      }
+
+      a + a {
+        border-top: 1px solid;
+      }
+    }
+
+    a {
+      display: none;
+      font-size: 1rem;
+      line-height: 1.25;
+      padding: 10px 15px;
+
+      @media ($bp-medium-min) {
+        display: block;
+        line-height: 1.63;
+        padding: 0;
+        padding-bottom: 15px;
+      }
+
+      &.is-active, {
+        display: block;
+      }
+    }
+
+    @media ($bp-medium-min) {
+      a + a {
+        border-top: 1px solid;
+        padding-top: 15px;
+      }
     }
 
   }
 
-  &__section {
+  &__toggle-link {
+    @include ma-button-reset;
+    font-size: 2.5rem;
+    line-height: .65em;
+    overflow: hidden;
+    position: absolute;
+      right: 10px;
+      top: 9px;
+    transition: all .2s ease;
+    transform-origin: center center;
 
+    .is-open & {
+      transform: rotate(135deg);
+    }
+
+    @media ($bp-medium-min) {
+      display: none;
+    }
+  }
+
+  &__section {
+    
     h3 {
       @include ma-border-decorative;
       position: relative;
