@@ -33,7 +33,7 @@
 @import "02-molecules/section-links";
 @import "02-molecules/settings-util";
 @import "02-molecules/social-links";
-@import "02-molecules/task-step";
+@import "02-molecules/action-step";
 @import "02-molecules/utility-nav";
 @import "02-molecules/zoom-controls";
 
@@ -45,10 +45,10 @@
 @import "03-organisms/footer";
 @import "03-organisms/page-banner";
 @import "03-organisms/page-header";
-@import "03-organisms/related-tasks";
+@import "03-organisms/related-actions";
 @import "03-organisms/sections-three-up";
-@import "03-organisms/task-details";
-@import "03-organisms/top-tasks";
+@import "03-organisms/action-details";
+@import "03-organisms/top-actions";
 
 // Templates - page content types
 @import "04-templates/layout";
