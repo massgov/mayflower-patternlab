@@ -1,0 +1,7 @@
+.ma__page-header {
+
+  &__intro {
+    @include ma-font(500);
+    color: $c-font-heading;
+  }
+}

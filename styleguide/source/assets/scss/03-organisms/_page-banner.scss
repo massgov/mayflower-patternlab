@@ -32,7 +32,6 @@ $page-banner-inner-width: 612px;
   }
 
   &__content {
-    margin: 0 30px;
     min-height: 400px;
     padding: 0 45px 40px;
     position: relative;
@@ -54,10 +53,22 @@ $page-banner-inner-width: 612px;
   }
 
   &__title {
-    font-size: 4.625rem;
+    font-size: 2.75rem;
     line-height: 1.05;
     margin-bottom: 0;
     padding-bottom: 0.67em;
+
+      @media ($bp-medium-min){
+        font-size: 3.75rem;
+      }
+
+      @media ($bp-large-min){
+        font-size: 4.25rem;
+      }
+
+      @media ($bp-x-large-min){
+        font-size: 4.625rem;
+      }
   }
 
   &__divider {
