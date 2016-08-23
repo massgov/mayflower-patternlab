@@ -101,9 +101,10 @@
       &:hover {
         opacity: .8;
       }
-
     }
-    svg {
+
+    span {
+      display: inline-block;
       transform: rotate(11deg);
     }
   }
