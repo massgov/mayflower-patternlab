@@ -7,4 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     $vendorDir . '/phing/phing/classes',
+    $vendorDir . '/pear/console_getopt',
+    $vendorDir . '/pear/pear_exception',
+    $vendorDir . '/pear/pear-core-minimal/src',
+    $vendorDir . '/pear/versioncontrol_git',
 );

@@ -59,6 +59,13 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
     );
 
     public static $prefixesPsr0 = array (
+        'V' => 
+        array (
+            'VersionControl' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/versioncontrol_git',
+            ),
+        ),
         'T' => 
         array (
             'Twig_' => 
@@ -77,6 +84,10 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
                 0 => __DIR__ . '/../..' . '/core/src',
                 1 => __DIR__ . '/..' . '/pattern-lab/core/src',
             ),
+            'PEAR' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/pear_exception',
+            ),
         ),
         'M' => 
         array (
@@ -94,11 +105,19 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         ),
         'C' => 
         array (
+            'Console' => 
+            array (
+                0 => __DIR__ . '/..' . '/pear/console_getopt',
+            ),
             'Colors' => 
             array (
                 0 => __DIR__ . '/..' . '/kevinlebrun/colors.php/src',
             ),
         ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
     );
 
     public static $classMap = array (
@@ -582,6 +601,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
             $loader->prefixLengthsPsr4 = ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e::$classMap;
 
         }, null, ClassLoader::class);
