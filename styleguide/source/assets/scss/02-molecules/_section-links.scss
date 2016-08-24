@@ -56,12 +56,11 @@
 
   // skip the first item
   &__item + &__item{
-    padding-top: 10px;
+    padding-top: 14px;
   }
 
   &__link {
     @include ma-underline-link;
-    padding-bottom: 0px;
 
     span {
       @include ma-chevron;
@@ -73,6 +72,7 @@
       &:after {
         border-width: 3px;
         height: 9px;
+        margin-left: .4em;
         opacity: .5;
         width: 9px;
       }

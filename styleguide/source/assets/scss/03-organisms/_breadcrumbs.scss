@@ -59,6 +59,10 @@
       &:nth-last-child(2) {
         @include ma-chevron("left");
         display: block;
+
+        &:before {
+          opacity: .5;
+        }
       }
 
 
