@@ -8,7 +8,9 @@ export default function (window,document,$,undefined) {
         windowSize,
         lowerLimit,
         upperLimit,
-        debounceTimer;
+        debounceTimer,
+        activeAnchor,
+        anchors = {};
 
     setVariables();
 
@@ -20,18 +22,17 @@ export default function (window,document,$,undefined) {
     $el.find('a').on('click',function(e) {
       e.preventDefault();
       // find the location of the desired link and scroll the page
-      let href = $(this).attr('href'),
-          anchorName = href.substring(1, href.length),
-          position = $('a[name=' + anchorName + ']').offset();
+      let hash = this.hash,
+          position = $(hash).offset().top;
 
-      $("html, body").stop(true,true).animate({scrollTop:position.top}, '750');
+      $("html, body").stop(true,true).animate({scrollTop:position}, '750');
+      
       // remove active flag from other links
       $el.find('.is-active').removeClass('is-active');
       // add active flag to this link
       $(this).addClass('is-active');
       // close the menu
       $el.removeClass('is-open');
-
     });
 
     $el.find(".js-scroll-anchors-toggle").on('click',function() {
@@ -46,11 +47,13 @@ export default function (window,document,$,undefined) {
       debounceTimer = window.setTimeout(function(){
         setVariables();
         setPosition();
+        activateLink();
       },300);
     });
 
     $(window).scroll(function () {
       setPosition();
+      activateLink();
     });
 
     function setVariables() {
@@ -64,10 +67,26 @@ export default function (window,document,$,undefined) {
       }
 
       lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
+
+      anchors = {};
+      activeAnchor = $el.find('a').first()[0].hash;
+
+console.log(activeAnchor);
+
+      $el.find('a').each(function(){
+        let hash = this.hash,
+            position = $(hash).offset().top;
+
+        anchors[hash] = position;
+
+        if($(this).hasClass('is-active')) {
+
+        }
+      });
     }
 
     function setPosition() {
-      var windowTop = $(window).scrollTop();
+      let windowTop = $(window).scrollTop();
       
       if(windowSize <= 780) {
         $elParent.css({'paddingTop':elHeight});
@@ -84,6 +103,12 @@ export default function (window,document,$,undefined) {
       else if (windowTop >= lowerLimit) {
         $el.attr('data-sticky','bottom');
       }
+    }
+
+    function activateLink() {
+      let windowTop = $(window).scrollTop();
+
+
     }
 
   });
