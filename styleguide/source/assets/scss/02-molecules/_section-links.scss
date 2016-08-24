@@ -21,7 +21,7 @@
   }
 
   &__content {
-    padding: 10px;
+    padding: 10px 30px;
     padding-bottom: 40px; // makes room for the view all link
 
     @media ($bp-small-min) {
@@ -36,7 +36,6 @@
 
   &__title {
     @include ma-border-decorative;
-    font-size: 1.75rem;
     padding-bottom: 20px;
 
     &:after {
@@ -57,12 +56,11 @@
 
   // skip the first item
   &__item + &__item{
-    padding-top: 10px;
+    padding-top: 14px;
   }
 
   &__link {
     @include ma-underline-link;
-    padding-bottom: 0px;
 
     span {
       @include ma-chevron;
@@ -74,6 +72,7 @@
       &:after {
         border-width: 3px;
         height: 9px;
+        margin-left: .4em;
         opacity: .5;
         width: 9px;
       }

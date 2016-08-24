@@ -8,6 +8,6 @@
   }
 
   &__title {
-    color: $c-font-base;
+    @include ma-font(700);
   }
 }

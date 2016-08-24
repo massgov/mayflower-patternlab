@@ -7,13 +7,13 @@
   }
 
   &__anchor-links {
-    
+
     @media ($bp-medium-max) {
       background-color: $c-bg-section;
     }
 
     &.is-open {
-      
+
       a + a {
         border-top-color: $c-bd-divider;
       }
@@ -26,11 +26,19 @@
         @include ma-font(700);
         color: $c-font-dark;
       }
+
+      &:hover {
+        color: $c-font-dark;
+      }
     }
-    
+
     a + a {
       border-top-color: $c-bd-divider;
     }
+  }
+
+  &__toggle-link {
+    color: $c-theme-primary-2;
   }
 
   &__section {

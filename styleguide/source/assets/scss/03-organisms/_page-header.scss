@@ -1,4 +1,21 @@
 .ma__page-header {
   @include ma-container;
-  padding-top: 85px;
+  padding-top: 40px;
+
+  @media ($bp-medium-min){
+    padding-top: 65px;
+  }
+
+  @media ($bp-large-min){
+    padding-top: 75px;
+  }
+
+  @media ($bp-x-large-min){
+    padding-top: 85px;
+  }
+
+  &__intro {
+    font-size: 1.375rem;
+    max-width: 945px;
+  }
 }
