@@ -9,42 +9,64 @@
     font-size: 1.125rem;
     letter-spacing: .05em;
     line-height: 1.39;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     overflow: hidden;
     padding: 18px 25px;
     position: relative;
     text-transform: uppercase;
     width: calc(100% + $offset);
 
-    @if($side == "right") {
-      margin-right: -$offset;
-      padding-right: $offset + 20px;
-
-      &:after {
-        content: "";
-        height: 200%;
-        position: absolute;
-          top: 0;
-          left: 100%;
-        transform: rotate(30deg);
-        transform-origin: top left;
-        width: 100%;
-      }
+    @media ($bp-large-min) {
+      margin-bottom: 50px;
     }
-    // left
-    @else {
-      margin-left: -$offset;
-      padding-left: $offset;
 
-      &:before {
-        content: "";
-        height: 200%;
-        position: absolute;
-          bottom: 0;
+    &:after {
+      content: "";
+      height: 200%;
+      position: absolute;
+        top: 0;
+        left: 100%;
+      transform: rotate(30deg);
+      transform-origin: top left;
+      width: 100%;
+    }
+
+    @if($side == "right") {
+      padding-right: $offset;
+
+      @media ($bp-large-min) {
+        margin-right: -$offset + 20px;
+      }
+
+      @media($bp-x-large-min) {
+        margin-right: -$offset;
+        padding-right: $offset + 20px;
+
+      }
+
+    }
+    // left (shows as right and then switches to left)
+    @else {
+      @media ($bp-large-max) {
+        padding-right: $offset;
+      }
+
+      @media ($bp-large-min) {
+        padding-left: $offset;
+        margin-left: -$offset + 20px;
+
+        &:after {
+          top: auto;
           right: 100%;
-        transform: rotate(30deg);
-        transform-origin: bottom right;
-        width: 100%;
+          bottom: 0;
+          left: auto;
+          transform-origin: bottom right;
+        }
+      }
+
+      @media($bp-x-large-min) {
+        margin-left: -$offset;
+        padding-left: $offset;
       }
     }
   }

@@ -1,4 +1,4 @@
-.ma__related-tasks {
+.ma__related-actions {
   padding-bottom: 50px;
   
   &__title {
@@ -19,29 +19,22 @@
   }
 
   &__link {
-    display: block;
+    @include ma-underline-link;
     font-size: 1.375rem;
     line-height: 1.45;
-    margin-bottom: 20px;
     padding-right: 20px;
-
-    span {
-      display: inline;
-    }
+    padding-bottom: 0;
 
     svg {
       @include ma-link-transition;
       margin-right: -20px;
-    }
-
-    &:hover svg {
-      margin-left: 4px;
     }
   }
 
   &__description {
     font-size: 1rem;
     line-height: 1.75;
+    padding-top: 20px;
 
     & > :last-child {
       margin-bottom: 0;

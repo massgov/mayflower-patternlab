@@ -51,13 +51,32 @@
     @include ma-reset-list;
   }
 
+  &__item {
+  }
+
   // skip the first item
   &__item + &__item{
-    margin-top: 14px;
+    padding-top: 10px;
   }
 
   &__link {
     @include ma-underline-link;
+    padding-bottom: 0px;
+
+    span {
+      @include ma-chevron;
+      display: inline-block;
+      height: 13px;
+      margin-right: -13px;
+      width: 13px;
+
+      &:after {
+        border-width: 3px;
+        height: 9px;
+        opacity: .5;
+        width: 9px;
+      }
+    }
   }
 
   // needs to be positioned relative to section links to work with flexbox
@@ -81,9 +100,10 @@
       &:hover {
         opacity: .8;
       }
-
     }
-    svg {
+
+    span {
+      display: inline-block;
       transform: rotate(11deg);
     }
   }

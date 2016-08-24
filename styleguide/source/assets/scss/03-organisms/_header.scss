@@ -29,9 +29,10 @@ body {
   }
 
   &__container {
-    @include clearfix;
+    @include ma-valign-block;
     @include ma-container;
     font-size: 0; // inline-block fix
+    height: 100px;
     padding-top: 8px;
     padding-bottom: 8px;
 
