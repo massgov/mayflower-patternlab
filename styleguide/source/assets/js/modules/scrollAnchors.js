@@ -9,8 +9,8 @@ export default function (window,document,$,undefined) {
         lowerLimit,
         upperLimit,
         debounceTimer,
-        activeAnchor,
-        anchors = {};
+        activeAnchor = 0,
+        anchors = [];
 
     setVariables();
 
@@ -22,7 +22,7 @@ export default function (window,document,$,undefined) {
     $el.find('a').on('click',function(e) {
       e.preventDefault();
       // find the location of the desired link and scroll the page
-      let hash = this.hash,
+      let hash = this.hash,  // TODO try with a span tag
           position = $(hash).offset().top;
 
       $("html, body").stop(true,true).animate({scrollTop:position}, '750');
@@ -68,20 +68,13 @@ export default function (window,document,$,undefined) {
 
       lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
 
-      anchors = {};
-      activeAnchor = $el.find('a').first()[0].hash;
-
-console.log(activeAnchor);
+      anchors = [];
 
       $el.find('a').each(function(){
         let hash = this.hash,
             position = $(hash).offset().top;
 
         anchors[hash] = position;
-
-        if($(this).hasClass('is-active')) {
-
-        }
       });
     }
 
@@ -92,7 +85,7 @@ console.log(activeAnchor);
         $elParent.css({'paddingTop':elHeight});
       }
 
-      if(typeof(upperLimit) !== "undefined" && windowTop <= upperLimit) {
+      if(typeof(upperLimit) !== "undefined" && windowTop <= upperLimit) {  //TODO
         $el.attr('data-sticky','top');
         $elParent.removeAttr('style');
       } 
