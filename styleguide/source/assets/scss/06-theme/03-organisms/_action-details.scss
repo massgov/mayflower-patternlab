@@ -1,4 +1,4 @@
-.ma__task-details {
+.ma__action-details {
 
   &__title {
     @include ma-font(700);
@@ -7,6 +7,17 @@
   }
 
   &__anchor-links {
+    
+    @media ($bp-medium-max) {
+      background-color: $c-bg-section;
+    }
+
+    &.is-open {
+      
+      a + a {
+        border-top-color: $c-bd-divider;
+      }
+    }
 
     a {
       @include ma-font(500);

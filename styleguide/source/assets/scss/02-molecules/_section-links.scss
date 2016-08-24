@@ -52,25 +52,31 @@
     @include ma-reset-list;
   }
 
+  &__item {
+  }
+
   // skip the first item
   &__item + &__item{
-    margin-top: 10px;
+    padding-top: 10px;
   }
 
   &__link {
-    @include ma-chevron;
     @include ma-underline-link;
-    display: inline-block;
     padding-bottom: 0px;
-    padding-right: 15px;
 
-    &:after {
-      border-width: 3px;
-      height: 9px;
+    span {
+      @include ma-chevron;
+      display: inline-block;
+      height: 13px;
       margin-right: -13px;
-      margin-left: 7px;
-      opacity: .5;
-      width: 9px;
+      width: 13px;
+
+      &:after {
+        border-width: 3px;
+        height: 9px;
+        opacity: .5;
+        width: 9px;
+      }
     }
   }
 
@@ -95,9 +101,10 @@
       &:hover {
         opacity: .8;
       }
-
     }
-    svg {
+
+    span {
+      display: inline-block;
       transform: rotate(11deg);
     }
   }

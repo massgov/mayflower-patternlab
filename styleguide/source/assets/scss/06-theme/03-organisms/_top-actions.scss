@@ -1,4 +1,4 @@
-.ma__top-tasks {
+.ma__top-actions {
 
   &__title {
     @include ma-border-decorative($c-white, $c-theme-primary-2);
@@ -10,17 +10,17 @@
   }
 
   &__item {
-
-  }
-
-  &__item + &__item {
-    border-left-color: $c-bd-divider;
+    border-color: $c-bd-divider;
   }
 
   &__link {
 
     &:hover {
       border-bottom-color: rgba($c-theme-primary-1,.5);
+    }
+
+    svg {
+      fill: rgba($c-theme-primary-1,.5);
     }
   }
 }

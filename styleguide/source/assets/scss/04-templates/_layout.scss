@@ -1,8 +1,7 @@
 $layout-sidebar-width: ($column * 3) + ($gutter * 2);
 
 .pre-content,
-.main-content,
-.post-content {
+.main-content {
   @include clearfix;
   padding-bottom: 40px;
 
@@ -14,10 +13,6 @@ $layout-sidebar-width: ($column * 3) + ($gutter * 2);
   }
 }
 
-.post-content {
-  padding-bottom: 0;
-}
-
 .main-content--two {
   @include ma-container;
 }
@@ -25,24 +20,24 @@ $layout-sidebar-width: ($column * 3) + ($gutter * 2);
 .page-content {
   padding-bottom: 20px;
 
-  @media ($bp-small-min) {
-    padding-bottom: 0;
-  }
-
   .main-content--two &,
   &:first-child:nth-last-child(2) {
-    @media ($bp-small-min){
+    @media ($bp-large-min){
       float:left;
-      padding-right: $column + ($gutter * 2);
+      padding-right: $column;
       padding-bottom: 0;
       width: calc(100% - #{$layout-sidebar-width});
+    }
+
+    @media ($bp-x-large-min) {
+      padding-right: $column + ($gutter * 2);
     }
   }
 }
 
 .sidebar {
   // two column layout with sidebar on the right
-  @media ($bp-small-min){
+  @media ($bp-large-min){
     float: left;
     width: $layout-sidebar-width;
   }

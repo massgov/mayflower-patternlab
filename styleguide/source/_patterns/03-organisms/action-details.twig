@@ -1,16 +1,17 @@
-<section class="ma__task-details">
-  <h2 class="ma__task-details__title">The Details</h2>
+<section class="ma__action-details">
+  <h2 class="ma__action-details__title">The Details</h2>
 
-  <div class="ma__task-details__content">
-    <div class="ma__task-details__anchor-links">
+  <div class="ma__action-details__content">
+    <div class="ma__action-details__anchor-links js-scroll-anchors">
+        <button class="ma__action-details__toggle-link js-scroll-anchors-toggle">+</button>
         <a href="#overview" class="is-active">Overview</a>
         <a href="#get-it-done">Get It Done</a>
         <a href="#additional-info">Additional Information</a>
     </div>
-    <div class="ma__task-details__section">
+    <div class="ma__action-details__section">
       <a name="overview"></a>
       <h3>Overview</h3>
-      <div class="ma__task-details__section-content">
+      <div class="ma__action-details__section-content">
         <section class="ma__rich-text">
           <p>The Annual MassParks Pass allows you free parking for one vehicle, during daytime hours, at all State Parks except Quabbin Reservoir. It’s valid for one calendar year, from January through December, so you’ll need to buy a new one each year.</p>
 
@@ -20,20 +21,20 @@
         </section>
       </div>
     </div>
-    <div class="ma__task-details__section">
+    <div class="ma__action-details__section">
       <a name="get-it-done"></a>
       <h3>Get it Done</h3>
       <p>You can get your Mass Parks Pass a couple different ways</p>
-      <div class="ma__task-details__section-content">
-        {% for taskStep in taskSteps %}
-          {% include "molecules-task-step" with taskStep %}
+      <div class="ma__action-details__section-content">
+        {% for actionStep in actionSteps %}
+          {% include "molecules-action-step" with actionStep %}
         {% endfor %}
       </div>      
     </div>
-    <div class="ma__task-details__section">
+    <div class="ma__action-details__section">
       <a name="additional-info"></a>
       <h3>Additional Information</h3>
-      <div class="ma__task-details__section-content">
+      <div class="ma__action-details__section-content">
         <section class="ma__rich-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel.</p>
         </section>
