@@ -23,6 +23,7 @@
 @import "01-atoms/svg-icons";
 
 // Molecules - chunks of code that are used in Organisms/Components
+@import "02-molecules/action-step";
 @import "02-molecules/alerts-util";
 @import "02-molecules/dropdown";
 @import "02-molecules/footer-links";
@@ -33,11 +34,12 @@
 @import "02-molecules/section-links";
 @import "02-molecules/settings-util";
 @import "02-molecules/social-links";
-@import "02-molecules/action-step";
+@import "02-molecules/stats-callout";
 @import "02-molecules/utility-nav";
 @import "02-molecules/zoom-controls";
 
 // Organisms - components
+@import "03-organisms/action-details";
 @import "03-organisms/breadcrumbs";
 @import "03-organisms/callout";
 @import "03-organisms/contact-us";
@@ -47,7 +49,6 @@
 @import "03-organisms/page-header";
 @import "03-organisms/related-actions";
 @import "03-organisms/sections-three-up";
-@import "03-organisms/action-details";
 @import "03-organisms/top-actions";
 
 // Templates - page content types

@@ -1,0 +1,55 @@
+.ma__stats-callout {
+  margin-bottom: 1em;
+  padding: 40px 30px 50px;
+  position: relative;
+
+  @media ($bp-small-min) {
+    &--left,
+    &--right {
+      width: 50%;
+    }
+
+    &--left {
+      float: left;
+      margin-right: $gutter;
+    }
+
+    &--right {
+      float: right;
+      margin-left: $gutter;
+    }
+  }
+
+  @media ($bp-large-min) and ($bp-x-large-max) {
+    .ma__action-details & {
+      &--left,
+      &--right {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    height: calc(100% - 16px);  // adjusting for the 11deg angle on 85px
+    position: absolute;
+      top: 8px; // adjusting for the 11deg angle on 85px
+      left: 0;
+    transform: skew(0,-11deg);
+    width: 85px;
+    z-index: -1;
+  }
+
+  &__stat {
+    font-size: 3.875rem;
+    line-height: 1.5;
+  }
+
+  &__content {
+    font-size: 1.188rem;
+    line-height: 1.42;
+  }
+}
