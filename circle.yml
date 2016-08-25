@@ -10,7 +10,7 @@ dependencies:
 
 test:
     override:
-        - gulp prod
+        - npm run gulp prod
 
 deployment:
     release:
