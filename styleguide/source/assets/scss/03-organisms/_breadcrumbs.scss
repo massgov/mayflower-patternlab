@@ -59,6 +59,10 @@
       &:nth-last-child(2) {
         @include ma-chevron("left");
         display: block;
+
+        &:before {
+          opacity: .5;
+        }
       }
 
 
@@ -69,7 +73,6 @@
     display: inline-block;
     font-size: .875rem;
     line-height: 1rem;
-    margin-right: 5px;
     padding: 20px 0;
 
     &:hover {

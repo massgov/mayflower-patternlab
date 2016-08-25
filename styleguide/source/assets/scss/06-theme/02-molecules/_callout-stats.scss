@@ -1,0 +1,15 @@
+.ma__callout-stats {
+  @include ma-font(900);
+
+  &:before {
+    background-color: rgba($c-theme-primary-2,.2);
+  }
+
+  &__stat {
+    color: $c-theme-primary-2;
+  }
+
+  &__content {
+    color: $c-font-dark;
+  }
+}

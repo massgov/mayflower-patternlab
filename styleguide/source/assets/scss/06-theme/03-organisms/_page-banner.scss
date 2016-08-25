@@ -3,10 +3,9 @@ $page-banner-inner-width: 612px;
 .ma__page-banner {
 
   &__background {
+    @include ma-border-decorative ($c-white,$c-theme-primary-2,1);
 
     &:after {
-      background-color: $c-theme-primary-2;
-      background-image: linear-gradient(-45deg, $c-white 3%, $c-theme-primary-2 3%, $c-theme-primary-2 97%, $c-white 97%);
     }
   }
 
