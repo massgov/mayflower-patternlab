@@ -5,14 +5,17 @@
     <div class="ma__action-details__anchor-links js-scroll-anchors">
         <button class="ma__action-details__toggle-link js-scroll-anchors-toggle">+</button>
         <a href="#overview" class="is-active">Overview</a>
+        <a href="#fees">Fees</a>
+        <a href="#eligibility">Eligibility</a>
         <a href="#get-it-done">Get It Done</a>
         <a href="#additional-info">Additional Information</a>
     </div>
     <div class="ma__action-details__section">
-      <a name="overview"></a>
+      <a name="overview" id="overview"></a>
       <h3>Overview</h3>
       <div class="ma__action-details__section-content">
         <section class="ma__rich-text">
+          {% include "molecules-callout-stats" with {"statsCallout":{"pull":"right"}} %}
           <p>The Annual MassParks Pass allows you free parking for one vehicle, during daytime hours, at all State Parks except Quabbin Reservoir. It’s valid for one calendar year, from January through December, so you’ll need to buy a new one each year.</p>
 
           <p>The parking pass costs <b>$60 for Massachusetts residents</b> and <b>$85 dollars for non-Massachusetts residents</b>. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!).</p>
@@ -22,7 +25,27 @@
       </div>
     </div>
     <div class="ma__action-details__section">
-      <a name="get-it-done"></a>
+      <a name="fees" id="fees"></a>
+      <h3>Fees</h3>
+      <div class="ma__action-details__section-content">
+        <section class="ma__rich-text">
+          <p>The parking pass costs $60 for Massachusetts residents and $85 for non-Massachusetts residents.  If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!).</p>  
+          <p>If you're a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10.</p>
+        </section>
+      </div>
+    </div>
+    <div class="ma__action-details__section">
+      <a name="eligibility" id="eligibility"></a>
+      <h3>Eligibility</h3>
+      <div class="ma__action-details__section-content">
+        <section class="ma__rich-text">
+          <p>Lorem ipsum blah blah (there's no eligibility for state park pass)</p>
+        </section>
+      </div>
+    </div>
+
+    <div class="ma__action-details__section">
+      <a name="get-it-done" id="get-it-done"></a>
       <h3>Get it Done</h3>
       <p>You can get your Mass Parks Pass a couple different ways</p>
       <div class="ma__action-details__section-content">
@@ -32,7 +55,7 @@
       </div>      
     </div>
     <div class="ma__action-details__section">
-      <a name="additional-info"></a>
+      <a name="additional-info" id="additional-info"></a>
       <h3>Additional Information</h3>
       <div class="ma__action-details__section-content">
         <section class="ma__rich-text">
