@@ -13,6 +13,8 @@ export default function (window,document,$,undefined) {
         activeAnchor = 0,
         anchors = [],
         numAnchors = 0,
+        isMobile = false,
+        mobileBreakpoint = 780, // match CSS breakpoint
         linkScrolling = false;
 
     setVariables();
@@ -24,6 +26,14 @@ export default function (window,document,$,undefined) {
 
     $el.find('a').on('click',function(e) {
       e.preventDefault();
+
+      // is the menu closed on mobile
+      if(!$el.hasClass('is-open') && isMobile) {     
+        // just show the menu
+        $el.addClass('is-open');
+        return;
+      }
+       
       // find the location of the desired link and scroll the page
       let hash = this.hash,  // TODO try with a span tag
           position = $(hash).offset().top;
@@ -69,8 +79,9 @@ export default function (window,document,$,undefined) {
       elHeight = $el.outerHeight(true);
       windowSize = $(window).innerWidth();
       upperLimit = $elParent.offset().top;
+      isMobile = windowSize <= mobileBreakpoint;
 
-      if(windowSize <= 780) {
+      if(isMobile) {
         headerBuffer = $('.js-sticky-header').height() || 0;
         upperLimit -= headerBuffer;
       }
@@ -93,7 +104,7 @@ export default function (window,document,$,undefined) {
     function setPosition() {
       let windowTop = $(window).scrollTop();
       
-      if(windowSize <= 780) {
+      if(isMobile) {
         $elParent.css({'paddingTop':elHeight});
       }
 
