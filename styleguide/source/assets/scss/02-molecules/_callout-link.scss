@@ -1,0 +1,10 @@
+.ma__callout-link {
+  margin-bottom: 1em;
+  padding: 30px;
+
+  a,
+  .ma__rich-text & a {
+    font-size: 1.375rem;
+    line-height: 1.45;
+  }
+}
