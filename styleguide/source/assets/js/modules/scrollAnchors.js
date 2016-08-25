@@ -122,8 +122,6 @@ export default function (window,document,$,undefined) {
       // and 
       // is the current scroll position above the prev target
       if(activeAnchor > 0 && windowTop < anchors[activeAnchor-1].position) { 
-console.log('windowTop',windowTop);
-console.log('prev pos',anchors[activeAnchor-1].position);
         // make the prev link active
         --activeAnchor;
       }
@@ -132,8 +130,6 @@ console.log('prev pos',anchors[activeAnchor-1].position);
       // and
       // is the current scroll position below the next target
       if(activeAnchor < numAnchors-1 && windowTop > anchors[activeAnchor+1].position) { 
-console.log('windowTop',windowTop);
-console.log('next pos',anchors[activeAnchor+1].position);
         // make the next link active
         ++activeAnchor;
       }
