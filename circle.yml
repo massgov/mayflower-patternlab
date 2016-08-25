@@ -1,0 +1,20 @@
+general:
+    artifacts:
+        - "public/assets"
+    build_dir: styleguide
+
+dependencies:
+    override:
+        - php core/console --generate
+        - npm install
+
+test:
+    override:
+        - gulp prod
+
+deployment:
+    release:
+        tag: /v[0-9]+(\.[0-9]+)*/
+        owner: massgov
+        commands:
+            - vendor/bin/phing deploy
