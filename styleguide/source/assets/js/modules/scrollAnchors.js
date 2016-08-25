@@ -9,8 +9,11 @@ export default function (window,document,$,undefined) {
         lowerLimit,
         upperLimit,
         debounceTimer,
+        activeClass = "is-active",
         activeAnchor = 0,
-        anchors = [];
+        anchors = [],
+        numAnchors = 0,
+        linkScrolling = false;
 
     setVariables();
 
@@ -25,12 +28,18 @@ export default function (window,document,$,undefined) {
       let hash = this.hash,  // TODO try with a span tag
           position = $(hash).offset().top;
 
-      $("html, body").stop(true,true).animate({scrollTop:position}, '750');
+      // prevent the scroll event for updating active links
+      linkScrolling = true;
+      activeAnchor = $(this).index() - 1;
+
+      $("html, body").stop(true,true).animate({scrollTop:position}, '750', function(){
+        linkScrolling = false;
+      });
       
       // remove active flag from other links
-      $el.find('.is-active').removeClass('is-active');
+      $el.find('.' + activeClass).removeClass(activeClass);
       // add active flag to this link
-      $(this).addClass('is-active');
+      $(this).addClass(activeClass);
       // close the menu
       $el.removeClass('is-open');
     });
@@ -52,8 +61,8 @@ export default function (window,document,$,undefined) {
     });
 
     $(window).scroll(function () {
-      setPosition();
       activateLink();
+      setPosition();
     });
 
     function setVariables() {
@@ -68,14 +77,17 @@ export default function (window,document,$,undefined) {
 
       lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
 
-      anchors = [];
-
-      $el.find('a').each(function(){
+      // locate the position of all of the anchor targets
+      anchors = new Array;
+      $el.find('a').each(function(i,e){
         let hash = this.hash,
             position = $(hash).offset().top;
 
-        anchors[hash] = position;
+        anchors[i] = { hash, position };
       });
+
+      // record the number of anchors for performance
+      numAnchors = anchors.length;
     }
 
     function setPosition() {
@@ -85,7 +97,7 @@ export default function (window,document,$,undefined) {
         $elParent.css({'paddingTop':elHeight});
       }
 
-      if(typeof(upperLimit) !== "undefined" && windowTop <= upperLimit) {  //TODO
+      if(windowTop <= upperLimit) {
         $el.attr('data-sticky','top');
         $elParent.removeAttr('style');
       } 
@@ -99,9 +111,36 @@ export default function (window,document,$,undefined) {
     }
 
     function activateLink() {
-      let windowTop = $(window).scrollTop();
+      // do we have more than one anchor
+      if(numAnchors < 2 || linkScrolling){
+        return;
+      }
 
+      // get the current scroll position and offset by half the view port
+      let windowTop = $(window).scrollTop() + (window.innerHeight/3);
+      // is there a prev target
+      // and 
+      // is the current scroll position above the prev target
+      if(activeAnchor > 0 && windowTop < anchors[activeAnchor-1].position) { 
+console.log('windowTop',windowTop);
+console.log('prev pos',anchors[activeAnchor-1].position);
+        // make the prev link active
+        --activeAnchor;
+      }
 
+      // is there a next target
+      // and
+      // is the current scroll position below the next target
+      if(activeAnchor < numAnchors-1 && windowTop > anchors[activeAnchor+1].position) { 
+console.log('windowTop',windowTop);
+console.log('next pos',anchors[activeAnchor+1].position);
+        // make the next link active
+        ++activeAnchor;
+      }
+
+      // move the active flag
+      $el.find('.' + activeClass).removeClass(activeClass);
+      $el.find('a').eq(activeAnchor).addClass(activeClass);
     }
 
   });
