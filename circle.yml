@@ -14,7 +14,7 @@ test:
 
 deployment:
     release:
-        tag: /v[0-9]+(\.[0-9]+)*/
+        tag: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
         owner: massgov
         commands:
             - vendor/bin/phing deploy
