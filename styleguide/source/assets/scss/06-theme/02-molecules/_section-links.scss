@@ -1,15 +1,12 @@
 .ma__section-links {
-  background-color: $c-bg-section;
-
-  &__banner {
-
-  }
+  background-image: linear-gradient(180deg, transparent, rgba($c-bg-section,.2) 30%, $c-bg-section);
 
   &__overlay {
     background-image: linear-gradient(191deg, rgba($c-bg-section,.2), $c-bg-section 50%);
   }
 
-  &__content {
+  &__banner + &__content {
+    background-color: $c-bg-section;
   }
 
   &__title {
@@ -19,14 +16,6 @@
       color: inherit;
       @include ma-font(500);
     }
-  }
-
-  &__items {
-
-  }
-
-  &__item {
-
   }
 
   &__link {
