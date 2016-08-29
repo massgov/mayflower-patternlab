@@ -3,6 +3,7 @@
 
   &__back2top{
     @include ma-button("normal","outline",$c-theme-primary-1);
+    background-color: rgba($c-white, .5);
   }
 
   &__copyright {

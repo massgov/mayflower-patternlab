@@ -1,18 +1,24 @@
 .ma__footer {
-  padding: 20px 0;
+  padding: 20px 0 30px;
   position: relative;
 
   @media ($bp-small-min) {
-    padding: 40px 0;
+    padding: 40px 0 50px;
   }
 
   &__back2top{
     @include ma-button("small");
-    display: none;
-    position: absolute;
-      top: -28px;
-      right: 20px;
-    transform: translateY(-100%);
+    opacity: 1;
+    position: fixed;
+      bottom: 1.3125rem;
+      right: 1.5625rem;
+    transition: visibility .5s, opacity .5s;
+    visibility: visible;
+
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   &__container {
