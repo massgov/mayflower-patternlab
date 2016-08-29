@@ -1,8 +1,12 @@
 $page-banner-inner-width: 612px;
 
+// child variant
+$page-banner-child: '.ma__page-banner--child';
+
 .ma__page-banner {
   position: relative;
   text-align: center;
+
 
   &__background {
     background-size: cover;
@@ -45,11 +49,30 @@ $page-banner-inner-width: 612px;
       margin: 0 auto;
       max-width: $page-banner-inner-width;
     }
+
+    #{$page-banner-child} & {
+      padding-top: 130px;  // linear-gradient offset
+    }
   }
 
   &__icon {
-    display: inline-block;
     margin-bottom: 55px;
+    text-align: center;
+
+    #{$page-banner-child} & {
+      margin-bottom: 5px;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  &__back-link {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
   }
 
   &__title {
@@ -86,4 +109,7 @@ $page-banner-inner-width: 612px;
       margin-bottom: 0;
     }
   }
+}
+
+.ma__page-banner--small {
 }

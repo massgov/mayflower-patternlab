@@ -13,6 +13,10 @@ $page-banner-inner-width: 612px;
 
   }
 
+  &__back-link {
+    color: $c-theme-primary-2;
+  }
+
   &__title {
     @include ma-font(400);
   }
