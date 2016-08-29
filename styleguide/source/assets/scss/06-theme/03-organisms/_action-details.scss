@@ -40,11 +40,4 @@
   &__toggle-link {
     color: $c-theme-primary-2;
   }
-
-  &__section {
-
-    h3 {
-      @include ma-border-decorative($c-white, $c-theme-primary-2);
-    }
-  }
 }
