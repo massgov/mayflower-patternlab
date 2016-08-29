@@ -1,24 +1,25 @@
-<section class="ma__page-banner">
+{# adding ma__page-banner--child shows a different version #}
+<section class="ma__page-banner {{pageBanner.size}}">
   <style>
     .ma__page-banner__background {
-      background-image: url('/assets/images/placeholder/800x400.png');
+      background-image: url('{{pageBanner.bgNarrow}}');
     }
 
     @media (min-width: 801px) {
       .ma__page-banner__background {
-        background-image: url('/assets/images/placeholder/1600x400.png');
+        background-image: url('{{pageBanner.bgWide}}');
       }
     }
   </style>
   <div class="ma__page-banner__background"></div>
   <div class="ma__page-banner__content">
     <div class="ma__page-banner__icon">
-      {% include "atoms-cat-icon-recreation" %}
+      {% include pageBanner.icon %}
     </div>
-    <h1 class="ma__page-banner__title">Visiting &amp; Exploring</h1>
+    <h1 class="ma__page-banner__title">{{pageBanner.title}}</h1>
     <div class="ma__page-banner__divider"></div>
     <div class="ma__page-banner__description">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam porro tempore minus repellendus animi rem veritatis.</p>
+      {{pageBanner.description | raw}}
     </div>
   </div>
 </section>
