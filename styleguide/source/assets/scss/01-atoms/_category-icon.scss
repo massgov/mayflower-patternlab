@@ -1,5 +1,6 @@
 .ma__category-icon {
   @include ma-valign-block;
+  display: inline-block;
   font-size: 0;
   height: 150px;
   margin: 0 0 28px; // height of the after angled element

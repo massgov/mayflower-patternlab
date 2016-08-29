@@ -13,9 +13,20 @@
   </style>
   <div class="ma__page-banner__background"></div>
   <div class="ma__page-banner__content">
-    <div class="ma__page-banner__icon">
-      {% include pageBanner.icon %}
-    </div>
+    {% if pageBanner.parentLink %}
+      <div class="ma__page-banner__icon">
+        <a href="{{pageBanner.parentLink.href}}">
+          {% include pageBanner.icon %}
+        </a>
+      </div>
+      <a class="ma__page-banner__back-link" href="{{pageBanner.parentLink.href}}">
+        {{pageBanner.parentLink.text}}
+      </a>
+      {% else %} 
+      <div class="ma__page-banner__icon">
+        {% include pageBanner.icon %}
+      </div>
+    {% endif %}
     <h1 class="ma__page-banner__title">{{pageBanner.title}}</h1>
     <div class="ma__page-banner__divider"></div>
     <div class="ma__page-banner__description">
