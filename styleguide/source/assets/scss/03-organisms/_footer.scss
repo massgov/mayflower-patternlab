@@ -8,7 +8,9 @@
 
   &__back2top{
     @include ma-button("small");
+    font-size: .85rem;
     opacity: 1;
+    padding: .5em .7em;
     position: fixed;
       bottom: 1.3125rem;
       right: 1.5625rem;
@@ -18,6 +20,15 @@
     &.is-hidden {
       opacity: 0;
       visibility: hidden;
+    }
+
+    svg {
+      display: inline-block;
+      transform: rotate(-90deg);
+    }
+    span {
+      display: block;
+      text-align: center;
     }
   }
 

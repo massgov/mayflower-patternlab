@@ -4,6 +4,16 @@
   &__back2top{
     @include ma-button("normal","outline",$c-theme-primary-1);
     background-color: rgba($c-white, .5);
+
+    svg {
+      fill: rgba($c-theme-primary-1, .5);
+    }
+
+    &:hover {
+      svg {
+        fill: $c-font-inverse;
+      }
+    }
   }
 
   &__copyright {
