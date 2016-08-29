@@ -4,30 +4,39 @@
   height: 150px;
   margin: 0 0 28px; // height of the after angled element
   padding: 40px 10px 12px;
+  position: relative;
   text-align: center;
   width: 130px;
 
-  img {
+  svg {
     display: inline-block;
     vertical-align: middle;
   }
 
   &:after {
-    border-top: 14px solid; // ~11 degrees
-    border-right: 65px solid transparent; // half width
-    border-bottom: 14px solid transparent; // ~11 degrees
-    border-left: 65px solid; //half width;
-
     content: "";
     display: block;
     height: 0;
-    position: relative;
-      left: -10px;
-      bottom: -12px;
-    width: 0;
+    padding-top: 22%;  // twice the degree since it skews in the middle
+    position: absolute;
+      left: 0;
+      top: 100%;
+    transform: skew(0,-11deg) translateY(-50%);
+    width: 100%;
+    z-index: -1;
   }
 
   &--small {
+    height: 69px;
+    margin: 0 0 14px; // height of the after angled element
+    padding: 12px;
+    position: relative;
+    text-align: center;
+    width: 60px;
 
+    svg {
+      height: 32px;
+      width: 35px;
+    }
   }
 }

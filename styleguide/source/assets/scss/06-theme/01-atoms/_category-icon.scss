@@ -1,8 +1,11 @@
 .ma__category-icon {
   background-color: $c-theme-primary-2;
 
+  svg {
+    fill: $c-white;
+  }
+
   &:after {
-    border-top-color: $c-theme-primary-2;
-    border-left-color: $c-theme-primary-2;
+    background-color: $c-theme-primary-2;
   }
 }
