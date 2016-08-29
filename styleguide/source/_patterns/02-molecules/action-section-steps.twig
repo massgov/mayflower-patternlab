@@ -1,0 +1,10 @@
+<section class="ma__action-section">
+  <a name="get-it-done" id="get-it-done"></a>
+  <h3>Get it Done</h3>
+  <p>You can get your Mass Parks Pass a couple different ways</p>
+  <div class="ma__action-section__content">
+    {% for actionStep in actionSteps %}
+      {% include "molecules-action-step" with actionStep %}
+    {% endfor %}
+  </div>      
+</section>

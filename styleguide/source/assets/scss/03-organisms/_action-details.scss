@@ -125,17 +125,4 @@
       display: none;
     }
   }
-
-  &__section {
-    
-    h3 {
-      @include ma-border-decorative;
-      position: relative;
-      padding-bottom: .55em;
-
-      &:after {
-        width: 2.25em; // ma-underline-decorative override
-      }
-    }
-  }
 }
