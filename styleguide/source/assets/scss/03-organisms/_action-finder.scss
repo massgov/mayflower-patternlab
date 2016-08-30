@@ -4,9 +4,22 @@ $action-finder-bp: 800px;
   background-size: cover;
   background-position: top center;
   padding: 60px 0;
+  position: relative;
+
+  &:after {
+    content: "";
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+    z-index: 1;
+  }
 
   &__container {
     @include ma-container;
+    position: relative;
+    z-index: 2;
   }
 
   &__header {
