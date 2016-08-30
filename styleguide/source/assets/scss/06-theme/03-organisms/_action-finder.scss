@@ -9,7 +9,8 @@
   }
 
   &__title {
-
+    @include ma-border-decorative(transparent,$c-theme-secondary-1,1);
+    color: $c-font-inverse;
   }
 
   &__search {

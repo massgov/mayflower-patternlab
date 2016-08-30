@@ -13,8 +13,8 @@ $header-search-height: 46px;
   &__input {
     font-size: 1rem;
     height: $header-search-height;
-    padding-right: 128px;
-    padding-left: 17px;
+    padding-right: $header-search-height + 16;
+    padding-left: 16px;
     width: 100%;
   }
 
