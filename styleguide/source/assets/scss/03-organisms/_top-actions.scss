@@ -26,8 +26,9 @@
 
   &__item {
     display: flex;
-      align-items: center;
-    flex: 1 1 auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
     padding: 12px 40px 20px;
     width: 100%;
 
@@ -43,6 +44,7 @@
     }
     @media ($bp-x-large-min) {
         @include omega(4n);
+        align-items: center;
         border-left-width: 1px;
         border-left-style: solid;
         float: left;
