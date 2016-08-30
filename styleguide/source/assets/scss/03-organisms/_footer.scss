@@ -1,18 +1,35 @@
 .ma__footer {
-  padding: 20px 0;
+  padding: 20px 0 30px;
   position: relative;
 
   @media ($bp-small-min) {
-    padding: 40px 0;
+    padding: 40px 0 50px;
   }
 
   &__back2top{
     @include ma-button("small");
-    display: none;
-    position: absolute;
-      top: -28px;
-      right: 20px;
-    transform: translateY(-100%);
+    font-size: .85rem;
+    opacity: 1;
+    padding: .5em .7em;
+    position: fixed;
+      bottom: 1.3125rem;
+      right: 1.5625rem;
+    transition: visibility .5s, opacity .5s;
+    visibility: visible;
+
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    svg {
+      display: inline-block;
+      transform: rotate(-90deg);
+    }
+    span {
+      display: block;
+      text-align: center;
+    }
   }
 
   &__container {
