@@ -5,7 +5,7 @@
   }
 
   &__title {
-    @include ma-border-decorative(transparent,$c-theme-secondary-1,1);
+    @include ma-border-decorative($c-theme-secondary-1,transparent,1);
     color: $c-font-inverse;
   }
 
