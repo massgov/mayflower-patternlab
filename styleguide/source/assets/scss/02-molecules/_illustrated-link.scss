@@ -1,13 +1,14 @@
+$illustrated-link-svg: .75em;
+
 .ma__illustrated-link {
-  @include clearfix;
+  @include clearfix;  // remove
   display: flex;
     align-items: stretch;
-  font-size: 0;
   min-width: 350px;
   overflow: hidden;
 
   &__content {
-    display: inline-block;
+    float: left;
     min-width: 320px;
     padding: 50px 0 50px 30px;
     position: relative;
@@ -28,12 +29,13 @@
   }
 
   &__icon {
-
+    font-size: 0;  // remove extra whitespace
+    margin-bottom: 20px;
   }
 
   &__title {
     margin-bottom: 0;
-    padding-right: .75em;
+    padding-right: $illustrated-link-svg;
     position: relative;
 
     a {
@@ -41,18 +43,17 @@
     }
 
     svg {
-      height: .75em;
-      margin-right: -.75em;
+      height: $illustrated-link-svg;
+      margin-right: -$illustrated-link-svg;
       vertical-align: baseline;
-      width: .75em;
+      width: $illustrated-link-svg;
     }
   }
 
   &__image {
-    @include ma-valign-block;
     background-size: cover;
     background-position: center right;
-    flex-grow: 1;
+    float: left;
     max-width: calc(100% - 320px);
     width: 50%;
   }
