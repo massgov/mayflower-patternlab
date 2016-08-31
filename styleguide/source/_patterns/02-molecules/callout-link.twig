@@ -1,5 +1,11 @@
 <div class="ma__callout-link">
-  <a href="#" target="_blank">
-    Order a MassParks Pass online through Reserve America&nbsp;{% include "atoms-svg-external-link" %}
-  </a>
+  {% if calloutLink.type == "external" %}
+    <a href="#" target="_blank">
+      {{calloutLink.text}}&nbsp;{% include "atoms-svg-external-link" %}
+    </a>
+  {% else %}
+    <a href="#">
+      {{calloutLink.text}}&nbsp;{% include "atoms-svg-arrow" %}
+    </a>
+  {% endif %}
 </div>
