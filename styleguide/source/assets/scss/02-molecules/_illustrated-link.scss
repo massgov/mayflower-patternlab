@@ -1,30 +1,47 @@
 $illustrated-link-svg: .75em;
+$illustrated-link-bp: "min-width:500px";
 
 .ma__illustrated-link {
-  @include clearfix;  // remove
-  display: flex;
-    align-items: stretch;
-  min-width: 350px;
   overflow: hidden;
 
+  @media ($illustrated-link-bp){
+    display: flex;
+      align-items: stretch;
+  }
+
   &__content {
-    float: left;
     min-width: 320px;
-    padding: 50px 0 50px 30px;
+    padding: 50px 30px;
+    padding-top: 0;
     position: relative;
-    width: 50%;
     z-index: 4;
+
+    @media ($illustrated-link-bp){
+      padding: 50px 30px;
+      padding-right: 0;
+      order: 1;
+      width: 50%;
+    }
 
     &:after {
       content: "";
       height: 200%;
       position: absolute;
+        top: 0;
+        right: 0;
+      transform: rotate(11deg);
+      transform-origin: top right;
+      width: 200%;
+      z-index: -1;
+
+      @media ($illustrated-link-bp){
         bottom: 0;
         right: 0;
-      transform: rotate(30deg);
-      transform-origin: bottom right;
-      width: 100%;
-      z-index: -1;
+        top: auto;
+        transform: rotate(30deg);
+        transform-origin: bottom right;
+        width: 100%;
+      }
     }
   }
 
@@ -34,6 +51,7 @@ $illustrated-link-svg: .75em;
   }
 
   &__title {
+    @include ma-border-decorative;
     margin-bottom: 0;
     padding-right: $illustrated-link-svg;
     position: relative;
@@ -54,10 +72,16 @@ $illustrated-link-svg: .75em;
   }
 
   &__image {
+    background-position: center top;
     background-size: cover;
-    background-position: center right;
-    float: left;
-    max-width: calc(100% - 320px);
-    width: 50%;
+    height: 220px;
+
+    @media ($illustrated-link-bp){
+      background-position: center right;
+      height: auto;
+      max-width: calc(100% - 320px);
+      order: 2;
+      width: 50%;
+    }
   }
 }
