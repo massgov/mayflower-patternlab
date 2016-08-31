@@ -2,11 +2,10 @@
   margin-bottom: 1em;
   padding: 30px;
 
-  a,
-  .ma__rich-text & a {
+  a {
+    @include ma-underline-link;
     font-size: 1.375rem;
     line-height: 1.45;
-    padding-bottom: 1px;
   }
 
   svg {
