@@ -1,0 +1,16 @@
+{
+  "illustratedLink2up": {
+    "title" : "Planners",
+    "links": [{
+      "text": "Getting Outdoors in Massachusetts",
+      "type": "",
+      "image": "/assets/images/placeholder/460x220.png",
+      "icon": "atoms-svg-map"
+    },{
+      "text": "Fall Activity Planner",
+      "type": "",
+      "image": "/assets/images/placeholder/460x220.png",
+      "icon": "atoms-svg-map"
+    }]
+  }
+}

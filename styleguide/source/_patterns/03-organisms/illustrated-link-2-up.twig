@@ -1,7 +1,12 @@
-<section class="illustrated-link-2-up">
-  <h2 class="illustrated-link-2-up__title">Planners</h2>
-  <div class="illustrated-link-2-up__content">
-    {% include "molecules-illustrated-link" %}
-    {% include "molecules-illustrated-link" %}
+<section class="ma__illustrated-link-2-up">
+  <div class="ma__illustrated-link-2-up__container">
+    <h2 class="ma__illustrated-link-2-up__title">{{illustratedLink2up.title}}</h2>
+    <div class="ma__illustrated-link-2-up__content">
+      {% for illustratedLink in illustratedLink2up.links %}
+        <div class="ma__illustrated-link-2-up__item">
+          {% include "molecules-illustrated-link" with illustratedLink %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
