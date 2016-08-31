@@ -39,12 +39,15 @@ $illustrated-link-svg: .75em;
     position: relative;
 
     a {
-
+      @include ma-underline-link;
+      padding-bottom: 0;
     }
 
     svg {
       height: $illustrated-link-svg;
       margin-right: -$illustrated-link-svg;
+      position: relative;
+        top: .05em;
       vertical-align: baseline;
       width: $illustrated-link-svg;
     }

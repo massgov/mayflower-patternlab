@@ -19,6 +19,10 @@
 
     a {
       color: $c-font-inverse;
+
+      &:hover {
+        border-bottom-color: $c-font-inverse;
+      }
     }
 
     svg {
