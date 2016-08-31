@@ -1,7 +1,7 @@
 <section class="ma__illustrated-link">
   <div class="ma__illustrated-link__content">
     <div class="ma__illustrated-link__icon">
-      {% include "atoms-svg-map" %}
+      {% include illustratedLink.icon %}
     </div>
     <h3 class="ma__illustrated-link__title">
       {% if illustratedLink.type == "external" %}
@@ -15,7 +15,5 @@
       {% endif %}
     </h3>
   </div>
-  <div class="ma__illustrated-link__image" style="background-image: url('/assets/images/placeholder/400x300.png')">
-
-  </div>
+  <div class="ma__illustrated-link__image" style="background-image: url('{{illustratedLink.image}}')"></div>
 </section>
