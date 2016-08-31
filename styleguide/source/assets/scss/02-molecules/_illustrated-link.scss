@@ -1,0 +1,59 @@
+.ma__illustrated-link {
+  @include clearfix;
+  display: flex;
+    align-items: stretch;
+  font-size: 0;
+  min-width: 350px;
+  overflow: hidden;
+
+  &__content {
+    display: inline-block;
+    min-width: 320px;
+    padding: 50px 0 50px 30px;
+    position: relative;
+    width: 50%;
+    z-index: 4;
+
+    &:after {
+      content: "";
+      height: 200%;
+      position: absolute;
+        bottom: 0;
+        right: 0;
+      transform: rotate(30deg);
+      transform-origin: bottom right;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &__icon {
+
+  }
+
+  &__title {
+    margin-bottom: 0;
+    padding-right: .75em;
+    position: relative;
+
+    a {
+
+    }
+
+    svg {
+      height: .75em;
+      margin-right: -.75em;
+      vertical-align: baseline;
+      width: .75em;
+    }
+  }
+
+  &__image {
+    @include ma-valign-block;
+    background-size: cover;
+    background-position: center right;
+    flex-grow: 1;
+    max-width: calc(100% - 320px);
+    width: 50%;
+  }
+}
