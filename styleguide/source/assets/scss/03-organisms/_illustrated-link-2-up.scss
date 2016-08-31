@@ -1,7 +1,8 @@
 $illustrated-link-2-up-bp-desktop: "min-width: 1001px";
 
 .ma__illustrated-link-2-up {
-
+  padding: 60px 0;
+  
   &__container {
     @include ma-container;
   }
