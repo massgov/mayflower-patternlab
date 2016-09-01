@@ -46,6 +46,10 @@
 
       &.is-active {
         @include ma-border-decorative;
+
+        &:after {
+          width: 100%;
+        }
       }
       &.is-open:after {
         display: none;

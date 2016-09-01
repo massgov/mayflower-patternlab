@@ -6,7 +6,6 @@
 
 // some variables adjust the settings in Neat
 @import "00-base/variables";
-
 @import "neat";
 
 // Base variables
@@ -31,6 +30,7 @@
 @import "02-molecules/dropdown";
 @import "02-molecules/footer-links";
 @import "02-molecules/header-search";
+@import "02-molecules/illustrated-link";
 @import "02-molecules/keyword-search";
 @import "02-molecules/login-util";
 @import "02-molecules/main-nav";
@@ -48,6 +48,7 @@
 @import "03-organisms/callout";
 @import "03-organisms/contact-us";
 @import "03-organisms/header";
+@import "03-organisms/illustrated-link-2-up";
 @import "03-organisms/footer";
 @import "03-organisms/page-banner";
 @import "03-organisms/page-header";

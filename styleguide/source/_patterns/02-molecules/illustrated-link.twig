@@ -1,0 +1,19 @@
+<section class="ma__illustrated-link">
+  <div class="ma__illustrated-link__image" style="background-image: url('{{illustratedLink.image}}')"></div>
+  <div class="ma__illustrated-link__content">
+    <div class="ma__illustrated-link__icon">
+      {% include illustratedLink.icon %}
+    </div>
+    <h3 class="ma__illustrated-link__title">
+      {% if illustratedLink.type == "external" %}
+        <a href="#" target="_blank">
+          {{illustratedLink.text}}&nbsp;{% include "atoms-svg-external-link" %}
+        </a>
+      {% else %}
+        <a href="#">
+          {{illustratedLink.text}}&nbsp;{% include "atoms-svg-arrow" %}
+        </a>
+      {% endif %}
+    </h3>
+  </div>
+</section>
