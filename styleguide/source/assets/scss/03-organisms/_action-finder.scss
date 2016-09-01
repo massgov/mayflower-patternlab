@@ -38,10 +38,6 @@ $action-finder-bp: 800px;
       vertical-align: middle;
       width: 66.12903%; // @include span-columns(8 of 12);
     }
-
-    &:after {
-      width: 85px;
-    }
   }
 
   &__search {

@@ -1,0 +1,36 @@
+.ma__illustrated-link {
+
+  &__content {
+    background-color: $c-theme-primary-2;
+
+    &:after {
+      background-color: $c-theme-primary-2;
+    }
+  }
+
+  &__icon {
+
+    svg {
+      fill: rgba($c-font-inverse, .5);
+    }
+  }
+
+  &__title {
+
+    a {
+      color: $c-font-inverse;
+
+      &:hover {
+        border-bottom-color: $c-font-inverse;
+      }
+    }
+
+    svg {
+      fill: rgba($c-font-inverse, .5);
+    }
+  }
+
+  &__image {
+
+  }
+}

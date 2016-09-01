@@ -1,0 +1,14 @@
+.ma__illustrated-link-2-up {
+
+  &__container {
+
+  }
+
+  &__title {
+    @include ma-border-decorative($c-theme-primary-2);
+  }
+
+  &__content {
+
+  }
+}
