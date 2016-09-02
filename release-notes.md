@@ -12,7 +12,6 @@
 * ?? - Action Finder
 * ?? - Illustrated Links
 * ?? - List of Links
-* ?? - Action Search
 
 ## 0.1.0
 ### Action Detail page
