@@ -16,8 +16,12 @@
       color: $c-font-inverse;
     }
 
-    button svg {
-      fill: $c-font-inverse;
+    button {
+      color: $c-font-inverse;
+      
+      svg {
+        fill: $c-font-inverse;
+      }
     }
   }
 

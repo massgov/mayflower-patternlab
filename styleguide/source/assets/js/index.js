@@ -1,5 +1,6 @@
-import dropdown       from "./modules/dropdown.js";
 import back2top       from "./modules/back2top.js";
+import dropdown       from "./modules/dropdown.js";
+import keywordSearch  from "./modules/keywordSearch.js";
 import mainNav        from "./modules/mainNav.js";
 import mobileNav      from "./modules/mobileNav.js";
 import scrollAnchors  from "./modules/scrollAnchors.js";
