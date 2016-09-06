@@ -64,13 +64,11 @@ $action-finder-bp: 800px;
     @media ($bp-x-small-min) and (max-width: $action-finder-bp) {
       @include span-columns(4 of 8);
       @include omega(2n);
-      margin-bottom: 2.43902%; // $gutter in % form
     }
 
     @media (min-width: ($action-finder-bp + 1)) {
       @include span-columns(4 of 12);
       @include omega(3n);
-      margin-bottom: 1.6129%; // $gutter in % form
     }
 
     .ma__callout-link {
