@@ -2,11 +2,6 @@
   top:36px;
 }
 
-:not(pre)>code[class*=language-], 
-pre[class*=language-] {
-  background-color: #fff;
-}
-
 .sg-header {
   background-color: #14558f;
   box-shadow: 0 2px 2px #ccc;
@@ -84,3 +79,4 @@ pre[class*=language-] {
   border-left: 1px solid #ccc;
   border-top: 1px solid #ccc;
 }
+
