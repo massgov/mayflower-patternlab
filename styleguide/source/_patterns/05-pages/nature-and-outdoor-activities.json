@@ -19,7 +19,7 @@
   },
 
   "actionFinder": {
-    "bgWide":"/assets/images/placeholder/1600x600-lighthouse.jpg",
+    "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
 
     "calloutLinks": [{
