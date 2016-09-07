@@ -1,4 +1,4 @@
-<section class="ma__action-finder" id="GUID831741781374893">
+<section class="ma__action-finder">
   <style>
     #GUID831741781374893 {
       background-image: url('{{actionFinder.bgNarrow}}');
@@ -10,6 +10,8 @@
       }
     }
   </style>
+  <!-- TODO: determine if blurring happens server side.  if so remove the .is-blurred class and CSS code -->
+  <div id="GUID831741781374893" class="ma__action-finder__banner is-blurred"></div>
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
       <h2 class="ma__action-finder__title">What Would You Like to Do?</h2>
@@ -26,3 +28,10 @@
     </ul>
   </div>
 </section>
+<div class="ma__action-finder__blur">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+     <filter id="blur">
+         <feGaussianBlur stdDeviation="3" />
+     </filter>
+  </svg> 
+</div>
