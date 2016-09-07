@@ -1,7 +1,6 @@
 $action-finder-bp: 800px;
 
 .ma__action-finder {
-  overflow: hidden; // added for .is-blurred image code
   padding: 60px 0;
   position: relative;
 
@@ -13,28 +12,6 @@ $action-finder-bp: 800px;
       top: 0;
       left: 0;
     width: 100%;
-
-    &.is-blurred {
-      background-size: 0 0;    
-      transform: matrix3d(1, 0, 0, 0,
-                            0, 1, 0, 0,
-                            0, 0, 1, 0,
-                            0, 0, 0, 0.05);
-
-      &:before {
-        background-image: inherit;
-        background-size: cover;
-        background-position: top center;
-        content: "";
-        height: 100%;
-        position: absolute;
-          top: 0;
-          left: 0;
-        transform: scale(0.05);
-        width: 100%;
-        z-index: 1;
-      }
-    }
   }
 
   &:after {
