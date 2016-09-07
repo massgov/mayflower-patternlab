@@ -4,8 +4,6 @@
 
 {% if statsCallout.pull %}
   {% set modifierClass = "ma__callout-stats--" ~ statsCallout.pull %}
-{% else %}
-  {% set modifierClass = "foo" %}
 {% endif %}
 <section class="ma__callout-stats {{modifierClass}}">
   <div class="ma__callout-stats__stat">$60</div>
