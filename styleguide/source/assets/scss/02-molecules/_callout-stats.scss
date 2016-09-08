@@ -6,7 +6,8 @@
   @media ($bp-small-min) {
     &--left,
     &--right {
-      width: 50%;
+      min-width: 230px;
+      width: 45%;
     }
 
     &--left {
