@@ -21,8 +21,8 @@
     }
   }
 
-  @media ($bp-large-min) and ($bp-x-large-max) {
-    .ma__action-details & {
+  .ma__action-details & {
+    @media ($bp-large-min) and ($bp-x-large-max) {
       &--left,
       &--right {
         float: none;
