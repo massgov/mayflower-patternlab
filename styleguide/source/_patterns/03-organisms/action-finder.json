@@ -1,0 +1,29 @@
+{
+  "actionFinder": {
+    "bgWide":"/assets/images/placeholder/1600x600-lighthouse.jpg",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+
+    "calloutLinks": [{
+      "text": "Find Scenic Viewing Areas",
+      "type": ""
+    },{
+      "text": "Cancel or Transfer a Campsite Reservation",
+      "type": "external"
+    },{
+      "text": "Find Horseback Riding Trails",
+      "type": ""
+    },{
+      "text": "Find a State Park",
+      "type": ""
+    },{
+      "text": "Get a State Park Pass",
+      "type": ""
+    },{
+      "text": "Download a Trail Map",
+      "type": ""
+    },{
+      "text": "Reserve a Campsite",
+      "type": "external"
+    }]
+  }
+}

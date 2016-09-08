@@ -16,16 +16,19 @@
       right: 1.5625rem;
     transition: visibility .5s, opacity .5s;
     visibility: visible;
+    z-index: $z-sticky-content;
 
     &.is-hidden {
       opacity: 0;
       visibility: hidden;
     }
 
-    svg {
+    & > svg {
       display: inline-block;
       transform: rotate(-90deg);
+      transform-origin: center center;
     }
+    
     span {
       display: block;
       text-align: center;

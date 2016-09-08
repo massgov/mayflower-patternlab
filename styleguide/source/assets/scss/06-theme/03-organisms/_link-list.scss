@@ -1,0 +1,13 @@
+.ma__link-list {
+
+  &__title {
+    @include ma-border-decorative($c-theme-primary-2);
+  }
+  
+  &__link {
+    
+    &:hover {
+      border-bottom-color: inherit;
+    }
+  }
+}

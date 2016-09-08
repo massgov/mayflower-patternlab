@@ -1,0 +1,18 @@
+.ma__keyword-search {
+
+  .ma__button-search {
+    background-color: transparent;
+    border-left-color: $c-bd-input;
+
+    &:hover {
+      background: $c-theme-primary-2;
+    }
+  }
+
+  &__reset {
+    @include ma-font(700);
+    color: $c-theme-primary-2;
+  }
+
+}
+

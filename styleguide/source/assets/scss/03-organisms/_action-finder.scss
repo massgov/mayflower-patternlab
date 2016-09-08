@@ -1,0 +1,88 @@
+$action-finder-bp: 800px;
+
+.ma__action-finder {
+  padding: 60px 0;
+  position: relative;
+
+  &__banner {
+    background-size: cover;
+    background-position: top center;
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+  }
+
+  &:after {
+    content: "";
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__container {
+    @include ma-container;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__header {
+    font-size: 0;
+    padding-bottom: 60px;
+  }
+
+  &__title {
+    @include ma-border-decorative;
+    padding-bottom: 15px;
+
+    @media (min-width: ($action-finder-bp + 1)) {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-right: 1.6129%; // $gutter in % form
+      vertical-align: middle;
+      width: 66.12903%; // @include span-columns(8 of 12);
+    }
+  }
+
+  &__search {
+    
+    @media (min-width: ($action-finder-bp + 1)) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 32.25806%; // @include span-columns(4 of 12);
+    }
+  }
+
+  &__items {
+    @include ma-reset-list;
+    display: flex;
+      flex-wrap: wrap;
+  }
+
+  &__item {
+    @include ma-valign-block;
+    font-size: 0;  // inline-block white-space override
+    margin-bottom: 20px;
+    width: 100%;
+
+    @media ($bp-x-small-min) and (max-width: $action-finder-bp) {
+      @include span-columns(4 of 8);
+      @include omega(2n);
+    }
+
+    @media (min-width: ($action-finder-bp + 1)) {
+      @include span-columns(4 of 12);
+      @include omega(3n);
+    }
+
+    .ma__callout-link {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+}

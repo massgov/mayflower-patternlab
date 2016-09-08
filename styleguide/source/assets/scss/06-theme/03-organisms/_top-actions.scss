@@ -1,7 +1,7 @@
 .ma__top-actions {
 
   &__title {
-    @include ma-border-decorative($c-white, $c-theme-primary-2);
+    @include ma-border-decorative($c-theme-primary-2);
   }
 
 

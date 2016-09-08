@@ -1,0 +1,36 @@
+<section class="ma__action-finder">
+  <style>
+    #GUID831741781374893 {
+      background-image: url('{{actionFinder.bgNarrow}}');
+    }
+
+    @media (min-width: 801px) {
+      #GUID831741781374893 {
+        background-image: url('{{actionFinder.bgWide}}');
+      }
+    }
+  </style>
+  <div id="GUID831741781374893" class="ma__action-finder__banner"></div>
+  <div class="ma__action-finder__container">
+    <header class="ma__action-finder__header">
+      <h2 class="ma__action-finder__title">What Would You Like to Do?</h2>
+      <div class="ma__action-finder__search">
+        {% include "molecules-keyword-search" %}
+      </div>
+    </header>
+    <ul class="ma__action-finder__items">
+      {% for calloutLink in actionFinder.calloutLinks %}
+        <li class="ma__action-finder__item">
+          {% include "molecules-callout-link" with calloutLink %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<div class="ma__action-finder__blur">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+     <filter id="blur">
+         <feGaussianBlur stdDeviation="3" />
+     </filter>
+  </svg> 
+</div>
