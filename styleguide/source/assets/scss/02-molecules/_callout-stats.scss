@@ -6,7 +6,8 @@
   @media ($bp-small-min) {
     &--left,
     &--right {
-      width: 50%;
+      min-width: 230px;
+      width: 45%;
     }
 
     &--left {
@@ -20,8 +21,8 @@
     }
   }
 
-  @media ($bp-large-min) and ($bp-x-large-max) {
-    .ma__action-details & {
+  .ma__action-details & {
+    @media ($bp-large-min) and ($bp-x-large-max) {
       &--left,
       &--right {
         float: none;

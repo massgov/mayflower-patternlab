@@ -79,9 +79,8 @@ export default function (window,document,$,undefined) {
       elHeight = $el.outerHeight(true);
       windowSize = $(window).innerWidth();
       upperLimit = $elParent.offset().top;
-      isMobile = windowSize <= mobileBreakpoint;
 
-      if(isMobile) {
+      if(windowSize <= mobileBreakpoint) {
         headerBuffer = $('.js-sticky-header').height() || 0;
         upperLimit -= headerBuffer;
       }
@@ -104,8 +103,14 @@ export default function (window,document,$,undefined) {
     function setPosition() {
       let windowTop = $(window).scrollTop();
       
-      if(isMobile) {
+      if(!isMobile && windowSize <= mobileBreakpoint) {
         $elParent.css({'paddingTop':elHeight});
+        isMobile = true;
+      }
+
+      if(isMobile && windowSize > mobileBreakpoint) {
+        $elParent.removeAttr('style');
+        isMobile = false;
       }
 
       if(windowTop <= upperLimit) {
