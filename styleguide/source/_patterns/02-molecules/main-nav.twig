@@ -1,73 +1,19 @@
 <section class="ma__main-nav">
   <ul class="ma__main-nav__items js-main-nav">
-    <li class="ma__main-nav__item js-main-nav-toggle">
-      <a class="ma__main-nav__top-link" href="#" title="Living">Living</a>
-      <div class="ma__main-nav__subitems js-main-nav-content is-closed">
-        <ul class="ma__main-nav__container">
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Living</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Health &amp; Social Services</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Family &amp; Children</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Housing</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Transportation</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Legal &amp; Justice</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Public Safety</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Voting</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Taxes</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="ma__main-nav__item js-main-nav-toggle">
-      <a class="ma__main-nav__top-link" href="#" title="Working">Working</a>
-      <div class="ma__main-nav__subitems js-main-nav-content is-closed">
-        <ul class="ma__main-nav__container">
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Working</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Unemployment</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Finding a Job</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Worker’s Rights &amp; Safety</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Business Services &amp; Resources</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Professional Licensing &amp; Certification</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Professional Training</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="ma__main-nav__item js-main-nav-toggle">
-      <a class="ma__main-nav__top-link" href="#" title="Learning">Learning</a>
-      <div class="ma__main-nav__subitems js-main-nav-content is-closed">
-        <ul class="ma__main-nav__container">
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Learning</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Early Childhood Education</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">K-12 Schools</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Higher Education</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Continuing Education</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Special Needs Education</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="ma__main-nav__item js-main-nav-toggle is-active">
-      <a class="ma__main-nav__top-link" href="#" title="Visiting">Visiting &amp; Exploring</a>
-      <div class="ma__main-nav__subitems js-main-nav-content is-closed">
-        <ul class="ma__main-nav__container">
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Visiting &amp; Exploring</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Recreational Licenses &amp; Permits</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">State Parks &amp; Recreation</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Travel &amp; Tourism</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Arts &amp; Culture</a></li>
-        </ul>
-      </div>
-    </li>
-    <li class="ma__main-nav__item js-main-nav-toggle">
-      <a class="ma__main-nav__top-link" href="#" title="Your Government">Your Government</a>
-      <div class="ma__main-nav__subitems js-main-nav-content is-closed">
-        <ul class="ma__main-nav__container">
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Your Government</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Office of the Governor</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">State Agencies</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Executive Branch</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Judicial Branch</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Legislative Branch</a></li>
-          <li class="ma__main-nav__subitem"><a href="" class="ma__main-nav__link">Local Government</a></li>
-        </ul>
-      </div>
-    </li>
+    {% for nav in mainNav %}
+      <li class="ma__main-nav__item {{ nav.active ? 'is-active' : '' }} {{ nav.subNav ? 'has-subnav js-main-nav-toggle' : '' }}">
+        <a class="ma__main-nav__top-link" href="{{nav.href}}" title="{{nav.text}}">{{nav.text}}</a>
+        {% if nav.subNav %}
+          <div class="ma__main-nav__subitems js-main-nav-content is-closed">
+            <ul class="ma__main-nav__container">
+              <li class="ma__main-nav__subitem"><a href="{{nav.href}}" class="ma__main-nav__link">{{nav.text}}</a></li>
+              {% for subNav in nav.subNav %}
+                <li class="ma__main-nav__subitem"><a href="{{subNav.href}}" class="ma__main-nav__link">{{subNav.text}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
   </ul>
 </section>
