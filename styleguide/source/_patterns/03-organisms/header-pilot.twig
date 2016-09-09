@@ -1,0 +1,26 @@
+<link href="/assets/css/pilot-generated.css" rel="stylesheet" />
+<!-- Begin .header -->
+<header class="ma__header">
+  <a class="ma__header__skip-nav" href="#main-content">skip navigation</a>
+  <div class="ma__header__container">
+    <div class="ma__header__logo">
+      {% include "atoms-site-logo" %}
+    </div>
+    <nav class="ma__header__nav">
+      <div class="ma__header__button-container js-sticky-header">
+        <button class="ma__header__back-button js-close-sub-nav"><span>Back</span></button>
+        <button class="ma__header__menu-button js-header-menu-button">
+          <span>Menu</span><span class="ma__header__menu-icon"></span>
+        </button>
+      </div>
+      <div class="ma__header__nav-container">
+        <div class="ma__header__main-nav">
+          {% include "molecules-main-nav" %}
+        </div>
+        <div class="ma__header__utility-nav"></div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- end .header -->
+<a name="main-content"></a>
