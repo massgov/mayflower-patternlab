@@ -1,4 +1,53 @@
+$header-mobile-menu-width: 300px;
+$header-logo-width: 210px;
+$bp-header-logo-min: "min-width: 1000px";
+
 // Pilot version only
 .ma__header {
-  
+
+  &__nav {
+    vertical-align: middle;
+
+    @media ($bp-medium-min) {
+      display: inline-block;
+      text-align: right;
+      width: 66.12903%; //@include span-columns(8);
+    }
+
+    @media ($bp-header-logo-min) {
+      width: 74.59677%; //@include span-columns(9);
+    }
+  }  
 }
+
+.ma__main-nav {
+  padding-left: 0;
+  padding-right: 0;
+
+  &__items {
+
+    @media ($bp-medium-min) {
+      .flexbox & {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__item + &__item {
+
+    @media ($bp-medium-min) {
+      margin-left: 7%;
+    }
+  }
+  
+  &__top-link {
+
+    .has-subnav & {
+      
+      &:after {
+        display: inline-block;
+      }
+    }
+  }
+}
+
