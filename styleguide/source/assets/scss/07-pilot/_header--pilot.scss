@@ -5,6 +5,41 @@ $bp-header-logo-min: "min-width: 1000px";
 // Pilot version only
 .ma__header {
 
+  @media ($bp-medium-min) {
+    padding-top: 0;
+  }
+
+  &__backto {
+    display: inline-block;
+    height: 40px;
+    margin-bottom: 3px;
+    position: fixed;
+      top: 0;
+    z-index: 9999;
+
+    @media ($bp-medium-min) {
+      background-color: $c-theme-primary-1;
+      display: block;
+      position: relative;
+      text-align: center;
+    }
+
+    a {
+      @include ma-chevron("left");
+      background-color: $c-theme-secondary-1;
+      color: $c-font-base;
+      display: inline-block;
+      padding: 10px 15px;
+
+      &:before {
+        height: 9px;
+        margin-right: .75em;
+        margin-top: 0;
+        width: 9px;
+      }
+    }
+  }
+
   &__nav {
     vertical-align: middle;
 
