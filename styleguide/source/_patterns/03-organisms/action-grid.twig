@@ -1,0 +1,19 @@
+<section class="ma__action-grid">
+  <h2 class="ma__action-grid__title">{{actionGrid.title}}</h2>
+  <p class="ma__action-grid__description">{{actionGrid.description}}</p>
+  <div class="ma__action-grid__items">
+    {% for action in actionGrid.actions %}
+      <div class="ma__action-grid__item {{action.theme ? 'ma__action-grid__item--' ~ action.theme : ''}}">
+        <div class="ma__action-grid__icon">
+          {% include action.icon %}
+        </div>
+        <div class="ma__action-grid__content">
+          <span class="ma__action-grid__category">{{action.category}}</span>
+          <h3 class="ma__action-grid__link">
+            <a href="{{action.linkHref}}" title="{{action.linkText}}">{{action.linkText}}&nbsp;{% include "atoms-svg-arrow" %}</a>
+          </h3>
+        </div>
+      </div> 
+    {% endfor %}
+  </div>
+</section>
