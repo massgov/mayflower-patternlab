@@ -1,15 +1,13 @@
 .ma__action-card {
 
   &__title {
+    @include ma-border-decorative($c-theme-primary-2);
+    padding-bottom: 15px;
 
-  }
-
-  &__description {
-
-  }
-
-  &__items {
-
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__item {
@@ -60,10 +58,6 @@
       fill: rgba($c-font-inverse,.7);
     }
   } 
-
-  &__content {
-
-  }
 
   &__category {
     @include ma-font(700);

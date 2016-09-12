@@ -1,6 +1,10 @@
 <section class="ma__action-card">
   <h2 class="ma__action-card__title">{{actionCard.title}}</h2>
-  <p class="ma__action-card__description">{{actionCard.description}}</p>
+  <div class="ma__action-card__description">
+    <section class="ma__rich-text">
+      <p>{{actionCard.description}}</p>
+    </section>
+  </div>
   <div class="ma__action-card__items">
     {% for action in actionCard.actions %}
       <div class="ma__action-card__item js-clickable {{action.theme ? 'ma__action-card__item--' ~ action.theme : ''}}">
