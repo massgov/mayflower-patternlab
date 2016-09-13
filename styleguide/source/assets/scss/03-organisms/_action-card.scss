@@ -1,6 +1,9 @@
 .ma__action-card {
   @include ma-container;
 
+  padding-top: 95px;
+  padding-bottom: 95px;
+
   &__title {
     @include ma-border-decorative;
     text-align: center;
