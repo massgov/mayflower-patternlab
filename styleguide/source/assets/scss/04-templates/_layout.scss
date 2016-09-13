@@ -3,14 +3,6 @@ $layout-sidebar-width: ($column * 3) + ($gutter * 2);
 .pre-content,
 .main-content {
   @include clearfix;
-  padding-bottom: 30px;
-
-  @media ($bp-medium-min){
-    padding-bottom: 50px;
-  }
-  @media ($bp-large-min){
-    padding-bottom: 70px;
-  }
 }
 
 .main-content--two {
@@ -18,7 +10,7 @@ $layout-sidebar-width: ($column * 3) + ($gutter * 2);
 }
 
 .page-content {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
   .main-content--two &,
   &:first-child:nth-last-child(2) {
