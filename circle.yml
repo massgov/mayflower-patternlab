@@ -13,8 +13,11 @@ test:
         - npm run gulp prod
 
 deployment:
+    pre:
+      - git config --global user.email "devops@palantir.net"
+      - git config --global user.name "palantirnet-temp1"
     release:
-        tag: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
+        # tag: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
         owner: massgov
         commands:
             - vendor/bin/phing deploy
