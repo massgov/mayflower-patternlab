@@ -15,7 +15,7 @@ test:
 deployment:
     release:
         # tag: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
-        branch: dev
+        branch: fix-deployment
         owner: massgov
         commands:
             - git config --global user.email "devops@palantir.net"
