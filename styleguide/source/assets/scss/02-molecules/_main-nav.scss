@@ -82,22 +82,25 @@
       padding-left: 20px;
       padding-right: 20px;
     }
+    
+    .has-subnav & {
+      @include ma-chevron;
+      
+      &:after {
+        cursor: pointer;
+        margin-left: 6px;
 
-    @include ma-chevron;
-    &:after {
-      cursor: pointer;
-      margin-left: 6px;
-
-      @media ($bp-medium-max) {
-        position: absolute;
-          right: 20px;
-          top: 15px;
-      }
-      @media ($bp-medium-min) {
-        transform: translateY(-45%) rotate(45deg);
-      }
-      @media ($bp-medium-min) and ($bp-x-large-max) {
-        display: none;
+        @media ($bp-medium-max) {
+          position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        @media ($bp-medium-min) {
+          transform: translateY(-45%) rotate(45deg);
+        }
+        @media ($bp-medium-min) and ($bp-x-large-max) {
+          display: none;
+        }
       }
     }
 

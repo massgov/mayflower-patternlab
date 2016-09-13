@@ -1,6 +1,6 @@
 # Mass Gov Release Notes
 
-## 0.2.0
+## 0.3.0
 ### Level 0,1,2 pages
 * MGRV-93 - L0 Page Banner
 * MGRV-43 - Locate/purchase any custom fonts used
@@ -13,7 +13,7 @@
 * ?? - Illustrated Links
 * ?? - List of Links
 
-## 0.1.0
+## 0.2.0
 ### Action Detail page
 * MGRV-89 - Related Contact Call-Out
 * MGRV-88 - Task Detail Section
@@ -21,7 +21,7 @@
 * MGRV-92 - Breadcrumbs
 * MGRV-91 - Task Detail Header
 
-## Sprint B
+## 0.1.0
 ### Header and Footer
 * MGRV-38 - Header plus navigation
 * MGRV-51 - Global Styling for elements
