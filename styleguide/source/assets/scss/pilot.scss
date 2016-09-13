@@ -14,11 +14,6 @@
 @import "06-theme/00-base/colors";
 @import "06-theme/00-base/fonts";
 
-// Atoms - reusable styles
-
-// Molecules - chunks of code that are used in Organisms/Components
-
-// Organisms - components
-@import "07-pilot/header--pilot";
-
-// Templates - page content types
+// pilot overrides
+@import "07-pilot/footer";
+@import "07-pilot/header";
