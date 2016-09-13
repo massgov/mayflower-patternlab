@@ -1,0 +1,13 @@
+.ma__whats-new {
+
+  &__title {
+    @include ma-border-decorative($c-theme-primary-2);
+  }
+
+  &__link {
+
+    svg {
+      fill: rgba($c-font-link,.5);
+    }
+  }
+}
