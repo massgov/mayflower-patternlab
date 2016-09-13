@@ -1,0 +1,53 @@
+.personal-message {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__container {
+    @include ma-container;
+    @include clearfix;
+  }
+
+  &__image {
+    margin-top: .5em;
+
+    @media ($bp-x-small-min) {
+      float: left;
+      margin-right: 35px;
+      width: 200px;
+    }
+
+    @media ($bp-medium-min) {
+      width: 255px;
+    }
+
+    @media ($bp-x-large-min) {
+      margin-left: $column + $gutter;
+    }
+
+  }
+
+  &__content {
+
+    @media ($bp-x-small-min) {
+      float: left;
+      width: calc(100% - 235px);
+    }
+
+    @media ($bp-medium-min) {
+      width: calc(100% - 315px);
+    }
+
+    @media ($bp-x-large-min) {
+      width: calc(100% - 525px);
+    }
+
+    .ma__rich-text {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include ma-border-decorative;
+    padding-bottom: 15px;
+  }
+}
