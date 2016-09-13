@@ -1,4 +1,5 @@
 import back2top       from "./modules/back2top.js";
+import clickable      from "./modules/clickable.js";
 import dropdown       from "./modules/dropdown.js";
 import keywordSearch  from "./modules/keywordSearch.js";
 import mainNav        from "./modules/mainNav.js";

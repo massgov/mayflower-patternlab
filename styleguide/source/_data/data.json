@@ -120,5 +120,47 @@
       "href":"#",
       "text":"Local Government"
     }]
+  }],
+
+  "mainNavPilot": [{
+    "href":"#",
+    "text":"Top Actions",
+    "active":"",
+    "subNav":[{
+      "href":"#",
+      "text":"Health & Social Services"
+    },{
+      "href":"#",
+      "text":"Family & Children"
+    },{
+      "href":"#",
+      "text":"Housing"
+    },{
+      "href":"#",
+      "text":"Transportation"
+    },{
+      "href":"#",
+      "text":"Legal & Justice"
+    },{
+      "href":"#",
+      "text":"Public Safety"
+    },{
+      "href":"#",
+      "text":"Voting"
+    },{
+      "href":"#",
+      "text":"Taxes"
+    }]
+  },{
+    "href":"#",
+    "text":"Feedback",
+    "active":"",
+    "subNav":[]
+  },{
+    "href":"#",
+    "text":"FAQ",
+    "active":"",
+    "subNav":[]
   }]
+
 }
