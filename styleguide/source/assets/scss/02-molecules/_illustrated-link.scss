@@ -57,7 +57,7 @@ $illustrated-link-bp: "min-width:500px";
     position: relative;
 
     a {
-      @include ma-underline-link;
+      @include ma-link-underline;
       padding-bottom: 0;
     }
 

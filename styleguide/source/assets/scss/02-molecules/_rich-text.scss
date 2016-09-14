@@ -28,13 +28,9 @@
   }
 
   a {
-    @include ma-underline-link;
+    @include ma-link-underline;
     overflow-wrap: break-word;
     word-wrap: break-word;  
     word-break: break-word;
-
-    &:hover {
-
-    }
   }
 }
