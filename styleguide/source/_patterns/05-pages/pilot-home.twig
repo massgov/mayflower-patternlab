@@ -7,8 +7,15 @@
   {% include "organisms-action-card" %}
   {% include "organisms-personal-message" %}
   {% include "organisms-whats-new" %}
+  {% embed "organisms-split50" %}
+    {% block split50Content %}
+      {% include "base-placeholder" with {'placeholder':{'text':'50% nested'}} %}
+      {% include "base-placeholder" with {'placeholder':{'text':'50% nested'}} %}
+    {% endblock %}
+  {% endembed %}
 {% endblock %}
 {% block postContent %}
 
 {% endblock %}
+
 
