@@ -63,22 +63,15 @@
     font-size: 1rem;
     line-height: 1.5;
     text-transform: uppercase;
-
   }
 
   &__link {
+    @include ma-link-decorative;
     margin-bottom: 0;
-    padding-right: 16px;
 
     a {
-      @include ma-underline-link;
       font-size: 1.5rem;
       line-height: 1.333;
-      padding-bottom: 1px;
-    }
-
-    svg {
-      margin-right: -16px;
     }
   }
 }

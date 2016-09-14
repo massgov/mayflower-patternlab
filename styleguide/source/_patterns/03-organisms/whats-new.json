@@ -1,0 +1,31 @@
+{
+  "whatsNew" : {
+    "title": "The Latest from Our Team",
+    "items": [{
+      "image": {
+        "src": "/assets/images/placeholder/320x180.png",
+        "alt": "something about this image"
+      },
+      "date": "08.15.16",
+      "link": {
+        "type": "external",
+        "href": "#",
+        "text": "Car, Bus, Bike, or Boat?"
+      },
+      "description": "Choosing iconography for the Transportation page got a little complicated when..."
+    },
+    {
+      "image": {
+        "src": "/assets/images/placeholder/320x180.png",
+        "alt": "something about this image"
+      },
+      "date": "08.14.16",
+      "link": {
+        "type": "external",
+        "href": "#",
+        "text": "The Importance of User Feedback"
+      },
+      "description": "When you redesign a website like Mass.Gov, you have to think about a lot of..."
+    }]
+  }
+}

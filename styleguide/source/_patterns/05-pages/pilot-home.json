@@ -79,6 +79,58 @@
     "imageAlt": "Governor Baker",
     "title": "A Message from Governor Baker",
     "rte": "<p>\"Information technology is an important priority for this administration and our ability to provide secure essential services and execute projects in an efficient and fiscally responsible manner is key to a better state government for Massachusetts. This is an important step that not only addresses some of the problems we have, but is an essential way forward to a better future.\"</p>"
+  },
+
+  "whatsNew" : {
+    "title": "The Latest from Our Team",
+    "items": [{
+      "image": {
+        "src": "/assets/images/placeholder/320x180.png",
+        "alt": "something about this image"
+      },
+      "date": "08.15.16",
+      "link": {
+        "type": "external",
+        "href": "#",
+        "text": "Car, Bus, Bike, or Boat?"
+      },
+      "description": "Choosing iconography for the Transportation page got a little complicated when..."
+    },
+    {
+      "image": {
+        "src": "/assets/images/placeholder/320x180.png",
+        "alt": "something about this image"
+      },
+      "date": "08.14.16",
+      "link": {
+        "type": "external",
+        "href": "#",
+        "text": "The Importance of User Feedback"
+      },
+      "description": "When you redesign a website like Mass.Gov, you have to think about a lot of..."
+    }]
+  },
+
+  "changeLog": {
+    "title": "What’s New on Pilot.Mass.Gov",
+    "items": [{
+      "date":"08.15.16",
+      "description":"Added 4 new Actions - Apply for a Fishing License, Find a State Park, Pay for Child Support, Register Your Business"
+    },{
+      "date":"08.15.16",
+      "description":"Added 2 new Actions - Get a Driver’s License, Apply for SNAP"
+    },{
+      "date":"08.15.16",
+      "description":"Updated the global site navigation"
+    },{
+      "date":"08.15.16",
+      "description":"Added 2 new Agency pages - Department of Conservation and Recreation (DCR), Office of Health and Social Services (OHSS)"
+    },{
+      "date":"08.11.16",
+      "description":"Launched Pilot!"
+    }]
   }
+
+
 
 }
