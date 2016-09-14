@@ -1,33 +1,29 @@
 <section class="ma__whats-new">
-  <h2 class="ma__whats-new__title">The Latest from Our Team</h2>
+  <h2 class="ma__whats-new__title">{{whatsNew.title}}</h2>
   <div class="ma__whats-new__items">
-    <div class="ma__whats-new__item">
-      <div class="ma__whats-new__image-wrapper">
-        <img 
-          src="/assets/images/placeholder/230x130.png" 
-          alt=""
-          width="230"
-          height="130" />
-        <span class="ma__whats-new__date">08.15.16</span>
+    {% for item in whatsNew.items %}
+      <div class="ma__whats-new__item">
+        <div class="ma__whats-new__image-wrapper">
+          <a href="{{item.link.href}}" {{item.link.type == "external" ? 'target="_blank"' : ''}}>
+            <img 
+              src="{{item.image.src}}" 
+              alt="{{item.image.alt}}"
+              width="320"
+              height="180" />
+            <span class="ma__whats-new__date">{{item.date}}</span>
+          </a>
+        </div>
+        <div class="ma__whats-new__content">
+          <h4 class="ma__whats-new__link">
+            {% set decorativeLink = item.link %}
+              {% include "atoms-decorative-link" with decorativeLink %}
+          </h4>
+          <div class="ma__whats-new__description">{{item.description}}</div>
+        </div>
       </div>
-      <div class="ma__whats-new__content">
-        <h4 class="ma__whats-new__link"><a href="#" title="">Car, Bus, Bike, or Boat?&nbsp;{% include "atoms-svg-arrow" %}</a></h4>
-        <p>Choosing iconography for the Transportation page got a little complicated when...</p>
-      </div>
-    </div>
-    <div class="ma__whats-new__item">
-      <div class="ma__whats-new__image-wrapper">
-        <img 
-          src="/assets/images/placeholder/230x130.png" 
-          alt=""
-          width="230"
-          height="130" />
-        <span class="ma__whats-new__date">08.15.16</span>
-      </div>
-      <div class="ma__whats-new__content">
-        <h4 class="ma__whats-new__link"><a href="#" title="">Car, Bus, Bike, or Boat?&nbsp;{% include "atoms-svg-arrow" %}</a></h4>
-        <p>Choosing iconography for the Transportation page got a little complicated when...</p>
-      </div>
-    </div>
+    {% endfor %}
+  </div>
+  <div class="ma__whats-new__view-all">
+    <a href="#">See all posts</a>
   </div>
 </section>
