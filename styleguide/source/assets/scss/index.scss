@@ -18,6 +18,7 @@
 @import "01-atoms/global/zoom";
 @import "01-atoms/buttons";
 @import "01-atoms/category-icon";
+@import "01-atoms/decorative-link";
 @import "01-atoms/site-logo";
 @import "01-atoms/svg-icons";
 
@@ -47,6 +48,8 @@
 @import "03-organisms/action-finder";
 @import "03-organisms/breadcrumbs";
 @import "03-organisms/callout";
+@import "03-organisms/change-log";
+@import "03-organisms/collage-header";
 @import "03-organisms/contact-us";
 @import "03-organisms/footer";
 @import "03-organisms/header";
@@ -54,9 +57,12 @@
 @import "03-organisms/link-list";
 @import "03-organisms/page-banner";
 @import "03-organisms/page-header";
+@import "03-organisms/personal-message";
 @import "03-organisms/related-actions";
 @import "03-organisms/sections-three-up";
+@import "03-organisms/split50";
 @import "03-organisms/top-actions";
+@import "03-organisms/whats-new";
 
 // Templates - page content types
 @import "04-templates/layout";

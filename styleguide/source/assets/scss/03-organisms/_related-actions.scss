@@ -19,15 +19,12 @@
   }
 
   &__link {
-    @include ma-underline-link;
-    font-size: 1.375rem;
-    line-height: 1.45;
-    padding-right: 20px;
-    padding-bottom: 1px;
+    @include ma-link-decorative;
 
-    svg {
-      @include ma-link-transition;
-      margin-right: -20px;
+    a {
+      font-size: 1.375rem;
+      line-height: 1.45;
+      padding-right: 20px;
     }
   }
 

@@ -1,0 +1,128 @@
+$collage-header-bp: "min-width: 700px";
+
+.ma__collage-header {
+
+  &__container {
+    @include ma-container;
+    @include clearfix;
+    padding-bottom: 60px;
+    position: relative;
+
+    @media ($collage-header-bp) {
+      padding-top: 60px;
+      padding-bottom: 90px;
+    }
+  }
+
+  &__images {
+    @include clearfix;
+    margin-left: -20px;
+    width: calc(100% + 40px);
+
+    @media ($collage-header-bp) {
+      @include ma-container;
+      height: 100%;
+      margin: 0;
+      padding-bottom: 20px;
+      position: absolute;
+        top: 0;
+        right: 0;
+      width: calc(100% - 420px);
+      z-index: 1;
+    }
+  }
+
+  &__image {
+    background-position: center center;
+    background-size: cover;
+    float: left;
+    padding-top: 33.333333%; // square shape;
+    width: 33.333333%;
+
+    @media ($collage-header-bp) {
+      height: 20%;
+      margin-right: 0;
+      margin-bottom: 2.43902%;
+      padding: 0;
+      width: 100%;
+
+
+      @media ($bp-large-min) {
+        @include span-columns(5 of 8);
+        height: 30%;
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        height: 60%;
+        margin-bottom: 2.43902%;
+        margin-right: 0;
+
+        @media ($bp-large-min) {
+          @include span-columns(8 of 8);
+          height: 68%;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+
+        @media ($bp-large-min) {
+          @include span-columns(3 of 8);
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    margin-left: -20px;
+    padding: 40px 20px 45px;
+    position: relative;
+    width: calc(100% + 40px);
+    
+    h1 {
+      margin-bottom: 0;
+    }
+
+    @media ($collage-header-bp) {
+      margin-bottom: 50px;
+      padding-top: 70px;
+      padding-bottom: 75px;
+
+      h1 {
+        font-size: 3.25rem;
+        width: 480px;
+
+        @media ($bp-medium-min) {
+          font-size: 3.625rem;
+          width: 550px;
+        }
+        @media ($bp-large-min) {
+          font-size: 4.625rem;
+          width: 600px;
+        }
+      }
+
+      &:before {
+        content: "";
+        height: 100%;
+        position: absolute;
+          top: 0;
+          right: 100%;
+        width: 50vw; // calc((100vw - 100%)/2);
+      }
+    }
+  }
+
+  &__details {
+    @media ($collage-header-bp) {
+      width: 370px;
+    }
+  }
+}

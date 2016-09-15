@@ -47,6 +47,11 @@ $bp-header-logo-min: "min-width: 1000px";
     }
   }
 
+  &__container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
   &__search {
     display: none;
   }
@@ -54,11 +59,9 @@ $bp-header-logo-min: "min-width: 1000px";
   &__nav {
 
     @media ($bp-medium-min) {
+      margin: 0 auto;
       max-width: 1320px;
-      position: absolute;
-        top: 70px;
-        right: 50%;
-      transform: translateX(50%);
+      position: relative;
       width: 100%;
     }
 
@@ -68,7 +71,9 @@ $bp-header-logo-min: "min-width: 1000px";
     border: none;
 
     @media ($bp-medium-min) {
-      float: right;
+      position: absolute;
+        top: -75px;
+        right: 0;
       text-align: right;
       width: 66.12903%; //@include span-columns(8);
     }
@@ -98,7 +103,7 @@ $bp-header-logo-min: "min-width: 1000px";
   &__item + &__item {
 
     @media ($bp-medium-min) {
-      margin-left: 7%;
+      margin-left: 6%;
     }
   }
   

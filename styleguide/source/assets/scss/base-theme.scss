@@ -12,6 +12,7 @@
 @import "06-theme/01-atoms/global/elements";
 @import "06-theme/01-atoms/buttons";
 @import "06-theme/01-atoms/category-icon";
+@import "06-theme/01-atoms/decorative-link";
 
 // Molecules - chunks of code that are used in Organisms/Components
 @import "06-theme/02-molecules/action-section";
@@ -39,6 +40,8 @@
 @import "06-theme/03-organisms/action-finder";
 @import "06-theme/03-organisms/breadcrumbs";
 @import "06-theme/03-organisms/callout";
+@import "06-theme/03-organisms/change-log";
+@import "06-theme/03-organisms/collage-header";
 @import "06-theme/03-organisms/contact-us";
 @import "06-theme/03-organisms/footer";
 @import "06-theme/03-organisms/header";
@@ -46,6 +49,9 @@
 @import "06-theme/03-organisms/link-list";
 @import "06-theme/03-organisms/page-banner";
 @import "06-theme/03-organisms/page-header";
+@import "06-theme/03-organisms/personal-message";
 @import "06-theme/03-organisms/related-actions";
 @import "06-theme/03-organisms/sections-three-up";
+@import "06-theme/03-organisms/split50";
 @import "06-theme/03-organisms/top-actions";
+@import "06-theme/03-organisms/whats-new";

@@ -1,16 +1,10 @@
 .ma__callout-link {
+  @include ma-link-decorative;
   margin-bottom: 1em;
   padding: 30px;
 
   a {
-    @include ma-underline-link;
     font-size: 1.375rem;
     line-height: 1.45;
-  }
-
-  svg {
-    height: 16px;
-    margin-right: -17px;
-    width: 17px;
   }
 }
