@@ -1,6 +1,16 @@
-<label for="options">Dropdown label</label>
-<select name="options" id="options">
-  <option value="value1">Option A</option>
-  <option value="value2">Option B</option>
-  <option value="value3">Option C</option>
-</select>
+<section class="ma__select-box js-dropdown">
+  <label
+    for="color-select" 
+    class="ma__select-box__label">{{selectBox.label}}</label>
+  <div class="ma__select-box__field">
+    <select
+      name="{{selectBox.id}}"
+      id="{{selectBox.id}}" 
+      class="ma__select-box__select js-dropdown-select">
+      {% for option in selectBox.options %}
+        <option value="{{option.value}}">{{option.text}}</option>
+      {% endfor %}
+    </select>
+    <span class="ma__select-box__link js-dropdown-link">{{selectBox.options[0].text}}</span>
+  </div>
+</section>
