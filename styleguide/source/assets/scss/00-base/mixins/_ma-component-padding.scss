@@ -1,0 +1,8 @@
+@mixin ma-component-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media ($bp-medium-min) {
+    padding-top: 90px;
+  }
+}

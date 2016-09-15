@@ -1,7 +1,6 @@
 .ma__change-log {
   @include ma-container;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  @include ma-component-padding;
 
   &__title {
     @include ma-border-decorative;
