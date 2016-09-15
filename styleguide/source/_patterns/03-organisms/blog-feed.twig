@@ -1,29 +1,29 @@
-<section class="ma__whats-new">
-  <h2 class="ma__whats-new__title">{{whatsNew.title}}</h2>
-  <div class="ma__whats-new__items">
-    {% for item in whatsNew.items %}
-      <div class="ma__whats-new__item">
-        <div class="ma__whats-new__image-wrapper">
+<section class="ma__blog-feed">
+  <h2 class="ma__blog-feed__title">{{blogFeed.title}}</h2>
+  <div class="ma__blog-feed__items">
+    {% for item in blogFeed.items %}
+      <div class="ma__blog-feed__item">
+        <div class="ma__blog-feed__image-wrapper">
           <a href="{{item.link.href}}" {{item.link.type == "external" ? 'target="_blank"' : ''}}>
             <img 
               src="{{item.image.src}}" 
               alt="{{item.image.alt}}"
               width="320"
               height="180" />
-            <span class="ma__whats-new__date">{{item.date}}</span>
+            <span class="ma__blog-feed__date">{{item.date}}</span>
           </a>
         </div>
-        <div class="ma__whats-new__content">
-          <h4 class="ma__whats-new__link">
+        <div class="ma__blog-feed__content">
+          <h4 class="ma__blog-feed__link">
             {% set decorativeLink = item.link %}
               {% include "atoms-decorative-link" with decorativeLink %}
           </h4>
-          <div class="ma__whats-new__description">{{item.description}}</div>
+          <div class="ma__blog-feed__description">{{item.description}}</div>
         </div>
       </div>
     {% endfor %}
   </div>
-  <div class="ma__whats-new__view-all">
+  <div class="ma__blog-feed__view-all">
     <a href="#">See all posts</a>
   </div>
 </section>
