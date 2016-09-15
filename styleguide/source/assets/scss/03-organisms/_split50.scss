@@ -25,6 +25,8 @@
   }
 
   &--has-divider &__container {
-    border-top: 1px solid;
+    @media ($bp-medium-min) {
+      border-top: 1px solid;
+    }
   }
 }
