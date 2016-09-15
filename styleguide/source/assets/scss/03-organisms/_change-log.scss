@@ -1,4 +1,5 @@
 .ma__change-log {
+  @include ma-container;
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -9,7 +10,7 @@
 
   &__items {
     @include ma-reset-list;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     
     @media ($bp-medium-min) {
       columns: 2;
@@ -47,6 +48,16 @@
   }
 
   @media ($bp-medium-min) {
+    
+    // left side
+    .ma__split50__container > &:nth-child(odd) {
+      padding-left: 0;
+    }
+
+    // right side
+    .ma__split50__container > &:nth-child(even) {
+      padding-right: 0;
+    }
 
     // more than two in a 50/50
     .ma__split50__container > &:nth-last-child(n+2),
