@@ -25,7 +25,7 @@
   {
     "icon":"atoms-svg-laptop",
     "title":"Online",
-    "rte":"<p>You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days.</p><div class=\"ma__callout-link\"><a href=\"#\" target=\"_blank\">Order a MassParks Pass online through Reserve America&nbsp;<svg focusable=\"false\" role=\"presentation\"><use xlink:href=\"/assets/images/svg-sprite.svg#external-link\"></use></svg></a></div>"
+    "rte":"<p>You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days.</p><div class=\"ma__callout-link\"><a href=\"#\" target=\"_blank\">Order a MassParks Pass online through Reserve America&nbsp;<svg focusable=\"false\" role=\"presentation\" class=\"svg-external-link\"><use xlink:href=\"/assets/images/svg-sprite.svg#external-link\"></use></svg></a></div>"
   },
   {
     "icon":"atoms-svg-phone",
