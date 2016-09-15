@@ -1,0 +1,36 @@
+.ma__feedback-form {
+  background-size: cover;
+  background-position: top center;
+
+  &__container {
+    @include ma-container;
+  }
+
+  &__title {
+
+  }
+
+  &__description {
+
+  }
+
+  &__name {
+
+  }
+
+  &__email {
+
+  }
+
+  &__feeback {
+
+  }
+
+  &__type {
+
+  }
+
+  &__permission {
+
+  }
+}
