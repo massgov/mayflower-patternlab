@@ -1,4 +1,4 @@
-.ma__change-log {
+.ma__blog-feed {
 
   &__title {
     @include ma-border-decorative($c-theme-primary-2);
@@ -6,9 +6,10 @@
 
   &__date {
     @include ma-font(900);
+    background-color: rgba($c-white,.9);
     color: $c-font-dark;
   }
-  
+
   &__view-all {
     
     a {
@@ -19,4 +20,5 @@
       }
     }
   }
+
 }

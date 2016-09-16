@@ -1,6 +1,6 @@
 <span class="ma__decorative-link">
   {% if decorativeLink.type == "external" %}
-    <a href="{{decorativeLink.href}}" target="_blank">{{decorativeLink.text}}&nbsp;{% include "atoms-svg-external" %}</a>
+    <a href="{{decorativeLink.href}}" target="_blank">{{decorativeLink.text}}&nbsp;{% include "atoms-svg-external-link" %}</a>
   {% else %}
     <a href="{{decorativeLink.href}}">{{decorativeLink.text}}&nbsp;{% include "atoms-svg-arrow" %}</a>
   {% endif %}
