@@ -1,4 +1,5 @@
 .ma__select-box {
+  display: inline-block;
   position: relative;
 
   &__label {
@@ -6,8 +7,7 @@
   }
 
   &__field {
-    border: 2px solid;
-    display: inline-block;
+    display: block;
     font-size: 0;
     position: relative;
   }
@@ -24,7 +24,7 @@
   }
 
   &__link {
-    display: inline-block;
+    border: 2px solid;
     font-size: 1rem;
     line-height: 40px;
     overflow: hidden;
