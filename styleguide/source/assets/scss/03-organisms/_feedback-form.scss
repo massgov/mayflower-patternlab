@@ -91,6 +91,10 @@ $feedback-form-bp-min: "min-width: 751px";
       font-size: 1rem;
       line-height: 1.75;
     }
+
+    .ma__input-radio + .ma__input-radio {
+      margin-left: 1.5em;
+    }
   }
 
   &__controls {
