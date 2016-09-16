@@ -1,0 +1,16 @@
+{
+  "selectBox":{
+    "label":"Color Scheme:",
+    "id":"color-select",
+    "options":[{
+      "value":"",
+      "text":"Default color scheme"
+    },{
+      "value":"has-theme-black",
+      "text":"White on Black scheme"
+    },{
+      "value":"has-theme-white",
+      "text":"Black on White scheme"
+    }]
+  }
+}

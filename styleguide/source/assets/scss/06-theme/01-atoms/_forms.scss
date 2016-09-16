@@ -1,0 +1,27 @@
+input {
+  background-color: rgba($c-white,.3);
+  border-color: $c-bd-input;
+}
+
+.ma__input-radio {
+
+  input {
+    border-color: $c-bd-input;
+  }
+  
+  label {
+    
+    &:before {
+      background-color: rgba($c-white, 0.3);
+      border-color: $c-bd-input;
+      color: transparent;
+    }
+  }
+
+  input:checked ~ label {
+
+    &:before {
+      color: $c-font-base;
+    }
+  }
+}

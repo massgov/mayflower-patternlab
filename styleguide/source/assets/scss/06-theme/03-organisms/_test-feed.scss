@@ -1,15 +1,16 @@
-.ma__whats-new {
+.ma__test-feed {
 
   &__title {
     @include ma-border-decorative($c-theme-primary-2);
   }
 
-  &__date {
-    @include ma-font(900);
-    background-color: rgba($c-white,.9);
-    color: $c-font-dark;
-  }
+  &__icon {
 
+    svg {
+      fill: $c-theme-primary-2;
+    }
+  }
+  
   &__view-all {
     
     a {
@@ -20,5 +21,4 @@
       }
     }
   }
-
 }

@@ -6,11 +6,11 @@
 {% block pageContent %}
   {% include "organisms-action-card" %}
   {% include "organisms-personal-message" %}
-  {% include "organisms-whats-new" %}
+  {% include "organisms-blog-feed" %}
   {% embed "organisms-split50" %}
     {% block split50Content %}
       {% include "organisms-change-log" %}
-      {% include "base-placeholder" with {'placeholder':{'text':'50% nested'}} %}
+      {% include "organisms-test-feed" %}
     {% endblock %}
   {% endembed %}
 {% endblock %}

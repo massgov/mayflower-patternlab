@@ -1,34 +1,45 @@
-.ma__change-log {
+.ma__test-feed {
   @include ma-container;
   @include ma-component-padding;
 
   &__title {
     @include ma-border-decorative;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
   }
 
   &__items {
-    @include ma-reset-list;
+    @include clearfix;
     margin-bottom: 40px;
-    
-    @media ($bp-medium-min) {
-      columns: 2;
-    }
+
   }
 
   &__item {
-    font-size: 1rem;
-    padding-left: 95px;
-    position: relative;
+    @include clearfix;
 
+    @media ($bp-medium-min) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
   }
 
-  &__date {
-    font-size: 1.188rem;
-    line-height: 1.35;
-    position: absolute;
-      top: 0;
-      left: 0;
+  &__icon {
+    float: left;
+    padding-right: 30px;
+    width: 90px;
+  }
+
+  &__content {
+    float: left;
+    padding-right: 10px;
+    width: calc(100% - 90px);
+  }
+
+  &__link {
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 1rem;
   }
 
   &__view-all {
@@ -47,7 +58,7 @@
   }
 
   @media ($bp-medium-min) {
-    
+
     // left side
     .ma__split50__container > &:nth-child(odd) {
       padding-left: 0;
@@ -62,14 +73,15 @@
     .ma__split50__container > &:nth-last-child(n+2),
     .ma__split50__container > *:nth-last-child(n+2) ~ & {
       
-      .ma__change-log__title {
+      .ma__test-feed__title {
         font-size: 1.75rem;
         line-height: 1.214287;
       }
 
-      .ma__change-log__items {
-        columns: 1;
+      .ma__test-feed__item {
+        @include span-columns(12);
       }
     }
   }
+
 }
