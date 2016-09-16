@@ -1,0 +1,66 @@
+.ma__select-box {
+  position: relative;
+
+  &__label {
+    display: block;
+  }
+
+  &__field {
+    border: 2px solid;
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+  }
+
+  &__select {
+    font-size: 1rem;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+      top: 0;
+      left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 40px;
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 58px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    @include ma-chevron;
+    border-left: 2px solid;
+    height: 100%;
+    padding-right: 3px;
+    position: absolute;
+      top: 0;
+      right: 0;
+    text-align: center;
+    width: 40px;
+
+    &:after {
+      margin: 0;
+      opacity: .7;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__select:focus + &__link {
+    outline-width: 2px;
+    outline-style: solid;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-style: auto;
+    }
+  }
+}
