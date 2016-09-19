@@ -38,6 +38,7 @@
     a {
       @include ma-chevron;
       @include ma-link-underline;
+      padding-bottom: 1px;
       display: inline-block;
       padding-bottom: 0;
 
