@@ -1,18 +1,16 @@
 .ma__illustrated-link {
 
   &__content {
-    background-color: $c-theme-primary-2;
+    background-color: $c-theme-primary-1;
 
     &:after {
-      background-color: $c-theme-primary-2;
+      background-color: $c-theme-primary-1;
     }
   }
 
-  &__icon {
-
-    svg {
-      fill: rgba($c-font-inverse, .5);
-    }
+  &__label {
+    color: $c-font-inverse;
+    opacity: .5;
   }
 
   &__title {
@@ -28,9 +26,5 @@
     svg {
       fill: rgba($c-font-inverse, .5);
     }
-  }
-
-  &__image {
-
   }
 }
