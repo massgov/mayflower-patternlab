@@ -1,7 +1,12 @@
 .ma__header-search {
 
+  input {
+    background-color: $c-font-inverse;
+    border-color: $c-bd-input;
+  }
+
   .ma__button-search {
-    
+
     .ma__header__nav-search & {
       background-color: transparent;
       border-left-color: $c-bd-input;
@@ -19,4 +24,3 @@
     }
   }
 }
-
