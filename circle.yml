@@ -1,20 +1,26 @@
+machine:
+  php:
+    version: 5.5.36
+
 general:
-    artifacts:
-        - "public/assets"
-    build_dir: styleguide
+  artifacts:
+    - "public/assets"
+  build_dir: styleguide
 
 dependencies:
-    override:
-        - php core/console --generate
-        - npm install
+  override:
+    - php core/console --generate
+    - npm install
 
 test:
-    override:
-        - npm run gulp prod
+  override:
+    - npm run gulp prod
 
 deployment:
-    release:
-        tag: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
-        owner: massgov
-        commands:
-            - vendor/bin/phing deploy
+  release:
+    tag: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
+    owner: massgov
+    commands:
+      - git config --global user.email "devops@palantir.net"
+      - git config --global user.name "palantirnet-temp1"
+      - vendor/bin/phing deploy

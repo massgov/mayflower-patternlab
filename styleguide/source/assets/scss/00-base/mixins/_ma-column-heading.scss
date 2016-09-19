@@ -73,8 +73,7 @@
   @else {
     background-color: $c-bg;
 
-    &:after,
-    &:before {
+    &:after {
       background-color: $c-page;
     }
   }

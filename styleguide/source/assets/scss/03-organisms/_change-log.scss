@@ -1,0 +1,75 @@
+.ma__change-log {
+  @include ma-container;
+  @include ma-component-padding;
+
+  &__title {
+    @include ma-border-decorative;
+    padding-bottom: 15px;
+  }
+
+  &__items {
+    @include ma-reset-list;
+    margin-bottom: 40px;
+    
+    @media ($bp-medium-min) {
+      columns: 2;
+    }
+  }
+
+  &__item {
+    font-size: 1rem;
+    padding-left: 95px;
+    position: relative;
+
+  }
+
+  &__date {
+    font-size: 1.188rem;
+    line-height: 1.35;
+    position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+  &__view-all {
+    text-align: right;
+
+    a {
+      @include ma-chevron;
+      @include ma-link-underline;
+      display: inline-block;
+      
+      &:after {
+        height: .5em;
+        width: .5em;
+      }
+    }
+  }
+
+  @media ($bp-medium-min) {
+    
+    // left side
+    .ma__split50__container > &:nth-child(odd) {
+      padding-left: 0;
+    }
+
+    // right side
+    .ma__split50__container > &:nth-child(even) {
+      padding-right: 0;
+    }
+
+    // more than two in a 50/50
+    .ma__split50__container > &:nth-last-child(n+2),
+    .ma__split50__container > *:nth-last-child(n+2) ~ & {
+      
+      .ma__change-log__title {
+        font-size: 1.75rem;
+        line-height: 1.214287;
+      }
+
+      .ma__change-log__items {
+        columns: 1;
+      }
+    }
+  }
+}

@@ -99,13 +99,9 @@
 
     button {
       @include ma-button-reset;
-      @include ma-underline-link;
+      @include ma-link-underline;
       font-size: 1rem;
       white-space: nowrap;
-
-      &:hover {
-
-      }
 
       span,
       svg {

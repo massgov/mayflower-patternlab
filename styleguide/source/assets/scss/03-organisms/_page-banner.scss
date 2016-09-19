@@ -4,9 +4,16 @@ $page-banner-inner-width: 612px;
 $page-banner-child: '.ma__page-banner--child';
 
 .ma__page-banner {
+  padding-bottom: 30px;
   position: relative;
   text-align: center;
 
+  @media ($bp-medium-min){
+    padding-bottom: 50px;
+  }
+  @media ($bp-large-min){
+    padding-bottom: 70px;
+  }
 
   &__background {
     background-size: cover;

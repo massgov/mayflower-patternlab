@@ -1,12 +1,22 @@
 {% extends 'pilot-single-column-template' %}
 
 {% block preContent %}
-
+  {% include "organisms-collage-header" %}
 {% endblock %}
 {% block pageContent %}
   {% include "organisms-action-card" %}
+  {% include "organisms-personal-message" %}
+  {% include "organisms-blog-feed" %}
+  {% embed "organisms-split50" %}
+    {% block split50Content %}
+      {% include "organisms-change-log" %}
+      {% include "organisms-test-feed" %}
+    {% endblock %}
+  {% endembed %}
+  {% include "organisms-feedback-form" %}
 {% endblock %}
 {% block postContent %}
 
 {% endblock %}
+
 

@@ -1,6 +1,9 @@
 .ma__action-card {
   @include ma-container;
 
+  padding-top: 95px;
+  padding-bottom: 95px;
+
   &__title {
     @include ma-border-decorative;
     text-align: center;
@@ -24,16 +27,25 @@
     cursor: pointer;
     font-size: 0;  //valign fix
     margin-bottom: 20px;
-    min-height: 215px;
-    padding: 20px 50px;
+    padding: 30px 20px 50px;
+    width: 100%;
+
+    @media ($bp-x-small-min) {
+      padding: 50px 20px;
+    }
 
     @media ($bp-medium-min) {
       @include span-columns(6);
       @include omega(2n);
+      min-height: 215px;
 
       &:nth-last-child(2) {
         margin-bottom: 0;
       }
+    }
+    
+    @media ($bp-large-min) {
+      padding: 20px 50px;
     }
 
     &:last-child {
@@ -43,39 +55,51 @@
 
   &__icon,
   &__content {
-    display: inline-block;
     vertical-align: middle;
+
+    @media ($bp-x-small-min) {
+      display: inline-block;
+    }
   }
 
   &__icon {
-    text-align: center;
-    width: 100px;
+    margin-bottom: 10px;
+
+    @media ($bp-x-small-min) {
+      margin-bottom: 0;
+      text-align: center;
+      width: 75px;
+    }
+
+    @media ($bp-medium-min) {
+      width: 100px;
+    }
   }
 
   &__content {
-    width: calc(100% - 100px);
+
+    @media ($bp-x-small-min) {
+      width: calc(100% - 75px);
+    }
+
+    @media ($bp-medium-min) {
+      width: calc(100% - 100px);
+    }
   }
 
   &__category {
     font-size: 1rem;
     line-height: 1.5;
     text-transform: uppercase;
-
   }
 
   &__link {
+    @include ma-link-decorative;
     margin-bottom: 0;
-    padding-right: 16px;
 
     a {
-      @include ma-underline-link;
       font-size: 1.5rem;
       line-height: 1.333;
-      padding-bottom: 1px;
-    }
-
-    svg {
-      margin-right: -16px;
     }
   }
 }

@@ -1,0 +1,58 @@
+:focus {
+  border-color: Highlight !important;
+
+  /* WebKit gets its native focus styles.
+   */
+  @media (-webkit-min-device-pixel-ratio:0) {
+    outline-color: -webkit-focus-ring-color;
+  }
+}
+
+
+input[type="email"],
+input[type="text"] {
+  background-color: rgba($c-white,.3);
+  border-color: $c-bd-input;
+}
+
+textarea {
+  background-color: rgba($c-white,.3);
+  border-color: $c-bd-input;
+}
+
+label {
+  @include ma-font(500);
+}
+
+.ma__input-radio {
+
+  input {
+    border-color: $c-bd-input;
+  }
+  
+  label {
+    
+    &:before {
+      background-color: rgba($c-white, 0.3);
+      border-color: $c-bd-input;
+      color: transparent;
+    }
+  }
+
+  input:checked ~ label {
+
+    &:before {
+      color: $c-font-base;
+    }
+  }
+
+  input:focus ~ label:before {
+    border-color: Highlight !important;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-color: -webkit-focus-ring-color;
+    }
+  }
+}

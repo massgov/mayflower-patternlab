@@ -1,0 +1,48 @@
+input[type="email"],
+input[type="text"] {
+  border: 2px solid;
+  min-height: 40px;
+  padding: 0 18px;
+}
+
+textarea {
+  border: 2px solid;
+  padding: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: .5em;
+}
+
+.ma__input-radio {
+
+  input {
+    @include ma-visually-hidden;
+  }
+
+  label {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    &:before {
+      border: 2px solid; 
+      border-radius: 50%;
+      content: "\2022";
+      display: inline-block;
+      height: .6em;
+      font-size: 2.5em;
+      line-height: calc(.6em - 2px);
+      margin-right: .125em;
+      text-align: center;
+      vertical-align: middle;
+      width: .6em;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

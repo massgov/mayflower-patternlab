@@ -3,8 +3,8 @@ This living styleguide is built using PatternLab.
 
 ##Machine set up
 1. Install PHP
-2. Install NodeJS
-3. Install GulpJS
+2. Install NodeJS (https://nodejs.org/en/download/)
+3. Install GulpJS, via command line `npm install -g gulp`
 
 ##Set up instructions
 1. Clone Repo
@@ -30,3 +30,6 @@ This living styleguide is built using PatternLab.
 * Front end assets can be found in the source/assets directory
 * Gulp will handle the conversion of files from source to public
 * Pattern Lab specific files are in the /public/styleguide directory (the styleguide.html file is automatically generated when twig templates are updated)
+
+# Release Deployment
+Tagged releases are automatically (via CircleCI) deployed to the [Mayflower Artifacts](https://github.com/palantirnet/mayflower-artifacts) repo for consumption by the Palantir team. Tags should follow [semantic versioning](https://github.com/sindresorhus/semver-regex) conventions.
