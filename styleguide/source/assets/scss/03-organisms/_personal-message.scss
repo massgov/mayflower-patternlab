@@ -1,6 +1,11 @@
 .ma__personal-message {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media ($bp-small-min) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   &__container {
     @include ma-container;
@@ -8,15 +13,13 @@
   }
 
   &__image {
-    margin-top: .5em;
-
-    @media ($bp-x-small-min) {
-      float: left;
-      margin-right: 35px;
-      width: 200px;
-    }
+    margin-bottom: 20px;
+    text-align: center;
 
     @media ($bp-medium-min) {
+      float: left;
+      margin-bottom: 0;
+      margin-right: 35px;
       width: 255px;
     }
 
@@ -28,12 +31,8 @@
 
   &__content {
 
-    @media ($bp-x-small-min) {
-      float: left;
-      width: calc(100% - 235px);
-    }
-
     @media ($bp-medium-min) {
+      float: left;
       width: calc(100% - 315px);
     }
 

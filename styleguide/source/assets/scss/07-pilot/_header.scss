@@ -29,12 +29,16 @@ $bp-header-logo-min: "min-width: 1000px";
 
     a {
       @include ma-chevron("left");
+      @include ma-font(500);
       background-color: $c-theme-secondary-1;
-      color: $c-font-base;
+      color: $c-font-dark;
       display: inline-block;
-      padding: 10px 5px;
+      font-size: 1rem;
+      padding: 10px;
 
       @media ($bp-x-small-min) {
+        font-size: 1.125rem;
+        margin-left: 20px;
         padding: 10px 15px;
       }
 
@@ -43,6 +47,10 @@ $bp-header-logo-min: "min-width: 1000px";
         margin-right: .75em;
         margin-top: 0;
         width: 9px;
+      }
+
+      &:hover {
+       padding-top: 18px;
       }
     }
   }
@@ -85,7 +93,7 @@ $bp-header-logo-min: "min-width: 1000px";
 
   &__utility-nav {
     display: none;
-  } 
+  }
 }
 
 .ma__main-nav {
@@ -106,15 +114,14 @@ $bp-header-logo-min: "min-width: 1000px";
       margin-left: 6%;
     }
   }
-  
+
   &__top-link {
 
     .has-subnav & {
-      
+
       &:after {
         display: inline-block;
       }
     }
   }
 }
-

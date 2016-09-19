@@ -11,13 +11,13 @@
 
 input[type="email"],
 input[type="text"] {
-  background-color: rgba($c-white,.3);
-  border-color: $c-bd-input;
+  background-color: rgba($c-white,.1);
+  border-color: rgba($c-bd-input,.5);
 }
 
 textarea {
-  background-color: rgba($c-white,.3);
-  border-color: $c-bd-input;
+  background-color: rgba($c-white,.1);
+  border-color: rgba($c-bd-input,.5);
 }
 
 label {
@@ -29,12 +29,12 @@ label {
   input {
     border-color: $c-bd-input;
   }
-  
+
   label {
-    
+
     &:before {
-      background-color: rgba($c-white, 0.3);
-      border-color: $c-bd-input;
+      background-color: rgba($c-white, 0.1);
+      border-color: rgba($c-bd-input,.5);
       color: transparent;
     }
   }
