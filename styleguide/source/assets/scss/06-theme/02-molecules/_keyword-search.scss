@@ -14,5 +14,18 @@
     color: $c-theme-primary-2;
   }
 
+  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: $c-font-inverse;
+    opacity:  .8;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: $c-font-inverse;
+    opacity:  .8;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $c-font-inverse;
+    opacity:  .8;
+  }
+
 }
 
