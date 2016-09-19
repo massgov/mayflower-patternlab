@@ -18,12 +18,12 @@
     &:hover {
       background-color: darken($c-bg-subtle, 10%);
     }
-  
+
     &--blue {
       background-color: $c-theme-primary-1;
 
       &:hover {
-        background-color: lighten($c-theme-primary-1, 10%);
+        background-color: $c-theme-primary-1;
       }
     }
 
@@ -31,7 +31,7 @@
       background-color: $c-theme-primary-2;
 
       &:hover {
-        background-color: lighten($c-theme-primary-2, 10%);
+        background-color: $c-theme-primary-2;
       }
     }
 
@@ -47,18 +47,18 @@
   &__icon {
 
     svg {
-      fill: $c-font-medium;
+      fill: rgba($c-font-medium,.7);
     }
   }
 
   &__item--blue &__icon,
   &__item--green &__icon,
   &__item--dark-gray &__icon {
-    
+
     svg {
       fill: rgba($c-font-inverse,.7);
     }
-  } 
+  }
 
   &__category {
     @include ma-font(700);
@@ -76,7 +76,7 @@
     a:hover {
       border-bottom-color: $c-font-link;
     }
-    
+
     svg {
       fill: rgba($c-font-link, .5);
     }
@@ -85,13 +85,13 @@
   &__item--blue &__link,
   &__item--green &__link,
   &__item--dark-gray &__link {
-    
+
     a {
       color: $c-font-inverse;
 
       &:hover {
         border-bottom-color: $c-font-inverse;
-      }  
+      }
     }
 
     svg {

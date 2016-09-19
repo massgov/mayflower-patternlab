@@ -1,6 +1,9 @@
 .ma__change-log {
-  @include ma-container;
-  @include ma-component-padding;
+
+  @media ($bp-medium-min) {
+    @include ma-container;
+    @include ma-component-padding;
+  }
 
   &__title {
     @include ma-border-decorative;
@@ -9,8 +12,8 @@
 
   &__items {
     @include ma-reset-list;
-    margin-bottom: 40px;
-    
+    padding-top: 10px;
+
     @media ($bp-medium-min) {
       columns: 2;
     }
@@ -18,6 +21,7 @@
 
   &__item {
     font-size: 1rem;
+    padding-bottom: 30px;
     padding-left: 95px;
     position: relative;
 
@@ -38,7 +42,8 @@
       @include ma-chevron;
       @include ma-link-underline;
       display: inline-block;
-      
+      padding-bottom: 0;
+
       &:after {
         height: .5em;
         width: .5em;
@@ -47,7 +52,7 @@
   }
 
   @media ($bp-medium-min) {
-    
+
     // left side
     .ma__split50__container > &:nth-child(odd) {
       padding-left: 0;
@@ -61,10 +66,14 @@
     // more than two in a 50/50
     .ma__split50__container > &:nth-last-child(n+2),
     .ma__split50__container > *:nth-last-child(n+2) ~ & {
-      
+
       .ma__change-log__title {
         font-size: 1.75rem;
         line-height: 1.214287;
+
+        &:after {
+          width: 2.25em;
+        }
       }
 
       .ma__change-log__items {

@@ -57,7 +57,7 @@
   }
 
   &__content {
-    
+
     @media ($bp-x-small-min) {
       float: left;
       width: 57%;
@@ -79,7 +79,8 @@
       @include ma-chevron;
       @include ma-link-underline;
       display: inline-block;
-      
+      padding-bottom: 0;
+
       &:after {
         height: .5em;
         width: .5em;
