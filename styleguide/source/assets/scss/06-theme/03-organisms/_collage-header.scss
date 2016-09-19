@@ -9,18 +9,18 @@ $collage-header-bp: "min-width: 700px";
     @media ($collage-header-bp) {
       background-image: linear-gradient(120deg, $c-theme-primary-2 550px, transparent 550px);
     }
-    
+
     @media ($bp-medium-min) {
       background-image: linear-gradient(120deg, $c-theme-primary-2 620px, transparent 620px);
     }
-    
+
     @media ($bp-large-min) {
-      background-image: linear-gradient(120deg, $c-theme-primary-2 670px, transparent 670px);
+      background-image: linear-gradient(120deg, $c-theme-primary-2 690px, transparent 690px);
     }
 
     h1 {
       color: $c-font-inverse;
-      @include ma-font(300);
+      @include ma-font(400);
     }
 
     &:before {
@@ -30,6 +30,13 @@ $collage-header-bp: "min-width: 700px";
   }
 
   &__details {
-    @include ma-font(300);
+
+    h3 {
+      @include ma-font(400);
+    }
+
+    p {
+      @include ma-font(300);
+    }
   }
 }

@@ -6,11 +6,14 @@
     @include ma-border-decorative;
     margin-bottom: 60px;
     padding-bottom: 15px;
-    text-align: center;
 
-    &:after {
-      left: 50%;
-      transform: translateX(-50%);
+    @media ($bp-medium-min) {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
@@ -57,7 +60,7 @@
   }
 
   &__content {
-    
+
     @media ($bp-x-small-min) {
       float: left;
       width: 57%;

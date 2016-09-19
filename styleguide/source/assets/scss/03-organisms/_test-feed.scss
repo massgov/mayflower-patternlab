@@ -1,7 +1,7 @@
 .ma__test-feed {
   @include ma-container;
   @include ma-component-padding;
-
+  
   &__title {
     @include ma-border-decorative;
     padding-bottom: 16px;
@@ -9,12 +9,12 @@
 
   &__items {
     @include clearfix;
-    margin-bottom: 40px;
-
+    padding-top: 10px;
   }
 
   &__item {
     @include clearfix;
+    padding-bottom: 30px;
 
     @media ($bp-medium-min) {
       @include span-columns(6);
@@ -35,6 +35,8 @@
   }
 
   &__link {
+    font-size: 1.375rem;
+    line-height: 1.363635;
     margin-bottom: 10px;
   }
 
@@ -49,7 +51,8 @@
       @include ma-chevron;
       @include ma-link-underline;
       display: inline-block;
-      
+      padding-bottom: 0;
+
       &:after {
         height: .5em;
         width: .5em;
@@ -57,7 +60,13 @@
     }
   }
 
-  @media ($bp-medium-min) {
+ .ma__split50__container > &:nth-last-child(n+2),
+ .ma__split50__container > *:nth-last-child(n+2) ~ & {
+   padding-left: 0;
+   padding-right: 0;
+ }
+ 
+ @media ($bp-medium-min) {
 
     // left side
     .ma__split50__container > &:nth-child(odd) {
@@ -72,10 +81,14 @@
     // more than two in a 50/50
     .ma__split50__container > &:nth-last-child(n+2),
     .ma__split50__container > *:nth-last-child(n+2) ~ & {
-      
+
       .ma__test-feed__title {
         font-size: 1.75rem;
         line-height: 1.214287;
+
+        &:after {
+          width: 2.25em;
+        }
       }
 
       .ma__test-feed__item {
