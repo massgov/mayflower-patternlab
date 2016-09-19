@@ -79,6 +79,7 @@
       @include ma-chevron;
       @include ma-link-underline;
       display: inline-block;
+      padding-bottom: 1px;
       
       &:after {
         height: .5em;
