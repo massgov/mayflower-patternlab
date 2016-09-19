@@ -19,7 +19,8 @@
     "es6-polyfill": "./es6-polyfill.js",
     "svg4everybody": "~2.0.3",
     "polyfill-init": "./polyfill-init.js",
-    "jquery.fitvids": "fitvids#^1.1.0"
+    "jquery.fitvids": "fitvids#^1.1.0",
+    "jquery": "^3.1.0"
   },
   "overrides": {
     "es5-shim": {
