@@ -27,7 +27,7 @@
     cursor: pointer;
     font-size: 0;  //valign fix
     margin-bottom: 20px;
-    padding: 30px 20px 30px;
+    padding: 30px 20px;
     width: 100%;
 
     @media ($bp-x-small-min) {
@@ -46,10 +46,6 @@
 
     @media ($bp-large-min) {
       padding: 20px;
-    }
-
-    &--blue:hover, &--green:hover {
-      filter: opacity(80%);
     }
 
     &:last-child {
