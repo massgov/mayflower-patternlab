@@ -6,11 +6,23 @@
 
   &__title {
     @include ma-border-decorative;
-    text-align: center;
+    padding-bottom: 15px;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   &__description {
-    text-align: center;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+    }
   }
 
   &__items {

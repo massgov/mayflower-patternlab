@@ -24,17 +24,23 @@ $feedback-form-bp-min: "min-width: 751px";
     @include ma-border-decorative;
     margin-bottom: $feedback-form-spacing;
     padding-bottom: 16px;
-    text-align: center;
 
-    &:after {
-      left: 50%;
-      transform: translateX(-50%);
+    @media ($bp-medium-min) {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
   &__description {
     margin: 0;
-    text-align: center;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+    }
   }
 
   &__name,
