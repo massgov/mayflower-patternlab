@@ -1,5 +1,5 @@
 .ma__select-box {
-  
+
   &__label {
     @include ma-font(500);
   }
@@ -10,12 +10,12 @@
   }
 
   &__link {
-    background-color: rgba($c-white,.3);
-    border-color: $c-bd-input;
+    background-color: rgba($c-white,.1);
+    border-color: rgba($c-bd-input,.5);
   }
 
   &__icon {
-    border-color: $c-bd-input;
+    border-color: rgba($c-bd-input,.5);
   }
 
   &__select:focus + &__link {

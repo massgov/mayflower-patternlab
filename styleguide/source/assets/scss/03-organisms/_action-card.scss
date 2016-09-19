@@ -6,11 +6,23 @@
 
   &__title {
     @include ma-border-decorative;
-    text-align: center;
+    padding-bottom: 15px;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   }
 
   &__description {
-    text-align: center;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+    }
   }
 
   &__items {
@@ -27,7 +39,7 @@
     cursor: pointer;
     font-size: 0;  //valign fix
     margin-bottom: 20px;
-    padding: 30px 20px 50px;
+    padding: 30px 20px;
     width: 100%;
 
     @media ($bp-x-small-min) {
@@ -43,9 +55,9 @@
         margin-bottom: 0;
       }
     }
-    
+
     @media ($bp-large-min) {
-      padding: 20px 50px;
+      padding: 20px;
     }
 
     &:last-child {
@@ -63,15 +75,17 @@
   }
 
   &__icon {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     @media ($bp-x-small-min) {
       margin-bottom: 0;
+      margin-right: 10px;
       text-align: center;
       width: 75px;
     }
 
     @media ($bp-medium-min) {
+      margin-right: 0;
       width: 100px;
     }
   }
@@ -79,7 +93,7 @@
   &__content {
 
     @media ($bp-x-small-min) {
-      width: calc(100% - 75px);
+      width: calc(100% - 85px);
     }
 
     @media ($bp-medium-min) {
@@ -88,18 +102,29 @@
   }
 
   &__category {
-    font-size: 1rem;
+    font-size: .875rem;
+    letter-spacing: .05em;
     line-height: 1.5;
     text-transform: uppercase;
+
+    @media ($bp-large-min) {
+      font-size: 1rem;
+    }
   }
 
   &__link {
     @include ma-link-decorative;
     margin-bottom: 0;
+    margin-top: 5px;
 
     a {
-      font-size: 1.5rem;
-      line-height: 1.333;
+      font-size: 1.25rem;
+      line-height: 1.3;
+
+      @media ($bp-large-min) {
+        font-size: 1.5rem;
+        line-height: 1.333;
+      }
     }
   }
 }

@@ -24,17 +24,23 @@ $feedback-form-bp-min: "min-width: 751px";
     @include ma-border-decorative;
     margin-bottom: $feedback-form-spacing;
     padding-bottom: 16px;
-    text-align: center;
 
-    &:after {
-      left: 50%;
-      transform: translateX(-50%);
+    @media ($bp-medium-min) {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
   &__description {
     margin: 0;
-    text-align: center;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+    }
   }
 
   &__name,
@@ -54,7 +60,7 @@ $feedback-form-bp-min: "min-width: 751px";
 
     @media ($feedback-form-bp-min) {
       margin-bottom: 0;
-    }    
+    }
   }
 
   &__email {
@@ -73,7 +79,7 @@ $feedback-form-bp-min: "min-width: 751px";
   &__type {
     margin-bottom: $feedback-form-spacing;
 
-    @media ($feedback-form-bp-min) {  
+    @media ($feedback-form-bp-min) {
       @include span-columns(4 of 8);
     }
 
@@ -86,6 +92,10 @@ $feedback-form-bp-min: "min-width: 751px";
     border: none;
     clear: both;
     margin-bottom: $feedback-form-spacing;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 
     legend {
       font-size: 1rem;

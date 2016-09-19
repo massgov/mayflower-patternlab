@@ -6,14 +6,14 @@
 
   &__date {
     @include ma-font(900);
-    background-color: rgba($c-white,.9);
+    background-color: rgba($c-white,.8);
     color: $c-font-dark;
   }
 
   &__view-all {
-    
+
     a {
-      
+
       &:hover,
       &:after {
         border-color: rgba($c-font-link,.5);
