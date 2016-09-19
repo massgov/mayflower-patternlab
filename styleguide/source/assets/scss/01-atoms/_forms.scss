@@ -1,3 +1,20 @@
+input[type="email"],
+input[type="text"] {
+  border: 2px solid;
+  height: 40px;
+  padding: 0 18px;
+}
+
+textarea {
+  border: 2px solid;
+  padding: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: .5em;
+}
+
 .ma__input-radio {
 
   input {

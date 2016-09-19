@@ -150,9 +150,40 @@
       },
       "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis..."
     }]
+  },
+
+  "feedbackForm": {
+    "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "title":"Have Feedback for Us?",
+    "description":"Mass.gov is for you, and we want to know what you think about it.",
+    "permissionLegend":"Are you interested in helping us test our designs for new sections of Mass.Gov? If so, we will contact you by email with more information.",
+  
+    "radioButtons":[{
+      "name": "permission",
+      "value": "Yes",
+      "id": "permission-yes",
+      "label": "Yes"
+    },{
+      "name": "permission",
+      "value": "No",
+      "id": "permission-no",
+      "label": "No"
+    }]
+  },
+
+  "selectBox":{
+    "label":"Type of Feedback",
+    "id":"color-select",
+    "options":[{
+      "value":"design",
+      "text":"Visual Feedback"
+    },{
+      "value":"development",
+      "text":"Functionality"
+    },{
+      "value":"ux",
+      "text":"Organization"
+    }]
   }
-
-
-
-
 }

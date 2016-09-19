@@ -1,0 +1,30 @@
+.ma__select-box {
+  
+  &__label {
+    @include ma-font(500);
+  }
+
+  &__select {
+    @include ma-font(300);
+    color: $c-font-base;
+  }
+
+  &__link {
+    background-color: rgba($c-white,.3);
+    border-color: $c-bd-input;
+  }
+
+  &__icon {
+    border-color: $c-bd-input;
+  }
+
+  &__select:focus + &__link {
+    border-color: Highlight;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-color: -webkit-focus-ring-color;
+    }
+  }
+}
