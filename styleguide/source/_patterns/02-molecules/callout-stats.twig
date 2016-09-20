@@ -6,6 +6,6 @@
   {% set modifierClass = "ma__callout-stats--" ~ statsCallout.pull %}
 {% endif %}
 <section class="ma__callout-stats {{modifierClass}}">
-  <div class="ma__callout-stats__stat">$60</div>
-  <div class="ma__callout-stats__content">per calendar year for residents</div>
+  <div class="ma__callout-stats__stat">{{statsCallout.stat}}</div>
+  <div class="ma__callout-stats__content">{{statsCallout.content}}</div>
 </section>
