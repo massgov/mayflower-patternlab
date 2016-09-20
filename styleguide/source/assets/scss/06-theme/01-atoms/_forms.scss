@@ -9,10 +9,10 @@
 }
 
 
-input[type="email"],
-input[type="text"] {
+input {
   background-color: rgba($c-white,.1);
   border-color: rgba($c-bd-input,.5);
+  color: $c-font-inverse;
 }
 
 textarea {
