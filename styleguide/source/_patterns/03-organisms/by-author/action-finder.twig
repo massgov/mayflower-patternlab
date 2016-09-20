@@ -18,12 +18,34 @@
         {% include "molecules-keyword-search" %}
       </div>
     </header>
+    <div class="ma__action-finder__category">Featured:</div>
     <ul class="ma__action-finder__items">
-      {% for calloutLink in actionFinder.calloutLinks %}
-        <li class="ma__action-finder__item">
-          {% include "molecules-callout-link" with calloutLink %}
+      {% for link in actionFinder.featuredLinks %}
+        <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
+          {% if link.image %}
+            {% set illustratedLink = link %}
+            {% include "molecules-illustrated-link" %}
+          {% else %}
+            {% set decorativeLink = link %}
+            {% include "atoms-decorative-link" %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>    
+    <div class="ma__action-finder__category">All Actions:</div>
+    <ul class="ma__action-finder__items">
+      {% for link in actionFinder.links %}
+        <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
+          {% if link.image %}
+            {% set illustratedLink = link %}
+            {% include "molecules-illustrated-link" %}
+          {% else %}
+            {% set decorativeLink = link %}
+            {% include "atoms-decorative-link" %}
+          {% endif %}
         </li>
       {% endfor %}
     </ul>
+
   </div>
 </section>

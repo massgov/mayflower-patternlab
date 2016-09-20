@@ -1,11 +1,4 @@
 <div class="ma__callout-link">
-  {% if calloutLink.type == "external" %}
-    <a href="#" target="_blank">
-      {{calloutLink.text}}&nbsp;{% include "atoms-svg-external-link" %}
-    </a>
-  {% else %}
-    <a href="#">
-      {{calloutLink.text}}&nbsp;{% include "atoms-svg-arrow" %}
-    </a>
-  {% endif %}
+  {% set decorativeLink = calloutLink %}
+  {% include "atoms-decorative-link" %}
 </div>

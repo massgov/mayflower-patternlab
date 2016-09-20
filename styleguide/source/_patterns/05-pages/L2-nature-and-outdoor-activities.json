@@ -14,13 +14,14 @@
   }],
 
   "pageHeader": {
-    "title": "Nature & Outdoor Activities",
-    "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel.</p>"
+    "title": "Get a State Park Pass",
+    "subTitle": "Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.",
+    "intro": "<p>Optional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus pellentesque ultricies. Sed in ex nunc. Nam rhoncus eget purus id consectetur. Nunc sed enim rhoncus, cursus nulla non, dapibus nisi. Nullam hendrerit pharetra augue, sed gravida enim sagittis at. Nam eget tellus ullamcorper risus luctus fermentum. Nunc fermentum, arcu eu molestie finibus, leo neque hendrerit massa, eu vulputate est ex nec leo. Vivamus tortor nisi, maximus eu quam eget, interdum aliquam enim.</p>"
   },
 
   "actionFinder": {
     "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "bgNarrow":"/assets/images/placeholder/800x800.png",
 
     "calloutLinks": [{
       "text": "Find Scenic Viewing Areas",
@@ -43,21 +44,6 @@
     },{
       "text": "Reserve a Campsite",
       "type": "external"
-    }]
-  },
-
-  "illustratedLink2up": {
-    "title" : "Planners",
-    "links": [{
-      "text": "Getting Outdoors in Massachusetts",
-      "type": "",
-      "image": "/assets/images/placeholder/460x220.png",
-      "icon": "atoms-svg-map"
-    },{
-      "text": "Fall Activity Planner",
-      "type": "",
-      "image": "/assets/images/placeholder/460x220.png",
-      "icon": "atoms-svg-map"
     }]
   },
 
