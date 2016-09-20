@@ -1,11 +1,3 @@
 .ma__callout-link {
   background-color: $c-bg-section;
-
-  a:hover {
-    border-bottom-color: rgba($c-font-link,.5);
-  }
-
-  svg {
-    fill: rgba($c-font-link,.5);
-  }
 }

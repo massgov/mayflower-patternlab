@@ -9,12 +9,14 @@
 
     .ma__header__nav-search & {
       background-color: transparent;
+      border-color: transparent;
       border-left-color: $c-bd-input;
     }
 
     @media ($bp-small-min) {
       .ma__header & {
         background: transparent;
+        border-color: transparent;
         border-left-color: $c-bd-input;
 
         &:hover {
