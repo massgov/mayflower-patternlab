@@ -1,0 +1,8 @@
+<section class="ma__action-section">
+  <a name="{{actionSection.id}}" id="{{actionSection.id}}"></a>
+  <h3>{{actionSection.title}}</h3>
+  <p>{{actionSection.intro}}</p>
+  <div class="ma__action-section__content">
+    {% include actionSection.path with actionSection.data %}
+  </div>
+</section>
