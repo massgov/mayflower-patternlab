@@ -21,7 +21,6 @@ export default function (window,document,$,undefined) {
 
   // prepend the quickaction list to the quick action components
   let template = compiledTemplate(data);
-console.log(template);
   $('.page-content').prepend(template);
   $('.sidebar').prepend(template);
 
