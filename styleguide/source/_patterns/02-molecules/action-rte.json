@@ -1,6 +1,7 @@
 {
-  "actionSectionRTE": {
+  "actionRTE": {
     "title":"Overview",
+    "id":"overview:",
     "content": {
       "rteElements": [{
         "path": "molecules-callout-stats",
