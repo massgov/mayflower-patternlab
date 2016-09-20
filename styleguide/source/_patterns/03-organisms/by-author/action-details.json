@@ -111,7 +111,7 @@
     {
       "title":"Additonal Information",
       "intro": "",
-      "id":"fees",
+      "id":"additional-info",
       "path": "molecules-rich-text",
       "data": {
         "rteElements": [{
