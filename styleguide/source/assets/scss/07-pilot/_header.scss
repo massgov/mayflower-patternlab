@@ -60,9 +60,11 @@ $bp-header-logo-min: "min-width: 1000px";
     padding-bottom: 15px;
   }
 
+  &__nav-search,
   &__search {
     display: none;
   }
+
 
   &__nav {
 

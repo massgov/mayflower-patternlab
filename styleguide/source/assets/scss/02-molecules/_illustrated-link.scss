@@ -1,87 +1,55 @@
-$illustrated-link-svg: .75em;
-$illustrated-link-bp: "min-width:500px";
+$illustrated-link-image-width: 130px;
 
 .ma__illustrated-link {
+  display: flex;
+    align-items: stretch;
+  height: 100%;
   overflow: hidden;
-
-  @media ($illustrated-link-bp){
-    display: flex;
-      align-items: stretch;
-  }
+  width: 100%;
 
   &__content {
-    min-width: 320px;
-    padding: 50px 30px;
-    padding-top: 0;
+    display: table;
+    height: 100%;
+    padding: 30px;
+    padding-right: 0;
     position: relative;
+    width: calc(100% - #{$illustrated-link-image-width});
     z-index: 4;
-
-    @media ($illustrated-link-bp){
-      padding: 50px 30px;
-      padding-right: 0;
-      order: 1;
-      width: 50%;
-    }
 
     &:after {
       content: "";
       height: 200%;
       position: absolute;
-        top: 0;
-        right: 0;
-      transform: rotate(11deg);
-      transform-origin: top right;
-      width: 200%;
-      z-index: -1;
-
-      @media ($illustrated-link-bp){
         bottom: 0;
         right: 0;
-        top: auto;
-        transform: rotate(30deg);
-        transform-origin: bottom right;
-        width: 100%;
-      }
+      transform: rotate(30deg);
+      transform-origin: bottom right;
+      width: 200%;
+      z-index: -1;
     }
   }
 
-  &__icon {
-    font-size: 0;  // remove extra whitespace
-    margin-bottom: 20px;
+  &__label {
+    font-size: 0.875rem;
+    line-height: 1.71;
+    text-transform: uppercase;
   }
 
   &__title {
-    @include ma-border-decorative;
+    display: table-cell;
     margin-bottom: 0;
-    padding-right: $illustrated-link-svg;
-    position: relative;
+    vertical-align: middle;
 
-    a {
-      @include ma-link-underline;
-      padding-bottom: 0;
-    }
-
-    svg {
-      height: $illustrated-link-svg;
-      margin-right: -$illustrated-link-svg;
-      position: relative;
-        top: .05em;
-      vertical-align: baseline;
-      width: $illustrated-link-svg;
+    .ma__decorative-link {
+      display: inline;
     }
   }
 
   &__image {
-    background-position: center top;
-    background-size: cover;
-    height: 220px;
-
-    @media ($illustrated-link-bp){
-      background-position: center right;
-      height: auto;
-      max-width: calc(100% - 320px);
-      order: 2;
-      width: 50%;
-    }
+    background-position: center right;
+    height: 100%;
+    width: $illustrated-link-image-width;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 }
