@@ -1,49 +1,178 @@
 {
   "bodyClass":"action-page",
 
-  "breadcrumbs": [{
-    "text": "Home",
-    "href": "/"
-  },{
-    "text": "Visiting & Exploring",
-    "href": "/?p=pages-visiting-and-exploring"
-  },{
-    "text": "Get a State Park Pass",
-    "href": "#"
-  }],
-
   "pageHeader": {
     "title": "Get a State Park Pass",
     "intro": "<p>Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.</p>"
   },
-  
-  "actionSteps": [{
-    "icon":"atoms-svg-profile",
-    "title":"In Person at State Parks",
-    "rte":"<p>Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check.</p>"
+
+  "actionDetails" : {
+    "sections": [{
+      "title":"Before You Start",
+      "intro": "",
+      "id":"before-you-start",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet:"
+            }
+          }
+        },
+        {
+          "path": "atoms-unordered-list",
+          "data": {
+            "unorderedList": [{
+              "text": "Checklist item"
+            },
+            {
+              "text": "Checklist item"
+            },
+            {
+              "text": "Checklist item"
+            }]
+          }
+        }]
+      }
+    },
+    {
+      "title":"Overview",
+      "intro": "",
+      "id":"overview",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+            }
+          }
+        }]
+      }
+    },
+    {
+      "title":"Fees",
+      "intro": "",
+      "id":"fees",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "molecules-callout-stats",
+          "data": {
+            "statsCallout": {
+              "pull": "right",
+              "stat": "$12",
+              "content": "standard fee for residents"
+            }
+          }
+        },{
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "The Annual MassParks Pass allows you free parking for one vehicle, during daytime hours, at all State Parks except Quabbin Reservoir. It’s valid for one calendar year, from January through December, so you’ll need to buy a new one each year."
+            }
+          }
+        },
+        {
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "The parking pass costs <b>$60 for Massachusetts residents</b> and <b>$85 dollars for non-Massachusetts residents</b>. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!)."
+            }
+          }
+        },
+        {
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "If you’re a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+            }
+          }
+        }]
+      } 
+    }, 
+    {
+      "title":"Subnav Item",
+      "intro": "",
+      "id":"subnav-item",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+            }
+          }
+        },
+        {
+          "path": "molecules-callout-link",
+          "data": {
+            "calloutLink": {
+              "text": "Order a MassParks Pass online through Reserve America",
+              "type": "",
+              "href": "#",
+              "quickaction": "true"
+            }
+          }
+        }]
+      }
+    },
+    {
+      "title":"Get it Done",
+      "intro": "",
+      "id":"get-it-done",
+      "path": "molecules-action-section-steps",
+      "data": {
+        "actionSteps": [{
+          "icon":"atoms-svg-profile",
+          "title":"In Person at State Parks",
+          "rte":"<p>Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check.</p>"
+        },
+        {
+          "icon":"atoms-svg-laptop",
+          "title":"Online",
+          "rte":"<p>You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days.</p>"
+        },
+        {
+          "icon":"atoms-svg-phone",
+          "title":"By Phone",
+          "rte":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel. </p>"
+        },
+        {
+          "icon":"atoms-svg-mail",
+          "title":"By Mail",
+          "rte":"<p><i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts.</p>"
+        }]
+      }
+    },
+    {
+      "title":"Additonal Information",
+      "intro": "",
+      "id":"additionalinfo",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+            }
+          }
+        }]
+      }
+    }]
   },
-  {
-    "icon":"atoms-svg-laptop",
-    "title":"Online",
-    "rte":"<p>You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days.</p><div class=\"ma__callout-link\"><a href=\"#\" target=\"_blank\">Order a MassParks Pass online through Reserve America&nbsp;<svg focusable=\"false\" role=\"presentation\" class=\"svg-external-link\"><use xlink:href=\"/assets/images/svg-sprite.svg#external-link\"></use></svg></a></div>"
-  },
-  {
-    "icon":"atoms-svg-phone",
-    "title":"By Phone",
-    "rte":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel. </p>"
-  },
-  {
-    "icon":"atoms-svg-mail",
-    "title":"By Mail",
-    "rte":"<p><i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts.</p>"
-  }],
 
   "relatedActions": {
     "items": [{
       "link" : {
         "type": "",
         "href": "#",
-        "text": "Give a Park Pass a as a Gift!"
+        "text": "Give a Park Pass as a Gift!"
       },
       "description":"Purchase a MassParks Pass as a gift for holidays, birthdays, and anniversaries, or just to a put a smile on someone's face."
     },{
