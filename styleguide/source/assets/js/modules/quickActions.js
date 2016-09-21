@@ -2,6 +2,10 @@ import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
 
+  if($('.js-quickaction-link').length === 0) {
+    return;
+  }
+
   let compiledTemplate = getTemplate('quickactions'),
       data = {
         title: "Quick Actions",
