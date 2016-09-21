@@ -1,0 +1,117 @@
+$feedback-form-spacing: 50px;
+$feedback-form-bp-min: "min-width: 751px";
+
+.ma__feedback-form {
+  background-size: cover;
+  background-position: top center;
+
+  &__overlay {
+
+  }
+
+  &__container {
+    @include ma-container;
+    max-width: ($column + $gutter) * 8 - $gutter;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__header {
+    margin-bottom: $feedback-form-spacing;
+  }
+
+  &__title {
+    @include ma-border-decorative;
+    margin-bottom: $feedback-form-spacing;
+    padding-bottom: 16px;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__description {
+    margin: 0;
+
+    @media ($bp-medium-min) {
+      text-align: center;
+    }
+  }
+
+  &__name,
+  &__email {
+
+    @media ($feedback-form-bp-min) {
+      @include span-columns(4 of 8);
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    margin-bottom: $feedback-form-spacing;
+
+    @media ($feedback-form-bp-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__email {
+    margin-right: 0;
+  }
+
+  &__feeback {
+    clear: both;
+    padding: $feedback-form-spacing 0;
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  &__type {
+    margin-bottom: $feedback-form-spacing;
+
+    @media ($feedback-form-bp-min) {
+      @include span-columns(4 of 8);
+    }
+
+    .ma__select-box {
+      width: 100%;
+    }
+  }
+
+  &__permission {
+    border: none;
+    clear: both;
+    margin-bottom: $feedback-form-spacing;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    legend {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .ma__input-radio + .ma__input-radio {
+      margin-left: 1.5em;
+    }
+  }
+
+  &__controls {
+    text-align: right;
+
+    button {
+      @include ma-button;
+    }
+  }
+}

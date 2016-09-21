@@ -1,0 +1,40 @@
+.ma__related-actions {
+  padding-bottom: 50px;
+
+  &__title {
+    @include ma-column-heading("left");
+  }
+
+  &__items {
+    @include ma-reset-list;
+  }
+
+  &__item {
+
+    & + & {
+      border-top: 1px solid;
+      padding-top: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  &__link {
+    @include ma-link-decorative;
+
+    a {
+      font-size: 1.375rem;
+      line-height: 1.45;
+      padding-right: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.75;
+    padding-top: 20px;
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}

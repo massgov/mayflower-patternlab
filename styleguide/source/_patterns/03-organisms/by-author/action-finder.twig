@@ -1,0 +1,51 @@
+<section class="ma__action-finder">
+  <style>
+    #GUID831741781374893 {
+      background-image: url('{{actionFinder.bgNarrow}}');
+    }
+
+    @media (min-width: 801px) {
+      #GUID831741781374893 {
+        background-image: url('{{actionFinder.bgWide}}');
+      }
+    }
+  </style>
+  <div id="GUID831741781374893" class="ma__action-finder__banner"></div>
+  <div class="ma__action-finder__container">
+    <header class="ma__action-finder__header">
+      <h2 class="ma__action-finder__title">What Would You Like to Do?</h2>
+      <div class="ma__action-finder__search">
+        {% include "molecules-keyword-search" %}
+      </div>
+    </header>
+    <div class="ma__action-finder__category">Featured:</div>
+    <ul class="ma__action-finder__items">
+      {% for link in actionFinder.featuredLinks %}
+        <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
+          {% if link.image %}
+            {% set illustratedLink = link %}
+            {% include "molecules-illustrated-link" %}
+          {% else %}
+            {% set decorativeLink = link %}
+            {% include "atoms-decorative-link" %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>    
+    <div class="ma__action-finder__category">All Actions:</div>
+    <ul class="ma__action-finder__items">
+      {% for link in actionFinder.links %}
+        <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
+          {% if link.image %}
+            {% set illustratedLink = link %}
+            {% include "molecules-illustrated-link" %}
+          {% else %}
+            {% set decorativeLink = link %}
+            {% include "atoms-decorative-link" %}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+
+  </div>
+</section>

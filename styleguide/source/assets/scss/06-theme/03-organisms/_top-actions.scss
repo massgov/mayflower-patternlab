@@ -1,0 +1,26 @@
+.ma__top-actions {
+
+  &__title {
+    @include ma-border-decorative($c-theme-primary-2);
+  }
+
+
+  &__items {
+
+  }
+
+  &__item {
+    border-color: $c-bd-divider;
+  }
+
+  &__link {
+
+    a:hover {
+      border-bottom-color: rgba($c-theme-primary-1,.5);
+    }
+
+    svg {
+      fill: rgba($c-theme-primary-1,.5);
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "actionCard": {
+    "title": "Things to Do",
+    "description": "Here you'll find the pages we redesigned first",
+    "actions":[{
+      "icon":"atoms-svg-pig-bank",
+      "category":"Unemployment",
+      "linkText":"File for Unemployment",
+      "linkHref":"#",
+      "theme":"green"
+    },
+    {
+      "icon":"atoms-svg-apple",
+      "category":"Health & Social Services",
+      "linkText":"Apply for MassHealth Coverage",
+      "linkHref":"#",
+      "theme":"blue"
+    },
+    {
+      "icon":"atoms-svg-apple",
+      "category":"Health & Social Services",
+      "linkText":"Apply for SNAP Benefits",
+      "linkHref":"#",
+      "theme":""
+    },
+    {
+      "icon":"atoms-svg-gavel",
+      "category":"Legal & Justice",
+      "linkText":"Respond to a Jury Duty Summons",
+      "linkHref":"#",
+      "theme":"dark-gray"
+    },
+    {
+      "icon":"atoms-svg-campfire",
+      "category":"State Parks & Recreation",
+      "linkText":"Find a State Park",
+      "linkHref":"#",
+      "theme":"blue"
+    },
+    {
+      "icon":"atoms-svg-certificate",
+      "category":"Professional Licensing & Certification",
+      "linkText":"Apply for a Nursing License",
+      "linkHref":"#",
+      "theme":"green"
+    },
+    {
+      "icon":"atoms-svg-family",
+      "category":"Family & Children",
+      "linkText":"Get a Child Support Order",
+      "linkHref":"#",
+      "theme":"dark-gray"
+    },
+    {
+      "icon":"atoms-svg-id-card",
+      "category":"Recreational Licenses & Permits",
+      "linkText":"Buy a Freshwater Fishing License",
+      "linkHref":"#",
+      "theme":""
+    },
+    {
+      "icon":"atoms-svg-bag-search",
+      "category":"Finding a Job",
+      "linkText":"Get a State Job",
+      "linkHref":"#",
+      "theme":"green"
+    },
+    {
+      "icon":"atoms-svg-server-rack",
+      "category":"Business Services & Resources",
+      "linkText":"Register Your Business",
+      "linkHref":"#",
+      "theme":"blue"
+    }]
+  },
+
+  "personalMessage": {
+    "imageSrc": "/assets/images/placeholder/250x250.png",
+    "imageAlt": "Governor Baker",
+    "title": "A Message from Governor Baker",
+    "rte": "<p>\"Information technology is an important priority for this administration and our ability to provide secure essential services and execute projects in an efficient and fiscally responsible manner is key to a better state government for Massachusetts. This is an important step that not only addresses some of the problems we have, but is an essential way forward to a better future.\"</p>"
+  },
+
+  "blogFeed" : {
+    "title": "The Latest from Our Team",
+    "items": [{
+      "image": {
+        "src": "/assets/images/placeholder/320x180.png",
+        "alt": "something about this image"
+      },
+      "date": "08.15.16",
+      "link": {
+        "type": "external",
+        "href": "#",
+        "text": "Car, Bus, Bike, or Boat?"
+      },
+      "description": "Choosing iconography for the Transportation page got a little complicated when..."
+    },
+    {
+      "image": {
+        "src": "/assets/images/placeholder/320x180.png",
+        "alt": "something about this image"
+      },
+      "date": "08.14.16",
+      "link": {
+        "type": "external",
+        "href": "#",
+        "text": "The Importance of User Feedback"
+      },
+      "description": "When you redesign a website like Mass.Gov, you have to think about a lot of..."
+    }]
+  },
+
+  "changeLog": {
+    "title": "What’s New on Pilot.Mass.Gov",
+    "items": [{
+      "date":"08.15.16",
+      "description":"Added 4 new Actions - Apply for a Fishing License, Find a State Park, Pay for Child Support, Register Your Business"
+    },{
+      "date":"08.15.16",
+      "description":"Added 2 new Actions - Get a Driver’s License, Apply for SNAP"
+    },{
+      "date":"08.15.16",
+      "description":"Updated the global site navigation"
+    },{
+      "date":"08.15.16",
+      "description":"Added 2 new Agency pages - Department of Conservation and Recreation (DCR), Office of Health and Social Services (OHSS)"
+    },{
+      "date":"08.11.16",
+      "description":"Launched Pilot!"
+    }]
+  },
+
+  "testFeed": {
+    "title": "Help Us Test",
+    "items": [{
+      "icon":"atoms-svg-user-test",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Help Us Pick a Logo!"
+      },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis..."
+    },{
+      "icon":"atoms-svg-page-test",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Give Us Feedback on These In-Progress Pages"
+      },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis..."
+    }]
+  },
+
+  "feedbackForm": {
+    "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "title":"Have Feedback for Us?",
+    "description":"Mass.gov is for you, and we want to know what you think about it.",
+    "permissionLegend":"Are you interested in helping us test our designs for new sections of Mass.Gov? If so, we will contact you by email with more information.",
+  
+    "radioButtons":[{
+      "name": "permission",
+      "value": "Yes",
+      "id": "permission-yes",
+      "label": "Yes"
+    },{
+      "name": "permission",
+      "value": "No",
+      "id": "permission-no",
+      "label": "No"
+    }]
+  },
+
+  "selectBox":{
+    "label":"Type of Feedback",
+    "id":"color-select",
+    "options":[{
+      "value":"design",
+      "text":"Visual Feedback"
+    },{
+      "value":"development",
+      "text":"Functionality"
+    },{
+      "value":"ux",
+      "text":"Organization"
+    }]
+  }
+}

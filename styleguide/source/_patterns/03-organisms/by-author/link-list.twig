@@ -1,0 +1,14 @@
+<section class="ma__link-list">
+  <div class="ma__link-list__container">
+    <h2 class="ma__link-list__title">{{linkList.title}}</h2>
+    <ul class="ma__link-list__items">
+      {% for link in linkList.links %}
+      <li class="ma__link-list__item">
+        <a class="ma__link-list__link" href="{{link.url}}">
+          {{link.text}}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

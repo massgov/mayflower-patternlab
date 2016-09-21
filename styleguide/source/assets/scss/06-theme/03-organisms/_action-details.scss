@@ -1,0 +1,43 @@
+.ma__action-details {
+
+  &__title {
+    @include ma-font(700);
+    @include ma-column-heading("",$c-theme-primary-2);
+    color: $c-font-inverse;
+  }
+
+  &__anchor-links {
+
+    @media ($bp-medium-max) {
+      background-color: $c-bg-section;
+    }
+
+    &.is-open {
+
+      a + a {
+        border-top-color: $c-bd-divider;
+      }
+    }
+
+    a {
+      @include ma-font(500);
+
+      &.is-active {
+        @include ma-font(700);
+        color: $c-font-dark;
+      }
+
+      &:hover {
+        color: $c-font-dark;
+      }
+    }
+
+    a + a {
+      border-top-color: $c-bd-divider;
+    }
+  }
+
+  &__toggle-link {
+    color: $c-theme-primary-2;
+  }
+}

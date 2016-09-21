@@ -1,22 +1,24 @@
 <section class="ma__section-links">
   <!-- Banner is optional -->
-  <div class="ma__section-links__banner">
-    <img src="{{sectionLinks.image.src}}" alt="{{sectionLinks.image.alt}}" />
-    <div class="ma__section-links__overlay"></div>
-  </div>
+  {% if sectionLinks.image %}
+    <div class="ma__section-links__banner">
+      <img width="600" height="450" src="{{sectionLinks.image.src}}" alt="{{sectionLinks.image.alt}}" />
+      <div class="ma__section-links__overlay"></div>
+    </div>
+  {% endif %}
   <div class="ma__section-links__content">
-    <h2 class="ma__section-links__title">
+    <h3 class="ma__section-links__title">
       <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}</a>
-    </h2>
+    </h3>
     <ul class="ma__section-links__items">
       {% for list in sectionLinks.links %}
       <li class="ma__section-links__item">
-        <a href="{{list.href}}" class="ma__section-links__link">{{list.text}}</a>
+        <a href="{{list.href}}" class="ma__section-links__link">{{list.text}}<span role="presentation"></span></a>
       </li>
       {% endfor %}
     </ul>
     <div class="ma__section-links__view-all">
-      <a href="#" title="view all">{% include "atoms-svg-arrow" %}</a>
+      <a href="#" title="view all"><span>{% include "atoms-svg-arrow" %}</span></a>
     </div>
   </div>
 </section>

@@ -1,0 +1,46 @@
+.ma__contact-us {
+  padding-bottom: 50px;
+
+  &__title {
+    @include ma-column-heading("left");
+  }
+
+  &__items {
+    @include ma-reset-list;
+  }
+
+  &__item {
+
+    & + & {
+      border-top: 1px solid;
+      padding-top: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  &__phone,
+  &__email {
+    font-size: 1rem;
+  }
+
+  &__phone {
+    white-space: nowrap;
+  }
+
+  &__email {
+    @include ma-link-underline;
+  }
+
+  &__address {
+    font-size: 1rem;
+
+    span {
+      display: inline-block;
+    }
+  }
+}

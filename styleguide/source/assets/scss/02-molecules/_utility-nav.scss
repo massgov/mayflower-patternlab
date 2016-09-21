@@ -91,7 +91,7 @@ $utility-nav-height: 43px;
     }
 
     @media ($bp-medium-min) {
-      height: 140px;
+      height: 145px;
       margin-top: 0;
       overflow: visible;
       padding-left: 0;
@@ -99,11 +99,11 @@ $utility-nav-height: 43px;
         left: 0;
       transition: visibility .6s, top .6s;
       visibility: visible;
-      width: 100vw;
+      width: 100%;
 
       &.is-closed {
         right: 0;
-        top: -140px;
+        top: -145px;
         transition: visibility .3s, top .3s;
       }
 
@@ -184,7 +184,7 @@ $utility-nav-height: 43px;
   &__content-body {
 
     @media ($bp-medium-min) {
-      height: 80px;
+      height: 88px;
     }
   }
 }

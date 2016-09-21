@@ -1,0 +1,31 @@
+.ma__action-finder {
+
+  &:after {
+    background-image: linear-gradient(180deg, rgba($c-black, .5), transparent 60%, transparent);
+  }
+
+  &__category {
+    @include ma-font(500);
+    color: $c-font-inverse;
+  }
+
+  &__title {
+    @include ma-border-decorative($c-theme-secondary-1,transparent,1);
+    color: $c-font-inverse;
+  }
+
+  &__search {
+
+    button {
+      color: $c-font-inverse;
+      
+      svg {
+        fill: $c-font-inverse;
+      }
+    }
+  }
+
+  &__item--text {
+    background-color: $c-white;
+  }
+}

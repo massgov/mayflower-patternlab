@@ -1,0 +1,36 @@
+.ma__rich-text {
+  margin-bottom: 40px;
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  h2, h3, h4 {
+    @include ma-border-decorative;
+    position: relative;
+    padding-bottom: .55em;
+
+    &:after {
+      width: 2.25em; // ma-underline-decorative override
+    }
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+
+  ol {
+    padding-left: 40px;
+  }
+
+  li {
+    padding-left: 10px;
+  }
+
+  a {
+    @include ma-link-underline;
+    overflow-wrap: break-word;
+    word-wrap: break-word;  
+    word-break: break-word;
+  }
+}

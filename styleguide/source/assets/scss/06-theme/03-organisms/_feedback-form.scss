@@ -1,0 +1,55 @@
+.ma__feedback-form {
+
+  input,
+  textarea {
+    color: $c-font-inverse;
+  }
+
+  &__overlay {
+    background-color: rgba(#000,.6);
+    color: $c-font-inverse;
+  }
+
+  &__container {
+    
+  }
+
+  &__title {
+    @include ma-border-decorative($c-theme-secondary-1,transparent,1);
+    color: $c-font-inverse;
+  }
+
+  &__description {
+
+  }
+
+  &__name {
+
+  }
+
+  &__email {
+
+  }
+
+  &__feeback {
+
+  }
+
+  &__type {
+
+  }
+
+  &__permission {
+
+    .ma__input-radio input:checked ~ label:before {
+      color: $c-font-inverse;
+    }
+  }
+
+  &__controls {
+
+    button {
+      @include ma-button("normal","solid",$c-theme-primary-1);
+    }
+  }
+}

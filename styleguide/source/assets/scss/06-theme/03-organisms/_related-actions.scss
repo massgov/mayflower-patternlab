@@ -1,0 +1,34 @@
+.ma__related-actions {
+
+  &__title {
+    @include ma-column-heading("",$c-bg-comp-title);
+    @include ma-font(700);
+    color: $c-font-inverse;
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+    
+    & + & {
+      border-top-color: $c-bd-divider;
+    }
+  }
+
+  &__link {
+
+    a:hover {
+      border-bottom-color: rgba($c-font-link,.5);
+    }
+
+    svg {
+      fill: rgba($c-font-link,.5);
+    }
+  }
+
+  &__description {
+
+  }
+}

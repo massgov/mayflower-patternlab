@@ -8,11 +8,34 @@
     }
   }
 
-  li:last-child {
-     
-    a {
-      @include ma-font(400);
-      color: $c-font-base;
+  li {
+
+    &:last-child {
+      a {
+        @include ma-font(400);
+        color: $c-font-base;
+      }
+    }
+
+    .post-content & {
+
+      &:nth-last-child(2) {
+
+        &:before {
+          border-color: $c-theme-primary-1;
+        }
+      }
+    }
+  }
+}
+
+.ma__breadcrumbs--page {
+
+  .pre-content & {
+    background-color: transparent;
+
+    ul {
+      border-bottom-color: $c-bd-divider;
     }
   }
 }

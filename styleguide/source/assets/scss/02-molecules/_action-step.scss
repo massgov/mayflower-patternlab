@@ -1,0 +1,14 @@
+.ma__action-step {
+  padding-left: 60px;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+      top: .5rem;
+      left: 0;
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+}

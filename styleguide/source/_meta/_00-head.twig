@@ -11,14 +11,17 @@
     <link rel="stylesheet" href="/assets/css/index-generated.css?{{ cacheBuster }}" media="all" />
     <link rel="stylesheet" href="/assets/css/base-theme-generated.css?{{ cacheBuster }}" media="all" />
 
-    <!-- this file is just for pattern lab style guide styling -->
-    <link rel="stylesheet" href="/assets/css/pattern-scaffolding-generated.css?{{ cacheBuster }}" media="all" />
-
     <script src="/assets/js/vendor/modernizr.js"></script>
+
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     {{ patternLabHead | raw }}
+    <!-- this file is just for pattern lab style guide styling -->
+    <link rel="stylesheet" href="/assets/css/pattern-scaffolding-generated.css?{{ cacheBuster }}" media="all" />
     <!-- End Pattern Lab -->
   
   </head>
   <body class="{{ bodyClass }}">
+    <!-- Fix: Chrome doesn't always render the first SVG use tag -->
+    <img src="/assets/images/svg-sprite.svg" style="display:none" />
+
     

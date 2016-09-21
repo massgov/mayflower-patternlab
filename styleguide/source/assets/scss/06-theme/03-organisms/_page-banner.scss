@@ -3,15 +3,18 @@ $page-banner-inner-width: 612px;
 .ma__page-banner {
 
   &__background {
+    @include ma-border-decorative ($c-theme-primary-2,$c-white,1);
 
     &:after {
-      background-color: $c-theme-primary-2;
-      background-image: linear-gradient(-45deg, $c-white 3%, $c-theme-primary-2 3%, $c-theme-primary-2 97%, $c-white 97%);
     }
   }
 
   &__icon {
 
+  }
+
+  &__back-link {
+    color: $c-theme-primary-2;
   }
 
   &__title {
@@ -27,7 +30,7 @@ $page-banner-inner-width: 612px;
   }
 
   &__divider {
-    @include ma-border-decorative($c-bg-section, $c-theme-primary-2);
+    @include ma-border-decorative($c-theme-primary-2,$c-bg-section);
     opacity: .5
   }
 

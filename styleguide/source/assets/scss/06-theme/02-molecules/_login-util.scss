@@ -20,6 +20,10 @@
 
     a {
       @include ma-font(400);
+
+      &:hover {
+        border-bottom-color: rgba($c-white,.5);
+      }
     }
 
     &:after {

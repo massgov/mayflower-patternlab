@@ -1,0 +1,13 @@
+.ma__action-step {
+
+  &__icon {
+
+    svg {
+      fill: $c-theme-primary-2;
+    }
+  }
+
+  &__title {
+    @include ma-font(700);
+  }
+}

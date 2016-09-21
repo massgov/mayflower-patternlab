@@ -33,8 +33,9 @@
     padding-right: .5em;
 
     &:after {
-      margin-left: .5em;
+      margin-left: .25em;
       opacity: .7;
+      transform: rotate(45deg) translateY(-45%);
     }
   }
 

@@ -1,0 +1,43 @@
+.ma__contact-us {
+
+  &__title {
+    @include ma-column-heading("",$c-bg-comp-title);
+    @include ma-font(700);
+    color: $c-font-inverse;
+  }
+
+  &__items {
+
+  }
+
+  &__item {
+
+    & + & {
+      border-top-color: $c-bd-divider;
+    }
+  }
+
+  &__name {
+    @include ma-font(700);
+  }
+
+  &__phone {
+    @include ma-font(400);
+    color: $c-font-base;
+  }
+
+  &__email {
+
+    &:hover {
+      border-color: rgba($c-font-link,.5);
+    }
+  }
+
+  &__address {
+
+    span {
+
+    }
+  }
+
+}

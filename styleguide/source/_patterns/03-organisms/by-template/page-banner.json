@@ -1,0 +1,15 @@
+{
+  "pageBanner": {
+    "bgWide":"/assets/images/placeholder/1600x400.png",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "size":"",
+    "parentLink":"",
+    "icon":"atoms-cat-icon",
+    "title":"Visiting & Exploring",
+    "description":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam porro tempore minus repellendus animi rem veritatis.</p>"
+  },
+  "catIcon": {
+    "svg":"atoms-svg-camping"
+  }
+
+}
