@@ -10,7 +10,8 @@
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
     "size":"",
-    "icon":"atoms-cat-icon",
+    "parentLink":"",
+    "icon":"atoms-svg-camping",
     "title":"Visiting & Exploring",
     "description":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam porro tempore minus repellendus animi rem veritatis.</p>"
   },
