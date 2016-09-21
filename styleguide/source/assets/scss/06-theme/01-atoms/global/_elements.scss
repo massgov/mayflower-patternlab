@@ -19,4 +19,38 @@ b, strong {
   @include ma-font(700);
 }
 
+// TABLE styles
 
+table {
+  
+}
+
+thead {
+  background-color: $c-bg-subtle;
+}
+
+tbody {
+  border-color: $c-bd-divider;
+}
+
+tr {
+
+}
+
+tr + tr {
+  border-color: $c-bd-divider;
+}
+
+th, td {
+
+}
+
+th {
+  
+}
+
+td {
+
+}
+
+// end Table styles

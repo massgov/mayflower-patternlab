@@ -9,6 +9,9 @@
 //   }
 // }
 
+// WARNING: avoid nesting of elements, 
+// because it makes them harder to override
+
 body {
   font-size: 1.125rem;
   line-height: 1.67;
@@ -24,9 +27,13 @@ img {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6,
 p,
 ul, ol {
+  margin-top: 0;
+}
+
+// Heading styles
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
@@ -69,3 +76,59 @@ h4 {
 h5, h6 {
   font-size: 1.125rem;
 }
+
+// end heading styles
+
+// TABLE styles
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+thead {
+
+  th {
+    border: none;
+    font-size: 1.25rem;
+  }
+}
+
+tbody {
+  border-top: 2px solid;
+}
+
+tr {
+
+}
+
+tr + tr {
+  border-top: 1px solid;
+}
+
+th, td {
+  font-size: 1rem;
+  padding: 15px 20px 15px 0;
+  text-align: left;
+  vertical-align: top;
+
+  &:first-child {
+    padding-left: 15px;
+
+    .is-offset & {
+      padding-left: 0;
+    }
+  }
+
+}
+
+th {
+
+}
+
+td {
+
+}
+
+// end Table styles
