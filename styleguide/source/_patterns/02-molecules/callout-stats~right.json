@@ -1,5 +1,7 @@
 {
   "statsCallout": {
-    "pull":"right"
+    "pull": "right",
+    "stat": "$12",
+    "content": "standard fee for residents"
   }
 }

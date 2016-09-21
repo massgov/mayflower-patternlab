@@ -1,12 +1,8 @@
 .ma__callout-link {
-  @include ma-valign-block;
+  border: 3px solid;
+  cursor: pointer;
   margin-bottom: 1em;
   padding: 30px;
-
-  > span {
-    display: inline-block;
-    vertical-align: middle;
-  }
 
   a {
     font-size: 1.375rem;
