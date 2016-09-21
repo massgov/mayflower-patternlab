@@ -10,24 +10,29 @@
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
     "size":"",
-    "icon":"atoms-cat-icon",
+    "parentLink":"",
+    "icon":"atoms-svg-camping",
     "title":"Visiting & Exploring",
     "description":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam porro tempore minus repellendus animi rem veritatis.</p>"
   },
+
   "catIcon": {
     "svg":"atoms-svg-camping"
   },
+
   "sectionThreeUp" : {
-    "title": "More in Visiting & Exploring",
+    "title": "",
     "sections": [{
-      "image" : {
-        "src" : "/assets/images/placeholder/600x450.png",
-        "alt" : "Recreational Licenses & Permits"
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-id-card",
+        "small":"true"
       },
       "title" : {
         "href" : "#",
         "text" : "Recreational Licenses & Permits"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Boating"
@@ -42,14 +47,16 @@
       }]
     },
     {
-      "image" : {
-        "src" : "/assets/images/placeholder/600x450-kitten.jpg",
-        "alt" : "State Parks & Recreation"
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-campfire",
+        "small":"true"
       },
       "title" : {
         "href" : "#",
         "text" : "State Parks & Recreation"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Accessible Recreation"
@@ -68,14 +75,16 @@
       }]
     }, 
     {
-      "image" : {
-        "src" : "/assets/images/placeholder/600x450.png",
-        "alt" : "Travel & Tourism"
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-map",
+        "small":"true"
       },
       "title" : {
         "href" : "#",
         "text" : "Travel & Tourism"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Family Friendly Activities"
@@ -94,14 +103,16 @@
       }]
     },
     {
-      "image" : {
-        "src" : "/assets/images/placeholder/600x450-kitten.jpg",
-        "alt" : "Art & Culture"
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-theater",
+        "small":"true"
       },
       "title" : {
         "href" : "#",
         "text" : "Art & Culture"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Cultural Districts & Historic Sites"
@@ -128,5 +139,4 @@
       }]
     }]
   }
-
 }
