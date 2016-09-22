@@ -7,9 +7,14 @@
     </div>
   {% endif %}
   <div class="ma__section-links__content">
+    <div class="ma__section-links__icon">
+      {% set catIcon = sectionLinks.catIcon %}
+      {% include "atoms-cat-icon" %}
+    </div>
     <h3 class="ma__section-links__title">
-      <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}</a>
+      <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "atoms-svg-arrow" %}</a>
     </h3>
+    <p class="ma__section-links__description">{{sectionLinks.description}}</p>
     <ul class="ma__section-links__items">
       {% for list in sectionLinks.links %}
       <li class="ma__section-links__item">
@@ -17,8 +22,5 @@
       </li>
       {% endfor %}
     </ul>
-    <div class="ma__section-links__view-all">
-      <a href="#" title="view all"><span>{% include "atoms-svg-arrow" %}</span></a>
-    </div>
   </div>
 </section>

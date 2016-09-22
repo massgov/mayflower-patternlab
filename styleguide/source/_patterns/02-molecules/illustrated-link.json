@@ -2,7 +2,8 @@
   "illustratedLink": {
     "text": "Getting Outdoors in Massachusetts",
     "type": "",
-    "image": "/assets/images/placeholder/460x220.png",
+    "href": "#",
+    "image": "/assets/images/placeholder/130x160.png",
     "icon": "atoms-svg-map"
   }
 }

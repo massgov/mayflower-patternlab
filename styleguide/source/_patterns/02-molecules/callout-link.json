@@ -1,6 +1,8 @@
 {
   "calloutLink": {
     "text": "Order a MassParks Pass online through Reserve America",
-    "type": ""
+    "type": "",
+    "href": "#",
+    "quickaction": "false"
   }
 }

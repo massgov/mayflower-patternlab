@@ -1,15 +1,23 @@
 .ma__header-search {
 
+  input {
+    background-color: $c-white;
+    border-color: $c-bd-input;
+    color: $c-font-base;
+  }
+
   .ma__button-search {
-    
+
     .ma__header__nav-search & {
       background-color: transparent;
+      border-color: transparent;
       border-left-color: $c-bd-input;
     }
 
     @media ($bp-small-min) {
       .ma__header & {
         background: transparent;
+        border-color: transparent;
         border-left-color: $c-bd-input;
 
         &:hover {
@@ -19,4 +27,3 @@
     }
   }
 }
-

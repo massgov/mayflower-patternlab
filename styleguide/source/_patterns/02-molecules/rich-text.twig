@@ -1,11 +1,5 @@
 <section class="ma__rich-text">
-  {% include "atoms-heading-2" %}
-  {% include "atoms-heading-3" %}
-  {% include "atoms-heading-4" %}
-
-  {% include "atoms-unordered-list" %}
-  {% include "atoms-ordered-list" %}
-  {% include "atoms-paragraph" %}
-  {% include "atoms-link" %}
-
+  {% for element in rteElements %}
+    {% include element.path with element.data %}
+  {% endfor %}  
 </section>

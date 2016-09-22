@@ -1,3 +1,6 @@
+// Sass frameworks added in npm
+@import "bourbon";
+
 // Base variables
 @import "00-base/breakpoints";
 @import "00-base/mixins";
@@ -49,11 +52,11 @@
 @import "06-theme/03-organisms/feedback-form";
 @import "06-theme/03-organisms/footer";
 @import "06-theme/03-organisms/header";
-@import "06-theme/03-organisms/illustrated-link-2-up";
 @import "06-theme/03-organisms/link-list";
 @import "06-theme/03-organisms/page-banner";
 @import "06-theme/03-organisms/page-header";
 @import "06-theme/03-organisms/personal-message";
+@import "06-theme/03-organisms/quick-actions";
 @import "06-theme/03-organisms/related-actions";
 @import "06-theme/03-organisms/sections-three-up";
 @import "06-theme/03-organisms/split50";

@@ -1,5 +1,6 @@
 {
   "catIcon": {
-    "svg":"atoms-svg-camping"
+    "svg":"atoms-svg-camping",
+    "small":""
   }
 }

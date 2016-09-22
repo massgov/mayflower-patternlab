@@ -1,5 +1,6 @@
 .ma__callout-link {
-  @include ma-link-decorative;
+  border: 3px solid;
+  cursor: pointer;
   margin-bottom: 1em;
   padding: 30px;
 
