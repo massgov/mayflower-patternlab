@@ -1,3 +1,4 @@
+import accordions     from "./modules/accordions.js";
 import back2top       from "./modules/back2top.js";
 import clickable      from "./modules/clickable.js";
 import dropdown       from "./modules/dropdown.js";
