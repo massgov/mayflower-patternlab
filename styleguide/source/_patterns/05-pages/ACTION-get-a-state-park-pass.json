@@ -22,9 +22,9 @@
           }
         },
         {
-          "path": "atoms-unordered-list",
+          "path": "atoms-checklist",
           "data": {
-            "unorderedList": [{
+            "checkList": [{
               "text": "Checklist item"
             },
             {
