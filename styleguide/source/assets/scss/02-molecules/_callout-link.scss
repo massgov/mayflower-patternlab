@@ -1,17 +1,11 @@
 .ma__callout-link {
+  border: 3px solid;
+  cursor: pointer;
   margin-bottom: 1em;
   padding: 30px;
 
-  a,
-  .ma__rich-text & a {
+  a {
     font-size: 1.375rem;
     line-height: 1.45;
-    padding-bottom: 1px;
-  }
-
-  svg {
-    height: 16px;
-    margin-right: -17px;
-    width: 17px;
   }
 }

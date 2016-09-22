@@ -1,0 +1,17 @@
+<section class="ma__quick-actions">
+  <h2 class="ma__quick-actions__title">{{title}}</h2>
+  <ul class="ma__quick-actions__items">
+    {{#each items}}
+    <li class="ma__quick-actions__item">
+      <span class="ma__decorative-link">
+        {{#if external}}
+          <a href="{{href}}" class="js-clickable-link" target="_blank">{{text}}&nbsp;<svg focusable="false" role="presentation" class="svg-external-link"><use xlink:href="/assets/images/svg-sprite.svg#external-link"></use></svg></a>
+        {{else}}
+          <a href="{{href}}" class="js-clickable-link">{{text}}&nbsp;<svg focusable="false" role="presentation" class="svg-arrow"><use xlink:href="/assets/images/svg-sprite.svg#arrow"></use></svg></a>
+        {{/if}}
+      </span>
+    </li>
+    {{/each}} 
+  </ul>
+</section>
+

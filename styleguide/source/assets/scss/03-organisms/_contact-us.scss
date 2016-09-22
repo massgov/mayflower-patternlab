@@ -33,7 +33,7 @@
   }
 
   &__email {
-    @include ma-underline-link;
+    @include ma-link-underline;
   }
 
   &__address {

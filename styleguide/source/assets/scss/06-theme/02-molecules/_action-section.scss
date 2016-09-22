@@ -1,6 +1,10 @@
 .ma__action-section {
 
   h3 {
-    @include ma-border-decorative($c-white, $c-theme-primary-2);
+    @include ma-border-decorative($c-theme-primary-2);
+
+    a {
+      color: $c-font-heading;
+    }
   }
 }

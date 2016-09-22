@@ -1,0 +1,30 @@
+.ma__link-list {
+  padding: 60px 0;
+
+  &__container {
+    @include ma-container;
+  }
+
+  &__title {
+    @include ma-border-decorative;
+    padding-bottom: 15px;
+  }
+
+  &__items {
+    list-style-position: inside;
+    padding-left: .5em;
+
+    @media ($bp-small-min) {
+      column-count: 2;
+    }
+  }
+
+  &__item {
+    padding: 5px 0 5px .75em;
+    text-indent: -.75em;
+  }
+
+  &__link {
+    @include ma-link-underline;
+  }
+}

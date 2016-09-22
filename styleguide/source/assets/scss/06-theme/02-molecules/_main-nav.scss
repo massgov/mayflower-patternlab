@@ -9,17 +9,19 @@
     }
     &.is-active {
 
-      @include ma-border-decorative($c-bg-section ,$c-theme-primary-2);
+      @include ma-border-decorative($c-theme-primary-2,$c-bg-section);
     }
   }
 
   &__top-link {
     color: $c-font-dark;
 
-    // chevron
-    &:after {
-      border-right-color: $c-theme-primary-2;
-      border-bottom-color: $c-theme-primary-2;
+    .has-subnav & {
+  // chevron
+      &:after {
+        border-right-color: $c-theme-primary-2;
+        border-bottom-color: $c-theme-primary-2;
+      }
     }
   }
 

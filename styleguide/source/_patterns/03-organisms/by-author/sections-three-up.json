@@ -1,0 +1,121 @@
+{
+  "sectionThreeUp" : {
+    "title": "More in Visiting & Exploring",
+    "sections": [{
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-id-card",
+        "small":"true"
+      },
+      "title" : {
+        "href" : "#",
+        "text" : "Recreational Licenses & Permits"
+      },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
+      "links" : [{
+        "href" : "#",
+        "text" : "Boating"
+      },
+      {
+        "href" : "#",
+        "text" : "Fishing"
+      },
+      {
+        "href" : "#",
+        "text" : "Hunting"
+      }]
+    },
+    {
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-campfire",
+        "small":"true"
+      },
+      "title" : {
+        "href" : "#",
+        "text" : "State Parks & Recreation"
+      },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
+      "links" : [{
+        "href" : "#",
+        "text" : "Accessible Recreation"
+      },
+      {
+        "href" : "#",
+        "text" : "Active & Team Sports"
+      },
+      {
+        "href" : "#",
+        "text" : "Nature & Outdoor Activities"
+      },
+      {
+        "href" : "#",
+        "text" : "Water Related Activities"
+      }]
+    }, 
+    {
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-map",
+        "small":"true"
+      },
+      "title" : {
+        "href" : "#",
+        "text" : "Travel & Tourism"
+      },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
+      "links" : [{
+        "href" : "#",
+        "text" : "Family Friendly Activities"
+      },
+      {
+        "href" : "#",
+        "text" : "Seasonal Activities"
+      },
+      {
+        "href" : "#",
+        "text" : "Sightseeing"
+      },
+      {
+        "href" : "#",
+        "text" : "Traveling to Massachusetts"
+      }]
+    },
+    {
+      "image" : "",
+      "catIcon": {
+        "svg":"atoms-svg-theater",
+        "small":"true"
+      },
+      "title" : {
+        "href" : "#",
+        "text" : "Art & Culture"
+      },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
+      "links" : [{
+        "href" : "#",
+        "text" : "Cultural Districts & Historic Sites"
+      },
+      {
+        "href" : "#",
+        "text" : "Dance"
+      },
+      {
+        "href" : "#",
+        "text" : "Film & Theater"
+      },
+      {
+        "href" : "#",
+        "text" : "Galleries"
+      },
+      {
+        "href" : "#",
+        "text" : "Museums"
+      },
+      {
+        "href" : "#",
+        "text" : "Music"
+      }]
+    }]
+  }
+}

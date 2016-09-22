@@ -1,0 +1,22 @@
+{# adding ma__page-banner--child shows a different version #}
+<section class="ma__page-banner {{pageBanner.size}}">
+  <style>
+    .ma__page-banner {
+      background-image: url('{{pageBanner.bgNarrow}}');
+    }
+
+    @media (min-width: 801px) {
+      .ma__page-banner {
+        background-image: url('{{pageBanner.bgWide}}');
+      }
+    }
+  </style>
+  <div class="ma__page-banner__container">
+    <div class="ma__page-banner__content">
+      <div class="ma__page-banner__icon">
+        {% include pageBanner.icon %}
+      </div>
+      <h1 class="ma__page-banner__title">{{pageBanner.title}}</h1>
+    </div>
+  </div>
+</section>
