@@ -1,4 +1,5 @@
 $page-banner-icon-width: $column + $gutter;
+$page-banner-small: '.ma__page-banner--small';
 
 .ma__page-banner {
   background-size: cover;
@@ -31,6 +32,15 @@ $page-banner-icon-width: $column + $gutter;
       padding-right: 175px;
     }
 
+    #{$page-banner-small} & {
+      padding: 25px 25px 40px 0;
+
+      @media ($bp-x-small-min) {
+        padding-top: 45px;
+        padding-right: 175px;
+      }
+    }
+
     &:before {
       content: "";
       height: 100%;
@@ -42,7 +52,7 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &__icon {
-    padding-right: $gutter;
+    padding-right: 30px;
     vertical-align: middle;
     width: 75px;
 
@@ -52,10 +62,14 @@ $page-banner-icon-width: $column + $gutter;
 
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
+
+      #{$page-banner-small} & {
+        width: $column;
+      }
     }
 
-    svg {
-      max-width: 100%;
+    & > svg {
+      width: 100%;
     }
 
     a {
@@ -86,9 +100,30 @@ $page-banner-icon-width: $column + $gutter;
     @media ($bp-x-large-min){
       font-size: 4.625rem;
     }
+
+    #{$page-banner-small} & {
+      font-size: 1.75rem;
+
+      @media ($bp-x-small-min) {
+        width: calc(100% - 75px);
+      }
+
+      @media ($bp-medium-min){
+        font-size: 2.75rem;
+        width: calc(100% - #{$column});
+      }
+
+      @media ($bp-large-min){
+        font-size: 3.25rem;
+      }
+
+      @media ($bp-x-large-min){
+        font-size: 3.625rem;
+      }
+    }
   }
 
   &--small {
-
+    
   }
 }

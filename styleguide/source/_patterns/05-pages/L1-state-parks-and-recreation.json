@@ -12,26 +12,21 @@
   "pageBanner": {
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "size":"ma__page-banner--child",
-    "parentLink":{
-      "text":"Visiting & Exploring",
-      "href":"#"
-    },
-    "icon":"atoms-cat-icon-small",
-    "title":"State Parks & Recreation",
-    "description":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam porro tempore minus repellendus animi rem veritatis.</p>"
+    "small":"true",
+    "icon":"atoms-svg-campfire",
+    "title":"State Parks & Recreation"
   },
-  "catIcon": {
-    "svg":"atoms-svg-camping"
-  },
+
   "sectionThreeUp" : {
     "title": "",
     "sections": [{
       "image" : "",
+      "catIcon": "",
       "title" : {
         "href" : "#",
         "text" : "Recreational Licenses & Permits"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Boating"
@@ -47,10 +42,12 @@
     },
     {
       "image" : "",
+      "catIcon": "",
       "title" : {
         "href" : "#",
         "text" : "State Parks & Recreation"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Accessible Recreation"
@@ -70,10 +67,12 @@
     }, 
     {
       "image" : "",
+      "catIcon": "",
       "title" : {
         "href" : "#",
         "text" : "Travel & Tourism"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Family Friendly Activities"
@@ -93,10 +92,12 @@
     },
     {
       "image" : "",
+      "catIcon": "",
       "title" : {
         "href" : "#",
         "text" : "Art & Culture"
       },
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Cultural Districts & Historic Sites"
