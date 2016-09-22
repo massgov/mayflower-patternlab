@@ -5,6 +5,7 @@ import keywordSearch  from "./modules/keywordSearch.js";
 import mainNav        from "./modules/mainNav.js";
 import mobileNav      from "./modules/mobileNav.js";
 import quickActions   from "./modules/quickActions.js";
+import richText       from "./modules/richText.js";
 import scrollAnchors  from "./modules/scrollAnchors.js";
 import siteSettings   from "./modules/siteSettings.js";
 import utilNav        from "./modules/utilNav.js";

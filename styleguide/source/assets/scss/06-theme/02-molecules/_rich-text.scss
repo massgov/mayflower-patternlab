@@ -6,4 +6,18 @@
   a:hover {
     border-bottom-color: rgba($c-font-link,.5);
   }
+
+  // TABLE styles
+  thead {
+    background-color: $c-bg-subtle;
+  }
+
+  tbody {
+    border-color: $c-bd-divider;
+  }
+
+  tr + tr {
+    border-color: $c-bd-divider;
+  }
+  // end Table styles
 }

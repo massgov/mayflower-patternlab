@@ -24,6 +24,10 @@ body {
   padding-top: 43px; // height of the util nav
   position: relative;
 
+  @media print {
+    padding-top: 0;
+  }
+
   &__skip-nav {
     @include ma-visually-hidden;
   }
@@ -106,6 +110,10 @@ body {
     z-index: $z-dropdown;
 
     @media ($bp-medium-min){
+      display: none;
+    }
+
+    @media print {
       display: none;
     }
 
