@@ -10,3 +10,4 @@ import scrollAnchors  from "./modules/scrollAnchors.js";
 import siteSettings   from "./modules/siteSettings.js";
 import utilNav        from "./modules/utilNav.js";
 import zoomControls   from "./modules/zoomControls.js";
+import responvieVideo from "./modules/responsiveVideo.js";

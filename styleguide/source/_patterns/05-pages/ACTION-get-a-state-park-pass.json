@@ -50,6 +50,13 @@
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
             }
           }
+        }, {
+          "path": "atoms-video",
+          "data": {
+            "video": {
+              "src": "https://www.youtube.com/embed/dEkUq-Rs-Tc"
+            }
+          }
         }]
       }
     },
