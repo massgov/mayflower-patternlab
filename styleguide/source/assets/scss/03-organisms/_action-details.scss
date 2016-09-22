@@ -45,26 +45,27 @@
       margin-left: -$column-with-gutter * 2;
       width: $column-with-gutter * 2;
     }
+    @media print {
+      display: none;
+    }
 
     &[data-sticky='middle'] {
       position: fixed;
         top: 40px;
+
+      @media ($bp-medium-min) {
+        top: 15px;
+      }
     }
 
     &[data-sticky='bottom'] {
       position: absolute;
         top: auto; // height of one line of text
         bottom: -30px; // compensate for bottom margin
-    }
 
-    @media ($bp-medium-min) {
-      &[data-sticky='middle'] {
-          top: 15px;
-      }
-
-      &[data-sticky='bottom'] {
-          top: auto;
-          bottom: -15px;
+      @media ($bp-medium-min) {
+        top: auto;
+        bottom: -15px;
       }
     }
 
