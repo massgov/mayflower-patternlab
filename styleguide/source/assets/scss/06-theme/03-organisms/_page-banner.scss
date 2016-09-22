@@ -2,30 +2,27 @@ $page-banner-inner-width: 612px;
 
 .ma__page-banner {
 
-  &__background {
-    @include ma-border-decorative ($c-theme-primary-2,$c-white,1);
-
-    &:after {
-    }
-  }
-
   &__icon {
-
-  }
-
-  &__back-link {
-    color: $c-theme-primary-2;
+    
+    svg {
+      fill: $c-font-inverse;
+    }
   }
 
   &__title {
     @include ma-font(400);
+    color: $c-font-inverse;
   }
 
   &__content {
-    background-image: linear-gradient(180deg, transparent, transparent 130px, rgba($c-bg-section,.1) 131px, $c-bg-section 400px, $c-bg-section);
+    background-image: linear-gradient(-90deg, rgba($c-theme-primary-2,.7), $c-theme-primary-2);
 
-    .no-cssgradients & {
-      background-color: rgba($c-bg-section,.6);
+    @media ($bp-x-small-min) {
+      background-image: linear-gradient(-60deg, transparent, transparent 125px, rgba($c-theme-primary-2,.7) 125px, $c-theme-primary-2);
+    }
+
+    &:before {
+      background-color: $c-theme-primary-2;
     }
   }
 

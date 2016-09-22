@@ -1,73 +1,61 @@
-$page-banner-inner-width: 612px;
-
-// child variant
-$page-banner-child: '.ma__page-banner--child';
+$page-banner-icon-width: $column + $gutter;
 
 .ma__page-banner {
-  padding-bottom: 30px;
+  background-size: cover;
+  background-position: top center;
+  height: 400px;
+  margin-bottom: 40px;
+  overflow: hidden;
   position: relative;
-  text-align: center;
 
-  @media ($bp-medium-min){
-    padding-bottom: 50px;
+  @media ($bp-x-small-min) {
+    height: 366px;
   }
-  @media ($bp-large-min){
-    padding-bottom: 70px;
-  }
-
-  &__background {
-    background-size: cover;
-    background-position: top center;
-    max-width: 1600px;
-    height: 400px;
-    position: absolute;
-      top: 0;
-      left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    z-index: -1;
-
-    &:after {
-      @include ma-container;
-
-      @media($bp-medium-min) {
-        content: "";
-        height: 10px;
-        position: absolute;
-          bottom: -10px;
-          left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-      }
-    }
+  
+  &__container {
+    @include ma-container;
   }
 
   &__content {
-    min-height: 400px;
-    padding: 0 45px 40px;
-    position: relative;
+    font-size: 0;
+    margin-right: 20px;
+    max-width: 1050px;
+    padding: 30px 25px 45px 0;
+    position: absolute;
+      top: 50%;
+    transform: translateY(-50%);
     z-index: 1;
 
-    @media($bp-small-min) {
-      margin: 0 60px;
+    @media ($bp-x-small-min) {
+      padding-top: 50px;
+      padding-right: 175px;
     }
 
-    @media($bp-medium-min) {
-      margin: 0 auto;
-      max-width: $page-banner-inner-width;
-    }
-
-    #{$page-banner-child} & {
-      padding-top: 130px;  // linear-gradient offset
+    &:before {
+      content: "";
+      height: 100%;
+      position: absolute;
+        top: 0;
+        right: 100%;
+      width: 50vw;
     }
   }
 
   &__icon {
-    margin-bottom: 55px;
-    text-align: center;
+    padding-right: $gutter;
+    vertical-align: middle;
+    width: 75px;
 
-    #{$page-banner-child} & {
-      margin-bottom: 5px;
+    @media ($bp-x-small-min) {
+      display: inline-block;
+    }
+
+    @media ($bp-medium-min) {
+      width: $page-banner-icon-width;
+    }
+
+    svg {
+      max-width: 100%;
     }
 
     a {
@@ -75,48 +63,32 @@ $page-banner-child: '.ma__page-banner--child';
     }
   }
 
-  &__back-link {
-    display: block;
-    font-size: 0.875rem;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-  }
-
   &__title {
+    display: inline-block;
     font-size: 2.75rem;
     line-height: 1.05;
     margin-bottom: 0;
-    padding-bottom: 0.67em;
+    vertical-align: middle;
 
-      @media ($bp-medium-min){
-        font-size: 3.75rem;
-      }
+    @media ($bp-x-small-min) {
+      width: calc(100% - 75px);
+    }
 
-      @media ($bp-large-min){
-        font-size: 4.25rem;
-      }
+    @media ($bp-medium-min){
+      font-size: 3.75rem;
+      width: calc(100% - #{$page-banner-icon-width});
+    }
 
-      @media ($bp-x-large-min){
-        font-size: 4.625rem;
-      }
-  }
+    @media ($bp-large-min){
+      font-size: 4.25rem;
+    }
 
-  &__divider {
-    @include ma-border-decorative();
-    margin: 0 auto;
-    position: relative;
-    width: 100px;
-  }
-
-  &__description {
-    font-size: 1.375rem;
-    padding-top: 35px;
-
-    & > :last-child {
-      margin-bottom: 0;
+    @media ($bp-x-large-min){
+      font-size: 4.625rem;
     }
   }
-}
 
-.ma__page-banner--small {
+  &--small {
+
+  }
 }
