@@ -2,7 +2,6 @@
   "sectionThreeUp" : {
     "title": "More in Visiting & Exploring",
     "sections": [{
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-id-card",
         "small":"true"
@@ -26,7 +25,6 @@
       }]
     },
     {
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-campfire",
         "small":"true"
@@ -54,7 +52,6 @@
       }]
     }, 
     {
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-map",
         "small":"true"
@@ -82,7 +79,6 @@
       }]
     },
     {
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-theater",
         "small":"true"
