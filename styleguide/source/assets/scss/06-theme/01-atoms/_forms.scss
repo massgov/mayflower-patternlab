@@ -13,11 +13,19 @@ input {
   background-color: rgba($c-white,.1);
   border-color: rgba($c-bd-input,.5);
   color: $c-font-inverse;
+
+  &[data-valid ="is-invalid"] {
+    border-color: red;
+  }
 }
 
 textarea {
   background-color: rgba($c-white,.1);
   border-color: rgba($c-bd-input,.5);
+
+  &[data-valid ="is-invalid"] {
+    border-color: rgba(red,.7);
+  }
 }
 
 label {

@@ -16,6 +16,11 @@
 
     .sidebar & {
       @include ma-column-heading("left");
+
+      // override
+      @media (min-width: 0px) {
+        margin-bottom: 30px;
+      }
     }
     .page-content & {
       @include ma-column-heading("right");
