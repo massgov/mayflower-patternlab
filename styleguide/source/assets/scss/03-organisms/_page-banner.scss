@@ -5,12 +5,13 @@ $page-banner-small: '.ma__page-banner--small';
   background-size: cover;
   background-position: top center;
   height: 400px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   overflow: hidden;
   position: relative;
 
   @media ($bp-x-small-min) {
     height: 366px;
+    margin-bottom: 40px;
   }
   
   &__container {
@@ -18,7 +19,7 @@ $page-banner-small: '.ma__page-banner--small';
   }
 
   &__content {
-    font-size: 0;
+    font-size: 1rem;
     margin-right: 20px;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
@@ -28,11 +29,14 @@ $page-banner-small: '.ma__page-banner--small';
     z-index: 1;
 
     @media ($bp-x-small-min) {
+      display: flex;
+        align-items: center;
       padding-top: 50px;
       padding-right: 175px;
     }
 
     #{$page-banner-small} & {
+      font-size: .8rem;
       padding: 25px 25px 40px 0;
 
       @media ($bp-x-small-min) {
@@ -53,12 +57,7 @@ $page-banner-small: '.ma__page-banner--small';
 
   &__icon {
     padding-right: 30px;
-    vertical-align: middle;
     width: 75px;
-
-    @media ($bp-x-small-min) {
-      display: inline-block;
-    }
 
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
@@ -69,7 +68,20 @@ $page-banner-small: '.ma__page-banner--small';
     }
 
     & > svg {
+      height: 2.75em;
       width: 100%;
+
+      @media ($bp-medium-min){
+        height: 3.75em;
+      }
+
+      @media ($bp-large-min){
+        height: 4.25em;
+      }
+
+      @media ($bp-x-large-min){
+        height: 4.625em;
+      }
     }
 
     a {
@@ -78,8 +90,7 @@ $page-banner-small: '.ma__page-banner--small';
   }
 
   &__title {
-    display: inline-block;
-    font-size: 2.75rem;
+    font-size: 2.75em;
     line-height: 1.05;
     margin-bottom: 0;
     vertical-align: middle;
@@ -89,37 +100,16 @@ $page-banner-small: '.ma__page-banner--small';
     }
 
     @media ($bp-medium-min){
-      font-size: 3.75rem;
+      font-size: 3.75em;
       width: calc(100% - #{$page-banner-icon-width});
     }
 
     @media ($bp-large-min){
-      font-size: 4.25rem;
+      font-size: 4.25em;
     }
 
     @media ($bp-x-large-min){
-      font-size: 4.625rem;
-    }
-
-    #{$page-banner-small} & {
-      font-size: 1.75rem;
-
-      @media ($bp-x-small-min) {
-        width: calc(100% - 75px);
-      }
-
-      @media ($bp-medium-min){
-        font-size: 2.75rem;
-        width: calc(100% - #{$column});
-      }
-
-      @media ($bp-large-min){
-        font-size: 3.25rem;
-      }
-
-      @media ($bp-x-large-min){
-        font-size: 3.625rem;
-      }
+      font-size: 4.625em;
     }
   }
 

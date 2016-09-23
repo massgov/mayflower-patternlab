@@ -20,13 +20,11 @@
   "sectionThreeUp" : {
     "title": "",
     "sections": [{
-      "image" : "",
       "catIcon": "",
       "title" : {
         "href" : "#",
-        "text" : "Recreational Licenses & Permits"
+        "text" : "Accessible Recreation"
       },
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Boating"
@@ -41,13 +39,11 @@
       }]
     },
     {
-      "image" : "",
       "catIcon": "",
       "title" : {
         "href" : "#",
-        "text" : "State Parks & Recreation"
+        "text" : "Active & Team Sports"
       },
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Accessible Recreation"
@@ -66,13 +62,11 @@
       }]
     }, 
     {
-      "image" : "",
       "catIcon": "",
       "title" : {
         "href" : "#",
-        "text" : "Travel & Tourism"
+        "text" : "Water Related Activities"
       },
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Family Friendly Activities"
@@ -91,13 +85,11 @@
       }]
     },
     {
-      "image" : "",
       "catIcon": "",
       "title" : {
         "href" : "#",
         "text" : "Art & Culture"
       },
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
       "links" : [{
         "href" : "#",
         "text" : "Cultural Districts & Historic Sites"
