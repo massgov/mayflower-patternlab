@@ -112,7 +112,8 @@
     @include ma-reset-list;
   }
 
-  &__item {
+  &__item + &__item {
+    margin-top: 1em;
   }
 
   // skip the first item
