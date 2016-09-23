@@ -2,6 +2,8 @@
   background-color: $c-bg-section;
 
   @media ($bp-x-small-max) {
+    border-top-color: $c-bd-divider;
+
     &.is-open {
       background-color: $c-white
     }
@@ -26,18 +28,27 @@
     }
     
     a {
-      color: inherit;
       @include ma-font(500);
+      color: inherit;
     }
 
     svg {
       fill: rgba($c-font-heading,.5);
     }
+
   }
 
   &__mobile-title {
+    border-bottom-color: $c-bd-divider;
+
     svg {
       fill: rgba($c-font-link,.5);
+    }
+
+    a:hover {
+      @media ($bp-x-small-max) {
+        border-bottom-color: rgba($c-font-link,.5);
+      }
     }
   }
 

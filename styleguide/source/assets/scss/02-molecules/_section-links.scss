@@ -2,17 +2,18 @@
   position: relative;
   width: 100%;
 
-  @media ($bp-small-max) {
+  @media ($bp-x-small-max) {
+    border-top: 2px solid;
     margin: 0 -20px;
     width: calc(100% + 40px);
   }
 
   &__content {
     height: 100%;
-    padding: 10px 20px 30px;
+    padding: 10px 20px 0;
 
     @media ($bp-x-small-min) {
-      padding: 40px 30px 45px;
+      padding: 40px 30px 0;
     }
   }
 
@@ -20,21 +21,7 @@
     text-align: center;
 
     @media ($bp-x-small-max) {
-      position: absolute; 
-        top: 0;
-        left: 0;
-
-      .ma__category-icon {
-        float: left;
-        height: auto;
-        padding: 10px 5px;
-        width: 36px;
-
-        & > svg {
-          height: 25px;
-          width: 100%;
-        }
-      }
+      display: none;
     }
 
     @media ($bp-x-small-min) {
@@ -44,9 +31,9 @@
   }
 
   &__mobile-title {
+    border-bottom: 1px solid;
     margin-bottom: .5em;
-    padding-top: .5em;
-    padding-right: 16px;
+    padding: 0 16px .5em 0;
 
     @media ($bp-x-small-min) {
       display: none;
@@ -55,9 +42,15 @@
     svg {
       margin-right: -16px;
     }
+
+    a {
+      @include ma-link-underline;
+      padding-bottom: 0px;
+    }
   }
 
   &__title {
+    margin-bottom: 10px;
 
     a:hover {
       opacity: .7;
@@ -66,7 +59,6 @@
     @media ($bp-x-small-max) {
       cursor: pointer;
       font-size: 1.25em;
-      padding-left: 25px;
       padding-right: 1em;
 
       &:after {
@@ -104,15 +96,12 @@
     }
   }
 
-  &__icon + &__title {
-    padding-top: 0;
-  }
-
   &__toggle-content {
+    padding: 10px 0 30px;
 
     @media ($bp-x-small-max) {
       display: none;
-      
+
       .is-open & {
         display: block;
       }
