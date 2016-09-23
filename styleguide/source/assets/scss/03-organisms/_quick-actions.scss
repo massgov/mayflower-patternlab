@@ -1,6 +1,6 @@
 .ma__quick-actions {
   padding-bottom: 50px;
-  
+
   .sidebar & {
     @media ($bp-large-max) {
       display: none;
@@ -13,6 +13,7 @@
   }
 
   &__title {
+
     .sidebar & {
       @include ma-column-heading("left");
     }
@@ -34,7 +35,7 @@
     }
 
     a {
-      font-size: 1.375rem;
+      font-size: 1.25rem;
       line-height: 1.45;
     }
   }

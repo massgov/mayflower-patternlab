@@ -4,6 +4,7 @@
     @include ma-border-decorative($c-theme-primary-2);
 
     a {
+      @include ma-font(500);
       color: $c-font-heading;
     }
   }
