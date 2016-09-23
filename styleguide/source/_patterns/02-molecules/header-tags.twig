@@ -1,0 +1,7 @@
+<div class="ma__header-tags">
+  Tags: <span class="ma__header-tags__terms">
+    {% for item in taxonomyTerms %}
+      <a href="{{item.url}}">{{item.term}}</a>
+    {% endfor %}
+  </span>
+</div>

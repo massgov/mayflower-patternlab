@@ -11,5 +11,9 @@
         </div>
       </div>
     {% endif %}
+    {% if pageHeader.taxonomyTerms %}
+      {% set taxonomyTerms = pageHeader.taxonomyTerms %}
+      {% include "molecules-header-tags" %}
+    {% endif %}
   </div>
 </section>
