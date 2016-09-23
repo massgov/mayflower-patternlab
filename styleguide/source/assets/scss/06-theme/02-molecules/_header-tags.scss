@@ -1,0 +1,11 @@
+.ma__header-tags {
+  @include ma-font(700);
+
+  &__terms {
+  	
+    a {
+      border-color: rgba($c-theme-primary-1,.2);
+      @include ma-font(500);
+    }
+  }
+}
