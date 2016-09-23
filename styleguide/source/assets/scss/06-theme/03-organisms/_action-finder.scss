@@ -65,12 +65,12 @@ $featured-border-color: #89aac7;
   }
 
   &__items--all {
+    
     .ma__action-finder__item--text {
       background-color: $c-white;
-      border: none;
     }
+
     .ma__illustrated-link {
-      border: none;
       &__content {
         background-color: $c-white;
 
