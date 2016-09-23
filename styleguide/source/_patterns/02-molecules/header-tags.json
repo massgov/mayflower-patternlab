@@ -1,15 +1,17 @@
 {
-  "taxonomyTerms": [{
+  "headerTags": {
+    "taxonomyTerms": [{
     "url": "#",
     "term": "Term 1"
-  },{
-    "url": "#",
-    "term": "Term 2"
-  },{
-    "url": "#",
-    "term": "Term 3"
-  },{
-    "url": "#",
-    "term": "Term 4"
-  }]
+    },{
+      "url": "#",
+      "term": "Term 2"
+    },{
+      "url": "#",
+      "term": "Term 3"
+    },{
+      "url": "#",
+      "term": "Term 4"
+    }]
+  }
 }

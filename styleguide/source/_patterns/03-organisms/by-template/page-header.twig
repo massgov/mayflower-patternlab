@@ -11,8 +11,8 @@
         </div>
       </div>
     {% endif %}
-    {% if pageHeader.taxonomyTerms %}
-      {% set taxonomyTerms = pageHeader.taxonomyTerms %}
+    {% if pageHeader.headerTags.taxonomyTerms %}
+      {% set headerTags = pageHeader.headerTags %}
       {% include "molecules-header-tags" %}
     {% endif %}
   </div>
