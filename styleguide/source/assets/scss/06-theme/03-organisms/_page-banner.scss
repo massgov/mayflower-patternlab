@@ -5,7 +5,7 @@ $page-banner-inner-width: 612px;
   &__icon {
     
     svg {
-      fill: $c-font-inverse;
+      fill: rgba($c-font-inverse,.5);
     }
   }
 

@@ -1,25 +1,13 @@
 <section class="ma__top-actions">
-  <h2 class="ma__top-actions__title">Common Actions & Guides</h2>
+  <h2 class="ma__top-actions__title">{{topActions.title}}</h2>
   <ul class="ma__top-actions__items">
-    <li class="ma__top-actions__item">
-      <div class="ma__top-actions__link">
-        <a href="#">Get a State Park Pass&nbsp;{% include "atoms-svg-arrow" %}</a>
-      </div>
-    </li>
-    <li class="ma__top-actions__item">
-      <div class="ma__top-actions__link">
-        <a href="#">Reserve an Athletic Field&nbsp;{% include "atoms-svg-arrow" %}</a>
-      </div>
-    </li>
-    <li class="ma__top-actions__item">
-      <div class="ma__top-actions__link">
-        <a href="#">Download a Trail Map&nbsp;{% include "atoms-svg-arrow" %}</a>
-      </div>
-    </li>
-    <li class="ma__top-actions__item">
-      <div class="ma__top-actions__link">
-        <a href="#">Find a Campground&nbsp;{% include "atoms-svg-arrow" %}</a>
-      </div>
-    </li>
+    {% for link in topActions.links %}
+      <li class="ma__top-actions__item">
+        <div class="ma__top-actions__link">
+          {% set calloutLink = link.calloutLink %}
+          {% include "molecules-callout-link" %}
+        </div>
+      </li>
+    {% endfor %}
   </ul>
 </section>

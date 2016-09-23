@@ -88,6 +88,7 @@ $action-finder-bp: 900px;
     }
 
     &--text {
+      border: 3px solid;
       display: flex;
         align-items: center;
       font-size: 1.375rem;
@@ -98,6 +99,21 @@ $action-finder-bp: 900px;
     .ma__callout-link {
       height: 100%;
       margin-bottom: 0;
+    }
+  }
+
+  .ma__illustrated-link {
+    border: 3px solid;
+  }
+
+  &__items--all {
+    
+    .ma__action-finder__item--text {
+      border: none;
+    }
+
+    .ma__illustrated-link {
+      border: none;
     }
   }
 }

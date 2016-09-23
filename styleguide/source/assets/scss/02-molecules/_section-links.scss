@@ -2,63 +2,109 @@
   position: relative;
   width: 100%;
 
-  &__banner {
-    overflow: hidden;
-    position: relative;
-
-    img {
-      display: block;
-      width: 100%
-    }
-  }
-
-  &__overlay {
-    height: 50%;
-    position: absolute;
-      bottom: -25%;
-      right: -50%;
-    transform: rotate(-11deg);
-    transform-origin: bottom center;
-    width: 200%;
+  @media ($bp-x-small-max) {
+    border-top: 2px solid;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
   }
 
   &__content {
     height: 100%;
-    padding: 0 30px 30px;
+    padding: 10px 20px 0;
 
-    @media ($bp-small-min) {
-      padding-bottom: 45px;
+    @media ($bp-x-small-min) {
+      padding: 40px 30px 0;
     }
-  }
-
-  &__banner + &__content {
-    height: auto;
-  }
-
-  &__description {
-    font-size: 1rem;
-    margin-bottom: 25px;
   }
 
   &__icon {
     text-align: center;
-    margin-bottom: 1.4em;
+
+    @media ($bp-x-small-max) {
+      display: none;
+    }
+
+    @media ($bp-x-small-min) {
+      margin-bottom: 1em;
+      margin-top: -40px;
+    }
+  }
+
+  &__mobile-title {
+    border-bottom: 1px solid;
+    margin-bottom: .5em;
+    padding: 0 16px .5em 0;
+
+    @media ($bp-x-small-min) {
+      display: none;
+    }
+
+    svg {
+      margin-right: -16px;
+    }
+
+    a {
+      @include ma-link-underline;
+      padding-bottom: 0px;
+    }
   }
 
   &__title {
-    @include ma-border-decorative;
-    padding-bottom: 20px;
-
-    &:after {
-      width: 60px;
-    }
+    margin-bottom: 10px;
 
     a:hover {
       opacity: .6;
     }
 
-    svg {
-      margin-right: -16px;
+    @media ($bp-x-small-max) {
+      cursor: pointer;
+      font-size: 1.25em;
+      padding-right: 1em;
+
+      &:after {
+        content: "+";
+        display: block;
+        font-size: 1.5em;
+        line-height: .75em;
+        position: absolute;
+          top: 10px;
+          right: 15px;
+        transition: transform .5s ease;
+        transform-origin: center center;
+
+        .is-open & {
+          transform: rotate(135deg);
+        }
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    @media ($bp-x-small-min) {
+      @include ma-border-decorative;
+      padding-bottom: 16px;
+
+      &:after {
+        width: 60px;
+      }
+
+      svg {
+        margin-right: -16px;
+      }
+    }
+  }
+
+  &__toggle-content {
+    padding: 10px 0 30px;
+
+    @media ($bp-x-small-max) {
+      display: none;
+
+      .is-open & {
+        display: block;
+      }
     }
   }
 
@@ -66,12 +112,12 @@
     @include ma-reset-list;
   }
 
-  &__item {
+  &__item + &__item {
+    margin-top: 1em;
   }
 
   // skip the first item
   &__item + &__item{
-    padding-top: 14px;
   }
 
   &__link {
