@@ -3,6 +3,15 @@
 
   &__title {
     @include ma-column-heading("left");
+
+    .sidebar & {
+      @include ma-column-heading("left");
+
+      // override
+      @media (min-width: 0px) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__items {
@@ -22,7 +31,7 @@
     @include ma-link-decorative;
 
     a {
-      font-size: 1.375rem;
+      font-size: 1.25rem;
       line-height: 1.45;
       padding-right: 20px;
     }

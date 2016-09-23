@@ -3,6 +3,7 @@
     "name": "gender",
     "value": "male",
     "id": "gender-male",
-    "label": "Male"
+    "label": "Male",
+    "checked": "true"
   }
 }

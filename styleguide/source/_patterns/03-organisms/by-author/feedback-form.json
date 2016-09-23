@@ -10,7 +10,8 @@
       "name": "permission",
       "value": "Yes",
       "id": "permission-yes",
-      "label": "Yes"
+      "label": "Yes",
+      "checked": "true"
     },{
       "name": "permission",
       "value": "No",
