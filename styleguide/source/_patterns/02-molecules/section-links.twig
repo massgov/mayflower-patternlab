@@ -10,7 +10,9 @@
       <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "atoms-svg-arrow" %}</a>
     </h3>
     <div class="ma__section-links__toggle-content js-section-accordion-body">
-      <p class="ma__section-links__description">{{sectionLinks.description}}</p>
+      {% if sectionLinks.description %}
+        <p class="ma__section-links__description">{{sectionLinks.description}}</p>
+      {% endif %}
       <h4 class="ma__section-links__mobile-title">
         <a href="{{sectionLinks.title.href}}">Learn More&nbsp;{% include "atoms-svg-arrow" %}</a>
       </h4>
