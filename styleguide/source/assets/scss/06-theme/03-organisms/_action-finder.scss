@@ -30,11 +30,11 @@ $featured-border-color: #89aac7;
 
   &__item--text {
     background-color: $featured-bg-color;
-    border: 3px solid $featured-border-color;
+    border-color: $featured-border-color;
   }
 
   .ma__illustrated-link {
-    border: 3px solid $featured-border-color;
+    border-color: $featured-border-color;
     &__content {
       background-color: $featured-bg-color;
 
