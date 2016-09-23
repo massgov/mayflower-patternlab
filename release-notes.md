@@ -5,8 +5,6 @@
 * MGVDU-53 - FE Dev: L0 Page (contains sub tickets)
 * MGVDU-54 - FE Dev: L1 Page
 * MGVDU-55 - FE Dev: L2 Page (contains sub tickets)
-* MGVDU-116 - Responsive RTE Video
-* ?? - Action Page Header Update
 
 ### Pilot Home page
 * MGVDU-56 - FE Dev: Pilot homepage (contains sub tickets)
@@ -15,6 +13,8 @@
 * MGVDU-115 - FE Dev: Quick Action Component
 * MGVDU-114 - FE Dev: Action Page - tabular data
 * MGVDU-106 - FE Dev: Action Page - checklist
+* MGVDU-116 - Responsive RTE Video
+* ?? - Action Page Header Update
 
 ## 0.2.0
 ### Action Detail page
