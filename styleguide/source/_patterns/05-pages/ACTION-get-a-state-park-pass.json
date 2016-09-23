@@ -3,7 +3,17 @@
 
   "pageHeader": {
     "title": "Get a State Park Pass",
-    "intro": "<p>Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.</p>"
+    "intro": "<p>Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.</p>",
+    "taxonomyTerms": [{
+      "url": "#",
+      "term": "Visiting & Exploring"
+    },{
+      "url": "#",
+      "term": "State Parks & Recreation"
+    },{
+      "url": "#",
+      "term": "Nature & Outdoor Activities"
+    }]
   },
 
   "actionDetails" : {
