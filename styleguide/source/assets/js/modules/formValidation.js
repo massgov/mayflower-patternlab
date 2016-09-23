@@ -31,12 +31,11 @@ export default function (window,document,$,undefined) {
         item.valid = validate(value,item.type);
 
         if(item.valid) {
-          item.$el.attr('data-valid','is-invalid');
+          item.$el.attr('data-valid','is-valid');
         } else {
           submitForm = false;
-          item.$el.attr('data-valid','is-valid');
+          item.$el.attr('data-valid','is-invalid');
         }
-
       });
 
       if(!submitForm) {
@@ -47,13 +46,17 @@ export default function (window,document,$,undefined) {
   });
 
   function validate(value,type='text'){
+    let valid = false;
+
     switch(type) {
       case 'email':
-// TODO - fill this in
+        valid = !!(value.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]+/i));
+        break;
       default:
-        return value.length !== 0;
+        valid = value.length !== 0;
     }
-    return false;
+
+    return valid;
   }
 
 }(window,document,jQuery);
