@@ -10,6 +10,10 @@
   // TABLE styles
   thead {
     background-color: $c-bg-subtle;
+
+      th {
+        color: $c-font-heading;
+      }
   }
 
   tbody {
