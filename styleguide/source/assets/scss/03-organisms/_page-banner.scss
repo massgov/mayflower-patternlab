@@ -90,6 +90,7 @@ $page-banner-small: '.ma__page-banner--small';
   }
 
   &__title {
+    flex-grow: 1;
     font-size: 2.75em;
     line-height: 1.05;
     margin-bottom: 0;
