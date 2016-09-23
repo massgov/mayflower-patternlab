@@ -44,22 +44,22 @@ $featured-border-color: #89aac7;
     }
 
     &__label {
-      color: $c-blue-primary;
+      color: $c-font-link;
       opacity: .5;
     }
 
     &__title {
 
       a {
-        color: $c-blue-primary;
+        color: $c-font-link;
 
         &:hover {
-          border-bottom-color: $c-blue-primary;
+          border-bottom-color: rgba($c-font-link,.5);
         }
       }
 
       svg {
-        fill: rgba($c-blue-primary, .5);
+        fill: rgba($c-font-link, .5);
       }
     }
   }
@@ -76,26 +76,6 @@ $featured-border-color: #89aac7;
 
         &:after {
           background-color: $c-white;
-        }
-      }
-
-      &__label {
-        color: $c-blue-primary;
-        opacity: .5;
-      }
-
-      &__title {
-
-        a {
-          color: $c-blue-primary;
-
-          &:hover {
-            border-bottom-color: $c-blue-primary;
-          }
-        }
-
-        svg {
-          fill: rgba($c-blue-primary, .5);
         }
       }
     }

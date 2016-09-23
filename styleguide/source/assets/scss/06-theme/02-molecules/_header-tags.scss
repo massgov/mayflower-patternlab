@@ -4,8 +4,8 @@
   &__terms {
   	
     a {
-      border-color: rgba($c-theme-primary-1,.2);
-      @include ma-font(500);
+    	@include ma-font(500);
+    	border-color: rgba($c-font-link,.2);
     }
   }
 }
