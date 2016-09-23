@@ -3,7 +3,19 @@
 
   "pageHeader": {
     "title": "Get a State Park Pass",
-    "intro": "<p>Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.</p>"
+    "intro": "<p>Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.</p>",
+    "headerTags": {
+      "taxonomyTerms": [{
+        "url": "#",
+        "term": "Visiting & Exploring"
+      },{
+        "url": "#",
+        "term": "State Parks & Recreation"
+      },{
+        "url": "#",
+        "term": "Nature & Outdoor Activities"
+      }]
+    } 
   },
 
   "actionDetails" : {
@@ -22,9 +34,9 @@
           }
         },
         {
-          "path": "atoms-unordered-list",
+          "path": "atoms-checklist",
           "data": {
-            "unorderedList": [{
+            "checkList": [{
               "text": "Checklist item"
             },
             {
@@ -48,6 +60,13 @@
           "data": {
             "paragraph" : {
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+            }
+          }
+        }, {
+          "path": "atoms-video",
+          "data": {
+            "video": {
+              "src": "https://www.youtube.com/embed/dEkUq-Rs-Tc"
             }
           }
         }]
@@ -89,6 +108,170 @@
           "data": {
             "paragraph" : {
               "text": "If you’re a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+            }
+          }
+        },
+        {
+          "path": "atoms-table",
+          "data": {
+            "table": {
+              "head": {
+                "rows": [{
+                  "rowSpanOffset":"0",
+                  "cells":[{
+                    "heading": "true",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Type"
+                  },
+                  {
+                    "heading": "true",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Name"
+                  },
+                  {
+                    "heading": "true",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Fee"
+                  }]
+                }]
+              },
+              "bodies": [{
+                "rows": [{
+                  "rowSpanOffset":"0",
+                  "cells":[{
+                    "heading": "true",
+                    "colspan": "",
+                    "rowspan": "4",
+                    "text": "Freshwater Fishing"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident Citizen or Alien Fishing"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "$27.50"
+                  }]
+                },
+                {
+                  "rowSpanOffset":"1",
+                  "cells":[{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident Citizen or Alien Minor Fishing (Age 15-17)"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "FREE"
+                  }]
+                },
+                {
+                  "rowSpanOffset":"1",
+                  "cells":[{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident Citizen Fishing (Age 65-69)"
+                  },{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "$16.25"
+                  }]
+                },
+                {
+                  "rowSpanOffset":"1",
+                  "cells":[{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident Citizen Fishing (Aged 70 or Over)"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "FREE"
+                  }]
+                }]
+              },
+              {
+                "rows": [{
+                  "rowSpanOffset":"0",
+                  "cells":[{
+                    "heading": "true",
+                    "colspan": "",
+                    "rowspan": "4",
+                    "text": "Hunting"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident Citizen Hunting"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "$27.50"
+                  }]
+                },
+                {
+                  "rowSpanOffset":"1",
+                  "cells":[{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident Citizen Hunting, (Age 65-69)"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "$16.25"
+                  }]
+                },
+                {
+                  "rowSpanOffset":"1",
+                  "cells":[{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident and Non-Resident Citizen Hunting, Paraplegic"
+                  },{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "FREE"
+                  }]
+                },
+                {
+                  "rowSpanOffset":"1",
+                  "cells":[{
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "Resident Alien Hunting"
+                  },
+                  {
+                    "heading": "false",
+                    "colspan": "",
+                    "rowspan": "",
+                    "text": "$27.50"
+                  }]
+                }]
+              }]
             }
           }
         }]
