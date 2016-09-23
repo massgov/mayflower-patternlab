@@ -1,0 +1,7 @@
+.ma__download {
+
+  span {
+    @include ma-font(500);
+    color: $c-font-base;
+  }
+}
