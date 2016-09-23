@@ -2,8 +2,10 @@
   font-size: .875rem;
   margin-top: 2em;
   text-transform: uppercase;
+
   &__terms {
     margin-left: .5em;
+
     a {
       border: 2px solid;
       display: block;
@@ -11,9 +13,11 @@
       margin-bottom: .5em;
       padding: 6px 8px 3px;
       text-transform: capitalize;
+
       @media ($bp-x-small-min) {
         display: inline-block;
         margin-right: .3em;
+        
         &:last-child {
           margin-right: 0;
         }
