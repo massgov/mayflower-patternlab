@@ -4,6 +4,7 @@
 ### Level 0,1,2 pages
 * MGRV-93 - L0 Page Banner
 * MGRV-43 - Locate/purchase any custom fonts used
+* MGVDU-116 - Responsive RTE Video
 * ?? - Top Actions
 * ?? - Section Links
 * ?? - Back to Top widget
@@ -12,6 +13,7 @@
 * ?? - Action Finder
 * ?? - Illustrated Links
 * ?? - List of Links
+* ?? - Action Page Header Update
 
 ## 0.2.0
 ### Action Detail page
