@@ -1,11 +1,11 @@
 .ma__top-actions {
   @include ma-container;
-  margin-bottom: 90px;
+  padding-bottom: 60px;
 
   &__title {
     @include ma-border-decorative;
     margin-bottom: 45px;
-    padding-bottom: .55em;
+    padding-bottom: 16px;
     text-align: center;
 
     &:after {
@@ -15,43 +15,28 @@
   }
 
   &__items {
-   @include clearfix;
-   @include ma-reset-list;
-    display: flex;
-      align-items: stretch;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    @include clearfix;
+    @include ma-reset-list;
+
+    @media ($bp-small-min) {
+      display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
   }
 
   &__item {
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    padding: 12px 40px 20px;
-    width: 100%;
+    margin-bottom: 20px;
 
     @media ($bp-small-min) and ($bp-x-large-max) {
+      @include span-columns(6);
       @include omega(2n);
-      float: left;
-      width: 50%;
-
-      &:nth-child(2n) {
-        border-left-width: 1px;
-        border-left-style: solid;
-      }
     }
-    @media ($bp-x-large-min) {
-        @include omega(4n);
-        align-items: center;
-        border-left-width: 1px;
-        border-left-style: solid;
-        float: left;
-        width: 25%;
 
-        &:nth-child(4n + 1) {
-          border-left: none;
-        }
+    @media ($bp-x-large-min) {
+      @include span-columns(3);
+      @include omega(4n);
     }
 
     > div {
@@ -61,10 +46,14 @@
   }
 
   &__link {
-    @include ma-link-decorative;
+    display: block;
+    height: 100%;
+    width: 100%;
 
-    a {
-      font-size: 1.375rem;
+    .ma__callout-link {
+      height: 100%;
     }
+
   }
+
 }
