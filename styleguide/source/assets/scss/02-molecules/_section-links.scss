@@ -35,9 +35,14 @@
     height: auto;
   }
 
+  &__description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
   &__icon {
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 1.4em;
   }
 
   &__title {
@@ -49,7 +54,7 @@
     }
 
     a:hover {
-      opacity: .7;
+      opacity: .6;
     }
 
     svg {

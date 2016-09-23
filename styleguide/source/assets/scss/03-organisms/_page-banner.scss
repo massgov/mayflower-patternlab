@@ -11,14 +11,13 @@ $page-banner-icon-width: $column + $gutter;
   @media ($bp-x-small-min) {
     height: 366px;
   }
-  
+
   &__container {
     @include ma-container;
   }
 
   &__content {
     font-size: 0;
-    margin-right: 20px;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
     position: absolute;
@@ -27,6 +26,7 @@ $page-banner-icon-width: $column + $gutter;
     z-index: 1;
 
     @media ($bp-x-small-min) {
+      margin-right: 20px;
       padding-top: 50px;
       padding-right: 175px;
     }
