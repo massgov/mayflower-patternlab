@@ -30,6 +30,8 @@ $bp-header-search-reduce-button: "max-width: 700px";
   }
 
   .ma__button-search {
+    border: none;
+    border-left: 2px solid;
     display: block;
     height: $header-search-height;
     padding-top: 0;
@@ -42,15 +44,12 @@ $bp-header-search-reduce-button: "max-width: 700px";
       padding-left: 10px;
     }
 
-    .ma__header__nav-search & {
-      border: none;
-      border-left: 2px solid;
-    }
-
+    // not the button in navigation
     .ma__header__search & {
 
       @media ($bp-small-max) {
         @include ma-valign-block;
+        border: 2px solid;
         display: inline-block;
         position: static;
         transition: opacity .4s;
@@ -60,17 +59,15 @@ $bp-header-search-reduce-button: "max-width: 700px";
           opacity: 0;
         }
       }
-    }
-    
-    @media ($bp-small-min) and ($bp-header-search-reduce-button) {
-      .ma__header__search & span {
-        display: none;
-      }
-    }
 
-    @media ($bp-x-small-max) {
-      .ma__header__search & span {
-        display: none;
+      span {
+        @media ($bp-x-small-max) {
+          display: none;
+        }
+
+        @media ($bp-small-min) and ($bp-header-search-reduce-button) {
+          display: none;
+        }
       }
     }
   }
