@@ -13,6 +13,12 @@
     a {
       @include ma-link-underline;
     }
+    
+    span {
+      font-size: .875rem;
+      line-height: 2.14;
+      white-space: nowrap;
+    }
   }
 
   &__icon {
@@ -23,9 +29,4 @@
     overflow: hidden;
   }
 
-  span {
-    font-size: .875rem;
-    line-height: 2.14;
-    white-space: nowrap;
-  }
 }
