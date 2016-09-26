@@ -7,6 +7,10 @@
     &.is-open {
       background-color: $c-white
     }
+
+    &:last-child {
+      border-bottom-color: $c-bd-divider;
+    }
   }
 
   &__content {
@@ -26,7 +30,7 @@
     &:after {
       color: $c-theme-primary-2;
     }
-    
+
     a {
       @include ma-font(500);
       color: inherit;
