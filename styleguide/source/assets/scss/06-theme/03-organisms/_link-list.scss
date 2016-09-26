@@ -3,11 +3,11 @@
   &__title {
     @include ma-border-decorative($c-theme-primary-2);
   }
-  
+
   &__link {
-    
+
     &:hover {
-      border-bottom-color: inherit;
+      border-bottom-color: rgba($c-theme-primary-1,.5);
     }
   }
 }

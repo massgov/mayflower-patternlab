@@ -2,7 +2,7 @@
 
   .ma__button-search {
     background-color: transparent;
-    border-left-color: $c-bd-input;
+    border-left-color: rgba($c-bd-input,.5);
 
     &:hover {
       background: $c-theme-primary-2;
@@ -28,4 +28,3 @@
   }
 
 }
-
