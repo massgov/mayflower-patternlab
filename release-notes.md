@@ -14,7 +14,8 @@
 * MGVDU-114 - FE Dev: Action Page - tabular data
 * MGVDU-106 - FE Dev: Action Page - checklist
 * MGVDU-116 - Responsive RTE Video
-* ?? - Action Page Header Update
+* MGVDU-139 - Action Page Header Update
+* MGVDU-117 - Forms/Downloads
 
 ## 0.2.0
 ### Action Detail page
