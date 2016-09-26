@@ -39,9 +39,17 @@ export default function (window,document,$,undefined) {
       });
 
       if(!submitForm) {
+        // prevent the form from submitting
         e.preventDefault();
+        // show the form error message 
+        // or blink the message if it is already visible
+        $form.find('.js-error-msg')
+          .removeClass('show-error');
+        setTimeout(function() {
+          $form.find('.js-error-msg')
+            .addClass('show-error');
+          },100);
       }
-
     });
   });
 

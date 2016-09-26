@@ -114,4 +114,17 @@ $feedback-form-bp-min: "min-width: 751px";
       @include ma-button;
     }
   }
+
+  &__error-message {
+    display: inline-block;
+    opacity: 0;
+    margin-right: 20px; 
+    vertical-align: middle;
+    transition: opacity 0s;
+
+    &.show-error {
+      opacity: 1;
+      transition: opacity 1.5s;
+    }
+  }
 }

@@ -3,18 +3,53 @@
     "title": "Things to Do",
     "description": "Here you'll find the pages we redesigned first",
     "actions":[{
-      "icon":"atoms-svg-pig-bank",
-      "category":"Unemployment",
-      "linkText":"File for Unemployment",
+      "icon":"atoms-svg-campfire",
+      "category":"State Parks & Recreation",
+      "linkText":"Get a State Park Pass",
       "linkHref":"#",
       "theme":"green"
     },
     {
-      "icon":"atoms-svg-apple",
-      "category":"Health & Social Services",
-      "linkText":"Apply for MassHealth Coverage",
+      "icon":"atoms-svg-id-card",
+      "category":"Recreational Licenses & Permits",
+      "linkText":"Buy a Freshwater Fishing License",
       "linkHref":"#",
       "theme":"blue"
+    },
+    {
+      "icon":"atoms-svg-certificate",
+      "category":"Professional Licensing & Certification",
+      "linkText":"Apply for a Nursing License: In-State Residents",
+      "linkHref":"#",
+      "theme":""
+    },
+    {
+      "icon":"atoms-svg-certificate",
+      "category":"Professional Licensing & Certification",
+      "linkText":"Apply for a Nursing License: Out-Of-State Residents",
+      "linkHref":"#",
+      "theme":"dark-gray"
+    },
+    {
+      "icon":"atoms-svg-server-rack",
+      "category":"Business Services & Resources",
+      "linkText":"Register Your Business",
+      "linkHref":"#",
+      "theme":"blue"
+    },
+    {
+      "icon":"atoms-svg-apple",
+      "category":"Health & Social Services",
+      "linkText":"Apply for MassHealth",
+      "linkHref":"#",
+      "theme":"green"
+    },
+    {
+      "icon":"atoms-svg-application",
+      "category":"Unemployment",
+      "linkText":"File for Unemployment",
+      "linkHref":"#",
+      "theme":"dark-gray"
     },
     {
       "icon":"atoms-svg-apple",
@@ -24,51 +59,16 @@
       "theme":""
     },
     {
-      "icon":"atoms-svg-gavel",
-      "category":"Legal & Justice",
-      "linkText":"Respond to a Jury Duty Summons",
-      "linkHref":"#",
-      "theme":"dark-gray"
-    },
-    {
-      "icon":"atoms-svg-campfire",
-      "category":"State Parks & Recreation",
-      "linkText":"Find a State Park",
-      "linkHref":"#",
-      "theme":"blue"
-    },
-    {
-      "icon":"atoms-svg-certificate",
-      "category":"Professional Licensing & Certification",
-      "linkText":"Apply for a Nursing License",
-      "linkHref":"#",
-      "theme":"green"
-    },
-    {
       "icon":"atoms-svg-family",
       "category":"Family & Children",
       "linkText":"Get a Child Support Order",
       "linkHref":"#",
-      "theme":"dark-gray"
-    },
-    {
-      "icon":"atoms-svg-id-card",
-      "category":"Recreational Licenses & Permits",
-      "linkText":"Buy a Freshwater Fishing License",
-      "linkHref":"#",
-      "theme":""
-    },
-    {
-      "icon":"atoms-svg-bag-search",
-      "category":"Finding a Job",
-      "linkText":"Get a State Job",
-      "linkHref":"#",
       "theme":"green"
     },
     {
-      "icon":"atoms-svg-server-rack",
-      "category":"Business Services & Resources",
-      "linkText":"Register Your Business",
+      "icon":"atoms-svg-gavel",
+      "category":"Legal & Justice",
+      "linkText":"Respond to a Jury Duty Summons",
       "linkHref":"#",
       "theme":"blue"
     }]
@@ -170,21 +170,24 @@
       "value": "No",
       "id": "permission-no",
       "label": "No"
-    }]
-  },
+    }],
+    
+    "selectBox":{
+      "label":"Type of Feedback",
+      "id":"color-select",
+      "options":[{
+        "value":"design",
+        "text":"Visual Feedback"
+      },{
+        "value":"development",
+        "text":"Functionality"
+      },{
+        "value":"ux",
+        "text":"Organization"
+      }]
+    },
 
-  "selectBox":{
-    "label":"Type of Feedback",
-    "id":"color-select",
-    "options":[{
-      "value":"design",
-      "text":"Visual Feedback"
-    },{
-      "value":"development",
-      "text":"Functionality"
-    },{
-      "value":"ux",
-      "text":"Organization"
-    }]
+    "errorMsg":"Please complete the fields highlighted in red."
   }
+
 }
