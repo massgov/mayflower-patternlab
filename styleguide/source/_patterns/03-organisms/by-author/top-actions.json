@@ -1,6 +1,6 @@
 {
   "topActions": {
-    "title": "Common Actions",
+    "title": "Common Actions &amp; Guides",
     "links": [{
       "calloutLink": {
         "type": "",
@@ -19,7 +19,7 @@
       "calloutLink": {
         "type": "",
         "href": "#",
-        "text": "Plan a Vacation in Massachusetts",
+        "text": "Download a Trail Map",
         "quickaction": "false"
       }
     },{
