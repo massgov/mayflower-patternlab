@@ -27,6 +27,7 @@
           {% include "atoms-input-textarea" %}
         </div>
         <div class="ma__feedback-form__type">
+          {% set selectBox = feedbackForm.selectBox %}
           {% include "atoms-select-box" %}
         </div>
         <fieldset class="ma__feedback-form__permission">
@@ -36,6 +37,9 @@
           {% endfor %}
         </fieldset>
         <div class="ma__feedback-form__controls">
+          <div class="ma__feedback-form__error-message js-error-msg">
+            {{feedbackForm.errorMsg}}
+          </div>
           <button type="submit">Send</button>
         </div>
       </form>

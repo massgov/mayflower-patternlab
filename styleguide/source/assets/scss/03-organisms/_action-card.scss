@@ -75,18 +75,26 @@
   }
 
   &__icon {
+    height: 60px;
     margin-bottom: 20px;
+    width: 60px;
 
     @media ($bp-x-small-min) {
       margin-bottom: 0;
-      margin-right: 10px;
+      padding: 0 12px;
       text-align: center;
-      width: 75px;
+      width: 84px;
     }
 
     @media ($bp-medium-min) {
       margin-right: 0;
+      padding: 0 20px;
       width: 100px;
+    }
+
+    svg {
+      height: 100%;
+      width: 100%;
     }
   }
 
