@@ -2,10 +2,10 @@
   @include ma-font(700);
 
   &__terms {
-  	
+    
     a {
-      border-color: rgba($c-theme-primary-1,.2);
       @include ma-font(500);
+      border-color: rgba($c-font-link,.2);
     }
   }
 }

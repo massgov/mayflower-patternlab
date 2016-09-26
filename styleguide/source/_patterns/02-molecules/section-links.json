@@ -1,9 +1,5 @@
 {
   "sectionLinks": {
-    "image" : {
-      "src" : "/assets/images/placeholder/600x450-kitten.jpg",
-      "alt" : "Recreational Licenses & Permits"
-    },
     "catIcon": {
       "svg":"atoms-svg-camping",
       "small":"true"

@@ -12,114 +12,140 @@
   "pageBanner": {
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "size":"ma__page-banner--child",
-    "parentLink":{
-      "text":"Visiting & Exploring",
-      "href":"#"
-    },
-    "icon":"atoms-cat-icon-small",
-    "title":"State Parks & Recreation",
-    "description":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam porro tempore minus repellendus animi rem veritatis.</p>"
+    "small":"true",
+    "icon":"atoms-svg-campfire",
+    "title":"State Parks & Recreation"
   },
-  "catIcon": {
-    "svg":"atoms-svg-camping"
+
+  "topActions": {
+    "title": "Common Actions",
+    "links": [{
+      "calloutLink": {
+        "type": "",
+        "href": "#",
+        "text": "Get a State Park Pass",
+        "quickaction": ""
+      }
+    },{
+      "calloutLink": {
+        "type": "",
+        "href": "#",
+        "text": "Reserve an Athletic Field",
+        "quickaction": ""
+      }
+    },{
+      "calloutLink": {
+        "type": "",
+        "href": "#",
+        "text": "Plan a Vacation in Massachusetts",
+        "quickaction": ""
+      }
+    },{
+      "calloutLink": {
+        "type": "",
+        "href": "#",
+        "text": "Find a Campground",
+        "quickaction": ""
+      }
+    }]
   },
+
   "sectionThreeUp" : {
-    "title": "",
+    "title": "More in State Parks & Recreation",
     "sections": [{
-      "image" : "",
+      "catIcon": "",
       "title" : {
         "href" : "#",
-        "text" : "Recreational Licenses & Permits"
+        "text" : "Accessible Recreation"
       },
+      "description":"",
+      "links" : [{
+        "href" : "#",
+        "text" : "Accessible Fishing"
+      },
+      {
+        "href" : "#",
+        "text" : "Accessible Swimming"
+      },
+      {
+        "href" : "#",
+        "text" : "Accessible Hiking"
+      },
+      {
+        "href" : "#",
+        "text" : "More"
+      }]
+    },
+    {
+      "catIcon": "",
+      "title" : {
+        "href" : "#",
+        "text" : "Active & Team Sports"
+      },
+      "description":"",
+      "links" : [{
+        "href" : "#",
+        "text" : "Ice Skating"
+      },
+      {
+        "href" : "#",
+        "text" : "Golfing"
+      },
+      {
+        "href" : "#",
+        "text" : "Reserve an Athletic Field"
+      },
+      {
+        "href" : "#",
+        "text" : "More"
+      }]
+    }, 
+    {
+      "catIcon": "",
+      "title" : {
+        "href" : "#",
+        "text" : "Nature & Outdoor Activities"
+      },
+      "description":"",
+      "links" : [{
+        "href" : "#",
+        "text" : "Camping"
+      },
+      {
+        "href" : "#",
+        "text" : "Hiking"
+      },
+      {
+        "href" : "#",
+        "text" : "Biking"
+      },
+      {
+        "href" : "#",
+        "text" : "More"
+      }]
+    },
+    {
+      "catIcon": "",
+      "title" : {
+        "href" : "#",
+        "text" : "Water Related Activities"
+      },
+      "description":"",
       "links" : [{
         "href" : "#",
         "text" : "Boating"
       },
       {
         "href" : "#",
-        "text" : "Fishing"
+        "text" : "Lifeguarding"
       },
       {
         "href" : "#",
-        "text" : "Hunting"
-      }]
-    },
-    {
-      "image" : "",
-      "title" : {
-        "href" : "#",
-        "text" : "State Parks & Recreation"
-      },
-      "links" : [{
-        "href" : "#",
-        "text" : "Accessible Recreation"
+        "text" : "Canoeing"
       },
       {
         "href" : "#",
-        "text" : "Active & Team Sports"
-      },
-      {
-        "href" : "#",
-        "text" : "Nature & Outdoor Activities"
-      },
-      {
-        "href" : "#",
-        "text" : "Water Related Activities"
-      }]
-    }, 
-    {
-      "image" : "",
-      "title" : {
-        "href" : "#",
-        "text" : "Travel & Tourism"
-      },
-      "links" : [{
-        "href" : "#",
-        "text" : "Family Friendly Activities"
-      },
-      {
-        "href" : "#",
-        "text" : "Seasonal Activities"
-      },
-      {
-        "href" : "#",
-        "text" : "Sightseeing"
-      },
-      {
-        "href" : "#",
-        "text" : "Traveling to Massachusetts"
-      }]
-    },
-    {
-      "image" : "",
-      "title" : {
-        "href" : "#",
-        "text" : "Art & Culture"
-      },
-      "links" : [{
-        "href" : "#",
-        "text" : "Cultural Districts & Historic Sites"
-      },
-      {
-        "href" : "#",
-        "text" : "Dance"
-      },
-      {
-        "href" : "#",
-        "text" : "Film & Theater"
-      },
-      {
-        "href" : "#",
-        "text" : "Galleries"
-      },
-      {
-        "href" : "#",
-        "text" : "Museums"
-      },
-      {
-        "href" : "#",
-        "text" : "Music"
+        "text" : "More"
       }]
     }]
   }

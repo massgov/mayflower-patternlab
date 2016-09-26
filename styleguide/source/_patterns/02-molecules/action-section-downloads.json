@@ -1,0 +1,21 @@
+{
+  "actionSectionDownloads": [{
+    "icon": "atoms-svg-doc-pdf",
+    "title": "PDF download item",
+    "url": "#",
+    "size": "30kb",
+    "type": "PDF"
+  },{
+    "icon": "atoms-svg-doc-xlsx",
+    "title": "Excel download item that has a longer title than the pdf did",
+    "url": "#",
+    "size": "35kb",
+    "type": "XLSX"
+  },{
+    "icon": "atoms-svg-doc-docx",
+    "title": "Word download item",
+    "url": "#",
+    "size": "40kb",
+    "type": "DOCX"
+  }]
+}

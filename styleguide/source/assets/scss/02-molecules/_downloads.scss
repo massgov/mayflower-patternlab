@@ -1,0 +1,31 @@
+.ma__download {
+  margin-bottom: 1em;
+  overflow: auto; // clearing
+
+  &__item {
+    clear: both;
+  }
+
+  &__title {
+    float: left;
+    width: calc(100% - 66px);
+
+    a {
+      @include ma-link-underline;
+    }
+  }
+
+  &__icon {
+    float: left;
+    height: 36px;
+    opacity: .75;
+    width: 66px;
+    overflow: hidden;
+  }
+
+  span {
+    font-size: .875rem;
+    line-height: 2.14;
+    white-space: nowrap;
+  }
+}

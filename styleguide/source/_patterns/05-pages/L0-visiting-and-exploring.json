@@ -9,11 +9,9 @@
   "pageBanner": {
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "size":"",
-    "parentLink":"",
+    "small":"",
     "icon":"atoms-svg-camping",
-    "title":"Visiting & Exploring",
-    "description":"<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam porro tempore minus repellendus animi rem veritatis.</p>"
+    "title":"Visiting & Exploring"
   },
 
   "catIcon": {
@@ -23,7 +21,6 @@
   "sectionThreeUp" : {
     "title": "",
     "sections": [{
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-id-card",
         "small":"true"
@@ -47,7 +44,6 @@
       }]
     },
     {
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-campfire",
         "small":"true"
@@ -75,7 +71,6 @@
       }]
     }, 
     {
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-map",
         "small":"true"
@@ -103,7 +98,6 @@
       }]
     },
     {
-      "image" : "",
       "catIcon": {
         "svg":"atoms-svg-theater",
         "small":"true"
