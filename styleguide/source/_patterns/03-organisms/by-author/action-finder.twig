@@ -33,7 +33,7 @@
       {% endfor %}
     </ul>
     <div class="ma__action-finder__category">All Actions & Guides:</div>
-    <ul class="ma__action-finder__items">
+    <ul class="ma__action-finder__items ma__action-finder__items--all">
       {% for link in actionFinder.links %}
         <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
           {% if link.image %}
