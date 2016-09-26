@@ -17,21 +17,23 @@
       "value": "No",
       "id": "permission-no",
       "label": "No"
-    }]
-  },
+    }],
 
-  "selectBox":{
-    "label":"Type of Feedback",
-    "id":"color-select",
-    "options":[{
-      "value":"design",
-      "text":"Visual Feedback"
-    },{
-      "value":"development",
-      "text":"Functionality"
-    },{
-      "value":"ux",
-      "text":"Organization"
-    }]
+    "selectBox":{
+      "label":"Type of Feedback",
+      "id":"color-select",
+      "options":[{
+        "value":"design",
+        "text":"Visual Feedback"
+      },{
+        "value":"development",
+        "text":"Functionality"
+      },{
+        "value":"ux",
+        "text":"Organization"
+      }]
+    },
+
+    "errorMsg":"Please complete the fields highlighted in red."
   }
 }
