@@ -20,11 +20,12 @@
   }
 
   &__item {
-    padding: 5px 0 5px .75em;
-    text-indent: -.75em;
+    padding: 5px 0 5px 1.4em;
+    text-indent: -1.4em;
   }
 
   &__link {
     @include ma-link-underline;
+    margin-left: -.5em;
   }
 }

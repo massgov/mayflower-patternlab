@@ -1,0 +1,13 @@
+<section class="ma__action-seq-list">
+  <ol class="ma__action-seq-list__items">
+    {% for item in actionSeqLists %}
+      <li class="ma__action-seq-list__item">
+        <h5 class="ma__action-seq-list__title">{{item.title}}</h5>
+        <div class="ma__action-seq-list__content">
+          {% set rteElements = item.rteElements %}
+          {% include "molecules-rich-text" %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

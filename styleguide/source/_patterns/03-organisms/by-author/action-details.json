@@ -84,27 +84,65 @@
       "title":"Get it Done",
       "intro": "",
       "id":"get-it-done",
-      "path": "molecules-action-section-steps",
+      "path": "molecules-action-step",
       "data": {
         "actionSteps": [{
           "icon":"atoms-svg-profile",
           "title":"In Person at State Parks",
-          "rte":"<p>Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check.</p>"
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph": {
+                "text": "Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check."
+              }
+            }
+          }]
         },
         {
           "icon":"atoms-svg-laptop",
           "title":"Online",
-          "rte":"<p>You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days.</p><div class=\"ma__callout-link\"><a href=\"#\" target=\"_blank\">Order a MassParks Pass online through Reserve America&nbsp;<svg focusable=\"false\" role=\"presentation\" class=\"svg-external-link\"><use xlink:href=\"/assets/images/svg-sprite.svg#external-link\"></use></svg></a></div>"
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph": {
+                "text": "You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days."
+              }
+            }
+          },{
+            "path": "molecules-callout-link",
+            "data": {
+              "calloutLink": {
+                "text": "Order a MassParks Pass online through Reserve America",
+                "type": "",
+                "href": "#",
+                "quickaction": "false"
+              }
+            }
+          }]
         },
         {
           "icon":"atoms-svg-phone",
           "title":"By Phone",
-          "rte":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel. </p>"
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+              }
+            }
+          }]
         },
         {
           "icon":"atoms-svg-mail",
           "title":"By Mail",
-          "rte":"<p><i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts.</p>"
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph": {
+                "text": "<i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts."
+              }
+            }
+          }]
         }]
       }
     },

@@ -5,7 +5,9 @@
     <div class="ma__action-details__anchor-links js-scroll-anchors">
         <button class="ma__action-details__toggle-link js-scroll-anchors-toggle">+</button>
         {% for section in actionDetails.sections %}
-          <a href="#{{section.id}}" class="{{loop.first ? 'is-active' : ''}}">{{section.title}}</a>
+          {% if section.id and section.title %}
+            <a href="#{{section.id}}" class="{{loop.first ? 'is-active' : ''}}">{{section.title}}</a>
+          {% endif %}
         {% endfor %}
     </div>
     {% for actionSection in actionDetails.sections %}

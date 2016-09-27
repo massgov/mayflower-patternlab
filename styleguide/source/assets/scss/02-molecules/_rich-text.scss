@@ -17,16 +17,23 @@
   
 // List styles
   ul {
+    list-style-type: disc;
     padding-left: 20px;
   }
 
   ol {
-    padding-left: 40px;
+    padding-left: 30px;
   }
 
   li {
     padding-left: 10px;
   }
+
+  ul ul, 
+  ol ul {
+      list-style-type: circle;
+  }
+
 // end list styles
 
   a {
