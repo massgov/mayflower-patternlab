@@ -1,24 +1,25 @@
 $page-banner-icon-width: $column + $gutter;
+$page-banner-small: '.ma__page-banner--small';
 
 .ma__page-banner {
   background-size: cover;
   background-position: top center;
   height: 400px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   overflow: hidden;
   position: relative;
 
   @media ($bp-x-small-min) {
     height: 366px;
+    margin-bottom: 40px;
   }
-  
+
   &__container {
     @include ma-container;
   }
 
   &__content {
-    font-size: 0;
-    margin-right: 20px;
+    font-size: 1rem;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
     position: absolute;
@@ -27,8 +28,21 @@ $page-banner-icon-width: $column + $gutter;
     z-index: 1;
 
     @media ($bp-x-small-min) {
+      display: flex;
+        align-items: center;
+      margin-right: 20px;
       padding-top: 50px;
       padding-right: 175px;
+    }
+
+    #{$page-banner-small} & {
+      font-size: .8rem;
+      padding: 25px 25px 40px 0;
+
+      @media ($bp-x-small-min) {
+        padding-top: 45px;
+        padding-right: 175px;
+      }
     }
 
     &:before {
@@ -42,20 +56,32 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &__icon {
-    padding-right: $gutter;
-    vertical-align: middle;
+    padding-right: 30px;
     width: 75px;
-
-    @media ($bp-x-small-min) {
-      display: inline-block;
-    }
 
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
+
+      #{$page-banner-small} & {
+        width: $column;
+      }
     }
 
-    svg {
-      max-width: 100%;
+    & > svg {
+      height: 2.75em;
+      width: 100%;
+
+      @media ($bp-medium-min){
+        height: 3.75em;
+      }
+
+      @media ($bp-large-min){
+        height: 4.25em;
+      }
+
+      @media ($bp-x-large-min){
+        height: 4.625em;
+      }
     }
 
     a {
@@ -64,8 +90,8 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &__title {
-    display: inline-block;
-    font-size: 2.75rem;
+    flex-grow: 1;
+    font-size: 2.75em;
     line-height: 1.05;
     margin-bottom: 0;
     vertical-align: middle;
@@ -75,16 +101,16 @@ $page-banner-icon-width: $column + $gutter;
     }
 
     @media ($bp-medium-min){
-      font-size: 3.75rem;
+      font-size: 3.75em;
       width: calc(100% - #{$page-banner-icon-width});
     }
 
     @media ($bp-large-min){
-      font-size: 4.25rem;
+      font-size: 4.25em;
     }
 
     @media ($bp-x-large-min){
-      font-size: 4.625rem;
+      font-size: 4.625em;
     }
   }
 

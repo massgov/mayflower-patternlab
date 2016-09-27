@@ -1,7 +1,10 @@
+$featured-bg-color: #e7eef4;
+$featured-border-color: #89aac7;
+
 .ma__action-finder {
 
   &:after {
-    background-image: linear-gradient(180deg, rgba($c-black, .5), transparent 60%, transparent);
+    background-image: linear-gradient(180deg, rgba(#000,.6), transparent 90%, transparent);
   }
 
   &__category {
@@ -18,7 +21,7 @@
 
     button {
       color: $c-font-inverse;
-      
+
       svg {
         fill: $c-font-inverse;
       }
@@ -26,6 +29,55 @@
   }
 
   &__item--text {
-    background-color: $c-white;
+    background-color: $featured-bg-color;
+    border-color: $featured-border-color;
   }
-}
+
+  .ma__illustrated-link {
+    border-color: $featured-border-color;
+    &__content {
+      background-color: $featured-bg-color;
+
+      &:after {
+        background-color: $featured-bg-color;
+      }
+    }
+
+    &__label {
+      color: $c-font-link;
+      opacity: .8;
+    }
+
+    &__title {
+
+      a {
+        color: $c-font-link;
+
+        &:hover {
+          border-bottom-color: rgba($c-font-link,.5);
+        }
+      }
+
+      svg {
+        fill: rgba($c-font-link, .5);
+      }
+    }
+  }
+
+  &__items--all {
+    
+    .ma__action-finder__item--text {
+      background-color: $c-white;
+    }
+
+    .ma__illustrated-link {
+      &__content {
+        background-color: $c-white;
+
+        &:after {
+          background-color: $c-white;
+        }
+      }
+    }
+  }
+}

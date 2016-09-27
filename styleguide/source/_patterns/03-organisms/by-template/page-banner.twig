@@ -1,5 +1,5 @@
 {# adding ma__page-banner--child shows a different version #}
-<section class="ma__page-banner {{pageBanner.size}}">
+<section class="ma__page-banner {{pageBanner.small ? 'ma__page-banner--small' : ''}}">
   <style>
     .ma__page-banner {
       background-image: url('{{pageBanner.bgNarrow}}');

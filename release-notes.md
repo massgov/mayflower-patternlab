@@ -1,17 +1,21 @@
 # Mass Gov Release Notes
 
 ## 0.3.0
-### Level 0,1,2 pages
-* MGRV-93 - L0 Page Banner
-* MGRV-43 - Locate/purchase any custom fonts used
-* ?? - Top Actions
-* ?? - Section Links
-* ?? - Back to Top widget
-* ?? - L1 Page Banner variant
-* ?? - Section Links - without image variant
-* ?? - Action Finder
-* ?? - Illustrated Links
-* ?? - List of Links
+### Level 0,1,2 pages - Action Funnel
+* MGVDU-53 - FE Dev: L0 Page (contains sub tickets)
+* MGVDU-54 - FE Dev: L1 Page
+* MGVDU-55 - FE Dev: L2 Page (contains sub tickets)
+
+### Pilot Home page
+* MGVDU-56 - FE Dev: Pilot homepage (contains sub tickets)
+
+### Action Detail page modifications
+* MGVDU-115 - FE Dev: Quick Action Component
+* MGVDU-114 - FE Dev: Action Page - tabular data
+* MGVDU-106 - FE Dev: Action Page - checklist
+* MGVDU-116 - Responsive RTE Video
+* MGVDU-139 - Action Page Header Update
+* MGVDU-117 - Forms/Downloads
 
 ## 0.2.0
 ### Action Detail page

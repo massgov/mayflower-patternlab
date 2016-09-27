@@ -1,0 +1,21 @@
+.ma__download {
+
+  &__title {
+
+    a {
+    
+      &:hover {
+        border-bottom-color: rgba($c-font-link,.5);
+      }
+    }
+
+    span {
+      @include ma-font(500);
+      color: $c-font-base;
+    }
+  }
+
+  &__icon {
+    fill: $c-font-link;
+  }
+}

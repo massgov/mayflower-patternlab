@@ -8,17 +8,21 @@
 
   .ma__button-search {
 
-    .ma__header__nav-search & {
-      background-color: transparent;
-      border-color: transparent;
-      border-left-color: $c-bd-input;
+    background-color: transparent;
+    border-color: transparent;
+    border-left-color: $c-bd-input;
+
+    &:hover {
+      background: $c-theme-primary-2;
+      border-left-color: $c-theme-primary-2;
     }
 
-    @media ($bp-small-min) {
-      .ma__header & {
-        background: transparent;
-        border-color: transparent;
-        border-left-color: $c-bd-input;
+    // not the button in navigation
+    .ma__header__search & {
+
+      @media ($bp-small-max) {
+        background-color: $c-white;
+        border-color: $c-bd-input;
 
         &:hover {
           background: $c-theme-primary-2;

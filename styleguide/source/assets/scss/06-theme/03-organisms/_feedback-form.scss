@@ -52,4 +52,8 @@
       @include ma-button("normal","solid",$c-theme-primary-1);
     }
   }
+
+  &__error-message {
+    color: red;
+  }
 }
