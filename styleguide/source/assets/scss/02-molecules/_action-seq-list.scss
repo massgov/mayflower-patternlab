@@ -3,7 +3,7 @@ $action-seq-list-icon-border: 3px;
 
   &__items {
     @include ma-reset-list;
-    counter-reset:li; // Initiate a counter
+    counter-reset: li; // Initiate a counter
   }
 
   &__item {
@@ -14,8 +14,8 @@ $action-seq-list-icon-border: 3px;
     &:before {
       border: $action-seq-list-icon-border solid;
       border-radius: 50%;
-      content:counter(li); // Use the counter as content
-      counter-increment:li; // Increment the counter by 1
+      content: counter(li); // Use the counter as content
+      counter-increment: li; // Increment the counter by 1
       font-size: 1.25rem;
       height: 36px;
       line-height: 36px - $action-seq-list-icon-border * 2;
