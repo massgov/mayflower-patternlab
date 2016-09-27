@@ -9,15 +9,15 @@
     a {
       border: 2px solid;
       display: block;
-      line-height: 2.29;
+      line-height: 2;
       margin-bottom: .5em;
-      padding: 6px 8px 3px;
+      padding: 0 8px;
       text-transform: capitalize;
 
       @media ($bp-x-small-min) {
         display: inline-block;
         margin-right: .3em;
-        
+
         &:last-child {
           margin-right: 0;
         }
