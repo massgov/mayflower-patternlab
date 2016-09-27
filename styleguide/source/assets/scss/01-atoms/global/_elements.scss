@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.75rem; //44px
+  font-size: 2.75rem; 
   line-height: 1.07;
 
   @media ($bp-medium-min){
@@ -50,13 +50,13 @@ h1 {
   }
 
   @media ($bp-x-large-min){
-    font-size: 3.625rem; //62px
+    font-size: 3.625rem; 
   }
 }
 
 h2 {
   font-size: 1.875rem;
-  line-height: 1.222222; //44px
+  line-height: 1.222222;
 
   @media ($bp-small-min){
     font-size: 2.25rem;
@@ -65,15 +65,20 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
-  line-height: 1.214287; //34px
+  line-height: 1.214287; 
 }
 
 h4 {
   font-size: 1.375rem;
-  line-height: 1.5; //33px
+  line-height: 1.5; 
 }
 
-h5, h6 {
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h6 {
   font-size: 1.125rem;
 }
 
