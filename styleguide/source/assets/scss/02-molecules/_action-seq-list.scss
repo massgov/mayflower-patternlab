@@ -1,0 +1,33 @@
+$action-seq-list-icon-border: 3px;
+.ma__action-seq-list {
+
+  &__items {
+    @include ma-reset-list;
+    counter-reset:li; // Initiate a counter
+  }
+
+  &__item {
+    list-style:none; // Disable the normal item numbering
+    padding-left: 60px;
+    position: relative;
+
+    &:before {
+      border: $action-seq-list-icon-border solid;
+      border-radius: 50%;
+      content:counter(li); // Use the counter as content
+      counter-increment:li; // Increment the counter by 1
+      font-size: 1.25rem;
+      height: 36px;
+      line-height: 36px - $action-seq-list-icon-border * 2;
+      position: absolute;
+        top: 0;
+        left: 0;
+      text-align: center;
+      width: 36px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+}

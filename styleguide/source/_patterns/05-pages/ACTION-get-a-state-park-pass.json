@@ -362,6 +362,61 @@
       }
     },
     {
+      "title":"",
+      "intro": "",
+      "id":"",
+      "path": "molecules-action-seq-list",
+      "data": {
+        "actionSeqLists" : [{
+          "title":"Lorem ipsum dolor sit amet",
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis."
+              }
+            }
+          },{
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "bullet item"
+              },
+              { 
+                "text": "bullet item"
+              },
+              { 
+                "text": "bullet item"
+              }]
+            }
+          }]
+        },{
+          "title":"Lorem ipsum dolor sit amet",
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis."
+              }
+            }
+          },{
+            "path": "atoms-ordered-list",
+            "data": {
+              "orderedList": [{
+                "text": "bullet item"
+              },
+              { 
+                "text": "bullet item"
+              },
+              { 
+                "text": "bullet item"
+              }]
+            }
+          }]
+        }]
+      }
+    },
+    {
       "title":"Forms",
       "intro": "Here are some helpful downloads to get you started.",
       "id":"downloads",
