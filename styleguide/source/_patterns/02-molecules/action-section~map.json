@@ -1,0 +1,11 @@
+{
+  "actionSection": {
+    "title":"Google Map",
+    "intro": "",
+    "id":"google-map:",
+    "path":"molecules-action-map",
+    "data": {
+
+    }
+  }
+}
