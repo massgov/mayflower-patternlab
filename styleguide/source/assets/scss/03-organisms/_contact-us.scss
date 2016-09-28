@@ -1,6 +1,13 @@
 .ma__contact-us {
   padding-bottom: 50px;
 
+  // use in the Action Map component info window
+  // Handle bar template
+  &--infoWindow {
+    font-size: 1.125rem;
+    padding-bottom: 0;
+  }
+
   &__title {
     @include ma-column-heading("left");
 
@@ -24,6 +31,10 @@
       border-top: 1px solid;
       padding-top: 30px;
       margin-top: 30px;
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -50,6 +61,10 @@
 
     span {
       display: inline-block;
+
+      &:last-child {
+        display: block;
+      }
     }
   }
 }
