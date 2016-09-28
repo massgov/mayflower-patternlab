@@ -94,6 +94,10 @@ $action-finder-bp: 900px;
       font-size: 1.375rem;
       line-height: 1.363635;
       padding: 30px;
+
+      > span {
+        flex-basis: 100%;
+      }
     }
 
     .ma__callout-link {
