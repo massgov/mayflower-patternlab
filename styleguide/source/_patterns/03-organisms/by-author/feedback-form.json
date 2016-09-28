@@ -21,7 +21,7 @@
 
     "selectBox":{
       "label":"Type of Feedback",
-      "id":"color-select",
+      "id":"feedback-type",
       "options":[{
         "value":"design",
         "text":"Visual Feedback"
