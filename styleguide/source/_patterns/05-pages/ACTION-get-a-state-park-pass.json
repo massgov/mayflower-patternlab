@@ -417,6 +417,25 @@
       }
     },
     {
+      "title":"",
+      "intro": "",
+      "id":"",
+      "path": "molecules-action-image",
+      "data": {
+        "actionImage": {
+          "title": "This is an Optional Image Title",
+          "image": {
+            "alt": "16 x 9 image from your camera",
+            "width": "640",
+            "height": "360",
+            "src": "/assets/images/placeholder/640x360.png"
+          },
+          "caption": "This is an optional caption that can wrap to multiple lines.",
+          "source": "Optional Source"
+        }
+      }
+    },
+    {
       "title":"Forms",
       "intro": "Here are some helpful downloads to get you started.",
       "id":"downloads",

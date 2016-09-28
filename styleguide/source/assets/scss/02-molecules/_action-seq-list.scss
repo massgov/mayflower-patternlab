@@ -8,6 +8,7 @@ $action-seq-list-icon-border: 3px;
 
   &__item {
     list-style:none; // Disable the normal item numbering
+    margin-bottom: 28px;
     padding-left: 60px;
     position: relative;
 
@@ -24,6 +25,10 @@ $action-seq-list-icon-border: 3px;
         left: 0;
       text-align: center;
       width: 36px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 

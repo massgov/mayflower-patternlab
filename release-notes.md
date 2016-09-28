@@ -1,5 +1,11 @@
 # Mass Gov Release Notes
 
+## 0.4.0
+### Action Detail page modifications
+* MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
+* MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists 
+### Agency Page
+
 ## 0.3.0
 ### Level 0,1,2 pages - Action Funnel
 * MGVDU-53 - FE Dev: L0 Page (contains sub tickets)

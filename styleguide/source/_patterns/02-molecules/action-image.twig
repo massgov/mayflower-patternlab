@@ -1,0 +1,21 @@
+<section class="ma__action-image">
+  {% if actionImage.title %}
+  <h5 class="ma__action-image__title">{{actionImage.title}}</h5>
+  {% endif %}
+  <figure class="ma__action-image__figure">
+    <img 
+        class="ma__action-image__image"
+        alt="{{actionImage.image.alt}}" 
+        src="{{actionImage.image.src}}" 
+        height="{{actionImage.image.height}}" 
+        width="{{actionImage.image.width}}" />
+    {% if actionImage.caption %}
+      <figcaption class="ma__action-image__caption">
+        {{actionImage.caption}}
+      </figcaption>
+    {% endif %}
+    {% if actionImage.source %}
+      <div class="ma__action-image__source">Source: {{actionImage.source}}</div>
+    {% endif %}
+  </figure>
+</section>
