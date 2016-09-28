@@ -14,7 +14,11 @@
       width: 2.25em; // ma-underline-decorative override
     }
   }
-  
+
+  p {
+    margin-bottom: 28px;
+  }
+
 // List styles
   ul {
     list-style-type: disc;
@@ -29,7 +33,7 @@
     padding-left: 10px;
   }
 
-  ul ul, 
+  ul ul,
   ol ul {
       list-style-type: circle;
   }
@@ -39,7 +43,7 @@
   a {
     @include ma-link-underline;
     overflow-wrap: break-word;
-    word-wrap: break-word;  
+    word-wrap: break-word;
     word-break: break-word;
   }
 
