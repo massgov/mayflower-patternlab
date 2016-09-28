@@ -1,0 +1,12 @@
+<section class="ma__contact-us ma__contact-us--infoWindow">
+  <h3 class="ma__contact-us__name">{{name}}</h3>
+  <p class="ma__contact-us__phone-email">
+    <b>Main Phone:</b> <a class="ma__contact-us__phone" href="tel:+{{phone}}">{{phoneFormatted}}</a><br />
+    {{#if fax}}<b>Main Fax:</b> <a class="ma__contact-us__phone"  href="tel:+{{fax}}">{{faxFormatted}}</a><br />{{/if}}
+    <b>Email:</b> <a class="ma__contact-us__email" href="mailto:mass.parks@state.ma.us">{{email}}</a>
+  </p>
+  <p class="ma__contact-us__address">
+    <span>{{address}}{{#if address2}},</span> <span>{{address2}}{{/if}}</span>
+    <span>{{city}}, {{state}} {{zip}}</span>
+  </p>
+</section>

@@ -3,7 +3,8 @@
 ## 0.4.0
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
-* MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists 
+* MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
+* MGVDU-119 - FE Dev: Modifications to Action page: Map 
 ### Agency Page
 
 ## 0.3.0
