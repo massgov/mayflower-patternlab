@@ -18,7 +18,8 @@
     </div>
     <div class="ma__header__nav-container">
       <div class="ma__header__nav-search">
-        {% include "molecules-header-search" with {'placeholder':'Search'} %}
+        {% set headerSearch = {'placeholder':'Search','id':'nav-search'} %}
+        {% include "molecules-header-search" %}
       </div>
       <div class="ma__header__main-nav">
         {% include "molecules-main-nav" %}
