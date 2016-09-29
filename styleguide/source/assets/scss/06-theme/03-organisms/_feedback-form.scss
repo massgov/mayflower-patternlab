@@ -1,7 +1,17 @@
 .ma__feedback-form {
 
   input,
-  textarea {
+  textarea,
+  .ma__select-box__link {
+    background-color: rgba($c-white, 0.1);
+    color: $c-font-inverse;
+  }
+
+  .ma__input-radio label:before {
+    background-color: rgba($c-white, 0.1);
+  }
+  
+  .ma__input-radio input:checked ~ label:before {
     color: $c-font-inverse;
   }
 
@@ -10,40 +20,9 @@
     color: $c-font-inverse;
   }
 
-  &__container {
-    
-  }
-
   &__title {
     @include ma-border-decorative($c-theme-secondary-1,transparent,1);
     color: $c-font-inverse;
-  }
-
-  &__description {
-
-  }
-
-  &__name {
-
-  }
-
-  &__email {
-
-  }
-
-  &__feeback {
-
-  }
-
-  &__type {
-
-  }
-
-  &__permission {
-
-    .ma__input-radio input:checked ~ label:before {
-      color: $c-font-inverse;
-    }
   }
 
   &__controls {
