@@ -19,6 +19,11 @@ $featured-border-color: #89aac7;
 
   &__search {
 
+    input {
+      background-color: rgba($c-white, 0.1);
+      color: $c-font-inverse;
+    }
+
     button {
       color: $c-font-inverse;
 
@@ -80,4 +85,4 @@ $featured-border-color: #89aac7;
       }
     }
   }
-}
+}
