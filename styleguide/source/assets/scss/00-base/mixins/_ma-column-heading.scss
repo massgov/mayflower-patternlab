@@ -2,7 +2,7 @@
 // $c-bg is the color you want the title background to be
 // $c-page is the color of the page it is being rendered on
 
-@mixin ma-column-heading($side:"right",$c-bg:transparent,$c-page:white) {
+@mixin ma-column-heading($c-bg:transparent,$c-page:white) {
   $offset: 55px;
 
   @if($c-bg == transparent) {
@@ -16,10 +16,6 @@
     text-transform: uppercase;
     width: calc(100% + $offset);
 
-    @media ($bp-large-min) {
-      margin-bottom: 50px;
-    }
-
     &:after {
       content: "";
       height: 200%;
@@ -31,11 +27,12 @@
       width: 100%;
     }
 
-    @if($side == "right") {
+    .page-content & {
       padding-right: $offset;
 
       @media ($bp-large-min) {
         margin-right: -$offset + 20px;
+        margin-bottom: 50px;
       }
 
       @media($bp-x-large-min) {
@@ -46,7 +43,7 @@
 
     }
     // left (shows as right and then switches to left)
-    @else {
+    .sidebar & {
       @media ($bp-large-max) {
         padding-right: $offset;
       }
