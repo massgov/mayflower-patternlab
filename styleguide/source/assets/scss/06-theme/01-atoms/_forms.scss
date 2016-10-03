@@ -10,9 +10,9 @@
 
 
 input {
-  background-color: rgba($c-white,.1);
+  background-color: $c-white;
   border-color: rgba($c-bd-input,.5);
-  color: $c-font-inverse;
+  color: $c-font-base;
 
   &[data-valid ="is-invalid"] {
     border-color: red;
@@ -20,7 +20,7 @@ input {
 }
 
 textarea {
-  background-color: rgba($c-white,.1);
+  background-color: $c-white;
   border-color: rgba($c-bd-input,.5);
 
   &[data-valid ="is-invalid"] {
@@ -41,7 +41,7 @@ label {
   label {
 
     &:before {
-      background-color: rgba($c-white, 0.1);
+      background-color: $c-white;
       border-color: rgba($c-bd-input,.5);
       color: transparent;
     }
