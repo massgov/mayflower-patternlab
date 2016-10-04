@@ -29,5 +29,35 @@
       "href": "#",
       "text": "Download a Trail Map"
     }]
+  },
+
+  "contactUs": {
+    "title": "Additional Contacts",
+    "contacts":[{
+      "name": "Bascom Lodge",
+      "phone": "(617) 443-8765",
+      "phoneLink": "16174438765",
+      "fax": "",
+      "faxLink": "",
+      "email": "",
+      "address1": "555 Park Drive",
+      "address2": "",
+      "city": "North Hampton",
+      "state": "MA",
+      "zip": "02231"
+    },{
+      "name": "Museum",
+      "phone": "(617) 443-8765",
+      "phoneLink": "16174438765",
+      "fax": "",
+      "faxLink": "",
+      "email": "",
+      "address1": "555 Park Drive",
+      "address2": "",
+      "city": "North Hampton",
+      "state": "MA",
+      "zip": "02231"
+    }]
   }
+
 }
