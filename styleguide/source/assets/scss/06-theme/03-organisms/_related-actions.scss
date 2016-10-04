@@ -1,7 +1,7 @@
 .ma__related-actions {
 
   &__title {
-    @include ma-column-heading("",$c-bg-comp-title);
+    @include ma-column-heading($c-bg-comp-title);
     @include ma-font(700);
     color: $c-font-inverse;
   }
