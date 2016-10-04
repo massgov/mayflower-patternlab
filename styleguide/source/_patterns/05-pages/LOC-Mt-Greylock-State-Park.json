@@ -1,13 +1,16 @@
 {
   "COMMENT":"****PRECONTENT COMPONENTS****",
   
-  "breadcrumbs": [{
-    "text": "Home",
-    "href": "/"
-  },{
-    "text": "Mt Greylock State Park",
-    "href": "#"
-  }],
+  "breadcrumbs":{
+    "light": "true",
+    "links": [{
+      "text": "Home",
+      "href": "/"
+    },{
+      "text": "Mt Greylock State Park",
+      "href": "#"
+    }]
+  },
 
   "pageHeader": {
     "title": "Mt Greylock State Park",
