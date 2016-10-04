@@ -4,11 +4,10 @@
     {% if pageHeader.subTitle %}
       <h4 class="ma__page-header__sub-title">{{pageHeader.subTitle}}</h4>
     {% endif %}
-    {% if pageHeader.intro %}
+    {% if pageHeader.rteElements %}
       <div class="ma__page-header__intro">
-        <div class="ma__rich-text">
-          {{ pageHeader.intro | raw }}
-        </div>
+        {% set rteElements = pageHeader.rteElements %}
+        {% include "molecules-rich-text" %}
       </div>
     {% endif %}
     {% if pageHeader.headerTags.taxonomyTerms %}
