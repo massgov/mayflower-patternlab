@@ -114,6 +114,148 @@
           }
         }]
       }
+    },{
+      "title":"",
+      "intro": "",
+      "id":"",
+      "path": "molecules-action-map",
+      "data": {
+        "actionMap": {
+          "map": {
+            "center": {
+              "lat": 42.594129,
+              "lng": -73.183715
+            },
+            "zoom": 12
+          },
+          "markers": [{
+            "position": {
+              "lat": 42.554129,
+              "lng": -73.213715 
+            },
+            "label": "V",
+            "infoWindow": {
+              "name": "Visitor's Center",
+              "phone": "14134994262",
+              "fax": "",
+              "email": "mass.parks@state.ma.us",
+              "address": "30 Rockwell Road",
+              "address2": "",
+              "city": "Lanesborough",
+              "state": "MA",
+              "zip": "01237"
+            }
+          },{
+            "position": {
+              "lat": 42.636875,
+              "lng": -73.166921 
+            },
+            "label": "B",
+            "infoWindow": {
+              "name": "Bascom Lodge",
+              "phone": "14137431591",
+              "fax": "",
+              "email": "mail@bascomlodge.net",
+              "address": "30 Rockwell Road",
+              "address2": "",
+              "city": "Lanesborough",
+              "state": "MA",
+              "zip": "01237"
+            }
+          }]
+        }
+      }
+    },{
+      "title":"Activities",
+      "intro": "",
+      "id":"activities",
+      "path": "molecules-rich-text",
+      "data": {}
+    },{
+      "title":"Facilities",
+      "intro": "",
+      "id":"facilities",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "atoms-unordered-list",
+          "data": {
+            "unorderedList": [{ 
+              "text": "Vestibulum ornare feugiat sodales." 
+            },{ 
+              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+            },{ 
+              "text": "Nulla facilisi."
+            },{
+              "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+            },{
+              "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            }]
+          }
+        }]
+      }
+    },{
+      "title":"Acessibility",
+      "intro": "",
+      "id":"acessibility",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph" : {
+              "text": "Vestibulum ornare feugiat sodales. Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum. Nulla facilisi. Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui. Sed hendrerit sit amet nunc sit amet ultrices. Pellentesque malesuada faucibus ligula ac tincidunt."
+            }
+          }
+        },
+        {
+          "path": "atoms-unordered-list",
+          "data": {
+            "unorderedList": [{ 
+              "text": "Vestibulum ornare feugiat sodales." 
+            },{ 
+              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+            },{ 
+              "text": "Nulla facilisi."
+            },{
+              "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+            },{
+              "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            }]
+          }
+        }]
+      }
+    },{
+      "title":"Restrictions",
+      "intro": "",
+      "id":"restrictions",
+      "path": "molecules-rich-text",
+      "data": {
+        "rteElements": [{
+          "path": "atoms-unordered-list",
+          "data": {
+            "unorderedList": [{ 
+              "text": "Vestibulum ornare feugiat sodales." 
+            },{ 
+              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+            },{ 
+              "text": "Nulla facilisi."
+            },{ 
+              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+            },{ 
+              "text": "Nulla facilisi."
+            },{ 
+              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+            },{ 
+              "text": "Nulla facilisi."
+            },{
+              "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+            },{
+              "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            }]
+          }
+        }]
+      }
     }]
   },
 
@@ -140,8 +282,8 @@
     "title": "Additional Contacts",
     "contacts":[{
       "name": "Bascom Lodge",
-      "phone": "(617) 443-8765",
-      "phoneLink": "16174438765",
+      "phone": "(413) 743-1591",
+      "phoneLink": "14137431591",
       "fax": "",
       "faxLink": "",
       "email": "",
