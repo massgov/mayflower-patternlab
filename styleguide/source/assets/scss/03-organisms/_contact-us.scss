@@ -9,16 +9,7 @@
   }
 
   &__title {
-    @include ma-column-heading("left");
-
-    .sidebar & {
-      @include ma-column-heading("left");
-
-      // override
-      @media (min-width: 0px) {
-        margin-bottom: 30px;
-      }
-    }
+    @include ma-column-heading();
   }
 
   &__items {
@@ -41,6 +32,10 @@
   &__name {
     font-size: 1.25rem;
     line-height: 1.4;
+  }
+
+  &__contact {
+    margin-bottom: 1em;
   }
 
   &__phone,

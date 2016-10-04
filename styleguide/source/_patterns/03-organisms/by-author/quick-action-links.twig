@@ -1,0 +1,8 @@
+<section class="ma__quick-action-links">
+    <p>This component doesn't actually render. It is just providing links for JavaScript to consume so it can create the actual Quick Actions components in the sidebar and page content areas.</p>
+    {% for link in quickActions.links %}
+      <div class="js-quickaction-link"> 
+        <a href="{{link.href}}" target="{{link.target}}">{{link.text}}</a>
+      </div>
+    {% endfor %} 
+</section>
