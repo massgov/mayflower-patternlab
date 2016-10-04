@@ -18,7 +18,7 @@
   ul {
     @include ma-reset-list;
 
-    .pre-content & {
+    @media ($bp-medium-min) {
       border-top: 1px solid;
     }
   }
@@ -49,7 +49,7 @@
       }
     }
 
-    .post-content & {
+    @media ($bp-medium-max) {
       display: none;
 
       &:after {
@@ -81,9 +81,11 @@
   }
 }
 
-.ma__breadcrumbs--page {
-  .pre-content & ul {
-    border-top: none;
-    border-bottom: 1px solid;
+.ma__breadcrumbs--light {
+  ul {
+    @media ($bp-medium-min) {
+      border-top: none;
+      border-bottom: 1px solid;
+    }
   }
 }
