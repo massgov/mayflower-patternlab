@@ -12,6 +12,12 @@
     }]
   },
 
+  "headerAlert": {
+    "text": "Lots of Bears.",
+    "href": "#",
+    "target": "" 
+  },
+
   "pageHeader": {
     "title": "Mt Greylock State Park",
     "subTitle": "",
