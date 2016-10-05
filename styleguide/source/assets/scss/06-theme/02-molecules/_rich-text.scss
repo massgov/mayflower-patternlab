@@ -3,6 +3,10 @@
     @include ma-border-decorative($c-theme-primary-2);
   }
 
+  h5 {
+    @include ma-font(700);
+  }
+
   a:hover {
     border-bottom-color: rgba($c-font-link,.5);
   }
