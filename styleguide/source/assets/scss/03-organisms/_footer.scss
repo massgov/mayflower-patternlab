@@ -14,7 +14,7 @@
     position: fixed;
       bottom: 1.3125rem;
       right: 1.5625rem;
-    transition: visibility .5s, opacity .5s;
+    transition: all .5s;
     visibility: visible;
     z-index: $z-sticky-content;
 
