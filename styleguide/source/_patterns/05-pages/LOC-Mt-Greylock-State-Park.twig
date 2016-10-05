@@ -1,8 +1,10 @@
 {% extends 'templates-two-column' %}
 
 {% block preContent %}
+  {% include "organisms-header-alert" %}
   {% include "organisms-breadcrumbs" %}
   {% include "organisms-page-header" %}
+  {% include "organisms-location-banner" %}
 {% endblock %}
 {% block pageContent %}
   {% include "organisms-action-details" %}

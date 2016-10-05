@@ -1,13 +1,22 @@
 {
   "COMMENT":"****PRECONTENT COMPONENTS****",
-  
-  "breadcrumbs": [{
-    "text": "Home",
-    "href": "/"
-  },{
-    "text": "Mt Greylock State Park",
-    "href": "#"
-  }],
+
+  "headerAlert": {
+    "text": "Lots of Bears.",
+    "href": "#",
+    "target": ""
+  },
+
+  "breadcrumbs":{
+    "light": "true",
+    "links": [{
+      "text": "Home",
+      "href": "/"
+    },{
+      "text": "Mt Greylock State Park",
+      "href": "#"
+    }]
+  },
 
   "pageHeader": {
     "title": "Mt Greylock State Park",
@@ -16,7 +25,7 @@
       "path": "atoms-paragraph",
       "data": {
         "paragraph" : {
-          "text": "Visitor's Center<br />30 Rockwell Road, Lanesborough, MA 01237<br />413-499-4262"
+          "text": "Visitor's Center<br />30 Rockwell Road, Lanesborough, MA 01237<br />(413) 499-4262"
         }
       }
     },{
@@ -29,8 +38,59 @@
         }
       }
     }],
-    "headerTags": "" 
+    "headerTags": ""
   },
+
+  "locationBanner": {
+    "bgTitle":"Mt Greylock State Park",
+    "bgWide":"/assets/images/placeholder/1600x400.png",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "actionMap": {
+      "map": {
+        "center": {
+          "lat": 42.594129,
+          "lng": -73.183715
+        },
+        "zoom": 12
+      },
+      "markers": [{
+        "position": {
+          "lat": 42.554129,
+          "lng": -73.213715
+        },
+        "label": "V",
+        "infoWindow": {
+          "name": "Visitor's Center",
+          "phone": "14134994262",
+          "fax": "",
+          "email": "mass.parks@state.ma.us",
+          "address": "30 Rockwell Road",
+          "address2": "",
+          "city": "Lanesborough",
+          "state": "MA",
+          "zip": "01237"
+        }
+      },{
+        "position": {
+          "lat": 42.636875,
+          "lng": -73.166921
+        },
+        "label": "B",
+        "infoWindow": {
+          "name": "Bascom Lodge",
+          "phone": "14137431591",
+          "fax": "",
+          "email": "mail@bascomlodge.net",
+          "address": "30 Rockwell Road",
+          "address2": "",
+          "city": "Lanesborough",
+          "state": "MA",
+          "zip": "01237"
+        }
+      }]
+    }
+  },
+
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
@@ -61,8 +121,16 @@
           "data": {
             "statsCallout": {
               "pull": "right",
-              "stat": "Today",
-              "content": "6:15am - 7:45pm"
+              "stat": "today",
+              "content": "6:15 a.m. - 7:45 p.m."
+            }
+          }
+        },
+        {
+          "path": "atoms-heading-5",
+          "data": {
+            "heading5" : {
+                "text": "Park"
             }
           }
         },
@@ -70,7 +138,15 @@
           "path": "atoms-paragraph",
           "data": {
             "paragraph" : {
-              "text": "<b>Park</b><br />May - Sep: Sunrise - Sunset<br />Oct - April: 9am - 5pm"
+              "text": "May - September:<br />Sunrise - Sunset<br /><br />October - April:<br />9:00 a.m. - 5:00 p.m."
+            }
+          }
+        },
+        {
+          "path": "atoms-heading-5",
+          "data": {
+            "heading5" : {
+                "text": "Museum"
             }
           }
         },
@@ -78,7 +154,15 @@
           "path": "atoms-paragraph",
           "data": {
             "paragraph" : {
-              "text": "<b>Museum</b><br />Mon - Fri: 9am - 5pm<br />Sat: 12pm - 7pm"
+              "text": "Monday - Friday:<br />9:00 a.m. - 5:00 p.m.<br /><br />Saturday:<br />12:00 p.m. - 7:00 p.m."
+            }
+          }
+        },
+        {
+          "path": "atoms-heading-5",
+          "data": {
+            "heading5" : {
+                "text": "Beach"
             }
           }
         },
@@ -86,7 +170,7 @@
           "path": "atoms-paragraph",
           "data": {
             "paragraph" : {
-              "text": "<b>Beach</b><br />May - Sep: 7am - 6pm"
+              "text": "May - September:<br />7am - 6pm"
             }
           }
         }]
@@ -101,7 +185,7 @@
           "path": "atoms-paragraph",
           "data": {
             "paragraph" : {
-              "text": "<b>Parking Meters only accept Cerdit Cards.</b>"
+              "text": "<b>Parking Meters only accept Credit Cards.</b>"
             }
           }
         },
@@ -131,7 +215,7 @@
           "markers": [{
             "position": {
               "lat": 42.554129,
-              "lng": -73.213715 
+              "lng": -73.213715
             },
             "label": "V",
             "infoWindow": {
@@ -148,7 +232,7 @@
           },{
             "position": {
               "lat": 42.636875,
-              "lng": -73.166921 
+              "lng": -73.166921
             },
             "label": "B",
             "infoWindow": {
@@ -180,11 +264,11 @@
         "rteElements": [{
           "path": "atoms-unordered-list",
           "data": {
-            "unorderedList": [{ 
-              "text": "Vestibulum ornare feugiat sodales." 
-            },{ 
+            "unorderedList": [{
+              "text": "Vestibulum ornare feugiat sodales."
+            },{
               "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{ 
+            },{
               "text": "Nulla facilisi."
             },{
               "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
@@ -211,11 +295,11 @@
         {
           "path": "atoms-unordered-list",
           "data": {
-            "unorderedList": [{ 
-              "text": "Vestibulum ornare feugiat sodales." 
-            },{ 
+            "unorderedList": [{
+              "text": "Vestibulum ornare feugiat sodales."
+            },{
               "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{ 
+            },{
               "text": "Nulla facilisi."
             },{
               "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
@@ -234,19 +318,19 @@
         "rteElements": [{
           "path": "atoms-unordered-list",
           "data": {
-            "unorderedList": [{ 
-              "text": "Vestibulum ornare feugiat sodales." 
-            },{ 
+            "unorderedList": [{
+              "text": "Vestibulum ornare feugiat sodales."
+            },{
               "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{ 
+            },{
               "text": "Nulla facilisi."
-            },{ 
+            },{
               "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{ 
+            },{
               "text": "Nulla facilisi."
-            },{ 
+            },{
               "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{ 
+            },{
               "text": "Nulla facilisi."
             },{
               "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."

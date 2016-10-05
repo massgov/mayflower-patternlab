@@ -1,0 +1,34 @@
+.ma__location-banner {
+  @include clearfix;
+  margin-bottom: 45px;
+
+  &__image {
+    background-position: center top;
+    height: 400px;
+
+    @media ($bp-large-min) {
+      float: left;
+      width: calc(100% - #{$layout-sidebar-width} - 40px); //outer page padding
+    }
+
+    @media ($bp-x-large-min) {
+      width: 64%;
+    }
+  }
+
+  &__map {
+
+    @media ($bp-large-min) {
+      float: left;
+      width: $layout-sidebar-width + 40px; //outer page padding
+    }
+
+    @media ($bp-x-large-min) {
+      width: 36%;
+    }
+
+    .ma__action-map {
+      height: 400px;
+    }
+  }
+}
