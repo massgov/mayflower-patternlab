@@ -7,12 +7,12 @@
   }
 
   &__message {
-    
+
     a {
       color: $c-font-dark;
 
       &:hover {
-        border-color: $c-font-dark;
+        border-bottom-color: rgba($c-font-link-subtle,.5);
       }
     }
   }
