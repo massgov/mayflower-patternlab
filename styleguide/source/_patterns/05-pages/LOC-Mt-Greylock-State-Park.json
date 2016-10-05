@@ -34,7 +34,8 @@
         "link" : {
           "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
           "target": "_blank",
-          "text": "Directions"
+          "text": "Directions",
+          "chevron": "true"
         }
       }
     }],
