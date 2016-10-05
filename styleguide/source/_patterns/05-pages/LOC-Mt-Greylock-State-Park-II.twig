@@ -1,0 +1,19 @@
+{% extends 'templates-two-column' %}
+
+{% block preContent %}
+  {% include "organisms-header-alert" %}
+  {% include "organisms-breadcrumbs" %}
+  {% include "organisms-page-header" %}
+  {% include "organisms-location-banner" %}
+{% endblock %}
+{% block pageContent %}
+  {% include "organisms-action-details" %}
+{% endblock %}
+{% block sidebar %}
+  {% include "organisms-quick-action-links" %}
+  {% include "organisms-contact-us" %}
+  {% include "organisms-action-events" %}
+{% endblock %}
+{% block postContent %}
+  {% include "organisms-breadcrumbs" %}
+{% endblock %}
