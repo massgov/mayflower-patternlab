@@ -1,0 +1,13 @@
+<section class="ma__header-alert">
+  <div class="ma__header-alert__container">
+    <span class="ma__header-alert__label">alert!</span>
+    <span class="ma__header-alert__message">
+      {% if headerAlert.href %}
+        {% set link = headerAlert %}
+        {% include "atoms-link" %}
+      {% else %}
+        {{headerAlert.text}}
+      {% endif %}
+    </span>
+  </div>
+</section>

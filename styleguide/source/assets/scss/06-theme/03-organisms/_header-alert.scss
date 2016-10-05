@@ -1,0 +1,19 @@
+.ma__header-alert {
+  background-color: $c-theme-secondary-1;
+
+  &__label {
+    @include ma-font(700);
+    color: rgba($c-font-dark, .7);
+  }
+
+  &__message {
+    
+    a {
+      color: $c-font-dark;
+
+      &:hover {
+        border-color: $c-font-dark;
+      }
+    }
+  }
+}

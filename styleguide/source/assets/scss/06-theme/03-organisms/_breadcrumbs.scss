@@ -1,6 +1,6 @@
 .ma__breadcrumbs {
 
-  .pre-content & {
+  @media ($bp-medium-min)  {
     background-color: $c-bg-section;
 
     ul {
@@ -17,7 +17,7 @@
       }
     }
 
-    .post-content & {
+    @media ($bp-medium-max) {
 
       &:nth-last-child(2) {
 
@@ -29,13 +29,11 @@
   }
 }
 
-.ma__breadcrumbs--page {
+.ma__breadcrumbs--light {
 
-  .pre-content & {
-    background-color: transparent;
+  background-color: transparent;
 
-    ul {
-      border-bottom-color: $c-bd-divider;
-    }
+  ul {
+    border-bottom-color: $c-bd-divider;
   }
 }
