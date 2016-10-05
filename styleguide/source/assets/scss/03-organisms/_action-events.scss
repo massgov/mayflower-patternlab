@@ -1,0 +1,44 @@
+.ma__action-events {
+  padding-bottom: 50px;
+
+  &__title {
+    @include ma-column-heading;
+  }
+
+  &__items {
+    @include ma-reset-list;
+  }
+
+  &__item {
+
+    & + & {
+      border-top: 1px solid;
+      margin-top: 30px;
+      padding-top: 30px;
+    }
+  }
+
+  &__name {
+
+    a {
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+  }
+
+  &__more {
+    border-top: 1px solid;
+    margin-top: 30px;
+    padding-top: 15px;
+    text-align: right;
+
+    a {
+      @include ma-chevron;
+      @include ma-link-underline;
+    }
+  }
+}
