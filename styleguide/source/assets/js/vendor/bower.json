@@ -19,9 +19,12 @@
     "es6-polyfill": "./es6-polyfill.js",
     "svg4everybody": "~2.0.3",
     "polyfill-init": "./polyfill-init.js",
+    "picturefill": "./picturefill.min.js",
     "jquery.fitvids": "fitvids#^1.1.0",
     "jquery": "^3.1.0",
-    "handlebars": "^4.0.5"
+    "handlebars": "^4.0.5",
+    "lazysizes": "^2.0.2",
+    "slick-carousel": "^1.6.0"
   },
   "overrides": {
     "es5-shim": {
