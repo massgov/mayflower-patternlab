@@ -1,0 +1,14 @@
+<section class="ma__banner-carousel">
+  <div class="ma__banner-carousel__controls js-banner-carousel-controls"></div>
+  <div class="ma__banner-carousel__slides js-banner-carousel">
+    {% for slide in bannerCarousel.slides %}
+      <div class="ma__banner-carousel__slide">
+        <picture>
+          <source srcset="{{slide.imageLarge}}">
+          <img srcset="{{slide.image}}" alt="{{slide.alt}}">
+        </picture>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
