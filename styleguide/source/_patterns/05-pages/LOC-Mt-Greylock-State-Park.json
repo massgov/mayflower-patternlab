@@ -171,7 +171,7 @@
           "path": "atoms-paragraph",
           "data": {
             "paragraph" : {
-              "text": "May - September:<br />7am - 6pm"
+              "text": "May - September:<br />7 a.m. - 6 p.m."
             }
           }
         }]
@@ -400,7 +400,7 @@
         "href": "#",
         "text": "Horse Party"
       },
-      "date":"June 24, 2017, 12:00pm",
+      "date":"June 24, 2017, 12:00 p.m.",
       "description":"This is a description of the event that will happen at a future date"
     },{
       "name": {
@@ -408,7 +408,7 @@
         "href": "#",
         "text": "Full Moon Hike"
       },
-      "date":"June 24, 2017, 9:00pm",
+      "date":"June 24, 2017, 9:00 p.m.",
       "description":"This is a description of the event that will happen at a future date"
     }]
   }
