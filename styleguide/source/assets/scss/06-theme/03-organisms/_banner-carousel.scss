@@ -1,42 +1,25 @@
 .ma__banner-carousel {
 
-  &__controls {
 
-    .slick-arrow {
-      
-      &:after {
-        border-color: $c-theme-primary-1;
-        box-shadow: 1px 1px 2px rgba($c-theme-primary-1,.3);
-      }
+  .slick-arrow {
+    
+    &:after {
+      border-color: $c-white;
     }
 
-    .slick-prev {
-
-    }
-
-    .slick-next {
-
-    }
-
-    .slick-dots {
-
-      li {
-
-      }
-
-      button {
-        background-color: rgba($c-theme-primary-1,.2);
-        border-color: $c-theme-primary-1;
-      }
-
-      .slick-active {
-
-        button {
-          background-color: rgba($c-theme-primary-1,.5);
-        }
-      }
+    &:before {
+      background-color: rgba($c-theme-primary-1,.5);
     }
   }
+
+  .slick-prev {
+
+  }
+
+  .slick-next {
+
+  }
+
 
   &__slide {
 
