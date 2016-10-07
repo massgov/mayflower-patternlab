@@ -3,13 +3,13 @@
 //   outline-style: solid;
 
 //   // WebKit gets its native focus styles.
-  
+
 //   @media (-webkit-min-device-pixel-ratio:0) {
 //     outline-style: auto;
 //   }
 // }
 
-// WARNING: avoid nesting of elements, 
+// WARNING: avoid nesting of elements,
 // because it makes them harder to override
 
 body {
@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.75rem; 
+  font-size: 2.75rem;
   line-height: 1.07;
 
   @media ($bp-medium-min){
@@ -60,7 +60,7 @@ h1 {
   }
 
   @media ($bp-x-large-min){
-    font-size: 3.625rem; 
+    font-size: 3.625rem;
   }
 }
 
@@ -75,12 +75,12 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
-  line-height: 1.214287; 
+  line-height: 1.214287;
 }
 
 h4 {
   font-size: 1.375rem;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 h5 {
@@ -94,3 +94,6 @@ h6 {
 
 // end heading styles
 
+.visually-hidden {
+  @include ma-visually-hidden;
+}
