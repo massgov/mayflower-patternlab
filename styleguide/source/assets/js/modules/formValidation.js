@@ -44,10 +44,10 @@ export default function (window,document,$,undefined) {
         // show the form error message 
         // or blink the message if it is already visible
         $form.find('.js-error-msg')
-          .removeClass('show-error');
+          .attr('hidden',true);
         setTimeout(function() {
           $form.find('.js-error-msg')
-            .addClass('show-error');
+            .removeAttr('hidden');
           },100);
       }
     });
