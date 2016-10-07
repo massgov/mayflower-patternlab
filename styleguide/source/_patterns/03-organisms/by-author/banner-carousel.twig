@@ -4,7 +4,7 @@
     {% for slide in bannerCarousel.slides %}
       <div class="ma__banner-carousel__slide">
         <picture>
-          <source srcset="{{slide.imageLarge}}">
+          <source srcset="{{slide.imageLarge}}" media="(min-width: 801px)">
           <img srcset="{{slide.image}}" alt="{{slide.alt}}">
         </picture>
       </div>
