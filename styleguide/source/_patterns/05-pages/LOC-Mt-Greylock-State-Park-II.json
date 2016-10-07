@@ -2,7 +2,7 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "headerAlert": {
-    "text": "Lots of Bears.",
+    "text": "There's a hole in front of the door. Beware!",
     "href": "#",
     "target": ""
   },
@@ -42,56 +42,25 @@
     "headerTags": ""
   },
 
-  "locationBanner": {
-    "bgTitle":"Mt Greylock State Park",
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "actionMap": {
-      "map": {
-        "center": {
-          "lat": 42.594129,
-          "lng": -73.183715
-        },
-        "zoom": 12
-      },
-      "markers": [{
-        "position": {
-          "lat": 42.554129,
-          "lng": -73.213715
-        },
-        "label": "V",
-        "infoWindow": {
-          "name": "Visitor's Center",
-          "phone": "14134994262",
-          "fax": "",
-          "email": "mass.parks@state.ma.us",
-          "address": "30 Rockwell Road",
-          "address2": "",
-          "city": "Lanesborough",
-          "state": "MA",
-          "zip": "01237"
-        }
-      },{
-        "position": {
-          "lat": 42.636875,
-          "lng": -73.166921
-        },
-        "label": "B",
-        "infoWindow": {
-          "name": "Bascom Lodge",
-          "phone": "14137431591",
-          "fax": "",
-          "email": "mail@bascomlodge.net",
-          "address": "30 Rockwell Road",
-          "address2": "",
-          "city": "Lanesborough",
-          "state": "MA",
-          "zip": "01237"
-        }
-      }]
-    }
+  "bannerCarousel": {
+    "slides":[{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    },{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    },{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    },{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    }]
   },
-
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
