@@ -1,69 +1,80 @@
 .ma__banner-carousel {
   position: relative;
 
-  &__controls {
-    max-width: 100%;
-    padding: 5px 45px;
+  .slick-arrow {
+    @include ma-chevron;
+    @include ma-button-reset;
+    font-size: 1rem;
+    height: 100%;
     position: absolute;
       top: 0;
-      left: 50%;
-    transform: translateX(-50%);
+    width: 60px;
     z-index: 1;
 
-    .slick-arrow {
-      @include ma-chevron;
-      @include ma-button-reset;
-      font-size: 1rem;
-      line-height: 40px;
+    @media ($bp-page-width-max) {
+
+    }
+
+    @media ($bp-page-width-min) {
+      min-width: 60px;
+      width: calc((100vw - #{$max-width} + 40px) / 2);
+    }
+    
+    &:after {
+      margin-left: 0;
+      margin-top: -5px;
+      border-width: 6px;
+      height: 1rem;
       position: absolute;
-        top: 5px;
-      text-align: center;
-      width: 40px;
-      
-      &:after {
-        margin-left: 0;
-      }
+        top: 50%;
+      width: 1rem;
     }
 
-    .slick-prev {
+    &:before {
+      content:"";
+      height: 60px;
+      position: absolute;
+        top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &:before {
       left: 0;
-      transform: rotate(180deg);
     }
 
-    .slick-next {
+    &:after {
+      left: 14px;
+      transform: translateY(-50%) rotate(135deg);
+    }
+  }
+
+  .slick-next {
+    right: 0;
+
+    &:before {
       right: 0;
     }
 
-    .slick-dots {
-      @include ma-reset-list;
-      @include ma-valign-block;
-      font-size: 0;
-      height: 40px;
-
-      li {
-        display: inline-block;
-        padding: 0 5px;
-        vertical-align: middle;
-      }
-
-      button {
-        @include ma-button-reset;
-        border: 2px solid;
-        border-radius: 50%;
-        height: 1rem;
-        width: 1rem;
-      }
-
-      .slick-active {
-
-      }
+    &:after {
+      right: 22px;
+      transform: translateY(-50%) rotate(-45deg);
     }
+  }
+
+  &__slides {
+    @include clearfix;
   }
 
   &__slide {
     display: none;
     float: left;
     font-size: 0;
+    width: 100%;
 
     &:first-child,
     .slick-slider & {
