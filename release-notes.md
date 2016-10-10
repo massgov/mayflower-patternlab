@@ -5,7 +5,17 @@
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
 * MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
 * MGVDU-119 - FE Dev: Modifications to Action page: Map 
-### Agency Page
+* MGVDU-137 - FE Dev: Modifications to Action page: OR Lists 
+* MGVDU-139 - FE Dev: Action Page Header
+
+### Location Page
+* MGVDU-174 - Component: Location Hero Banner
+* MGVDU-171 - Component: Alert
+* MGVDU-175 - Component: Upcoming Events
+
+### Pilot Page
+* MGYDU-87 - Feedback Form
+
 
 ## 0.3.0
 ### Level 0,1,2 pages - Action Funnel
