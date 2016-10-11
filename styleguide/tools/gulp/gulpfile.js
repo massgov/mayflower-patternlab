@@ -30,9 +30,10 @@ var defaults = {
     dest: path.resolve(__dirname, "../../public/assets"),
     patternLabRoot: path.resolve(__dirname, "../../"),
     rootSite: path.resolve(__dirname, "../../public"),
-    tasks: ["patternlab", "copy", "js", "css", "bower", "svg-sprite"],
+    tasks: ["copy", "js", "css", "bower", "svg-sprite"],
     env: "development", // "development", "production", "local"
     watch: false,
+    patternlab: false,
     browserSync: false
 };
 
@@ -45,6 +46,7 @@ gulp.task("default", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : true,
+        patternlab: true,
         browserSync: true
     });
 
@@ -60,6 +62,7 @@ gulp.task("prod", function(){
     var config = Object.assign({}, defaults, {
         env   : "production",
         watch : false,
+        patternlab: false,
         browserSync: false
     });
 
@@ -75,6 +78,7 @@ gulp.task("build", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : false,
+        patternlab: true,
         browserSync: false
     });
 
