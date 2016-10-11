@@ -179,10 +179,6 @@ var build = module.exports.build = function build(_config) {
     config.local = fileExists(localJs) ? require(localJs) : {};
 
 
-    if(config.patternlab) {
-        config.tasks.push('patternlab');
-    }
-
     //  loadTasks: given an array of tasks, require them, and pass params
     config.tasks.forEach(function(name) {
         // console.log("loading task: ", name);
