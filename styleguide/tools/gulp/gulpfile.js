@@ -46,8 +46,8 @@ gulp.task("default", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : true,
-        patternlab: true,
-        browserSync: true
+        browserSync : true,
+        tasks : defaults.tasks.concat("patternlab")
     });
 
     quench.build(config);
@@ -62,7 +62,6 @@ gulp.task("prod", function(){
     var config = Object.assign({}, defaults, {
         env   : "production",
         watch : false,
-        patternlab: false,
         browserSync: false
     });
 
@@ -78,8 +77,8 @@ gulp.task("build", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : false,
-        patternlab: true,
-        browserSync: false
+        browserSync: false,
+        tasks : defaults.tasks.concat("patternlab")
     });
 
     quench.build(config);
