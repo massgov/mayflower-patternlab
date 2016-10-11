@@ -33,7 +33,6 @@ var defaults = {
     tasks: ["copy", "js", "css", "bower", "svg-sprite"],
     env: "development", // "development", "production", "local"
     watch: false,
-    patternlab: false,
     browserSync: false
 };
 
