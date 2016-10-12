@@ -13,8 +13,8 @@
 // because it makes them harder to override
 
 body {
-  font-size: 1.125rem;
-  line-height: 1.67;
+  font-size: 1.375rem;
+  line-height: 1.5;
 }
 
 a {
@@ -48,19 +48,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 3rem;
   line-height: 1.07;
 
   @media ($bp-medium-min){
-    font-size: 3rem;
-  }
-
-  @media ($bp-large-min){
     font-size: 3.25rem;
   }
 
+  @media ($bp-large-min){
+    font-size: 4rem;
+  }
+
   @media ($bp-x-large-min){
-    font-size: 3.625rem;
+    font-size: 4.375rem;
   }
 }
 
@@ -74,22 +74,22 @@ h2 {
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2.188rem;
   line-height: 1.214287;
 }
 
 h4 {
-  font-size: 1.375rem;
+  font-size: 1.813rem;
   line-height: 1.5;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1.625rem;
   line-height: 1.5;
 }
 
 h6 {
-  font-size: 1.125rem;
+  font-size: 1.4rem;
 }
 
 // end heading styles

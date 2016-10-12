@@ -3,7 +3,7 @@
 // $gutter: 20px;
 
 .ma__action-details {
-  
+
   &__title {
     @include ma-column-heading();
   }
@@ -16,7 +16,7 @@
     }
 
     @media ($bp-x-large-min) {
-      margin-left: $column-with-gutter * 2; 
+      margin-left: $column-with-gutter * 2;
     }
   }
 
@@ -40,7 +40,7 @@
         top: 0;
       width: 160px;
     }
-    
+
     @media ($bp-x-large-min) {
       margin-left: -$column-with-gutter * 2;
       width: $column-with-gutter * 2;
@@ -70,7 +70,7 @@
     }
 
     &.is-open {
-      
+
       a {
         display: block;
       }
@@ -82,13 +82,12 @@
 
     a {
       display: none;
-      font-size: 1rem;
-      line-height: 1.25;
+      font-size: 1.25rem;
+      line-height: 1.2;
       padding: 10px 15px;
 
       @media ($bp-medium-min) {
         display: block;
-        line-height: 1.63;
         padding: 0;
         padding-bottom: 15px;
       }
