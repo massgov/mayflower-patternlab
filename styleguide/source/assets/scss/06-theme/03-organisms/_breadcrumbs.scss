@@ -12,7 +12,6 @@
 
     &:last-child {
       a {
-        @include ma-font(400);
         color: $c-font-base;
       }
     }

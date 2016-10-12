@@ -12,8 +12,8 @@ html[data-zoom="zoom-large"] {
 
   @media ($bp-medium-max) {
     display: none;
-  }  
-  
+  }
+
   &__normal,
   &__medium,
   &__large {
@@ -29,9 +29,9 @@ html[data-zoom="zoom-large"] {
       display: block;
       line-height: 1.5;
       text-align: center;
-      width: 1.5em;     
+      width: 1.5em;
     }
-    
+
     input:focus + span {
       outline-width: 2px;
       outline-style: solid;
@@ -46,14 +46,17 @@ html[data-zoom="zoom-large"] {
   }
 
   &__normal {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
+    margin-bottom: 0;
   }
 
   &__medium {
-    font-size: 1.438rem;
+    font-size: 1.688rem;
+    margin-bottom: 0;
   }
 
   &__large {
-    font-size: 1.75rem;
+    font-size: 2rem;
+    margin-bottom: 0;
   }
 }

@@ -36,7 +36,7 @@ $utility-nav-height: 43px;
 
   &__link {
     display: block;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.45;
 
     @media ($bp-medium-max) {
@@ -140,11 +140,11 @@ $utility-nav-height: 43px;
 
     span {
       display: inline-block;
-      font-size: 0.75rem;
+      font-size: 1rem;
       margin-right: .45em;
       text-transform: uppercase;
       vertical-align: middle;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
     }
 
     span[role="presentation"] {
@@ -156,7 +156,7 @@ $utility-nav-height: 43px;
   }
 
   &__content-title {
-    font-size: 1.375rem;
+    font-size: 1.625rem;
     line-height: 1.45;
     padding-bottom: 20px;
     position: relative;
@@ -173,6 +173,7 @@ $utility-nav-height: 43px;
 
     & > svg {
       height: 20px;
+      margin-right: 10px;
       width: 20px;
 
       &.svg-login {
