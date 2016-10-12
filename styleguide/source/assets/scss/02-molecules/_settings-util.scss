@@ -12,7 +12,7 @@
       display: table-cell;
       margin-bottom: 0;
       vertical-align: middle;
-      width: 135px;
+      width: 150px;
     }
   }
 
@@ -51,6 +51,7 @@
       &__label {
         display: block;
         line-height: 1.25;
+        margin-bottom: 0;
         opacity: .7;
 
         @media ($bp-x-large-min) {
@@ -59,7 +60,7 @@
       }
 
       &__link {
-        font-size: 1rem;
+        font-size: 1.25rem;
       }
     }
   }
@@ -100,7 +101,7 @@
     button {
       @include ma-button-reset;
       @include ma-link-underline;
-      font-size: 1rem;
+      font-size: 1.125rem;
       white-space: nowrap;
 
       span,
