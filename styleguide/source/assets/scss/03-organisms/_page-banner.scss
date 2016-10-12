@@ -91,7 +91,7 @@ $page-banner-small: '.ma__page-banner--small';
 
   &__title {
     flex-grow: 1;
-    font-size: 2.75em;
+    font-size: 4rem;
     line-height: 1.05;
     margin-bottom: 0;
     vertical-align: middle;
@@ -101,16 +101,15 @@ $page-banner-small: '.ma__page-banner--small';
     }
 
     @media ($bp-medium-min){
-      font-size: 3.75em;
       width: calc(100% - #{$page-banner-icon-width});
     }
 
     @media ($bp-large-min){
-      font-size: 4.25em;
+      font-size: 4.625rem;
     }
 
     @media ($bp-x-large-min){
-      font-size: 4.625em;
+      font-size: 5.125rem;
     }
   }
 

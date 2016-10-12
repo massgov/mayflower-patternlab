@@ -16,9 +16,10 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
 
     @media ($bp-medium-min) {
       display: table-cell;
+      line-height: 1.3;
       margin-bottom: 0;
       vertical-align: middle;
-      width: 300px;
+      width: 250px;
     }
 
     @media ($bp-login-util-medium-min) {
@@ -67,7 +68,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       font-size: 1.375rem;
       line-height: 1.25;
       margin-bottom: .5em;
-      padding: 15px;
+      padding: 10px;
       padding-right: 2.5em;
       position: relative;
       text-align: left;
@@ -77,6 +78,14 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
         display: inline-block;
         margin-left: 15px;
         margin-bottom: 0;
+      }
+
+      @media ($bp-large-min) {
+        display: inline-block;
+        margin-left: 15px;
+        margin-bottom: 0;
+        padding: 10px;
+        padding-right: 2.5em;
       }
 
       &:hover {

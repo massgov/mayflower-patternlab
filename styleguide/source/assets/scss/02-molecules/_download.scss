@@ -8,15 +8,15 @@
 
   &__title {
     float: left;
-    font-size: 1.125rem;
+    font-size: 1.375rem;
     width: calc(100% - 66px);
 
     a {
       @include ma-link-underline;
     }
-    
+
     span {
-      font-size: .875rem;
+      font-size: 1rem;
       line-height: 2.14;
       white-space: nowrap;
     }

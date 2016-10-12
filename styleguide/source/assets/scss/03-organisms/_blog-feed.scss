@@ -27,7 +27,7 @@
     margin-bottom: 30px;
 
     @media ($bp-large-min) {
-      @include span-columns(6);
+      @include span-columns(3 of 6);
       @include omega(2n);
       margin-bottom: 0;
     }
@@ -68,7 +68,8 @@
   }
 
   &__link {
-    margin-bottom: .8em;
+    font-size: 1.625rem;
+    margin-bottom: .5em;
   }
 
   &__description {

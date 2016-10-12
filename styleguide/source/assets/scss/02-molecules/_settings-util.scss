@@ -12,7 +12,7 @@
       display: table-cell;
       margin-bottom: 0;
       vertical-align: middle;
-      width: 150px;
+      width: 140px;
     }
   }
 
@@ -37,11 +37,10 @@
 
     .ma__dropdown {
 
-
       @media ($bp-medium-min) {
         border-left: 1px solid;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 10px;
 
         &__items {
           left: 30px;
