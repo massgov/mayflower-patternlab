@@ -1,4 +1,5 @@
 .ma__banner-carousel {
+  margin-bottom: 45px;
   position: relative;
 
   .slick-arrow {
@@ -19,7 +20,7 @@
       min-width: 40px;
       width: calc((100vw - #{$max-width} + 40px) / 2);
     }
-    
+
     &:after {
       margin-left: 0;
       margin-top: -5px;
@@ -107,5 +108,5 @@
     img {
       width: 100%;
     }
-  } 
+  }
 }

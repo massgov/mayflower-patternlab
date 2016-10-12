@@ -121,9 +121,9 @@ body {
 
   &__back-button {
     @include ma-button-reset;
-    font-size: .875rem;
+    font-size: 1rem;
     height: 33px;
-    letter-spacing: .08em;
+    letter-spacing: .1em;
     margin-left: 20px;
     padding-left: 20px;
     position: fixed;
@@ -163,9 +163,9 @@ body {
   &__menu-button {
     background-color: transparent;
     border: none;
-    font-size: .875rem;
+    font-size: 1rem;
     height: 35px;
-    letter-spacing: .08em;
+    letter-spacing: .1em;
     line-height: 35px;
     margin-top: 2px;
     padding-right: 30px;
@@ -253,4 +253,3 @@ body {
     }
   }
 }
-
