@@ -89,7 +89,7 @@
       @media ($bp-medium-min) {
         display: block;
         padding: 0;
-        padding-bottom: 15px;
+        padding-bottom: 12px;
       }
 
       &.is-active, {
@@ -100,7 +100,7 @@
     @media ($bp-medium-min) {
       a + a {
         border-top: 1px solid;
-        padding-top: 15px;
+        padding-top: 12px;
       }
     }
 

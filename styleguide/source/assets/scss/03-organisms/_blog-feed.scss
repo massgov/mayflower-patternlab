@@ -27,7 +27,7 @@
     margin-bottom: 30px;
 
     @media ($bp-large-min) {
-      @include span-columns(6);
+      @include span-columns(3 of 6);
       @include omega(2n);
       margin-bottom: 0;
     }
@@ -51,7 +51,7 @@
   }
 
   &__date {
-    font-size: 1.188rem;
+    font-size: 1.375rem;
     line-height: 1.79;
     padding: 0 10px;
     position: absolute;
@@ -68,11 +68,12 @@
   }
 
   &__link {
-    margin-bottom: .8em;
+    font-size: 1.625rem;
+    margin-bottom: .5em;
   }
 
   &__description {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   &__view-all {
@@ -83,7 +84,7 @@
       @include ma-link-underline;
       display: inline-block;
       padding-bottom: 1px;
-      
+
       &:after {
         height: .5em;
         width: .5em;

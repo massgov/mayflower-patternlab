@@ -1,0 +1,38 @@
+.ma__location-header {
+  @include ma-container;
+
+  &__inner {
+    position: relative;   
+  }
+
+  .ma__page-header {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__title {
+      margin-bottom: .25em;
+    }
+
+    &__intro {
+
+      p {
+        margin-bottom: .25em;
+      }
+    }
+  }
+
+  .ma__location-icons {
+    padding-bottom: 40px;
+
+    @media ($bp-large-min){
+      padding-top: 75px;
+      position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @media ($bp-x-large-min){
+      padding-top: 85px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.ma__location-icons {
+  @include clearfix;
+  max-width: $layout-sidebar-width;
+  width: 100%;
+
+  &__item {
+    @include span-columns(1 of 4);
+    @include omega(4n);
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  &__icon {
+    height: 40px;
+    margin-bottom: 18px;
+    text-align: center;
+
+    & > svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 0.688rem;
+  }
+}

@@ -25,7 +25,7 @@
       "path": "atoms-paragraph",
       "data": {
         "paragraph" : {
-          "text": "Visitor's Center<br />30 Rockwell Road, Lanesborough, MA 01237<br />(413) 499-4262"
+          "text": "Visitor's Center, 30 Rockwell Road, Lanesborough, MA 01237"
         }
       }
     },{
@@ -40,6 +40,22 @@
       }
     }],
     "headerTags": ""
+  },
+
+  "locationIcons": {
+    "icons": [{
+      "path":"atoms-svg-loc-mt-park",
+      "name":"Mountain Park"
+    },{
+      "path":"atoms-svg-loc-historic-site",
+      "name":"Historic Site"
+    },{
+      "path":"atoms-svg-loc-handicap-accessible",
+      "name":"Handicap Accessible"
+    },{
+      "path":"atoms-svg-loc-dogs-allowed",
+      "name":"Dogs Allowed"
+    }]
   },
 
   "locationBanner": {
