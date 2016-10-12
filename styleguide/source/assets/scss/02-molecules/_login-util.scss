@@ -80,14 +80,6 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
         margin-bottom: 0;
       }
 
-      @media ($bp-large-min) {
-        display: inline-block;
-        margin-left: 15px;
-        margin-bottom: 0;
-        padding: 10px;
-        padding-right: 2.5em;
-      }
-
       &:hover {
         opacity: .8;
       }
