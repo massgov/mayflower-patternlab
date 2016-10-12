@@ -28,7 +28,7 @@
       transform: rotate(-90deg);
       transform-origin: center center;
     }
-    
+
     span {
       display: block;
       text-align: center;
@@ -70,7 +70,7 @@
   }
 
   &__copyright {
-    font-size: 0.813rem;
+    font-size: 1.063rem;
     line-height: 1.54;
 
     @media ($bp-large-max) {
