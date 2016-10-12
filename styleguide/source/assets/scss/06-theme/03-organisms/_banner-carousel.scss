@@ -10,6 +10,10 @@
     &:before {
       background-color: rgba($c-theme-primary-1,.5);
     }
+
+    &:hover:before {
+      background-color: $c-theme-primary-1;      
+    }
   }
 
   .slick-prev {
@@ -18,6 +22,17 @@
 
   .slick-next {
 
+  }
+
+  .slick-dots {
+    
+    button {
+      background-color: $c-theme-primary-1;
+    }
+
+    .slick-active button {
+      background-color: $c-white;
+    }
   }
 
 
