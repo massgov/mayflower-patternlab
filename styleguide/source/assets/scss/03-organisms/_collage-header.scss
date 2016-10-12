@@ -87,24 +87,25 @@ $collage-header-bp: "min-width: 700px";
     width: calc(100% + 40px);
 
     h1 {
+      font-size: 4rem;
       margin-bottom: 0;
     }
 
     @media ($collage-header-bp) {
       margin-bottom: 50px;
-      padding-top: 70px;
-      padding-bottom: 75px;
+      padding-top: 50px;
+      padding-bottom: 55px;
 
       h1 {
-        font-size: 3.25rem;
+        font-size: 4rem;
         width: 480px;
 
         @media ($bp-medium-min) {
-          font-size: 3.625rem;
+          font-size: 4.625rem;
           width: 550px;
         }
         @media ($bp-large-min) {
-          font-size: 4.625rem;
+          font-size: 5.125rem;
           width: 620px;
         }
       }
@@ -124,12 +125,8 @@ $collage-header-bp: "min-width: 700px";
     @media ($collage-header-bp) {
       width: 370px;
 
-      h3 {
-        line-height: 1.43;
-      }
-
       p {
-        font-size: 1.375rem;
+        font-size: 1.625rem;
       }
     }
   }

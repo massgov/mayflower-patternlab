@@ -13,8 +13,8 @@
 
     & + & {
       border-top: 1px solid;
-      padding-top: 30px;
-      margin-top: 30px;
+      padding-top: 20px;
+      margin-top: 20px;
     }
   }
 
@@ -29,9 +29,9 @@
   }
 
   &__description {
-    font-size: 1rem;
-    line-height: 1.75;
-    padding-top: 20px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding-top: 5px;
 
     & > :last-child {
       margin-bottom: 0;
