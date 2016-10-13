@@ -1,5 +1,12 @@
 # Mass Gov Release Notes
 
+## 0.5.0
+### Location Page
+* MGVDU-172 - Component: Hero Banner Carousel (Location Page)
+* MGVDU-204 - FE Dev: Location - Wait Time Indicator
+* MGVDU-203 - FE Dev: Location - Icon Indicators
+
+
 ## 0.4.0
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
