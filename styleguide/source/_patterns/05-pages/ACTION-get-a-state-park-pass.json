@@ -501,6 +501,45 @@
       }
     },
     {
+      "title":"Activities",
+      "intro": "",
+      "path":"molecules-action-activities",
+      "id": "activities",
+      "data": {
+        "activities": [{
+          "image": "http://placehold.it/190x107",
+          "title": "Hiking &amp; Walking",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "Details &amp; Maps",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "title": "Camping",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "title": "Winter Sports",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "title": "Hunting",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "title": "Bird Watching",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        }]
+      }
+    },
+    {
       "title":"Forms",
       "intro": "Here are some helpful downloads to get you started.",
       "id":"downloads",
