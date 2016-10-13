@@ -5,11 +5,11 @@
   {% endblock %}
 </div>
 <div class="main-content">
-  <div class="page-content">
+  <main class="page-content">
     {% block pageContent %}
       {% include "base-placeholder" with {'placeholder':{'text':'Page content'}} %}
     {% endblock %}
-  </div>
+  </main>
 </div>
 <div class="post-content">
   {% block postContent %}

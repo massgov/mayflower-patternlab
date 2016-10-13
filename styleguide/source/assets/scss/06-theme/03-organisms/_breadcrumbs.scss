@@ -3,7 +3,7 @@
   @media ($bp-medium-min)  {
     background-color: $c-bg-section;
 
-    ul {
+    ol {
       border-top-color: $c-bd-divider;
     }
   }
@@ -32,7 +32,7 @@
 
   background-color: transparent;
 
-  ul {
+  ol {
     border-bottom-color: $c-bd-divider;
   }
 }

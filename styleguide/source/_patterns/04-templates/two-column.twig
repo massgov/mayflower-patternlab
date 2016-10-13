@@ -5,16 +5,16 @@
   {% endblock %}
 </div>
 <div class="main-content main-content--two">
-  <div class="page-content">
+  <main class="page-content">
     {% block pageContent %}
       {% include "base-placeholder" with {'placeholder':{'text':'Page content'}} %}
     {% endblock %}
-  </div>
-  <div class="sidebar">
+  </main>
+  <aside class="sidebar">
     {% block sidebar %}
       {% include "base-placeholder" with {'placeholder':{'text':'sidebar'}} %}
     {% endblock %}
-  </div>
+  </aside>
 </div>
 <div class="post-content">
   {% block postContent %}

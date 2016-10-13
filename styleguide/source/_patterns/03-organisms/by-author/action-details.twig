@@ -2,14 +2,14 @@
   <h2 class="ma__action-details__title">The Details</h2>
 
   <div class="ma__action-details__content">
-    <div class="ma__action-details__anchor-links js-scroll-anchors">
+    <nav class="ma__action-details__anchor-links js-scroll-anchors">
         <button class="ma__action-details__toggle-link js-scroll-anchors-toggle">+</button>
         {% for section in actionDetails.sections %}
           {% if section.id and section.title %}
             <a href="#{{section.id}}" class="{{loop.first ? 'is-active' : ''}}">{{section.title}}</a>
           {% endif %}
         {% endfor %}
-    </div>
+    </nav>
     {% for actionSection in actionDetails.sections %}
       {% include "molecules-action-section" %}
     {% endfor %}
