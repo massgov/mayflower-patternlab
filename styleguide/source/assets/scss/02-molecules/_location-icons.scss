@@ -1,7 +1,5 @@
 .ma__location-icons {
   @include clearfix;
-  max-width: $layout-sidebar-width;
-  width: 100%;
 
   &__item {
     @include span-columns(1 of 4);
