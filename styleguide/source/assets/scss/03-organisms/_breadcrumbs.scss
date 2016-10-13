@@ -15,7 +15,7 @@
     @include ma-container;
   }
 
-  ul {
+  ol {
     @include ma-reset-list;
 
     @media ($bp-medium-min) {
@@ -82,7 +82,7 @@
 }
 
 .ma__breadcrumbs--light {
-  ul {
+  ol {
     @media ($bp-medium-min) {
       border-top: none;
       border-bottom: 1px solid;
