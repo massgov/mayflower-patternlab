@@ -9,7 +9,7 @@
     <h3 class="ma__section-links__title js-section-accordion-link">
       <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "atoms-svg-arrow" %}</a>
     </h3>
-    <div class="ma__section-links__toggle-content js-section-accordion-body">
+    <nav class="ma__section-links__toggle-content js-section-accordion-body">
       {% if sectionLinks.description %}
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>
       {% endif %}
@@ -23,6 +23,6 @@
         </li>
         {% endfor %}
       </ul>
-    </div>
+    </nav>
   </div>
 </section>
