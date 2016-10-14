@@ -58,6 +58,22 @@
     }]
   },
 
+  "headerContact": {
+    "phone": [{
+      "label":"Main",
+      "value":"(413) 499-4262",
+      "rawVal":"14134994262",
+      "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+    }],
+    "online": [{
+      "label":"Email",
+      "value":"email@email.com",
+      "link":"email@email.com",
+      "details":""
+    }],
+    "fax": []
+  },
+
   "locationBanner": {
     "bgTitle":"Mt Greylock State Park",
     "bgWide":"/assets/images/placeholder/1600x400.png",

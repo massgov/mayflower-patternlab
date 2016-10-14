@@ -1,9 +1,13 @@
 .ma__wait-time {
 
   &__title {
-    border-bottom: 3px solid;
+    @include ma-border-decorative;
     margin-bottom: .75em;
     padding-bottom: .5em;
+
+    &:after {
+      width: 100%;
+    }
 
     span,
     & > svg {
