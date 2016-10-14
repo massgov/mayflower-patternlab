@@ -2,12 +2,18 @@
   @include ma-container;
 
   &__inner {
-    position: relative;   
+    @include clearfix;   
   }
 
   .ma__page-header {
+    float: left;
     padding-left: 0;
     padding-right: 0;
+    width: calc(100% - #{$layout-sidebar-width});
+
+    &__content {
+      width: 100%
+    }
 
     &__title {
       margin-bottom: .25em;
@@ -21,14 +27,13 @@
     }
   }
 
-  .ma__location-icons {
+  &__widgets {
     padding-bottom: 40px;
+    width: $layout-sidebar-width;
 
     @media ($bp-large-min){
+      float: left;
       padding-top: 75px;
-      position: absolute;
-        top: 0;
-        right: 0;
     }
 
     @media ($bp-x-large-min){

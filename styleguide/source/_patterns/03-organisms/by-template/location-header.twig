@@ -3,6 +3,13 @@
   <img aria-hidden="true" alt="icon-sprite" src="/assets/images/svg-loc-icons.svg" style="display:none" />
   <div class="ma__location-header__inner">
     {% include "organisms-page-header" %}
-    {% include "molecules-location-icons" %}
+    <div class="ma__location-header__widgets">
+      {% if locationIcons %}
+        {% include "molecules-location-icons" %}
+      {% endif %}
+      {% if waitTime %}
+        {% include "molecules-wait-time" %}
+      {% endif %}
+    </div>
   </div>
 </section>
