@@ -1,0 +1,12 @@
+<div>
+  {% for activity in activities %}
+    <div class="ma__activity">
+      <img class="ma__activity__image" alt="{{ activity.alt }}" src="{{ activity.image }}">
+      <div class="ma__activity__details">
+        <h5 class="ma__activity__title">{{ activity.title }}</h5>
+        <div class="ma__activity__description">{{ activity.description }}</div>
+        <a class="ma__activity__link" href="{{ activity.href }}">{{ activity.linkTitle }}<span class="visually-hidden"> about {{ activity.title }}</span></a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

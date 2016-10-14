@@ -1,0 +1,14 @@
+.ma__activity {
+  border-color: $c-bd-divider;
+
+  &__link {
+
+    &:after {
+      color: rgba($c-font-link, .5);
+    }
+
+    &:hover {
+      border-bottom-color: rgba($c-font-link, .5);
+    }
+  }
+}

@@ -26,6 +26,7 @@
 @import "01-atoms/svg-loc-icons";
 
 // Molecules - chunks of code that are used in Organisms/Components
+@import "02-molecules/action-activities";
 @import "02-molecules/action-image";
 @import "02-molecules/action-map";
 @import "02-molecules/action-section";
@@ -37,6 +38,7 @@
 @import "02-molecules/download";
 @import "02-molecules/dropdown";
 @import "02-molecules/footer-links";
+@import "02-molecules/header-contact";
 @import "02-molecules/header-search";
 @import "02-molecules/header-tags";
 @import "02-molecules/illustrated-link";
@@ -57,6 +59,7 @@
 @import "03-organisms/action-details";
 @import "03-organisms/action-events";
 @import "03-organisms/action-finder";
+@import "03-organisms/action-header";
 @import "03-organisms/banner-carousel";
 @import "03-organisms/blog-feed";
 @import "03-organisms/breadcrumbs";
@@ -70,7 +73,6 @@
 @import "03-organisms/header-alert";
 @import "03-organisms/link-list";
 @import "03-organisms/location-banner";
-@import "03-organisms/location-header";
 @import "03-organisms/page-banner";
 @import "03-organisms/page-header";
 @import "03-organisms/personal-message";
