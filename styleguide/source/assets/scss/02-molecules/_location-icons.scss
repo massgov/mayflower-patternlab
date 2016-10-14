@@ -2,10 +2,18 @@
   @include clearfix;
 
   &__item {
-    @include span-columns(1 of 4);
-    @include omega(4n);
     text-align: center;
     margin-bottom: 18px;
+
+    @media ($bp-x-small-max) {
+      @include span-columns(2 of 6);
+      @include omega(3n);
+    }
+
+    @media ($bp-x-small-min) {
+      @include span-columns(1 of 4);
+      @include omega(4n);
+    }
   }
 
   &__icon {
@@ -20,6 +28,8 @@
   }
 
   &__name {
-    font-size: 0.688rem;
+    font-size: 0.813rem; 
+    text-transform: uppercase; 
+    letter-spacing: .1em; 
   }
 }

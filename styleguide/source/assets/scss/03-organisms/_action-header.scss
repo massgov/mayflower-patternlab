@@ -1,4 +1,4 @@
-$action-header-widget-width: 330px;
+$action-header-widget-width: ($column * 4) + ($gutter *3);
 .ma__action-header {
   @include ma-container;
 
@@ -17,7 +17,7 @@ $action-header-widget-width: 330px;
 
     @media ($bp-large-min){
       float: left;
-      padding: 75px 50px 70px 0;
+      padding: 75px 40px 70px 0;
       width: calc(100% - #{$action-header-widget-width});
     }
 
@@ -30,13 +30,10 @@ $action-header-widget-width: 330px;
   &__widgets {
     padding-bottom: 40px;
 
-    @media ($bp-x-small-min) {
-      width: $action-header-widget-width;
-    }
-
     @media ($bp-large-min){
       float: left;
       padding-top: 75px;
+      width: $action-header-widget-width;
     }
 
     @media ($bp-x-large-min){
