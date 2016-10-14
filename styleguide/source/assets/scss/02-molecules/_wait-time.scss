@@ -2,8 +2,8 @@
 
   &__title {
     border-bottom: 3px solid;
-    margin-bottom: .5em;
-    padding-bottom: .75em;
+    margin-bottom: .75em;
+    padding-bottom: .5em;
 
     span,
     & > svg {
@@ -18,7 +18,9 @@
 
     span {
       font-size: 1.375rem;
+      letter-spacing: .1em;
       line-height: 1.39;
+      padding-left: 5px;
       padding-top: 7px;
       text-transform: uppercase;
     }
@@ -49,17 +51,18 @@
   }
 
   &__label {
-    font-size: 0.688rem;
+    font-size: 0.813rem;
+    letter-spacing: .1em;
     line-height: 1.27;
     margin-bottom: 0;
     text-transform: uppercase;
   }
 
   &__time {
-    font-size: 1.875rem;
+    font-size: 2.125rem;
   }
 
   &__units {
-    font-size: 1.188rem;
+    font-size: 1.5rem;
   }
 }
