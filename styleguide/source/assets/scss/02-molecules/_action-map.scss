@@ -1,5 +1,9 @@
 .ma__action-map {
-  height: 500px;
+  height: 360px;
+
+  @media ($bp-x-small-min) {
+    height: 500px;
+  }
 
   &__google-map {
     height: 100%;
