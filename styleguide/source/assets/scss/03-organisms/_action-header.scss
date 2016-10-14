@@ -1,3 +1,4 @@
+$action-header-widget-width: 330px;
 .ma__action-header {
   @include ma-container;
 
@@ -16,9 +17,8 @@
 
     @media ($bp-large-min){
       float: left;
-      padding-top: 75px;
-      padding-bottom: 70px;
-      width: calc(100% - #{$layout-sidebar-width});
+      padding: 75px 50px 70px 0;
+      width: calc(100% - #{$action-header-widget-width});
     }
 
     @media ($bp-x-large-min){
@@ -31,7 +31,7 @@
     padding-bottom: 40px;
 
     @media ($bp-x-small-min) {
-      width: $layout-sidebar-width;
+      width: $action-header-widget-width;
     }
 
     @media ($bp-large-min){
@@ -48,7 +48,8 @@
     padding: 0;
 
     &__content {
-      width: 100%
+      width: 100%;
+      padding-right: 0;
     }
 
     &__title {
