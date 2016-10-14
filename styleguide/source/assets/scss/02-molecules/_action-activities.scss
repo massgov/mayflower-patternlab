@@ -3,7 +3,7 @@ $bp-x-large-min: "min-width: 1160px";
 .ma__activity {
   @include clearfix();
   border-bottom: 1px solid;
-  padding: 40px 0;
+  padding: 30px 0;
 
   &__image {
     
@@ -54,6 +54,10 @@ $bp-x-large-min: "min-width: 1160px";
   &__link {
     @include ma-chevron;
     @include ma-link-underline;
+  }
+
+  &:first-child {
+    padding-top: 0;
   }
 
   &:last-child {
