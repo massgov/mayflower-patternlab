@@ -1,13 +1,20 @@
 <section class="ma__suggested-pages">
-  <h2 class="ma__suggested-pages__title">{{ suggestedPages.title }}</h2>
-  {% for page in suggestedPages.pages %}
-    <div class="ma__suggested-pages__item">
-      <a href="{{ page.href }}">
-        <img alt="{{ page.altTag }}" src="{{ page.image }}">
-        {{ page.linkTitle }}
-      </a>
+  <div class="ma__suggested-pages__container">
+    <h2 class="ma__suggested-pages__title">{{ suggestedPages.title }}</h2>
+    <div class="ma__suggested-pages__items">
+    {% for page in suggestedPages.pages %}
+      <figure class="ma__suggested-pages__item">
+        <a href="{{ page.link.href }}">
+          <img alt="{{ page.altTag }}" src="{{ page.image }}">
+        </a>
+        {% set decorativeLink = page.link %}
+        {% include "atoms-decorative-link" %}
+      </figure>
+    {% endfor %}
     </div>
-  {% endfor %}
-  {% set buttonMinor = suggestedPages.buttonMinor %}
-  {% include "atoms-button-link2-sm" %}
+    {% set buttonMinor = suggestedPages.buttonMinor %}
+    {% if buttonMinor.link %}
+      {% include "atoms-button-link2-sm" %}
+    {% endif %}
+  </div>
 </section>

@@ -360,6 +360,49 @@
     }]
   },
 
+  "COMMENT":"****POSTCONTENT COMPONENTS****",
+
+  "suggestedPages": {
+    "title": "Related Parks",
+    "buttonMinor" : {
+      "link": "#",
+      "text": "Do Something"
+    },
+    "pages": [{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Nearby State Parks"
+      }
+    },{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Similar State Park"
+      }
+    },{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Great Sight Seeing"
+      }
+    },{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Great Hiking"
+      }
+    }]
+  },
+
 
   "COMMENT":"****SIDEBAR COMPONENTS****",
 
