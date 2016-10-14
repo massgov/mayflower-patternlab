@@ -4,6 +4,9 @@
   <div class="ma__action-header__inner">
     <div class="ma__action-header__content">
       {% include "organisms-page-header" %}
+      {% if headerContact %}
+        {% include "molecules-header-contact" %}
+      {% endif %}
     </div>
     <div class="ma__action-header__widgets">
       {% if locationIcons %}

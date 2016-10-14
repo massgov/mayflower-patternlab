@@ -1,0 +1,65 @@
+.ma__header-contact {
+  
+  @media($bp-small-min) {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__column {
+    padding-right: 45px;
+
+    & + & {
+      padding-top: 20px;
+    }
+
+    @media($bp-small-min) {
+      width: 50%;
+    
+      & + & {
+        border-left: 1px solid;
+        padding-top: 0;
+        padding-right: 0;
+        padding-left: 45px;
+      }
+    }
+  }
+
+  &__list {
+
+    & + & {
+      padding-top: 20px;
+    }
+  }
+
+  &__name {
+
+    & > svg {
+      display: inline-block;
+      height: 20px;
+      margin-right: .25em;
+      vertical-align: middle;
+      width: 20px;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__label {
+    font-size: 1.125rem;
+  }
+
+  &__value {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  &__details {
+    font-size: 1rem;
+    line-height: 1.83;
+    margin-bottom: .35em;
+    margin-top: -.35em;
+  }
+}

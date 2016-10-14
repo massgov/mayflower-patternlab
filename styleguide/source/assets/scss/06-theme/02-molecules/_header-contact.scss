@@ -1,0 +1,35 @@
+.ma__header-contact {
+
+  &__column {
+
+    & + & {
+      border-color: $c-bd-divider;
+    }
+  }
+
+  &__name {
+
+    svg {
+      fill: $c-theme-primary-2;
+    }
+
+    span {
+      color: $c-font-dark;
+      font-weight: 700;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+  }
+
+  &__value--phone {
+    
+    color: $c-font-base;
+  }
+
+  &__details {
+    font-weight: 300;
+    font-style: italic;
+  }
+}
