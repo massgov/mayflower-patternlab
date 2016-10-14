@@ -1,0 +1,13 @@
+<section class="ma__suggested-pages">
+  <h2 class="ma__suggested-pages__title">{{ suggestedPages.title }}</h2>
+  {% for page in suggestedPages.pages %}
+    <div class="ma__suggested-pages__item">
+      <a href="{{ page.href }}">
+        <img alt="{{ page.altTag }}" src="{{ page.image }}">
+        {{ page.linkTitle }}
+      </a>
+    </div>
+  {% endfor %}
+  {% set buttonMinor = suggestedPages.buttonMinor %}
+  {% include "atoms-button-link2-sm" %}
+</section>
