@@ -508,9 +508,9 @@
       "data": {
         "activities": [{
           "image": "http://placehold.it/190x107",
-          "title": "Hiking &amp; Walking",
+          "title": "Hiking & Walking",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
-          "linkTitle": "Details &amp; Maps",
+          "linkTitle": "Details & Maps",
           "href": "#"
         },{
           "image": "http://placehold.it/190x107",
