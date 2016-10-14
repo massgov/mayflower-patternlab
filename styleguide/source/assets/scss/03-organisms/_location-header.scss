@@ -5,11 +5,28 @@
     @include clearfix;   
   }
 
-  .ma__page-header {
+  &__content {
     float: left;
+    width: calc(100% - #{$layout-sidebar-width});
+  }
+
+  &__widgets {
+    padding-bottom: 40px;
+    width: $layout-sidebar-width;
+
+    @media ($bp-large-min){
+      float: left;
+      padding-top: 75px;
+    }
+
+    @media ($bp-x-large-min){
+      padding-top: 85px;
+    }
+  }
+
+  .ma__page-header {
     padding-left: 0;
     padding-right: 0;
-    width: calc(100% - #{$layout-sidebar-width});
 
     &__content {
       width: 100%
@@ -24,20 +41,6 @@
       p {
         margin-bottom: .25em;
       }
-    }
-  }
-
-  &__widgets {
-    padding-bottom: 40px;
-    width: $layout-sidebar-width;
-
-    @media ($bp-large-min){
-      float: left;
-      padding-top: 75px;
-    }
-
-    @media ($bp-x-large-min){
-      padding-top: 85px;
     }
   }
 }

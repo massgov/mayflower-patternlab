@@ -2,7 +2,9 @@
   <!-- Fix: Chrome doesn't always render the first SVG use tag -->
   <img aria-hidden="true" alt="icon-sprite" src="/assets/images/svg-loc-icons.svg" style="display:none" />
   <div class="ma__location-header__inner">
-    {% include "organisms-page-header" %}
+    <div class="ma__location-header__content">
+      {% include "organisms-page-header" %}
+    </div>
     <div class="ma__location-header__widgets">
       {% if locationIcons %}
         {% include "molecules-location-icons" %}
