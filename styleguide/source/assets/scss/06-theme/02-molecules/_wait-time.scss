@@ -1,7 +1,7 @@
 .ma__wait-time {
 
   &__title {
-    border-color: rgba($c-theme-secondary-1,.5);
+    @include ma-border-decorative($c-theme-secondary-1);
 
     svg {
       fill: $c-theme-secondary-1;

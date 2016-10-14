@@ -1,4 +1,4 @@
-$action-header-widget-width: ($column * 4) + ($gutter *3);
+$action-header-widget-width: 350px;
 .ma__action-header {
   @include ma-container;
 
