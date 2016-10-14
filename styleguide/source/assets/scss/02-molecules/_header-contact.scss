@@ -1,5 +1,5 @@
 .ma__header-contact {
-  
+
   @media($bp-small-min) {
     display: flex;
     align-items: stretch;
@@ -14,7 +14,7 @@
 
     @media($bp-small-min) {
       width: 50%;
-    
+
       & + & {
         border-left: 1px solid;
         padding-top: 0;
@@ -48,12 +48,17 @@
   }
 
   &__label {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 
   &__value {
-    font-size: 1.125rem;
+    @include ma-link-underline;
+    font-size: 1.25rem;
     line-height: 1.75;
+  }
+
+  &__value--phone:hover {
+    border-bottom: none;
   }
 
   &__details {
