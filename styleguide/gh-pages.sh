@@ -16,29 +16,25 @@ gulp build
 
 # make temp directory to copy public  assets
 echo "Making tmp directory..."
-
 mkdir ~/tmp
 
 # copy built assets in /public into tmp directory
 echo "Copying PL output to tmp directory..."
-
 cp -R public ~/tmp
 
-# replace asset url /assets/ with /mayflower/assets/
+# get to tmp directory
 echo "Changing directory to tmp..."
-
 cd ~/tmp
 
-echo "Search tmp directory for /assets/ and replace with /mayflower/assets/..."
-
-find ./public -type f -name "*.*" -exec sed -i "" 's/\=\"\/assets\//\=\"\/mayflower\/assets\//g' {} \;
-
-
-echo "Change directory to public..."
-cd public
+# Search temp directory + replace asset url /assets/ with /mayflower/assets/
+echo "Searching tmp directory for /assets/ and replace with /mayflower/assets/..."
+find ./public -type f -name "*.*" -exec sed -i "" 's/\"\/assets\//\"\/mayflower\/assets\//g' {} \;
+find ./public -type f -name "*.*" -exec sed -i "" "s/\'\/assets\//\'\/mayflower\/assets\//g" {} \;
 
 # initialize temp git repo + push up to gh-pages
-echo "Push up to massgov/mayflower gh-pages..."
+echo "Changing directory to public..."
+cd public
+echo "Creating repo and pushing up to massgov/mayflower gh-pages..."
 
 git init
 git add .
