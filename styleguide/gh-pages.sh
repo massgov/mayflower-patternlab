@@ -1,4 +1,24 @@
 #!/bin/sh
+#
+# Deploying Mayflower to Github Pages:
+# -----------------------------------------------------
+# Checkout latest release from massgov/mayflower
+# Build PL assets
+# Copy public/ into tmp directory
+# Correct the asset urls for being served at /mayflower
+# Initialize a temp repo in the tmp public/ directory
+# Commit all files (includes updates URLs)
+# Add massgov/mayflower as remote
+# Push contents of tmp public/ to mass/mayflower gh-pages
+# Clean up tmp dir
+# Get back to mayflowr/styleguide dir
+# Checkout prior branch
+#
+# @todo
+# - harden this process/script
+# - build into ci process
+# - regex'ify the find/replace process
+#
 
 # avoid illegal byte sequence error by overriding all individually set encoding
 # see: http://stackoverflow.com/questions/11287564/getting-sed-error-illegal-byte-sequence-in-bash
