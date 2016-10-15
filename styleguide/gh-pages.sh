@@ -7,8 +7,12 @@ export LC_ALL=C
 # variables
 GITHUB_REPONAME="massgov/mayflower"
 NOW=$(date +"%c")
-MESSAGE="GH Pages updated: $NOW"
+MESSAGE="GH Pages updated: ${NOW}"
+LATESTTAG=$(git fetch upstream --tags && git describe --tags `git rev-list --tags --max-count=1`)
 
+# checkout the latest tag/release
+echo "Checking out the latest tag: ${LATESTTAG}"
+git checkout ${LATESTTAG}
 
 # build pattern lab site
 echo "Building PL..."
