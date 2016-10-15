@@ -73,7 +73,7 @@ git push origin master:refs/heads/gh-pages --force
 echo "Getting back to styleguide directory..."
 cd -
 echo "Cleaning up tmp dir..."
-rm -rf tmp
+rm -rf ~/tmp
 
 # check out the previous branch
 echo "Checking out prior branch"
