@@ -52,4 +52,5 @@ echo "Cleaning up tmp dir..."
 cd
 rm -rf tmp
 
-
+# check out the previous branch
+git checkout @{-1}
