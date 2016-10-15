@@ -2,6 +2,10 @@
 #
 # Deploying Mayflower to Github Pages:
 # -----------------------------------------------------
+#
+# Run from mayflower/styleguide from a clean working directory
+#
+# THIS SCRIPT WILL:
 # Checkout latest release from massgov/mayflower
 # Build PL assets
 # Copy public/ into tmp directory
