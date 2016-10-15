@@ -46,8 +46,9 @@ git remote add origin git@github.com:$GITHUB_REPONAME.git
 git push origin master:refs/heads/gh-pages --force
 
 # cleanup
-echo "Cleaning up tmp dir..."
+echo "Getting back to styleguide directory..."
 cd -
+echo "Cleaning up tmp dir..."
 rm -rf tmp
 
 # check out the previous branch
