@@ -4,8 +4,8 @@
 
   &__container {
     @include ma-container;
-    padding-bottom: 50px;
     border-bottom: 1px solid;
+    padding-bottom: 50px;
   }
 
   &__title {
@@ -54,7 +54,7 @@
     @media ($bp-large-min) {
       border-left: 1px solid;
       padding: 0 45px;
-      width: 24%;
+      width: 25%;
     }
   }
 
