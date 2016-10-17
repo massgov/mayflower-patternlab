@@ -1,0 +1,60 @@
+.ma__suggested-pages {
+
+  text-align: center;
+
+  &__container {
+    @include ma-container;
+    border-bottom: 1px solid;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    @include ma-border-decorative;
+    margin-bottom: 45px;
+    padding-top: 60px;
+    padding-bottom: 16px;
+    text-align: center;
+
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__items {
+    @include clearfix;
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    display: block;
+    margin: 0;
+    margin-bottom: 30px;
+    vertical-align: top;
+    width: 100%;
+    
+    a {
+      height: 100%;
+      width: 100%;
+    }
+
+    .ma__decorative-link {
+      display: block;
+    }
+
+    @media ($bp-x-small-min) {
+      float: left;
+      padding: 0 10px;
+      width: 50%;
+    }
+
+    @media ($bp-large-min) {
+      padding: 0 45px;
+      width: 25%;
+      & + & {
+        border-left: 1px solid;
+      }
+    }
+  }
+
+}
