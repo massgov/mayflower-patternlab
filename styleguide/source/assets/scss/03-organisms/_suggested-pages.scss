@@ -27,11 +27,12 @@
   }
 
   &__item {
-    display: inline-block;
+    display: block;
     margin: 0;
     margin-bottom: 30px;
     vertical-align: top;
     width: 100%;
+    
     a {
       height: 100%;
       width: 100%;
@@ -41,10 +42,6 @@
       display: block;
     }
 
-    &:first-of-type {
-      border: none;
-    }
-
     @media ($bp-x-small-min) {
       float: left;
       padding: 0 10px;
@@ -52,9 +49,11 @@
     }
 
     @media ($bp-large-min) {
-      border-left: 1px solid;
       padding: 0 45px;
       width: 25%;
+      & + & {
+        border-left: 1px solid;
+      }
     }
   }
 

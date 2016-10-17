@@ -5,12 +5,16 @@
     border-color: $c-bd-divider;
   }
 
-  &__item {
-    border-color: $c-bd-divider;
-  }
-
   &__title {
     @include ma-border-decorative($c-theme-primary-2);
+  }
+
+  @media ($bp-large-min) {
+
+    &__item + &__item {
+      border-color: $c-bd-divider;
+    }
+
   }
 
 }
