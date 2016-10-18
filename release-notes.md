@@ -12,6 +12,7 @@
 
 ### Other
 * MGVDU-220 - FE Dev: Image credit component
+* MGVDU-202 - Action Finder - entire action item should be clickable
 
 ## 0.4.0
 ### Action Detail page modifications
