@@ -28,7 +28,8 @@
   &__controls {
 
     button,
-    input[type="button"] {
+    input[type="button"],
+    input[type="submit"] {
       @include ma-button("normal","solid",$c-theme-primary-1);
     }
   }
