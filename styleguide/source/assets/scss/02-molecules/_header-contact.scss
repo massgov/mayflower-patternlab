@@ -1,0 +1,128 @@
+.ma__header-contact {
+
+  // controls for when to activate accordion
+  &.js-section-accordion:before {
+    content: "true";
+    display: none;
+
+    @media ($bp-small-min) {
+      content: "false";
+    }
+  }
+
+  &__accordion {
+    @include ma-button-reset;
+    border-top: 1px solid;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: .1em;
+    margin-bottom: 1em;
+    padding: 10px 30px 10px 0;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:after {
+      content: "+";
+      display: block;
+      font-size: 1.75rem;
+      line-height: .75em;
+      position: absolute;
+        top: 50%;
+        right: 0;
+      transition: transform .5s ease;
+      transform-origin: center center;
+      transform: translateY(-50%);
+
+      .is-open & {
+        transform: translateY(-50%) rotate(135deg);
+      }
+    }
+
+    &:hover {
+
+    }
+
+    @media($bp-small-min) {
+      display: none;
+    }
+  }
+
+  &__container {
+
+    @media($bp-small-max) {
+      &.js-section-accordion-content {
+        display: none;
+      }
+    }
+
+    @media($bp-small-min) {
+      display: flex;
+      align-items: stretch;
+    }
+  }
+
+  &__column {
+    padding-right: 45px;
+
+    & + & {
+      padding-top: 20px;
+    }
+
+    @media($bp-small-min) {
+      width: 50%;
+
+      & + & {
+        border-left: 1px solid;
+        padding-top: 0;
+        padding-right: 0;
+        padding-left: 45px;
+      }
+    }
+  }
+
+  &__list {
+
+    & + & {
+      padding-top: 20px;
+    }
+  }
+
+  &__name {
+
+    & > svg {
+      display: inline-block;
+      height: 20px;
+      margin-right: .25em;
+      vertical-align: middle;
+      width: 20px;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__label {
+    font-size: 1.25rem;
+  }
+
+  &__value {
+    @include ma-link-underline;
+    font-size: 1.25rem;
+    line-height: 1.75;
+  }
+
+  &__value--phone:hover {
+    border-bottom: none;
+  }
+
+  &__details {
+    font-size: 1rem;
+    line-height: 1.83;
+    margin-bottom: .35em;
+    margin-top: -.35em;
+  }
+}

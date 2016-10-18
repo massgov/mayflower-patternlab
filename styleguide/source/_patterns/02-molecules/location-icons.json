@@ -1,0 +1,17 @@
+{
+  "locationIcons": {
+    "icons": [{
+      "path":"atoms-svg-loc-mt-park",
+      "name":"Mountain Park"
+    },{
+      "path":"atoms-svg-loc-historic-site",
+      "name":"Historic Site"
+    },{
+      "path":"atoms-svg-loc-handicap-accessible",
+      "name":"Handicap Accessible"
+    },{
+      "path":"atoms-svg-loc-dogs-allowed",
+      "name":"Dogs Allowed"
+    }]
+  }
+}

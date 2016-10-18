@@ -23,8 +23,11 @@
 @import "01-atoms/select-box";
 @import "01-atoms/site-logo";
 @import "01-atoms/svg-icons";
+@import "01-atoms/svg-loc-icons";
 
 // Molecules - chunks of code that are used in Organisms/Components
+@import "02-molecules/action-activities";
+@import "02-molecules/action-gallery";
 @import "02-molecules/action-image";
 @import "02-molecules/action-map";
 @import "02-molecules/action-section";
@@ -36,10 +39,12 @@
 @import "02-molecules/download";
 @import "02-molecules/dropdown";
 @import "02-molecules/footer-links";
+@import "02-molecules/header-contact";
 @import "02-molecules/header-search";
 @import "02-molecules/header-tags";
 @import "02-molecules/illustrated-link";
 @import "02-molecules/keyword-search";
+@import "02-molecules/location-icons";
 @import "02-molecules/login-util";
 @import "02-molecules/main-nav";
 @import "02-molecules/rich-text";
@@ -47,6 +52,7 @@
 @import "02-molecules/settings-util";
 @import "02-molecules/social-links";
 @import "02-molecules/utility-nav";
+@import "02-molecules/wait-time";
 @import "02-molecules/zoom-controls";
 
 // Organisms - components
@@ -54,6 +60,7 @@
 @import "03-organisms/action-details";
 @import "03-organisms/action-events";
 @import "03-organisms/action-finder";
+@import "03-organisms/action-header";
 @import "03-organisms/banner-carousel";
 @import "03-organisms/blog-feed";
 @import "03-organisms/breadcrumbs";
@@ -65,6 +72,7 @@
 @import "03-organisms/footer";
 @import "03-organisms/header";
 @import "03-organisms/header-alert";
+@import "03-organisms/image-credit";
 @import "03-organisms/link-list";
 @import "03-organisms/location-banner";
 @import "03-organisms/page-banner";
@@ -75,6 +83,7 @@
 @import "03-organisms/related-actions";
 @import "03-organisms/sections-three-up";
 @import "03-organisms/split50";
+@import "03-organisms/suggested-pages";
 @import "03-organisms/test-feed";
 @import "03-organisms/top-actions";
 

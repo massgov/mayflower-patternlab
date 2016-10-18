@@ -25,7 +25,7 @@
       "path": "atoms-paragraph",
       "data": {
         "paragraph" : {
-          "text": "Visitor's Center<br />30 Rockwell Road, Lanesborough, MA 01237<br />(413) 499-4262"
+          "text": "Visitor's Center, 30 Rockwell Road, Lanesborough, MA 01237"
         }
       }
     },{
@@ -40,6 +40,38 @@
       }
     }],
     "headerTags": ""
+  },
+
+  "locationIcons": {
+    "icons": [{
+      "path":"atoms-svg-loc-mt-park",
+      "name":"Mountain Park"
+    },{
+      "path":"atoms-svg-loc-historic-site",
+      "name":"Historic Site"
+    },{
+      "path":"atoms-svg-loc-handicap-accessible",
+      "name":"Handicap Accessible"
+    },{
+      "path":"atoms-svg-loc-dogs-allowed",
+      "name":"Dogs Allowed"
+    }]
+  },
+
+  "headerContact": {
+    "phone": [{
+      "label":"Main",
+      "value":"(413) 499-4262",
+      "rawVal":"14134994262",
+      "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+    }],
+    "online": [{
+      "label":"Email",
+      "value":"email@email.com",
+      "link":"email@email.com",
+      "details":""
+    }],
+    "fax": []
   },
 
   "locationBanner": {
@@ -254,8 +286,45 @@
       "title":"Activities",
       "intro": "",
       "id":"activities",
-      "path": "molecules-rich-text",
-      "data": {}
+      "path": "molecules-action-activities",
+      "data": {
+        "activities": [{
+          "image": "http://placehold.it/190x107",
+          "alt": "hiking image",
+          "title": "Hiking & Walking",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "Details & Maps",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "alt": "camping image",
+          "title": "Camping",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "alt": "wintery image",
+          "title": "Winter Sports",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "alt": "hunting image",
+          "title": "Hunting",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        },{
+          "image": "http://placehold.it/190x107",
+          "alt": "bird image",
+          "title": "Bird Watching",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
+          "linkTitle": "More",
+          "href": "#"
+        }]
+      }
     },{
       "title":"Facilities",
       "intro": "",
@@ -278,6 +347,37 @@
             }]
           }
         }]
+      }
+    },{
+      "title":"",
+      "intro": "",
+      "id":"",
+      "path": "molecules-action-gallery",
+      "data": {
+        "actionGallery": {
+          "link": {
+            "href": "#",
+            "target": "",
+            "text":"view gallery",
+            "chevron": "true"
+          },
+          "items": [{
+            "src":"/assets/images/placeholder/80x80.png",
+            "alt":"nature is beautiful1"
+          },{
+            "src":"/assets/images/placeholder/80x80.png",
+            "alt":"nature is beautiful2"
+          },{
+            "src":"/assets/images/placeholder/80x80.png",
+            "alt":"nature is beautiful3"
+          },{
+            "src":"/assets/images/placeholder/80x80.png",
+            "alt":"nature is beautiful3"
+          },{
+            "src":"/assets/images/placeholder/80x80.png",
+            "alt":"nature is beautiful4"
+          }]
+        }
       }
     },{
       "title":"Acessibility",
@@ -340,6 +440,49 @@
             }]
           }
         }]
+      }
+    }]
+  },
+
+  "COMMENT":"****POSTCONTENT COMPONENTS****",
+
+  "suggestedPages": {
+    "title": "Related Parks",
+    "buttonMinor" : {
+      "link": "#",
+      "text": "Do Something"
+    },
+    "pages": [{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Nearby State Parks"
+      }
+    },{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Similar State Park"
+      }
+    },{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Great Sight Seeing"
+      }
+    },{
+      "image": "http://placehold.it/230x130",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Great Hiking"
       }
     }]
   },

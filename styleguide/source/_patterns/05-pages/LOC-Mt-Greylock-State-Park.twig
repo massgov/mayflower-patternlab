@@ -3,7 +3,7 @@
 {% block preContent %}
   {% include "organisms-header-alert" %}
   {% include "organisms-breadcrumbs" %}
-  {% include "organisms-page-header" %}
+  {% include "organisms-action-header" %}
   {% include "organisms-location-banner" %}
 {% endblock %}
 {% block pageContent %}
@@ -15,5 +15,6 @@
   {% include "organisms-action-events" %}
 {% endblock %}
 {% block postContent %}
+  {% include "organisms-suggested-pages" %}
   {% include "organisms-breadcrumbs" %}
 {% endblock %}

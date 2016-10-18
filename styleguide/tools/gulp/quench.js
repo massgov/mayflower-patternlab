@@ -186,7 +186,6 @@ var build = module.exports.build = function build(_config) {
         taskFactory(config, env);
     });
 
-
     // start watchers if specified
     if (config.watch && config.watchers) {
 

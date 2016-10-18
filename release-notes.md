@@ -1,11 +1,34 @@
 # Mass Gov Release Notes
 
+## 0.5.0
+### MGVDU-181 - Location Page
+* MGVDU-172 - Component: Hero Banner Carousel (Location Page)
+* MGVDU-204 - FE Dev: Location - Wait Time Indicator
+* MGVDU-203 - FE Dev: Location - Icon Indicators
+* MGVDU-210 - FE Dev: Location - updated page header
+* MGVDU-212 - FE Dev: Location - suggested pages
+* MGVDU-213 - FE Dev: Location - inline gallery
+* MGVDU-214 - FE Dev: Location - Action Activities section
+
+### Other
+* MGVDU-220 - FE Dev: Image credit component
+
 ## 0.4.0
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
 * MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
 * MGVDU-119 - FE Dev: Modifications to Action page: Map 
-### Agency Page
+* MGVDU-137 - FE Dev: Modifications to Action page: OR Lists 
+* MGVDU-139 - FE Dev: Action Page Header
+
+### Location Page
+* MGVDU-174 - Component: Location Hero Banner
+* MGVDU-171 - Component: Alert
+* MGVDU-175 - Component: Upcoming Events
+
+### Pilot Page
+* MGYDU-87 - Feedback Form
+
 
 ## 0.3.0
 ### Level 0,1,2 pages - Action Funnel

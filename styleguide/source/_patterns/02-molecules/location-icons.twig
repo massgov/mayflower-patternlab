@@ -1,0 +1,10 @@
+<section class="ma__location-icons">
+  {% for icon in locationIcons.icons %}
+    <div class="ma__location-icons__item">
+      <div class="ma__location-icons__icon">
+        {% include icon.path %}
+      </div>
+      <h5 class="ma__location-icons__name">{{icon.name}}</h5>
+    </div>
+  {% endfor %}
+</section>

@@ -9,8 +9,6 @@ export default function (window,document,$,undefined) {
 
     let slider = $el.slick({
       dots: true,
-      appendArrows: $('.js-banner-carousel-controls'),
-      appendDots: $('.js-banner-carousel-controls'),
       prevArrow: '<button type="button" class="slick-prev"></button>',
       nextArrow: '<button type="button" class="slick-next"></button>'
     });

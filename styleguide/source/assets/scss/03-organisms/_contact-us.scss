@@ -20,8 +20,8 @@
 
     & + & {
       border-top: 1px solid;
-      padding-top: 30px;
-      margin-top: 30px;
+      padding-top: 20px;
+      margin-top: 20px;
     }
 
     & > :last-child {
@@ -30,19 +30,19 @@
   }
 
   &__name {
-    font-size: 1.25rem;
-    line-height: 1.4;
+    font-size: 1.625rem;
+    line-height: 1.2;
     margin-bottom: 12px;
   }
 
   &__contact {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-bottom: 1em;
   }
 
   &__phone,
   &__email {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   &__phone {
@@ -54,7 +54,7 @@
   }
 
   &__address {
-    font-size: 1rem;
+    font-size: 1.25rem;
 
     span {
       display: inline-block;

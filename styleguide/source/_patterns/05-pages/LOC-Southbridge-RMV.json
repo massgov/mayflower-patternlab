@@ -13,26 +13,26 @@
       "text": "Home",
       "href": "/"
     },{
-      "text": "Mt Greylock State Park",
+      "text": "Southbridge RMV",
       "href": "#"
     }]
   },
 
   "pageHeader": {
-    "title": "Mt Greylock State Park",
+    "title": "Southbridge RMV",
     "subTitle": "",
     "rteElements": [{
       "path": "atoms-paragraph",
       "data": {
         "paragraph" : {
-          "text": "Visitor's Center<br />30 Rockwell Road, Lanesborough, MA 01237<br />(413) 499-4262"
+          "text": "6 Larochelle Way, Southbridge, MA 01550"
         }
       }
     },{
       "path": "atoms-link",
       "data": {
         "link" : {
-          "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
+          "href": "https://www.google.com/maps/place/6+Larochelle+way,+Southbridge,+MA+01550",
           "target": "_blank",
           "text": "Directions",
           "chevron": "true"
@@ -40,6 +40,18 @@
       }
     }],
     "headerTags": ""
+  },
+
+  "waitTime": {
+    "items":[{
+      "label": "Licensing",
+      "time": "2:00",
+      "units": "hrs"
+    },{
+      "label": "Registration",
+      "time": "24",
+      "units": "mins"
+    }]
   },
 
   "bannerCarousel": {

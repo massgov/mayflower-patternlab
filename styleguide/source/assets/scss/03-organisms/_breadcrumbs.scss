@@ -15,7 +15,7 @@
     @include ma-container;
   }
 
-  ul {
+  ol {
     @include ma-reset-list;
 
     @media ($bp-medium-min) {
@@ -71,7 +71,7 @@
 
   a {
     display: inline-block;
-    font-size: .875rem;
+    font-size: 1.063rem;
     line-height: 1rem;
     padding: 20px 0;
 
@@ -82,7 +82,7 @@
 }
 
 .ma__breadcrumbs--light {
-  ul {
+  ol {
     @media ($bp-medium-min) {
       border-top: none;
       border-bottom: 1px solid;

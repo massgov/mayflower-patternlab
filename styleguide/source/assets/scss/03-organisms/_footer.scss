@@ -8,7 +8,8 @@
 
   &__back2top{
     @include ma-button("small");
-    font-size: .85rem;
+    font-size: 1rem;
+    letter-spacing: .1em;
     opacity: 1;
     padding: .5em .7em;
     position: fixed;
@@ -28,7 +29,7 @@
       transform: rotate(-90deg);
       transform-origin: center center;
     }
-    
+
     span {
       display: block;
       text-align: center;
@@ -70,7 +71,7 @@
   }
 
   &__copyright {
-    font-size: 0.813rem;
+    font-size: 1.063rem;
     line-height: 1.54;
 
     @media ($bp-large-max) {
