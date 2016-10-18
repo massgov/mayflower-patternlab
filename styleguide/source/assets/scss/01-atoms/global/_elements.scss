@@ -22,16 +22,6 @@ a {
   text-decoration: none;
 }
 
-.link-chevron {
-  @include ma-link-underline;
-  @include ma-chevron;
-  padding-right: 14px;
-
-  &:after {
-    margin-right: -14px;
-  }
-}
-
 img {
   height: auto;
   max-width: 100%;
