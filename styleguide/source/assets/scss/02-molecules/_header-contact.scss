@@ -12,22 +12,25 @@
 
   &__accordion {
     @include ma-button-reset;
+    border-top: 1px solid;
     display: block;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: .1em;
     margin-bottom: 1em;
-    padding: 5px 30px 5px 10px;
+    padding: 10px 30px 10px 0;
     position: relative;
     text-align: left;
+    text-transform: uppercase;
     width: 100%;
 
     &:after {
       content: "+";
       display: block;
-      font-size: 1.5em;
+      font-size: 1.75rem;
       line-height: .75em;
       position: absolute;
         top: 50%;
-        right: 10px;
+        right: 0;
       transition: transform .5s ease;
       transform-origin: center center;
       transform: translateY(-50%);
@@ -38,7 +41,7 @@
     }
 
     &:hover {
-      opacity: .7;
+
     }
 
     @media($bp-small-min) {
