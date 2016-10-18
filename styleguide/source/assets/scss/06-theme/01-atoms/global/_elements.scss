@@ -10,14 +10,6 @@ a {
   color: $c-font-link;
 }
 
-.link-chevron {
-
-  &:after,
-  &:hover {
-    border-color: rgba($c-font-link, .5);
-  }
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: $c-font-heading;
   font-weight: 700;

@@ -43,6 +43,7 @@
     a {
       @include ma-chevron;
       @include ma-link-underline;
+      padding-bottom: 3px;
 
       &:after {
         border-right: 3px solid;

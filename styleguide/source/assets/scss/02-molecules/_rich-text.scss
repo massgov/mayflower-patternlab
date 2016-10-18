@@ -47,6 +47,7 @@
   a {
     @include ma-link-underline;
     overflow-wrap: break-word;
+    padding-bottom: 3px;
     word-wrap: break-word;
     word-break: break-word;
   }
