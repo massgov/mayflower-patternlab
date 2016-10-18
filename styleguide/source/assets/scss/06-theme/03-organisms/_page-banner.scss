@@ -3,8 +3,9 @@ $page-banner-inner-width: 612px;
 .ma__page-banner {
 
   &__icon {
-    
-    svg {
+
+    svg,
+    svg > g {
       fill: rgba($c-font-inverse,.5);
     }
   }
