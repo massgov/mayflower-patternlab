@@ -1,8 +1,63 @@
 .ma__header-contact {
 
-  @media($bp-small-min) {
-    display: flex;
-    align-items: stretch;
+  // controls for when to activate accordion
+  &.js-section-accordion:before {
+    content: "true";
+    display: none;
+
+    @media ($bp-small-min) {
+      content: "false";
+    }
+  }
+
+  &__accordion {
+    @include ma-button-reset;
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+    padding: 5px 30px 5px 10px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+    &:after {
+      content: "+";
+      display: block;
+      font-size: 1.5em;
+      line-height: .75em;
+      position: absolute;
+        top: 50%;
+        right: 10px;
+      transition: transform .5s ease;
+      transform-origin: center center;
+      transform: translateY(-50%);
+
+      .is-open & {
+        transform: translateY(-50%) rotate(135deg);
+      }
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    @media($bp-small-min) {
+      display: none;
+    }
+  }
+
+  &__container {
+
+    @media($bp-small-max) {
+      &.js-section-accordion-content {
+        display: none;
+      }
+    }
+
+    @media($bp-small-min) {
+      display: flex;
+      align-items: stretch;
+    }
   }
 
   &__column {
