@@ -1,5 +1,15 @@
 .ma__header-contact {
 
+  &__accordion {
+    background-color: $c-bg-section;
+    color: $c-theme-primary-2;
+    font-weight: 500;
+
+    &:after {
+      color: $c-theme-primary-2;
+    }
+  }
+
   &__column {
 
     & + & {
