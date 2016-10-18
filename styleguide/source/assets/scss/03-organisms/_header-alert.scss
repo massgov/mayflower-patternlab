@@ -4,7 +4,7 @@
 
   &__hide {
     @include ma-button-reset;
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: .65;
     overflow: hidden;
     position: absolute;
@@ -27,12 +27,13 @@
   }
 
   &__label {
+    font-size: 1rem;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    font-size: .9rem;
   }
 
   &__message {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.5em;
 
     a {

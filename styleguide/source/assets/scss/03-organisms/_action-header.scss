@@ -3,7 +3,7 @@ $action-header-widget-width: 350px;
   @include ma-container;
 
   &__inner {
-    @include clearfix;   
+    @include clearfix;
   }
 
   &__content {
@@ -62,6 +62,6 @@ $action-header-widget-width: 350px;
   }
 
   .ma__header-contact {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
