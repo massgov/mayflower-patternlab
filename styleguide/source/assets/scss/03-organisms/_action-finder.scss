@@ -63,6 +63,7 @@ $action-finder-bp: 900px;
 
   &__items {
     @include ma-reset-list;
+    cursor: pointer;
     display: flex;
       flex-wrap: wrap;
     margin-bottom: 20px;
