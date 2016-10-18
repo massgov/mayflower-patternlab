@@ -34,7 +34,6 @@
 
   &__link {
     @include ma-link-underline;
-
-
+    padding-bottom: 3px;
   }
 }

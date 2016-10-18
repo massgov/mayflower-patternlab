@@ -51,6 +51,7 @@
 
   &__email {
     @include ma-link-underline;
+    padding-bottom: 3px;
   }
 
   &__address {

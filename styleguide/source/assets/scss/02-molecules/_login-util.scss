@@ -112,6 +112,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
 
     a {
       @include ma-link-underline;
+      padding-bottom: 3px;
 
       &:after {
         border-right: 3px solid;

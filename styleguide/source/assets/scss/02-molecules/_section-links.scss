@@ -143,6 +143,7 @@
 
   &__link {
     @include ma-link-underline;
+    padding-bottom: 3px;
 
     span {
       @include ma-chevron;

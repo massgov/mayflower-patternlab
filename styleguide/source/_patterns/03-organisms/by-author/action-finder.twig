@@ -21,7 +21,7 @@
     <div class="ma__action-finder__category">Featured:</div>
     <ul class="ma__action-finder__items">
       {% for link in actionFinder.featuredLinks %}
-        <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
+        <li class="ma__action-finder__item js-clickable {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
           {% if link.image %}
             {% set illustratedLink = link %}
             {% include "molecules-illustrated-link" %}
