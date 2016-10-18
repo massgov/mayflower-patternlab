@@ -27,5 +27,6 @@
   &__link {
     @include ma-link-underline;
     margin-left: -.5em;
+    padding-bottom: 3px;
   }
 }

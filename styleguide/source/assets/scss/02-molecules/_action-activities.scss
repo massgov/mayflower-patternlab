@@ -54,6 +54,7 @@ $bp-x-large-min: "min-width: 1160px";
   &__link {
     @include ma-chevron;
     @include ma-link-underline;
+    padding-bottom: 3px;
   }
 
   &:first-child {
