@@ -125,6 +125,10 @@ $collage-header-bp: "min-width: 700px";
     @media ($collage-header-bp) {
       width: 370px;
 
+      h3 {
+        line-height: 1.3;
+      }
+
       p {
         font-size: 1.625rem;
       }
