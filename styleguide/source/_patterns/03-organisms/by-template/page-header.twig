@@ -10,9 +10,9 @@
         {% include "molecules-rich-text" %}
       </div>
     {% endif %}
-    {% if pageHeader.headerTags.taxonomyTerms %}
-      {% set headerTags = pageHeader.headerTags %}
-      {% include "molecules-header-tags" %}
-    {% endif %}
   </div>
+  {% if pageHeader.headerTags.taxonomyTerms %}
+    {% set headerTags = pageHeader.headerTags %}
+    {% include "molecules-header-tags" %}
+  {% endif %}
 </section>

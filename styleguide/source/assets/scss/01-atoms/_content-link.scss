@@ -1,0 +1,12 @@
+.ma__content-link {
+  @include ma-link-underline;
+
+  &--chevron {
+    @include ma-chevron;
+    padding-right: 14px;
+
+    &:after {
+      margin-right: -14px;
+    }
+  }
+}
