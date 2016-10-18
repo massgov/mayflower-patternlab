@@ -1,12 +1,12 @@
 .ma__header-contact {
 
   &__accordion {
-    background-color: $c-bg-section;
-    color: $c-theme-primary-2;
-    font-weight: 500;
+    border-top-color: $c-bd-divider;
+    color: $c-theme-primary-1;
+    font-weight: 700;
 
     &:after {
-      color: $c-theme-primary-2;
+      color: $c-theme-primary-1;
     }
   }
 
@@ -39,6 +39,7 @@
 
   &__value--phone {
     color: $c-font-base;
+    font-weight: 500;
   }
 
   &__details {
