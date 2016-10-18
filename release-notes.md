@@ -10,6 +10,9 @@
 * MGVDU-213 - FE Dev: Location - inline gallery
 * MGVDU-214 - FE Dev: Location - Action Activities section
 
+### Other
+* MGVDU-220 - FE Dev: Image credit component
+
 ## 0.4.0
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
