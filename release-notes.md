@@ -12,6 +12,7 @@
 
 ### MGVDU-208 - Basic Content Page
 * MGVDU-88 - Page Discourse Component
+* MGVDU-275 - FE Dev - Basic Content - side bar Promo
 
 ### Other
 * MGVDU-220 - FE Dev: Image credit component
