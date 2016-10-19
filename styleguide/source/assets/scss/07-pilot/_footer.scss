@@ -1,7 +1,10 @@
 .ma__footer {
 
-  &__nav,
   &__logo {
+    text-align: center;
+  }
+
+  &__nav {
     display: none;
   }
 

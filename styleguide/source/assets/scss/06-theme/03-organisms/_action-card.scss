@@ -40,7 +40,8 @@
 
   &__icon {
 
-    svg {
+    svg,
+    svg > g {
       fill: rgba($c-font-medium,.7);
     }
   }
@@ -49,7 +50,8 @@
   &__item--green &__icon,
   &__item--dark-gray &__icon {
 
-    svg {
+    svg,
+    svg > g {
       fill: rgba($c-font-inverse,.7);
     }
   }
