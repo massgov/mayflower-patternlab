@@ -10,6 +10,9 @@
 * MGVDU-213 - FE Dev: Location - inline gallery
 * MGVDU-214 - FE Dev: Location - Action Activities section
 
+### MGVDU-208 - Basic Content Page
+* MGVDU-88 - Page Discourse Component
+
 ### Other
 * MGVDU-220 - FE Dev: Image credit component
 * MGVDU-202 - Action Finder - entire action item should be clickable
