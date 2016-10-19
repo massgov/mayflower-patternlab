@@ -26,6 +26,10 @@ $header-search-height: 46px;
       right: 0;
       top: 0;
     width: $header-search-height;
+
+    &.ajax {
+      padding: 12px;
+    }
   }
 
   .ma__button-search {
@@ -35,6 +39,11 @@ $header-search-height: 46px;
     text-align: center;
     z-index: 2;
 
+    &--ajax {
+      padding: 12px;
+      border-left: 2px solid;
+    }
+
     svg {
       opacity: 1;
       transition: all .2s;
@@ -42,15 +51,19 @@ $header-search-height: 46px;
     }
   }
 
-  &.is-dirty .ma__button-search {
+  .ma__action-finder__container.is-dirty & .ma__button-search {
     z-index: 1;
 
     svg {
       opacity: 0;
       visibility: hidden;
     }
-  }
 
+    &--ajax {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 
   &__reset {
     font-size: 2.75rem;
@@ -65,6 +78,11 @@ $header-search-height: 46px;
       opacity: 1;
       visibility: visible;
       z-index: 2;
+    }
+
+    &--ajax {
+      @include ma-button-reset;
+      border-left: 2px solid;
     }
 
     span {
