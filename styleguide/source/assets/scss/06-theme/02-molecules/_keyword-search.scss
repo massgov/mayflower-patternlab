@@ -12,6 +12,9 @@
   &__reset {
     @include ma-font(700);
     color: $c-theme-primary-2;
+    &.ajax {
+      border-left-color: rgba($c-bd-input,.5);
+    }
   }
 
   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
