@@ -4,6 +4,10 @@
     @media ($bp-medium-max) {
       display: none;
     }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
   }
   .post-content & {
     @media ($bp-medium-min) {
