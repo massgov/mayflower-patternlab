@@ -1,0 +1,6 @@
+.ma__page-discourse {
+
+  &__title {
+    @include ma-column-heading($c-theme-primary-2);
+  }
+}
