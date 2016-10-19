@@ -1,7 +1,8 @@
 .ma__category-icon {
   background-color: $c-theme-primary-2;
 
-  svg {
+  svg,
+  svg > g {
     fill: $c-white;
   }
 

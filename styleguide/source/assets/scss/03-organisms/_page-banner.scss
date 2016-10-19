@@ -113,7 +113,15 @@ $page-banner-small: '.ma__page-banner--small';
     }
   }
 
-  &--small {
+  &--small &__title {
+    font-size: 3.25rem;
 
+    @media ($bp-large-min){
+      font-size: 3.5rem;
+    }
+
+    @media ($bp-x-large-min){
+      font-size: 3.875rem;
+    }
   }
 }

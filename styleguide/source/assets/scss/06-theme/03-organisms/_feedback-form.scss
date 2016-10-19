@@ -10,7 +10,7 @@
   .ma__input-radio label:before {
     background-color: rgba($c-white, 0.1);
   }
-  
+
   .ma__input-radio input:checked ~ label:before {
     color: $c-font-inverse;
   }
@@ -27,7 +27,9 @@
 
   &__controls {
 
-    button {
+    button,
+    input[type="button"],
+    input[type="submit"] {
       @include ma-button("normal","solid",$c-theme-primary-1);
     }
   }
