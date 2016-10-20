@@ -10,8 +10,4 @@
       padding:0;
     }
   }
-
-  &__title {
-    @include ma-column-heading();
-  }
 }
