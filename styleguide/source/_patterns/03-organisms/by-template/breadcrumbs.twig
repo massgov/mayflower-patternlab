@@ -2,8 +2,9 @@
   <nav class="ma__breadcrumbs__container">
     <ol class="ma__breadcrumbs__items">
       <li class="ma__breadcrumbs__item"><a href="/">Home</a></li>
+      <button class="ma__breadcrumbs__item ma__breadcrumbs__item--spacer">&#8230;</button>
       {% for link in breadcrumbs.links %}
-      <li class="ma__breadcrumbs__item"><a href="{{link.href}}">{{link.text}}</a></li>
+      <li class="ma__breadcrumbs__item" style="top: {{ loop.index * 36 }}px"><a href="{{link.href}}">{{link.text}}</a></li>
       {% endfor %}
     </ol>
   </nav>

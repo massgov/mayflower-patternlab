@@ -3,12 +3,12 @@
   @media ($bp-medium-min)  {
     background-color: $c-bg-section;
 
-    ol {
+    &__items {
       border-top-color: $c-bd-divider;
     }
   }
 
-  li {
+  &__item {
 
     &:last-child {
       a {
@@ -23,6 +23,14 @@
         &:before {
           border-color: $c-theme-primary-1;
         }
+      }
+    }
+
+    @media ($bp-medium-min) {
+      // more than four items + one input
+      &:nth-child(3):nth-last-child(n+5),
+      &:nth-child(3):nth-last-child(n+5) ~ & {
+        background-color: $c-white;
       }
     }
   }
