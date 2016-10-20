@@ -1,8 +1,9 @@
 <section class="ma__breadcrumbs {{breadcrumbs.light ? 'ma__breadcrumbs--light' : ''}}">
   <nav class="ma__breadcrumbs__container">
-    <ol>
+    <ol class="ma__breadcrumbs__items">
+      <li class="ma__breadcrumbs__item"><a href="/">Home</a></li>
       {% for link in breadcrumbs.links %}
-      <li><a href="{{link.href}}">{{link.text}}</a></li>
+      <li class="ma__breadcrumbs__item"><a href="{{link.href}}">{{link.text}}</a></li>
       {% endfor %}
     </ol>
   </nav>

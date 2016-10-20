@@ -2,9 +2,6 @@
   "breadcrumbs":{
     "light": "true",
     "links": [{
-      "text": "Home",
-      "href": "/"
-    },{
       "text": "Your Government",
       "href": ""
     },{
