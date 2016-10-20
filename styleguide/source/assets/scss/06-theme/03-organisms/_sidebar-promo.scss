@@ -1,6 +1,7 @@
 .ma__sidebar-promo {
 
   &__title {
-    @include ma-column-heading($c-bg-comp-title);
+    border-color: $c-bd-divider;
+    color: $c-font-base;
   }
 }

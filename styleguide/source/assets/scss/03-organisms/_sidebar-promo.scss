@@ -1,8 +1,12 @@
 .ma__sidebar-promo {
-  margin-bottom: 30px;
-  
+  margin-bottom: 40px;
+
   &__title {
-    @include ma-column-heading;
+    border-bottom: 2px solid;
+    font-size: 1.188rem;
+    letter-spacing: .09em;
+    padding-bottom: .5em;
+    text-transform: uppercase;
   }
 
   &__image {
@@ -15,10 +19,12 @@
   }
 
   &__content {
+    font-size: 1.25rem;
     margin-bottom: 1em;
   }
 
   &__view-more {
     text-align: right;
+    text-transform: lowercase;
   }
 }

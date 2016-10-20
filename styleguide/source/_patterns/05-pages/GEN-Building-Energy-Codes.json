@@ -25,12 +25,20 @@
     }]
   },
 
-  "pageDiscourse": {
+  "pageHeader": {
     "title": "Building Energy Codes",
+    "subTitle": "",
+    "intro": "",
+    "headerTags": {
+      "taxonomyTerms": ""
+    }
+  },
+
+  "pageDiscourse": {
     "rteElements": [{
-      "path": "atoms-heading-3",
+      "path": "atoms-heading-2",
       "data": {
-        "heading3" : {
+        "heading2" : {
           "text":"Energy Efficiency Provisions of the State Building Code (780 CMR)"
         }
       }
@@ -70,9 +78,9 @@
         }
       }
     },{
-      "path": "atoms-heading-3",
+      "path": "atoms-heading-2",
       "data": {
-        "heading3" : {
+        "heading2" : {
           "text":"Stretch Code Summary"
         }
       }
@@ -91,9 +99,9 @@
         }
       }
     },{
-      "path": "atoms-heading-3",
+      "path": "atoms-heading-2",
       "data": {
-        "heading3" : {
+        "heading2" : {
           "text":"Stretch code \"Residential Cash Flow Analysis\""
         }
       }
@@ -126,9 +134,9 @@
         }
       }
     },{
-      "path": "atoms-heading-3",
+      "path": "atoms-heading-2",
       "data": {
-        "heading3" : {
+        "heading2" : {
           "text":"Massachusetts Energy Code Training"
         }
       }
@@ -145,7 +153,7 @@
   "sidebarPromos":[{
     "title":"Cross Promotional Component Name",
     "image": {
-      "alt" : "promo copy", 
+      "alt" : "promo copy",
       "src" : "http://placehold.it/320x180"
     },
     "content":"This could link to another relevant page, such as the in court bail process or bail for juveniles. We can have variations for cross promo components. Some wouldn't need an image or description, as seen in the components below this one. Com sociis natoque penatibus et magnis dis.",
@@ -168,7 +176,7 @@
   },{
     "title":"Cross Promotional Component with Image",
     "image": {
-      "alt" : "promo copy", 
+      "alt" : "promo copy",
       "src" : "http://placehold.it/320x180"
     },
     "content":"",
