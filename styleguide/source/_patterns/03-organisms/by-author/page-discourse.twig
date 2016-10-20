@@ -1,8 +1,5 @@
 <section class="ma__page-discourse">
   <div class="ma__page-discourse__container">
-    {% if pageDiscourse.title %}
-      <h2 class="ma__page-discourse__title">{{pageDiscourse.title}}</h2> 
-    {% endif %}
     {% set rteElements = pageDiscourse.rteElements %}
     {% include "molecules-rich-text" %}
   </div>
