@@ -25,14 +25,29 @@
         }
       }
     }
+  }
 
-    @media ($bp-medium-min) {
-      // more than four items + one input
-      &:nth-child(3):nth-last-child(n+5),
-      &:nth-child(3):nth-last-child(n+5) ~ & {
-        background-color: $c-white;
-      }
+  &__menu-trigger {
+    color: transparent;
+  }
+
+  &__menu-display {
+    color: $c-font-link;
+  }
+
+  &__menu-trigger:focus ~ &__menu-display {
+    border-color: Highlight !important;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline: -webkit-focus-ring-color auto 5px;
     }
+  }
+
+  &__sub-items {
+    background-color: $c-white;
+    box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
   }
 }
 
@@ -40,7 +55,7 @@
 
   background-color: transparent;
 
-  ol {
+  &__items {
     border-bottom-color: $c-bd-divider;
   }
 }

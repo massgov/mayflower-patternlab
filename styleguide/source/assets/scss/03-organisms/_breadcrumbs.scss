@@ -73,40 +73,59 @@
       }
     }
 
-    @media ($bp-medium-min) {
-      // more than four items + one input
-      &:nth-child(3):nth-last-child(n+5),
-      &:nth-child(3):nth-last-child(n+5) ~ & {
-        display: none;
-        position: absolute;
-          top: 1.5em;
-        z-index: $z-dropdown;
-      }
-
-      // override to show last two items
-      // not enough specificity 
-      &:last-child,
-      &:nth-last-child(2) {
-        display: inline-block !important;
-        position: static !important;
-      }
-
-      // show the spacer
-      &--spacer {
-        @include ma-button-reset;
-        display: inline-block;
-      }
-
-      &--spacer:focus ~ & {
-        display: inline-block !important;
-      }
+    &--menu {
+      position: relative;
     }
+  }
+
+  // checkbox
+  &__menu-trigger {
+    cursor: pointer;
+    height: 100%;
+    min-height: 0;
+    opacity: 0;
+    position: absolute;
+      top: 50%;
+      left: -.15em;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+    width: 20px;
+    z-index: $z-dropdown;
+  }
+
+  &__menu-display {
+    display: inline-block;
+    font-size: 1.063rem;
+    line-height: 1em;
+    padding: 10px 0;
+  }
+
+  &__menu-trigger:hover ~ &__menu-display {
+    opacity: .6;
+  }
+
+  &__sub-items {
+    @include ma-reset-list;
+    display: none;
+    padding: 0 15px;
+    position: absolute;
+    width: auto;
+    z-index: $z-dropdown;
+  }
+
+  &__menu-trigger:checked ~ &__sub-items {
+    display: block;
+  }
+
+  &__sub-item {
+    display: block;
+    white-space:nowrap;
   }
 
   a {
     display: inline-block;
     font-size: 1.063rem;
-    line-height: 1rem;
+    line-height: 1em;
     padding: 10px 0;
 
     &:hover {
@@ -116,7 +135,7 @@
 }
 
 .ma__breadcrumbs--light {
-  ol {
+  &__items {
     @media ($bp-medium-min) {
       border-top: none;
       border-bottom: 1px solid;
