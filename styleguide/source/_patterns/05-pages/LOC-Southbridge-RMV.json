@@ -10,9 +10,6 @@
   "breadcrumbs":{
     "light": "true",
     "links": [{
-      "text": "Home",
-      "href": "/"
-    },{
       "text": "Southbridge RMV",
       "href": "#"
     }]
