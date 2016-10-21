@@ -12,12 +12,13 @@
 
   &__message {
 
+    &:hover {
+      border-bottom-color: rgba($c-font-link-subtle,.5);
+    }
+    
     a {
       color: $c-font-dark;
 
-      &:hover {
-        border-bottom-color: rgba($c-font-link-subtle,.5);
-      }
     }
   }
 }
