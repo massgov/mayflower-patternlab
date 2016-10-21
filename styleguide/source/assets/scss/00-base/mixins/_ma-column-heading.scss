@@ -14,7 +14,6 @@
     padding: 18px 25px 14px 25px;
     position: relative;
     text-transform: uppercase;
-    width: calc(100% + $offset);
 
     &:after {
       content: "";
@@ -27,7 +26,7 @@
       width: 100%;
     }
 
-    .page-content & {
+    .main-content--two .page-content & {
       padding-right: $offset;
 
       @media ($bp-large-min) {
@@ -69,6 +68,7 @@
   }
   @else {
     background-color: $c-bg;
+    color: white;
 
     &:after {
       background-color: $c-page;

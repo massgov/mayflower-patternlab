@@ -116,14 +116,15 @@
     padding-bottom: 3px;
   }
 
+  &__value--phone,
   &__value--phone:hover {
     border-bottom: none;
-  }
+}
 
   &__details {
     font-size: 1rem;
-    line-height: 1.83;
+    line-height: 1.3;
     margin-bottom: .35em;
-    margin-top: -.35em;
+    margin-top: -.25em;
   }
 }

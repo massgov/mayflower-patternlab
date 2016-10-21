@@ -22,7 +22,6 @@
   &__content {
 
     @media ($bp-large-min){
-      float:left;
       padding-right: $column;
       padding-bottom: 0;
       width: calc(100% - #{$layout-sidebar-width});
@@ -35,5 +34,9 @@
 
   &__title {
     margin-bottom: .4em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

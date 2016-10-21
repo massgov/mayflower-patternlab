@@ -1,0 +1,30 @@
+.ma__sidebar-promo {
+  margin-bottom: 40px;
+
+  &__title {
+    border-bottom: 2px solid;
+    font-size: 1.188rem;
+    letter-spacing: .09em;
+    padding-bottom: .5em;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    margin-bottom: 1em;
+
+    a {
+      display: inline-block;
+      font-size: 0;
+    }
+  }
+
+  &__content {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+  }
+
+  &__view-more {
+    text-align: right;
+    text-transform: lowercase;
+  }
+}
