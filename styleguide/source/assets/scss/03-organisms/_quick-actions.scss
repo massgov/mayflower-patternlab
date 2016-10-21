@@ -13,7 +13,7 @@
   }
 
   &__title {
-    @include ma-column-heading();
+    @include ma-heading-colored();
 
     .sidebar & {
 
