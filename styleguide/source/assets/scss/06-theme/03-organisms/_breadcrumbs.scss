@@ -3,12 +3,12 @@
   @media ($bp-medium-min)  {
     background-color: $c-bg-section;
 
-    ol {
+    &__items {
       border-top-color: $c-bd-divider;
     }
   }
 
-  li {
+  &__item {
 
     &:last-child {
       a {
@@ -26,13 +26,36 @@
       }
     }
   }
+
+  &__menu-trigger {
+    color: transparent;
+  }
+
+  &__menu-display {
+    color: $c-font-link;
+  }
+
+  &__menu-trigger:focus ~ &__menu-display {
+    border-color: Highlight !important;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+  }
+
+  &__sub-items {
+    background-color: $c-white;
+    box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+  }
 }
 
 .ma__breadcrumbs--light {
 
   background-color: transparent;
 
-  ol {
+  &__items {
     border-bottom-color: $c-bd-divider;
   }
 }
