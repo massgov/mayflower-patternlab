@@ -2,7 +2,7 @@
 // $c-bg is the color you want the title background to be
 // $c-page is the color of the page it is being rendered on
 
-@mixin ma-column-heading($c-bg:transparent,$c-page:white) {
+@mixin ma-heading-colored($c-bg:transparent,$c-page:white) {
   $offset: 55px;
 
   @if($c-bg == transparent) {

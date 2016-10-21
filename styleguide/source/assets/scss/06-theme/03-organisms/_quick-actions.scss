@@ -1,7 +1,7 @@
 .ma__quick-actions {
 
   &__title {
-    @include ma-column-heading($c-theme-primary-2);
+    @include ma-heading-colored($c-theme-primary-2);
     @include ma-font(700);
     color: $c-font-inverse;
   }
