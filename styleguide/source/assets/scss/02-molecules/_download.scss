@@ -1,14 +1,19 @@
 .ma__download {
-  margin-bottom: 1em;
+  margin-bottom: 40px;
   overflow: auto; // clearing
 
   &__item {
-    clear: both;
+    @include clearfix;
+  }
+
+  &__item + &__item {
+    padding-top: 35px;
   }
 
   &__title {
     float: left;
     font-size: 1.375rem;
+    margin-bottom: 0;
     width: calc(100% - 66px);
 
     a {
