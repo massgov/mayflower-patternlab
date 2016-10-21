@@ -1,43 +1,36 @@
 .ma__contact-us {
 
   &__title {
-    @include ma-heading-colored($c-bg-comp-title);
-    @include ma-font(700);
-    color: $c-font-inverse;
-  }
 
-  &__items {
-
-  }
-
-  &__item {
-
-    & + & {
-      border-top-color: $c-bd-divider;
-    }
   }
 
   &__name {
-    @include ma-font(700);
-  }
 
-  &__phone {
-    @include ma-font(400);
-    color: $c-font-base;
-  }
-
-  &__email {
-
-    &:hover {
-      border-color: rgba($c-font-link,.5);
+    svg {
+      fill: $c-theme-primary-2;
     }
-  }
-
-  &__address {
 
     span {
-
+      color: $c-font-dark;
+      font-weight: 700;
     }
   }
 
+  &__label {
+    font-weight: 500;
+  }
+
+  &__value:hover {
+    border-bottom-color: rgba($c-font-link,.5);
+  }
+
+  &__value--phone {
+    color: $c-font-base;
+    font-weight: 500;
+  }
+
+  &__details {
+    font-weight: 300;
+    font-style: italic;
+  }
 }

@@ -1,68 +1,117 @@
 .ma__contact-us {
-  padding-bottom: 50px;
-
-  // use in the Action Map component info window
-  // Handle bar template
-  &--infoWindow {
-    font-size: 1.125rem;
-    padding-bottom: 0;
-  }
 
   &__title {
-    @include ma-heading-colored();
+    margin-bottom: .5em;
   }
 
-  &__items {
-    @include ma-reset-list;
-  }
-
-  &__item {
+  &__list {
 
     & + & {
-      border-top: 1px solid;
       padding-top: 20px;
-      margin-top: 20px;
-    }
-
-    & > :last-child {
-      margin-bottom: 0;
     }
   }
 
   &__name {
-    font-size: 1.625rem;
-    line-height: 1.2;
-    margin-bottom: 12px;
-  }
 
-  &__contact {
-    font-size: 1.25rem;
-    margin-bottom: 1em;
-  }
-
-  &__phone,
-  &__email {
-    font-size: 1.25rem;
-  }
-
-  &__phone {
-    white-space: nowrap;
-  }
-
-  &__email {
-    @include ma-link-underline;
-    padding-bottom: 3px;
-  }
-
-  &__address {
-    font-size: 1.25rem;
+    & > svg {
+      display: inline-block;
+      height: 20px;
+      margin-right: .25em;
+      vertical-align: middle;
+      width: 20px;
+    }
 
     span {
       display: inline-block;
-
-      &:last-child {
-        display: block;
-      }
+      vertical-align: middle;
     }
   }
+
+  &__label {
+    font-size: 1.25rem;
+  }
+
+  &__value {
+    @include ma-link-underline;
+    font-size: 1.25rem;
+    line-height: 1.75;
+    padding-bottom: 3px;
+  }
+
+  &__value--phone,
+  &__value--phone:hover {
+    border-bottom: none;
+  }
+
+  &__details {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-bottom: .35em;
+    margin-top: -.25em;
+  }
 }
+
+  // // use in the Action Map component info window
+  // // Handle bar template
+  // &--infoWindow {
+  //   font-size: 1.125rem;
+  //   padding-bottom: 0;
+  // }
+
+  // &__title {
+  //   @include ma-heading-colored();
+  // }
+
+  // &__items {
+  //   @include ma-reset-list;
+  // }
+
+  // &__item {
+
+  //   & + & {
+  //     border-top: 1px solid;
+  //     padding-top: 20px;
+  //     margin-top: 20px;
+  //   }
+
+  //   & > :last-child {
+  //     margin-bottom: 0;
+  //   }
+  // }
+
+  // &__name {
+  //   font-size: 1.625rem;
+  //   line-height: 1.2;
+  //   margin-bottom: 12px;
+  // }
+
+  // &__contact {
+  //   font-size: 1.25rem;
+  //   margin-bottom: 1em;
+  // }
+
+  // &__phone,
+  // &__email {
+  //   font-size: 1.25rem;
+  // }
+
+  // &__phone {
+  //   white-space: nowrap;
+  // }
+
+  // &__email {
+  //   @include ma-link-underline;
+  //   padding-bottom: 3px;
+  // }
+
+  // &__address {
+  //   font-size: 1.25rem;
+
+  //   span {
+  //     display: inline-block;
+
+  //     &:last-child {
+  //       display: block;
+  //     }
+  //   }
+  // }
