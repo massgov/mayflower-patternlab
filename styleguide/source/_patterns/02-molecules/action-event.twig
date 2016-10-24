@@ -1,0 +1,14 @@
+<section class="ma__action-event">
+  <div class="ma__action-event__name">
+    {% set decorativeLink = actionEvent.name %}
+    {% include "atoms-decorative-link" %}
+  </div>
+  <div class="ma__action-event__date">
+    {{actionEvent.date}}
+  </div>
+  {% if actionEvent.description %}
+    <div class="ma__action-event__description">
+      {{actionEvent.description}}
+    </div>
+  {% endif %}
+</section>

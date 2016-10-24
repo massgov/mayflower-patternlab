@@ -1,0 +1,20 @@
+.ma__sidebar-widget {
+
+  &__item  {
+
+    & + & {
+      border-top-color: $c-bd-divider;
+    }
+  }
+
+  &__more {
+
+    a {
+
+      &:hover,
+      &:after {
+        border-color: rgba($c-font-link,.5);
+      }
+    }
+  }
+}
