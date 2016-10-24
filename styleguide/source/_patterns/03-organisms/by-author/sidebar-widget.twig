@@ -1,7 +1,0 @@
-<section class="ma__sidebar-widget">
-  {% set coloredHeading = sidebarWidget.coloredHeading %}
-  {% include "atoms-colored-heading" %}
-  {% for item in sidebarWidget.items %}
-    {% include item.path with item.data %}
-  {% endfor %}
-</section>

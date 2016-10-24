@@ -1,0 +1,6 @@
+{% set coloredHeading = sidebarContact.coloredHeading %}
+{% include "atoms-colored-heading" %}
+{% for item in sidebarContact.items %}
+  {% set contactUs = item.contactUs %}
+  {% include "molecules-contact-us" %}
+{% endfor %}
