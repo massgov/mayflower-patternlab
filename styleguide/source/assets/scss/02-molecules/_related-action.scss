@@ -1,5 +1,11 @@
 .ma__related-action {
 
+  & + & {
+    border-top: 1px solid;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
   &__link {
     @include ma-link-decorative;
 

@@ -1,5 +1,9 @@
 .ma__related-action {
 
+  & + & {
+    border-top-color: $c-bd-divider;
+  }
+
   &__link {
 
     a:hover {

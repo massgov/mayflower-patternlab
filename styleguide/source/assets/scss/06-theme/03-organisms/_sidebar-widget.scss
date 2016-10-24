@@ -1,12 +1,5 @@
 .ma__sidebar-widget {
 
-  &__item  {
-
-    & + & {
-      border-top-color: $c-bd-divider;
-    }
-  }
-
   &__more {
 
     a {

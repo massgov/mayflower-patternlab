@@ -1,12 +1,12 @@
 {% set coloredHeading = sidebarWidget.coloredHeading %}
 {% include "atoms-colored-heading" %}
 <section class="ma__sidebar-widget">
+  <div class="ma__sidebar-widget__items">
   {% for item in sidebarWidget.items %}
-    <div class="ma__sidebar-widget__item">
       {% set data = item.data %}
       {% include item.path with data %}
-    </div>
   {% endfor %}
+  </div>
   {% if sidebarWidget.more %}
     <div class="ma__sidebar-widget__more">
       <a href="#">{{sidebarWidget.more}}</a>
