@@ -1,5 +1,9 @@
 .ma__action-event {
 
+  & + & {
+    border-top-color: $c-bd-divider;
+  }
+
   &__date {
     @include ma-font(700);
   }

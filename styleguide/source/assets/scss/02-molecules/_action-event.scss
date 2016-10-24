@@ -1,5 +1,11 @@
 .ma__action-event {
 
+  & + & {
+    border-top: 1px solid;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
   &__date {
     margin-top: 5px;
   }

@@ -24,6 +24,7 @@
 
 // Molecules - chunks of code that are used in Organisms/Components
 @import "06-theme/02-molecules/action-activities";
+@import "06-theme/02-molecules/action-event";
 @import "06-theme/02-molecules/action-gallery";
 @import "06-theme/02-molecules/action-image";
 @import "06-theme/02-molecules/action-section";
@@ -56,7 +57,6 @@
 // Organisms - components
 @import "06-theme/03-organisms/action-card";
 @import "06-theme/03-organisms/action-details";
-@import "06-theme/03-organisms/action-events";
 @import "06-theme/03-organisms/action-finder";
 @import "06-theme/03-organisms/banner-carousel";
 @import "06-theme/03-organisms/blog-feed";

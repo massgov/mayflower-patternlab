@@ -29,6 +29,7 @@
 
 // Molecules - chunks of code that are used in Organisms/Components
 @import "02-molecules/action-activities";
+@import "02-molecules/action-event";
 @import "02-molecules/action-gallery";
 @import "02-molecules/action-image";
 @import "02-molecules/action-map";
@@ -62,7 +63,6 @@
 // Organisms - components
 @import "03-organisms/action-card";
 @import "03-organisms/action-details";
-@import "03-organisms/action-events";
 @import "03-organisms/action-finder";
 @import "03-organisms/action-header";
 @import "03-organisms/banner-carousel";
