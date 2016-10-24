@@ -2,7 +2,9 @@
   {% set accordion = "js-accordion" %}
 {% endif %}
 <section class="ma__contact-us {{accordion}}">
-  <h5 class="ma__contact-us__title">{{contactUs.title}}</h5>
+  {% if contactUs.title %}
+    <h5 class="ma__contact-us__title">{{contactUs.title}}</h5>
+  {% endif %}
   {% if contactUs.phone|length %}
     <div class="ma__contact-us__list">
       <h6 class="ma__contact-us__name">
