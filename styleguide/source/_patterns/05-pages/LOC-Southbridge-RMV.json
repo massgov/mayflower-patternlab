@@ -421,24 +421,38 @@
     }]
   },
 
-  "actionEvents": {
-    "title": "Upcoming Events",
-    "events": [{
-      "name": {
-        "type": "",
-        "href": "#",
-        "text": "Horse Party"
-      },
-      "date":"June 24, 2017, 12:00 p.m.",
-      "description":"This is a description of the event that will happen at a future date"
+  "sidebarWidget": {
+    "coloredHeading": {
+      "text": "Upcoming Events",
+      "color": ""
+    },
+    "items": [{
+      "path": "molecules-action-event",
+      "data": {
+        "actionEvent": {
+          "name": {
+            "type": "",
+            "href": "#",
+            "text": "Horse Party"
+          },
+          "date":"June 24, 2017, 12:00pm",
+          "description":"This is a description of the event that will happen at a future date"
+        }
+      }
     },{
-      "name": {
-        "type": "",
-        "href": "#",
-        "text": "Full Moon Hike"
-      },
-      "date":"June 24, 2017, 9:00 p.m.",
-      "description":"This is a description of the event that will happen at a future date"
+      "path": "molecules-action-event",
+      "data": {
+        "actionEvent": {
+          "name": {
+            "type": "",
+            "href": "#",
+            "text": "Full Moon Hike"
+          },
+          "date":"June 24, 2017, 9:00pm",
+          "description":"This is a description of the event that will happen at a future date"
+        }
+      }
     }]
-  }
+  },
+  "more":"more"
 }
