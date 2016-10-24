@@ -1,5 +1,11 @@
 .ma__contact-us {
 
+  & + & {
+    border-top: 1px solid;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
   &__title {
     margin-bottom: .5em;
   }
@@ -32,15 +38,17 @@
   }
 
   &__value {
-    @include ma-link-underline;
     font-size: 1.25rem;
     line-height: 1.75;
     padding-bottom: 3px;
   }
 
-  &__value--phone,
-  &__value--phone:hover {
-    border-bottom: none;
+  &__value--email {
+    @include ma-link-underline;
+  }
+
+  &__value--address {
+    line-height: 1.5;
   }
 
   &__details {
@@ -48,6 +56,44 @@
     line-height: 1.3;
     margin-bottom: .35em;
     margin-top: -.25em;
+  }
+
+  &__extra {
+    display: none;
+    padding-top: 20px;
+  }
+
+  &__expand {
+    padding-top:20px;
+    text-align: right;
+
+    button {
+      @include ma-button-reset;
+      @include ma-link-underline;
+      @include ma-chevron;
+      padding-right: 20px;
+
+      &:after {
+        margin-left: 0;
+        transform: translateY(-45%) rotate(45deg);
+
+        .is-open & {
+          transform: translateY(-55%) rotate(-135deg);
+        }
+      }
+
+      span:nth-child(2) {
+        display: none;
+
+        .is-open & {
+          display: inline;
+        }
+      }
+
+      .is-open & span:first-child {
+        display: none;
+      }
+    }
   }
 }
 

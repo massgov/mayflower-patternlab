@@ -1,5 +1,9 @@
 .ma__contact-us {
 
+  & + & {
+    border-color: $c-bd-divider;
+  }
+
   &__title {
 
   }
@@ -20,17 +24,31 @@
     font-weight: 500;
   }
 
-  &__value:hover {
+  &__value--email:hover {
     border-bottom-color: rgba($c-font-link,.5);
   }
 
   &__value--phone {
     color: $c-font-base;
-    font-weight: 500;
+    font-weight: 300;
   }
 
   &__details {
     font-weight: 300;
     font-style: italic;
   }
+
+  &__expand {
+
+    button {
+      color: $c-font-link;
+      font-weight: 700;
+
+      &:after {
+        border-color: $c-font-link;
+        opacity: .5;
+      }
+    }
+  }
+
 }
