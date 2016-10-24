@@ -1,22 +1,4 @@
-.ma__related-actions {
-  padding-bottom: 50px;
-
-  &__title {
-    @include ma-heading-colored();
-  }
-
-  &__items {
-    @include ma-reset-list;
-  }
-
-  &__item {
-
-    & + & {
-      border-top: 1px solid;
-      padding-top: 20px;
-      margin-top: 20px;
-    }
-  }
+.ma__related-action {
 
   &__link {
     @include ma-link-decorative;

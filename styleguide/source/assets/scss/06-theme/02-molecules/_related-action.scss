@@ -1,21 +1,4 @@
-.ma__related-actions {
-
-  &__title {
-    @include ma-heading-colored($c-bg-comp-title);
-    @include ma-font(700);
-    color: $c-font-inverse;
-  }
-
-  &__items {
-
-  }
-
-  &__item {
-    
-    & + & {
-      border-top-color: $c-bd-divider;
-    }
-  }
+.ma__related-action {
 
   &__link {
 
