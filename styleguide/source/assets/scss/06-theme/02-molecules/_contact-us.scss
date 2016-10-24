@@ -48,6 +48,10 @@
         border-color: $c-font-link;
         opacity: .5;
       }
+
+      &:hover {
+        border-color: rgba($c-font-link,.5);
+      }
     }
   }
 
