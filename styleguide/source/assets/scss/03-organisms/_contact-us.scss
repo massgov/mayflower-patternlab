@@ -43,6 +43,9 @@
   &__phone,
   &__email {
     font-size: 1.25rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
   }
 
   &__phone {
