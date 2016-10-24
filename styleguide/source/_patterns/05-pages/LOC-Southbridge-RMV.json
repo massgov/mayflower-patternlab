@@ -452,7 +452,7 @@
           "description":"This is a description of the event that will happen at a future date"
         }
       }
-    }]
-  },
-  "more":"more"
+    }],
+    "more":"more"
+  }
 }
