@@ -54,6 +54,7 @@
     "phone": {
       "icon": "atoms-svg-phone",
       "name": "Phone",
+      "type": "phone",
       "items": [{
         "label":"Main",
         "value":"(413) 499-4262",
@@ -64,6 +65,7 @@
     "online": {
       "icon": "atoms-svg-laptop",
       "name": "Online",
+      "type": "email",
       "items": [{
         "label":"Email",
         "value":"email@email.com",

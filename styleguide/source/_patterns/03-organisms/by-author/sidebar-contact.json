@@ -8,6 +8,7 @@
       "contactUs": {
         "title": "Bascom Lodge",
         "hide": "address",
+        "type": "phone",
         "phone": {
           "icon": "atoms-svg-phone",
           "name": "Phone",
@@ -26,6 +27,7 @@
         "fax": {
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
+          "type": "phone",
           "items": [{
             "label":"",
             "value":"(413) 499-4262",
@@ -51,6 +53,7 @@
       "contactUs": {
         "title": "Museum",
         "hide": "fax",
+        "type": "phone",
         "phone": {
           "icon": "atoms-svg-phone",
           "name": "Phone",
@@ -64,6 +67,7 @@
         "online": {
           "icon": "atoms-svg-laptop",
           "name": "Online",
+          "type": "email",
           "items": [{
             "label":"Email",
             "value":"mount.greylock@state.ma.us",
@@ -74,6 +78,7 @@
         "fax": {
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
+          "type": "phone",
           "items": [{
             "label":"",
             "value":"(413) 499-4262",

@@ -2,6 +2,7 @@
   "contactGroup": {
     "icon": "atoms-svg-phone",
     "name": "Phone",
+    "type": "phone",
     "items": [{
       "label": "Main",
       "value": "(413) 499-4262",
