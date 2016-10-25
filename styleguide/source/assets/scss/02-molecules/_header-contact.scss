@@ -1,13 +1,17 @@
 .ma__header-contact {
 
   // controls for when to activate accordion
-  &.js-section-accordion:before {
+  &:before {
     content: "true";
     display: none;
 
     @media ($bp-small-min) {
       content: "false";
     }
+  }
+
+  &__directions {
+    padding-bottom: 20px;
   }
 
   &__accordion {
@@ -52,9 +56,7 @@
   &__container {
 
     @media($bp-small-max) {
-      &.js-section-accordion-content {
-        display: none;
-      }
+      display: none;
     }
 
     @media($bp-small-min) {
@@ -80,51 +82,5 @@
         padding-left: 45px;
       }
     }
-  }
-
-  &__list {
-
-    & + & {
-      padding-top: 20px;
-    }
-  }
-
-  &__name {
-
-    & > svg {
-      display: inline-block;
-      height: 20px;
-      margin-right: .25em;
-      vertical-align: middle;
-      width: 20px;
-    }
-
-    span {
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
-
-  &__label {
-    font-size: 1.25rem;
-  }
-
-  &__value {
-    @include ma-link-underline;
-    font-size: 1.25rem;
-    line-height: 1.75;
-    padding-bottom: 3px;
-  }
-
-  &__value--phone,
-  &__value--phone:hover {
-    border-bottom: none;
-}
-
-  &__details {
-    font-size: 1rem;
-    line-height: 1.3;
-    margin-bottom: .35em;
-    margin-top: -.25em;
   }
 }

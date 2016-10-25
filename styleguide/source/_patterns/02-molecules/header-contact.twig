@@ -1,66 +1,30 @@
 <section class="ma__header-contact js-accordion">
+  <div class="ma__header-contact__address">
+    {{headerContact.title}}, {{headerContact.address1}}{{headerContact.address2 ? " " + headerContact.address2 + "'": ""}}, {{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}
+  </div>
+  <div class="ma__header-contact__directions">
+    {% set link = headerContact.directions %}
+    {% include "atoms-link" %}
+  </div>
   <button class="ma__header-contact__accordion js-accordion-link">More contact information</button>
   <div class="ma__header-contact__container js-accordion-content">
-    <div class="ma__header-contact__column">
-      {% if headerContact.phone|length %}
-        <div class="ma__header-contact__list">
-          <h6 class="ma__header-contact__name">
-            {% include "atoms-svg-phone" %}
-            <span>Phone</span>
-          </h6>
-          {% for item in headerContact.phone %}
-            <div>
-              {% if item.label %}
-                <span class="ma__header-contact__label">{{item.label}}:</span>
-              {% endif %}
-              <a href="tel:+{{item.link}}" class="ma__header-contact__value ma__header-contact__value--phone">{{item.value}}</a>
-            </div>
-            {% if item.details %}
-              <p class="ma__header-contact__details">{{item.details}}</p>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-    <div class="ma__header-contact__column">
-      {% if headerContact.online|length %}
-        <div class="ma__header-contact__list">
-          <h6 class="ma__header-contact__name">
-            {% include "atoms-svg-laptop" %}
-            <span>Online</span>
-          </h6>
-          {% for item in headerContact.online %}
-            <div>
-              {% if item.label %}
-                <span class="ma__header-contact__label">{{item.label}}:</span>
-              {% endif %}
-              <a href="mailto:{{item.link}}" class="ma__header-contact__value">{{item.value}}</a>
-            </div>
-            {% if item.details %}
-              <p class="ma__header-contact__details">{{item.details}}</p>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
-      {% if headerContact.fax|length %}
-        <div class="ma__header-contact__list">
-          <h6 class="ma__header-contact__name">
-            {% include "atoms-svg-phone" %}
-            <span>Fax</span>
-          </h6>
-          {% for item in headerContact.fax %}
-            <div>
-              {% if item.label %}
-                <span class="ma__header-contact__label">{{item.label}}:</span>
-              {% endif %}
-              <a href="tel:+{{item.link}}" class="ma__header-contact__value ma__header-contact__value--phone">{{item.value}}</a>
-            </div>
-            {% if item.details %}
-              <p class="ma__header-contact__details">{{item.details}}</p>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
+    {% if headerContact.phone|length %}
+      <div class="ma__header-contact__column">
+        {% set contactGroup = headerContact.phone %}
+        {% include "molecules-contact-group" %}
+      </div>
+    {% endif %}
+    {% if headerContact.online|length or headerContact.fax|length %}
+      <div class="ma__header-contact__column">
+        {% if headerContact.online|length %}
+          {% set contactGroup = headerContact.online %}
+          {% include "molecules-contact-group" %}
+        {% endif %}
+        {% if headerContact.fax|length %}
+          {% set contactGroup = headerContact.fax %}
+          {% include "molecules-contact-group" %}
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 </section>
