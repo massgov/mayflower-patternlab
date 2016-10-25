@@ -1,6 +1,7 @@
+
 <section class="ma__header-contact js-accordion">
   <div class="ma__header-contact__address">
-    {{headerContact.title}}, {{headerContact.address1}}{{headerContact.address2 ? " " + headerContact.address2 + "'": ""}}, {{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}
+    {{headerContact.title ? headerContact.title  + "," : ""}}{{headerContact.address1}}{{headerContact.address2 ? " " + headerContact.address2: ""}}, {{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}
   </div>
   <div class="ma__header-contact__directions">
     {% set link = headerContact.directions %}
