@@ -51,24 +51,27 @@
       "text":"Directions",
       "chevron": "true"
     },
-    "contactUs":{
-      "title": "",
-      "hide": "",
-      "phone": [{
+    "phone": {
+      "icon": "atoms-svg-phone",
+      "name": "Phone",
+      "items": [{
         "label":"Main",
         "value":"(413) 499-4262",
         "rawVal":"14134994262",
         "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-      }],
-      "online": [{
+      }]
+    },
+    "online": {
+      "icon": "atoms-svg-laptop",
+      "name": "Online",
+      "items": [{
         "label":"Email",
         "value":"email@email.com",
         "link":"email@email.com",
         "details":""
-      }],
-      "fax": "",
-      "address": ""
-    }
+      }]
+    },
+    "fax": ""
   },
 
   "locationBanner": {

@@ -18,25 +18,26 @@
   "pageHeader": {
     "title": "Southbridge RMV",
     "subTitle": "",
-    "rteElements": [{
-      "path": "atoms-paragraph",
-      "data": {
-        "paragraph" : {
-          "text": "6 Larochelle Way, Southbridge, MA 01550"
-        }
-      }
-    },{
-      "path": "atoms-link",
-      "data": {
-        "link" : {
-          "href": "https://www.google.com/maps/place/6+Larochelle+way,+Southbridge,+MA+01550",
-          "target": "_blank",
-          "text": "Directions",
-          "chevron": "true"
-        }
-      }
-    }],
+    "rteElements": "",
     "headerTags": ""
+  },
+
+  "headerContact": {
+    "title": "",
+    "address1": "6 Larochelle Way",
+    "address2": "",
+    "city": "Southbridge",
+    "state": "MA",
+    "zip": "01550",
+    "directions": {
+      "href": "https://www.google.com/maps/place/Southbridge+RMV",
+      "target": "_blank",
+      "text":"Directions",
+      "chevron": "true"
+    },
+    "phone": "",
+    "online": "",
+    "fax": ""
   },
 
   "waitTime": {
