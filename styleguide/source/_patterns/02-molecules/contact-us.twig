@@ -5,94 +5,60 @@
   {% if contactUs.title %}
     <h5 class="ma__contact-us__title">{{contactUs.title}}</h5>
   {% endif %}
+
   {% if contactUs.phone|length %}
-    <div class="ma__contact-us__list">
-      <h6 class="ma__contact-us__name">
-        {% include "atoms-svg-phone" %}
-        <span>Phone</span>
-      </h6>
-      {% for item in contactUs.phone %}
-        <div>
-          {% if item.label %}
-            <span class="ma__contact-us__label">{{item.label}}:</span>
-          {% endif %}
-          <a href="tel:+{{item.link}}" class="ma__contact-us__value ma__contact-us__value--phone">{{item.value}}</a>
-        </div>
-        {% if item.details %}
-          <p class="ma__contact-us__details">{{item.details}}</p>
-        {% endif %}
-      {% endfor %}
-    </div>
+    {% set contactGroup = contactUs.phone %}
+    {% include "molecules-contact-group" %}
   {% endif %}
+
   {% if contactUs.online|length %}
-    <div class="ma__contact-us__list">
-      <h6 class="ma__contact-us__name">
-        {% include "atoms-svg-laptop" %}
-        <span>Online</span>
-      </h6>
-      {% for item in contactUs.online %}
-        <div>
-          {% if item.label %}
-            <span class="ma__contact-us__label">{{item.label}}:</span>
-          {% endif %}
-          <a href="mailto:{{item.link}}" class="ma__contact-us__value ma__contact-us__value--email">{{item.value}}</a>
-        </div>
-        {% if item.details %}
-          <p class="ma__contact-us__details">{{item.details}}</p>
-        {% endif %}
-      {% endfor %}
-    </div>
+    {% set contactGroup = contactUs.online %}
+    {% include "molecules-contact-group" %}
   {% endif %}
+
   {% if contactUs.hide == "fax" %}
     <div class="ma__contact-us__extra js-accordion-content">
   {% endif %}
-    {% if contactUs.fax|length %}
-      <div class="ma__contact-us__list">
-        <h6 class="ma__contact-us__name">
-          {% include "atoms-svg-phone" %}
-          <span>Fax</span>
-        </h6>
-        {% for item in contactUs.fax %}
-          <div>
-            {% if item.label %}
-              <span class="ma__contact-us__label">{{item.label}}:</span>
-            {% endif %}
-            <a href="tel:+{{item.link}}" class="ma__contact-us__value ma__contact-us__value--phone">{{item.value}}</a>
-          </div>
-          {% if item.details %}
-            <p class="ma__contact-us__details">{{item.details}}</p>
-          {% endif %}
-        {% endfor %}
-      </div>
-    {% endif %}
+
+  {% if contactUs.fax|length %}
+    {% set contactGroup = contactUs.fax %}
+    {% include "molecules-contact-group" %}
+  {% endif %}
+
   {% if contactUs.hide == "address" %}
     <div class="ma__contact-us__extra js-accordion-content">
   {% endif %}
-    {% if contactUs.address|length %}
-      <div class="ma__contact-us__list">
-        <h6 class="ma__contact-us__name">
-          {% include "atoms-svg-marker" %}
-          <span>Address</span>
-        </h6>
-        {% for item in contactUs.address %}
-          <div class="ma__contact-us__value ma__contact-us__value--address">{{item.address1}}</div>
-          {% if item.address2 %}
-            <div class="ma__contact-us__value ma__contact-us__value--address">{{item.address2}}</div>
+
+  {% if contactUs.address|length %}
+    <div class="ma__contact-us__group">
+      <h6 class="ma__contact-us__name">
+        {% include "atoms-svg-marker" %}
+        <span>Address</span>
+      </h6>
+      {% for item in contactUs.address %}
+        <div class="ma__contact-us__address">
+          {{item.address1}}
+        </div>
+        {% if item.address2 %}
+          <div class="ma__contact-us__address">
+            {{item.address2}}
+          </div>
+        {% endif %}
+        <div class="ma__contact-us__address">
+          {{item.city}},&nbsp;{{item.state}}&nbsp;{{item.zip}}
+        </div>
+        <div class="ma__contact-us__directions">
+          {% if item.directions %}
+            {% set link = item.directions %}
+            {% include "atoms-link" %}
           {% endif %}
-          <div class="ma__contact-us__value ma__contact-us__value--address">
-            {{item.city}},&nbsp;{{item.state}}&nbsp;{{item.zip}}
-          </div>
-          <div class="ma__contact-us__value ma__contact-us__value--directions">
-            {% if item.directions %}
-              {% set link = item.directions %}
-              {% include "atoms-link" %}
-            {% endif %}
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-  {% if accordion %}
+        </div>
+      {% endfor %}
     </div>
+  {% endif %}
+
+  {% if accordion %}
+    </div> {# end ma__contact-us__extra #}
     <div class="ma__contact-us__expand">
       <button class="js-accordion-link">
         <span>more</span><span>less</span> contact info
