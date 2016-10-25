@@ -1,5 +1,9 @@
-
-<section class="ma__header-contact js-accordion">
+{% if headerContact.phone|length or headerContact.online|length or headerContact.fax|length %}
+  {% set accordion = true %}
+  {% set accordionParent = "js-accordion" %}
+  {% set accordionContent = "js-accordion-content" %}
+{% endif %}
+<section class="ma__header-contact {{accordionParent}}">
   <div class="ma__header-contact__address">
     {{headerContact.title ? headerContact.title  + "," : ""}}{{headerContact.address1}}{{headerContact.address2 ? " " + headerContact.address2: ""}}, {{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}
   </div>
@@ -7,8 +11,10 @@
     {% set link = headerContact.directions %}
     {% include "atoms-link" %}
   </div>
-  <button class="ma__header-contact__accordion js-accordion-link">More contact information</button>
-  <div class="ma__header-contact__container js-accordion-content">
+  {% if accordion %}
+    <button class="ma__header-contact__accordion js-accordion-link">More contact information</button>
+  {% endif %}
+  <div class="ma__header-contact__container {{accordionContent}}">
     {% if headerContact.phone|length %}
       <div class="ma__header-contact__column">
         {% set contactGroup = headerContact.phone %}

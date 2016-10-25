@@ -350,7 +350,7 @@
     "items": [{
       "contactUs": {
         "title": "Bascom Lodge",
-        "hide": "address",
+        "hide": "fax",
         "phone": {
           "icon": "atoms-svg-phone",
           "name": "Phone",

@@ -4,7 +4,7 @@ export default function (window,document,$,undefined) {
     let $el = $(this),
         $link = $el.find('.js-accordion-link'),
         $content = $el.find('.js-accordion-content'),
-        active = refreshValue();
+        active = refreshValue($el);
 
     $link.on('click',function(e){
       if(active) {
@@ -19,7 +19,7 @@ export default function (window,document,$,undefined) {
     })
 
     $(window).resize(function () {
-      let temp = refreshValue();
+      let temp = refreshValue($el);
 
       if(temp !== active && !temp) {
         $content.removeAttr('style');
@@ -30,10 +30,10 @@ export default function (window,document,$,undefined) {
     }).resize();
   });
 
-  function refreshValue() {
+  function refreshValue($el) {
     let value = "true";
     try {
-      value = window.getComputedStyle(document.querySelector('.js-accordion'), ':before').getPropertyValue('content').replace(/\"/g, '');
+      value = window.getComputedStyle($el[0], ':before').getPropertyValue('content').replace(/\"/g, '');
     } catch(err) {}
     return value === "false" ? false : true;
   };
