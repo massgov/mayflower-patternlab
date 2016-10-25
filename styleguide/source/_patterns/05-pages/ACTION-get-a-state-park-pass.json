@@ -600,24 +600,36 @@
       "contactUs": {
         "title": "Department of Conservation and Recreation",
         "hide": "fax",
-        "phone": [{
-          "label":"Main",
-          "value":"(617) 626-1250",
-          "rawVal":"16176261250",
-          "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-        }],
-        "online": [{
-          "label":"Email",
-          "value":"mass.parks@state.ma.us",
-          "link":"mass.parks@state.ma.us",
-          "details":""
-        }],
-        "fax": [{
-          "label":"",
-          "value":"(617) 626-1351",
-          "link":"16176261351",
-          "details":"Please allow 24 hours for a response"
-        }],
+        "phone": {
+          "icon": "atoms-svg-phone",
+          "name": "Phone",
+          "items": [{
+            "label":"Main",
+            "value":"(617) 626-1250",
+            "rawVal":"16176261250",
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          }]
+        },
+        "online": {
+          "icon": "atoms-svg-laptop",
+          "name": "Online",
+          "items": [{
+            "label":"Email",
+            "value":"mass.parks@state.ma.us",
+            "link":"mass.parks@state.ma.us",
+            "details":""
+          }]
+        },
+        "fax": {
+          "icon": "atoms-svg-fax-icon",
+          "name": "Fax",
+          "items": [{
+            "label":"",
+            "value":"(617) 626-1351",
+            "link":"16176261351",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },
         "address": [{
           "address1": "251 Causeway Street",
           "address2": "Suite 900",
@@ -631,24 +643,36 @@
       "contactUs": {
         "title": "MassParks",
         "hide": "fax",
-        "phone": [{
-          "label":"Main",
-          "value":"(617) 626-1250",
-          "rawVal":"16176261250",
-          "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-        }],
-        "online": [{
-          "label":"Email",
-          "value":"mass.parks@state.ma.us",
-          "link":"mass.parks@state.ma.us",
-          "details":""
-        }],
-        "fax": [{
-          "label":"",
-          "value":"(617) 626-1351",
-          "link":"16176261351",
-          "details":"Please allow 24 hours for a response"
-        }],
+        "phone": {
+          "icon": "atoms-svg-phone",
+          "name": "Phone",
+          "items": [{
+            "label":"Main",
+            "value":"(617) 626-1250",
+            "rawVal":"16176261250",
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          }]
+        },
+        "online": {
+          "icon": "atoms-svg-laptop",
+          "name": "Online",
+          "items": [{
+            "label":"Email",
+            "value":"mass.parks@state.ma.us",
+            "link":"mass.parks@state.ma.us",
+            "details":""
+          }]
+        },
+        "fax": {
+          "icon": "atoms-svg-fax-icon",
+          "name": "Fax",
+          "items": [{
+            "label":"",
+            "value":"(617) 626-1351",
+            "link":"16176261351",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },
         "address": [{
           "address1": "251 Causeway Street",
           "address2": "Suite 900",
