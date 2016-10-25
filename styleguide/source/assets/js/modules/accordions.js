@@ -7,7 +7,6 @@ export default function (window,document,$,undefined) {
         active = refreshValue();
 
     $link.on('click',function(e){
-console.log(active);
       if(active) {
         e.preventDefault();
         if($el.hasClass('is-open')){
