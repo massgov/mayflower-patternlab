@@ -20,6 +20,7 @@
   }
 
   &__content {
+    @include ma-reset-rich-text;
 
     @media ($bp-large-min){
       padding-right: $column;
@@ -27,9 +28,6 @@
       width: calc(100% - #{$layout-sidebar-width});
     }
 
-    .ma__rich-text {
-      margin-bottom: 0;
-    }
   }
 
   &__title {
