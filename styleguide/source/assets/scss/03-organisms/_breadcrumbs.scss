@@ -132,13 +132,11 @@
       opacity: .6;
     }
   }
-}
 
-.ma__breadcrumbs--light {
-  &__items {
-    @media ($bp-medium-min) {
-      border-top: none;
-      border-bottom: 1px solid;
-    }
+  &--light &__items {
+      @media ($bp-medium-min) {
+        border-top: none;
+        border-bottom: 1px solid;
+      }
   }
 }
