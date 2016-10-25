@@ -1,9 +1,12 @@
 .ma__callout-link {
   border: 3px solid;
   cursor: pointer;
-  font-size: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1.75rem;
   padding: 20px 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   a {
     font-size: 1.625rem;

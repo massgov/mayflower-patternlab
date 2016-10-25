@@ -1,6 +1,6 @@
 {
   "activities": [{
-    "image": "http://placehold.it/190x107",
+    "image": "/assets/images/placeholder/190x107.png",
     "alt": "placeholder image",
     "title": "Activity Title",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",

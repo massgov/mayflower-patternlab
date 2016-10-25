@@ -110,7 +110,9 @@ $feedback-form-bp-min: "min-width: 751px";
   &__controls {
     text-align: right;
 
-    button {
+    button,
+    input[type="submit"],
+    input[type="button"] {
       @include ma-button;
     }
   }
