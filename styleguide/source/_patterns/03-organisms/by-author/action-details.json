@@ -4,7 +4,7 @@
       "title":"Overview",
       "intro": "",
       "id":"overview",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "molecules-callout-stats",
@@ -45,7 +45,7 @@
       "title":"Fees",
       "intro": "",
       "id":"fees",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -68,7 +68,7 @@
       "title":"Eligibility",
       "intro": "",
       "id":"fees",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -179,7 +179,7 @@
       "title":"Additonal Information",
       "intro": "",
       "id":"additional-info",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
