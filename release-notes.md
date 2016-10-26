@@ -9,6 +9,7 @@
 * MGVDU-138 - FE Dev: Modifications to Location/Action page: Multiple contacts
 * MGVDU-287 - FE Dev: Alert Bar - Hides globally
 * MGVDU-273 - Need fax icon for action page
+* MGVDU-282 - Remove Javascript autopopulation of Quick Actions on Location page
 
 ## 0.5.0
 ### MGVDU-181 - Location Page
