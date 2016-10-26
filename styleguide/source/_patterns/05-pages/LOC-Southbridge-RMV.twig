@@ -1,16 +1,19 @@
 {% extends 'templates-two-column' %}
 
 {% block preContent %}
-  {% include "organisms-header-alert" %}
+  {% for headerAlert in headerAlerts %}
+    {% include "organisms-header-alert" %}
+  {% endfor %}
   {% include "organisms-breadcrumbs" %}
   {% include "organisms-action-header" %}
   {% include "organisms-banner-carousel" %}
 {% endblock %}
 {% block pageContent %}
+  {% include "organisms-quick-actions" %}
   {% include "organisms-action-details" %}
 {% endblock %}
 {% block sidebar %}
-  {% include "organisms-quick-action-links" %}
+  {% include "organisms-quick-actions" %}
   {% include "organisms-sidebar-contact" %}
   {% include "organisms-sidebar-widget" %}
 {% endblock %}

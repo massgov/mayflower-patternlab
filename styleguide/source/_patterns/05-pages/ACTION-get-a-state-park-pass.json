@@ -547,10 +547,23 @@
     }]
   },
 
+  "quickActions":{
+    "coloredHeading": {
+      "text":"Quick Actions",
+      "color":"green"
+    },
+    "links": [{
+      "type": "",
+      "href": "#",
+      "text": "Order a MassParks Pass online through Reserve America"
+    }]
+  },
+
+
   "sidebarContact": {
     "coloredHeading": {
       "text": "Contact",
-      "color": "green"
+      "color": ""
     },
     "items": [{
       "contactUs": {

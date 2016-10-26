@@ -1,6 +1,6 @@
 <ul>
 	{% for list in unorderedList %}
-		<li>{{list.text}}</li>
+		<li>{{list.text |raw }}</li>
 		{% if list.sublist %}
 			<ul>
 				{% for sublist in list.sublist %}

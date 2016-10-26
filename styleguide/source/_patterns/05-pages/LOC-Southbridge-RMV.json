@@ -1,11 +1,17 @@
 {
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
-  "headerAlert": {
+  "headerAlerts": [{
+    "guid": "GUID09058070137",
     "text": "There's a hole in front of the door. Beware!",
     "href": "#",
     "target": ""
-  },
+  },{
+    "guid": "GUID09058070138",
+    "text": "Free cookies while you wait.",
+    "href": "#",
+    "target": ""
+  }],
 
   "breadcrumbs":{
     "light": "true",
@@ -327,6 +333,10 @@
   "COMMENT":"****SIDEBAR COMPONENTS****",
 
   "quickActions":{
+    "coloredHeading": {
+      "text": "Quick Actions",
+      "color": "green"
+    },
     "links": [{
       "type": "",
       "href": "#",
@@ -345,7 +355,7 @@
   "sidebarContact": {
     "coloredHeading": {
       "text": "Contact",
-      "color": "green"
+      "color": ""
     },
     "items": [{
       "contactUs": {
