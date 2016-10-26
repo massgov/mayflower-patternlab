@@ -5,7 +5,8 @@ export default function (window,document,$,undefined) {
   $('.js-header-alert').each(function(){
     let $el = $(this),
         $link = $el.find('.js-header-alert-link'),
-        cookieName = "header-alert",
+        id = $el.data('id'),
+        cookieName = "Alert" + id,
         cookieExpires = 365,
         cookieValue = cookies.getCookie(cookieName);
 

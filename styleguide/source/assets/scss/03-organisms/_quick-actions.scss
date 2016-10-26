@@ -6,20 +6,10 @@
     }
   }
   .page-content & {
+    margin-bottom: 50px;
+
     @media ($bp-large-min) {
       display: none;
-    }
-  }
-
-  &__title {
-    @include ma-heading-colored();
-
-    .sidebar & {
-
-      // override
-      @media (min-width: 0px) {
-        margin-bottom: 30px;
-      }
     }
   }
 

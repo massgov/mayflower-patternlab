@@ -5,7 +5,15 @@
 {% endif %}
 <section class="ma__header-contact {{accordionParent}}">
   <div class="ma__header-contact__address">
-    {{headerContact.title ? headerContact.title  + "," : ""}}{{headerContact.address1}}{{headerContact.address2 ? " " + headerContact.address2: ""}}, {{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}
+    {% if headerContact.title %}
+      <span>{{headerContact.title | raw}}, </span>
+    {% endif %}
+    {% if headerContact.address2 %}
+      <span>{{headerContact.address1}} {{headerContact.address2}}, </span>
+    {% else %}
+      <span>{{headerContact.address1}}, </span>
+    {% endif %}
+    <span>{{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}</span>
   </div>
   <div class="ma__header-contact__directions">
     {% set link = headerContact.directions %}
