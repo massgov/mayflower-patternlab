@@ -79,7 +79,7 @@
       "title":"Overview",
       "intro": "",
       "id":"overview",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -94,7 +94,7 @@
       "title":"Hours",
       "intro": "",
       "id":"hours",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "molecules-callout-stats",
@@ -159,7 +159,7 @@
       "title":"Parking",
       "intro": "",
       "id":"parking",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -233,13 +233,13 @@
       "title":"Activities",
       "intro": "",
       "id":"activities",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {}
     },{
       "title":"Facilities",
       "intro": "",
       "id":"facilities",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-unordered-list",
@@ -262,7 +262,7 @@
       "title":"Acessibility",
       "intro": "",
       "id":"acessibility",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -293,7 +293,7 @@
       "title":"Restrictions",
       "intro": "",
       "id":"restrictions",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-unordered-list",

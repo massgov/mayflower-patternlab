@@ -2,9 +2,11 @@
 
 ## 0.6.0
 ### MGVDU-208 - Basic Content Page
-* MGVDU-88 - Page Discourse Component - removed
+* MGVDU-88 - Page Discourse Component - using rich-text component instead
 * MGVDU-278 - FE Dev: Breadcrumbs - collapsable
 
+### Other
+* MGVDU-138 - FE Dev: Modifications to Location/Action page: Multiple contacts
 
 ## 0.5.0
 ### MGVDU-181 - Location Page

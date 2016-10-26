@@ -1,7 +1,15 @@
 $rich-text-spacing: 1.75rem;
 
 .ma__rich-text {
-  margin-bottom: 40px;
+  @include ma-container;
+  padding-bottom: 45px;
+
+  // not full width
+  .page-content:nth-child(2) &,
+  .page-content:nth-last-child(2) & {
+    padding-left:0;
+    padding-right:0;
+  }
 
   & > :last-child {
     margin-bottom: 0;
