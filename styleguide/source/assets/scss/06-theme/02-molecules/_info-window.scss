@@ -1,0 +1,32 @@
+.ma__info-window {
+  font-family: "Texta", "Century Gothic", "Helvetica", "Arial", "sans-serif";
+
+  &__name {
+
+  }
+
+  &__contact {
+
+  }
+
+  &__label {
+    font-weight: 500;
+  }
+
+  &__value {
+
+  }
+
+  &__phone {
+    color: $c-font-base;
+    font-weight: inherit;
+  }
+
+  &__email {
+
+  }
+
+  &__address {
+
+  }
+}

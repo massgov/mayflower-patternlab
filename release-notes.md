@@ -1,5 +1,11 @@
 # Mass Gov Release Notes
 
+## 0.6.0
+### MGVDU-208 - Basic Content Page
+* MGVDU-88 - Page Discourse Component - removed
+* MGVDU-278 - FE Dev: Breadcrumbs - collapsable
+
+
 ## 0.5.0
 ### MGVDU-181 - Location Page
 * MGVDU-172 - Component: Hero Banner Carousel (Location Page)
@@ -18,6 +24,7 @@
 ### Other
 * MGVDU-220 - FE Dev: Image credit component
 * MGVDU-202 - Action Finder - entire action item should be clickable
+
 
 ## 0.4.0
 ### Action Detail page modifications
@@ -53,6 +60,7 @@
 * MGVDU-139 - Action Page Header Update
 * MGVDU-117 - Forms/Downloads
 
+
 ## 0.2.0
 ### Action Detail page
 * MGRV-89 - Related Contact Call-Out
@@ -61,11 +69,13 @@
 * MGRV-92 - Breadcrumbs
 * MGRV-91 - Task Detail Header
 
+
 ## 0.1.0
 ### Header and Footer
 * MGRV-38 - Header plus navigation
 * MGRV-51 - Global Styling for elements
 * MGRV-39 - Footer
+
 
 ## Sprint A
 ### Environment Setup

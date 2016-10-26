@@ -1,4 +1,4 @@
-<section class="ma__section-links js-section-accordion">
+<section class="ma__section-links js-accordion">
   <div class="ma__section-links__content">
     {% if sectionLinks.catIcon %}
       <div class="ma__section-links__icon">
@@ -6,10 +6,10 @@
         {% include "atoms-cat-icon" %}
       </div>
     {% endif %}
-    <h3 class="ma__section-links__title js-section-accordion-link">
+    <h3 class="ma__section-links__title js-accordion-link">
       <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "atoms-svg-arrow" %}</a>
     </h3>
-    <nav class="ma__section-links__toggle-content js-section-accordion-body">
+    <nav class="ma__section-links__toggle-content js-accordion-body">
       {% if sectionLinks.description %}
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>
       {% endif %}
