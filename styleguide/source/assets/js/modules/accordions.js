@@ -1,10 +1,10 @@
 export default function (window,document,$,undefined) {
 
-  $('.js-section-accordion').each(function(){
+  $('.js-accordion').each(function(){
     let $el = $(this),
-        $link = $el.find('.js-section-accordion-link'),
-        $content = $el.find('.js-section-accordion-content'),
-        active = refreshValue();
+        $link = $el.find('.js-accordion-link'),
+        $content = $el.find('.js-accordion-content'),
+        active = refreshValue($el);
 
     $link.on('click',function(e){
       if(active) {
@@ -19,7 +19,7 @@ export default function (window,document,$,undefined) {
     })
 
     $(window).resize(function () {
-      let temp = refreshValue();
+      let temp = refreshValue($el);
 
       if(temp !== active && !temp) {
         $content.removeAttr('style');
@@ -30,8 +30,11 @@ export default function (window,document,$,undefined) {
     }).resize();
   });
 
-  function refreshValue() {
-    let value = window.getComputedStyle(document.querySelector('.js-section-accordion'), ':before').getPropertyValue('content').replace(/\"/g, '');
+  function refreshValue($el) {
+    let value = "true";
+    try {
+      value = window.getComputedStyle($el[0], ':before').getPropertyValue('content').replace(/\"/g, '');
+    } catch(err) {}
     return value === "false" ? false : true;
   };
 

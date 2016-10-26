@@ -1,0 +1,68 @@
+{% if contactUs.hide == "fax" or contactUs.hide == "address" %}
+  {% set accordion = "js-accordion" %}
+{% endif %}
+<section class="ma__contact-us {{accordion}}">
+  {% if contactUs.title %}
+    <h5 class="ma__contact-us__title">{{contactUs.title}}</h5>
+  {% endif %}
+
+  {% if contactUs.phone|length %}
+    {% set contactGroup = contactUs.phone %}
+    {% include "molecules-contact-group" %}
+  {% endif %}
+
+  {% if contactUs.online|length %}
+    {% set contactGroup = contactUs.online %}
+    {% include "molecules-contact-group" %}
+  {% endif %}
+
+  {% if contactUs.hide == "fax" %}
+    <div class="ma__contact-us__extra js-accordion-content">
+  {% endif %}
+
+  {% if contactUs.fax|length %}
+    {% set contactGroup = contactUs.fax %}
+    {% include "molecules-contact-group" %}
+  {% endif %}
+
+  {% if contactUs.hide == "address" %}
+    <div class="ma__contact-us__extra js-accordion-content">
+  {% endif %}
+
+  {% if contactUs.address|length %}
+    <div class="ma__contact-us__group">
+      <h6 class="ma__contact-us__name">
+        {% include "atoms-svg-marker" %}
+        <span>Address</span>
+      </h6>
+      {% for item in contactUs.address %}
+        <div class="ma__contact-us__address">
+          {{item.address1}}
+        </div>
+        {% if item.address2 %}
+          <div class="ma__contact-us__address">
+            {{item.address2}}
+          </div>
+        {% endif %}
+        <div class="ma__contact-us__address">
+          {{item.city}},&nbsp;{{item.state}}&nbsp;{{item.zip}}
+        </div>
+        <div class="ma__contact-us__directions">
+          {% if item.directions %}
+            {% set link = item.directions %}
+            {% include "atoms-link" %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if accordion %}
+    </div> {# end ma__contact-us__extra #}
+    <div class="ma__contact-us__expand">
+      <button class="js-accordion-link">
+        <span>more</span><span>less</span> contact info
+      </button>
+    </div>
+  {% endif %}
+</section>

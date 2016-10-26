@@ -1,0 +1,45 @@
+// // use in the Action Map component info window
+// // Handle bar template
+.ma__info-window {
+  font-size: 1.25rem;
+  padding-bottom: 0;
+
+
+  &__name {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  &__contact {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+  }
+
+  &__label {
+
+  }
+
+  &__phone,
+  &__email {
+  }
+
+  &__phone {
+    white-space: nowrap;
+  }
+
+  &__email {
+    @include ma-link-underline;
+  }
+
+  &__address {
+
+    span {
+      display: inline-block;
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
