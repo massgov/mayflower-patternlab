@@ -10,7 +10,6 @@ import hideAlert        from "./modules/hideAlert.js";
 import keywordSearch    from "./modules/keywordSearch.js";
 import mainNav          from "./modules/mainNav.js";
 import mobileNav        from "./modules/mobileNav.js";
-import quickActions     from "./modules/quickActions.js";
 import responsiveVideo  from "./modules/responsiveVideo.js";
 import richText         from "./modules/richText.js";
 import scrollAnchors    from "./modules/scrollAnchors.js";

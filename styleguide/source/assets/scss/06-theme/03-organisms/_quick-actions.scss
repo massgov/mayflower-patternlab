@@ -1,15 +1,5 @@
 .ma__quick-actions {
 
-  &__title {
-    @include ma-heading-colored($c-theme-primary-2);
-    @include ma-font(700);
-    color: $c-font-inverse;
-  }
-
-  &__items {
-
-  }
-
   &__item {
     
     & + & {

@@ -1,5 +1,9 @@
 {
   "quickActions":{
+    "coloredHeading": {
+      "text":"Quick Actions",
+      "color":"green"
+    },
     "links": [{
       "type": "",
       "href": "#",
@@ -9,7 +13,7 @@
       "href": "#",
       "text": "Download a Park Map"
     },{
-      "type": "",
+      "type": "external",
       "href": "#",
       "text": "Download a Trail Map"
     }]
