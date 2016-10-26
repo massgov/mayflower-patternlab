@@ -2,7 +2,7 @@ $rich-text-spacing: 1.75rem;
 
 .ma__rich-text {
   @include ma-container;
-  padding-bottom: 45px;
+  margin-bottom: 45px;
 
   // not full width
   .page-content:nth-child(2) &,
