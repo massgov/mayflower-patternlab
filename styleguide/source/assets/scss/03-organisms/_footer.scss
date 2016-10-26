@@ -19,6 +19,13 @@
     visibility: visible;
     z-index: $z-sticky-content;
 
+    @media ($bp-small-max) {
+      padding: .4em .4em 0 .4em;
+      position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
     &.is-hidden {
       opacity: 0;
       visibility: hidden;
@@ -33,6 +40,10 @@
     span {
       display: block;
       text-align: center;
+
+      @media ($bp-small-max) {
+        display: none;
+      }
     }
   }
 
