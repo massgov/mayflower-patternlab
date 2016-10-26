@@ -30,6 +30,7 @@
   }
 
   &__content {
+    @include ma-reset-rich-text;
 
     @media ($bp-medium-min) {
       float: left;
@@ -40,9 +41,6 @@
       width: calc(100% - 525px);
     }
 
-    .ma__rich-text {
-      margin-bottom: 0;
-    }
   }
 
   &__title {

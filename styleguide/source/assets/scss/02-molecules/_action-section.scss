@@ -1,4 +1,5 @@
 .ma__action-section {
+  @include ma-reset-rich-text;
   margin-bottom: 40px;
 
   h3 {
@@ -9,9 +10,5 @@
     &:after {
       width: 2.25em; // ma-underline-decorative override
     }
-  }
-
-  .ma__rich-text {
-    margin-bottom: 0;
   }
 }
