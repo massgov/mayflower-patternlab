@@ -2,6 +2,7 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "headerAlert": {
+    "guid": "GUID09058070136",
     "text": "Lots of Bears.",
     "href": "#",
     "target": ""
@@ -493,6 +494,10 @@
   "COMMENT":"****SIDEBAR COMPONENTS****",
 
   "quickActions":{
+    "coloredHeading": {
+      "text":"Quick Actions",
+      "color":"green"
+    },
     "links": [{
       "type": "",
       "href": "#",
@@ -511,7 +516,7 @@
   "sidebarContact": {
     "coloredHeading": {
       "text": "Contact",
-      "color": "green"
+      "color": ""
     },
     "items": [{
       "contactUs": {
