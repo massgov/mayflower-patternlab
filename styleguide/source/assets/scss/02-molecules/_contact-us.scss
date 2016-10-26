@@ -1,0 +1,90 @@
+.ma__contact-us {
+
+  // controls for when to activate accordion
+  &:before {
+    content: "true";
+    display: none;
+  }
+
+  & + & {
+    border-top: 1px solid;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  &__title {
+    margin-bottom: .5em;
+  }
+
+  &__group {
+    padding-top: 20px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__name {
+
+    & > svg {
+      display: inline-block;
+      height: 20px;
+      margin-right: .25em;
+      vertical-align: middle;
+      width: 20px;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__address {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    padding-bottom: 3px;
+  }
+
+  &__directions {
+    line-height: 1.5;
+  }
+
+  &__extra {
+    display: none;
+    padding-top: 20px;
+  }
+
+  &__expand {
+    padding-top:20px;
+    text-align: right;
+
+    button {
+      @include ma-button-reset;
+      @include ma-link-underline;
+      @include ma-chevron;
+      padding-right: 10px;
+
+      &:after {
+        margin-left: 0;
+        transform: translateY(-45%) rotate(45deg);
+
+        .is-open & {
+          transform: translateY(-55%) rotate(-135deg);
+        }
+      }
+
+      span:nth-child(2) {
+        display: none;
+
+        .is-open & {
+          display: inline;
+        }
+      }
+
+      .is-open & span:first-child {
+        display: none;
+      }
+    }
+  }
+}

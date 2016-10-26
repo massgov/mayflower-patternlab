@@ -3,7 +3,7 @@
     "title":"Overview",
     "intro": "",
     "id":"overview:",
-    "path":"molecules-rich-text",
+    "path":"organisms-rich-text",
     "data": {
       "rteElements": [{
         "path": "atoms-paragraph",

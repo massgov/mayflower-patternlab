@@ -1,0 +1,32 @@
+.ma__contact-group {
+
+  &__name {
+
+    svg {
+      fill: $c-theme-primary-2;
+    }
+
+    span {
+      color: $c-font-dark;
+      font-weight: 700;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+  }
+
+  &__value--email:hover {
+    border-bottom-color: rgba($c-font-link,.5);
+  }
+
+  &__value--phone {
+    color: $c-font-base;
+    font-weight: 300;
+  }
+
+  &__details {
+    font-weight: 300;
+    font-style: italic;
+  }
+}

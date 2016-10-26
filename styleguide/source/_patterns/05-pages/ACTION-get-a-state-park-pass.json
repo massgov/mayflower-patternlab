@@ -24,7 +24,7 @@
       "title":"Before You Start",
       "intro": "",
       "id":"before-you-start",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -54,7 +54,7 @@
       "title":"Overview",
       "intro": "",
       "id":"overview",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -77,7 +77,7 @@
       "title":"Fees",
       "intro": "",
       "id":"fees",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "molecules-callout-stats",
@@ -282,7 +282,7 @@
       "title":"Subnav Item",
       "intro": "",
       "id":"subnav-item",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -533,7 +533,7 @@
       "title":"Additonal Information",
       "intro": "",
       "id":"additionalinfo",
-      "path": "molecules-rich-text",
+      "path": "organisms-rich-text",
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
@@ -547,52 +547,129 @@
     }]
   },
 
-  "contactUs": {
-    "title": "Contact",
-    "contacts":[{
-      "name": "Department of Conservation and Recreation",
-      "phone": "(617) 626-1250",
-      "phoneLink": "16176261250",
-      "fax": "(617) 626-1351",
-      "faxLink": "16176261351",
-      "email": "mass.parks@state.ma.us",
-      "address1": "251 Causeway Street",
-      "address2": "Suite 900",
-      "city": "Boston",
-      "state": "MA",
-      "zip": "02114-2104"
+  "sidebarContact": {
+    "coloredHeading": {
+      "text": "Contact",
+      "color": "green"
+    },
+    "items": [{
+      "contactUs": {
+        "title": "Department of Conservation and Recreation",
+        "hide": "fax",
+        "phone": {
+          "icon": "atoms-svg-phone",
+          "name": "Phone",
+          "items": [{
+            "label":"Main",
+            "value":"(617) 626-1250",
+            "rawVal":"16176261250",
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          }]
+        },
+        "online": {
+          "icon": "atoms-svg-laptop",
+          "name": "Online",
+          "items": [{
+            "label":"Email",
+            "value":"mass.parks@state.ma.us",
+            "link":"mass.parks@state.ma.us",
+            "details":""
+          }]
+        },
+        "fax": {
+          "icon": "atoms-svg-fax-icon",
+          "name": "Fax",
+          "items": [{
+            "label":"",
+            "value":"(617) 626-1351",
+            "link":"16176261351",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },
+        "address": [{
+          "address1": "251 Causeway Street",
+          "address2": "Suite 900",
+          "city": "Boston",
+          "state": "MA",
+          "zip": "02114-2104",
+          "directions": ""
+        }]
+      }
     },{
-      "name": "MassParks",
-      "phone": "(617) 626-1250",
-      "phoneLink": "16176261250",
-      "fax": "(617) 626-1351",
-      "faxLink": "16176261351",
-      "email": "mass.parks@state.ma.us",
-      "address1": "251 Causeway Street",
-      "address2": "Suite 900",
-      "city": "Boston",
-      "state": "MA",
-      "zip": "02114-2104"
+      "contactUs": {
+        "title": "MassParks",
+        "hide": "fax",
+        "phone": {
+          "icon": "atoms-svg-phone",
+          "name": "Phone",
+          "items": [{
+            "label":"Main",
+            "value":"(617) 626-1250",
+            "rawVal":"16176261250",
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          }]
+        },
+        "online": {
+          "icon": "atoms-svg-laptop",
+          "name": "Online",
+          "items": [{
+            "label":"Email",
+            "value":"mass.parks@state.ma.us",
+            "link":"mass.parks@state.ma.us",
+            "details":""
+          }]
+        },
+        "fax": {
+          "icon": "atoms-svg-fax-icon",
+          "name": "Fax",
+          "items": [{
+            "label":"",
+            "value":"(617) 626-1351",
+            "link":"16176261351",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },
+        "address": [{
+          "address1": "251 Causeway Street",
+          "address2": "Suite 900",
+          "city": "Boston",
+          "state": "MA",
+          "zip": "02114-2104",
+          "directions": ""
+        }]
+      }
     }]
   },
 
-
-  "relatedActions": {
+  "sidebarWidget": {
+    "coloredHeading": {
+      "text": "Related",
+      "color": ""
+    },
     "items": [{
-      "link" : {
-        "type": "",
-        "href": "#",
-        "text": "Give a Park Pass as a Gift!"
-      },
-      "description":"Purchase a MassParks Pass as a gift for holidays, birthdays, and anniversaries, or just to a put a smile on someone's face."
+      "path": "molecules-related-action",
+      "data": {
+        "relatedAction": {
+          "link" : {
+            "type": "",
+            "href": "#",
+            "text": "Give a Park Pass as a Gift!"
+          },
+          "description":"Purchase a MassParks Pass as a gift for holidays, birthdays, and anniversaries, or just to a put a smile on someone's face."
+        }
+      }
     },{
-      "link" : {
-        "type": "",
-        "href": "#",
-        "text": "Day Use Parking Fees"
-      },
-      "description":"See a listing of parks that charge a daily parking fee."
+      "path": "molecules-related-action",
+      "data": {
+        "relatedAction": {
+          "link" : {
+            "type": "",
+            "href": "#",
+            "text": "Day Use Parking Fees"
+          },
+          "description":"See a listing of parks that charge a daily parking fee."
+        }
+      }
     }]
   }
-
 }
