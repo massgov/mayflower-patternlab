@@ -1,1 +1,5 @@
-<h2 class="ma__colored-heading {{coloredHeading.green == 'true' ? 'ma__colored-heading--green' : ''}}">{{coloredHeading.text}}</h2>
+{% if coloredHeading.color %}
+  {% set class = coloredHeading.color %}
+{% endif %}
+
+<h2 class="ma__colored-heading {{class}}">{{coloredHeading.text}}</h2>

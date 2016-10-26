@@ -18,25 +18,26 @@
   "pageHeader": {
     "title": "Southbridge RMV",
     "subTitle": "",
-    "rteElements": [{
-      "path": "atoms-paragraph",
-      "data": {
-        "paragraph" : {
-          "text": "6 Larochelle Way, Southbridge, MA 01550"
-        }
-      }
-    },{
-      "path": "atoms-link",
-      "data": {
-        "link" : {
-          "href": "https://www.google.com/maps/place/6+Larochelle+way,+Southbridge,+MA+01550",
-          "target": "_blank",
-          "text": "Directions",
-          "chevron": "true"
-        }
-      }
-    }],
+    "rteElements": "",
     "headerTags": ""
+  },
+
+  "headerContact": {
+    "title": "",
+    "address1": "6 Larochelle Way",
+    "address2": "",
+    "city": "Southbridge",
+    "state": "MA",
+    "zip": "01550",
+    "directions": {
+      "href": "https://www.google.com/maps/place/Southbridge+RMV",
+      "target": "_blank",
+      "text":"Directions",
+      "chevron": "true"
+    },
+    "phone": "",
+    "online": "",
+    "fax": ""
   },
 
   "waitTime": {
@@ -341,53 +342,142 @@
     }]
   },
 
-  "contactUs": {
-    "title": "Additional Contacts",
-    "contacts":[{
-      "name": "Bascom Lodge",
-      "phone": "(413) 743-1591",
-      "phoneLink": "14137431591",
-      "fax": "",
-      "faxLink": "",
-      "email": "",
-      "address1": "555 Park Drive",
-      "address2": "",
-      "city": "North Hampton",
-      "state": "MA",
-      "zip": "02231"
+  "sidebarContact": {
+    "coloredHeading": {
+      "text": "Contact",
+      "color": "green"
+    },
+    "items": [{
+      "contactUs": {
+        "title": "Bascom Lodge",
+        "hide": "fax",
+        "phone": {
+          "icon": "atoms-svg-phone",
+          "name": "Phone",
+          "items": [{
+            "label":"Main",
+            "value":"(413) 499-4262",
+            "rawVal":"14134994262",
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          },{
+            "label":"TTY",
+            "value":"(617) 555-7777",
+            "link":"16175557777",
+            "details":"For those who need accessible services"
+          }]
+        },
+        "online": {
+          "icon": "atoms-svg-laptop",
+          "name": "Online",
+          "items": [{
+            "label":"Email",
+            "value":"mount.greylock@state.ma.us",
+            "link":"mount.greylock@state.ma.us",
+            "details":""
+          }]
+        },
+        "fax": {
+          "icon": "atoms-svg-fax-icon",
+          "name": "Fax",
+          "items": [{
+            "label":"",
+            "value":"(413) 499-4262",
+            "link":"14134994262",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },
+        "address": [{
+          "address1": "555 Park Drive",
+          "address2": "",
+          "city": "Boston",
+          "state": "MA",
+          "zip": "02231",
+          "directions": {
+            "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+            "target": "_blank",
+            "text":"directions",
+            "chevron": "true"
+          }
+        }]
+      }
     },{
-      "name": "Museum",
-      "phone": "(617) 443-8765",
-      "phoneLink": "16174438765",
-      "fax": "",
-      "faxLink": "",
-      "email": "",
-      "address1": "555 Park Drive",
-      "address2": "",
-      "city": "North Hampton",
-      "state": "MA",
-      "zip": "02231"
+      "contactUs": {
+        "title": "Museum",
+        "hide": "fax",
+        "phone": {
+          "icon": "atoms-svg-phone",
+          "name": "Phone",
+          "items": [{
+            "label":"Main",
+            "value":"(413) 443-8765",
+            "rawVal":"14134438765",
+            "details":""
+          }]
+        },
+        "online": {
+          "icon": "atoms-svg-laptop",
+          "name": "Online",
+          "items": [{
+            "label":"Email",
+            "value":"mount.greylock@state.ma.us",
+            "link":"mount.greylock@state.ma.us",
+            "details":""
+          }]
+        },
+        "fax": {
+          "icon": "atoms-svg-fax-icon",
+          "name": "Fax",
+          "items": [{
+            "label":"",
+            "value":"(413) 499-4262",
+            "link":"14134994262",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },
+        "address": [{
+          "address1": "555 Park Drive",
+          "address2": "",
+          "city": "North Hampton",
+          "state": "MA",
+          "zip": "02231",
+          "directions": ""
+        }]
+      }
     }]
   },
 
-  "actionEvents": {
-    "title": "Upcoming Events",
-    "events": [{
-      "name": {
-        "type": "",
-        "href": "#",
-        "text": "Horse Party"
-      },
-      "date":"June 24, 2017, 12:00 p.m.",
-      "description":"This is a description of the event that will happen at a future date"
+  "sidebarWidget": {
+    "coloredHeading": {
+      "text": "Upcoming Events",
+      "color": ""
+    },
+    "items": [{
+      "path": "molecules-action-event",
+      "data": {
+        "actionEvent": {
+          "name": {
+            "type": "",
+            "href": "#",
+            "text": "Horse Party"
+          },
+          "date":"June 24, 2017, 12:00pm",
+          "description":"This is a description of the event that will happen at a future date"
+        }
+      }
     },{
-      "name": {
-        "type": "",
-        "href": "#",
-        "text": "Full Moon Hike"
-      },
-      "date":"June 24, 2017, 9:00 p.m.",
-      "description":"This is a description of the event that will happen at a future date"
-    }]
+      "path": "molecules-action-event",
+      "data": {
+        "actionEvent": {
+          "name": {
+            "type": "",
+            "href": "#",
+            "text": "Full Moon Hike"
+          },
+          "date":"June 24, 2017, 9:00pm",
+          "description":"This is a description of the event that will happen at a future date"
+        }
+      }
+    }],
+    "more":"more"
   }
 }

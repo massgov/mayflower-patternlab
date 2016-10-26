@@ -1,52 +1,7 @@
 {
-  "pageHeader": {
-    "title": "Mt Greylock State Park",
-    "subTitle": "",
-    "rteElements": "",
-    "headerTags": ""
-  },
-
-  "locationIcons": {
-    "icons": [{
-      "path":"atoms-svg-loc-mt-park",
-      "name":"Mountain Park"
-    },{
-      "path":"atoms-svg-loc-historic-site",
-      "name":"Historic Site"
-    },{
-      "path":"atoms-svg-loc-handicap-accessible",
-      "name":"Handicap Accessible"
-    },{
-      "path":"atoms-svg-loc-dogs-allowed",
-      "name":"Dogs Allowed"
-    }]
-  },
-
-  "waitTime": {
-    "items":[{
-      "label": "Licensing",
-      "time": "2:00",
-      "units": "hrs"
-    },{
-      "label": "Registration",
-      "time": "24",
-      "units": "mins"
-    }]
-  },
-
-  "headerContact": {
-    "title": "Visitor's Center",
-    "address1": "30 Rockwell Road",
-    "address2": "",
-    "city": "Lanesborough",
-    "state": "MA",
-    "zip": "01237",
-    "directions": {
-      "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
-      "target": "_blank",
-      "text":"Directions",
-      "chevron": "true"
-    },
+  "contactUs": {
+    "title": "Department of Conservation and Recreation",
+    "hide": "fax",
     "phone": {
       "icon": "atoms-svg-phone",
       "name": "Phone",
@@ -99,6 +54,19 @@
         "link":"14134994262",
         "details":"Please allow 24 hours for a response"
       }]
-    }
+    },
+    "address": [{
+      "address1": "555 Park Drive",
+      "address2": "",
+      "city": "Boston",
+      "state": "MA",
+      "zip": "02231",
+      "directions": {
+        "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+        "target": "_blank",
+        "text":"directions",
+        "chevron": "true"
+      }
+    }]
   }
 }
