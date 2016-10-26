@@ -2,6 +2,7 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "headerAlert": {
+    "guid": "GUID09058070136",
     "text": "Lots of Bears.",
     "href": "#",
     "target": ""
