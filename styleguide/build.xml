@@ -18,6 +18,9 @@
     <property name="app.assets.relative" value="${application.startdir}/public/assets" />
     <resolvepath propertyName="app.assets" file="${app.assets.relative}" />
 
+    <property name="app.assets.relative" value="${application.startdir}/public/_patterns" />
+    <resolvepath propertyName="app.twig" file="${app.assets.relative}" />
+
     <property file="config/build.properties" />
 
     <target name="welcome">
@@ -103,6 +106,12 @@
         <!-- Copy assets to deploy.dir -->
         <copy todir="${deploy.dir}/assets" preservemode="true" overwrite="yes">
             <fileset dir="${app.assets}">
+                <include name="**" />
+            </fileset>
+        </copy>
+
+        <copy todir="${deploy.dir}/twig" preservemode="true" overwrite="yes">
+            <fileset dir="${app.twig}">
                 <include name="**" />
             </fileset>
         </copy>
