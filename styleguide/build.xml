@@ -18,8 +18,8 @@
     <property name="app.assets.relative" value="${application.startdir}/public/assets" />
     <resolvepath propertyName="app.assets" file="${app.assets.relative}" />
 
-    <property name="app.assets.relative" value="${application.startdir}/public/_patterns" />
-    <resolvepath propertyName="app.twig" file="${app.assets.relative}" />
+    <property name="app.twig.relative" value="${application.startdir}/public/_patterns" />
+    <resolvepath propertyName="app.twig" file="${app.twig.relative}" />
 
     <property file="config/build.properties" />
 
@@ -41,6 +41,14 @@
             <not><available file="${app.assets}" type="dir" /></not>
             <then>
                 <fail message="You must generate the assets first" />
+            </then>
+        </if>
+        
+        <!-- Verify twig is included -->
+        <if>
+            <not><available file="${app.twig}" type="dir" /></not>
+            <then>
+                <fail message="Make sure your twig files are in place" />
             </then>
         </if>
     </target>
