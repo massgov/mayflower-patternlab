@@ -1,0 +1,15 @@
+<section class="ma__guide-section">
+  <h2 class="ma__guide-section__title">{{guideSection.title}}</h2>
+</section>  
+<div class="main-content main-content--two">
+  <main class="page-content">
+    {% set rteElements = guideSection.rteElements %}
+    {% include "organisms-rich-text" %}
+  </main>
+  <aside class="sidebar">
+    {% set sidebarHeading = guideSection.sidebarHeading %}
+    {% include "atoms-sidebar-heading" %}
+    {% set contactUs = guideSection.contactUs %}
+    {% include "molecules-contact-us" %}
+  </aside>
+</div>

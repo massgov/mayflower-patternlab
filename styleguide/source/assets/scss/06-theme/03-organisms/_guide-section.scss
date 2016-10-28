@@ -1,0 +1,10 @@
+.ma__guide-section {
+
+  &__title {
+    @include ma-border-decorative($c-theme-primary-2);
+  }
+
+  &__title ~ &__title {
+    border-color: $c-bd-divider;
+  }
+}
