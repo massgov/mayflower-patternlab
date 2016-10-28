@@ -28,6 +28,15 @@
     width: 100%;
     z-index: $z-sticky-content;
 
+    &:before {
+      content: "true"; // hook for JS to do the mobile sticky
+      display: none;
+      
+      @media ($bp-medium-min) {
+        content: "false"; // hook for JS to do the mobile sticky
+      }
+    }
+
     @media ($bp-medium-max) {
       left: 0;
     }

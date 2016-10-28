@@ -44,27 +44,27 @@
     width: 100%;
     z-index: $z-sticky-content;
 
+    &:before {
+      content: "false"; // hook for JS to do the mobile sticky
+      display: none;
+    }
+
     @media ($bp-medium-max) {
       left: 0;
-    }
 
-    &[data-sticky='middle'] {
-      position: fixed;
-        top: 40px;
-
-      @media ($bp-medium-min) {
-        top: 15px;
+      &:before {
+        content: "true"; // hook for JS to do the mobile sticky
       }
-    }
 
-    &[data-sticky='bottom'] {
-      position: absolute;
-        top: auto; // height of one line of text
-        bottom: -30px; // compensate for bottom margin
+      &[data-sticky='middle'] {
+        position: fixed;
+          top: 40px;
+      }
 
-      @media ($bp-medium-min) {
-        top: auto;
-        bottom: -15px;
+      &[data-sticky='bottom'] {
+        position: absolute;
+          top: auto; // height of one line of text
+          bottom: -30px; // compensate for bottom margin
       }
     }
   }
