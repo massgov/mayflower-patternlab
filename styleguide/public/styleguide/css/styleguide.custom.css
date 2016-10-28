@@ -41,6 +41,15 @@
   font-size: 90%;
 }
 
+.sg-modal .sg-pattern-extra-info a {
+  color: #14558f;
+}
+
+.sg-modal .sg-pattern-extra-info a:hover {
+  color: #14558f;
+  opacity: .7;
+}
+
 .sg-modal-close-btn {
   background-color: transparent;
   border: none;

@@ -1,6 +1,10 @@
 # Mass Gov Release Notes
 
 ## 0.6.0
+### MGVDU-219 - FE Dev: Guide Page
+* MGVDU-270 - FE Dev: Guide Page - Jump Links
+* MGVDU-216 - FE Dev: Guide Page - Header Banner
+
 ### MGVDU-208 - Basic Content Page
 * MGVDU-88 - Page Discourse Component - using rich-text component instead
 * MGVDU-278 - FE Dev: Breadcrumbs - collapsable

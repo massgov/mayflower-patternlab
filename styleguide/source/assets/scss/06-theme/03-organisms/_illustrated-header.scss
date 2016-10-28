@@ -1,0 +1,15 @@
+.ma__illustrated-header {
+
+  &__content {
+    background-color: $c-white;
+
+    &:after {
+      background-color: $c-white;
+    }
+  }
+
+  &__category {
+    font-weight: 700;
+  }
+
+}

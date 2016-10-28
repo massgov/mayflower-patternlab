@@ -1,0 +1,21 @@
+{
+  "jumpLinks": {
+    "title": "In this guide",
+    "links": [{
+      "text": "Residency",
+      "href": "residency"
+    },{
+      "text": "Employment",
+      "href": "employment"
+    },{
+      "text": "Section Name1",
+      "href": "section-name2"
+    },{
+      "text": "Section Name1",
+      "href": "section-name2"
+    },{
+      "text": "Section Name1",
+      "href": "section-name2"
+    }]
+  }
+}
