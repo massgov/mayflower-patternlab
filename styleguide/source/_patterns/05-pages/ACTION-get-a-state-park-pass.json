@@ -506,7 +506,7 @@
       "id":"downloads",
       "path": "molecules-action-downloads",
       "data": {
-        "action-downloads": [{
+        "actionDownloads": [{
           "icon":"atoms-svg-doc-pdf",
           "title":"Park Pass Application",
           "url": "#",

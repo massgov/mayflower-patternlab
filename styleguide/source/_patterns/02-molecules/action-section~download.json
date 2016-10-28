@@ -5,7 +5,7 @@
     "id":"downloads:",
     "path":"molecules-action-download",
     "data": {
-      "actionSectionDownloads": [{
+      "actionDownloads": [{
         "icon": "atoms-svg-doc-pdf",
         "title": "PDF download item",
         "url": "#",
