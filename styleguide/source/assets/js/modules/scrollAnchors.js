@@ -34,11 +34,19 @@ export default function (window,document,$,undefined) {
         return;
       }
        
+      // close the menu
+      $el.removeClass('is-open');
+
+      // remove active flag from other links
+      $el.find('.' + activeClass).removeClass(activeClass);
+      // add active flag to this link
+      $(this).addClass(activeClass);
+
       // find the location of the desired link and scroll the page
       let hash = this.hash,  // TODO try with a span tag
-          position = $(hash).offset().top;
+          position = $(hash).offset().top - headerBuffer - elHeight;
 
-      // prevent the scroll event for updating active links
+      // prevent the scroll event from updating active links
       linkScrolling = true;
       activeAnchor = $(this).index() - 1;
 
@@ -46,12 +54,6 @@ export default function (window,document,$,undefined) {
         linkScrolling = false;
       });
       
-      // remove active flag from other links
-      $el.find('.' + activeClass).removeClass(activeClass);
-      // add active flag to this link
-      $(this).addClass(activeClass);
-      // close the menu
-      $el.removeClass('is-open');
     });
 
     $el.find(".js-scroll-anchors-toggle").on('click',function() {
