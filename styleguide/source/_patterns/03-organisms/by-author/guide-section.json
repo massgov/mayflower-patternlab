@@ -3,6 +3,39 @@
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
 
+    "rteElements": [{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "If you are renting a home or an apartment, the Office of Consumer Affairs & Business Regulation (OCABR) emphasizes the importance of knowing <a href=\"#\">your tenant rights and responsibilities</a>, such as:"
+        }
+      }
+    },
+    {
+      "path": "atoms-unordered-list",
+      "data": {
+        "unorderedList": [{ 
+          "text": "Protection from unlawful discrimination" 
+        },{ 
+          "text": "Rental agreements for leases and tenancy-at-will" 
+        },{ 
+          "text": "Rent withholding and deductions for repairs" 
+        },{ 
+          "text": "Lease termination, eviction, and moving out" 
+        }]
+      }
+    },
+    {
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "If you will be buying a home in Massachusetts, make sure you consider all the steps you will need to take, whether or not you’re a <a href=\"#\">first-time home buyer</a>."
+        }
+      }
+    }],
+
+    "COMMENT":"****Guide Sidebar****",
+
     "sidebarHeading": {
       "title": "Key Agencies"
     },
@@ -55,37 +88,6 @@
           "chevron": "true"
         }
       }]
-    },
-
-    "rteElements": [{
-      "path": "atoms-paragraph",
-      "data": {
-        "paragraph" : {
-          "text": "If you are renting a home or an apartment, the Office of Consumer Affairs & Business Regulation (OCABR) emphasizes the importance of knowing <a href=\"#\">your tenant rights and responsibilities</a>, such as:"
-        }
-      }
-    },
-    {
-      "path": "atoms-unordered-list",
-      "data": {
-        "unorderedList": [{ 
-          "text": "Protection from unlawful discrimination" 
-        },{ 
-          "text": "Rental agreements for leases and tenancy-at-will" 
-        },{ 
-          "text": "Rent withholding and deductions for repairs" 
-        },{ 
-          "text": "Lease termination, eviction, and moving out" 
-        }]
-      }
-    },
-    {
-      "path": "atoms-paragraph",
-      "data": {
-        "paragraph" : {
-          "text": "If you will be buying a home in Massachusetts, make sure you consider all the steps you will need to take, whether or not you’re a <a href=\"#\">first-time home buyer</a>."
-        }
-      }
-    }]
+    }
   }
 }
