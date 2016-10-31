@@ -1,10 +1,10 @@
 <section class="ma__quick-actions">
   {% set coloredHeading = quickActions.coloredHeading %}
-  {% include "atoms-colored-heading" %}
+  {% include "@atoms/04-headings/colored-heading.twig" %}
   <ul class="ma__quick-actions__items">
     {% for decorativeLink in quickActions.links %}
       <li class="ma__quick-actions__item">
-        {% include "atoms-decorative-link" %}
+        {% include "@atoms/decorative-link.twig" %}
       </li>
     {% endfor %}
   </ul>

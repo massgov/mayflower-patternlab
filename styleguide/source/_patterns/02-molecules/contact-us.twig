@@ -8,12 +8,12 @@
 
   {% if contactUs.phone|length %}
     {% set contactGroup = contactUs.phone %}
-    {% include "molecules-contact-group" %}
+    {% include "@molecules/contact-group.twig" %}
   {% endif %}
 
   {% if contactUs.online|length %}
     {% set contactGroup = contactUs.online %}
-    {% include "molecules-contact-group" %}
+    {% include "@molecules/contact-group.twig" %}
   {% endif %}
 
   {% if contactUs.hide == "fax" %}
@@ -22,7 +22,7 @@
 
   {% if contactUs.fax|length %}
     {% set contactGroup = contactUs.fax %}
-    {% include "molecules-contact-group" %}
+    {% include "@molecules/contact-group.twig" %}
   {% endif %}
 
   {% if contactUs.hide == "address" %}
@@ -32,7 +32,7 @@
   {% if contactUs.address|length %}
     <div class="ma__contact-us__group">
       <h6 class="ma__contact-us__name">
-        {% include "atoms-svg-marker" %}
+        {% include "@atoms/05-icons/svg-marker.twig" %}
         <span>Address</span>
       </h6>
       {% for item in contactUs.address %}
@@ -50,7 +50,7 @@
         <div class="ma__contact-us__directions">
           {% if item.directions %}
             {% set link = item.directions %}
-            {% include "atoms-link" %}
+            {% include "@atoms/11-text/link.twig" %}
           {% endif %}
         </div>
       {% endfor %}

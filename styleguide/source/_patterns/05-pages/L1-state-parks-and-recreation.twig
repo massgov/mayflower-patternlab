@@ -1,13 +1,13 @@
-{% extends 'templates-single-column' %}
+{% extends '@templates/single-column.twig' %}
 
 {% block preContent %}
-  {% include "organisms-breadcrumbs" %}
-  {% include "organisms-page-banner" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
+  {% include "@organisms/by-template/page-banner.twig" %}
 {% endblock %}
 {% block pageContent %}
-  {% include "organisms-top-actions" %}
-  {% include "organisms-sections-three-up" %}
+  {% include "@organisms/by-author/top-actions.twig" %}
+  {% include "@organisms/by-author/sections-three-up.twig" %}
 {% endblock %}
 {% block postContent %}
-  {% include "organisms-breadcrumbs" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
 {% endblock %}

@@ -3,13 +3,13 @@
 
   "illustratedHeader": {
     "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/assets/images/placeholder/600x450.png",
+    "bgImage": "/{{ directory }}/images/placeholder/600x450.png",
     "category": "Guide",
     "pageHeader": {
       "title": "Moving to Massachusetts Part 1: Planning Your Move",
       "subTitle": "",
       "rteElements": [{
-        "path": "atoms-paragraph",
+        "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
             "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this three-part guide series provides instructions for changing your license, tips for settling in, and other useful information."

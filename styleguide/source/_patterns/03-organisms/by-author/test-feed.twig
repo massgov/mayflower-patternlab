@@ -7,7 +7,7 @@
           <div class="ma__test-feed__content">
             <div class="ma__test-feed__link">
               {% set decorativeLink = item.link %}
-              {% include "atoms-decorative-link" with decorativeLink %}
+              {% include "@atoms/decorative-link.twig" with decorativeLink %}
             </div>
             <div class="ma__test-feed__description">
               {{item.description}}

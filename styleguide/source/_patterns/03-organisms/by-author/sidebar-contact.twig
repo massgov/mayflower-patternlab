@@ -1,6 +1,6 @@
 {% set coloredHeading = sidebarContact.coloredHeading %}
-{% include "atoms-colored-heading" %}
+{% include "@atoms/04-headings/colored-heading.twig" %}
 {% for item in sidebarContact.items %}
   {% set contactUs = item.contactUs %}
-  {% include "molecules-contact-us" %}
+  {% include "@molecules/contact-us.twig" %}
 {% endfor %}

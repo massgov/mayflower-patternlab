@@ -1,9 +1,9 @@
 {
   "pageBanner": {
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "bgWide":"/{{ directory }}/images/placeholder/1600x400.png",
+    "bgNarrow":"/{{ directory }}/images/placeholder/800x400.png",
     "small":"",
-    "icon":"atoms-svg-camping",
+    "icon":"@atoms/07-user-added-icons/svg-camping.twig",
     "title":"Visiting & Exploring"
   }
 }

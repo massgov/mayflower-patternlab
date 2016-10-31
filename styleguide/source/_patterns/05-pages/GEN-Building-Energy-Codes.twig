@@ -1,17 +1,17 @@
-{% extends 'templates-two-column' %}
+{% extends '@templates/two-column.twig' %}
 
 {% block preContent %}
-  {% include "organisms-breadcrumbs" %}
-  {% include "organisms-page-header" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
+  {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 {% block pageContent %}
-  {% include "organisms-rich-text" %}
+  {% include "@organisms/by-author/rich-text.twig" %}
 {% endblock %}
 {% block sidebar %}
   {% for sidebarPromo in sidebarPromos %}
-    {% include "organisms-sidebar-promo" %}
+    {% include "@organisms/by-author/sidebar-promo.twig" %}
   {% endfor %}
 {% endblock %}
 {% block postContent %}
-  {% include "organisms-breadcrumbs" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
 {% endblock %}
