@@ -3,7 +3,7 @@
 
   "illustratedHeader": {
     "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/{{directory}}/images/placeholder/600x450.png",
+    "bgImage": "/{{ directory }}/images/placeholder/600x450.png",
     "category": "Guide",
     "pageHeader": {
       "title": "Moving to Massachusetts Part 1: Planning Your Move",
