@@ -96,20 +96,33 @@
       width: 50%;
 
       &:nth-child(odd) {
-        padding-left: 90px;
+        padding-left: 45px;
       }
 
       &:nth-child(even) {
         border-right-width: 1px;
         border-right-style: solid;
+        padding-right: 45px;
+      }
+    }
+
+    @media ($bp-medium-min) {
+      &:nth-child(odd) {
+        padding-left: 90px;
+      }
+
+      &:nth-child(even) {
         padding-right: 90px;
       }
     }
   }
 
   &__link {
-    line-height: 1.67;
+    line-height: 1.2;
     display: block;
+    margin-bottom: .35em;
+    padding-left: 35px;
+    position: relative;
 
     & > svg,
     span {
@@ -119,12 +132,11 @@
 
     & > svg {
       height: 22px;
+      position: absolute;
+        left: 0;
+        top: 1px;
       transform: rotate(90deg);
       width: 22px;
-    }
-
-    span {
-      margin-top: 2px;
     }
 
     @media ($bp-small-max) {
