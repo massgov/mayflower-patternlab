@@ -6,7 +6,7 @@
     <h5 class="ma__action-step__title">{{actionStep.title}}</h5>
     <div class="ma__action-step__content">
       {% set rteElements = actionStep.rteElements %}
-      {% include "@organisms/rich-text.twig" %}
+      {% include "@organisms/by-author/rich-text.twig" %}
     </div>
   </section>
 {% endfor %}

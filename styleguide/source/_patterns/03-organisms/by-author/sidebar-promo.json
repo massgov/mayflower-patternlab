@@ -1,6 +1,8 @@
 {
   "sidebarPromo":{
-    "title":"Cross Promotional Component Name",
+    "sidebarHeading": {
+      "title": "Cross Promotional Component Name"
+    },
     "image": {
       "alt" : "promo copy", 
       "src" : "http://placehold.it/320x180"

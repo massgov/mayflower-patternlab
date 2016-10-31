@@ -1,0 +1,12 @@
+<section class="ma__action-downloads">
+  {% for download in actionDownloads %}
+    <div class="ma__action-downloads__item">
+      <div class="ma__action-downloads__icon">
+        {% include download.icon %}
+      </div>
+      <h5 class="ma__action-downloads__title">
+        <a href="{{download.url}}">{{download.title}}</a> <span>({{download.type}} {{download.size}})</span>
+      </h5>
+    </div>
+  {% endfor %}
+</section>

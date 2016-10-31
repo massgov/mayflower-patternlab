@@ -15,7 +15,7 @@ module.exports = function patternLabTask(config, env){
 
     // register the watch
     quench.registerWatcher("patternlab", [
-        config.patternLabRoot + "/source/**/*.{twig,mustache,json}"
+        config.patternLabRoot + "/source/**/*.{twig,mustache,json,md}"
     ]);
 
 };

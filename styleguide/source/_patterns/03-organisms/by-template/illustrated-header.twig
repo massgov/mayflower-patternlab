@@ -8,10 +8,18 @@
       {% include "@organisms/by-template/page-header.twig" %}
     </div>
   </div>
-  <div 
-    style="background-image: url('{{illustratedHeader.bgImage}}')" 
-    class="ma__illustrated-header__image"
-    role="image"
-    title="{{illustratedHeader.bgTitle}}">
-  </div>
+  {% if illustratedHeader.bgImage %}
+    <div 
+      style="background-image: url('{{illustratedHeader.bgImage}}')" 
+      class="ma__illustrated-header__image"
+      role="image"
+      title="{{illustratedHeader.bgTitle}}">
+    </div>
+  {% else %}
+    <div 
+      class="ma__illustrated-header__image ma__illustrated-header__image--empty"
+      role="image"
+      title="{{illustratedHeader.bgTitle}}">
+    </div>
+  {% endif %}
 </section>
