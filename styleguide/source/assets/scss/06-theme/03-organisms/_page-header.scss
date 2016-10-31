@@ -1,3 +1,9 @@
 .ma__page-header {
 
+  &__intro {
+
+    p {
+      @include ma-font(300);
+    }
+  }
 }
