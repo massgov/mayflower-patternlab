@@ -1,0 +1,10 @@
+<section class="ma__action-steps">
+  {% if actionSteps.intro %}
+    <p class="ma__action-steps">{{ actionSteps.intro }}</p>
+  {% endif %}
+  <div class="ma__action-steps__items">
+    {% for actionStep in actionSteps.steps %}
+      {% include "@molecules/action-step.twig" %}
+    {% endfor %}
+  </div>
+</section>
