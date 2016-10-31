@@ -1,5 +1,5 @@
 {
-  "actionSectionDownloads": [{
+  "actionDownloads": [{
     "icon": "atoms-svg-doc-pdf",
     "title": "PDF download item",
     "url": "#",

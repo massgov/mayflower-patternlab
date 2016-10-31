@@ -146,7 +146,9 @@
   }],
 
   "sidebarPromos":[{
-    "title":"Cross Promotional Component Name",
+    "sidebarHeading": {
+      "title":"Cross Promotional Component Name"
+    },
     "image": {
       "alt" : "promo copy",
       "src" : "http://placehold.it/320x180"
@@ -159,7 +161,9 @@
       "chevron": "true"
     }
   },{
-    "title":"Cross Promotional Component w/o Image",
+    "sidebarHeading": {
+      "title":"Cross Promotional Component w/o Image"
+    },
     "image": "",
     "content":"This could link to another relevant page, such as the in court bail process or bail for juveniles. We can have variations for cross promo components. Some wouldn't need an image or description, as seen in the components below this one. Com sociis natoque penatibus et magnis dis.",
     "link":{
@@ -169,7 +173,9 @@
       "chevron": "true"
     }
   },{
-    "title":"Cross Promotional Component with Image",
+    "sidebarHeading": {
+      "title":"Cross Promotional Component with Image"
+    },
     "image": {
       "alt" : "promo copy",
       "src" : "http://placehold.it/320x180"

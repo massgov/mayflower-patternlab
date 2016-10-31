@@ -1,7 +1,8 @@
 {% set link = sidebarPromo.link %}
 
 <section class="ma__sidebar-promo">
-  <h4 class="ma__sidebar-promo__title">{{sidebarPromo.title}}</h4>
+  {% set sidebarHeading = sidebarPromo.sidebarHeading %}
+  {% include "atoms-sidebar-heading" %}
   {% if sidebarPromo.image %}
     {% set image = sidebarPromo.image %}
     <div class="ma__sidebar-promo__image">

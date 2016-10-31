@@ -1,5 +1,9 @@
 .ma__illustrated-header {
 
+  &__image--empty {
+    background-color: $c-theme-primary-2;
+  }
+
   &__content {
     background-color: $c-white;
 
