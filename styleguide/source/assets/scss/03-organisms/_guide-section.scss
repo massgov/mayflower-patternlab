@@ -1,6 +1,19 @@
 .ma__guide-section {
+  margin-bottom: 60px;
 
-  @include ma-container;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__container {
+    @include ma-container;
+  }
+
+  & ~ & &__container {
+    border-top-width: 1px;
+    border-top-style: solid;
+    padding-top: 90px;
+  }
 
   &__title {
     @include ma-border-decorative;
@@ -11,10 +24,4 @@
     }
   }
 
-  &__title ~ &__title {
-    border-top-width: 1px;
-    border-top-style: solid;
-    margin-top: 65px;
-    padding-top: 95px;
-  }
 }

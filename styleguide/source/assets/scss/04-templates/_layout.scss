@@ -3,16 +3,25 @@
   @include clearfix;
 }
 
+.main-content {
+  padding-bottom: 30px;
+
+  @media ($bp-large-min){
+    padding-bottom: 45px;
+  }
+}
+
 .main-content--two {
   @include ma-container;
 }
 
 .page-content {
-  padding-bottom: 30px;
   position: relative;
 
   .main-content--two &,
   &:first-child:nth-last-child(2) {
+    padding-bottom: 30px;
+
     @media ($bp-large-min){
       float:left;
       padding-right: $column;
