@@ -4,10 +4,14 @@
 }
 
 .main-content {
-  padding-bottom: 30px;
+  margin-bottom: 45px;
 
   @media ($bp-large-min){
-    padding-bottom: 45px;
+    margin-bottom: 60px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

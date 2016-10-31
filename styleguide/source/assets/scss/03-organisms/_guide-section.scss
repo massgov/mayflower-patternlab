@@ -1,19 +1,5 @@
 .ma__guide-section {
-  margin-bottom: 60px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &__container {
-    @include ma-container;
-  }
-
-  & ~ & &__container {
-    border-top-width: 1px;
-    border-top-style: solid;
-    padding-top: 90px;
-  }
+  @include ma-container;
 
   &__title {
     @include ma-border-decorative;
@@ -23,5 +9,10 @@
       cursor: default;
     }
   }
-
+  
+  & ~ & &__title {
+    border-top-width: 1px;
+    border-top-style: solid;
+    padding-top: 90px;
+  }
 }
