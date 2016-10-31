@@ -37,13 +37,4 @@
       margin-bottom: 0;
     }
   }
-
- &__intro {
-
-   p {
-     @media ($bp-small-min) {
-       font-size: 1.625rem;
-     }
-   }
- }
 }
