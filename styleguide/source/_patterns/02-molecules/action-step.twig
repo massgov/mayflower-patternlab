@@ -1,12 +1,12 @@
-{% for actionStep in actionSteps %}
-  <section class="ma__action-step">
-    <div class="ma__action-step__icon">
-      {% include actionStep.icon %}
-    </div>
+<section class="ma__action-step">
+  <div class="ma__action-step__icon">
+    {% include actionStep.icon %}
+  </div>
+  {% if actionStep.title %}
     <h5 class="ma__action-step__title">{{actionStep.title}}</h5>
-    <div class="ma__action-step__content">
-      {% set rteElements = actionStep.rteElements %}
-      {% include "organisms-rich-text" %}
-    </div>
-  </section>
-{% endfor %}
+  {% endif %}
+  <div class="ma__action-step__content">
+    {% set rteElements = actionStep.rteElements %}
+    {% include "organisms-rich-text" %}
+  </div>
+</section>

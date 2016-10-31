@@ -1,0 +1,14 @@
+{
+  "actionStep": {
+    "icon":"atoms-svg-profile",
+    "title":"In Person at State Parks",
+    "rteElements": [{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check."
+        }
+      }
+    }]
+  }
+}

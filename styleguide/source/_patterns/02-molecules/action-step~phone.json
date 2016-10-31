@@ -1,0 +1,14 @@
+{
+  "actionStep": {
+    "icon":"atoms-svg-phone",
+    "title":"By Phone",
+    "rteElements": [{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+        }
+      }
+    }]
+  }
+}
