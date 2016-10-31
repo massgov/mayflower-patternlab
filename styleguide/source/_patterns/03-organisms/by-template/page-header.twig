@@ -7,12 +7,12 @@
     {% if pageHeader.rteElements %}
       <div class="ma__page-header__intro">
         {% set rteElements = pageHeader.rteElements %}
-        {% include "organisms-rich-text" %}
+        {% include "@organisms/by-author/rich-text.twig" %}
       </div>
     {% endif %}
   </div>
   {% if pageHeader.headerTags.taxonomyTerms %}
     {% set headerTags = pageHeader.headerTags %}
-    {% include "molecules-header-tags" %}
+    {% include "@molecules/header-tags.twig" %}
   {% endif %}
 </section>

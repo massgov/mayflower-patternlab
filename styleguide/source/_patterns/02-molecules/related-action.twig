@@ -1,7 +1,7 @@
 <section class="ma__related-action">
   <div class="ma__related-action__link">
     {% set decorativeLink = relatedAction.link %}
-    {% include "atoms-decorative-link" with decorativeLink %}
+    {% include "@atoms/decorative-link.twig" with decorativeLink %}
   </div>
   {% if relatedAction.description %}
     <div class="ma__related-action__description">

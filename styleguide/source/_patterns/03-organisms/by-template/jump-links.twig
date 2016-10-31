@@ -9,7 +9,7 @@
         <div class="ma__jump-links__column">
           {% for item in jumpLinks.links[start:half] %}
             <a href="#{{item.href}}" class="ma__jump-links__link {{loop.first ? 'is-active' : ''}}">
-              {% include "atoms-svg-circle-chevron" %}
+              {% include "@atoms/05-icons/svg-circle-chevron.twig" %}
               <span>{{item.text}}</span>
             </a>
           {% endfor %}
@@ -17,7 +17,7 @@
         <div class="ma__jump-links__column">
           {% for item in jumpLinks.links[half:length] %}
             <a href="#{{item.href}}" class="ma__jump-links__link">
-              {% include "atoms-svg-circle-chevron" %}
+              {% include "@atoms/05-icons/svg-circle-chevron.twig" %}
               <span>{{item.text}}</span>
             </a>
           {% endfor %}

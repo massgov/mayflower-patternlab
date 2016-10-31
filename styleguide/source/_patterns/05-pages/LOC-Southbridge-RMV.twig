@@ -1,22 +1,22 @@
-{% extends 'templates-two-column' %}
+{% extends '@templates/two-column.twig' %}
 
 {% block preContent %}
   {% for headerAlert in headerAlerts %}
-    {% include "organisms-header-alert" %}
+    {% include "@organisms/by-template/header-alert.twig" %}
   {% endfor %}
-  {% include "organisms-breadcrumbs" %}
-  {% include "organisms-action-header" %}
-  {% include "organisms-banner-carousel" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
+  {% include "@organisms/by-template/action-header.twig" %}
+  {% include "@organisms/by-author/banner-carousel.twig" %}
 {% endblock %}
 {% block pageContent %}
-  {% include "organisms-quick-actions" %}
-  {% include "organisms-action-details" %}
+  {% include "@organisms/by-author/quick-actions.twig" %}
+  {% include "@organisms/by-author/action-details.twig" %}
 {% endblock %}
 {% block sidebar %}
-  {% include "organisms-quick-actions" %}
-  {% include "organisms-sidebar-contact" %}
-  {% include "organisms-sidebar-widget" %}
+  {% include "@organisms/by-author/quick-actions.twig" %}
+  {% include "@organisms/by-author/sidebar-contact.twig" %}
+  {% include "@organisms/by-author/sidebar-widget.twig" %}
 {% endblock %}
 {% block postContent %}
-  {% include "organisms-breadcrumbs" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
 {% endblock %}

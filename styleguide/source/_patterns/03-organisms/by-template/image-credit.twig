@@ -5,7 +5,7 @@
       <span>"{{item.caption}}" &mdash; 
         {% if item.link %}
           {% set link = item.link %}
-          {% include "atoms-link" %};&nbsp;
+          {% include "@atoms/11-text/link.twig" %};&nbsp;
         {% else %}
           {{item.source}};&nbsp;
         {% endif %}

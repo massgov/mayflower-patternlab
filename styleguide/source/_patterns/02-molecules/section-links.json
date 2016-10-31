@@ -1,7 +1,7 @@
 {
   "sectionLinks": {
     "catIcon": {
-      "svg":"atoms-svg-camping",
+      "svg":"@atoms/07-user-added-icons/svg-camping.twig",
       "small":"true"
     },
     "title" : {

@@ -1,14 +1,14 @@
-{% extends 'templates-single-column' %}
+{% extends '@templates/single-column.twig' %}
 
 {% block preContent %}
-  {% include "organisms-breadcrumbs" with {breadcrumb:{class:"ma__breadcrumbs--page"}} %}
-  {% include "organisms-page-header" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" with {breadcrumb:{class:"ma__breadcrumbs--page"}} %}
+  {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 {% block pageContent %}
-  {% include "organisms-action-finder" %}
-  {% include "organisms-link-list" %}
+  {% include "@organisms/by-author/action-finder.twig" %}
+  {% include "@organisms/by-author/link-list.twig" %}
 {% endblock %}
 {% block postContent %}
-  {% include "organisms-image-credit" %}
-  {% include "organisms-breadcrumbs" %}
+  {% include "@organisms/by-template/image-credit.twig" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
 {% endblock %}
