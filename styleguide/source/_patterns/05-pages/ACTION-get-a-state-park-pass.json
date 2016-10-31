@@ -573,9 +573,10 @@
           "icon": "atoms-svg-phone",
           "name": "Phone",
           "items": [{
+            "type": "phone",
             "label":"Main",
             "value":"(617) 626-1250",
-            "rawVal":"16176261250",
+            "link":"16176261250",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           }]
         },
@@ -583,6 +584,7 @@
           "icon": "atoms-svg-laptop",
           "name": "Online",
           "items": [{
+            "type": "email",
             "label":"Email",
             "value":"mass.parks@state.ma.us",
             "link":"mass.parks@state.ma.us",
@@ -593,6 +595,7 @@
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
           "items": [{
+            "type": "phone",
             "label":"",
             "value":"(617) 626-1351",
             "link":"16176261351",
@@ -616,9 +619,10 @@
           "icon": "atoms-svg-phone",
           "name": "Phone",
           "items": [{
+            "type": "phone",
             "label":"Main",
             "value":"(617) 626-1250",
-            "rawVal":"16176261250",
+            "link":"16176261250",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           }]
         },
@@ -626,6 +630,7 @@
           "icon": "atoms-svg-laptop",
           "name": "Online",
           "items": [{
+            "type": "email",
             "label":"Email",
             "value":"mass.parks@state.ma.us",
             "link":"mass.parks@state.ma.us",
@@ -636,6 +641,7 @@
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
           "items": [{
+            "type": "phone",
             "label":"",
             "value":"(617) 626-1351",
             "link":"16176261351",

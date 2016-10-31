@@ -8,10 +8,12 @@
       {% if item.label %}
         <span class="ma__contact-group__label">{{item.label}}:</span>
       {% endif %}
-      {% if contactGroup.type == "phone" %}
+      {% if item.type == "phone" %}
         <a href="tel:+{{item.link}}" class="ma__contact-group__value ma__contact-group__value--phone">{{item.value}}</a>
-      {% else %}
+      {% elseif item.type == "email" %}
         <a href="mailto:{{item.link}}" class="ma__contact-group__value ma__contact-group__value--email">{{item.value}}</a>
+      {% else %}
+        <a href="{{item.link}}" class="ma__contact-group__value">{{item.value}}</a>
       {% endif %}
     </div>
     {% if item.details %}

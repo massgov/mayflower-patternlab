@@ -55,19 +55,19 @@
     "phone": {
       "icon": "atoms-svg-phone",
       "name": "Phone",
-      "type": "phone",
       "items": [{
+        "type": "phone",
         "label":"Main",
         "value":"(413) 499-4262",
-        "rawVal":"14134994262",
+        "link":"14134994262",
         "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
       }]
     },
     "online": {
       "icon": "atoms-svg-laptop",
       "name": "Online",
-      "type": "email",
       "items": [{
+        "type": "email",
         "label":"Email",
         "value":"email@email.com",
         "link":"email@email.com",
@@ -526,11 +526,13 @@
           "icon": "atoms-svg-phone",
           "name": "Phone",
           "items": [{
+            "type": "phone",
             "label":"Main",
             "value":"(413) 499-4262",
-            "rawVal":"14134994262",
+            "link":"14134994262",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           },{
+            "type": "phone",
             "label":"TTY",
             "value":"(617) 555-7777",
             "link":"16175557777",
@@ -541,6 +543,7 @@
           "icon": "atoms-svg-laptop",
           "name": "Online",
           "items": [{
+            "type": "email",
             "label":"Email",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -551,6 +554,7 @@
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
           "items": [{
+            "type": "phone",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -579,9 +583,10 @@
           "icon": "atoms-svg-phone",
           "name": "Phone",
           "items": [{
+            "type": "phone",
             "label":"Main",
             "value":"(413) 443-8765",
-            "rawVal":"14134438765",
+            "link":"14134438765",
             "details":""
           }]
         },
@@ -589,6 +594,7 @@
           "icon": "atoms-svg-laptop",
           "name": "Online",
           "items": [{
+            "type": "email",
             "label":"Email",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -599,6 +605,7 @@
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
           "items": [{
+            "type": "phone",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
