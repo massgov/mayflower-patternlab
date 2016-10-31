@@ -3,13 +3,13 @@
 </section>  
 <div class="main-content main-content--two">
   <main class="page-content">
-    {% set rteElements = guideSection.rteElements %}
-    {% include "organisms-rich-text" %}
+    {% for content in guideSection.pageContent %}
+      {% include content.path with content.data %}
+    {% endfor %}
   </main>
   <aside class="sidebar">
-    {% set sidebarHeading = guideSection.sidebarHeading %}
-    {% include "atoms-sidebar-heading" %}
-    {% set contactUs = guideSection.contactUs %}
-    {% include "molecules-contact-us" %}
+    {% for sidebar in guideSection.sideBar %}
+      {% include sidebar.path with sidebar.data %}
+    {% endfor %}
   </aside>
 </div>
