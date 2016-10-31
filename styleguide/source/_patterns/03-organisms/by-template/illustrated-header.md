@@ -4,8 +4,8 @@ title: Illustrated Header
 
 ##Fields: 
 * Category - string 
-* Background Image - string/url
-* Image title - string - description of the image
+* Background Image (optional) - string/url
+* Image title (optional) - string - description of the image
 
 ##Partials:
 * Page Header
