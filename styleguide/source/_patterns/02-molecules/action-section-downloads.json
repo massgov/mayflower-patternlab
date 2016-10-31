@@ -1,18 +1,18 @@
 {
   "actionSectionDownloads": [{
-    "icon": "atoms-svg-doc-pdf",
+    "icon": "@atoms/05-icons/svg-doc-pdf.twig",
     "title": "PDF download item",
     "url": "#",
     "size": "30kb",
     "type": "PDF"
   },{
-    "icon": "atoms-svg-doc-xlsx",
+    "icon": "@atoms/05-icons/svg-doc-xlsx.twig",
     "title": "Excel download item that has a longer title than the pdf did",
     "url": "#",
     "size": "35kb",
     "type": "XLSX"
   },{
-    "icon": "atoms-svg-doc-docx",
+    "icon": "@atoms/05-icons/svg-doc-docx.twig",
     "title": "Word download item",
     "url": "#",
     "size": "40kb",

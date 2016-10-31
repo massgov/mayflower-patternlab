@@ -15,7 +15,7 @@
     <header class="ma__action-finder__header">
       <h2 class="ma__action-finder__title">What Would You Like to Do?</h2>
       <div class="ma__action-finder__search">
-        {% include "molecules-keyword-search" %}
+        {% include "@molecules/keyword-search.twig" %}
       </div>
     </header>
     <div class="ma__action-finder__category">Featured:</div>
@@ -24,10 +24,10 @@
         <li class="ma__action-finder__item js-clickable {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
           {% if link.image %}
             {% set illustratedLink = link %}
-            {% include "molecules-illustrated-link" %}
+            {% include "@molecules/illustrated-link.twig" %}
           {% else %}
             {% set decorativeLink = link %}
-            {% include "atoms-decorative-link" %}
+            {% include "@atoms/decorative-link.twig" %}
           {% endif %}
         </li>
       {% endfor %}
@@ -38,10 +38,10 @@
         <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
           {% if link.image %}
             {% set illustratedLink = link %}
-            {% include "molecules-illustrated-link" %}
+            {% include "@molecules/illustrated-link.twig" %}
           {% else %}
             {% set decorativeLink = link %}
-            {% include "atoms-decorative-link" %}
+            {% include "@atoms/decorative-link.twig" %}
           {% endif %}
         </li>
       {% endfor %}

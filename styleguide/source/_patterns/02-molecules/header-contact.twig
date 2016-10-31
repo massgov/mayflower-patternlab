@@ -17,7 +17,7 @@
   </div>
   <div class="ma__header-contact__directions">
     {% set link = headerContact.directions %}
-    {% include "atoms-link" %}
+    {% include "@atoms/11-text/link.twig" %}
   </div>
   {% if accordion %}
     <button class="ma__header-contact__accordion js-accordion-link">More contact information</button>
@@ -26,18 +26,18 @@
     {% if headerContact.phone|length %}
       <div class="ma__header-contact__column">
         {% set contactGroup = headerContact.phone %}
-        {% include "molecules-contact-group" %}
+        {% include "@molecules/contact-group.twig" %}
       </div>
     {% endif %}
     {% if headerContact.online|length or headerContact.fax|length %}
       <div class="ma__header-contact__column">
         {% if headerContact.online|length %}
           {% set contactGroup = headerContact.online %}
-          {% include "molecules-contact-group" %}
+          {% include "@molecules/contact-group.twig" %}
         {% endif %}
         {% if headerContact.fax|length %}
           {% set contactGroup = headerContact.fax %}
-          {% include "molecules-contact-group" %}
+          {% include "@molecules/contact-group.twig" %}
         {% endif %}
       </div>
     {% endif %}

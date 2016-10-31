@@ -1,14 +1,14 @@
 <form action="#" class="js-site-setting-form">
   <section class="ma__settings-util">
     <div class="ma__settings-util__zoom">
-      {% include "molecules-zoom-controls" %}
+      {% include "@molecules/zoom-controls.twig" %}
     </div>
     <div class="ma__settings-util__dropdown-controls">
       <div class="ma__settings-util__theme js-site-settings-theme">
-        {% include "molecules-dropdown" %}
+        {% include "@molecules/dropdown.twig" %}
       </div>
       <div class="ma__settings-util__lang js-site-settings-lang">
-        <!-- {% include "molecules-dropdown" %} -->
+        <!-- {% include "@molecules/dropdown.twig" %} -->
         <section class="ma__dropdown js-dropdown">
           <label 
             for="lang-select" 
@@ -32,7 +32,7 @@
       <button type="submit">submit</button>
       <button class="js-button-reset" type="reset">
         <span>Restore Defaults</span>
-        {% include "atoms-svg-restore" %}
+        {% include "@atoms/05-icons/svg-restore.twig" %}
       </button>
     </div>
   </section> 

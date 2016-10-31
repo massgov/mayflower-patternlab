@@ -5,7 +5,7 @@
         <h5 class="ma__action-seq-list__title">{{item.title}}</h5>
         <div class="ma__action-seq-list__content">
           {% set rteElements = item.rteElements %}
-          {% include "organisms-rich-text" %}
+          {% include "@organisms/rich-text.twig" %}
         </div>
       </li>
     {% endfor %}

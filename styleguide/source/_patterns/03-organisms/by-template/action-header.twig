@@ -1,19 +1,19 @@
 <section class="ma__action-header">
   <!-- Fix: Chrome doesn't always render the first SVG use tag -->
-  <img aria-hidden="true" alt="icon-sprite" src="/assets/images/svg-loc-icons.svg" style="display:none" />
+  <img aria-hidden="true" alt="icon-sprite" src="/{{directory}}/images/svg-loc-icons.svg" style="display:none" />
   <div class="ma__action-header__inner">
     <div class="ma__action-header__content">
-      {% include "organisms-page-header" %}
+      {% include "@organisms/by-template/page-header.twig" %}
       {% if headerContact %}
-        {% include "molecules-header-contact" %}
+        {% include "@molecules/header-contact.twig" %}
       {% endif %}
     </div>
     <div class="ma__action-header__widgets">
       {% if locationIcons %}
-        {% include "molecules-location-icons" %}
+        {% include "@molecules/location-icons.twig" %}
       {% endif %}
       {% if waitTime %}
-        {% include "molecules-wait-time" %}
+        {% include "@molecules/wait-time.twig" %}
       {% endif %}
     </div>
   </div>

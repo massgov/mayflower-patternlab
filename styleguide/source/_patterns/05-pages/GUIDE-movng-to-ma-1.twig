@@ -1,10 +1,10 @@
-{% extends 'templates-single-column' %}
+{% extends '@templates/single-column.twig' %}
 
 {% block preContent %}
-  {% include "organisms-illustrated-header" %}
+  {% include "@organisms/by-template/illustrated-header.twig" %}
 {% endblock %}
 {% block pageContent %}
-  {% include "organisms-jump-links" %}
+  {% include "@organisms/by-template/jump-links.twig" %}
   {% for link in jumpLinks.links %}
     <a id="{{link.href}}" style="display:block; height:200px;">{{link.text}}</a>
   {% endfor %}

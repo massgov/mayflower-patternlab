@@ -18,22 +18,22 @@
       </header>
       <form action="#">
         <div class="ma__feedback-form__name">
-          {% include "atoms-input-text" %}
+          {% include "@atoms/03-forms/input-text.twig" %}
         </div>
         <div class="ma__feedback-form__email">
-          {% include "atoms-input-email" %}
+          {% include "@atoms/03-forms/input-email.twig" %}
         </div>
         <div class="ma__feedback-form__feedback">
-          {% include "atoms-input-textarea" %}
+          {% include "@atoms/03-forms/input-textarea.twig" %}
         </div>
         <div class="ma__feedback-form__type">
           {% set selectBox = feedbackForm.selectBox %}
-          {% include "atoms-select-box" %}
+          {% include "@atoms/03-forms/select-box.twig" %}
         </div>
         <fieldset class="ma__feedback-form__permission">
           <legend>{{feedbackForm.permissionLegend}}</legend>
           {% for inputRadio in feedbackForm.radioButtons %}
-            {% include "atoms-input-radio" with inputRadio %}
+            {% include "@atoms/03-forms/input-radio.twig" with inputRadio %}
           {% endfor %}
         </fieldset>
         <div class="ma__feedback-form__controls">

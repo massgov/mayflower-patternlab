@@ -1,7 +1,7 @@
 <span class="ma__decorative-link">
   {% if decorativeLink.type == "external" %}
-    <a href="{{decorativeLink.href}}" class="js-clickable-link" target="_blank">{{decorativeLink.text}}&nbsp;{% include "atoms-svg-external-link" %}</a>
+    <a href="{{decorativeLink.href}}" class="js-clickable-link" target="_blank">{{decorativeLink.text}}&nbsp;{% include "@atoms/05-icons/svg-external-link.twig" %}</a>
   {% else %}
-    <a href="{{decorativeLink.href}}" class="js-clickable-link">{{decorativeLink.text}}&nbsp;{% include "atoms-svg-arrow" %}</a>
+    <a href="{{decorativeLink.href}}" class="js-clickable-link">test{{decorativeLink.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
   {% endif %}
 </span>

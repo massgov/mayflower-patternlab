@@ -3,70 +3,70 @@
     "title": "Things to Do",
     "description": "Here you'll find the pages we redesigned first",
     "actions":[{
-      "icon":"atoms-svg-pig-bank",
+      "icon":"@atoms/05-icons/svg-pig-bank.twig",
       "category":"Unemployment",
       "linkText":"File for Unemployment",
       "linkHref":"#",
       "theme":"green"
     },
     {
-      "icon":"atoms-svg-apple",
+      "icon":"@atoms/07-user-added-icons/svg-apple.twig",
       "category":"Health & Social Services",
       "linkText":"Apply for MassHealth Coverage",
       "linkHref":"#",
       "theme":"blue"
     },
     {
-      "icon":"atoms-svg-apple",
+      "icon":"@atoms/07-user-added-icons/svg-apple.twig",
       "category":"Health & Social Services",
       "linkText":"Apply for SNAP Benefits",
       "linkHref":"#",
       "theme":""
     },
     {
-      "icon":"atoms-svg-gavel",
+      "icon":"@atoms/07-user-added-icons/svg-gavel.twig",
       "category":"Legal & Justice",
       "linkText":"Respond to a Jury Duty Summons",
       "linkHref":"#",
       "theme":"dark-gray"
     },
     {
-      "icon":"atoms-svg-campfire",
+      "icon":"@atoms/07-user-added-icons/svg-campfire.twig",
       "category":"State Parks & Recreation",
       "linkText":"Find a State Park",
       "linkHref":"#",
       "theme":"blue"
     },
     {
-      "icon":"atoms-svg-certificate",
+      "icon":"@atoms/07-user-added-icons/svg-certificate.twig",
       "category":"Professional Licensing & Certification",
       "linkText":"Apply for a Nursing License",
       "linkHref":"#",
       "theme":"green"
     },
     {
-      "icon":"atoms-svg-family",
+      "icon":"@atoms/07-user-added-icons/svg-family.twig",
       "category":"Family & Children",
       "linkText":"Get a Child Support Order",
       "linkHref":"#",
       "theme":"dark-gray"
     },
     {
-      "icon":"atoms-svg-id-card",
+      "icon":"@atoms/07-user-added-icons/svg-id-card.twig",
       "category":"Recreational Licenses & Permits",
       "linkText":"Buy a Freshwater Fishing License",
       "linkHref":"#",
       "theme":""
     },
     {
-      "icon":"atoms-svg-bag-search",
+      "icon":"@atoms/07-user-added-icons/svg-bag-search.twig",
       "category":"Finding a Job",
       "linkText":"Get a State Job",
       "linkHref":"#",
       "theme":"green"
     },
     {
-      "icon":"atoms-svg-server-rack",
+      "icon":"@atoms/07-user-added-icons/svg-server-rack.twig",
       "category":"Business Services & Resources",
       "linkText":"Register Your Business",
       "linkHref":"#",
