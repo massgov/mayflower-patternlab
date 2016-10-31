@@ -42,7 +42,7 @@
     }]
   },
 
-  "guideSections": {
+  "guideSections": [{
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
 
@@ -132,7 +132,7 @@
         }
       }]
     }
-  },
+  }],
 
   "COMMENT":"****POSTCONTENT COMPONENTS****"
 
