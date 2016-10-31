@@ -1,18 +1,18 @@
 <footer class="ma__footer js-footer">
   <button class="ma__footer__back2top js-back2top is-hidden">
-    {% include "atoms-svg-arrow" %}
+    {% include "@atoms/05-icons/svg-arrow.twig" %}
     <span>Top</span>
   </button>
   <div class="ma__footer__container">
     <div class="ma__footer__nav">
-      {% include "molecules-footer-links" %}
+      {% include "@molecules/footer-links.twig" %}
     </div>
     <section class="ma__footer__info">
       <div class="ma__footer__logo">
-        <img src="/assets/images/stateseal.png" alt="Massachusetts State Seal" width="120" height="120" />
+        <img src="/{{ directory }}/images/stateseal.png" alt="Massachusetts State Seal" width="120" height="120" />
       </div>
       <div class="ma__footer__social">
-        {% include "molecules-social-links" %}
+        {% include "@molecules/social-links.twig" %}
       </div>
       <div class="ma__footer__copyright">
         <p><b>&copy; 2016 Commonwealth of Massachusetts.</b></p>

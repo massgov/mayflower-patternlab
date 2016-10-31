@@ -16,7 +16,7 @@
         <div class="ma__blog-feed__content">
           <h4 class="ma__blog-feed__link">
             {% set decorativeLink = item.link %}
-              {% include "atoms-decorative-link" with decorativeLink %}
+              {% include "@atoms/decorative-link.twig" with decorativeLink %}
           </h4>
           <div class="ma__blog-feed__description">{{item.description}}</div>
         </div>

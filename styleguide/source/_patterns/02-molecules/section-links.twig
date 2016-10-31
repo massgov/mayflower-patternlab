@@ -3,18 +3,18 @@
     {% if sectionLinks.catIcon %}
       <div class="ma__section-links__icon">
         {% set catIcon = sectionLinks.catIcon %}
-        {% include "atoms-cat-icon" %}
+        {% include "@atoms/05-icons/cat-icon.twig" %}
       </div>
     {% endif %}
     <h3 class="ma__section-links__title js-accordion-link">
-      <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "atoms-svg-arrow" %}</a>
+      <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
     </h3>
     <nav class="ma__section-links__toggle-content js-accordion-body">
       {% if sectionLinks.description %}
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>
       {% endif %}
       <h4 class="ma__section-links__mobile-title">
-        <a href="{{sectionLinks.title.href}}">Learn More&nbsp;{% include "atoms-svg-arrow" %}</a>
+        <a href="{{sectionLinks.title.href}}">Learn More&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
       </h4>
       <ul class="ma__section-links__items">
         {% for list in sectionLinks.links %}
