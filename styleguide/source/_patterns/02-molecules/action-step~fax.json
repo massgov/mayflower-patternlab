@@ -1,9 +1,9 @@
 {
   "actionStep": {
-    "icon":"atoms-svg-fax-icon",
+    "icon":"@atoms/05-icons/svg-fax-icon.twig",
     "title":"By Fax",
     "rteElements": [{
-      "path": "atoms-unordered-list",
+      "path": "@atoms/08-lists/unordered-list.twig",
       "data": {
         "unorderedList": [{ 
           "text": "Download and fill out an <a href=\"#\">application for an EIN.</a>" 

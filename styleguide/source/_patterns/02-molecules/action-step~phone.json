@@ -1,9 +1,9 @@
 {
   "actionStep": {
-    "icon":"atoms-svg-phone",
+    "icon":"@atoms/05-icons/svg-phone.twig",
     "title":"By Phone",
     "rteElements": [{
-      "path": "atoms-paragraph",
+      "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph": {
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."

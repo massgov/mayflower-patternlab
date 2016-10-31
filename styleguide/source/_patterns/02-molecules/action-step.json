@@ -1,9 +1,9 @@
 {
   "actionStep": {
-    "icon":"atoms-circle-chevron",
+    "icon":"@atoms/05-icons/svg-circle-chevron.twig",
     "title":"Some Other Method",
     "rteElements": [{
-      "path": "atoms-paragraph",
+      "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph": {
           "text": "If you concentrate really hard, a Park Pass might magically appear in front of you"
