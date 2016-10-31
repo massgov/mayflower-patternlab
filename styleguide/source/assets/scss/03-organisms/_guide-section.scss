@@ -5,6 +5,10 @@
   &__title {
     @include ma-border-decorative;
     padding-bottom: .25em;
+
+    a {
+      cursor: default;
+    }
   }
 
   &__title ~ &__title {

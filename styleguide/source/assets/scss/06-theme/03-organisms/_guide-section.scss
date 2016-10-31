@@ -2,6 +2,10 @@
 
   &__title {
     @include ma-border-decorative($c-theme-primary-2);
+
+    a {
+      color: $c-font-heading;
+    }
   }
 
   &__title ~ &__title {
