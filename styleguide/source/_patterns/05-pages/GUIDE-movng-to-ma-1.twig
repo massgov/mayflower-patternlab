@@ -5,8 +5,8 @@
 {% endblock %}
 {% block pageContent %}
   {% include "organisms-jump-links" %}
-  {% for link in jumpLinks.links %}
-    <a id="{{link.href}}" style="display:block; height:200px;">{{link.text}}</a>
+  {% for guideSection in guideSections %}
+    {% include "organisms-guide-section" %}
   {% endfor %}
 {% endblock %}
 {% block postContent %}

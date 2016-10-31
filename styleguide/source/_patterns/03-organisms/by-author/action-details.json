@@ -150,9 +150,9 @@
       "title":"Forms",
       "intro": "Here are some helpful downloads to get you started.",
       "id":"downloads",
-      "path": "molecules-action-section-downloads",
+      "path": "molecules-action-downloads",
       "data": {
-        "actionSectionDownloads": [{
+        "actionDownloads": [{
           "icon":"atoms-svg-doc-pdf",
           "title":"Park Pass Application",
           "url": "#",

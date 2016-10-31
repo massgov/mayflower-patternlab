@@ -1,48 +1,5 @@
 {
-  "COMMENT":"****PRECONTENT COMPONENTS****",
-
-  "illustratedHeader": {
-    "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/assets/images/placeholder/600x450.png",
-    "category": "Guide",
-    "pageHeader": {
-      "title": "Moving to Massachusetts Part 1: Planning Your Move",
-      "subTitle": "",
-      "rteElements": [{
-        "path": "atoms-paragraph",
-        "data": {
-          "paragraph" : {
-            "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this three-part guide series provides instructions for changing your license, tips for settling in, and other useful information."
-          }
-        }
-      }],
-      "headerTags": ""
-    }
-  },
-  
-  "COMMENT":"****PAGE CONTENT COMPONENTS****",
-  
-  "jumpLinks": {
-    "title": "In this guide",
-    "links": [{
-      "text": "Buying or Renting a Home",
-      "href": "buying-or-renting-a-home"
-    },{
-      "text": "Moving from a Foreign Country",
-      "href": "moving-from-a-Foreign-country"
-    },{
-      "text": "Moving Day",
-      "href": "moving-day"
-    },{
-      "text": "Moving with Pets",
-      "href": "moving-with-pets"
-    },{
-      "text": "Changing Your Address",
-      "href": "changing-your-address"
-    }]
-  },
-
-  "guideSections": [{
+  "guideSection": {
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
 
@@ -132,8 +89,5 @@
         }
       }]
     }
-  }],
-
-  "COMMENT":"****POSTCONTENT COMPONENTS****"
-
+  }
 }
