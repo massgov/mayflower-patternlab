@@ -159,24 +159,24 @@
       "data": {
         "actionDownloads": [{
           "icon":"atoms-svg-doc-pdf",
-          "title":"Park Pass Application",
-          "url": "#",
+          "text":"Park Pass Application",
+          "href": "#",
           "size": "305kb",
-          "type": "PDF"
+          "format": "PDF"
         },
         {
           "icon":"atoms-svg-doc-docx",
-          "title":"Park Pass Application",
-          "url": "#",
+          "text":"Park Pass Application",
+          "href": "#",
           "size": "280kb",
-          "type": "DOCX"
+          "format": "DOCX"
         },
         {
           "icon":"atoms-svg-doc-xlsx",
-          "title":"Calculate your personal return on investment with a seasonal pass.",
-          "url": "#",
+          "text":"Calculate your personal return on investment with a seasonal pass.",
+          "href": "#",
           "size": "220kb",
-          "type": "XLSX"
+          "format": "XLSX"
         }]
       }
     },
