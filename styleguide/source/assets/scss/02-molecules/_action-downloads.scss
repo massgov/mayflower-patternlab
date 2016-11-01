@@ -1,6 +1,5 @@
 .ma__action-downloads {
   margin-bottom: 40px;
-  overflow: auto; // clearing
 
   &__item {
     @include clearfix;
@@ -16,15 +15,18 @@
     margin-bottom: 0;
     width: calc(100% - 66px);
 
-    a {
-      @include ma-link-underline;
-      padding-bottom: 3px;
-    }
+    &--file {
+      a {
+        @include ma-link-underline;
+        padding-bottom: 3px;
+        margin-right: .2em;
+      }
 
-    span {
-      font-size: 1rem;
-      line-height: 2.14;
-      white-space: nowrap;
+      span {
+        font-size: 1rem;
+        line-height: 2.14;
+        white-space: nowrap;
+      }
     }
   }
 
