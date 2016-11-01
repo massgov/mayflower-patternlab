@@ -325,7 +325,66 @@
           "title": {
             "href":"#",
             "target":"",
-            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "text": "Executive Office of Energy and Environmental Affairs (EEA)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Department of Public Utilities (DPU)",
             "chevron":""
           },
           "hide": "fax",
@@ -463,7 +522,179 @@
           "title": {
             "href":"#",
             "target":"",
+            "text": "Executive Office of Energy and Environmental Affairs (EEA)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
             "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Changing Your Address",
+    "id": "changing-your-address",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "You may need to <a href=\"#\">file a change of address with federal agencies</a> depending on your needs. Newcomers can file a <a href=\"#\" target=\"_blank\">change of address form online</a> through the <a href=\"#\" target=\"_blank\">U.S. Postal Service (USPS)</a> to have mail forwarded to their new home."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Once Massachusetts residency has been established, new residents are required to have a <a href=\"#\">Massachusetts driver’s license</a> to operate a vehicle. There is no grace period."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "If you do not drive, a <a href=\"#\">Massachusetts ID</a> can serve as proof of residency and identity."
+            }
+          }
+        }]
+      }
+    },{
+      "path": "@organisms/by-author/form-download.twig",
+      "data": {
+        "actionSection": {
+          "title": "Forms"
+        },
+        "actionDownloads": [{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "text": "Online Form: Official USPS Change of Address",
+          "href": "#",
+          "type": "external",
+          "size": "",
+          "format": "form"
+        }]
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
           "hide": "fax",
@@ -519,5 +750,4 @@
   }],
 
   "COMMENT":"****POSTCONTENT COMPONENTS****"
-
 }
