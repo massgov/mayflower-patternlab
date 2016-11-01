@@ -16,4 +16,13 @@
     font-weight: 700;
   }
 
+  .ma__page-header {
+
+    &__intro {
+
+      p {
+        font-weight: 300;
+      }
+    }
+  }
 }

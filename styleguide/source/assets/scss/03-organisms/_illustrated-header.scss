@@ -69,6 +69,7 @@ $bp-illustrated-header-columns: "min-width: 751px";
   &__category {
     font-size: 1.5rem;
     font-weight: 700;
+    letter-spacing: .1em;
     text-transform: uppercase;
   }
 
@@ -77,6 +78,15 @@ $bp-illustrated-header-columns: "min-width: 751px";
 
     &__content {
       width: 100%;
+    }
+
+    &__intro {
+
+      p {
+        @media ($bp-small-min) {
+          font-size: 1.625rem;
+        }
+      }
     }
   }
 }
