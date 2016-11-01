@@ -3,7 +3,7 @@
 
   "illustratedHeader": {
     "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/{{ directory }}/images/placeholder/600x450.png",
+    "bgImage": "/assets/images/placeholder/600x450.png",
     "category": "Guide",
     "pageHeader": {
       "title": "Moving to Massachusetts Part 1: Planning Your Move",
@@ -46,18 +46,17 @@
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
     "pageContent": [{
-      "path": "organisms-rich-text",
+      "path": "@organisms/by-author/rich-text.twig",
       "data": {
         "rteElements": [{
-          "path": "atoms-paragraph",
+          "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
               "text": "If you are renting a home or an apartment, the Office of Consumer Affairs & Business Regulation (OCABR) emphasizes the importance of knowing <a href=\"#\">your tenant rights and responsibilities</a>, such as:"
             }
           }
-        },
-        {
-          "path": "atoms-unordered-list",
+        },{
+          "path": "@atoms/08-lists/unordered-list.twig",
           "data": {
             "unorderedList": [{ 
               "text": "Protection from unlawful discrimination" 
@@ -69,9 +68,8 @@
               "text": "Lease termination, eviction, and moving out" 
             }]
           }
-        },
-        {
-          "path": "atoms-paragraph",
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
               "text": "If you will be buying a home in Massachusetts, make sure you consider all the steps you will need to take, whether or not you’re a <a href=\"#\">first-time home buyer</a>."
@@ -82,20 +80,25 @@
     }],
 
     "sideBar": [{
-      "path": "atoms-sidebar-heading",
+      "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
         "sidebarHeading": {
           "title": "Key Agencies"
         }
       }
     },{
-      "path": "molecules-contact-us",
+      "path": "@molecules/contact-us.twig",
       "data": {
         "contactUs": {
-          "title": "Office of Consumer Affairs & Business Regulation (OCABR)",
+          "title": {
+            "href":"",
+            "target":"",
+            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "chevron":""
+          },
           "hide": "fax",
           "phone": {
-            "icon": "atoms-svg-phone",
+            "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
             "type": "phone",
             "items": [{
@@ -106,7 +109,7 @@
             }]
           },
           "online": {
-            "icon": "atoms-svg-laptop",
+            "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
             "type": "email",
             "items": [{
@@ -117,7 +120,7 @@
             }]
           },
           "fax": {
-            "icon": "atoms-svg-fax-icon",
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
             "type": "phone",
             "items": [{
@@ -147,18 +150,17 @@
     "title": "Moving from a Foreign Country",
     "id": "moving-from-a-Foreign-country",
     "pageContent": [{
-      "path": "organisms-rich-text",
+      "path": "@organisms/by-author/rich-text.twig",
       "data": {
         "rteElements": [{
-          "path": "atoms-paragraph",
+          "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
               "text": "According to the U.S. Department of State (DOS), most citizens of foreign countries must obtain a U.S. visa when moving to the United States. There are different types of visitor visas and immigrant visas."
             }
           }
-        },
-        {
-          "path": "atoms-paragraph",
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
               "text": "The DOS provides a complete directory of visa categories and a Visa Wizard to help foreign citizens determine whether or not they will need a visa."
@@ -169,20 +171,25 @@
     }],
 
     "sideBar": [{
-      "path": "atoms-sidebar-heading",
+      "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
         "sidebarHeading": {
           "title": "Key Agencies"
         }
       }
     },{
-      "path": "molecules-contact-us",
+      "path": "@molecules/contact-us.twig",
       "data": {
         "contactUs": {
-          "title": "Office of Consumer Affairs & Business Regulation (OCABR)",
+          "title": {
+            "href":"",
+            "target":"",
+            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "chevron":""
+          },
           "hide": "fax",
           "phone": {
-            "icon": "atoms-svg-phone",
+            "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
             "items": [{
               "type": "phone",
@@ -193,7 +200,7 @@
             }]
           },
           "online": {
-            "icon": "atoms-svg-laptop",
+            "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
             "items": [{
               "type": "web",
@@ -204,7 +211,7 @@
             }]
           },
           "fax": {
-            "icon": "atoms-svg-fax-icon",
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
             "items": [{
               "type": "phone",
@@ -231,32 +238,75 @@
       }
     }]
   },{
-    "title": "Moving from a Foreign Country",
-    "id": "moving-from-a-Foreign-country",
+    "title": "Moving with Pets",
+    "id": "moving-with-pets",
     "pageContent": [{
-      "path": "organisms-rich-text",
+      "path": "@organisms/by-author/action-steps.twig",
       "data": {
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "According to the U.S. Department of State (DOS), most citizens of foreign countries must obtain a U.S. visa when moving to the United States. There are different types of visitor visas and immigrant visas."
-            }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "The DOS provides a complete directory of visa categories and a Visa Wizard to help foreign citizens determine whether or not they will need a visa."
-            }
-          }
-        }]
+        "actionSteps": {
+          "intro": "Be aware of any regulations that may affect moving with a pet, and keep these guidelines in mind as you plan your move:",
+          "steps": [{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"#\" target=\"_blank\">Dog licenses are required by state law</a>."
+                }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"#\" target=\"_blank\">moving pets to the United States from a different country</a>."
+                }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Make sure your pet is comfortable during the move, and that you use the right size kennel or crate."
+                }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Ensure your pet’s vaccines are up to date. <a href=\"#\">Dogs, cats, and ferrets must be vaccinated against rabies in Massachusetts.</a>"
+                }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"#\" target=\"_blank\">contact a local veterinarian’s office for more information</a>."
+                }
+              }
+            }]
+          }]
+        }
       }
     }],
 
     "sideBar": [{
-      "path": "atoms-sidebar-heading",
+      "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
         "sidebarHeading": {
           "title": "Key Agencies"
@@ -264,13 +314,18 @@
       }
     },
     {
-      "path": "molecules-contact-us",
+      "path": "@molecules/contact-us.twig",
       "data": {
         "contactUs": {
-          "title": "Office of Consumer Affairs & Business Regulation (OCABR)",
+          "title": {
+            "href":"",
+            "target":"",
+            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "chevron":""
+          },
           "hide": "fax",
           "phone": {
-            "icon": "atoms-svg-phone",
+            "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
             "items": [{
               "type": "phone",
@@ -281,7 +336,7 @@
             }]
           },
           "online": {
-            "icon": "atoms-svg-laptop",
+            "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
             "items": [{
               "type": "web",
@@ -292,7 +347,7 @@
             }]
           },
           "fax": {
-            "icon": "atoms-svg-fax-icon",
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
             "items": [{
               "type": "phone",
