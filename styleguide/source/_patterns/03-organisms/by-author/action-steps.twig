@@ -1,10 +1,15 @@
 <section class="ma__action-steps">
   {% if actionSteps.intro %}
-    <p class="ma__action-steps">{{ actionSteps.intro }}</p>
+    <p class="ma__action-steps__intro">{{ actionSteps.intro }}</p>
   {% endif %}
-  <div class="ma__action-steps__items">
-    {% for actionStep in actionSteps.steps %}
-      {% include "@molecules/action-step.twig" %}
-    {% endfor %}
-  </div>
+  {% for column in actionSteps.columns %}
+    <div class="ma__action-steps__items">
+      {% if column.heading %}
+        <h5>{{ column.heading }}</h5>
+      {% endif %}
+      {% for actionStep in column.steps %}
+        {% include "@molecules/action-step.twig" %}
+      {% endfor %}
+    </div>
+  {% endfor %}
 </section>

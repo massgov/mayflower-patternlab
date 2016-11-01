@@ -91,7 +91,7 @@
       "data": {
         "contactUs": {
           "title": {
-            "href":"",
+            "href":"#",
             "target":"",
             "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
             "chevron":""
@@ -182,7 +182,148 @@
       "data": {
         "contactUs": {
           "title": {
-            "href":"",
+            "href":"#",
+            "target":"",
+            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Moving Day",
+    "id": "moving-day",
+    "pageContent": [{
+      "path": "@organisms/by-author/action-steps.twig",
+      "data": {
+        "actionSteps": {
+          "intro": "Follow these tips to ease your move on the big day:",
+          "columns": [{
+            "heading":"Choose a Reputable Mover",
+              "steps": [{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "The <a href=\"#\">Executive Office of Energy and Environmental Affairs (EEA)</a> recommends <a href=\"#\">selecting a reputable mover</a>."
+                  }
+                }
+              }]
+            },{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Make sure that any in-state moving company you use is properly licensed with the <a href=\"#\" target=\"_blank\">Massachusetts Department of Public Utilities (DPU)</a>."
+                  }
+                }
+              }]
+            },{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Follow the <a href=\"#\">Federal Motor Carrier Safety Administration (FMCSA)</a> guidelines to protect yourself from moving fraud."
+                  }
+                }
+              }]
+            }]
+          },{
+            "heading":"Observe Parking Restrictions",
+              "steps": [{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Research <a href=\"#\">parking restrictions</a> before moving to find out where you are allowed to unload vehicles."
+                  }
+                }
+              }]
+            },{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "<a href=\"#\" target=\"_blank\">Contact your city or town</a> for information on obtaining a moving permit, or talk to your landlord or property owner."
+                  }
+                }
+              }]
+            }]
+          }]
+        }
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
             "target":"",
             "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
             "chevron":""
@@ -245,60 +386,63 @@
       "data": {
         "actionSteps": {
           "intro": "Be aware of any regulations that may affect moving with a pet, and keep these guidelines in mind as you plan your move:",
-          "steps": [{
-            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-            "title":"",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph": {
-                  "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"#\" target=\"_blank\">Dog licenses are required by state law</a>."
+          "columns": [{
+            "heading":"",
+              "steps": [{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"#\" target=\"_blank\">Dog licenses are required by state law</a>."
+                  }
                 }
-              }
-            }]
-          },{
-            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-            "title":"",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph": {
-                  "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"#\" target=\"_blank\">moving pets to the United States from a different country</a>."
+              }]
+            },{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"#\" target=\"_blank\">moving pets to the United States from a different country</a>."
+                  }
                 }
-              }
-            }]
-          },{
-            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-            "title":"",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph": {
-                  "text": "Make sure your pet is comfortable during the move, and that you use the right size kennel or crate."
+              }]
+            },{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Make sure your pet is comfortable during the move, and that you use the right size kennel or crate."
+                  }
                 }
-              }
-            }]
-          },{
-            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-            "title":"",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph": {
-                  "text": "Ensure your pet’s vaccines are up to date. <a href=\"#\">Dogs, cats, and ferrets must be vaccinated against rabies in Massachusetts.</a>"
+              }]
+            },{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Ensure your pet’s vaccines are up to date. <a href=\"#\">Dogs, cats, and ferrets must be vaccinated against rabies in Massachusetts.</a>"
+                  }
                 }
-              }
-            }]
-          },{
-            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-            "title":"",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph": {
-                  "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"#\" target=\"_blank\">contact a local veterinarian’s office for more information</a>."
+              }]
+            },{
+              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+              "title":"",
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"#\" target=\"_blank\">contact a local veterinarian’s office for more information</a>."
+                  }
                 }
-              }
+              }]
             }]
           }]
         }
@@ -312,13 +456,12 @@
           "title": "Key Agencies"
         }
       }
-    },
-    {
+    },{
       "path": "@molecules/contact-us.twig",
       "data": {
         "contactUs": {
           "title": {
-            "href":"",
+            "href":"#",
             "target":"",
             "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
             "chevron":""
