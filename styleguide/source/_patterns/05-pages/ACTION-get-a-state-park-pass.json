@@ -569,7 +569,12 @@
     },
     "items": [{
       "contactUs": {
-        "title": "Department of Conservation and Recreation",
+        "title": {
+          "href":"",
+          "target":"",
+          "text": "Department of Conservation and Recreation",
+          "chevron":""
+        },
         "hide": "fax",
         "phone": {
           "icon": "atoms-svg-phone",
@@ -615,7 +620,12 @@
       }
     },{
       "contactUs": {
-        "title": "MassParks",
+        "title": {
+          "href":"",
+          "target":"",
+          "text": "MassParks",
+          "chevron":""
+        },
         "hide": "fax",
         "phone": {
           "icon": "atoms-svg-phone",

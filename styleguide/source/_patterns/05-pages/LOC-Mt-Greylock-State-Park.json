@@ -520,7 +520,12 @@
     },
     "items": [{
       "contactUs": {
-        "title": "Bascom Lodge",
+        "title": {
+          "href":"",
+          "target":"",
+          "text": "Bascom Lodge",
+          "chevron":""
+        },
         "hide": "address",
         "phone": {
           "icon": "atoms-svg-phone",
@@ -577,7 +582,12 @@
       }
     },{
       "contactUs": {
-        "title": "Museum",
+        "title": {
+          "href":"",
+          "target":"",
+          "text": "Museum",
+          "chevron":""
+        },
         "hide": "fax",
         "phone": {
           "icon": "atoms-svg-phone",
