@@ -1,0 +1,547 @@
+{
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+
+  "illustratedHeader": {
+    "bgTitle": "",
+    "bgImage": "",
+    "category": "Guide",
+    "pageHeader": {
+      "title": "Moving to Massachusetts Part 2: Driver’s Licenses and Motor Vehicle Registration",
+      "subTitle": "",
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "If you are planning to drive or bring a car when moving here, you’ll need to keep a few things in mind. This section has information from the Massachusetts Registry of Motor Vehicles (RMV) to guide you through converting an out-of-state driver’s license or ID, converting a driver’s license from a foreign country, converting out-of-state vehicle registration, bringing leased vehicles to Massachusetts, and getting auto insurance."
+          }
+        }
+      }],
+      "headerTags": ""
+    }
+  },
+
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+  
+  "jumpLinks": {
+    "title": "In this guide",
+    "links": [{
+      "text": "Converting Your Out-Of-State Driver’s License",
+      "href": "converting-your-out-of-state-drivers-license"
+    },{
+      "text": "Converting Your Out-of-Country Driver’s License",
+      "href": "converting-your-out-of-country-Drivers-license"
+    },{
+      "text": "Converting Out-of-State Vehicle Registration",
+      "href": "converting-out-of-state-vehicle-registration"
+    },{
+      "text": "Bringing Leased Vehicles to MA",
+      "href": "bringing-leased-vehicles-to-ma"
+    },{
+      "text": "Getting Auto Insurance",
+      "href": "getting-auto-insurance"
+    }]
+  },
+
+  "guideSections": [{
+    "title": "Converting Your Out-Of-State Driver’s License",
+    "id": "converting-your-out-of-state-drivers-license",
+    "pageContent": [{
+      "path": "@organisms/by-author/callout-time.twig",
+      "data": {
+        "calloutTime": {
+          "text": "This usually takes approximately 2 weeks"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Once you move to Massachusetts, you must <a href=\"#\">convert your out-of-state license</a> to continue driving. You’ll need to fill out a Class D, M, or D/M License and ID Card application, which you can also submit <a href=\"#\">online</a>, and take several original forms of ID (not photocopies) to a Massachusetts RMV branch office. Common documents you may need include:"
+            }
+          }
+        },{
+          "path": "@atoms/08-lists/unordered-list.twig",
+          "data": {
+            "unorderedList": [{ 
+              "text": "Your out-of-state license. If your out-of-state license does not have a photo, you must present another form of photo ID from the <a href=\"#\">Acceptable Identification Documents List</a>." 
+            },{ 
+              "text": "A document proving your date of birth, such as your original birth certificate." 
+            },{ 
+              "text": "A document proving your signature, such as a passport or social security card." 
+            },{ 
+              "text": "A document proving Massachusetts residency, such as a household bill addressed to you." 
+            },{ 
+              "text": "Your <a href=\"#\">Social Security number (SSN)</a>, or an acceptable alternative document (known as a “<a href=\"#\">Denial Notice</a>”) and proof of acceptable visa status along with a current non-U.S. Passport." 
+            }]
+          }
+        },{
+          "path": "@molecules/callout-stats.twig",
+          "data": {
+            "statsCallout": {
+              "pull": "right",
+              "stat": "$10-140+",
+              "content": "fees vary based on license type"
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "<a href=\"#\">Conversion fees</a> are also required. The amount varies depending on the license class."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "If your out-of-state license has been expired for more than one year but less than four years, you will be required to take a written test."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "If your license has been expired for more than four years, you will need to take a written and road test, as well as a vision exam."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Keep in mind that if you later move within Massachusetts, you must <a href=\"#\">report your change of address</a> to the RMV within 30 days."
+            }
+          }
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/form-download.twig",
+      "data":{
+        "actionSection": {
+          "title": "Forms"
+        },
+        "actionDownloads": [{
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "text": "Class D, M, or D/M License and ID Card Application",
+          "href": "#",
+          "type": "",
+          "size": "259KB",
+          "format": "PDF"
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "text": "Online Form: Out-of-State Driver's License Conversion",
+          "href": "#",
+          "type": "",
+          "size": "",
+          "format": "form"
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "text": "Online Form: Official USPS Change of Address",
+          "href": "#",
+          "type": "",
+          "size": "",
+          "format": "form"
+        }]
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "type": "phone",
+            "items": [{
+              "label":"Main",
+              "value":"(413) 499-4262",
+              "rawVal":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "type": "email",
+            "items": [{
+              "label":"Email",
+              "value":"email@email.com",
+              "link":"email@email.com",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "type": "phone",
+            "items": [{
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Converting Your Out-of-Country Driver’s License",
+    "id": "converting-your-out-of-country-Drivers-license",
+    "pageContent": [{
+      "path": "@organisms/by-author/callout-time.twig",
+      "data": {
+        "calloutTime": {
+          "text": "This usually takes approximately 4 weeks"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "If you are <a href=\"#\">converting a license from a foreign country</a>, you must take the full driver’s test, which includes the written, road, and vision exams, and present identification documents similar to those outlined in the previous section. You may also need a sponsor depending on the country that issued your license. However, if you are a foreign visitor with a valid license from one of the <a href=\"#\">countries or territories approved by the RMV</a>, you may legally drive in Massachusetts for up to one year. The year begins on the date of your arrival, and you must be at least 18 years old and drive only the vehicle type covered by your license."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "You may be eligible to convert your out-of-state license into a Massachusetts one if you currently carry a <a href=\"#\">valid license from a U.S. territory, Canada, or Mexico</a>. The license must meet the RMV’s identification requirements."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "International driving permits cannot be converted to a Massachusetts driver’s license, and do not give you any driving privileges."
+            }
+          }
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/form-download.twig",
+      "data":{
+        "actionSection": {
+          "title": "Forms"
+        },
+        "actionDownloads": [{
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "text": "Class D, M, or D/M License and ID Card Application",
+          "href": "#",
+          "type": "",
+          "size": "259KB",
+          "format": "PDF"
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "text": "Online Form: Out-of-State Driver's License Conversion",
+          "href": "#",
+          "type": "",
+          "size": "",
+          "format": "form"
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "text": "Online Form: Official USPS Change of Address",
+          "href": "#",
+          "type": "",
+          "size": "",
+          "format": "form"
+        }]
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Bringing Leased Vehicles to MA",
+    "id": "bringing-leased-vehicles-to-ma",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@molecules/callout-stats.twig",
+          "data": {
+            "statsCallout": {
+              "pull": "right",
+              "stat": "$75+",
+              "content": "this includes a title and registration fee"
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "In general, leased vehicles must be registered and titled in Massachusetts. However, there are exceptions, so check with the RMV to determine what steps you need to take. If the leased vehicle needs to be titled in Massachusetts, the leasee must bring the Form RMV-1, the current out-of-state title, a $75 title fee, and <a href=\"#\">registration fee</a> to an <a href=\"#\">RMV branch office</a>."
+            }
+          }
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/form-download.twig",
+      "data":{
+        "actionSection": {
+          "title": "Forms"
+        },
+        "actionDownloads": [{
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "text": "RMV-1 Form",
+          "href": "#",
+          "type": "",
+          "size": "259KB",
+          "format": "PDF"
+        }]
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Getting Auto Insurance",
+    "id": "getting-auto-insurance",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "All Massachusetts drivers are required to have <a href=\"#\">minimum insurance coverage</a>. To help you find the appropriate insurance, the <a href=\"#\">Office of Consumer Affairs and Business Regulation (OCABR) Division of Insurance</a> offers a tool to <a href=\"#\">compare auto insurance premiums</a>, a <a href=\"#\">shopping for auto insurance guide</a>, and <a href=\"#\">tips</a> that outline ways to <a href=\"#\">save on automobile insurance</a>."
+            }
+          }
+        }]
+      }
+    }],
+  
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  }],
+
+
+  "COMMENT":"****POSTCONTENT COMPONENTS****"
+}
