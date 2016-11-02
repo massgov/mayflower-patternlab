@@ -8,11 +8,11 @@
     }
 
     &:before {
-      background-color: rgba($c-theme-primary-1,.5);
+      background-color: rgba($c-theme-blue,.5);
     }
 
     &:hover:before {
-      background-color: $c-theme-primary-1;      
+      background-color: $c-theme-blue;      
     }
   }
 
@@ -27,7 +27,7 @@
   .slick-dots {
     
     button {
-      background-color: $c-theme-primary-1;
+      background-color: $c-theme-blue;
     }
 
     .slick-active button {

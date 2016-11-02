@@ -1,6 +1,6 @@
 .ma__rich-text {
   h2, h3, h4 {
-    @include ma-border-decorative($c-theme-primary-2);
+    @include ma-border-decorative($c-theme-green);
   }
 
   h5 {
@@ -29,6 +29,6 @@
   }
   // end Table styles
   &__embed {
-    border-color: rgba($c-theme-primary-1,.1);
+    border-color: rgba($c-theme-blue,.1);
   }
 }

@@ -2,11 +2,11 @@
   background-color: $c-bg-section;
 
   &__back2top{
-    @include ma-button("normal","outline",$c-theme-primary-1);
+    @include ma-button("normal","outline",$c-theme-blue);
     background-color: rgba($c-white, .9);
 
     svg {
-      fill: rgba($c-theme-primary-1, .5);
+      fill: rgba($c-theme-blue, .5);
     }
 
     &:hover {

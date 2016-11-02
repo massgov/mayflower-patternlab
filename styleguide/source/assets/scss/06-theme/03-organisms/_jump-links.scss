@@ -8,7 +8,7 @@
   }
 
   &__title {
-    background-image: linear-gradient(-60deg, transparent, transparent 35px, $c-theme-primary-2 35px);
+    background-image: linear-gradient(-60deg, transparent, transparent 35px, $c-theme-green 35px);
     color: $c-white;
     font-weight: 700;
   }
@@ -32,7 +32,7 @@
     }
 
     & > svg {
-      fill: $c-theme-primary-2;
+      fill: $c-theme-green;
 
       @media ($bp-small-max) {
         display: none;
@@ -48,5 +48,9 @@
         color: $c-font-base;
       }
     }
+  }
+  
+  &__toggle-link {
+    color: $c-theme-green;
   }
 }

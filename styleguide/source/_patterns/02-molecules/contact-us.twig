@@ -3,15 +3,22 @@
 {% endif %}
 <section class="ma__contact-us {{accordion}}">
   {% if contactUs.title %}
-    <h5 class="ma__contact-us__title">{{contactUs.title}}</h5>
+    <h5 class="ma__contact-us__title">
+      {% if contactUs.title.href %}
+        {% set link = contactUs.title %}
+        {% include "atoms-link" %}
+      {% else %}
+        <h5 class="ma__contact-us__title">{{contactUs.title.text}}</h5>
+      {% endif %}
+    </h5>
   {% endif %}
 
-  {% if contactUs.phone|length %}
+  {% if contactUs.phone %}
     {% set contactGroup = contactUs.phone %}
     {% include "@molecules/contact-group.twig" %}
   {% endif %}
 
-  {% if contactUs.online|length %}
+  {% if contactUs.online %}
     {% set contactGroup = contactUs.online %}
     {% include "@molecules/contact-group.twig" %}
   {% endif %}
@@ -20,7 +27,7 @@
     <div class="ma__contact-us__extra js-accordion-content">
   {% endif %}
 
-  {% if contactUs.fax|length %}
+  {% if contactUs.fax %}
     {% set contactGroup = contactUs.fax %}
     {% include "@molecules/contact-group.twig" %}
   {% endif %}
@@ -29,7 +36,7 @@
     <div class="ma__contact-us__extra js-accordion-content">
   {% endif %}
 
-  {% if contactUs.address|length %}
+  {% if contactUs.address %}
     <div class="ma__contact-us__group">
       <h6 class="ma__contact-us__name">
         {% include "@atoms/05-icons/svg-marker.twig" %}

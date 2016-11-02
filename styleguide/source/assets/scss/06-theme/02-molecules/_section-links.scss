@@ -24,11 +24,11 @@
   &__title {
 
     @media ($bp-x-small-min) {
-      @include ma-border-decorative($c-theme-secondary-1,$c-bg-section,1);
+      @include ma-border-decorative($c-theme-yellow,$c-bg-section,1);
     }
 
     &:after {
-      color: $c-theme-primary-2;
+      color: $c-theme-green;
     }
 
     a {
@@ -58,7 +58,7 @@
   &__link {
 
     &:hover {
-      border-bottom-color: rgba($c-theme-primary-1,.5);
+      border-bottom-color: rgba($c-theme-blue,.5);
     }
   }
 }

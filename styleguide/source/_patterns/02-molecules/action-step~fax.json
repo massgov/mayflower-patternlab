@@ -1,0 +1,19 @@
+{
+  "actionStep": {
+    "icon":"@atoms/05-icons/svg-fax-icon.twig",
+    "title":"By Fax",
+    "rteElements": [{
+      "path": "@atoms/08-lists/unordered-list.twig",
+      "data": {
+        "unorderedList": [{ 
+          "text": "Download and fill out an <a href=\"#\">application for an EIN.</a>" 
+        },{ 
+          "text": "Fax it to (855) 641-6935",
+          "sublist" : [{
+            "text":"If you include your fax number, an EIN will be faxed to you within 4 business days."
+          }]
+        }]
+      }
+    }]
+  }
+}

@@ -2,13 +2,14 @@
   "contactGroup": {
     "icon": "@atoms/05-icons/svg-phone.twig",
     "name": "Phone",
-    "type": "phone",
     "items": [{
+      "type": "phone",
       "label": "Main",
       "value": "(413) 499-4262",
-      "rawVal": "14134994262",
+      "link": "14134994262",
       "details": "This line is open from 9:00 a.m. - 5:00 p.m., M-F"
     },{
+      "type": "phone",
       "label": "Toll Free",
       "value": "(800) 432-4321",
       "link": "18004324321",

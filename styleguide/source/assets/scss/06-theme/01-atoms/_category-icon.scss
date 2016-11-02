@@ -1,5 +1,5 @@
 .ma__category-icon {
-  background-color: $c-theme-primary-2;
+  background-color: $c-theme-green;
 
   svg,
   svg > g {
@@ -7,6 +7,6 @@
   }
 
   &:after {
-    background-color: $c-theme-primary-2;
+    background-color: $c-theme-green;
   }
 }

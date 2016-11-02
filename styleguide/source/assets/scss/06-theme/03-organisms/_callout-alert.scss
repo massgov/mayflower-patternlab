@@ -1,0 +1,24 @@
+.ma__callout-alert {
+  background-color: tint($c-theme-yellow,90%);
+  border-color: tint($c-theme-yellow,50%);
+  box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
+
+  &__icon svg {
+    fill: $c-theme-yellow;
+  }
+
+  &__link {
+
+    a {
+      color: $c-font-dark;
+
+      &:hover {
+        border-color: rgba($c-font-dark,.5);
+      }
+    }
+
+    svg {
+      fill: rgba($c-font-dark,.5);
+    }
+  }
+}

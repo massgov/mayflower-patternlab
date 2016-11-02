@@ -8,16 +8,17 @@
       "contactUs": {
         "title": "Bascom Lodge",
         "hide": "address",
-        "type": "phone",
         "phone": {
           "icon": "atoms-svg-phone",
           "name": "Phone",
           "items": [{
+            "type": "phone",
             "label":"Main",
             "value":"(413) 499-4262",
-            "rawVal":"14134994262",
+            "link":"14134994262",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           },{
+            "type": "phone",
             "label":"TTY",
             "value":"(617) 555-7777",
             "link":"16175557777",
@@ -27,8 +28,8 @@
         "fax": {
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
-          "type": "phone",
           "items": [{
+            "type": "phone",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -53,22 +54,22 @@
       "contactUs": {
         "title": "Museum",
         "hide": "fax",
-        "type": "phone",
         "phone": {
           "icon": "atoms-svg-phone",
           "name": "Phone",
           "items": [{
+            "type": "phone",
             "label":"Main",
             "value":"(413) 443-8765",
-            "rawVal":"14134438765",
+            "link":"14134438765",
             "details":""
           }]
         },
         "online": {
           "icon": "atoms-svg-laptop",
           "name": "Online",
-          "type": "email",
           "items": [{
+            "type": "email",
             "label":"Email",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -78,8 +79,8 @@
         "fax": {
           "icon": "atoms-svg-fax-icon",
           "name": "Fax",
-          "type": "phone",
           "items": [{
+            "type": "phone",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
