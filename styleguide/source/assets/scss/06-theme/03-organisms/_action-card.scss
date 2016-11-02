@@ -14,10 +14,10 @@
     }
 
     &--blue {
-      background-color: $c-theme-primary-1;
+      background-color: $c-theme-blue;
 
       &:hover {
-        background-color: rgba($c-theme-primary-1,.8);
+        background-color: rgba($c-theme-blue,.8);
       }
     }
 

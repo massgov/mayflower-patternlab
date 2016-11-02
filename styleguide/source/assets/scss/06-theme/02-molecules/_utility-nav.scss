@@ -1,7 +1,7 @@
 .ma__utility-nav {
 
   @media( $bp-medium-min) {
-    background-color: $c-theme-primary-1;
+    background-color: $c-theme-blue;
     color: $c-font-inverse;
   }
 
@@ -20,7 +20,7 @@
     color: $c-font-base;
 
     @media( $bp-medium-min) {
-      background-color: $c-theme-primary-1;
+      background-color: $c-theme-blue;
       color: $c-font-inverse;
     }
 
@@ -30,7 +30,7 @@
     }
 
     svg {
-      fill: $c-theme-primary-1;
+      fill: $c-theme-blue;
 
       @media( $bp-medium-min) {
         fill: $c-font-inverse;
@@ -46,7 +46,7 @@
     color: $c-font-inverse;
 
     @media( $bp-medium-min) {
-      background-color: $c-theme-primary-1;
+      background-color: $c-theme-blue;
     }
 
     a {
@@ -56,7 +56,7 @@
 
   &__container {
     @media ($bp-medium-max) {
-      background-color: $c-theme-primary-1;
+      background-color: $c-theme-blue;
     }
 
   }

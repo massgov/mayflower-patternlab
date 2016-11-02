@@ -1,10 +1,10 @@
 .ma__button {
-  @include ma-button("normal","solid",$c-theme-primary-1);
+  @include ma-button("normal","solid",$c-theme-blue);
 }
 
 .ma__button--minor,
 .ma__button-minor {
-  @include ma-button("normal","outline",$c-theme-primary-1);
+  @include ma-button("normal","outline",$c-theme-blue);
 }
 
 .ma__button--alt,

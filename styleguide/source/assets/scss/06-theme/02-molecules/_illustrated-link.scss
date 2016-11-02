@@ -1,10 +1,10 @@
 .ma__illustrated-link {
 
   &__content {
-    background-color: $c-theme-primary-1;
+    background-color: $c-theme-blue;
 
     &:after {
-      background-color: $c-theme-primary-1;
+      background-color: $c-theme-blue;
     }
   }
 
@@ -27,4 +27,4 @@
       fill: rgba($c-font-inverse, .5);
     }
   }
-}
+}
