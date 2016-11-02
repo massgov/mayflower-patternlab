@@ -24,7 +24,7 @@
   &__title {
 
     @media ($bp-x-small-min) {
-      @include ma-border-decorative($c-theme-secondary-1,$c-bg-section,1);
+      @include ma-border-decorative($c-theme-yellow,$c-bg-section,1);
     }
 
     &:after {

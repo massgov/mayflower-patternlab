@@ -30,7 +30,7 @@ $bp-header-logo-min: "min-width: 1000px";
     a {
       @include ma-chevron("left");
       @include ma-font(500);
-      background-color: $c-theme-secondary-1;
+      background-color: $c-theme-yellow;
       color: $c-font-dark;
       display: inline-block;
       font-size: 1.125rem;

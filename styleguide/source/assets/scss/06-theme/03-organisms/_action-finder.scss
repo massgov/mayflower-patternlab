@@ -13,7 +13,7 @@ $featured-border-color: #89aac7;
   }
 
   &__title {
-    @include ma-border-decorative($c-theme-secondary-1,transparent,1);
+    @include ma-border-decorative($c-theme-yellow,transparent,1);
     color: $c-font-inverse;
   }
 
