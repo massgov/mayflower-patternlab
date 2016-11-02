@@ -20,11 +20,11 @@
   @include ma-font(700);
   background-color: $c-white;
   border-color: $c-bd-input;
-  color: $c-theme-primary-2;
+  color: $c-theme-green;
 
   &:hover {
-    background-color: $c-theme-primary-2;
-    border-color: $c-theme-primary-2;
+    background-color: $c-theme-green;
+    border-color: $c-theme-green;
     color: $c-white;
 
     svg {
@@ -32,6 +32,6 @@
     } 
   }
   svg {
-    fill: $c-theme-primary-2;
+    fill: $c-theme-green;
   }
 }

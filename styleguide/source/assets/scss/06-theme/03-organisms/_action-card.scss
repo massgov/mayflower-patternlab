@@ -1,7 +1,7 @@
 .ma__action-card {
 
   &__title {
-    @include ma-border-decorative($c-theme-primary-2);
+    @include ma-border-decorative($c-theme-green);
   }
 
   &__item {
@@ -22,10 +22,10 @@
     }
 
     &--green {
-      background-color: $c-theme-primary-2;
+      background-color: $c-theme-green;
 
       &:hover {
-        background-color: rgba($c-theme-primary-2,.8);
+        background-color: rgba($c-theme-green,.8);
       }
     }
 

@@ -1,7 +1,7 @@
 .ma__link-list {
 
   &__title {
-    @include ma-border-decorative($c-theme-primary-2);
+    @include ma-border-decorative($c-theme-green);
   }
 
   &__link {

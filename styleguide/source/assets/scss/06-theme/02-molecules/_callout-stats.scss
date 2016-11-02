@@ -2,11 +2,11 @@
   @include ma-font(900);
 
   &:before {
-    background-color: rgba($c-theme-primary-2,.2);
+    background-color: rgba($c-theme-green,.2);
   }
 
   &__stat {
-    color: $c-theme-primary-2;
+    color: $c-theme-green;
   }
 
   &__content {
