@@ -1,5 +1,4 @@
 .ma__guide-section {
-
   @include ma-container;
 
   &__title {
@@ -10,11 +9,10 @@
       cursor: default;
     }
   }
-
-  &__title ~ &__title {
+  
+  & ~ & &__title {
     border-top-width: 1px;
     border-top-style: solid;
-    margin-top: 65px;
-    padding-top: 95px;
+    padding-top: 90px;
   }
 }

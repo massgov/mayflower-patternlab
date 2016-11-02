@@ -2,6 +2,10 @@
   @include ma-reset-rich-text;
   margin-bottom: 40px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   h3 {
     @include ma-border-decorative;
     position: relative;

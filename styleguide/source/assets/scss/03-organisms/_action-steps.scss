@@ -1,0 +1,36 @@
+.ma__action-steps {
+  @include clearfix;
+  margin-bottom: 45px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__items {
+    margin-bottom: 45px;
+
+    @media ($bp-medium-min) and ($bp-large-max) {
+      &:nth-last-child(2),
+      &:nth-last-child(2) + & {
+        @include span-columns(1 of 2);
+        margin-bottom: 0;
+      }
+    }
+
+    @media ($bp-x-large-min) {
+      &:nth-last-child(2),
+      &:nth-last-child(2) + & {
+        @include span-columns(1 of 2);
+        margin-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h5 {
+      margin-bottom: .5em;
+    }
+  }
+}

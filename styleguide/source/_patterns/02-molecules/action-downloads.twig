@@ -4,9 +4,17 @@
       <div class="ma__action-downloads__icon">
         {% include download.icon %}
       </div>
-      <h5 class="ma__action-downloads__title">
-        <a href="{{download.url}}">{{download.title}}</a> <span>({{download.type}} {{download.size}})</span>
-      </h5>
+      {% if download.format == "form" %}
+        <h5 class="ma__action-downloads__title">
+          {% set decorativeLink = download %}
+          {% include "@atoms/decorative-link.twig" %}
+        </h5>
+      {% else %}
+        <h5 class="ma__action-downloads__title ma__action-downloads__title--file">
+          <a href="{{download.href}}">{{download.text}}</a>
+          <span>({{download.format}} {{download.size}})</span>
+        </h5>
+      {% endif %}
     </div>
   {% endfor %}
 </section>

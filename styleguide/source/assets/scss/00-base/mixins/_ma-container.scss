@@ -1,5 +1,6 @@
 @mixin ma-container {
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   // grid max width plus the l/r padding for desktop
   max-width: $max-width;
   padding-left: 20px;

@@ -4,7 +4,7 @@
 // basic structure expected => <div><a>text&nbsp;<svg></svg></a></div> 
 
 @mixin ma-link-decorative {
-  padding-right: 17px;
+  padding-right: 18px;
 
   a {
     @include ma-link-underline;
@@ -12,7 +12,9 @@
 
     svg {
       display: inline-block;
-      margin-right: -17px;
+      height: .6em;
+      margin-right: -18px;
+      width: .6em;
     }
   }
 }
