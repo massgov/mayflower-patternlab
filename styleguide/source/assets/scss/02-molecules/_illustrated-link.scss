@@ -1,6 +1,7 @@
 $illustrated-link-image-width: 130px;
 
 .ma__illustrated-link {
+  border: 3px solid;
   display: flex;
     align-items: stretch;
   height: 100%;
@@ -8,8 +9,6 @@ $illustrated-link-image-width: 130px;
   width: 100%;
 
   &__content {
-    display: table;
-    height: 100%;
     padding: 30px;
     padding-right: 0;
     position: relative;
@@ -50,7 +49,6 @@ $illustrated-link-image-width: 130px;
 
   &__image {
     background-position: center right;
-    height: 100%;
     width: $illustrated-link-image-width;
     flex-grow: 0;
     flex-shrink: 0;
