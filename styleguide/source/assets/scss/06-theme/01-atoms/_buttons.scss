@@ -9,11 +9,11 @@
 
 .ma__button--alt,
 .ma__button-alt {
-  @include ma-button("normal","solid",$c-theme-primary-3);
+  @include ma-button("normal","solid",$c-theme-gray);
 }
 
 .ma__button-minor-alt {
-  @include ma-button("normal","outline",$c-theme-primary-3);
+  @include ma-button("normal","outline",$c-theme-gray);
 }
 
 .ma__button-search {

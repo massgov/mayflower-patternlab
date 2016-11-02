@@ -30,10 +30,10 @@
     }
 
     &--dark-gray {
-      background-color: $c-theme-primary-3;
+      background-color: $c-theme-gray;
 
       &:hover {
-        background-color: rgba($c-theme-primary-3,.8);
+        background-color: rgba($c-theme-gray,.8);
       }
     }
   }
