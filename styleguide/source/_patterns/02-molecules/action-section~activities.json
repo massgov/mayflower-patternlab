@@ -5,7 +5,7 @@
     "path":"molecules-action-activities",
     "id": "activities",
     "data": {
-      "activities": [{
+      "actionActivities": [{
         "image": "http://placehold.it/190x107",
         "alt": "placeholder image",
         "title": "Activity Title",
