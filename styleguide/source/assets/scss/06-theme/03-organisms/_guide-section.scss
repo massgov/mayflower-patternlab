@@ -1,7 +1,7 @@
 .ma__guide-section {
 
   &__title {
-    @include ma-border-decorative($c-theme-primary-2);
+    @include ma-border-decorative($c-theme-green);
 
     a {
       color: $c-font-heading;

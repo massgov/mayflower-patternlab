@@ -16,19 +16,19 @@ $page-banner-inner-width: 612px;
   }
 
   &__content {
-    background-image: linear-gradient(-90deg, rgba($c-theme-primary-2,.7), $c-theme-primary-2);
+    background-image: linear-gradient(-90deg, rgba($c-theme-green,.7), $c-theme-green);
 
     @media ($bp-x-small-min) {
-      background-image: linear-gradient(-60deg, transparent, transparent 125px, rgba($c-theme-primary-2,.7) 125px, $c-theme-primary-2);
+      background-image: linear-gradient(-60deg, transparent, transparent 125px, rgba($c-theme-green,.7) 125px, $c-theme-green);
     }
 
     &:before {
-      background-color: $c-theme-primary-2;
+      background-color: $c-theme-green;
     }
   }
 
   &__divider {
-    @include ma-border-decorative($c-theme-primary-2,$c-bg-section);
+    @include ma-border-decorative($c-theme-green,$c-bg-section);
     opacity: .5
   }
 

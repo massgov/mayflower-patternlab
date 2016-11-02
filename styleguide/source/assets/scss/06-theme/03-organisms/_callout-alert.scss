@@ -1,10 +1,10 @@
 .ma__callout-alert {
-  background-color: tint($c-theme-secondary-1,90%);
-  border-color: tint($c-theme-secondary-1,50%);
+  background-color: tint($c-theme-yellow,90%);
+  border-color: tint($c-theme-yellow,50%);
   box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
 
   &__icon svg {
-    fill: $c-theme-secondary-1;
+    fill: $c-theme-yellow;
   }
 
   &__link {

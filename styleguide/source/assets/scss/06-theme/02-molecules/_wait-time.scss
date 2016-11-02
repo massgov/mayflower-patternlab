@@ -1,10 +1,10 @@
 .ma__wait-time {
 
   &__title {
-    @include ma-border-decorative($c-theme-secondary-1);
+    @include ma-border-decorative($c-theme-yellow);
 
     svg {
-      fill: $c-theme-secondary-1;
+      fill: $c-theme-yellow;
     }
 
   }

@@ -21,7 +21,7 @@
   }
 
   &__title {
-    @include ma-border-decorative($c-theme-secondary-1,transparent,1);
+    @include ma-border-decorative($c-theme-yellow,transparent,1);
     color: $c-font-inverse;
   }
 
@@ -30,7 +30,7 @@
     button,
     input[type="button"],
     input[type="submit"] {
-      @include ma-button("normal","solid",$c-theme-primary-1);
+      @include ma-button("normal","solid",$c-theme-blue);
     }
   }
 

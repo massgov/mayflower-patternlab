@@ -5,13 +5,13 @@
     border-left-color: rgba($c-bd-input,.5);
 
     &:hover {
-      background: $c-theme-primary-2;
+      background: $c-theme-green;
     }
   }
 
   &__reset {
     @include ma-font(700);
-    color: $c-theme-primary-2;
+    color: $c-theme-green;
   }
 
   ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
