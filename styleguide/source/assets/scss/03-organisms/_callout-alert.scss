@@ -1,10 +1,14 @@
 .ma__callout-alert {
   border: 3px solid;
   cursor: pointer;
-  margin-bottom: 1.75rem;
+  margin-bottom: 45px;
   padding: 30px;
   padding-left: 100px;
   position: relative;
+
+  .rich-text {
+    margin-bottom: 1.75rem;
+  }
 
   &__icon {
     font-size: 0; // removing white-space;
