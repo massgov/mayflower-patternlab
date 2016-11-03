@@ -1,0 +1,9 @@
+.ma__callout-time {
+
+  &__icon {
+    
+    & > svg {
+      fill: $c-theme-yellow;
+    }
+  }
+}

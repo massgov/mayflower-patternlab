@@ -291,7 +291,7 @@
       "id":"activities",
       "path": "molecules-action-activities",
       "data": {
-        "activities": [{
+        "actionActivities": [{
           "image": "/assets/images/placeholder/190x107.png",
           "alt": "hiking image",
           "title": "Hiking & Walking",

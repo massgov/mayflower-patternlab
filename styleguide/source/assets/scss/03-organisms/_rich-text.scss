@@ -2,6 +2,7 @@ $rich-text-spacing: 1.75rem;
 
 .ma__rich-text {
   @include ma-container;
+  @include clearfix;
   margin-bottom: 45px;
 
   // not full width
