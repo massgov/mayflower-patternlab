@@ -1,9 +1,9 @@
-{% extends '@templates/single-column.twig' %}
+{% extends '@templates/guide-template.twig' %}
 
 {% block preContent %}
   {% include "@organisms/by-template/illustrated-header.twig" %}
 {% endblock %}
-{% block pageContent %}
+{% block guideContent %}
   {% include "@organisms/by-template/jump-links.twig" %}
   {% for guideSection in guideSections %}
     {% include "@organisms/by-author/guide-section.twig" %}
