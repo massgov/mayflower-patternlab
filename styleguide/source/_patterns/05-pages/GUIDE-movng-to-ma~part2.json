@@ -119,8 +119,9 @@
     },{
       "path":"@organisms/by-author/form-download.twig",
       "data":{
-        "actionSection": {
-          "title": "Forms"
+        "compHeading": {
+          "title": "Forms",
+          "sub": true
         },
         "actionDownloads": [{
           "icon": "@atoms/05-icons/svg-doc-pdf.twig",
@@ -253,8 +254,9 @@
     },{
       "path":"@organisms/by-author/form-download.twig",
       "data":{
-        "actionSection": {
-          "title": "Forms"
+        "compHeading": {
+          "title": "Forms",
+          "sub": true
         },
         "actionDownloads": [{
           "icon": "@atoms/05-icons/svg-doc-pdf.twig",
@@ -375,8 +377,9 @@
     },{
       "path":"@organisms/by-author/form-download.twig",
       "data":{
-        "actionSection": {
-          "title": "Forms"
+        "compHeading": {
+          "title": "Forms",
+          "sub": true
         },
         "actionDownloads": [{
           "icon": "@atoms/05-icons/svg-doc-pdf.twig",

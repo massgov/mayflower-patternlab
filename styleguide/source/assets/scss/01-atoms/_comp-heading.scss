@@ -1,0 +1,9 @@
+.ma__comp-heading {
+  @include ma-border-decorative;
+  position: relative;
+  padding-bottom: 15px;
+
+  &:after {
+    width: 1.85em; // ma-underline-decorative override
+  }
+}

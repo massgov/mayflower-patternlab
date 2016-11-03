@@ -1,0 +1,8 @@
+.ma__comp-heading {
+  @include ma-border-decorative($c-theme-green);
+
+  a {
+    border: none;
+    color: $c-font-heading;
+  }
+}
