@@ -1,1 +1,4 @@
-<img alt="{{image.alt}}" src="{{image.src}}" />
+{% if image.pull %}
+  {% set class = "pull-" ~ image.pull %}
+{% endif %}
+<img class="{{ class }}" alt="{{image.alt}}" src="{{image.src}}" />
