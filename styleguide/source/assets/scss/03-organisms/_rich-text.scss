@@ -1,8 +1,8 @@
 $rich-text-spacing: 1.75rem;
 
 // not full width
-.main-content--two {
-  @include ma-reset-rich-text;
+.main-content--two .ma__rich-text {
+  padding: 0;
 }
 
 .ma__rich-text {
