@@ -1,5 +1,6 @@
 .pre-content,
-.main-content {
+.main-content,
+.post-content {
   @include clearfix;
 }
 
@@ -8,10 +9,6 @@
 
   @media ($bp-large-min){
     margin-bottom: 60px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
   }
 }
 

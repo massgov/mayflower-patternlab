@@ -844,16 +844,57 @@
     "title": "Another Section Name",
     "id": "another-section-name5",
     "pageContent": [{
-      "path": "@organisms/by-author/rich-text.twig",
+      "path": "@organisms/by-author/rte-columns.twig",
       "data": {
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
-            }
-          }
-        }]
+        "rteColumns": {
+          "intro": "Follow these tips to ease your move on the big day:",
+          "columns": [{
+            "heading": "Subheading Section Name",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
+                }
+              }
+            }]
+          },{
+            "heading": "Subheading Section Name",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. "
+                }
+              }
+            }]
+          },{
+            "heading": "Subheading Section Name",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "Lorem ipsum dolor sit amet, Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
+                }
+              }
+            }]
+          }]
+        }
+      }
+    },{
+      "path":"@organisms/by-author/key-actions.twig",
+      "data":{
+        "keyActions": {
+          "compHeading": {
+            "title": "Key Actions",
+            "sub":true
+          },
+          "links":[{
+            "text": "Related Action to important Page Name",
+            "type": "",
+            "href": "#"
+          }]
+        }
       }
     }],
   
@@ -864,14 +905,14 @@
   "COMMENT":"****POSTCONTENT COMPONENTS****",
 
   "suggestedPages": {
-    "title": "Related Guides",
-    "view":"guide",
+    "title": "Related Pages",
+    "view":"",
     "buttonMinor" : {
       "link": "#",
       "text": "See All Guides"
     },
     "pages": [{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "/assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -879,7 +920,7 @@
         "text": "Buying Your First Home"
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "/assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -887,20 +928,20 @@
         "text": "Shopping for Auto Insurance"
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "/assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
         "href": "#",
-        "text": "Guide: Education in Massachusetts"
+        "text": "Education in Massachusetts"
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": "",
+      "altTag": "",
       "link": {
         "type": "",
         "href": "#",
-        "text": "Guide: Education in Massachusetts"
+        "text": "Charter Schools"
       }
     }]
   }
