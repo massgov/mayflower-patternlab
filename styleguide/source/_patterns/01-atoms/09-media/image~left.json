@@ -2,6 +2,6 @@
   "image": { 
     "alt": "alt text", 
     "src": "/assets/images/placeholder/800x400.png",
-    "pull": ""
+    "pull": "left"
   }
 }

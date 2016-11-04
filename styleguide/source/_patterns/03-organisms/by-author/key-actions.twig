@@ -1,0 +1,14 @@
+<section class="ma__key-actions">
+  <div class="ma__key-actions__container">
+    <div class="ma__key-actions__title">
+      {% set compHeading = keyActions.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    </div>
+    <div class="ma__key-actions__items">
+      {% for calloutLink in keyActions.links %}
+        {% include "@molecules/callout-link.twig" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

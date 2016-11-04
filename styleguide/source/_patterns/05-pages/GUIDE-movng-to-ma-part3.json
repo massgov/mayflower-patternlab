@@ -2,49 +2,58 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "illustratedHeader": {
-    "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/assets/images/placeholder/600x450.png",
+    "bgTitle": "",
+    "bgImage": "",
     "category": "Guide",
     "pageHeader": {
-      "title": "Moving to Massachusetts Part 1: Planning Your Move",
+      "title": "Moving to Massachusetts Part 3: Settling In",
       "subTitle": "",
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this three-part guide series provides instructions for changing your license, tips for settling in, and other useful information."
+            "text": "This part of the series will cover residency, employment, health care coverage, education, registering to vote, and taxes — important things to help you settle into your life in the Bay State."
           }
         }
       }],
       "headerTags": ""
     }
   },
-  
+
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
   
   "jumpLinks": {
     "title": "In this guide",
     "links": [{
-      "text": "Buying or Renting a Home",
-      "href": "buying-or-renting-a-home"
+      "text": "Residency",
+      "href": "residency"
     },{
-      "text": "Moving from a Foreign Country",
-      "href": "moving-from-a-Foreign-country"
+      "text": "Employment",
+      "href": "employment"
     },{
-      "text": "Moving Day",
-      "href": "moving-day"
+      "text": "Taxes",
+      "href": "taxes"
     },{
-      "text": "Moving with Pets",
-      "href": "moving-with-pets"
+      "text": "Another Section Name",
+      "href": "another-section-name1"
     },{
-      "text": "Changing Your Address",
-      "href": "changing-your-address"
+      "text": "Another Section Name",
+      "href": "another-section-name2"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name3"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name4"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name5"
     }]
   },
 
   "guideSections": [{
-    "title":"Buying or Renting a Home",
-    "id":"buying-or-renting-a-home",
+    "title": "Residency",
+    "id": "residency",
     "pageContent": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
@@ -52,33 +61,54 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "If you are renting a home or an apartment, the Office of Consumer Affairs & Business Regulation (OCABR) emphasizes the importance of knowing <a href=\"#\">your tenant rights and responsibilities</a>, such as:"
+              "text": "Residency is defined in different ways depending on the circumstances, so you may want to check with individual institutions and agencies to see what their requirements are. For example, to be eligible for the resident tuition rate at a community college, you must have lived in the state for at least six months and prove that you intend to stay indefinitely. However, if you are filing taxes, you must spend more than half the year in Massachusetts and maintain a permanent place of living in the Commonwealth or have your legal or permanent home here for you to qualify as a full-year resident."
             }
           }
         },{
           "path": "@atoms/08-lists/unordered-list.twig",
           "data": {
             "unorderedList": [{ 
-              "text": "Protection from unlawful discrimination" 
+              "text": "Voter registration" 
             },{ 
-              "text": "Rental agreements for leases and tenancy-at-will" 
+              "text": "Automobile registration" 
             },{ 
-              "text": "Rent withholding and deductions for repairs" 
+              "text": "Massachusetts driver’s license or ID" 
             },{ 
-              "text": "Lease termination, eviction, and moving out" 
+              "text": "Rent, utility, or telephone bills" 
+            },{ 
+              "text": "A city or town street list with your name on it" 
             }]
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "If you will be buying a home in Massachusetts, make sure you consider all the steps you will need to take, whether or not you’re a <a href=\"#\">first-time home buyer</a>."
-            }
           }
         }]
       }
+    },{
+      "path":"@organisms/by-author/callout-alert.twig",
+      "data":{
+        "calloutAlert": {
+          "decorativeLink": {
+            "type": "",
+            "href": "#",
+            "text": "Massachusetts requires you to get health insurance"
+          }
+        }
+      }
+    },{
+      "path":"@organisms/by-author/key-actions.twig",
+      "data":{
+        "keyActions": {
+          "compHeading": {
+            "title": "Key Actions",
+            "sub":true
+          },
+          "links":[{
+            "text": "Register to Vote",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
     }],
-
+    
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
@@ -93,7 +123,7 @@
           "title": {
             "href":"#",
             "target":"",
-            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "text": "Massachusetts Department of Revenue (DOR)",
             "chevron":""
           },
           "hide": "fax",
@@ -147,8 +177,8 @@
       }
     }]
   },{
-    "title": "Moving from a Foreign Country",
-    "id": "moving-from-a-Foreign-country",
+    "title": "Employment",
+    "id": "employment",
     "pageContent": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
@@ -156,19 +186,27 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "According to the U.S. Department of State (DOS), most citizens of foreign countries must obtain a U.S. visa when moving to the United States. There are different types of visitor visas and immigrant visas."
-            }
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "The DOS provides a complete directory of visa categories and a Visa Wizard to help foreign citizens determine whether or not they will need a visa."
+              "text": "The Executive Office of Labor and Workforce Development (LWD) provides resources for finding job listings and training opportunities for Massachusetts residents and newcomers. LWD’s JobQuest service lists thousands of job postings and enables users to upload their resume and create a profile. The Commonwealth Employment Opportunities (CEO) website, provided by the Human Resources Division (HRD), allows you to search for job opportunities with the state. You can also find career assistance, such as workshops, short-term training, and help with resumes and cover letters, at one of Massachusetts’ career centers."
             }
           }
         }]
       }
-    }],
+    },{
+      "path":"@organisms/by-author/key-actions.twig",
+      "data":{
+        "keyActions": {
+          "compHeading": {
+            "title": "Key Actions",
+            "sub":true
+          },
+          "links":[{
+            "text": "Find a Job",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],  
 
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
@@ -184,7 +222,7 @@
           "title": {
             "href":"#",
             "target":"",
-            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
           "hide": "fax",
@@ -238,405 +276,8 @@
       }
     }]
   },{
-    "title": "Moving Day",
-    "id": "moving-day",
-    "pageContent": [{
-      "path": "@organisms/by-author/action-steps.twig",
-      "data": {
-        "actionSteps": {
-          "intro": "Follow these tips to ease your move on the big day:",
-          "columns": [{
-            "heading":"Choose a Reputable Mover",
-              "steps": [{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "The <a href=\"#\">Executive Office of Energy and Environmental Affairs (EEA)</a> recommends <a href=\"#\">selecting a reputable mover</a>."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Make sure that any in-state moving company you use is properly licensed with the <a href=\"#\" target=\"_blank\">Massachusetts Department of Public Utilities (DPU)</a>."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Follow the <a href=\"#\">Federal Motor Carrier Safety Administration (FMCSA)</a> guidelines to protect yourself from moving fraud."
-                  }
-                }
-              }]
-            }]
-          },{
-            "heading":"Observe Parking Restrictions",
-              "steps": [{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Research <a href=\"#\">parking restrictions</a> before moving to find out where you are allowed to unload vehicles."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "<a href=\"#\" target=\"_blank\">Contact your city or town</a> for information on obtaining a moving permit, or talk to your landlord or property owner."
-                  }
-                }
-              }]
-            }]
-          }]
-        }
-      }
-    }],
-
-    "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
-      "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "title": {
-            "href":"#",
-            "target":"",
-            "text": "Executive Office of Energy and Environmental Affairs (EEA)",
-            "chevron":""
-          },
-          "hide": "fax",
-          "phone": {
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "items": [{
-              "type": "phone",
-              "label":"Main",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },
-          "online": {
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "items": [{
-              "type": "web",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },
-          "fax": {
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "items": [{
-              "type": "phone",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
-          }]
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "title": {
-            "href":"#",
-            "target":"",
-            "text": "Massachusetts Department of Public Utilities (DPU)",
-            "chevron":""
-          },
-          "hide": "fax",
-          "phone": {
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "items": [{
-              "type": "phone",
-              "label":"Main",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },
-          "online": {
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "items": [{
-              "type": "web",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },
-          "fax": {
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "items": [{
-              "type": "phone",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
-          }]
-        }
-      }
-    }]
-  },{
-    "title": "Moving with Pets",
-    "id": "moving-with-pets",
-    "pageContent": [{
-      "path": "@organisms/by-author/action-steps.twig",
-      "data": {
-        "actionSteps": {
-          "intro": "Be aware of any regulations that may affect moving with a pet, and keep these guidelines in mind as you plan your move:",
-          "columns": [{
-            "heading":"",
-              "steps": [{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"#\" target=\"_blank\">Dog licenses are required by state law</a>."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"#\" target=\"_blank\">moving pets to the United States from a different country</a>."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Make sure your pet is comfortable during the move, and that you use the right size kennel or crate."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Ensure your pet’s vaccines are up to date. <a href=\"#\">Dogs, cats, and ferrets must be vaccinated against rabies in Massachusetts.</a>"
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"#\" target=\"_blank\">contact a local veterinarian’s office for more information</a>."
-                  }
-                }
-              }]
-            }]
-          }]
-        }
-      }
-    }],
-
-    "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
-      "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "title": {
-            "href":"#",
-            "target":"",
-            "text": "Executive Office of Energy and Environmental Affairs (EEA)",
-            "chevron":""
-          },
-          "hide": "fax",
-          "phone": {
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "items": [{
-              "type": "phone",
-              "label":"Main",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },
-          "online": {
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "items": [{
-              "type": "web",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },
-          "fax": {
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "items": [{
-              "type": "phone",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
-          }]
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "title": {
-            "href":"#",
-            "target":"",
-            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
-            "chevron":""
-          },
-          "hide": "fax",
-          "phone": {
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "items": [{
-              "type": "phone",
-              "label":"Main",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },
-          "online": {
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "items": [{
-              "type": "web",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },
-          "fax": {
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "items": [{
-              "type": "phone",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
-          }]
-        }
-      }
-    }]
-  },{
-    "title": "Changing Your Address",
-    "id": "changing-your-address",
+    "title": "Taxes",
+    "id": "taxes",
     "pageContent": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
@@ -644,40 +285,155 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "You may need to <a href=\"#\">file a change of address with federal agencies</a> depending on your needs. Newcomers can file a <a href=\"#\" target=\"_blank\">change of address form online</a> through the <a href=\"#\" target=\"_blank\">U.S. Postal Service (USPS)</a> to have mail forwarded to their new home."
+              "text": "According to the Department of Revenue (DOR), full-year residents and part-year residents whose Massachusetts gross income exceeds $8,000 during the taxable year are required to file a tax return. Nonresidents, such as students and those who do not have a permanent place of residence in Massachusetts, must also file a tax return if their Massachusetts gross income exceeds either their prorated personal exemption or $8,000, whichever is less."
             }
           }
         },{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "Once Massachusetts residency has been established, new residents are required to have a <a href=\"#\">Massachusetts driver’s license</a> to operate a vehicle. There is no grace period."
-            }
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "If you do not drive, a <a href=\"#\">Massachusetts ID</a> can serve as proof of residency and identity."
+              "text": "If you are a full-year resident, you may be eligible to use WebFile for Income, a free service for filing returns provided by DOR. Find out what the most common forms for filing taxes are and make sure you choose the correct one(s)."
             }
           }
         }]
       }
     },{
-      "path": "@organisms/by-author/form-download.twig",
-      "data": {
+      "path":"@organisms/by-author/callout-alert.twig",
+      "data":{
+        "calloutAlert": {
+          "decorativeLink": {
+            "type": "external",
+            "href": "#",
+            "text": "Massachusetts requires you to pay taxes if you make more than $8,000 a year"
+          }
+        }
+      }
+    },{
+      "path":"@organisms/by-author/form-download.twig",
+      "data":{
         "compHeading": {
           "title": "Forms",
           "sub": true
         },
         "actionDownloads": [{
           "icon": "@atoms/05-icons/svg-laptop.twig",
-          "text": "Online Form: Official USPS Change of Address",
+          "text": "WebFile for Income",
           "href": "#",
           "type": "external",
           "size": "",
           "format": "form"
         }]
+      }
+    }],
+    
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name1",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/key-actions.twig",
+      "data":{
+        "keyActions": {
+          "compHeading": {
+            "title": "Key Actions",
+            "sub":true
+          },
+          "links":[{
+            "text": "Related Action to important Page Name",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Related Action this Page Name",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Exciting Action Page Name",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Related Action Page Name",
+            "type": "",
+            "href": "#"
+          }]
+        }
       }
     }],
 
@@ -748,7 +504,404 @@
         }
       }
     }]
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name2",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        },{
+          "path": "@atoms/09-media/image.twig",
+          "data": {
+            "image": { 
+              "alt": "alt text", 
+              "src": "/assets/images/placeholder/800x400.png",
+              "pull": ""
+            }
+          }
+        }]
+      }
+    }],
+  
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name2",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        },{
+          "path": "@atoms/09-media/image.twig",
+          "data": {
+            "image": { 
+              "alt": "alt text", 
+              "src": "/assets/images/placeholder/800x400.png",
+              "pull": "right"
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        }]
+      }
+    }],
+  
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name4",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        }]
+      }
+    },{
+      "path": "@organisms/by-author/callout.twig",
+      "data": {
+        "callOut" : {
+          "text": "Mass.Gov was so helpful when starting up my business. They had everything I needed and it was easy to find.",
+          "author": "Jane Doe",
+          "title": "Hair Salon Owner"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/form-download.twig",
+      "data":{
+        "compHeading": {
+          "title": "Forms",
+          "sub": true
+        },
+        "actionDownloads": [{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "text": "WebFile for Income",
+          "href": "#",
+          "type": "external",
+          "size": "",
+          "format": "form"
+        },{
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "text": "Name of document",
+          "href": "#",
+          "type": "external",
+          "size": "239KB",
+          "format": "PDF"
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/key-actions.twig",
+      "data":{
+        "keyActions": {
+          "compHeading": {
+            "title": "Key Actions",
+            "sub":true
+          },
+          "links":[{
+            "text": "Related Action to important Page Name",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+  
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "target":"",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "hide": "fax",
+          "phone": {
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },
+          "online": {
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "web",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },
+          "fax": {
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "items": [{
+              "type": "phone",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },
+          "address": [{
+            "address1": "555 Park Drive",
+            "address2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip": "02231",
+            "directions": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "target": "_blank",
+              "text":"directions",
+              "chevron": "true"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name5",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        }]
+      }
+    }],
+  
+    "sideBar": []
   }],
 
-  "COMMENT":"****POSTCONTENT COMPONENTS****"
+
+  "COMMENT":"****POSTCONTENT COMPONENTS****",
+
+  "suggestedPages": {
+    "title": "Related Guides",
+    "view":"guide",
+    "buttonMinor" : {
+      "link": "#",
+      "text": "See All Guides"
+    },
+    "pages": [{
+      "image": "/assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Buying Your First Home"
+      }
+    },{
+      "image": "/assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Shopping for Auto Insurance"
+      }
+    },{
+      "image": "/assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Guide: Education in Massachusetts"
+      }
+    },{
+      "image": "/assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Guide: Education in Massachusetts"
+      }
+    }]
+  }
 }

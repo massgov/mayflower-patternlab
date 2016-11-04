@@ -1,0 +1,13 @@
+{
+  "keyActions": {
+    "compHeading": {
+      "title": "Key Actions",
+      "sub":true
+    },
+    "links":[{
+      "text": "Register to Vote",
+      "type": "",
+      "href": "#"
+    }]
+  }
+}

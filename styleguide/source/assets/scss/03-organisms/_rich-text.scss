@@ -4,6 +4,7 @@ $rich-text-spacing: 1.75rem;
   @include ma-container;
   @include clearfix;
   margin-bottom: 45px;
+  max-width: 820px;  // attempting to improve readablity
 
   // not full width
   .page-content:nth-child(2) &,
@@ -32,6 +33,26 @@ $rich-text-spacing: 1.75rem;
 
   p {
     margin-bottom: $rich-text-spacing;
+  }
+
+  img {
+    width: 100%;
+
+    @media ($bp-small-min) {
+      &.pull-left {
+        float: left;
+        margin-right: .5em;
+        margin-bottom: 1em;
+        width: 50%;
+      }
+
+      &.pull-right {
+        float: right;
+        margin-left: .5em;
+        margin-bottom: 1em;
+        width: 50%;
+      }
+    }
   }
 
 // List styles

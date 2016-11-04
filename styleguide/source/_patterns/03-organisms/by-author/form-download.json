@@ -1,6 +1,7 @@
 {
-  "actionSection": {
-    "title": "Forms"
+  "compHeading": {
+    "title": "Forms",
+    "sub": true
   },
   "actionDownloads": [{
     "icon": "@atoms/05-icons/svg-laptop.twig",
