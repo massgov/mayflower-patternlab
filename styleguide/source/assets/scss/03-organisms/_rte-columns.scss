@@ -13,13 +13,13 @@
     &:last-child {
       margin-bottom: 0;
     }
-    
+
     .main-content:not(.main-content--two) & {
 
       // two items (50/50)
       &:first-child:nth-last-child(2) {
         @media($bp-large-min) {
-          @include span-columns(6 of 12);
+          @include span-columns(3 of 6);
           @include omega(2n);
         }
       }
@@ -29,12 +29,12 @@
       &:nth-last-child(n+3) ~ .ma__rte-columns__item {
         
         @media($bp-medium-min) and ($bp-large-max) {
-          @include span-columns(4 of 8);
+          @include span-columns(2 of 4);
           @include omega(2n);
         }
 
         @media($bp-large-min) {
-          @include span-columns(4 of 12);
+          @include span-columns(2 of 6);
           @include omega(3n);
         }
       }
@@ -43,7 +43,7 @@
     // two items (50/50)
     .main-content--two &:first-child:nth-last-child(2) {
       @media($bp-large-min) {
-        @include span-columns(4 of 8);
+        @include span-columns(2 of 4);
         @include omega(2n);
       }
     }
