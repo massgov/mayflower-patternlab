@@ -2,15 +2,28 @@
   <div class="ma__suggested-pages__container">
     <h2 class="ma__suggested-pages__title">{{ suggestedPages.title }}</h2>
     <div class="ma__suggested-pages__items">
-    {% for page in suggestedPages.pages %}
-      <figure class="ma__suggested-pages__item">
-        <a href="{{ page.link.href }}">
-          <img alt="{{ page.altTag }}" src="{{ page.image }}">
-        </a>
-        {% set decorativeLink = page.link %}
-        {% include "@atoms/decorative-link.twig" %}
-      </figure>
-    {% endfor %}
+      {% if suggestedPages.view == "guide" %}
+        {% for page in suggestedPages.pages %}
+          {% set illustratedLink = { 
+            "text": page.link.text, 
+            "type": page.link.type, 
+            "href": page.link.href, 
+            "image": page.image } %}
+          <div class="ma__suggested-pages__item ma__suggested-pages__item--guide">
+            {% include "@molecules/illustrated-link.twig" %}
+          </div>
+        {% endfor %}
+      {% else %}
+        {% for page in suggestedPages.pages %}
+          <figure class="ma__suggested-pages__item ma__suggested-pages__item--figure">
+            <a href="{{ page.link.href }}">
+              <img alt="{{ page.altTag }}" src="{{ page.image }}">
+            </a>
+            {% set decorativeLink = page.link %}
+            {% include "@atoms/decorative-link.twig" %}
+          </figure>
+        {% endfor %}
+      {% endif %}
     </div>
     {% set buttonMinor = suggestedPages.buttonMinor %}
     {% if buttonMinor.link %}

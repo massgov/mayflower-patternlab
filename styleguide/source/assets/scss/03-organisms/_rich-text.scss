@@ -1,15 +1,19 @@
 $rich-text-spacing: 1.75rem;
 
+// not full width
+.main-content--two .ma__rich-text {
+  padding: 0;
+}
+
 .ma__rich-text {
+  @include clearfix;
   @include ma-container;
   margin-bottom: 45px;
 
-  // not full width
-  .page-content:nth-child(2) &,
-  .page-content:nth-last-child(2) & {
-    padding-left:0;
-    padding-right:0;
+  & > * {
+    max-width: 820px;  // attempting to improve readablity
   }
+
 
   & > :last-child {
     margin-bottom: 0;
@@ -31,6 +35,26 @@ $rich-text-spacing: 1.75rem;
 
   p {
     margin-bottom: $rich-text-spacing;
+  }
+
+  img {
+    width: 100%;
+
+    @media ($bp-small-min) {
+      &.pull-left {
+        float: left;
+        margin-right: .5em;
+        margin-bottom: 1em;
+        width: 50%;
+      }
+
+      &.pull-right {
+        float: right;
+        margin-left: .5em;
+        margin-bottom: 1em;
+        width: 50%;
+      }
+    }
   }
 
 // List styles

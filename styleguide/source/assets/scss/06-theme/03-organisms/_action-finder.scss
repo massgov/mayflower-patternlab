@@ -1,5 +1,5 @@
-$featured-bg-color: #e7eef4;
-$featured-border-color: #89aac7;
+$action-finder-bg-color: tint($c-theme-blue,89%);
+$action-finder-border-color: tint($c-theme-blue,50%);
 
 .ma__action-finder {
 
@@ -34,39 +34,8 @@ $featured-border-color: #89aac7;
   }
 
   &__item--text {
-    background-color: $featured-bg-color;
-    border-color: $featured-border-color;
-  }
-
-  .ma__illustrated-link {
-    border-color: $featured-border-color;
-    &__content {
-      background-color: $featured-bg-color;
-
-      &:after {
-        background-color: $featured-bg-color;
-      }
-    }
-
-    &__label {
-      color: $c-font-link;
-      opacity: .8;
-    }
-
-    &__title {
-
-      a {
-        color: $c-font-link;
-
-        &:hover {
-          border-bottom-color: rgba($c-font-link,.5);
-        }
-      }
-
-      svg {
-        fill: rgba($c-font-link, .5);
-      }
-    }
+    background-color: $action-finder-bg-color;
+    border-color: $action-finder-border-color;
   }
 
   &__items--all {

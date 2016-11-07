@@ -1,0 +1,53 @@
+.ma__rte-columns {
+  @include ma-container;
+  margin-bottom: 45px;
+  
+  &__items {
+    @include clearfix;
+  }
+
+  &__item {
+    @include ma-reset-rich-text;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .main-content:not(.main-content--two) & {
+
+      // two items (50/50)
+      &:first-child:nth-last-child(2) {
+        @media($bp-large-min) {
+          @include span-columns(3 of 6);
+          @include omega(2n);
+        }
+      }
+
+      // three of more items (3 up)
+      &:nth-last-child(n+3),
+      &:nth-last-child(n+3) ~ .ma__rte-columns__item {
+        
+        @media($bp-medium-min) and ($bp-large-max) {
+          @include span-columns(2 of 4);
+          @include omega(2n);
+        }
+
+        @media($bp-large-min) {
+          @include span-columns(2 of 6);
+          @include omega(3n);
+        }
+      }
+    }
+
+    // two items (50/50)
+    .main-content--two &:first-child:nth-last-child(2) {
+      @media($bp-large-min) {
+        @include span-columns(2 of 4);
+        @include omega(2n);
+      }
+    }
+
+  }
+
+}

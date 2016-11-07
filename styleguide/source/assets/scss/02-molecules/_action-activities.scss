@@ -1,6 +1,6 @@
-$bp-x-large-min: "min-width: 1160px";
+$action-activities-bp-x-large-min: "min-width: 1160px";
 
-.ma__activity {
+.ma__action-activities {
   @include clearfix();
   border-bottom: 1px solid;
   padding: 30px 0;
@@ -16,7 +16,7 @@ $bp-x-large-min: "min-width: 1160px";
       float: none;
     }
 
-    @media ($bp-x-large-min) {
+    @media ($action-activities-bp-x-large-min) {
       float: left;
       width: 190px;
     }
@@ -36,7 +36,7 @@ $bp-x-large-min: "min-width: 1160px";
       width: 100%;
     }
 
-    @media ($bp-x-large-min) {
+    @media ($action-activities-bp-x-large-min) {
       float: left;
       margin-left: 30px;
       width: calc(100% - 220px);

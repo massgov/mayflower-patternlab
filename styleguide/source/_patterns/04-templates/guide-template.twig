@@ -1,0 +1,21 @@
+{% include "@organisms/by-template/header.twig" %}
+<div class="pre-content">
+  {% block preContent %}
+    {% include "@base/placeholder.twig" with {'placeholder':{'text':'Pre Content'}} %}
+  {% endblock %}
+</div>
+<div class="guide-content">
+  {% block guideContent %}
+    {% include "@organisms/by-template/jump-links.twig" %}
+    {% for guideSection in guideSections %}
+      {% include "@organisms/by-author/guide-section.twig" %}
+    {% endfor %}
+  {% endblock %}
+</div>
+<div class="post-content">
+  {% block postContent %}
+    {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
+  {% endblock %}
+</div>
+
+{% include "@organisms/by-template/footer.twig" %}

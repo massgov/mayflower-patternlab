@@ -1,42 +1,42 @@
 {
   "suggestedPages": {
-    "title": "Related Parks",
-    "view":"",
+    "title": "Related Guides",
+    "view":"guide",
     "buttonMinor" : {
       "link": "#",
-      "text": "Do Something"
+      "text": "See All Guides"
     },
     "pages": [{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "/assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
         "href": "#",
-        "text": "Title Link I"
+        "text": "Buying Your First Home"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "/assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
         "href": "#",
-        "text": "Title Link II"
+        "text": "Shopping for Auto Insurance"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "/assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
         "href": "#",
-        "text": "Title Link III"
+        "text": "Guide: Education in Massachusetts"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "/assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
         "href": "#",
-        "text": "Title Link IV"
+        "text": "Guide: Education in Massachusetts"
       }
     }]
   }
