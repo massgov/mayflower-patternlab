@@ -1,13 +1,24 @@
 # Mass Gov Release Notes
 
-## 0.6.0
+## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
-* MGVDU-270 - FE Dev: Guide Page - Jump Links
 * MGVDU-216 - FE Dev: Guide Page - Header Banner
+* MGVDU-217 - FE Dev: Guide Page - Action Steps
+* MGVDU-218 - FE Dev: Guide Page - Guide Sections
+* MGVDU-270 - FE Dev: Guide Page - Jump Links
+* MGVDU-271 - FE Dev: Guide Page - Callout Alert
+* MGVDU-272 - FE Dev: Guide Page - Download Forms
+* MGVDU-293 - FE Dev: Guide Page - Callout Time
+* MGVDU-294 - FE Dev: Guide Page - Key Actions
+* MGVDU-295 - FE Dev: Guide Page - Suggested Guides
+* MGVDU-296 - FE Dev: Guide Page - Sidebar title
+* MGVDU-300 - FE Dev: Guide - Rich Text 3 up
 
 ### MGVDU-208 - Basic Content Page
 * MGVDU-88 - Page Discourse Component - using rich-text component instead
 * MGVDU-278 - FE Dev: Breadcrumbs - collapsable
+* MGRP-154 - Callout Link - bottom margin
+* MGRP-156 - Email link doesn't wrap.
 
 ### Other
 * MGVDU-138 - FE Dev: Modifications to Location/Action page: Multiple contacts
