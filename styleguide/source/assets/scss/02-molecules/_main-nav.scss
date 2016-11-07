@@ -1,7 +1,7 @@
 .ma__main-nav {
   @include ma-container;
 
-  @media ($bp-medium-max){
+  @media ($bp-header-toggle-max){
     padding-left: 0;
     padding-right: 0;
   }
@@ -9,7 +9,7 @@
   &__items {
     @include ma-reset-list;
 
-    @media ($bp-medium-min){
+    @media ($bp-header-toggle-min){
       display: table;
       margin-left: -12px;
       width: calc(100% + 24px);
@@ -29,11 +29,11 @@
     position: relative;
     transition: background-color .4s;
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       font-size: 1rem;
     }
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: table-cell;
       text-align: center;
 
@@ -66,12 +66,12 @@
     padding-right: 15px;
     text-transform: uppercase;
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       padding-right: 20px;
       padding-left: 20px;
     }
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: inline-block;
       font-size: 1.375rem;
       padding: 14px 12px;
@@ -90,15 +90,15 @@
         cursor: pointer;
         margin-left: 6px;
 
-        @media ($bp-medium-max) {
+        @media ($bp-header-toggle-max) {
           position: absolute;
             right: 20px;
             top: 15px;
         }
-        @media ($bp-medium-min) {
+        @media ($bp-header-toggle-min) {
           transform: translateY(-45%) rotate(45deg);
         }
-        @media ($bp-medium-min) and ($bp-x-large-max) {
+        @media ($bp-header-toggle-min) and ($bp-x-large-max) {
           display: none;
         }
       }
@@ -107,7 +107,7 @@
     .is-open & {
 
       &:after {
-        @media ($bp-medium-min) {
+        @media ($bp-header-toggle-min) {
           transform: translateY(-45%) rotate(-135deg);
         }
       }
@@ -124,7 +124,7 @@
     z-index: $z-dropdown;
 
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: none;
     }
 
@@ -154,7 +154,7 @@
     width: 300px;
     z-index: $z-dropdown;
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       margin-top: $header-mobile-controls-height;
       overflow-y: auto;
       padding-left: 20px;
@@ -169,7 +169,7 @@
       }
     }
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       min-width: 340px;
       position: absolute;
         top: 100%;
@@ -191,7 +191,7 @@
   &__container {
     @include ma-reset-list;
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       height: 100vh;
     }
   }
@@ -203,7 +203,7 @@
       letter-spacing: .05em;
       text-transform: uppercase;
 
-      @media ($bp-medium-min) {
+      @media ($bp-header-toggle-min) {
         display: none;
       }
     }

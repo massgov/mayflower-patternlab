@@ -4,7 +4,7 @@ $bp-header-logo-min: "min-width: 1000px";
 
 body {
 
-  @media ($bp-medium-max) {
+  @media ($bp-header-toggle-max) {
     height: 100%;
     position: relative;
       left: 0;
@@ -40,7 +40,7 @@ body {
     padding-top: 8px;
     padding-bottom: 8px;
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       padding-top: 20px;
     }
   }
@@ -82,7 +82,7 @@ body {
 
   &__nav-container {
 
-    @media ($bp-medium-max){
+    @media ($bp-header-toggle-max){
       height: calc(100vh - #{$header-mobile-controls-height});
       overflow-y: auto;
       position: fixed;
@@ -109,7 +109,7 @@ body {
     width: 100%;
     z-index: $z-dropdown;
 
-    @media ($bp-medium-min){
+    @media ($bp-header-toggle-min){
       display: none;
     }
 
@@ -237,7 +237,7 @@ body {
   &__nav-search,
   &__main-nav {
 
-    @media ($bp-medium-max){
+    @media ($bp-header-toggle-max){
       border-bottom: 2px solid; // $c-gray-dcdcdc;
       margin-bottom: 15px;
       padding-bottom: 15px;
@@ -246,7 +246,7 @@ body {
 
   &__utility-nav {
 
-    @media ($bp-medium-min){
+    @media ($bp-header-toggle-min){
       position: absolute;
         top: 0;
       width: 100%;

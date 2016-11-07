@@ -1,5 +1,10 @@
 # Mass Gov Release Notes
 
+## 1.2.0 (Sprint 7)
+### Other
+* MGVDU-269 - Site Settings (utility nav) language dropdown
+
+
 ## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
 * MGVDU-216 - FE Dev: Guide Page - Header Banner
