@@ -1,9 +1,13 @@
 .ma__callout-time {
 
   &__icon {
-    
+
     & > svg {
       fill: $c-theme-yellow;
     }
+  }
+
+  &__text {
+    font-weight: 500;
   }
 }
