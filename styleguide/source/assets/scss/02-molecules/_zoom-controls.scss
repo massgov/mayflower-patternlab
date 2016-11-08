@@ -10,7 +10,7 @@ html[data-zoom="zoom-large"] {
 
 .ma__zoom-controls {
 
-  @media ($bp-medium-max) {
+  @media ($bp-header-toggle-max) {
     display: none;
   }
 

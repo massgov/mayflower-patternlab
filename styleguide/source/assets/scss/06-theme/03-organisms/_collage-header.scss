@@ -4,39 +4,25 @@ $collage-header-bp: "min-width: 700px";
   background-color: $c-bg-subtle;
 
   &__title {
-    background-image: linear-gradient(120deg, $c-theme-green 80%, $c-theme-green 80%);
-
-    @media ($collage-header-bp) {
-      background-image: linear-gradient(120deg, $c-theme-green 550px, transparent 550px);
-    }
-
-    @media ($bp-medium-min) {
-      background-image: linear-gradient(120deg, $c-theme-green 620px, transparent 620px);
-    }
-
-    @media ($bp-large-min) {
-      background-image: linear-gradient(120deg, $c-theme-green 690px, transparent 690px);
-    }
-
-    h1 {
-      color: $c-font-inverse;
-      @include ma-font(400);
-    }
 
     &:before {
       background-color: $c-theme-green;
     }
 
+    h1 {
+      color: $c-font-inverse;
+      font-weight: 400;
+    }
   }
 
   &__details {
 
     h3 {
-      @include ma-font(400);
+      font-weight: 400;
     }
 
     p {
-      @include ma-font(300);
+      font-weight: 300;
     }
   }
 }

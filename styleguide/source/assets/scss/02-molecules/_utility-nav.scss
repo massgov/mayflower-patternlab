@@ -7,12 +7,12 @@ $utility-nav-height: 43px;
     @include ma-reset-list;
     @include ma-container;
 
-    @media ($bp-medium-max){
+    @media ($bp-header-toggle-max){
       padding-left: 0;
       padding-right: 0;
     }
 
-    @media ($bp-medium-min){
+    @media ($bp-header-toggle-min){
       @include ma-valign-block;
       height: $utility-nav-height;
       text-align: right;
@@ -21,12 +21,12 @@ $utility-nav-height: 43px;
 
   &__item {
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       padding-right: 15px;
       position: relative;
     }
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: inline-block;
       padding-left: 30px;
       transition: opacity .4s;
@@ -39,7 +39,7 @@ $utility-nav-height: 43px;
     font-size: 1.25rem;
     line-height: 1.45;
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       @include ma-chevron;
       padding: 10px 20px;
 
@@ -49,7 +49,7 @@ $utility-nav-height: 43px;
           top: 15px;
       }
     }
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       line-height: 2;
 
       &:hover {
@@ -90,7 +90,7 @@ $utility-nav-height: 43px;
       right: -300px;
     }
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       height: 145px;
       margin-top: 0;
       overflow: visible;
@@ -123,7 +123,7 @@ $utility-nav-height: 43px;
     z-index: $z-dropdown;
     height: calc(100vh - #{$header-mobile-controls-height});
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       height: auto;
       padding-bottom: 0;
       padding-top: 0;
@@ -161,7 +161,7 @@ $utility-nav-height: 43px;
     padding-bottom: 20px;
     position: relative;
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       padding-bottom: 5px;
     }
 
@@ -184,7 +184,7 @@ $utility-nav-height: 43px;
 
   &__content-body {
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       height: 88px;
     }
   }

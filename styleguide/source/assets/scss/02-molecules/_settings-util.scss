@@ -1,6 +1,6 @@
 .ma__settings-util {
 
-  @media ($bp-medium-min) {
+  @media ($bp-header-toggle-min) {
     display: table;
     height: 75px;
     width: 100%;
@@ -8,7 +8,7 @@
 
   &__zoom {
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: table-cell;
       margin-bottom: 0;
       vertical-align: middle;
@@ -17,7 +17,7 @@
   }
 
   &__dropdown-controls {
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: table-cell;
       vertical-align: middle;
     }
@@ -26,7 +26,7 @@
   &__theme,
   &__lang {
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: inline-block;
       vertical-align: middle;
     }
@@ -37,7 +37,7 @@
 
     .ma__dropdown {
 
-      @media ($bp-medium-min) {
+      @media ($bp-header-toggle-min) {
         border-left: 1px solid;
         padding-left: 20px;
         padding-right: 10px;
@@ -67,7 +67,7 @@
   &__theme {
     margin-bottom: .75rem;
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       margin-bottom: 0;
     }
   }
@@ -75,7 +75,7 @@
   &__lang {
     margin-bottom: 2rem;
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       margin-bottom: 0;
 
       .ma__dropdown {
@@ -86,14 +86,14 @@
 
   &__buttons {
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       display: table-cell;
       text-align: right;
       vertical-align: middle;
       width: 150px;
     }
 
-    @media ($bp-medium-min) and ("max-width:900px") {
+    @media ($bp-header-toggle-min) and ("max-width:900px") {
       width: auto;
     }
 
@@ -111,7 +111,7 @@
         vertical-align: middle;
       }
 
-      @media ($bp-medium-min) and ("max-width:1000px") {
+      @media ($bp-header-toggle-min) and ("max-width:1000px") {
         text-align: right;
 
         span {

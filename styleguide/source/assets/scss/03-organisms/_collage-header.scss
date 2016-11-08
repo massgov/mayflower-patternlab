@@ -1,6 +1,7 @@
 $collage-header-bp: "min-width: 700px";
 
 .ma__collage-header {
+  overflow: hidden;
 
   &__container {
     @include ma-container;
@@ -86,37 +87,49 @@ $collage-header-bp: "min-width: 700px";
     position: relative;
     width: calc(100% + 40px);
 
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 0;
-    }
-
     @media ($collage-header-bp) {
       margin-bottom: 50px;
       padding-top: 50px;
       padding-bottom: 55px;
+    }
 
-      h1 {
-        font-size: 4rem;
-        width: 480px;
-
-        @media ($bp-medium-min) {
-          font-size: 4.625rem;
-          width: 550px;
-        }
-        @media ($bp-large-min) {
-          font-size: 5.125rem;
-          width: 620px;
-        }
-      }
-
-      &:before {
+    &:before {
+      @media ($collage-header-bp) {
         content: "";
         height: 100%;
         position: absolute;
           top: 0;
-          right: 100%;
-        width: 50vw; // calc((100vw - 100%)/2);
+          right: calc(100% - 480px);
+        width: 100vw;
+        transform: skew(-30deg);
+      }
+
+      @media ($bp-medium-min) {
+        right: calc(100% - 550px);
+      }
+      
+      @media ($bp-large-min) {
+        right: calc(100% - 620px);
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 0;
+
+      @media ($collage-header-bp) {
+        position: relative;
+        width: 480px;
+      }
+
+      @media ($bp-medium-min) {
+        font-size: 4.625rem;
+        width: 550px;
+      }
+
+      @media ($bp-large-min) {
+        font-size: 5.125rem;
+        width: 620px;
       }
     }
   }
