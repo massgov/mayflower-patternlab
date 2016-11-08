@@ -10,11 +10,13 @@
   &__icon {
     font-size: 0;
     height: 30px;
-    margin-right: 12px;
+    margin: 12px 12px 12px 0;
     width: 30px;
   }
 
   &__text {
+    font-size: 1.438rem;
+    font-style: italic;
     margin-bottom: 0;
   }
 }
