@@ -1,10 +1,10 @@
 .ma__callout {
   border-left: 2px solid;
-  padding-left:38px;
+  padding-left:20px;
   margin-bottom: 45px;
 
-  @media ($bp-x-small-max) {
-    padding-left:20px;
+  @media ($bp-x-small-min) {
+    padding-left:38px;
   }
 
 
