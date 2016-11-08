@@ -1,5 +1,10 @@
 # Mass Gov Release Notes
 
+## 1.2.0 (Sprint 7)
+### Other
+* MGVDU-269 - Site Settings (utility nav) language dropdown
+
+
 ## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
 * MGVDU-216 - FE Dev: Guide Page - Header Banner
@@ -14,17 +19,20 @@
 * MGVDU-296 - FE Dev: Guide Page - Sidebar title
 * MGVDU-300 - FE Dev: Guide - Rich Text 3 up
 
+
 ### MGVDU-208 - Basic Content Page
 * MGVDU-88 - Page Discourse Component - using rich-text component instead
 * MGVDU-278 - FE Dev: Breadcrumbs - collapsable
-* MGRP-154 - Callout Link - bottom margin
-* MGRP-156 - Email link doesn't wrap.
+
 
 ### Other
 * MGVDU-138 - FE Dev: Modifications to Location/Action page: Multiple contacts
 * MGVDU-287 - FE Dev: Alert Bar - Hides globally
 * MGVDU-273 - Need fax icon for action page
 * MGVDU-282 - Remove Javascript autopopulation of Quick Actions on Location page
+* MGRP-154 - Callout Link - bottom margin
+* MGRP-156 - Email link doesn't wrap.
+
 
 ## 0.5.0
 ### MGVDU-181 - Location Page
