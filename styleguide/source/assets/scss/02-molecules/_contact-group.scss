@@ -25,16 +25,13 @@
   }
 
   &__value {
+    @include ma-link-underline;
     font-size: 1.25rem;
     line-height: 1.75;
     overflow-wrap: break-word;
     padding-bottom: 3px;
     word-wrap: break-word;
-    word-break: break-word;  
-  }
-
-  &__value--email {
-    @include ma-link-underline;
+    word-break: break-word;
   }
 
   &__details {

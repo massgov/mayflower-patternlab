@@ -16,13 +16,17 @@
     font-weight: 500;
   }
 
-  &__value--email:hover {
+  &__value:hover {
     border-bottom-color: rgba($c-font-link,.5);
   }
 
   &__value--phone {
     color: $c-font-base;
     font-weight: 300;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
   }
 
   &__details {
