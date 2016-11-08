@@ -12,6 +12,7 @@
   }
 }
 
+// two column template
 .main-content--two {
   @include ma-container;
 }
@@ -42,4 +43,9 @@
     float: left;
     width: $layout-sidebar-width;
   }
+}
+
+// guide page template
+.guide-content {
+  position: relative;
 }

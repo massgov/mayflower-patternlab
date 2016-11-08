@@ -1,7 +1,7 @@
 var externalUrlCheck = (function(){
     var domainRe = /https?:\/\/((?:[\w\d-]+\.)+[\w\d]{2,})/i;
     return function(url) {
-console.log('url',url);
+
         if (!url.length || url[0] === "#") {
           return false;
         }
