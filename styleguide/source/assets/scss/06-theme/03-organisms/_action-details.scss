@@ -1,9 +1,9 @@
 .ma__action-details {
 
   &__title {
-    @include ma-font(700);
     @include ma-heading-colored($c-theme-green);
     color: $c-font-inverse;
+    font-weight: 700;
   }
 
   &__anchor-links {
@@ -20,11 +20,11 @@
     }
 
     a {
-      @include ma-font(500);
+      font-weight: 500;
 
       &.is-active {
-        @include ma-font(700);
         color: $c-font-dark;
+        font-weight: 700;
       }
 
       &:hover {
