@@ -55,8 +55,8 @@
           "phone": {
             "icon": "atoms-svg-phone",
             "name": "Phone",
-            "type": "phone",
             "items": [{
+              "type": "phone",
               "label":"Main",
               "value":"(413) 499-4262",
               "rawVal":"14134994262",
@@ -66,8 +66,8 @@
           "online": {
             "icon": "atoms-svg-laptop",
             "name": "Online",
-            "type": "email",
             "items": [{
+              "type": "email",
               "label":"Email",
               "value":"email@email.com",
               "link":"email@email.com",
@@ -77,8 +77,8 @@
           "fax": {
             "icon": "atoms-svg-fax-icon",
             "name": "Fax",
-            "type": "phone",
             "items": [{
+              "type": "phone",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",
