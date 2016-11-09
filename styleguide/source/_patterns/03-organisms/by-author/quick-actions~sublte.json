@@ -1,10 +1,9 @@
 {
   "quickActions":{
-    "coloredHeading": {
-      "text":"Quick Actions",
-      "color":"green"
+    "coloredHeading": "",
+    "sidebarHeading": {
+      "title": "Quick Actions"
     },
-    "sidebarHeading": "",
     "links": [{
       "type": "",
       "href": "#",

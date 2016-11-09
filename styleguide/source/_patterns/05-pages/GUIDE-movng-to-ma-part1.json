@@ -265,7 +265,7 @@
                 "path": "@atoms/11-text/paragraph.twig",
                 "data": {
                   "paragraph": {
-                    "text": "Make sure that any in-state moving company you use is properly licensed with the <a href=\"#\" target=\"_blank\">Massachusetts Department of Public Utilities (DPU)</a>."
+                    "text": "Make sure that any in-state moving company you use is properly licensed with the <a href=\"http://www.mass.gov\">Massachusetts Department of Public Utilities (DPU)</a>."
                   }
                 }
               }]
@@ -301,7 +301,7 @@
                 "path": "@atoms/11-text/paragraph.twig",
                 "data": {
                   "paragraph": {
-                    "text": "<a href=\"#\" target=\"_blank\">Contact your city or town</a> for information on obtaining a moving permit, or talk to your landlord or property owner."
+                    "text": "<a href=\"http://www.mass.gov\">Contact your city or town</a> for information on obtaining a moving permit, or talk to your landlord or property owner."
                   }
                 }
               }]
@@ -454,7 +454,7 @@
                 "path": "@atoms/11-text/paragraph.twig",
                 "data": {
                   "paragraph": {
-                    "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"#\" target=\"_blank\">Dog licenses are required by state law</a>."
+                    "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"http://www.mass.gov\">Dog licenses are required by state law</a>."
                   }
                 }
               }]
@@ -465,7 +465,7 @@
                 "path": "@atoms/11-text/paragraph.twig",
                 "data": {
                   "paragraph": {
-                    "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"#\" target=\"_blank\">moving pets to the United States from a different country</a>."
+                    "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"http://www.mass.gov\">moving pets to the United States from a different country</a>."
                   }
                 }
               }]
@@ -498,7 +498,7 @@
                 "path": "@atoms/11-text/paragraph.twig",
                 "data": {
                   "paragraph": {
-                    "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"#\" target=\"_blank\">contact a local veterinarian’s office for more information</a>."
+                    "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"http://www.mass.gov\">contact a local veterinarian’s office for more information</a>."
                   }
                 }
               }]
@@ -655,7 +655,7 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "You may need to <a href=\"#\">file a change of address with federal agencies</a> depending on your needs. Newcomers can file a <a href=\"#\" target=\"_blank\">change of address form online</a> through the <a href=\"#\" target=\"_blank\">U.S. Postal Service (USPS)</a> to have mail forwarded to their new home."
+              "text": "You may need to <a href=\"#\">file a change of address with federal agencies</a> depending on your needs. Newcomers can file a <a href=\"http://www.mass.gov\">change of address form online</a> through the <a href=\"http://www.mass.gov\">U.S. Postal Service (USPS)</a> to have mail forwarded to their new home."
             }
           }
         },{

@@ -18,15 +18,15 @@ export default function (window,document,$,undefined) {
       let $el = $(this),
           href = $el.attr('href');
 
-      if(externalUrlCheck(href) && !$el.has('svg')) {
+      if(externalUrlCheck(href) && !$el.children().length) {
         // wrap the link in a span tag
-        $link.wrap('<span class="ma__decorative-link"></span>');
+        $el.wrap('<span class="ma__decorative-link"></span>');
         // append the SVG to the link
-        $link.append('&nbsp;' + data);
+        $el.append('&nbsp;' + data);
       }
     });
   }).catch(function(e){
-    console.error('external link svg not found');
+    console.error('external link rte code failing');
   });
 
 }(window,document,jQuery);
