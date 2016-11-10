@@ -1,4 +1,4 @@
-$error-page-bg-offset-full: calc(50% - 325px);
+$error-page-bg-offset-full: calc(50% - 320px);
 $error-page-bg-offset-narrow: calc(50% - 125px);
 
 @keyframes error-page-bg-full {
@@ -100,6 +100,7 @@ $error-page-bg-offset-narrow: calc(50% - 125px);
   &__message {
     font-size: 1.25rem;
     line-height: 1.5;
+    margin-bottom: 1.75em;
 
     @media ($bp-small-min) {
       font-size: 1.5rem;
