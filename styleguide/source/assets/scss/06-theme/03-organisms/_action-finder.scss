@@ -13,7 +13,7 @@ $action-finder-border-color: tint($c-theme-blue,50%);
   }
 
   &__title {
-    @include ma-border-decorative($c-theme-yellow,transparent,1);
+    @include ma-border-decorative($c-theme-yellow,1);
     color: $c-font-inverse;
   }
 

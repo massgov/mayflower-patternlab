@@ -28,7 +28,7 @@ $page-banner-inner-width: 612px;
   }
 
   &__divider {
-    @include ma-border-decorative($c-theme-green,$c-bg-section);
+    @include ma-border-decorative($c-theme-green);
     opacity: .5
   }
 

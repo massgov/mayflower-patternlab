@@ -9,7 +9,7 @@
     }
     &.is-active {
 
-      @include ma-border-decorative($c-theme-green,$c-bg-section);
+      @include ma-border-decorative($c-theme-green);
     }
   }
 
