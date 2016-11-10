@@ -1,6 +1,6 @@
 // $bg is the color of the parent
 // $fg is the color of the line
-@mixin ma-border-decorative($fg: transparent, $bg: transparent, $opacity: .5) {
+@mixin ma-border-decorative($fg: transparent, $opacity: .5) {
   @if($fg == transparent) {
     position: relative;
   }
