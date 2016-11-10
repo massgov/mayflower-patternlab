@@ -1,0 +1,28 @@
+{
+  "errorPage": {
+    "type": "403",
+    "title": "This page is forbidden",
+    "message": "Sorry, you don't have access to this page"
+  },
+
+  "helpfulLinks": {
+    "compHeading": {
+      "title": "Helpful Links",
+      "sub": "true",
+      "color": "yellow"
+    },
+    "items": [{
+      "href": "#",
+      "text":"Helpful link",
+      "chevron": "true"
+    },{
+      "href": "#",
+      "text":"Another helpful link",
+      "chevron": "true"
+    },{
+      "href": "#",
+      "text":"Yet another helpful link",
+      "chevron": "true"
+    }]
+  }
+}
