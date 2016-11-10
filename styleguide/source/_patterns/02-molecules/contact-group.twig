@@ -16,7 +16,9 @@
         <div class="ma__contact-group__address">
           {{item.value | raw}}
         </div>
-        <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron">directions</a>
+        {% if item.link %}
+          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron">directions</a>
+        {% endif %}
       {% else %}
         <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
       {% endif %}
