@@ -70,8 +70,11 @@ $error-page-bg-offset-narrow: calc(50% - 125px);
   &__content {
     @include ma-container;
     max-width: 650px;
-    margin-bottom: 150px;
     position: relative;
+
+    @media ($bp-large-min) {
+      margin-bottom: 150px;
+    }
   }
 
   &__label {
