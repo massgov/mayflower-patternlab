@@ -9,11 +9,18 @@
         <span class="ma__contact-group__label">{{item.label}}:</span>
       {% endif %}
       {% if item.type == "phone" %}
-        <a href="tel:+{{item.link}}" class="ma__contact-group__value ma__contact-group__value--phone">{{item.value}}</a>
+        <a href="tel:+{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
       {% elseif item.type == "email" %}
-        <a href="mailto:{{item.link}}" class="ma__contact-group__value ma__contact-group__value--email">{{item.value}}</a>
+        <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
+      {% elseif item.type == "address" %}
+        <div class="ma__contact-group__address">
+          {{item.value | raw}}
+        </div>
+        {% if item.link %}
+          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron">directions</a>
+        {% endif %}
       {% else %}
-        <a href="{{item.link}}" class="ma__contact-group__value">{{item.value}}</a>
+        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
       {% endif %}
     </div>
     {% if item.details %}

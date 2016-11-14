@@ -6,3 +6,6 @@
     color: $c-font-heading;
   }
 }
+.ma__comp-heading--yellow {
+  @include ma-border-decorative($c-theme-yellow, 1);
+}

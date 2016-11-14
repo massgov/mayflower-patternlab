@@ -1,0 +1,32 @@
+.ma__error-page {
+
+  &:before {
+    background-color: rgba($c-theme-yellow, .15);
+  }
+
+  &__header {
+
+  }
+
+  &__content {
+
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__type {
+    color: $c-theme-yellow;
+    font-weight: 900;
+  }
+
+  &__title {
+    color: $c-font-dark;
+    font-weight: 700;
+  }
+
+  &__message {
+    font-weight: 300;
+  }
+}

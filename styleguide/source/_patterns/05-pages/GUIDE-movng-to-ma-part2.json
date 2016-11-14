@@ -161,14 +161,13 @@
         "contactUs": {
           "title": {
             "href":"#",
-            "target":"",
             "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
-          "hide": "fax",
-          "phone": {
+          "groups": [{
             "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
+            "hidden": "",
             "items": [{
               "type": "phone",
               "label":"Main",
@@ -176,10 +175,10 @@
               "rawVal":"14134994262",
               "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
             }]
-          },
-          "online": {
+          },{
             "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
+            "hidden": "",
             "items": [{
               "type": "email",
               "label":"Email",
@@ -187,10 +186,10 @@
               "link":"email@email.com",
               "details":""
             }]
-          },
-          "fax": {
+          },{
             "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
+            "hidden": "true",
             "items": [{
               "type": "phone",
               "label":"",
@@ -198,19 +197,17 @@
               "link":"14134994262",
               "details":"Please allow 24 hours for a response"
             }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
+          },{
+            "icon": "@atoms/05-icons/svg-marker.twig",
+            "name": "Address",
+            "hidden": "true",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "details": ""
+            }]
           }]
         }
       }
@@ -296,14 +293,13 @@
         "contactUs": {
           "title": {
             "href":"#",
-            "target":"",
             "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
-          "hide": "fax",
-          "phone": {
+          "groups": [{
             "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
+            "hidden": "",
             "items": [{
               "type": "phone",
               "label":"Main",
@@ -311,10 +307,10 @@
               "link":"14134994262",
               "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
             }]
-          },
-          "online": {
+          },{
             "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
+            "hidden": "",
             "items": [{
               "type": "web",
               "label":"",
@@ -322,10 +318,10 @@
               "link":"#",
               "details":""
             }]
-          },
-          "fax": {
+          },{
             "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
+            "hidden": "true",
             "items": [{
               "type": "phone",
               "label":"",
@@ -333,19 +329,17 @@
               "link":"14134994262",
               "details":"Please allow 24 hours for a response"
             }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
+          },{
+            "icon": "@atoms/05-icons/svg-marker.twig",
+            "name": "Address",
+            "hidden": "true",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "details": ""
+            }]
           }]
         }
       }
@@ -405,14 +399,13 @@
         "contactUs": {
           "title": {
             "href":"#",
-            "target":"",
             "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
-          "hide": "fax",
-          "phone": {
+          "groups": [{
             "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
+            "hidden": "",
             "items": [{
               "type": "phone",
               "label":"Main",
@@ -420,10 +413,10 @@
               "link":"14134994262",
               "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
             }]
-          },
-          "online": {
+          },{
             "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
+            "hidden": "",
             "items": [{
               "type": "web",
               "label":"",
@@ -431,10 +424,10 @@
               "link":"#",
               "details":""
             }]
-          },
-          "fax": {
+          },{
             "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
+            "hidden": "true",
             "items": [{
               "type": "phone",
               "label":"",
@@ -442,19 +435,17 @@
               "link":"14134994262",
               "details":"Please allow 24 hours for a response"
             }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
+          },{
+            "icon": "@atoms/05-icons/svg-marker.twig",
+            "name": "Address",
+            "hidden": "true",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "details": ""
+            }]
           }]
         }
       }
@@ -489,14 +480,13 @@
         "contactUs": {
           "title": {
             "href":"#",
-            "target":"",
             "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
-          "hide": "fax",
-          "phone": {
+          "groups": [{
             "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
+            "hidden": "",
             "items": [{
               "type": "phone",
               "label":"Main",
@@ -504,10 +494,10 @@
               "link":"14134994262",
               "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
             }]
-          },
-          "online": {
+          },{
             "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
+            "hidden": "",
             "items": [{
               "type": "web",
               "label":"",
@@ -515,10 +505,10 @@
               "link":"#",
               "details":""
             }]
-          },
-          "fax": {
+          },{
             "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
+            "hidden": "true",
             "items": [{
               "type": "phone",
               "label":"",
@@ -526,19 +516,17 @@
               "link":"14134994262",
               "details":"Please allow 24 hours for a response"
             }]
-          },
-          "address": [{
-            "address1": "555 Park Drive",
-            "address2": "",
-            "city": "Boston",
-            "state": "MA",
-            "zip": "02231",
-            "directions": {
-              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "target": "_blank",
-              "text":"directions",
-              "chevron": "true"
-            }
+          },{
+            "icon": "@atoms/05-icons/svg-marker.twig",
+            "name": "Address",
+            "hidden": "true",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "details": ""
+            }]
           }]
         }
       }
