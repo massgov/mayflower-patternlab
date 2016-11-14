@@ -27,7 +27,7 @@
     display: block;
     font-size: 1rem;
     letter-spacing: .1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
     padding: 10px 30px 10px 0;
     position: relative;
     text-align: left;
@@ -62,10 +62,6 @@
 
   &__container {
 
-    @media($bp-small-max) {
-      display: none;
-    }
-
     @media($bp-small-min) {
       display: flex;
       align-items: stretch;
@@ -77,6 +73,11 @@
 
     & + & {
       padding-top: 20px;
+
+      @media($bp-small-max) {
+        display: none;
+      }
+
     }
 
     @media($bp-small-min) {
