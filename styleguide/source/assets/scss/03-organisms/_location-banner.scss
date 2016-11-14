@@ -19,7 +19,7 @@
   &__map {
 
     @media ($bp-large-min) {
-      float: left;
+      float: right;
       width: $layout-sidebar-width + 40px; //outer page padding
     }
 
