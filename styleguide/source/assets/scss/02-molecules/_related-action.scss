@@ -1,3 +1,4 @@
+.paragraph--type--related-link, // mass gov drupal instance
 .ma__related-action {
 
   & + & {
@@ -7,13 +8,7 @@
   }
 
   &__link {
-    @include ma-link-decorative;
 
-    a {
-      font-size: 1.625rem;
-      line-height: 1.2;
-      padding-right: 20px;
-    }
   }
 
   &__description {
@@ -23,6 +18,15 @@
 
     & > :last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .ma__decorative-link {
+    display: block;
+
+    a {
+      font-size: 1.625rem;
+      line-height: 1.2;
     }
   }
 }
