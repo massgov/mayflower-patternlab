@@ -2,8 +2,10 @@
 
 ## 1.2.0 (Sprint 7)
 ### Other
+* MGVDU-253 - Front end: 404 page
 * MGVDU-269 - Site Settings (utility nav) language dropdown
-
+* MGVDU-312 - FE Dev - Contact Group - refactor address
+* MGVDU-313 - Firefox text wrapping bug on Related Topics section on some but not all pages
 
 ## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
