@@ -70,11 +70,13 @@ $error-page-bg-offset-narrow: calc(50% - 125px);
   &__content {
     @include ma-container;
     max-width: 650px;
+    margin-bottom: 150px;
     position: relative;
   }
 
   &__label {
     font-size: 1.75rem;
+    letter-spacing: .1em;
     text-transform: uppercase;
   }
 
@@ -98,12 +100,12 @@ $error-page-bg-offset-narrow: calc(50% - 125px);
   }
 
   &__message {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 1.75em;
 
     @media ($bp-small-min) {
-      font-size: 1.5rem;
+      font-size: 1.625rem;
     }
   }
 
