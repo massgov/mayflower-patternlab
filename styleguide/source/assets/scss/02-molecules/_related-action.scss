@@ -2,7 +2,8 @@
 .ma__related-action {
 
   & + & {
-    border-top: 1px solid;
+    border-top-width: 1px;
+    border-top-style: solid;
     margin-top: 30px;
     padding-top: 30px;
   }
