@@ -22,7 +22,7 @@
 
   .main-content--two &,
   &:first-child:nth-last-child(2) {
-    padding-bottom: 30px;
+    padding-bottom: 45px;
 
     @media ($bp-large-min){
       float:left;
@@ -34,6 +34,10 @@
     @media ($bp-x-large-min) {
       padding-right: $column + ($gutter * 2);
     }
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
   }
 }
 
