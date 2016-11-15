@@ -90,7 +90,9 @@ $rich-text-spacing: 1.75rem;
 
   a {
     @include ma-link-underline;
+    border-bottom-width: 1px;
     overflow-wrap: break-word;
+    transition: border .3s;
     word-wrap: break-word;
     word-break: break-word;
   }

@@ -61,7 +61,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet sint quia est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
+        "text": "Lorem ipsum dolor sit amet, <a href=\"#\">Internal Link</a> consectetur <a href=\"http://www.google.com\">External Link</a> adipisicing elit. Suscipit amet sint quia est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
       }
     }
   },
@@ -79,7 +79,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+        "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, <a href=\"http://www.google.com\">External Link</a> fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
       }
     }
   },
@@ -113,7 +113,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Repudiandae accusamus distinctio dignissimos odit officiis est, ipsa ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
+        "text": "Repudiandae accusamus <a href=\"#\">Internal Link</a> distinctio dignissimos odit officiis est, ipsa ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
       }
     }
   },
@@ -131,7 +131,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet sint quia est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
+        "text": "Lorem ipsum dolor sit amet, consectetur <a href=\"http://www.google.com\">External Link</a> adipisicing elit. Suscipit amet sint quia <a href=\"http://www.google.com\">External Link</a> est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
       }
     }
   },
@@ -147,7 +147,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Voluptatibus, dicta consequatur placeat aliquid laudantium quo minima assumenda perspiciatis maxime id architecto tenetur a in dolore ipsa dolorum ratione aut qui ex asperiores, laborum, rerum numquam animi. Mollitia, a?"
+        "text": "Voluptatibus, dicta consequatur placeat aliquid laudantium quo minima assumenda perspiciatis maxime <a href=\"#\">Internal Link</a> id architecto tenetur a in dolore ipsa dolorum ratione aut qui ex asperiores, laborum, rerum numquam animi. Mollitia, a?"
       }
     }
   },
@@ -163,7 +163,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet sint quia est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
+        "text": "Lorem ipsum dolor <a href=\"http://www.google.com\">External Link</a> sit amet, consectetur adipisicing elit. Suscipit amet sint quia est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
       }
     }
   },
@@ -171,7 +171,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Repudiandae accusamus distinctio dignissimos odit officiis est, ipsa ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
+        "text": "Repudiandae accusamus distinctio dignissimos odit officiis est, ipsa <a href=\"#\">Internal Link</a> ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
       }
     }
   },
@@ -343,7 +343,7 @@
     "path": "@atoms/11-text/paragraph.twig",
     "data": {
       "paragraph" : {
-        "text": "Repudiandae accusamus distinctio dignissimos odit officiis est, ipsa ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
+        "text": "Repudiandae accusamus distinctio <a href=\"http://www.google.com\">External Link</a> dignissimos odit officiis est, ipsa ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
       }
     }
   },
