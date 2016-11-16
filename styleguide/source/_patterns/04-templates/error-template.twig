@@ -19,10 +19,10 @@
     </div>
   </main>
   <div>
-    <button aria-hidden class="ma__error-page__hidden-msg"></button>
-    <button aria-hidden class="ma__error-page__hidden-msg"></button>
-    <button aria-hidden class="ma__error-page__hidden-msg"></button>
-    <button aria-hidden class="ma__error-page__hidden-msg"></button>
-    <button aria-hidden class="ma__error-page__hidden-msg"></button>
+    {% for image in errorPage.images %}
+      <button aria-hidden class="ma__error-page__hidden-msg">
+        <img role="presentation" src="{{image.src}}" />
+      </button>
+    {% endfor %}
   </div>
 </section>
