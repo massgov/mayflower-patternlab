@@ -7,8 +7,8 @@
       "path":"@atoms/06-icons-locations/svg-loc-historic-site.twig",
       "name":"Historic Site"
     },{
-      "path":"@atoms/06-icons-locations/svg-loc-handicap-accessible.twig",
-      "name":"Handicap Accessible"
+      "path":"@atoms/06-icons-locations/svg-loc-wheelchair-accessible.twig",
+      "name":"Wheelchair Accessible"
     },{
       "path":"@atoms/06-icons-locations/svg-loc-dogs-allowed.twig",
       "name":"Dogs Allowed"
