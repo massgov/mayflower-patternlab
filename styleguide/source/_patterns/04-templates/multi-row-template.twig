@@ -4,8 +4,8 @@
     {% include "@base/placeholder.twig" with {'placeholder':{'text':'Pre Content'}} %}
   {% endblock %}
 </div>
-<div class="guide-content">
-  {% block guideContent %}
+<div class="multi-row-content">
+  {% block multiRowContent %}
     {% include "@organisms/by-template/jump-links.twig" %}
     {% for guideSection in guideSections %}
       {% include "@organisms/by-author/guide-section.twig" %}
