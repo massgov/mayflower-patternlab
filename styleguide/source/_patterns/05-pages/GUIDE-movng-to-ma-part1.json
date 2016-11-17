@@ -42,7 +42,7 @@
     }]
   },
 
-  "guideSections": [{
+  "multiRowSections": [{
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
     "pageContent": [{
