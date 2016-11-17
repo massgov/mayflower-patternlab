@@ -1,15 +1,15 @@
-<section class="ma__guide-section">
-  <h2 class="ma__guide-section__title"><a name="{{guideSection.id}}" id="{{guideSection.id}}">{{guideSection.title}}</a></h2>
+<section class="ma__multi-row-section">
+  <h2 class="ma__multi-row-section__title"><a name="{{multiRowSection.id}}" id="{{multiRowSection.id}}">{{multiRowSection.title}}</a></h2>
 </section> 
-<div class="main-content {{ guideSection.sideBar|length != 'single' ? 'main-content--two' : '' }}">
+<div class="main-content {{ multiRowSection.sideBar|length != 'single' ? 'main-content--two' : '' }}">
   <main class="page-content">
-    {% for content in guideSection.pageContent %}
+    {% for content in multiRowSection.pageContent %}
       {% include content.path with content.data %}
     {% endfor %}
   </main>
-  {% if guideSection.sideBar|length %} 
+  {% if multiRowSection.sideBar|length %} 
     <aside class="sidebar">
-      {% for sidebar in guideSection.sideBar %}
+      {% for sidebar in multiRowSection.sideBar %}
         {% include sidebar.path with sidebar.data %}
       {% endfor %}
     </aside>
