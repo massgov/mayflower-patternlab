@@ -12,7 +12,7 @@ var gulp           = require("gulp"),
 module.exports = function jsTask(config, env){
 
     var jsConfig = {
-        pages: config.root + "/js/*.js",
+        pages: config.root + "!/js/**/env.js" + "/js/*.js",
         dest: config.dest + "/js",
         // js uglify options.
         uglify: {},
@@ -29,9 +29,13 @@ module.exports = function jsTask(config, env){
         config.root + "/js/**/*.jsx"
     ]);
 
+    gulp.task('copy-env-js', function() {
+        return gulp.src(config.root + "/js/**/env.js")
+            .pipe(gulp.dest(jsConfig.dest));
+    });
 
     /* compile application javascript */
-    gulp.task("js", function(){
+    gulp.task("js", ['copy-env-js'], function(){
 
         var commonPackages = quench.getInstalledNPMPackages();
 
