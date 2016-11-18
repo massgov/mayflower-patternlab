@@ -29,8 +29,8 @@ export default function (window,document,$,undefined) {
       // relevant if open..
           $topLevelItem = $focusedElement.parents('.ma__main-nav__item'),
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
-          $openDropdownLinks = $openContent.find('.ma__main-nav__subitem .ma__main-nav__link'),
-          focusIndexInDropdown = $openDropdownLinks.index($focusedElement);
+          $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
+          focusIndexInDropdown = $dropdownLinks.index($focusedElement);
 
 
       // down arrow key
@@ -43,19 +43,20 @@ export default function (window,document,$,undefined) {
         //  - Select next menu item
         e.preventDefault();
         if(open) {
-          if(focusIndexInDropdown === ($openDropdownLinks.length-1) ) {
+          if(focusIndexInDropdown === ($dropdownLinks.length-1) ) {
             return;
           } else {
             if(focusIndexInDropdown === -1) {
-              $openDropdownLinks[1].focus();
+              $dropdownLinks[1].focus();
             } else {
-              $openDropdownLinks[focusIndexInDropdown+1].focus();
+              $dropdownLinks[focusIndexInDropdown+1].focus();
             }
             return;
           }
         } else {
           show($topLevelItem.find('.js-main-nav-content'));
           $link.addClass(openClass);
+          $dropdownLinks[1].focus();
           return;
         }
       }
@@ -74,7 +75,7 @@ export default function (window,document,$,undefined) {
             $topLevelLink.focus();
             return;
           } else {
-            $openDropdownLinks[focusIndexInDropdown-1].focus();
+            $dropdownLinks[focusIndexInDropdown-1].focus();
             return;
           }
         } else {
