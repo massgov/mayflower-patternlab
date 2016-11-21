@@ -13,12 +13,12 @@
   }
 
   &__label {
-    font-weight: 700;
+    color: $c-theme-yellow;
+    font-weight: 900;
   }
 
   &__type {
-    color: $c-theme-yellow;
-    font-weight: 900;
+    font-weight: 700;
   }
 
   &__title {

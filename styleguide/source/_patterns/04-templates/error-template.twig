@@ -4,10 +4,8 @@
   </header>
 
   <main class="ma__error-page__content">
-    <div class="ma__error-page__label">
-      Error
-    </div>
     <div class="ma__error-page__type">{{ errorPage.type }}</div>
+    <div class="ma__error-page__label">{{ errorPage.label }}</div>
     <h1 class="ma__error-page__title">{{ errorPage.title }}</h1>
     <h2 class="ma__error-page__message">{{ errorPage.message }}</h2>
     <div class="main-content">
@@ -18,11 +16,4 @@
       </div>
     </div>
   </main>
-  <div>
-    {% for image in errorPage.images %}
-      <button aria-hidden class="ma__error-page__hidden-msg">
-        <img role="presentation" src="{{image.src}}" />
-      </button>
-    {% endfor %}
-  </div>
 </section>

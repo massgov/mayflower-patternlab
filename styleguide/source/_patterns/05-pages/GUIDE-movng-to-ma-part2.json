@@ -42,7 +42,7 @@
     }]
   },
 
-  "guideSections": [{
+  "multiRowSections": [{
     "title": "Converting Your Out-Of-State Driver’s License",
     "id": "converting-your-out-of-state-drivers-license",
     "pageContent": [{
@@ -540,7 +540,7 @@
     "title": "Related Guides",
     "view":"guide",
     "buttonMinor" : {
-      "link": "#",
+      "href": "#",
       "text": "See All Guides"
     },
     "pages": [{

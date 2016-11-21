@@ -1,0 +1,48 @@
+.ma__split-columns {
+  @include clearfix;
+
+  &__container {
+    @include ma-container;
+
+    .main-content--two & {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__column {
+    margin-bottom: 45px;
+
+    // two items (50/50)
+    &:first-child:nth-last-child(2),
+    &:first-child:nth-last-child(2) ~ & {
+      
+      @media($bp-medium-min) {
+        @include ma-reset-rich-text;
+        @include span-columns(3 of 6);
+      }
+    }
+
+    // three columns
+    &:first-child:nth-last-child(3),
+    &:first-child:nth-last-child(3) ~ & {
+      
+      @media($bp-large-min) {
+        @include ma-reset-rich-text;
+        @include span-columns(2 of 6);
+      }
+    }
+
+    .main-content--two & {
+      
+      // two items (50/50)
+      &:first-child:nth-last-child(2),
+      &:first-child:nth-last-child(2) ~ & {
+        @media($bp-large-min) {
+          @include ma-reset-rich-text;
+          @include span-columns(2 of 4);
+        }
+      }
+    }
+  }
+}

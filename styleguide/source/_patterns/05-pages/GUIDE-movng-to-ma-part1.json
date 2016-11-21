@@ -42,7 +42,7 @@
     }]
   },
 
-  "guideSections": [{
+  "multiRowSections": [{
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
     "pageContent": [{
@@ -746,7 +746,7 @@
     "title": "Related Guides",
     "view":"guide",
     "buttonMinor" : {
-      "link": "#",
+      "href": "#",
       "text": "See All Guides"
     },
     "pages": [{

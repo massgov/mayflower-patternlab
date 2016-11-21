@@ -51,7 +51,7 @@
     }]
   },
 
-  "guideSections": [{
+  "multiRowSections": [{
     "title": "Residency",
     "id": "residency",
     "pageContent": [{

@@ -1,5 +1,6 @@
 $error-page-bg-offset-full: calc(50% - 320px);
 $error-page-bg-offset-narrow: calc(50% - 125px);
+$error-page-max-width: 670px;
 
 @keyframes error-page-bg-full {
   0% { 
@@ -58,7 +59,7 @@ $error-page-bg-offset-narrow: calc(50% - 125px);
 
   &__header {
     @include ma-container;
-    max-width: 650px;
+    max-width: $error-page-max-width;
     padding: 45px 0 80px;
     position: relative;
 
@@ -69,7 +70,7 @@ $error-page-bg-offset-narrow: calc(50% - 125px);
 
   &__content {
     @include ma-container;
-    max-width: 650px;
+    max-width: $error-page-max-width;
     position: relative;
 
     @media ($bp-large-min) {
@@ -78,19 +79,20 @@ $error-page-bg-offset-narrow: calc(50% - 125px);
   }
 
   &__label {
-    font-size: 1.75rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-
-  &__type {
     font-size: 9rem;
     line-height: 0.72;
     margin-bottom: 15px;
+    text-transform: uppercase;
 
     @media ($bp-small-min) {
       font-size: 12.75rem;
     }
+  }
+
+  &__type {
+    font-size: 1.75rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
   }
 
   &__title {
