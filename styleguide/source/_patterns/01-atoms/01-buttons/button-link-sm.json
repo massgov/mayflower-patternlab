@@ -1,6 +1,6 @@
 {
 	"buttonMain":{
-        "text":"Main Button",
-        "link":"#"
-    }
+    "text":"Main Button",
+    "href":"#"
+  }
 }

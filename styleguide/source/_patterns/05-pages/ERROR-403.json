@@ -1,17 +1,9 @@
 {
   "errorPage": {
     "type": "403",
+    "label": "Oh no",
     "title": "This page is forbidden",
-    "message": "Sorry, you don't have access to this page",
-    "images": [{
-      "src": "/assets/images/baker-butterfly.jpg"
-    },{
-      "src": "/assets/images/baker-laughing-small.jpg"
-    },{
-      "src": "/assets/images/bee.png"
-    },{
-      "src": "/assets/images/mantis.png"
-    }]
+    "message": "Sorry, you don't have access to this page"
   },
 
   "helpfulLinks": {

@@ -1,4 +1,4 @@
-.ma__guide-section {
+.ma__multi-row-section {
 
   &__title {
     @include ma-border-decorative($c-theme-green);
@@ -8,7 +8,7 @@
     }
   }
 
-  & ~ & &__title {
+  & ~ & &__title { // divider needs to match content width
     border-color: $c-bd-divider;
   }
 }

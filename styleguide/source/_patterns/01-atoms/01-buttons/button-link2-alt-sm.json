@@ -1,6 +1,6 @@
 {
   "buttonMinorAlt":{
-        "text":"minor Alt Button",
-        "link":"#"
-    }
+    "text":"minor Alt Button",
+    "href":"#"
+  }
 }

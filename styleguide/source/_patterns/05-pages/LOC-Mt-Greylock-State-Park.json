@@ -452,7 +452,7 @@
   "suggestedPages": {
     "title": "Related Parks",
     "buttonMinor" : {
-      "link": "#",
+      "href": "#",
       "text": "Do Something"
     },
     "pages": [{

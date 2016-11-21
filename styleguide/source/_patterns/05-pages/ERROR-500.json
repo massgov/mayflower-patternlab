@@ -1,14 +1,8 @@
 {
   "errorPage": {
     "type": "500",
+    "label": "Uh Oh",
     "title": "Something went wrong",
-    "message": "Sorry, we're having some technical issues. Please try refreshing the page in a few minutes",
-    "images": [{
-      "src": "/assets/images/baker-butterfly.jpg"
-    },{
-      "src": "/assets/images/baker-laughing-small.jpg"
-    },{
-      "src": "/assets/images/lady-bug.png"
-    }]
+    "message": "Sorry, we're having some technical issues. Please try refreshing the page in a few minutes"
   }
 }
