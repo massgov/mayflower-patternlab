@@ -23,6 +23,12 @@
     @media ($bp-medium-min) {
       text-align: center;
     }
+
+    @media ($bp-large-min) {
+      .ma__rich-text {
+        padding: 0;
+      }
+    }
   }
 
   &__items {

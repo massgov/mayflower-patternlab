@@ -16,7 +16,7 @@
         "url": "#",
         "term": "Nature & Outdoor Activities"
       }]
-    } 
+    }
   },
 
   "actionDetails" : {
@@ -152,7 +152,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident Citizen or Alien Fishing"
+                    "text": "Resident Citizen or Non-Resident Fishing"
                   },
                   {
                     "heading": "false",
@@ -167,7 +167,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident Citizen or Alien Minor Fishing (Age 15-17)"
+                    "text": "Resident Citizen or Non-Resident Minor Fishing (Age 15-17)"
                   },
                   {
                     "heading": "false",
@@ -249,7 +249,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident and Non-Resident Citizen Hunting, Paraplegic"
+                    "text": "Resident and Non-Resident Citizen Hunting"
                   },{
                     "heading": "false",
                     "colspan": "",
@@ -263,7 +263,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident Alien Hunting"
+                    "text": "Resident Hunting"
                   },
                   {
                     "heading": "false",
@@ -276,8 +276,8 @@
             }
           }
         }]
-      } 
-    }, 
+      }
+    },
     {
       "title":"Subnav Item",
       "intro": "",
@@ -399,10 +399,10 @@
               "unorderedList": [{
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               }]
             }
@@ -422,10 +422,10 @@
               "orderedList": [{
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               }]
             }
@@ -469,7 +469,7 @@
           "markers": [{
             "position": {
               "lat": 42.366565,
-              "lng": -71.058940 
+              "lng": -71.058940
             },
             "label": "A",
             "infoWindow": {
@@ -486,7 +486,7 @@
           },{
             "position": {
               "lat": 42.358795,
-              "lng": -71.063858 
+              "lng": -71.063858
             },
             "label": "B",
             "infoWindow": {
