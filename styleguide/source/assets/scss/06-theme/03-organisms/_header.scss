@@ -2,13 +2,13 @@
   background-color: $c-bg-section;
 
   &__nav-container {
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       background-color: $c-bg-section;
     }
   }
 
   &__button-container {
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       background-color: $c-theme-blue;
     }
   }
@@ -62,7 +62,7 @@
 
   &__nav-search,
   &__main-nav {
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       border-bottom-color: $c-bd-divider;
     }
   }

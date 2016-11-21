@@ -1,0 +1,19 @@
+<section class="ma__split-columns">
+  <div class="ma__split-columns__container">
+    <div class="ma__split-columns__column">
+      {% block splitColumn1 %}
+        {% include "@base/placeholder.twig" with {'placeholder':{'text':'33%'}} %}
+      {% endblock %}
+    </div>
+    <div class="ma__split-columns__column">
+      {% block splitColumn2 %}
+        {% include "@base/placeholder.twig" with {'placeholder':{'text':'33%'}} %}
+      {% endblock %}
+    </div>
+    <div class="ma__split-columns__column">
+      {% block splitColumn3 %}
+        {% include "@base/placeholder.twig" with {'placeholder':{'text':'33%'}} %}
+      {% endblock %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+.ma__helpful-links {
+
+  &__items {
+    @include ma-reset-list;
+  }
+
+  &__item  {
+
+    & + & {
+      padding-top: 7px;
+    }
+  }
+
+  .ma__comp-heading {
+    margin-bottom: .75em;
+
+    .ma__error-page &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

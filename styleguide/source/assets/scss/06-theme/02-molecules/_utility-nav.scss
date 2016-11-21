@@ -1,12 +1,12 @@
 .ma__utility-nav {
 
-  @media( $bp-medium-min) {
+  @media ($bp-header-toggle-min) {
     background-color: $c-theme-blue;
     color: $c-font-inverse;
   }
 
   &__item {
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       &:hover {
         background-color: $c-white;
         box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
@@ -19,7 +19,7 @@
     @include ma-font(500);
     color: $c-font-base;
 
-    @media( $bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       background-color: $c-theme-blue;
       color: $c-font-inverse;
     }
@@ -32,7 +32,7 @@
     svg {
       fill: $c-theme-blue;
 
-      @media( $bp-medium-min) {
+      @media ($bp-header-toggle-min) {
         fill: $c-font-inverse;
         opacity: .7;
         stroke: transparent;
@@ -45,7 +45,7 @@
     background-color: $c-bg-section;
     color: $c-font-inverse;
 
-    @media( $bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       background-color: $c-theme-blue;
     }
 
@@ -55,7 +55,7 @@
   }
 
   &__container {
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       background-color: $c-theme-blue;
     }
 
@@ -63,7 +63,7 @@
 
   &__close {
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       display: none;
     }
 

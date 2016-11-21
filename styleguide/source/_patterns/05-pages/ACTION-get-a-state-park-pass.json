@@ -16,7 +16,7 @@
         "url": "#",
         "term": "Nature & Outdoor Activities"
       }]
-    } 
+    }
   },
 
   "actionDetails" : {
@@ -152,7 +152,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident Citizen or Alien Fishing"
+                    "text": "Resident Citizen or Non-Resident Fishing"
                   },
                   {
                     "heading": "false",
@@ -167,7 +167,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident Citizen or Alien Minor Fishing (Age 15-17)"
+                    "text": "Resident Citizen or Non-Resident Minor Fishing (Age 15-17)"
                   },
                   {
                     "heading": "false",
@@ -249,7 +249,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident and Non-Resident Citizen Hunting, Paraplegic"
+                    "text": "Resident and Non-Resident Citizen Hunting"
                   },{
                     "heading": "false",
                     "colspan": "",
@@ -263,7 +263,7 @@
                     "heading": "false",
                     "colspan": "",
                     "rowspan": "",
-                    "text": "Resident Alien Hunting"
+                    "text": "Resident Hunting"
                   },
                   {
                     "heading": "false",
@@ -276,8 +276,8 @@
             }
           }
         }]
-      } 
-    }, 
+      }
+    },
     {
       "title":"Subnav Item",
       "intro": "",
@@ -399,10 +399,10 @@
               "unorderedList": [{
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               }]
             }
@@ -422,10 +422,10 @@
               "orderedList": [{
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               },
-              { 
+              {
                 "text": "bullet item"
               }]
             }
@@ -469,7 +469,7 @@
           "markers": [{
             "position": {
               "lat": 42.366565,
-              "lng": -71.058940 
+              "lng": -71.058940
             },
             "label": "A",
             "infoWindow": {
@@ -486,7 +486,7 @@
           },{
             "position": {
               "lat": 42.358795,
-              "lng": -71.063858 
+              "lng": -71.063858
             },
             "label": "B",
             "infoWindow": {
@@ -574,14 +574,13 @@
       "contactUs": {
         "title": {
           "href":"",
-          "target":"",
           "text": "Department of Conservation and Recreation",
           "chevron":""
         },
-        "hide": "fax",
-        "phone": {
-          "icon": "atoms-svg-phone",
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
+          "hidden": "",
           "items": [{
             "type": "phone",
             "label":"Main",
@@ -589,10 +588,10 @@
             "link":"16176261250",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           }]
-        },
-        "online": {
-          "icon": "atoms-svg-laptop",
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
+          "hidden": "",
           "items": [{
             "type": "email",
             "label":"Email",
@@ -600,10 +599,10 @@
             "link":"mass.parks@state.ma.us",
             "details":""
           }]
-        },
-        "fax": {
-          "icon": "atoms-svg-fax-icon",
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
+          "hidden": "true",
           "items": [{
             "type": "phone",
             "label":"",
@@ -611,28 +610,30 @@
             "link":"16176261351",
             "details":"Please allow 24 hours for a response"
           }]
-        },
-        "address": [{
-          "address1": "251 Causeway Street",
-          "address2": "Suite 900",
-          "city": "Boston",
-          "state": "MA",
-          "zip": "02114-2104",
-          "directions": ""
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "label":"",
+            "value":"251 Causeway Street<br/>Suite 900<br/>Boston, MA 02114-2104",
+            "link": "",
+            "details":""
+          }]
         }]
       }
     },{
       "contactUs": {
         "title": {
           "href":"",
-          "target":"",
           "text": "MassParks",
           "chevron":""
         },
-        "hide": "fax",
-        "phone": {
-          "icon": "atoms-svg-phone",
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
+          "hidden": "",
           "items": [{
             "type": "phone",
             "label":"Main",
@@ -640,10 +641,10 @@
             "link":"16176261250",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           }]
-        },
-        "online": {
-          "icon": "atoms-svg-laptop",
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
+          "hidden": "",
           "items": [{
             "type": "email",
             "label":"Email",
@@ -651,10 +652,10 @@
             "link":"mass.parks@state.ma.us",
             "details":""
           }]
-        },
-        "fax": {
-          "icon": "atoms-svg-fax-icon",
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
+          "hidden": "true",
           "items": [{
             "type": "phone",
             "label":"",
@@ -662,14 +663,17 @@
             "link":"16176261351",
             "details":"Please allow 24 hours for a response"
           }]
-        },
-        "address": [{
-          "address1": "251 Causeway Street",
-          "address2": "Suite 900",
-          "city": "Boston",
-          "state": "MA",
-          "zip": "02114-2104",
-          "directions": ""
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "label":"",
+            "value":"251 Causeway Street<br/>Suite 900<br/>Boston, MA 02114-2104",
+            "link": "",
+            "details":""
+          }]
         }]
       }
     }]

@@ -79,6 +79,7 @@
       top: 9px;
     transition: all .2s ease;
     transform-origin: center center;
+    z-index: 1;
 
     .is-open & {
       transform: rotate(135deg);
@@ -90,6 +91,13 @@
   }
 
   &__column {
+
+    @media ($bp-small-max) {
+      .is-open &:last-child {
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
+    }
 
     @media ($bp-small-min) {
       float: left;
@@ -139,6 +147,10 @@
       width: 22px;
     }
 
+    span {
+      @include ma-link-underline;
+    }
+
     @media ($bp-small-max) {
       display: none;
       font-size: 1.25rem;
@@ -151,10 +163,11 @@
 
       .is-open & {
         display: block;
+      }
 
-        & + & {
-          border-top: 1px solid;
-        }
+      .is-open & + & {
+        border-top-width: 1px;
+        border-top-style: solid;
       }
     }
   }

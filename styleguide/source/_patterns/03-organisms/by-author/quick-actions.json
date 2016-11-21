@@ -4,6 +4,7 @@
       "text":"Quick Actions",
       "color":"green"
     },
+    "sidebarHeading": "",
     "links": [{
       "type": "",
       "href": "#",

@@ -9,7 +9,7 @@
     }
     &.is-active {
 
-      @include ma-border-decorative($c-theme-green,$c-bg-section);
+      @include ma-border-decorative($c-theme-green);
     }
   }
 
@@ -41,7 +41,7 @@
   &__subitems {
     background-color: $c-bg-section;
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       background-color: $c-white;
       box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
     }
@@ -49,7 +49,7 @@
 
   &__container {
 
-    @media ($bp-medium-max) {
+    @media ($bp-header-toggle-max) {
       background-color: $c-white;
     }
   }

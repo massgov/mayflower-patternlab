@@ -1,0 +1,1 @@
+var themePath = '/assets';

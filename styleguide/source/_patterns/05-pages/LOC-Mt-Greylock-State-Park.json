@@ -31,8 +31,8 @@
       "path":"atoms-svg-loc-historic-site",
       "name":"Historic Site"
     },{
-      "path":"atoms-svg-loc-handicap-accessible",
-      "name":"Handicap Accessible"
+      "path":"atoms-svg-loc-wheelchair-accessible",
+      "name":"Wheelchair Accessible"
     },{
       "path":"atoms-svg-loc-dogs-allowed",
       "name":"Dogs Allowed"
@@ -53,7 +53,7 @@
       "chevron": "true"
     },
     "phone": {
-      "icon": "atoms-svg-phone",
+      "icon": "@atoms/05-icons/svg-phone.twig",
       "name": "Phone",
       "items": [{
         "type": "phone",
@@ -64,7 +64,7 @@
       }]
     },
     "online": {
-      "icon": "atoms-svg-laptop",
+      "icon": "@atoms/05-icons/svg-laptop.twig",
       "name": "Online",
       "items": [{
         "type": "email",
@@ -452,7 +452,7 @@
   "suggestedPages": {
     "title": "Related Parks",
     "buttonMinor" : {
-      "link": "#",
+      "href": "#",
       "text": "Do Something"
     },
     "pages": [{
@@ -522,14 +522,13 @@
       "contactUs": {
         "title": {
           "href":"",
-          "target":"",
           "text": "Bascom Lodge",
           "chevron":""
         },
-        "hide": "address",
-        "phone": {
-          "icon": "atoms-svg-phone",
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
+          "hidden": "",
           "items": [{
             "type": "phone",
             "label":"Main",
@@ -543,10 +542,10 @@
             "link":"16175557777",
             "details":"For those who need accessible services"
           }]
-        },
-        "online": {
-          "icon": "atoms-svg-laptop",
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
+          "hidden": "",
           "items": [{
             "type": "email",
             "label":"Email",
@@ -554,10 +553,10 @@
             "link":"mount.greylock@state.ma.us",
             "details":""
           }]
-        },
-        "fax": {
-          "icon": "atoms-svg-fax-icon",
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
+          "hidden": "true",
           "items": [{
             "type": "phone",
             "label":"",
@@ -565,33 +564,30 @@
             "link":"14134994262",
             "details":"Please allow 24 hours for a response"
           }]
-        },
-        "address": [{
-          "address1": "555 Park Drive",
-          "address2": "",
-          "city": "Boston",
-          "state": "MA",
-          "zip": "02231",
-          "directions": {
-            "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-            "target": "_blank",
-            "text":"directions",
-            "chevron": "true"
-          }
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "label":"",
+            "value":"555 Park Drive<br />Boston, MA 02231",
+            "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+            "details":""
+          }]
         }]
       }
     },{
       "contactUs": {
         "title": {
           "href":"",
-          "target":"",
           "text": "Museum",
           "chevron":""
         },
-        "hide": "fax",
-        "phone": {
-          "icon": "atoms-svg-phone",
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
+          "hidden": "",
           "items": [{
             "type": "phone",
             "label":"Main",
@@ -599,10 +595,10 @@
             "link":"14134438765",
             "details":""
           }]
-        },
-        "online": {
-          "icon": "atoms-svg-laptop",
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
+          "hidden": "",
           "items": [{
             "type": "email",
             "label":"Email",
@@ -610,10 +606,10 @@
             "link":"mount.greylock@state.ma.us",
             "details":""
           }]
-        },
-        "fax": {
-          "icon": "atoms-svg-fax-icon",
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
+          "hidden": "true",
           "items": [{
             "type": "phone",
             "label":"",
@@ -621,14 +617,17 @@
             "link":"14134994262",
             "details":"Please allow 24 hours for a response"
           }]
-        },
-        "address": [{
-          "address1": "555 Park Drive",
-          "address2": "",
-          "city": "North Hampton",
-          "state": "MA",
-          "zip": "02231",
-          "directions": ""
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "label":"",
+            "value":"555 Park Drive<br />North Hampton, MA 02231",
+            "link": "",
+            "details":""
+          }]
         }]
       }
     }]
@@ -646,7 +645,7 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Horse Party"
+            "text": "Fishing Clinic"
           },
           "date":"June 24, 2017, 12:00pm",
           "description":"This is a description of the event that will happen at a future date"

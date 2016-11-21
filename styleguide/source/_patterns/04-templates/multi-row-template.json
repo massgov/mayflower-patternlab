@@ -13,7 +13,7 @@
     }]
   },
 
-  "guideSections": [{
+  "multiRowSection": [{
     "title": "Placeholder",
     "id": "placeholder1",
     "pageContent": [{

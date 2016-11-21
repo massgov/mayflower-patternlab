@@ -79,15 +79,16 @@
 @import "03-organisms/collage-header";
 @import "03-organisms/feedback-form";
 @import "03-organisms/footer";
-@import "03-organisms/guide-section";
 @import "03-organisms/header";
 @import "03-organisms/header-alert";
+@import "03-organisms/helpful-links";
 @import "03-organisms/illustrated-header";
 @import "03-organisms/image-credit";
 @import "03-organisms/link-list";
 @import "03-organisms/jump-links";
 @import "03-organisms/key-actions";
 @import "03-organisms/location-banner";
+@import "03-organisms/multi-row-section";
 @import "03-organisms/page-banner";
 @import "03-organisms/page-discourse";
 @import "03-organisms/page-header";
@@ -99,9 +100,11 @@
 @import "03-organisms/sidebar-promo";
 @import "03-organisms/sidebar-widget";
 @import "03-organisms/split50";
+@import "03-organisms/split-columns";
 @import "03-organisms/suggested-pages";
 @import "03-organisms/test-feed";
 @import "03-organisms/top-actions";
 
 // Templates - page content types
 @import "04-templates/layout";
+@import "04-templates/error-page";

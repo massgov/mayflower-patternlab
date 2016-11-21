@@ -1,0 +1,19 @@
+<section class="ma__error-page">
+  <header class="ma__error-page__header">
+    {% include "@atoms/09-media/site-logo.twig" %}
+  </header>
+
+  <main class="ma__error-page__content">
+    <div class="ma__error-page__type">{{ errorPage.type }}</div>
+    <div class="ma__error-page__label">{{ errorPage.label }}</div>
+    <h1 class="ma__error-page__title">{{ errorPage.title }}</h1>
+    <h2 class="ma__error-page__message">{{ errorPage.message }}</h2>
+    <div class="main-content">
+      <div class="page-content">
+        {% block pageContent %}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Optional Page content'}} %}
+        {% endblock %}
+      </div>
+    </div>
+  </main>
+</section>
