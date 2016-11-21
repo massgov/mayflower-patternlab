@@ -12,7 +12,7 @@ export default function (window,document,$,undefined) {
         submenuClass = "show-submenu",
         $parent = $(this),
         previousKey = null,
-        breakpoint = 780;
+        breakpoint = 800; // matches CSS breakpoint for Main Nav
 
     $parent.find('.js-main-nav-toggle').on('keydown', function(e) {
       if(windowWidth <= breakpoint) {
