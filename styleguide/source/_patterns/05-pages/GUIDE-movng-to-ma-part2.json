@@ -540,7 +540,7 @@
     "title": "Related Guides",
     "view":"guide",
     "buttonMinor" : {
-      "link": "#",
+      "href": "#",
       "text": "See All Guides"
     },
     "pages": [{
