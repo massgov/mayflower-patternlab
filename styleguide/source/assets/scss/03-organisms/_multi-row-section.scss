@@ -1,9 +1,22 @@
 .ma__multi-row-section {
-  @include ma-container;
 
+  @media ($bp-large-max) {
+    box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
+    padding-bottom: 45px;
+
+    &:last-child {
+      box-shadow: none;
+    }
+  }
+
+  &__container {
+    @include ma-container;
+  }
+ 
   &__title {
     @include ma-border-decorative;
     padding-bottom: .25em;
+    padding-top: 45px;
 
     a {
       cursor: default;
@@ -11,8 +24,11 @@
   }
   
   & ~ & &__title {
-    border-top-width: 1px;
-    border-top-style: solid;
-    padding-top: 90px;
+
+    @media ($bp-large-min) {
+      border-top-width: 1px;
+      border-top-style: solid;
+      padding-top: 90px;
+    }
   }
 }
