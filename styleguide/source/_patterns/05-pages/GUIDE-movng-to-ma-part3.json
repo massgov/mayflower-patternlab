@@ -21,7 +21,7 @@
   },
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
-  
+
   "jumpLinks": {
     "title": "In this guide",
     "links": [{
@@ -67,16 +67,16 @@
         },{
           "path": "@atoms/08-lists/unordered-list.twig",
           "data": {
-            "unorderedList": [{ 
-              "text": "Voter registration" 
-            },{ 
-              "text": "Automobile registration" 
-            },{ 
-              "text": "Massachusetts driver’s license or ID" 
-            },{ 
-              "text": "Rent, utility, or telephone bills" 
-            },{ 
-              "text": "A city or town street list with your name on it" 
+            "unorderedList": [{
+              "text": "Voter registration"
+            },{
+              "text": "Automobile registration"
+            },{
+              "text": "Massachusetts driver’s license or ID"
+            },{
+              "text": "Rent, utility, or telephone bills"
+            },{
+              "text": "A city or town street list with your name on it"
             }]
           }
         }]
@@ -108,7 +108,7 @@
         }
       }
     }],
-    
+
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
@@ -203,7 +203,7 @@
           }]
         }
       }
-    }],  
+    }],
 
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
@@ -319,7 +319,7 @@
         }]
       }
     }],
-    
+
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
@@ -508,8 +508,8 @@
         },{
           "path": "@atoms/09-media/image.twig",
           "data": {
-            "image": { 
-              "alt": "alt text", 
+            "image": {
+              "alt": "alt text",
               "src": "/assets/images/placeholder/800x400.png",
               "pull": ""
             }
@@ -517,7 +517,7 @@
         }]
       }
     }],
-  
+
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
@@ -598,8 +598,8 @@
         },{
           "path": "@atoms/09-media/image.twig",
           "data": {
-            "image": { 
-              "alt": "alt text", 
+            "image": {
+              "alt": "alt text",
               "src": "/assets/images/placeholder/800x400.png",
               "pull": "right"
             }
@@ -614,7 +614,7 @@
         }]
       }
     }],
-  
+
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
@@ -698,9 +698,9 @@
       "path": "@organisms/by-author/callout.twig",
       "data": {
         "callOut" : {
-          "text": "Mass.Gov was so helpful when starting up my business. They had everything I needed and it was easy to find.",
+          "text": "Testimonial from a client or quote from source that you want highlighted.",
           "author": "Jane Doe",
-          "title": "Hair Salon Owner"
+          "title": "Jane Doe's Title"
         }
       }
     },{
@@ -754,7 +754,7 @@
         }
       }
     }],
-  
+
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
@@ -876,7 +876,7 @@
         }
       }
     }],
-  
+
     "sideBar": []
   }],
 

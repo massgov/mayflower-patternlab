@@ -31,8 +31,8 @@
       "path":"atoms-svg-loc-historic-site",
       "name":"Historic Site"
     },{
-      "path":"atoms-svg-loc-handicap-accessible",
-      "name":"Handicap Accessible"
+      "path":"atoms-svg-loc-wheelchair-accessible",
+      "name":"Wheelchair Accessible"
     },{
       "path":"atoms-svg-loc-dogs-allowed",
       "name":"Dogs Allowed"
@@ -645,7 +645,7 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Horse Party"
+            "text": "Fishing Clinic"
           },
           "date":"June 24, 2017, 12:00pm",
           "description":"This is a description of the event that will happen at a future date"

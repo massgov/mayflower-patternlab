@@ -36,7 +36,7 @@
           "heading": "false",
           "colspan": "",
           "rowspan": "",
-          "text": "Resident Citizen or Alien Fishing"
+          "text": "Resident Citizen or Non-Resident Fishing"
         },
         {
           "heading": "false",
@@ -51,7 +51,7 @@
           "heading": "false",
           "colspan": "",
           "rowspan": "",
-          "text": "Resident Citizen or Alien Minor Fishing (Age 15-17)"
+          "text": "Resident Citizen or Non-Resident Minor Fishing (Age 15-17)"
         },
         {
           "heading": "false",
@@ -133,7 +133,7 @@
           "heading": "false",
           "colspan": "",
           "rowspan": "",
-          "text": "Resident and Non-Resident Citizen Hunting, Paraplegic"
+          "text": "Resident and Non-Resident Citizen Hunting"
         },{
           "heading": "false",
           "colspan": "",
@@ -147,7 +147,7 @@
           "heading": "false",
           "colspan": "",
           "rowspan": "",
-          "text": "Resident Alien Hunting"
+          "text": "Resident Hunting"
         },
         {
           "heading": "false",
