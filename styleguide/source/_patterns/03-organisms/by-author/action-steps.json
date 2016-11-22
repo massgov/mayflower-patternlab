@@ -36,16 +36,6 @@
               "text": "You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days."
             }
           }
-        },{
-          "path": "@molecules/callout-link.twig",
-          "data": {
-            "calloutLink": {
-              "text": "Order a MassParks Pass online through Reserve America",
-              "type": "",
-              "href": "#",
-              "quickaction": "false"
-            }
-          }
         }]
       },
       {

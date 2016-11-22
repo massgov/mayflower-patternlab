@@ -1,8 +1,8 @@
 {
     "orderedList": [
         { "text": "This is a list item in an ordered list" },
-        { "text": "An ordered list is a list in which the sequence of items is not important. Sometimes, an ordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line." },
-        { 
+        { "text": "An ordered list is a list in which the sequence of items is important." },
+        {
             "text": "Lists can be nested inside of each other",
             "sublist" : [
                 {"text":"This is a nested list item"},

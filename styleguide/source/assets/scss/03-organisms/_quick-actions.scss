@@ -3,6 +3,10 @@
   .sidebar & {
     @media ($bp-large-max) {
       display: none;
+
+      & + .ma__colored-heading {
+        margin-top: 0;
+      }
     }
   }
   .page-content & {

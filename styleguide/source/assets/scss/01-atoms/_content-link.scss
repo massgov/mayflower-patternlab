@@ -1,5 +1,8 @@
 .ma__content-link {
   @include ma-link-underline;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 
   &--chevron {
     @include ma-chevron;
@@ -7,6 +10,15 @@
 
     &:after {
       margin-right: -14px;
+    }
+  }
+
+  &--phone {
+    border: none;
+    padding-bottom: 0;
+
+    &:hover {
+      border: none;
     }
   }
 }

@@ -10,14 +10,14 @@
       }
     }
   </style>
+  <div class="ma__location-banner__map">
+    {% set actionMap = locationBanner.actionMap %}
+    {% include "@molecules/action-map.twig" %}
+  </div>
   <div 
     class="ma__location-banner__image" 
     id="GUID24872901570"
     role="image"
     title="{{locationBanner.bgTitle}}">
-  </div>
-  <div class="ma__location-banner__map">
-    {% set actionMap = locationBanner.actionMap %}
-    {% include "@molecules/action-map.twig" %}
   </div>
 </section>

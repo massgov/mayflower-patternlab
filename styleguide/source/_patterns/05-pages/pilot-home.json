@@ -1,84 +1,85 @@
 {
   "actionCard": {
-    "title": "Things to Do",
-    "description": "Here you'll find the pages we redesigned first",
-    "actions":[{
-      "icon":"atoms-svg-campfire",
-      "category":"State Parks & Recreation",
-      "linkText":"Get a State Park Pass",
-      "linkHref":"#",
-      "theme":"green"
-    },
-    {
-      "icon":"atoms-svg-id-card",
-      "category":"Recreational Licenses & Permits",
-      "linkText":"Buy a Freshwater Fishing License",
-      "linkHref":"#",
-      "theme":"blue"
-    },
-    {
-      "icon":"atoms-svg-certificate",
-      "category":"Professional Licensing & Certification",
-      "linkText":"Apply for a Nursing License: In-State Residents",
-      "linkHref":"#",
-      "theme":""
-    },
-    {
-      "icon":"atoms-svg-certificate",
-      "category":"Professional Licensing & Certification",
-      "linkText":"Apply for a Nursing License: Out-Of-State Residents",
-      "linkHref":"#",
-      "theme":"dark-gray"
-    },
-    {
-      "icon":"atoms-svg-server-rack",
-      "category":"Business Services & Resources",
-      "linkText":"Register Your Business",
-      "linkHref":"#",
-      "theme":"blue"
-    },
-    {
-      "icon":"atoms-svg-apple",
-      "category":"Health & Social Services",
-      "linkText":"Apply for MassHealth",
-      "linkHref":"#",
-      "theme":"green"
-    },
-    {
-      "icon":"atoms-svg-application",
-      "category":"Unemployment",
-      "linkText":"File for Unemployment",
-      "linkHref":"#",
-      "theme":"dark-gray"
-    },
-    {
-      "icon":"atoms-svg-apple",
-      "category":"Health & Social Services",
-      "linkText":"Apply for SNAP Benefits",
-      "linkHref":"#",
-      "theme":""
-    },
-    {
-      "icon":"atoms-svg-family",
-      "category":"Family & Children",
-      "linkText":"Get a Child Support Order",
-      "linkHref":"#",
-      "theme":"green"
-    },
-    {
-      "icon":"atoms-svg-gavel",
-      "category":"Legal & Justice",
-      "linkText":"Respond to a Jury Duty Summons",
-      "linkHref":"#",
-      "theme":"blue"
-    }]
+    "title": "Common Actions",
+    "description": "Get a feel for where we're headed",
+    "actions":[
+      {
+        "icon":"@atoms/07-user-added-icons/svg-campfire.twig",
+        "category":"State Parks & Recreation",
+        "linkText":"Get a DCR ParksPass",
+        "linkHref":"#",
+        "theme":"green"
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-id-card.twig",
+        "category":"Recreational Licenses & Permits",
+        "linkText":"Buy a freshwater fishing license",
+        "linkHref":"#",
+        "theme":"blue"
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-certificate.twig",
+        "category":"Professional Licensing & Certification",
+        "linkText":"Apply for a nursing license (new graduates)",
+        "linkHref":"#",
+        "theme":""
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-certificate.twig",
+        "category":"Professional Licensing & Certification",
+        "linkText":"Convert an out-of-state nursing license (reciprocity)",
+        "linkHref":"#",
+        "theme":"dark-gray"
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-server-rack.twig",
+        "category":"Business Services & Resources",
+        "linkText":"Register your business",
+        "linkHref":"#",
+        "theme":"blue"
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-apple.twig",
+        "category":"Health & Social Services",
+        "linkText":"Apply for MassHealth (individuals & families)",
+        "linkHref":"#",
+        "theme":"green"
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-application.twig",
+        "category":"Unemployment",
+        "linkText":"File for unemployment",
+        "linkHref":"#",
+        "theme":"dark-gray"
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-apple.twig",
+        "category":"Health & Social Services",
+        "linkText":"Apply for SNAP benefits (food stamps)",
+        "linkHref":"#",
+        "theme":""
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-family.twig",
+        "category":"Family & Children",
+        "linkText":"Get a child support order",
+        "linkHref":"#",
+        "theme":"green"
+      },
+      {
+        "icon":"@atoms/07-user-added-icons/svg-gavel.twig",
+        "category":"Legal & Justice",
+        "linkText":"Respond to a jury duty summons",
+        "linkHref":"#",
+        "theme":"blue"
+      }]
   },
 
   "personalMessage": {
     "imageSrc": "/assets/images/placeholder/250x250.png",
     "imageAlt": "Governor Baker",
     "title": "A Message from Governor Baker",
-    "rte": "<p>\"Information technology is an important priority for this administration and our ability to provide secure essential services and execute projects in an efficient and fiscally responsible manner is key to a better state government for Massachusetts. This is an important step that not only addresses some of the problems we have, but is an essential way forward to a better future.\"</p>"
+    "rte": "<p>&#8220;Mass.gov is the digital front door of government — the first place many people in the Commonwealth start their interactions with the state. In our ongoing mission to ensure that state government works better for everyone, we are excited to unveil the new Mass.gov pilot, an innovative testing laboratory to help you get the support you need and the answers you’re looking for — fast and easy. We welcome your feedback. Thanks for your help.&#8221; - Governor Charlie Baker</p>"
   },
 
   "blogFeed" : {
@@ -88,26 +89,26 @@
         "src": "/assets/images/placeholder/320x180.png",
         "alt": "something about this image"
       },
-      "date": "08.15.16",
+      "date": "11.15.16",
       "link": {
         "type": "external",
         "href": "#",
-        "text": "Car, Bus, Bike, or Boat?"
+        "text": "Lorem ipsum dolor sit amet."
       },
-      "description": "Choosing iconography for the Transportation page got a little complicated when..."
+      "description": "Ne fugit omnium vel. Qui purto oblique fuisset ea, ex autem viderer has, illum paulo saperet te has."
     },
     {
       "image": {
         "src": "/assets/images/placeholder/320x180.png",
         "alt": "something about this image"
       },
-      "date": "08.14.16",
+      "date": "10.14.16",
       "link": {
         "type": "external",
         "href": "#",
-        "text": "The Importance of User Feedback"
+        "text": "Per illum tibique definitiones id"
       },
-      "description": "When you redesign a website like Mass.Gov, you have to think about a lot of..."
+      "description": "Qui summo omnium persius ad. Mollis definiebas dissentiunt ea sea, nibh intellegebat cu pri."
     }]
   },
 
@@ -158,7 +159,7 @@
     "title":"Have Feedback for Us?",
     "description":"Mass.gov is for you, and we want to know what you think about it.",
     "permissionLegend":"Are you interested in helping us test our designs for new sections of Mass.Gov? If so, we will contact you by email with more information.",
-  
+
     "radioButtons":[{
       "name": "permission",
       "value": "Yes",
@@ -171,7 +172,7 @@
       "id": "permission-no",
       "label": "No"
     }],
-    
+
     "selectBox":{
       "label":"Type of Feedback",
       "id":"feedback-type",

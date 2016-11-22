@@ -24,20 +24,21 @@
     font-size: 1.25rem;
   }
 
-  &__value {
-    @include ma-link-underline;
-    font-size: 1.25rem;
-    line-height: 1.75;
-    overflow-wrap: break-word;
-    padding-bottom: 3px;
-    word-wrap: break-word;
-    word-break: break-word;
-  }
-
   &__details {
     font-size: 1rem;
     line-height: 1.3;
     margin-bottom: .35em;
     margin-top: -.25em;
   }
+
+  &__address {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .ma__content-link {
+    font-size: 1.25rem;
+    line-height: 1.75;
+  }
+
 }

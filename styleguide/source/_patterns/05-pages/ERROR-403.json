@@ -1,6 +1,7 @@
 {
   "errorPage": {
     "type": "403",
+    "label": "Oh no",
     "title": "This page is forbidden",
     "message": "Sorry, you don't have access to this page"
   },

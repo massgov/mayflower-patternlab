@@ -1,17 +1,24 @@
 $rich-text-spacing: 1.75rem;
 
-// not full width
-.main-content--two .ma__rich-text {
-  padding: 0;
-}
-
 .ma__rich-text {
   @include clearfix;
   @include ma-container;
   margin-bottom: 45px;
 
-  & > * {
-    max-width: 820px;  // attempting to improve readablity
+  @media ($bp-large-min) and ($bp-page-width-max) {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 820px;
+  }
+
+  @media ($bp-page-width-min) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 540px;
+  }
+
+  .main-content--two & {
+    padding: 0;
   }
 
 
@@ -83,9 +90,15 @@ $rich-text-spacing: 1.75rem;
 
   a {
     @include ma-link-underline;
+    border-bottom-width: 1px;
     overflow-wrap: break-word;
+    transition: border .3s;
     word-wrap: break-word;
     word-break: break-word;
+  }
+
+  .ma__decorative-link {
+    display: inline;
   }
 
 
