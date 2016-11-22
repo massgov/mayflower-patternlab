@@ -18,14 +18,9 @@ $bp-header-search-reduce-button: "max-width: 700px";
     padding-left: 17px;
     width: 100%;
 
-    @media ($bp-small-max) {
-      .ma__header__search & {
-        display:none;
-      }
-    }
 
     @media ($bp-header-search-reduce-button) {
-      padding-right: 17px
+      padding-right: 60px
     }
   }
 
@@ -44,30 +39,9 @@ $bp-header-search-reduce-button: "max-width: 700px";
       padding-left: 10px;
     }
 
-    // not the button in navigation
-    .ma__header__search & {
-
-      @media ($bp-small-max) {
-        @include ma-valign-block;
-        border: 2px solid;
-        display: inline-block;
-        position: static;
-        transition: opacity .4s;
-        vertical-align: middle;
-
-        .show-menu & {
-          opacity: 0;
-        }
-      }
-
+    @media ($bp-header-search-reduce-button) {
       span {
-        @media ($bp-x-small-max) {
-          display: none;
-        }
-
-        @media ($bp-small-min) and ($bp-header-search-reduce-button) {
-          display: none;
-        }
+        display: none;
       }
     }
   }
