@@ -26,6 +26,8 @@
 
     @media ($bp-large-min) {
       .ma__rich-text {
+        margin-left: auto;
+        margin-right: auto;
         padding: 0;
       }
     }
