@@ -2,7 +2,6 @@ $rich-text-spacing: 1.75rem;
 
 .ma__rich-text {
   @include clearfix;
-  @include ma-container;
   margin-bottom: 45px;
 
   @media ($bp-large-min) and ($bp-page-width-max) {
@@ -17,8 +16,19 @@ $rich-text-spacing: 1.75rem;
     padding-right: 540px;
   }
 
-  .main-content--two & {
-    padding: 0;
+  &--description {
+    margin-bottom: 1rem;
+  }
+
+  .pre-content > &,
+  .post-content > &,
+  .page-content > & {
+    @include ma-container;
+  }
+
+  .main-content--two .page-content > & {
+    padding-left: 0;
+    padding-right: 0;
   }
 
 

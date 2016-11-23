@@ -1,17 +1,14 @@
 .ma__callout-time {
   margin-bottom: 30px;
-
-  &__icon,
-  &__text {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  position: relative;
 
   &__icon {
     font-size: 0;
     height: 30px;
-    margin: 12px;
-    margin-left: 0;
+    position: absolute;
+      top: 50%;
+      left: 0;
+    transform: translateY(-50%);
     width: 30px;
   }
 
@@ -19,5 +16,6 @@
     font-size: 1.438rem;
     font-style: italic;
     margin-bottom: 0;
+    padding-left: 42px; // width of icon and margin
   }
 }
