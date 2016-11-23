@@ -1,0 +1,25 @@
+<section class="ma__split-columns">
+  <div class="ma__split-columns__container">
+    {% if splitColumns.column1 %}
+      <div class="ma__split-columns__column">
+        {% for item in splitColumns.column1 %}
+          {% include item.path with item.data %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if splitColumns.column2 %}
+      <div class="ma__split-columns__column">
+        {% for item in splitColumns.column2 %}
+          {% include item.path with item.data %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if splitColumns.column3 %}
+      <div class="ma__split-columns__column">
+        {% for item in splitColumns.column3 %}
+          {% include item.path with item.data %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
