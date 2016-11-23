@@ -51,6 +51,10 @@ body {
     vertical-align: middle;
     width: $header-logo-width; // width of the image
 
+    @media ($bp-small-max) {
+      width: 150px;
+    }
+    
     @media ($bp-small-min) {
       @include span-columns(4);
       display: inline-block;
