@@ -43,13 +43,13 @@ export default function (window,document,$,undefined) {
       $el.removeClass('is-open');
       // remove active flag from other links
       $el.find('.' + activeClass).removeClass(activeClass);
-      // add active flag to this link
+      // mark this link as active
       $(this).addClass(activeClass);
+      activeAnchor = $(this).data('index');
       // prevent the scroll event from updating active links
       linkScrolling = true;
-      activeAnchor = $(this).index() - 1;
 
-      $("html, body").stop(true,true).animate({scrollTop:position}, '750', function(){
+      $("body").stop(true,true).animate({scrollTop:position}, '750', function(){
         linkScrolling = false;
       });
       
@@ -72,8 +72,8 @@ export default function (window,document,$,undefined) {
     });
 
     $(window).scroll(function () {
-      activateLink();
       setPosition();
+      activateLink();
     });
 
     function setVariables() {
@@ -149,13 +149,13 @@ export default function (window,document,$,undefined) {
       }
 
       // get the current scroll position and offset by half the view port
-      let windowTop = $(window).scrollTop() + (window.innerHeight/3),
+      let windowTop = $(window).scrollTop() + (window.innerHeight/2),
           currentAnchor = activeAnchor;
       
       // is there a prev target
       // and 
-      // is the current scroll position above the prev target
-      if(currentAnchor > 0 && windowTop < anchors[activeAnchor-1].position) { 
+      // is the current scroll position above the current target
+      if(currentAnchor > 0 && windowTop < anchors[activeAnchor].position) { 
         // make the prev link active
         --activeAnchor;
       }
