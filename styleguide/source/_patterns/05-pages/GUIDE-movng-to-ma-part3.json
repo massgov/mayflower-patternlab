@@ -823,40 +823,68 @@
     "title": "Another Section Name",
     "id": "another-section-name5",
     "pageContent": [{
-      "path": "@organisms/by-author/rte-columns.twig",
+      "path": "@organisms/by-author/split-columns.twig",
       "data": {
-        "rteColumns": {
-          "intro": "Follow these tips to ease your move on the big day:",
-          "columns": [{
-            "heading": "Subheading Section Name",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph" : {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
-                }
+        "splitColumns": {
+          "column1": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Subheading Section Name 1"
               }
-            }]
+            }
           },{
-            "heading": "Subheading Section Name",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph" : {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. "
+            "path": "@organisms/by-author/rich-text.twig",
+            "data": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate."
+                  }
                 }
+              }]
+            }
+          }],
+          "column2": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Subheading Section Name 2"
               }
-            }]
+            }
           },{
-            "heading": "Subheading Section Name",
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph" : {
-                  "text": "Lorem ipsum dolor sit amet, Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
+            "path": "@organisms/by-author/rich-text.twig",
+            "data": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
+                  }
                 }
+              }]
+            }
+          }],
+          "column3": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Subheading Section Name 3"
               }
-            }]
+            }
+          },{
+            "path": "@organisms/by-author/rich-text.twig",
+            "data": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Lorem ipsum dolor sit amet. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
+                  }
+                }
+              }]
+            }
           }]
         }
       }
