@@ -1,12 +1,19 @@
 # Mass Gov Release Notes
 
-## 1.2.0 (Sprint 7)
-### Other
+## 2.1.0 (Sprint 7)
+### Error pages
 * MGVDU-253 - Front end: 404 page
+* MGVDU-256 - Front end: 403 page
+* MGVDU-259 - Front end: 500 page
+
+### Other
+* MGVDU-202 - Action Finder - entire action item should be clickable
 * MGVDU-269 - Site Settings (utility nav) language dropdown
 * MGVDU-283 - FE Dev: Location Banner - swap stacking order
 * MGVDU-312 - FE Dev - Contact Group - refactor address
 * MGVDU-313 - Firefox text wrapping bug on Related Topics section on some but not all pages
+* MGVDU-354 - FE Dev - RTE columns - refactor
+* MGVDU-357 - FE Dev: Action Steps - refactor
 
 ## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
@@ -54,7 +61,6 @@
 
 ### Other
 * MGVDU-220 - FE Dev: Image credit component
-* MGVDU-202 - Action Finder - entire action item should be clickable
 
 
 ## 0.4.0
