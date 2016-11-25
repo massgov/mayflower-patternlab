@@ -2,7 +2,9 @@
   {% for download in actionDownloads %}
     <div class="ma__action-downloads__item">
       <div class="ma__action-downloads__icon">
-        {% include download.icon %}
+        <a href="{{download.href}}">
+          {% include download.icon %}
+        </a>
       </div>
       {% if download.format == "form" %}
         <h5 class="ma__action-downloads__title">
