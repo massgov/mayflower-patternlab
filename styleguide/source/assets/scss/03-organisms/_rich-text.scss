@@ -26,6 +26,7 @@ $rich-text-spacing: 1.75rem;
     @include ma-container;
   }
 
+  .ma__split-columns > &,
   .main-content--two .page-content > & {
     padding-left: 0;
     padding-right: 0;

@@ -3,12 +3,9 @@ Title: Action Steps
 ---
 
 ##Field:
-* intro (optional) - string
-* column heading (optional) - string
+* items - array of action step molecules
 
 ##Partials:
 * action step
 
 ##Notes:
-* Steps can be arrange into single or double columns
-* Each column has an optional heading

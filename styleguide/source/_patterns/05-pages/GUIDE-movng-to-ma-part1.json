@@ -247,70 +247,93 @@
         }]
       }
     },{
-      "path": "@organisms/by-author/action-steps.twig",
+      "path": "@organisms/by-author/split-columns.twig",
       "data": {
-        "actionSteps": {
-          "columns": [{
-            "heading":"Choose a Reputable Mover",
-              "steps": [{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "The <a href=\"#\">Executive Office of Energy and Environmental Affairs (EEA)</a> recommends <a href=\"#\">selecting a reputable mover</a>."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Make sure that any in-state moving company you use is properly licensed with the <a href=\"http://www.mass.gov\">Massachusetts Department of Public Utilities (DPU)</a>."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Follow the <a href=\"#\">Federal Motor Carrier Safety Administration (FMCSA)</a> guidelines to protect yourself from moving fraud."
-                  }
-                }
-              }]
-            }]
+        "splitColumns": {
+          "column1": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Choose a Reputable Mover"
+              }
+            }
           },{
-            "heading":"Observe Parking Restrictions",
-              "steps": [{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Research <a href=\"#\">parking restrictions</a> before moving to find out where you are allowed to unload vehicles."
-                  }
-                }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "<a href=\"http://www.mass.gov\">Contact your city or town</a> for information on obtaining a moving permit, or talk to your landlord or property owner."
-                  }
-                }
-              }]
-            }]
+            "path": "@organisms/by-author/action-steps.twig",
+            "data": {
+              "actionSteps": {
+                "steps": [{
+                  "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+                  "title":"",
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "The <a href=\"#\">Executive Office of Energy and Environmental Affairs (EEA)</a> recommends <a href=\"#\">selecting a reputable mover</a>."
+                      }
+                    }
+                  }]
+                },{
+                  "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+                  "title":"",
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Make sure that any in-state moving company you use is properly licensed with the <a href=\"http://www.mass.gov\">Massachusetts Department of Public Utilities (DPU)</a>."
+                      }
+                    }
+                  }]
+                },{
+                  "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+                  "title":"",
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Follow the <a href=\"#\">Federal Motor Carrier Safety Administration (FMCSA)</a> guidelines to protect yourself from moving fraud."
+                      }
+                    }
+                  }]
+                }]            
+              }
+            }
+          }],
+          "column2": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Observe Parking Restrictions"
+              }
+            }
+          },{
+            "path": "@organisms/by-author/action-steps.twig",
+            "data": {
+              "actionSteps": {
+                "steps": [{
+                  "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+                  "title":"",
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Research <a href=\"#\">parking restrictions</a> before moving to find out where you are allowed to unload vehicles."
+                      }
+                    }
+                  }]
+                },{
+                  "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+                  "title":"",
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "<a href=\"http://www.mass.gov\">Contact your city or town</a> for information on obtaining a moving permit, or talk to your landlord or property owner."
+                      }
+                    }
+                  }]
+                }]
+              }
+            }
           }]
         }
       }
@@ -455,63 +478,60 @@
       "path": "@organisms/by-author/action-steps.twig",
       "data": {
         "actionSteps": {
-          "columns": [{
-            "heading":"",
-              "steps": [{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"http://www.mass.gov\">Dog licenses are required by state law</a>."
-                  }
+          "steps": [{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"http://www.mass.gov\">Dog licenses are required by state law</a>."
                 }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"http://www.mass.gov\">moving pets to the United States from a different country</a>."
-                  }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"http://www.mass.gov\">moving pets to the United States from a different country</a>."
                 }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Make sure your pet is comfortable during the move, and that you use the right size kennel or crate."
-                  }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Make sure your pet is comfortable during the move, and that you use the right size kennel or crate."
                 }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Ensure your pet’s vaccines are up to date. <a href=\"#\">Dogs, cats, and ferrets must be vaccinated against rabies in Massachusetts.</a>"
-                  }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Ensure your pet’s vaccines are up to date. <a href=\"#\">Dogs, cats, and ferrets must be vaccinated against rabies in Massachusetts.</a>"
                 }
-              }]
-            },{
-              "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-              "title":"",
-              "rteElements": [{
-                "path": "@atoms/11-text/paragraph.twig",
-                "data": {
-                  "paragraph": {
-                    "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"http://www.mass.gov\">contact a local veterinarian’s office for more information</a>."
-                  }
+              }
+            }]
+          },{
+            "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+            "title":"",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"http://www.mass.gov\">contact a local veterinarian’s office for more information</a>."
                 }
-              }]
+              }
             }]
           }]
         }
