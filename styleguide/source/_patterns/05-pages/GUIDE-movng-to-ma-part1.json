@@ -3,7 +3,7 @@
 
   "illustratedHeader": {
     "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/assets/images/placeholder/600x450.png",
+    "bgImage": "/assets/images/placeholder/800x450.png",
     "category": "Guide",
     "pageHeader": {
       "title": "Moving to Massachusetts Part 1: Planning Your Move",
@@ -235,10 +235,21 @@
     "title": "Moving Day",
     "id": "moving-day",
     "pageContent": [{
+      "path": "@organisms/by-author/rich-text-description.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Follow these tips to ease your move on the big day:"
+            }
+          }
+        }]
+      }
+    },{
       "path": "@organisms/by-author/action-steps.twig",
       "data": {
         "actionSteps": {
-          "intro": "Follow these tips to ease your move on the big day:",
           "columns": [{
             "heading":"Choose a Reputable Mover",
               "steps": [{
@@ -429,10 +440,21 @@
     "title": "Moving with Pets",
     "id": "moving-with-pets",
     "pageContent": [{
+      "path": "@organisms/by-author/rich-text-description.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Be aware of any regulations that may affect moving with a pet, and keep these guidelines in mind as you plan your move:"
+            }
+          }
+        }]
+      }
+    },{
       "path": "@organisms/by-author/action-steps.twig",
       "data": {
         "actionSteps": {
-          "intro": "Be aware of any regulations that may affect moving with a pet, and keep these guidelines in mind as you plan your move:",
           "columns": [{
             "heading":"",
               "steps": [{

@@ -51,6 +51,10 @@ body {
     vertical-align: middle;
     width: $header-logo-width; // width of the image
 
+    @media ($bp-small-max) {
+      width: 150px;
+    }
+    
     @media ($bp-small-min) {
       @include span-columns(4);
       display: inline-block;
@@ -77,6 +81,37 @@ body {
 
     @media ($bp-header-logo-min) {
       width: 74.59677%; //@include span-columns(9);
+    }
+
+    @media ($bp-small-max) {
+      .ma__header-search {
+        
+        &__input {
+          display:none;
+        }
+
+        span {
+          display: inline-block;
+        }
+
+        // not the button in navigation
+        .ma__button-search {
+
+          @media ($bp-small-max) {
+            @include ma-valign-block;
+            border: 2px solid;
+            display: inline-block;
+            position: static;
+            transition: opacity .4s;
+            vertical-align: middle;
+
+            .show-menu & {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
     }
   }
 
@@ -218,10 +253,6 @@ body {
     padding: 15px 20px 15px;
 
     .ma__header-search {
-
-      input {
-        padding-right: 60px;
-      }
 
       span {
         display: none;

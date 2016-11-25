@@ -1,6 +1,7 @@
 $error-page-bg-offset-full: calc(50% - 320px);
 $error-page-bg-offset-narrow: calc(50% - 125px);
 $error-page-max-width: 670px;
+$error-page-header-height: 170px;
 
 @keyframes error-page-bg-full {
   0% { 
@@ -59,27 +60,29 @@ $error-page-max-width: 670px;
 
   &__header {
     @include ma-container;
+    height: $error-page-header-height;
     max-width: $error-page-max-width;
-    padding: 45px 0 80px;
+    padding-top: 45px;
     position: relative;
+  }
 
-    @media ($bp-small-min) {
-      padding: 90px 0 165px;
-    }
+  &__container {
+    @include ma-container;
+    display: flex;
+      flex-direction: column;
+      justify-content: center;  
+    max-width: $error-page-max-width;
+    min-height: calc(100vh - #{$error-page-header-height});
   }
 
   &__content {
-    @include ma-container;
-    max-width: $error-page-max-width;
+    flex-grow: 0;
+    padding-bottom: $error-page-header-height;
     position: relative;
-
-    @media ($bp-large-min) {
-      margin-bottom: 150px;
-    }
   }
 
   &__label {
-    font-size: 9rem;
+    font-size: 7rem;
     line-height: 0.72;
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -166,5 +169,9 @@ $error-page-max-width: 670px;
 
   .page-content {
     z-index: 2;
+  }
+
+  .main-content {
+    margin-bottom: 0;
   }
 }

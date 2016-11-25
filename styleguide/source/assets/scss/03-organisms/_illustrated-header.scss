@@ -1,5 +1,7 @@
-$bp-illustrated-header-columns-min: "min-width: 751px";
-$bp-illustrated-header-columns-max: "max-width: 750px";
+$bp-illustrated-header-columns-min: "min-width: 1001px";
+$bp-illustrated-header-columns-max: "max-width: 1000px";
+$bp-illustrated-header-image-width: 360px;
+
 
 .ma__illustrated-header {
   margin-bottom: 40px;
@@ -24,11 +26,11 @@ $bp-illustrated-header-columns-max: "max-width: 750px";
       position: absolute;
         top: 0;
         right: 0;
-      width: 35%; // @include span-columns(4); didn't quite work
+      width: $bp-illustrated-header-image-width + 40px; // 40px is right padding of the page
     }
 
     @media ($bp-page-width-min) {
-      width: calc(50vw - 220px);
+      width: calc(50vw - 220px); 
     }
 
     &--empty {
@@ -49,9 +51,9 @@ $bp-illustrated-header-columns-max: "max-width: 750px";
     z-index: 2;
 
     @media ($bp-illustrated-header-columns-min) {
-      @include span-columns(8);
       float: none;
       min-height: 430px;
+      width: calc(100% - #{$bp-illustrated-header-image-width}); // width of right rail
 
       &:after {
         content: "";
@@ -84,6 +86,7 @@ $bp-illustrated-header-columns-max: "max-width: 750px";
     padding: 0;
 
     &__content {
+      padding-right: 0;
       width: 100%;
     }
 
