@@ -1,8 +1,8 @@
 .ma__split-columns {
-  @include clearfix;
 
   &__container {
     @include ma-container;
+    @include clearfix;
 
     .main-content--two & {
       padding-left: 0;
@@ -18,7 +18,6 @@
     &:first-child:nth-last-child(2) ~ & {
       
       @media($bp-medium-min) {
-        @include ma-reset-rich-text;
         @include span-columns(3 of 6);
       }
     }
@@ -28,26 +27,24 @@
     &:first-child:nth-last-child(3) ~ & {
       
       @media($bp-large-min) {
-        @include ma-reset-rich-text;
         @include span-columns(2 of 6);
       }
     }
-
-    .main-content--two & {
       
-      // two items (50/50)
-      &:first-child:nth-last-child(2),
-      &:first-child:nth-last-child(2) ~ & {
-        @media($bp-large-min) {
-          @include ma-reset-rich-text;
-          @include span-columns(2 of 4);
-        }
+    // two items (50/50) in a 2/3 width
+    .main-content--two &:first-child:nth-last-child(2),
+    .main-content--two &:first-child:nth-last-child(2) ~ & {
+      @media($bp-large-min) {
+        @include span-columns(12);
+      }
+
+      @media($bp-x-large-min) {
+        @include span-columns(2 of 4);
       }
     }
-  }
 
-  .ma__rich-text {
-    padding-right: 0;
-    padding-left: 0;
+    & > :last-child {
+      margin-bottom: 0;
+    }
   }
 }

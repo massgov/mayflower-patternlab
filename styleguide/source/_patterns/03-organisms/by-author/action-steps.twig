@@ -1,12 +1,5 @@
 <section class="ma__action-steps">
-  {% for column in actionSteps.columns %}
-    <div class="ma__action-steps__items">
-      {% if column.heading %}
-        <h5>{{ column.heading }}</h5>
-      {% endif %}
-      {% for actionStep in column.steps %}
-        {% include "@molecules/action-step.twig" %}
-      {% endfor %}
-    </div>
+  {% for actionStep in actionSteps.steps %}
+    {% include "@molecules/action-step.twig" %}
   {% endfor %}
 </section>
