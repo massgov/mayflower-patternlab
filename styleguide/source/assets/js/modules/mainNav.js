@@ -11,10 +11,11 @@ export default function (window,document,$,undefined) {
         closeClass = "is-closed",
         submenuClass = "show-submenu",
         $parent = $(this),
+        $mainNavToggle = $parent.find('.js-main-nav-toggle'),
         previousKey = null,
         breakpoint = 800; // matches CSS breakpoint for Main Nav
 
-    $parent.find('.js-main-nav-toggle').on('keydown', function(e) {
+    $mainNavToggle.on('keydown', function(e) {
       if(windowWidth <= breakpoint) {
         // only for desktop
         return;
@@ -141,24 +142,21 @@ export default function (window,document,$,undefined) {
       // add open class to the correct content based on index
       show($link.find('.js-main-nav-content'));
     });
-
-    $parent.find('.js-main-nav-toggle').on('mouseenter', function(e) {
+    $mainNavToggle.on('mouseenter', function(e) {
       if(windowWidth > breakpoint) {
         let $openContent = $(this).find('.js-main-nav-content');
         show($openContent);
       }
     });
-
-    $parent.find('.js-main-nav-toggle').on('mouseleave', function(e) {
+    $mainNavToggle.on('mouseleave', function(e) {
       if(windowWidth > breakpoint) {
         let $openContent = $(this).find('.js-main-nav-content');
         hide($openContent);
       }
     });
-
-    $parent.find('.js-main-nav-toggle').on('click', function(e) {
+    $mainNavToggle .on('click', function(e) {
       if(windowWidth <= breakpoint) {
-        e.preventDefault;
+        e.preventDefault();
 
         let $content = $(this).find('.js-main-nav-content');
         // add open class to this item
@@ -166,11 +164,8 @@ export default function (window,document,$,undefined) {
         show($content);
       }
     });
-
-    $parent
-      .find('.js-main-nav-toggle')
-      .last()
-        .find('.js-main-nav-content li')
+    $mainNavToggle.last()
+      .find('.js-main-nav-content li')
         .last()
           .find('a').on('keydown', function(e) {
             e.stopPropagation();
@@ -180,7 +175,7 @@ export default function (window,document,$,undefined) {
               hide($openContent);
             }
             previousKey = e.keyCode;
-    });
+      });
 
     $('.js-close-sub-nav').on('click', function(){
       let $openContent = $parent.find('.js-main-nav-content.' + openClass);
