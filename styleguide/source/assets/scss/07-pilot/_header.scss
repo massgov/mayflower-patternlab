@@ -17,6 +17,7 @@ $bp-header-logo-min: "min-width: 1000px";
     position: fixed;
       top: 0;
       left: 0;
+    transition: left 0.5s ease;
     z-index: 9999;
 
 
@@ -25,6 +26,10 @@ $bp-header-logo-min: "min-width: 1000px";
       display: block;
       position: relative;
       text-align: center;
+    }
+
+    .show-menu & {
+      left: -100%;
     }
 
     a {
