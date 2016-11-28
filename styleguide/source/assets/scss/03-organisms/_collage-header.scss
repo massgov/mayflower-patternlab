@@ -137,7 +137,9 @@ $collage-header-bp-min: "min-width: 701px";
   &__details {
     @media ($collage-header-bp-min) {
       width: 370px;
-      font-size: 1.625rem;
+      &__content {
+        font-size: 1.625rem;
+      }
       &__lead {
         @include ma-h3;
       }
