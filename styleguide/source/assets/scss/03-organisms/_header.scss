@@ -1,5 +1,5 @@
 $header-mobile-menu-width: 300px;
-$header-logo-width: 210px;
+$header-logo-width: 150px;
 $bp-header-logo-min: "min-width: 1000px";
 
 body {
@@ -51,8 +51,8 @@ body {
     vertical-align: middle;
     width: $header-logo-width; // width of the image
 
-    @media ($bp-small-max) {
-      width: 150px;
+    @media ($bp-small-min) {
+      width: 210px;
     }
     
     @media ($bp-small-min) {
