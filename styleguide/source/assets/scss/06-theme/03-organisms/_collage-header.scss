@@ -20,13 +20,10 @@ $collage-header-bp-max: "max-width: 700px";
   }
 
   &__details {
+    font-weight: 300;
 
-    h3 {
+    &__lead {
       font-weight: 400;
-    }
-
-    p {
-      font-weight: 300;
     }
   }
 }
