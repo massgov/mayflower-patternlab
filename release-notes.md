@@ -6,6 +6,12 @@
 * MGVDU-256 - Front end: 403 page
 * MGVDU-259 - Front end: 500 page
 
+### MQA bugs
+* MQA-62 - Pilot Homepage Header on mobile has wrong coloring
+* MQA-65 - Opening the Common Actions menu in mobile also opens the common actions section on the pilot homepage
+* MQA-74 - [action page] - ma__page-header__sub-title is marked-up wrong
+* MQA-84 - [Action] - Contact markup headings are non-semantic
+
 ### Other
 * MGVDU-202 - Action Finder - entire action item should be clickable
 * MGVDU-269 - Site Settings (utility nav) language dropdown

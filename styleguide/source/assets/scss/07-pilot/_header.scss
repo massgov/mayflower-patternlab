@@ -6,7 +6,7 @@ $bp-header-logo-min: "min-width: 1000px";
 .ma__header {
   position: relative;
 
-  @media ($bp-medium-min) {
+  @media ($bp-header-toggle-min) {
     padding-top: 0;
   }
 
@@ -20,7 +20,7 @@ $bp-header-logo-min: "min-width: 1000px";
     z-index: 9999;
 
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       background-color: $c-theme-blue;
       display: block;
       position: relative;
@@ -68,7 +68,7 @@ $bp-header-logo-min: "min-width: 1000px";
 
   &__nav {
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       margin: 0 auto;
       max-width: 1320px;
       position: relative;
@@ -80,7 +80,7 @@ $bp-header-logo-min: "min-width: 1000px";
   &__main-nav {
     border: none;
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       position: absolute;
         top: -75px;
         right: 0;
@@ -103,7 +103,7 @@ $bp-header-logo-min: "min-width: 1000px";
 
   &__items {
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       .flexbox & {
         display: inline-block;
       }
@@ -112,7 +112,7 @@ $bp-header-logo-min: "min-width: 1000px";
 
   &__item + &__item {
 
-    @media ($bp-medium-min) {
+    @media ($bp-header-toggle-min) {
       margin-left: 6%;
     }
   }

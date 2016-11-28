@@ -1,9 +1,13 @@
-$collage-header-bp: "min-width: 700px";
+$collage-header-bp-max: "max-width: 700px";
 
 .ma__collage-header {
   background-color: $c-bg-subtle;
 
   &__title {
+
+    @media ($collage-header-bp-max) {
+      background-color: $c-theme-green;
+    }
 
     &:before {
       background-color: $c-theme-green;

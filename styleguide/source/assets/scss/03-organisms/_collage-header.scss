@@ -1,4 +1,4 @@
-$collage-header-bp: "min-width: 700px";
+$collage-header-bp-min: "min-width: 701px";
 
 .ma__collage-header {
   overflow: hidden;
@@ -9,7 +9,7 @@ $collage-header-bp: "min-width: 700px";
     padding-bottom: 20px;
     position: relative;
 
-    @media ($collage-header-bp) {
+    @media ($collage-header-bp-min) {
       padding-top: 60px;
       padding-bottom: 90px;
     }
@@ -20,7 +20,7 @@ $collage-header-bp: "min-width: 700px";
     margin-left: -20px;
     width: calc(100% + 40px);
 
-    @media ($collage-header-bp) {
+    @media ($collage-header-bp-min) {
       @include ma-container;
       height: 100%;
       margin: 0;
@@ -40,7 +40,7 @@ $collage-header-bp: "min-width: 700px";
     padding-top: 33.333333%; // square shape;
     width: 33.333333%;
 
-    @media ($collage-header-bp) {
+    @media ($collage-header-bp-min) {
       height: 20%;
       margin-right: 0;
       margin-bottom: 2.43902%;
@@ -87,14 +87,14 @@ $collage-header-bp: "min-width: 700px";
     position: relative;
     width: calc(100% + 40px);
 
-    @media ($collage-header-bp) {
+    @media ($collage-header-bp-min) {
       margin-bottom: 50px;
       padding-top: 50px;
       padding-bottom: 55px;
     }
 
     &:before {
-      @media ($collage-header-bp) {
+      @media ($collage-header-bp-min) {
         content: "";
         height: 100%;
         position: absolute;
@@ -117,7 +117,7 @@ $collage-header-bp: "min-width: 700px";
       font-size: 4rem;
       margin-bottom: 0;
 
-      @media ($collage-header-bp) {
+      @media ($collage-header-bp-min) {
         position: relative;
         width: 480px;
       }
@@ -135,7 +135,7 @@ $collage-header-bp: "min-width: 700px";
   }
 
   &__details {
-    @media ($collage-header-bp) {
+    @media ($collage-header-bp-min) {
       width: 370px;
 
       h3 {
