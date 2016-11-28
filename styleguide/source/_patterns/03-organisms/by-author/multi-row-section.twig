@@ -3,12 +3,12 @@
     <h2 class="ma__multi-row-section__title"><a name="{{multiRowSection.id}}" id="{{multiRowSection.id}}">{{multiRowSection.title}}</a></h2>
   </div>
   <div class="main-content {{ multiRowSection.sideBar|length != 'single' ? 'main-content--two' : '' }}">
-    <main class="page-content">
+    <div class="page-content">
       {% for content in multiRowSection.pageContent %}
         {% include content.path with content.data %}
       {% endfor %}
-    </main>
-    {% if multiRowSection.sideBar|length %} 
+    </div>
+    {% if multiRowSection.sideBar|length %}
       <aside class="sidebar">
         {% for sidebar in multiRowSection.sideBar %}
           {% include sidebar.path with sidebar.data %}
@@ -16,5 +16,5 @@
       </aside>
     {% endif %}
   </div>
-</section> 
+</section>
 
