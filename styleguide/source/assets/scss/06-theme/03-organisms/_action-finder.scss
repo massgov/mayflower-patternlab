@@ -37,18 +37,17 @@ $action-finder-border-color: tint($c-theme-blue,50%);
     border-color: rgba($c-font-link, .5);
   }
 
-  &__item--text {
-    background-color: $action-finder-bg-color;
-    border-color: $action-finder-border-color;
-  }
-
   &__items--all {
     
-    .ma__action-finder__item--text {
+    .ma__callout-link {
       background-color: $c-white;
+      border-color: transparent;
+      box-shadow: none;
     }
 
     .ma__illustrated-link {
+      box-shadow: none;
+
       &__content {
         background-color: $c-white;
 
