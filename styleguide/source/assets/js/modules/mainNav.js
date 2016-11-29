@@ -154,7 +154,7 @@ export default function (window,document,$,undefined) {
         hide($openContent);
       }
     });
-    $mainNavToggle .on('click', function(e) {
+    $mainNavToggle.on('click', function(e) {
       if(windowWidth <= breakpoint) {
         e.preventDefault();
 
@@ -178,6 +178,12 @@ export default function (window,document,$,undefined) {
       });
 
     $('.js-close-sub-nav').on('click', function(){
+      let $openContent = $parent.find('.js-main-nav-content.' + openClass);
+      hide($openContent);
+    });
+
+    // Hide any open submenu content when the sidebar menu is closed
+    $('.js-header-menu-button').click(function() {
       let $openContent = $parent.find('.js-main-nav-content.' + openClass);
       hide($openContent);
     });
