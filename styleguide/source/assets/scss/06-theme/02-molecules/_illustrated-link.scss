@@ -1,5 +1,6 @@
 .ma__illustrated-link {
   border-color: tint($c-theme-blue,50%);
+  box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
 
   &__content {
     background-color: tint($c-theme-blue,89%);

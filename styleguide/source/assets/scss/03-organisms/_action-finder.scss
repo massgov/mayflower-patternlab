@@ -88,22 +88,16 @@ $action-finder-bp: 900px;
 
     }
 
-    &--text {
-      border: 3px solid;
+    .ma__callout-link {
       display: flex;
         align-items: center;
-      font-size: 1.625rem;
-      line-height: 1.3;
-      padding: 30px;
+      height: 100%;
+      margin-bottom: 0;
+      width: 100%;
 
       > span {
         flex-basis: 100%;
       }
-    }
-
-    .ma__callout-link {
-      height: 100%;
-      margin-bottom: 0;
     }
   }
 

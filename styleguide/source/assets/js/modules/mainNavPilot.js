@@ -5,7 +5,7 @@ export default function (window,document,$,undefined) {
       $mainNavToggle = $parent.find('.js-main-nav-toggle');
 
     // make root top-level links inert for pilot
-    $mainNavToggle.find('a').on('click', function(e) {
+    $mainNavToggle.children('a').on('click', function(e) {
       e.preventDefault();
     });
 

@@ -1,6 +1,15 @@
 <section class="ma__multi-row-section">
   <div class="ma__multi-row-section__container">
-    <h2 class="ma__multi-row-section__title"><a name="{{multiRowSection.id}}" id="{{multiRowSection.id}}">{{multiRowSection.title}}</a></h2>
+    <div class="ma__multi-row-section__title">
+      {% set compHeading = {
+          "title": multiRowSection.title,
+          "sub": "",
+          "color": "",
+          "id": multiRowSection.id
+        }
+      %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    </div>
   </div>
   <div class="main-content {{ multiRowSection.sideBar|length != 'single' ? 'main-content--two' : '' }}">
     <div class="page-content">
