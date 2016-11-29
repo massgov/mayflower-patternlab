@@ -1,11 +1,11 @@
-<section class="ma__action-section">
-  {% if actionSection.title %}
-    <h3><a name="{{actionSection.id}}" id="{{actionSection.id}}">{{actionSection.title}}</a></h3>
-  {% endif %}
-  {% if actionSection.intro %}
-    <p>{{actionSection.intro}}</p>
-  {% endif %}
-  <div class="ma__action-section__content">
-    {% include actionSection.path with actionSection.data %}
-  </div>
-</section>
+{% if actionSection.title %}
+  {% set compHeading = {
+      "title": actionSection.title,
+      "sub": true,
+      "color": "",
+      "id": actionSection.id
+    }
+  %}
+  {% include "@atoms/04-headings/comp-heading.twig" %}
+{% endif %}
+{% include actionSection.path with actionSection.data %}
