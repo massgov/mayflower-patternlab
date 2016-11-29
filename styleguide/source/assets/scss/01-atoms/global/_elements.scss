@@ -36,52 +36,23 @@ ul, ol {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
-
 h1 {
-  font-size: 3rem;
-  line-height: 1.07;
-
-  @media ($bp-medium-min){
-    font-size: 3.25rem;
-  }
-
-  @media ($bp-large-min){
-    font-size: 4rem;
-  }
-
-  @media ($bp-x-large-min){
-    font-size: 4.375rem;
-  }
+  @include ma-h1;
 }
-
 h2 {
-  font-size: 2.25rem;
-  line-height: 1.222222;
-
-  @media ($bp-small-min){
-    font-size: 2.688rem;
-  }
+  @include ma-h2;
 }
-
 h3 {
-  font-size: 2.188rem;
-  line-height: 1.1;
+  @include ma-h3;
 }
-
 h4 {
-  font-size: 1.813rem;
-  line-height: 1.2;
+  @include ma-h4;
 }
-
 h5 {
-  font-size: 1.625rem;
-  line-height: 1.3;
-  margin-bottom: .5em;
+  @include ma-h5;
 }
-
 h6 {
-  font-size: 1.4rem;
-  margin-bottom: .25em;
+  @include ma-h6;
 }
 
 // end heading styles
