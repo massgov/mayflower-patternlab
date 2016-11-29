@@ -6,12 +6,16 @@
   {% for item in contactGroup.items %}
     <div>
       {% if item.label %}
-        <span class="ma__contact-group__label">{{item.label}}:</span>
+        <span class="ma__contact-group__label">{{item.label}}</span>
       {% endif %}
       {% if item.type == "phone" %}
         <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
+      {% elseif item.type == "fax" %}
+        {{item.value}}
       {% elseif item.type == "email" %}
         <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
+      {% elseif item.type == "online" %}
+        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
       {% elseif item.type == "address" %}
         <div class="ma__contact-group__address">
           {{item.value | raw}}
@@ -20,7 +24,7 @@
           <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron">directions</a>
         {% endif %}
       {% else %}
-        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
+        {{item.value}}
       {% endif %}
     </div>
     {% if item.details %}
