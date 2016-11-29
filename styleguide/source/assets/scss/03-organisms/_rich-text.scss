@@ -4,17 +4,6 @@ $rich-text-spacing: 1.75rem;
   @include clearfix;
   margin-bottom: 45px;
 
-  @media ($bp-large-min) and ($bp-page-width-max) {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 820px;
-  }
-
-  @media ($bp-page-width-min) {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 540px;
-  }
 
   &--description {
     margin-bottom: 1rem;
@@ -24,10 +13,23 @@ $rich-text-spacing: 1.75rem;
   .post-content > &,
   .page-content > & {
     @include ma-container;
+
+    @media ($bp-large-min) and ($bp-page-width-max) {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: 820px;
+    }
+
+    @media ($bp-page-width-min) {
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 540px;
+    }
   }
 
   .ma__split-columns__column > &,
   .main-content--two .page-content > & {
+    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
