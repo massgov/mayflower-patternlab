@@ -33,6 +33,10 @@ $action-finder-border-color: tint($c-theme-blue,50%);
     }
   }
 
+  &__item:hover a {
+    border-color: rgba($c-font-link, .5);
+  }
+
   &__item--text {
     background-color: $action-finder-bg-color;
     border-color: $action-finder-border-color;
