@@ -1,6 +1,8 @@
 {
   "compHeading": {
     "title": "Key Actions",
-    "sub": true
+    "sub": true,
+    "color": "",
+    "id": "key-actions"
   }
 }
