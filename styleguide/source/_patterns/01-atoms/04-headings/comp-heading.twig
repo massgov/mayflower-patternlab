@@ -2,8 +2,13 @@
   {% set modifier = "ma__comp-heading--" ~ compHeading.color %}
 {% endif %}
 
-{% if compHeading.sub == true %}
-  <h3 class="ma__comp-heading {{modifier}}">{{ compHeading.title }}</h3>
+{% if compHeading.sub %}
+  <h3 {{tagType}} class="ma__comp-heading {{modifier}}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %}>
+    {{ compHeading.title }}
+  </h3>
 {% else %}
-  <h2 class="ma__comp-heading {{modifier}}">{{ compHeading.title }}</h2>
+  <h2 {{tagType}} class="ma__comp-heading {{modifier}}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %}>
+    {{ compHeading.title }}
+  </h2>
 {% endif %}
+
