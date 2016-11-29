@@ -1,8 +1,8 @@
 <section class="ma__main-nav">
   <ul class="ma__main-nav__items js-main-nav">
     {% for nav in mainNavPilot %}
-      <li class="ma__main-nav__item {{ nav.active ? 'is-active' : '' }} {{ nav.subNav ? 'has-subnav js-main-nav-toggle' : '' }}">
-        <a class="ma__main-nav__top-link js-main-nav-top-link" href="{{nav.href}}" title="{{nav.text}}">{{nav.text}}</a>
+      <li class="ma__main-nav__item {{ nav.active ? 'is-active' : '' }} {{ nav.subNav ? 'has-subnav js-main-nav-toggle' : 'js-main-nav-top-link' }}">
+        <a class="ma__main-nav__top-link" href="{{nav.href}}" title="{{nav.text}}">{{nav.text}}</a>
         {% if nav.subNav %}
           <div class="ma__main-nav__subitems js-main-nav-content is-closed">
             <ul class="ma__main-nav__container">

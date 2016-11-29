@@ -182,6 +182,12 @@ export default function (window,document,$,undefined) {
       hide($openContent);
     });
 
+    // Hide any open submenu content when the sidebar menu is closed
+    $('.js-header-menu-button').click(function() {
+      let $openContent = $parent.find('.js-main-nav-content.' + openClass);
+      hide($openContent);
+    });
+
 
     function hide($content) {
       $('body').removeClass(submenuClass);
