@@ -152,7 +152,7 @@
             "name": "Fax",
             "hidden": "true",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",
@@ -237,7 +237,7 @@
             "name": "Online",
             "hidden": "",
             "items": [{
-              "type": "web",
+              "type": "online",
               "label":"",
               "value":"Contact Form",
               "link":"#",
@@ -248,7 +248,7 @@
             "name": "Fax",
             "hidden": "true",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",
@@ -352,7 +352,7 @@
             "name": "Online",
             "hidden": "",
             "items": [{
-              "type": "web",
+              "type": "online",
               "label":"",
               "value":"Contact Form",
               "link":"#",
@@ -363,7 +363,7 @@
             "name": "Fax",
             "hidden": "true",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",
@@ -460,7 +460,7 @@
             "name": "Online",
             "hidden": "",
             "items": [{
-              "type": "web",
+              "type": "online",
               "label":"",
               "value":"Contact Form",
               "link":"#",
@@ -471,7 +471,7 @@
             "name": "Fax",
             "hidden": "true",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",
@@ -550,7 +550,7 @@
             "name": "Online",
             "hidden": "",
             "items": [{
-              "type": "web",
+              "type": "online",
               "label":"",
               "value":"Contact Form",
               "link":"#",
@@ -561,7 +561,7 @@
             "name": "Fax",
             "hidden": "true",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",
@@ -647,7 +647,7 @@
             "name": "Online",
             "hidden": "",
             "items": [{
-              "type": "web",
+              "type": "online",
               "label":"",
               "value":"Contact Form",
               "link":"#",
@@ -658,7 +658,7 @@
             "name": "Fax",
             "hidden": "true",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",
@@ -783,22 +783,11 @@
               "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
             }]
           },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "web",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
             "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
             "hidden": "",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",

@@ -33,7 +33,7 @@
           "name": "Fax",
           "hidden": "",
           "items": [{
-            "type": "phone",
+            "type": "fax",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -86,7 +86,7 @@
           "name": "Fax",
           "hidden": "true",
           "items": [{
-            "type": "phone",
+            "type": "fax",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",

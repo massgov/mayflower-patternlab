@@ -45,7 +45,7 @@
         "link":"email@email.com",
         "details":""
       },{
-        "type": "web",
+        "type": "online",
         "label":"Web:",
         "value":"Contact Form",
         "link":"#",
@@ -56,8 +56,8 @@
       "name": "Fax",
       "hidden": "true",
       "items": [{
-        "type": "phone",
-        "label":"",
+        "type": "fax",
+        "label":"Main:",
         "value":"(413) 499-4262",
         "link":"14134994262",
         "details":"Please allow 24 hours for a response"
