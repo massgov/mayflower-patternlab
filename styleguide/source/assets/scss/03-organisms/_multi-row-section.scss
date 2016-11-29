@@ -14,13 +14,7 @@
   }
  
   &__title {
-    @include ma-border-decorative;
-    padding-bottom: .25em;
     padding-top: 45px;
-
-    a {
-      cursor: default;
-    }
   }
   
   & ~ & &__title {

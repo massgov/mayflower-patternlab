@@ -1,13 +1,5 @@
 .ma__multi-row-section {
 
-  &__title {
-    @include ma-border-decorative($c-theme-green);
-
-    a {
-      color: $c-font-heading;
-    }
-  }
-
   & ~ & &__title { // divider needs to match content width
     border-color: $c-bd-divider;
   }
