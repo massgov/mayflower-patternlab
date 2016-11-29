@@ -5,10 +5,10 @@
         <div class="ma__test-feed__item">
           <div class="ma__test-feed__icon">{% include item.icon %}</div>
           <div class="ma__test-feed__content">
-            <div class="ma__test-feed__link">
+            <h3 class="ma__test-feed__link">
               {% set decorativeLink = item.link %}
               {% include "@atoms/decorative-link.twig" with decorativeLink %}
-            </div>
+            </h3>
             <div class="ma__test-feed__description">
               {{item.description}}
             </div>
