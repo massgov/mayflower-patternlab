@@ -31,3 +31,4 @@ Title: Contact Us
 * Contact Group
 
 ##Notes:
+* first two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.

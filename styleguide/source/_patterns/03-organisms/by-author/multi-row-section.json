@@ -61,7 +61,7 @@
             "hidden": "",
             "items": [{
               "type": "phone",
-              "label":"Main",
+              "label":"Main:",
               "value":"(413) 499-4262",
               "rawVal":"14134994262",
               "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
@@ -72,7 +72,7 @@
             "hidden": "",
             "items": [{
               "type": "email",
-              "label":"Email",
+              "label":"Email:",
               "value":"email@email.com",
               "link":"email@email.com",
               "details":""
@@ -82,7 +82,7 @@
             "name": "Fax",
             "hidden": "true",
             "items": [{
-              "type": "phone",
+              "type": "fax",
               "label":"",
               "value":"(413) 499-4262",
               "link":"14134994262",

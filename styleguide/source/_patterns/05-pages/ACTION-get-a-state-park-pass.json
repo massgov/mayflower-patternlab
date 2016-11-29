@@ -580,7 +580,7 @@
           "hidden": "",
           "items": [{
             "type": "phone",
-            "label":"Main",
+            "label":"Main:",
             "value":"(617) 626-1250",
             "link":"16176261250",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
@@ -591,7 +591,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
-            "label":"Email",
+            "label":"Email:",
             "value":"mass.parks@state.ma.us",
             "link":"mass.parks@state.ma.us",
             "details":""
@@ -601,7 +601,7 @@
           "name": "Fax",
           "hidden": "true",
           "items": [{
-            "type": "phone",
+            "type": "fax",
             "label":"",
             "value":"(617) 626-1351",
             "link":"16176261351",
@@ -633,7 +633,7 @@
           "hidden": "",
           "items": [{
             "type": "phone",
-            "label":"Main",
+            "label":"Main:",
             "value":"(617) 626-1250",
             "link":"16176261250",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
@@ -644,7 +644,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
-            "label":"Email",
+            "label":"Email:",
             "value":"mass.parks@state.ma.us",
             "link":"mass.parks@state.ma.us",
             "details":""
@@ -654,7 +654,7 @@
           "name": "Fax",
           "hidden": "true",
           "items": [{
-            "type": "phone",
+            "type": "fax",
             "label":"",
             "value":"(617) 626-1351",
             "link":"16176261351",

@@ -8,14 +8,17 @@
       {% if item.label %}
         <span class="ma__contact-group__label">{{item.label}}</span>
       {% endif %}
-      {% if item.type == "phone" %}
+
+      {# Online wrap value in a link #}
+      {% if item.type == "online" %}
+        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
+      {# Phone - add tel: to href #}
+      {% elseif item.type == "phone" %}
         <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
-      {% elseif item.type == "fax" %}
-        {{item.value}}
+      {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
         <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
-      {% elseif item.type == "online" %}
-        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
+      {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
         <div class="ma__contact-group__address">
           {{item.value | raw}}
@@ -23,8 +26,9 @@
         {% if item.link %}
           <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron">directions</a>
         {% endif %}
+      {# Default - just spit out the value #}
       {% else %}
-        {{item.value}}
+        <span class="ma__contact-group__value">{{item.value}}</span>        
       {% endif %}
     </div>
     {% if item.details %}

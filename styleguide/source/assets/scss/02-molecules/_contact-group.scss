@@ -21,7 +21,14 @@
   }
 
   &__label {
+    display: inline-block;
     font-size: 1.25rem;
+  }
+
+  &__value {
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 1.75;
   }
 
   &__details {
@@ -37,8 +44,8 @@
   }
 
   .ma__content-link {
+    display: inline-block;
     font-size: 1.25rem;
     line-height: 1.75;
   }
-
 }

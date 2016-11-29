@@ -57,7 +57,7 @@
       "name": "Phone",
       "items": [{
         "type": "phone",
-        "label":"Main",
+        "label":"Main:",
         "value":"(413) 499-4262",
         "link":"14134994262",
         "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
@@ -68,7 +68,7 @@
       "name": "Online",
       "items": [{
         "type": "email",
-        "label":"Email",
+        "label":"Email:",
         "value":"email@email.com",
         "link":"email@email.com",
         "details":""
@@ -531,13 +531,13 @@
           "hidden": "",
           "items": [{
             "type": "phone",
-            "label":"Main",
+            "label":"Main:",
             "value":"(413) 499-4262",
             "link":"14134994262",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           },{
             "type": "phone",
-            "label":"TTY",
+            "label":"TTY:",
             "value":"(617) 555-7777",
             "link":"16175557777",
             "details":"For those who need accessible services"
@@ -548,7 +548,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
-            "label":"Email",
+            "label":"Email:",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
             "details":""
@@ -558,7 +558,7 @@
           "name": "Fax",
           "hidden": "true",
           "items": [{
-            "type": "phone",
+            "type": "fax",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -590,7 +590,7 @@
           "hidden": "",
           "items": [{
             "type": "phone",
-            "label":"Main",
+            "label":"Main:",
             "value":"(413) 443-8765",
             "link":"14134438765",
             "details":""
@@ -601,7 +601,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
-            "label":"Email",
+            "label":"Email:",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
             "details":""
@@ -611,7 +611,7 @@
           "name": "Fax",
           "hidden": "true",
           "items": [{
-            "type": "phone",
+            "type": "fax",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
