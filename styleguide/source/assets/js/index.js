@@ -9,6 +9,7 @@ import formValidation   from "./modules/formValidation.js";
 import hideAlert        from "./modules/hideAlert.js";
 import keywordSearch    from "./modules/keywordSearch.js";
 import mainNav          from "./modules/mainNav.js";
+import mainNavPilot     from "./modules/mainNavPilot.js";
 import mobileNav        from "./modules/mobileNav.js";
 import responsiveVideo  from "./modules/responsiveVideo.js";
 import richText         from "./modules/richText.js";

@@ -154,7 +154,7 @@ export default function (window,document,$,undefined) {
         hide($openContent);
       }
     });
-    $mainNavToggle .on('click', function(e) {
+    $mainNavToggle.on('click', function(e) {
       if(windowWidth <= breakpoint) {
         e.preventDefault();
 
