@@ -9,11 +9,16 @@
     font-size: 1.375rem;
     letter-spacing: .1em;
     line-height: 1.39;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     overflow: hidden;
-    padding: 18px 25px 14px 25px;
+    padding: 12px 20px 10px 20px;
     position: relative;
     text-transform: uppercase;
+
+    @media ($bp-small-min) {
+      margin-bottom: 30px;
+      padding: 18px 25px 14px 25px;
+    }
 
     &:after {
       content: "";

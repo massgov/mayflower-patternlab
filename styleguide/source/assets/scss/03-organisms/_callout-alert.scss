@@ -2,9 +2,14 @@
   border: 3px solid;
   cursor: pointer;
   margin-bottom: 45px;
-  padding: 30px;
-  padding-left: 100px;
+  padding: 15px 20px;
+  padding-left: 60px;
   position: relative;
+
+  @media ($bp-small-min){
+    padding: 30px;
+    padding-left: 100px;
+  }
 
   .rich-text {
     margin-bottom: 1.75rem;
@@ -12,12 +17,18 @@
 
   &__icon {
     font-size: 0; // removing white-space;
-    height: 48px;
+    height: 36px;
     position: absolute;
       top: 50%;
-      left:30px;
+      left:20px;
     transform: translateY(-50%);
-    width: 44px;
+    width: 34px;
+
+    @media ($bp-small-min){
+      height: 48px;
+      left: 30px;
+      width: 44px;
+    }
   }
 
   &__link {

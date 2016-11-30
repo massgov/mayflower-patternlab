@@ -1,8 +1,19 @@
 .ma__action-card {
   @include ma-container;
 
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media ($bp-small-min){
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media ($bp-medium-min){
+    padding-top: 95px;
+    padding-bottom: 95px;
+  }
+
 
   &__title {
     @include ma-border-decorative;
@@ -19,6 +30,7 @@
   }
 
   &__description {
+    margin-bottom: 30px;
 
     @media ($bp-medium-min) {
       text-align: center;
@@ -51,13 +63,14 @@
     width: 100%;
 
     @media ($bp-x-small-min) {
-      padding: 50px 20px;
+      padding: 30px;
     }
 
     @media ($bp-medium-min) {
       @include span-columns(6);
       @include omega(2n);
       min-height: 215px;
+      padding: 40px 20px;
 
       &:nth-last-child(2) {
         margin-bottom: 0;
@@ -83,15 +96,20 @@
   }
 
   &__icon {
-    height: 60px;
-    margin-bottom: 20px;
-    width: 60px;
+    height: 50px;
+    margin-bottom: 15px;
+    width: 50px;
 
     @media ($bp-x-small-min) {
       margin-bottom: 0;
-      padding: 0 12px;
+      margin-right: 20px;
       text-align: center;
-      width: 84px;
+    }
+
+    @media ($bp-small-min) {
+      height: 60px;
+      margin-bottom: 20px;
+      width: 60px;
     }
 
     @media ($bp-medium-min) {
@@ -109,7 +127,7 @@
   &__content {
 
     @media ($bp-x-small-min) {
-      width: calc(100% - 85px);
+      width: calc(100% - 105px);
     }
 
     @media ($bp-medium-min) {
