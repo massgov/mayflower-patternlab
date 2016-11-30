@@ -1,25 +1,31 @@
 # Mass Gov Release Notes
 
+## 2.2.0 (Sprint 8)
+### MQA bugs
+* MQA-23 - Links in the body are turning into a weird display
+* MQA-62 - Pilot Homepage Header on mobile has wrong coloring
+* MQA-65 - Opening the Common Actions menu in mobile also opens the common actions section on the pilot homepage
+* MQA-67 - Cannot collapse Common Actions when open in menu in mobile
+* MQA-74 - [action page] - ma__page-header__sub-title is marked-up wrong
+* MQA-84 - [Action] - Contact markup headings are non-semantic
+
+### Other
+* MGVDU-202 - Action Finder - entire action item should be clickable
+* MGVDU-354 - FE Dev - RTE columns - refactor
+* MGVDU-357 - FE Dev: Action Steps - refactor
+
+
 ## 2.1.0 (Sprint 7)
 ### Error pages
 * MGVDU-253 - Front end: 404 page
 * MGVDU-256 - Front end: 403 page
 * MGVDU-259 - Front end: 500 page
 
-### MQA bugs
-* MQA-62 - Pilot Homepage Header on mobile has wrong coloring
-* MQA-65 - Opening the Common Actions menu in mobile also opens the common actions section on the pilot homepage
-* MQA-74 - [action page] - ma__page-header__sub-title is marked-up wrong
-* MQA-84 - [Action] - Contact markup headings are non-semantic
-
 ### Other
-* MGVDU-202 - Action Finder - entire action item should be clickable
 * MGVDU-269 - Site Settings (utility nav) language dropdown
 * MGVDU-283 - FE Dev: Location Banner - swap stacking order
 * MGVDU-312 - FE Dev - Contact Group - refactor address
 * MGVDU-313 - Firefox text wrapping bug on Related Topics section on some but not all pages
-* MGVDU-354 - FE Dev - RTE columns - refactor
-* MGVDU-357 - FE Dev: Action Steps - refactor
 
 ## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
