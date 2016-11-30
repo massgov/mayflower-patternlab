@@ -1,0 +1,18 @@
+<section class="ma__transition-page">
+  <header class="ma__transition-page__header">
+    {% include "@atoms/09-media/site-logo.twig" %}
+  </header>
+
+  <main class="ma__transition-page__container">
+    <div class="ma__transition-page__icon">
+      {% include pilotTransition.icon %}
+    </div>
+    <p class="ma__transition-page__message">{{ pilotTransition.message }}</p>
+    <form class="ma__transition-page__form" action="{{ pilotTransition.href}}">
+      {% set inputCheckbox = pilotTransition.inputCheckbox %}
+      {% include "@atoms/03-forms/input-checkbox.twig" %}
+      <button class="ma__button-minor ma__button-minor--small" type="button">{{ pilotTransition.back }}</button>
+      <button class="ma__button ma__button--small" type="submit">{{ pilotTransition.submit }}</button>
+    </form>
+  </main>
+</section>
