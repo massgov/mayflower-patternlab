@@ -64,3 +64,38 @@ label {
     }
   }
 }
+
+.ma__input-checkbox {
+
+  input {
+    border-color: $c-bd-input;
+  }
+
+  label {
+
+    &:before {
+      background-color: $c-white;
+      border-color: rgba($c-bd-input,.5);
+      color: transparent;
+    }
+  }
+
+  input:checked ~ label {
+
+    &:before {
+      color: $c-font-base;
+      font-weight: 700;
+    }
+  }
+
+  input:focus ~ label:before {
+    border-color: Highlight !important;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-color: -webkit-focus-ring-color;
+    }
+  }
+}
+
