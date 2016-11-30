@@ -76,15 +76,6 @@ label {
     &:before {
       background-color: $c-white;
       border-color: rgba($c-bd-input,.5);
-      color: transparent;
-    }
-  }
-
-  input:checked ~ label {
-
-    &:before {
-      color: $c-font-base;
-      font-weight: 700;
     }
   }
 

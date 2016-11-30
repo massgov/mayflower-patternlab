@@ -65,11 +65,12 @@ label {
 
     &:before {
       border: 2px solid;
-      content: "✔";
+      content: ""; 
       display: inline-block;
       height: 1.75em;
       font-size: .5em;
       line-height: 1.5;
+      padding-top: .125em;
       position: absolute;
         top: -.13em;
         left: 0;
@@ -77,5 +78,13 @@ label {
       width: 1.75em;
     }
   }
+
+  input:checked ~ label {
+
+    &:before {
+      content: url("../images/checkmark.svg"); //"✔";
+    }
+  }
+
 }
 
