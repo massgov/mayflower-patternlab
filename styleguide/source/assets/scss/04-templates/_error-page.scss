@@ -21,16 +21,6 @@ $error-page-header-height: 170px;
   }
 }
 
-@keyframes error-page-hidden {
-  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
-    box-shadow: none;
-  }
-
-  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% {
-    box-shadow: 0 0 18px -5px #999;
-  }
-}
-
 .ma__error-page {
   min-height: 100vh;
   overflow: hidden;
@@ -115,56 +105,6 @@ $error-page-header-height: 170px;
     @media ($bp-small-min) {
       font-size: 1.625rem;
     }
-  }
-
-  &__hidden-msg {
-    @include ma-button-reset;
-    font-size: 0;
-    position: absolute;
-
-    img {
-      opacity: 0;
-      transition: opacity .8s ease;
-    }
-
-    &:hover {
-      box-shadow: 0 0 18px -5px #999;
-    }
-
-    &:focus {
-      border: none;
-      outline: none;
-    }
-
-    &:focus img {
-      opacity: 1;
-    }
-    
-    &:nth-child(1) {
-      animation: 7s linear 75s error-page-hidden;
-      left: random(15) + %;
-      top: random(15) + %;
-    }  
-    &:nth-child(2) {
-      animation: 7s linear 45s error-page-hidden;
-      right: random(15) + %;
-      top: random(15) + %;
-    }  
-    &:nth-child(3) {
-      animation: 7s linear 30s error-page-hidden;
-      left: random(15) + %;
-      bottom: random(15) + %;
-    }  
-    &:nth-child(4) {
-      animation: 7s linear 15s error-page-hidden;
-      bottom: random(15) + %;
-      right: random(15) + %;
-    }  
-    &:nth-child(5) {
-      animation: 7s linear 100s error-page-hidden;
-      bottom: random(15) + %;
-      left: random(80) - 20;
-    }  
   }
 
   .page-content {
