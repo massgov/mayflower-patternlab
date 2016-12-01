@@ -14,7 +14,6 @@ export default function (window,document,$,undefined) {
         anchors = [],
         numAnchors = 0,
         isMobile = false,
-        mobileBreakpoint = 780, // match CSS breakpoint
         linkScrolling = false;
 
     setVariables();
@@ -49,7 +48,7 @@ export default function (window,document,$,undefined) {
       // prevent the scroll event from updating active links
       linkScrolling = true;
 
-      $("body").stop(true,true).animate({scrollTop:position}, '750', function(){
+      $("html,body").stop(true,true).animate({scrollTop:position}, '750', function(){
         linkScrolling = false;
       });
       
@@ -77,14 +76,22 @@ export default function (window,document,$,undefined) {
     });
 
     function setVariables() {
-      elHeight = $el.outerHeight(true);
+      let topOffset = 0;
+
+      headerBuffer = 0;
+      elHeight = $el.height();
       windowSize = $(window).innerWidth();
       upperLimit = $elParent.offset().top;
       isMobile = checkMobile($el);
 
-      if(windowSize <= mobileBreakpoint) {
+      if($elParent[0].hasAttribute("style") && !isMobile) {
+        $elParent.removeAttr('style');
+      }
+ 
+      if(isMobile) {
         headerBuffer = $('.js-sticky-header').height() || 0;
         upperLimit -= headerBuffer;
+        topOffset = elHeight;
       }
 
       lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
@@ -93,7 +100,7 @@ export default function (window,document,$,undefined) {
       anchors = new Array;
       $el.find('a').each(function(i,e){
         let hash = this.hash,
-            position = $(hash).offset() ? $(hash).offset().top - headerBuffer - elHeight : upperLimit;
+            position = $(hash).offset() ? $(hash).offset().top - headerBuffer - topOffset : upperLimit;
 
         anchors[i] = { hash, position };
 
