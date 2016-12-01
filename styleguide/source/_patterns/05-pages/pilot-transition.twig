@@ -14,7 +14,7 @@
         {% include "@atoms/03-forms/input-checkbox.twig" %}
       </div>
       <div class="ma__pilot-transition__buttons">
-        <button class="ma__button-minor ma__button-minor--small" type="button">{{ pilotTransition.back }}</button>
+        <button class="ma__button-minor ma__button-minor--small" onClick="window.history.back();" type="button">{{ pilotTransition.back }}</button>
         <button class="ma__button ma__button--small" type="submit">{{ pilotTransition.submit }}</button>
       </div>
     </form>
