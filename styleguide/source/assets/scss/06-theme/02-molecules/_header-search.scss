@@ -1,9 +1,5 @@
 .ma__header-search {
 
-  input {
-    border-color: $c-bd-input;
-  }
-
   .ma__button-search {
 
     background-color: transparent;
@@ -20,7 +16,6 @@
 
       @media ($bp-small-max) {
         background-color: $c-white;
-        border-color: $c-bd-input;
 
         &:hover {
           background: $c-theme-green;
