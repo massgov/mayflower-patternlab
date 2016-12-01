@@ -5,7 +5,6 @@ export default function (window,document,$,undefined) {
         $elParent = $el.parent().css('position') === 'relative' ? $el.parent() : $el.parent().offsetParent(),
         elHeight,
         headerBuffer = 0,
-        windowSize,
         lowerLimit,
         upperLimit,
         debounceTimer,
@@ -80,7 +79,6 @@ export default function (window,document,$,undefined) {
 
       headerBuffer = 0;
       elHeight = $el.height();
-      windowSize = $(window).innerWidth();
       upperLimit = $elParent.offset().top;
       isMobile = checkMobile($el);
 
