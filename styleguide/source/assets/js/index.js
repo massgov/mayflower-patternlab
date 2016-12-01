@@ -2,7 +2,6 @@ import accordions       from "./modules/accordions.js";
 import actionMap        from "./modules/actionMap.js";
 import back2top         from "./modules/back2top.js";
 import bannerCarousel   from "./modules/bannerCarousel.js";
-import breadcrumbButton from "./modules/breadcrumbsButton.js";
 import clickable        from "./modules/clickable.js";
 import dropdown         from "./modules/dropdown.js";
 import formValidation   from "./modules/formValidation.js";
