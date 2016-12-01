@@ -57,7 +57,9 @@ export default function (window,document,$,undefined) {
         } else {
           show($topLevelItem.find('.js-main-nav-content'));
           $link.addClass(openClass);
-          $dropdownLinks[1].focus();
+          if($dropdownLinks[1]) {
+            $dropdownLinks[1].focus();
+          }
           return;
         }
       }
