@@ -1,18 +1,22 @@
-<section class="ma__transition-page">
-  <header class="ma__transition-page__header">
+<section class="ma__pilot-transition">
+  <header class="ma__pilot-transition__header">
     {% include "@atoms/09-media/site-logo.twig" %}
   </header>
 
-  <main class="ma__transition-page__container">
-    <div class="ma__transition-page__icon">
+  <main class="ma__pilot-transition__container">
+    <div class="ma__pilot-transition__icon">
       {% include pilotTransition.icon %}
     </div>
-    <p class="ma__transition-page__message">{{ pilotTransition.message }}</p>
-    <form class="ma__transition-page__form" action="{{ pilotTransition.href}}">
-      {% set inputCheckbox = pilotTransition.inputCheckbox %}
-      {% include "@atoms/03-forms/input-checkbox.twig" %}
-      <button class="ma__button-minor ma__button-minor--small" type="button">{{ pilotTransition.back }}</button>
-      <button class="ma__button ma__button--small" type="submit">{{ pilotTransition.submit }}</button>
+    <p class="ma__pilot-transition__message">{{ pilotTransition.message }}</p>
+    <form class="ma__form ma__pilot-transition__form" action="{{ pilotTransition.href}}">
+      <div class="ma__pilot-transition__checkbox">
+        {% set inputCheckbox = pilotTransition.inputCheckbox %}
+        {% include "@atoms/03-forms/input-checkbox.twig" %}
+      </div>
+      <div class="ma__pilot-transition__buttons">
+        <button class="ma__button-minor ma__button-minor--small" type="button">{{ pilotTransition.back }}</button>
+        <button class="ma__button ma__button--small" type="submit">{{ pilotTransition.submit }}</button>
+      </div>
     </form>
   </main>
 </section>
