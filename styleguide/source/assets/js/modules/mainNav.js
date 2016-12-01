@@ -154,13 +154,12 @@ export default function (window,document,$,undefined) {
         hide($openContent);
       }
     });
-    $mainNavToggle.on('click', function(e) {
+    $mainNavToggle.children('a').on('click', function(e) {
       if(windowWidth <= breakpoint) {
         e.preventDefault();
-
-        let $content = $(this).find('.js-main-nav-content');
+        let $content = $(this).parent().find('.js-main-nav-content');
         // add open class to this item
-        $(this).addClass(openClass);
+        $(this).parent().addClass(openClass);
         show($content);
       }
     });
