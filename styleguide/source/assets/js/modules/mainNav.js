@@ -11,7 +11,7 @@ export default function (window,document,$,undefined) {
         closeClass = "is-closed",
         submenuClass = "show-submenu",
         $parent = $(this),
-        $mainNavToggle = $parent.find('.js-main-nav-toggle'),
+        $mainNavToggle = $parent.find('.js-main-nav-toggle, .js-main-nav-top-link'),
         previousKey = null,
         breakpoint = 800; // matches CSS breakpoint for Main Nav
 
@@ -57,7 +57,9 @@ export default function (window,document,$,undefined) {
         } else {
           show($topLevelItem.find('.js-main-nav-content'));
           $link.addClass(openClass);
-          $dropdownLinks[1].focus();
+          if($dropdownLinks[1]) {
+            $dropdownLinks[1].focus();
+          }
           return;
         }
       }
