@@ -11,7 +11,7 @@ export default function (window,document,$,undefined) {
         closeClass = "is-closed",
         submenuClass = "show-submenu",
         $parent = $(this),
-        $mainNavToggle = $parent.find('.js-main-nav-toggle'),
+        $mainNavToggle = $parent.find('.js-main-nav-toggle, .js-main-nav-top-link'),
         previousKey = null,
         breakpoint = 800; // matches CSS breakpoint for Main Nav
 
@@ -57,7 +57,9 @@ export default function (window,document,$,undefined) {
         } else {
           show($topLevelItem.find('.js-main-nav-content'));
           $link.addClass(openClass);
-          $dropdownLinks[1].focus();
+          if($dropdownLinks[1]) {
+            $dropdownLinks[1].focus();
+          }
           return;
         }
       }
@@ -154,13 +156,12 @@ export default function (window,document,$,undefined) {
         hide($openContent);
       }
     });
-    $mainNavToggle.on('click', function(e) {
+    $mainNavToggle.children('a').on('click', function(e) {
       if(windowWidth <= breakpoint) {
         e.preventDefault();
-
-        let $content = $(this).find('.js-main-nav-content');
+        let $content = $(this).parent().find('.js-main-nav-content');
         // add open class to this item
-        $(this).addClass(openClass);
+        $(this).parent().addClass(openClass);
         show($content);
       }
     });

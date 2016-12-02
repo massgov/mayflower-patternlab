@@ -19,11 +19,6 @@ $action-finder-border-color: tint($c-theme-blue,50%);
 
   &__search {
 
-    input {
-      background-color: rgba($c-white, 0.1);
-      color: $c-font-inverse;
-    }
-
     button {
       color: $c-font-inverse;
 

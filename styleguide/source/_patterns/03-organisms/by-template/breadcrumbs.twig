@@ -1,25 +1,14 @@
 
 <section class="ma__breadcrumbs {{breadcrumbs.light ? 'ma__breadcrumbs--light' : ''}}">
   <nav class="ma__breadcrumbs__container">
+    <div class="ma__breadcrumbs__label">
+      More in:
+    </div>
     <ol class="ma__breadcrumbs__items">
       <li class="ma__breadcrumbs__item"><a href="/">Home</a></li>
-      {% if breadcrumbs.links|length > 4 %}
-        <li class="ma__breadcrumbs__item ma__breadcrumbs__item--menu"> 
-          <button class="ma__breadcrumbs__menu-display js-breadcrumbs-button" role="menu">&#8230;</button>
-          <ol class="ma__breadcrumbs__sub-items">
-            {% for link in breadcrumbs.links[start:length-2] %}
-              <li class="ma__breadcrumbs__sub-item"><a href="{{link.href}}">{{link.text}}</a></li>
-            {% endfor %}
-          </ol>
-        </li>
-        {% for link in breadcrumbs.links[length-2:length] %}
-          <li class="ma__breadcrumbs__item"><a href="{{link.href}}">{{link.text}}</a></li>
-        {% endfor %}
-      {% else %}
-        {% for link in breadcrumbs.links %}
-          <li class="ma__breadcrumbs__item"><a href="{{link.href}}">{{link.text}}</a></li>
-        {% endfor %}
-      {% endif %}
+      {% for link in breadcrumbs.links %}
+        <li class="ma__breadcrumbs__item"><a href="{{link.href}}">{{link.text}}</a></li>
+      {% endfor %}
     </ol>
   </nav>
 </section>
