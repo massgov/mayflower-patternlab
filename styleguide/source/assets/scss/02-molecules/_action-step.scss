@@ -4,10 +4,6 @@
   margin-bottom: 28px;
   position: relative;
 
-  @media ($bp-small-min) {
-    padding-left: 60px;
-  }
-
   &__icon {
     position: absolute;
       top: 0;
@@ -28,7 +24,21 @@
     padding-left: 50px;
 
     @media ($bp-small-min) {
-      margin-bottom: 0;
+      padding-left: 60px;
+    }
+  }
+
+  &__content {
+    padding-left: 50px;
+
+    @media ($bp-small-min) {
+      padding-left: 60px;
+    }
+  }
+
+  &__title + &__content {
+
+    @media ($bp-small-max) {
       padding-left: 0;
     }
   }

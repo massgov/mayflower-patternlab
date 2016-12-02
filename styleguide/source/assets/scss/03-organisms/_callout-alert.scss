@@ -17,17 +17,23 @@
 
   &__icon {
     font-size: 0; // removing white-space;
-    height: 36px;
     position: absolute;
       top: 50%;
       left:20px;
     transform: translateY(-50%);
-    width: 34px;
 
     @media ($bp-small-min){
-      height: 48px;
       left: 30px;
+    }
+
+    & > svg {
+      height: 48px;
       width: 44px;
+
+      @media ($bp-small-max){
+        height: 36px;
+        width: 34px;
+      }
     }
   }
 
@@ -40,4 +46,7 @@
     }
   }
 
+  .ma__decorative-link {
+    padding-right: 0;
+  }
 }
