@@ -2,12 +2,22 @@
 
   .ma__button-search {
     background-color: transparent;
-    border-left-color: rgba($c-bd-input,.5);
+    border-left-color: $c-bd-input;
 
     &:hover {
       background: $c-theme-green;
+      border-left-color: $c-theme-green;
     }
   }
+
+  .ma__form--light .ma__button-search {
+    border-left-color: rgba($c-bd-input,.5);
+
+    &:hover {
+      border-left-color: $c-theme-green;
+    }
+  }
+
 
   &__reset {
     @include ma-font(700);

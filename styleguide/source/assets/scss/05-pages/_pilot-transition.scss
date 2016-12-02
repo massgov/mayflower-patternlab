@@ -5,23 +5,23 @@ $error-page-header-height: 170px;
 
 @keyframes error-page-bg-full {
   0% { 
-    left: 150%;
+    right: 150%;
   }
   100% {
-    left: $error-page-bg-offset-full;
+    right: $error-page-bg-offset-full;
   }
 }
 
 @keyframes error-page-bg-narrow {
   0% { 
-    left: 150%;
+    right: 150%;
   }
   100% {
-    left: $error-page-bg-offset-narrow;
+    right: $error-page-bg-offset-narrow;
   }
 }
 
-.ma__error-page {
+.ma__pilot-transition {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
@@ -32,19 +32,19 @@ $error-page-header-height: 170px;
     height: 200%;
     position: absolute;
       top: 0;
-    transform: rotate(-30deg);
-    transform-origin: top left;
+    transform: rotate(30deg);
+    transform-origin: top right;
     width: 200%;
     z-index: -1;
 
     @media ($bp-small-max) {
       animation: 3s error-page-bg-narrow;
-      left: $error-page-bg-offset-narrow;
+      right: $error-page-bg-offset-narrow;
     }
 
     @media ($bp-small-min) {
       animation: 3s error-page-bg-full;
-      left: $error-page-bg-offset-full;
+      right: $error-page-bg-offset-full;
     }
   }
 
@@ -65,30 +65,11 @@ $error-page-header-height: 170px;
     min-height: calc(100vh - #{$error-page-header-height});
   }
 
-  &__content {
-    flex-grow: 0;
-    padding-bottom: $error-page-header-height;
-    position: relative;
-  }
-
-  &__label {
-    font-size: 7rem;
-    line-height: 0.72;
+  &__icon {
     margin-bottom: 15px;
-    text-transform: uppercase;
-
-    @media ($bp-small-min) {
-      font-size: 12.75rem;
-    }
   }
 
-  &__type {
-    font-size: 1.75rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
-
-  &__title {
+  &__message {
     font-size: 1.75rem;
     line-height: 1.31;
 
@@ -97,21 +78,16 @@ $error-page-header-height: 170px;
     }
   }
 
-  &__message {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    margin-bottom: 1.75em;
+  &__checkbox {
+    margin-bottom: 45px;
+  }
 
-    @media ($bp-small-min) {
-      font-size: 1.625rem;
+  &__buttons {
+    padding-bottom: 170px;  // helps vertically align the page content
+
+    button,
+    input {
+      margin: 0 10px;
     }
-  }
-
-  .page-content {
-    z-index: 2;
-  }
-
-  .main-content {
-    margin-bottom: 0;
   }
 }
