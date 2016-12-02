@@ -1,0 +1,15 @@
+.ma__pilot-transition {
+
+  &:before {
+    background-color: rgba($c-theme-green, .15);
+  }
+
+  &__icon {
+    fill: $c-theme-green;
+  }
+
+  &__message {
+    color: $c-font-dark;
+    font-weight: 700;
+  }
+}
