@@ -77,6 +77,7 @@
 @import "03-organisms/callout-time";
 @import "03-organisms/change-log";
 @import "03-organisms/collage-header";
+@import "03-organisms/error-page";
 @import "03-organisms/feedback-form";
 @import "03-organisms/footer";
 @import "03-organisms/header";
@@ -103,10 +104,8 @@
 @import "03-organisms/suggested-pages";
 @import "03-organisms/test-feed";
 @import "03-organisms/top-actions";
+@import "03-organisms/transition-page";
 
 // Templates - page content types
 @import "04-templates/layout";
-@import "04-templates/error-page";
 
-// Pages - 
-@import "05-pages/pilot-transition";
