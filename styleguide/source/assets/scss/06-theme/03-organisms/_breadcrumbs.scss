@@ -8,6 +8,10 @@
     }
   }
 
+  .post-content & {
+    border-color: $c-bd-divider;
+  }
+
   &__label {
     @include ma-font(700);
   }
@@ -26,15 +30,6 @@
         &:nth-last-child(2) {
 
           &:before {
-            border-color: $c-theme-blue;
-          }
-        }
-      }
-
-      .post-content & {
-        &:nth-last-child(2) {
-
-          &:after {
             border-color: $c-theme-blue;
           }
         }
