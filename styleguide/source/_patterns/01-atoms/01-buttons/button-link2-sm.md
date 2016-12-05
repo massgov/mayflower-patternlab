@@ -1,5 +1,4 @@
 ---
-el: .ma__button-minor--small
 title: Button minor small
 ---
 Description: an atom for a link styled as a small minor button.

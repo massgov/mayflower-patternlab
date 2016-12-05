@@ -1,5 +1,4 @@
 ---
-el: .ma__button-alt
 title: Button main alternate
 ---
 Description: an atom for a link styled as an alternate main button.
