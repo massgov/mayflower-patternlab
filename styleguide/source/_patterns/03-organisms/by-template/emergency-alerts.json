@@ -1,0 +1,9 @@
+{
+  "emergencyAlerts": {
+    "buttonAlert": {
+      "hideText": "Hide",
+      "showText": "Show",
+      "text": "Updates"
+    }
+  }
+}
