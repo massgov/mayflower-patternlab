@@ -99,7 +99,8 @@ body {
 
           @media ($bp-small-max) {
             @include ma-valign-block;
-            border: 2px solid;
+            border-width: 2px;
+            border-style: solid;
             display: inline-block;
             position: static;
             transition: opacity .4s;

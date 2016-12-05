@@ -3,8 +3,7 @@
   .ma__button-search {
 
     background-color: transparent;
-    border-color: transparent;
-    border-left-color: $c-bd-input;
+    border-color: $c-bd-input;
 
     &:hover {
       background: $c-theme-green;

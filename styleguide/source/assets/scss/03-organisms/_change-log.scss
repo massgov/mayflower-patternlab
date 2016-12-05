@@ -19,9 +19,13 @@
   &__item {
     font-size: 1.25rem;
     padding-bottom: 30px;
-    padding-left: 95px;
+    padding-top: 30px;
     position: relative;
 
+    @media ($bp-small-min) {
+      padding-left: 95px;
+      padding-top: 0;
+    }
   }
 
   &__date {
