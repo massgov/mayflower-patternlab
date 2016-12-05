@@ -1,7 +1,7 @@
 .ma__action-step {
+  @include ma-component-spacing;
   @include ma-reset-rich-text;
   margin-bottom: 28px;
-  padding-left: 60px;
   position: relative;
 
   &__icon {
@@ -20,6 +20,26 @@
   }
 
   &__title {
-    margin-bottom: 0;
+    min-height: 32px;
+    padding-left: 50px;
+
+    @media ($bp-small-min) {
+      padding-left: 60px;
+    }
+  }
+
+  &__content {
+    padding-left: 50px;
+
+    @media ($bp-small-min) {
+      padding-left: 60px;
+    }
+  }
+
+  &__title + &__content {
+
+    @media ($bp-small-max) {
+      padding-left: 0;
+    }
   }
 }

@@ -1,9 +1,9 @@
 $rich-text-spacing: 1.75rem;
+$rich-text-spacing-mobile: 1.5rem;
 
 .ma__rich-text {
   @include clearfix;
-  margin-bottom: 45px;
-
+  @include ma-component-spacing;
 
   &--description {
     margin-bottom: 1rem;
@@ -54,7 +54,11 @@ $rich-text-spacing: 1.75rem;
   }
 
   p {
-    margin-bottom: $rich-text-spacing;
+    margin-bottom: $rich-text-spacing-mobile;
+
+    @media ($bp-small-min) {
+      margin-bottom: $rich-text-spacing;
+    }
   }
 
   img {
@@ -80,13 +84,21 @@ $rich-text-spacing: 1.75rem;
 // List styles
   ul {
     list-style-type: disc;
-    margin-bottom: $rich-text-spacing;
+    margin-bottom: $rich-text-spacing-mobile;
     padding-left: 20px;
+
+    @media ($bp-small-min) {
+      margin-bottom: $rich-text-spacing;
+    }
   }
 
   ol {
-    margin-bottom: $rich-text-spacing;
+    margin-bottom: $rich-text-spacing-mobile;
     padding-left: 30px;
+
+    @media ($bp-small-min) {
+      margin-bottom: $rich-text-spacing;
+    }
   }
 
   li {
@@ -118,10 +130,13 @@ $rich-text-spacing: 1.75rem;
   // TABLE styles
   table {
     border-collapse: collapse;
-    margin-bottom: $rich-text-spacing;
+    margin-bottom: $rich-text-spacing-mobile;
     min-width: 450px;
     width: 100%;
 
+    @media ($bp-small-min) {
+      margin-bottom: $rich-text-spacing;
+    }
   }
 
   thead {

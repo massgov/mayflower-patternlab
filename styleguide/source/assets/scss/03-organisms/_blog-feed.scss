@@ -4,10 +4,11 @@
 
   &__title {
     @include ma-border-decorative;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding-bottom: 15px;
 
     @media ($bp-medium-min) {
+      margin-bottom: 60px;
       text-align: center;
 
       &:after {

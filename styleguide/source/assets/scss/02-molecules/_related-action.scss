@@ -13,9 +13,12 @@
   }
 
   &__description {
-    font-size: 1.25rem;
     line-height: 1.5;
     padding-top: 5px;
+
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
 
     & > :last-child {
       margin-bottom: 0;
