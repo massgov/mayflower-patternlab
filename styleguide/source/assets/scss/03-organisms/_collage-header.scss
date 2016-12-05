@@ -89,8 +89,8 @@ $collage-header-bp-min: "min-width: 701px";
 
     @media ($collage-header-bp-min) {
       margin-bottom: 50px;
-      padding-top: 50px;
-      padding-bottom: 55px;
+      padding-top: 35px;
+      padding-bottom: 40px;
     }
 
     &:before {
@@ -114,7 +114,7 @@ $collage-header-bp-min: "min-width: 701px";
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
       margin-bottom: 0;
 
       @media ($collage-header-bp-min) {
@@ -123,12 +123,12 @@ $collage-header-bp-min: "min-width: 701px";
       }
 
       @media ($bp-medium-min) {
-        font-size: 4.625rem;
+        font-size: 4rem;
         width: 550px;
       }
 
       @media ($bp-large-min) {
-        font-size: 5.125rem;
+        font-size: 4.75rem;
         width: 620px;
       }
     }
@@ -144,8 +144,8 @@ $collage-header-bp-min: "min-width: 701px";
     &__description {
       font-size: 1.625rem;
     }
+  }
     &__lead {
       @include ma-h3;
     }
-  }
 }

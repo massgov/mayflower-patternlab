@@ -1,0 +1,11 @@
+@mixin ma-component-spacing {
+  margin-bottom: 30px;
+
+  @media ($bp-small-min){
+    margin-bottom: 45px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
