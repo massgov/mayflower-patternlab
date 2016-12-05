@@ -54,7 +54,7 @@ body {
     @media ($bp-small-min) {
       width: 210px;
     }
-    
+
     @media ($bp-small-min) {
       @include span-columns(4);
       display: inline-block;
@@ -85,7 +85,7 @@ body {
 
     @media ($bp-small-max) {
       .ma__header-search {
-        
+
         &__input {
           display:none;
         }
@@ -99,7 +99,8 @@ body {
 
           @media ($bp-small-max) {
             @include ma-valign-block;
-            border: 2px solid;
+            border-width: 2px;
+            border-style: solid;
             display: inline-block;
             position: static;
             transition: opacity .4s;
@@ -156,7 +157,7 @@ body {
 
   &__back-button {
     @include ma-button-reset;
-    font-size: 1rem;
+    font-size: 1.125rem;
     height: 33px;
     letter-spacing: .1em;
     margin-left: 20px;
@@ -198,7 +199,7 @@ body {
   &__menu-button {
     background-color: transparent;
     border: none;
-    font-size: 1rem;
+    font-size: 1.125rem;
     height: 35px;
     letter-spacing: .1em;
     line-height: 35px;

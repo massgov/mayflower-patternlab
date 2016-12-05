@@ -22,13 +22,20 @@
 
   &__label {
     display: inline-block;
-    font-size: 1.25rem;
+
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
+
   }
 
   &__value {
     display: inline-block;
-    font-size: 1.25rem;
     line-height: 1.75;
+
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
   }
 
   &__details {
@@ -39,13 +46,19 @@
   }
 
   &__address {
-    font-size: 1.25rem;
     line-height: 1.5;
+
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
   }
 
   .ma__content-link {
     display: inline-block;
-    font-size: 1.25rem;
     line-height: 1.75;
+
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
   }
 }

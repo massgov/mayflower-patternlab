@@ -1,4 +1,5 @@
 .ma__action-map {
+  @include ma-component-spacing;
   height: 360px;
 
   @media ($bp-x-small-min) {

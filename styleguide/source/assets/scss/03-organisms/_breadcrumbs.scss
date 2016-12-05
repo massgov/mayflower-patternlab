@@ -1,5 +1,6 @@
 
 .ma__breadcrumbs {
+
   .pre-content & {
 
     &:last-child {
@@ -7,6 +8,9 @@
     }
   }
   .post-content & {
+    border-top: 1px solid;
+    margin-top: 2em;
+
     @media ($bp-medium-min) {
       display: none;
     }
@@ -21,7 +25,6 @@
     display: inline-block;
     font-size: 1rem;
     letter-spacing: .1em;
-    margin-top: 2em;
     text-transform: uppercase;
 
     .pre-content & {
@@ -89,12 +92,7 @@
 
       .post-content & {
         &:nth-last-child(2) {
-          @include ma-chevron("right");
           display: block;
-
-          &:after {
-            opacity: .5;
-          }
         }
       }
     }
@@ -120,7 +118,7 @@
 
   a {
     display: inline-block;
-    font-size: 1.063rem;
+    font-size: 17px;
     line-height: 1em;
     padding: 10px 0;
 
