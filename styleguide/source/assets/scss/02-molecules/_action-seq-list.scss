@@ -1,5 +1,6 @@
 $action-seq-list-icon-border: 3px;
 .ma__action-seq-list {
+  @include ma-component-spacing;
 
   &__items {
     @include ma-reset-list;
@@ -9,8 +10,12 @@ $action-seq-list-icon-border: 3px;
   &__item {
     list-style:none; // Disable the normal item numbering
     margin-bottom: 28px;
-    padding-left: 60px;
     position: relative;
+
+    @media ($bp-small-min) {
+      padding-left: 60px;
+    }
+
 
     &:before {
       border: $action-seq-list-icon-border solid;
@@ -33,7 +38,13 @@ $action-seq-list-icon-border: 3px;
   }
 
   &__title {
-    margin-bottom: 0;
+    min-height: 32px;
+    padding-left: 50px;
+
+    @media ($bp-small-min) {
+      margin-bottom: 0;
+      padding-left: 0;
+    }
   }
 
   .ma__rich-text {

@@ -163,9 +163,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Park"
             }
           }
@@ -179,9 +179,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Museum"
             }
           }
@@ -195,9 +195,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Beach"
             }
           }
