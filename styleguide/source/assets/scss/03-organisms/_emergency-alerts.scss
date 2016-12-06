@@ -1,0 +1,36 @@
+$emergency-alerts-half-max: $max-width / 2;
+
+.ma__emergency-alerts {
+  position: relative;
+
+  &__header {
+
+    @media ($bp-medium-min) {
+      padding-right: 170px; // width of the button
+    }
+  }
+
+
+  &__content {
+
+  }
+
+  &__interface {
+    @include ma-container;
+    font-size: 0;
+
+    @media ($bp-small-min) {
+      margin: 0;
+      position: absolute;
+        top: 15px;
+        right: 0;
+        
+    }
+
+    @media ($bp-page-width-min) {
+      left: calc(50% + #{$emergency-alerts-half-max});
+      right: auto;
+      transform: translateX(-100%);
+    }
+  }
+}

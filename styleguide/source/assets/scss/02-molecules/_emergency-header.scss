@@ -1,7 +1,15 @@
 .ma__emergency-header {
   @include ma-container;
-  display: flex;
   padding: 12px;
+
+  @media ($bp-small-max) {
+    text-align: center;
+  }
+  
+  @media ($bp-medium-min) {
+    display: flex;
+      align-items: center;
+  }
 
   &__label {
     flex-shrink: 0;
@@ -9,6 +17,10 @@
     padding-right: 18px;
     white-space: nowrap;
 
+    @media ($bp-medium-max) {
+      margin-bottom: 10px;
+    }
+    
     // icon
     & > svg {
       height: 24px;
@@ -20,6 +32,7 @@
         height: 32px;
         width: 36px;
       }
+
     }
 
     // text
@@ -33,11 +46,14 @@
   }
 
   &__title {
-    border-left-width: 1px;
-    border-left-style: solid;
     font-size: 1.5rem;
     line-height: 1.4;
     margin-bottom: 0;
-    padding-left: 18px;
+
+    @media ($bp-medium-min) {
+      border-left-width: 1px;
+      border-left-style: solid;
+      padding-left: 18px;
+    }
   }
 }

@@ -1,0 +1,29 @@
+.ma__emergency-alerts {
+  position: relative;
+
+  &__header {
+    background-color: $c-theme-yellow;
+  }
+
+  &__content {
+    
+  }
+
+  &__interface {
+    
+    @media ($bp-small-max) {
+      background-color: $c-theme-yellow;
+      padding: 20px;
+      padding-top: 0;
+      transition: background-color .5s;
+      
+      .is-open & {
+        background-color: rgba($c-theme-yellow, .5);
+      }
+
+      .ma__button-alert {
+        width: 100%;
+      }
+    }
+  }
+}
