@@ -2,7 +2,11 @@
   @include ma-heading-colored();
 
   .sidebar & {
-    margin-top: 50px;
+    margin-top: 45px;
+
+    @media ($bp-small-min){
+      margin-top: 50px;
+    }
 
     &:first-child {
       margin-top: 0;

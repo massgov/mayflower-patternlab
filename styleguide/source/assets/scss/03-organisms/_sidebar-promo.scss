@@ -11,8 +11,11 @@
   }
 
   &__content {
-    font-size: 1.25rem;
     margin-bottom: 1em;
+
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
   }
 
   &__view-more {

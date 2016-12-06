@@ -11,20 +11,32 @@
 
 input {
   background-color: $c-white;
-  border-color: rgba($c-bd-input,.5);
+  border-color: $c-bd-input;
   color: $c-font-base;
 
   &[data-valid ="is-invalid"] {
     border-color: red;
   }
+
+  .ma__form--light & {
+    background-color: rgba($c-white, 0.1);
+    border-color: rgba($c-bd-input,.5);
+    color: $c-font-inverse;
+  }
 }
 
 textarea {
   background-color: $c-white;
-  border-color: rgba($c-bd-input,.5);
+  border-color: $c-bd-input;
 
   &[data-valid ="is-invalid"] {
     border-color: rgba(red,.7);
+  }
+
+  .ma__form--light & {
+    background-color: rgba($c-white, 0.1);
+    border-color: rgba($c-bd-input,.5);
+    color: $c-font-inverse;
   }
 }
 
@@ -34,16 +46,17 @@ label {
 
 .ma__input-radio {
 
-  input {
-    border-color: $c-bd-input;
-  }
-
   label {
 
     &:before {
       background-color: $c-white;
-      border-color: rgba($c-bd-input,.5);
+      border-color: $c-bd-input;
       color: transparent;
+
+      .ma__form--light & {
+        background-color: rgba($c-white, 0.1);
+        border-color: rgba($c-bd-input,.5);
+      }
     }
   }
 
@@ -51,6 +64,10 @@ label {
 
     &:before {
       color: $c-font-base;
+
+      .ma__form--light & {
+        color: $c-font-inverse;
+      }
     }
   }
 
@@ -64,3 +81,30 @@ label {
     }
   }
 }
+
+.ma__input-checkbox {
+
+  label {
+
+    &:before {
+      background-color: $c-white;
+      border-color: $c-bd-input;
+
+      .ma__form--light & {
+        background-color: rgba($c-white, 0.1);
+        border-color: rgba($c-bd-input,.5);
+      }
+    }
+  }
+
+  input:focus ~ label:before {
+    border-color: Highlight !important;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-color: -webkit-focus-ring-color;
+    }
+  }
+}
+

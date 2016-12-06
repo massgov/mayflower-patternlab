@@ -1,4 +1,9 @@
 {
+  "narrowTemplate": {
+    "side": "right",
+    "color": "yellow"
+  },
+  
   "errorPage": {
     "type": "500",
     "label": "Uh Oh",

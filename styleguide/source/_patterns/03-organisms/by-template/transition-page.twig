@@ -1,0 +1,16 @@
+<section class="ma__transition-page">
+  <div class="ma__transition-page__icon">
+    {% include transitionPage.icon %}
+  </div>
+  <p class="ma__transition-page__message">{{ transitionPage.message }}</p>
+  <form class="ma__form ma__transition-page__form" action="{{ transitionPage.href}}">
+    <div class="ma__transition-page__checkbox">
+      {% set inputCheckbox = transitionPage.inputCheckbox %}
+      {% include "@atoms/03-forms/input-checkbox.twig" %}
+    </div>
+    <div class="ma__transition-page__buttons">
+      <button class="ma__button-minor ma__button-minor--small" onClick="window.history.back();" type="button">{{ transitionPage.back }}</button>
+      <button class="ma__button ma__button--small" type="submit">{{ transitionPage.submit }}</button>
+    </div>
+  </form>
+</section>

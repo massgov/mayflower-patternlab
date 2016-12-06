@@ -1,6 +1,7 @@
-{% extends '@templates/error-template.twig' %}
+{% extends '@templates/narrow-template.twig' %}
 
-{% block pageContent %}
+{% block narrowContent %}
+  {% include "@organisms/by-template/error-page.twig" %}
   {% include "@molecules/header-search.twig" %}
   {% include "@organisms/by-author/helpful-links.twig" %}
 {% endblock %}

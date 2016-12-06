@@ -31,7 +31,7 @@
     &:before {
       content: "true"; // hook for JS to do the mobile sticky
       display: none;
-      
+
       @media ($bp-medium-min) {
         content: "false"; // hook for JS to do the mobile sticky
       }
@@ -91,7 +91,7 @@
 
     a {
       display: none;
-      font-size: 1.25rem;
+      font-size: 20px;
       line-height: 1.2;
       padding: 10px 15px;
 
