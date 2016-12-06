@@ -1,6 +1,6 @@
 {
   "narrowTemplate": {
-    "direction": "right",
+    "side": "right",
     "color": "yellow"
   }
 }
