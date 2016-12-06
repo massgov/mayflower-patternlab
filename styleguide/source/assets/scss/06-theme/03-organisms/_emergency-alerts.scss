@@ -6,7 +6,7 @@
   }
 
   &__content {
-    
+    background-color: lighten($c-theme-yellow,34%);
   }
 
   &__interface {
@@ -18,7 +18,7 @@
       transition: background-color .5s;
       
       .is-open & {
-        background-color: rgba($c-theme-yellow, .5);
+        background-color: lighten($c-theme-yellow,34%);
       }
 
       .ma__button-alert {

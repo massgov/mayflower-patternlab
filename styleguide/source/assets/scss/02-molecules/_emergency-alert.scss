@@ -1,0 +1,31 @@
+.ma__emergency-alert {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  & + & {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+
+  &__message {
+
+  }
+
+  &__time-stamp {
+    font-size: 1.125rem;
+
+  }
+
+  &__link {
+    
+    a {
+      border-bottom-width: 1px;
+      font-size: 1.25rem;
+
+      &:hover {
+        border-bottom-width: 3px;
+      }
+    }
+
+  }
+}

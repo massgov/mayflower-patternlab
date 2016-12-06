@@ -6,13 +6,19 @@ $emergency-alerts-half-max: $max-width / 2;
   &__header {
 
     @media ($bp-medium-min) {
-      padding-right: 170px; // width of the button
+      .ma__emergency-header {
+        padding-right: 190px; // width of the button
+      }
     }
   }
 
 
   &__content {
 
+  }
+
+  &__container {
+    @include ma-container;
   }
 
   &__interface {
