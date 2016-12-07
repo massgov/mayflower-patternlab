@@ -1,19 +1,17 @@
 ---
-title: Button Main Link
+title: Button Search
 ---
-Description: A link `<a>` element which is styled to look like a main button.
+Description: A `<button> [type='submit']` element which contains a visually hidden `<span>` element and an `<svg>` icon element.
 
 ## Status: alpha
 ### Used In:
+- [@molecules/header-search](/?p=molecules-header-search)
+- [@molecules/keyword-search](/?p=molecules-keyword-search)
 
-### Required Variables:
+### Required Variables: 
 ~~~
-buttonMain {
-    href:
-        type: string
-    text: 
-        type: string
-}
+directory: 
+    type: string (describes the folder which contains the svg-sprite <svg> file)
 ~~~
 ## Variations
 * [Main](/?p=atoms-button-link)

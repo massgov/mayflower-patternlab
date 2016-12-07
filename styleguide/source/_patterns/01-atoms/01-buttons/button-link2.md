@@ -1,14 +1,14 @@
 ---
-title: Button Main Link
+title: Minor Button Link
 ---
-Description: A link `<a>` element which is styled to look like a main button.
+Description: A link `<a>` element which is styled to look like a minor button.
 
 ## Status: alpha
 ### Used In:
 
 ### Required Variables:
 ~~~
-buttonMain {
+buttonMinor {
     href:
         type: string
     text: 

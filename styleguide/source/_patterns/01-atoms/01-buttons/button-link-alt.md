@@ -1,14 +1,14 @@
 ---
-title: Button Main Link
+title: Button Main Alt Link
 ---
-Description: A link `<a>` element which is styled to look like a main button.
+Description: A link `<a>` element which is styled to look like a main alt button.
 
 ## Status: alpha
 ### Used In:
 
 ### Required Variables:
 ~~~
-buttonMain {
+buttonMainAlt {
     href:
         type: string
     text: 

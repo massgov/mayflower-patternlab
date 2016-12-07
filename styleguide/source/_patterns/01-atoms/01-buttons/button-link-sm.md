@@ -1,12 +1,13 @@
 ---
-title: Button Main Link
+title: Button Main Small Link
 ---
-Description: A link `<a>` element which is styled to look like a main button.
+Description: A link `<a>` element which is styled to look like a small main button.
 
 ## Status: alpha
 ### Used In:
 
 ### Required Variables:
+_Same as [Main](/?p=atoms-button-link) variation_: 
 ~~~
 buttonMain {
     href:

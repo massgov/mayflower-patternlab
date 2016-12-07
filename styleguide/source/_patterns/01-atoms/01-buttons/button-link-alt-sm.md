@@ -1,14 +1,15 @@
 ---
-title: Button Main Link
+title: Button Main Alt Small Link
 ---
-Description: A link `<a>` element which is styled to look like a main button.
+Description: A link `<a>` element which is styled to look like a small main alt button.
 
 ## Status: alpha
 ### Used In:
 
 ### Required Variables:
+_Same as [Main Alt](/?p=atoms-button-link-alt) variation_:
 ~~~
-buttonMain {
+buttonMainAlt {
     href:
         type: string
     text: 
