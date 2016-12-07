@@ -1,11 +1,24 @@
 ---
-title: Button search
+title: Button Search
 ---
-Description: an atom for the search button.
-## Status: stable
-### Used in:
-* 02-molecules/header-search.twig
-### Required Variables
+Description: A `<button> [type='submit']` element which contains a visually hidden `<span>` element and an `<svg>` icon element.
+
+## Status: alpha
+### Used In:
+- [@molecules/header-search](/?p=molecules-header-search)
+- [@molecules/keyword-search](/?p=molecules-keyword-search)
+
+### Required Variables: 
 ~~~
-None
+directory: 
+    type: string (describes the folder which contains the svg-sprite <svg> file)
 ~~~
+## Variations
+* [Main](/?p=atoms-button-link)
+* [Main Alt](/?p=atoms-button-link-alt)
+* [Main Alt Small](/?p=atoms-button-link-alt-sm)
+* [Minor](/?p=atoms-button-link2)
+* [Minor Alt](/?p=atoms-button-link2-alt)
+* [Minor Alt Small](/?p=atoms-button-link2-alt-sm)
+* [Small](/?p=atoms-button-link-sm)
+* [Search](/?p=atoms-button-search) (no variables required)
