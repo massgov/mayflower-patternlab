@@ -6,15 +6,15 @@
         {% include "@atoms/05-icons/cat-icon.twig" %}
       </div>
     {% endif %}
-    <h3 class="ma__section-links__title js-accordion-link">
+    <h3 class="ma__section-links__title js-accordion-link" id="section_titles_{{sectionLinks.title.text|lower|replace({' ':'-'})}}">
       <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
     </h3>
-    <nav class="ma__section-links__toggle-content js-accordion-body">
+    <nav class="ma__section-links__toggle-content js-accordion-body" aria-labelledby="section_titles_{{sectionLinks.title.text|lower|replace({' ':'-'})}}">
       {% if sectionLinks.description %}
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>
       {% endif %}
       <div class="ma__section-links__mobile-title">
-        <a href="{{sectionLinks.title.href}}">Learn More<span class="ma__accessibility--morelink-info">about {{sectionLinks.title.text}}</span>&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+        <a href="{{sectionLinks.title.href}}">Learn More<span class="ma__accessibility--morelink-info"> about {{sectionLinks.title.text}}</span>&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
       </div>
       <ul class="ma__section-links__items">
         {% for list in sectionLinks.links %}
