@@ -3,9 +3,10 @@ title: Button Main Link
 ---
 Description: A link `<a>` element which is styled to look like a main button.
 
-## Status: alpha
+## State: ALPHA
+### Notes:
+The button atoms are too similar to keep as separate files. This should be refactored to use one file, and one object that has href, text and type.
 ### Used In:
-
 ### Required Variables:
 ~~~
 buttonMain {

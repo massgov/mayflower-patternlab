@@ -1,11 +1,12 @@
 ---
-title: Minor Button Link
+title: DEPRECATED - Minor Button Link
 ---
 Description: A link `<a>` element which is styled to look like a minor button.
 
-## Status: alpha
+## State: DEPRECATED
+### Notes
+Deprecated by [Button Main Link](/?p=atoms-button-link).
 ### Used In:
-
 ### Required Variables:
 ~~~
 buttonMinor {

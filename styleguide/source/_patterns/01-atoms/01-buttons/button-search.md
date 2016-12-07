@@ -3,7 +3,7 @@ title: Button Search
 ---
 Description: A `<button> [type='submit']` element which contains a visually hidden `<span>` element and an `<svg>` icon element.
 
-## Status: alpha
+## State: ALPHA
 ### Used In:
 - [@molecules/header-search](/?p=molecules-header-search)
 - [@molecules/keyword-search](/?p=molecules-keyword-search)
