@@ -1,20 +1,27 @@
 ---
-Title: Action Step
+title: Action Step
 ---
-
-##Fields
-* SVG Icon - string - One of five svg choices:
-  * Default - atoms-svg-circle-chevron
-  * Fax - atoms-svg-fax-icon
-  * Mail - atoms-svg-mail
-  * Laptop - atoms-svg-laptop
-  * Phone - atoms-svg-phone
-  * Profile - atoms-svg-profil
-* Title (optional) - string
-* Rich Text
-
-##Partials
-* Rich Text
-
-##Notes
-
+Description: Displays an icon, optional title and rich text elements in a grouping. 
+## Status: ALPHA
+### Notes:
+It is necessary to use the rich text organism for rendering main copy for the step. The variable structure for the rich text organism has the potneital to be refactored.
+### Contains
+- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
+### Used in:
+- [@organisms/by-author/action-steps](/?p=organisms-action-steps)
+### Variables
+~~~
+actionStep: {
+    icon:
+        string/required
+    title:
+        string
+    rteElements: [{
+        path:
+            string/required
+        data: {
+            object/required
+        }
+    }]
+}
+~~~
