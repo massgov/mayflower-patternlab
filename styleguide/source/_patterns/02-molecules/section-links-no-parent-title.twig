@@ -1,0 +1,28 @@
+<section class="ma__section-links js-accordion">
+  <div class="ma__section-links__content">
+    {% if sectionLinks.catIcon %}
+      <div class="ma__section-links__icon">
+        {% set catIcon = sectionLinks.catIcon %}
+        {% include "@atoms/05-icons/cat-icon.twig" %}
+      </div>
+    {% endif %}
+    <h2 class="ma__section-links__title js-accordion-link" id="section_titles_{{sectionLinks.title.text|lower|replace({' ':'-'})}}">
+      <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+    </h2>
+    <nav class="ma__section-links__toggle-content js-accordion-body" aria-labelledby="section_titles_{{sectionLinks.title.text|lower|replace({' ':'-'})}}">
+      {% if sectionLinks.description %}
+        <p class="ma__section-links__description">{{sectionLinks.description}}</p>
+      {% endif %}
+      <div class="ma__section-links__mobile-title">
+        <a href="{{sectionLinks.title.href}}">Learn More<span class="ma__accessibility--morelink-info"> about {{sectionLinks.title.text}}</span>&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+      </div>
+      <ul class="ma__section-links__items">
+        {% for list in sectionLinks.links %}
+        <li class="ma__section-links__item">
+          <a href="{{list.href}}" class="ma__section-links__link">{{list.text}}<span role="presentation"></span></a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</section>
