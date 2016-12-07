@@ -2,7 +2,7 @@
 title: Decorative link
 ---
 Description: an atom for a decorative link.
-## Status: beta
+## State: BETA
 ### Notes
 The svg reference could possibly change. 05-icons and 06-icons-location may still be consolodated.
 ### Used in:

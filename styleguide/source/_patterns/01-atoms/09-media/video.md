@@ -2,7 +2,7 @@
 title: Video
 ---
 Description: an atom for a video element.
-## Status: stable
+## State: STABLE
 ### Required Variables
 ~~~
 None
