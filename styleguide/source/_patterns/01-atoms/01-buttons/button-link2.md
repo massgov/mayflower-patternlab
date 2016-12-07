@@ -3,7 +3,9 @@ title: Minor Button Link
 ---
 Description: A link `<a>` element which is styled to look like a minor button.
 
-## Status: alpha
+## Status: deprecated
+### Notes
+Deprecated by [Button Main Link](/?p=atoms-button-link).
 ### Used In:
 ### Required Variables:
 ~~~

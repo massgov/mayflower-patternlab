@@ -3,7 +3,9 @@ title: Minor Small Button Link
 ---
 Description: A link `<a>` element which is styled to look like a small minor button.
 
-## Status: alpha
+## Status: deprecated
+### Notes
+Deprecated by [Button Main Link](/?p=atoms-button-link).
 ### Used In:
 - [@organisms/by-author/suggested-pages](/?p=organisms-suggested-pages)
 - [@organisms/by-author/suggested-pages-guide](/?p=organisms-suggested-pages-guide)
