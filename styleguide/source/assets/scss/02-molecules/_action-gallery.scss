@@ -1,4 +1,5 @@
 .ma__action-gallery {
+  @include ma-component-spacing;
 
   &__items {
     @include ma-reset-list;
