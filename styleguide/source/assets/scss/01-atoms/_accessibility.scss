@@ -1,0 +1,5 @@
+.ma__accessibility {
+	&--morelink-info {
+		@include ma-visually-hidden;
+	}
+}
