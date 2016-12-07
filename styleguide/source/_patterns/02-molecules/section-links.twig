@@ -14,7 +14,7 @@
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>
       {% endif %}
       <div class="ma__section-links__mobile-title">
-        <a href="{{sectionLinks.title.href}}">Learn More<span>about {{sectionLinks.title.text}}</span>&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+        <a href="{{sectionLinks.title.href}}">Learn More<span class="ma__header__skip-nav">about {{sectionLinks.title.text}}</span>&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
       </div>
       <ul class="ma__section-links__items">
         {% for list in sectionLinks.links %}
