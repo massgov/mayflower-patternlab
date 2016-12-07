@@ -1,5 +1,5 @@
-<section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="GUID18378923w38789">
-  {% if emergencyAlerts.alerts %}
+{% if emergencyAlerts.alerts %}
+  <section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="{{emergencyAlerts.id}}">
     <div class="ma__emergency-alerts__header">
         {% set emergencyHeader = emergencyAlerts.emergencyHeader %}
         {% include "@molecules/emergency-header.twig" %}
@@ -15,5 +15,5 @@
       {% set buttonAlert = emergencyAlerts.buttonAlert %}
       {% include "@molecules/button-alert.twig" %}
     </div>
-  {% endif %}
-</section>
+  </section>
+{% endif %}
