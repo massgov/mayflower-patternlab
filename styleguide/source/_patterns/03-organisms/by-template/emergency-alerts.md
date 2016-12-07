@@ -1,0 +1,57 @@
+---
+title: Emergency Alert
+---
+Description: an organism to show any current emergency alerts 
+
+## State: ALPHA
+
+### Notes 
+  1. This Organism should only render if the alerts array is populated
+  2. Accordion only stays closed per session if the browser supports JS determined by a JS class on the html tag
+  3. The Id value should be consistent across the site, but can be changed when new alerts are created to reopen the accordion
+
+### Used in: 
+* templates/multi-row-template.twig
+* templates/single-template.twig
+* templates/two-column-template.twig
+
+### Contains:
+* molecules/emergency-header.twig
+* molecules/emergency-alert.twig
+* molecules/button-alert.twig
+
+### Variables 
+~~~ 
+emergencyAlerts: {
+  id: 
+    type: string/guid/required
+  buttonAlert: {
+    hideText: 
+      type: string/required,
+    showText: 
+      type: string/required,
+    text: 
+      type: string/required
+  },
+
+  emergencyHeader: {
+    title: 
+      type: string/required
+  },
+
+  alerts: [{
+    message: 
+      type: string/required
+    timeStamp: 
+      type: string/required
+    link: {
+      href: 
+        type: string/url/required,
+      text:
+        type: string/required
+      chevron: 
+        type: boolean/required
+    }
+  }]
+}
+~~~

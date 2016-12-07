@@ -21,7 +21,8 @@ export default function (window,document,$,undefined) {
     $el.on('click','.js-accordion-link',function(){
       // toggle the current state
       open = !open;
-      // update open/close state cookie
+      // update open/close state cookie 
+      // leave off third argument to make it expire on session
       cookie.setCookie(cookieName,open);
     });
 
