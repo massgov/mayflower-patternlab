@@ -10,8 +10,15 @@
     margin-top: 5px;
   }
 
-  &__name {
+  h3.&__name {
+    font-weight: none;
+    font-size: none;
+    line-height: 0;
+    margin-bottom: 0;   
+    margin-top: 0;    
+  }
 
+  &__name {
     a {
       font-size: 1.625rem;
       line-height: 1.2;
