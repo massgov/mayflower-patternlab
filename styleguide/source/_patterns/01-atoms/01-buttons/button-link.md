@@ -6,6 +6,8 @@ Description: A link `<a>` element which is styled to look like a main button.
 ## State: ALPHA
 ### Notes:
 The button atoms are too similar to keep as separate files. This should be refactored to use one file, and one object that has href, text and type.
+
+These CSS classes can also be applied to `<button>` elements when a link is not required.
 ### Used In:
 ### Required Variables:
 ~~~
