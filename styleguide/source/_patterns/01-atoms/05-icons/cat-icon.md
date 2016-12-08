@@ -12,14 +12,15 @@ This template currently hard codes the include for `@atoms/07-user-added-icons/s
 - [@molecules/section-links](/?p=molecules-section-links)
 
 ### Contains:
-- [@atoms/07-user-added-icons/svg-camping](/?p=atoms-svg-camping)
+- Any supplied icon atom, such as:
+[@atoms/07-user-added-icons/svg-camping](/?p=atoms-svg-camping)
 
 ### Variables:
 ~~~
 catIcon: {
     svg:
         type: string / required 
-        (any existing icon filename without the ".svg" extension)
+        (a complete path to an icon atom twig template, such as "@atoms/07-user-added-icons/svg-camping.twig")
     small:
         type: string ("true" || "")
   }
