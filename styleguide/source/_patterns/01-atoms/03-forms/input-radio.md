@@ -11,17 +11,17 @@ Radio buttons which are related to the form field control should have the same v
 ### Used In:
 - [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)
 
-### Required Variables:
+### Variables:
 ~~~
 inputRadio {
     name:
-        type: string
+        type: string / required
     value:
-        type: string
+        type: string / required
     id:
-        type: string
+        type: string / required
     label:
-        type: string
+        type: string / required
     checked:
         type: string ("true" || "")
 }

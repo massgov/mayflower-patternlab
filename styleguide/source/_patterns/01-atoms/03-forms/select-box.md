@@ -11,32 +11,20 @@ _No limit to number of objects in options array_
 ### Used In:
 - [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)
 
-### Required Variables:
+### Variables:
 ~~~
 selectBox {
     label:
-        type: string
+        type: string / required
     id:
-        type: string
+        type: string / required
     options: [
         {
             value:
-                type: string
+                type: string / required
             text: 
-                type: string
-        },
-        {
-            value:
-                type: string
-            text: 
-                type: string
-        },
-        {
-            value:
-                type: string
-            text: 
-                type: string
-        },
+                type: string / required
+        }, / required (multiple)
     ]
 }
 ~~~

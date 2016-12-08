@@ -13,5 +13,5 @@ JS validation included?
 ### Used In:
 - [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)
 
-### Required Variables:
+### Variables:
 _All ids, classes, labels are hard coded. No placeholder text._

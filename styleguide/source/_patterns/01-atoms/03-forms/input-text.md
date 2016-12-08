@@ -11,5 +11,5 @@ Any text input field will have the same label (Your Name) and will always be req
 ### Used In:
 - [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)
 
-### Required Variables:
+### Variables:
 _All ids, classes, labels are hard coded. No placeholder text._

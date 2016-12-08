@@ -10,5 +10,5 @@ Any textarea field will have the same label (Feedback) and will always be requir
 ### Used In:
 - [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)
 
-### Required Variables:
+### Variables:
 _All ids, classes, labels are hard coded. No placeholder text._

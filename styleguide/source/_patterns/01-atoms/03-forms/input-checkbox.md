@@ -10,15 +10,15 @@ Description: An `<input> [type='checkbox']`  element with its corresponding `<la
 ### Used In:
 - [@organisms/by-template/transition-page](/?p=organisms-transition-page)
 
-### Required Variables:
+### Variables:
 ~~~
 inputCheckbox {
     value:
-        type: string
+        type: string / required
     id: 
-        type: string
+        type: string / required
     label:
-        type: string
+        type: string / required
     checked:
         type: string ("true" || "")
 }

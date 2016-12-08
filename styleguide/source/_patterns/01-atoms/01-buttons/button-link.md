@@ -9,13 +9,13 @@ The button atoms are too similar to keep as separate files. This should be refac
 
 These CSS classes can also be applied to `<button>` elements when a link is not required.
 ### Used In:
-### Required Variables:
+### Variables:
 ~~~
 buttonMain {
     href:
-        type: string
+        type: string (url) / required
     text: 
-        type: string
+        type: string / reuired
 }
 ~~~
 ## Variations
