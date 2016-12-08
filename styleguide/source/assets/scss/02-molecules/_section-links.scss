@@ -62,8 +62,10 @@
       display: none;
     }
 
-    svg {
+    & a > svg {
+      height: .75em;
       margin-right: -16px;
+      width: .75em;
     }
 
     a {
@@ -73,9 +75,15 @@
   }
 
   &__title {
+    @include ma-h3;
     margin-bottom: 15px;
 
+    a {
+      border: none;
+    }
+
     a:hover {
+      border: none;
       opacity: .6;
     }
 
@@ -101,7 +109,7 @@
         }
       }
 
-      svg {
+      a > svg {
         display: none;
       }
     }
@@ -160,9 +168,4 @@
       }
     }
   }
-}
-
-// when the page doesn't have h2 for the section, h3 shifted up to h2 with the h3's style
-h2.ma__section-links__title {
-    @include ma-h3;
 }
