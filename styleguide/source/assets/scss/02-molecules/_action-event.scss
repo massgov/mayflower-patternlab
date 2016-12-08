@@ -10,14 +10,6 @@
     margin-top: 5px;
   }
 
-  h3.&__name {
-    font-weight: none;
-    font-size: none;
-    line-height: 0;
-    margin-bottom: 0;   
-    margin-top: 0;    
-  }
-
   &__name {
     a {
       font-size: 1.625rem;
@@ -32,3 +24,14 @@
     }
   }
 }
+
+// .ma__action-event__name override
+h3.ma__action-event__name {
+    font-size: 1.625rem;
+    line-height: 1.2;
+    border-bottom: 3px solid transparent;
+    display: inline;
+    padding-bottom: 1px;
+    padding-top: 3px;
+    transition: border 0.4s ease 0s;   
+  }
