@@ -43,7 +43,8 @@ emergencyAlerts: {
     message: 
       type: string/required
     timeStamp: 
-      type: string/required
+      type: date/required
+      format: mm.dd.yy, h:mm am/pm
     link: {
       href: 
         type: string/url/required,
