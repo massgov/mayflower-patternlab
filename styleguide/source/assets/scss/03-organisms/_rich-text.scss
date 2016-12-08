@@ -49,6 +49,15 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
 
+  h4 {
+    margin-bottom: .6em;
+    padding-bottom: .45em;
+
+    &:after {
+      width: 1.5em;
+    }
+  }
+
   h5 {
     margin-bottom: 0;
   }
