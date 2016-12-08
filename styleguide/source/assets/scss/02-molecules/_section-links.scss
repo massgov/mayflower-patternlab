@@ -161,7 +161,8 @@
     }
   }
 }
+
 // when the page doesn't have h2 for the section, h3 shifted up to h2 with the h3's style
 h2.ma__section-links__title {
-    font-size: 2.188rem;
+    @include ma-h3;
 }
