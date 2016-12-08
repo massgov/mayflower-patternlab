@@ -11,6 +11,10 @@
   }
 
   &__name {
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
+
     a {
       font-size: 1.625rem;
       line-height: 1.2;
@@ -24,14 +28,3 @@
     }
   }
 }
-
-// .ma__action-event__name override
-h3.ma__action-event__name {
-    font-size: 1.625rem;
-    line-height: 1.2;
-    border-bottom: 3px solid transparent;
-    display: inline;
-    padding-bottom: 1px;
-    padding-top: 3px;
-    transition: border 0.4s ease 0s;   
-  }
