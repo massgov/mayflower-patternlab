@@ -8,6 +8,9 @@ Description: An `<h3>` element used as a subheading in the sidebar, designated b
 ### Notes:
 
 ### Used In:
+- [@pages/GUIDE-movng-to-ma-part1](/?p=pages-GUIDE-movng-to-ma-part1)
+- [@pages/GUIDE-movng-to-ma-part2](/?p=pages-GUIDE-movng-to-ma-part2)
+- [@pages/GUIDE-movng-to-ma-part3](/?p=pages-GUIDE-movng-to-ma-part3)
 - [@organisms/by-author/quick-actions](/?p=organisms-quick-actions)
 
 ### Variables:

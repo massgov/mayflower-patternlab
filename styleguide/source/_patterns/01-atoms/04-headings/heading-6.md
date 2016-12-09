@@ -8,6 +8,8 @@ Description: An `<h6>` element with no CSS class.
 ### Notes:
 
 ### Used In:
+-[@organisms/by-author/rich-text](/?p=organisms-rich-text)
+-[@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
 
 ### Variables:
 ~~~

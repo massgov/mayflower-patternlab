@@ -6,6 +6,8 @@ Description: an atom for `<table>` elements with child `<thead>`, `<tbody>`, `<t
 ## State: ALPHA
 
 ## Used In:
+- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
+- [@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
 
 ## Notes:
 

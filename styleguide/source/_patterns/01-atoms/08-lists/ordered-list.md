@@ -8,6 +8,8 @@ Description: An `<ol>`  element with its child `<li>` elements and optional nest
 ### Notes:
 
 ### Used In:
+- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
+- [@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
 
 ### Required Variables:
 ~~~

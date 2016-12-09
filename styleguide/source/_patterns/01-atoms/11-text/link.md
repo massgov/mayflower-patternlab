@@ -11,6 +11,7 @@ Description: Displays an link with the "<a>" tag and class "ma__content-link". I
 - [@organisms/by-author/sidebar-promo](/?p=organisms-sidebar-promo)
 - [@organisms/by-template/header-alert](/?p=organisms-header-alert)
 - [@organisms/by-template/image-credit](/?p=organisms-image-credit)
+
 ### Required Variables:
 ~~~
 link {
