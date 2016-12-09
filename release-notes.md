@@ -13,7 +13,7 @@
 * MGVDU-202 - Action Finder - entire action item should be clickable
 * MGVDU-354 - FE Dev - RTE columns - refactor
 * MGVDU-357 - FE Dev: Action Steps - refactor
-
+* MGRP-278 - FE Dev: Emergency alert bar
 
 ## 2.1.0 (Sprint 7)
 ### Error pages
