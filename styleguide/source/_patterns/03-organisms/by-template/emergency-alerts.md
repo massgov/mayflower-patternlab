@@ -11,14 +11,14 @@ Description: an organism to show any current emergency alerts
   3. The Id value should be consistent across the site, but can be changed when new alerts are created to reopen the accordion
 
 ### Used in: 
-* templates/multi-row-template.twig
-* templates/single-template.twig
-* templates/two-column-template.twig
+* [@templates/multi-row-template.twig](/?p=templates-multi-row-template)
+* [@templates/single-column.twig](/?p=templates-single-column)
+* [@templates/two-column.twig](/?p=templates-two-column)
 
 ### Contains:
-* molecules/emergency-header.twig
-* molecules/emergency-alert.twig
-* molecules/button-alert.twig
+* [@molecules/emergency-header.twig](/?p=molecules-emergency-header)
+* [@molecules/emergency-alert.twig](/?p=molecules-emergency-alert)
+* [@molecules/button-alert.twig](/?p=molecules-button-alert)
 
 ### Variables 
 ~~~ 

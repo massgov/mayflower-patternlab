@@ -10,10 +10,10 @@ Link is optional.
 messages are sorted with the newest one first
 
 ### Used in: 
-organisms/by-template/emergency-alerts.twig 
+[@organisms/by-template/emergency-alerts.twig](/?p=organisms-emergency-alerts)
 
 ### Contains
-atoms/11-text/link.twig
+[@atoms/11-text/link.twig](/?p=atoms-link)
 
 ### Variables 
 ~~~ 

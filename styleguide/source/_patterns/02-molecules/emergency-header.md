@@ -6,10 +6,10 @@ Description: Content describing the overall emergency.
 ###  Notes
 
 ### Used in: 
-organisms/by-template/emergency-alerts.twig 
+[@organisms/by-template/emergency-alerts.twig](/?p=organisms-emergency-alerts)
 
 ### Contains
-atoms/05-icons/svg-alert.twig
+[@atoms/05-icons/svg-alert.twig](/?p=atoms-svg-alert)
 
 ### Variables 
 ~~~ 
