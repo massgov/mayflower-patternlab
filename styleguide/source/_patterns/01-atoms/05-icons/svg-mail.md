@@ -1,5 +1,5 @@
 ---
-title: DEPRECATED - Alert Icon
+title: DEPRECATED - Mail Icon
 ---
 Description: An `<svg>` element which contains a `<use>` element to take the appropriate node from within the svg sprite.
 
@@ -9,8 +9,9 @@ Description: An `<svg>` element which contains a `<use>` element to take the app
 Icons will be refactored so that they all use the same pattern template and are passed arguments to determine the appropriate asset, etc.
 
 ### Used In:
-- [@molecules/utility-nav](/?p=molecules-utility-nav)
-- [@organisms/by-author/callout-alert](/?p=organisms-callout-alert)
+- [@molecules/action-step](/?p=molecules-action-step)
+- [@organisms/by-author/action-steps](/?p=organisms/action-steps)
+- [@pages/ACTION-get-a-state-park-pass](/?p=pages-ACTION-get-a-state-park-pass)
 
 ### Variables:
 ~~~
