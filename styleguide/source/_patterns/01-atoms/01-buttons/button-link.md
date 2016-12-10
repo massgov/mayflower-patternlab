@@ -26,4 +26,4 @@ buttonMain {
 * [Minor Alt](/?p=atoms-button-link2-alt)
 * [Minor Alt Small](/?p=atoms-button-link2-alt-sm)
 * [Small](/?p=atoms-button-link-sm)
-* [Search](/?p=atoms-button-search) (no variables required)
+* [Search](/?p=atoms-button-search)
