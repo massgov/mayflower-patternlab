@@ -6,8 +6,7 @@ Description: An `<h2>` or `<h3>` element with a styled underline color designate
 ## State: ALPHA
 
 ### Notes:
-- _'yellow' is currently the only value that can be passed for optional variable compHeading.color_
-- _'true' is the only value that can be passed for optional variable compHeading.sub_
+- _'yellow' is currently the only value that can be passed for variable `compHeading.color`, which is required for this yellow variation_
 - `{{ modifier }}` is a local twig variable which is set in the atom twig template by appending `compHeading.color` to a CSS class name
 
 ### Used In:
@@ -25,7 +24,7 @@ Description: An `<h2>` or `<h3>` element with a styled underline color designate
     sub:
         type: string ("true" || "" )
     color:
-        type: string ("yellow")
+        type: string ("yellow") / required
     id:
         type: string
   }
