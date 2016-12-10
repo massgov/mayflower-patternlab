@@ -1,11 +1,12 @@
 ---
-title: Heading - Level 1
+title: DEPRECATED - Heading - Level 1
 ---
 Description: An `<h1>` element with no CSS class.
 
-## State: ALPHA
+## State: DEPRECATED
 
 ### Notes:
+All base elements with no class or id are being moved into base pattern directory.
 
 ### Used In:
 

@@ -1,11 +1,12 @@
 ---
-title: Unordered List
+title: DEPRECATED - Unordered List
 ---
 Description: An `<ul>`  element with its child `<li>` elements and optional nested child `<ul>` and `<li>` elements.
 
-## State: ALPHA
+## State: DEPRECATED
 
 ### Notes:
+All base elements with no class or id are being moved into base pattern directory.
 
 ### Used In:
 - [@molecules/action-step](/?p=molecules-action-step)
