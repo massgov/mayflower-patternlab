@@ -1,7 +1,7 @@
 ---
-title: Image
+title: Image - Pull Left
 ---
-Description: an atom for `<image>` elements with alt text and an optional 'float' direction (right or left).
+Description: an atom for `<image>` elements with alt text and 'pull' (float) left direction.
 
 ## State: ALPHA
 
@@ -22,7 +22,7 @@ image {
     src:
         type: string (url) / required
     pull:
-        type: string ("right" || "left")
+        type: string ("left") / required
 }
 ~~~
 
