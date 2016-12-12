@@ -2,33 +2,49 @@
 Title: Contact Us
 ---
 
-##Fields:
-* Title (optional) - object
-  * href (optional) - string/url
-  * target (optional) -  string "_blank" or ""
-  * text - string
-  * chevron - string/boolean - "false"
-* Hide (optional) - string "Fax", "Address", or "" - States where the accordion should start.  If blank, the accordion isn't shown.
-* Phone (optional) - Object
-  * contains a Contact Group partial
-* Online (optional) - Object
-  * contains a Contact Group partial
-* Fax (optional) - Object
-  * contains a Contact Group partial
-* Address (optional) - Object
-  * Address 1 - string
-  * Address 2 - string
-  * City - string
-  * State - string
-  * zip - number
-  * directions:
-    * href - string/url - google map URL with street address
-    * target (optional) -  string "_blank" or ""
-    * text - string "directions"
-    * chevron - string/boolean - "true"
+Description: Displays groups of contact information.
 
-##Partials:
-* Contact Group
+## State: Alpha
 
-##Notes:
-* first two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
+### Contains:
+- [@molecules/contact-group](/?p=organisms-contact-group)
+
+### Used in:
+- [@organisms/by-author/sidebar-contact](/?p=organisms-sidebar-contact)
+
+## Notes:
+- First two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
+- `{{ accordion }}` is a local twig variable which is set in the molecule twig template when looping through contactUs.groups and hidden is set.
+
+### Required Variables
+~~~
+contactUs {
+    title {
+        href:
+            string
+        chevron:
+            string
+        text:
+            string/required
+    }
+    groups [{
+      icon:
+           type: string/required
+      name:
+           type: string/required
+      hidden:
+           type: boolean
+      items: [{
+          type:
+              string (online, phone, email, address or other)
+          label:
+              string
+          value:
+              string
+          link:
+              string
+          details:
+              string
+       }]
+   ]}
+}

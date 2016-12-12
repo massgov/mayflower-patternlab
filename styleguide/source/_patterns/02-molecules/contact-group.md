@@ -10,7 +10,7 @@ Description: Displays a grouping of contact information under a header with an i
 * Most fields for the item are optional and will render differently based on the item.type used.
 
 ### Used in:
-[none]
+- [@molecules/contact-us](/?p=organisms-contact-us)
 
 ### Required Variables
 ~~~
