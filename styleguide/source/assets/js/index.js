@@ -4,6 +4,7 @@ import back2top         from "./modules/back2top.js";
 import bannerCarousel   from "./modules/bannerCarousel.js";
 import clickable        from "./modules/clickable.js";
 import dropdown         from "./modules/dropdown.js";
+import emergencyAlerts  from "./modules/emergencyAlerts.js";
 import formValidation   from "./modules/formValidation.js";
 import hideAlert        from "./modules/hideAlert.js";
 import keywordSearch    from "./modules/keywordSearch.js";

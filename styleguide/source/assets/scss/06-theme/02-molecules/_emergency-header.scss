@@ -1,0 +1,18 @@
+.ma__emergency-header {
+  background-color: $c-theme-yellow;
+
+  &__icon {
+
+  }
+
+  &__label {
+    color: rgba($c-font-dark,.8);
+    font-weight: 700;
+  }
+
+  &__title {
+    border-left-color: rgba($c-black,.3);
+    color: $c-font-dark;
+    font-weight: 700;
+  }
+}

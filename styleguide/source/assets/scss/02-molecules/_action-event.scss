@@ -11,6 +11,9 @@
   }
 
   &__name {
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
 
     a {
       font-size: 1.625rem;

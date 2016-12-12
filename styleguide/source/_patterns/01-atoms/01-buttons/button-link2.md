@@ -7,6 +7,9 @@ Description: A link `<a>` element which is styled to look like a minor button.
 ### Notes
 Deprecated by [Button Main Link](/?p=atoms-button-link).
 ### Used In:
+[@organisms/by-author/suggested-pages](/?p=organisms-suggested-pages)
+
+
 ### Required Variables:
 ~~~
 buttonMinor {
@@ -24,4 +27,4 @@ buttonMinor {
 * [Minor Alt](/?p=atoms-button-link2-alt)
 * [Minor Alt Small](/?p=atoms-button-link2-alt-sm)
 * [Small](/?p=atoms-button-link-sm)
-* [Search](/?p=atoms-button-search) (no variables required)
+* [Search](/?p=atoms-button-search)
