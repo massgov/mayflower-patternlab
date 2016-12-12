@@ -1,4 +1,6 @@
 {
+  "bodyClass":"",
+
   "narrowTemplate": {
     "side": "left",
     "color": "green"
