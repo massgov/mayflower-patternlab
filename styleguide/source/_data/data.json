@@ -1,7 +1,7 @@
 {
   "title" : "Mass Gov",
   "htmlClass": "pl",
-  "bodyClass": "pl__styleguide",
+  "bodyClass": "",
   "directory": "assets",
 
   "headerSearch" : {
