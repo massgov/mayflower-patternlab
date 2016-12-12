@@ -1,3 +1,12 @@
+{% set decorativeLink = { 
+  "type": "", 
+  "href": sectionLinks.title.href, 
+  "text": sectionLinks.title.text, 
+  "info": "" } 
+%}
+{% set titleClass = "ma__section-links__title js-accordion-link" %}
+{% set titleId = "section_titles_" ~ sectionLinks.id %}
+
 <section class="ma__section-links js-accordion">
   <div class="ma__section-links__content">
     {% if sectionLinks.catIcon %}
@@ -6,15 +15,26 @@
         {% include "@atoms/05-icons/cat-icon.twig" %}
       </div>
     {% endif %}
-
-    <h{% if sectionThreeUp.title %}3{% else %}2{% endif %} class="ma__section-links__title js-accordion-link" id="section_titles_{{sectionLinks.title.text|lower|replace({' ':'-'})}}">
-      <a href="{{sectionLinks.title.href}}">{{sectionLinks.title.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
-    </h{% if sectionThreeUp.title %}3{% else %}2{% endif %}>
-    <nav class="ma__section-links__toggle-content js-accordion-body" aria-labelledby="section_titles_{{sectionLinks.title.text|lower|replace({' ':'-'})}}">
+    {% if sectionLinks.sub %}
+      <h3 class="{{ titleClass }}" id="{{ titleId }}">
+        {% include "@atoms/decorative-link.twig" %}
+      </h3>
+    {% else %}
+      <h2 class="{{ titleClass }}" id="{{ titleId }}">
+        {% include "@atoms/decorative-link.twig" %}
+      </h2>
+    {% endif %}
+    <nav class="ma__section-links__toggle-content js-accordion-body" aria-labelledby="{{ titleId }}">
       {% if sectionLinks.description %}
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>
       {% endif %}
       <div class="ma__section-links__mobile-title">
+        {% set decorativeLink = { 
+          "type": "", 
+          "href": sectionLinks.title.href, 
+          "text": "Learn More", 
+          "info": "about " ~ sectionLinks.title.text } 
+        %}
         {% include "@atoms/decorative-link.twig" %}
       </div>
       <ul class="ma__section-links__items">
