@@ -1,5 +1,5 @@
 ---
-Title: Multi-row Section
+Title: Stacked Row Section
 ---
 
 ##Field:
