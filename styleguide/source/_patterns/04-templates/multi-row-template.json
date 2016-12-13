@@ -2,20 +2,20 @@
   "jumpLinks": {
     "title": "In this guide",
     "links": [{
-      "text": "Placeholder",
-      "href": "placeholder1"
+      "text": "Row with sidebar",
+      "href": "row-with-sidebar"
     },{
-      "text": "Placeholder",
-      "href": "placeholder2"
+      "text": "Full with row",
+      "href": "full-width-row"
     },{
-      "text": "Placeholder",
-      "href": "placeholder3"
+      "text": "Mix and match as desired",
+      "href": "mix-and-match-as-desired"
     }]
   },
 
-  "multiRowSection": [{
-    "title": "Placeholder",
-    "id": "placeholder1",
+  "multiRowSections": [{
+    "title": "Row with sidebar",
+    "id": "row-with-sidebar",
     "pageContent": [{
       "path": "@base/placeholder.twig",
       "data": {
@@ -34,28 +34,8 @@
       }
     }]
   },{
-    "title": "Placeholder",
-    "id": "placeholder2",
-    "pageContent": [{
-      "path": "@base/placeholder.twig",
-      "data": {
-        "placeholder": {
-          "text":"Page content"
-        }
-      }
-    }],
-    
-    "sideBar": [{
-      "path": "@base/placeholder.twig",
-      "data": {
-        "placeholder": {
-          "text":"Sidebar"
-        }
-      }
-    }]
-  },{
-    "title": "Placeholder",
-    "id": "placeholder3",
+    "title": "Full width row",
+    "id": "full-width-row",
     "pageContent": [{
       "path": "@base/placeholder.twig",
       "data": {
@@ -66,5 +46,25 @@
     }],
     
     "sideBar": []
+  },{
+    "title": "Mix and match as desired",
+    "id": "mix-and-match-as-desired",
+    "pageContent": [{
+      "path": "@base/placeholder.twig",
+      "data": {
+        "placeholder": {
+          "text":"Page content"
+        }
+      }
+    }],
+    
+    "sideBar": [{
+      "path": "@base/placeholder.twig",
+      "data": {
+        "placeholder": {
+          "text":"Sidebar"
+        }
+      }
+    }]
   }]
 }
