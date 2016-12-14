@@ -1,5 +1,5 @@
 ---
-Title: Header contact
+title: Header contact
 ---
 Description: Displays a set of contact information in the header.
 
@@ -18,7 +18,7 @@ Description: Displays a set of contact information in the header.
 ### Required Variables
 ~~~
 headerContact {
-    title: 
+    title:
         type: string/required
     address1:
         type: string/required

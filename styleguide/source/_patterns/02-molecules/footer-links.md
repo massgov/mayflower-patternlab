@@ -1,5 +1,5 @@
 ---
-Title: Footer links
+title: Footer links
 ---
 
 Description: Displays the links in the footer.

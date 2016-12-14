@@ -1,5 +1,5 @@
 ---
-Title: Contact Us
+title: Contact Us
 ---
 Description: Displays groups of contact information.
 ## State: Alpha

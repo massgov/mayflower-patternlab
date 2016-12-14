@@ -1,5 +1,5 @@
 ---
-Title: Dropdown
+title: Dropdown
 ---
 
 Description: Displays a dropdown to switch between different color schemes.
