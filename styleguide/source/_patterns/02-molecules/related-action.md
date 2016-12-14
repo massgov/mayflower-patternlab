@@ -9,13 +9,13 @@ Small markup changes are required. The description text will not be wrapped in a
 ### Required Variables
 ~~~
 relatedAction {
-    link {
-        type:
-            string
-        href:
-            string
-        text:
-            string
-    }
-    description: string
+  link {
+    type:
+      string
+    href:
+      string
+    text:
+      string
+  }
+  description: string
 ~~~

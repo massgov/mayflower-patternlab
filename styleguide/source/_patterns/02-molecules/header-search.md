@@ -13,11 +13,11 @@ Description: A stat displayed within a paragraph of content floated either left 
 ### Required Variables
 ~~~
 statsCallout: {
-    pull:
-        NULL or 'left' or 'right'
-    stat:
-        string/required
-    content:
-        string/required
+  pull:
+    NULL or 'left' or 'right'
+  stat:
+    string/required
+  content:
+    string/required
 }
 ~~~

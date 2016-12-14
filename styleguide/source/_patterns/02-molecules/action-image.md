@@ -11,21 +11,21 @@ Description: An image with an optional title and caption.
 ### Required Variables
 ~~~
 actionImage: {
-    title:
-        type: string
-    image: {
-        alt:
-            type: string/required
-        width:
-            type: string/required
-        height:
-            type: string/required
-        src:
-            type: string/url/required
-    },
-    caption:
-        type: string
-    source:
-        type: string/required
+  title:
+    type: string
+  image: {
+    alt:
+      type: string/required
+    width:
+      type: string/required
+    height:
+      type: string/required
+    src:
+      type: string/url/required
+  },
+  caption:
+    type: string
+  source:
+    type: string/required
 }
 ~~~

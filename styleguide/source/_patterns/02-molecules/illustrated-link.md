@@ -9,13 +9,13 @@ Description: a molecule for an illustrated link.
 ### Required Variables
 ~~~
 illustratedLink {
-    text:
-        type: string
-    href:
-        type: string
-    type:
-        type: string
-    image:
-        type: string
+  text:
+    type: string
+  href:
+    type: string
+  type:
+    type: string
+  image:
+    type: string
 }
 ~~~

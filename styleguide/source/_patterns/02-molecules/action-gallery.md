@@ -14,21 +14,21 @@ Description: A teaser for a gallery of images with a link to view the full galle
 ### Required Variables
 ~~~
 actionGallery: {
-    link: {
-        href:
-            type: string/url/required
-        target:
-            type: string
-        text:
-            type: string/required
-        chevron:
-            type: boolean/True/required
-    },
-    items: [{
-        src:
-            type: string/url/required
-        alt:
-            type: string/required
-    }]
+  link: {
+    href:
+      type: string/url/required
+    target:
+      type: string
+    text:
+      type: string/required
+    chevron:
+      type: boolean/True/required
+  },
+  items: [{
+    src:
+      type: string/url/required
+    alt:
+      type: string/required
+  }]
 }
 ~~~

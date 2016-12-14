@@ -11,21 +11,21 @@ Description: Displays a grouping of contact information under a header with an i
 ### Required Variables
 ~~~
 contactGroup: {
-    icon:
-        directory/required
-    name:
-        string/required
-    items: [{
-        type:
-            string (online, phone, email, address or other)
-        label:
-            string
-        value:
-            string
-        link:
-            string
-        details:
-            string
-     }]
+  icon:
+    directory/required
+  name:
+    string/required
+  items: [{
+    type:
+      string (online, phone, email, address or other)
+    label:
+      string
+    value:
+      string
+    link:
+      string
+    details:
+      string
+   }]
 }
 ~~~

@@ -12,16 +12,16 @@ It is necessary to use the rich text organism for rendering main copy for the st
 ### Variables
 ~~~
 actionStep: {
-    icon:
-        string/required
-    title:
-        string
-    rteElements: [{
-        path:
-            string/required
-        data: {
-            object/required
-        }
-    }]
+  icon:
+    string/required
+  title:
+    string
+  rteElements: [{
+    path:
+      string/required
+    data: {
+      object/required
+    }
+  }]
 }
 ~~~

@@ -18,77 +18,77 @@ Description: Displays a set of contact information in the header.
 ### Required Variables
 ~~~
 headerContact {
-    title:
-        type: string/required
-    address1:
-        type: string/required
-    address2:
-        type: string/required
-    city:
-        type: string/required
-    state:
-        type: string/required
-    zip:
-        type: string/required
-    directions {
-        href:
-            type: url/string/required
-        target:
-            type: default '_blank'/required
-        text:
-            type: default 'Directions'/required
-        chevron:
-            type: boolean
-    },
-    phone {
-      icon:
-            type: string
-      name:
-            type: string
-      items: [{
-            type:
-                type: string
-            label:
-                type: string
-            value:
-                type: formatted string
-            rawVal:
-                type: string
-            details:
-                type: string
-      }]
-    },
-    online: {
-        icon:
-            type: string
-        name:
-            type: string
-        items: [{
-            type:
-                type: string
-            label:
-                type: string
-            value:
-                type: string
-            details:
-                type: string
-        }]
-    },
-    fax: {
-        icon:
-            type: string
-        name:
-            type: string
-        items: [{
-            type:
-                type: string
-            label:
-                type: string
-            value:
-                type: string
-            details:
-                type: string
-        }]
-    }
+  title:
+    type: string/required
+  address1:
+    type: string/required
+  address2:
+    type: string/required
+  city:
+    type: string/required
+  state:
+    type: string/required
+  zip:
+    type: string/required
+  directions {
+    href:
+      type: url/string/required
+    target:
+      type: default '_blank'/required
+    text:
+      type: default 'Directions'/required
+    chevron:
+      type: boolean
+  },
+  phone {
+    icon:
+      type: string
+    name:
+      type: string
+    items: [{
+      type:
+        type: string
+      label:
+        type: string
+      value:
+        type: formatted string
+      rawVal:
+        type: string
+      details:
+        type: string
+    }]
+  },
+  online: {
+    icon:
+      type: string
+    name:
+      type: string
+    items: [{
+      type:
+        type: string
+      label:
+        type: string
+      value:
+        type: string
+      details:
+        type: string
+    }]
+  },
+  fax: {
+    icon:
+      type: string
+    name:
+      type: string
+    items: [{
+      type:
+        type: string
+      label:
+        type: string
+      value:
+        type: string
+      details:
+        type: string
+    }]
+  }
 }
 ~~~

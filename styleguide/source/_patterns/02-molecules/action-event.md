@@ -13,17 +13,17 @@ Description: A singular event including title, link, date and a description of t
 ### Required Variables
 ~~~
 actionEvent: {
-    name: {
-        type:
-            type: string/NULL or external
-        href:
-            type: string/url/required
-        text:
-            type: string/required
-    },
-    date:
-        type: date/required
-    description:
-        type: string
+  name: {
+    type:
+      type: string/NULL or external
+    href:
+      type: string/url/required
+    text:
+      type: string/required
+  },
+  date:
+    type: date/required
+  description:
+    type: string
 }
 ~~~

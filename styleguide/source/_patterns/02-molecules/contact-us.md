@@ -13,33 +13,33 @@ Description: Displays groups of contact information.
 ### Required Variables
 ~~~
 contactUs {
-    title {
-        href:
-            string
-        chevron:
-            string
-        text:
-            string/required
-    }
-    groups [{
-      icon:
-           type: string/required
-      name:
-           type: string/required
-      hidden:
-           type: boolean
-      items: [{
-          type:
-              string (online, phone, email, address or other)
-          label:
-              string
-          value:
-              string
-          link:
-              string
-          details:
-              string
-       }]
+  title {
+    href:
+      string
+    chevron:
+      string
+    text:
+      string/required
+  }
+  groups [{
+    icon:
+       type: string/required
+    name:
+       type: string/required
+    hidden:
+       type: boolean
+    items: [{
+      type:
+        string (online, phone, email, address or other)
+      label:
+        string
+      value:
+        string
+      link:
+        string
+      details:
+        string
+     }]
    ]}
 }
 ~~~

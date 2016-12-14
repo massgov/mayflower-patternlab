@@ -15,17 +15,17 @@ Description: A list of downloadable assets with an icon to display the type of f
 ### Required Variables
 ~~~
 actionDownloads: [{
-    icon:
-        type: string to svg template/required
-    text:
-        type: string/required
-    href:
-        type: string/required
-    type:
-        type: string/required
-    size:
-        type: string/required
-    format:
-        type: string/required
+  icon:
+    type: string to svg template/required
+  text:
+    type: string/required
+  href:
+    type: string/required
+  type:
+    type: string/required
+  size:
+    type: string/required
+  format:
+    type: string/required
   }]
 ~~~

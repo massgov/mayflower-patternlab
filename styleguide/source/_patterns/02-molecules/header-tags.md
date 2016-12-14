@@ -10,11 +10,11 @@ Needs refactoring of variable structure. Should be simplified to be an array of 
 ### Required Variables
 ~~~
 headerTags: {
-    taxonomyTerms: [{
-        url:
-            string
-        term:
-            string
-    }]
+  taxonomyTerms: [{
+    url:
+      string
+    term:
+      string
+  }]
 }
 ~~~

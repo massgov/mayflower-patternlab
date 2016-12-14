@@ -13,17 +13,17 @@ Description: An illustrated list where each item displays an image, title, descr
 ### Required Variables
 ~~~
 actionActivities: [{
-    image:
-        type: string/url/required
-    alt:
-        type: string/required
-    title:
-        type: string/required
-    description:
-        type: string/required
-    linkTitle:
-        type: string/required
-    href:
-        type: string/url/required
+  image:
+    type: string/url/required
+  alt:
+    type: string/required
+  title:
+    type: string/required
+  description:
+    type: string/required
+  linkTitle:
+    type: string/required
+  href:
+    type: string/url/required
 }]
 ~~~

@@ -10,11 +10,11 @@ Description: A decorative link `<a>` element which is wrapped in a styled contai
 ### Required Variables
 ~~~
 calloutLink: {
-    href:
-        string
-    text:
-        string
-    type:
-        NULL or "External"
+  href:
+    string
+  text:
+    string
+  type:
+    NULL or "External"
 }
 ~~~

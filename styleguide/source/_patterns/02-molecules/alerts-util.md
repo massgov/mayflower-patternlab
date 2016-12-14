@@ -10,5 +10,5 @@ Description: Displays links for downloading the Massachusetts alert app.
 ### Required Variables: 
 ~~~
 directory: 
-    type: string (describes the folder which contains the svg-sprite <svg> file)
+  type: string (describes the folder which contains the svg-sprite <svg> file)
 ~~~
