@@ -1,5 +1,15 @@
 # Mass Gov Release Notes
 
+## 2.3.0 (Sprint 9)
+### Homepage search
+* MGRP-296 - FE: Homepage build-out
+
+### Org page
+
+### Other
+* MGRP-258 - Updated Pattern Lab Documentation (molecules)
+
+
 ## 2.2.0 (Sprint 8)
 ### MQA bugs
 * MQA-23 - Links in the body are turning into a weird display
@@ -14,6 +24,8 @@
 * MGVDU-354 - FE Dev - RTE columns - refactor
 * MGVDU-357 - FE Dev: Action Steps - refactor
 * MGRP-278 - FE Dev: Emergency alert bar
+* MGRP-258 - Updated Pattern Lab Documentation (atoms)
+
 
 ## 2.1.0 (Sprint 7)
 ### Error pages
@@ -26,6 +38,7 @@
 * MGVDU-283 - FE Dev: Location Banner - swap stacking order
 * MGVDU-312 - FE Dev - Contact Group - refactor address
 * MGVDU-313 - Firefox text wrapping bug on Related Topics section on some but not all pages
+
 
 ## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
@@ -41,11 +54,9 @@
 * MGVDU-296 - FE Dev: Guide Page - Sidebar title
 * MGVDU-300 - FE Dev: Guide - Rich Text 3 up
 
-
 ### MGVDU-208 - Basic Content Page
 * MGVDU-88 - Page Discourse Component - using rich-text component instead
 * MGVDU-278 - FE Dev: Breadcrumbs - collapsable
-
 
 ### Other
 * MGVDU-138 - FE Dev: Modifications to Location/Action page: Multiple contacts
@@ -56,7 +67,7 @@
 * MGRP-156 - Email link doesn't wrap.
 
 
-## 0.5.0
+## 0.5.0 (Sprint 5)
 ### MGVDU-181 - Location Page
 * MGVDU-172 - Component: Hero Banner Carousel (Location Page)
 * MGVDU-204 - FE Dev: Location - Wait Time Indicator
@@ -75,7 +86,7 @@
 * MGVDU-220 - FE Dev: Image credit component
 
 
-## 0.4.0
+## 0.4.0 (Sprint 4)
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
 * MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
@@ -92,7 +103,7 @@
 * MGYDU-87 - Feedback Form
 
 
-## 0.3.0
+## 0.3.0 (Sprint 3)
 ### Level 0,1,2 pages - Action Funnel
 * MGVDU-53 - FE Dev: L0 Page (contains sub tickets)
 * MGVDU-54 - FE Dev: L1 Page
@@ -110,7 +121,7 @@
 * MGVDU-117 - Forms/Downloads
 
 
-## 0.2.0
+## 0.2.0 (Sprint 2)
 ### Action Detail page
 * MGRV-89 - Related Contact Call-Out
 * MGRV-88 - Task Detail Section
@@ -119,7 +130,7 @@
 * MGRV-91 - Task Detail Header
 
 
-## 0.1.0
+## 0.1.0 (Sprint 1)
 ### Header and Footer
 * MGRV-38 - Header plus navigation
 * MGRV-51 - Global Styling for elements
