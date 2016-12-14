@@ -4,7 +4,8 @@
     "compHeading": {
       "title": "Popular Searches",
       "sub": "true",
-      "color": "yellow"
+      "color": "yellow",
+      "centered": "true"
     },
     "items": [{
       "href": "#",
