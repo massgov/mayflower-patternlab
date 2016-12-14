@@ -7,4 +7,8 @@
   &:after {
     border-color: rgba($c-font-inverse,.5);
   }
+
+  &:hover {
+    background-color: rgba($c-black, 0.75);
+  }
 }
