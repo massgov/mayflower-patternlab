@@ -6,8 +6,9 @@ Description: An `<h2>` or `<h3>` element with a styled underline color designate
 ## State: ALPHA
 
 ### Notes:
-- _'yellow' is currently the only value that can be passed for optional variable compHeading.color_
-- _'true' is the only value that can be passed for optional variable compHeading.sub_
+- _compHeading.color - 'yellow' is currently the only optional value that can be passed to this variable_
+- _compHeading.sub - 'true' is the only optional value that can be passed to this variable_
+- _compHeading.centered - 'true' is the only optional value that can be passed to this variable_
 - `{{ modifier }}` is a local twig variable which is set in the atom twig template by appending `compHeading.color` to a CSS class name
 
 ### Used In:
@@ -19,19 +20,22 @@ Description: An `<h2>` or `<h3>` element with a styled underline color designate
 
 ### Variables:
 ~~~
- compHeading: {
-    title:
-        type: string / required
-    sub:
-        type: string ("true" || "" )
-    color:
-        type: string ("yellow")
-    id:
-        type: string
-  }
+compHeading: {
+  title:
+    type: string / required
+  sub:
+    type: string ("true" || "" )
+  color:
+    type: string ("yellow")
+  id:
+    type: string
+  centered:
+    type: string ("true" || "" )
+}
 ~~~
 
 ### Variations
 - [@atoms/04-headings/comp-heading](/?p=atoms-comp-heading)
 - [@atoms/04-headings/comp-heading-subheading](/?p=atoms-comp-heading-subheading)
 - [@atoms/04-headings/comp-heading-yellow](/?p=atoms-comp-heading-yellow)
+- [@atoms/04-headings/comp-heading-centered](/?p=atoms-comp-heading-centered)
