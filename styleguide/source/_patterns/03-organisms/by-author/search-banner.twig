@@ -1,0 +1,34 @@
+<section class="ma__search-banner" id="GUID935283478">
+  <style>
+    #GUID935283478 {
+      background-image: url('{{searchBanner.bgNarrow}}');
+    }
+
+    @media (min-width: 801px) {
+      #GUID935283478 {
+        background-image: url('{{searchBanner.bgWide}}');
+      }
+    }
+  </style>
+  <div class="ma__search-banner__container">
+    <h1 class="ma__search-banner__title">{{searchBanner.title}}</h1>
+    <div class="ma__search-banner__intro">{{searchBanner.intro}}</div>
+    <form class="ma__search-banner__form" action="{{searchBanner.action}}">
+      <div class="ma__search-banner__input">
+        {% set inputText = searchBanner.inputText %}
+        {% include "@atoms/03-forms/input-text.twig" %}
+      </div>
+      <button class="ma__search-banner__button" type="submit">
+        <span>{{searchBanner.buttonText}}</span>
+        {% include "@atoms/05-icons/svg-search.twig" %}
+      </button>
+    </form>
+    <div class="ma__search-banner__links">
+      {% set helpfulLinks = searchBanner.helpfulLinks %}
+      {% include "@organisms/by-author/helpful-links.twig" %}
+    </div>
+  </div>
+  <div class="ma__search-banner__credits">
+    
+  </div>
+</section>
