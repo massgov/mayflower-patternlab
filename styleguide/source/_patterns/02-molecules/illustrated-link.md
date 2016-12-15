@@ -2,7 +2,7 @@
 title: Illustrated link
 ---
 Description: a molecule for an illustrated link.
-## Status: STABLE
+## Status: ALPHA
 ### Used in:
 - [@organisms/by-author/action-finder](/?p=organisms-action-finder)
 - [@organisms/by-author/suggested-pages](/?p=organisms-suggested-pages)
