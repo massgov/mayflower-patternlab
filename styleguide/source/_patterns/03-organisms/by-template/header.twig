@@ -5,9 +5,11 @@
     <div class="ma__header__logo">
       {% include "@atoms/09-media/site-logo.twig" %}
     </div>
-    <div class="ma__header__search js-header-search-menu">
-      {% include "@molecules/header-search.twig" %}
-    </div>
+    {% if not hideHeaderSearch %}
+      <div class="ma__header__search js-header-search-menu">
+        {% include "@molecules/header-search.twig" %}
+      </div>
+    {% endif %}
   </div>
   <nav class="ma__header__nav">
     <div class="ma__header__button-container js-sticky-header">
@@ -17,10 +19,12 @@
       </button>
     </div>
     <div class="ma__header__nav-container">
-      <div class="ma__header__nav-search">
-        {% set headerSearch = {'placeholder':'Search','id':'nav-search'} %}
-        {% include "@molecules/header-search.twig" %}
-      </div>
+      {% if not hideHeaderSearch %}
+        <div class="ma__header__nav-search">
+          {% set headerSearch = {'placeholder':'Search','id':'nav-search'} %}
+          {% include "@molecules/header-search.twig" %}
+        </div>
+      {% endif %}
       <div class="ma__header__main-nav">
         {% include "@molecules/main-nav.twig" %}
       </div>
