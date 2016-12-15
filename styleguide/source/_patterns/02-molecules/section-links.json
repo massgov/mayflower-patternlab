@@ -2,7 +2,7 @@
   "sectionLinks": {
     "id": "GUIDasjdhf1",
     "catIcon": {
-      "svg":"@atoms/07-user-added-icons/svg-camping.twig",
+      "icon":"@atoms/07-user-added-icons/svg-camping.twig",
       "small":"true"
     },
     "title" : {
