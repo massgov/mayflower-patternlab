@@ -1,4 +1,6 @@
 {
+  "hideHeaderSearch": true,
+  
   "stackedRowSections": [{
     "title":"",
     "id":"",
@@ -6,8 +8,49 @@
       "path": "@organisms/by-author/search-banner.twig",
       "data": {
         "searchBanner": {
-          "bgWide":"/assets/images/placeholder/1600x400.png",
-          "bgNarrow":"/assets/images/placeholder/800x400.png"
+          "bgWide": "/assets/images/placeholder/1600x400.png",
+          "bgNarrow": "/assets/images/placeholder/800x400.png",
+          "imageName": "MIT Media Lab",
+          "imageAuthor": "Sir Mix Alot",
+          "title": "Welcome to Massachusetts",
+          "intro": "What would you like to do?",
+          "buttonText": "Search",
+          "inputText": {
+            "labelText": "Search",
+            "required": false,
+            "id": "GUID138490237",
+            "placeholder": "Search..."
+          },
+          "helpfulLinks": {
+            "columns": "true",
+            "compHeading": {
+              "title": "Popular Searches",
+              "sub": "true",
+              "color": "yellow",
+              "centered": "true"
+            },
+            "items": [{
+              "href": "#",
+              "text":"Apply for Unemployment",
+              "chevron": "true"
+            },{
+              "href": "#",
+              "text":"Register my Vehicle",
+              "chevron": "true"
+            },{
+              "href": "#",
+              "text":"Find My Local Polling Station",
+              "chevron": "true"
+            },{
+              "href": "#",
+              "text":"Search for Unclaimed Property",
+              "chevron": "true"
+            },{
+              "href": "#",
+              "text":"Learn about Fishing and Hunting",
+              "chevron": "true"
+            }]
+          }
         }
       }
     }]

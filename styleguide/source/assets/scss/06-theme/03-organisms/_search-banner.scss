@@ -96,4 +96,30 @@
       }
     }
   }
+
+  &__image-credit {
+
+  }
+  
+  &__credits-container {
+
+  }
+
+  &__icon {
+
+    & > svg {
+      fill: transparent;
+      stroke: $c-font-inverse;
+    }
+  }
+
+  &__image-name {
+    color: rgba($c-font-inverse,.9);
+    font-weight: 500;
+  }
+
+  &__image-author {
+    color: rgba($c-font-inverse, .5);
+    font-weight: 500;
+  }
 }

@@ -3,9 +3,22 @@
   background-size: cover;
   display: flex;
     align-items: center;
-  height: 1px; // IE11 hack to vertially align content with min-height
-  min-height: 800px;
-  padding: 30px 0;
+  font-size: 0;
+  padding: 30px 0 95px;
+
+  @media ($bp-small-min) {
+    height: 1px; // IE11 hack to vertially align content with min-height
+    min-height: 800px;
+  }
+
+  .page-content &:last-child {
+    margin-bottom: -45px; // compensating for main-content margin
+
+    @media ($bp-large-min){
+      margin-bottom: -60px; // compensating for main-content margin
+    }
+  }
+
 
   &:after {
     content: "";
@@ -19,7 +32,7 @@
 
   &__container {
     @include ma-container;
-    padding-bottom: 15px; // offset based on Title line height
+    font-size: 1.375rem;
     position: relative;
     z-index: 2;
   }
@@ -49,8 +62,16 @@
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
-    height: 90px;
+    height: 40px;
     margin-right: 3px;
+
+    @media ($bp-small-min) {
+      height: 60px;
+    }
+
+    @media ($bp-medium-min) {
+      height: 90px;
+    }
 
     label {
       @include ma-visually-hidden;
@@ -58,9 +79,13 @@
 
     input {
       border: none;
-      font-size: 2rem;
+      font-size: 1.5rem;
       height: 100%;
       width: 100%;
+
+      @media ($bp-small-min) {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -70,29 +95,51 @@
     flex-shrink: 0;
     flex-basis: auto;
     font-size: 1.125rem;
-    height: 90px;
-    padding-left: 30px;
-    padding-right: 30px;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-transform: uppercase;
-    transition: all .5s;
+    transition: color .5s, fill .5s, background .5s;
+
+    @media ($bp-small-min) {
+      height: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media ($bp-medium-min) {
+      height: 90px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
 
     & > span {
       display: inline-block;
       margin-right: 5px;
       vertical-align: middle;
+
+      @media ($bp-small-max) {
+        @include ma-visually-hidden;
+      }
     }
 
     & > svg {
       display: inline-block;
-      height: 30px;
+      height: 20px;
       vertical-align: middle;
-      width: 30px;
+      width: 20px;
+
+      @media ($bp-small-min) {
+        height: 30px;
+        width: 30px;
+      }
     }
   }
 
   &__links {
-    @include ma-container;
-    max-width: 786px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 706px;
 
     .ma__comp-heading {
       font-size: 1.375rem;
@@ -119,5 +166,41 @@
         }
       }
     }
+  }
+
+  &__image-credit {
+    @include ma-container;
+    position: absolute;
+      bottom: 20px;
+      left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 3;
+  }
+  
+  &__credits-container {
+    padding: 8px 30px;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+      top: 0;
+      left: 0;
+
+    & > svg {
+      height: 26px;
+      width: 19px;
+    }
+  }
+
+  &__image-name {
+    font-size: 1rem;
+    line-height: 1.125rem;
+  }
+
+  &__image-author {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }

@@ -2,8 +2,8 @@
   "searchBanner": {
     "bgWide": "/assets/images/placeholder/1600x400.png",
     "bgNarrow": "/assets/images/placeholder/800x400.png",
-    "imageSource": "MIT Media Lab",
-    "imagecredit": "Sir Mix Alot",
+    "imageName": "MIT Media Lab",
+    "imageAuthor": "Sir Mix Alot",
     "title": "Welcome to Massachusetts",
     "intro": "What would you like to do?",
     "buttonText": "Search",
