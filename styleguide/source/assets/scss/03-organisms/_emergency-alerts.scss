@@ -30,6 +30,7 @@ be included at the top of the page */
 
   &__container {
     @include ma-container;
+    
     @media ($bp-small-max) {
       padding-bottom: 10px;
     }
