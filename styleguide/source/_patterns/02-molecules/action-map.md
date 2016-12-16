@@ -1,10 +1,10 @@
 ---
-title: Action Map
+title: DEPRECATED - Action Map
 ---
 Description: A google map that fits the width of it's containing element.
-## State: Alpha
+## State: DEPRECATED
 ### Notes
-- This style has the potential to be generalized to display a google map elsewhere in the site.
+- This style is deprecated as it should be generalized to display a google map anywhere in the site.
 ### Used in:
 - [@molecules/action-section](?p=molecules-action-section)
 - [@organisms/by-author/location-banner](?p=organisms-location-banner)

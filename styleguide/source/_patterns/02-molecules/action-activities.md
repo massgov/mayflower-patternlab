@@ -1,11 +1,11 @@
 ---
-title: Action activities
+title: DEPRECATED - Action activities
 ---
 Description: An illustrated list where each item displays an image, title, description and a link to further information.
-## State: Alpha
+## State: DEPRECATED
 ### Notes
 - The image is 190px wide with a variable height.
-- This style has the potential to be generalized for an illustrated list used elsewhere in the site.
+- This style is deprecated as it should be generalized for an illustrated list that can be used elsewhere in the site.
 ### Used in:
 - [@molecules/action-section](?p=molecules-action-section)
 - [@organisms/by-author/action-details](?p=organisms-action-details)

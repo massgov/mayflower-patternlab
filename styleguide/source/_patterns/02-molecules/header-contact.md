@@ -12,7 +12,8 @@ Description: Displays a set of contact information in the header.
 - [@organisms/by-author/sidebar-contact](/?p=organisms-sidebar-contact)
 
 ## Notes:
-- This is similar to the [@molecules/contact-us](/?p=organisms-contact-us) but different in several key areas. This may be refactored to one set of contact templates.
+- The address needs to be able to accept a single element and not just an address with multiple fields.
+- This is similar to the [@molecules/contact-us](/?p=organisms-contact-us) but has a different set of classes and allows for the address.
 - `{{ accordion }}, {{ accordionParent }}, {{ accordionContent }}` are a set of local twig variables which is set in the molecule if phone, online and fax is set.
 
 ### Required Variables

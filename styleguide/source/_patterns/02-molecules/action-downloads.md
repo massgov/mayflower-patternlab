@@ -1,11 +1,11 @@
 ---
-title: Action Downloads
+title: DEPRECATED - Action Downloads
 ---
 Description: A list of downloadable assets with an icon to display the type of file being downloaded.
-## State: Alpha
+## State: DEPRECATED
 ### Notes
 - The download link can be an external link to an online form if the format of "form" is used for the actionDownload item.
-- This style has the potential to be generalized for a list of downloadable items used elsewhere in the site.
+- This style is deprecated as it should be generalized for a list of downloadable items used anywhere in the site.
 ### Contains
 - [@atoms/decorative-link.twig](?p=atoms-decorative-link)
 ### Used in:
