@@ -5,7 +5,11 @@
     "featuredHeading":"Featured:",
     "generalHeading":"All Actions & Guides:",
 
-    "seeAll": null,
+    "seeAll": {
+      "href": "#",
+      "text":"See all related Actions",
+      "chevron": "true"
+    },
 
     "featuredLinks": [{
       "image": "/assets/images/placeholder/130x160.png",

@@ -1,18 +1,9 @@
 $action-finder-bp: 900px;
 
 .ma__action-finder {
-  padding: 60px 0;
+  background-size: cover;
+  background-position: top center;
   position: relative;
-
-  &__banner {
-    background-size: cover;
-    background-position: top center;
-    height: 100%;
-    position: absolute;
-      top: 0;
-      left: 0;
-    width: 100%;
-  }
 
   &:after {
     content: "";
@@ -21,13 +12,15 @@ $action-finder-bp: 900px;
       top: 0;
       left: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 1;
   }
 
   &__container {
     @include ma-container;
+    padding-top: 60px;
+    padding-bottom: 60px;
     position: relative;
-    z-index: 3;
+    z-index: 2;
   }
 
   &__header {
@@ -36,7 +29,7 @@ $action-finder-bp: 900px;
   }
 
   &__category {
-    margin-bottom: .5em;
+    @include ma-h5;
   }
 
   &__title {
@@ -66,7 +59,6 @@ $action-finder-bp: 900px;
     cursor: pointer;
     display: flex;
       flex-wrap: wrap;
-    margin-bottom: 20px;
   }
 
   &__item {
@@ -110,5 +102,18 @@ $action-finder-bp: 900px;
     .ma__illustrated-link {
       border: none;
     }
+  }
+
+  &__see-all {
+    margin-top: -10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__see-all-container {
+    @include ma-container;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    text-align: right;
   }
 }
