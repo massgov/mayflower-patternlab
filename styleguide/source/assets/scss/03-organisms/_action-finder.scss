@@ -36,6 +36,7 @@ $action-finder-bp: 900px;
   }
 
   &__category {
+    @include ma-h5;
     margin-bottom: .5em;
   }
 
