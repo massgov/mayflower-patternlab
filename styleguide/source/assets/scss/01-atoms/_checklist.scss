@@ -3,6 +3,7 @@
     list-style: none;
 
     li {
+      list-style: none;
       position: relative;
 
       &:before {
@@ -12,7 +13,7 @@
         height: 1.125em;
         position: absolute;
           top: .25em;
-          left: -20px; 
+          left: -20px;
         width: 1.125em;
       }
     }
