@@ -8,7 +8,10 @@
 
 ### Other
 * MGRP-258 - Updated Pattern Lab Documentation (molecules)
-
+* MGVDU-448 - Pilot Header update
+* MGVDU-141 - Design print styles for How-to pages
+* MGVDU-438 - Design print styles for location pages
+* MGVDU-439 - Design print styles for guides
 
 ## 2.2.0 (Sprint 8)
 ### MQA bugs
