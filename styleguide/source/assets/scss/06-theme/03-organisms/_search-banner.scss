@@ -30,28 +30,31 @@
     input {
       background-color: rgba(255, 255, 255, 0.75);
       color: $c-font-dark;
-      font-style: italic;
       font-weight: 300;
     }
 
     ::-webkit-input-placeholder {
       color: $c-font-medium;
       font-weight: 300;
+      font-style: italic;
     }
 
     :-moz-placeholder { /* Firefox 18- */
       color: $c-font-medium;
       font-weight: 300;
+      font-style: italic;
     }
 
     ::-moz-placeholder {  /* Firefox 19+ */
       color: $c-font-medium;
       font-weight: 300;
+      font-style: italic;
     }
 
     :-ms-input-placeholder {  
       color: $c-font-medium;
       font-weight: 300;
+      font-style: italic;
     }
   }
 
