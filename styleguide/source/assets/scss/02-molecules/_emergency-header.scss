@@ -5,7 +5,7 @@
   @media ($bp-small-max) {
     text-align: center;
   }
-  
+
   @media ($bp-medium-min) {
     display: flex;
       align-items: center;
@@ -14,20 +14,21 @@
   &__label {
     flex-shrink: 0;
     flex-basis: auto;
+    letter-spacing: .1em;
     padding-right: 18px;
     white-space: nowrap;
 
     @media ($bp-medium-max) {
       margin-bottom: 10px;
     }
-    
+
     // icon
     & > svg {
       height: 24px;
       margin-right: 7px;
       vertical-align: middle;
       width: 27px;
-      
+
       @media ($bp-small-min) {
         height: 32px;
         width: 36px;
