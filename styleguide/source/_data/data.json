@@ -122,7 +122,7 @@
 
   "mainNavPilot": [{
     "href":"#",
-    "text":"Top Actions",
+    "text":"Common Actions",
     "active":"",
     "subNav":[{
       "href":"#",
@@ -152,11 +152,6 @@
   },{
     "href":"#",
     "text":"Feedback",
-    "active":"",
-    "subNav":[]
-  },{
-    "href":"#",
-    "text":"FAQ",
     "active":"",
     "subNav":[]
   }]
