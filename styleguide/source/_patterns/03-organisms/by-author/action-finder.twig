@@ -12,7 +12,7 @@
   </style>
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
-      <h2 class="ma__action-finder__title">What Would You Like to Do?</h2>
+      <h2 class="ma__action-finder__title">{{ actionFinder.title }}</h2>
       {% if actionFinder.links|length > 6 %}
         <div class="ma__action-finder__search">
           {% include "@molecules/keyword-search.twig" %}

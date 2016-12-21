@@ -25,6 +25,8 @@ Description: A collection of featured and general links
       type: string/image-url/required
     bgNarrow:
       type: string/image-url/required,
+    title:
+      type: string/required,
     featuredHeading:
       type: string/required,
     generalHeading:
