@@ -3,6 +3,8 @@
 ## 2.3.0 (Sprint 9)
 ### Homepage search
 * MGRP-296 - FE: Homepage build-out
+* MGRP-304 - FE: Homepage - Multi-row template - refactor
+* MGRP-328 - Implement footer in Pattern Lab 
 
 ### Org page
 
