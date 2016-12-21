@@ -1,0 +1,15 @@
+{
+  "sidebarHeading": {
+    "title": "Social"
+  },
+  "iconLinks": {
+    "items": [{
+      "icon": "@atoms/05-icons/svg-twitter.twig",
+      "link": {
+        "href": "https://twitter.com/MassHHS",
+        "text": "@MassHHS",
+        "chevron": ""
+      }
+    }]
+  }
+}
