@@ -18,7 +18,7 @@
         {% include "@molecules/keyword-search.twig" %}
       </div>
     </header>
-    <div class="ma__action-finder__category">Featured:</div>
+    <h3 class="ma__action-finder__category">Featured:</h3>
     <ul class="ma__action-finder__items">
       {% for link in actionFinder.featuredLinks %}
         <li class="ma__action-finder__item js-clickable {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
@@ -32,7 +32,7 @@
         </li>
       {% endfor %}
     </ul>
-    <div class="ma__action-finder__category">All Actions &amp; Guides:</div>
+    <h3 class="ma__action-finder__category">All Actions &amp; Guides:</h3>
     <ul class="ma__action-finder__items ma__action-finder__items--all">
       {% for link in actionFinder.links %}
         <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
