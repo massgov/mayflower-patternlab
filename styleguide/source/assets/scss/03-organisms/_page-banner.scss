@@ -21,15 +21,21 @@ $page-banner-small: '.ma__page-banner--small';
   &__content {
     font-size: 1rem;
     max-width: 1050px;
-    padding: 30px 25px 45px 0;
+    padding: 30px 25px 45px 40px;
+    left: 0px; // account for container margin to be flush to screen-left
     position: absolute;
-      top: 50%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 
+    @media (min-width: 1320px) {
+      // Account for all space to the left of the 1320-max-width container, plus the gutter.
+      padding-left: calc(((100vw - 1320px)/2) + 20px) !important;
+    }
+
     @media ($bp-x-small-min) {
       display: flex;
-        align-items: center;
+      align-items: center;
       margin-right: 20px;
       padding-top: 50px;
       padding-right: 175px;
@@ -37,21 +43,12 @@ $page-banner-small: '.ma__page-banner--small';
 
     #{$page-banner-small} & {
       font-size: .8rem;
-      padding: 25px 25px 40px 0;
+      padding: 25px 25px 40px 40px;
 
       @media ($bp-x-small-min) {
         padding-top: 45px;
         padding-right: 175px;
       }
-    }
-
-    &:before {
-      content: "";
-      height: 100%;
-      position: absolute;
-        top: 0;
-        right: 100%;
-      width: 50vw;
     }
   }
 
