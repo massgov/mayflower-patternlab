@@ -1,5 +1,24 @@
 # Mass Gov Release Notes
 
+## 2.3.0 (Sprint 9)
+### Homepage search
+* MGRP-296 - FE: Homepage build-out
+* MGRP-304 - FE: Homepage – Multi-row template – refactor
+
+### Org page
+* MGRP-302 - FE: Org - Action Finder - enhance
+
+### Bugs
+* MQA-81 - [L2] - 'Featured' and 'All actions & guides' should be headers
+
+### Other
+* MGRP-258 - Updated Pattern Lab Documentation (molecules)
+* MGVDU-448 - Pilot Header update
+* MGVDU-141 - Design print styles for How-to pages
+* MGVDU-438 - Design print styles for location pages
+* MGVDU-439 - Design print styles for guides
+
+
 ## 2.2.0 (Sprint 8)
 ### MQA bugs
 * MQA-23 - Links in the body are turning into a weird display
