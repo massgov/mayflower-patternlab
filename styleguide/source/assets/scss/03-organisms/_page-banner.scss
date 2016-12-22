@@ -21,9 +21,10 @@ $page-banner-small: '.ma__page-banner--small';
   &__content {
     font-size: 1rem;
     max-width: 1050px;
-    padding: 30px 25px 45px 0;
+    padding: 30px 25px 45px 40px;
+    left: -20px; // account for container margin to be flush to screen-left
     position: absolute;
-      top: 50%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 
@@ -37,21 +38,12 @@ $page-banner-small: '.ma__page-banner--small';
 
     #{$page-banner-small} & {
       font-size: .8rem;
-      padding: 25px 25px 40px 0;
+      padding: 25px 25px 40px 40px;
 
       @media ($bp-x-small-min) {
         padding-top: 45px;
         padding-right: 175px;
       }
-    }
-
-    &:before {
-      content: "";
-      height: 100%;
-      position: absolute;
-        top: 0;
-        right: 100%;
-      width: 50vw;
     }
   }
 
