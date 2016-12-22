@@ -7,6 +7,10 @@
 * MGRP-328 - Implement footer in Pattern Lab 
 
 ### Org page
+* MGRP-302 - FE: Org - Action Finder - enhance
+
+### Bugs
+* MQA-81 - [L2] - 'Featured' and 'All actions & guides' should be headers
 
 ### Other
 * MGRP-258 - Updated Pattern Lab Documentation (molecules)
