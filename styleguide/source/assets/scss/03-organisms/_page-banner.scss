@@ -30,9 +30,10 @@ $page-banner-small: '.ma__page-banner--small';
     @media ($bp-x-small-min) {
       display: flex;
         align-items: center;
-      margin-right: 20px;
+      margin-right: 70px;
       padding-top: 50px;
-      padding-right: 175px;
+      padding-right: 80px;
+      transform: translateY(-50%) skew(-30deg);
     }
 
     #{$page-banner-small} & {
@@ -41,7 +42,7 @@ $page-banner-small: '.ma__page-banner--small';
 
       @media ($bp-x-small-min) {
         padding-top: 45px;
-        padding-right: 175px;
+        padding-right: 80px;
       }
     }
 
@@ -50,7 +51,7 @@ $page-banner-small: '.ma__page-banner--small';
       height: 100%;
       position: absolute;
         top: 0;
-        right: 100%;
+        right: 99%;
       width: 50vw;
     }
   }
@@ -58,6 +59,10 @@ $page-banner-small: '.ma__page-banner--small';
   &__icon {
     padding-right: 30px;
     width: 75px;
+
+    @media ($bp-x-small-min) {
+      transform: skew(30deg);
+    }
 
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
@@ -97,6 +102,7 @@ $page-banner-small: '.ma__page-banner--small';
     vertical-align: middle;
 
     @media ($bp-x-small-min) {
+      transform: skew(30deg);
       width: calc(100% - 75px);
     }
 
