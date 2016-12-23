@@ -1,4 +1,4 @@
-<div class="ma__contact-group">
+<div class="ma__contact-group trk-contact-group">
   <h6 class="ma__contact-group__name">
     {% include contactGroup.icon %}
     <span>{{contactGroup.name}}</span>
@@ -11,13 +11,13 @@
 
       {# Online wrap value in a link #}
       {% if item.type == "online" %}
-        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
+        <a href="{{item.link}}" class="ma__content-link trk-contact-link-online">{{item.value}}</a>
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
-        <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
+        <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone trk-contact-link-phone">{{item.value}}</a>
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
-        <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
+        <a href="mailto:{{item.link}}" class="ma__content-link trk-contact-link-email">{{item.value}}</a>
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
         <div class="ma__contact-group__address">
@@ -28,7 +28,7 @@
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
-        <span class="ma__contact-group__value">{{item.value}}</span>        
+        <span class="ma__contact-group__value">{{item.value}}</span>
       {% endif %}
     </div>
     {% if item.details %}
