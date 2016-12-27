@@ -158,7 +158,6 @@ export default function (window,document,$,undefined) {
     });
     $mainNavToggle.children('a').on('click', function(e) {
       if(windowWidth <= breakpoint) {
-        e.preventDefault();
         let $content = $(this).parent().find('.js-main-nav-content');
         // add open class to this item
         $(this).parent().addClass(openClass);
