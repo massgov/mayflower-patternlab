@@ -11,11 +11,12 @@ export default function (window,document,$,undefined) {
         closeClass = "is-closed",
         submenuClass = "show-submenu",
         $parent = $(this),
-        $mainNavToggle = $parent.find('.js-main-nav-toggle, .js-main-nav-top-link'),
+        $mainNavToggle = $parent.find('.js-main-nav-toggle'),
+        $mainNavItems = $parent.find('.js-main-nav-toggle, .js-main-nav-top-link'),
         previousKey = null,
         breakpoint = 800; // matches CSS breakpoint for Main Nav
 
-    $mainNavToggle.on('keydown', function(e) {
+    $mainNavItems.on('keydown', function(e) {
       if(windowWidth <= breakpoint) {
         // only for desktop
         return;
@@ -144,13 +145,13 @@ export default function (window,document,$,undefined) {
       // add open class to the correct content based on index
       show($link.find('.js-main-nav-content'));
     });
-    $mainNavToggle.on('mouseenter', function(e) {
+    $mainNavItems.on('mouseenter', function(e) {
       if(windowWidth > breakpoint) {
         let $openContent = $(this).find('.js-main-nav-content');
         show($openContent);
       }
     });
-    $mainNavToggle.on('mouseleave', function(e) {
+    $mainNavItems.on('mouseleave', function(e) {
       if(windowWidth > breakpoint) {
         let $openContent = $(this).find('.js-main-nav-content');
         hide($openContent);
