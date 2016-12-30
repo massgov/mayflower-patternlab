@@ -11,9 +11,12 @@
     </h4>
   {% endif %}
 
+  {# If more than 2 contact groups, they should load inside of accordion.#}
   {% for contactGroup in contactUs.groups %}
-    {% if contactGroup.hidden and not accordion %}
+    {% if loop.length > 2 %}
       {% set accordion = true %}
+    {% endif %}
+    {% if loop.index == 3 %}
       <div class="ma__contact-us__extra js-accordion-content">
     {% endif %}
     {% include "@molecules/contact-group.twig" %}
