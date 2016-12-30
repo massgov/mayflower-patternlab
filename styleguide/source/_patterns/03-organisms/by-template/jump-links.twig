@@ -1,4 +1,5 @@
-<section class="ma__jump-links">
+{% if jumpLinks.links %}
+  <section class="ma__jump-links">
   <div class="ma__jump-links__inner">
     <div class="ma__jump-links__container">
       <h2 class="ma__jump-links__title">{{jumpLinks.title}}</h2>
@@ -26,3 +27,4 @@
     </div>
   </div>
 </section>
+{% endif %}
