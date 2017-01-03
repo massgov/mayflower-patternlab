@@ -6,11 +6,13 @@
       {% include "@base/placeholder.twig" with {'placeholder':{'text':'Pre Content'}} %}
     {% endblock %}
   </div>
-  <div class="multi-row-content">
-    {% block multiRowContent %}
-      {% include "@organisms/by-template/jump-links.twig" %}
-      {% for multiRowSection in multiRowSections %}
-        {% include "@organisms/by-author/multi-row-section.twig" %}
+  <div class="stacked-row-content">
+    {% block stackedRowContent %}
+      {% if jumpLinks %}
+        {% include "@organisms/by-template/jump-links.twig" %}
+      {% endif %}
+      {% for stackedRowSection in stackedRowSections %}
+        {% include "@organisms/by-author/stacked-row-section.twig" %}
       {% endfor %}
     {% endblock %}
   </div>

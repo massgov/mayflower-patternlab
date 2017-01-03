@@ -80,7 +80,7 @@
     }]
   },
 
-  "multiRowSections": [{
+  "stackedRowSections": [{
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
     "pageContent": [{

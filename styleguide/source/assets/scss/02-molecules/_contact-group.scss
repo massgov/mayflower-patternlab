@@ -5,6 +5,7 @@
   }
 
   &__name {
+    @include ma-h6;
 
     & > svg {
       display: inline-block;

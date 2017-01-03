@@ -1,0 +1,8 @@
+{
+  "inputText": {
+    "labelText": "Your Name*",
+    "required": true,
+    "id": "text-input",
+    "placeholder": "full name"
+  }
+}

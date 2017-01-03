@@ -18,6 +18,7 @@
       </header>
       <form action="#" class="ma__form ma__form--light">
         <div class="ma__feedback-form__name">
+          {% set inputText = feedbackForm.inputText %}
           {% include "@atoms/03-forms/input-text.twig" %}
         </div>
         <div class="ma__feedback-form__email">

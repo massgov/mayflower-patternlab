@@ -4,11 +4,14 @@
     @include ma-reset-list;
   }
 
+  &--columns &__items {
+    @media ($bp-small-min) {
+      column-count: 2;
+    }
+  }
+
   &__item  {
 
-    & + & {
-      padding-top: 7px;
-    }
   }
 
   .ma__comp-heading {
