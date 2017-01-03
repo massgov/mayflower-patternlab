@@ -31,7 +31,7 @@ export LC_ALL=C
 # variables
 GITHUB_REPONAME="massgov/mayflower"
 NOW=$(date +"%c")
-LATESTTAG=$(git fetch upstream --tags && git describe --tags `git rev-list --tags --max-count=1`)
+LATESTTAG=$(git fetch origin --tags && git describe --tags `git rev-list --tags --max-count=1`)
 MESSAGE="GH Pages deployed tag ${LATESTTAG} on: ${NOW}"
 
 # checkout the latest tag/release
