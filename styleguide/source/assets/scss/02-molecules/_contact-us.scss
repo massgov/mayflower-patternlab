@@ -43,13 +43,13 @@
 
   &__expand {
     padding-top:20px;
-    text-align: right;
+    text-align: left;
 
     button {
       @include ma-button-reset;
       @include ma-link-underline;
       @include ma-chevron;
-      font-size: 1rem;
+      font-size: 1.375rem;
       padding-right: 10px;
 
       &:after {
