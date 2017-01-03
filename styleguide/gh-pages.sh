@@ -55,9 +55,9 @@ echo "Changing directory to ~/tmp/public..."
 cd ~/tmp/public
 
 # Search temp directory + replace asset url /assets/ with /mayflower/assets/
-echo "Searching directory for /assets/ and replace with /mayflower/assets/..."
-find . -type f -name "*.*" -exec sed -i "" 's/\"\/assets\//\"\/mayflower\/assets\//g' {} \;
-find . -type f -name "*.*" -exec sed -i "" "s/\'\/assets\//\'\/mayflower\/assets\//g" {} \;
+#echo "Searching directory for /assets/ and replace with /mayflower/assets/..."
+#find . -type f -name "*.*" -exec sed -i "" 's/\"\/assets\//\"\/mayflower\/assets\//g' {} \;
+#find . -type f -name "*.*" -exec sed -i "" "s/\'\/assets\//\'\/mayflower\/assets\//g" {} \;
 
 # initialize temp git repo + push up to gh-pages
 echo "Creating repo and pushing up to massgov/mayflower gh-pages..."
