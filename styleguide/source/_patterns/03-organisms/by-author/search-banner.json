@@ -1,7 +1,7 @@
 {
   "searchBanner": {
-    "bgWide": "/assets/images/placeholder/1600x400.png",
-    "bgNarrow": "/assets/images/placeholder/800x400.png",
+    "bgWide": "/assets/images/placeholder/1600x800.png",
+    "bgNarrow": "/assets/images/placeholder/800x800.png",
     "imageName": "MIT Media Lab",
     "imageAuthor": "Sir Mix Alot",
     "form": {
