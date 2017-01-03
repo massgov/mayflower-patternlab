@@ -51,7 +51,7 @@
       font-style: italic;
     }
 
-    :-ms-input-placeholder {  
+    :-ms-input-placeholder {
       color: $c-font-medium;
       font-weight: 300;
       font-style: italic;
@@ -78,13 +78,14 @@
   }
 
   &__links {
-    
+
     .ma__comp-heading {
       color: $c-font-inverse;
     }
 
     .ma__content-link {
       color: $c-font-inverse;
+      font-weight: 400;
 
       &:after {
         border-color: rgba($c-font-inverse, .5);
@@ -103,7 +104,7 @@
   &__image-credit {
 
   }
-  
+
   &__credits-container {
 
   }
@@ -118,11 +119,11 @@
 
   &__image-name {
     color: rgba($c-font-inverse,.9);
-    font-weight: 500;
+    font-weight: 400;
   }
 
   &__image-author {
     color: rgba($c-font-inverse, .5);
-    font-weight: 500;
+    font-weight: 400;
   }
 }
