@@ -1,0 +1,23 @@
+{
+  "socialLinks": {
+    "items": [{
+      "href": "#",
+      "icon": "@atoms/05-icons/svg-facebook.twig"
+    },{
+      "href": "#",
+      "icon": "@atoms/05-icons/svg-twitter.twig"
+    },{
+      "href": "#",
+      "icon": "@atoms/05-icons/svg-linkedin.twig"
+    },{
+      "href": "#",
+      "icon": "@atoms/05-icons/svg-youtube.twig"
+    },{
+      "href": "#",
+      "icon": "@atoms/05-icons/svg-blog.twig"
+    },{
+      "href": "#",
+      "icon": "@atoms/05-icons/svg-instagram.twig"
+    }]
+  }
+}

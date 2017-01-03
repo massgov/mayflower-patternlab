@@ -11,27 +11,26 @@
     {# Online wrap value in a link #}
     {% if item.type == "online" %}
       <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
-    {# Phone - add tel: to href #}
+      {# Phone - add tel: to href #}
     {% elseif item.type == "phone" %}
       <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
-    {# Email - add mailto: to href #}
+      {# Email - add mailto: to href #}
     {% elseif item.type == "email" %}
       <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
-    {# Address - RTE version of value and look for directions link #}
+      {# Address - RTE version of value and look for directions link #}
     {% elseif item.type == "address" %}
       <div class="ma__contact-group__address">
         {{item.value | raw}}
       </div>
       {% if item.link %}
-        <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron">directions</a>
+        <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"><span>Directions</span></a>
       {% endif %}
-    {# Default - just spit out the value #}
+      {# Default - just spit out the value #}
     {% else %}
       <span class="ma__contact-group__value">{{item.value}}</span>
     {% endif %}
   </div>
   {% if item.details %}
-    <p class="ma__contact-group__details">{{item.details}} test</p>
+    <p class="ma__contact-group__details">{{item.details}}</p>
   {% endif %}
 {% endfor %}
-

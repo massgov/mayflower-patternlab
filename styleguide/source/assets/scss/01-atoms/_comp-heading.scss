@@ -6,4 +6,12 @@
   &:after {
     width: 1.85em; // ma-underline-decorative override
   }
+
+  &--centered {
+    text-align: center;
+
+    &:after {
+      left: calc(50% - .9em); // half the width defined above
+    }
+  }
 }
