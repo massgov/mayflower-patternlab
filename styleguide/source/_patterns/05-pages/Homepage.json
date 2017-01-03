@@ -14,12 +14,18 @@
           "imageAuthor": "Sir Mix Alot",
           "title": "Welcome to Massachusetts",
           "intro": "What would you like to do?",
-          "buttonText": "Search",
-          "inputText": {
-            "labelText": "Search",
-            "required": false,
-            "id": "GUID138490237",
-            "placeholder": "Search..."
+          "form": {
+            "path": "@molecules/search-banner-form.twig",
+            "content": {
+              "action": "",
+              "buttonText": "Search",
+              "inputText": {
+                "labelText": "Search",
+                "required": false,
+                "id": "GUID138490237",
+                "placeholder": "Search..."
+              }
+            }
           },
           "helpfulLinks": {
             "columns": "true",

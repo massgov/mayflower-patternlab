@@ -4,15 +4,21 @@
     "bgNarrow": "/assets/images/placeholder/800x400.png",
     "imageName": "MIT Media Lab",
     "imageAuthor": "Sir Mix Alot",
+    "form": {
+      "path": "@molecules/search-banner-form.twig",
+      "content": {
+        "action": "",
+        "buttonText": "Search",
+        "inputText": {
+          "labelText": "Search",
+          "required": false,
+          "id": "GUID138490237",
+          "placeholder": "Search..."
+        }
+      }
+    },
     "title": "Welcome to Massachusetts",
     "intro": "What would you like to do?",
-    "buttonText": "Search",
-    "inputText": {
-      "labelText": "Search",
-      "required": false,
-      "id": "GUID138490237",
-      "placeholder": "Search..."
-    },
     "helpfulLinks": {
       "columns": "true",
       "compHeading": {

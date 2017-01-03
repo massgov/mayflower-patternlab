@@ -13,16 +13,12 @@
   <div class="ma__search-banner__container">
     <h1 class="ma__search-banner__title">{{searchBanner.title}}</h1>
     <div class="ma__search-banner__intro">{{searchBanner.intro}}</div>
-    <form class="ma__search-banner__form" action="{{searchBanner.action}}">
-      <div class="ma__search-banner__input">
-        {% set inputText = searchBanner.inputText %}
-        {% include "@atoms/03-forms/input-text.twig" %}
-      </div>
-      <button class="ma__search-banner__button" type="submit">
-        <span>{{searchBanner.buttonText}}</span>
-        {% include "@atoms/05-icons/svg-search.twig" %}
-      </button>
-    </form>
+    {% set form = searchBanner.form %}
+    {% if form.path is not empty and form.content is not empty %}
+      {% include form.path with form.content %}
+    {% elseif form.content is not empty %}
+      {{ form.content }}
+    {% endif %}
     <div class="ma__search-banner__links">
       {% set helpfulLinks = searchBanner.helpfulLinks %}
       {% include "@organisms/by-author/helpful-links.twig" %}
