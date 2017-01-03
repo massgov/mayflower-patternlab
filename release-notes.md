@@ -8,6 +8,7 @@
 
 ### Org page
 * MGRP-302 - FE: Org - Action Finder - enhance
+* MGRP-300 - FE: Org - Icon Links
 
 ### Bugs
 * MQA-81 - [L2] - 'Featured' and 'All actions & guides' should be headers
@@ -109,7 +110,7 @@
 * MGVDU-175 - Component: Upcoming Events
 
 ### Pilot Page
-* MGYDU-87 - Feedback Form
+* MGVDU-87 - Feedback Form
 
 
 ## 0.3.0 (Sprint 3)
