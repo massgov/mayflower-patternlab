@@ -5,11 +5,14 @@
     <div class="ma__header__logo">
       {% include "@atoms/09-media/site-logo.twig" %}
     </div>
-    <div class="ma__header__search js-header-search-menu">
-      {% include "@molecules/header-search.twig" %}
-    </div>
+    {% if not hideHeaderSearch %}
+      <div class="ma__header__search js-header-search-menu">
+        {% include "@molecules/header-search.twig" %}
+      </div>
+    {% endif %}
   </div>
-  <nav class="ma__header__nav">
+  <nav class="ma__header__nav" aria-labelledby="main_navigation">
+    <h2 id="main_navigation" class="visually-hidden">Main Navigation</h2>
     <div class="ma__header__button-container js-sticky-header">
       <button class="ma__header__back-button js-close-sub-nav"><span>Back</span></button>
       <button class="ma__header__menu-button js-header-menu-button">
@@ -17,10 +20,12 @@
       </button>
     </div>
     <div class="ma__header__nav-container">
-      <div class="ma__header__nav-search">
-        {% set headerSearch = {'placeholder':'Search','id':'nav-search'} %}
-        {% include "@molecules/header-search.twig" %}
-      </div>
+      {% if not hideHeaderSearch %}
+        <div class="ma__header__nav-search">
+          {% set headerSearch = {'placeholder':'Search','id':'nav-search'} %}
+          {% include "@molecules/header-search.twig" %}
+        </div>
+      {% endif %}
       <div class="ma__header__main-nav">
         {% include "@molecules/main-nav.twig" %}
       </div>

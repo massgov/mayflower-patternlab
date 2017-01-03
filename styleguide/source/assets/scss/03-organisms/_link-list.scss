@@ -20,6 +20,7 @@
   }
 
   &__item {
+    -webkit-column-break-inside: avoid; // avoids partial-overflow bug on webkit
     padding: 5px 0 5px 1.4em;
     text-indent: -1.4em;
   }

@@ -62,6 +62,10 @@ $action-finder-border-color: tint($c-theme-blue,50%);
       &:after {
         border-color: rgba($c-font-inverse, .5);
       }
+
+      &:hover {
+        border-color: rgba($c-font-inverse, .5);
+      }
     }
   }
 }
