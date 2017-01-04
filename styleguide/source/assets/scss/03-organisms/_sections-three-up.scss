@@ -9,16 +9,7 @@ $bp-section-3up-large-max: "max-width:950px";
   }
 
   &__title {
-    @include ma-border-decorative;
-    position: relative;
-    margin-bottom: 45px;
-    padding-bottom: .75em;
-    text-align: center;
-
-    &:after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    @include ma-container;
   }
 
   &__container {

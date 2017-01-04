@@ -1,8 +1,12 @@
 {% set sub = "" %}
 <section class="ma__sections-3up">
-  {% if sectionThreeUp.title %}
+  {% if sectionThreeUp.compHeading %}
+    {# render sections links with an h3 if the title is present #}
     {% set sub = "true" %}
-    <h2 class="ma__sections-3up__title">{{sectionThreeUp.title}}</h2>
+    <div class="ma__sections-3up__title">
+      {% set compHeading = sectionThreeUp.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    </div>
   {% endif %}
   <div class="ma__sections-3up__container">
     {% for sectionLinks in sectionThreeUp.sections %}
