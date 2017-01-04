@@ -1,5 +1,10 @@
 # Mass Gov Release Notes
 
+## 3.1.0 (Sprint 10)
+### Org Page
+* DP-708 - Implement Organization Page in PatternLab
+* DP-867 - FE - Action Finder
+
 ## 3.0.0 (Sprint 9)
 ### Homepage search
 * MGRP-339 - FE: Homepage build-out
