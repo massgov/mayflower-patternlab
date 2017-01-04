@@ -1,6 +1,6 @@
 .ma__top-actions {
   @include ma-container;
-  padding-bottom: 60px;
+  @include ma-component-padding;
 
   &__title {
     @include ma-border-decorative;
