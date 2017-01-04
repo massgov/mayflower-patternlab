@@ -20,7 +20,13 @@
   },
 
   "sectionThreeUp" : {
-    "title": "",
+    "compHeading": {
+      "title": "",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": "true"
+    },
     "sections": [{
       "id": "GUIDasjdhf1",
       "catIcon": {
