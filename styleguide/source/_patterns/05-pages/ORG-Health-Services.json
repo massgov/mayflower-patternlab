@@ -2,14 +2,15 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "pageHeader": {
-    "title": "Mt Greylock State Park",
-    "subTitle": "",
+    "title": "Executive Office of Health and Human Services",
+    "titleNote": "(EOHHS)",
+    "subTitle": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
     "rteElements": "",
     "headerTags": ""
   },
 
   "headerContact": {
-    "title": "Visitor's Center",
+    "title": "One Ashburton Place",
     "address1": "30 Rockwell Road",
     "address2": "",
     "city": "Lanesborough",
@@ -55,30 +56,24 @@
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
         "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
+          "path": "@atoms/04-headings/heading-2.twig",
           "data": {
             "paragraph" : {
-              "text": "If you are renting a home or an apartment, the Office of Consumer Affairs & Business Regulation (OCABR) emphasizes the importance of knowing <a href=\"#\">your tenant rights and responsibilities</a>, such as:"
+              "text": "Who We Serve"
             }
           }
         },{
-          "path": "@atoms/08-lists/unordered-list.twig",
+          "path": "@atoms/11-text/paragraph.twig",
           "data": {
-            "unorderedList": [{ 
-              "text": "Protection from unlawful discrimination" 
-            },{ 
-              "text": "Rental agreements for leases and tenancy-at-will" 
-            },{ 
-              "text": "Rent withholding and deductions for repairs" 
-            },{ 
-              "text": "Lease termination, eviction, and moving out" 
-            }]
+            "paragraph" : {
+              "text": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered."
+            }
           }
         },{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "If you will be buying a home in Massachusetts, make sure you consider all the steps you will need to take, whether or not you’re a <a href=\"#\">first-time home buyer</a>."
+              "text": "<a href=\"http://www.google.com\">See news and updates</a>."
             }
           }
         }]
@@ -92,6 +87,147 @@
           "title": "Key Agencies"
         }
       }
+    },{
+      "path": "@molecules/icon-links.twig",
+      "data": {
+        "iconLinks": {
+          "items": [{
+            "icon": "@atoms/05-icons/svg-twitter.twig",
+            "link": {
+              "href": "https://twitter.com/MassHHS",
+              "text": "@MassHHS",
+              "chevron": ""
+            }
+          },{
+            "icon": "@atoms/05-icons/svg-flickr.twig",
+            "link": {
+              "href": "https://www.flickr.com/photos/mass_hhs/",
+              "text": "Mass_HHS",
+              "chevron": ""
+            }
+          },{
+            "icon": "@atoms/05-icons/svg-blog.twig",
+            "link": {
+              "href": "https://blog.mass.gov/hhs",
+              "text": "blog.mass.gov/hhs",
+              "chevron": ""
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title":"",
+    "id":"",
+    "pageContent": [{
+      "path": "@organisms/by-author/action-finder.twig",
+      "data": {
+        "actionFinder": {
+          "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+          "bgNarrow":"/assets/images/placeholder/800x800.png",
+          "title": "What Would You Like to Do?",
+          "featuredHeading":"Featured:",
+          "generalHeading":"All Actions & Guides:",
+
+          "seeAll": {
+            "type": "external",
+            "href": "http://www.google.com",
+            "text": "See all EOHHS’s programs and services on classic Mass.gov",
+            "info": ""
+          },
+
+          "featuredLinks": [{
+            "image": "/assets/images/placeholder/130x160.png",
+            "text": "Getting Outdoors",
+            "type": "",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Cancel or Transfer a Campsite Reservation",
+            "type": "external",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Find Horseback Riding Trails",
+            "type": "",
+            "href": "#"
+          }],
+
+          "links": [{
+            "image": "",
+            "text": "Find a State Park",
+            "type": "",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Get a State Park Pass",
+            "type": "",
+            "href": "#"
+          },{
+            "image": "/assets/images/placeholder/130x160.png",
+            "text": "Fall Activity Planner",
+            "type": "",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Reserve a Campsite",
+            "type": "external",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Find Scenic Viewing Areas",
+            "type": "",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Download a Trail Map",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/icon-links.twig",
+      "data": {
+        "iconLinks": {
+          "items": [{
+            "icon": "@atoms/05-icons/svg-twitter.twig",
+            "link": {
+              "href": "https://twitter.com/MassHHS",
+              "text": "@MassHHS",
+              "chevron": ""
+            }
+          },{
+            "icon": "@atoms/05-icons/svg-flickr.twig",
+            "link": {
+              "href": "https://www.flickr.com/photos/mass_hhs/",
+              "text": "Mass_HHS",
+              "chevron": ""
+            }
+          },{
+            "icon": "@atoms/05-icons/svg-blog.twig",
+            "link": {
+              "href": "https://blog.mass.gov/hhs",
+              "text": "blog.mass.gov/hhs",
+              "chevron": ""
+            }
+          }]
+        }
+      }
     }]
   }]
+
+
+   
+
+  
 }
