@@ -7,9 +7,10 @@
     "generalHeading":"All Actions & Guides:",
 
     "seeAll": {
+      "type": "",
       "href": "#",
-      "text":"See all related Actions",
-      "chevron": "true"
+      "text": "See all related Actions",
+      "info": ""
     },
 
     "featuredLinks": [{

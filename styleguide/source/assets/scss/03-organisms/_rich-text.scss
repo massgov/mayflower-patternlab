@@ -72,21 +72,13 @@ $rich-text-spacing-mobile: 1.5rem;
 
   img {
     width: 100%;
+  }
+
+  figure {
+    margin-bottom: $rich-text-spacing-mobile;
 
     @media ($bp-small-min) {
-      &.pull-left {
-        float: left;
-        margin-right: .5em;
-        margin-bottom: 1em;
-        width: 50%;
-      }
-
-      &.pull-right {
-        float: right;
-        margin-left: .5em;
-        margin-bottom: 1em;
-        width: 50%;
-      }
+      margin-bottom: $rich-text-spacing;
     }
   }
 
