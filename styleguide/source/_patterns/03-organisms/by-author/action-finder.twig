@@ -51,8 +51,8 @@
   {% if actionFinder.seeAll %}
     <div class="ma__action-finder__see-all">
       <div class="ma__action-finder__see-all-container">
-        {% set link = actionFinder.seeAll %}
-        {% include "@atoms/11-text/link.twig" %}
+        {% set decorativeLink = actionFinder.seeAll %}
+        {% include "@atoms/decorative-link.twig" %}
       </div>
     </div>
   {% endif %}
