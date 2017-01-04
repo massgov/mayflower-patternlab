@@ -5,8 +5,8 @@ Description: A list of a specific type of contact information for an entity wrap
 
 ## State: ALPHA
 ### Notes:
-Multiple contact groups are often aggregated into an array, used by Contact Us molecule.
-
+* Multiple contact groups are often aggregated into an array, used by Contact Us molecule.
+* Most fields for the item are optional and will render differently based on the item.type used.
 ### Used In:
 [@molecules/contact-us](?p=molecules-contact-us)
 

@@ -1,5 +1,12 @@
 {
   "sectionThreeUp" : {
+    "compHeading": {
+      "title": "More in Visiting & Exploring",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": "true"
+    },
     "title": "More in Visiting & Exploring",
     "sections": [{
       "id": "GUIDasjdhf1",
