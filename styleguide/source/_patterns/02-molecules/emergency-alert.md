@@ -9,22 +9,22 @@ Description: Emergency Alert message describing the event with a timestamp refle
 Link is optional.
 messages are sorted with the newest one first
 
-### Used in: 
+### Used in:
 [@organisms/by-template/emergency-alerts.twig](/?p=organisms-emergency-alerts)
 
 ### Contains
 [@atoms/11-text/link.twig](/?p=atoms-link)
 
-### Variables 
-~~~ 
+### Variables
+~~~
 emergencyAlert: {
-  message: 
+  message:
     type: string/required,
-  timeStamp: 
+  timeStamp:
     type: date/required
     format: mm.dd.yy, h:mm am/pm
   link: {
-    href: 
+    href:
       type: string/url,
     text:
       type: string,

@@ -5,16 +5,16 @@ Description: Content describing the overall emergency.
 ## State: ALPHA
 ###  Notes
 
-### Used in: 
+### Used in:
 [@organisms/by-template/emergency-alerts.twig](/?p=organisms-emergency-alerts)
 
 ### Contains
 [@atoms/05-icons/svg-alert.twig](/?p=atoms-svg-alert)
 
-### Variables 
-~~~ 
+### Variables
+~~~
 emergencyHeader: {
-  title: 
+  title:
     type: "string/required"
 }
 ~~~

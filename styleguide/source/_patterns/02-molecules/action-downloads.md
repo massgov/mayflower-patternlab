@@ -1,15 +1,31 @@
 ---
-Title: Action Downloads
+title: DEPRECATED - Action Downloads
 ---
-
-##Fields:
-* text - string - value shown in the link
-* href - string/url
-* type (optional) - string - "external" or ""
-* size - string - file size to download
-* format - string - type of file to download PDF or "form" for web forms to fill out.
-
-##Partials:
-
-##Notes:
-* icon used is choosen based on the format of the file or link
+Description: A list of downloadable assets with an icon to display the type of file being downloaded.
+## State: DEPRECATED
+### Notes
+- The download link can be an external link to an online form if the format of "form" is used for the actionDownload item.
+- This style is deprecated as it should be generalized for a list of downloadable items used anywhere in the site.
+### Contains
+- [@atoms/decorative-link.twig](?p=atoms-decorative-link)
+### Used in:
+- [@molecules/action-section](?p=molecules-action-section)
+- [@organisms/by-author/form-download](?p=organisms-form-downloads)
+- [@organisms/by-author/action-details](?p=organisms-action-details)
+### Required Variables
+~~~
+actionDownloads: [{
+  icon:
+    type: string to svg template/required
+  text:
+    type: string/required
+  href:
+    type: string/required
+  type:
+    type: string/required
+  size:
+    type: string/required
+  format:
+    type: string/required
+  }]
+~~~
