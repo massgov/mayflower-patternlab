@@ -1,24 +1,30 @@
 # Mass Gov Release Notes
 
-## 2.3.0 (Sprint 9)
+## 3.0.0 (Sprint 9)
 ### Homepage search
-* MGRP-296 - FE: Homepage build-out
+* MGRP-339 - FE: Homepage build-out
 * MGRP-304 - FE: Homepage - Multi-row template - refactor
 * MGRP-328 - Implement footer in Pattern Lab 
+* MGRP-311 - FE: Updated Header
 
 ### Org page
 * MGRP-302 - FE: Org - Action Finder - enhance
 * MGRP-300 - FE: Org - Icon Links
+* MGRP-312 - FE: Section Divider
+* MGRP-305 - FE: Org - section three up
 
 ### Bugs
 * MQA-81 - [L2] - 'Featured' and 'All actions & guides' should be headers
+* MGRP-290 - Vertically Align Callout links
 
 ### Other
 * MGRP-258 - Updated Pattern Lab Documentation (molecules)
+* MGRP-344 - FE - Update rich text image to allow captions and different classes.
 * MGVDU-448 - Pilot Header update
 * MGVDU-141 - Design print styles for How-to pages
 * MGVDU-438 - Design print styles for location pages
 * MGVDU-439 - Design print styles for guides
+
 
 ## 2.2.0 (Sprint 8)
 ### MQA bugs
