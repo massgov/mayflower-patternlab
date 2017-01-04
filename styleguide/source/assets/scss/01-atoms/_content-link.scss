@@ -6,10 +6,20 @@
 
   &--chevron {
     @include ma-chevron;
+    border-bottom: none;
+    display: inline-block;
     padding-right: 14px;
+  
+    &:hover {
+      border-bottom: none;
+    }
 
     &:after {
       margin-right: -14px;
+    }
+
+    span {
+      @include ma-link-underline;
     }
   }
 

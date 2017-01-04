@@ -2,7 +2,7 @@
   <ol class="ma__action-seq-list__items">
     {% for item in actionSeqLists %}
       <li class="ma__action-seq-list__item">
-        <h5 class="ma__action-seq-list__title">{{item.title}}</h5>
+        <h4 class="ma__action-seq-list__title">{{item.title}}</h4>
         <div class="ma__action-seq-list__content">
           {% set rteElements = item.rteElements %}
           {% include "@organisms/by-author/rich-text.twig" %}

@@ -4,14 +4,18 @@
     @include ma-reset-list;
   }
 
-  &__item  {
-
-    & + & {
-      padding-top: 7px;
+  &--columns &__items {
+    @media ($bp-small-min) {
+      column-count: 2;
     }
   }
 
+  &__item  {
+
+  }
+
   .ma__comp-heading {
+    letter-spacing: .1em;
     margin-bottom: .75em;
 
     .ma__narrow-template &:after {

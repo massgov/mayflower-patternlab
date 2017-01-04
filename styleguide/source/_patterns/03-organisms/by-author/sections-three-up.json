@@ -1,9 +1,17 @@
 {
   "sectionThreeUp" : {
+    "compHeading": {
+      "title": "More in Visiting & Exploring",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": "true"
+    },
     "title": "More in Visiting & Exploring",
     "sections": [{
+      "id": "GUIDasjdhf1",
       "catIcon": {
-        "svg":"atoms-svg-id-card",
+        "icon":"@atoms/07-user-added-icons/svg-id-card.twig",
         "small":"true"
       },
       "title" : {
@@ -25,8 +33,9 @@
       }]
     },
     {
+      "id": "GUIDasjdhf2",
       "catIcon": {
-        "svg":"atoms-svg-campfire",
+        "icon":"@atoms/07-user-added-icons/svg-campfire.twig",
         "small":"true"
       },
       "title" : {
@@ -52,8 +61,9 @@
       }]
     }, 
     {
+      "id": "GUIDasjdhf3",
       "catIcon": {
-        "svg":"atoms-svg-map",
+        "icon":"@atoms/07-user-added-icons/svg-map.twig",
         "small":"true"
       },
       "title" : {
@@ -79,8 +89,9 @@
       }]
     },
     {
+      "id": "GUIDasjdhf4",
       "catIcon": {
-        "svg":"atoms-svg-theater",
+        "icon":"@atoms/07-user-added-icons/svg-theater.twig",
         "small":"true"
       },
       "title" : {

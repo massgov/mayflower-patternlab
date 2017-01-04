@@ -1,12 +1,12 @@
 $emergency-alerts-half-max: $max-width / 2;
 
-/* parent class should be 0px tall 
+/* parent class should be 0px tall
 if there are no alerts to show
 since the component will always
 be included at the top of the page */
 .ma__emergency-alerts {
   position: relative;
-  
+
   @media($bp-header-toggle-max) {
     top: 40px;
     z-index:1;
@@ -30,6 +30,10 @@ be included at the top of the page */
 
   &__container {
     @include ma-container;
+    
+    @media ($bp-small-max) {
+      padding-bottom: 10px;
+    }
   }
 
   &__interface {
@@ -41,7 +45,7 @@ be included at the top of the page */
       position: absolute;
         top: 15px;
         right: 0;
-        
+
     }
 
     @media ($bp-page-width-min) {

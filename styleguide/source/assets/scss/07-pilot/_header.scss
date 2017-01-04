@@ -35,22 +35,27 @@ $bp-header-logo-min: "min-width: 1000px";
     a {
       @include ma-chevron("left");
       @include ma-font(500);
-      background-color: $c-theme-yellow;
-      color: $c-font-dark;
+      background-color: tint($c-font-link,90%);
+      border: 3px solid;
+      border-color: tint($c-font-link,50%);
+      border-top: none;
+      box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
+      color: $c-font-link;
       display: inline-block;
       font-size: 1.25rem;
-      padding: 10px;
+      padding: 6px 7px;
 
       @media ($bp-x-small-min) {
         font-size: 1.375rem;
         margin-left: 20px;
-        padding: 10px 15px;
+        padding: 7px 15px;
       }
 
       &:before {
         height: 9px;
         margin-right: .75em;
         margin-top: 0;
+        opacity: .5;
         width: 9px;
       }
 
@@ -61,15 +66,46 @@ $bp-header-logo-min: "min-width: 1000px";
   }
 
   &__container {
+    font-size: 0;
     padding-top: 15px;
     padding-bottom: 15px;
   }
 
-  &__nav-search,
-  &__search {
-    display: none;
+  &__logo {
+    @media ($bp-header-toggle-min) {
+      margin-right: 0;
+      width: 75px;
+    }
   }
 
+  &__search {
+
+    @media ($bp-header-toggle-min) {
+      width: calc(100% - 75px);
+
+      .ma__header-search {
+        width: 35%;
+      }
+    }
+
+    @media ($bp-header-toggle-min) and ($bp-x-large-max) {
+      .ma__button-search {
+        span {
+          @include ma-visually-hidden;
+        }
+      }
+
+      .ma__header-search__input {
+        padding-right: 60px;
+      }
+    }
+
+    @media ($bp-x-large-min) {
+      .ma__header-search {
+        width: 45%;
+      }
+    }
+  }
 
   &__nav {
 
@@ -88,13 +124,13 @@ $bp-header-logo-min: "min-width: 1000px";
     @media ($bp-header-toggle-min) {
       position: absolute;
         top: -75px;
-        right: 0;
+        left: 120px;
       text-align: right;
-      width: 66.12903%; //@include span-columns(8);
+      width: calc(62% - 75px);
     }
 
-    @media ($bp-header-logo-min) {
-      width: 74.59677%; //@include span-columns(9);
+    @media ($bp-x-large-min) {
+      width: calc(53% - 75px);
     }
   }
 
@@ -110,7 +146,7 @@ $bp-header-logo-min: "min-width: 1000px";
 
     @media ($bp-header-toggle-min) {
       .flexbox & {
-        display: inline-block;
+        justify-content: flex-end;
       }
     }
   }

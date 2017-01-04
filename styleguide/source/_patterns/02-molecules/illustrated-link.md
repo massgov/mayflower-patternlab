@@ -10,12 +10,12 @@ Description: a molecule for an illustrated link.
 ~~~
 illustratedLink {
   text:
-    type: string
+    type: string / required
   href:
-    type: string
+    type: string / required
   type:
     type: string
   image:
-    type: string
+    type: string / required
 }
 ~~~

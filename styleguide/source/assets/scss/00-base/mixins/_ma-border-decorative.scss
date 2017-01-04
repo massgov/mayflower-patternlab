@@ -14,6 +14,10 @@
         left: 0.075em;
       transform: skew(-30deg);
       width: $column;  //85px
+
+      @media print {
+        display: none;
+      }
     }
     @else {
       background-color: rgba($fg,$opacity);
@@ -23,5 +27,4 @@
       }
     }
   }
-
 }

@@ -18,7 +18,7 @@ This template currently hard codes the include for `@atoms/07-user-added-icons/s
 ### Variables:
 ~~~
 catIcon: {
-    svg:
+    icon:
         type: string / required 
         (a complete path to an icon atom twig template, such as "@atoms/07-user-added-icons/svg-camping.twig")
     small:

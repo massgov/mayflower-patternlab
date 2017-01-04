@@ -1,31 +1,40 @@
 ---
-title: Contact group
+title: Contact Group
 ---
-Description: Displays a grouping of contact information under a header with an icon.
-## Status: ALPHA
+Description: A list of a specific type of contact information for an entity wrapped in a container, described by a title and optional icon.
+
+## State: ALPHA
 ### Notes:
-* Multiple contacts can be displayed under the one heading by adding multiple items.
+* Multiple contact groups are often aggregated into an array, used by Contact Us molecule.
 * Most fields for the item are optional and will render differently based on the item.type used.
-### Used in:
-- [@molecules/contact-us](/?p=organisms-contact-us)
-### Required Variables
+### Used In:
+[@molecules/contact-us](?p=molecules-contact-us)
+
+### Contains
+
+
+### Variables:
 ~~~
-contactGroup: {
-  icon:
-    directory/required
-  name:
-    string/required
-  items: [{
-    type:
-      string (online, phone, email, address or other)
-    label:
-      string
-    value:
-      string
-    link:
-      string
-    details:
-      string
-   }]
+group: { // aggregated in array contactUs.contactGroups
+    icon:
+        type: string (include path to icon twig template) / optional
+    name:
+        type: string ("Phone" || "Online" || "Address" || "Fax") / optional
+    items: [
+      ...,
+        {
+            type: 
+                type: string ("phone" || "online" || "address" || "fax" ) / required,
+            label:
+                type: string / optional
+            value:
+                type: string (html allowed) / required
+            link:
+                type: string / optional
+            details: 
+                type: string / optional
+        },
+      ...
+    ] / required
 }
 ~~~

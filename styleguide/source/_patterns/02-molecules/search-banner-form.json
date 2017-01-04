@@ -1,0 +1,14 @@
+{
+  "form": {
+    "content": {
+      "action": "",
+      "buttonText": "Search",
+      "inputText": {
+        "labelText": "Search",
+        "required": false,
+        "id": "GUID138490237",
+        "placeholder": "Search..."
+      }
+    }
+  }
+}

@@ -1,9 +1,10 @@
 .ma__social-links {
 
   &__link {
+    background-color: $c-green-primary;
 
-    svg {
-      fill: $c-green-primary;    
+    & > svg {
+      fill: $c-white;    
     }
   }
 }

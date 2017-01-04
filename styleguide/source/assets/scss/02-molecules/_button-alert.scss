@@ -1,9 +1,11 @@
 .ma__button-alert {
   @include ma-button-reset;
   @include ma-chevron;
-  font-size: .9rem;
+  font-size: 16px;
+  letter-spacing: .1em;
   line-height: 1;
-  padding: .6em;
+  padding: .4em;
+  padding-left: .7em;
   padding-right: .8em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -21,6 +23,10 @@
     .is-open & {
       transform: translateY(-50%) rotate(-135deg);
     }
+  }
+
+  &:hover {
+    transition: background-color .4s, color .4s, border .4s, fill .4s;
   }
 
   &__hide {

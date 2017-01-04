@@ -1,0 +1,29 @@
+.ma__stacked-row-section {
+
+  @media ($bp-large-max) {
+    box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
+    padding-bottom: 45px;
+
+    &:last-child {
+      box-shadow: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__container {
+    @include ma-container;
+  }
+ 
+  &__title {
+    padding-top: 45px;
+  }
+  
+  & ~ & &__title {
+
+    @media ($bp-large-min) {
+      border-top-width: 1px;
+      border-top-style: solid;
+      padding-top: 90px;
+    }
+  }
+}

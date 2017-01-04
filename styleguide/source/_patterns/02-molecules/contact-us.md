@@ -1,45 +1,35 @@
 ---
 title: Contact Us
 ---
-Description: Displays groups of contact information.
-## State: Alpha
-### Contains:
-- [@molecules/contact-group](/?p=organisms-contact-group)
-### Used in:
-- [@organisms/by-author/sidebar-contact](/?p=organisms-sidebar-contact)
-## Notes:
-- First two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
-- `{{ accordion }}` is a local twig variable which is set in the molecule twig template when looping through contactUs.groups and hidden is set.
-### Required Variables
+Description: `<section>` element which contains an `<h4>` title heading (an entity title) and several groups (or types IE phone, fax, email, address) of contact information.
+
+## State: ALPHA
+
+### Notes:
+The first two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
+
+### Used In:
+
+### Contains
+[@molecules/contact-group](?p=molecules-contact-group)
+
+### Variables:
 ~~~
-contactUs {
-  title {
-    href:
-      string
-    chevron:
-      string
-    text:
-      string/required
-  }
-  groups [{
-    icon:
-       type: string/required
-    name:
-       type: string/required
-    hidden:
-       type: boolean
-    items: [{
-      type:
-        string (online, phone, email, address or other)
-      label:
-        string
-      value:
-        string
-      link:
-        string
-      details:
-        string
-     }]
-   ]}
+contactUs: {
+    title: {
+        href:
+            type: string (url) / optional
+        target:
+            type: string (_blank || "") / optional
+        text:
+            type: string / required
+        chevron:
+            type: string (boolean, "false") / required
+    } / required
+    groups: [
+      ...
+        contactGroup object instances, see @molecules/contact-group
+      ...
+    ] / required
 }
 ~~~

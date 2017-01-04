@@ -1,6 +1,7 @@
 .ma__emergency-alert {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-size: 1.25rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   & + & {
     border-top-width: 1px;
@@ -12,7 +13,7 @@
   }
 
   &__link {
-    
+
     a {
       border-bottom-width: 1px;
       font-size: 1.25rem;
@@ -21,6 +22,5 @@
         border-bottom-width: 3px;
       }
     }
-
   }
 }

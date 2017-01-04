@@ -18,10 +18,10 @@ actionStep: {
   title:
     string
   rteElements: [{
-    path:
-      string/required
-    data: {
-      object/required
+      ...
+        rteElement object instances, see @organisms/by-author/rich-text
+      ...
+    ] / required
     }
   }]
 }

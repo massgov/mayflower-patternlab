@@ -9,7 +9,7 @@ Description: Displays a set of contact information in the header.
 - [@molecules/contact-group](/?p=organisms-contact-group)
 
 ### Used in:
-- [@organisms/by-author/sidebar-contact](/?p=organisms-sidebar-contact)
+- [@organisms/by-author/action-header](/?p=organisms-action-header)
 
 ## Notes:
 - The address needs to be able to accept a single element and not just an address with multiple fields.

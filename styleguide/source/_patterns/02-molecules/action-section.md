@@ -5,7 +5,7 @@ Description: A section of content on an action page that includes a title and mu
 ## State: DEPRECATED
 ### Notes
 - This style is deprecated as it should be generalized to display anywhere in the site.
-- The action section defines the type of content it displays via the ```path``` variable it should point to another template. The ```data``` variable will feed the template referenced in ```path```.
+- The action section renders it's content using a rich text element. More information on how to setup a RTE can be found here: [@organisms/by-author/rich-text](?p=organisms-rich-text)
 ### Contains:
 - [@atoms/04-headings/comp-heading](?p=atoms-comp-heading)
 ### Used in
@@ -20,6 +20,10 @@ actionSection: {
   path:
     type: string/template name/required
   data:
-    type: object/contains object for referenced template/required
+    rteElements: [{
+        ...
+            rteElement object instances, see @organisms/by-author/rich-text
+        ...
+     }] / required
 }
 ~~~

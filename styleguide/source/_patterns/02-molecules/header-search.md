@@ -1,23 +1,23 @@
 ---
 Title: Header search
 ---
-Description: A stat displayed within a paragraph of content floated either left or right.
+Description: The search form that displays in the header.
 
 ## Status: ALPHA
 
 ### Used in:
-- [@organisms/by-author/action-detai;s](/?p=organisms-action-details)
-- [@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
-- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
+- [@molecules/header-search](/?p=molecules-header-search)
+- [@organisms/by-template/header](/?p=organisms-header)
+
+### Contains:
+- [@atoms/01-buttons/button-search](/?p=atoms-button-search)
 
 ### Required Variables
 ~~~
-statsCallout: {
-  pull:
-    NULL or 'left' or 'right'
-  stat:
+headerSearch: {
+  id:
     string/required
-  content:
+  placeholder:
     string/required
 }
 ~~~

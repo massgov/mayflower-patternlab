@@ -2,4 +2,8 @@
   @include ma-link-decorative;
   display: inline-block;
   vertical-align: middle;
+
+  &__info {
+    @include ma-visually-hidden;
+  }
 }

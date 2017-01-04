@@ -1,13 +1,17 @@
 {% if compHeading.color %}
-  {% set modifier = "ma__comp-heading--" ~ compHeading.color %}
+  {% set colored = "ma__comp-heading--" ~ compHeading.color %}
+{% endif %}
+
+{% if compHeading.centered  == 'true' %}
+  {% set centered = "ma__comp-heading--centered" %}
 {% endif %}
 
 {% if compHeading.sub %}
-  <h3 class="ma__comp-heading {{modifier}}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %}>
+  <h3 class="ma__comp-heading {{ colored }} {{ centered }}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %}>
     {{ compHeading.title }}
   </h3>
 {% else %}
-  <h2 class="ma__comp-heading {{modifier}}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %}>
+  <h2 class="ma__comp-heading {{ colored }} {{ centered }}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %}>
     {{ compHeading.title }}
   </h2>
 {% endif %}

@@ -14,8 +14,8 @@ Description: displays a set of links for topic or subtopic.
 ~~~
 sectionLinks: {
   catIcon: {
-    svg:
-      type: string/path to svg
+    icon:
+      type: string/path to icon
     small:
       type: boolean/true
   },

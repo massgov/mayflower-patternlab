@@ -52,4 +52,20 @@ $action-finder-border-color: tint($c-theme-blue,50%);
       }
     }
   }
+
+  &__see-all {
+    background-color: $c-theme-blue;
+
+    .ma__content-link {
+      color: $c-font-inverse;
+
+      &:after {
+        border-color: rgba($c-font-inverse, .5);
+      }
+
+      &:hover {
+        border-color: rgba($c-font-inverse, .5);
+      }
+    }
+  }
 }

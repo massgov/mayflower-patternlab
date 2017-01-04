@@ -30,7 +30,7 @@ $bp-illustrated-header-image-width: 360px;
     }
 
     @media ($bp-page-width-min) {
-      width: calc(50vw - 220px); 
+      width: calc(50vw - 220px);
     }
 
     &--empty {
@@ -91,12 +91,6 @@ $bp-illustrated-header-image-width: 360px;
     }
 
     &__intro {
-
-      p {
-        @media ($bp-small-min) {
-          font-size: 1.625rem;
-        }
-      }
     }
   }
 }

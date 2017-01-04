@@ -1,12 +1,12 @@
-{% extends '@templates/multi-row-template.twig' %}
+{% extends '@templates/stacked-row-template.twig' %}
 
 {% block preContent %}
   {% include "@organisms/by-template/illustrated-header.twig" %}
 {% endblock %}
-{% block multiRowContent %}
+{% block stackedRowContent %}
   {% include "@organisms/by-template/jump-links.twig" %}
-  {% for multiRowSection in multiRowSections %}
-    {% include "@organisms/by-author/multi-row-section.twig" %}
+  {% for stackedRowSection in stackedRowSections %}
+    {% include "@organisms/by-author/stacked-row-section.twig" %}
   {% endfor %}
 {% endblock %}
 {% block postContent %}
