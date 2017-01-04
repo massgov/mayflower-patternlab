@@ -8,11 +8,6 @@ Description: A list of links with corresponding icon.
 The way icons are referenced will change and require an update here as well.
 ### Variables:
 ~~~
-sidebarHeading: {
-  title:
-    text: 
-      type: string / required
-}
 iconLinks: {
   items: [{
     icon:
