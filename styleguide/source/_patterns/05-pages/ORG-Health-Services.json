@@ -1,5 +1,21 @@
 {
   "COMMENT":"****PRECONTENT COMPONENTS****",
+  "breadcrumbs":{
+    "light": "",
+    "links": [{
+      "text": "Health and Human Services (EOHHS)",
+      "href": "#"
+    }]
+  },
+
+  "pageBanner": {
+    "bgWide":"/assets/images/placeholder/1600x400.png",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "size": "large",
+    "icon": null,
+    "title": "Executive Office of Health and Human Services",
+    "titleSubText": "(EOHHS)"
+  },
 
   "pageHeader": {
     "title": "Executive Office of Health and Human Services",
@@ -45,6 +61,21 @@
       }]
     },
     "fax": ""
+  },
+
+  "actionHeader": {
+    "divider": true,
+    "widgets": [{
+      "path": "@atoms/09-media/image.twig",
+      "data": {
+        "image": {
+          "alt": "eohhs logo", 
+          "src": "/assets/images/placeholder/230x130.png",
+          "height": "130",
+          "width": "230"
+        }
+      }
+    }]
   },
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
