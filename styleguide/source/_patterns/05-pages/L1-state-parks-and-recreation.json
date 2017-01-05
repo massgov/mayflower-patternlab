@@ -11,11 +11,11 @@
   },
 
   "pageBanner": {
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "small":"true",
-    "icon":"atoms-svg-campfire",
-    "title":"State Parks & Recreation"
+    "bgWide": "/assets/images/placeholder/1600x400.png",
+    "bgNarrow": "/assets/images/placeholder/800x400.png",
+    "size": "small",
+    "icon": "atoms-svg-campfire",
+    "title": "State Parks & Recreation"
   },
 
   "topActions": {
