@@ -4,6 +4,7 @@
 ### Org Page
 * DP-708 - Implement Organization Page in PatternLab
 * DP-867 - FE - Action Finder
+* DP-874 - FE - Org: Implement Header
 
 ## 3.0.0 (Sprint 9)
 ### Homepage search
