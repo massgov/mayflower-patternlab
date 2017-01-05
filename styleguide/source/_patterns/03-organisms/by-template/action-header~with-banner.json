@@ -1,8 +1,17 @@
 {
+  "pageBanner": {
+    "bgWide":"/assets/images/placeholder/1600x400.png",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "size": "large",
+    "icon": null,
+    "title": "Executive Office of Health and Human Services",
+    "titleSubText": "(EOHHS)"
+  },
+
   "pageHeader": {
-    "title": "Mt Greylock State Park",
-    "titleSubText": "",
-    "subTitle": "",
+    "title": "Executive Office of Health and Human Services",
+    "titleSubText": "(EOHHS)",
+    "subTitle": "EOHHS oversees health and general support services to help people in Massachusetts - from young children to seniors - meet basic needs.",
     "rteElements": "",
     "headerTags": ""
   },
