@@ -1,13 +1,4 @@
-{% if pageBanner %}
-  {% set bannerClass = "ma__action-header--banner" %}
-{% endif %}
-
-<section class="ma__action-header {{ bannerClass }}">
-  {% if pageBanner %}
-    <div class="ma__action-header__banner">
-      {% include "@organisms/by-template/page-banner.twig" %}
-    </div>
-  {% endif %}
+<section class="ma__action-header">
   <div class="ma__action-header__container">
     <div class="ma__action-header__content">
       {% include "@organisms/by-template/page-header.twig" %}

@@ -33,11 +33,8 @@ $action-header-widget-width: 350px;
     }
   }
 
-  &--banner &__content {
-    
-    @media ($bp-large-min){
-      padding-top: 60px;
-    }
+  .ma__page-banner ~ & &__content {
+    padding-top: 20px;
   }
 
   &__widgets {
@@ -61,10 +58,10 @@ $action-header-widget-width: 350px;
     }
   }
 
-  &--banner &__widgets {
+  .ma__page-banner ~ & &__widgets {
     
     @media ($bp-large-min){
-      padding-top: 60px;
+      padding-top: 20px;
     }
   }
 
@@ -101,7 +98,7 @@ $action-header-widget-width: 350px;
     }
   }
 
-  &--banner .ma__page-header {
+  .ma__page-banner ~ & .ma__page-header {
     
     &__title {
       display: none;
