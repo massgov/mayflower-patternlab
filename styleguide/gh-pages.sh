@@ -46,7 +46,7 @@ mkdir ~/tmp/${LATESTTAG}
 # copy built assets in /public into tmp directory and CNAME config file
 echo "Copying PL output to tmp directory..."
 cp -R public ~/tmp/${LATESTTAG}
-mv ./config/current.CNAME.conf ~tmp/${LATESTTAG}/public/CNAME
+echo "mayflower.digital.mass.gov" > ~tmp/${LATESTTAG}/public/CNAME
 
 # get to tmp directory
 echo "Changing directory to ~/tmp/public..."
