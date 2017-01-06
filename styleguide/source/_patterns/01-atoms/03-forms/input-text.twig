@@ -1,9 +1,9 @@
-<label for="text-input">{{inputText.labelText}}</label>
+<label for="{{ inputText.id }}">{{inputText.labelText}}</label>
 <input 
-  class="{{inputText.required ? 'js-is-required' : ''}}" 
-  name="{{inputText.id}}" 
-  id="{{inputText.id}}" 
+  class="{{ inputText.required ? 'js-is-required' : ''}}" 
+  name="{{ inputText.name }}" 
+  id="{{ inputText.id }}" 
   type="text" 
-  placeholder="{{inputText.placeholder}}" 
+  placeholder="{{ inputText.placeholder }}" 
   data-type="text"
-  {{inputText.required ? 'required' : ''}} />
+  {{ inputText.required ? 'required' : '' }} />

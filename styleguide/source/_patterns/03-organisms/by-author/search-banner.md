@@ -46,6 +46,8 @@ searchBanner: {
           type: boolean / required
         id:
           type: string / required
+        name:
+          type: string
         placeholder:
           type: string / required
       }

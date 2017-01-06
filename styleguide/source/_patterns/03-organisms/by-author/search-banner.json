@@ -13,6 +13,7 @@
           "labelText": "Search",
           "required": false,
           "id": "GUID138490237",
+          "name": "search",
           "placeholder": "Search..."
         }
       }
