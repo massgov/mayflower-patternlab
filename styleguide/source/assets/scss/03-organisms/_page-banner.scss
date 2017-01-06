@@ -1,9 +1,8 @@
 $page-banner-icon-width: $column + $gutter;
-$page-banner-small: '.ma__page-banner--small';
 
 .ma__page-banner {
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   height: 400px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -16,6 +15,10 @@ $page-banner-small: '.ma__page-banner--small';
 
   &__container {
     @include ma-container;
+  }
+
+  &--large &__container {
+    height: 100%;
   }
 
   &__content {
@@ -36,23 +39,36 @@ $page-banner-small: '.ma__page-banner--small';
       transform: translateY(-50%) skew(-30deg);
     }
 
-    #{$page-banner-small} & {
-      font-size: .8rem;
-      padding: 25px 25px 40px 0;
-
-      @media ($bp-x-small-min) {
-        padding-top: 45px;
-        padding-right: 80px;
-      }
-    }
-
     &:before {
       content: "";
       height: 100%;
       position: absolute;
         top: 0;
-        right: 99%;
+        right: 100%;
       width: 50vw;
+
+      @media ($bp-x-small-min) {
+        right: 99%; // weird gap when skewed is shown
+      }
+    }
+  }
+
+  &--small &__content {
+    font-size: .8rem;
+    padding: 25px 25px 40px 0;
+
+    @media ($bp-x-small-min) {
+      padding-top: 45px;
+      padding-right: 80px;
+    }
+  }
+
+  &--large &__content {
+    height: 100%;
+    max-width: 640px;
+
+    @media ($bp-x-small-min) {
+      margin-right: 105px;
     }
   }
 
@@ -66,10 +82,6 @@ $page-banner-small: '.ma__page-banner--small';
 
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
-
-      #{$page-banner-small} & {
-        width: $column;
-      }
     }
 
     & > svg {
@@ -91,6 +103,13 @@ $page-banner-small: '.ma__page-banner--small';
 
     a {
       display: inline-block;
+    }
+  }
+
+  &--small &__icon {
+    
+    @media ($bp-medium-min) {
+      width: $column;
     }
   }
 
@@ -117,8 +136,13 @@ $page-banner-small: '.ma__page-banner--small';
     @media ($bp-x-large-min){
       font-size: 5.125rem;
     }
+
+    span {
+      font-size: .4em;
+    }
   }
 
+  &--large &__title,
   &--small &__title {
     font-size: 3.25rem;
 

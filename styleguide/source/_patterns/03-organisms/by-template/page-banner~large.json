@@ -2,9 +2,9 @@
   "pageBanner": {
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "size":"",
-    "icon":"@atoms/07-user-added-icons/svg-camping.twig",
-    "title":"Visiting & Exploring",
+    "size":"large",
+    "icon":"atoms-svg-campfire",
+    "title":"State Parks & Recreation",
     "titleSubText": ""
   }
 }

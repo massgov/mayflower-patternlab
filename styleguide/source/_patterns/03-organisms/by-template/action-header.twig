@@ -1,7 +1,5 @@
 <section class="ma__action-header">
-  <!-- Fix: Chrome doesn't always render the first SVG use tag -->
-  <img aria-hidden="true" alt="icon-sprite" src="/{{ directory }}/images/svg-loc-icons.svg" style="display:none" />
-  <div class="ma__action-header__inner">
+  <div class="ma__action-header__container">
     <div class="ma__action-header__content">
       {% include "@organisms/by-template/page-header.twig" %}
       {% if headerContact %}
@@ -9,12 +7,14 @@
       {% endif %}
     </div>
     <div class="ma__action-header__widgets">
-      {% if locationIcons %}
-        {% include "@molecules/location-icons.twig" %}
-      {% endif %}
-      {% if waitTime %}
-        {% include "@molecules/wait-time.twig" %}
-      {% endif %}
+      {% for widget in actionHeader.widgets %}
+        {% include widget.path with widget.data %}
+      {% endfor %}
     </div>
   </div>
+  {% if actionHeader.divider %}
+    <div class="ma__action-header__divider">
+      {% include "@atoms/divider.twig" %}
+    </div>
+  {% endif %}
 </section>

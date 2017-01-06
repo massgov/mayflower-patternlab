@@ -1,7 +1,4 @@
 {
-  "sidebarHeading": {
-    "title": "Social"
-  },
   "iconLinks": {
     "items": [{
       "icon": "@atoms/05-icons/svg-twitter.twig",

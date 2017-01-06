@@ -6,4 +6,8 @@
     padding-top: 90px;
     padding-bottom: 60px;
   }
+
+  &:first-child {
+    padding-top: 0;
+  }
 }

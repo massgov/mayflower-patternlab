@@ -10,7 +10,7 @@
   "pageBanner": {
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "small":"",
+    "size":"",
     "icon":"atoms-svg-camping",
     "title":"Visiting & Exploring"
   },
@@ -20,7 +20,13 @@
   },
 
   "sectionThreeUp" : {
-    "title": "",
+    "compHeading": {
+      "title": "",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": "true"
+    },
     "sections": [{
       "id": "GUIDasjdhf1",
       "catIcon": {
