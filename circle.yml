@@ -24,3 +24,4 @@ deployment:
       - git config --global user.email "devops@palantir.net"
       - git config --global user.name "palantirnet-temp1"
       - vendor/bin/phing deploy
+      - sh styleguide/gh-pages.sh

@@ -44,15 +44,16 @@ gulp build
 
 # make temp directory to copy public  assets
 echo "Making tmp directory..."
-mkdir ~/tmp
+mkdir ~/tmp/${LATESTTAG}
 
-# copy built assets in /public into tmp directory
+# copy built assets in /public into tmp directory and CNAME config file
 echo "Copying PL output to tmp directory..."
-cp -R public ~/tmp
+cp -R public ~/tmp/${LATESTTAG}
+mv config/current.CNAME.conf ~tmp/${LATESTTAG}/public/CNAME
 
 # get to tmp directory
 echo "Changing directory to ~/tmp/public..."
-cd ~/tmp/public
+cd ~/tmp/${LATESTTAG}/public
 
 # Search temp directory + replace asset url /assets/ with /mayflower/assets/
 #echo "Searching directory for /assets/ and replace with /mayflower/assets/..."
