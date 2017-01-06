@@ -38,12 +38,9 @@ MESSAGE="GH Pages deployed tag ${LATESTTAG} on: ${NOW}"
 echo "Checking out the latest tag: ${LATESTTAG}"
 git checkout ${LATESTTAG}
 
-# build pattern lab site
-echo "Building PL..."
-gulp build
-
 # make temp directory to copy public  assets
 echo "Making tmp directory..."
+mkdir ~/tmp/
 mkdir ~/tmp/${LATESTTAG}
 
 # copy built assets in /public into tmp directory and CNAME config file
