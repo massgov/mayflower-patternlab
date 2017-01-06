@@ -14,7 +14,6 @@ Description: Page Header with multiple sub-modules used at the top of a page.
 
 
 ### Contains:
-- [@organisms/by-template/page-banner.twig](/?p=organisms-page-banner)
 - [@organisms/by-template/page-header.twig](/?p=organisms-page-header)
 - [@molecules/header-contact.twig](/?p=molecules-header-contact)
 
@@ -23,9 +22,6 @@ Description: Page Header with multiple sub-modules used at the top of a page.
 - See sub modules listed above for more details
 
 ~~~
-pageBanner:
-  type: object/optional
-
 pageHeader:
   type: object/required
 
