@@ -26,8 +26,10 @@ form: {
       labelText:
         type: string / required
       required:
-        type: boolean / required
+        type: boolean
       id:
+        type: string / required
+      name:
         type: string / required
       placeholder:
         type: string / required

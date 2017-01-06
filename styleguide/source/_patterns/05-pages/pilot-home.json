@@ -163,7 +163,8 @@
     "inputText": {
       "labelText": "Your Name*",
       "required": true,
-      "id": "text-input",
+      "id": "name-input",
+      "name": "name",
       "placeholder": ""
     },
 
