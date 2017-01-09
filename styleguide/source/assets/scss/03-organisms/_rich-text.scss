@@ -40,13 +40,7 @@ $rich-text-spacing-mobile: 1.5rem;
   }
 
   h2, h3, h4 {
-    @include ma-border-decorative;
-    position: relative;
-    padding-bottom: .55em;
-
-    &:after {
-      width: 2.25em; // ma-underline-decorative override
-    }
+    @include ma-comp-heading;
   }
 
   h4 {

@@ -1,11 +1,7 @@
 .ma__comp-heading {
-  @include ma-border-decorative($c-theme-green);
-
-  a {
-    border: none;
-    color: $c-font-heading;
-  }
+  @include ma-comp-heading($c-theme-green);
 }
+
 .ma__comp-heading--yellow {
   @include ma-border-decorative($c-theme-yellow, 1);
 }
