@@ -13,6 +13,13 @@ $page-banner-icon-width: $column + $gutter;
     margin-bottom: 40px;
   }
 
+  &--large {
+    @media ($bp-small-min) {
+      height: 305px;
+    }
+  }
+
+
   &__container {
     @include ma-container;
   }
