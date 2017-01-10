@@ -104,7 +104,7 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph": {
-              "text": "<a href=\"http://www.google.com\">See news and updates</a>."
+              "text": "<a href=\"http://www.google.com\">See news and updates</a>"
             }
           }
         }]
