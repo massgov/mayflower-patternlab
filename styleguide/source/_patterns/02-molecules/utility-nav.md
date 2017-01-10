@@ -6,12 +6,9 @@ Description: Sitewide utility links
 ### Notes:
 - The way the icons are rendered is deprecrated and will need to be updated here once refactored.
 ### Contains:
-- [@atoms/05-icons/svg-settings](?p=atoms-svg-settings)
-- [@atoms/05-icons/svg-alert](?p=atoms-svg-alert)
-- [@atoms/05-icons/svg-login](?p=atoms-svg-login)
-- [@atoms/05-icons/svg-building](?p=atoms-svg-building)
-- [@molecules/alerts-util](?p=molecules-alerts-util)
+- [@molecules/dropdown](?p=molecules-dropdown)
 - [@molecules/login-util](?p=molecules-login-util)
-- [@molecules/settings-util](?p=molecules-settings-util)
+- [@molecules/states-util](?p=molecules-states-util)
+
 ### Used in:
 - [@organisms/by-template/header](?p=organisms-header)
