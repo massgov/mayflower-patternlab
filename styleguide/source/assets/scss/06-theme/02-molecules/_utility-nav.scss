@@ -52,6 +52,14 @@
     a {
       color: $c-font-inverse;
     }
+
+    .ma__rich-text {
+      max-width: 720px;
+
+      a {
+        border-color: $c-font-inverse;
+      }
+    }
   }
 
   &__container {
