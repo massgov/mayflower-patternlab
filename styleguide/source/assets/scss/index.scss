@@ -41,7 +41,6 @@
 @import "02-molecules/action-map";
 @import "02-molecules/action-seq-list";
 @import "02-molecules/action-step";
-@import "02-molecules/alerts-util";
 @import "02-molecules/button-alert";
 @import "02-molecules/callout-stats";
 @import "02-molecules/callout-link";
@@ -62,11 +61,9 @@
 @import "02-molecules/main-nav";
 @import "02-molecules/related-action";
 @import "02-molecules/section-links";
-@import "02-molecules/settings-util";
 @import "02-molecules/social-links";
 @import "02-molecules/utility-nav";
 @import "02-molecules/wait-time";
-@import "02-molecules/zoom-controls";
 
 // Organisms - components
 @import "03-organisms/action-card";
