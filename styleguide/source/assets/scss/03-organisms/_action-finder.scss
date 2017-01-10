@@ -71,7 +71,7 @@ $action-finder-bp: 900px;
       @include omega(2n);
     }
 
-    @media ($bp-large-min) {
+    @media print, ($bp-large-min) {
       @include span-columns(4 of 12);
       @include omega(3n);
     }
