@@ -1,5 +1,7 @@
 // Sass frameworks added in npm
 @import "bourbon";
+@import "00-base/variables";
+@import "neat";
 
 // Base variables
 @import "00-base/breakpoints";

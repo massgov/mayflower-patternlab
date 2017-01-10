@@ -18,7 +18,7 @@
     @include clearfix;
     @include ma-reset-list;
 
-    @media ($bp-small-min) {
+    @media print, ($bp-small-min) {
       display: flex;
         align-items: stretch;
         flex-wrap: wrap;
@@ -34,7 +34,7 @@
       @include omega(2n);
     }
 
-    @media ($bp-x-large-min) {
+    @media print, ($bp-x-large-min) {
       @include span-columns(3);
       @include omega(4n);
     }
