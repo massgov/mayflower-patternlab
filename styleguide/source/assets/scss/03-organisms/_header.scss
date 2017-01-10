@@ -190,6 +190,8 @@ body {
       display: inline-block;
       vertical-align: middle;
     }
+
+    .show-menu.show-utilmenu &,
     .show-menu.show-submenu & {
       left: calc(100vw - 280px);
       visibility: visible;

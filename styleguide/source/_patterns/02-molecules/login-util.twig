@@ -1,26 +1,10 @@
 <section class="ma__login-util">
-  <p class="ma__login-util__description">These are the top requested sites you can login to access state provided services</p>
+  <p class="ma__login-util__description">{{ loginUtil.description }}</p>
   <ul class="ma__login-util__items">
-    <li class="ma__login-util__item">
-      <a href="#">
-        <span>Virtual Gateway</span>
-        {% include "@atoms/05-icons/svg-external-link.twig" %}
-      </a>
-    </li>
-    <li class="ma__login-util__item">
-      <a href="#">
-        <span>MA Health Connector</span>
-        {% include "@atoms/05-icons/svg-external-link.twig" %}
-      </a>
-    </li>
-    <li class="ma__login-util__item">
-      <a href="#">
-        <span>MassTax Connect</span>
-        {% include "@atoms/05-icons/svg-external-link.twig" %}
-      </a>
-    </li>
+    {% for decorativeLink in loginUtil.links %}
+      <li class="ma__login-util__item js-clickable">
+        {% include "@atoms/decorative-link.twig" %}
+      </li>
+    {% endfor %}
   </ul>
-  <div class="ma__login-util__view-all">
-    <a href="#">View all logins</a>
-  </div>
 </section>

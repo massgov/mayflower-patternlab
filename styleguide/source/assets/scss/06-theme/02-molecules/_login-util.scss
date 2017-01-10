@@ -5,30 +5,14 @@
   }
 
   &__item {
+    background-color: rgba($c-white, 0.2);
 
     a {
       @include ma-font(500);
-      background-color: rgba($c-white, 0.2);
     }
 
     svg {
       fill: $c-font-inverse;
-    }
-  }
-
-  &__view-all {
-
-    a {
-      @include ma-font(400);
-
-      &:hover {
-        border-bottom-color: rgba($c-white,.5);
-      }
-    }
-
-    &:after {
-      border-right-color: $c-white;
-      border-bottom-color: $c-white;
     }
   }
 }
