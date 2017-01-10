@@ -6,6 +6,10 @@
 * DP-867 - FE - Action Finder
 * DP-874 - FE - Org: Implement Header
 
+### Other
+* DP-712 - Handle Stacked Row Optional Header Image variants
+* DP-821 - Ensure that link chevron is never bumped to a new line
+
 ## 3.0.0 (Sprint 9)
 ### Homepage search
 * MGRP-339 - FE: Homepage build-out

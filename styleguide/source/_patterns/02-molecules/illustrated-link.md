@@ -14,8 +14,8 @@ illustratedLink {
   href:
     type: string / required
   type:
-    type: string
+    type: string / ('', or 'external')
   image:
-    type: string / required
+    type: string / optional
 }
 ~~~
