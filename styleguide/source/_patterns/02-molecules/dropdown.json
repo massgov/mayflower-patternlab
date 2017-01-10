@@ -1,0 +1,20 @@
+{
+  "dropdown": {
+    "labelText": "Language:",
+    "id": "lang-select",
+    "name": "lang-select",
+    "options": [{
+      "text": "Default language: English",
+      "value": "en"
+    },{
+      "text": "Fran&#231;ais",
+      "value": "fr"
+    },{
+      "text": "Deutsch",
+      "value": "de"
+    },{
+      "text": "Espa&#241;ol",
+      "value": "es"
+    }]
+  }
+}
