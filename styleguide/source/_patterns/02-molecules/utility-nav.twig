@@ -1,8 +1,13 @@
 <section class="ma__utility-nav js-util-nav">
   <ul class="ma__utility-nav__items">
     <li class="ma__utility-nav__item">
-      {% set dropdown = utilityNav.dropdown %}
-      {% include "@molecules/dropdown.twig" %}
+      <div class="ma__utility-nav__translate">
+        {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
+        <span>
+          {% set dropdown = utilityNav.dropdown %}
+          {% include "@molecules/dropdown.twig" %}
+        </span>
+      </div>
     </li>
     {% for item in utilityNav.items %}
       <li class="ma__utility-nav__item js-util-nav-toggle">

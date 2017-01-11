@@ -8,8 +8,9 @@ export default function (window,document,$,undefined) {
         waitForIt = null;
 
     $('.js-close-sub-nav').on('click', function(){
-      hide();
-    }
+      let $openContent = $parent.find('.js-util-nav-content.' + openClass);
+      hide($openContent);
+    });
 
     $parent.find('.js-util-nav-toggle > a').on('click', function(e) {
       e.preventdefault;
