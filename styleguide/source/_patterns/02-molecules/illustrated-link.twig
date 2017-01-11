@@ -6,5 +6,11 @@
       {% include "@atoms/decorative-link.twig" %}
     </div>
   </div>
-  <div class="ma__illustrated-link__image" style="background-image: url('{{illustratedLink.image}}')"></div>
+    {% if illustratedLink.image %}
+      <div 
+        class="ma__illustrated-link__image" 
+        style="background-image: url('{{ illustratedLink.image }}')"></div>
+    {% else %}
+      <div class="ma__illustrated-link__image"></div>
+    {% endif %}
 </div>

@@ -5,7 +5,7 @@
     content: "true";
     display: none;
 
-    @media ($bp-small-min) {
+    @media print, ($bp-small-min) {
       content: "false";
     }
   }
@@ -55,14 +55,14 @@
 
     }
 
-    @media($bp-small-min) {
+    @media print, ($bp-small-min) {
       display: none;
     }
   }
 
   &__container {
 
-    @media($bp-small-min) {
+    @media print, ($bp-small-min) {
       display: flex;
       align-items: stretch;
     }
@@ -74,13 +74,16 @@
     & + & {
       padding-top: 20px;
 
-      @media($bp-small-max) {
+      @media ($bp-small-max) {
         display: none;
       }
 
+      @media print {
+        display: block;
+      }
     }
 
-    @media($bp-small-min) {
+    @media print, ($bp-small-min) {
       width: 50%;
 
       & + & {
