@@ -3,7 +3,7 @@ This living styleguide is built using PatternLab.
 
 ##Machine set up
 1. Install PHP
-2. Install NodeJS (https://nodejs.org/en/download/)
+2. Install NodeJS version 6.9.4 (https://nodejs.org/en/download/)
 3. Install GulpJS, via command line `npm install -g gulp`
 
 ##Set up instructions
