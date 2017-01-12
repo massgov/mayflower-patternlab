@@ -37,7 +37,11 @@ h1,
 .ma__action-finder__see-all-container,
 .ma__page-banner__icon,
 .ma__page-banner--small .ma__page-banner__icon,
-.ma__location-banner__image {
+.ma__location-banner__image,
+.ma__banner-carousel,
+.ma__quick-actions,
+.ma__wait-time,
+.fluid-width-video-wrapper {
   display: none !important;
 }
 
@@ -61,10 +65,10 @@ h1,
 }
 
 .page-content,
-.sidebar,
-.ma__page-header {
+.ma__page-header,
+.sidebar {
   float: none !important;
-  margin-bottom: 50px !important;
+  margin-bottom: 30px !important;
   padding: 0 !important;
   width: 100% !important;
 }
@@ -161,15 +165,8 @@ h4 {
     padding-right: 0;
 }
 
-.ma__quick-actions,
 .ma__sidebar-widget__items {
   margin-bottom: 50px;
-}
-
-.ma__quick-actions__item + .ma__quick-actions__item {
-  margin-top: 10px;
-  padding-bottom: 0;
-  padding-top: 10px;
 }
 
 .paragraph--type--related-link + .paragraph--type--related-link, .ma__related-action + .paragraph--type--related-link, .paragraph--type--related-link +
@@ -234,7 +231,7 @@ h4 {
 }
 
 .main-content {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 .ma__action-step {
@@ -310,7 +307,7 @@ h4 {
 
 .ma__action-header__widgets {
   padding-bottom: 20px;
-  padding-top: 30px;
+  padding-top: 0;
 }
 
 .ma__location-icons__name {
