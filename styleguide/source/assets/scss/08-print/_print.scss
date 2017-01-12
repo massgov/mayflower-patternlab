@@ -1,4 +1,4 @@
-@media print {
+// @media print {
 
 html {
   font-size: 13px;
@@ -37,7 +37,10 @@ h1,
 .ma__action-finder__see-all-container,
 .ma__page-banner__icon,
 .ma__page-banner--small .ma__page-banner__icon,
-.ma__location-banner__image {
+.ma__location-banner__image,
+.ma__banner-carousel,
+.ma__quick-actions,
+.ma__wait-time {
   display: none !important;
 }
 
@@ -161,15 +164,8 @@ h4 {
     padding-right: 0;
 }
 
-.ma__quick-actions,
 .ma__sidebar-widget__items {
   margin-bottom: 50px;
-}
-
-.ma__quick-actions__item + .ma__quick-actions__item {
-  margin-top: 10px;
-  padding-bottom: 0;
-  padding-top: 10px;
 }
 
 .paragraph--type--related-link + .paragraph--type--related-link, .ma__related-action + .paragraph--type--related-link, .paragraph--type--related-link +
@@ -310,7 +306,7 @@ h4 {
 
 .ma__action-header__widgets {
   padding-bottom: 20px;
-  padding-top: 30px;
+  padding-top: 0;
 }
 
 .ma__location-icons__name {
@@ -549,4 +545,4 @@ h4 {
 
 
 
-}
+// }

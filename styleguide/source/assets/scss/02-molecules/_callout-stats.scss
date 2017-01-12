@@ -3,7 +3,7 @@
   padding: 30px 0 40px 30px;
   position: relative;
 
-  @media ($bp-small-min) {
+  @media print, ($bp-small-min) {
     padding: 40px 30px 50px;
 
     &--left,
