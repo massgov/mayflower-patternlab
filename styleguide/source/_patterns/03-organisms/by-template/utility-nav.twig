@@ -4,8 +4,11 @@
       <div class="ma__utility-nav__translate">
         {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
         <span>
-          {% set dropdown = utilityNav.dropdown %}
-          {% include "@molecules/dropdown.twig" %}
+          <form action="#">
+            {% set dropdown = utilityNav.dropdown %}
+            {% include "@molecules/dropdown.twig" %}
+            <button type="submit" hidden>Translate</button>
+          </form>
         </span>
       </div>
     </li>

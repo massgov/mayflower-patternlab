@@ -8,7 +8,7 @@ Description: Sitewide utility links
 ### Contains:
 - [@molecules/dropdown](?p=molecules-dropdown)
 - [@molecules/login-util](?p=molecules-login-util)
-- [@molecules/states-util](?p=molecules-states-util)
+- [@molecules/state-util](?p=molecules-state-util)
 
 ### Used in:
 - [@organisms/by-template/header](?p=organisms-header)
