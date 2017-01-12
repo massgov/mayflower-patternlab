@@ -1,4 +1,4 @@
-// @media print {
+@media print {
 
 html {
   font-size: 13px;
@@ -40,7 +40,8 @@ h1,
 .ma__location-banner__image,
 .ma__banner-carousel,
 .ma__quick-actions,
-.ma__wait-time {
+.ma__wait-time,
+.fluid-width-video-wrapper {
   display: none !important;
 }
 
@@ -64,10 +65,10 @@ h1,
 }
 
 .page-content,
-.sidebar,
-.ma__page-header {
+.ma__page-header,
+.sidebar {
   float: none !important;
-  margin-bottom: 50px !important;
+  margin-bottom: 30px !important;
   padding: 0 !important;
   width: 100% !important;
 }
@@ -230,7 +231,7 @@ h4 {
 }
 
 .main-content {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 .ma__action-step {
@@ -545,4 +546,4 @@ h4 {
 
 
 
-// }
+}

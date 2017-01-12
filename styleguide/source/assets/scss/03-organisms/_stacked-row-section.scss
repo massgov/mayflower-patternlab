@@ -10,17 +10,21 @@
     }
   }
 
+  @media print {
+    padding-bottom: 0;
+  }
+
   &__container {
     @include ma-container;
   }
- 
+
   &__title {
     padding-top: 45px;
   }
-  
+
   & ~ & &__title {
 
-    @media ($bp-large-min) {
+    @media print, ($bp-large-min) {
       border-top-width: 1px;
       border-top-style: solid;
       padding-top: 90px;
