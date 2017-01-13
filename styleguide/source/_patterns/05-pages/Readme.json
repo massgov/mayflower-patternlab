@@ -1,0 +1,12 @@
+{
+  "narrowTemplate": {
+    "side": "left",
+    "color": "green"
+  },
+
+  "errorPage": {
+    "type": "v2.2.1 (01/09/2016)",
+    "title": "Welcome to Mayflower, the Commonwealth's Design System",
+    "message": "Use the navigation menu above to browse our patterns."
+  }
+}
