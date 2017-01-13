@@ -30,7 +30,7 @@ var defaults = {
     dest: path.resolve(__dirname, "../../public/assets"),
     patternLabRoot: path.resolve(__dirname, "../../"),
     rootSite: path.resolve(__dirname, "../../public"),
-    tasks: ["copy", "js", "css", "bower", "svg-sprite","svg-loc-icons"],
+    tasks: ["copy", "js", "css", "bower", "svg-sprite"],
     env: "development", // "development", "production", "local"
     watch: false,
     browserSync: false

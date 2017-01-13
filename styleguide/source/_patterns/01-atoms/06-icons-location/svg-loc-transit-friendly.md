@@ -1,5 +1,5 @@
 ---
-title: Park Icon - Dogs Allowed
+title: Park Icon - Transit Friendly
 ---
 Description: Icon used on Park Type pages.
 
