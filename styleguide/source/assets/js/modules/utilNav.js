@@ -3,9 +3,14 @@ export default function (window,document,$,undefined) {
   $('.js-util-nav').each(function() {
     let openClass = "is-open",
         closeClass = "is-closed",
-        submenuClass = "show-submenu",
+        submenuClass = "show-utilmenu",
         $parent = $(this),
         waitForIt = null;
+
+    $('.js-close-sub-nav').on('click', function(){
+      let $openContent = $parent.find('.js-util-nav-content.' + openClass);
+      hide($openContent);
+    });
 
     $parent.find('.js-util-nav-toggle > a').on('click', function(e) {
       e.preventdefault;

@@ -34,21 +34,12 @@ $utility-nav-height: 43px;
     }
   }
 
-  &__link {
+  &__link,
+  &__translate {
     display: block;
     font-size: 1.25rem;
     line-height: 1.45;
 
-    @media ($bp-header-toggle-max) {
-      @include ma-chevron;
-      padding: 10px 20px;
-
-      &:after {
-        position: absolute;
-          right: 20px;
-          top: 15px;
-      }
-    }
     @media ($bp-header-toggle-min) {
       line-height: 2;
 
@@ -57,15 +48,74 @@ $utility-nav-height: 43px;
       }
     }
 
-    svg,
-    span {
+    & > svg,
+    & > span {
       display: inline-block;
       vertical-align: middle;
     }
 
-    svg {
+    & > svg {
       height: 1rem;
       width: 20px;
+
+      @media ($bp-header-toggle-max) {
+        position: absolute;
+          top: 50%;
+          left: 20px;
+        transform: translateY(-50%);
+      }
+    }
+
+    & > span {
+      
+      @media ($bp-header-toggle-max) {
+        display: block;
+      }
+    }
+  }
+
+  &__link {
+    @media ($bp-header-toggle-max) {
+      padding: 11px 20px 9px 45px;
+    }
+
+    @media ($bp-header-toggle-max) {
+      @include ma-chevron;
+
+      &:after {
+        position: absolute;
+          right: 20px;
+          top: 18px;
+      }
+    }
+  }
+
+  &__translate {
+    position: relative;
+
+    .ma__dropdown {
+
+      @media ($bp-header-toggle-max) {
+        padding: 11px 0 9px 45px;
+
+        &__field {
+          width: 100%;
+        }
+      }
+
+      &__link {
+        font-size: 1.25rem;
+        padding-right: 0;
+        width: 100%;
+
+        &:after {
+          @media ($bp-header-toggle-max) {
+            position: absolute;
+              right: 12px;
+              top: 8px;
+          }
+        }
+      }
     }
   }
 

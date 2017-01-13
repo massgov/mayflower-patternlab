@@ -15,8 +15,8 @@
 
   }
 
-  &__link {
-    @include ma-font(500);
+  &__link,
+  &__translate {
     color: $c-font-base;
 
     @media ($bp-header-toggle-min) {
@@ -39,6 +39,26 @@
         opacity: .7;
       }
     }
+    
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__translate {
+
+    .ma__dropdown__link {
+      font-weight: 500;
+
+      &:after {
+
+        @media ($bp-header-toggle-max) {
+          border-right-color: $c-theme-green;
+          border-bottom-color: $c-theme-green;
+          opacity: 1;
+        }
+      }
+    }
   }
 
   &__content {
@@ -51,6 +71,14 @@
 
     a {
       color: $c-font-inverse;
+    }
+
+    .ma__rich-text {
+      max-width: 720px;
+
+      a {
+        border-color: $c-font-inverse;
+      }
     }
   }
 

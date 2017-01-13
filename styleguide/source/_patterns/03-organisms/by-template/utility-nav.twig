@@ -1,0 +1,40 @@
+<section class="ma__utility-nav js-util-nav">
+  <ul class="ma__utility-nav__items">
+    <li class="ma__utility-nav__item">
+      <div class="ma__utility-nav__translate">
+        {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
+        <span>
+          <form action="#">
+            {% set dropdown = utilityNav.dropdown %}
+            {% include "@molecules/dropdown.twig" %}
+            <button type="submit" hidden>Translate</button>
+          </form>
+        </span>
+      </div>
+    </li>
+    {% for item in utilityNav.items %}
+      <li class="ma__utility-nav__item js-util-nav-toggle">
+        <a class="ma__utility-nav__link" 
+          href="#" 
+          title="{{ item.text }}">
+          {% include item.icon %}
+          <span>
+            {{ item.text }}
+          </span>
+        </a>
+        <div aria-hidden="true" class="ma__utility-nav__content js-util-nav-content is-closed">
+          <div class="ma__utility-nav__container">
+            <div class="ma__utility-nav__content-title">
+              <button class="ma__utility-nav__close js-close-util-nav"><span>{{ item.closeText }}</span><span role="presentation">+</span></button>
+              {% include item.icon %}
+              <span>{{ item.text }}</span>
+            </div>
+            <div class="ma__utility-nav__content-body">
+              {% include item.panel %}
+            </div>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
