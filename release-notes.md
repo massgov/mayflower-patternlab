@@ -1,5 +1,10 @@
 # Mass Gov Release Notes
 
+## 3.2.0 (Sprint 11)
+
+### Other 
+* DP-1103 - Implement default file/download icon in Patternlab
+
 ## 3.1.0 (Sprint 10)
 ### Org Page
 * DP-708 - Implement Organization Page in PatternLab
