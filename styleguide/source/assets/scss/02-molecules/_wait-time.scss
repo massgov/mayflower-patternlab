@@ -36,23 +36,18 @@
     display: flex;
       flex-wrap: wrap;
       align-items: stretch;
+    margin-bottom: 1rem;
   }
 
   &__item {
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
-    margin-bottom: 20px;
-    width: 50%;
+    width: 100%;
+  }
 
-    &:nth-child(even) {
-      border-left: 1px solid;
-      padding-left: 38px;
-    }
-
-    &:nth-child(odd) {
-      padding-right: 38px;
-    }
+  &__item ~ &__item {
+    margin-top: 20px;
   }
 
   &__label {
