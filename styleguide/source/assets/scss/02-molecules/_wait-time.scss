@@ -58,11 +58,10 @@
     text-transform: uppercase;
   }
 
-  &__time {
+  &__time
+  {
     font-size: 2.125rem;
   }
 
-  &__units {
-    font-size: 1.5rem;
   }
 }
