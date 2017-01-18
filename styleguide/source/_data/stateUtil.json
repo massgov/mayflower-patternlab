@@ -4,7 +4,7 @@
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
-          "text": "<a href=\"#\">The A-Z Organizations page</a> provides an alphabetical listing of government organizations, including commissions, departments, and bureaus."
+          "text": "The <a href=\"#\">A-Z Organizations page</a> provides an alphabetical listing of government organizations, including commissions, departments, and bureaus."
         }
       }
     }]
