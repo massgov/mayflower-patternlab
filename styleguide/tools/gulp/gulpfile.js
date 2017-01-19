@@ -30,7 +30,7 @@ var defaults = {
     dest: path.resolve(__dirname, "../../public/assets"),
     patternLabRoot: path.resolve(__dirname, "../../"),
     rootSite: path.resolve(__dirname, "../../public"),
-    tasks: ["copy", "js", "css", "bower", "svg-sprite"],
+    tasks: ["copy", "js", "css", "bower"],
     env: "development", // "development", "production", "local"
     watch: false,
     browserSync: false
@@ -78,6 +78,22 @@ gulp.task("build", function(){
         watch : false,
         browserSync: false,
         tasks : defaults.tasks.concat("patternlab")
+    });
+
+    quench.build(config);
+
+});
+
+/**
+ * Quick tool for converting svg icons into patternLab twig files
+**/
+gulp.task("svg2twig",function(){
+
+    var config = Object.assign({}, defaults, {
+        env   : "development",
+        watch : false,
+        browserSync: false,
+        tasks : ["svg2twig"]
     });
 
     quench.build(config);
