@@ -2,8 +2,12 @@
 
 ## 3.2.0 (Sprint 11)
 
+### Bugs 
+* DP-1278 - [Action] Link & text alignment issue in action steps
+
 ### Other 
 * DP-1103 - Implement default file/download icon in Patternlab
+
 
 ## 3.1.0 (Sprint 10)
 ### Org Page
