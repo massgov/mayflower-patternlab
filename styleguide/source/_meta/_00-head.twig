@@ -16,14 +16,9 @@
     <link rel="stylesheet" href="/assets/css/pattern-scaffolding-generated.css?{{ cacheBuster }}" media="all" />
     <!-- End Pattern Lab -->
 {#
-      SITE LEVEL COMMON DATA: 
-      ORGANIZATION
-        NOTE: Update the log location in organization
-      PAGE STRUCTURE
-      - header area
-      - footer area
-      - sidebar area
-      - main navigation
+  SITE LEVEL COMMON DATA: 
+  ORGANIZATION
+  - alternateName can be added later if helpful.
 #}
     <script type="application/ld+json">
       { 
@@ -41,6 +36,14 @@
             ]
       }
     </script>
+{#
+  SITE LEVEL COMMON DATA: 
+  PAGE STRUCTURE - they match with the ids assigned to the area elements in the <body>.
+  - header area
+  - footer area
+  - sidebar area
+  - main navigation area
+#}
     <script type="application/ld+json">
       {
           "@context":"http://schema.org",
