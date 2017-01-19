@@ -1,16 +1,16 @@
 <section class="ma__dropdown js-dropdown">
   <label
-    for="color-select" 
-    class="ma__dropdown__label">Color Scheme:</label>
+    for="{{ dropdown.id }}" 
+    class="ma__dropdown__label">{{ dropdown.labelText }}</label>
   <div class="ma__dropdown__field">
     <select
-      name="color-select"
-      id="color-select" 
+      name="{{ dropdown.name }}"
+      id="{{ dropdown.id }}" 
       class="ma__dropdown__select js-dropdown-select">
-      <option value="">Default color scheme</option>
-      <option value="has-theme-black">White on Black scheme</option>
-      <option value="has-theme-white">Black on White scheme</option>
+      {% for option in dropdown.options %}
+        <option value="{{ option.value }}">{{ option.text|raw }}</option>
+      {% endfor %}
     </select>
-    <span class="ma__dropdown__link js-dropdown-link">Default color scheme</span>
+    <span class="ma__dropdown__link js-dropdown-link">{{ dropdown.options[0].text }}</span>
   </div>
 </section>

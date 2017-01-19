@@ -6,34 +6,6 @@
     "headerTags": ""
   },
 
-  "locationIcons": {
-    "icons": [{
-      "path":"atoms-svg-loc-mt-park",
-      "name":"Mountain Park"
-    },{
-      "path":"atoms-svg-loc-historic-site",
-      "name":"Historic Site"
-    },{
-      "path":"atoms-svg-loc-wheelchair-accessible",
-      "name":"Wheelchair Accessible"
-    },{
-      "path":"atoms-svg-loc-dogs-allowed",
-      "name":"Dogs Allowed"
-    }]
-  },
-
-  "waitTime": {
-    "items":[{
-      "label": "Licensing",
-      "time": "2:00",
-      "units": "hrs"
-    },{
-      "label": "Registration",
-      "time": "24",
-      "units": "mins"
-    }]
-  },
-
   "headerContact": {
     "title": "Visitor's Center",
     "address1": "30 Rockwell Road",
@@ -107,5 +79,44 @@
         "details":"Please allow 24 hours for a response"
       }]
     }
+  },
+
+  "actionHeader": {
+    "divider": false,
+    "widgets": [{
+      "path": "@molecules/location-icons.twig",
+      "data": {
+        "locationIcons": {
+          "icons": [{
+            "path":"atoms-svg-loc-mt-park",
+            "name":"Mountain Park"
+          },{
+            "path":"atoms-svg-loc-historic-site",
+            "name":"Historic Site"
+          },{
+            "path":"atoms-svg-loc-wheelchair-accessible",
+            "name":"Wheelchair Accessible"
+          },{
+            "path":"atoms-svg-loc-dogs-allowed",
+            "name":"Dogs Allowed"
+          }]
+        }
+      }
+    },{
+      "path": "@molecules/wait-time.twig",
+      "data": {
+        "waitTime": {
+          "items":[{
+            "label": "Licensing",
+            "time": "2:00",
+            "units": "hrs"
+          },{
+            "label": "Registration",
+            "time": "24",
+            "units": "mins"
+          }]
+        }
+      }
+    }]
   }
 }

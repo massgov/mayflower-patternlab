@@ -18,14 +18,18 @@
   &__link {
     display: inline-block;
     font-size: 0;
+    height: 1.875rem;
+    padding: 5px;
     transition: opacity .4s;
+    width: 1.875rem;
     
     &:hover {
       opacity: .7;
     }
-    svg {
-      height: 1.875rem;
-      width: 1.875rem;
+    
+    & > svg {
+      height: 100%;
+      width: 100%;
     }
   }
 }

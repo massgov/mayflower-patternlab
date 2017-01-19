@@ -1,0 +1,57 @@
+$emergency-alerts-half-max: $max-width / 2;
+
+/* parent class should be 0px tall
+if there are no alerts to show
+since the component will always
+be included at the top of the page */
+.ma__emergency-alerts {
+  position: relative;
+
+  @media($bp-header-toggle-max) {
+    top: 40px;
+    z-index:1;
+  }
+
+  &__header {
+
+    @media ($bp-medium-min) {
+      .ma__emergency-header {
+        padding-right: 190px; // width of the button
+      }
+    }
+  }
+
+  &__content {
+
+    .js & {
+      display: none;
+    }
+  }
+
+  &__container {
+    @include ma-container;
+    
+    @media ($bp-small-max) {
+      padding-bottom: 10px;
+    }
+  }
+
+  &__interface {
+    @include ma-container;
+    font-size: 0;
+
+    @media ($bp-small-min) {
+      margin: 0;
+      position: absolute;
+        top: 15px;
+        right: 0;
+
+    }
+
+    @media ($bp-page-width-min) {
+      left: calc(50% + #{$emergency-alerts-half-max});
+      right: auto;
+      transform: translateX(-100%);
+    }
+  }
+}

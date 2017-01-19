@@ -6,10 +6,25 @@
 
   &--chevron {
     @include ma-chevron;
-    padding-right: 14px;
+    border-bottom: none;
+    display: inline-block;
+    padding-right: .75em;
+    position: relative;
+  
+    &:hover {
+      border-bottom: none;
+    }
 
     &:after {
-      margin-right: -14px;
+      height: .45em;
+      margin-top: .175em;
+      position: absolute;
+      transform: translateY(50%) rotate(-45deg);
+      width: .45em;
+    }
+
+    span {
+      @include ma-link-underline;
     }
   }
 

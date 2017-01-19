@@ -1,5 +1,41 @@
 # Mass Gov Release Notes
 
+## 3.1.0 (Sprint 10)
+### Org Page
+* DP-708 - Implement Organization Page in PatternLab
+* DP-867 - FE - Action Finder
+* DP-874 - FE - Org: Implement Header
+
+### Other
+* DP-712 - Handle Stacked Row Optional Header Image variants
+* DP-821 - Ensure that link chevron is never bumped to a new line
+
+## 3.0.0 (Sprint 9)
+### Homepage search
+* MGRP-339 - FE: Homepage build-out
+* MGRP-304 - FE: Homepage - Multi-row template - refactor
+* MGRP-328 - Implement footer in Pattern Lab 
+* MGRP-311 - FE: Updated Header
+
+### Org page
+* MGRP-302 - FE: Org - Action Finder - enhance
+* MGRP-300 - FE: Org - Icon Links
+* MGRP-312 - FE: Section Divider
+* MGRP-305 - FE: Org - section three up
+
+### Bugs
+* MQA-81 - [L2] - 'Featured' and 'All actions & guides' should be headers
+* MGRP-290 - Vertically Align Callout links
+
+### Other
+* MGRP-258 - Updated Pattern Lab Documentation (molecules)
+* MGRP-344 - FE - Update rich text image to allow captions and different classes.
+* MGVDU-448 - Pilot Header update
+* MGVDU-141 - Design print styles for How-to pages
+* MGVDU-438 - Design print styles for location pages
+* MGVDU-439 - Design print styles for guides
+
+
 ## 2.2.0 (Sprint 8)
 ### MQA bugs
 * MQA-23 - Links in the body are turning into a weird display
@@ -13,6 +49,8 @@
 * MGVDU-202 - Action Finder - entire action item should be clickable
 * MGVDU-354 - FE Dev - RTE columns - refactor
 * MGVDU-357 - FE Dev: Action Steps - refactor
+* MGRP-278 - FE Dev: Emergency alert bar
+* MGRP-258 - Updated Pattern Lab Documentation (atoms)
 
 
 ## 2.1.0 (Sprint 7)
@@ -26,6 +64,7 @@
 * MGVDU-283 - FE Dev: Location Banner - swap stacking order
 * MGVDU-312 - FE Dev - Contact Group - refactor address
 * MGVDU-313 - Firefox text wrapping bug on Related Topics section on some but not all pages
+
 
 ## 1.1.0 (Sprint 6)
 ### MGVDU-219 - FE Dev: Guide Page
@@ -41,11 +80,9 @@
 * MGVDU-296 - FE Dev: Guide Page - Sidebar title
 * MGVDU-300 - FE Dev: Guide - Rich Text 3 up
 
-
 ### MGVDU-208 - Basic Content Page
 * MGVDU-88 - Page Discourse Component - using rich-text component instead
 * MGVDU-278 - FE Dev: Breadcrumbs - collapsable
-
 
 ### Other
 * MGVDU-138 - FE Dev: Modifications to Location/Action page: Multiple contacts
@@ -56,7 +93,7 @@
 * MGRP-156 - Email link doesn't wrap.
 
 
-## 0.5.0
+## 0.5.0 (Sprint 5)
 ### MGVDU-181 - Location Page
 * MGVDU-172 - Component: Hero Banner Carousel (Location Page)
 * MGVDU-204 - FE Dev: Location - Wait Time Indicator
@@ -75,7 +112,7 @@
 * MGVDU-220 - FE Dev: Image credit component
 
 
-## 0.4.0
+## 0.4.0 (Sprint 4)
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
 * MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
@@ -89,10 +126,10 @@
 * MGVDU-175 - Component: Upcoming Events
 
 ### Pilot Page
-* MGYDU-87 - Feedback Form
+* MGVDU-87 - Feedback Form
 
 
-## 0.3.0
+## 0.3.0 (Sprint 3)
 ### Level 0,1,2 pages - Action Funnel
 * MGVDU-53 - FE Dev: L0 Page (contains sub tickets)
 * MGVDU-54 - FE Dev: L1 Page
@@ -110,7 +147,7 @@
 * MGVDU-117 - Forms/Downloads
 
 
-## 0.2.0
+## 0.2.0 (Sprint 2)
 ### Action Detail page
 * MGRV-89 - Related Contact Call-Out
 * MGRV-88 - Task Detail Section
@@ -119,7 +156,7 @@
 * MGRV-91 - Task Detail Header
 
 
-## 0.1.0
+## 0.1.0 (Sprint 1)
 ### Header and Footer
 * MGRV-38 - Header plus navigation
 * MGRV-51 - Global Styling for elements

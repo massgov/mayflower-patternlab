@@ -29,9 +29,14 @@
   }
 
   &__content {
-    float: left;
-    padding-right: 10px;
-    width: calc(100% - 90px);
+    clear: both;
+
+    @media ($bp-small-min) {
+      clear: none;
+      float: left;
+      padding-right: 10px;
+      width: calc(100% - 90px);
+    }
   }
 
   &__link {

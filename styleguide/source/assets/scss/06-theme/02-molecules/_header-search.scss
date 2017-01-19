@@ -1,18 +1,13 @@
 .ma__header-search {
 
-  input {
-    border-color: $c-bd-input;
-  }
-
   .ma__button-search {
 
     background-color: transparent;
-    border-color: transparent;
-    border-left-color: $c-bd-input;
+    border-color: $c-bd-input;
 
     &:hover {
       background: $c-theme-green;
-      border-left-color: $c-theme-green;
+      border-color: $c-theme-green;
     }
 
     // not the button in navigation
@@ -20,7 +15,6 @@
 
       @media ($bp-small-max) {
         background-color: $c-white;
-        border-color: $c-bd-input;
 
         &:hover {
           background: $c-theme-green;

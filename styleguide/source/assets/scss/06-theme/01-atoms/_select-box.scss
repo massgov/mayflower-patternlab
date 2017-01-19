@@ -10,12 +10,21 @@
   }
 
   &__link {
-    background-color: rgba($c-white,.1);
-    border-color: rgba($c-bd-input,.5);
+    background-color: $c-white;
+    border-color: $c-bd-input;
+
+    .ma__form--light & {
+      background-color: rgba($c-white,.1);
+      border-color: rgba($c-bd-input,.5);
+    }
   }
 
   &__icon {
-    border-color: rgba($c-bd-input,.5);
+    border-color: $c-bd-input;
+
+    .ma__form--light & {
+      border-color: rgba($c-bd-input,.5);
+    }
   }
 
   &__select:focus + &__link {

@@ -1,4 +1,9 @@
 {
+  "narrowTemplate": {
+    "side": "right",
+    "color": "yellow"
+  },
+  
   "errorPage": {
     "type": "403",
     "label": "Oh no",

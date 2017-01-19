@@ -11,11 +11,11 @@
   },
 
   "pageBanner": {
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "small":"true",
-    "icon":"atoms-svg-campfire",
-    "title":"State Parks & Recreation"
+    "bgWide": "/assets/images/placeholder/1600x400.png",
+    "bgNarrow": "/assets/images/placeholder/800x400.png",
+    "size": "small",
+    "icon": "atoms-svg-campfire",
+    "title": "State Parks & Recreation"
   },
 
   "topActions": {
@@ -52,8 +52,15 @@
   },
 
   "sectionThreeUp" : {
-    "title": "More in State Parks & Recreation",
+    "compHeading": {
+      "title": "More in State Parks & Recreation",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": "true"
+    },
     "sections": [{
+      "id": "GUIDasjdhf1",
       "catIcon": "",
       "title" : {
         "href" : "#",
@@ -78,6 +85,7 @@
       }]
     },
     {
+      "id": "GUIDasjdhf2",
       "catIcon": "",
       "title" : {
         "href" : "#",
@@ -102,6 +110,7 @@
       }]
     }, 
     {
+      "id": "GUIDasjdhf3",
       "catIcon": "",
       "title" : {
         "href" : "#",
@@ -126,6 +135,7 @@
       }]
     },
     {
+      "id": "GUIDasjdhf4",
       "catIcon": "",
       "title" : {
         "href" : "#",

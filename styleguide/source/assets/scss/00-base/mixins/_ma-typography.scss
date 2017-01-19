@@ -25,8 +25,14 @@
 }
 
 @mixin ma-h3 {
-  font-size: 2.188rem;
-  line-height: 1.1;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: .75em;
+
+  @media ($bp-small-min){
+    font-size: 2.188rem;
+    margin-bottom: 1em;
+  }
 }
 
 @mixin ma-h4 {

@@ -1,0 +1,71 @@
+{
+  "pageHeader": {
+    "title": "Mt Greylock State Park",
+    "subTitle": "",
+    "rteElements": "",
+    "headerTags": ""
+  },
+
+  "headerContact": {
+    "title": "Visitor's Center",
+    "address1": "30 Rockwell Road",
+    "address2": "",
+    "city": "Lanesborough",
+    "state": "MA",
+    "zip": "01237",
+    "directions": {
+      "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
+      "target": "_blank",
+      "text":"Directions",
+      "chevron": "true"
+    },
+    "phone": {
+      "icon": "@atoms/05-icons/svg-phone.twig",
+      "name": "Phone",
+      "hidden": "",
+      "items": [{
+        "type": "phone",
+        "label":"Main:",
+        "value":"(413) 499-4262",
+        "rawVal":"14134994262",
+        "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+      }]
+    },
+    "online": {
+      "icon": "@atoms/05-icons/svg-laptop.twig",
+      "name": "Online",
+      "hidden": "",
+      "items": [{
+        "type": "email",
+        "label":"Email:",
+        "value":"email@email.com",
+        "link":"email@email.com",
+        "details":""
+      }]
+    }
+  },
+
+  "actionHeader": {
+    "divider": true,
+    "widgets": [{
+      "path": "@molecules/location-icons.twig",
+      "data": {
+        "locationIcons": {
+          "icons": [{
+            "path":"atoms-svg-loc-mt-park",
+            "name":"Mountain Park"
+          },{
+            "path":"atoms-svg-loc-historic-site",
+            "name":"Historic Site"
+          },{
+            "path":"atoms-svg-loc-wheelchair-accessible",
+            "name":"Wheelchair Accessible"
+          },{
+            "path":"atoms-svg-loc-dogs-allowed",
+            "name":"Dogs Allowed"
+          }]
+        }
+      }
+    }]
+  }
+}

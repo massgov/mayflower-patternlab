@@ -12,6 +12,12 @@
 // WARNING: avoid nesting of elements,
 // because it makes them harder to override
 
+html {
+  @media ($bp-small-max){
+    font-size: 14.5px;
+  }
+}
+
 body {
   font-size: 1.375rem;
   line-height: 1.5;

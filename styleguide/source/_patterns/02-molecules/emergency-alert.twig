@@ -1,0 +1,9 @@
+<div class="ma__emergency-alert">
+  <div class="ma__emergency-alert__message">{{ emergencyAlert.message }} <span class="ma__emergency-alert__time-stamp">{{ emergencyAlert.timeStamp }}</span></div>
+  <div class="ma__emergency-alert__link">
+    {% if emergencyAlert.link %}
+      {% set link = emergencyAlert.link %}
+      {% include "@atoms/11-text/link.twig" %}
+    {% endif %}
+  </div>
+</div>

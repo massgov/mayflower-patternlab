@@ -2,9 +2,14 @@
   border: 3px solid;
   cursor: pointer;
   margin-bottom: 45px;
-  padding: 30px;
-  padding-left: 100px;
+  padding: 15px 20px;
+  padding-left: 65px;
   position: relative;
+
+  @media ($bp-small-min){
+    padding: 30px;
+    padding-left: 100px;
+  }
 
   .rich-text {
     margin-bottom: 1.75rem;
@@ -12,12 +17,24 @@
 
   &__icon {
     font-size: 0; // removing white-space;
-    height: 48px;
     position: absolute;
       top: 50%;
-      left:30px;
+      left:20px;
     transform: translateY(-50%);
-    width: 44px;
+
+    @media ($bp-small-min){
+      left: 30px;
+    }
+
+    & > svg {
+      height: 48px;
+      width: 44px;
+
+      @media ($bp-small-max){
+        height: 36px;
+        width: 34px;
+      }
+    }
   }
 
   &__link {
@@ -29,4 +46,7 @@
     }
   }
 
+  .ma__decorative-link {
+    padding-right: 0;
+  }
 }

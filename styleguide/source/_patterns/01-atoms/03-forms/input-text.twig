@@ -1,9 +1,9 @@
-<label for="text-input">Your Name*</label>
+<label for="{{ inputText.id }}">{{inputText.labelText}}</label>
 <input 
-  class="js-is-required" 
-  name="text-input" 
-  id="text-input" 
+  class="{{ inputText.required ? 'js-is-required' : ''}}" 
+  name="{{ inputText.name }}" 
+  id="{{ inputText.id }}" 
   type="text" 
-  placeholder="" 
+  placeholder="{{ inputText.placeholder }}" 
   data-type="text"
-  required />
+  {{ inputText.required ? 'required' : '' }} />

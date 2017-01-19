@@ -6,6 +6,14 @@
     "description":"Mass.gov is for you, and we want to know what you think about it.",
     "permissionLegend":"Are you interested in helping us test our designs for new sections of Mass.Gov? If so, we will contact you by email with more information.",
   
+    "inputText": {
+      "labelText": "Your Name*",
+      "required": true,
+      "id": "name-input",
+      "name": "name",
+      "placeholder": ""
+    },
+
     "radioButtons":[{
       "name": "permission",
       "value": "Yes",

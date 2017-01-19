@@ -1,0 +1,38 @@
+.ma__figure {
+  margin: 0 0 1.75rem;
+
+  @media ($bp-small-min) {
+    &.align-left {
+      float: left;
+      margin-right: .5em;
+      margin-bottom: 1em;
+      width: 50%;
+    }
+
+    &.align-right {
+      float: right;
+      margin-left: .5em;
+      margin-bottom: 1em;
+      width: 50%;
+    }
+  }
+
+  img {    
+    width: 100%;
+  }
+
+  &__caption {
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.57;
+    margin-bottom: .25em;
+
+    @media ($bp-small-min) {
+      &:nth-last-child(2) {
+        @include span-columns(6);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

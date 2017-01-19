@@ -438,14 +438,15 @@
       "data": {
         "actionImage": {
           "title": "This is an Optional Image Title",
-          "image": {
-            "alt": "16 x 9 image from your camera",
-            "width": "640",
-            "height": "360",
-            "src": "/assets/images/placeholder/640x360.png"
-          },
-          "caption": "This is an optional caption that can wrap to multiple lines.",
-          "source": "Optional Source"
+          "figure": {
+            "image": {
+              "alt": "16 x 9 image from your camera",
+              "width": "640",
+              "height": "360",
+              "src": "/assets/images/placeholder/640x360.png"
+            },
+            "caption": "This is an optional caption that can wrap to multiple lines."
+          }
         }
       }
     },
@@ -577,7 +578,6 @@
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
-          "hidden": "",
           "items": [{
             "type": "phone",
             "label":"Main:",
@@ -588,7 +588,6 @@
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "email",
             "label":"Email:",
@@ -599,7 +598,6 @@
         },{
           "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
-          "hidden": "true",
           "items": [{
             "type": "fax",
             "label":"",
@@ -610,7 +608,6 @@
         },{
           "icon": "@atoms/05-icons/svg-marker.twig",
           "name": "Address",
-          "hidden": "true",
           "items": [{
             "type": "address",
             "label":"",
@@ -630,7 +627,6 @@
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
-          "hidden": "",
           "items": [{
             "type": "phone",
             "label":"Main:",
@@ -641,7 +637,6 @@
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "email",
             "label":"Email:",
@@ -652,7 +647,6 @@
         },{
           "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
-          "hidden": "true",
           "items": [{
             "type": "fax",
             "label":"",
@@ -663,7 +657,6 @@
         },{
           "icon": "@atoms/05-icons/svg-marker.twig",
           "name": "Address",
-          "hidden": "true",
           "items": [{
             "type": "address",
             "label":"",

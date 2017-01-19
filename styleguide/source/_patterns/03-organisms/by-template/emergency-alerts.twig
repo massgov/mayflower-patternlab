@@ -1,0 +1,19 @@
+{% if emergencyAlerts.alerts %}
+  <section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="{{emergencyAlerts.id}}">
+    <div class="ma__emergency-alerts__header">
+        {% set emergencyHeader = emergencyAlerts.emergencyHeader %}
+        {% include "@molecules/emergency-header.twig" %}
+    </div>
+    <div class="ma__emergency-alerts__content js-accordion-content">
+      <div class="ma__emergency-alerts__container">
+        {% for emergencyAlert in emergencyAlerts.alerts %}
+          {% include "@molecules/emergency-alert.twig" %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="ma__emergency-alerts__interface js-accordion-link">
+      {% set buttonAlert = emergencyAlerts.buttonAlert %}
+      {% include "@molecules/button-alert.twig" %}
+    </div>
+  </section>
+{% endif %}

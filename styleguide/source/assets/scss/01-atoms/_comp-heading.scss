@@ -1,9 +1,11 @@
 .ma__comp-heading {
-  @include ma-border-decorative;
-  position: relative;
-  padding-bottom: 15px;
+  @include ma-comp-heading;
 
-  &:after {
-    width: 1.85em; // ma-underline-decorative override
+  &--centered {
+    text-align: center;
+
+    &:after {
+      left: calc(50% - .9em); // half the width defined above
+    }
   }
 }

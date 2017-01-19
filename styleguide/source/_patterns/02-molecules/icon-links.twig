@@ -1,0 +1,15 @@
+<section class="ma__icon-links">
+  <ul class="ma__icon-links__items">
+    {% for item in iconLinks.items %}
+      <li class="ma__icon-links__item">
+        <span class="ma__icon-links__icon">
+          {% include item.icon %}
+        </span>
+        <span class="ma__icon-links__link">
+          {% set link = item.link %}
+          {% include "@atoms/11-text/link.twig" %}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -46,15 +46,23 @@
     "fax": ""
   },
 
-  "waitTime": {
-    "items":[{
-      "label": "Licensing",
-      "time": "2:00",
-      "units": "hrs"
-    },{
-      "label": "Registration",
-      "time": "24",
-      "units": "mins"
+  "actionHeader": {
+    "divider": false,
+    "widgets": [{
+      "path": "@molecules/wait-time.twig",
+      "data": {
+        "waitTime": {
+          "items":[{
+            "label": "Licensing",
+            "time": "2:00",
+            "units": "hrs"
+          },{
+            "label": "Registration",
+            "time": "24",
+            "units": "mins"
+          }]
+        }
+      }
     }]
   },
 
@@ -113,9 +121,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Park"
             }
           }
@@ -129,9 +137,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Museum"
             }
           }
@@ -145,9 +153,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Beach"
             }
           }

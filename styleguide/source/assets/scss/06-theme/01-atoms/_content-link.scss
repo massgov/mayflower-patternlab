@@ -10,6 +10,10 @@
     &:after {
       border-color: rgba($c-font-link, .5);
     }
+
+    span:hover {
+      border-bottom-color: rgba($c-font-link, .5);
+    }
   }
 
   &--phone {

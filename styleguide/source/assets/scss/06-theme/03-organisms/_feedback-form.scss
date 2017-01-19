@@ -1,20 +1,5 @@
 .ma__feedback-form {
 
-  input,
-  textarea,
-  .ma__select-box__link {
-    background-color: rgba($c-white, 0.1);
-    color: $c-font-inverse;
-  }
-
-  .ma__input-radio label:before {
-    background-color: rgba($c-white, 0.1);
-  }
-
-  .ma__input-radio input:checked ~ label:before {
-    color: $c-font-inverse;
-  }
-
   &__overlay {
     background-color: rgba(#000,.6);
     color: $c-font-inverse;
