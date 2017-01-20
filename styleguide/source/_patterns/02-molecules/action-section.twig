@@ -8,4 +8,8 @@
   %}
   {% include "@atoms/04-headings/comp-heading.twig" %}
 {% endif %}
-{% include actionSection.path with actionSection.data %}
+
+{% if actionSection.title %}
+  {% set  sectionId = actionSection.id %}
+	{% include actionSection.path with actionSection.data %}
+{% endif %}

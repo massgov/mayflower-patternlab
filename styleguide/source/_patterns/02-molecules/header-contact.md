@@ -40,6 +40,8 @@ headerContact {
       type: default 'Directions'/required
     chevron:
       type: boolean
+    map:
+      type: boolean
   },
   phone {
     icon:

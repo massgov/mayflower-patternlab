@@ -4,18 +4,18 @@
   {% set accordionContent = "js-accordion-content" %}
 {% endif %}
 <section class="ma__header-contact {{accordionParent}}">
-  <div class="ma__header-contact__address">
+  <div class="ma__header-contact__address" property="address" typeof="PostalAddress">
     {% if headerContact.title %}
-      <span>{{headerContact.title | raw}}, </span>
+      <span property="name">{{headerContact.title | raw}}, </span>
     {% endif %}
     {% if headerContact.address2 %}
-      <span>{{headerContact.address1}} {{headerContact.address2}}, </span>
+      <span><span property="streetAddress">{{headerContact.address1}}</span> <span>{{headerContact.address2}}</span>, </span>
     {% else %}
-      <span>{{headerContact.address1}}, </span>
+      <span property="streetAddress">{{headerContact.address1}}, </span>
     {% endif %}
-    <span>{{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}</span>
+    <span property="addressLocality">{{headerContact.city}}, <span property="addressRegion">{{headerContact.state}}</span> <span property="postalCode">{{headerContact.zip}}</span></span>
   </div>
-  <div class="ma__header-contact__directions">
+  <div class="ma__header-contact__directions" property="hasMap" typeof="Map">
     {% set link = headerContact.directions %}
     {% include "@atoms/11-text/link.twig" %}
   </div>
