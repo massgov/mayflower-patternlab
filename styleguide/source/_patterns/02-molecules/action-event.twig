@@ -1,14 +1,35 @@
-<section class="ma__action-event">
-  <h3 class="ma__action-event__name">
-    {% set decorativeLink = actionEvent.name %}
-    {% include "@atoms/decorative-link.twig" %}
-  </h3>
-  <div class="ma__action-event__date">
-    {{actionEvent.date}}
-  </div>
-  {% if actionEvent.description %}
-    <div class="ma__action-event__description">
-      {{actionEvent.description}}
+{% if schemaPageType == "Park" %}
+  <section class="ma__action-event" property="event" typeof="Event">
+    <h3 class="ma__action-event__name" property="name">
+      {% set decorativeLink = actionEvent.name %}
+      {% include "@atoms/decorative-link.twig" %}
+    </h3>
+    <div class="ma__action-event__date" property="startDate" content="{{actionEvent.schemaDate}}">
+      {{actionEvent.date}}
     </div>
-  {% endif %}
-</section>
+    {% if actionEvent.description %}
+      <div class="ma__action-event__description" property="description">
+        {{actionEvent.description}}
+      </div>
+    {% endif %}
+      <span property="location" typeof="{{schemaPageType}}">
+        <meta property="name" content="{{pageHeader.title}}" />
+        <meta property="address" content="{{headerContact.address1}} {{headerContact.address2}} {{headerContact.city}}, {{headerContact.state}} {{headerContact.zip}}" />
+      </span>
+  </section>
+{% else %}
+  <section class="ma__action-event">
+    <h3 class="ma__action-event__name">
+      {% set decorativeLink = actionEvent.name %}
+      {% include "@atoms/decorative-link.twig" %}
+    </h3>
+    <div class="ma__action-event__date">
+      {{actionEvent.date}}
+    </div>
+    {% if actionEvent.description %}
+      <div class="ma__action-event__description">
+        {{actionEvent.description}}
+      </div>
+    {% endif %}
+  </section>
+{% endif %}

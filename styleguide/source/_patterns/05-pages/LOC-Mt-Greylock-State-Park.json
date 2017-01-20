@@ -1,6 +1,8 @@
 {
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
+  "schemaPageType": "Park",
+
   "headerAlert": {
     "guid": "GUID09058070136",
     "text": "Lots of Bears.",
@@ -34,7 +36,8 @@
       "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
       "target": "_blank",
       "text":"Directions",
-      "chevron": "true"
+      "chevron": "true",
+      "map": "true"
     },
     "phone": {
       "icon": "@atoms/05-icons/svg-phone.twig",
@@ -656,6 +659,7 @@
             "text": "Fishing Clinic"
           },
           "date":"June 24, 2017, 12:00pm",
+          "schemaDate": "2017-06-24T12:00",
           "description":"This is a description of the event that will happen at a future date"
         }
       }
@@ -669,6 +673,7 @@
             "text": "Full Moon Hike"
           },
           "date":"June 24, 2017, 9:00pm",
+          "schemaDate": "2017-06-24T21:00",
           "description":"This is a description of the event that will happen at a future date"
         }
       }

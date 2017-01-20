@@ -22,11 +22,13 @@
         <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
-        <div class="ma__contact-group__address">
+        <div class="ma__contact-group__address" property="address" typeof="PostalAddress">
           {{item.value | raw}}
         </div>
         {% if item.link %}
-          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"><span>Directions</span></a>
+          <span property="hasMap" typeof="Map">
+            <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron" property="url"><span>Directions</span></a>
+          </span>
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
