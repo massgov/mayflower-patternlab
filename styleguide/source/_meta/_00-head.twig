@@ -24,8 +24,8 @@
       { 
           "@context" : "http://schema.org",
           "@type" : "Organization",
-          "url" : "https://www.mass.gov/",
-          "logo": "https://www.mass.gov/assets/images/stateseal-color.png",
+          "url" : document.location.origin,
+          "logo": document.location.origin + "assets/images/stateseal-color.png",
           "name" : "Commonwealth of Massachusetts",
           "sameAs" : [
             "https://www.facebook.com/massgov/",
@@ -48,28 +48,28 @@
       {
           "@context":"http://schema.org",
           "@type":"WPHeader",
-          "@id" : "https://www.mass.gov//#header"
+          "@id" : document.location.href + "#header"
       }
     </script>
     <script type="application/ld+json">
       {
           "@context":"http://schema.org",
           "@type":"WPSidebar",
-          "@id" : "https://www.mass.gov//#sidebar"
+          "@id" : document.location.href + "#sidebar"
       }
     </script>
     <script type="application/ld+json">
       {
           "@context":"http://schema.org",
           "@type":"WPFooter",
-          "@id" : "https://www.mass.gov//#footer"
+          "@id" : document.location.href + "#footer"
       }
     </script>  
     <script type="application/ld+json">
         {
           "@context":"http://schema.org",
           "@type":"SiteNavigationElement",
-          "@id" : "https://www.mass.gov//#main-navigation"
+          "@id" : document.location.href + "#main-navigation"
         }
     </script>  
   </head>
