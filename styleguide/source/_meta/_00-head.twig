@@ -16,18 +16,43 @@
     <link rel="stylesheet" href="/assets/css/pattern-scaffolding-generated.css?{{ cacheBuster }}" media="all" />
     <!-- End Pattern Lab -->
 {#
+  SITE LEVEL DATA: 
+  WEBSITE
+  - add to home (front) page only.
+  - about can be added when its content is ready.
+  - keywords can be added when its content is ready.
+#}
+{% if schemaPageType == "Home" %}
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebSite",
+          "url": '"' + document.location.origin + '"',
+          "name": "Mass.gov",
+          "alternateName": "The Official Website of the Commonwealth of Massachusetts",{#
+          "about": "~NEED CONTENT~", #}
+          "copyrightHolder": "Commonwealth of Massachusetts",{#
+          "keywords": "state government, ~OTHERS TO ADD: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.~", #}
+          "potentialAction": {
+             "@type": "SearchAction",
+             "target": '"' + document.location.origin + '/?s={search_term_string}&post_type=post' + '"',
+             "query-input": "required name=search_term_string"}
+        }
+    </script>
+{% endif %}
+{#
   SITE LEVEL COMMON DATA: 
   ORGANIZATION
   - alternateName can be added later if helpful.
 #}
     <script type="application/ld+json">
       { 
-          "@context" : "http://schema.org",
-          "@type" : "Organization",
-          "url" : document.location.origin,
-          "logo": document.location.origin + "/assets/images/stateseal-color.png",
-          "name" : "Commonwealth of Massachusetts",
-          "sameAs" : [
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "url": '"' + document.location.origin + '"',
+          "logo": '"' + document.location.origin + '/assets/images/stateseal-color.png' + '"',
+          "name": "Commonwealth of Massachusetts",
+          "sameAs": [
             "https://www.facebook.com/massgov/",
             "https://twitter.com/massgov/",
             "https://www.linkedin.com/company/commonwealth-of-massachusetts/",
@@ -46,23 +71,23 @@
 #}
     <script type="application/ld+json">
       {
-          "@context":"http://schema.org",
-          "@type":"WPHeader",
-          "@id" : document.location.href + "#header"
+          "@context": "http://schema.org",
+          "@type": "WPHeader",
+          "@id": '"' + document.location.href + '#header' + '"'
       }
     </script>
     <script type="application/ld+json">
       {
-          "@context":"http://schema.org",
-          "@type":"WPFooter",
-          "@id" : document.location.href + "#footer"
+          "@context": "http://schema.org",
+          "@type": "WPFooter",
+          "@id": '"' + document.location.href + '#footer' + '"'
       }
     </script>  
     <script type="application/ld+json">
         {
-          "@context":"http://schema.org",
-          "@type":"SiteNavigationElement",
-          "@id" : document.location.href + "#main-navigation"
+          "@context": "http://schema.org",
+          "@type": "SiteNavigationElement",
+          "@id": '"' + document.location.href + '#main-navigation' + '"'
         }
     </script>  
   </head>
