@@ -15,8 +15,9 @@
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
         <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
-        <meta property="telephone" content="{{item.value}}" />
-
+        {% if item.label == "Main:" %}
+          <meta property="telephone" content="{{item.value}}" />
+        {% endif %}
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
         <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
@@ -32,7 +33,11 @@
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
-        <span class="ma__contact-group__value">{{item.value}}</span>
+        <span class="ma__contact-group__value">{{item.value}}
+        {% if item.type == "fax" %}
+          <meta property="faxNumber" content="{{item.value}}" />
+        {% endif %}
+        </span>
       {% endif %}
     </div>
     {% if item.details %}

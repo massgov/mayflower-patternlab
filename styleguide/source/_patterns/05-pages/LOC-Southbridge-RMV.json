@@ -1,6 +1,8 @@
 {
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
+  "schemaPageType": "GovernmentOffice",
+
   "headerAlerts": [{
     "guid": "GUID09058070137",
     "text": "There's a hole in front of the door. Beware!",
@@ -39,7 +41,8 @@
       "href": "https://www.google.com/maps/place/Southbridge+RMV",
       "target": "_blank",
       "text":"Directions",
-      "chevron": "true"
+      "chevron": "true",
+      "map": "true"
     },
     "phone": "",
     "online": "",
