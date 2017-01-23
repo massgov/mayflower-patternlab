@@ -1,22 +1,9 @@
 ---
-title: DEPRECATED - generic Document Icon
+title: Generic Document Icon
 ---
-Description: An `<svg>` element which contains a `<use>` element to take the appropriate node from within the svg sprite.
+Description: Download icon for other file types
 
-## State: DEPRECATED
-
-### Notes:
-Icons will be refactored so that they all use the same pattern template and are passed arguments to determine the appropriate asset, etc.
-
-### Used In:
-- [@organisms/by-author/form-download](/?p=organisms-form-download)
-
-### Variables:
-~~~
-directory: 
-    type: string / required
-    (the parent directory(s) of the svg asset)
-~~~
+## State: ALPHA
 
 ### Variations
 - [@atoms/05-icons/svg-alert](/?p=atoms-svg-alert)
