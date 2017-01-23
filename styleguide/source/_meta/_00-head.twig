@@ -22,8 +22,6 @@
   - about can be added when its content is ready.
   - keywords can be added when its content is ready.
 #}
-{% set site_url = document.location.origin %}
-{% set bar = 'apple' %}  
 {% if schemaPageType == "Home" %}
     <script type="application/ld+json">
         {
@@ -52,7 +50,7 @@
           "@context": "http://schema.org",
           "@type": "Organization",
           "url": {{'"'}}document.location.origin{{'"'}},
-          "logo": {{'"'}}document.location.origin{{'/assets/images/stateseal-color.png"'}},
+          "logo": {{'"'}}document.location.origin{{'/'~directory }}{{'/images/stateseal-color.png"'}},
           "name": "Commonwealth of Massachusetts",
           "sameAs": [
             "https://www.facebook.com/massgov/",
