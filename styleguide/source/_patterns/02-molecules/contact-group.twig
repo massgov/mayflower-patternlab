@@ -1,38 +1,36 @@
-<div class="ma__contact-group">
-  <h5 class="ma__contact-group__name">
-    {% include contactGroup.icon %}
-    <span>{{contactGroup.name}}</span>
-  </h5>
-  {% for item in contactGroup.items %}
-    <div>
-      {% if item.label %}
-        <span class="ma__contact-group__label">{{item.label}}</span>
-      {% endif %}
-
-      {# Online wrap value in a link #}
-      {% if item.type == "online" %}
-        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
-      {# Phone - add tel: to href #}
-      {% elseif item.type == "phone" %}
-        <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
-      {# Email - add mailto: to href #}
-      {% elseif item.type == "email" %}
-        <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
-      {# Address - RTE version of value and look for directions link #}
-      {% elseif item.type == "address" %}
-        <div class="ma__contact-group__address">
-          {{item.value | raw}}
-        </div>
-        {% if item.link %}
-          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"><span>Directions</span></a>
-        {% endif %}
-      {# Default - just spit out the value #}
-      {% else %}
-        <span class="ma__contact-group__value">{{item.value}}</span>
-      {% endif %}
-    </div>
-    {% if item.details %}
-      <p class="ma__contact-group__details">{{item.details}}</p>
+<h5 class="ma__contact-group__name">
+  {% include contactGroup.icon %}
+  <span>{{contactGroup.name}}</span>
+</h5>
+{% for item in contactGroup.items %}
+  <div>
+    {% if item.label %}
+      <span class="ma__contact-group__label">{{item.label}}</span>
     {% endif %}
-  {% endfor %}
-</div>
+
+    {# Online wrap value in a link #}
+    {% if item.type == "online" %}
+      <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
+      {# Phone - add tel: to href #}
+    {% elseif item.type == "phone" %}
+      <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
+      {# Email - add mailto: to href #}
+    {% elseif item.type == "email" %}
+      <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
+      {# Address - RTE version of value and look for directions link #}
+    {% elseif item.type == "address" %}
+      <div class="ma__contact-group__address">
+        {{item.value | raw}}
+      </div>
+      {% if item.link %}
+        <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"><span>Directions</span></a>
+      {% endif %}
+      {# Default - just spit out the value #}
+    {% else %}
+      <span class="ma__contact-group__value">{{item.value}}</span>
+    {% endif %}
+  </div>
+  {% if item.details %}
+    <p class="ma__contact-group__details">{{item.details}}</p>
+  {% endif %}
+{% endfor %}
