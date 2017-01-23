@@ -68,16 +68,16 @@
       "data": {
         "locationIcons": {
           "icons": [{
-            "path":"@atoms/06-icons-location/svg-loc-transit-friendly.twig",
+            "path":"@atoms/05-icons/svg-transit.twig",
             "name":"Transit Friendly"
           },{
-            "path":"@atoms/06-icons-location/svg-loc-historic-site.twig",
+            "path":"@atoms/05-icons/svg-castle.twig",
             "name":"Historic Site"
           },{
-            "path":"@atoms/06-icons-location/svg-loc-wheelchair-accessible.twig",
+            "path":"@atoms/05-icons/svg-wheelchair.twig",
             "name":"Wheelchair Accessible"
           },{
-            "path":"@atoms/06-icons-location/svg-loc-dogs-allowed.twig",
+            "path":"@atoms/05-icons/svg-dog.twig",
             "name":"Dogs Allowed"
           }]
         }
