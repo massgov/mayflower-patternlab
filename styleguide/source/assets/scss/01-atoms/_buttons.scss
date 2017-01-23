@@ -28,12 +28,12 @@ button {
   white-space: nowrap;
 
   span,
-  &__icon {
+  & > svg {
     display: inline-block;
     vertical-align: middle;
   }
 
-  &__icon {
+  & > svg {
     height: 20px;
     transition: fill .4s;
     width: 20px;
