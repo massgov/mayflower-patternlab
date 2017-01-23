@@ -22,12 +22,14 @@
   - about can be added when its content is ready.
   - keywords can be added when its content is ready.
 #}
+{% set site_url = document.location.origin %}
+{% set bar = 'apple' %}  
 {% if schemaPageType == "Home" %}
     <script type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "WebSite",
-          "url": '"' + document.location.origin + '"',
+          "url": {{'"'}}document.location.origin{{'"'}},
           "name": "Mass.gov",
           "alternateName": "The Official Website of the Commonwealth of Massachusetts",{#
           "about": "~NEED CONTENT~", #}
@@ -35,7 +37,7 @@
           "keywords": "state government, ~OTHERS TO ADD: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.~", #}
           "potentialAction": {
              "@type": "SearchAction",
-             "target": '"' + document.location.origin + '/?s={search_term_string}&post_type=post' + '"',
+             "target": {{'"'}}document.location.origin{{'/?s={search_term_string}&post_type=post"'}},
              "query-input": "required name=search_term_string"}
         }
     </script>
@@ -49,8 +51,8 @@
       { 
           "@context": "http://schema.org",
           "@type": "Organization",
-          "url": '"' + document.location.origin + '"',
-          "logo": '"' + document.location.origin + '/assets/images/stateseal-color.png' + '"',
+          "url": {{'"'}}document.location.origin{{'"'}},
+          "logo": {{'"'}}document.location.origin{{'/assets/images/stateseal-color.png"'}},
           "name": "Commonwealth of Massachusetts",
           "sameAs": [
             "https://www.facebook.com/massgov/",
@@ -73,21 +75,21 @@
       {
           "@context": "http://schema.org",
           "@type": "WPHeader",
-          "@id": '"' + document.location.href + '#header' + '"'
+          "@id": {{'"'}}document.location.href{{'#header"'}}
       }
     </script>
     <script type="application/ld+json">
       {
           "@context": "http://schema.org",
           "@type": "WPFooter",
-          "@id": '"' + document.location.href + '#footer' + '"'
+          "@id": {{'"'}}document.location.href{{'#footer"'}}
       }
     </script>  
     <script type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "SiteNavigationElement",
-          "@id": '"' + document.location.href + '#main-navigation' + '"'
+          "@id": {{'"'}}document.location.href{{'#main-navigation"'}}
         }
     </script>  
   </head>
