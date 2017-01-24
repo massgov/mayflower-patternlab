@@ -27,15 +27,15 @@
         {
           "@context": "http://schema.org",
           "@type": "WebSite",
-          "url": document.location.origin,
+          "url": "{{ urlDomain }}",
           "name": "Mass.gov",
-          "alternateName": "The Official Website of the Commonwealth of Massachusetts",{#
-          "about": "~NEED CONTENT~", #}
-          "copyrightHolder": "Commonwealth of Massachusetts",{#
-          "keywords": "state government, ~OTHERS TO ADD: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.~", #}
+          "alternateName": "The Official Website of the Commonwealth of Massachusetts", {#
+          "about": "~NEED CONTENT~",#} 
+          "copyrightHolder": "Commonwealth of Massachusetts", {#
+          "keywords": "state government, ~OTHERS TO ADD: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.~",#} 
           "potentialAction": {
              "@type": "SearchAction",
-             "target": {{'"'}}document.location.origin{{'/?s={search_term_string}&post_type=post"'}},
+             "target": "{{ urlDomain }}/?s={search_term_string}&post_type=post",
              "query-input": "required name=search_term_string"}
         }
     </script>
@@ -49,8 +49,8 @@
       { 
           "@context": "http://schema.org",
           "@type": "Organization",
-          "url": document.location.origin,
-          "logo": {{'"'}}document.location.origin{{'/'~directory }}{{'/images/stateseal-color.png"'}},
+          "url": "{{urlDomain}}",
+          "logo": "{{ urlDomain ~ '/' ~ directory ~ '/images/stateseal-color.png' }}",
           "name": "Commonwealth of Massachusetts",
           "sameAs": [
             "https://www.facebook.com/massgov/",
@@ -66,28 +66,27 @@
   PAGE STRUCTURE - they match with the ids assigned to the area elements in the <body>.
   - header area
   - footer area
-  - sidebar area
   - main navigation area
 #}
     <script type="application/ld+json">
       {
           "@context": "http://schema.org",
           "@type": "WPHeader",
-          "@id": {{'"'}}document.location.href{{'#header"'}}
+          "@id": "{{ urlDomain ~ urlPath ~ '#header' }}"
       }
     </script>
     <script type="application/ld+json">
       {
           "@context": "http://schema.org",
           "@type": "WPFooter",
-          "@id": {{'"'}}document.location.href{{'#footer"'}}
+          "@id": "{{ urlDomain ~ urlPath ~ '#footer' }}"
       }
     </script>  
     <script type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "SiteNavigationElement",
-          "@id": {{'"'}}document.location.href{{'#main-navigation"'}}
+          "@id": "{{ urlDomain ~ urlPath ~ '#main-navigation'}}"
         }
     </script>  
   </head>

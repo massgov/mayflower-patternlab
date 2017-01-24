@@ -3,6 +3,8 @@
   "htmlClass": "pl",
   "bodyClass": "",
   "directory": "assets",
+  "urlDomain": "http://mayflower.mass.gov",
+  "urlPath": "/",
 
   "headerSearch" : {
     "placeholder":"What can we help you find?",
