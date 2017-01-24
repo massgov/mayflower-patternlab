@@ -2,13 +2,19 @@
 
 ## 3.2.0 (Sprint 11)
 
+### DS-5 
+* DP-1103 - Implement default file/download icon in Patternlab
+* DP-691 - Implement Google Translate in Pattern Lab
+
+### DS-23 - External Search
+* DP-1267 - Implement the structure data markup for page elements to mayflower
+
+### DS-41
+* DP-787 - Create Park Icons for Park Types, Activities, Users
+
 ### Bugs 
 * DP-1278 - [Action] Link & text alignment issue in action steps
 * DP-1312 - Activities Paragraph shows link icon when there is no link
-
-### Other 
-* DP-1103 - Implement default file/download icon in Patternlab
-* DP-787 - Create Park Icons for Park Types, Activities, Users
 
 
 ## 3.1.0 (Sprint 10)
@@ -30,9 +36,6 @@
 * DP-730 - Implement footer in Pattern Lab
 * DP-796 - Implement MVP Header - Utility Nav in Patternlab
 
-
-### DS-23 - External Search
-* DP-1267 - Implement the structure data markup for page elements to mayflower
 
 ## 3.0.0 (Sprint 9)
 ### Homepage search
