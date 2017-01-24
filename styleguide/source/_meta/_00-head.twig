@@ -23,6 +23,7 @@
   - keywords can be added when its content is ready.
 #}
 {% if schemaPageType == "Home" %}
+<<<<<<< HEAD
     <script type="application/ld+json">
         {
           "@context": "http://schema.org",
@@ -39,18 +40,64 @@
              "query-input": "required name=search_term_string"}
         }
     </script>
+=======
+  <script>
+    (function(){
+      var domain = document.location.origin;
+      var data = {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": domain,
+        "name": "Mass.gov",
+        "alternateName": "The Official Website of the Commonwealth of Massachusetts",
+        {# "about": "~NEED CONTENT~", #}
+        "copyrightHolder": "Commonwealth of Massachusetts",
+        {# "keywords": "state government, ~OTHERS TO ADD: Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.~", #}
+        "potentialAction": {
+           "@type": "SearchAction",
+           "target": domain + "/?s={search_term_string}&post_type=post",
+           "query-input": "required name=search_term_string"
+         }
+      };
+
+      outputJSON(data);
+
+      function outputJSON(data) {
+        var script = document.createElement('script');
+        script.type = "application/ld+json";
+        script.innerHTML = JSON.stringify(data);
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+    })(document);
+  </script>
+>>>>>>> f7299927e24bee802f22c851559aa14dbeab1d0e
 {% endif %}
 {#
   SITE LEVEL COMMON DATA: 
   ORGANIZATION
   - alternateName can be added later if helpful.
+
+  SITE LEVEL COMMON DATA: 
+  PAGE STRUCTURE - they match with the ids assigned to the area elements in the <body>.
+  - header area
+  - footer area
+  - sidebar area
+  - main navigation area
 #}
-    <script type="application/ld+json">
-      { 
+    <script>
+      (function(){
+        var domain = document.location.origin;
+        var path = document.location.href;
+        var data = [{
           "@context": "http://schema.org",
           "@type": "Organization",
+<<<<<<< HEAD
           "url": "{{urlDomain}}",
           "logo": "{{ urlDomain ~ '/' ~ directory ~ '/images/stateseal-color.png' }}",
+=======
+          "url": domain,
+          "logo": domain + "/{{ directory }}/images/stateseal-color.png",
+>>>>>>> f7299927e24bee802f22c851559aa14dbeab1d0e
           "name": "Commonwealth of Massachusetts",
           "sameAs": [
             "https://www.facebook.com/massgov/",
@@ -58,6 +105,7 @@
             "https://www.linkedin.com/company/commonwealth-of-massachusetts/",
             "https://www.youtube.com/user/massgov/",
             "https://www.instagram.com/massgov/"
+<<<<<<< HEAD
             ]
       }
     </script>
@@ -87,8 +135,35 @@
           "@context": "http://schema.org",
           "@type": "SiteNavigationElement",
           "@id": "{{ urlDomain ~ urlPath ~ '#main-navigation'}}"
+=======
+          ]
+        },{
+          "@context": "http://schema.org",
+          "@type": "WPHeader",
+          "@id": path + '#header'
+        },{
+          "@context": "http://schema.org",
+          "@type": "WPFooter",
+          "@id": path + '#footer'
+        },{
+          "@context": "http://schema.org",
+          "@type": "SiteNavigationElement",
+          "@id": path + '#main-navigation'
+        }];
+
+        data.forEach(function(value){
+          outputJSON(value);
+        });
+
+        function outputJSON(data) {
+          var script = document.createElement('script');
+          script.type = "application/ld+json";
+          script.innerHTML = JSON.stringify(data);
+          document.getElementsByTagName('head')[0].appendChild(script);
+>>>>>>> f7299927e24bee802f22c851559aa14dbeab1d0e
         }
-    </script>  
+      })(document);
+    </script>
   </head>
   <body class="{{ bodyClass }}" vocab="http://schema.org/" typeof="WebPage">
     <!-- Fix: Chrome doesn't always render the first SVG use tag -->
