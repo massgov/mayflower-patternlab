@@ -61,6 +61,11 @@
           top: 40px;
       }
 
+      .translated-rtl &,
+      .translated-ltr & {
+        top: 80px;
+      }
+
       &[data-sticky='bottom'] {
         position: absolute;
           top: auto; // height of one line of text
