@@ -1,1 +1,3 @@
-<p>{{paragraph.text | raw}}</p>
+{% if paragraph.text %}
+  {{paragraph.text | raw}}
+{% endif %}

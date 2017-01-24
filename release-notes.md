@@ -2,11 +2,12 @@
 
 ## 3.2.0 (Sprint 11)
 
-### Bugs 
+### Bugs
 * DP-1278 - [Action] Link & text alignment issue in action steps
 * DP-1312 - Activities Paragraph shows link icon when there is no link
+* DP-1187 - Paragraph twig wraps the output in a paragraph
 
-### Other 
+### Other
 * DP-1103 - Implement default file/download icon in Patternlab
 * DP-787 - Create Park Icons for Park Types, Activities, Users
 
@@ -141,8 +142,8 @@
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
 * MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
-* MGVDU-119 - FE Dev: Modifications to Action page: Map 
-* MGVDU-137 - FE Dev: Modifications to Action page: OR Lists 
+* MGVDU-119 - FE Dev: Modifications to Action page: Map
+* MGVDU-137 - FE Dev: Modifications to Action page: OR Lists
 * MGVDU-139 - FE Dev: Action Page Header
 
 ### Location Page
