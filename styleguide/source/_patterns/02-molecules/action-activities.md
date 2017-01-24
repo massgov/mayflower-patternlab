@@ -21,9 +21,15 @@ actionActivities: [{
     type: string/required
   description:
     type: string/required
+}]
+~~~
+
+### Required Variables
+~~~
+actionActivities: [{
   linkTitle:
-    type: string/required
+    type: string/optional
   href:
-    type: string/url/required
+    type: string/url/optional
 }]
 ~~~

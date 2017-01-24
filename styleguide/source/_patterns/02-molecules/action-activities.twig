@@ -5,7 +5,9 @@
       <div class="ma__action-activities__details">
         <h5 class="ma__action-activities__title">{{ activity.title }}</h5>
         <div class="ma__action-activities__description">{{ activity.description }}</div>
-        <a class="ma__action-activities__link" href="{{ activity.href }}">{{ activity.linkTitle }}<span class="visually-hidden"> about {{ activity.title }}</span></a>
+        {% if activity.href %}
+          <a class="ma__action-activities__link" href="{{ activity.href }}">{{ activity.linkTitle }}<span class="visually-hidden"> about {{ activity.title }}</span></a>
+        {% endif %}
       </div>
     </div>
   {% endfor %}
