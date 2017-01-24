@@ -31,6 +31,9 @@
 * DP-796 - Implement MVP Header - Utility Nav in Patternlab
 
 
+### DS-23 - External Search
+* DP-1267 - Implement the structure data markup for page elements to mayflower
+
 ## 3.0.0 (Sprint 9)
 ### Homepage search
 * MGRP-339 - FE: Homepage build-out
