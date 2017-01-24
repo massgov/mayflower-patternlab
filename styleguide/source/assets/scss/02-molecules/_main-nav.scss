@@ -158,11 +158,6 @@
     width: 300px;
     z-index: $z-dropdown;
 
-    .translated-rtl &,
-    .translated-ltr & {
-      top: 40px;
-    }
-
     @media ($bp-header-toggle-max) {
       margin-top: $header-mobile-controls-height;
       height: calc(100vh - #{$header-mobile-controls-height});
@@ -174,6 +169,7 @@
       .translated-rtl &,
       .translated-ltr & {
         height: calc(100vh - #{$header-mobile-controls-height * 2});
+        top: 40px;
       }
 
       .show-menu & {

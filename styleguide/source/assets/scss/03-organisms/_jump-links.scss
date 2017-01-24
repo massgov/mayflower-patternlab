@@ -59,11 +59,11 @@
       &[data-sticky='middle'] {
         position: fixed;
           top: 40px;
-      }
 
-      .translated-rtl &,
-      .translated-ltr & {
-        top: 80px;
+        .translated-rtl &,
+        .translated-ltr & {
+          top: 80px;
+        }
       }
 
       &[data-sticky='bottom'] {
@@ -132,16 +132,9 @@
 
   &__link {
     line-height: 1.2;
-    display: block;
     padding-bottom: .35em;
     padding-left: 35px;
     position: relative;
-
-    & > svg,
-    span {
-      display: inline-block;
-      vertical-align: middle;
-    }
 
     & > svg {
       height: 22px;
@@ -150,10 +143,6 @@
         top: 1px;
       transform: rotate(90deg);
       width: 22px;
-    }
-
-    span {
-      @include ma-link-underline;
     }
 
     @media ($bp-small-max) {
