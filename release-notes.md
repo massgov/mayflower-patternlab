@@ -15,7 +15,7 @@
 ### Bugs 
 * DP-1278 - [Action] Link & text alignment issue in action steps
 * DP-1312 - Activities Paragraph shows link icon when there is no link
-
+* DP-1279 - Spacing issue between numbered steps & rich text field
 
 ## 3.1.0 (Sprint 10)
 ### Org Page
