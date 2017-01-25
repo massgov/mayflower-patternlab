@@ -12,7 +12,7 @@
   {% if contactUs.title %}
     <h4 class="ma__column-heading"{% if schemaPageType %} property="name"{% endif %}>
       {% if contactUs.title.href %}
-       {% set link = contactUs.title %}
+        {% set link = contactUs.title %}
         {% include "atoms-link" %}
       {% else %}
         {{contactUs.title.text}}
