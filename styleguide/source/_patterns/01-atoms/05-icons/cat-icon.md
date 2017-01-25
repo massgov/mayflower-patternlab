@@ -5,22 +5,19 @@ Description: An `<figure>` element which contains an icon atom (`<svg>` element)
 
 ## State: ALPHA
 
-### Notes:
-This template currently hard codes the include for `@atoms/07-user-added-icons/svg-camping.twig` and should be refactored to use the existing variable `catIcon.svg`.  
-
 ### Used In:
 - [@molecules/section-links](/?p=molecules-section-links)
 
 ### Contains:
 - Any supplied icon atom, such as:
-[@atoms/07-user-added-icons/svg-camping](/?p=atoms-svg-camping)
+[@atoms/05-icons/svg-lg-picnic-table](/?p=atoms-svg-lg-picnic-table)
 
 ### Variables:
 ~~~
 catIcon: {
     icon:
         type: string / required 
-        (a complete path to an icon atom twig template, such as "@atoms/07-user-added-icons/svg-camping.twig")
+        (a complete path to an icon atom twig template, such as "@atoms/05-icons/svg-picnic-table.twig")
     small:
         type: string ("true" || "")
   }
