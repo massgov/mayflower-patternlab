@@ -1,4 +1,9 @@
 .ma__key-actions {
+  @include ma-component-spacing;
+
+  @media ($bp-small-min) {
+    margin-bottom: 15px;
+  }
 
   &__container {
     @include ma-container;
@@ -9,12 +14,7 @@
     }
   }
 
-  &__title {
-
-  }
-
   &__items {
-    margin-bottom: 30px;
 
     @media ($bp-small-min) {
       display: flex;
@@ -22,17 +22,20 @@
         justify-content: space-between;
     }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    .ma__callout-link {
-      display: block;
+    & > * {
       margin-bottom: 30px;
+      width: 100%;
 
-      @media ($bp-small-min) {
-        display: flex;
+      &:last-child { // override
+        margin-bottom: 30px;
       }
+
+      @media ($bp-small-max) {
+        &:last-child { // override
+          margin-bottom: 0;
+        }
+      }
+
       @media ($bp-small-min) and ($bp-large-max) {
         width: 48.78049%; //@include span-columns(4 of 8);
       }
@@ -42,7 +45,7 @@
       }
     }
 
-    .main-content--two & .ma__callout-link {
+    .main-content--two & > * {
       @media ($bp-small-min) {
         width: 48.78049%; //@include span-columns(4 of 8);
       }
