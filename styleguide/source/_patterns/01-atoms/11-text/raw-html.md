@@ -7,7 +7,7 @@ Description: This is an empty container. It displays a "blob" of text that comes
 ### Used In:
 ### Required Variables:
 ~~~
-richText {
+rawHtml {
     content:
         type: string
 }
