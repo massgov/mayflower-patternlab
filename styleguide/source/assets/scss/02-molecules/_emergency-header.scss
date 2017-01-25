@@ -6,7 +6,7 @@
     text-align: center;
   }
 
-  @media ($bp-medium-min) {
+  @media ($bp-large-min) {
     display: flex;
       align-items: center;
   }
@@ -18,7 +18,7 @@
     padding-right: 18px;
     white-space: nowrap;
 
-    @media ($bp-medium-max) {
+    @media ($bp-large-max) {
       margin-bottom: 10px;
     }
 
@@ -51,7 +51,7 @@
     line-height: 1.4;
     margin-bottom: 0;
 
-    @media ($bp-medium-min) {
+    @media ($bp-large-min) {
       border-left-width: 1px;
       border-left-style: solid;
       padding-left: 18px;
