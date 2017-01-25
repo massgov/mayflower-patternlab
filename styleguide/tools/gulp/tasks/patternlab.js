@@ -9,9 +9,13 @@ var gulp         = require('gulp'),
 
 module.exports = function patternLabTask(config, env){
 
-    gulp.task('patternlab', function(next) {
-        return run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec("", next);
+    gulp.task('patternlab', function() {
+        run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec();
     });
+
+    // gulp.task('patternlab', function(next) {
+    //     return run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec("", next);
+    // });
 
     // register the watch
     quench.registerWatcher("patternlab", [
