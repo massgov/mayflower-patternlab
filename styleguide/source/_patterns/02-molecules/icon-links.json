@@ -1,0 +1,26 @@
+{
+  "iconLinks": {
+    "items": [{
+      "icon": "@atoms/05-icons/svg-twitter.twig",
+      "link": {
+        "href": "https://twitter.com/MassHHS",
+        "text": "@MassHHS",
+        "chevron": ""
+      }
+    },{
+      "icon": "@atoms/05-icons/svg-flickr.twig",
+      "link": {
+        "href": "https://www.flickr.com/photos/mass_hhs/",
+        "text": "Mass_HHS",
+        "chevron": ""
+      }
+    },{
+      "icon": "@atoms/05-icons/svg-blog.twig",
+      "link": {
+        "href": "https://blog.mass.gov/hhs",
+        "text": "blog.mass.gov/hhs",
+        "chevron": ""
+      }
+    }]
+  }
+}

@@ -1,0 +1,41 @@
+---
+title: Comp Heading
+---
+Description: An `<h2>` or `<h3>` element with a styled underline color designated by its CSS class.
+
+## State: ALPHA
+
+### Notes:
+- _compHeading.color - 'yellow' is currently the only optional value that can be passed to this variable_
+- _compHeading.sub - 'true' is the only optional value that can be passed to this variable_
+- _compHeading.centered - 'true' is the only optional value that can be passed to this variable_
+- `{{ modifier }}` is a local twig variable which is set in the atom twig template by appending `compHeading.color` to a CSS class name
+
+### Used In:
+- [@molecules/action-section](/?p=molecules-action-section)
+- [@organisms/by-author/key-actions](/?p=organisms-key-actions)
+- [@organisms/by-author/helpful-links](/?p=organisms-helpful-links)
+- [@organisms/by-author/form-download](/?p=organisms-form-download)
+- [@organisms/by-author/multi-row-section](/?p=organisms-multi-row-section)
+
+### Variables:
+~~~
+compHeading: {
+  title:
+    type: string / required
+  sub:
+    type: string ("true" || "" )
+  color:
+    type: string ("yellow")
+  id:
+    type: string
+  centered:
+    type: string ("true" || "" )
+}
+~~~
+
+### Variations
+- [@atoms/04-headings/comp-heading](/?p=atoms-comp-heading)
+- [@atoms/04-headings/comp-heading-subheading](/?p=atoms-comp-heading-subheading)
+- [@atoms/04-headings/comp-heading-yellow](/?p=atoms-comp-heading-yellow)
+- [@atoms/04-headings/comp-heading-centered](/?p=atoms-comp-heading-centered)

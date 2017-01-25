@@ -1,8 +1,8 @@
 <div class="ma__contact-group">
-  <h6 class="ma__contact-group__name">
+  <h5 class="ma__contact-group__name">
     {% include contactGroup.icon %}
     <span>{{contactGroup.name}}</span>
-  </h6>
+  </h5>
   {% for item in contactGroup.items %}
     <div>
       {% if item.label %}
@@ -24,11 +24,11 @@
           {{item.value | raw}}
         </div>
         {% if item.link %}
-          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron">directions</a>
+          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"><span>Directions</span></a>
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
-        <span class="ma__contact-group__value">{{item.value}}</span>        
+        <span class="ma__contact-group__value">{{item.value}}</span>
       {% endif %}
     </div>
     {% if item.details %}

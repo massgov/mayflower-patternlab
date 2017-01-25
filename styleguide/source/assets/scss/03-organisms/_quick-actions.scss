@@ -8,11 +8,15 @@
         margin-top: 0;
       }
     }
+
+    @media print {
+      display: block;
+    }
   }
   .page-content & {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
-    @media ($bp-large-min) {
+    @media print, ($bp-large-min) {
       display: none;
     }
   }

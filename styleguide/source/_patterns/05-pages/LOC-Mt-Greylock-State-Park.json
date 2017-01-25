@@ -1,4 +1,6 @@
 {
+  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
+
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "headerAlert": {
@@ -21,22 +23,6 @@
     "subTitle": "",
     "rteElements": "",
     "headerTags": ""
-  },
-
-  "locationIcons": {
-    "icons": [{
-      "path":"atoms-svg-loc-mt-park",
-      "name":"Mountain Park"
-    },{
-      "path":"atoms-svg-loc-historic-site",
-      "name":"Historic Site"
-    },{
-      "path":"atoms-svg-loc-wheelchair-accessible",
-      "name":"Wheelchair Accessible"
-    },{
-      "path":"atoms-svg-loc-dogs-allowed",
-      "name":"Dogs Allowed"
-    }]
   },
 
   "headerContact": {
@@ -75,6 +61,30 @@
       }]
     },
     "fax": ""
+  },
+
+  "actionHeader": {
+    "divider": false,
+    "widgets": [{
+      "path": "@molecules/location-icons.twig",
+      "data": {
+        "locationIcons": {
+          "icons": [{
+            "path":"@atoms/05-icons/svg-transit.twig",
+            "name":"Transit Friendly"
+          },{
+            "path":"@atoms/05-icons/svg-castle.twig",
+            "name":"Historic Site"
+          },{
+            "path":"@atoms/05-icons/svg-wheelchair.twig",
+            "name":"Wheelchair Accessible"
+          },{
+            "path":"@atoms/05-icons/svg-dog.twig",
+            "name":"Dogs Allowed"
+          }]
+        }
+      }
+    }]
   },
 
   "locationBanner": {
@@ -163,9 +173,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Park"
             }
           }
@@ -179,9 +189,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Museum"
             }
           }
@@ -195,9 +205,9 @@
           }
         },
         {
-          "path": "atoms-heading-5",
+          "path": "atoms-heading-4",
           "data": {
-            "heading5" : {
+            "heading4" : {
                 "text": "Beach"
             }
           }

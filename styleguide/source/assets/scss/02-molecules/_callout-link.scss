@@ -1,11 +1,21 @@
 .ma__callout-link {
   border: 3px solid;
   cursor: pointer;
+  display: inline-flex;
+    align-items: center;
   margin-bottom: 40px;
-  padding: 20px 30px;
+  padding: 15px 20px;
+
+  @media ($bp-small-min) {
+    padding: 20px 30px;
+  }
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  & > span {
+    width: 100%;
   }
 
   a {

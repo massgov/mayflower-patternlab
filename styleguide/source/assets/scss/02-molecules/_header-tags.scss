@@ -1,5 +1,5 @@
 .ma__header-tags {
-  font-size: 1rem;
+  font-size: 16px;
   letter-spacing: .1em;
   margin-top: 2em;
   text-transform: uppercase;
@@ -8,10 +8,16 @@
     letter-spacing: 0;
     margin-left: .5em;
 
+    @media ($bp-x-small-max) {
+      display: block;
+      margin-left: 0;
+      margin-top: .5em;
+    }
+
     a {
       border: 2px solid;
       display: block;
-      font-size: 1.063rem;
+      font-size: 17px;
       line-height: 1.8;
       margin-bottom: .5em;
       padding: 0 8px;

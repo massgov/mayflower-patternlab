@@ -19,11 +19,6 @@ $action-finder-border-color: tint($c-theme-blue,50%);
 
   &__search {
 
-    input {
-      background-color: rgba($c-white, 0.1);
-      color: $c-font-inverse;
-    }
-
     button {
       color: $c-font-inverse;
 
@@ -54,6 +49,25 @@ $action-finder-border-color: tint($c-theme-blue,50%);
         &:after {
           background-color: $c-white;
         }
+      }
+    }
+  }
+
+  &__see-all {
+    background-color: $c-theme-blue;
+
+    .ma__decorative-link {
+
+      a {
+        color: $c-font-inverse;
+
+        &:hover {
+          border-color: rgba($c-font-inverse, .5);
+        }
+      }
+
+      svg {
+        fill: rgba($c-font-inverse, .5);
       }
     }
   }

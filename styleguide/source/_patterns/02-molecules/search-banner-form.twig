@@ -1,0 +1,11 @@
+{% set form = form.content %}
+<form class="ma__search-banner__form" action="{{form.action}}">
+  <div class="ma__search-banner__input">
+    {% set inputText = form.inputText %}
+    {% include "@atoms/03-forms/input-text.twig" %}
+  </div>
+  <button class="ma__search-banner__button" type="submit">
+    <span>{{form.buttonText}}</span>
+    {% include "@atoms/05-icons/svg-search.twig" %}
+  </button>
+</form>

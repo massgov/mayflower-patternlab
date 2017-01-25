@@ -1,4 +1,4 @@
-<section class="ma__action-finder">
+<section class="ma__action-finder" id="GUID831741781374893">
   <style>
     #GUID831741781374893 {
       background-image: url('{{actionFinder.bgNarrow}}');
@@ -10,15 +10,16 @@
       }
     }
   </style>
-  <div id="GUID831741781374893" class="ma__action-finder__banner"></div>
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
-      <h2 class="ma__action-finder__title">What Would You Like to Do?</h2>
-      <div class="ma__action-finder__search">
-        {% include "@molecules/keyword-search.twig" %}
-      </div>
+      <h2 class="ma__action-finder__title">{{ actionFinder.title }}</h2>
+      {% if actionFinder.links|length > 6 %}
+        <div class="ma__action-finder__search">
+          {% include "@molecules/keyword-search.twig" %}
+        </div>
+      {% endif %}
     </header>
-    <div class="ma__action-finder__category">Featured:</div>
+    <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
     <ul class="ma__action-finder__items">
       {% for link in actionFinder.featuredLinks %}
         <li class="ma__action-finder__item js-clickable {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
@@ -32,7 +33,7 @@
         </li>
       {% endfor %}
     </ul>
-    <div class="ma__action-finder__category">All Actions &amp; Guides:</div>
+    <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
     <ul class="ma__action-finder__items ma__action-finder__items--all">
       {% for link in actionFinder.links %}
         <li class="ma__action-finder__item {{link.image ? 'ma__action-finder__item--image' : 'ma__action-finder__item--text'}}">
@@ -46,6 +47,13 @@
         </li>
       {% endfor %}
     </ul>
-
   </div>
+  {% if actionFinder.seeAll %}
+    <div class="ma__action-finder__see-all">
+      <div class="ma__action-finder__see-all-container">
+        {% set decorativeLink = actionFinder.seeAll %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
+    </div>
+  {% endif %}
 </section>

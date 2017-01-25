@@ -54,7 +54,7 @@ body {
     @media ($bp-small-min) {
       width: 210px;
     }
-    
+
     @media ($bp-small-min) {
       @include span-columns(4);
       display: inline-block;
@@ -85,7 +85,7 @@ body {
 
     @media ($bp-small-max) {
       .ma__header-search {
-        
+
         &__input {
           display:none;
         }
@@ -99,7 +99,8 @@ body {
 
           @media ($bp-small-max) {
             @include ma-valign-block;
-            border: 2px solid;
+            border-width: 2px;
+            border-style: solid;
             display: inline-block;
             position: static;
             transition: opacity .4s;
@@ -156,13 +157,13 @@ body {
 
   &__back-button {
     @include ma-button-reset;
-    font-size: 1rem;
+    font-size: 1.125rem;
     height: 33px;
     letter-spacing: .1em;
     margin-left: 20px;
     padding-left: 20px;
     position: fixed;
-      top: 5px;
+      top: 3px;
       left: 100%; // hides the outline
     text-transform: uppercase;
     transition: left .5s, visibility .5s;
@@ -175,7 +176,7 @@ body {
       content: "";
       display: inline-block;
       height: .65em;
-      margin-top: 4px;
+      margin-top: 3px;
       margin-left: 3px;
       position: absolute;
         left: 0;
@@ -189,6 +190,8 @@ body {
       display: inline-block;
       vertical-align: middle;
     }
+
+    .show-menu.show-utilmenu &,
     .show-menu.show-submenu & {
       left: calc(100vw - 280px);
       visibility: visible;
@@ -198,7 +201,7 @@ body {
   &__menu-button {
     background-color: transparent;
     border: none;
-    font-size: 1rem;
+    font-size: 1.125rem;
     height: 35px;
     letter-spacing: .1em;
     line-height: 35px;

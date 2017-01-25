@@ -10,6 +10,11 @@
       left: 0;
     transform: translateY(-50%);
     width: 30px;
+
+    & > svg {
+      height: 30px;
+      width: 30px;
+    }
   }
 
   &__text {

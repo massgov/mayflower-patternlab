@@ -1,4 +1,6 @@
 {
+  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
+
   "breadcrumbs":{
     "light": "",
     "links": [{
@@ -10,20 +12,27 @@
   "pageBanner": {
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "small":"",
+    "size":"",
     "icon":"atoms-svg-camping",
     "title":"Visiting & Exploring"
   },
 
   "catIcon": {
-    "svg":"atoms-svg-camping"
+    "icon":"atoms-svg-camping"
   },
 
   "sectionThreeUp" : {
-    "title": "",
+    "compHeading": {
+      "title": "",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": "true"
+    },
     "sections": [{
+      "id": "GUIDasjdhf1",
       "catIcon": {
-        "svg":"atoms-svg-id-card",
+        "icon":"@atoms/07-user-added-icons/svg-id-card.twig",
         "small":"true"
       },
       "title" : {
@@ -45,8 +54,9 @@
       }]
     },
     {
+      "id": "GUIDasjdhf2",
       "catIcon": {
-        "svg":"atoms-svg-campfire",
+        "icon":"@atoms/07-user-added-icons/svg-campfire.twig",
         "small":"true"
       },
       "title" : {
@@ -72,8 +82,9 @@
       }]
     }, 
     {
+      "id": "GUIDasjdhf3",
       "catIcon": {
-        "svg":"atoms-svg-map",
+        "icon":"@atoms/07-user-added-icons/svg-map.twig",
         "small":"true"
       },
       "title" : {
@@ -99,8 +110,9 @@
       }]
     },
     {
+      "id": "GUIDasjdhf4",
       "catIcon": {
-        "svg":"atoms-svg-theater",
+        "icon":"@atoms/07-user-added-icons/svg-theater.twig",
         "small":"true"
       },
       "title" : {

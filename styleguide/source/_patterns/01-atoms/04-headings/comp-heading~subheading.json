@@ -3,6 +3,7 @@
     "title": "Key Actions",
     "sub": true,
     "color": "",
-    "id": "key-actions"
+    "id": "key-actions",
+    "centered": ""
   }
 }

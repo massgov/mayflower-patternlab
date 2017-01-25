@@ -1,9 +1,8 @@
 $page-banner-icon-width: $column + $gutter;
-$page-banner-small: '.ma__page-banner--small';
 
 .ma__page-banner {
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   height: 400px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -14,8 +13,19 @@ $page-banner-small: '.ma__page-banner--small';
     margin-bottom: 40px;
   }
 
+  &--large {
+    @media ($bp-small-min) {
+      height: 305px;
+    }
+  }
+
+
   &__container {
     @include ma-container;
+  }
+
+  &--large &__container {
+    height: 100%;
   }
 
   &__content {
@@ -30,19 +40,10 @@ $page-banner-small: '.ma__page-banner--small';
     @media ($bp-x-small-min) {
       display: flex;
         align-items: center;
-      margin-right: 20px;
+      margin-right: 70px;
       padding-top: 50px;
-      padding-right: 175px;
-    }
-
-    #{$page-banner-small} & {
-      font-size: .8rem;
-      padding: 25px 25px 40px 0;
-
-      @media ($bp-x-small-min) {
-        padding-top: 45px;
-        padding-right: 175px;
-      }
+      padding-right: 80px;
+      transform: translateY(-50%) skew(-30deg);
     }
 
     &:before {
@@ -52,6 +53,29 @@ $page-banner-small: '.ma__page-banner--small';
         top: 0;
         right: 100%;
       width: 50vw;
+
+      @media ($bp-x-small-min) {
+        right: 99%; // weird gap when skewed is shown
+      }
+    }
+  }
+
+  &--small &__content {
+    font-size: .8rem;
+    padding: 25px 25px 40px 0;
+
+    @media ($bp-x-small-min) {
+      padding-top: 45px;
+      padding-right: 80px;
+    }
+  }
+
+  &--large &__content {
+    height: 100%;
+    max-width: 640px;
+
+    @media ($bp-x-small-min) {
+      margin-right: 105px;
     }
   }
 
@@ -59,12 +83,12 @@ $page-banner-small: '.ma__page-banner--small';
     padding-right: 30px;
     width: 75px;
 
+    @media ($bp-x-small-min) {
+      transform: skew(30deg);
+    }
+
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
-
-      #{$page-banner-small} & {
-        width: $column;
-      }
     }
 
     & > svg {
@@ -89,6 +113,13 @@ $page-banner-small: '.ma__page-banner--small';
     }
   }
 
+  &--small &__icon {
+    
+    @media ($bp-medium-min) {
+      width: $column;
+    }
+  }
+
   &__title {
     flex-grow: 1;
     font-size: 4rem;
@@ -97,6 +128,7 @@ $page-banner-small: '.ma__page-banner--small';
     vertical-align: middle;
 
     @media ($bp-x-small-min) {
+      transform: skew(30deg);
       width: calc(100% - 75px);
     }
 
@@ -111,8 +143,13 @@ $page-banner-small: '.ma__page-banner--small';
     @media ($bp-x-large-min){
       font-size: 5.125rem;
     }
+
+    span {
+      font-size: .4em;
+    }
   }
 
+  &--large &__title,
   &--small &__title {
     font-size: 3.25rem;
 

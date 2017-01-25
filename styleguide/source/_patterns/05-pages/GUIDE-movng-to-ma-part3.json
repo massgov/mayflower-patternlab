@@ -1,4 +1,43 @@
 {
+  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
+
+  "emergencyAlerts": {
+    "id":"GUID18378923w38789",
+    "buttonAlert": {
+      "hideText": "Hide",
+      "showText": "Show",
+      "text": "Updates"
+    },
+    "emergencyHeader": {
+      "title": "The State is experiencing severe weather due to the winter storm Paula."
+    },
+    "alerts": [{
+      "message": "MassPort is operating with limited flights due to road closures.",
+      "timeStamp": "02.15.16, 5:00 p.m.",
+      "link": {
+        "href": "#",
+        "text":"Read full alert",
+        "chevron": "true"
+      }
+    },{
+      "message": "The MTBA is operating at a lighter service level, and experiencing delays.",
+      "timeStamp": "02.15.16, 3:00 p.m.",
+      "link": {
+        "href": "http://massgov.legostud.velir.com:3000/patterns/05-pages-GUIDE-movng-to-ma-part2/05-pages-GUIDE-movng-to-ma-part2.html",
+        "text":"Read full alert",
+        "chevron": "true"
+      }
+    },{
+      "message": "The Governor directs non-emergency executive branch state employees to not come in to work.",
+      "timeStamp": "02.13.16, 10:00 a.m.",
+      "link": {
+        "href": "#",
+        "text":"Read full alert",
+        "chevron": "true"
+      }
+    }]
+  },
+  
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "illustratedHeader": {
@@ -51,7 +90,7 @@
     }]
   },
 
-  "multiRowSections": [{
+  "stackedRowSections": [{
     "title": "Residency",
     "id": "residency",
     "pageContent": [{
@@ -506,12 +545,17 @@
             }
           }
         },{
-          "path": "@atoms/09-media/image.twig",
+          "path": "@atoms/09-media/figure.twig",
           "data": {
-            "image": {
-              "alt": "alt text",
-              "src": "/assets/images/placeholder/800x400.png",
-              "pull": ""
+            "figure": {
+              "align": "",
+              "image": { 
+                "alt": "alt text", 
+                "src": "/assets/images/placeholder/800x400.png",
+                "height": "",
+                "width": ""
+              },
+              "caption": ""
             }
           }
         }]
@@ -596,12 +640,17 @@
             }
           }
         },{
-          "path": "@atoms/09-media/image.twig",
+          "path": "@atoms/09-media/figure.twig",
           "data": {
-            "image": {
-              "alt": "alt text",
-              "src": "/assets/images/placeholder/800x400.png",
-              "pull": "right"
+            "figure": {
+              "align": "align-right",
+              "image": { 
+                "alt": "alt text", 
+                "src": "/assets/images/placeholder/400x300.png",
+                "height": "",
+                "width": ""
+              },
+              "caption": ""
             }
           }
         },{

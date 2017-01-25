@@ -1,0 +1,34 @@
+{
+  "utilityNav": {
+    "dropdown": {
+      "labelText": "Language:",
+      "id": "lang-select",
+      "name": "lang-select",
+      "options": [{
+        "text": "Default language: English",
+        "value": "en"
+      },{
+        "text": "Fran&#231;ais",
+        "value": "fr"
+      },{
+        "text": "Deutsch",
+        "value": "de"
+      },{
+        "text": "Espa&#241;ol",
+        "value": "es"
+      }]
+    },
+
+    "items": [{
+      "text": "State Organizations",
+      "icon": "@atoms/05-icons/svg-building.twig",
+      "closeText": "Close",
+      "panel": "@molecules/state-util.twig"
+    },{
+      "text": "Log in to...",
+      "icon": "@atoms/05-icons/svg-login.twig",
+      "closeText": "Close",
+      "panel": "@molecules/login-util.twig"
+    }]
+  }
+}

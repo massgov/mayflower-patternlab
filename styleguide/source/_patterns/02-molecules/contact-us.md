@@ -1,34 +1,35 @@
 ---
-Title: Contact Us
+title: Contact Us
 ---
+Description: `<section>` element which contains an `<h4>` title heading (an entity title) and several groups (or types IE phone, fax, email, address) of contact information.
 
-##Fields:
-* Title (optional) - object
-  * href (optional) - string/url
-  * target (optional) -  string "_blank" or ""
-  * text - string
-  * chevron - string/boolean - "false"
-* Hide (optional) - string "Fax", "Address", or "" - States where the accordion should start.  If blank, the accordion isn't shown.
-* Phone (optional) - Object
-  * contains a Contact Group partial
-* Online (optional) - Object
-  * contains a Contact Group partial
-* Fax (optional) - Object
-  * contains a Contact Group partial
-* Address (optional) - Object
-  * Address 1 - string
-  * Address 2 - string
-  * City - string
-  * State - string
-  * zip - number
-  * directions:
-    * href - string/url - google map URL with street address
-    * target (optional) -  string "_blank" or ""
-    * text - string "directions"
-    * chevron - string/boolean - "true"
+## State: ALPHA
 
-##Partials:
-* Contact Group
+### Notes:
+The first two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
 
-##Notes:
-* first two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
+### Used In:
+
+### Contains
+[@molecules/contact-group](?p=molecules-contact-group)
+
+### Variables:
+~~~
+contactUs: {
+    title: {
+        href:
+            type: string (url) / optional
+        target:
+            type: string (_blank || "") / optional
+        text:
+            type: string / required
+        chevron:
+            type: string (boolean, "false") / required
+    } / required
+    groups: [
+      ...
+        contactGroup object instances, see @molecules/contact-group
+      ...
+    ] / required
+}
+~~~

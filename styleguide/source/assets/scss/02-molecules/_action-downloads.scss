@@ -6,7 +6,7 @@
   }
 
   &__item + &__item {
-    padding-top: 35px;
+    padding-top: 25px;
   }
 
   &__title {
@@ -36,6 +36,11 @@
     opacity: .75;
     width: 55px;
     overflow: hidden;
+
+    & > svg {
+      height: 37px;
+      width: 35px;
+    }
   }
 
 }

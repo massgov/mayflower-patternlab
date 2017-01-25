@@ -13,7 +13,7 @@
   }
 
   // controls for when to activate accordion
-  &.js-section-accordion:before {
+  &.js-accordion:before {
     content: "true";
     display: none;
 
@@ -32,8 +32,11 @@
   }
 
   &__description {
-    font-size: 1.25rem;
     margin-bottom: 25px;
+
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
   }
 
 
@@ -60,8 +63,10 @@
       display: none;
     }
 
-    svg {
+    & a > svg {
+      height: .75em;
       margin-right: -16px;
+      width: .75em;
     }
 
     a {
@@ -71,11 +76,18 @@
   }
 
   &__title {
+    @include ma-h3;
     margin-bottom: 15px;
 
+    a {
+      border: none;
+    }
+
     a:hover {
+      border: none;
       opacity: .6;
     }
+
 
     @media ($bp-x-small-max) {
       cursor: pointer;
@@ -98,7 +110,7 @@
         }
       }
 
-      svg {
+      a > svg {
         display: none;
       }
     }

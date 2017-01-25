@@ -27,4 +27,8 @@
       fill: rgba($c-font-link, .5);
     }
   }
+
+  &__image {
+    background-color: tint($c-theme-blue,50%);
+  }
 }

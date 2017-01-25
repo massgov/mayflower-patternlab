@@ -20,7 +20,7 @@ button {
 .ma__button-search {
   border: 2px solid;
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 14px;
   letter-spacing: .1em;
   padding: 14px;
   text-transform: uppercase;
@@ -28,12 +28,12 @@ button {
   white-space: nowrap;
 
   span,
-  &__icon {
+  & > svg {
     display: inline-block;
     vertical-align: middle;
   }
 
-  &__icon {
+  & > svg {
     height: 20px;
     transition: fill .4s;
     width: 20px;

@@ -8,6 +8,14 @@
     }
   }
 
+  .post-content & {
+    border-color: $c-bd-divider;
+  }
+
+  &__label {
+    @include ma-font(700);
+  }
+
   &__item {
 
     &:last-child {
@@ -18,30 +26,14 @@
 
     @media ($bp-medium-max) {
 
-      &:nth-last-child(2) {
+      .pre-content & {
+        &:nth-last-child(2) {
 
-        &:before {
-          border-color: $c-theme-blue;
+          &:before {
+            border-color: $c-theme-blue;
+          }
         }
       }
-    }
-  }
-
-  &__menu-trigger {
-    color: transparent;
-  }
-
-  &__menu-display {
-    color: $c-font-link;
-  }
-
-  &__menu-trigger:focus ~ &__menu-display {
-    border-color: Highlight !important;
-
-    /* WebKit gets its native focus styles.
-     */
-    @media (-webkit-min-device-pixel-ratio:0) {
-      outline: -webkit-focus-ring-color auto 5px;
     }
   }
 
