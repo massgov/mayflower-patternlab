@@ -4,18 +4,18 @@
   {% set accordionContent = "js-accordion-content" %}
 {% endif %}
 <section class="ma__header-contact {{accordionParent}}">
-  <div class="ma__header-contact__address" property="address" typeof="PostalAddress">
+  <div class="ma__header-contact__address" {% if schemaPageType %}property="address" typeof="PostalAddress"{% endif %}>
     {% if headerContact.title %}
-      <span property="name">{{headerContact.title | raw}}, </span>
+      <span {% if schemaPageType %}property="name">{% endif %}{{headerContact.title | raw}}, </span>
     {% endif %}
     {% if headerContact.address2 %}
-      <span><span property="streetAddress">{{headerContact.address1}}</span> <span>{{headerContact.address2}}</span>, </span>
+      <span><span{% if schemaPageType %} property="streetAddress">{% endif %}{{headerContact.address1}}</span> <span>{{headerContact.address2}}</span>, </span>
     {% else %}
-      <span property="streetAddress">{{headerContact.address1}}, </span>
+      <span{% if schemaPageType %} property="streetAddress"{% endif %}>{{headerContact.address1}}, </span>
     {% endif %}
-    <span property="addressLocality">{{headerContact.city}}, <span property="addressRegion">{{headerContact.state}}</span> <span property="postalCode">{{headerContact.zip}}</span></span>
+    <span{% if schemaPageType %} property="addressLocality"{% endif %}>{{headerContact.city}}, <span{% if schemaPageType %} property="addressRegion"{% endif %}>{{headerContact.state}}</span> <span{% if schemaPageType %} property="postalCode"{% endif %}>{{headerContact.zip}}</span></span>
   </div>
-  <div class="ma__header-contact__directions" property="hasMap" typeof="Map">
+  <div class="ma__header-contact__directions"{% if schemaPageType %} property="hasMap" typeof="Map"{% endif %}>
     {% set link = headerContact.directions %}
     {% include "@atoms/11-text/link.twig" %}
   </div>

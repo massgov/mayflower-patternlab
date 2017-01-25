@@ -1,4 +1,4 @@
-{% if schemaPageType == "Park" %}
+{% if schemaPageType == "Park"  or schemaPageType == "GovernmentOffice" %}
   <section class="ma__action-event" property="event" typeof="Event">
     <h3 class="ma__action-event__name" property="name">
       {% set decorativeLink = actionEvent.name %}

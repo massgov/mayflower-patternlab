@@ -15,7 +15,7 @@
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
         <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
-        {% if item.label == "Main:" %}
+        {% if schemaPageType and item.label == "Main:" %}
           <meta property="telephone" content="{{item.value}}" />
         {% endif %}
       {# Email - add mailto: to href #}
@@ -23,18 +23,18 @@
         <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
-        <div class="ma__contact-group__address" property="address" typeof="PostalAddress">
+        <div class="ma__contact-group__address">
           {{item.value | raw}}
         </div>
         {% if item.link %}
-          <span property="hasMap" typeof="Map">
-            <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron" property="url"><span>Directions</span></a>
+          <span{% if schemaPageType == "Park" %} property="hasMap" typeof="Map"{% endif %}>
+            <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"{% if schemaPageType %}  property="url"{% endif %}><span>Directions</span></a>
           </span>
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
         <span class="ma__contact-group__value">{{item.value}}
-        {% if item.type == "fax" %}
+        {% if schemaPageType and item.type == "fax" %}
           <meta property="faxNumber" content="{{item.value}}" />
         {% endif %}
         </span>

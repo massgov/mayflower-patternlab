@@ -1,4 +1,4 @@
-<section class="ma__rich-text js-ma-rich-text" {% if sectionId == "overview" %}property="description"{% endif %}>
+<section class="ma__rich-text js-ma-rich-text" {% if schemaPageType and sectionId == "overview" %}property="description"{% endif %}>
   {% for element in rteElements %}
     {% include element.path with element.data %}
   {% endfor %}  
