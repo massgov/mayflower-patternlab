@@ -41,6 +41,10 @@ $illustrated-link-image-width: 130px;
     text-transform: uppercase;
   }
 
+  &__link {
+    display: inline;
+  }
+
   &__title {
     display: table-cell;
     font-size: 1.625rem;

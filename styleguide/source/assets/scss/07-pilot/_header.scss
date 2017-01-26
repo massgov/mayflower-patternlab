@@ -26,6 +26,13 @@ $bp-header-logo-min: "min-width: 1000px";
     }
 
     @media ($bp-header-toggle-min) {
+      .translated-rtl &,
+      .translated-ltr & {
+        top: 0;
+      }
+    }
+
+    @media ($bp-header-toggle-min) {
       background-color: $c-theme-blue;
       display: block;
       position: relative;
