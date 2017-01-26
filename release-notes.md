@@ -2,7 +2,7 @@
 
 ## 3.2.0 (Sprint 11)
 
-### DS-5 
+### DS-5
 * DP-1103 - Implement default file/download icon in Patternlab
 * DP-691 - Implement Google Translate in Pattern Lab
 
@@ -12,10 +12,11 @@
 ### DS-41
 * DP-787 - Create Park Icons for Park Types, Activities, Users
 
-### Bugs 
+### Bugs
 * DP-1278 - [Action] Link & text alignment issue in action steps
 * DP-1312 - Activities Paragraph shows link icon when there is no link
 * DP-1279 - Spacing issue between numbered steps & rich text field
+* DP-1521 - External links under jclickable containers were not firing the interstitial js
 
 ## 3.1.0 (Sprint 10)
 ### Org Page
@@ -144,8 +145,8 @@
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
 * MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
-* MGVDU-119 - FE Dev: Modifications to Action page: Map 
-* MGVDU-137 - FE Dev: Modifications to Action page: OR Lists 
+* MGVDU-119 - FE Dev: Modifications to Action page: Map
+* MGVDU-137 - FE Dev: Modifications to Action page: OR Lists
 * MGVDU-139 - FE Dev: Action Page Header
 
 ### Location Page

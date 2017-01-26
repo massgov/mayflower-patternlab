@@ -1,7 +1,7 @@
 ---
 title: Callout link
 ---
-Description: A decorative link `<a>` element which is wrapped in a styled container.
+Description: An decorative link `<a>` element which wraps a styled container.
 ## Status: BETA
 ### Used in:
 - [@organisms/by-author/action-finder](/?p=organisms-action-finder)
