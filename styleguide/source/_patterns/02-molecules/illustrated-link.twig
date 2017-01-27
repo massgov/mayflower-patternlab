@@ -2,8 +2,10 @@
   <div class="ma__illustrated-link__content">
     <div class="ma__illustrated-link__title">
       <span class="ma__illustrated-link__label">Guide:</span>
-      {% set decorativeLink = illustratedLink %}
-      {% include "@atoms/decorative-link.twig" %}
+      <div class="ma__illustrated-link__link">
+        {% set decorativeLink = illustratedLink %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
     </div>
   </div>
     {% if illustratedLink.image %}

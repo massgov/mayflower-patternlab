@@ -20,7 +20,7 @@
     color: $c-font-base;
 
     @media ($bp-header-toggle-min) {
-      background-color: $c-theme-blue;
+      //background-color: $c-theme-blue;
       color: $c-font-inverse;
     }
 
@@ -36,7 +36,6 @@
         fill: $c-font-inverse;
         opacity: .7;
         stroke: transparent;
-        opacity: .7;
       }
     }
     
@@ -46,16 +45,35 @@
   }
 
   &__translate {
+    .goog-te-gadget {
+      @include ma-font(400);
+    }
 
-    .ma__dropdown__link {
+    .goog-te-gadget-simple {
+      background-color: transparent;
+      border: none;
       font-weight: 500;
 
-      &:after {
+      & > img {
+        opacity: .7;
+      }
+    }
 
-        @media ($bp-header-toggle-max) {
+    .goog-te-gadget-simple .goog-te-menu-value {
+      color: $c-font-base;
+
+      @media ($bp-header-toggle-max) {
+        &:after {
           border-right-color: $c-theme-green;
           border-bottom-color: $c-theme-green;
-          opacity: 1;
+        }
+      }
+
+      @media ($bp-header-toggle-min) {
+        color: $c-font-inverse;
+
+        &:after {
+          opacity: .7;
         }
       }
     }

@@ -1,7 +1,8 @@
 <div class="ma__header-tags">
-  More About: <span class="ma__header-tags__terms">
+  <span>More About:</span>
+  <div class="ma__header-tags__terms">
     {% for item in headerTags.taxonomyTerms %}
       <a href="{{item.url}}">{{item.term}}</a>
     {% endfor %}
-  </span>
+  </div>
 </div>
