@@ -206,6 +206,13 @@
     }
 
     &:last-child {
+
+      @media ($bp-header-toggle-max) {
+        display: none;
+      }
+    }
+
+    &:last-child {
       border-bottom: none;
     }
   }
@@ -216,5 +223,16 @@
     line-height: 1.33;
     padding: 10px 20px;
 
+    & > svg,
+    & > span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__subitem:last-child &__link {
+    font-size: 1.125rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
   }
 }

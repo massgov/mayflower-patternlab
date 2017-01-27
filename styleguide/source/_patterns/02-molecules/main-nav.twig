@@ -10,7 +10,12 @@
               {% for subNav in nav.subNav %}
                 <li class="ma__main-nav__subitem"><a href="{{ subNav.href }}" class="ma__main-nav__link">{{ subNav.text }}</a></li>
               {% endfor %}
-              <li class="ma__main-nav__subitem"><a href="{{ nav.href }}" class="ma__main-nav__link">{{ nav.text }}</a></li>
+              <li class="ma__main-nav__subitem">
+                <a href="{{ nav.href }}" class="ma__main-nav__link">
+                  {% include "@atoms/05-icons/svg-arrow-bent.twig" %}
+                  <span>{{ nav.text }}</span>
+                </a>
+              </li>
             </ul>
           </div>
         {% endif %}
