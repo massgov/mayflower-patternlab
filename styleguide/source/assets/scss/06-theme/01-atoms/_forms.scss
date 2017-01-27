@@ -8,6 +8,13 @@
   }
 }
 
+input, 
+optgroup, 
+select, 
+textarea {
+  @include ma-font(400);
+}
+
 
 input {
   background-color: $c-white;
