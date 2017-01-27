@@ -5,7 +5,7 @@
   "directory": "assets",
   "urlDomain": "http://mayflower.mass.gov",
   "urlPath": "/",
-  "googleLanguages": "en,es,fr,pt,ar,ht,it,km,ko,ru,vi,zh-CN",
+  "googleLanguages": "ar,es,fr,pt,ht,it,km,ko,ru,vi,zh-CN",
 
   "headerSearch" : {
     "placeholder":"What can we help you find?",
