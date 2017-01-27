@@ -157,7 +157,7 @@ export default function (window,document,$,undefined) {
         hide($openContent);
       }
     });
-    $mainNavToggle.children('a').on('click', function(e) {
+    $mainNavToggle.children('button').on('click', function(e) {
       if(windowWidth <= breakpoint) {
         e.preventDefault();
         let $content = $(this).parent().find('.js-main-nav-content');
@@ -169,7 +169,7 @@ export default function (window,document,$,undefined) {
     $mainNavToggle.last()
       .find('.js-main-nav-content li')
         .last()
-          .find('a').on('keydown', function(e) {
+          .find('button').on('keydown', function(e) {
             e.stopPropagation();
             // previous key was not a shift
             if(e.keyCode === 9 && previousKey !== 16) {  // tab arrow\

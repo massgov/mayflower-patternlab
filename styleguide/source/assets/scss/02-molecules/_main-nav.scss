@@ -58,6 +58,7 @@
   }
 
   &__top-link {
+    @include ma-button-reset;
     display: block;
     font-size: 1.125rem;
     letter-spacing: .1em;
@@ -65,10 +66,13 @@
     padding: 10px 0;
     padding-right: 15px;
     text-transform: uppercase;
+    transition: all 0.4s ease;
+    width: 100%;
 
     @media ($bp-header-toggle-max) {
       padding-right: 20px;
       padding-left: 20px;
+      text-align: left;
     }
 
     @media ($bp-header-toggle-min) {

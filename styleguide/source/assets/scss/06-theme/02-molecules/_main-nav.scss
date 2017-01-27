@@ -15,7 +15,8 @@
 
   &__top-link {
     color: $c-font-dark;
-
+    font-weight: 700;
+    
     .has-subnav & {
   // chevron
       &:after {
