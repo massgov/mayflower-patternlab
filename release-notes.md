@@ -1,20 +1,47 @@
 # Mass Gov Release Notes
 
+## 3.2.0 (Sprint 11)
+
+### DS-5 
+* DP-1103 - Implement default file/download icon in Patternlab
+* DP-691 - Implement Google Translate in Pattern Lab
+* DP-976 - Implement topic funnel icons in Patternlab
+
+### DS-23 - External Search
+* DP-1267 - Implement the structure data markup for page elements to mayflower
+
+### DS-41
+* DP-787 - Create Park Icons for Park Types, Activities, Users
+
+### Bugs 
+* DP-1278 - [Action] Link & text alignment issue in action steps
+* DP-1312 - Activities Paragraph shows link icon when there is no link
+* DP-1279 - Spacing issue between numbered steps & rich text field
+
 ## 3.1.0 (Sprint 10)
 ### Org Page
 * DP-708 - Implement Organization Page in PatternLab
 * DP-867 - FE - Action Finder
 * DP-874 - FE - Org: Implement Header
 
+### Print Styles
+* DP-671 - Design print styles for organizational pages
+* DP-644 - Design print styles for guides
+* DP-686 - Design print styles for location pages
+* DP-658 - Design print styles for How-to pages
+
 ### Other
 * DP-712 - Handle Stacked Row Optional Header Image variants
 * DP-821 - Ensure that link chevron is never bumped to a new line
+* DP-980 - Update handicap icon in Patternlab
+* DP-730 - Implement footer in Pattern Lab
+* DP-796 - Implement MVP Header - Utility Nav in Patternlab
+
 
 ## 3.0.0 (Sprint 9)
 ### Homepage search
 * MGRP-339 - FE: Homepage build-out
 * MGRP-304 - FE: Homepage - Multi-row template - refactor
-* MGRP-328 - Implement footer in Pattern Lab 
 * MGRP-311 - FE: Updated Header
 
 ### Org page
@@ -27,13 +54,15 @@
 * MQA-81 - [L2] - 'Featured' and 'All actions & guides' should be headers
 * MGRP-290 - Vertically Align Callout links
 
+### Print Styles
+* MGVDU-141 - Design print styles for How-to pages
+* MGVDU-438 - Design print styles for location pages
+* MGVDU-439 - Design print styles for guides
+
 ### Other
 * MGRP-258 - Updated Pattern Lab Documentation (molecules)
 * MGRP-344 - FE - Update rich text image to allow captions and different classes.
 * MGVDU-448 - Pilot Header update
-* MGVDU-141 - Design print styles for How-to pages
-* MGVDU-438 - Design print styles for location pages
-* MGVDU-439 - Design print styles for guides
 
 
 ## 2.2.0 (Sprint 8)
