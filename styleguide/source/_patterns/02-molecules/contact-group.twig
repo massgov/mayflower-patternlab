@@ -1,8 +1,10 @@
 <div class="ma__contact-group">
-  <h5 class="ma__contact-group__name">
-    {% include contactGroup.icon %}
-    <span>{{contactGroup.name}}</span>
-  </h5>
+  {% if contactGroup.name and contactGroup.icon %}
+    <h5 class="ma__contact-group__name">
+      {% include contactGroup.icon %}
+      <span>{{contactGroup.name}}</span>
+    </h5>
+  {% endif %}
   {% for item in contactGroup.items %}
     <div>
       {% if item.label %}
@@ -24,7 +26,13 @@
           {{item.value | raw}}
         </div>
         {% if item.link %}
-          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"><span>Directions</span></a>
+          {% set decorativeLink = {
+            "type": "external",
+            "href": item.link,
+            "text": "Directions"
+          }
+          %}
+          {% include "@atoms/decorative-link.twig" %}
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
