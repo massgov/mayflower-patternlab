@@ -1,6 +1,6 @@
 {
   "catIcon": {
-    "icon":"@atoms/07-user-added-icons/svg-camping.twig",
+    "icon":"@atoms/05-icons/svg-lg-picnic-table.twig",
     "small":"true"
   }
 }

@@ -1,6 +1,8 @@
 {
   "hideHeaderSearch": true,
   
+  "schemaPageType": "Home",
+  
   "stackedRowSections": [{
     "title":"",
     "id":"",

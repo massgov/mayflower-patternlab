@@ -26,6 +26,7 @@
           {{item.value | raw}}
         </div>
         {% if item.link %}
+          <div class="ma__contact-group__directions">
           {% set decorativeLink = {
             "type": "external",
             "href": item.link,
@@ -33,6 +34,7 @@
           }
           %}
           {% include "@atoms/decorative-link.twig" %}
+          </div>
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}

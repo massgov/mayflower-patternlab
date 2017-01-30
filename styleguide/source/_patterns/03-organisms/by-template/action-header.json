@@ -84,16 +84,16 @@
       "data": {
         "locationIcons": {
           "icons": [{
-            "path":"atoms-svg-loc-mt-park",
-            "name":"Mountain Park"
+            "path":"@atoms/05-icons/svg-transit.twig",
+            "name":"Transit Friendly"
           },{
-            "path":"atoms-svg-loc-historic-site",
+            "path":"@atoms/05-icons/svg-castle.twig",
             "name":"Historic Site"
           },{
-            "path":"atoms-svg-loc-wheelchair-accessible",
+            "path":"@atoms/05-icons/svg-wheelchair.twig",
             "name":"Wheelchair Accessible"
           },{
-            "path":"atoms-svg-loc-dogs-allowed",
+            "path":"@atoms/05-icons/svg-dog.twig",
             "name":"Dogs Allowed"
           }]
         }

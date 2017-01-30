@@ -1,15 +1,15 @@
   
-  <!--DO NOT REMOVE-->
-  {{ patternLabFoot | raw }}
-  <script src="/assets/js/env.js"></script>
-  <script src="/assets/js/vendor-generated.js"></script>
-  <script src="/assets/js/index-generated.js"></script>
-  <script> 
-    var json = JSON.parse($("#sg-pattern-data-footer").html()),
-      data = json.patternBreadcrumb.patternType;
-    if(data !== 'templates' && data !== 'pages') {
-        $('body').addClass('pl__styleguide');
-    }
-  </script>
+    <!--DO NOT REMOVE-->
+    {{ patternLabFoot | raw }}
+    <script src="/assets/js/env.js"></script>
+    <script src="/assets/js/vendor-generated.js"></script>
+    <script src="/assets/js/index-generated.js"></script>
+    <script> 
+      var json = JSON.parse($("#sg-pattern-data-footer").html()),
+        data = json.patternBreadcrumb.patternType;
+      if(data !== 'templates' && data !== 'pages') {
+          $('body').addClass('pl__styleguide');
+      }
+    </script>
   </body>
 </html>
