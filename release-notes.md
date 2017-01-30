@@ -1,5 +1,9 @@
 # Mass Gov Release Notes
 
+## 3.3.0 (Sprint 11)
+### DS-5 
+* DP-981 - PatternLab - Refactor header contact us
+
 ## 3.2.2 (Sprint 11)
 
 ### DS-5 
