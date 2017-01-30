@@ -1,5 +1,16 @@
 # Mass Gov Release Notes
 
+## 3.3.0 (Sprint 11)
+### DS-5 
+* DP-981 - PatternLab - Refactor header contact us
+* DP-1535 - Modify topic nav in Pattern Lab in keeping with touch / desktop design update
+* DP-1759 - Implement Location Row on Org Page in Patternlab
+
+
+### DS-8 
+* DP-1367 - The "Top" button does not move keyboard focus to the top of the page. 
+
+
 ## 3.2.2 (Sprint 11)
 
 ### DS-5 
