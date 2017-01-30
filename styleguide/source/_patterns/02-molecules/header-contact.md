@@ -1,9 +1,9 @@
 ---
-title: Header contact
+title: Depreciated - Header contact
 ---
 Description: Displays a set of contact information in the header.
 
-## State: Alpha
+## State: Depreciated.
 
 ### Contains:
 - [@molecules/contact-group](/?p=organisms-contact-group)
@@ -12,8 +12,6 @@ Description: Displays a set of contact information in the header.
 - [@organisms/by-author/action-header](/?p=organisms-action-header)
 
 ## Notes:
-- The address needs to be able to accept a single element and not just an address with multiple fields.
-- This is similar to the [@molecules/contact-us](/?p=organisms-contact-us) but has a different set of classes and allows for the address.
 - `{{ accordion }}, {{ accordionParent }}, {{ accordionContent }}` are a set of local twig variables which is set in the molecule if phone, online and fax is set.
 
 ### Required Variables
