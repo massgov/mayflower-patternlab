@@ -1,5 +1,5 @@
 {% for element in rteElements %}
 <section class="ma__rich-text js-ma-rich-text"{% if element.schemaSdProperty %} property="{{element.schemaSdProperty}}"{% endif %}>
-    {% include element.path with element.data %}
-{% endfor %}  
+    {% include element.path with element.data %}  
 </section>
+{% endfor %}

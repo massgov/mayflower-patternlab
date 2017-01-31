@@ -1,9 +1,9 @@
 <section class="ma__action-event"{% if schemaPageType %} property="event" typeof="Event"{% endif %}>
-  <h3 class="ma__action-event__name"{% if schemaPageType %}  property="name"{% endif %}>
+  <h3 class="ma__action-event__name"{% if schemaPageType %} property="name"{% endif %}>
     {% set decorativeLink = actionEvent.name %}
     {% include "@atoms/decorative-link.twig" %}
   </h3>
-  <div class="ma__action-event__date"{% if schemaPageType %}  property="startDate" content="{{actionEvent.schemaDate}}"{% endif %}>
+  <div class="ma__action-event__date"{% if schemaPageType %} property="startDate" content="{{actionEvent.schemaDate}}"{% endif %}>
     {{actionEvent.date}}
   </div>
   {% if actionEvent.description %}

@@ -28,7 +28,7 @@
         </div>
         {% if item.link %}
           <span{% if schemaPageType %} property="hasMap" typeof="Map"{% endif %}>
-            <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"{% if schemaPageType %}  property="url"{% endif %}><span>Directions</span></a>
+            <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"{% if schemaPageType %} property="url"{% endif %}><span>Directions</span></a>
           </span>
         {% endif %}
       {# Default - just spit out the value #}
