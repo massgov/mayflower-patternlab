@@ -6,6 +6,7 @@
     "data": {
       "rteElements": [{
         "path": "atoms-paragraph",
+        "schemaSdProperty": "description",
         "data": {
           "paragraph": {
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."

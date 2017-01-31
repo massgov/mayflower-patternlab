@@ -40,7 +40,7 @@ headerContact {
       type: default 'Directions'/required
     chevron:
       type: boolean
-    map:
+    googleMapLink:
       type: boolean
   },
   phone {

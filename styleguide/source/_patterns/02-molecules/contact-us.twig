@@ -1,13 +1,5 @@
-{% if schemaPageType %}
-  {% if schemaPageType == "Park" %}
-<section class="ma__contact-us js-accordion" property="containedInPlace" typeof="CivicStructure">
-  {% endif %}
-  {% if schemaPageType == "GovernmentOffice" %}
-<section class="ma__contact-us js-accordion" property="department" typeof="Organization">
-  {% endif %}
-{% else %}
-<section class="ma__contact-us js-accordion">
-{% endif %}  
+<section class="ma__contact-us js-accordion"{% if schemaPageType %} property
+="{{contactUs.schemaSd.property}}" typeof="{{contactUs.schemaSd.type}}"{% endif %} >
 
   {% if contactUs.title %}
     <h4 class="ma__column-heading"{% if schemaPageType %} property="name"{% endif %}>

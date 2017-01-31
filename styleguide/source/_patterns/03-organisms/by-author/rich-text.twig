@@ -1,5 +1,5 @@
-<section class="ma__rich-text js-ma-rich-text" {% if schemaPageType and sectionId == "overview" %}property="description"{% endif %}>
-  {% for element in rteElements %}
+{% for element in rteElements %}
+<section class="ma__rich-text js-ma-rich-text"{% if element.schemaSdProperty %} property="{{element.schemaSdProperty}}"{% endif %}>
     {% include element.path with element.data %}
-  {% endfor %}  
+{% endfor %}  
 </section>

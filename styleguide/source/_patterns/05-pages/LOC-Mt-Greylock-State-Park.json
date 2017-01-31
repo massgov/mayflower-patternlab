@@ -37,7 +37,7 @@
       "target": "_blank",
       "text":"Directions",
       "chevron": "true",
-      "map": "true"
+      "googleMapLink": "true"
     },
     "phone": {
       "icon": "@atoms/05-icons/svg-phone.twig",
@@ -150,6 +150,7 @@
       "data": {
         "rteElements": [{
           "path": "atoms-paragraph",
+          "schemaSdProperty": "description",
           "data": {
             "paragraph" : {
               "text": "At 3,491 feet, Mount Greylock is the highest point in Massachusetts. Rising above the surrounding Berkshire landscape, dramatic views of 60-90 miles distant may be seen. It became Massachusetts' first wilderness state park, acquired by the Commonwealth in 1898, to preserve its natural environment for public enjoyment. Wild and rugged yet intimate and accessible, Mount Greylock rewards the visitor exploring this special place of scenic and natural beauty."
@@ -531,10 +532,16 @@
     },
     "items": [{
       "contactUs": {
+        "schemaSd": {
+          "property": "containedInPlace",
+          "type": "CivicStructure"
+        },
         "title": {
           "href":"",
           "text": "Bascom Lodge",
-          "chevron":""
+          "chevron":"",
+          "schemaProperty": "containedInPlace",
+          "schemaType": "CivicStructure"
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
@@ -590,6 +597,10 @@
       }
     },{
       "contactUs": {
+        "schemaSd": {
+          "property": "containedInPlace",
+          "type": "CivicStructure"
+        },
         "title": {
           "href":"",
           "text": "Museum",
@@ -660,7 +671,21 @@
           },
           "date":"June 24, 2017, 12:00pm",
           "schemaDate": "2017-06-24T12:00",
-          "description":"This is a description of the event that will happen at a future date"
+          "description":"This is a description of the event that will happen at a future date",
+          "meta": {
+            "location": {
+              "name":"Event Location Name",
+              "address1":"24 Beacon St.",
+              "address2":"",
+              "city":"Boston",
+              "state":"MA",
+              "zip":"02133",
+              "image": {
+                "alt":"",
+                "src":""
+              }
+            }
+          }
         }
       }
     },{
@@ -674,7 +699,21 @@
           },
           "date":"June 24, 2017, 9:00pm",
           "schemaDate": "2017-06-24T21:00",
-          "description":"This is a description of the event that will happen at a future date"
+          "description":"This is a description of the event that will happen at a future date",
+          "meta": {
+            "location": {
+              "name":"Event Location Name",
+              "address1":"address 1",
+              "address2":"address 2",
+              "city":"City",
+              "state":"State",
+              "zip":"00000",
+              "image": {
+                "alt":"",
+                "src":""
+              }
+            }
+          }
         }
       }
     }],

@@ -16,6 +16,12 @@ The first two contact groups should always be visible on page load.  Additional 
 ### Variables:
 ~~~
 contactUs: {
+   schemaSd: {
+          property: 
+            type: string / required,
+          type: 
+            type: string / required
+        }
     title: {
         href:
             type: string (url) / optional

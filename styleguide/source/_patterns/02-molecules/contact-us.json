@@ -1,5 +1,9 @@
 {
   "contactUs": {
+    "schemaSd": {
+      "property": "containedInPlace",
+      "type": "CivicStructure"
+    },
     "title": {
       "href":"",
       "text": "Department of Conservation and Recreation",

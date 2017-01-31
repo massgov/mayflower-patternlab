@@ -1,11 +1,11 @@
 <h2 class="visually-hidden">Location Features</h2>
 <section class="ma__location-icons">
   {% for icon in locationIcons.icons %}
-    <div class="ma__location-icons__item" property="amenityFeature">
+    <div class="ma__location-icons__item"{% if schemaPageType %} property="amenityFeature"{% endif %}>
       <div class="ma__location-icons__icon">
         {% include icon.path %}
       </div>
-      <div class="ma__location-icons__name">{{icon.name}}</div>
+      <div class="ma__location-icons__name"{% if schemaPageType %} property="name"{% endif %}>{{icon.name}}</div>
     </div>
   {% endfor %}
 </section>
