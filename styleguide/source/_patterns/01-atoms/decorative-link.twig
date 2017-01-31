@@ -1,7 +1,7 @@
 <span class="ma__decorative-link">
   {% if decorativeLink.type == "external" %}
-    <a href="{{decorativeLink.href}}" class="js-clickable-link" {% if decorativeLink == actionEvent.name %}property="url"{% endif %}>{{decorativeLink.text}}{% if decorativeLink.info %}<span class="ma__decorative-link__info">{{ decorativeLink.info }}</span>{% endif %}&nbsp;{% include "@atoms/05-icons/svg-external-link.twig" %}</a>
+    <a href="{{decorativeLink.href}}" class="js-clickable-link"{% if decorativeLink == actionEvent.name and schemaPageType %} property="url"{% endif %}>{{decorativeLink.text}}{% if decorativeLink.info %}<span class="ma__decorative-link__info">{{ decorativeLink.info }}</span>{% endif %}&nbsp;{% include "@atoms/05-icons/svg-external-link.twig" %}</a>
   {% else %}
-    <a href="{{decorativeLink.href}}" class="js-clickable-link" {% if decorativeLink == actionEvent.name and (schemaPageType == "Park" or schemaPageType == "GovernmentOffice") %}property="url"{% endif %}>{{decorativeLink.text}}{% if decorativeLink.info %}<span class="ma__decorative-link__info">{{ decorativeLink.info }}</span>{% endif %}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+    <a href="{{decorativeLink.href}}" class="js-clickable-link"{% if decorativeLink == actionEvent.name and schemaPageType %} property="url"{% endif %}>{{decorativeLink.text}}{% if decorativeLink.info %}<span class="ma__decorative-link__info">{{ decorativeLink.info }}</span>{% endif %}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
   {% endif %}
 </span>
