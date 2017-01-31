@@ -1,4 +1,16 @@
 <section class="ma__action-map" aria-hidden="true" role=”presentation”>
+  {% if actionMap.compHeading or actionMap.link %}
+    <div class="ma__action-map__header">
+      {% if actionMap.compHeading %}
+       {% set compHeading = actionMap.compHeading %}
+       {% include "@atoms/04-headings/comp-heading.twig" %}
+      {% endif %}
+      {% if actionMap.link %}
+        {% set link = actionMap.link %}
+        {% include "@atoms/11-text/link.twig" %}
+      {% endif %}
+    </div>
+  {% endif %}
   <div class="ma__action-map__google-map js-google-map"></div>
   {# user editable data used in this specific map #}
   <script>

@@ -1,12 +1,24 @@
 .ma__action-map {
-  @include ma-component-spacing;
-  height: 360px;
+  @include ma-component-padding;
 
-  @media ($bp-x-small-min) {
-    height: 500px;
+  .pre-content > & &__header,
+  .main-content--full .page-content > & &__header,
+  .post-content > & &__header {
+    @include ma-container;
+  }
+
+  &__header {
+
+    & > a {
+      margin-bottom: 20px;
+    }
   }
 
   &__google-map {
-    height: 100%;
+    height: 360px;
+
+    @media ($bp-x-small-min) {
+      height: 500px;
+    }
   }
 }
