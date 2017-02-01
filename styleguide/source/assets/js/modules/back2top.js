@@ -14,6 +14,8 @@ export default function (window,document,$,undefined) {
       catch(e) {
         $('body').scrollTop(0);
       }
+      // Bring keyboard focus back to top as well.
+      $("#main-content").focus();
       return false;
     });
 
