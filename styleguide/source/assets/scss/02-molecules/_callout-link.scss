@@ -22,4 +22,28 @@
     font-size: 1.625rem;
     line-height: 1.3;
   }
+
+  &__container {
+    display: inline-block;
+    padding-right: 18px;
+    vertical-align: middle;
+  }
+
+  &__info {
+    @include ma-visually-hidden;
+  }
+
+  &__text {
+    @include ma-link-underline;
+    font-size: 1.625rem;
+    display: inline;
+    line-height: 1.3;
+
+    svg {
+      display: inline-block;
+      height: .6em;
+      margin-right: -18px;
+      width: .6em;
+    }
+  }
 }

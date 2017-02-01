@@ -1,14 +1,13 @@
-{% set decorativeLink = calloutLink %}
-{% if decorativeLink.type == "external" %}
+{% if calloutLink.type == "external" %}
   {% set atom_svg_path = "@atoms/05-icons/svg-external-link.twig" %}
 {% else %}
   {% set atom_svg_path = "@atoms/05-icons/svg-arrow.twig" %}
 {% endif %}
 
-<a href="{{decorativeLink.href}}">
-  <div class="ma__callout-link">
-    <span class="ma__decorative-link">
-      {{decorativeLink.text}}{% if decorativeLink.info %}<span class="ma__decorative-link__info">{{ decorativeLink.info }}</span>{% endif %}&nbsp;{% include(atom_svg_path) %}
+<a class="ma__callout-link" href="{{ calloutLink.href }}">
+  <span class="ma__callout-link__container">
+    <span class="ma__callout-link__text">
+      {{ calloutLink.text }}{% if calloutLink.info %}<span class="ma__callout-link__info">{{ calloutLink.info }}</span>{% endif %}&nbsp;{% include(atom_svg_path) %}
     </span>
-  </div>
+  </span>
 </a>
