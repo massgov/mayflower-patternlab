@@ -108,6 +108,7 @@ $rich-text-spacing-mobile: 1.5rem;
 
 // end list styles
 
+// link styles
   a {
     @include ma-link-underline;
     border-bottom-width: 1px;
@@ -119,10 +120,12 @@ $rich-text-spacing-mobile: 1.5rem;
 
   .ma__decorative-link {
     display: inline;
+    vertical-align: baseline;
   }
 
+// end link styles
 
-  // TABLE styles
+// TABLE styles
   table {
     border-collapse: collapse;
     margin-bottom: $rich-text-spacing-mobile;
