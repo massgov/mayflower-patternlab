@@ -1,21 +1,27 @@
 {
   "socialLinks": {
     "items": [{
+      "text": "Follow us on Facebook",
       "href": "#",
       "icon": "@atoms/05-icons/svg-facebook.twig"
     },{
+      "text": "Follow us on Twitter",
       "href": "#",
       "icon": "@atoms/05-icons/svg-twitter.twig"
     },{
+      "text": "Follow us on LinkedIn",
       "href": "#",
       "icon": "@atoms/05-icons/svg-linkedin.twig"
     },{
+      "text": "Follow us on Youtube",
       "href": "#",
       "icon": "@atoms/05-icons/svg-youtube.twig"
     },{
+      "text": "Read our blog",
       "href": "#",
       "icon": "@atoms/05-icons/svg-blog.twig"
     },{
+      "text": "Follow us on Instagram",
       "href": "#",
       "icon": "@atoms/05-icons/svg-instagram.twig"
     }]

@@ -1,4 +1,9 @@
-<svg focusable="false" role="img" class="svg-linkedin">
-  <title>Linkedin</title>
+{%
+  set iconRole = iconRole ? iconRole : 'presentation'
+%}
+{%
+  set ariaHidden = iconHidden ? iconHidden : 'true'
+%}
+<svg focusable="false" role="{{ iconRole }}" class="svg-linkedin">
   <use xlink:href="/{{ directory }}/images/svg-sprite.svg#linkedin"></use>
 </svg>

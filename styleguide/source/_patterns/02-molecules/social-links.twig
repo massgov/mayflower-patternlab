@@ -4,6 +4,7 @@
       {% for item in socialLinks.items %}
         <li class="ma__social-links__item">
           <a href="{{ item.href }}" class="ma__social-links__link">
+            <span class="visually-hidden">{{ item.text }}</span>
             {% include item.icon %}
           </a>
         </li>

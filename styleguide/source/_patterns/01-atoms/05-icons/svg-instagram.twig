@@ -1,4 +1,6 @@
-<svg focusable="false" role="img" class="svg-instagram">
-  <title>Instagram</title>
+{%
+  set iconRole = iconRole ? iconRole : 'presentation'
+%}
+<svg focusable="false" role="{{ iconRole }}" class="svg-instagram">
   <use xlink:href="/{{ directory }}/images/svg-sprite.svg#instagram"></use>
 </svg>
