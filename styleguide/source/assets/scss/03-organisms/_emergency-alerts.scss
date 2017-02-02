@@ -14,10 +14,28 @@ be included at the top of the page */
 
   &__header {
 
-    @media ($bp-medium-min) {
-      .ma__emergency-header {
-        padding-right: 190px; // width of the button
-      }
+    .ma__emergency-header {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__header-interface {
+    padding-top: 12px;
+    padding-left: 12px;
+
+    @media ($bp-small-max) {
+      display: none;
+    }
+  
+    @media ($bp-small-min) and ($bp-large-max) {
+      @include ma-container;
+      margin: 0;
+      position: absolute;
+        top: 0;
+        right: 0;
     }
   }
 
@@ -36,22 +54,21 @@ be included at the top of the page */
     }
   }
 
+  &__header &__container {
+    position: relative;
+
+    @media ($bp-large-min) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__interface {
     @include ma-container;
     font-size: 0;
 
     @media ($bp-small-min) {
-      margin: 0;
-      position: absolute;
-        top: 15px;
-        right: 0;
-
-    }
-
-    @media ($bp-page-width-min) {
-      left: calc(50% + #{$emergency-alerts-half-max});
-      right: auto;
-      transform: translateX(-100%);
+      display: none;
     }
   }
 }

@@ -10,7 +10,8 @@ module.exports = function copyTask(config, env){
             config.root + "/fonts/**/*.*",
             config.root + "/images/**/*.*",
             config.root + "/js/templates/**/*.*",
-            config.root + "/js/vendor/modernizr.js"
+            config.root + "/js/vendor/modernizr.js",
+            "!" + config.root + "/images/**/*.svg",
         ],
         dest: config.dest
     };

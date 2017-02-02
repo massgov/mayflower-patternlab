@@ -24,7 +24,10 @@
           {{item.value | raw}}
         </div>
         {% if item.link %}
-          <a href="{{item.link}}" class="ma__content-link ma__content-link--chevron"><span>Directions</span></a>
+          <div class="ma__contact-group__directions">
+            {% set link = { "text": "Directions", "href": item.link, "chevron": "true" } %}
+            {% include "@atoms/11-text/link.twig" %}
+          </div>
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}

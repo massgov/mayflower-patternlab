@@ -2,14 +2,7 @@
   <ul class="ma__utility-nav__items">
     <li class="ma__utility-nav__item">
       <div class="ma__utility-nav__translate">
-        {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
-        <span>
-          <form action="#">
-            {% set dropdown = utilityNav.dropdown %}
-            {% include "@molecules/dropdown.twig" %}
-            <button type="submit" hidden>Translate</button>
-          </form>
-        </span>
+        <div id="google_translate_element"></div>                  
       </div>
     </li>
     {% for item in utilityNav.items %}
