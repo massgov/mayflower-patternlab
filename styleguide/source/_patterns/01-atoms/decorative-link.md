@@ -26,5 +26,7 @@ decorativeLink {
         type: string
     type:
         type: string
+    property:
+    		type: string/optional
 }
 ~~~

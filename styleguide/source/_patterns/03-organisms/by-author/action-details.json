@@ -6,6 +6,7 @@
       "id":"overview",
       "path": "organisms-rich-text",
       "data": {
+        "property": "description",
         "rteElements": [{
           "path": "molecules-callout-stats",
           "data": {
@@ -47,6 +48,7 @@
       "id":"fees",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-paragraph",
           "data": {
@@ -70,6 +72,7 @@
       "id":"fees",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-paragraph",
           "data": {
@@ -183,6 +186,7 @@
       "id":"additional-info",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-paragraph",
           "data": {

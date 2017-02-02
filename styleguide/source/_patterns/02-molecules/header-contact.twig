@@ -19,7 +19,7 @@
       {% if schemaPageType %}<span property="postalCode">{% endif %}{{headerContact.zip}}{% if schemaPageType %}</span>{% endif %}
     </span>
   </div>
-  <div class="ma__header-contact__directions"{% if schemaPageType %} property="hasMap" typeof="Map"{% endif %}>
+  <div class="ma__header-contact__directions"{% if headerContact.directions.property %} property="hasMap" typeof="Map"{% endif %}>
     {% set link = headerContact.directions %}
     {% include "@atoms/11-text/link.twig" %}
   </div>

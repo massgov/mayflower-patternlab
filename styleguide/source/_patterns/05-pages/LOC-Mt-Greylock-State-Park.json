@@ -37,7 +37,7 @@
       "target": "_blank",
       "text":"Directions",
       "chevron": "true",
-      "googleMapLink": "true"
+      "property": "url"
     },
     "phone": {
       "icon": "@atoms/05-icons/svg-phone.twig",
@@ -148,9 +148,9 @@
       "id":"overview",
       "path": "organisms-rich-text",
       "data": {
+        "property": "description",
         "rteElements": [{
           "path": "atoms-paragraph",
-          "schemaSdProperty": "description",
           "data": {
             "paragraph" : {
               "text": "At 3,491 feet, Mount Greylock is the highest point in Massachusetts. Rising above the surrounding Berkshire landscape, dramatic views of 60-90 miles distant may be seen. It became Massachusetts' first wilderness state park, acquired by the Commonwealth in 1898, to preserve its natural environment for public enjoyment. Wild and rugged yet intimate and accessible, Mount Greylock rewards the visitor exploring this special place of scenic and natural beauty."
@@ -164,6 +164,7 @@
       "id":"hours",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "molecules-callout-stats",
           "data": {
@@ -229,6 +230,7 @@
       "id":"parking",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-paragraph",
           "data": {
@@ -346,6 +348,7 @@
       "id":"facilities",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-unordered-list",
           "data": {
@@ -400,6 +403,7 @@
       "id":"acessibility",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-paragraph",
           "data": {
@@ -431,6 +435,7 @@
       "id":"restrictions",
       "path": "organisms-rich-text",
       "data": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-unordered-list",
           "data": {
@@ -549,12 +554,14 @@
           "hidden": "",
           "items": [{
             "type": "phone",
+            "property": "telephone",
             "label":"Main:",
             "value":"(413) 499-4262",
             "link":"14134994262",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           },{
             "type": "phone",
+            "property": "",
             "label":"TTY:",
             "value":"(617) 555-7777",
             "link":"16175557777",
@@ -566,6 +573,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
+            "property": "",
             "label":"Email:",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -577,6 +585,7 @@
           "hidden": "true",
           "items": [{
             "type": "fax",
+            "property": "faxNumber",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -588,6 +597,7 @@
           "hidden": "true",
           "items": [{
             "type": "address",
+            "property": "address",
             "label":"",
             "value":"555 Park Drive<br />Boston, MA 02231",
             "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
@@ -612,6 +622,7 @@
           "hidden": "",
           "items": [{
             "type": "phone",
+            "property": "telephone",
             "label":"Main:",
             "value":"(413) 443-8765",
             "link":"14134438765",
@@ -623,6 +634,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
+            "property": "",
             "label":"Email:",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -634,6 +646,7 @@
           "hidden": "true",
           "items": [{
             "type": "fax",
+            "property": "faxNumber",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -645,6 +658,7 @@
           "hidden": "true",
           "items": [{
             "type": "address",
+            "property": "address",
             "label":"",
             "value":"555 Park Drive<br />North Hampton, MA 02231",
             "link": "",
@@ -667,7 +681,8 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Fishing Clinic"
+            "text": "Fishing Clinic",
+            "property": "url"
           },
           "date":"June 24, 2017, 12:00pm",
           "schemaDate": "2017-06-24T12:00",
@@ -695,7 +710,8 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Full Moon Hike"
+            "text": "Full Moon Hike",
+            "property": "url"
           },
           "date":"June 24, 2017, 9:00pm",
           "schemaDate": "2017-06-24T21:00",

@@ -21,7 +21,7 @@ link {
         type: string/required
     chevron:
         type: boolean
-    googleMapLink:
-        type: boolean
+    property:
+        type: string/optional
 }
 ~~~
