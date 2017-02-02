@@ -3,7 +3,7 @@
   {% set rteElements = richText.rteElements %}
 {% endif %}
 <section class="ma__rich-text js-ma-rich-text"{% if property %} property="{{property}}"{% endif %}>
-	{% for element in rteElements %}
+  {% for element in rteElements %}
     {% include element.path with element.data %}  
-	{% endfor %}
+  {% endfor %}
 </section>
