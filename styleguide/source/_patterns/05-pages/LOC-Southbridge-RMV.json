@@ -101,7 +101,6 @@
         "property":"description",
         "rteElements": [{
           "path": "atoms-paragraph",
-          "schemaSdProperty": "description",
           "data": {
             "paragraph" : {
               "text": "At 3,491 feet, Mount Greylock is the highest point in Massachusetts. Rising above the surrounding Berkshire landscape, dramatic views of 60-90 miles distant may be seen. It became Massachusetts' first wilderness state park, acquired by the Commonwealth in 1898, to preserve its natural environment for public enjoyment. Wild and rugged yet intimate and accessible, Mount Greylock rewards the visitor exploring this special place of scenic and natural beauty."

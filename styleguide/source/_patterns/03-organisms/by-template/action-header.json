@@ -18,7 +18,7 @@
       "target": "_blank",
       "text":"Directions",
       "chevron": "true",
-      "map": "true"
+      "property": "url"
     },
     "phone": {
       "icon": "@atoms/05-icons/svg-phone.twig",

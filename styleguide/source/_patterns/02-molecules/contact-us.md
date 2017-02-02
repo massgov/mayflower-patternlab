@@ -17,9 +17,9 @@ The first two contact groups should always be visible on page load.  Additional 
 ~~~
 contactUs: {
    schemaSd: {
-          property: 
+        property: 
             type: string / required
-          type: 
+        type: 
             type: string / required
         }
     title: {
