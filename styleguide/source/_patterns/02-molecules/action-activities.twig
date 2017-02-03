@@ -1,14 +1,33 @@
+{# DEPRECIATED - use image-promo instead #}
 <div>
   {% for activity in actionActivities %}
-    <div class="ma__action-activities">
-      <img class="ma__action-activities__image" alt="{{ activity.alt }}" src="{{ activity.image }}">
-      <div class="ma__action-activities__details">
-        <h5 class="ma__action-activities__title">{{ activity.title }}</h5>
-        <div class="ma__action-activities__description">{{ activity.description }}</div>
-        {% if activity.href %}
-          <a class="ma__action-activities__link" href="{{ activity.href }}">{{ activity.linkTitle }}<span class="visually-hidden"> about {{ activity.title }}</span></a>
-        {% endif %}
-      </div>
-    </div>
+    {% set imagePromo = {
+      "title": {
+        "text": activity.title
+      },
+      "image": {
+        "image": activity.image,
+        "text": activity.alt
+      },
+      "description": {
+        "property": "",
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": activity.description
+            }
+          }
+        }]
+      },
+      "link": {
+        "text": activity.linkTitle,
+        "href": activity.href,
+        "type": "chevron",
+        "label": ""
+      }
+    } %}
+    {% include "@molecules/image-promo.twig" %}
+    }
   {% endfor %}
 </div>
