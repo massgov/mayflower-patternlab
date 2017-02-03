@@ -8,19 +8,19 @@
           {% set l = jumpLinks.links|length/2 %}
           {% set half = l|round(0,'ceil') %}
           <div class="ma__jump-links__column">
-            {% for item in jumpLinks.links[start:half] %}
-              <a href="#{{item.href}}" class="ma__jump-links__link {{loop.first ? 'is-active' : ''}}">
+            {% for link in jumpLinks.links[start:half] %}
+              <div class="ma__jump-links__link {{loop.first ? 'is-active' : ''}}">
                 {% include "@atoms/05-icons/svg-circle-chevron.twig" %}
-                <span>{{item.text}}</span>
-              </a>
+                {% include "@atoms/11-text/link.twig" %}
+              </div>
             {% endfor %}
           </div>
           <div class="ma__jump-links__column">
-            {% for item in jumpLinks.links[half:length] %}
-              <a href="#{{item.href}}" class="ma__jump-links__link">
+            {% for link in jumpLinks.links[half:length] %}
+              <div class="ma__jump-links__link">
                 {% include "@atoms/05-icons/svg-circle-chevron.twig" %}
-                <span>{{item.text}}</span>
-              </a>
+                {% include "@atoms/11-text/link.twig" %}
+              </div>
             {% endfor %}
           </div>
         </nav>

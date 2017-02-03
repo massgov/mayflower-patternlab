@@ -28,5 +28,8 @@ decorativeLink {
         type: string/optional ("external")
     info:
         type: string/optional
+        type: string
+    property:
+        type: string/optional
 }
 ~~~

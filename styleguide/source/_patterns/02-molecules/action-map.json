@@ -1,5 +1,17 @@
 {
   "actionMap": {
+    "compHeading": {
+      "title": "All Locations",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
+    "link": {
+      "href": "#",
+      "text":"See a list of all locations",
+      "chevron": "true"
+    },
     "map": {
       "center": {
         "lat": 42.366565,
@@ -42,6 +54,5 @@
         "zip": "02133"
       }
     }]
-
   }
 }
