@@ -2,7 +2,7 @@
 {% if richText.rteElements %}
   {% set rteElements = richText.rteElements %}
 {% endif %}
-<section class="ma__rich-text js-ma-rich-text"{% if richText.property %} property="{{property}}"{% endif %}>
+<section class="ma__rich-text js-ma-rich-text"{% if richText.property %} property="{{richText.property}}"{% endif %}>
   {% for element in rteElements %}
     {% include element.path with element.data %}  
   {% endfor %}
