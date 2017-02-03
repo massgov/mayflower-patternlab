@@ -25,7 +25,7 @@ decorativeLink {
     text:
         type: string/required
     type:
-        type: string/optional ("external")
+        type: string/optional ("external","chevron")
     info:
         type: string/optional
         type: string
