@@ -28,7 +28,11 @@
     }
 
     .ma__action-map {
-      height: 400px;
+      padding: 0;
+      
+      &__google-map {
+        height: 400px;
+      }
     }
   }
 }
