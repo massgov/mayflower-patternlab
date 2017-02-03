@@ -1,6 +1,9 @@
 # Mass Gov Release Notes
 
-## 3.2.0 (Sprint 11)
+## 3.2.2
+* Fixes bump version bug
+
+## 3.2.1 (Sprint 11)
 
 ### DS-5 
 * DP-1103 - Implement default file/download icon in Patternlab
