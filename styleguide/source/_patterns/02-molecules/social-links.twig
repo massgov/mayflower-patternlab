@@ -4,7 +4,10 @@
       {% for item in socialLinks.items %}
         <li class="ma__social-links__item">
           <a href="{{ item.href }}" class="ma__social-links__link">
-            <span class="visually-hidden">{{ item.text }}</span>
+            {# Maintain backwards compatibility for v3.1 & enable accessibility #}
+            {% if item.altText is defined and item.altText %}
+                <span class="visually-hidden">{{ item.altText }}</span>
+            {% endif %}
             {% include item.icon %}
           </a>
         </li>
