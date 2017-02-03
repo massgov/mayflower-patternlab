@@ -3,6 +3,8 @@
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
+  "schemaPageType": "GovernmentOffice",
+
   "headerAlerts": [{
     "guid": "GUID09058070137",
     "text": "There's a hole in front of the door. Beware!",
@@ -41,7 +43,8 @@
       "href": "https://www.google.com/maps/place/Southbridge+RMV",
       "target": "_blank",
       "text":"Directions",
-      "chevron": "true"
+      "chevron": "true",
+      "property": "url"
     },
     "phone": "",
     "online": "",
@@ -97,14 +100,17 @@
       "id":"overview",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "At 3,491 feet, Mount Greylock is the highest point in Massachusetts. Rising above the surrounding Berkshire landscape, dramatic views of 60-90 miles distant may be seen. It became Massachusetts' first wilderness state park, acquired by the Commonwealth in 1898, to preserve its natural environment for public enjoyment. Wild and rugged yet intimate and accessible, Mount Greylock rewards the visitor exploring this special place of scenic and natural beauty."
+        "richText": {
+          "property":"description",
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "At 3,491 feet, Mount Greylock is the highest point in Massachusetts. Rising above the surrounding Berkshire landscape, dramatic views of 60-90 miles distant may be seen. It became Massachusetts' first wilderness state park, acquired by the Commonwealth in 1898, to preserve its natural environment for public enjoyment. Wild and rugged yet intimate and accessible, Mount Greylock rewards the visitor exploring this special place of scenic and natural beauty."
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     },{
       "title":"Hours",
@@ -112,64 +118,67 @@
       "id":"hours",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "molecules-callout-stats",
-          "data": {
-            "statsCallout": {
-              "pull": "right",
-              "stat": "today",
-              "content": "6:15 a.m. - 7:45 p.m."
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "molecules-callout-stats",
+            "data": {
+              "statsCallout": {
+                "pull": "right",
+                "stat": "today",
+                "content": "6:15 a.m. - 7:45 p.m."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-heading-4",
-          "data": {
-            "heading4" : {
-                "text": "Park"
+          },
+          {
+            "path": "atoms-heading-4",
+            "data": {
+              "heading4" : {
+                  "text": "Park"
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "May - September:<br />Sunrise - Sunset<br /><br />October - April:<br />9:00 a.m. - 5:00 p.m."
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "May - September:<br />Sunrise - Sunset<br /><br />October - April:<br />9:00 a.m. - 5:00 p.m."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-heading-4",
-          "data": {
-            "heading4" : {
-                "text": "Museum"
+          },
+          {
+            "path": "atoms-heading-4",
+            "data": {
+              "heading4" : {
+                  "text": "Museum"
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Monday - Friday:<br />9:00 a.m. - 5:00 p.m.<br /><br />Saturday:<br />12:00 p.m. - 7:00 p.m."
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Monday - Friday:<br />9:00 a.m. - 5:00 p.m.<br /><br />Saturday:<br />12:00 p.m. - 7:00 p.m."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-heading-4",
-          "data": {
-            "heading4" : {
-                "text": "Beach"
+          },
+          {
+            "path": "atoms-heading-4",
+            "data": {
+              "heading4" : {
+                  "text": "Beach"
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "May - September:<br />7am - 6pm"
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "May - September:<br />7am - 6pm"
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     },{
       "title":"Parking",
@@ -177,22 +186,25 @@
       "id":"parking",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "<b>Parking Meters only accept Credit Cards.</b>"
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "<b>Parking Meters only accept Credit Cards.</b>"
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Suspendisse non tempus justo. Pellentesque malesuada lectus augue, eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. In quis urna sollicitudin, dictum sapien sit amet, rutrum metus. Donec sed risus neque. Ut a orci ex. Morbi laoreet suscipit tortor at ullamcorper."
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Suspendisse non tempus justo. Pellentesque malesuada lectus augue, eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. In quis urna sollicitudin, dictum sapien sit amet, rutrum metus. Donec sed risus neque. Ut a orci ex. Morbi laoreet suscipit tortor at ullamcorper."
+              }
             }
-          }
-        }]
+          }]          
+        }
       }
     },{
       "title":"",
@@ -257,22 +269,25 @@
       "id":"facilities",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-unordered-list",
-          "data": {
-            "unorderedList": [{
-              "text": "Vestibulum ornare feugiat sodales."
-            },{
-              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{
-              "text": "Nulla facilisi."
-            },{
-              "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
-            },{
-              "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            }]
-          }
-        }]
+        "richText":{
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Vestibulum ornare feugiat sodales."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+              },{
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }]
+            }
+          }]
+        }
       }
     },{
       "title":"Acessibility",
@@ -280,6 +295,8 @@
       "id":"acessibility",
       "path": "organisms-rich-text",
       "data": {
+        "richText": {
+        "property": "",
         "rteElements": [{
           "path": "atoms-paragraph",
           "data": {
@@ -304,6 +321,7 @@
             }]
           }
         }]
+        }
       }
     },{
       "title":"Restrictions",
@@ -311,30 +329,33 @@
       "id":"restrictions",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-unordered-list",
-          "data": {
-            "unorderedList": [{
-              "text": "Vestibulum ornare feugiat sodales."
-            },{
-              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{
-              "text": "Nulla facilisi."
-            },{
-              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{
-              "text": "Nulla facilisi."
-            },{
-              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{
-              "text": "Nulla facilisi."
-            },{
-              "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
-            },{
-              "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            }]
-          }
-        }]
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Vestibulum ornare feugiat sodales."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+              },{
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }]
+            }
+          }]
+        }
       }
     }]
   },
@@ -369,6 +390,10 @@
     },
     "items": [{
       "contactUs": {
+        "schemaSd": {
+          "property": "department",
+          "type": "Organization"
+        },
         "title": {
           "href":"",
           "text": "Bascom Lodge",
@@ -380,12 +405,14 @@
           "hidden": "",
           "items": [{
             "type": "phone",
+            "property": "telephone",
             "label":"Main:",
             "value":"(413) 499-4262",
             "link":"14134994262",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           },{
             "type": "phone",
+            "property": "",
             "label":"TTY:",
             "value":"(617) 555-7777",
             "link":"16175557777",
@@ -397,6 +424,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
+            "property": "",
             "label":"Email:",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -408,6 +436,7 @@
           "hidden": "true",
           "items": [{
             "type": "fax",
+            "property": "faxNumber",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -419,15 +448,20 @@
           "hidden": "true",
           "items": [{
             "type": "address",
-            "label":"",
+            "property": "address",
+            "label": "",
             "value":"555 Park Drive<br />Boston, MA 02231",
             "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-            "details":""
+            "details": ""
           }]
         }]
       }
     },{
       "contactUs": {
+        "schemaSd": {
+          "property": "department",
+          "type": "Organization"
+        },
         "title": {
           "href":"",
           "text": "Museum",
@@ -439,6 +473,7 @@
           "hidden": "",
           "items": [{
             "type": "phone",
+            "property": "telephone",
             "label":"Main:",
             "value":"(413) 443-8765",
             "link":"14134438765",
@@ -450,6 +485,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
+            "property": "",
             "label":"Email:",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -461,6 +497,7 @@
           "hidden": "true",
           "items": [{
             "type": "fax",
+            "property": "faxNumber",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -472,6 +509,7 @@
           "hidden": "true",
           "items": [{
             "type": "address",
+            "property": "address",
             "label":"",
             "value":"555 Park Drive<br />North Hampton, MA 02231",
             "link": "",
@@ -494,10 +532,26 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Fishing Clinic"
+            "text": "Fishing Clinic",
+            "property": "url"
           },
           "date":"June 24, 2017, 12:00pm",
-          "description":"This is a description of the event that will happen at a future date"
+          "schemaDate": "2017-06-24T12:00",
+          "description":"This is a description of the event that will happen at a future date",
+          "meta": {
+            "location": {
+              "name":"Event Location Name",
+              "address1":"24 Beacon St.",
+              "address2":"",
+              "city":"Boston",
+              "state":"MA",
+              "zip":"02133",
+              "image": {
+                "src":"/assets/images/placeholder/800x400.png",
+                "alt":"view from the lodge"
+              }
+            }
+          }
         }
       }
     },{
@@ -507,10 +561,26 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Full Moon Hike"
+            "text": "Full Moon Hike",
+            "property": "url"
           },
           "date":"June 24, 2017, 9:00pm",
-          "description":"This is a description of the event that will happen at a future date"
+          "schemaDate": "2017-06-24T21:00",
+          "description":"This is a description of the event that will happen at a future date",
+          "meta": {
+            "location": {
+              "name":"Event Location Name",
+              "address1":"206 Washington St.",
+              "address2":"",
+              "city":"Boston",
+              "state":"MA",
+              "zip":"02109",
+              "image": {
+                "src":"/assets/images/placeholder/800x400.png",
+                "alt":"view from the lodge"
+              }
+            }
+          }
         }
       }
     }],

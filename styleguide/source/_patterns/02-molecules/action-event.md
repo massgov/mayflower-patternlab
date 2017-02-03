@@ -20,6 +20,8 @@ actionEvent: {
       type: string/url/required
     text:
       type: string/required
+    property: 
+      type: string/optional
   },
   date:
     type: date/required
