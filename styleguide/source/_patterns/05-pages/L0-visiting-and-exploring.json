@@ -1,4 +1,6 @@
 {
+  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
+
   "breadcrumbs":{
     "light": "",
     "links": [{
@@ -11,7 +13,7 @@
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
     "size":"",
-    "icon":"atoms-svg-camping",
+    "icon":"@atoms/05-icons/svg-lg-park.twig",
     "title":"Visiting & Exploring"
   },
 
@@ -30,7 +32,7 @@
     "sections": [{
       "id": "GUIDasjdhf1",
       "catIcon": {
-        "icon":"@atoms/07-user-added-icons/svg-id-card.twig",
+        "icon":"@atoms/05-icons/svg-lg-fishing.twig",
         "small":"true"
       },
       "title" : {
@@ -54,7 +56,7 @@
     {
       "id": "GUIDasjdhf2",
       "catIcon": {
-        "icon":"@atoms/07-user-added-icons/svg-campfire.twig",
+        "icon":"@atoms/05-icons/svg-lg-picnic-table.twig",
         "small":"true"
       },
       "title" : {
@@ -82,7 +84,7 @@
     {
       "id": "GUIDasjdhf3",
       "catIcon": {
-        "icon":"@atoms/07-user-added-icons/svg-map.twig",
+        "icon":"@atoms/05-icons/svg-lg-map-location.twig",
         "small":"true"
       },
       "title" : {
@@ -105,42 +107,6 @@
       {
         "href" : "#",
         "text" : "Traveling to Massachusetts"
-      }]
-    },
-    {
-      "id": "GUIDasjdhf4",
-      "catIcon": {
-        "icon":"@atoms/07-user-added-icons/svg-theater.twig",
-        "small":"true"
-      },
-      "title" : {
-        "href" : "#",
-        "text" : "Art & Culture"
-      },
-      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
-      "links" : [{
-        "href" : "#",
-        "text" : "Cultural Districts & Historic Sites"
-      },
-      {
-        "href" : "#",
-        "text" : "Dance"
-      },
-      {
-        "href" : "#",
-        "text" : "Film & Theater"
-      },
-      {
-        "href" : "#",
-        "text" : "Galleries"
-      },
-      {
-        "href" : "#",
-        "text" : "Museums"
-      },
-      {
-        "href" : "#",
-        "text" : "Music"
       }]
     }]
   }
