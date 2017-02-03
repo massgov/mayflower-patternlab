@@ -11,6 +11,8 @@
 ### DS-8 
 * DP-1367 - The "Top" button does not move keyboard focus to the top of the page. 
 
+## 3.2.2
+* Fixes bump version bug
 
 ## 3.2.1 (Sprint 11)
 
