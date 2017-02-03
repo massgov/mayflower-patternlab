@@ -11,6 +11,10 @@
 ### DS-8 
 * DP-1367 - The "Top" button does not move keyboard focus to the top of the page. 
 
+### DS-23
+* DP-1270 - Implement the structure data markup for location page type to mayflower
+
+
 ## 3.2.2
 * Fixes bump version bug
 
