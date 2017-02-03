@@ -1,0 +1,24 @@
+<div class="ma__image-promo">
+  {% if imagePromo.image %}
+    <img class="ma__image-promo__image" alt="{{ imagePromo.image.alt }}" src="{{ imagePromo.image.src }}">
+  {% endif %}
+  <div class="ma__image-promo__details">      
+    <h5 class="ma__image-promo__title">
+      {% if imagePromo.link %}
+        <a href="{{ imagePromo.link.href }}">
+      {% endif %}
+      {{ imagePromo.title }}
+      {% if imagePromo.link %}
+        </a>
+      {% endif %}
+    </h5>
+    <div class="ma__image-promo__description">
+      {% set richText = { "rteElement": imagePromo.description } %}
+      {% include "@organisms/by-author/rich-text.twig" %}
+    </div>
+    {% if imagePromo.href %}
+      {% set decorativeLink = imagePromo.link %}
+      {% include "@atoms/decorative-link.twig" %}
+    {% endif %}
+  </div>
+</div>
