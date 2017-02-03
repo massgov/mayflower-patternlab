@@ -20,6 +20,17 @@ $bp-header-logo-min: "min-width: 1000px";
     transition: left 0.5s ease;
     z-index: 9999;
 
+    .translated-rtl &,
+    .translated-ltr & {
+      top: 40px;
+    }
+
+    @media ($bp-header-toggle-min) {
+      .translated-rtl &,
+      .translated-ltr & {
+        top: 0;
+      }
+    }
 
     @media ($bp-header-toggle-min) {
       background-color: $c-theme-blue;

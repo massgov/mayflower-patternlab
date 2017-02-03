@@ -1,3 +1,7 @@
+button {
+  @include ma-font(400);
+}
+
 .ma__button {
   @include ma-button("normal","solid",$c-theme-blue);
 }

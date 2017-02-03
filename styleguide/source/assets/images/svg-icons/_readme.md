@@ -8,7 +8,7 @@
 ## Note when exporting icons from Avocode:
 1. The fill and stroke styling need to be removed from the path elements
 2. Remove the title and description fields
-* if you want to update the these fields instead of adding the aria-hidden attribute, add => role="img"
+* if you want to update the these fields, instead of adding the aria-hidden attribute add => role="img"
 
 ###See Example:
 ```html

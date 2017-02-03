@@ -2,14 +2,20 @@
   <ul class="ma__main-nav__items js-main-nav">
     {% for nav in mainNav %}
       <li class="ma__main-nav__item {{ nav.active ? 'is-active' : '' }} {{ nav.subNav ? 'has-subnav js-main-nav-toggle' : 'js-main-nav-top-link' }}">
-        <a class="ma__main-nav__top-link" href="{{nav.href}}" title="{{nav.text}}">{{nav.text}}</a>
+        <button class="ma__main-nav__top-link">{{ nav.text }}</button>
         {% if nav.subNav %}
           <div class="ma__main-nav__subitems js-main-nav-content is-closed">
             <ul class="ma__main-nav__container">
-              <li class="ma__main-nav__subitem"><a href="{{nav.href}}" class="ma__main-nav__link">{{nav.text}}</a></li>
+              <li class="ma__main-nav__subitem"><a href="{{ nav.href }}" class="ma__main-nav__link">{{ nav.text }}</a></li>
               {% for subNav in nav.subNav %}
-                <li class="ma__main-nav__subitem"><a href="{{subNav.href}}" class="ma__main-nav__link">{{subNav.text}}</a></li>
+                <li class="ma__main-nav__subitem"><a href="{{ subNav.href }}" class="ma__main-nav__link">{{ subNav.text }}</a></li>
               {% endfor %}
+              <li class="ma__main-nav__subitem">
+                <a href="{{ nav.href }}" class="ma__main-nav__link">
+                  {% include "@atoms/05-icons/svg-arrow-bent.twig" %}
+                  <span>{{ nav.text }}</span>
+                </a>
+              </li>
             </ul>
           </div>
         {% endif %}

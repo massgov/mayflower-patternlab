@@ -62,4 +62,10 @@
       font-size: 1.25rem;
     }
   }
+
+  &__directions {
+    .ma__content-link {
+      line-height: inherit;
+    }
+  }
 }

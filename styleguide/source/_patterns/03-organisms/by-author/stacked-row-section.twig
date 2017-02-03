@@ -13,7 +13,7 @@
       </div>
     </div>
   {% endif %}
-  <div class="main-content {{ stackedRowSection.sideBar|length != 'single' ? 'main-content--two' : '' }}">
+  <div class="main-content {{ stackedRowSection.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
     <div class="page-content">
       {% for content in stackedRowSection.pageContent %}
         {% include content.path with content.data %}

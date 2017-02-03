@@ -129,8 +129,18 @@ body {
       width: $header-mobile-menu-width;
       z-index: $z-dropdown;
 
+      .translated-rtl &,
+      .translated-ltr & {
+        height: calc(100vh - #{$header-mobile-controls-height * 2});
+      }
+
       .show-menu & {
         right: 0;
+      }
+
+      .translated-rtl &,
+      .translated-ltr & {
+        top: 40px;
       }
     }
   }
@@ -144,6 +154,11 @@ body {
     text-align: right;
     width: 100%;
     z-index: $z-dropdown;
+
+    .translated-rtl &,
+    .translated-ltr & {
+      top: 40px;
+    }
 
     @media ($bp-header-toggle-min){
       display: none;
@@ -169,6 +184,11 @@ body {
     transition: left .5s, visibility .5s;
     visibility: hidden;
     z-index: $z-dropdown;
+
+    .translated-rtl &,
+    .translated-ltr & {
+      top: 43px;
+    }
 
     &:before {
       border-left: 3px solid;

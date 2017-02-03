@@ -3,14 +3,23 @@ title: DEPRECATED - Action Map
 ---
 Description: A google map that fits the width of it's containing element.
 ## State: DEPRECATED
+
 ### Notes
 - This style is deprecated as it should be generalized to display a google map anywhere in the site.
+
+### Contains
+- [@atoms/11-text/link.twig](?p=atoms-link)
+- [@atoms/04-headings/compHeading.twig](?p=atoms-comp-heading)
+
 ### Used in:
 - [@molecules/action-section](?p=molecules-action-section)
 - [@organisms/by-author/location-banner](?p=organisms-location-banner)
+
 ### Required Variables
 ~~~
 actionMap: {
+  compHeading: { ... },
+  link: { ... },
   map: {
     center: {
       lat:

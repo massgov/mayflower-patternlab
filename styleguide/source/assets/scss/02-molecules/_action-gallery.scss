@@ -28,7 +28,9 @@
 
     a {
       font-size: 1.25rem;
-      line-height: 80px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

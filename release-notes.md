@@ -1,5 +1,16 @@
 # Mass Gov Release Notes
 
+## 3.3.0 (Sprint 12)
+### DS-5 
+* DP-691 - Implement Google Translate in Pattern Lab
+* DP-981 - PatternLab - Refactor header contact us
+* DP-1535 - Modify topic nav in Pattern Lab in keeping with touch / desktop design update
+* DP-1759 - Implement Location Row on Org Page in Patternlab
+* DP-1737 - Key Actions - illustrated links don't grow in height
+
+### DS-8 
+* DP-1367 - The "Top" button does not move keyboard focus to the top of the page. 
+
 ## 3.2.2
 * Fixes bump version bug
 
@@ -8,6 +19,10 @@
 ### DS-5 
 * DP-1103 - Implement default file/download icon in Patternlab
 * DP-976 - Implement topic funnel icons in Patternlab
+* DP-686 - Design print styles for location pages
+* DP-671 - Design print styles for organizational pages
+* DP-644 - Design print styles for guides
+* DP-658 - Design print styles for How-to pages
 
 ### DS-23 - External Search
 * DP-1267 - Implement the structure data markup for page elements to mayflower
