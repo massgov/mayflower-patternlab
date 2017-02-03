@@ -1,0 +1,55 @@
+{
+  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
+
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+
+  "breadcrumbs":{
+    "light": "true",
+    "links": [{
+      "text": "Your Government",
+      "href": ""
+    },{
+      "text": "State Agencies",
+      "href": ""
+    },{
+      "text": "Human Services",
+      "href": "#"
+    }]
+  },
+
+  "pageHeader": {
+    "title": "Executive Office of Health and Human Services Locations",
+    "subTitle": "",
+    "rteElements": [{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "This is an optional descriptive paragraph field, explaining the map and listing of locations below. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+        }
+      }
+    }],
+    "headerTags": {
+      "taxonomyTerms": ""
+    }
+  },
+  
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+  
+  "stackedRowSections": [{
+    "title":"",
+    "id":"",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "If you are renting a home or an apartment, the Office of Consumer Affairs & Business Regulation (OCABR) emphasizes the importance of knowing <a href=\"#\">your tenant rights and responsibilities</a>, such as:"
+            }
+          }
+        }]
+      }
+    }]
+  }]
+}
