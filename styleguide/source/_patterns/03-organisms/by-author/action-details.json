@@ -6,40 +6,42 @@
       "id":"overview",
       "path": "organisms-rich-text",
       "data": {
-        "property": "description",
-        "rteElements": [{
-          "path": "molecules-callout-stats",
-          "data": {
-            "statsCallout": {
-              "pull": "right",
-              "stat": "$12",
-              "content": "standard fee for residents"
+        "richText": {
+          "property": "description",
+          "rteElements": [{
+            "path": "molecules-callout-stats",
+            "data": {
+              "statsCallout": {
+                "pull": "right",
+                "stat": "$12",
+                "content": "standard fee for residents"
+              }
             }
-          }
-        },{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "The Annual MassParks Pass allows you free parking for one vehicle, during daytime hours, at all State Parks except Quabbin Reservoir. It’s valid for one calendar year, from January through December, so you’ll need to buy a new one each year."
+          },{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "The Annual MassParks Pass allows you free parking for one vehicle, during daytime hours, at all State Parks except Quabbin Reservoir. It’s valid for one calendar year, from January through December, so you’ll need to buy a new one each year."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "The parking pass costs <b>$60 for Massachusetts residents</b> and <b>$85 dollars for non-Massachusetts residents</b>. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!)."
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "The parking pass costs <b>$60 for Massachusetts residents</b> and <b>$85 dollars for non-Massachusetts residents</b>. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!)."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "If you’re a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "If you’re a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+              }
             }
-          }
-        }]
+          }]
+        }
       } 
     },
     {

@@ -20,12 +20,14 @@ actionSection: {
   path:
     type: string/template name/required
   data:
-    property: 
-      type: string/optional
-    rteElements: [{
-        ...
-            rteElement object instances, see @organisms/by-author/rich-text
-        ...
-     }] / required
+    richText: {
+      property: 
+        type: string/optional
+      rteElements: [{
+          ...
+              rteElement object instances, see @organisms/by-author/rich-text
+          ...
+       }] / required    
+    }   
 }
 ~~~
