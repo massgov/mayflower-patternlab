@@ -7,7 +7,6 @@
 
 ### DS-5 
 * DP-1103 - Implement default file/download icon in Patternlab
-* DP-691 - Implement Google Translate in Pattern Lab
 * DP-976 - Implement topic funnel icons in Patternlab
 
 ### DS-23 - External Search
