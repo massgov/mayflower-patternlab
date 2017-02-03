@@ -26,25 +26,11 @@
 
   &__link {
 
-    & > svg,
-    span {
-
-    }
-
     & > svg {
       fill: $c-theme-green;
 
       @media ($bp-small-max) {
         display: none;
-      }
-    }
-
-    span {
-      
-      @media ($bp-small-min) {
-        &:hover {
-          border-color: rgba($c-font-link, .5);
-        }
       }
     }
 
