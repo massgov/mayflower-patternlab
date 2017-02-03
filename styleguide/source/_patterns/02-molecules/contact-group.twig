@@ -13,32 +13,34 @@
 
       {# Online wrap value in a link #}
       {% if item.type == "online" %}
-        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
+        <a href="{{item.link}}" class="ma__content-link"{% if item.property %} property="{{item.property}}"{% endif %}>{{item.value}}</a>
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
         <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
+        {% if item.property %}
+          <meta property="{{item.property}}" content="{{item.value}}" />
+        {% endif %}
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
-        <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
+        <a href="mailto:{{item.link}}" class="ma__content-link"{% if item.property %} property="{{item.property}}"{% endif %}>{{item.value}}</a>
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
-        <div class="ma__contact-group__address">
+        <div class="ma__contact-group__address"{% if item.property %} property="{{item.property}}" typeof="PostalAddress"{% endif %}>
           {{item.value | raw}}
         </div>
         {% if item.link %}
-          <div class="ma__contact-group__directions">
-          {% set decorativeLink = {
-            "type": "external",
-            "href": item.link,
-            "text": "Directions"
-          }
-          %}
-          {% include "@atoms/decorative-link.twig" %}
+          <div class="ma__contact-group__directions"{% if item.property %} property="hasMap" typeof="Map"{% endif %}>
+            {% set linkProperty = schemaPageType ? "url" : "" %}
+            {% set decorativeLink = { "text": "Directions", "href": item.link, "type": "external", "property": linkProperty } %} 
+            {% include "@atoms/decorative-link.twig" %}
           </div>
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
         <span class="ma__contact-group__value">{{item.value}}</span>
+        {% if item.property %}
+          <meta property="{{item.property}}" content="{{item.value}}" />
+        {% endif %}
       {% endif %}
     </div>
     {% if item.details %}
