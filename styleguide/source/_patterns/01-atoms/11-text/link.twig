@@ -1,1 +1,4 @@
-<a class="ma__content-link {{link.chevron == 'true' ? 'ma__content-link--chevron' : ''}}" href="{{link.href}}"><span>{{link.text}}</span></a>
+<a 
+  class="ma__content-link {{link.chevron == 'true' ? 'ma__content-link--chevron' : ''}}" 
+  href="{{link.href}}"
+  {% if link.info %} aria-label="{{ link.label }}"{% endif %}><span>{{link.text}}</span></a>
