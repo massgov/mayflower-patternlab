@@ -30,7 +30,8 @@
               <span>{{ item.text }}</span>
             </div>
             <div class="ma__utility-nav__content-body">
-              {% include item.panel %}
+              {% set utilityPanel = item.panel %}
+              {% include "@molecules/utility-panel.twig" %}
             </div>
           </div>
         </div>

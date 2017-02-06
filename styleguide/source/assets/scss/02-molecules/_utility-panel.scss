@@ -1,7 +1,7 @@
-$bp-login-util-medium-min: "min-width:1121px";
-$bp-login-util-reduce-links-max: "max-width:1120px";
+$bp-utility-panel-medium-min: "min-width:1121px";
+$bp-utility-panel-reduce-links-max: "max-width:1120px";
 
-.ma__login-util {
+.ma__utility-panel {
 
   @media ($bp-header-toggle-min) {
     display: flex;
@@ -28,7 +28,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       }
     }
 
-    @media ($bp-login-util-medium-min) {
+    @media ($bp-utility-panel-medium-min) {
       width: 350px;
     }
   }
@@ -50,7 +50,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       }
     }
 
-    @media ($bp-login-util-medium-min) {
+    @media ($bp-utility-panel-medium-min) {
       width: calc(100% - 350px);  // width of description
     }
   }
@@ -82,7 +82,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       opacity: .8;
     }
 
-    @media ($bp-login-util-medium-min) {
+    @media ($bp-utility-panel-medium-min) {
       margin: 0 2%;
     }
 
@@ -98,7 +98,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       margin: 0;
       text-align: left;
 
-      @media ($bp-header-toggle-min) and ($bp-login-util-reduce-links-max) {
+      @media ($bp-header-toggle-min) and ($bp-utility-panel-reduce-links-max) {
         font-size: 1.25rem;
       }
 

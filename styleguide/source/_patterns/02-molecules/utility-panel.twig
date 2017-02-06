@@ -1,8 +1,8 @@
-<section class="ma__login-util">
-  <p class="ma__login-util__description">{{ loginUtil.description }}</p>
-  <ul class="ma__login-util__items">
+<section class="ma__utility-panel">
+  <p class="ma__utility-panel__description">{{ loginUtil.description }}</p>
+  <ul class="ma__utility-panel__items">
     {% for decorativeLink in loginUtil.links %}
-      <li class="ma__login-util__item js-clickable">
+      <li class="ma__utility-panel__item js-clickable">
         {% include "@atoms/decorative-link.twig" %}
       </li>
     {% endfor %}
