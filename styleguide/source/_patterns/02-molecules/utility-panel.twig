@@ -1,5 +1,5 @@
 <section class="ma__utility-panel">
-  <div class="ma__utility-panel__description">
+  <div class="ma__utility-panel__description {{ utilityPanel.links ? '' : 'ma__utility-panel__description--full' }}">
     {% set rteElements = utilityPanel.description.rteElements %}
     {% include "@organisms/by-author/rich-text.twig" %}
   </div>

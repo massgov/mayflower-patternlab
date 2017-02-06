@@ -5,6 +5,7 @@ $bp-utility-panel-reduce-links-max: "max-width:1120px";
 
   @media ($bp-header-toggle-min) {
     display: flex;
+      justify-content: space-between;
     width: 100%;
 
     .no-flex & {
@@ -33,6 +34,10 @@ $bp-utility-panel-reduce-links-max: "max-width:1120px";
 
     @media ($bp-utility-panel-medium-min) {
       flex-basis: 350px;
+    }
+
+    &--full {
+      flex-basis: 850px;
     }
   }
 
