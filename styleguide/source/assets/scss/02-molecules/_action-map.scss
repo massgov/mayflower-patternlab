@@ -1,29 +1,5 @@
 .ma__action-map {
   @include ma-component-padding;
-  @include ma-container;
-  
-  @media ($bp-page-width-min) {
-    max-width: 100%;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .main-content--two & {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  &__header {
-
-    @media ($bp-page-width-min) {
-      @include ma-container;
-    }
-
-    & > a {
-      margin-bottom: 20px;
-    }
-  }
-
 
   &__google-map {
     height: 360px;
@@ -31,7 +7,5 @@
     @media ($bp-x-small-min) {
       height: 500px;
     }
-
-
   }
 }
