@@ -1,7 +1,10 @@
 <section class="ma__utility-panel">
-  <p class="ma__utility-panel__description">{{ loginUtil.description }}</p>
+  <div class="ma__utility-panel__description">
+    {% set rteElements = utilityPanel.description.rteElements %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+  </div>
   <ul class="ma__utility-panel__items">
-    {% for decorativeLink in loginUtil.links %}
+    {% for decorativeLink in utilityPanel.links %}
       <li class="ma__utility-panel__item js-clickable">
         {% include "@atoms/decorative-link.twig" %}
       </li>
