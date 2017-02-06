@@ -1,8 +1,10 @@
 <div class="ma__contact-group">
-  <h5 class="ma__contact-group__name">
-    {% include contactGroup.icon %}
-    <span>{{contactGroup.name}}</span>
-  </h5>
+  {% if contactGroup.name and contactGroup.icon %}
+    <h5 class="ma__contact-group__name">
+      {% include contactGroup.icon %}
+      <span>{{contactGroup.name}}</span>
+    </h5>
+  {% endif %}
   {% for item in contactGroup.items %}
     <div>
       {% if item.label %}
@@ -29,8 +31,8 @@
         {% if item.link %}
           <div class="ma__contact-group__directions"{% if item.property %} property="hasMap" typeof="Map"{% endif %}>
             {% set linkProperty = schemaPageType ? "url" : "" %}
-            {% set link = { "text": "Directions", "href": item.link, "chevron": "true", "property": linkProperty } %} 
-            {% include "@atoms/11-text/link.twig" %}
+            {% set decorativeLink = { "text": "Directions", "href": item.link, "type": "external", "property": linkProperty } %} 
+            {% include "@atoms/decorative-link.twig" %}
           </div>
         {% endif %}
       {# Default - just spit out the value #}

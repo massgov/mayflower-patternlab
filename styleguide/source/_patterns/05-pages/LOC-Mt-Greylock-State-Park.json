@@ -20,53 +20,49 @@
     }]
   },
 
-  "pageHeader": {
-    "title": "Mt Greylock State Park",
-    "subTitle": "",
-    "rteElements": "",
-    "headerTags": ""
-  },
-
-  "headerContact": {
-    "title": "Visitor's Center",
-    "address1": "30 Rockwell Road",
-    "address2": "",
-    "city": "Lanesborough",
-    "state": "MA",
-    "zip": "01237",
-    "directions": {
-      "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
-      "target": "_blank",
-      "text":"Directions",
-      "chevron": "true",
-      "property": "url"
-    },
-    "phone": {
-      "icon": "@atoms/05-icons/svg-phone.twig",
-      "name": "Phone",
-      "items": [{
-        "type": "phone",
-        "label":"Main:",
-        "value":"(413) 499-4262",
-        "link":"14134994262",
-        "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-      }]
-    },
-    "online": {
-      "icon": "@atoms/05-icons/svg-laptop.twig",
-      "name": "Online",
-      "items": [{
-        "type": "email",
-        "label":"Email:",
-        "value":"email@email.com",
-        "link":"email@email.com",
-        "details":""
-      }]
-    },
-    "fax": ""
-  },
-
   "actionHeader": {
+    "pageHeader": {
+      "title": "Mt Greylock State Park",
+      "subTitle": "",
+      "rteElements": "",
+      "headerTags": ""
+    },
+
+    "contactUs": {
+      "groups": [{
+        "icon": "",
+        "name": "",
+        "items": [{
+          "type": "address",
+          "property": "url",
+          "label": "",
+          "value": "Visitor's Center, 30 Rockwell Road, Lanesborough, MA 01237",
+          "link": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
+          "details": ""
+        }]
+      },{
+        "icon": "@atoms/05-icons/svg-phone.twig",
+        "name": "Phone",
+        "items": [{
+          "type": "phone",
+          "label":"Main:",
+          "value":"(413) 499-4262",
+          "link":"14134994262",
+          "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+        }]
+      },{
+        "icon": "@atoms/05-icons/svg-laptop.twig",
+        "name": "Online",
+        "items": [{
+          "type": "email",
+          "label":"Email:",
+          "value":"email@email.com",
+          "link":"email@email.com",
+          "details":""
+        }]
+      }]
+    },
+
     "divider": false,
     "widgets": [{
       "path": "@molecules/location-icons.twig",

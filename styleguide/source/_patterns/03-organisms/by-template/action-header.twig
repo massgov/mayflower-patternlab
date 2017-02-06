@@ -1,7 +1,16 @@
 <section class="ma__action-header">
   <div class="ma__action-header__container">
     <div class="ma__action-header__content">
+      {# for backward compatibility with version 3.2.0 #}
+      {% if actionHeader.pageHeader %} 
+        {% set pageHeader = actionHeader.pageHeader %}
+      {% endif %}
       {% include "@organisms/by-template/page-header.twig" %}
+      {% if actionHeader.contactUs %}
+        {% set contactUs = actionHeader.contactUs %}
+        {% include "@molecules/contact-us.twig" %}
+      {% endif %}
+      {# for backward compatibility with version 3.2.0 #}
       {% if headerContact %}
         {% include "@molecules/header-contact.twig" %}
       {% endif %}

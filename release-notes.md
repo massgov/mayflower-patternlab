@@ -7,6 +7,7 @@
 * DP-1535 - Modify topic nav in Pattern Lab in keeping with touch / desktop design update
 * DP-1759 - Implement Location Row on Org Page in Patternlab
 * DP-1737 - Key Actions - illustrated links don't grow in height
+* DP-981 - PatternLab - Refactor header contact us
 
 ### DS-8 
 * DP-1367 - The "Top" button does not move keyboard focus to the top of the page. 
