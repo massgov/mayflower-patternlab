@@ -64,7 +64,7 @@
     color: $c-font-base;
 
     &:hover {
-      background-color: $c-gray-f2f2f2;
+      background-color: $c-bg-subtle;
       color: $c-font-link-subtle;
     }
   }
@@ -76,11 +76,11 @@
 
   &__subitem:last-child &__link {
     font-weight: 700;
-    background-color: $c-gray-f2f2f2;
+    background-color: $c-bg-subtle;
     color: $c-font-link;
   
     &:hover {
-      background-color: $c-white;
+      background-color: $c-gray-dcdcdc;
     }
 
     & > svg {
