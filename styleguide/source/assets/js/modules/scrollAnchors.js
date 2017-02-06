@@ -27,6 +27,8 @@ export default function (window,document,$,undefined) {
 
     $el.find('a').on('click',function(e) {
       e.preventDefault();
+      // Get the link hash target so we can bring focus to it
+      let hash = this.hash;
 
       // is the menu closed on mobile
       if(!$el.hasClass('is-open') && isMobile) {     
@@ -49,6 +51,8 @@ export default function (window,document,$,undefined) {
 
       $("html,body").stop(true,true).animate({scrollTop:position}, '750', function(){
         linkScrolling = false;
+        // bring focus to the item we just scrolled to
+        $(hash).focus();
       });
       
     });
