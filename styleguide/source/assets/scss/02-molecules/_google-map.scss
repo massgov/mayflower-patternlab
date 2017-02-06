@@ -1,7 +1,6 @@
-.ma__action-map {
-  @include ma-component-padding;
-
-  &__google-map {
+.ma__google-map {
+  
+  &__map {
     height: 360px;
 
     @media ($bp-x-small-min) {
