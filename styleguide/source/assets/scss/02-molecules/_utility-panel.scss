@@ -16,11 +16,14 @@ $bp-utility-panel-reduce-links-max: "max-width:1120px";
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: 2em;
+    margin-right: 2%;
 
     @media ($bp-header-toggle-min) {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 250px;
       line-height: 1.3;
       margin-bottom: 0;
-      width: 250px;
 
       .no-flex & {
         display: table-cell;
@@ -29,7 +32,7 @@ $bp-utility-panel-reduce-links-max: "max-width:1120px";
     }
 
     @media ($bp-utility-panel-medium-min) {
-      width: 350px;
+      flex-basis: 350px;
     }
   }
 
@@ -39,10 +42,12 @@ $bp-utility-panel-reduce-links-max: "max-width:1120px";
 
     @media ($bp-header-toggle-min) {
       display: flex;
-        justify-content: space-between;
         align-items: stretch;
+        flex-wrap: nowrap;
+      flex-shrink: 2;
+      flex-grow: 2;
       margin-bottom: 0;
-      width: calc(100% - 250px);  // width of description
+      flex-basis: calc(100% - 250px);  // width of description
 
       .no-flex & {
         display: table-cell;
@@ -51,7 +56,7 @@ $bp-utility-panel-reduce-links-max: "max-width:1120px";
     }
 
     @media ($bp-utility-panel-medium-min) {
-      width: calc(100% - 350px);  // width of description
+      flex-basis: calc(100% - 350px);  // width of description
     }
   }
 
@@ -63,6 +68,9 @@ $bp-utility-panel-reduce-links-max: "max-width:1120px";
     @media ($bp-header-toggle-min) {
       display: flex;
         align-items: center;
+      flex-basis: 33%;
+      flex-grow: 0;
+      flex-shrink: 1;
       margin: 0 1%;
 
       .no-flex & {
