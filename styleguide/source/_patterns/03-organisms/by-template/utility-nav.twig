@@ -1,13 +1,15 @@
 <section class="ma__utility-nav js-util-nav">
   <ul class="ma__utility-nav__items">
-    <li class="ma__utility-nav__item">
-      <div class="ma__utility-nav__translate">
-        <div class="ma__utility-nav__translate-icon">
-          {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
+    {% if googleLanguages %}
+      <li class="ma__utility-nav__item">
+        <div class="ma__utility-nav__translate">
+          <div id="google_translate_element"></div>
+          <div class="ma__utility-nav__translate-icon">
+            {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
+          </div>
         </div>
-        <div id="google_translate_element"></div>                  
-      </div>
-    </li>
+      </li>
+    {% endif %}
     {% for item in utilityNav.items %}
       <li class="ma__utility-nav__item js-util-nav-toggle">
         <a class="ma__utility-nav__link" 

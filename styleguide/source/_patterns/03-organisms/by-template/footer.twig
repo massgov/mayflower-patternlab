@@ -26,6 +26,8 @@
   <script>
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: '{{ googleLanguages }}', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+
+      document.querySelector('#google_translate_element').classList.add('has-rendered');
     }
 
     (function() {
