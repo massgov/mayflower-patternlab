@@ -28,7 +28,8 @@
               <span>{{ item.text }}</span>
             </div>
             <div class="ma__utility-nav__content-body">
-              {% include item.panel %}
+              {% set utilityPanel = item.panel %}
+              {% include "@organisms/by-template/utility-panel.twig" %}
             </div>
           </div>
         </div>
