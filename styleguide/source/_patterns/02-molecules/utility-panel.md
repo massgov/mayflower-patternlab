@@ -1,7 +1,22 @@
 ---
-title: Login util
+title: Utility Panel
 ---
-Description: A list of login utility links.
+Description: A Rich Text field followed by 1-3 decorative links.
+
 ## State: Alpha
+
 ### Contains
-- [@atoms/05-icons/svg-external-link](?p=atoms-external-link)
+- [@organisms/by-author/rich-text](?p=organisms-rich-text)
+- [@atoms/decorative-link](?p=atoms-decorative-link)
+
+### Required Variables
+~~~
+
+description: 
+  See: [@organisms/by-author/rich-text](?p=organisms-rich-text)
+
+(optional) links: [{
+  See: [@atoms/decorative-link](?p=atoms-decorative-link)
+}]
+
+~~~
