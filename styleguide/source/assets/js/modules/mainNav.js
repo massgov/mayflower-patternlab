@@ -146,12 +146,16 @@ export default function (window,document,$,undefined) {
       show($link.find('.js-main-nav-content'));
     });
     $mainNavItems.on('mouseenter', function(e) {
+      $(this).children('button').attr("aria-expanded","true");
+
       if(windowWidth > breakpoint) {
         let $openContent = $(this).find('.js-main-nav-content');
         show($openContent);
       }
     });
     $mainNavItems.on('mouseleave', function(e) {
+      $(this).children('button').attr("aria-expanded","false");
+
       if(windowWidth > breakpoint) {
         let $openContent = $(this).find('.js-main-nav-content');
         hide($openContent);
@@ -170,11 +174,14 @@ export default function (window,document,$,undefined) {
         // add open class to this item
         $elParent.addClass(openClass);
         show($content);
+        $el.attr('aria-expanded', 'true');
       } else {
         hide($openContent);
+        $el.attr('aria-expanded', 'false');
 
         if(!isOpen) {
           show($content);
+          $el.attr('aria-expanded', 'true');
         }
       }
     });
@@ -201,7 +208,6 @@ export default function (window,document,$,undefined) {
       let $openContent = $parent.find('.js-main-nav-content.' + openClass);
       hide($openContent);
     });
-
 
     function hide($content) {
       $('body').removeClass(submenuClass);
