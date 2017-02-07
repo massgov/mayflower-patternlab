@@ -1,3 +1,5 @@
+import checkMobile from "../helpers/cssControlCode.js";
+
 export default function (window,document,$,undefined) {
 
   $(".js-scroll-anchors").each(function() {
@@ -185,13 +187,5 @@ export default function (window,document,$,undefined) {
     }
 
   });
-
-  function checkMobile($el) {
-    let value = "true";
-    try {
-      value = window.getComputedStyle($el[0], ':before').getPropertyValue('content').replace(/\"/g, '');
-    } catch(err) {}
-    return value === "false" ? false : true;
-  };
 
 }(window,document,jQuery);
