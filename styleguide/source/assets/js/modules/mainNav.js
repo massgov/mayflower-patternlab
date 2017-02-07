@@ -36,7 +36,7 @@ export default function (window,document,$,undefined) {
           isShift = !!e.shiftKey; // typecast to boolean
           console.log(isShift);
 
-      // down arrow key
+      // down arrow or tab key
       if((e.keyCode === 40) || (e.keyCode === 9 && !isShift)) {
         // hide content
         // If menubar focus
@@ -67,7 +67,7 @@ export default function (window,document,$,undefined) {
         }
       }
 
-       // up arrow
+       // up arrow or shift+tab keys
        if((e.keyCode === 38) || (e.keyCode === 9 && isShift)) {
         // hide content
         // If menubar focus
