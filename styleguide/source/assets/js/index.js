@@ -14,6 +14,4 @@ import mobileNav        from "./modules/mobileNav.js";
 import responsiveVideo  from "./modules/responsiveVideo.js";
 import richText         from "./modules/richText.js";
 import scrollAnchors    from "./modules/scrollAnchors.js";
-import siteSettings     from "./modules/siteSettings.js";
 import utilNav          from "./modules/utilNav.js";
-import zoomControls     from "./modules/zoomControls.js";
