@@ -1,0 +1,11 @@
+<section class="ma__location-listing js-location-listing">
+  <div class="ma__location-listing__map js-location-listing-map">
+    {% set googleMap = locationListing.googleMap %}
+    {% include "@molecules/google-map.twig" %}
+  </div>
+  <div class="ma__location-listing__results">
+    {% for imagePromo in locationListing.results %}
+      {% include "@molecules/image-promo.twig" %}
+    {% endfor %}
+  </div>
+</section>

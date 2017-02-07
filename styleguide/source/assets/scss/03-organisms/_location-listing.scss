@@ -1,0 +1,33 @@
+.ma__location-listing {
+  @include ma-container;
+
+  &:before {
+    content: "false";
+    display: none;
+
+    @media ($bp-large-min) {
+      content: "true"
+    }
+  }
+
+  &__map {
+    margin-bottom: 40px;
+
+    @media ($bp-large-min){
+      //@include span-columns(3 of 6);
+      float: right;
+      margin-bottom: 0;
+      max-height: 80vh;
+      width: 48.36066%;
+    }
+  }
+
+  &__results {
+
+    @media ($bp-large-min){
+      //@include span-columns(3 of 6);
+      float: left;
+      width: 48.36066%;
+    }
+  }
+}
