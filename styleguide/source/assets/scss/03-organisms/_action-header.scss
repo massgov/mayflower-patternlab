@@ -104,6 +104,68 @@ $action-header-widget-width: 350px;
       display: none;
     }
   }
+
+
+  .ma__contact-us--accordion {
+    @include clearfix;
+
+    // controls for when to activate accordion
+    &:before {
+      content: "true";
+    }
+
+    @media print, ($bp-small-min) {
+      &:before {
+        content: "false";
+      }
+    }
+  }
+
+  @media print, ($bp-small-min) {
+    .ma__contact-us > .ma__contact-group {
+      
+      &:first-child {
+        clear: both;
+        padding-bottom: 20px;
+      }
+    }
+
+    .ma__contact-us--accordion > .ma__contact-group:nth-child(2) {
+      border-right: 1px solid;
+      float: left;
+      height: 100%;
+      padding-right: 45px;
+      padding-top: 0;
+      width: 50%;
+    }
+
+    .ma__contact-us--accordion > .ma__contact-us__extra {
+      border-left: 1px solid;
+      display: block;
+      float: left;
+      height: 100%;
+      margin-left: -1px;
+      padding-left: 45px;
+      padding-top: 0;
+      width: 50%;
+    }
+
+    .ma__contact-us__expand {
+      border-top: 1px solid;
+      clear: both;
+      display: none;
+    }
+  }
+
+  .ma__contact-us__expand {
+    // border-top: 1px solid;
+    clear: both;
+    // margin: 1em 0;
+
+    @media print, ($bp-small-min) {
+      display: none;
+    }
+  }
 }
 
 
