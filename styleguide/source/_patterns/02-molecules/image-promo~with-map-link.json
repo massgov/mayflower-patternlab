@@ -27,6 +27,9 @@
       "type": "chevron",
       "info": "Read More about Activity Title"
     },
-    "location": null
+    "location": {
+      "text": "89 Summer St, Malden, MA 02148",
+      "map": true
+    }
   }
 }

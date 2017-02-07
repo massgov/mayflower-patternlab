@@ -17,6 +17,18 @@
         {{ imagePromo.title.text }}
       {% endif %}
     </h2>
+    {% if imagePromo.location %}
+      <div class="ma__image-promo__location {{ imagePromo.location.map ? 'js-location-listing-link' : '' }}">
+        {% if imagePromo.location.map %}
+          {% include "@atoms/05-icons/svg-marker.twig" %}
+          <button type="button">{{ imagePromo.location.text }}</button>
+        {% else %}
+          <span>
+            {{ imagePromo.location.text }}
+          </span>
+        {% endif %}
+      </div>
+    {% endif %}
     <div class="ma__image-promo__description">
       {% set richText = imagePromo.description %}
       {% include "@organisms/by-author/rich-text.twig" %}

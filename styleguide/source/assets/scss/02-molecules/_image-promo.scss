@@ -67,4 +67,21 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
     padding-bottom: 3px;
   }
 
+  &__location {
+    padding: 5px 0;
+
+    svg {
+      height: 1.5em;
+      margin-right: 5px;
+      vertical-align: bottom;
+      width: 1rem;
+    }
+
+    button {
+      @include ma-button-reset;
+      @include ma-link-underline;
+      border-bottom-width: 1px;
+    }
+  }
+
 }
