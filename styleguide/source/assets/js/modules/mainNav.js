@@ -57,6 +57,7 @@ export default function (window,document,$,undefined) {
           }
         } else {
           show($topLevelItem.find('.js-main-nav-content'));
+          $topLevelLink.attr('aria-expanded', 'true');
           $link.addClass(openClass);
           if($dropdownLinks[1]) {
             $dropdownLinks[1].focus();
@@ -65,7 +66,8 @@ export default function (window,document,$,undefined) {
         }
       }
 
-       if(e.keyCode === 38) {  // up arrow
+       // up arrow
+       if(e.keyCode === 38) {
         // hide content
         // If menubar focus
         //  - Open pull down menu and select first menu item
@@ -76,7 +78,7 @@ export default function (window,document,$,undefined) {
         if(open) {
           if(focusIndexInDropdown <= 1 ) { // not 0 bc of hidden first link
             hide($openContent);
-            $topLevelLink.focus();
+            $topLevelLink.focus().attr('aria-expanded', 'false');
             return;
           } else {
             $dropdownLinks[focusIndexInDropdown-1].focus();
@@ -84,6 +86,7 @@ export default function (window,document,$,undefined) {
           }
         } else {
           show($topLevelItem.find('.js-main-nav-content'));
+          $topLevelLink.focus().attr('aria-expanded', 'true');
           $link.addClass(openClass);
           return;
         }
@@ -95,7 +98,7 @@ export default function (window,document,$,undefined) {
         e.preventDefault();
         hide($openContent);
         $link.removeClass(openClass);
-        $topLevelLink.focus();
+        $topLevelLink.focus().attr('aria-expanded','false');
         return;
       }
 
@@ -109,6 +112,7 @@ export default function (window,document,$,undefined) {
         // If dropdown focus
         //  - Open previous pull down menu and select first item
         hide($openContent);
+        $topLevelLink.attr('aria-expanded','false');
         let index = $topLevelLinks.index($topLevelLink)-1;
         if($topLevelLinks[index]) {
           $topLevelLinks[index].focus();
@@ -126,6 +130,7 @@ export default function (window,document,$,undefined) {
         // If dropdown focus
         //  - Open next pull menu and select first item
         hide($openContent);
+        $topLevelLink.attr('aria-expanded','false');
         let index = $topLevelLinks.index($topLevelLink)+1;
         if($topLevelLinks[index]) {
           $topLevelLinks[index].focus();
