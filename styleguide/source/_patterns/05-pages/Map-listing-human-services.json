@@ -30,7 +30,8 @@
     }],
     "headerTags": {
       "taxonomyTerms": ""
-    }
+    },
+    "divider": true
   },
   
   "COMMENT":"****PAGE CONTENT COMPONENTS****",

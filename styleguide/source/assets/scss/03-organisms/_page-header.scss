@@ -47,4 +47,14 @@
       margin-bottom: 0;
     }
   }
+
+  &__divider {
+    padding-top: 30px;
+
+    .ma__divider {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  }
 }
