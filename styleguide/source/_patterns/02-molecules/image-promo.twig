@@ -3,7 +3,9 @@
     {% if imagePromo.image.href %}
       <a href="{{ imagePromo.image.href }}">
     {% endif %}
-    <img class="ma__image-promo__image" alt="{{ imagePromo.image.text }}" src="{{ imagePromo.image.image }}">
+    <div class="ma__image-promo__image">
+      <img alt="{{ imagePromo.image.text }}" src="{{ imagePromo.image.image }}">
+    </div>
     {% if imagePromo.image.href %}
       </a>
     {% endif %}
@@ -18,10 +20,10 @@
       {% endif %}
     </h2>
     {% if imagePromo.location %}
-      <div class="ma__image-promo__location {{ imagePromo.location.map ? 'js-location-listing-link' : '' }}">
+      <div class="ma__image-promo__location">
         {% if imagePromo.location.map %}
           {% include "@atoms/05-icons/svg-marker.twig" %}
-          <button type="button">{{ imagePromo.location.text }}</button>
+          <a class="{{ imagePromo.location.map ? 'js-location-listing-link' : '' }}" href="#" role="button">{{ imagePromo.location.text }}</a>
         {% else %}
           <span>
             {{ imagePromo.location.text }}
