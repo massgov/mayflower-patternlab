@@ -144,12 +144,6 @@ export default function (window,document,$,undefined) {
         return;
       }
 
-      // hide content
-      // hide($openContent);
-      // add open class to this item
-      // $(this).addClass(openClass);
-      // add open class to the correct content based on index
-      // show($link.find('.js-main-nav-content'));
     });
     $mainNavItems.on('mouseenter', function(e) {
       $(this).children('button').attr("aria-expanded","true");
