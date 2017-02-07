@@ -32,11 +32,12 @@ export default function (window,document,$,undefined) {
           $topLevelItem = $focusedElement.parents('.ma__main-nav__item'),
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
           $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
-          focusIndexInDropdown = $dropdownLinks.index($focusedElement);
-
+          focusIndexInDropdown = $dropdownLinks.index($focusedElement),
+          isShift = !!e.shiftKey; // typecast to boolean
+          console.log(isShift);
 
       // down arrow key
-      if(e.keyCode === 40) {
+      if((e.keyCode === 40) || (e.keyCode === 9 && !isShift)) {
         // hide content
         // If menubar focus
         //  - Open pull down menu and select first menu item
@@ -67,7 +68,7 @@ export default function (window,document,$,undefined) {
       }
 
        // up arrow
-       if(e.keyCode === 38) {
+       if((e.keyCode === 38) || (e.keyCode === 9 && isShift)) {
         // hide content
         // If menubar focus
         //  - Open pull down menu and select first menu item
@@ -144,11 +145,11 @@ export default function (window,document,$,undefined) {
       }
 
       // hide content
-      hide($openContent);
+      // hide($openContent);
       // add open class to this item
-      $(this).addClass(openClass);
+      // $(this).addClass(openClass);
       // add open class to the correct content based on index
-      show($link.find('.js-main-nav-content'));
+      // show($link.find('.js-main-nav-content'));
     });
     $mainNavItems.on('mouseenter', function(e) {
       $(this).children('button').attr("aria-expanded","true");
