@@ -15,6 +15,8 @@
 ### DS-23
 * DP-1270 - Implement the structure data markup for location page type to mayflower
 
+### Other
+* DP-1521 - Interstitial page not displaying when clicking on common actions & guide links for topic and subtopic pages
 
 ## 3.2.2
 * Fixes bump version bug
