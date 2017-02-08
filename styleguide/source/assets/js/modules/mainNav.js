@@ -34,7 +34,6 @@ export default function (window,document,$,undefined) {
           $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
           focusIndexInDropdown = $dropdownLinks.index($focusedElement),
           isShift = !!e.shiftKey; // typecast to boolean
-          console.log(isShift);
 
       // down arrow or tab key
       if((e.keyCode === 40) || (e.keyCode === 9 && !isShift)) {
