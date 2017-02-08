@@ -13,15 +13,10 @@ Description: A `<button> [type='submit']` element which contains a visually hidd
 
 ### Required Variables: 
 ~~~
-directory: 
-    type: string (describes the folder which contains the svg-sprite <svg> file)
+buttonSearch {
+    text: 
+        type: string/required
+}
 ~~~
-## Variations
-* [Main](/?p=atoms-button-link)
-* [Main Alt](/?p=atoms-button-link-alt)
-* [Main Alt Small](/?p=atoms-button-link-alt-sm)
-* [Minor](/?p=atoms-button-link2)
-* [Minor Alt](/?p=atoms-button-link2-alt)
-* [Minor Alt Small](/?p=atoms-button-link2-alt-sm)
-* [Small](/?p=atoms-button-link-sm)
-* [Search](/?p=atoms-button-search)
+
+~~~
