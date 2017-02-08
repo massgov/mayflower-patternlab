@@ -1,32 +1,53 @@
 .ma__location-listing {
   @include ma-container;
+  position: relative;
 
-  &:before {
-    content: "false";
-    display: none;
-
-    @media ($bp-large-min) {
-      content: "true"
-    }
+  @media ($bp-large-min) {
+    display: flex;
+      align-items: stretch;
   }
 
   &__map {
     margin-bottom: 40px;
+    position: relative;
 
     @media ($bp-large-min){
-      //@include span-columns(3 of 6);
-      float: right;
+      // @include span-columns(3 of 6);
       margin-bottom: 0;
-      max-height: 80vh;
+      order: 2;
       width: 48.36066%;
+    }
+  }
+
+  &__sticky {
+    max-height: 80vh;
+
+    &:before {
+      content: "false";
+      display: none;
+
+      @media ($bp-large-min) {
+        content: "true"
+      }
+    }
+
+    &[data-sticky='middle'] {
+      position: fixed;
+      top: 0;
+    }
+
+    &[data-sticky='bottom'] {
+      position: absolute;
+      bottom: 0;
     }
   }
 
   &__results {
 
     @media ($bp-large-min){
-      //@include span-columns(3 of 6);
-      float: left;
+      // @include span-columns(3 of 6);
+      margin-right: 3.27869%;
+      order: 1;
       width: 48.36066%;
     }
   }
