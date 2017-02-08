@@ -2,9 +2,15 @@
   @include ma-container;
   position: relative;
 
-  @media ($bp-large-min) {
-    display: flex;
-      align-items: stretch;
+  &__filters {
+
+  }
+
+  &__columns {
+    @media ($bp-large-min) {
+      display: flex;
+        align-items: stretch;
+    }
   }
 
   &__map {

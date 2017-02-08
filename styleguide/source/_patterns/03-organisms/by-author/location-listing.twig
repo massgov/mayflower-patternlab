@@ -1,13 +1,18 @@
 <section class="ma__location-listing js-location-listing">
-  <div class="ma__location-listing__map">
-    <div class="ma__location-listing__sticky js-location-listing-map">
-      {% set googleMap = locationListing.googleMap %}
-      {% include "@molecules/google-map.twig" %}
-    </div>
+  <div class="ma__loction-listing__filters">
+
   </div>
-  <div class="ma__location-listing__results">
-    {% for imagePromo in locationListing.results %}
-      {% include "@molecules/image-promo.twig" %}
-    {% endfor %}
+  <div class="ma__location-listing__columns">
+    <div class="ma__location-listing__map">
+      <div class="ma__location-listing__sticky js-location-listing-map">
+        {% set googleMap = locationListing.googleMap %}
+        {% include "@molecules/google-map.twig" %}
+      </div>
+    </div>
+    <div class="ma__location-listing__results js-location-listing-results">
+      {% for imagePromo in locationListing.results %}
+        {% include "@molecules/image-promo.twig" %}
+      {% endfor %}
+    </div>
   </div>
 </section>
