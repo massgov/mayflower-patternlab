@@ -1,5 +1,25 @@
 {
   "locationListing": {
+    "form": {
+      "action": "#",
+      "inputs":[{
+        "path":"@molecules/filter-search.twig",
+        "data":{
+          "filterSearch": {
+            "inputText": {
+              "labelText": "Filter by city, town or zipcode",
+              "required": false,
+              "id": "filter-by-location",
+              "name": "filter-by-location",
+              "placeholder": ""
+            },
+            "buttonSearch": {
+              "text": "Update"
+            }
+          }
+        }
+      }]
+    },
     "googleMap": {
       "map": {
         "center": {

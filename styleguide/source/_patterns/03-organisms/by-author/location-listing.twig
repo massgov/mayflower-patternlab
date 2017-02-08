@@ -1,7 +1,13 @@
 <section class="ma__location-listing js-location-listing">
-  <div class="ma__loction-listing__filters">
-
-  </div>
+  {% if locationListing.form %}
+    <div class="ma__location-listing__filters">
+      <form action="{{ locationListing.form.action }}" class="js-location-listing-form">
+        {% for input in locationListing.form.inputs %}
+          {% include input.path with input.data %}
+        {% endfor %}
+      </form>
+    </div>
+  {% endif %}
   <div class="ma__location-listing__columns">
     <div class="ma__location-listing__map">
       <div class="ma__location-listing__sticky js-location-listing-map">

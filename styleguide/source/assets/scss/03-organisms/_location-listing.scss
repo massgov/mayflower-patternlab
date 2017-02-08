@@ -3,7 +3,10 @@
   position: relative;
 
   &__filters {
-
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 
   &__columns {
