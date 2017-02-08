@@ -28,10 +28,6 @@ $action-finder-border-color: tint($c-theme-blue,50%);
     }
   }
 
-  &__item:hover a {
-    border-color: rgba($c-font-link, .5);
-  }
-
   &__items--all {
     
     .ma__callout-link {
