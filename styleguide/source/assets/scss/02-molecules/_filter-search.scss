@@ -1,0 +1,14 @@
+.ma__filter-search {
+  border: none;
+  padding: 0;
+
+  label {
+    display: block;
+  }
+
+  input,
+  button {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
