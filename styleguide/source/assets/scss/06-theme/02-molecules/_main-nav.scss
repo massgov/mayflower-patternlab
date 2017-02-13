@@ -15,7 +15,8 @@
 
   &__top-link {
     color: $c-font-dark;
-
+    font-weight: 700;
+    
     .has-subnav & {
   // chevron
       &:after {
@@ -59,17 +60,33 @@
   }
 
   &__link {
-    @include ma-font(500);
+    font-weight: 500;
     color: $c-font-base;
 
     &:hover {
-      background-color: $c-gray-f2f2f2;
+      background-color: $c-bg-subtle;
       color: $c-font-link-subtle;
     }
   }
 
   &__subitem:first-child &__link {
-    @include ma-font(700);
+    font-weight: 700;
     color: $c-font-dark;
+  }
+
+  &__subitem:last-child &__link {
+    font-weight: 700;
+    background-color: $c-bg-subtle;
+    color: $c-font-link;
+  
+    &:hover {
+      background-color: $c-gray-dcdcdc;
+    }
+
+    & > svg {
+      fill: rgba($c-font-link, .5);
+      height: 20px;
+      width: 20px;
+    }
   }
 }

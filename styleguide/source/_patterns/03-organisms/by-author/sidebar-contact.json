@@ -17,12 +17,14 @@
           "hidden": "",
           "items": [{
             "type": "phone",
+            "property": "",
             "label":"Main:",
             "value":"(413) 499-4262",
             "link":"14134994262",
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           },{
             "type": "phone",
+            "property": "",
             "label":"TTY:",
             "value":"(617) 555-7777",
             "link":"16175557777",
@@ -34,6 +36,7 @@
           "hidden": "",
           "items": [{
             "type": "fax",
+            "property": "",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -45,6 +48,7 @@
           "hidden": "true",
           "items": [{
             "type": "address",
+            "property": "",
             "label":"",
             "value": "555 Park Drive<br/>Boston, MA 02231",
             "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
@@ -65,6 +69,7 @@
           "hidden": "",
           "items": [{
             "type": "phone",
+            "property": "",
             "label":"Main:",
             "value":"(413) 443-8765",
             "link":"14134438765",
@@ -76,6 +81,7 @@
           "hidden": "",
           "items": [{
             "type": "email",
+            "property": "",
             "label":"Email:",
             "value":"mount.greylock@state.ma.us",
             "link":"mount.greylock@state.ma.us",
@@ -87,6 +93,7 @@
           "hidden": "true",
           "items": [{
             "type": "fax",
+            "property": "",
             "label":"",
             "value":"(413) 499-4262",
             "link":"14134994262",
@@ -98,6 +105,7 @@
           "hidden": "true",
           "items": [{
             "type": "address",
+            "property": "",
             "label": "",
             "value": "555 Park Drive<br/>North Hampton, MA 02231",
             "link": "",

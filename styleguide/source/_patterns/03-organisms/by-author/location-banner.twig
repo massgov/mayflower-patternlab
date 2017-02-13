@@ -11,8 +11,8 @@
     }
   </style>
   <div class="ma__location-banner__map">
-    {% set actionMap = locationBanner.actionMap %}
-    {% include "@molecules/action-map.twig" %}
+    {% set googleMap = locationBanner.actionMap %}
+    {% include "@molecules/google-map.twig" %}
   </div>
   <div 
     class="ma__location-banner__image" 
@@ -20,4 +20,7 @@
     role="image"
     title="{{locationBanner.bgTitle}}">
   </div>
+{% if schemaPageType %}
+  <meta property="image" src="{{locationBanner.bgNarrow}}" alt="{{locationBanner.bgTitle}}" />
+{% endif %}
 </section>

@@ -1,17 +1,15 @@
 <section class="ma__utility-nav js-util-nav">
   <ul class="ma__utility-nav__items">
-    <li class="ma__utility-nav__item">
-      <div class="ma__utility-nav__translate">
-        {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
-        <span>
-          <form action="#">
-            {% set dropdown = utilityNav.dropdown %}
-            {% include "@molecules/dropdown.twig" %}
-            <button type="submit" hidden>Translate</button>
-          </form>
-        </span>
-      </div>
-    </li>
+    {% if googleLanguages %}
+      <li class="ma__utility-nav__item">
+        <div class="ma__utility-nav__translate">
+          <div id="google_translate_element"></div>
+          <div class="ma__utility-nav__translate-icon">
+            {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
+          </div>
+        </div>
+      </li>
+    {% endif %}
     {% for item in utilityNav.items %}
       <li class="ma__utility-nav__item js-util-nav-toggle">
         <a class="ma__utility-nav__link" 
@@ -30,7 +28,8 @@
               <span>{{ item.text }}</span>
             </div>
             <div class="ma__utility-nav__content-body">
-              {% include item.panel %}
+              {% set utilityPanel = item.panel %}
+              {% include "@organisms/by-template/utility-panel.twig" %}
             </div>
           </div>
         </div>

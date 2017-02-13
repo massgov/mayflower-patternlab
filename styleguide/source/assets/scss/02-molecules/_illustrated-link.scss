@@ -10,6 +10,8 @@ $illustrated-link-image-width: 130px;
   width: 100%;
 
   &__content {
+    display: flex;
+      align-items: center;
     padding: 15px 0 15px 20px;
     padding-right: 0;
     position: relative;
@@ -41,15 +43,22 @@ $illustrated-link-image-width: 130px;
     text-transform: uppercase;
   }
 
+  &__link {
+    display: inline;
+  }
+
   &__title {
-    display: table-cell;
+    display: block;
     font-size: 1.625rem;
     line-height: 1.3;
     margin-bottom: 0;
+    padding-right: 18px;
     vertical-align: middle;
+    width: 100%;
 
     .ma__decorative-link {
       display: inline;
+      padding-right: 0;
     }
   }
 

@@ -10,61 +10,6 @@ $bp-header-logo-min: "min-width: 1000px";
     padding-top: 0;
   }
 
-  &__backto {
-    display: inline-block;
-    height: 40px;
-    margin-bottom: 3px;
-    position: fixed;
-      top: 0;
-      left: 0;
-    transition: left 0.5s ease;
-    z-index: 9999;
-
-
-    @media ($bp-header-toggle-min) {
-      background-color: $c-theme-blue;
-      display: block;
-      position: relative;
-      text-align: center;
-    }
-
-    .show-menu & {
-      left: -100%;
-    }
-
-    a {
-      @include ma-chevron("left");
-      @include ma-font(500);
-      background-color: tint($c-font-link,90%);
-      border: 3px solid;
-      border-color: tint($c-font-link,50%);
-      border-top: none;
-      box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
-      color: $c-font-link;
-      display: inline-block;
-      font-size: 1.25rem;
-      padding: 6px 7px;
-
-      @media ($bp-x-small-min) {
-        font-size: 1.375rem;
-        margin-left: 20px;
-        padding: 7px 15px;
-      }
-
-      &:before {
-        height: 9px;
-        margin-right: .75em;
-        margin-top: 0;
-        opacity: .5;
-        width: 9px;
-      }
-
-      &:hover {
-       padding-top: 18px;
-      }
-    }
-  }
-
   &__container {
     font-size: 0;
     padding-top: 15px;

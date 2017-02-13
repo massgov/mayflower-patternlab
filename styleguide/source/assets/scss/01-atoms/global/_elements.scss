@@ -16,11 +16,19 @@ html {
   @media ($bp-small-max){
     font-size: 14.5px;
   }
+
+  // .translated-rtl & {
+  //   direction: rtl;
+  // }
 }
 
 body {
   font-size: 1.375rem;
   line-height: 1.5;
+
+  // .translated-rtl & {
+  //   direction: rtl;
+  // }
 }
 
 a {
@@ -66,3 +74,4 @@ h6 {
 .visually-hidden {
   @include ma-visually-hidden;
 }
+
