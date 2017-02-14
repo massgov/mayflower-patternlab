@@ -3,7 +3,7 @@
     "form": {
       "action": "#",
       "inputs":[{
-        "path":"@molecules/filter-search.twig",
+        "path":"@molecules/field-submit.twig",
         "data":{
           "fieldSubmit": {
             "inputText": {
