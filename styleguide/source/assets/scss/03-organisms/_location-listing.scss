@@ -1,15 +1,18 @@
 .ma__location-listing {
-  @include ma-container;
   position: relative;
 
   &__filters {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
     margin-bottom: 40px;
-    padding-bottom: 40px;
+    padding: 40px 0;
+
+    form {
+      @include ma-container;
+    }
   }
 
   &__columns {
+    @include ma-container;
+
     @media ($bp-large-min) {
       display: flex;
         align-items: stretch;

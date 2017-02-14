@@ -25,7 +25,7 @@
     @media ($bp-large-min){
       padding-right: $column;
       padding-bottom: 0;
-      width: calc(100% - #{$layout-sidebar-width});
+      max-width: 820px;
     }
 
   }

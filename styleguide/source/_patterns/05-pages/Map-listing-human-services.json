@@ -31,7 +31,7 @@
     "headerTags": {
       "taxonomyTerms": ""
     },
-    "divider": true
+    "divider": false
   },
   
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
@@ -136,7 +136,7 @@
               "info": ""
             },
             "location": {
-              "text": "251 Causeway Street,Suite 900, Boston, MA 02114",
+              "text": "251 Causeway Street, Suite 900, Boston, MA 02114",
               "map": true
             }
             
