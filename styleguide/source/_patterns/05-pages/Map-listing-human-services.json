@@ -48,7 +48,7 @@
             "inputs":[{
               "path":"@molecules/filter-search.twig",
               "data":{
-                "filterSearch": {
+                "fieldSubmit": {
                   "inputText": {
                     "labelText": "Filter by city, town or zipcode",
                     "required": false,
