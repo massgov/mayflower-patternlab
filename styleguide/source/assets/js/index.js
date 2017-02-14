@@ -1,5 +1,5 @@
 import accordions       from "./modules/accordions.js";
-import actionMap        from "./modules/actionMap.js";
+import googleMap        from "./modules/googleMap.js";
 import back2top         from "./modules/back2top.js";
 import bannerCarousel   from "./modules/bannerCarousel.js";
 import clickable        from "./modules/clickable.js";
