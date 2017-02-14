@@ -1,17 +1,19 @@
 .ma__location-listing {
   position: relative;
 
-  &__filters {
-    margin-bottom: 40px;
-    padding: 40px 0;
+  &__container {
+    @include ma-container;
+  }
 
-    form {
-      @include ma-container;
-    }
+  &__filters {
+    padding: 40px 0;
   }
 
   &__columns {
-    @include ma-container;
+    position: relative;
+  }
+
+  &__columns &__container {
 
     @media ($bp-large-min) {
       display: flex;
@@ -21,18 +23,38 @@
 
   &__map {
     margin-bottom: 40px;
-    position: relative;
+    //position: relative;  //removed to allow the map to expand all the way to the right.
 
     @media ($bp-large-min){
-      // @include span-columns(3 of 6);
+      min-height: 100vh;
       margin-bottom: 0;
       order: 2;
-      width: 48.36066%;
+      width: 40%;    
     }
   }
 
   &__sticky {
-    max-height: 80vh;
+    height: 80vh;
+    max-height: 500px;
+    width: 100%;
+
+    @media ($bp-large-min) {
+      height: 100vh;
+      max-height: none;
+      position: absolute;
+        right: 0;
+      //width: calc((100vw - (#{$max-width}))/2 + #{$max-width * .4836066}) !important;
+      width: calc((100vw - (#{$max-width}))/2 + #{$max-width * .4}) !important;
+
+      &[data-sticky='middle'] {
+        position: fixed;
+        top: 0;
+      }
+
+      &[data-sticky='bottom'] {
+        bottom: 0;
+      }
+    }
 
     &:before {
       content: "false";
@@ -43,24 +65,19 @@
       }
     }
 
-    &[data-sticky='middle'] {
-      position: fixed;
-      top: 0;
-    }
-
-    &[data-sticky='bottom'] {
-      position: absolute;
-      bottom: 0;
+    .ma__google-map,
+    .ma__google-map__map {
+      height: 100%;
     }
   }
 
   &__results {
 
     @media ($bp-large-min){
-      // @include span-columns(3 of 6);
-      margin-right: 3.27869%;
+      margin-right: 3.25%;
       order: 1;
-      width: 48.36066%;
+      padding-top: 40px;
+      width: 60% - 3.25%; // subtract the margin right    
     }
   }
 }

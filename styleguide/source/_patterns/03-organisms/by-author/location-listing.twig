@@ -1,24 +1,28 @@
 <section class="ma__location-listing js-location-listing">
   {% if locationListing.form %}
     <div class="ma__location-listing__filters">
-      <form action="{{ locationListing.form.action }}" class="js-location-listing-form">
-        {% for input in locationListing.form.inputs %}
-          {% include input.path with input.data %}
-        {% endfor %}
-      </form>
+      <div class="ma__location-listing__container">
+        <form action="{{ locationListing.form.action }}" class="js-location-listing-form">
+          {% for input in locationListing.form.inputs %}
+            {% include input.path with input.data %}
+          {% endfor %}
+        </form>
+      </div>
     </div>
   {% endif %}
   <div class="ma__location-listing__columns">
-    <div class="ma__location-listing__map">
-      <div class="ma__location-listing__sticky js-location-listing-map">
-        {% set googleMap = locationListing.googleMap %}
-        {% include "@molecules/google-map.twig" %}
+    <div class="ma__location-listing__container">
+      <div class="ma__location-listing__map">
+        <div class="ma__location-listing__sticky js-location-listing-map">
+          {% set googleMap = locationListing.googleMap %}
+          {% include "@molecules/google-map.twig" %}
+        </div>
       </div>
-    </div>
-    <div class="ma__location-listing__results js-location-listing-results">
-      {% for imagePromo in locationListing.results %}
-        {% include "@molecules/image-promo.twig" %}
-      {% endfor %}
+      <div class="ma__location-listing__results js-location-listing-results">
+        {% for imagePromo in locationListing.results %}
+          {% include "@molecules/image-promo.twig" %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>

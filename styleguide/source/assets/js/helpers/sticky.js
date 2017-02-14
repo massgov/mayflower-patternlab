@@ -36,13 +36,25 @@ export default function (window,document,$,undefined) {
   }
 
   function updateData(){
-    runCode = checkActive($el);
+    let newRunCode = checkActive($el);
+
+    if(runCode && !newRunCode) {
+      $el.removeAttr('style');
+    }
+
+    runCode = newRunCode;
+
+    if(!runCode){
+      return;
+    }
+    
+    runCode = newRunCode;
     elHeight = $el.height();
     elWidth = $elParent.width();
     upperLimit = $elParent.offset().top;
     lowerLimit = upperLimit + $elParent.outerHeight(true) - $el.height();
 
-    $el.width(elWidth);
+    $el.width(elWidth);      
   }
 
   function setPosition() {
