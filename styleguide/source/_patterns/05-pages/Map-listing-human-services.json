@@ -50,11 +50,11 @@
               "data":{
                 "fieldSubmit": {
                   "inputText": {
-                    "labelText": "Filter by city, town or zipcode",
+                    "labelText": "Find nearby",
                     "required": false,
                     "id": "filter-by-location",
                     "name": "filter-by-location",
-                    "placeholder": ""
+                    "placeholder": "City, town or zipcode"
                   },
                   "buttonSearch": {
                     "text": "Update"
