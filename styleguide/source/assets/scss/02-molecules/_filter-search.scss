@@ -4,11 +4,29 @@
 
   label {
     display: block;
+    margin-bottom: 0;
   }
 
   input,
   button {
-    display: inline-block;
-    vertical-align: top;
+    float:left;
+    margin-top: .5rem;
+  }
+
+  input {
+    margin-right: -2px;
+    max-width: 100%;
+    width: 400px;
+
+    @media ($bp-x-small-max) {
+      width: 100%;
+    }
+  }
+
+  button {
+
+    svg {
+      display: none;
+    }
   }
 }
