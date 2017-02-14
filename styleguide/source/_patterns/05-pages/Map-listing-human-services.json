@@ -76,7 +76,7 @@
                 "lat": 42.366565,
                 "lng": -71.058940 
               },
-              "label": "A",
+              "label": "",
               "infoWindow": {
                 "name": "Department of Conservation and Recreation",
                 "phone": "16176261250",
@@ -93,7 +93,7 @@
                 "lat": 42.358795,
                 "lng": -71.063858 
               },
-              "label": "B",
+              "label": "",
               "infoWindow": {
                 "name": "Department of Recreation and Fun",
                 "phone": "16176261250",
