@@ -35,7 +35,7 @@ export default function (window,document,$,undefined) {
       rawData.markers.forEach(function(d,i){
         let markerData = Object.assign({map},d);
 
-        markers[i] =  new google.maps.Marker(markerData);
+        let marker =  new google.maps.Marker(markerData);
 
         let infoData = infoTransform(markerData.infoWindow);
         let template = compiledTemplate(infoData);
@@ -43,9 +43,11 @@ export default function (window,document,$,undefined) {
           content: template
         });
 
-        markers[i].addListener('click', function(){
+        marker.addListener('click', function(){
           infoWindow.open(map, marker);
         });
+
+        markers.push(marker);
       });
 
       // listen for recenter command
