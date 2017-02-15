@@ -318,15 +318,19 @@ body {
     a {
       @include ma-chevron("left");
       border: 3px solid;
-      border-top: none;
       display: inline-block;
       padding: 6px 7px;
-      position: absolute;
-        top: -$header-mobile-controls-height;
+      position: fixed;
+        top: 0;
       white-space: nowrap;
 
       @media ($bp-x-small-max) {
         left: 0;
+      }
+
+      @media ($bp-header-toggle-min){
+        position: absolute;
+          top: -$header-mobile-controls-height - 4px;
       }
 
       @media ($bp-large-min) {
