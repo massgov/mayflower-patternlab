@@ -79,5 +79,10 @@
       padding-top: 40px;
       width: 60% - 3.25%; // subtract the margin right    
     }
+
+    & > p {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
   }
 }
