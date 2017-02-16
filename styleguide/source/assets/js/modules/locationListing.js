@@ -12,10 +12,16 @@ export default function (window,document,$,undefined) {
     $el.find('.js-location-listing-link').each(function(index) {
       let $link = $(this);
 
-      $link.on('click', function(){
+      $link.on('click', function(e){
+        e.preventDefault();
         // when link is clicked 
         // trigger map to recenter on this item based on it's index.
-        $el.find('.js-google-map').trigger('recenter',index);
+        let $map = $el.find('.js-google-map'),
+          position = $map.offset().top;
+
+        $map.trigger('recenter',index);
+        // focus on the map
+        $("html,body").stop(true,true).animate({scrollTop:position}, '750');
       });
     });
 

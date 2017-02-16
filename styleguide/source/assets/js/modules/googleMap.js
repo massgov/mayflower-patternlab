@@ -47,6 +47,10 @@ export default function (window,document,$,undefined) {
           infoWindow.open(map, marker);
         });
 
+        marker.showInfo = () => {
+          infoWindow.open(map, marker);
+        }
+
         markers.push(marker);
       });
 
@@ -55,7 +59,8 @@ export default function (window,document,$,undefined) {
         if(typeof markers[markerIndex] === "undefined") {
           return false;
         }
-        map.setCenter(markers[markerIndex].getPosition())
+        map.setCenter(markers[markerIndex].getPosition());
+        markers[markerIndex].showInfo();        
       });    
     });
   }
