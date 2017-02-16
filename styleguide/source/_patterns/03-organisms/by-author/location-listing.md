@@ -22,7 +22,7 @@ locationListing: {
   googleMap: {
     type: @molecules/google-map.twig
   }
-  results: [{
+  imagePromos: [{
     type: @molecules/image-promo.twig
   }]
 }
