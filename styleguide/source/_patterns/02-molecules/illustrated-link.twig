@@ -5,7 +5,11 @@
         <span class="ma__illustrated-link__label">{{ illustratedLink.label }}</span>
       {% endif %}
       <div class="ma__illustrated-link__link">
-        {% set decorativeLink = illustratedLink %}
+        {% set decorativeLink = {
+          "text": illustratedLink.text,
+          "type": illustratedLink.type,
+          "href": illustratedLink.href }
+        %}
         {% include "@atoms/decorative-link.twig" %}
       </div>
     </div>
