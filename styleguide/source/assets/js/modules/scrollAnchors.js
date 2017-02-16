@@ -28,8 +28,6 @@ export default function (window,document,$,undefined) {
       setVariables();
     },1000);
 
-console.log('anchors', anchors);
-
     $links.on('click',function(e) {
       e.preventDefault();
 
@@ -110,8 +108,6 @@ console.log('anchors', anchors);
           $link = $el.is('a') ? $el : $el.find('a'),
           hash = $link[0].hash,
           position = $(hash).offset() ? $(hash).offset().top - headerBuffer - topOffset : upperLimit;
-
-console.log('$link',$link[0].hash);
 
         anchors[i] = { hash, position };
 
