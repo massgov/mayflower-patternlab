@@ -26,7 +26,7 @@
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
         <div class="ma__contact-group__address"{% if item.property %} property="{{item.property}}" typeof="PostalAddress"{% endif %}>
-          {{item.value | raw}}
+          {{item.value | nl2br | raw}}
         </div>
         {% if item.link %}
           <div class="ma__contact-group__directions"{% if item.property %} property="hasMap" typeof="Map"{% endif %}>

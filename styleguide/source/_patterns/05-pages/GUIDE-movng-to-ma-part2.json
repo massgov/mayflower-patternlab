@@ -240,7 +240,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
@@ -372,7 +372,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
@@ -478,7 +478,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
@@ -559,7 +559,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
