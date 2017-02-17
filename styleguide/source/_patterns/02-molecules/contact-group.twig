@@ -30,10 +30,9 @@
         </div>
         {% if item.link %}
           <div class="ma__contact-group__directions"{% if item.property %} property="hasMap" typeof="Map"{% endif %}>
-            {% set linkText = "Directions" %}
             {% set linkInfo =  " to " ~ contactUs.title.text %}
             {% set linkProperty = schemaPageType ? "url" : "" %}
-            {% set decorativeLink = { "text": linkText, "info": linkInfo, "href": item.link, "type": "external", "property": linkProperty } %}
+            {% set decorativeLink = { "text": "Directions", "info": linkInfo, "href": item.link, "type": "external", "property": linkProperty } %}
             {% include "@atoms/decorative-link.twig" %}
           </div>
         {% endif %}
