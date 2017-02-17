@@ -1,0 +1,43 @@
+<section class="ma__image-promo">
+  {% if imagePromo.image %}
+    {% if imagePromo.image.href %}
+      <a href="{{ imagePromo.image.href }}">
+    {% endif %}
+    <div class="ma__image-promo__image">
+      <img alt="{{ imagePromo.image.text }}" src="{{ imagePromo.image.image }}">
+    </div>
+    {% if imagePromo.image.href %}
+      </a>
+    {% endif %}
+  {% endif %}
+  <div class="ma__image-promo__details">      
+    <h2 class="ma__image-promo__title">
+      {% if imagePromo.title.href %}
+        {% set decorativeLink = imagePromo.title %}
+        {% include "@atoms/decorative-link.twig" %}
+      {% else %}
+        {{ imagePromo.title.text }}
+      {% endif %}
+    </h2>
+    {% if imagePromo.location %}
+      <div class="ma__image-promo__location">
+        {% if imagePromo.location.map %}
+          {% include "@atoms/05-icons/svg-marker.twig" %}
+          <a class="{{ imagePromo.location.map ? 'js-location-listing-link' : '' }}" href="#" role="button">{{ imagePromo.location.text }}</a>
+        {% else %}
+          <span>
+            {{ imagePromo.location.text }}
+          </span>
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="ma__image-promo__description">
+      {% set richText = imagePromo.description %}
+      {% include "@organisms/by-author/rich-text.twig" %}
+    </div>
+    {% if imagePromo.link %}
+      {% set decorativeLink = imagePromo.link %}
+      {% include "@atoms/decorative-link.twig" %}
+    {% endif %}
+  </div>
+</section>

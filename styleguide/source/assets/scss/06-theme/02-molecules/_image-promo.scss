@@ -1,0 +1,15 @@
+.ma__image-promo {
+  border-color: $c-bd-divider;
+
+  &__location {
+
+    svg {
+      fill: rgba($c-font-link, .5);
+    }
+
+    a {
+      border-bottom-color: rgba($c-font-link, .5);
+      font-weight: 400;
+    }
+  }
+}
