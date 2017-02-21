@@ -35,6 +35,7 @@
       display: inline-block;
       transform: rotate(-90deg);
       transform-origin: center center;
+      transition: all .5s;
     }
 
     span {
