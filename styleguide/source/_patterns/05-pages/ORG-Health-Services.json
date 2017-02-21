@@ -186,7 +186,8 @@
             "image": "/assets/images/placeholder/130x160.png",
             "text": "Massachusetts Health Care",
             "type": "",
-            "href": "#"
+            "href": "#",
+            "label": "Guide:"
           },{
             "image": "",
             "text": "Find a MassHealth doctor",

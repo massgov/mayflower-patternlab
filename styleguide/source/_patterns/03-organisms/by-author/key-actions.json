@@ -16,7 +16,8 @@
       "image": "/assets/images/placeholder/130x160.png",
       "text": "File for unemployment",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": "Guide:"
     },{
       "text": "Learn more about the tax code",
       "type": "",
