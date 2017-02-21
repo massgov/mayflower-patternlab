@@ -1,5 +1,16 @@
 # Mass Gov Release Notes
 
+## 3.3.1 (Sprint 13)
+### DS-5
+* DP-1848 - Related Things - allow for org partners to highlight one or two actions
+* DP-1670 - Remove static label "Guide:" from illustrated link
+* DP-1653 - Implement static MVP Map page in Patternlab
+* DP-1996 - Google translate is only showing in Chrome & Safari browsers
+
+### Maintaince & Support
+* DP-1434 - Update location and design of feedback form
+
+
 ## 3.3.0 (Sprint 12)
 ### DS-5
 * DP-691 - Implement Google Translate in Pattern Lab
