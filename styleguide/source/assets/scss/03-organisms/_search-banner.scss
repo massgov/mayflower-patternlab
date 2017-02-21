@@ -127,6 +127,7 @@
     & > svg {
       display: inline-block;
       height: 20px;
+      transition: color .5s, fill .5s, background .5s;
       vertical-align: middle;
       width: 20px;
 
