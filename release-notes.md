@@ -6,6 +6,7 @@
 * DP-1670 - Remove static label "Guide:" from illustrated link
 * DP-1653 - Implement static MVP Map page in Patternlab
 * DP-1996 - Google translate is only showing in Chrome & Safari browsers
+* DP-1763 - Stacked Row Icon Links - Text wrapping issue
 
 ### Maintaince & Support
 * DP-1434 - Update location and design of feedback form
