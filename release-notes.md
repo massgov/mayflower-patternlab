@@ -2,11 +2,13 @@
 
 ## 3.3.1 (Sprint 13)
 ### DS-5
-* DP-1848 - Related Things - allow for org partners to highlight one or two actions
-* DP-1670 - Remove static label "Guide:" from illustrated link
 * DP-1653 - Implement static MVP Map page in Patternlab
-* DP-1996 - Google translate is only showing in Chrome & Safari browsers
+* DP-1670 - Remove static label "Guide:" from illustrated link
+* DP-1731 - Location icon cut off on home page on mobile
 * DP-1763 - Stacked Row Icon Links - Text wrapping issue
+* DP-1848 - Related Things - allow for org partners to highlight one or two actions
+* DP-1996 - Google translate is only showing in Chrome & Safari browsers
+* DP-2040 - Update language in Patternlab on Location Row
 
 ### Maintaince & Support
 * DP-1434 - Update location and design of feedback form
