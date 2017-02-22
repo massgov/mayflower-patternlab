@@ -19,6 +19,7 @@
     @media ($bp-medium-min) {
       display: flex;
         flex-wrap: wrap;
+        align-items: stretch;
       margin-left: -2.43902%;
     }
 
@@ -34,8 +35,10 @@
 
   }
 
-  &__item {
+  .ma__illustrated-link,
+  .ma__callout-link {
     margin-bottom: 30px;
+    height: auto;
     width: 100%;
 
     @media ($bp-medium-max) {
@@ -72,11 +75,6 @@
       @media ($bp-large-min) and ($bp-x-large-max) {
         width: 100% - 2.43902%; 
       }
-    }
-
-    .ma__callout-link {
-      height: 100%;
-      width: 100%;
     }
   }
 }
