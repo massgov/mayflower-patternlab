@@ -211,15 +211,15 @@
       "data": {
         "mappedLocations": {
           "compHeading": {
-            "title": "All Locations",
+            "title": "Locations",
             "sub": "",
             "color": "",
             "id": "",
             "centered": ""
           },
           "link": {
-            "href": "#",
-            "text":"See a list of all locations",
+            "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
+            "text":"Location Details",
             "chevron": "true"
           },
           "googleMap":{
