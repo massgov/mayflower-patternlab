@@ -2,7 +2,8 @@
   @include ma-component-spacing;
   padding: 13px;
 
+  .ma__content-link,
   .ma__decorative-link {
-    margin-top: 1rem;
+    margin-top: 12px;
   }
 }
