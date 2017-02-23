@@ -1,4 +1,9 @@
-<div class="ma__rich-text__embed js-ma-responsive-video">
-  <iframe width="853" height="480" src="{{video.src}}" frameborder="0" allowfullscreen title="{{video.title}}"></iframe>
+<div class="ma__video">
+  <div class="js-ma-responsive-video">
+    <iframe width="video.width" height="video.height" src="{{video.src}}" frameborder="0" allowfullscreen aria-label="video.label"></iframe>
+  </div>
+  {% if video.link %}
+    {% set decorativeLink = video.link %}
+    {% include "@atoms/decorative-link.twig" %}
+  {% endif %}
 </div>
-<a class="ma__content-link " href="{{video.audioDescriptionFile}}"><span>{{video.audioDescriptionLinkedText}}</span></a>
