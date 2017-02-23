@@ -10,7 +10,7 @@
       </a>
     {% endif %}
   {% endif %}
-  <div class="ma__image-promo__details">      
+  <div class="ma__image-promo__details">
     <h2 class="ma__image-promo__title">
       {% if imagePromo.title.href %}
         {% set decorativeLink = imagePromo.title %}
@@ -36,8 +36,10 @@
       {% include "@organisms/by-author/rich-text.twig" %}
     </div>
     {% if imagePromo.link %}
-      {% set decorativeLink = imagePromo.link %}
-      {% include "@atoms/decorative-link.twig" %}
+      <div class="ma__image-promo__link">
+        {% set decorativeLink = imagePromo.link %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
     {% endif %}
   </div>
 </section>

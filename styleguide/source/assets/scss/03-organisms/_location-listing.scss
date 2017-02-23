@@ -41,6 +41,7 @@
     @media ($bp-large-min) {
       height: 100vh;
       max-height: none;
+      margin-bottom: -60px;
       position: absolute;
         right: 0;
       //width: calc((100vw - (#{$max-width}))/2 + #{$max-width * .4836066}) !important;
@@ -77,12 +78,20 @@
       margin-right: 3.25%;
       order: 1;
       padding-top: 40px;
-      width: 60% - 3.25%; // subtract the margin right    
+      width: 60% - 3.25%; // subtract the margin right
     }
 
     & > p {
-      font-weight: bold;
+      border-bottom: 2px solid;
+      font-size: 1.188rem;
+      letter-spacing: .09em;
+      line-height: 1.2;
+      padding-bottom: .5em;
       text-transform: uppercase;
+    }
+
+    .ma__image-promo__link {
+      font-size: 1.125rem;
     }
   }
 }
