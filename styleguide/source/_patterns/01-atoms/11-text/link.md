@@ -21,6 +21,8 @@ link {
         type: string/required
     chevron:
         type: boolean
+    label:
+        type: string/optional
     property:
         type: string/optional
 }

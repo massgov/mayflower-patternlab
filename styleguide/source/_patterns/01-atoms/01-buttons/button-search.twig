@@ -1,4 +1,7 @@
+{% if not buttonSearch %}
+  {% set buttonSearch = {"text":"Seach"} %}
+{% endif %}
 <button type="submit" class="ma__button-search">
-  <span>Search</span>
+  <span>{{ buttonSearch.text }}</span>
   {% include "@atoms/05-icons/svg-search.twig" %}
 </button>

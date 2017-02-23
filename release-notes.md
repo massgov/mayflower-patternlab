@@ -1,16 +1,20 @@
 # Mass Gov Release Notes
 
 ## 3.3.0 (Sprint 12)
-### DS-5 
+### DS-5
 * DP-691 - Implement Google Translate in Pattern Lab
 * DP-981 - PatternLab - Refactor header contact us
 * DP-1535 - Modify topic nav in Pattern Lab in keeping with touch / desktop design update
 * DP-1759 - Implement Location Row on Org Page in Patternlab
 * DP-1737 - Key Actions - illustrated links don't grow in height
 * DP-981 - PatternLab - Refactor header contact us
+* DP-1264 - Header - Adding Back to Classic MG button
+* DP-1264 - Patch for generalizing utility nav panels.
 
-### DS-8 
-* DP-1367 - The "Top" button does not move keyboard focus to the top of the page. 
+### DS-8
+* DP-1367 - The "Top" button does not move keyboard focus to the top of the page.
+* DP-1554 - The social media icons in the footer do not have appropriate alternative text.
+* DP-1374 - The state of the Common Actions dropdown menu is not conveyed to screen readers.
 
 ### DS-23
 * DP-1270 - Implement the structure data markup for location page type to mayflower
