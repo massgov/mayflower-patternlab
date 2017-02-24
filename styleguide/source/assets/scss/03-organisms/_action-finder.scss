@@ -58,37 +58,29 @@ $action-finder-bp: 900px;
     @include ma-reset-list;
     display: flex;
       flex-wrap: wrap;
+      justify-content: stretch;
   }
 
-  &__item {
+  .ma__illustrated-link,
+  .ma__callout-link {
+    display: flex;
     margin-bottom: 20px;
-    min-height: 112px;
+    height: auto;
     width: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
 
     @media ($bp-small-min) and ($bp-large-max) {
       @include span-columns(4 of 8);
       @include omega(2n);
+      display: flex;
     }
 
     @media print, ($bp-large-min) {
       @include span-columns(4 of 12);
       @include omega(3n);
-    }
-
-    &--image {
-
-    }
-
-    .ma__callout-link {
       display: flex;
-        align-items: center;
-      height: 100%;
-      margin-bottom: 0;
-      width: 100%;
-
-      > span {
-        flex-basis: 100%;
-      }
     }
   }
 

@@ -46,12 +46,7 @@
   }
 
   &__items {
-
-    @media ($bp-medium-min) {
-      display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-    }
+ 
   }
 
   &__item {
@@ -69,7 +64,7 @@
     @media ($bp-medium-min) {
       @include span-columns(6);
       @include omega(2n);
-      min-height: 215px;
+      height: 215px;
       padding: 40px 20px;
 
       &:nth-last-child(2) {
