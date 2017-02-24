@@ -17,9 +17,9 @@
   &__results {
 
     & > p {
-      @include ma-font(700);
       border-color: $c-bd-divider;
       color: $c-font-base;
+      font-weight: 700;
     }
   }
 }

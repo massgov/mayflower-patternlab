@@ -18,6 +18,7 @@
     @media ($bp-large-min) {
       display: flex;
         align-items: stretch;
+      margin-bottom: -60px;
     }
   }
 
@@ -41,7 +42,6 @@
     @media ($bp-large-min) {
       height: 100vh;
       max-height: none;
-      margin-bottom: -60px;
       position: absolute;
         right: 0;
       //width: calc((100vw - (#{$max-width}))/2 + #{$max-width * .4836066}) !important;
@@ -91,7 +91,7 @@
     }
 
     .ma__image-promo__link {
-      font-size: 1.125rem;
+      font-size: 18px;
     }
   }
 }
