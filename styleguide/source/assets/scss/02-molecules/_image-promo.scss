@@ -41,16 +41,12 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
   }
 
   &__description {
-
-  }
-
-  &__link {
-    @include ma-chevron;
-    @include ma-link-underline;
-    padding-bottom: 3px;
+    margin-top: 10px;
+    font-size: 1.25rem;
   }
 
   &__location {
+    font-size: 18px;
     padding: 5px 0;
 
     svg {
@@ -63,7 +59,6 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
 
     a {
       @include ma-link-underline;
-      border-bottom-width: 1px;
       display: inline;
     }
   }

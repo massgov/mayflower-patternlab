@@ -18,6 +18,7 @@
     @media ($bp-large-min) {
       display: flex;
         align-items: stretch;
+      margin-bottom: -60px;
     }
   }
 
@@ -77,12 +78,20 @@
       margin-right: 3.25%;
       order: 1;
       padding-top: 40px;
-      width: 60% - 3.25%; // subtract the margin right    
+      width: 60% - 3.25%; // subtract the margin right
     }
 
     & > p {
-      font-weight: bold;
+      border-bottom: 2px solid;
+      font-size: 1.188rem;
+      letter-spacing: .09em;
+      line-height: 1.2;
+      padding-bottom: .5em;
       text-transform: uppercase;
+    }
+
+    .ma__image-promo__link {
+      font-size: 18px;
     }
   }
 }
