@@ -5,7 +5,7 @@ export default function (window,document,$,undefined) {
   $('.js-ma-rich-text table').wrap( "<div class='ma__rich-text__table-wrapper'></div>" );
 
   // get the external SVG link code
-  fetch(themePath + '/images/svg-sprite/external-link.svg', {
+  fetch(themePath + '/images/svg-icons/external-link.svg', {
     method: 'get',
     headers: new Headers({
       'Content-Type': 'text/plain'

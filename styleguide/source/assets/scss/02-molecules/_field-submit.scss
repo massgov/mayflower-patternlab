@@ -1,0 +1,37 @@
+.ma__field-submit {
+  border: none;
+  padding: 0;
+
+  label {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  input,
+  button {
+    float:left;
+    margin-top: .5rem;
+
+    &:focus {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  input {
+    margin-right: -2px;
+    max-width: 100%;
+    width: 400px;
+
+    @media ($bp-x-small-max) {
+      width: 100%;
+    }
+  }
+
+  button {
+
+    svg {
+      display: none;
+    }
+  }
+}

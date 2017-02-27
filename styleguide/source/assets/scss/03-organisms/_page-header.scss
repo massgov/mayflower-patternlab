@@ -25,7 +25,7 @@
     @media ($bp-large-min){
       padding-right: $column;
       padding-bottom: 0;
-      width: calc(100% - #{$layout-sidebar-width});
+      max-width: 820px;
     }
 
   }
@@ -46,5 +46,23 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__divider {
+    padding-top: 30px;
+
+    @media ($bp-medium-min){
+      padding-top: 50px;
+    }
+
+    @media ($bp-large-min){
+      padding-top:70px;
+    }
+
+    .ma__divider {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
   }
 }

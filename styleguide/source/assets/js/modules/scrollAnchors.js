@@ -1,15 +1,18 @@
+import checkMobile from "../helpers/cssControlCode.js";
+
 export default function (window,document,$,undefined) {
 
   $(".js-scroll-anchors").each(function() {
     let $el = $(this),
         $elParent = $el.parent().css('position') === 'relative' ? $el.parent() : $el.parent().offsetParent(),
+        $links = $el.find('.js-scroll-anchors-link'),
         elHeight,
         headerBuffer = 0,
         lowerLimit,
         upperLimit,
         debounceTimer,
         activeClass = "is-active",
-        activeAnchor = 0,
+        activeAnchorIndex = 0,
         anchors = [],
         numAnchors = 0,
         isMobile = false,
@@ -25,10 +28,8 @@ export default function (window,document,$,undefined) {
       setVariables();
     },1000);
 
-    $el.find('a').on('click',function(e) {
+    $links.on('click',function(e) {
       e.preventDefault();
-      // Get the link hash target so we can bring focus to it
-      let hash = this.hash;
 
       // is the menu closed on mobile
       if(!$el.hasClass('is-open') && isMobile) {     
@@ -37,20 +38,22 @@ export default function (window,document,$,undefined) {
         return;
       }
        
+      activeAnchorIndex = $(this).data('index');
       // find the location of the desired link and scroll the page
-      let position = anchors[$(this).data('index')].position;
+      let position = anchors[activeAnchorIndex].position;
       // close the menu
       $el.removeClass('is-open');
       // remove active flag from other links
       $el.find('.' + activeClass).removeClass(activeClass);
       // mark this link as active
       $(this).addClass(activeClass);
-      activeAnchor = $(this).data('index');
       // prevent the scroll event from updating active links
       linkScrolling = true;
 
       $("html,body").stop(true,true).animate({scrollTop:position}, '750', function(){
         linkScrolling = false;
+        // Get the link hash target so we can bring focus to it
+        let hash = anchors[activeAnchorIndex].hash;
         // bring focus to the item we just scrolled to
         $(hash).focus();
       });
@@ -100,13 +103,15 @@ export default function (window,document,$,undefined) {
 
       // locate the position of all of the anchor targets
       anchors = new Array;
-      $el.find('a').each(function(i,e){
-        let hash = this.hash,
-            position = $(hash).offset() ? $(hash).offset().top - headerBuffer - topOffset : upperLimit;
+      $links.each(function(i,e){
+        let $el = $(this),
+          $link = $el.is('a') ? $el : $el.find('a'),
+          hash = $link[0].hash,
+          position = $(hash).offset() ? $(hash).offset().top - headerBuffer - topOffset : upperLimit;
 
         anchors[i] = { hash, position };
 
-        $(this).data('index',i);
+        $el.data('index',i);
       });
 
       // record the number of anchors for performance
@@ -159,39 +164,31 @@ export default function (window,document,$,undefined) {
 
       // get the current scroll position and offset by half the view port
       let windowTop = $(window).scrollTop() + (window.innerHeight/2),
-          currentAnchor = activeAnchor;
+          currentAnchor = activeAnchorIndex;
       
       // is there a prev target
       // and 
       // is the current scroll position above the current target
-      if(currentAnchor > 0 && windowTop < anchors[activeAnchor].position) { 
+      if(currentAnchor > 0 && windowTop < anchors[activeAnchorIndex].position) { 
         // make the prev link active
-        --activeAnchor;
+        --activeAnchorIndex;
       }
 
       // is there a next target
       // and
       // is the current scroll position below the next target
-      else if(currentAnchor < numAnchors-1 && windowTop > anchors[activeAnchor+1].position) { 
+      else if(currentAnchor < numAnchors-1 && windowTop > anchors[activeAnchorIndex+1].position) { 
         // make the next link active
-        ++activeAnchor;
+        ++activeAnchorIndex;
       }
 
-      if (currentAnchor !== activeAnchor) {
+      if (currentAnchor !== activeAnchorIndex) {
         // move the active flag
         $el.find('.' + activeClass).removeClass(activeClass);
-        $el.find('a').eq(activeAnchor).addClass(activeClass);
+        $links.eq(activeAnchorIndex).addClass(activeClass);
       }
     }
 
   });
-
-  function checkMobile($el) {
-    let value = "true";
-    try {
-      value = window.getComputedStyle($el[0], ':before').getPropertyValue('content').replace(/\"/g, '');
-    } catch(err) {}
-    return value === "false" ? false : true;
-  };
 
 }(window,document,jQuery);
