@@ -74,7 +74,7 @@
 
   &__category {
     @include ma-font(700);
-    color: $c-font-medium;
+    color: rgba($c-gray-primary,.85);
   }
 
   &__item--blue &__category,
