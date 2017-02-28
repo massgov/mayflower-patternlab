@@ -46,7 +46,7 @@
   }
 
   &__items {
- 
+    @include clearfix;
   }
 
   &__item {
