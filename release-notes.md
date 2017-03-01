@@ -1,6 +1,6 @@
 # Mass Gov Release Notes
 
-## 3.3.1 (Sprint 13)
+## 3.4.0 (Sprint 13)
 ### DS-5
 * DP-1653 - Implement static MVP Map page in Patternlab
 * DP-1670 - Remove static label "Guide:" from illustrated link
