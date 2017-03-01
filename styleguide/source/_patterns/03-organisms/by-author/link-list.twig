@@ -1,13 +1,23 @@
 <section class="ma__link-list">
   <div class="ma__link-list__container">
-    <h2 class="ma__link-list__title">{{linkList.title}}</h2>
+    {% if linkList.title %}
+      {% set compHeading = { "title": linkList.title } %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% endif %}
+    {% set length = linkList.links|length/2 %}
+    {% set half = length|round(0,'ceil') %}
     <ul class="ma__link-list__items">
-      {% for link in linkList.links %}
-      <li class="ma__link-list__item">
-        <a class="ma__link-list__link" href="{{link.url}}">
-          {{link.text}}
-        </a>
-      </li>
+      {% for link in linkList.links[start:half] %}
+        <li class="ma__link-list__item">
+          {% include "@atoms/11-text/link.twig" %}
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="ma__link-list__items">
+      {% for link in linkList.links[half:length] %}
+        <li class="ma__link-list__item">
+          {% include "@atoms/11-text/link.twig" %}
+        </li>
       {% endfor %}
     </ul>
   </div>
