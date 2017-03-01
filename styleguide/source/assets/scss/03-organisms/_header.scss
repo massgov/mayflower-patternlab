@@ -313,11 +313,16 @@ body {
     height: 0;
     position: relative;
     transition: left 0.5s ease;
-    z-index: 9999;
+    z-index: $z-dropdown + 1;
+
+    @media ($bp-header-toggle-min) {
+      z-index: $z-dropdown - 1;
+    }
 
     a {
       @include ma-chevron("left");
       border: 3px solid;
+      border-top: none;
       display: inline-block;
       padding: 6px 7px;
       position: fixed;
@@ -325,7 +330,7 @@ body {
       white-space: nowrap;
 
       @media ($bp-x-small-max) {
-        left: 0;
+        margin-left: -20px;
       }
 
       @media ($bp-header-toggle-min){
@@ -346,7 +351,7 @@ body {
       }
 
       &:hover {
-       padding-top: 18px;
+        padding-top: 18px;
       }
     }
   }
