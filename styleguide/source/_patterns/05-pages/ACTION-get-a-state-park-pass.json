@@ -304,18 +304,21 @@
               "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
             }
           }
-        },
-        {
-          "path": "molecules-callout-link",
-          "data": {
-            "calloutLink": {
-              "text": "Order a MassParks Pass online through Reserve America",
-              "type": "",
-              "href": "#",
-              "quickaction": "true"
-            }
-          }
         }]
+      }
+    },
+    {
+      "title":"",
+      "intro": "",
+      "id":"",
+      "path": "molecules-callout-link",
+      "data": {
+        "calloutLink": {
+          "text": "Order a MassParks Pass online through Reserve America",
+          "type": "",
+          "href": "#",
+          "quickaction": "true"
+        }
       }
     },
     {
