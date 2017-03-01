@@ -7,16 +7,16 @@
     {% set length = linkList.links|length/2 %}
     {% set half = length|round(0,'ceil') %}
     <ul class="ma__link-list__items">
-      {% for link in linkList.links[start:half] %}
+      {% for decorativeLink in linkList.links[start:half] %}
         <li class="ma__link-list__item">
-          {% include "@atoms/11-text/link.twig" %}
+          {% include "@atoms/decorative-link.twig" %}
         </li>
       {% endfor %}
     </ul>
     <ul class="ma__link-list__items">
-      {% for link in linkList.links[half:length] %}
+      {% for decorativeLink in linkList.links[half:length] %}
         <li class="ma__link-list__item">
-          {% include "@atoms/11-text/link.twig" %}
+          {% include "@atoms/decorative-link.twig" %}
         </li>
       {% endfor %}
     </ul>
