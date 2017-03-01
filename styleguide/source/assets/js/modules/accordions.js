@@ -1,10 +1,12 @@
+import checkActive from "../helpers/cssControlCode.js";
+
 export default function (window,document,$,undefined) {
 
   $('.js-accordion').each(function(){
     let $el = $(this),
         $link = $el.find('.js-accordion-link'),
         $content = $el.find('.js-accordion-content'),
-        active = refreshValue($el);
+        active = checkActive($el);
 
     $link.on('click',function(e){
       if(active) {
@@ -19,7 +21,7 @@ export default function (window,document,$,undefined) {
     })
 
     $(window).resize(function () {
-      let temp = refreshValue($el);
+      let temp = checkActive($el);
 
       if(temp !== active && !temp) {
         $content.removeAttr('style');
@@ -29,13 +31,5 @@ export default function (window,document,$,undefined) {
       active = temp;
     }).resize();
   });
-
-  function refreshValue($el) {
-    let value = "true";
-    try {
-      value = window.getComputedStyle($el[0], ':before').getPropertyValue('content').replace(/\"/g, '');
-    } catch(err) {}
-    return value === "false" ? false : true;
-  };
 
 }(window,document,jQuery);

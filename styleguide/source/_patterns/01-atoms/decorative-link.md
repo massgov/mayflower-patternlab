@@ -21,10 +21,13 @@ The svg reference could possibly change. 05-icons and 06-icons-location may stil
 ~~~
 decorativeLink {
     href:
-        type: string
+        type: string/required
     text:
-        type: string
+        type: string/required
     type:
+        type: string/optional ("external","chevron")
+    info:
+        type: string/optional
         type: string
     property:
         type: string/optional

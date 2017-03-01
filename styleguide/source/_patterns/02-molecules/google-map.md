@@ -33,23 +33,15 @@ googleMap: {
         type: string/required
       infoWindow: {
         name:
-          type: string/required
+          type: string(html)/required
         phone:
-          type: string/required
+          type: string/optional
         fax:
-          type: string/required
+          type: string/optional
         email:
-          type: string/required
+          type: string/optional
         address:
-          type: string/required
-        address2:
-          type: string/required
-        city:
-          type: string/required
-        state:
-          type: string/required
-        zip:
-          type: string/required
+          type: string(html)/required
       }
     }]
   }

@@ -186,7 +186,8 @@
             "image": "/assets/images/placeholder/130x160.png",
             "text": "Massachusetts Health Care",
             "type": "",
-            "href": "#"
+            "href": "#",
+            "label": "Guide:"
           },{
             "image": "",
             "text": "Find a MassHealth doctor",
@@ -210,15 +211,15 @@
       "data": {
         "mappedLocations": {
           "compHeading": {
-            "title": "All Locations",
+            "title": "Locations",
             "sub": "",
             "color": "",
             "id": "",
             "centered": ""
           },
           "link": {
-            "href": "#",
-            "text":"See a list of all locations",
+            "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
+            "text":"Location Details",
             "chevron": "true"
           },
           "googleMap":{
@@ -240,11 +241,7 @@
                 "phone": "16176261250",
                 "fax": "16176261351",
                 "email": "mass.parks@state.ma.us",
-                "address": "251 Causeway Street",
-                "address2": "Suite 900",
-                "city": "Boston",
-                "state": "MA",
-                "zip": "02114-2104"
+                "address": "251 Causeway Street, Suite 900<br />Boston, MA 02114-2104"
               }
             },{
               "position": {
@@ -257,11 +254,7 @@
                 "phone": "16176261250",
                 "fax": "",
                 "email": "mass.parks@state.ma.us",
-                "address": "24 Beacon St",
-                "address2": "",
-                "city": "Boston",
-                "state": "MA",
-                "zip": "02133"
+                "address": "24 Beacon St<br />Boston, MA 02133"
               }
             }]
           }

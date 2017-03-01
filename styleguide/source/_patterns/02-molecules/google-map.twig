@@ -28,11 +28,7 @@
             phone: "{{marker.infoWindow.phone}}",
             fax: "{{marker.infoWindow.fax}}",
             email: "{{marker.infoWindow.email}}",
-            address: "{{marker.infoWindow.address}}",
-            address2: "{{marker.infoWindow.address2}}",
-            city: "{{marker.infoWindow.city}}",
-            state: "{{marker.infoWindow.state}}",
-            zip: "{{marker.infoWindow.zip}}"
+            address: "{{marker.infoWindow.address | raw}}"
           }
         }{{loop.last ? '' : ','}}
       {% endfor %}

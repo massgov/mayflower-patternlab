@@ -17,7 +17,8 @@
       "image": "/assets/images/placeholder/130x160.png",
       "text": "Getting Outdoors",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": "Guide:"
     },{
       "image": "",
       "text": "Cancel or Transfer a Campsite Reservation",
@@ -44,7 +45,8 @@
       "image": "/assets/images/placeholder/130x160.png",
       "text": "Fall Activity Planner",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": "Guide:"
     },{
       "image": "",
       "text": "Reserve a Campsite",
@@ -74,7 +76,8 @@
       "image": "/assets/images/placeholder/130x160.png",
       "text": "Fall Activity Planner",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": "Guide:"
     },{
       "image": "",
       "text": "Reserve a Campsite",

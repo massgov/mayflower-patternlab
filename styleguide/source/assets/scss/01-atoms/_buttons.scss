@@ -20,9 +20,9 @@ button {
 .ma__button-search {
   border: 2px solid;
   display: inline-block;
-  font-size: 14px;
   letter-spacing: .1em;
-  padding: 14px;
+  min-height: 46px;
+  padding: 0 14px;
   text-transform: uppercase;
   transition: background-color .4s, color .4s, border .4s, fill .4s;
   white-space: nowrap;
