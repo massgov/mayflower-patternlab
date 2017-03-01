@@ -6,8 +6,8 @@
           {% include item.icon %}
         </span>
         <span class="ma__icon-links__link">
-          {% set link = item.link %}
-          {% include "@atoms/11-text/link.twig" %}
+          {% set decorativeLink = item.link %}
+          {% include "@atoms/decorative-link.twig" %}
         </span>
       </li>
     {% endfor %}
