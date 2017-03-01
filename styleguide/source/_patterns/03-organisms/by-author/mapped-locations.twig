@@ -6,8 +6,10 @@
        {% include "@atoms/04-headings/comp-heading.twig" %}
       {% endif %}
       {% if mappedLocations.link %}
-        {% set link = mappedLocations.link %}
-        {% include "@atoms/11-text/link.twig" %}
+        <div class="ma__mapped-locations__link">
+          {% set decorativeLink = mappedLocations.link %}
+          {% include "@atoms/decorative-link.twig" %}
+        </div>
       {% endif %}
     </div>
   {% endif %}
