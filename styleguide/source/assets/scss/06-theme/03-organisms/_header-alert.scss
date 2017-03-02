@@ -19,6 +19,9 @@
     a {
       color: $c-font-dark;
 
+      svg {
+        fill: rgba($c-font-link-subtle,.5);  
+      }
     }
   }
 }

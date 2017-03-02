@@ -83,12 +83,12 @@
       color: $c-font-inverse;
     }
 
-    .ma__content-link {
+    .ma__decorative-link a {
       color: $c-font-inverse;
       font-weight: 400;
 
-      &:after {
-        border-color: rgba($c-font-inverse, .5);
+      & > svg {
+        fill: rgba($c-font-inverse, .5);
       }
 
       span {
