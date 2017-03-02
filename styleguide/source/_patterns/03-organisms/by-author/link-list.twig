@@ -2,12 +2,17 @@
   <div class="ma__link-list__container">
     <h2 class="ma__link-list__title">{{linkList.title}}</h2>
     <ul class="ma__link-list__items">
-      {% for link in linkList.links %}
-      <li class="ma__link-list__item">
-        <a class="ma__link-list__link" href="{{link.url}}">
-          {{link.text}}
-        </a>
-      </li>
+      {% for decorativeLink in linkList.links[start:half] %}
+        <li class="ma__link-list__item">
+          {% include "@atoms/decorative-link.twig" %}
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="ma__link-list__items">
+      {% for decorativeLink in linkList.links[half:length] %}
+        <li class="ma__link-list__item">
+          {% include "@atoms/decorative-link.twig" %}
+        </li>
       {% endfor %}
     </ul>
   </div>

@@ -9,14 +9,8 @@
   {% endif %} >
 
   {% if contactUs.title %}
-    <h4 class="ma__column-heading"{% if schemaPageType %} property="name"{% endif %}>
-      {% if contactUs.title.href %}
-        {% set link = contactUs.title %}
-        {% include "atoms-link" %}
-      {% else %}
-        {{contactUs.title.text}}
-      {% endif %}
-    </h4>
+    {% set columnHeading = contactUs.title %}
+    {% include "@atoms/04-headings/column-heading.twig" %}
   {% endif %}
 
   {# Show first 2 contact groups outside of accordion #}
