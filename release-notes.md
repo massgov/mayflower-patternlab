@@ -1,5 +1,8 @@
 # Mass Gov Release Notes
 
+## 3.4.1
+* Reset the gulp copy task to include the svg files
+
 ## 3.4.0 (Sprint 13)
 ### DS-5
 * DP-1653 - Implement static MVP Map page in Patternlab
