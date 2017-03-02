@@ -1,6 +1,8 @@
 {
-  "video" : {
-    "src" : "https://www.youtube.com/embed/dEkUq-Rs-Tc",
-    "title" : "Using a gas grill safely"
+  "video": {
+    "src": "https://www.youtube.com/embed/dEkUq-Rs-Tc",
+    "label": "Using a gas grill safely",
+    "height": "853",
+    "width": "480"
   }
 }

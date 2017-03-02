@@ -1,6 +1,11 @@
 <section class="ma__link-list">
   <div class="ma__link-list__container">
-    <h2 class="ma__link-list__title">{{linkList.title}}</h2>
+    {% if linkList.title %}
+      {% set compHeading = { "title": linkList.title } %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% endif %}
+    {% set length = linkList.links|length/2 %}
+    {% set half = length|round(0,'ceil') %}
     <ul class="ma__link-list__items">
       {% for decorativeLink in linkList.links[start:half] %}
         <li class="ma__link-list__item">

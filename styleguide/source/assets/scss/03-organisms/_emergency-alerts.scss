@@ -6,10 +6,11 @@ since the component will always
 be included at the top of the page */
 .ma__emergency-alerts {
   position: relative;
+  z-index: $z-dropdown + 1;
 
   @media($bp-header-toggle-max) {
     top: 40px;
-    z-index:1;
+    // z-index:1;
   }
 
   &__header {
