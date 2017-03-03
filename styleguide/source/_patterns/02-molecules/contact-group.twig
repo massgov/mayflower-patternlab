@@ -6,6 +6,27 @@
     </h5>
   {% endif %}
   {% for item in contactGroup.items %}
+    {# if using the older 3.4.1 data model #}
+    {% if item.link and item.link is not iterable %}
+      {# update the older code's data to match the new version #}
+      {% set link = {
+        "href": item.link,
+        "text": item.type == "address" ? "directions" : item.value,
+        "info": "",
+        "property": item.type == "address" ? "url" : item.property
+      } %}
+    {% else %}
+      {% set link = item.link %}
+    {% endif %}
+
+    {# if using the older 3.4.1 data model #}
+    {% if item.value %}
+      {# update the older code's data to match the new version #}
+      {% set address = item.value %}
+    {% else %}
+      {% set address = item.address %}
+    {% endif %}
+
     <div>
       {% if item.label %}
         <span class="ma__contact-group__label">{{item.label}}</span>
@@ -13,39 +34,62 @@
 
       {# Online wrap value in a link #}
       {% if item.type == "online" %}
-        <a href="{{item.link}}" class="ma__content-link"{% if item.property %} property="{{item.property}}"{% endif %}>{{item.value}}</a>
+        <a href="{{ link.href }}" 
+          class="ma__content-link"
+          {% if link.property %} 
+            property="{{ link.property }}"
+          {% endif %}>{{ link.text }}</a>
+      
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
-        <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
-        {% if item.property %}
-          <meta property="{{item.property}}" content="{{item.value}}" />
-        {% endif %}
+        <a 
+          href="tel:{{ link.href }}" 
+          class="ma__content-link ma__content-link--phone"
+          {% if link.property %}
+            property="{{ link.property }}"
+          {% endif %}>{{ link.text }}</a>
+        
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
-        <a href="mailto:{{item.link}}" class="ma__content-link"{% if item.property %} property="{{item.property}}"{% endif %}>{{item.value}}</a>
+        <a 
+          href="mailto:{{ link.href }}" 
+          class="ma__content-link"
+          {% if link.property %} 
+            property="{{ link.property }}"
+          {% endif %}>{{ link.text }}</a>
+
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
-        <div class="ma__contact-group__address"{% if item.property %} property="{{item.property}}" typeof="PostalAddress"{% endif %}>
-          {{item.value | raw}}
+        <div 
+          class="ma__contact-group__address"
+          {% if link.property %} 
+            property="address"
+            typeof="PostalAddress"
+          {% endif %}>
+          {{ address|raw }}
         </div>
-        {% if item.link %}
-          <div class="ma__contact-group__directions"{% if item.property %} property="hasMap" typeof="Map"{% endif %}>
-            {% set linkInfo =  " to " ~ contactUs.title.text %}
-            {% set linkProperty = schemaPageType ? "url" : "" %}
-            {% set decorativeLink = { "text": "Directions", "info": linkInfo, "href": item.link, "type": "external", "property": linkProperty } %}
+        {% if link.href %}
+          <div 
+            class="ma__contact-group__directions"
+            {% if link.property %} 
+              property="hasMap" 
+              typeof="Map"
+            {% endif %}>
+            {% set decorativeLink = link %}
             {% include "@atoms/decorative-link.twig" %}
           </div>
         {% endif %}
+
       {# Default - just spit out the value #}
       {% else %}
-        <span class="ma__contact-group__value">{{item.value}}</span>
-        {% if item.property %}
-          <meta property="{{item.property}}" content="{{item.value}}" />
+        <span class="ma__contact-group__value">{{ link.text }}</span>
+        {% if link.property %}
+          <meta property="{{ link.property }}" content="{{ link.text }}" />
         {% endif %}
       {% endif %}
     </div>
     {% if item.details %}
-      <p class="ma__contact-group__details">{{item.details}}</p>
+      <p class="ma__contact-group__details">{{ item.details }}</p>
     {% endif %}
   {% endfor %}
 </div>
