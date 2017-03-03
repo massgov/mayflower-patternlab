@@ -12,9 +12,8 @@
   &__icon {
     font-size: 0;
     position: absolute;
-      top: 50%;
+      top: 5px;
       left: 0;
-    transform: translateY(-50%);
 
     & > svg {
       height: 18px;
@@ -24,6 +23,7 @@
 
   &__link {
     font-size: 1.25rem;
+    display: block;
     padding-left: 30px;
   }
 }

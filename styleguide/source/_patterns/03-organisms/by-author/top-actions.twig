@@ -1,13 +1,9 @@
 <section class="ma__top-actions">
   <h2 class="ma__top-actions__title">{{topActions.title}}</h2>
-  <ul class="ma__top-actions__items">
+  <div class="ma__top-actions__items">
     {% for link in topActions.links %}
-      <li class="ma__top-actions__item">
-        <div class="ma__top-actions__link">
-          {% set calloutLink = link.calloutLink %}
-          {% include "@molecules/callout-link.twig" %}
-        </div>
-      </li>
+        {% set calloutLink = link.calloutLink %}
+        {% include "@molecules/callout-link.twig" %}
     {% endfor %}
-  </ul>
+  </div>
 </section>

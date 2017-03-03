@@ -117,11 +117,7 @@
           "phone": "14134994262",
           "fax": "",
           "email": "mass.parks@state.ma.us",
-          "address": "30 Rockwell Road",
-          "address2": "",
-          "city": "Lanesborough",
-          "state": "MA",
-          "zip": "01237"
+          "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
         }
       },{
         "position": {
@@ -134,11 +130,7 @@
           "phone": "14137431591",
           "fax": "",
           "email": "mail@bascomlodge.net",
-          "address": "30 Rockwell Road",
-          "address2": "",
-          "city": "Lanesborough",
-          "state": "MA",
-          "zip": "01237"
+          "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
         }
       }]
     }
@@ -285,11 +277,7 @@
               "phone": "14134994262",
               "fax": "",
               "email": "mass.parks@state.ma.us",
-              "address": "30 Rockwell Road",
-              "address2": "",
-              "city": "Lanesborough",
-              "state": "MA",
-              "zip": "01237"
+              "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
             }
           },{
             "position": {
@@ -302,11 +290,7 @@
               "phone": "14137431591",
               "fax": "",
               "email": "mail@bascomlodge.net",
-              "address": "30 Rockwell Road",
-              "address2": "",
-              "city": "Lanesborough",
-              "state": "MA",
-              "zip": "01237"
+              "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
             }
           }]
         }

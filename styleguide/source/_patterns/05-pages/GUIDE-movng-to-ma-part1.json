@@ -837,7 +837,8 @@
       "link": {
         "type": "",
         "href": "#",
-        "text": "Buying Your First Home"
+        "text": "Buying Your First Home",
+        "label": "Guide:"
       }
     },{
       "image": "/assets/images/placeholder/130x160.png",
@@ -845,7 +846,8 @@
       "link": {
         "type": "",
         "href": "#",
-        "text": "Shopping for Auto Insurance"
+        "text": "Shopping for Auto Insurance",
+        "label": "Guide:"
       }
     },{
       "image": "/assets/images/placeholder/130x160.png",
@@ -853,7 +855,8 @@
       "link": {
         "type": "",
         "href": "#",
-        "text": "Education in Massachusetts"
+        "text": "Education in Massachusetts",
+        "label": "Guide:"
       }
     }]
   }

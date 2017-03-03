@@ -15,4 +15,9 @@
     {% set headerTags = pageHeader.headerTags %}
     {% include "@molecules/header-tags.twig" %}
   {% endif %}
+  {% if pageHeader.divider %}
+    <div class="ma__page-header__divider">
+      {% include "@atoms/divider.twig" %}
+    </div>
+  {% endif %}
 </section>
