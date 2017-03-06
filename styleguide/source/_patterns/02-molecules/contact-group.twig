@@ -27,19 +27,19 @@
       {% set address = item.address %}
     {% endif %}
 
-    <div>
+    <div class="ma__contact-group__item">
       {% if item.label %}
         <span class="ma__contact-group__label">{{item.label}}</span>
       {% endif %}
 
       {# Online wrap value in a link #}
       {% if item.type == "online" %}
-        <a href="{{ link.href }}" 
-          class="ma__content-link"
-          {% if link.property %} 
-            property="{{ link.property }}"
-          {% endif %}>{{ link.text }}</a>
-      
+        {% set decorativeLink = {
+          "href": item.link,
+          "text": item.value,
+          "property": item.property } 
+        %}
+        {% include "@atoms/decorative-link.twig" %}
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
         <a 
