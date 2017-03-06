@@ -6,14 +6,19 @@
     </h5>
   {% endif %}
   {% for item in contactGroup.items %}
-    <div>
+    <div class="ma__contact-group__item">
       {% if item.label %}
         <span class="ma__contact-group__label">{{item.label}}</span>
       {% endif %}
 
       {# Online wrap value in a link #}
       {% if item.type == "online" %}
-        <a href="{{item.link}}" class="ma__content-link"{% if item.property %} property="{{item.property}}"{% endif %}>{{item.value}}</a>
+        {% set decorativeLink = {
+          "href": item.link,
+          "text": item.value,
+          "property": item.property } 
+        %}
+        {% include "@atoms/decorative-link.twig" %}
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
         <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
