@@ -3,6 +3,7 @@
 
   &__container {
     @include ma-container;
+    @include clearfix;
   }
 
   &__title {
