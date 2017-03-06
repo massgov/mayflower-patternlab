@@ -57,7 +57,7 @@ label {
 
     &:before {
       background-color: $c-white;
-      border-color: #757575;
+      border-color: $c-bd-input-dark;
       color: transparent;
 
       .ma__form--light & {
@@ -95,7 +95,7 @@ label {
 
     &:before {
       background-color: $c-white;
-      border-color: #757575;
+      border-color: $c-bd-input-dark;
 
       .ma__form--light & {
         background-color: rgba($c-white, 0.1);
