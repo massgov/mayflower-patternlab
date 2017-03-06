@@ -34,11 +34,7 @@
 
       {# Online wrap value in a link #}
       {% if item.type == "online" %}
-        {% set decorativeLink = {
-          "href": item.link,
-          "text": item.value,
-          "property": item.property } 
-        %}
+        {% set decorativeLink = link %}
         {% include "@atoms/decorative-link.twig" %}
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
