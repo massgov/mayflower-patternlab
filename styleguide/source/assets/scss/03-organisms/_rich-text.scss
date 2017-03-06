@@ -118,21 +118,6 @@ $rich-text-spacing-mobile: 1.5rem;
     word-break: break-word;
   }
 
-  .ma__decorative-link {
-    display: inline;
-    vertical-align: baseline;
-
-    a {
-      position: relative;
-    }
-
-    & svg {
-      position: absolute;
-      margin-top: .4em;
-      margin-left: .1em;
-    }
-  }
-
 // end link styles
 
 // TABLE styles
