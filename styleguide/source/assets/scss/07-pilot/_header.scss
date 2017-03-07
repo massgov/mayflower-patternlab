@@ -73,6 +73,11 @@ $bp-header-logo-min: "min-width: 1000px";
       &:hover {
        padding-top: 18px;
       }
+
+      &:focus {
+        border-color: $c-theme-yellow !important;
+        background-color: #fff;
+      }
     }
   }
 
