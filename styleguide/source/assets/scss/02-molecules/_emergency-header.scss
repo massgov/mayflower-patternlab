@@ -1,11 +1,9 @@
-h2.ma__emergency-header {
-  font-size: 1.375rem;
-  line-height: 1.5em;
-}
-
 .ma__emergency-header {
   @include ma-container;
+  margin: 0;
   padding: 12px;
+  font-size: inherit;
+  line-height: inherit;
 
   @media ($bp-small-max) {
     text-align: center;
