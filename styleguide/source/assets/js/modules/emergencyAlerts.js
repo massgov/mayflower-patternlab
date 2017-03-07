@@ -7,7 +7,8 @@ export default function (window,document,$,undefined) {
         open = true,
         id = $el.data('id'),
         cookieName = 'emergency-alerts' + id,
-        cookieValue = cookie.getCookie(cookieName);
+        cookieValue = cookie.getCookie(cookieName),
+        $buttonState = $(this).find('.ma__button-alert').attr('aria-expanded');
 
     if(typeof(cookieValue) != 'undefined' && cookieValue === 'false') {
       // cookieValue is a string so we can't use the value directly
@@ -21,9 +22,12 @@ export default function (window,document,$,undefined) {
     $el.on('click','.js-accordion-link',function(){
       // toggle the current state
       open = !open;
-      // update open/close state cookie 
+      // update open/close state cookie
       // leave off third argument to make it expire on session
       cookie.setCookie(cookieName,open);
+      // change the state of aria-expanded
+     $buttonState === 'false' ? $buttonState = 'true' : $buttonState = 'false';
+     $(this).find('.ma__button-alert').attr('aria-expanded',$buttonState);
     });
 
   });
