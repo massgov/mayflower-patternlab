@@ -109,7 +109,7 @@
           "phone": "14134994262",
           "fax": "",
           "email": "mass.parks@state.ma.us",
-          "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
+          "address": "30 Rockwell Road\nLanesborough, MA 01237"
         }
       },{
         "position": {
@@ -122,7 +122,7 @@
           "phone": "14137431591",
           "fax": "",
           "email": "mail@bascomlodge.net",
-          "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
+          "address": "30 Rockwell Road\nLanesborough, MA 01237"
         }
       }]
     }
@@ -269,7 +269,7 @@
               "phone": "14134994262",
               "fax": "",
               "email": "mass.parks@state.ma.us",
-              "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
+              "address": "30 Rockwell Road\n Lanesborough, MA 01237"
             }
           },{
             "position": {
@@ -282,7 +282,7 @@
               "phone": "14137431591",
               "fax": "",
               "email": "mail@bascomlodge.net",
-              "address": "30 Rockwell Road<br />Lanesborough, MA 01237"
+              "address": "30 Rockwell Road\n Lanesborough, MA 01237"
             }
           }]
         }
@@ -593,7 +593,7 @@
             "type": "address",
             "property": "address",
             "label":"",
-            "value":"555 Park Drive<br />Boston, MA 02231",
+            "value":"555 Park Drive\nBoston, MA 02231",
             "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
             "details":""
           }]
@@ -654,7 +654,7 @@
             "type": "address",
             "property": "address",
             "label":"",
-            "value":"555 Park Drive<br />North Hampton, MA 02231",
+            "value":"555 Park Drive\nNorth Hampton, MA 02231",
             "link": "",
             "details":""
           }]
