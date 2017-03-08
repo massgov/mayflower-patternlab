@@ -13,21 +13,26 @@ export default function (window,document,$,undefined) {
   window.initMap = function() {
 
     $(".js-google-map").each(function(i) {
+      const $el = $(this);
+
       // get the maps data
-      let rawData = googleMapData[i];
+      // this could be replaced with an api
+      const rawData = googleMapData[i];
       
       // *** Create the Map *** //
       // map defaults
-      let initMapData = {
+      const initMapData = {
         scrollwheel: false
       }
-      // create map Data
-      let mapData = Object.assign({}, rawData.map, initMapData);
+      // create map Data by combining the rawData with the defaults
+      const mapData = Object.assign({}, rawData.map, initMapData);
 
-      let map = new google.maps.Map(this, mapData);
+      const map = new google.maps.Map(this, mapData);
+
+      let markers = [];
 
       // *** Add Markers with popups *** //
-      rawData.markers.forEach(function(d){
+      rawData.markers.forEach(function(d,i){
         let markerData = Object.assign({map},d);
 
         let marker =  new google.maps.Marker(markerData);
@@ -41,9 +46,22 @@ export default function (window,document,$,undefined) {
         marker.addListener('click', function(){
           infoWindow.open(map, marker);
         });
+
+        marker.showInfo = () => {
+          infoWindow.open(map, marker);
+        }
+
+        markers.push(marker);
       });
 
-      // let infoWindow = new google.maps.InforWindow
+      // listen for recenter command
+      $el.on( "recenter", function( event, markerIndex ) {
+        if(typeof markers[markerIndex] === "undefined") {
+          return false;
+        }
+        map.setCenter(markers[markerIndex].getPosition());
+        markers[markerIndex].showInfo();        
+      });    
     });
   }
 

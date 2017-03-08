@@ -1,0 +1,38 @@
+<div 
+  class="ma__google-map" 
+  aria-hidden="true" 
+  role="presentation">
+  <div class="ma__google-map__map js-google-map"></div>
+  {# user editable data used in this specific map #}
+  <script>
+    var googleMapData = googleMapData || [];
+
+    googleMapData.push({
+      map: {
+        center: {
+          lat: {{googleMap.map.center.lat}},
+          lng: {{googleMap.map.center.lng}}
+        },
+        zoom: {{googleMap.map.zoom}}
+      },
+      markers: [
+      {% for marker in googleMap.markers %}
+        {
+          position: {
+            lat: {{marker.position.lat}},
+            lng: {{marker.position.lng}} 
+          },
+          label: "{{ marker.label }}", // single character only
+          infoWindow: {
+            name: "{{ marker.infoWindow.name|raw }}", // raw was needed to prevent rendering ascii characters
+            phone: "{{ marker.infoWindow.phone }}",
+            fax: "{{ marker.infoWindow.fax }}",
+            email: "{{ marker.infoWindow.email }}",
+            address: "{{ marker.infoWindow.address|replace({'\n': '<br>'})|raw }}"
+          }
+        }{{ loop.last ? '' : ',' }}
+      {% endfor %}
+      ]
+    });
+  </script>
+</div>

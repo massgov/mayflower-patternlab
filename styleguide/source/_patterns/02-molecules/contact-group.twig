@@ -1,37 +1,51 @@
 <div class="ma__contact-group">
-  <h5 class="ma__contact-group__name">
-    {% include contactGroup.icon %}
-    <span>{{contactGroup.name}}</span>
-  </h5>
+  {% if contactGroup.name and contactGroup.icon %}
+    <h5 class="ma__contact-group__name">
+      {% include contactGroup.icon %}
+      <span>{{contactGroup.name}}</span>
+    </h5>
+  {% endif %}
   {% for item in contactGroup.items %}
-    <div>
+    <div class="ma__contact-group__item">
       {% if item.label %}
         <span class="ma__contact-group__label">{{item.label}}</span>
       {% endif %}
 
       {# Online wrap value in a link #}
       {% if item.type == "online" %}
-        <a href="{{item.link}}" class="ma__content-link">{{item.value}}</a>
+        {% set decorativeLink = {
+          "href": item.link,
+          "text": item.value,
+          "property": item.property } 
+        %}
+        {% include "@atoms/decorative-link.twig" %}
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
         <a href="tel:{{item.link}}" class="ma__content-link ma__content-link--phone">{{item.value}}</a>
+        {% if item.property %}
+          <meta property="{{item.property}}" content="{{item.value}}" />
+        {% endif %}
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
-        <a href="mailto:{{item.link}}" class="ma__content-link">{{item.value}}</a>
+        <a href="mailto:{{item.link}}" class="ma__content-link"{% if item.property %} property="{{item.property}}"{% endif %}>{{item.value}}</a>
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
-        <div class="ma__contact-group__address">
-          {{item.value | raw}}
+        <div class="ma__contact-group__address"{% if item.property %} property="{{item.property}}" typeof="PostalAddress"{% endif %}>
+          {{item.value | nl2br | raw}}
         </div>
         {% if item.link %}
-          <div class="ma__contact-group__directions">
-            {% set link = { "text": "Directions", "href": item.link, "chevron": "true" } %}
-            {% include "@atoms/11-text/link.twig" %}
+          <div class="ma__contact-group__directions"{% if item.property %} property="hasMap" typeof="Map"{% endif %}>
+            {% set linkProperty = schemaPageType ? "url" : "" %}
+            {% set decorativeLink = { "text": "Directions", "href": item.link, "type": "external", "property": linkProperty } %} 
+            {% include "@atoms/decorative-link.twig" %}
           </div>
         {% endif %}
       {# Default - just spit out the value #}
       {% else %}
         <span class="ma__contact-group__value">{{item.value}}</span>
+        {% if item.property %}
+          <meta property="{{item.property}}" content="{{item.value}}" />
+        {% endif %}
       {% endif %}
     </div>
     {% if item.details %}

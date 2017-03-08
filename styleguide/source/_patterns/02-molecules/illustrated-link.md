@@ -16,6 +16,8 @@ illustratedLink {
   type:
     type: string / ('', or 'external')
   image:
+    type: string (path) / optional
+  label:
     type: string / optional
 }
 ~~~

@@ -15,15 +15,9 @@
         {% include "@atoms/05-icons/cat-icon.twig" %}
       </div>
     {% endif %}
-    {% if sectionLinks.sub %}
-      <h3 class="{{ titleClass }}" id="{{ titleId }}">
-        {% include "@atoms/decorative-link.twig" %}
-      </h3>
-    {% else %}
-      <h2 class="{{ titleClass }}" id="{{ titleId }}">
-        {% include "@atoms/decorative-link.twig" %}
-      </h2>
-    {% endif %}
+    <h2 class="{{ titleClass }}" id="{{ titleId }}">
+      {% include "@atoms/decorative-link.twig" %}
+    </h2>
     <nav class="ma__section-links__toggle-content js-accordion-body" aria-labelledby="{{ titleId }}">
       {% if sectionLinks.description %}
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>
@@ -38,9 +32,9 @@
         {% include "@atoms/decorative-link.twig" %}
       </div>
       <ul class="ma__section-links__items">
-        {% for list in sectionLinks.links %}
+        {% for decorativeLink in sectionLinks.links %}
         <li class="ma__section-links__item">
-          <a href="{{list.href}}" class="ma__section-links__link">{{list.text}}<span role="presentation"></span></a>
+          {% include "@atoms/decorative-link.twig" %}
         </li>
         {% endfor %}
       </ul>

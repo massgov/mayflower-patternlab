@@ -3,12 +3,13 @@ title: Contact Us
 ---
 Description: `<section>` element which contains an `<h4>` title heading (an entity title) and several groups (or types IE phone, fax, email, address) of contact information.
 
-## State: ALPHA
+## State: Depreciated (should be promoted to Organism)
 
 ### Notes:
 The first two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
 
 ### Used In:
+[@organism/by-template/action-header](?p=organism-action-header)
 
 ### Contains
 [@molecules/contact-group](?p=molecules-contact-group)
@@ -16,6 +17,12 @@ The first two contact groups should always be visible on page load.  Additional 
 ### Variables:
 ~~~
 contactUs: {
+   schemaSd: {
+        property: 
+            type: string / required
+        type: 
+            type: string / required
+        }
     title: {
         href:
             type: string (url) / optional

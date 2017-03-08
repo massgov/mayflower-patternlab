@@ -11,9 +11,9 @@
 
     &:hover {
       background-color: darken($c-bg-subtle, 10%);
-
+      
       a {
-        border-bottom-color: inherit;
+        border-bottom-color: $c-font-link;
       }
     }
 
@@ -22,6 +22,10 @@
 
       &:hover {
         background-color: rgba($c-theme-blue,.8);
+      
+        a {
+          border-bottom-color: $c-font-inverse;
+        }
       }
     }
 
@@ -30,6 +34,10 @@
 
       &:hover {
         background-color: rgba($c-theme-green,.8);
+        
+        a {
+          border-bottom-color: $c-font-inverse;
+        }
       }
     }
 
@@ -38,6 +46,10 @@
 
       &:hover {
         background-color: rgba($c-theme-gray,.8);
+      
+        a {
+          border-bottom-color: $c-font-inverse;
+        }
       }
     }
   }
@@ -62,13 +74,14 @@
 
   &__category {
     @include ma-font(700);
-    color: $c-font-medium;
+    color: rgba($c-gray-primary,.85);
   }
 
   &__item--blue &__category,
   &__item--green &__category,
   &__item--dark-gray &__category {
-    color: rgba($c-font-inverse,.7);
+    color: rgba($c-font-inverse,.8);
+    text-shadow: 0 0.125rem 0.125rem rgba(1, 1, 1, 0.5);
   }
 
   &__link {

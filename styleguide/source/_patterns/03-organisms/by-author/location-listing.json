@@ -1,0 +1,130 @@
+{
+  "locationListing": {
+    "form": {
+      "action": "#",
+      "inputs":[{
+        "path":"@molecules/field-submit.twig",
+        "data":{
+          "fieldSubmit": {
+            "inputText": {
+              "labelText": "Filter by city, town or zipcode",
+              "required": false,
+              "id": "filter-by-location",
+              "name": "filter-by-location",
+              "placeholder": ""
+            },
+            "buttonSearch": {
+              "text": "Update"
+            }
+          }
+        }
+      }]
+    },
+    "googleMap": {
+      "map": {
+        "center": {
+          "lat": 42.366565,
+          "lng": -71.058940
+        },
+        "zoom": 16
+      },
+      "markers": [{
+        "position": {
+          "lat": 42.366565,
+          "lng": -71.058940 
+        },
+        "label": "A",
+        "infoWindow": {
+          "name": "Department of Conservation and Recreation",
+          "phone": "16176261250",
+          "fax": "16176261351",
+          "email": "mass.parks@state.ma.us",
+          "address": "251 Causeway Street, Suite 900\nBoston, MA 02114-2104"
+        }
+      },{
+        "position": {
+          "lat": 42.358795,
+          "lng": -71.063858 
+        },
+        "label": "B",
+        "infoWindow": {
+          "name": "Department of Recreation and Fun",
+          "phone": "16176261250",
+          "fax": "",
+          "email": "mass.parks@state.ma.us",
+          "address": "24 Beacon St\nBoston, MA 02133"
+        }
+      }]
+    },
+    "activeFilters": {
+      "nearby": "02155"
+    },
+    "imagePromos":[{
+      "title": {
+        "text": "Department of Conservation and Recreation",
+        "href": "#",
+        "type": ""
+      },
+      "image": {
+        "image":"/assets/images/placeholder/190x107.png",
+        "text": "placeholder image",
+        "href": "#"
+      },
+      "description": {
+        "property": "",
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+            }
+          }
+        }]
+      },
+      "link": {
+        "text": "Directions",
+        "href": "https://www.google.com/maps/place/251+Causeway+St+%23900,+Boston,+MA+02114",
+        "type": "external",
+        "info": ""
+      },
+      "location": {
+        "text": "251 Causeway Street,Suite 900, Boston, MA 02114",
+        "map": true
+      }
+      
+    },{
+      "title": {
+        "text": "Department of Recreation and Fun",
+        "href": "#",
+        "type": ""
+      },
+      "image": {
+        "image":"/assets/images/placeholder/190x107.png",
+        "text": "placeholder image",
+        "href": "#"
+      },
+      "description": {
+        "property": "",
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+            }
+          }
+        }]
+      },
+      "link": {
+        "text": "Directions",
+        "href": "https://www.google.com/maps/place/24+Beacon+St,+Boston,+MA+02133",
+        "type": "external",
+        "info": ""
+      },
+      "location": {
+        "text": "24 Beacon St, Boston, MA 02133",
+        "map": true
+      }
+      
+    }]
+  }
+}

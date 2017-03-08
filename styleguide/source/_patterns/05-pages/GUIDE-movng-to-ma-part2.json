@@ -240,7 +240,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
@@ -372,7 +372,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
@@ -478,7 +478,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
@@ -559,7 +559,7 @@
             "items": [{
               "type": "address",
               "label": "",
-              "value": "555 Park Drive<br/>Boston, MA 02231",
+              "value": "555 Park Drive\nBoston, MA 02231",
               "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "details": ""
             }]
@@ -585,7 +585,8 @@
       "link": {
         "type": "",
         "href": "#",
-        "text": "Buying Your First Home"
+        "text": "Buying Your First Home",
+        "label": "Guide:"
       }
     },{
       "image": "/assets/images/placeholder/130x160.png",
@@ -593,7 +594,8 @@
       "link": {
         "type": "",
         "href": "#",
-        "text": "Shopping for Auto Insurance"
+        "text": "Shopping for Auto Insurance",
+        "label": "Guide:"
       }
     },{
       "image": "/assets/images/placeholder/130x160.png",
@@ -601,7 +603,8 @@
       "link": {
         "type": "",
         "href": "#",
-        "text": "Education in Massachusetts"
+        "text": "Education in Massachusetts",
+        "label": "Guide:"
       }
     }]
   }
