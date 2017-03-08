@@ -67,6 +67,11 @@
       background-color: $c-bg-subtle;
       color: $c-font-link-subtle;
     }
+
+    &:focus {
+      background-color: $c-bg-subtle;
+      color: $c-font-link-subtle;
+    }
   }
 
   &__subitem:first-child &__link {
