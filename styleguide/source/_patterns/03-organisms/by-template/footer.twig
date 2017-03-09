@@ -1,8 +1,4 @@
 <footer class="ma__footer js-footer" id="footer">
-  <button class="ma__footer__back2top js-back2top is-hidden">
-    {% include "@atoms/05-icons/svg-arrow.twig" %}
-    <span>Top</span>
-  </button>
   <div class="ma__footer__container">
     <div class="ma__footer__nav">
       {% include "@molecules/footer-links.twig" %}
@@ -20,6 +16,11 @@
       </div>
     </section>
   </div>
+  <button class="ma__footer__back2top js-back2top is-hidden">
+    {% include "@atoms/05-icons/svg-arrow.twig" %}
+    <span aria-hidden="true">Top</span>
+    <span class="visually-hidden">Go to the top of the page</span>
+  </button>
 </footer>
 
 {% if googleLanguages %}
@@ -34,7 +35,7 @@
       var script = document.createElement('script');
       script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
-      element = document.getElementsByTagName('head')[0]; 
+      element = document.getElementsByTagName('head')[0];
       element.appendChild(script);
     })();
   </script>
