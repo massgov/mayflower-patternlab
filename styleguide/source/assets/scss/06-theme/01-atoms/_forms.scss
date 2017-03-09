@@ -105,7 +105,6 @@ label {
     /* WebKit gets its native focus styles.
      */
     @media (-webkit-min-device-pixel-ratio:0) {
-      outline-color: -webkit-focus-ring-color;
       outline: -webkit-focus-ring-color auto 5px;
     }
   }
@@ -132,7 +131,6 @@ label {
     /* WebKit gets its native focus styles.
      */
     @media (-webkit-min-device-pixel-ratio:0) {
-      outline-color: -webkit-focus-ring-color;
       outline: -webkit-focus-ring-color auto 5px;
     }
   }
