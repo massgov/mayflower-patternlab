@@ -62,8 +62,7 @@
             property="address"
             typeof="PostalAddress"
           {% endif %}>
-          {{ address|raw }}
-          {{item.value | nl2br | raw}}
+          {{ address|nl2br|raw }}
         </div>
         {% if link.href %}
           <div 
