@@ -16,27 +16,35 @@ Description: A list of a specific type of contact information for an entity wrap
 ### Variables:
 ~~~
 group: { // aggregated in array contactUs.contactGroups
-    icon:
-        type: string (include path to icon twig template) / optional
-    name:
-        type: string ("Phone" || "Online" || "Address" || "Fax") / optional
-    items: [
-      ...,
-        {
-            type: 
-                type: string ("phone" || "online" || "address" || "fax" ) / required,
-            property:
-                type: string / optional
-            label:
-                type: string / optional
-            value:
-                type: string (html allowed) / required
-            link:
-                type: string / optional
-            details: 
-                type: string / optional
-        },
-      ...
-    ] / required
+  icon:
+    type: string (include path to icon twig template) / optional
+  name:
+    type: string ("Phone" || "Online" || "Address" || "Fax") / optional
+  items: [
+    ...,
+    {
+      type: 
+        type: string ("phone" || "online" || "address" || "fax" ) / required,
+      property:
+        type: string / optional
+      label:
+        type: string / optional
+      address:
+        type: string (html allowed) / optional
+      link: {
+        href: 
+          type: string (url) / optional,
+        text: 
+          type: string / required if href exists,
+        info: 
+          type: string / optional,
+        property": 
+          type: string / optional
+      }
+      details: 
+        type: string / optional
+    },
+    ...
+  ] / required
 }
 ~~~

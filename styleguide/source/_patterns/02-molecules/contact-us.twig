@@ -3,7 +3,7 @@
 {% endif %}
 <section 
   class="ma__contact-us {{contactUsAccordion ? 'ma__contact-us--accordion js-accordion' : ''}}"
-  {% if schemaPageType %} 
+  {% if contactUs.schemaSd.property and contactUs.schemaSd.type %} 
     property="{{contactUs.schemaSd.property}}" 
     typeof="{{contactUs.schemaSd.type}}"
   {% endif %} >
