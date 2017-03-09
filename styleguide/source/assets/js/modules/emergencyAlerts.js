@@ -20,26 +20,22 @@ export default function (window,document,$,undefined) {
     if(open) {
       // expand the menu
       $el.find('.js-accordion-link').trigger('click');
+
+      $button.trigger('click');
     }
 
-    $el.on('click','.js-accordion-link',function(){
+    // $button.trigger('click');
+    $button.on('click', function(e) {
+      e.preventDefault();
       // toggle the current state
       open = !open;
       // update open/close state cookie
       // leave off third argument to make it expire on session
       cookie.setCookie(cookieName,open);
-    });
-
-    $button.trigger('click');
-    $button.on('click', function(e) {
-      e.preventDefault();
-
-      open = !open;
       // change the state of aria-expanded
       $buttonState = $buttonState === open ? !open : open;
       $(this).attr('aria-expanded', $buttonState);
     });
-
 
   });
 
