@@ -27,8 +27,12 @@
       width: 36%;
     }
 
-    .ma__action-map {
-      height: 400px;
+    .ma__google-map {
+      padding: 0;
+      
+      &__map {
+        height: 400px;
+      }
     }
   }
 }

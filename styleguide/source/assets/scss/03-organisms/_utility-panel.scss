@@ -1,10 +1,11 @@
-$bp-login-util-medium-min: "min-width:1121px";
-$bp-login-util-reduce-links-max: "max-width:1120px";
+$bp-utility-panel-medium-min: "min-width:1121px";
+$bp-utility-panel-reduce-links-max: "max-width:1120px";
 
-.ma__login-util {
+.ma__utility-panel {
 
   @media ($bp-header-toggle-min) {
     display: flex;
+      justify-content: space-between;
     width: 100%;
 
     .no-flex & {
@@ -16,11 +17,14 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: 2em;
+    margin-right: 2%;
 
     @media ($bp-header-toggle-min) {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 250px;
       line-height: 1.3;
       margin-bottom: 0;
-      width: 250px;
 
       .no-flex & {
         display: table-cell;
@@ -28,8 +32,12 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       }
     }
 
-    @media ($bp-login-util-medium-min) {
-      width: 350px;
+    @media ($bp-utility-panel-medium-min) {
+      flex-basis: 350px;
+    }
+
+    &--full {
+      flex-basis: 850px;
     }
   }
 
@@ -39,10 +47,12 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
 
     @media ($bp-header-toggle-min) {
       display: flex;
-        justify-content: space-between;
         align-items: stretch;
+        flex-wrap: nowrap;
+      flex-shrink: 2;
+      flex-grow: 2;
       margin-bottom: 0;
-      width: calc(100% - 250px);  // width of description
+      flex-basis: calc(100% - 250px);  // width of description
 
       .no-flex & {
         display: table-cell;
@@ -50,8 +60,8 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       }
     }
 
-    @media ($bp-login-util-medium-min) {
-      width: calc(100% - 350px);  // width of description
+    @media ($bp-utility-panel-medium-min) {
+      flex-basis: calc(100% - 350px);  // width of description
     }
   }
 
@@ -63,6 +73,9 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
     @media ($bp-header-toggle-min) {
       display: flex;
         align-items: center;
+      flex-basis: 33%;
+      flex-grow: 0;
+      flex-shrink: 1;
       margin: 0 1%;
 
       .no-flex & {
@@ -82,7 +95,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       opacity: .8;
     }
 
-    @media ($bp-login-util-medium-min) {
+    @media ($bp-utility-panel-medium-min) {
       margin: 0 2%;
     }
 
@@ -98,7 +111,7 @@ $bp-login-util-reduce-links-max: "max-width:1120px";
       margin: 0;
       text-align: left;
 
-      @media ($bp-header-toggle-min) and ($bp-login-util-reduce-links-max) {
+      @media ($bp-header-toggle-min) and ($bp-utility-panel-reduce-links-max) {
         font-size: 1.25rem;
       }
 

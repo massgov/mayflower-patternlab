@@ -16,48 +16,29 @@
 
   &__items {
     @include clearfix;
-    @include ma-reset-list;
 
     @media print, ($bp-small-min) {
       display: flex;
         align-items: stretch;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
     }
   }
 
-  &__item {
+  .ma__callout-link {
+    display: flex;
     margin-bottom: 20px;
 
     @media ($bp-small-min) and ($bp-x-large-max) {
       @include span-columns(6);
       @include omega(2n);
+      display: flex;
     }
 
     @media print, ($bp-x-large-min) {
       @include span-columns(3);
       @include omega(4n);
-    }
-
-    > div {
-      text-align: left;
-      width: 100%;
-    }
-
-    .ma__callout-link {
       display: flex;
     }
   }
-
-  &__link {
-    display: block;
-    height: 100%;
-    width: 100%;
-
-    .ma__callout-link {
-      height: 100%;
-    }
-
-  }
-
 }

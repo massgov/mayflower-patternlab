@@ -1,0 +1,66 @@
+$image-promo-bp-x-large-min: "min-width: 1160px";
+
+.ma__image-promo {
+  @include clearfix();
+  display: flex;
+    flex-wrap: wrap;
+  padding: 30px 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  & + & {
+    border-top-style: solid;
+    border-top-width: 1px;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 190px;
+    font-size: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__details {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: calc(100% - 220px);
+    min-width: 250px;
+  }
+
+  &__title {
+    @include ma-h5;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: 1.25rem;
+  }
+
+  &__location {
+    font-size: 18px;
+    padding: 5px 0;
+
+    svg {
+      float: left;
+      height: 1.5em;
+      margin-right: 5px;
+      vertical-align: bottom;
+      width: 1rem;
+    }
+
+    a {
+      @include ma-link-underline;
+      display: inline;
+    }
+  }
+
+}

@@ -1,6 +1,6 @@
 <section class="ma__page-header">
-  <div class="ma__page-header__content" property="mainEntityOfPage">
-    <h1 class="ma__page-header__title">{{pageHeader.title}}</h1>
+  <div class="ma__page-header__content"{% if schemaPageType %} property="mainEntityOfPage"{% endif %}>
+    <h1 class="ma__page-header__title"{% if schemaPageType %} property="name"{% endif %}>{{pageHeader.title}}</h1>
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>
     {% endif %}
@@ -14,5 +14,10 @@
   {% if pageHeader.headerTags.taxonomyTerms %}
     {% set headerTags = pageHeader.headerTags %}
     {% include "@molecules/header-tags.twig" %}
+  {% endif %}
+  {% if pageHeader.divider %}
+    <div class="ma__page-header__divider">
+      {% include "@atoms/divider.twig" %}
+    </div>
   {% endif %}
 </section>

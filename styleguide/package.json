@@ -1,7 +1,7 @@
 {
   "name": "MayflowerPatternLibrary",
   "author": "Jonathan Dallas / Mike Lambert",
-  "version": "2.0.0",
+  "version": "3.2.2",
   "devDependencies": {
     "babelify": "^6.3.0",
     "browser-sync": "^2.7.3",

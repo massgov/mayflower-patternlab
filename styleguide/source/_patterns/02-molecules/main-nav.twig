@@ -1,16 +1,18 @@
 <section class="ma__main-nav">
   <ul class="ma__main-nav__items js-main-nav">
     {% for nav in mainNav %}
+      {% set buttonId =  'button' ~ loop.index %}
+      {% set menuId =  'menu' ~ loop.index %}
       <li class="ma__main-nav__item {{ nav.active ? 'is-active' : '' }} {{ nav.subNav ? 'has-subnav js-main-nav-toggle' : 'js-main-nav-top-link' }}">
-        <button class="ma__main-nav__top-link">{{ nav.text }}</button>
         {% if nav.subNav %}
+          <button id="{{ buttonId }}" class="ma__main-nav__top-link" aria-haspopup="true" aria-expanded="false" aria-controls="{{ menuId }}">{{ nav.text }}</button>
           <div class="ma__main-nav__subitems js-main-nav-content is-closed">
-            <ul class="ma__main-nav__container">
-              <li class="ma__main-nav__subitem"><a href="{{ nav.href }}" class="ma__main-nav__link">{{ nav.text }}</a></li>
+            <ul id="{{ menuId }}" role="menu" aria-labelledby="{{ buttonId }}" class="ma__main-nav__container">
+              <li role="menuitem" class="ma__main-nav__subitem"><a href="{{ nav.href }}" class="ma__main-nav__link">{{ nav.text }}</a></li>
               {% for subNav in nav.subNav %}
-                <li class="ma__main-nav__subitem"><a href="{{ subNav.href }}" class="ma__main-nav__link">{{ subNav.text }}</a></li>
+                <li role="menuitem" class="ma__main-nav__subitem"><a href="{{ subNav.href }}" class="ma__main-nav__link">{{ subNav.text }}</a></li>
               {% endfor %}
-              <li class="ma__main-nav__subitem">
+              <li role="menuitem" class="ma__main-nav__subitem">
                 <a href="{{ nav.href }}" class="ma__main-nav__link">
                   {% include "@atoms/05-icons/svg-arrow-bent.twig" %}
                   <span>{{ nav.text }}</span>
@@ -18,6 +20,8 @@
               </li>
             </ul>
           </div>
+        {% else %}
+          <button id="{{ buttonId }}" class="ma__main-nav__top-link">{{ nav.text }}</button>
         {% endif %}
       </li>
     {% endfor %}

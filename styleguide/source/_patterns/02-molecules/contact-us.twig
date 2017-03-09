@@ -1,13 +1,16 @@
-<section class="ma__contact-us js-accordion">
+{% if contactUs.groups|length > 2 %}
+  {% set contactUsAccordion = true %}
+{% endif %}
+<section 
+  class="ma__contact-us {{contactUsAccordion ? 'ma__contact-us--accordion js-accordion' : ''}}"
+  {% if schemaPageType %} 
+    property="{{contactUs.schemaSd.property}}" 
+    typeof="{{contactUs.schemaSd.type}}"
+  {% endif %} >
+
   {% if contactUs.title %}
-    <h4 class="ma__column-heading">
-      {% if contactUs.title.href %}
-        {% set link = contactUs.title %}
-        {% include "atoms-link" %}
-      {% else %}
-        {{contactUs.title.text}}
-      {% endif %}
-    </h4>
+    {% set columnHeading = contactUs.title %}
+    {% include "@atoms/04-headings/column-heading.twig" %}
   {% endif %}
 
   {# Show first 2 contact groups outside of accordion #}
@@ -16,7 +19,7 @@
   {% endfor %}
 
   {# Show 3rd+ contact groups inside of accordion (if they exist) #}
-  {% if contactUs.groups|length > 2 %}
+  {% if contactUsAccordion %}
     <div class="ma__contact-us__extra js-accordion-content">
     {% for contactGroup in contactUs.groups[2:last] %}
       {% include "@molecules/contact-group.twig" %}

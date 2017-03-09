@@ -49,7 +49,9 @@ Description: A collection of featured and general links
       type: 
         type: null or 'external',
       href:  
-        type: string/url/required
+        type: string/url/required,
+      label:
+        type: string/optional
     }],
 
     links: [{

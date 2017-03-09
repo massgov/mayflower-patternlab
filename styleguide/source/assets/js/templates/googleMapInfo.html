@@ -1,21 +1,24 @@
 <section class="ma__info-window">
-  <h3 class="ma__info-window__name">{{name}}</h3>
-  <div class="ma__info-window__phone">
-    <span class="ma__info-window__label">Phone:</span>
-    <a class="ma__info-window__phone" href="tel:+{{phone}}">{{phoneFormatted}}</a>
+  <h3 class="ma__info-window__name">{{{name}}}</h3>
+  <div class="ma__info-window__address">
+    {{{address}}}
   </div>
+  {{#if phone}}
+    <div class="ma__info-window__phone">
+      <span class="ma__info-window__label">Phone:</span>
+      <a class="ma__info-window__phone" href="tel:{{phone}}">{{phoneFormatted}}</a>
+    </div>
+  {{/if}}
   {{#if fax}}
     <div class="ma__info-window__phone">
       <span class="ma__info-window__label">Fax:</span>
-      <a class="ma__info-window__phone"  href="tel:+{{fax}}">{{faxFormatted}}</a>
+      <a class="ma__info-window__phone"  href="tel:{{fax}}">{{faxFormatted}}</a>
     </div>
   {{/if}}
-  <div class="ma__info-window__email">
-    <span class="ma__info-window__label">Email:</span>
-    <a class="ma__info-window__email" href="mailto:mass.parks@state.ma.us">{{email}}</a>
-  </div>
-  <p class="ma__info-window__address">
-    <span>{{address}}{{#if address2}},</span> <span>{{address2}}{{/if}}</span>
-    <span>{{city}}, {{state}} {{zip}}</span>
-  </p>
+  {{#if email}}
+    <div class="ma__info-window__email">
+      <span class="ma__info-window__label">Email:</span>
+      <a class="ma__info-window__email" href="mailto:{{email}}">{{email}}</a>
+    </div>
+  {{/if}}
 </section>
