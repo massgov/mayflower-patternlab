@@ -12,6 +12,7 @@
 * DP-2110 - Print Styles - In Firefox, the Featured Topics menu has inches of margin on top and bottom
 
 ### DS-8
+* DP-1370 - The keyboard focus on the "yes" and "no" radio buttons is barely visible on feedback form
 * DP-1795 - Implement HIGH PRIORITY accessibility fixes from accessibility vendor SEE SUBTASKS
 * DP-1849 - On location page, there are multiple links labeled "directions"
 * DP-1878 - Fix focus when navigating by keyboard
