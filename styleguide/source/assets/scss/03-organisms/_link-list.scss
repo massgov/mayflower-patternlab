@@ -21,5 +21,9 @@
 
   &__item {
     padding: 5px 0;
+
+    & > span {
+      width: 100%;
+    }
   }
 }
