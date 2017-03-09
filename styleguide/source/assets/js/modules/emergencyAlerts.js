@@ -24,7 +24,6 @@ export default function (window,document,$,undefined) {
       $button.trigger('click');
     }
 
-    // $button.trigger('click');
     $button.on('click', function(e) {
       e.preventDefault();
       // toggle the current state
