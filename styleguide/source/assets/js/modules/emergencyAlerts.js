@@ -4,6 +4,11 @@ export default function (window,document,$,undefined) {
   // Emergency Alerts start close on page load
   // the default behavior is to expand the alerts
   // Emergency Alerts should stay closed if the cookie is set to false
+  
+  /* ********* NOTE: 
+    This component is dependent on the 
+    accordion.js component runing before it. 
+  ********* */
 
   $('.js-emergency-alerts').each(function(){
     let $el = $(this),
