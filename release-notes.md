@@ -18,6 +18,7 @@
 * DP-1878 - Fix focus when navigating by keyboard
 * DP-1880 - Change focus style of "Go to classic Mass.gov" to be more visible
 * DP-1881 - Focus indicator in top nav dropdowns is not visually clear enough
+* DP-1893 - Modify alert show/hide code to use ARIA expanded
 
 ### Maintaince & Support
 * DP-1995 - CLONE - Addresses in Contact Groups not showing all line breaks
