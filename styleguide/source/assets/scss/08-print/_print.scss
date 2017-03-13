@@ -10,8 +10,15 @@ body {
 }
 
 img,
-.ma__action-map__google-map {
+.ma__google-map,
+.ma__mapped-locations,
+.ma__section-links {
    page-break-inside: avoid;
+}
+
+.ma__sections-3up,
+.ma__sections-3up__container {
+  page-break-inside: auto;
 }
 
 h1,
@@ -23,6 +30,7 @@ h1,
 
 .ma__header__nav,
 .ma__header__search,
+.ma__header__backto,
 .ma__footer,
 .ma__action-details__anchor-links,
 .ma__header-tags,
@@ -30,8 +38,8 @@ h1,
 .ma__illustrated-header__image,
 .ma__jump-links,
 .ma__suggested-pages,
-.ma__action-activities__image,
 .ma__sidebar-widget__more,
+.ma__action-activities__image,
 .ma__action-activities__link,
 .ma__action-header__divider,
 .ma__action-finder__see-all-container,

@@ -4,6 +4,10 @@
     padding-top: 20px;
   }
 
+  &__item {
+    margin-bottom: .2em;
+  }
+
   &__name {
     @include ma-h6;
 
@@ -54,9 +58,9 @@
     }
   }
 
-  .ma__content-link {
+  .ma__content-link,
+  .ma__decorative-link {
     display: inline-block;
-    line-height: 1.75;
 
     @media ($bp-small-min){
       font-size: 1.25rem;

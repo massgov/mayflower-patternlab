@@ -105,11 +105,6 @@ $rich-text-spacing-mobile: 1.5rem;
     word-break: break-word;
   }
 
-  .ma__decorative-link {
-    display: inline;
-    vertical-align: baseline;
-  }
-
 // end link styles
 
 // TABLE styles
@@ -166,9 +161,4 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
   // end Table styles
-
-  &__embed {
-    border: 13px solid;
-    margin-bottom: 1em;
-  }
 }
