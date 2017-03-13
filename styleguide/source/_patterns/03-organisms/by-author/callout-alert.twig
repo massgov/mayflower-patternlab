@@ -1,9 +1,30 @@
+{% set ca = calloutAlert.decorativeLink %}
+
 <section class="ma__callout-alert js-clickable">
-  <div class="ma__callout-alert__icon">
-    {% include "@atoms/05-icons/svg-alert.twig" %}
-  </div>
-  <div class="ma__callout-alert__link">
-    {% set decorativeLink = calloutAlert.decorativeLink %}
-    {% include "@atoms/decorative-link.twig" %}
-  </div>
+  {% if ca.href %}
+    <a class="ma__callout-alert__content" 
+      href="{{ ca.href }}"
+      {% if ca.info %}
+        aria-label="{{ ca.info }}"
+      {% endif %}
+      {% if ca.property %}
+        property="{{ ca.property }}"
+      {% endif %}>
+      <div class="ma__callout-alert__icon">
+        {% include "@atoms/05-icons/svg-alert.twig" %}
+      </div>
+      <div class="ma__callout-alert__link">
+        <span>{{ ca.text }}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</span>
+      </div>
+    </a>
+  {% else %}
+    <div class="ma__callout-alert__content">
+      <div class="ma__callout-alert__icon">
+        {% include "@atoms/05-icons/svg-alert.twig" %}
+      </div>
+      <div class="ma__callout-alert__link">
+        {{ ca.text }}
+      </div>
+    </div>
+  {% endif %}
 </section>
