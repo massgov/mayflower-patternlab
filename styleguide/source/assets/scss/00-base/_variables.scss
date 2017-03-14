@@ -7,3 +7,5 @@ $max-width: 1320px; // use @include outer-container() which sets this and center
 $header-mobile-controls-height: 40px;
 
 $layout-sidebar-width: ($column * 3) + ($gutter * 2);
+
+$l-max-content-width: 820px;
