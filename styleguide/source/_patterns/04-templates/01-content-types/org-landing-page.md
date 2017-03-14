@@ -10,21 +10,22 @@ The following schema.org variables are optional and should only be set if their 
 ~~~
 Schema.org property name = Mayflower (.json) variable
 --------------------------------------------------------
-schema = [
-    type = "governmentOrganization",
-    name = pageBanner.title ,
-    alternateName = pageBanner.titleSubText,
-    disambiguatingDescription = actionHeader.subTitle,
-    description = stackedRowSections[0].pageContent[0].data.rteElements[1].data.paragraph.text,
-    address = contactUs.groups[0].items[0].value,
-    logo = widgets.[0].data.image.src,
-    url = (page url),
-    sameAs = [ 
-       stackedRowSections[0].sideBar[1].data.iconLinks.items[0].link.href,
-       stackedRowSections[0].sideBar[1].data.iconLinks.items[1].link.href,
-       stackedRowSections[0].sideBar[1].data.iconLinks.items[2].link.href
+{
+    "@context": "http://schema.org/",
+    "@id": "{{ urlDomain }}{{ urlPath }}/#governmentOrganization",
+    "@type": "governmentOrganization",
+    "name": "{{ pageBanner.title }}",
+    "alternateName": "{{ pageBanner.titleSubText }}",
+    "disambiguatingDescription": "{{ actionHeader.pageHeader.subTitle }}",
+    "description": "{{ stackedRowSections[0].pageContent[0].data.rteElements[1].data.paragraph.text }}",
+    "logo": "{{ actionHeader.widgets[0].data.image.src }}",
+    "url": "{{ urlDomain }}{{ urlPath }}",
+    "sameAs": [
+        "{{ stackedRowSections[0].sideBar[1].data.iconLinks.items[0].link.href }}",
+        "{{ stackedRowSections[0].sideBar[1].data.iconLinks.items[1].link.href }}",
+        "{{ stackedRowSections[0].sideBar[1].data.iconLinks.items[2].link.href }}"
     ]     
-]
+}
 ~~~
 
 #### Rendered json+ld data (MVP)
