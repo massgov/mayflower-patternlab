@@ -16,6 +16,7 @@
 </div>
 <div class="post-content">
 </div>
-{% if schema %}
+{% if schema.governmentOrganization %}
+    {% set governmentOrganization = schema.governmentOrganization %}
     {% include "@meta/schema/government-organization.twig" %}
 {% endif %}

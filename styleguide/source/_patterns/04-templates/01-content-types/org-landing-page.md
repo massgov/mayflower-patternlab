@@ -4,8 +4,33 @@ title: Org Landing Page
 Description: a page pattern representing an org landing page
 ## State: alpha
 
-### Structured Data
-#### Schema.org property / Mayflower variable map (MVP):
+## Structured Data
+
+### Schema.org property / Mayflower Schema variables map
+~~~
+{
+    "@context": "http://schema.org/",
+    "@id": "{{ governmentOrg.url }}/#governmentOrganization",
+    "@type": "governmentOrganization",
+    "name": "{{ governmentOrg.name }}",
+    "alternateName": "{{ governmentOrg.alternateName }}",
+    "disambiguatingDescription": "{{ governmentOrg.disambiguatingDescription }}",
+    "description": "{{ governmentOrg.description }}",
+    "logo": "{{ governmentOrg.logo }}",
+    "url": "{{ governmentOrg.url }}",
+    {% if governmentOrg.sameAs %}
+    "sameAs": [
+        {% for socialLink in governmentOrg.sameAs[:last-1] %}
+        "{{ socialLink }}",
+        {% endfor %}
+        {% set lastSocialLink = governmentOrg.sameAs|last %}
+        "{{ lastSocialLink }}"
+    ]
+    {% endif %}
+}
+~~~
+
+### Schema.org property / Mayflower organisms variable map (MVP):
 The following schema.org variables are optional and should only be set if their corresponding Mayflower data variable exists and is populated.
 ~~~
 Schema.org property name = Mayflower (.json) variable
@@ -28,7 +53,7 @@ Schema.org property name = Mayflower (.json) variable
 }
 ~~~
 
-#### Rendered json+ld data (MVP)
+### Rendered json+ld data (MVP)
 ~~~
 <script type="application/ld+json">
 {
@@ -50,7 +75,7 @@ Schema.org property name = Mayflower (.json) variable
 </script>
 ~~~
 
-### Resources
+## Resources
 - [schema.org](https://schema.org/)
   - [schema: Government Organization](https://schema.org/GovernmentOrganization)  
   - [schema: Government Office](https://schema.org/GovernmentOffice)  
@@ -63,7 +88,7 @@ Schema.org property name = Mayflower (.json) variable
   - [org page schema.org playground](http://tinyurl.com/gn72pa4)
 - [Some context for civic service vocabulary being added to schema.org](https://www.w3.org/wiki/images/0/03/Services_for_schema.org_%28DRAFT_2013-06-27%29.pdf)
 
-### Future iterations
+## Future iterations
 Once we've added contacts, locations to the Org Page then we can add address and contact point information.
 
 Once we've got a better idea of how to represent topics, subtopics, services and have created content types for these as well as how-tos and guides, then we can add offer catalogs to represent those.
@@ -117,7 +142,7 @@ schema += [
 ]
 ~~~
 
-#### Draft rendered json+ld object for future iterations
+### Draft rendered json+ld object for future iterations
 ~~~
   append to json+ld <script> object above
   "address": {
