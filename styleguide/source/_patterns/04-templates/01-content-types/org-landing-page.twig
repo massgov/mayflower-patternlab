@@ -1,0 +1,21 @@
+<div class="pre-content">
+    {% if breadcrumbs %}
+        {% include "@organisms/by-template/breadcrumbs.twig" %}
+    {% endif %}
+    {% if pageBanner %}
+        {% include "@organisms/by-template/page-banner.twig" %}
+    {% endif %}
+    {% if actionHeader %}
+        {% include "@organisms/by-template/action-header.twig" %}
+    {% endif %}
+</div>
+<div class="stacked-row-content">
+    {% for stackedRowSection in stackedRowSections %}
+        {% include "@organisms/by-author/stacked-row-section.twig" %}
+    {% endfor %}
+</div>
+<div class="post-content">
+</div>
+{% if schema %}
+    {% include "@meta/schema/government-organization.twig" %}
+{% endif %}
