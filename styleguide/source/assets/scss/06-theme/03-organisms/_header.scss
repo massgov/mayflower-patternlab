@@ -80,6 +80,11 @@
       @media ($bp-large-min) {
         font-size: 1.375rem;
       }
+
+      &:focus {
+        background-color: $c-white;
+        border-color: $c-theme-yellow !important;
+      }
     }
   }
 }

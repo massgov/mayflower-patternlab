@@ -1,5 +1,29 @@
 # Mass Gov Release Notes
 
+## 3.5.0
+### DS-5
+* DP-1307 - Display spacing issue in Agency Links area on subtopic (L2) pages
+* DP-1734 - Word "Unemployment" not resizing correctly on Subtopic page on iPhone 5
+* DP-1838 - Standardize on one icon for both internal and external links
+* DP-1853 - Related Things - topics do not have the correct icon
+* DP-2095 - SVG icons not being added properly to Rich Text links
+* DP-2104 - Implement thumbnail scaling in PatternLab
+* DP-2109 - Print Styles - Go to Classic Mass.gov appears at the top of every page, hiding text.
+* DP-2110 - Print Styles - In Firefox, the Featured Topics menu has inches of margin on top and bottom
+
+### DS-8
+* DP-1370 - The keyboard focus on the "yes" and "no" radio buttons is barely visible on feedback form
+* DP-1795 - Implement HIGH PRIORITY accessibility fixes from accessibility vendor SEE SUBTASKS
+* DP-1849 - On location page, there are multiple links labeled "directions"
+* DP-1878 - Fix focus when navigating by keyboard
+* DP-1880 - Change focus style of "Go to classic Mass.gov" to be more visible
+* DP-1881 - Focus indicator in top nav dropdowns is not visually clear enough
+* DP-1893 - Modify alert show/hide code to use ARIA expanded
+
+### Maintaince & Support
+* DP-1995 - CLONE - Addresses in Contact Groups not showing all line breaks
+
+
 ## 3.4.2
 * DP-1434 - Update location and design of feedback form
 

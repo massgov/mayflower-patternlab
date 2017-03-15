@@ -18,10 +18,10 @@
     @media ($bp-page-width-min) {
       @include ma-container;
     }
+  }
 
-    & > a {
-      margin-bottom: 20px;
-    }
+  &__link {
+    margin-bottom: 20px;
   }
 
 
