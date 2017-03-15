@@ -31,24 +31,18 @@ Description: a page pattern representing an org landing page
 ~~~
 
 ### Schema.org property / Mayflower organisms variable map (MVP):
-The following schema.org variables are optional and should only be set if their corresponding Mayflower data variable exists and is populated.
 ~~~
 Schema.org property name = Mayflower (.json) variable
 --------------------------------------------------------
-{
-    "@context": "http://schema.org/",
-    "@id": "{{ urlDomain }}{{ urlPath }}/#governmentOrganization",
-    "@type": "governmentOrganization",
-    "name": "{{ pageBanner.title }}",
-    "alternateName": "{{ pageBanner.titleSubText }}",
-    "disambiguatingDescription": "{{ actionHeader.pageHeader.subTitle }}",
-    "description": "{{ stackedRowSections[0].pageContent[0].data.rteElements[1].data.paragraph.text }}",
-    "logo": "{{ actionHeader.widgets[0].data.image.src }}",
-    "url": "{{ urlDomain }}{{ urlPath }}",
-    "sameAs": [
-        "{{ stackedRowSections[0].sideBar[1].data.iconLinks.items[0].link.href }}",
-        "{{ stackedRowSections[0].sideBar[1].data.iconLinks.items[1].link.href }}",
-        "{{ stackedRowSections[0].sideBar[1].data.iconLinks.items[2].link.href }}"
+
+    schema.governmentOrganization.name = pageBanner.title
+    schema.governmentOrganization.alternateName = pageBanner.titleSubText
+    schema.governmentOrganization.disambiguatingDescription = actionHeader.pageHeader.subTitle
+    schema.governmentOrganization.description = stackedRowSections[0].pageContent[0].data.rteElements[1].data.paragraph.text
+    schema.governmentOrganization.logo = actionHeader.widgets[0].data.image.src
+    schema.governmentOrganization.url = urlDomain }}{{ urlPath
+    schema.governmentOrganization.sameAs = [
+        stackedRowSections[0].sideBar[1].data.iconLinks.items[INDEX].link.href
     ]     
 }
 ~~~
