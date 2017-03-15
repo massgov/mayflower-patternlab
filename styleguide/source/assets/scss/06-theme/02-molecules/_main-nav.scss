@@ -63,7 +63,8 @@
     font-weight: 500;
     color: $c-font-base;
 
-    &:hover {
+    &:hover, 
+    &:focus {
       background-color: $c-bg-subtle;
       color: $c-font-link-subtle;
     }

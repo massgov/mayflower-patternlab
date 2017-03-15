@@ -12,6 +12,7 @@ $c-black: #141414;
 $c-gray-f2f2f2: #f2f2f2;
 $c-gray-dcdcdc: #dcdcdc;
 $c-gray-707070: #707070;
+$c-gray-757575: #757575;
 
 // 18F compliance we can't use variables with the color in the name
 $c-theme-blue: $c-blue-primary;
@@ -34,6 +35,6 @@ $c-bg-section: $c-gray-f2f2f2;
 
 $c-bd-divider: $c-gray-dcdcdc;
 $c-bd-input: $c-gray-dcdcdc;
-
+$c-bd-input-dark: $c-gray-757575;
 
 

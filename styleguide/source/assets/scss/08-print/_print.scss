@@ -10,8 +10,15 @@ body {
 }
 
 img,
-.ma__google-map {
+.ma__google-map,
+.ma__mapped-locations,
+.ma__section-links {
    page-break-inside: avoid;
+}
+
+.ma__sections-3up,
+.ma__sections-3up__container {
+  page-break-inside: auto;
 }
 
 h1,

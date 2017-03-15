@@ -1,4 +1,10 @@
 .ma__action-steps {
   @include clearfix;
   margin-bottom: 45px;
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container('restricted');
+  }
 }

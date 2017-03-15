@@ -145,28 +145,8 @@
     @include ma-reset-list;
   }
 
+  // skip the first item
   &__item + &__item {
     margin-top: .75em;
-  }
-
-  // skip the first item
-  &__item + &__item{
-  }
-
-  &__link {
-    @include ma-link-underline;
-    padding-bottom: 3px;
-
-    span {
-      @include ma-chevron;
-      display: inline-block;
-      height: 13px;
-      margin-right: -13px;
-      width: 13px;
-
-      &:after {
-        opacity: .5;
-      }
-    }
   }
 }
