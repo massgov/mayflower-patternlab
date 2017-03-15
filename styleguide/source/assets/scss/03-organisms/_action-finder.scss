@@ -71,7 +71,7 @@ $action-finder-bp: 900px;
     flex-shrink: 1;
     flex-basis: auto;
 
-    @media ($bp-small-min) and ($bp-large-max) {
+    @media screen and ($bp-small-min) and ($bp-large-max) {
       @include span-columns(4 of 8);
       @include omega(2n);
       display: flex;

@@ -46,13 +46,13 @@
     "bgImage": "/assets/images/placeholder/800x450.png",
     "category": "Guide",
     "pageHeader": {
-      "title": "Moving to Massachusetts Part 1: Planning Your Move",
+      "title": "Moving to Massachusetts: Planning Your Move",
       "subTitle": "",
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this three-part guide series provides instructions for changing your license, tips for settling in, and other useful information."
+            "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this guide provides instructions for changing your license, tips for settling in, and other useful information."
           }
         }
       }],
@@ -68,8 +68,8 @@
       "text": "Buying or Renting a Home",
       "href": "buying-or-renting-a-home"
     },{
-      "text": "Moving from a Foreign Country",
-      "href": "moving-from-a-Foreign-country"
+      "text": "Bringing Leased Vehicles to MA",
+      "href": "bringing-leased-vehicles-to-ma"
     },{
       "text": "Moving Day",
       "href": "moving-day"
@@ -77,8 +77,17 @@
       "text": "Moving with Pets",
       "href": "moving-with-pets"
     },{
-      "text": "Changing Your Address",
-      "href": "changing-your-address"
+      "text": "Another Section Name",
+      "href": "another-section-name"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name2"
+    },{
+      "text": "Converting Your Out-of-Country Driver’s License",
+      "href": "converting-your-out-of-country-drivers-license"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name5"
     }]
   },
 
@@ -184,25 +193,43 @@
       }
     }]
   },{
-    "title": "Moving from a Foreign Country",
-    "id": "moving-from-a-Foreign-country",
+    "title": "Bringing Leased Vehicles to MA",
+    "id": "bringing-leased-vehicles-to-ma",
     "pageContent": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
         "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
+          "path": "@molecules/callout-stats.twig",
           "data": {
-            "paragraph" : {
-              "text": "According to the U.S. Department of State (DOS), most citizens of foreign countries must obtain a U.S. visa when moving to the United States. There are different types of visitor visas and immigrant visas."
+            "statsCallout": {
+              "pull": "right",
+              "stat": "$75+",
+              "content": "this includes a title and registration fee"
             }
           }
         },{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "The DOS provides a complete directory of visa categories and a Visa Wizard to help foreign citizens determine whether or not they will need a visa."
+              "text": "In general, leased vehicles must be registered and titled in Massachusetts. However, there are exceptions, so check with the RMV to determine what steps you need to take. If the leased vehicle needs to be titled in Massachusetts, the leasee must bring the Form RMV-1, the current out-of-state title, a $75 title fee, and <a href=\"#\">registration fee</a> to an <a href=\"#\">RMV branch office</a>."
             }
           }
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/form-download.twig",
+      "data":{
+        "compHeading": {
+          "title": "Forms",
+          "sub": true
+        },
+        "actionDownloads": [{
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "text": "RMV-1 Form",
+          "href": "#",
+          "type": "",
+          "size": "259KB",
+          "format": "PDF"
         }]
       }
     }],
@@ -220,7 +247,7 @@
         "contactUs": {
           "title": {
             "href":"#",
-            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
           "groups": [{
@@ -589,6 +616,51 @@
       }
     }],
 
+    "sideBar": ""
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name1",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+            }
+          }
+        }]
+      }
+    },{
+      "path":"@organisms/by-author/key-actions.twig",
+      "data":{
+        "keyActions": {
+          "compHeading": {
+            "title": "Key Actions",
+            "sub":true
+          },
+          "links":[{
+            "text": "Related Action to important Page Name",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Related Action this Page Name",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Exciting Action Page Name",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Related Action Page Name",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+
     "sideBar": [{
       "path": "@atoms/04-headings/sidebar-heading.twig",
       "data": {
@@ -602,63 +674,7 @@
         "contactUs": {
           "title": {
             "href":"#",
-            "text": "Executive Office of Energy and Environmental Affairs (EEA)",
-            "chevron":""
-          },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "online",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
-            }]
-          }]
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "title": {
-            "href":"#",
-            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
             "chevron":""
           },
           "groups": [{
@@ -710,8 +726,8 @@
       }
     }]
   },{
-    "title": "Changing Your Address",
-    "id": "changing-your-address",
+    "title": "Another Section Name",
+    "id": "another-section-name2",
     "pageContent": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
@@ -719,39 +735,23 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "You may need to <a href=\"#\">file a change of address with federal agencies</a> depending on your needs. Newcomers can file a <a href=\"http://www.mass.gov\">change of address form online</a> through the <a href=\"http://www.mass.gov\">U.S. Postal Service (USPS)</a> to have mail forwarded to their new home."
+              "text": "Lorem ipsum dolor sit amet, <a href=\"#\">consectetur adipiscing</a> elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
             }
           }
         },{
-          "path": "@atoms/11-text/paragraph.twig",
+          "path": "@atoms/09-media/figure.twig",
           "data": {
-            "paragraph" : {
-              "text": "Once Massachusetts residency has been established, new residents are required to have a <a href=\"#\">Massachusetts driver’s license</a> to operate a vehicle. There is no grace period."
+            "figure": {
+              "align": "",
+              "image": { 
+                "alt": "alt text", 
+                "src": "/assets/images/placeholder/800x400.png",
+                "height": "",
+                "width": ""
+              },
+              "caption": ""
             }
           }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "If you do not drive, a <a href=\"#\">Massachusetts ID</a> can serve as proof of residency and identity."
-            }
-          }
-        }]
-      }
-    },{
-      "path": "@organisms/by-author/form-download.twig",
-      "data": {
-        "compHeading": {
-          "title": "Forms",
-          "sub": true
-        },
-        "actionDownloads": [{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
-          "text": "Online Form: Official USPS Change of Address",
-          "href": "#",
-          "type": "external",
-          "size": "",
-          "format": "form"
         }]
       }
     }],
@@ -820,6 +820,220 @@
         }
       }
     }]
+  },{
+    "title": "Converting Your Out-of-Country Driver’s License",
+    "id": "converting-your-out-of-country-drivers-license",
+    "pageContent": [{
+      "path": "@organisms/by-author/callout-time.twig",
+      "data": {
+        "calloutTime": {
+          "text": "This usually takes approximately 4 weeks"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "If you are <a href=\"#\">converting a license from a foreign country</a>, you must take the full driver’s test, which includes the written, road, and vision exams, and present identification documents similar to those outlined in the previous section. You may also need a sponsor depending on the country that issued your license. However, if you are a foreign visitor with a valid license from one of the <a href=\"#\">countries or territories approved by the RMV</a>, you may legally drive in Massachusetts for up to one year. The year begins on the date of your arrival, and you must be at least 18 years old and drive only the vehicle type covered by your license."
+            }
+          }
+        },{
+          "path": "@atoms/09-media/figure.twig",
+          "data": {
+            "figure": {
+              "align": "align-right",
+              "image": { 
+                "alt": "alt text", 
+                "src": "/assets/images/placeholder/400x300.png",
+                "height": "",
+                "width": ""
+              },
+              "caption": ""
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "You may be eligible to convert your out-of-state license into a Massachusetts one if you currently carry a <a href=\"#\">valid license from a U.S. territory, Canada, or Mexico</a>. The license must meet the RMV’s identification requirements."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "International driving permits cannot be converted to a Massachusetts driver’s license, and do not give you any driving privileges."
+            }
+          }
+        }]
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Key Agencies"
+        }
+      }
+    },{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "title": {
+            "href":"#",
+            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+            "chevron":""
+          },
+          "groups": [{
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "hidden": "",
+            "items": [{
+              "type": "phone",
+              "label":"Main:",
+              "value":"(617) 625-1250",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "hidden": "",
+            "items": [{
+              "type": "online",
+              "label":"",
+              "value":"Contact Form",
+              "link":"#",
+              "details":""
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-fax-icon.twig",
+            "name": "Fax",
+            "hidden": "true",
+            "items": [{
+              "type": "fax",
+              "label":"",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"Please allow 24 hours for a response"
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-marker.twig",
+            "name": "Address",
+            "hidden": "true",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "value": "555 Park Drive\nBoston, MA 02231",
+              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "details": ""
+            }]
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name5",
+    "pageContent": [{
+      "path": "@organisms/by-author/split-columns.twig",
+      "data": {
+        "splitColumns": {
+          "column1": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Subheading Section Name 1"
+              }
+            }
+          },{
+            "path": "@organisms/by-author/rich-text.twig",
+            "data": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate."
+                  }
+                }
+              }]
+            }
+          }],
+          "column2": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Subheading Section Name 2"
+              }
+            }
+          },{
+            "path": "@organisms/by-author/rich-text.twig",
+            "data": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <a href=\"#\">accumsan et viverra justo commodo</a>."
+                  }
+                }
+              },{
+                "path": "@atoms/08-lists/unordered-list.twig",
+                "data": {
+                  "unorderedList": [{ 
+                    "text": "Bulleted item" 
+                  },{ 
+                    "text": "Bulleted item" 
+                  },{ 
+                    "text": "Bulleted item" 
+                  }]
+                }
+              }]
+            }
+          }],
+          "column3": [{
+            "path": "@atoms/04-headings/column-heading.twig",
+            "data": {
+              "columnHeading" : {
+                "text": "Subheading Section Name 3"
+              }
+            }
+          },{
+            "path": "@organisms/by-author/rich-text.twig",
+            "data": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Lorem ipsum dolor sit amet. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
+                  }
+                }
+              }]
+            }
+          }]
+        }
+      }
+    },{
+      "path":"@organisms/by-author/key-actions.twig",
+      "data":{
+        "keyActions": {
+          "compHeading": {
+            "title": "Key Actions",
+            "sub":true
+          },
+          "links":[{
+            "text": "Related Action to important Page Name",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+
+    "sideBar": []
   }],
 
   "COMMENT":"****POSTCONTENT COMPONENTS****",
