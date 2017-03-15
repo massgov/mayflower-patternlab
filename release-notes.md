@@ -1,4 +1,7 @@
 # Mass Gov Release Notes
+## 3.6.0
+### Pillar1
+* DP-2181 - Update Guide Page in Mayflower 
 
 ## 3.5.0
 ### DS-5

@@ -11,24 +11,11 @@ $rich-text-spacing-mobile: 1.5rem;
 
   .pre-content > &,
   .post-content > &,
-  .page-content > & {
-    @include ma-container;
-
-    @media ($bp-large-min) and ($bp-page-width-max) {
-      margin-left: 0;
-      margin-right: 0;
-      max-width: 820px;
-    }
-
-    @media ($bp-page-width-min) {
-      margin-left: auto;
-      margin-right: auto;
-      padding-right: 540px;
-    }
+  .main-content--full .page-content > & {
+    @include ma-container('restricted');
   }
 
-  .ma__split-columns__column > &,
-  .main-content--two .page-content > & {
+  .ma__split-columns__column > & {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
