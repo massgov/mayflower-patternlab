@@ -2,17 +2,17 @@ $page-banner-inner-width: 612px;
 
 .ma__page-banner {
 
-  &__icon {
+  &__container {
 
-    svg,
-    svg > g {
-      fill: rgba($c-font-inverse,.5);
+    &:before {
+      background-color: rgba($c-theme-green, 0.8);
     }
   }
 
-  &__title {
-    @include ma-font(400);
-    color: $c-font-inverse;
+  &--blue &__container {
+    &:before {
+      background-color: rgba($c-theme-blue, 0.8);
+    }
   }
 
   &__content {
@@ -22,13 +22,34 @@ $page-banner-inner-width: 612px;
       background-color: $c-theme-green;
     }
   }
+    
+  &--blue &__content {
+    background-image: linear-gradient(-90deg, rgba($c-theme-blue,.7), $c-theme-blue 95%);
 
-  &__divider {
-    @include ma-border-decorative($c-theme-green);
-    opacity: .5
+    &:before {
+      background-color: $c-theme-blue;
+    }
+  }
+
+  &--overlay &__content {
+    background-image: none;
+  }
+
+  &__icon {
+
+    svg,
+    svg > g {
+      fill: rgba($c-font-inverse,.5);
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    color: $c-font-inverse;
   }
 
   &__description {
-    @include ma-font(300);
+    color: $c-font-inverse;
+    font-weight: 500;
   }
 }

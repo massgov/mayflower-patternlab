@@ -5,6 +5,8 @@
     "size": "",
     "icon": "@atoms/05-icons/svg-lg-park.twig",
     "title": "Visiting & Exploring",
-    "titleSubText": ""
+    "titleSubText": "",
+    "description": "",
+    "color": null
   }
 }
