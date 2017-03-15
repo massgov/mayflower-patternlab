@@ -5,11 +5,14 @@ Description: displays a set of links for topic or subtopic.
 ## Status: Alpha
 ### Notes:
 - The way the icons are rendered is deprecrated and will need to be updated here once refactored.
+
 ### Contains:
 - [@atoms/05-icons/cat-icon](?p=atoms-cat-icon)
-- [@atoms/05-icons/svg-arrow](?p=atoms-svg-arrow)
+- [@atoms/decorative-link](?p=atoms-decorative-link)
+
 ### Used in:
 - [@organisms/by-author/sections-three-up](?p=organisms-sections-three-up)
+
 ### Required Variables
 ~~~
 sectionLinks: {

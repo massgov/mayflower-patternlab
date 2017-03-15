@@ -122,7 +122,7 @@ $page-banner-icon-width: $column + $gutter;
 
   &__title {
     flex-grow: 1;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 1.05;
     margin-bottom: 0;
     vertical-align: middle;
@@ -132,7 +132,16 @@ $page-banner-icon-width: $column + $gutter;
       width: calc(100% - 75px);
     }
 
+    @media ($bp-x-small-min) {
+      font-size: 3.25rem;
+    }
+
+    @media ($bp-small-min) {
+      font-size: 3.5rem;
+    }
+
     @media ($bp-medium-min){
+      font-size: 4rem;
       width: calc(100% - #{$page-banner-icon-width});
     }
 
@@ -144,14 +153,17 @@ $page-banner-icon-width: $column + $gutter;
       font-size: 5.125rem;
     }
 
-    span {
+    & > span {
       font-size: .4em;
     }
   }
 
   &--large &__title,
   &--small &__title {
-    font-size: 3.25rem;
+
+    @media ($bp-small-min) {
+      font-size: 3.25rem;
+    }
 
     @media ($bp-large-min){
       font-size: 3.5rem;
