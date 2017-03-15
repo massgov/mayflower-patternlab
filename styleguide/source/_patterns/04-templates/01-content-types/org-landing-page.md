@@ -1,36 +1,19 @@
 ---
 title: Org Landing Page
 ---
-Description: a page pattern representing an org landing page
+Description: A pattern representing an org landing page content type.  This pattern renders everything inside of the `<main>` element, in other words, it includes type-specific content without the global `<header>` and `<footer>` elements.
+
 ## State: alpha
 
 ## Structured Data
 
-### Schema.org property / Mayflower Schema variables map
-~~~
-{
-    "@context": "http://schema.org/",
-    "@id": "{{ governmentOrg.url }}/#governmentOrganization",
-    "@type": "governmentOrganization",
-    "name": "{{ governmentOrg.name }}",
-    "alternateName": "{{ governmentOrg.alternateName }}",
-    "disambiguatingDescription": "{{ governmentOrg.disambiguatingDescription }}",
-    "description": "{{ governmentOrg.description }}",
-    "logo": "{{ governmentOrg.logo }}",
-    "url": "{{ governmentOrg.url }}",
-    {% if governmentOrg.sameAs %}
-    "sameAs": [
-        {% for socialLink in governmentOrg.sameAs[:last-1] %}
-        "{{ socialLink }}",
-        {% endfor %}
-        {% set lastSocialLink = governmentOrg.sameAs|last %}
-        "{{ lastSocialLink }}"
-    ]
-    {% endif %}
-}
-~~~
+### Available schema.org data objects
+schema:
+- [governmentOrganization](/?p=meta-government-organization)
 
-### Schema.org property / Mayflower organisms variable map (MVP):
+### Schema.org property / Mayflower organisms variable maps (MVP):
+
+#### governmentOrganization:
 ~~~
 Schema.org property name = Mayflower (.json) variable
 --------------------------------------------------------
@@ -44,10 +27,11 @@ Schema.org property name = Mayflower (.json) variable
     schema.governmentOrganization.sameAs = [
         stackedRowSections[0].sideBar[1].data.iconLinks.items[INDEX].link.href
     ]     
-}
 ~~~
 
-### Rendered json+ld data (MVP)
+### Rendered json+ld data objects (MVP)
+
+#### governmentOrganization
 ~~~
 <script type="application/ld+json">
 {
