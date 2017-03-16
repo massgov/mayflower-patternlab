@@ -116,11 +116,13 @@
 
   "doActionFinder": {
     "actionFinder": {
+      "id": "GUID90357801731903501238",
       "bgWide":"",
       "bgNarrow":"",
       "title": "What Would You Like to Do?",
       "featuredHeading":"Featured:",
       "generalHeading":"All How-Tos:",
+      "hideFilter": true,
 
       "seeAll": null,
 
@@ -161,11 +163,13 @@
 
   "learnActionFinder": {
     "actionFinder": {
+      "id": "GUID7501974075817350750",
       "bgWide":"",
       "bgNarrow":"",
       "title": "What you need to know",
       "featuredHeading":"",
       "generalHeading":"",
+      "hideFilter": true,
 
       "seeAll": null,
 
