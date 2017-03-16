@@ -38,5 +38,19 @@
         </aside>
       </div>
     </section>
+    <section class="ma__stacked-row-section">
+      <div class="main-content main-content--full">
+        <div class="page-content">
+          {% if doActionFinder %}
+            {% set actionFinder = doActionFinder.actionFinder %}
+            {% include "@organisms/by-author/action-finder.twig" %}
+          {% endif %}
+          {% if learnActionFinder %}
+            {% set actionFinder = learnActionFinder.actionFinder %}
+            {% include "@organisms/by-author/action-finder.twig" %}
+          {% endif %}
+        </div>
+      </div>
+    </section>
   </div>
 </main>

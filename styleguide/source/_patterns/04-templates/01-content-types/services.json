@@ -112,7 +112,83 @@
       "info": "Learn More about this generic service",
       "property": ""
     }
+  },
+
+  "doActionFinder": {
+    "actionFinder": {
+      "bgWide":"",
+      "bgNarrow":"",
+      "title": "What Would You Like to Do?",
+      "featuredHeading":"Featured:",
+      "generalHeading":"All How-Tos:",
+
+      "seeAll": null,
+
+      "featuredLinks": [{
+        "image": "",
+        "text": "Featured Link to a related How To's page",
+        "href": "#"
+      }],
+
+      "links": [{
+        "image": "",
+        "text": "Find a State Park",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Get a State Park Pass",
+        "href": "#"
+      },{
+        "image": "/assets/images/placeholder/130x160.png",
+        "text": "Fall Activity Planner",
+        "href": "#",
+        "label": "Guide:"
+      },{
+        "image": "",
+        "text": "Reserve a Campsite",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Find Scenic Viewing Areas",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Download a Trail Map",
+        "href": "#"
+      }]
+    }
+  },
+
+  "learnActionFinder": {
+    "actionFinder": {
+      "bgWide":"",
+      "bgNarrow":"",
+      "title": "What you need to know",
+      "featuredHeading":"",
+      "generalHeading":"",
+
+      "seeAll": null,
+
+      "featuredLinks": "",
+
+      "links": [{
+        "image": "",
+        "text": "Find a State Park",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Get a State Park Pass",
+        "href": "#"
+      },{
+        "image": "/assets/images/placeholder/130x160.png",
+        "text": "Fall Activity Planner",
+        "type": "",
+        "label": "Guide:"
+      }]
+    }
   }
+
+
 }
 
 
