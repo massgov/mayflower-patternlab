@@ -49,6 +49,28 @@
             {% set actionFinder = learnActionFinder.actionFinder %}
             {% include "@organisms/by-author/action-finder.twig" %}
           {% endif %}
+          {% if mappedLocations %}
+            {% include "@organisms/by-author/mapped-locations.twig" %}
+          {% endif %}
+          {% if linkList or formDownload %}
+            <section class="ma__split-columns">
+              <div class="ma__split-columns__container">
+                {% if linkList %}
+                  <div class="ma__split-columns__column">
+                    {% include "@organisms/by-author/link-list.twig" %}
+                  </div>
+                {% endif %}
+                {% if formDownload %}
+                  <div class="ma__split-columns__column">
+                    {% set sidebarHeading = formDownload.sidebarHeading %}
+                    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+                    {% set actionDownloads = formDownload.actionDownloads %}
+                    {% include "@molecules/action-downloads.twig" %}
+                  </div>
+                {% endif %}
+              </div>
+            </section>
+          {% endif %}
         </div>
       </div>
     </section>

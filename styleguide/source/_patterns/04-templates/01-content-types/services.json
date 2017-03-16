@@ -190,9 +190,121 @@
         "label": "Guide:"
       }]
     }
+  },
+
+  "mappedLocations": {
+    "compHeading": {
+      "title": "Locations",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
+    "link": {
+      "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
+      "text":"Location Details",
+      "info": "See more locations for this Generic Service",
+      "property": ""
+    },
+    "googleMap":{
+      "map": {
+        "center": {
+          "lat": 42.366565,
+          "lng": -71.058940
+        },
+        "zoom": 16
+      },
+      "markers": [{
+        "position": {
+          "lat": 42.366565,
+          "lng": -71.058940 
+        },
+        "label": "A",
+        "infoWindow": {
+          "name": "Department of Conservation and Recreation",
+          "phone": "16176261250",
+          "fax": "16176261351",
+          "email": "mass.parks@state.ma.us",
+          "address": "251 Causeway Street, Suite 900\nBoston, MA 02114-2104"
+        }
+      },{
+        "position": {
+          "lat": 42.358795,
+          "lng": -71.063858 
+        },
+        "label": "B",
+        "infoWindow": {
+          "name": "Department of Recreation and Fun",
+          "phone": "16176261250",
+          "fax": "",
+          "email": "mass.parks@state.ma.us",
+          "address": "24 Beacon St\nBoston, MA 02133"
+        }
+      }]
+    }
+  },
+
+  "linkList" : {
+    "sidebarHeading": {
+      "title": "Key Agencies"
+    },
+    "stacked": true,
+    "links" : [{
+      "url":"#",
+      "text":"MassParks"
+    },{
+      "url":"#",
+      "text":"Job Search Help"
+    },{
+      "url":"#",
+      "text":"Job Training"
+    },{
+      "url":"#",
+      "text":"Career Counseling"
+    }]
+  },
+
+  "formDownload": {
+    "sidebarHeading": {
+      "title": "Additional Resources"
+    },
+    "actionDownloads": [{
+      "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+      "text": "PDF download item",
+      "href": "#",
+      "type": "",
+      "size": "30kb",
+      "format": "PDF"
+    },{
+      "icon": "@atoms/05-icons/svg-doc-xlsx.twig",
+      "text": "Excel download item that has a longer title than the pdf did",
+      "href": "#",
+      "type": "",
+      "size": "35kb",
+      "format": "XLSX"
+    },{
+      "icon": "@atoms/05-icons/svg-doc-docx.twig",
+      "text": "Word download item",
+      "href": "#",
+      "type": "",
+      "size": "40kb",
+      "format": "DOCX"
+    },{
+      "icon": "@atoms/05-icons/svg-doc-generic.twig",
+      "text": "Generic download item",
+      "href": "#",
+      "type": "",
+      "size": "120kb",
+      "format": "CSV"
+    },{
+      "icon": "@atoms/05-icons/svg-laptop.twig",
+      "text": "Online Form: Out-of-Country Driver's License Conversion",
+      "href": "#",
+      "type": "external",
+      "size": "",
+      "format": "form"
+    }]
   }
-
-
 }
 
 
