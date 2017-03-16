@@ -2,8 +2,13 @@
   @include ma-component-padding;
 
   &__container {
-    @include ma-container;
     @include clearfix;
+
+    .pre-content > &,
+    .post-content > &,
+    .main-content--full .page-content > & {
+      @include ma-container();
+    }
   }
 
   &__title {
@@ -14,8 +19,12 @@
   &__items {
     margin-bottom: 0;
 
-    @media ($bp-medium-min) {
-      @include span-columns(6);
+    &:first-child:nth-last-child(2),
+    &:first-child:nth-last-child(2) ~ & {
+
+      @media ($bp-medium-min) {
+        @include span-columns(6);
+      }
     }
   }
 
