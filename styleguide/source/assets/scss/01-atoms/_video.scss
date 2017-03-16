@@ -2,6 +2,16 @@
   @include ma-component-spacing;
   padding: 13px;
 
+  @media ($bp-small-min) {
+  
+    &--right {
+      float: right;
+      margin-left: .5em;
+      margin-bottom: 1em;
+      width: 50%;
+    }
+  }
+
   .ma__content-link,
   .ma__decorative-link {
     margin-top: 12px;
