@@ -1,0 +1,23 @@
+.ma__services {
+
+  .page-content--intro {
+
+    & > .ma__image:first-child {
+      @include ma-component-spacing;
+
+      @media ($bp-large-min) {
+        display: none;
+      }
+    }
+  }
+
+  .sidebar--intro {
+    & > .ma__image:first-child {
+      margin-bottom: 30px;
+
+      @media ($bp-large-max) {
+        display: none;
+      }
+    }
+  }
+}

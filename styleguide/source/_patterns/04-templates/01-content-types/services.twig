@@ -1,0 +1,42 @@
+<main id="main-content" class="ma__services" tabindex="-1">
+  <div class="pre-content">
+    {% include "@organisms/by-template/breadcrumbs.twig" %}
+    {% include "@organisms/by-template/page-banner.twig" %}
+  </div>
+  <div class="stacked-row-content">
+    <section class="ma__stacked-row-section">
+      <div class="main-content main-content--two">
+        <div class="page-content page-content--intro">
+          {% if intro.logo %}
+            {% set image = intro.logo %}
+            {% include "@atoms/09-media/image.twig" %}
+          {% endif %}
+          {% if intro.video %}
+            {% set video = intro.video %}
+            {% include "@atoms/09-media/video.twig" %}
+          {% endif %}
+          {% include "@organisms/by-author/teaser-text.twig" %}
+          {% if intro.keyActions %}
+            {% set keyActions = intro.keyActions %}
+            {% include "@organisms/by-author/key-actions.twig" %}
+          {% endif %}
+        </div>
+        <aside class="sidebar sidebar--intro">
+          {% if intro.logo %}
+            {% set image = intro.logo %}
+            {% include "@atoms/09-media/image.twig" %}
+          {% endif %}
+          {% if intro.social %}
+            {% set sidebarHeading = intro.social.sidebarHeading %}
+            {% include "@atoms/04-headings/sidebar-heading.twig" %}
+            {% set iconLinks = intro.social.iconLinks %}
+            {% include "@molecules/icon-links.twig" %}
+          {% endif %}
+          {% if intro.owner %}
+
+          {% endif %}
+        </aside>
+      </div>
+    </section>
+  </div>
+</main>
