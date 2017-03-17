@@ -32,8 +32,9 @@
             {% set iconLinks = intro.social.iconLinks %}
             {% include "@molecules/icon-links.twig" %}
           {% endif %}
-          {% if intro.owner %}
-
+          {% if intro.linkList %}
+            {% set linkList = intro.linkList %}
+            {% include "@organisms/by-author/link-list.twig" %}
           {% endif %}
         </aside>
       </div>
@@ -60,6 +61,7 @@
                     {% include "@organisms/by-author/link-list.twig" %}
                   </div>
                 {% endif %}
+                {# TODO: update the formDownload pattern so it can be used here instead #}
                 {% if formDownload %}
                   <div class="ma__split-columns__column">
                     {% set sidebarHeading = formDownload.sidebarHeading %}

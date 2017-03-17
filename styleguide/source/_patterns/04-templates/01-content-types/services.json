@@ -65,7 +65,19 @@
           }
         }]
       }
+    },
+
+    "linkList" : {
+      "sidebarHeading": {
+        "title": "Offered By"
+      },
+      "stacked": true,
+      "links" : [{
+        "url":"#",
+        "text":"Department of Unemployment Assistance (DUA)"
+      }]
     }
+
   },
 
   "breadcrumbs":{

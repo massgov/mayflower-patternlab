@@ -1,6 +1,14 @@
 .ma__link-list {
   @include ma-component-padding;
 
+  .sidebar & {
+
+    @media ($bp-large-min) {
+      @include ma-component-spacing;
+      padding: 0;
+    }
+  }
+
   &__container {
     @include clearfix;
 
@@ -11,13 +19,15 @@
     }
   }
 
-  &__title {
-    @include ma-border-decorative;
-    padding-bottom: 15px;
-  }
-
   &__items {
     margin-bottom: 0;
+
+    .sidebar & {
+
+      @media ($bp-large-min) {
+        @include ma-reset-list;
+      }
+    }
 
     &:first-child:nth-last-child(2),
     &:first-child:nth-last-child(2) ~ & {
@@ -30,9 +40,5 @@
 
   &__item {
     padding: 5px 0;
-
-    & > span {
-      width: 100%;
-    }
   }
 }
