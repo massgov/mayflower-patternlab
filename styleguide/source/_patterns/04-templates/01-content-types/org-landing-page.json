@@ -1,0 +1,367 @@
+{
+  "urlPath": "/?p=pages-ORG-Health-Services",
+
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+  "breadcrumbs":{
+    "light": "",
+    "links": [{
+      "text": "Health and Human Services (EOHHS)",
+      "href": "#"
+    }]
+  },
+
+  "pageBanner": {
+    "bgWide":"/assets/images/placeholder/1600x400.png",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "size": "large",
+    "icon": null,
+    "title": "Executive Office of Health and Human Services",
+    "titleSubText": "(EOHHS)"
+  },
+
+  "actionHeader": {
+    "pageHeader": {
+      "title": "Executive Office of Health and Human Services",
+      "titleNote": "(EOHHS)",
+      "subTitle": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
+      "rteElements": "",
+      "headerTags": ""
+    },
+
+    "contactUs": {
+      "groups": [{
+        "icon": "",
+        "name": "",
+        "items": [{
+          "type": "address",
+          "label": "",
+          "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+          "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
+          "details": ""
+        }]
+      },{
+        "icon": "@atoms/05-icons/svg-phone.twig",
+        "name": "Phone",
+        "items": [{
+          "type": "phone",
+          "label":"Main:",
+          "value":"(413) 499-4262",
+          "link":"14134994262",
+          "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+        }]
+      },{
+        "icon": "@atoms/05-icons/svg-laptop.twig",
+        "name": "Online",
+        "items": [{
+          "type": "email",
+          "label":"Email:",
+          "value":"email@email.com",
+          "link":"email@email.com",
+          "details":""
+        }]
+      }]
+    },
+
+    "divider": true,
+    "widgets": [{
+      "path": "@atoms/09-media/image.twig",
+      "data": {
+        "image": {
+          "alt": "eohhs logo",
+          "src": "/assets/images/placeholder/230x130.png",
+          "height": "130",
+          "width": "230"
+        }
+      }
+    }]
+  },
+
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+
+  "stackedRowSections": [{
+    "title":"",
+    "id":"",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "rteElements": [{
+          "path": "@atoms/04-headings/heading-2.twig",
+          "data": {
+            "heading2": {
+              "text": "Who We Serve"
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "<a href=\"http://www.google.com\">See news and updates</a>"
+            }
+          }
+        }]
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "data": {
+        "sidebarHeading": {
+          "title": "Social"
+        }
+      }
+    },{
+      "path": "@molecules/icon-links.twig",
+      "data": {
+        "iconLinks": {
+          "items": [{
+            "icon": "@atoms/05-icons/svg-twitter.twig",
+            "link": {
+              "href": "https://twitter.com/MassHHS",
+              "text": "@MassHHS",
+              "chevron": ""
+            }
+          },{
+            "icon": "@atoms/05-icons/svg-flickr.twig",
+            "link": {
+              "href": "https://www.flickr.com/photos/mass_hhs/",
+              "text": "Mass_HHS",
+              "chevron": ""
+            }
+          },{
+            "icon": "@atoms/05-icons/svg-blog.twig",
+            "link": {
+              "href": "https://blog.mass.gov/hhs",
+              "text": "blog.mass.gov/hhs",
+              "chevron": ""
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title":"",
+    "id":"",
+    "pageContent": [{
+      "path": "@organisms/by-author/action-finder.twig",
+      "data": {
+        "actionFinder": {
+          "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+          "bgNarrow":"/assets/images/placeholder/800x800.png",
+          "title": "What Would You Like to Do?",
+          "featuredHeading":"Featured:",
+          "generalHeading":"All Actions & Guides:",
+
+          "seeAll": {
+            "type": "external",
+            "href": "http://www.google.com",
+            "text": "See all EOHHS’s programs and services on classic Mass.gov",
+            "info": ""
+          },
+
+          "featuredLinks": [{
+            "image": "",
+            "text": "Find mental health care options",
+            "type": "external",
+            "href": "#"
+          }],
+
+          "links": [{
+            "image": "",
+            "text": "Learn about other health care programs",
+            "type": "external",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Learn about MassHealth coverage types",
+            "type": "external",
+            "href": "#"
+          },{
+            "image": "/assets/images/placeholder/130x160.png",
+            "text": "Massachusetts Health Care",
+            "type": "",
+            "href": "#",
+            "label": ""
+          },{
+            "image": "",
+            "text": "Find a MassHealth doctor",
+            "type": "external",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Find dental care options",
+            "type": "external",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Shop for health care on the Health Connector",
+            "type": "external",
+            "href": "#"
+          }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/mapped-locations.twig",
+      "data": {
+        "mappedLocations": {
+          "compHeading": {
+            "title": "Locations",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
+          "link": {
+            "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
+            "text":"Location Details",
+            "chevron": "true"
+          },
+          "googleMap":{
+            "map": {
+              "center": {
+                "lat": 42.366565,
+                "lng": -71.058940
+              },
+              "zoom": 16
+            },
+            "markers": [{
+              "position": {
+                "lat": 42.366565,
+                "lng": -71.058940
+              },
+              "label": "A",
+              "infoWindow": {
+                "name": "Department of Conservation and Recreation",
+                "phone": "16176261250",
+                "fax": "16176261351",
+                "email": "mass.parks@state.ma.us",
+                "address": "251 Causeway Street, Suite 900\nBoston, MA 02114-2104"
+              }
+            },{
+              "position": {
+                "lat": 42.358795,
+                "lng": -71.063858
+              },
+              "label": "B",
+              "infoWindow": {
+                "name": "Department of Recreation and Fun",
+                "phone": "16176261250",
+                "fax": "",
+                "email": "mass.parks@state.ma.us",
+                "address": "24 Beacon St\nBoston, MA 02133"
+              }
+            }]
+          }
+        }
+      }
+    },{
+      "path": "@organisms/by-author/sections-three-up.twig",
+      "data": {
+        "sectionThreeUp" : {
+          "compHeading": {
+            "title": "Featured Topics",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
+          "sections": [{
+            "id": "GUIDasjdhf1",
+            "catIcon": null,
+            "title" : {
+              "href" : "#",
+              "text" : "Health & Social Services"
+            },
+            "description": "Massachusetts offers services and resources to keep you and your loved ones healthy, safe, and happy. Find out how we can support you.",
+            "links" : [{
+              "href" : "#",
+              "text" : "Housing Assistance"
+            },{
+              "href" : "#",
+              "text" : "MassHealth & Other Health Care"
+            },{
+              "href" : "#",
+              "text" : "food & Cash Assistance"
+            },{
+              "href" : "#",
+              "text" : "Special Needs & Accessible Living"
+            }]
+          },
+            {
+              "id": "GUIDasjdhf2",
+              "catIcon": null,
+              "title" : {
+                "href" : "#",
+                "text" : "Families & Children"
+              },
+              "description": "The Commonwealth is committed to supporting safe, healthy, happy families. Find information ranging from how to get a marriage certificate to tips on raising active children.",
+              "links" : [{
+                "href" : "#",
+                "text" : "Caring for Children"
+              },{
+                "href" : "#",
+                "text" : "Health, Nutrition & Safety"
+              },{
+                "href" : "#",
+                "text" : "Marriage & Divorce"
+              },{
+                "href" : "#",
+                "text" : "Housing Assistance"
+              }]
+            },
+            {
+              "id": "GUIDasjdhf3",
+              "catIcon": null,
+              "title" : {
+                "href" : "#",
+                "text" : "Housing & Property"
+              },
+              "description": "Do you own or rent property in Massachusetts? Find resources for tenants and landlords, homeowners, developers, and more.",
+              "links" : [{
+                "href" : "#",
+                "text" : "Renters/Tenants"
+              },{
+                "href" : "#",
+                "text" : "Landlords"
+              },{
+                "href" : "#",
+                "text" : "Homeowners"
+              },{
+                "href" : "#",
+                "text" : "Safety & Inspections"
+              }]
+            }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/link-list.twig",
+      "data": {
+        "linkList" : {
+          "title": "Related Organizations on pilot.mass.gov",
+          "links" : [{
+            "url":"#",
+            "text":"Executive Office of Elder Affairs"
+          },{
+            "url":"#",
+            "text":"Department of Public Health"
+          },{
+            "url":"#",
+            "text":"Department of Transitional Assistance"
+          },{
+            "url":"#",
+            "text":"Massachusetts Health Connector"
+          },{
+            "url":"#",
+            "text":"Executive Office of Health & Human Services"
+          }]
+        }
+      }
+    }]
+  }]
+}
