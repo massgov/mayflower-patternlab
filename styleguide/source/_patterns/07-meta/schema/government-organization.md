@@ -19,7 +19,10 @@ Description: a `json+ld` pattern representing a schema.org `governmentOrganizati
     "description": "{{ governmentOrg.description }}",
     "logo": "{{ governmentOrg.logo }}",
     "url": "{{ governmentOrg.url }}",
-    {% if governmentOrg.sameAs %}
+    "address": "{{ governmentOrganization.contactInfo.address }}",
+    "telephone": "{{ governmentOrganization.contactInfo.telephone }}",
+    "faxNumber": "{{ governmentOrganization.contactInfo.faxNumber }}",
+    "email": "{{ governmentOrganization.contactInfo.email }}",
     "sameAs": [
         {% for socialLink in governmentOrg.sameAs[:last-1] %}
         "{{ socialLink }}",
@@ -27,7 +30,6 @@ Description: a `json+ld` pattern representing a schema.org `governmentOrganizati
         {% set lastSocialLink = governmentOrg.sameAs|last %}
         "{{ lastSocialLink }}"
     ]
-    {% endif %}
 }
 ~~~
 
@@ -44,6 +46,10 @@ Description: a `json+ld` pattern representing a schema.org `governmentOrganizati
       "description": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered.",
       "logo": "https://mayflower.digital.mass.gov/assets/images/images/placeholder/230x130.png",
       "url": "https://mayflower.digital.mass.gov/?p=templates-org-landing-page",
+      "address": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+      "telephone": "+14134994262",
+      "faxNumber": "+14134994262",
+      "email": "email@email.com",
       "sameAs": [
         "https://twitter.com/MassHHS",
         "https://www.flickr.com/photos/mass_hhs/",

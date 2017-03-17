@@ -12,6 +12,10 @@
         "description": "{{ governmentOrganization.description }}",
         "logo": "{{ governmentOrganization.logo }}",
         "url": "{{ governmentOrganization.url }}",
+        "address": "{{ governmentOrganization.contactInfo.address }}",
+        "telephone": "{{ governmentOrganization.contactInfo.telephone }}",
+        "faxNumber": "{{ governmentOrganization.contactInfo.faxNumber }}",
+        "email": "{{ governmentOrganization.contactInfo.email }}",
         "sameAs": [
         {% for link in governmentOrganization.sameAs[:last-1] %}
           "{{ link }}",
