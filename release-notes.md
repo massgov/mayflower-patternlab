@@ -27,6 +27,9 @@
 * DP-1995 - CLONE - Addresses in Contact Groups not showing all line breaks
 
 
+## 3.4.2
+* DP-1434 - Update location and design of feedback form
+
 ## 3.4.1
 * Reset the gulp copy task to include the svg files
 
