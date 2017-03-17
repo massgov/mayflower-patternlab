@@ -11,6 +11,9 @@ Description: a `json+ld` pattern representing a schema.org `governmentOrganizati
     "@id": "{{ governmentOrg.url }}/#governmentOrganization",
     "@type": "governmentOrganization",
     "name": "{{ governmentOrg.name }}",
+    "memberOf": {
+       "@id": "{{ governmentOrganization.memberOf.id }}"
+     },
     "alternateName": "{{ governmentOrg.alternateName }}",
     "disambiguatingDescription": "{{ governmentOrg.disambiguatingDescription }}",
     "description": "{{ governmentOrg.description }}",
@@ -33,6 +36,9 @@ Description: a `json+ld` pattern representing a schema.org `governmentOrganizati
 {
     "governmentOrganization": {
       "name": "Executive Office of Health and Human Services",
+      "memberOf": {
+        "id": "http://mayflower.digital.mass.gov/#organization"
+      },
       "alternateName": "EOHHS",
       "disambiguatingDescription": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
       "description": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered.",

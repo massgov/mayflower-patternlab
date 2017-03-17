@@ -4,6 +4,9 @@
         "@id": "{{ governmentOrganization.url }}/#governmentOrganization",
         "@type": "governmentOrganization",
         "name": "{{ governmentOrganization.name }}",
+        "memberOf": {
+          "@id": "{{ governmentOrganization.memberOf.id }}"
+        },
         "alternateName": "{{ governmentOrganization.alternateName }}",
         "disambiguatingDescription": "{{ governmentOrganization.disambiguatingDescription }}",
         "description": "{{ governmentOrganization.description }}",
