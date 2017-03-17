@@ -4,7 +4,27 @@
  Description: a page pattern representing those patterns which could be used on an org landing page content type
  ## State: alpha
  
+ ## Can Contain
+ 
+ - [@organisms/by-template/page-banner](/?p=organisms-page-banner)
+ - [@organisms/by-template/action-header](/?p=organisms-action-header)
+ - [@organisms/by-author/stack-row-section](/?)
+   - Stack Row:
+     - Page Content: 
+       - [@organisms/by-author/rich-text](/?p=organisms-rich-text)
+     - Sidebar Content:
+       - [@atoms/headings/sidebar-heading](/?p=atoms-sidebar-heading)
+       - [@molecules/icon-links](/?p=molecules-icon-links)
+   - Stack Row:
+     - Page Content: 
+       - [@organisms/by-author/action-finder](/?p=organisms-action-finder)
+       - [@organisms/by-author/mapped-locations](/?p=organisms-mapped-locations)
+       - [@organisms/by-author/sections-three-up](/?p=organisms-sections-three-up)
+       - [@organisms/by-author/link-list](/?p=organisms-link-list)
+ - [@meta/schema/government-organization](/?p=meta-government-organization)
+ 
  ## Structured Data
+ 
  ### Schema.org property / Mayflower Schema variables map
  ~~~
  {
