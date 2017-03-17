@@ -110,6 +110,10 @@ $action-finder-bp: 900px;
       justify-content: stretch;
   }
 
+  &__items:not(&__items--all) {
+    padding-bottom: 25px;
+  }
+
   .ma__illustrated-link,
   .ma__callout-link {
     display: flex;

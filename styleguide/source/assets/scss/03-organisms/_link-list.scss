@@ -9,6 +9,10 @@
     }
   }
 
+  &:last-child {
+    padding-bottom: 0;
+  }
+
   &__container {
     @include clearfix;
 

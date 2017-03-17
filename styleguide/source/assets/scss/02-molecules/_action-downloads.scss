@@ -1,5 +1,5 @@
 .ma__action-downloads {
-  margin-bottom: 40px;
+  @include ma-component-spacing;
 
   &__item {
     @include clearfix;
