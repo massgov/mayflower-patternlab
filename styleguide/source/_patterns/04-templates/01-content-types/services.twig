@@ -1,80 +1,80 @@
-<main id="main-content" class="ma__services" tabindex="-1">
+{% include "@organisms/by-template/header.twig" %}
+<main 
+  id="main-content" 
+  class="ma__services" 
+  tabindex="-1"
+  {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
-    {% include "@organisms/by-template/breadcrumbs.twig" %}
-    {% include "@organisms/by-template/page-banner.twig" %}
+    {% block preContent %}
+      {% include "@organisms/by-template/breadcrumbs.twig" %}
+      {% include "@organisms/by-template/page-banner.twig" %}
+    {% endblock %}
   </div>
   <div class="stacked-row-content">
     <section class="ma__stacked-row-section">
       <div class="main-content main-content--two">
         <div class="page-content page-content--intro">
-          {% if intro.logo %}
-            {% set image = intro.logo %}
-            {% include "@atoms/09-media/image.twig" %}
-          {% endif %}
-          {% if intro.video %}
-            {% set video = intro.video %}
-            {% include "@atoms/09-media/video.twig" %}
-          {% endif %}
-          {% include "@organisms/by-author/teaser-text.twig" %}
-          {% if intro.keyActions %}
-            {% set keyActions = intro.keyActions %}
-            {% include "@organisms/by-author/key-actions.twig" %}
-          {% endif %}
+          {% block pageContentIntro %}
+            {% if intro.logo %}
+              {% set image = intro.logo %}
+              {% include "@atoms/09-media/image.twig" %}
+            {% endif %}
+            {% if intro.video %}
+              {% set video = intro.video %}
+              {% include "@atoms/09-media/video.twig" %}
+            {% endif %}
+            {% set teaserText = intro.teaserText %}
+            {% include "@organisms/by-author/teaser-text.twig" %}
+            {% if intro.keyActions %}
+              {% set keyActions = intro.keyActions %}
+              {% include "@organisms/by-author/key-actions.twig" %}
+            {% endif %}
+          {% endblock %}
         </div>
         <aside class="sidebar sidebar--intro">
-          {% if intro.logo %}
-            {% set image = intro.logo %}
-            {% include "@atoms/09-media/image.twig" %}
-          {% endif %}
-          {% if intro.social %}
-            {% set sidebarHeading = intro.social.sidebarHeading %}
-            {% include "@atoms/04-headings/sidebar-heading.twig" %}
-            {% set iconLinks = intro.social.iconLinks %}
-            {% include "@molecules/icon-links.twig" %}
-          {% endif %}
-          {% if intro.linkList %}
-            {% set linkList = intro.linkList %}
-            {% include "@organisms/by-author/link-list.twig" %}
-          {% endif %}
+          {% block sidebarIntro %}
+            {% if intro.logo %}
+              {% set image = intro.logo %}
+              {% include "@atoms/09-media/image.twig" %}
+            {% endif %}
+            {% if intro.social %}
+              {% set sidebarHeading = intro.social.sidebarHeading %}
+              {% include "@atoms/04-headings/sidebar-heading.twig" %}
+              {% set iconLinks = intro.social.iconLinks %}
+              {% include "@molecules/icon-links.twig" %}
+            {% endif %}
+            {% if intro.linkList %}
+              {% set linkList = intro.linkList %}
+              {% include "@organisms/by-author/link-list.twig" %}
+            {% endif %}
+          {% endblock %}
         </aside>
       </div>
     </section>
     <section class="ma__stacked-row-section">
       <div class="main-content main-content--full">
         <div class="page-content">
-          {% if doActionFinder %}
-            {% set actionFinder = doActionFinder.actionFinder %}
-            {% include "@organisms/by-author/action-finder.twig" %}
-          {% endif %}
-          {% if learnActionFinder %}
-            {% set actionFinder = learnActionFinder.actionFinder %}
-            {% include "@organisms/by-author/action-finder.twig" %}
-          {% endif %}
-          {% if mappedLocations %}
-            {% include "@organisms/by-author/mapped-locations.twig" %}
-          {% endif %}
-          {% if linkList or formDownload %}
-            <section class="ma__split-columns">
-              <div class="ma__split-columns__container">
-                {% if linkList %}
-                  <div class="ma__split-columns__column">
-                    {% include "@organisms/by-author/link-list.twig" %}
-                  </div>
-                {% endif %}
-                {# TODO: update the formDownload pattern so it can be used here instead #}
-                {% if formDownload %}
-                  <div class="ma__split-columns__column">
-                    {% set sidebarHeading = formDownload.sidebarHeading %}
-                    {% include "@atoms/04-headings/sidebar-heading.twig" %}
-                    {% set actionDownloads = formDownload.actionDownloads %}
-                    {% include "@molecules/action-downloads.twig" %}
-                  </div>
-                {% endif %}
-              </div>
-            </section>
-          {% endif %}
+          {% block pageContent %}
+            {% if doActionFinder %}
+              {% set actionFinder = doActionFinder.actionFinder %}
+              {% include "@organisms/by-author/action-finder.twig" %}
+            {% endif %}
+            {% if learnActionFinder %}
+              {% set actionFinder = learnActionFinder.actionFinder %}
+              {% include "@organisms/by-author/action-finder.twig" %}
+            {% endif %}
+            {% if mappedLocations %}
+              {% include "@organisms/by-author/mapped-locations.twig" %}
+            {% endif %}
+            {% if splitColumns %}
+              {% include "@organisms/by-author/split-columns.twig" %}
+            {% endif %}
+          {% endblock %}
         </div>
       </div>
     </section>
   </div>
 </main>
+{% block schemaContent %}
+{% endblock %}
+{% include "@organisms/by-template/footer.twig" %}

@@ -1,4 +1,29 @@
 {
+  "breadcrumbs":{
+    "light": "",
+    "links": [{
+      "text": "Working",
+      "href": ""
+    },{
+      "text": "Unemployment",
+      "href": ""
+    },{
+      "text": "Unemployment Benefits",
+      "href": ""
+    }]
+  },
+
+  "pageBanner": {
+    "bgWide": "/assets/images/placeholder/1600x400.png",
+    "bgNarrow": "/assets/images/placeholder/800x400.png",
+    "size": "overlay",
+    "icon": "",
+    "title": "Required - Services title",
+    "titleSubText": "",
+    "description": "Required - Should describe what the product does and if this is for a specific persona, season, or region",
+    "color": "blue"
+  },
+
   "intro": {
     "logo": {
       "alt": "alt text", 
@@ -22,7 +47,7 @@
     "keyActions": {
       "compHeading": {
         "title": "Optional but required for eligibility requirements",
-        "sub": false
+        "sub": true
       },
       "links":[{
         "image": "/assets/images/placeholder/130x160.png",
@@ -39,7 +64,7 @@
     },
     "social": {
       "sidebarHeading": {
-        "title": "Key Agencies"
+        "title": "Social"
       },
       "iconLinks": {
         "items": [{
@@ -69,60 +94,34 @@
 
     "linkList" : {
       "sidebarHeading": {
-        "title": "Offered By"
+        "title": "Optional - Offered By"
       },
       "stacked": true,
       "links" : [{
         "url":"#",
-        "text":"Department of Unemployment Assistance (DUA)"
-      }]
-    }
-
-  },
-
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Working",
-      "href": ""
-    },{
-      "text": "Unemployment",
-      "href": ""
-    },{
-      "text": "Unemployment Benefits",
-      "href": ""
-    }]
-  },
-
-  "pageBanner": {
-    "bgWide": "/assets/images/placeholder/1600x400.png",
-    "bgNarrow": "/assets/images/placeholder/800x400.png",
-    "size": "overlay",
-    "icon": "",
-    "title": "Required - Services title",
-    "titleSubText": "",
-    "description": "Required - Should describe what the product does and if this is for a specific persona, season, or region",
-    "color": "blue"
-  },
-
-  "teaserText": {
-    "richText": {
-      "property": "",
-      "rteElements": [{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "Required - Intro Paragraph followed by an optional Learn More link for services that may be more complicated, and require more explanation.  This 'Learn More' link could send end users to a page with additional information about this service to help them decide if it's the service they want or need."
-          }
-        }
+        "text":"Link to organization page"
       }]
     },
 
-    "decorativeLink": {
-      "href": "#",
-      "text": "Learn More",
-      "info": "Learn More about this generic service",
-      "property": ""
+    "teaserText": {
+      "richText": {
+        "property": "",
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Required - Intro Paragraph followed by an optional Learn More link for services that may be more complicated, and require more explanation.  This 'Learn More' link could send end users to a page with additional information about this service to help them decide if it's the service they want or need."
+            }
+          }
+        }]
+      },
+
+      "decorativeLink": {
+        "href": "#",
+        "text": "Learn More",
+        "info": "Learn More about this generic service",
+        "property": ""
+      }
     }
   },
 
