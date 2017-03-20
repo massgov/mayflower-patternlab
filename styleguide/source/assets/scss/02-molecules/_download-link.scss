@@ -1,0 +1,39 @@
+.ma__download-link {
+  @include clearfix;
+
+  & + & {
+    padding-top: 25px;
+  }
+
+  &__icon {
+    float: left;
+    height: 36px;
+    opacity: .75;
+    width: 55px;
+    overflow: hidden;
+
+    & > svg {
+      height: 37px;
+      width: 35px;
+    }
+  }
+
+  &__title {
+    float: left;
+    font-size: 1.375rem;
+    margin-bottom: 0;
+    width: calc(100% - 66px);
+  }
+
+  &__file-link {
+    @include ma-link-underline;
+    padding-bottom: 3px;
+    margin-right: .2em;
+  }
+
+  &__file-spec {
+    font-size: 1rem;
+    line-height: 2.14;
+    white-space: nowrap;
+  }
+}
