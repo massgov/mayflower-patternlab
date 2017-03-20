@@ -1,28 +1,32 @@
 ---
-title: DEPRECATED - Action Step
+title: Action Step
 ---
-Description: Displays an icon, optional title and rich text elements in a grouping. 
-## Status: DEPRECATED
+Description: Displays rich text follow by optional download links and learn more link.
+
+## Status: alpha
+
 ### Notes:
-- This style is deprecated as it should be generalized to display anywhere in the site.
-- It is necessary to use the rich text organism for rendering main copy for the step. The variable structure for the rich text organism has the potneital to be refactored.
+
 ### Contains
 - [@organisms/by-author/rich-text](/?p=organisms-rich-text)
+- [@molecules/download-link](/?p=molecules-download-link)
+- [@atoms/decorative-link](/?p=atoms-decorative-link)
+
 ### Used in:
 - [@organisms/by-author/action-steps](/?p=organisms-action-steps)
+
 ### Variables
 ~~~
 actionStep: {
-  icon:
-    string/required
-  title:
-    string
-  rteElements: [{
-      ...
-        rteElement object instances, see @organisms/by-author/rich-text
-      ...
-    ] / required
-    }
-  }]
+  "rteElements": 
+    type: see Rich Text pattern,
+  "downloadLinks": [{
+    type: array/optional
+
+    "downloadLink": 
+      type: see Download Link pattern
+  }],
+  "decorativeLink": 
+    type see: Decorative Link pattern
 }
 ~~~
