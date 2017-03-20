@@ -44,15 +44,9 @@ Description: a page pattern representing those patterns which could be used on a
  "telephone": "{{ governmentOrganization.contactInfo.telephone }}",
  "faxNumber": "{{ governmentOrganization.contactInfo.faxNumber }}",
  "email": "{{ governmentOrganization.contactInfo.email }}",
- {% if governmentOrganization.sameAs %}
  "sameAs": [
-     {% for socialLink in governmentOrganization.sameAs[:last-1] %}
-     "{{ socialLink }}",
-     {% endfor %}
-     {% set lastSocialLink = governmentOrganization.sameAs|last %}
-     "{{ lastSocialLink }}"
+     "governmentOrganization.sameAs[INDEX]"
  ]
- {% endif %}
 }
 ~~~
  
