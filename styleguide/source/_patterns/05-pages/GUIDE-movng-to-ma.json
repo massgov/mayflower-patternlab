@@ -504,8 +504,7 @@
       "data":{
         "calloutAlert": {
           "decorativeLink": {
-            "type": "external",
-            "href": "#",
+            "href": "",
             "text": "Massachusetts requires you to license your dog"
           }
         }
