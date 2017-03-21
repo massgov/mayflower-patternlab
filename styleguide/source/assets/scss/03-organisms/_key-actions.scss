@@ -1,5 +1,6 @@
 .ma__key-actions {
   @include ma-component-spacing;
+  clear: both;
 
   @media ($bp-small-min) {
     margin-bottom: 15px;

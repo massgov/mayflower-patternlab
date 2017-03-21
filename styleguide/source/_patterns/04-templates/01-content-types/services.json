@@ -25,6 +25,7 @@
   },
 
   "intro": {
+    "sidebar": true,
     "logo": {
       "alt": "alt text", 
       "src": "/assets/images/placeholder/230x130.png",
