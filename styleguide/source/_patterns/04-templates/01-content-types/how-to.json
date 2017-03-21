@@ -1,0 +1,31 @@
+{
+  "pageHeader": {
+    "title": "How To page Title",
+    "subTitle": "teaser text",
+    "richText": {
+      "rteElements": [{
+        "path": "atoms-paragraph",
+        "data": {
+          "paragraph" : {
+            "text": "Optional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus pellentesque ultricies. Sed in ex nunc. Nam rhoncus eget purus id consectetur. Nunc sed enim rhoncus, cursus nulla non, dapibus nisi. Nullam hendrerit pharetra augue, sed gravida enim sagittis at. Nam eget tellus ullamcorper risus luctus fermentum. Nunc fermentum, arcu eu molestie finibus, leo neque hendrerit massa, eu vulputate est ex nec leo. Vivamus tortor nisi, maximus eu quam eget, interdum aliquam enim."
+          }
+        }
+      }]
+    },
+    "headerTags": {
+      "taxonomyTerms": [{
+        "url": "#",
+        "term": "Term 1"
+      },{
+        "url": "#",
+        "term": "Term 2"
+      },{
+        "url": "#",
+        "term": "Term 3"
+      },{
+        "url": "#",
+        "term": "Term 4"
+      }]
+    }
+  }
+}
