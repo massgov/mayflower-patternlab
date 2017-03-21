@@ -1,4 +1,6 @@
-{% include "@organisms/by-template/header.twig" %}
+{% block header %}
+
+{% endblock %}
 <main 
   id="main-content" 
   class="ma__services" 
@@ -74,7 +76,12 @@
       </div>
     </section>
   </div>
+  {% block schemaContent %}
+
+  {% endblock %}
 </main>
-{% block schemaContent %}
+
+{% block footer %}
+
 {% endblock %}
-{% include "@organisms/by-template/footer.twig" %}
+
