@@ -1,15 +1,5 @@
 {
   "pageHeader": {
-    "title": "Get a State Park Pass",
-    "subTitle": "Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.",
-    "rteElements": [{
-      "path": "atoms-paragraph",
-      "data": {
-        "paragraph" : {
-          "text": "Optional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus pellentesque ultricies. Sed in ex nunc. Nam rhoncus eget purus id consectetur. Nunc sed enim rhoncus, cursus nulla non, dapibus nisi. Nullam hendrerit pharetra augue, sed gravida enim sagittis at. Nam eget tellus ullamcorper risus luctus fermentum. Nunc fermentum, arcu eu molestie finibus, leo neque hendrerit massa, eu vulputate est ex nec leo. Vivamus tortor nisi, maximus eu quam eget, interdum aliquam enim."
-        }
-      }
-    }],
     "headerTags": {
       "taxonomyTerms": [{
         "url": "#",
@@ -24,6 +14,58 @@
         "url": "#",
         "term": "Term 4"
       }]
-    }
+    },
+    "title": "Get a State Park Pass",
+    "subTitle": "Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.",
+    "extras": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "richText": {
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Optional text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus pellentesque ultricies. Sed in ex nunc. Nam rhoncus eget purus id consectetur. Nunc sed enim rhoncus, cursus nulla non, dapibus nisi. Nullam hendrerit pharetra augue, sed gravida enim sagittis at. Nam eget tellus ullamcorper risus luctus fermentum. Nunc fermentum, arcu eu molestie finibus, leo neque hendrerit massa, eu vulputate est ex nec leo. Vivamus tortor nisi, maximus eu quam eget, interdum aliquam enim."
+              }
+            }
+          }]
+        }
+      }
+    }],
+    "widgets": [{
+      "path": "@molecules/location-icons.twig",
+      "data": {
+        "locationIcons": {
+          "icons": [{
+            "path":"@atoms/05-icons/svg-transit.twig",
+            "name":"Transit Friendly"
+          },{
+            "path":"@atoms/05-icons/svg-castle.twig",
+            "name":"Historic Site"
+          },{
+            "path":"@atoms/05-icons/svg-wheelchair.twig",
+            "name":"Wheelchair Accessible"
+          },{
+            "path":"@atoms/05-icons/svg-dog.twig",
+            "name":"Dogs Allowed"
+          }]
+        }
+      }
+    },{
+      "path": "@molecules/wait-time.twig",
+      "data": {
+        "waitTime": {
+          "items":[{
+            "label": "Licensing",
+            "time": "2:00",
+            "units": "hrs"
+          },{
+            "label": "Registration",
+            "time": "24",
+            "units": "mins"
+          }]
+        }
+      }
+    }]
   }
 }

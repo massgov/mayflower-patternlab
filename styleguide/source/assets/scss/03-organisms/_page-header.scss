@@ -1,33 +1,62 @@
+$page-header-widget-width: 350px;
 
 .ma__page-header {
   @include ma-container;
   @include clearfix;
-  padding-top: 40px;
-  padding-bottom: 30px;
 
-  @media ($bp-medium-min){
-    padding-top: 65px;
-    padding-bottom: 50px;
-  }
-
-  @media ($bp-large-min){
-    padding-top: 75px;
-    padding-bottom: 70px;
-  }
-
-  @media ($bp-x-large-min){
-    padding-top: 85px;
+  &__tags {
+    clear: both;
   }
 
   &__content {
-    @include ma-reset-rich-text;
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    @media ($bp-medium-min){
+      padding-top: 65px;
+      padding-bottom: 50px;
+    }
 
     @media ($bp-large-min){
+      padding-top: 75px;
+      padding-bottom: 70px;
       padding-right: $column;
-      padding-bottom: 0;
       max-width: 820px;
     }
 
+    @media ($bp-x-large-min){
+      padding-top: 85px;
+    }
+  }
+
+  &--widgets &__content {
+
+    @media ($bp-large-min){
+      float: left;
+      width: calc(100% - #{$page-header-widget-width});
+    }
+  }
+
+  &__widgets {
+    padding-bottom: 40px;
+
+    @media ($bp-large-min){
+      float: right;
+      padding-top: 75px;
+      padding-bottom: 70px;
+      width: $page-header-widget-width;
+    }
+    
+    @media ($bp-x-large-min){
+      padding-top: 85px;
+    }
+
+    .ma__image {
+      @media ($bp-large-min){
+        clear: both;
+        float: right;
+      }
+    }
   }
 
   &__title {
@@ -46,6 +75,10 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__extras {
+    @include ma-reset-rich-text;
   }
 
   &__divider {

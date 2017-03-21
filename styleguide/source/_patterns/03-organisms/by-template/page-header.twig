@@ -1,20 +1,40 @@
-<section class="ma__page-header">
-  <div class="ma__page-header__content"{% if schemaPageType %} property="mainEntityOfPage"{% endif %}>
-    <h1 class="ma__page-header__title"{% if schemaPageType %} property="name"{% endif %}>{{pageHeader.title}}</h1>
+
+{% if pageHeader.widgets %}
+  {% set widgetsClass = "ma__page-header--widgets" %}
+{% endif %}
+
+<section class="ma__page-header {{ widgetsClass }}">
+  {% if pageHeader.headerTags.taxonomyTerms %}
+    <div class="ma__page-header__tags">
+      {% set headerTags = pageHeader.headerTags %}
+      {% include "@molecules/header-tags.twig" %}
+    </div>
+  {% endif %}
+  <div 
+    class="ma__page-header__content"
+    {% if schemaPageType %} property="mainEntityOfPage"{% endif %}>
+      <h1 
+      class="ma__page-header__title"
+      {% if schemaPageType %} property="name"{% endif %}>{{pageHeader.title}}</h1>
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>
     {% endif %}
-    {% if pageHeader.rteElements %}
-      <div class="ma__page-header__intro">
-        {% set rteElements = pageHeader.rteElements %}
-        {% include "@organisms/by-author/rich-text.twig" %}
+    {% if pageHeader.extras %}
+      <div class="ma__page-header__extras">
+        {% for item in pageHeader.extras %}
+          {% include item.path with item.data %}
+        {% endfor %}
       </div>
     {% endif %}
   </div>
-  {% if pageHeader.headerTags.taxonomyTerms %}
-    {% set headerTags = pageHeader.headerTags %}
-    {% include "@molecules/header-tags.twig" %}
+  {% if pageHeader.widgets %}
+    <div class="ma__page-header__widgets">
+      {% for widget in pageHeader.widgets %}
+        {% include widget.path with widget.data %}
+      {% endfor %}
+    </div>
   {% endif %}
+
   {% if pageHeader.divider %}
     <div class="ma__page-header__divider">
       {% include "@atoms/divider.twig" %}
