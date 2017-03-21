@@ -24,14 +24,7 @@
     "color": "blue"
   },
 
-  "intro": {
-    "sidebar": true,
-    "logo": {
-      "alt": "alt text", 
-      "src": "/assets/images/placeholder/230x130.png",
-      "height": "130",
-      "width": "230"
-    },
+  "introPageContent": {
     "video": {
       "src": "https://www.youtube.com/embed/dEkUq-Rs-Tc",
       "label": "Using a gas grill safely",
@@ -45,6 +38,28 @@
         "property": ""
       }
     },
+
+    "teaserText": {
+      "richText": {
+        "property": "",
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Required - Intro Paragraph followed by an optional Learn More link for services that may be more complicated, and require more explanation.  This 'Learn More' link could send end users to a page with additional information about this service to help them decide if it's the service they want or need."
+            }
+          }
+        }]
+      },
+
+      "decorativeLink": {
+        "href": "#",
+        "text": "Learn More",
+        "info": "Learn More about this generic service",
+        "property": ""
+      }
+    },
+
     "keyActions": {
       "compHeading": {
         "title": "Optional but required for eligibility requirements",
@@ -62,7 +77,17 @@
         "href": "#",
         "label": ":"
       }]
+    }
+  },
+
+  "introSidebar": {
+    "logo": {
+      "alt": "alt text", 
+      "src": "/assets/images/placeholder/230x130.png",
+      "height": "130",
+      "width": "230"
     },
+
     "social": {
       "sidebarHeading": {
         "title": "Social"
@@ -102,27 +127,6 @@
         "url":"#",
         "text":"Link to organization page"
       }]
-    },
-
-    "teaserText": {
-      "richText": {
-        "property": "",
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "Required - Intro Paragraph followed by an optional Learn More link for services that may be more complicated, and require more explanation.  This 'Learn More' link could send end users to a page with additional information about this service to help them decide if it's the service they want or need."
-            }
-          }
-        }]
-      },
-
-      "decorativeLink": {
-        "href": "#",
-        "text": "Learn More",
-        "info": "Learn More about this generic service",
-        "property": ""
-      }
     }
   },
 

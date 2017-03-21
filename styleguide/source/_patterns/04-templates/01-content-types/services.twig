@@ -1,4 +1,4 @@
-{% set mainContentClass = intro.sidebar ? 'main-content--two' : 'main-content--full' %}
+{% set mainContentClass = introSidebar ? 'main-content--two' : 'main-content--full' %}
 
 {% block header %}
 
@@ -18,40 +18,40 @@
     <section class="ma__stacked-row-section">
       <div class="main-content {{ mainContentClass }}">
         <div class="page-content page-content--intro">
-          {% if intro.logo %}
-            {% set image = intro.logo %}
+          {% if introSidebar.logo %}
+            {% set image = introSidebar.logo %}
             {% include "@atoms/09-media/image.twig" %}
           {% endif %}
           {% block pageContentIntro %}
-            {% if intro.video %}
-              {% set video = intro.video %}
+            {% if introPageContent.video %}
+              {% set video = introPageContent.video %}
               {% include "@atoms/09-media/video.twig" %}
             {% endif %}
 
-            {% set teaserText = intro.teaserText %}
+            {% set teaserText = introPageContent.teaserText %}
             {% include "@organisms/by-author/teaser-text.twig" %}
 
-            {% if intro.keyActions %}
-              {% set keyActions = intro.keyActions %}
+            {% if introPageContent.keyActions %}
+              {% set keyActions = introPageContent.keyActions %}
               {% include "@organisms/by-author/key-actions.twig" %}
             {% endif %}
           {% endblock %}
         </div>
-        {% if intro.sidebar %}
+        {% if introSidebar %}
           <aside class="sidebar sidebar--intro">
             {% block sidebarIntro %}
-              {% if intro.logo %}
-                {% set image = intro.logo %}
+              {% if introSidebar.logo %}
+                {% set image = introSidebar.logo %}
                 {% include "@atoms/09-media/image.twig" %}
               {% endif %}
-              {% if intro.social %}
-                {% set sidebarHeading = intro.social.sidebarHeading %}
+              {% if introSidebar.social %}
+                {% set sidebarHeading = introSidebar.social.sidebarHeading %}
                 {% include "@atoms/04-headings/sidebar-heading.twig" %}
-                {% set iconLinks = intro.social.iconLinks %}
+                {% set iconLinks = introSidebar.social.iconLinks %}
                 {% include "@molecules/icon-links.twig" %}
               {% endif %}
-              {% if intro.linkList %}
-                {% set linkList = intro.linkList %}
+              {% if introSidebar.linkList %}
+                {% set linkList = introSidebar.linkList %}
                 {% include "@organisms/by-author/link-list.twig" %}
               {% endif %}
             {% endblock %}

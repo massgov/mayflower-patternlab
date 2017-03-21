@@ -24,14 +24,7 @@
     "color": "blue"
   },
 
-  "intro": {
-    "sidebar": true,
-    "logo": {
-      "alt": "alt text", 
-      "src": "/assets/images/placeholder/230x130.png",
-      "height": "130",
-      "width": "230"
-    },
+  "introPageContent": {
     "video": {
       "src": "https://www.youtube.com/embed/dEkUq-Rs-Tc",
       "label": "Using a gas grill safely",
@@ -45,6 +38,28 @@
         "property": ""
       }
     },
+
+    "teaserText": {
+      "richText": {
+        "property": "",
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Need some help staying on your feet while  you look for a new job? If you’re out of work and able to work, you may be eligible for temporary income called unemployment insurance (UI). If you qualify, you receive weekly payments to help cover your living expenses. The amount is based on what you were paid in the last year. Donec lacinia vulputate magna. Vivamus suscipit lectus at quam. In lectus est, viverra a, ultricies ut, pulvinar vitae, tellus. Donec et lectus et sem rutrum sodales. Morbi cursus. Aliquam a odio. Sed tortor velit, convallis eget, porta interdum, convallis sed, tortor. Phasellus ac libero a lorem auctor mattis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
+            }
+          }
+        }]
+      },
+
+      "decorativeLink": {
+        "href": "#",
+        "text": "Learn More",
+        "info": "Learn More about unemployment Benefits",
+        "property": ""
+      }
+    },
+
     "keyActions": {
       "compHeading": {
         "title": "First time?",
@@ -62,7 +77,17 @@
         "href": "#",
         "label": ":"
       }]
+    }
+ },
+
+  "introSidebar": {
+    "logo": {
+      "alt": "alt text", 
+      "src": "/assets/images/placeholder/230x130.png",
+      "height": "130",
+      "width": "230"
     },
+
     "social": {
       "sidebarHeading": {
         "title": "Social"
@@ -102,27 +127,6 @@
         "url":"#",
         "text":"Department of Unemployment Assistance (DUA)"
       }]
-    },
-
-    "teaserText": {
-      "richText": {
-        "property": "",
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "Need some help staying on your feet while  you look for a new job? If you’re out of work and able to work, you may be eligible for temporary income called unemployment insurance (UI). If you qualify, you receive weekly payments to help cover your living expenses. The amount is based on what you were paid in the last year. Donec lacinia vulputate magna. Vivamus suscipit lectus at quam. In lectus est, viverra a, ultricies ut, pulvinar vitae, tellus. Donec et lectus et sem rutrum sodales. Morbi cursus. Aliquam a odio. Sed tortor velit, convallis eget, porta interdum, convallis sed, tortor. Phasellus ac libero a lorem auctor mattis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-            }
-          }
-        }]
-      },
-
-      "decorativeLink": {
-        "href": "#",
-        "text": "Learn More",
-        "info": "Learn More about unemployment Benefits",
-        "property": ""
-      }
     }
   },
 
