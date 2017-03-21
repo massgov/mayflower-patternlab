@@ -1,49 +1,47 @@
 <section class="ma__link-list">
+  {# added test for title for backward compatibilty with v3.5 #}
+  {% if linkList.title %}
+    {% set compHeading = { "title": linkList.title } %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+
+  {% if linkList.compHeading %}
+    {% set compHeading = linkList.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+
+  {% if linkList.sidebarHeading %}
+    {% set sidebarHeading = linkList.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+
   <div class="ma__link-list__container">
     {# added for backward compatibilty with v3.5 #}
-    {% if linkList.title %}
-      {% set compHeading = { "title": linkList.title } %}
-      {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% if linkList.stacked %}
+      <ul class="ma__link-list__items">
+        {% for decorativeLink in linkList.links %}
+          <li class="ma__link-list__item">
+            {% include "@atoms/decorative-link.twig" %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      {% set length = linkList.links|length/2 %}
+      {% set half = length|round(0,'ceil') %}
+      <ul class="ma__link-list__items">
+        {% for decorativeLink in linkList.links[start:half] %}
+          <li class="ma__link-list__item">
+            {% include "@atoms/decorative-link.twig" %}
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="ma__link-list__items">
+        {% for decorativeLink in linkList.links[half:length] %}
+          <li class="ma__link-list__item">
+            {% include "@atoms/decorative-link.twig" %}
+          </li>
+        {% endfor %}
+      </ul>
     {% endif %}
-
-    {% if linkList.compHeading %}
-      {% set compHeading = linkList.compHeading %}
-      {% include "@atoms/04-headings/comp-heading.twig" %}
-    {% endif %}
-
-    {% if linkList.sidebarHeading %}
-      {% set sidebarHeading = linkList.sidebarHeading %}
-      {% include "@atoms/04-headings/sidebar-heading.twig" %}
-    {% endif %}
-
-    <div>
-      {# added for backward compatibilty with v3.5 #}
-      {% if linkList.stacked %}
-        <ul class="ma__link-list__items">
-          {% for decorativeLink in linkList.links %}
-            <li class="ma__link-list__item">
-              {% include "@atoms/decorative-link.twig" %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        {% set length = linkList.links|length/2 %}
-        {% set half = length|round(0,'ceil') %}
-        <ul class="ma__link-list__items">
-          {% for decorativeLink in linkList.links[start:half] %}
-            <li class="ma__link-list__item">
-              {% include "@atoms/decorative-link.twig" %}
-            </li>
-          {% endfor %}
-        </ul>
-        <ul class="ma__link-list__items">
-          {% for decorativeLink in linkList.links[half:length] %}
-            <li class="ma__link-list__item">
-              {% include "@atoms/decorative-link.twig" %}
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-    </div>
   </div>
 </section>

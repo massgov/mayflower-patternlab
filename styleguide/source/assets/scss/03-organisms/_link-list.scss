@@ -1,6 +1,12 @@
 .ma__link-list {
   @include ma-component-padding;
 
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+
   .sidebar & {
 
     @media ($bp-large-min) {
@@ -15,12 +21,6 @@
 
   &__container {
     @include clearfix;
-
-    .pre-content > &,
-    .post-content > &,
-    .main-content--full .page-content > & {
-      @include ma-container();
-    }
   }
 
   &__items {
