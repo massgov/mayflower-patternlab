@@ -2,7 +2,7 @@
   "formDownloads": {
     "compHeading": {
       "title": "Forms",
-      "sub": true
+      "sub": false
     },
     "downloadLinks": [{
       "downloadLink": {

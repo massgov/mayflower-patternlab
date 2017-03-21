@@ -217,20 +217,28 @@
         }]
       }
     },{
-      "path":"@organisms/by-author/form-download.twig",
+      "path":"@organisms/by-author/form-downloads.twig",
       "data":{
-        "compHeading": {
-          "title": "Forms",
-          "sub": true
-        },
-        "actionDownloads": [{
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-          "text": "RMV-1 Form",
-          "href": "#",
-          "type": "",
-          "size": "259KB",
-          "format": "PDF"
-        }]
+        "formDownloads": {
+          "compHeading": {
+            "title": "Forms",
+            "sub": true
+          },
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "RMV-1 Form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "259KB",
+              "format": "PDF"
+            }
+          }]
+        }
       }
     }],
 
