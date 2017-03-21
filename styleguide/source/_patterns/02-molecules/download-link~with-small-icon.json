@@ -1,6 +1,6 @@
 {
   "downloadLink": {
-    "iconSize": "",
+    "iconSize": "small",
     "icon": "@atoms/05-icons/svg-doc-docx.twig",
     "decorativeLink": {
       "text": "Online Form: Out-of-Country Driver's License Conversion",

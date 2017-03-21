@@ -5,6 +5,10 @@
     padding-top: 25px;
   }
 
+  &--small + &--small {
+    padding-top: 10px;
+  }
+
   &__icon {
     float: left;
     height: 36px;
@@ -15,6 +19,17 @@
     & > svg {
       height: 37px;
       width: 35px;
+    }
+  }
+
+  &--small &__icon {
+    height: 25px;
+    margin-top: 4px;
+    width: 40px;
+    
+    & > svg {
+      height: 25px;
+      width: 25px;
     }
   }
 

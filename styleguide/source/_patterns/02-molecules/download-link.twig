@@ -1,4 +1,7 @@
-<div class="ma__download-link">
+{% if downloadLink.iconSize %}
+  {% set sizeClass = "ma__download-link--" ~ downloadLink.iconSize %}
+{% endif %}
+<div class="ma__download-link {{ sizeClass }}">
   <div class="ma__download-link__icon">
     {% include downloadLink.icon %}
   </div>

@@ -4,19 +4,4 @@
   &__downloads {
     margin-bottom: 1em;
   }
-
-  .ma__download-link + .ma__download-link {
-    padding-top: 10px;
-  }
-
-  .ma__download-link__icon { 
-    height: 25px;
-    margin-top: 4px;
-    width: 40px;
-    
-    & > svg {
-      height: 25px;
-      width: 25px;
-    }
-  }
 }

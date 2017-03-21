@@ -10,6 +10,7 @@
     }],
     "downloadLinks": [{
       "downloadLink": {
+        "iconSize": "small",
         "icon": "@atoms/05-icons/svg-doc-pdf.twig",
         "decorativeLink": {
           "text": "PDF download item",
@@ -22,6 +23,7 @@
       }
     },{
       "downloadLink": {
+        "iconSize": "small",
         "icon": "@atoms/05-icons/svg-doc-docx.twig",
         "decorativeLink": {
           "text": "Word download item",
@@ -34,6 +36,7 @@
       }
     },{
       "downloadLink": {
+        "iconSize": "small",
         "icon": "@atoms/05-icons/svg-laptop.twig",
         "decorativeLink": {
           "text": "Online Form: Out-of-Country Driver's License Conversion",
