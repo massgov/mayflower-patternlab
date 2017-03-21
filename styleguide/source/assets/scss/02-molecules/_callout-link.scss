@@ -1,13 +1,21 @@
 .ma__callout-link {
+  @include ma-component-spacing;
   border: 3px solid;
   cursor: pointer;
   display: inline-flex;
     align-items: center;
-  margin-bottom: 40px;
   padding: 15px 20px;
 
   @media ($bp-small-min) {
     padding: 20px 30px;
+  }
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+    display: block;
+    width: 100%;
   }
 
   &:last-child {

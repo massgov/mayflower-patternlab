@@ -10,7 +10,8 @@
     "link": {
       "href": "#",
       "text":"See a list of all locations",
-      "chevron": "true"
+      "info": "",
+      "property": ""
     },
     "googleMap": {
       "map": {

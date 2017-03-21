@@ -1,6 +1,9 @@
 {
   "linkList" : {
-    "title": " Related Agencies",
+    "compHeading": {
+      "title": "Related Agencies"
+    },
+    "stacked": false,
     "links" : [{
       "url":"#",
       "text":"MassParks"
