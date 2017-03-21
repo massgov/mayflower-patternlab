@@ -1,2 +1,14 @@
-{% include "@atoms/04-headings/comp-heading.twig" %}
-{% include "@molecules/action-downloads.twig" %}
+<section class="form-downloads">
+  {% if formDownloads.compHeading %}
+    {% set compHeading = formDownloads.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if formDownloads.sidebarHeading %}
+    {% set sidebarHeading = formDownloads.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+  {% if formDownloads.downloadLinks %}
+    {% set downloadLinks = formDownloads.downloadLinks %}
+    {% include "@organism/by-author/download-links.twig" %}
+  {% endif %}
+</section>
