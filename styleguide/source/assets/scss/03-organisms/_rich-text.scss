@@ -28,6 +28,10 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
 
+  .main-content--two .page-content > & {
+    @include ma-component-spacing;
+  }
+  
   .ma__split-columns__column > & {
     max-width: 100%;
     padding-left: 0;

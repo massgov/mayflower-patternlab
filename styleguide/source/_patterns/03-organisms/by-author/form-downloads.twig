@@ -1,4 +1,4 @@
-<section class="form-downloads">
+<section class="ma__form-downloads">
   {% if formDownloads.compHeading %}
     {% set compHeading = formDownloads.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
@@ -8,7 +8,11 @@
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
   {% if formDownloads.downloadLinks %}
-    {% set downloadLinks = formDownloads.downloadLinks %}
-    {% include "@organism/by-author/download-links.twig" %}
+    <div class="ma__form-downloads__links">
+      {% for item in formDownloads.downloadLinks %}
+        {% set downloadLink = item.downloadLink %}
+        {% include "@molecules/download-link.twig" %}
+      {% endfor %}
+    </div>
   {% endif %}
 </section>

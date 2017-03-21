@@ -1,42 +1,48 @@
 {
-  "compHeading": {
-    "title": "Forms",
-    "sub": true
-  },
-  "actionDownloads": [{
-    "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-    "text": "PDF download item",
-    "href": "#",
-    "type": "",
-    "size": "30kb",
-    "format": "PDF"
-  },{
-    "icon": "@atoms/05-icons/svg-doc-xlsx.twig",
-    "text": "Excel download item that has a longer title than the pdf did",
-    "href": "#",
-    "type": "",
-    "size": "35kb",
-    "format": "XLSX"
-  },{
-    "icon": "@atoms/05-icons/svg-doc-docx.twig",
-    "text": "Word download item",
-    "href": "#",
-    "type": "",
-    "size": "40kb",
-    "format": "DOCX"
-  },{
-    "icon": "@atoms/05-icons/svg-doc-generic.twig",
-    "text": "Generic download item",
-    "href": "#",
-    "type": "",
-    "size": "120kb",
-    "format": "CSV"
-  },{
-    "icon": "@atoms/05-icons/svg-laptop.twig",
-    "text": "Online Form: Out-of-Country Driver's License Conversion",
-    "href": "#",
-    "type": "external",
-    "size": "",
-    "format": "form"
-  }]
+  "formDownloads": {
+    "compHeading": {
+      "title": "Forms",
+      "sub": true
+    },
+    "downloadLinks": [{
+      "downloadLink": {
+        "iconSize": "",
+        "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+        "decorativeLink": {
+          "text": "PDF download item",
+          "href": "#",
+          "info": "",
+          "property": ""
+        },
+        "size": "30kb",
+        "format": "PDF"
+      }
+    },{
+      "downloadLink": {
+        "iconSize": "",
+        "icon": "@atoms/05-icons/svg-doc-docx.twig",
+        "decorativeLink": {
+          "text": "Word download item",
+          "href": "#",
+          "info": "",
+          "property": ""
+        },
+        "size": "40kb",
+        "format": "DOCX"
+      }
+    },{
+      "downloadLink": {
+        "iconSize": "",
+        "icon": "@atoms/05-icons/svg-laptop.twig",
+        "decorativeLink": {
+          "text": "Online Form: Out-of-Country Driver's License Conversion",
+          "href": "#",
+          "info": "",
+          "property": ""
+        },
+        "size": "",
+        "format": "form"
+      }
+    }]
+  }
 }
