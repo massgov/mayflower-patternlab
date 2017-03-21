@@ -1,0 +1,273 @@
+{
+  "urlPath": "/?p=pages-GUIDE-section-example",
+
+  "emergencyAlerts": {
+    "id":"GUID18378923w38789",
+    "buttonAlert": {
+      "hideText": "Hide",
+      "showText": "Show",
+      "text": "Updates"
+    },
+    "emergencyHeader": {
+      "title": "The State is experiencing severe weather due to the winter storm Paula."
+    },
+    "alerts": [{
+      "message": "MassPort is operating with limited flights due to road closures.",
+      "timeStamp": "02.15.16, 5:00 p.m.",
+      "link": {
+        "href": "#",
+        "text":"Read full alert",
+        "chevron": "true"
+      }
+    },{
+      "message": "The MTBA is operating at a lighter service level, and experiencing delays.",
+      "timeStamp": "02.15.16, 3:00 p.m.",
+      "link": {
+        "href": "#",
+        "text":"Read full alert",
+        "chevron": "true"
+      }
+    },{
+      "message": "The Governor directs non-emergency executive branch state employees to not come in to work.",
+      "timeStamp": "02.13.16, 10:00 a.m.",
+      "link": {
+        "href": "#",
+        "text":"Read full alert",
+        "chevron": "true"
+      }
+    }]
+  },
+
+
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+
+  "illustratedHeader": {
+    "bgTitle": "Forest of the Berkshires",
+    "bgImage": "/assets/images/placeholder/800x450.png",
+    "category": "Guide",
+    "pageHeader": {
+      "title": "Example Section with Everything",
+      "subTitle": "",
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this guide provides instructions for changing your license, tips for settling in, and other useful information."
+          }
+        }
+      }],
+      "headerTags": ""
+    }
+  },
+  
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+  
+  "jumpLinks": {
+    "title": "In this guide",
+    "links": [{
+      "text": "Section with Everything",
+      "href": "section-with-everything"
+    }]
+  },
+
+  "stackedRowSections": [{
+      "title": "Section with Everything",
+      "id": "another-section-name6",
+      "pageContent": [
+        {
+          "path": "@organisms/by-author/callout-time.twig",
+          "data": {
+            "calloutTime": {
+              "text": "This usually takes approximately 4 weeks"
+            }
+          }
+        },
+        {
+          "path": "@organisms/by-author/rich-text.twig",
+          "data": {
+            "rteElements": [{
+              "path": "@molecules/callout-stats.twig",
+              "data": {
+                "statsCallout": {
+                  "pull": "right",
+                  "stat": "$75+",
+                  "content": "this includes a title and registration fee"
+                }
+              }
+            },{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "Lorem ipsum dolor sit amet, <a href=\"#\">consectetur adipiscing</a> elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+                }
+              }
+            },{
+              "path": "@atoms/09-media/figure.twig",
+              "data": {
+                "figure": {
+                  "align": "",
+                  "image": {
+                    "alt": "alt text",
+                    "src": "/assets/images/placeholder/800x400.png",
+                    "height": "",
+                    "width": ""
+                  },
+                  "caption": ""
+                }
+              }
+            }]
+          }
+        },
+        {
+          "path":"@organisms/by-author/callout-alert.twig",
+          "data":{
+            "calloutAlert": {
+              "decorativeLink": {
+                "href": "",
+                "text": "Massachusetts requires you to license your dog"
+              }
+            }
+          }
+        },
+        {
+          "path":"@organisms/by-author/key-actions.twig",
+          "data":{
+            "keyActions": {
+              "compHeading": {
+                "title": "Key Actions",
+                "sub":true
+              },
+              "links":[{
+                "text": "Related Action to important Page Name",
+                "type": "",
+                "href": "#"
+              }]
+            }
+          }
+        },
+        {
+          "path":"@organisms/by-author/form-download.twig",
+          "data":{
+            "compHeading": {
+              "title": "Forms",
+              "sub": true
+            },
+            "actionDownloads": [{
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "text": "RMV-1 Form",
+              "href": "#",
+              "type": "",
+              "size": "259KB",
+              "format": "PDF"
+            }]
+          }
+        }
+      ],
+
+      "sideBar": [{
+        "path": "@atoms/04-headings/sidebar-heading.twig",
+        "data": {
+          "sidebarHeading": {
+            "title": "Key Agencies"
+          }
+        }
+      },{
+        "path": "@molecules/contact-us.twig",
+        "data": {
+          "contactUs": {
+            "title": {
+              "href":"#",
+              "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "hidden": "",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "value":"(617) 625-1250",
+                "link":"14134994262",
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "hidden": "",
+              "items": [{
+                "type": "online",
+                "label":"",
+                "value":"Contact Form",
+                "link":"#",
+                "details":""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-fax-icon.twig",
+              "name": "Fax",
+              "hidden": "true",
+              "items": [{
+                "type": "fax",
+                "label":"",
+                "value":"(413) 499-4262",
+                "link":"14134994262",
+                "details":"Please allow 24 hours for a response"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-marker.twig",
+              "name": "Address",
+              "hidden": "true",
+              "items": [{
+                "type": "address",
+                "label": "",
+                "value": "555 Park Drive\nBoston, MA 02231",
+                "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+                "details": ""
+              }]
+            }]
+          }
+        }
+      }]
+    }
+  ],
+
+  "COMMENT":"****POSTCONTENT COMPONENTS****",
+
+  "suggestedPages": {
+    "title": "Related Guides",
+    "view":"guide",
+    "buttonMinor" : {
+      "href": "#",
+      "text": "See All Guides"
+    },
+    "pages": [{
+      "image": "/assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Buying Your First Home",
+        "label": "Guide:"
+      }
+    },{
+      "image": "/assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Shopping for Auto Insurance",
+        "label": "Guide:"
+      }
+    },{
+      "image": "/assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Education in Massachusetts",
+        "label": "Guide:"
+      }
+    }]
+  }
+
+}
