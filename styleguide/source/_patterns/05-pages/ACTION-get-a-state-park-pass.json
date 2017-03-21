@@ -27,28 +27,30 @@
       "id":"before-you-start",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet:"
+        "richText":{
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet:"
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-checklist",
-          "data": {
-            "checkList": [{
-              "text": "Checklist item"
-            },
-            {
-              "text": "Checklist item"
-            },
-            {
-              "text": "Checklist item"
-            }]
-          }
-        }]
+          },
+          {
+            "path": "atoms-checklist",
+            "data": {
+              "checkList": [{
+                "text": "Checklist item"
+              },
+              {
+                "text": "Checklist item"
+              },
+              {
+                "text": "Checklist item"
+              }]
+            }
+          }]
+        }
       }
     },
     {
