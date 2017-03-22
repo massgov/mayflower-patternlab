@@ -1,4 +1,3 @@
-
 {% if pageHeader.widgets %}
   {% set widgetsClass = "ma__page-header--widgets" %}
 {% endif %}
@@ -21,9 +20,13 @@
     {% endif %}
     {% if pageHeader.optionalContents %}
       <div class="ma__page-header__optional-content">
-        {% for content in pageHeader.optionalContents %}
-          {% include content.path with content.data %}
-        {% endfor %}
+        <div class="main-content main-content--two">
+          <div class="page-content">
+            {% for content in pageHeader.optionalContents %}
+              {% include content.path with content.data %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
     {% endif %}
   </div>
