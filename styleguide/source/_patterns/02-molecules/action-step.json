@@ -1,5 +1,8 @@
 {
   "actionStep": {
+    "accordion": true,
+    "icon": "@atoms/05-icons/svg-circle-chevron.twig",
+    "title": "Generic",
     "richText": {
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",

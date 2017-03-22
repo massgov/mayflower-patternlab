@@ -1,4 +1,15 @@
-<section class="ma__action-step">
+{% set accordion = actionStep.accordion %}
+
+<section class="ma__action-step {{ accordion ? 'js-accordion ma__action-step--accordion' : '' }}">
+  <header class="ma__action-step__header {{ accordion ? 'js-accordion-link' : '' }}">
+    {% if actionStep.icon %}
+      <div class="ma__action-step__icon">
+        {% include actionStep.icon %}
+      </div> 
+    {% endif %} 
+    <h2 class="ma__action-step__title">{{ actionStep.title }}</h2>
+  </header>
+  <div class="ma__action-step__content {{ accordion ? 'js-accordion-content' : '' }}">
   {% set richText = actionStep.richText %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% if actionStep.downloadLinks %}

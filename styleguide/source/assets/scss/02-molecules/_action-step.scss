@@ -1,5 +1,31 @@
 .ma__action-step {
   @include ma-component-spacing;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+      top: 0;
+      left: 0;
+    
+    & > svg {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    @include ma-h5;
+    min-height: 32px;
+    padding-left: 50px;
+
+    @media ($bp-small-min) {
+      padding-left: 60px;
+    }
+  }
 
   &__downloads {
     margin-bottom: 1em;
