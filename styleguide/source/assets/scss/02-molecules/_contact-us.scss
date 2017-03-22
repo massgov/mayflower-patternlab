@@ -1,4 +1,5 @@
 .ma__contact-us {
+  @include ma-component-spacing;
 
   // controls for when to activate accordion
   &:before {
