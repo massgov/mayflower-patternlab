@@ -19,10 +19,10 @@
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>
     {% endif %}
-    {% if pageHeader.extras %}
-      <div class="ma__page-header__extras">
-        {% for item in pageHeader.extras %}
-          {% include item.path with item.data %}
+    {% if pageHeader.optionalContents %}
+      <div class="ma__page-header__optional-content">
+        {% for content in pageHeader.optionalContents %}
+          {% include content.path with content.data %}
         {% endfor %}
       </div>
     {% endif %}
