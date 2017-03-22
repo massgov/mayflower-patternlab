@@ -51,21 +51,23 @@
       "path": "organisms-rich-text",
       "data": {
         "property": "",
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "The parking pass costs $60 for Massachusetts residents and $85 for non-Massachusetts residents. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!)."
+        "richText":{
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "The parking pass costs $60 for Massachusetts residents and $85 for non-Massachusetts residents. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!)."
+              }
             }
-          }
-        },{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "If you're a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+          },{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "If you're a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     },
     {
@@ -75,14 +77,16 @@
       "path": "organisms-rich-text",
       "data": {
         "property": "",
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum blah blah (there's no eligibility for state park pass)"
+        "richText": {
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum blah blah (there's no eligibility for state park pass)"
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     },
     {
@@ -95,60 +99,68 @@
           "steps": [{
             "icon":"atoms-svg-profile",
             "title":"In Person at State Parks",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check."
+            "richText": {
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           },
           {
             "icon":"atoms-svg-laptop",
             "title":"Online",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days."
+            "richText":{
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days."
+                  }
                 }
-              }
-            },{
-              "path": "molecules-callout-link",
-              "data": {
-                "calloutLink": {
-                  "text": "Order a MassParks Pass online through Reserve America",
-                  "type": "",
-                  "href": "#",
-                  "quickaction": "false"
+              },{
+                "path": "molecules-callout-link",
+                "data": {
+                  "calloutLink": {
+                    "text": "Order a MassParks Pass online through Reserve America",
+                    "type": "",
+                    "href": "#",
+                    "quickaction": "false"
+                  }
                 }
-              }
-            }]
+              }]
+            }
           },
           {
             "icon":"atoms-svg-phone",
             "title":"By Phone",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+            "richText":{
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           },
           {
             "icon":"atoms-svg-mail",
             "title":"By Mail",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "<i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts."
+            "richText": {
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "<i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           }]
         }
       }
@@ -210,14 +222,16 @@
       "path": "organisms-rich-text",
       "data": {
         "property": "",
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+        "richText": {
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     }]
   }  

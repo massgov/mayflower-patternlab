@@ -16,10 +16,8 @@ Description: A section of content on an action page that includes a title and mu
 actionSeqLists : [{
   title:
     type: string/required
-  rteElements: [{
-    ...
-        rteElement object instances, see @organisms/by-author/rich-text
-    ...
+  richText: 
+    type: see rich text pattern @organisms/by-author/rich-text
   }]
 }]
 ~~~

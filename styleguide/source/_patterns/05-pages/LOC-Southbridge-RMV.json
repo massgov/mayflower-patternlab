@@ -29,7 +29,7 @@
     "pageHeader": {
       "title": "Southbridge RMV",
       "subTitle": "",
-      "rteElements": "",
+      "richText": "",
       "headerTags": ""
     },
 
@@ -285,30 +285,30 @@
       "data": {
         "richText": {
         "property": "",
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Vestibulum ornare feugiat sodales. Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum. Nulla facilisi. Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui. Sed hendrerit sit amet nunc sit amet ultrices. Pellentesque malesuada faucibus ligula ac tincidunt."
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Vestibulum ornare feugiat sodales. Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum. Nulla facilisi. Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui. Sed hendrerit sit amet nunc sit amet ultrices. Pellentesque malesuada faucibus ligula ac tincidunt."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-unordered-list",
-          "data": {
-            "unorderedList": [{
-              "text": "Vestibulum ornare feugiat sodales."
-            },{
-              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{
-              "text": "Nulla facilisi."
-            },{
-              "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
-            },{
-              "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            }]
-          }
-        }]
+          },
+          {
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Vestibulum ornare feugiat sodales."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+              },{
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }]
+            }
+          }]
         }
       }
     },{

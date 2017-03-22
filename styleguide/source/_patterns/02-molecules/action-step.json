@@ -1,13 +1,15 @@
 {
   "actionStep": {
-    "rteElements": [{
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph": {
-          "text": "Lorem ipsum dolor sit amet, consectetur <a href=\"#\">adipisicing elit</a>. Ducimus deleniti nisi at adipisci sequi consequuntur qui, corporis pariatur eos laborum nostrum itaque, facere. Doloremque qui temporibus repellendus incidunt in nam provident, aliquam."
+    "richText": {
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph": {
+            "text": "Lorem ipsum dolor sit amet, consectetur <a href=\"#\">adipisicing elit</a>. Ducimus deleniti nisi at adipisci sequi consequuntur qui, corporis pariatur eos laborum nostrum itaque, facere. Doloremque qui temporibus repellendus incidunt in nam provident, aliquam."
+          }
         }
-      }
-    }],
+      }]
+    },
     "downloadLinks": [{
       "downloadLink": {
         "iconSize": "small",

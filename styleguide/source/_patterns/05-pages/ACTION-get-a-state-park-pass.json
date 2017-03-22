@@ -59,14 +59,16 @@
       "id":"overview",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+        "richText": {
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     },{
       "title": "",
@@ -94,203 +96,205 @@
       "id":"fees",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "molecules-callout-stats",
-          "data": {
-            "statsCallout": {
-              "pull": "right",
-              "stat": "$12",
-              "content": "standard fee for residents"
+        "richText": {
+          "rteElements": [{
+            "path": "molecules-callout-stats",
+            "data": {
+              "statsCallout": {
+                "pull": "right",
+                "stat": "$12",
+                "content": "standard fee for residents"
+              }
             }
-          }
-        },{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "The Annual MassParks Pass allows you free parking for one vehicle, during daytime hours, at all State Parks except Quabbin Reservoir. It’s valid for one calendar year, from January through December, so you’ll need to buy a new one each year."
+          },{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "The Annual MassParks Pass allows you free parking for one vehicle, during daytime hours, at all State Parks except Quabbin Reservoir. It’s valid for one calendar year, from January through December, so you’ll need to buy a new one each year."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "The parking pass costs <b>$60 for Massachusetts residents</b> and <b>$85 dollars for non-Massachusetts residents</b>. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!)."
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "The parking pass costs <b>$60 for Massachusetts residents</b> and <b>$85 dollars for non-Massachusetts residents</b>. If you have two cars, you can pay an additional $25 for a second car sticker that will allow you to park either car for free (only one at a time, though!)."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "If you’re a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "If you’re a Massachusetts resident 62 years old or older, you can get a special lifetime Senior MassParks Pass for a one-time fee of only $10."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-table",
-          "data": {
-            "table": {
-              "head": {
-                "rows": [{
-                  "rowSpanOffset":"0",
-                  "cells":[{
-                    "heading": "true",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Type"
+          },
+          {
+            "path": "atoms-table",
+            "data": {
+              "table": {
+                "head": {
+                  "rows": [{
+                    "rowSpanOffset":"0",
+                    "cells":[{
+                      "heading": "true",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Type"
+                    },
+                    {
+                      "heading": "true",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Name"
+                    },
+                    {
+                      "heading": "true",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Fee"
+                    }]
+                  }]
+                },
+                "bodies": [{
+                  "rows": [{
+                    "rowSpanOffset":"0",
+                    "cells":[{
+                      "heading": "true",
+                      "colspan": "",
+                      "rowspan": "4",
+                      "text": "Freshwater Fishing"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident Citizen or Non-Resident Fishing"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "$27.50"
+                    }]
                   },
                   {
-                    "heading": "true",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Name"
+                    "rowSpanOffset":"1",
+                    "cells":[{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident Citizen or Non-Resident Minor Fishing (Age 15-17)"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "FREE"
+                    }]
                   },
                   {
-                    "heading": "true",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Fee"
+                    "rowSpanOffset":"1",
+                    "cells":[{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident Citizen Fishing (Age 65-69)"
+                    },{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "$16.25"
+                    }]
+                  },
+                  {
+                    "rowSpanOffset":"1",
+                    "cells":[{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident Citizen Fishing (Aged 70 or Over)"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "FREE"
+                    }]
+                  }]
+                },
+                {
+                  "rows": [{
+                    "rowSpanOffset":"0",
+                    "cells":[{
+                      "heading": "true",
+                      "colspan": "",
+                      "rowspan": "4",
+                      "text": "Hunting"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident Citizen Hunting"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "$27.50"
+                    }]
+                  },
+                  {
+                    "rowSpanOffset":"1",
+                    "cells":[{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident Citizen Hunting, (Age 65-69)"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "$16.25"
+                    }]
+                  },
+                  {
+                    "rowSpanOffset":"1",
+                    "cells":[{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident and Non-Resident Citizen Hunting"
+                    },{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "FREE"
+                    }]
+                  },
+                  {
+                    "rowSpanOffset":"1",
+                    "cells":[{
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "Resident Hunting"
+                    },
+                    {
+                      "heading": "false",
+                      "colspan": "",
+                      "rowspan": "",
+                      "text": "$27.50"
+                    }]
                   }]
                 }]
-              },
-              "bodies": [{
-                "rows": [{
-                  "rowSpanOffset":"0",
-                  "cells":[{
-                    "heading": "true",
-                    "colspan": "",
-                    "rowspan": "4",
-                    "text": "Freshwater Fishing"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident Citizen or Non-Resident Fishing"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "$27.50"
-                  }]
-                },
-                {
-                  "rowSpanOffset":"1",
-                  "cells":[{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident Citizen or Non-Resident Minor Fishing (Age 15-17)"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "FREE"
-                  }]
-                },
-                {
-                  "rowSpanOffset":"1",
-                  "cells":[{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident Citizen Fishing (Age 65-69)"
-                  },{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "$16.25"
-                  }]
-                },
-                {
-                  "rowSpanOffset":"1",
-                  "cells":[{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident Citizen Fishing (Aged 70 or Over)"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "FREE"
-                  }]
-                }]
-              },
-              {
-                "rows": [{
-                  "rowSpanOffset":"0",
-                  "cells":[{
-                    "heading": "true",
-                    "colspan": "",
-                    "rowspan": "4",
-                    "text": "Hunting"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident Citizen Hunting"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "$27.50"
-                  }]
-                },
-                {
-                  "rowSpanOffset":"1",
-                  "cells":[{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident Citizen Hunting, (Age 65-69)"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "$16.25"
-                  }]
-                },
-                {
-                  "rowSpanOffset":"1",
-                  "cells":[{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident and Non-Resident Citizen Hunting"
-                  },{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "FREE"
-                  }]
-                },
-                {
-                  "rowSpanOffset":"1",
-                  "cells":[{
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "Resident Hunting"
-                  },
-                  {
-                    "heading": "false",
-                    "colspan": "",
-                    "rowspan": "",
-                    "text": "$27.50"
-                  }]
-                }]
-              }]
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     },
     {
@@ -299,14 +303,16 @@
       "id":"subnav-item",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+        "richText": {
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     },
     {
@@ -333,62 +339,72 @@
           "steps": [{
             "icon":"atoms-svg-profile",
             "title":"In Person at State Parks",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check."
+            "richText":{
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           },
           {
             "icon":"atoms-svg-laptop",
             "title":"Online",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days."
+            "richText": {
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "You can also <a href=\"#\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           },
           {
             "icon":"atoms-svg-phone",
             "title":"By Phone",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+            "richText": {
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           },
           {
             "icon":"atoms-svg-mail",
             "title":"By Mail",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "<i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts."
+            "richText": {
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "<i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           },
           {
             "icon":"atoms-svg-circle-chevron",
             "title":"By Other",
-            "rteElements": [{
-              "path": "atoms-paragraph",
-              "data": {
-                "paragraph": {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+            "richText": {
+              "rteElements": [{
+                "path": "atoms-paragraph",
+                "data": {
+                  "paragraph": {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+                  }
                 }
-              }
-            }]
+              }]
+            }
           }]
         }
       }
@@ -401,50 +417,54 @@
       "data": {
         "actionSeqLists" : [{
           "title":"Lorem ipsum dolor sit amet",
-          "rteElements": [{
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis."
+          "richText": {
+            "rteElements": [{
+              "path": "atoms-paragraph",
+              "data": {
+                "paragraph": {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis."
+                }
               }
-            }
-          },{
-            "path": "atoms-unordered-list",
-            "data": {
-              "unorderedList": [{
-                "text": "bullet item"
-              },
-              {
-                "text": "bullet item"
-              },
-              {
-                "text": "bullet item"
-              }]
-            }
-          }]
+            },{
+              "path": "atoms-unordered-list",
+              "data": {
+                "unorderedList": [{
+                  "text": "bullet item"
+                },
+                {
+                  "text": "bullet item"
+                },
+                {
+                  "text": "bullet item"
+                }]
+              }
+            }]
+          }
         },{
           "title":"Lorem ipsum dolor sit amet",
-          "rteElements": [{
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis."
+          "richText": {
+            "rteElements": [{
+              "path": "atoms-paragraph",
+              "data": {
+                "paragraph": {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis."
+                }
               }
-            }
-          },{
-            "path": "atoms-ordered-list",
-            "data": {
-              "orderedList": [{
-                "text": "bullet item"
-              },
-              {
-                "text": "bullet item"
-              },
-              {
-                "text": "bullet item"
-              }]
-            }
-          }]
+            },{
+              "path": "atoms-ordered-list",
+              "data": {
+                "orderedList": [{
+                  "text": "bullet item"
+                },
+                {
+                  "text": "bullet item"
+                },
+                {
+                  "text": "bullet item"
+                }]
+              }
+            }]
+          }
         }]
       }
     },
@@ -569,14 +589,16 @@
       "id":"additionalinfo",
       "path": "organisms-rich-text",
       "data": {
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+        "richText": {
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     }]
   },
