@@ -139,12 +139,22 @@ $action-finder-bp: 900px;
 
   &__items--all {
 
-    .ma__action-finder__item--text {
-      border: none;
+    .ma__callout-link {
+      border-width: 0;
     }
 
     .ma__illustrated-link {
-      border: none;
+      border-width: 0;
+    }
+  }
+
+  &--no-background &__items--all {
+    .ma__callout-link {
+      border-width: 3px;
+    }
+
+    .ma__illustrated-link {
+      border-width: 3px;
     }
   }
 
