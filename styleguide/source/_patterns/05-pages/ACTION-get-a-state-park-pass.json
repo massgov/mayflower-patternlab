@@ -3,9 +3,9 @@
   "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
 
   "pageHeader": {
+    "divider": false,
     "title": "Get a State Park Pass",
     "subTitle": "Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.",
-    "intro": "",
     "headerTags": {
       "taxonomyTerms": [{
         "url": "#",
@@ -17,7 +17,9 @@
         "url": "#",
         "term": "Nature & Outdoor Activities"
       }]
-    }
+    },
+    "optionalContents": null,
+    "widgets": null
   },
 
   "actionDetails" : {

@@ -8,4 +8,18 @@
     color: $c-font-heading;
     font-weight: 700;
   }
+
+  &__optional-content {
+    @media print, ($bp-small-min) {
+      .ma__contact-us--accordion > .ma__contact-group:nth-child(2),
+      .ma__contact-us--accordion > .ma__contact-us__extra {
+        border-color: $c-bd-divider;
+      }
+    }
+
+    .ma__contact-us__expand {
+      border-top-color: $c-bd-divider;
+    }
+  }
+
 }

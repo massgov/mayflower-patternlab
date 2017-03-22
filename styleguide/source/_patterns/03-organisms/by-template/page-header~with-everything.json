@@ -1,6 +1,8 @@
 {
   "pageHeader": {
     "divider": false,
+    "title": "Get a State Park Pass",
+    "subTitle": "Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.",
     "headerTags": {
       "taxonomyTerms": [{
         "url": "#",
@@ -16,8 +18,6 @@
         "term": "Term 4"
       }]
     },
-    "title": "Get a State Park Pass",
-    "subTitle": "Do you regularly visit Massachusetts parks or beaches? Our MassParks Pass offers you a significant savings over daily parking charges.",
     "optionalContents": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {

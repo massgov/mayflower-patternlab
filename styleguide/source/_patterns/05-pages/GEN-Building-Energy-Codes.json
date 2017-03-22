@@ -25,12 +25,12 @@
   },
 
   "pageHeader": {
+    "divider": false,
     "title": "Building Energy Codes",
     "subTitle": "",
-    "richText": "",
-    "headerTags": {
-      "taxonomyTerms": ""
-    }
+    "headerTags": null,
+    "optionalContents": null,
+    "widgets": null
   },
 
   "richText": {

@@ -46,19 +46,26 @@
     "bgImage": "/assets/images/placeholder/800x450.png",
     "category": "Guide",
     "pageHeader": {
-      "title": "Example Section with Everything",
+      "divider": false,
+      "title": "Moving to Massachusetts: Planning Your Move",
       "subTitle": "",
-      "richText": {
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this guide provides instructions for changing your license, tips for settling in, and other useful information."
-            }
+      "headerTags": null,
+      "optionalContents": [{
+        "path": "@organisms/by-author/rich-text.twig",
+        "data": {
+          "richText": {
+            "rteElements": [{
+              "path": "atoms-paragraph",
+              "data": {
+                "paragraph" : {
+                  "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this guide provides instructions for changing your license, tips for settling in, and other useful information."
+                }
+              }
+            }]
           }
-        }]
-      },
-      "headerTags": ""
+        }
+      }],
+      "widgets": null
     }
   },
   

@@ -20,58 +20,58 @@
     }]
   },
 
-  "actionHeader": {
-    "pageHeader": {
-      "title": "Mt Greylock State Park",
-      "subTitle": "",
-      "richText": "",
-      "headerTags": ""
-    },
-
-    "contactUs": {
-      "groups": [{
-        "icon": "",
-        "name": "",
-        "items": [{
-          "type": "address",
-          "label": "",
-          "address": "Visitor's Center, 30 Rockwell Road, Lanesborough, MA 01237",
-          "link": {
-            "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
-            "text": "directions",
-            "info": "directions to Mt Greylock State Park Vistor's Center",
-            "property": "url"
-          },
-          "details": ""
-        }]
-      },{
-        "icon": "@atoms/05-icons/svg-phone.twig",
-        "name": "Phone",
-        "items": [{
-          "type": "phone",
-          "label":"Main:",
-          "link": {
-            "href": "+14134994262",
-            "text":"(413) 499-4262"
-          },
-          "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-        }]
-      },{
-        "icon": "@atoms/05-icons/svg-laptop.twig",
-        "name": "Online",
-        "items": [{
-          "type": "email",
-          "label":"Email:",
-          "link": {
-            "text":"email@email.com",
-            "href":"email@email.com"
-          },
-          "details":""
-        }]
-      }]
-    },
-
+  "pageHeader": {
     "divider": false,
+    "title": "Mt Greylock State Park",
+    "subTitle": "",
+    "headerTags": null,
+    "optionalContents": [{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "groups": [{
+            "icon": "",
+            "name": "",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "address": "Visitor's Center, 30 Rockwell Road, Lanesborough, MA 01237",
+              "link": {
+                "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
+                "text": "directions",
+                "info": "directions to Mt Greylock State Park Vistor's Center",
+                "property": "url"
+              },
+              "details": ""
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main:",
+              "link": {
+                "href": "+14134994262",
+                "text":"(413) 499-4262"
+              },
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "email",
+              "label":"Email:",
+              "link": {
+                "text":"email@email.com",
+                "href":"email@email.com"
+              },
+              "details":""
+            }]
+          }]
+        }
+      }
+    }],
     "widgets": [{
       "path": "@molecules/location-icons.twig",
       "data": {
