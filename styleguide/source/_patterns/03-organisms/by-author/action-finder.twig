@@ -34,30 +34,38 @@
         </div>
       {% endif %}
     </header>
-    <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
-    <div class="ma__action-finder__items">
-      {% for link in actionFinder.featuredLinks %}
-        {% if link.image %}
-          {% set illustratedLink = link %}
-          {% include "@molecules/illustrated-link.twig" %}
-        {% else %}
-          {% set calloutLink = link %}
-          {% include "@molecules/callout-link.twig" %}
-        {% endif %}
-      {% endfor %}
-    </div>
-    <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
-    <div class="ma__action-finder__items ma__action-finder__items--all">
-      {% for link in actionFinder.links %}
-        {% if link.image %}
-          {% set illustratedLink = link %}
-          {% include "@molecules/illustrated-link.twig" %}
-        {% else %}
-          {% set calloutLink = link %}
-          {% include "@molecules/callout-link.twig" %}
-        {% endif %}
-      {% endfor %}
-    </div>
+    {% if actionFinder.featuredLinks %}
+      {% if actionFinder.featuredHeading %}
+        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
+      {% endif %}
+      <div class="ma__action-finder__items">
+        {% for link in actionFinder.featuredLinks %}
+          {% if link.image %}
+            {% set illustratedLink = link %}
+            {% include "@molecules/illustrated-link.twig" %}
+          {% else %}
+            {% set calloutLink = link %}
+            {% include "@molecules/callout-link.twig" %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if actionFinder.links %}
+      {% if actionFinder.generalHeading %}
+        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
+      {% endif %}
+      <div class="ma__action-finder__items ma__action-finder__items--all">
+        {% for link in actionFinder.links %}
+          {% if link.image %}
+            {% set illustratedLink = link %}
+            {% include "@molecules/illustrated-link.twig" %}
+          {% else %}
+            {% set calloutLink = link %}
+            {% include "@molecules/callout-link.twig" %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
   {% if actionFinder.seeAll %}
     <div class="ma__action-finder__see-all">

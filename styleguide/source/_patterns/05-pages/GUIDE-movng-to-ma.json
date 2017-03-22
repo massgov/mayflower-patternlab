@@ -869,82 +869,86 @@
       "path": "@organisms/by-author/split-columns.twig",
       "data": {
         "splitColumns": {
-          "column1": [{
-            "path": "@atoms/04-headings/column-heading.twig",
-            "data": {
-              "columnHeading" : {
-                "text": "Subheading Section Name 1"
+          "columns": [{
+            "items": [{
+              "path": "@atoms/04-headings/column-heading.twig",
+              "data": {
+                "columnHeading" : {
+                  "text": "Subheading Section Name 1"
+                }
               }
-            }
-          },{
-            "path": "@organisms/by-author/rich-text.twig",
-            "data": {
-              "richText": {
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate."
+            },{
+              "path": "@organisms/by-author/rich-text.twig",
+              "data": {
+                "richText": {
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph" : {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate."
+                      }
                     }
-                  }
-                }]
+                  }]
+                }
               }
-            }
-          }],
-          "column2": [{
-            "path": "@atoms/04-headings/column-heading.twig",
-            "data": {
-              "columnHeading" : {
-                "text": "Subheading Section Name 2"
-              }
-            }
+            }]
           },{
-            "path": "@organisms/by-author/rich-text.twig",
-            "data": {
-              "richText": {
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <a href=\"#\">accumsan et viverra justo commodo</a>."
+            "items": [{
+              "path": "@atoms/04-headings/column-heading.twig",
+              "data": {
+                "columnHeading" : {
+                  "text": "Subheading Section Name 2"
+                }
+              }
+            },{
+              "path": "@organisms/by-author/rich-text.twig",
+              "data": {
+                "richText": {
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph" : {
+                        "text": "Consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus <a href=\"#\">accumsan et viverra justo commodo</a>."
+                      }
                     }
-                  }
-                },{
-                  "path": "@atoms/08-lists/unordered-list.twig",
-                  "data": {
-                    "unorderedList": [{ 
-                      "text": "Bulleted item" 
-                    },{ 
-                      "text": "Bulleted item" 
-                    },{ 
-                      "text": "Bulleted item" 
-                    }]
-                  }
-                }]
+                  },{
+                    "path": "@atoms/08-lists/unordered-list.twig",
+                    "data": {
+                      "unorderedList": [{ 
+                        "text": "Bulleted item" 
+                      },{ 
+                        "text": "Bulleted item" 
+                      },{ 
+                        "text": "Bulleted item" 
+                      }]
+                    }
+                  }]
+                }
               }
-            }
-          }],
-          "column3": [{
-            "path": "@atoms/04-headings/column-heading.twig",
-            "data": {
-              "columnHeading" : {
-                "text": "Subheading Section Name 3"
-              }
-            }
+            }]
           },{
-            "path": "@organisms/by-author/rich-text.twig",
-            "data": {
-              "richText": {
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
-                    }
-                  }
-                }]
+            "items": [{
+              "path": "@atoms/04-headings/column-heading.twig",
+              "data": {
+                "columnHeading" : {
+                  "text": "Subheading Section Name 3"
+                }
               }
-            }
+            },{
+              "path": "@organisms/by-author/rich-text.twig",
+              "data": {
+                "richText": {
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph" : {
+                        "text": "Lorem ipsum dolor sit amet. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien."
+                      }
+                    }
+                  }]
+                }
+              }
+            }]
           }]
         }
       }
