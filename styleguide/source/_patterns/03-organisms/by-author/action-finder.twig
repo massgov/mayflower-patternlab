@@ -1,19 +1,34 @@
-<section class="ma__action-finder" id="GUID831741781374893">
-  <style>
-    #GUID831741781374893 {
-      background-image: url('{{actionFinder.bgNarrow}}');
-    }
+{% set noBgClass = "" %}
+{% set filterClass = "" %}
 
-    @media (min-width: 801px) {
-      #GUID831741781374893 {
-        background-image: url('{{actionFinder.bgWide}}');
+{% if not actionFinder.bgWide %}
+  {% set noBgClass = "ma__action-finder--no-background" %}
+{% endif %}
+
+{% if actionFinder.links|length <= 6 and hideFilter %}
+  {% set filterClass = "ma__action-finder--no-filter" %}
+{% endif %}
+
+<section class="ma__action-finder {{ noBgClass }} {{ filterClass }}" id="{{ actionFinder.id }}">
+  {% if actionFinder.bgWide %}
+    <style>
+      #{{ actionFinder.id }} {
+        background-image: url('{{actionFinder.bgNarrow}}');
       }
-    }
-  </style>
+
+      @media (min-width: 801px) {
+        #{{ actionFinder.id }} {
+          background-image: url('{{actionFinder.bgWide}}');
+        }
+      }
+    </style>
+  {% endif %}
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
-      <h2 class="ma__action-finder__title">{{ actionFinder.title }}</h2>
-      {% if actionFinder.links|length > 6 %}
+      <h2 class="ma__action-finder__title">
+        {{ actionFinder.title }}
+      </h2>
+      {% if actionFinder.links|length > 6 and not hideFilter %}
         <div class="ma__action-finder__search">
           {% include "@molecules/keyword-search.twig" %}
         </div>

@@ -1,6 +1,7 @@
 # Mass Gov Release Notes
 ## 3.6.0
 ### Pillar1
+* DP-2114 - [pattern lab] Service Page
 * DP-2181 - Update Guide Page in Mayflower
 * DP-2206 - Implement org page level structured data json+ld object in Mayflower 
 
