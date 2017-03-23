@@ -1,5 +1,21 @@
 .ma__action-step {
 
+  &--accordion {
+    border-color: $c-bg-section;
+  }
+
+  &--accordion:not(.is-open) &__header {
+    background-color: $c-bg-section;
+  }
+
+  &--accordion.is-open &__header {
+    background-color: transparent;
+  }
+
+  &--accordion &__header:after {
+    color: $c-theme-green;
+  }
+
   &__icon {
 
     svg {

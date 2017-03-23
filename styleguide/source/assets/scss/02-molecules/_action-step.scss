@@ -1,12 +1,14 @@
 .ma__action-step {
   @include ma-component-spacing;
-  position: relative;
+  border-width: 2px;
+  border-style: solid;
 
   &__icon {
     position: absolute;
-      top: 0;
-      left: 0;
-    
+      top: 25px;
+      left: 20px;
+    text-align: center;
+
     & > svg {
       height: 25px;
       width: 25px;
@@ -17,14 +19,47 @@
     margin-bottom: 0;
   }
 
+  &__header {
+    padding: 20px 40px 20px 60px;
+    position: relative;
+
+  }
+
+  &--accordion &__header {
+    border: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+
+    &:after {
+      font-size: 2.5rem;
+      content: "+";
+      line-height: .65em;
+      overflow: hidden;
+      position: absolute;
+        right: 15px;
+        top: 25px;
+      transform-origin: center center;
+      transition: transform .2s ease;
+    }
+  }
+
+  &--accordion.is-open &__header:after {
+    transform: rotate(135deg);
+  }
+
   &__title {
     @include ma-h5;
+    margin-bottom: 0;
     min-height: 32px;
-    padding-left: 50px;
+  }
 
-    @media ($bp-small-min) {
-      padding-left: 60px;
-    }
+  &__content {
+    padding: 0 40px 30px 60px;
+  }
+
+  &--accordion &__content {
+    display: none;
   }
 
   &__downloads {

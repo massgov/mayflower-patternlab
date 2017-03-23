@@ -6,17 +6,21 @@ export default function (window,document,$,undefined) {
     let $el = $(this),
         $link = $el.find('.js-accordion-link'),
         $content = $el.find('.js-accordion-content'),
-        active = checkActive($el);
+        active = checkActive($el),
+        open = $el.hasClass('is-open');
+
+    $el.attr('aria-expanded',open);
 
     $link.on('click',function(e){
       if(active) {
         e.preventDefault();
-        if($el.hasClass('is-open')){
+        open = $el.hasClass('is-open');
+        if(open){
           $content.stop(true,true).slideUp();
         } else {
           $content.stop(true,true).slideDown();
         }
-        $el.toggleClass('is-open');
+        $el.attr('aria-expanded',!open).toggleClass('is-open');
       }
     })
 
@@ -26,6 +30,7 @@ export default function (window,document,$,undefined) {
       if(temp !== active && !temp) {
         $content.removeAttr('style');
         $el.removeClass('is-open');
+        $el.attr('aria-expanded','false');
       }
 
       active = temp;

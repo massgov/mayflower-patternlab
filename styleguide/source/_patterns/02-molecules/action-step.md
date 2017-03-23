@@ -1,7 +1,7 @@
 ---
 title: Action Step
 ---
-Description: Displays rich text follow by optional download links and learn more link.
+Description: Displays details about how to complete a step.
 
 ## Status: alpha
 
@@ -18,15 +18,21 @@ Description: Displays rich text follow by optional download links and learn more
 ### Variables
 ~~~
 actionStep: {
-  "rteElements": 
-    type: see Rich Text pattern,
-  "downloadLinks": [{
+  accordion: 
+    type: boolean,
+  accordionLabel: 
+    type: string/required if accordion is true
+  icon: 
+    type: string/path/optional
+  title: 
+    type: string/required
+  richText: 
+    type: object/required @organisms/by-author/rich-text.twig
+  downloadLinks: 
     type: array/optional
-
-    "downloadLink": 
-      type: see Download Link pattern
-  }],
-  "decorativeLink": 
-    type see: Decorative Link pattern
+    downloadLink: 
+      type: object/required @molecules/download-link.twig
+  decorativeLink: 
+    type: object/optional @atoms/decorative-link.twig
 }
 ~~~

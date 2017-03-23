@@ -19,13 +19,12 @@ export default function (window,document,$,undefined) {
         $button = $el.find('.js-accordion-link button');
 
     $button.on('click', function() {
+      // clicking this link also triggers the accordion click
       // toggle the current state
       open = !open;
       // update open/close state cookie
       // leave off third argument to make it expire on session
       cookie.setCookie(cookieName,open);
-      // change the state of aria-expanded
-      $button.attr('aria-expanded', open);
     });
 
     // if the user has closed the alerts on a previous page
