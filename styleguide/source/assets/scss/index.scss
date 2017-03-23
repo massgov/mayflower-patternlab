@@ -65,6 +65,7 @@
 @import "02-molecules/related-action";
 @import "02-molecules/section-links";
 @import "02-molecules/social-links";
+@import "02-molecules/sticky-nav";
 @import "02-molecules/wait-time";
 
 // Organisms - components
@@ -118,5 +119,6 @@
 @import "03-organisms/utility-panel";
 
 // Templates - page content types
+@import "04-templates/details";
 @import "04-templates/general";
 @import "04-templates/services";
