@@ -1,0 +1,12 @@
+{% extends '@templates/01-content-types/details.twig' %}
+
+{% block pageContent %}
+  {% set richText = pageContent.richText1 %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+{% endblock %}
+{% block sidebar %}
+  {% include "@organisms/by-author/sidebar-contact.twig" %}
+  {% include "@organisms/by-author/sidebar-widget.twig" %}
+{% endblock %}
+{% block postContent %}
+{% endblock %}

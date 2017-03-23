@@ -1,0 +1,146 @@
+{
+  "details": {
+    "contentTitle": "The Details"
+  },
+
+  "pageHeader": {
+    "divider": false,
+    "title": "Apply for unemployment benefits",
+    "subTitle": "Have you lost your job?  You may qualify for temporary income to support you while you look for a new one",
+    "headerTags": {
+      "taxonomyTerms": [{
+        "url": "#",
+        "term": "Unemployement Benefits"
+      }]
+    },
+    "optionalContents": [{
+      "path": "@molecules/callout-time.twig",
+      "data": {
+        "calloutTime": {
+          "text": "Most applicants hear back within 4-6 weeks of applying"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/key-actions.twig",
+      "data": {
+        "keyActions": {
+          "links":[{
+            "text": "Apply online",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Check eligibility",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  },
+
+  "stickyNav": {
+    "anchorLinks":[{
+      "href": "what-you-need",
+      "text": "What you need",
+      "info": ""
+    },{
+      "href": "fees",
+      "text": "Fees",
+      "info": ""
+    },{
+      "href": "how-to-apply",
+      "text": "How to apply",
+      "info": ""
+    },{
+      "href": "next-steps",
+      "text": "Next Steps",
+      "info": ""
+    },{
+      "href": "more-info",
+      "text": "More Info",
+      "info": ""
+    },{
+      "href": "downloads",
+      "text": "Downloads",
+      "info": ""
+    },{
+      "href": "contact",
+      "text": "Contact",
+      "info": ""
+    }]
+  },
+
+  "pageContent": {
+    "richText1": {
+      "compHeading": {
+        "title": "What you need",
+        "sub": true,
+        "color": "",
+        "id": "what-you-need",
+        "centered": ""
+      },
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "To apply for unemployment, you need to provide personal information including your Social Security number, birth date, home address, email address, and phone number."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "You also need information about your employment history from the last 15 months, including:"
+          }
+        }
+      },{
+        "path": "@atoms/08-lists/unordered-list.twig",
+        "data": {
+          "unorderedList": [{
+            "text": "Names of all employers, plus addresses and phone numbers" 
+          },{
+            "text": "Reasons for leaving those jobs" 
+          },{
+            "text": "Work start and end dates" 
+          },{
+            "text": "Recall date (if you were laid off but have a set date to return to work)" 
+          }]
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "You may need additional information in certain situations:"
+          }
+        }
+      },{
+        "path": "@atoms/08-lists/unordered-list.twig",
+        "data": {
+          "unorderedList": [{
+            "text": "If you are not a U.S. citizen — your Alien Registration number" 
+          },{
+            "text": "If you have children or other dependents — their birth dates and Social Security numbers" 
+          },{
+            "text": "If you’re in a union — your union name and local number" 
+          },{
+            "text": "If you were in the military — your DD-214 Member 4 form (optional). If you don’t have it, you can request your DD-214 online." 
+          },{
+            "text": "If you worked for the federal government — your SF8 form (optional)" 
+          }]
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "To receive payments by direct deposit, you’ll also need your bank account details and routing number. Otherwise, DUA will send you a debit card."
+          }
+        }
+      }]
+    }
+  },
+
+  "sidebar": {
+
+  }
+}
