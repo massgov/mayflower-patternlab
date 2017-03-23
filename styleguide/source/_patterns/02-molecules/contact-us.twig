@@ -10,7 +10,7 @@
 
   {# title should always be an h3 #}
   {% if contactUs.compHeading %}
-    {% set compHeading = contactUs.compHeading %}
+    {% set compHeading = contactUs.compHeading|merge({"sub":true}) %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
   {% endif %}
   {% if contactUs.sidebarHeading %}
