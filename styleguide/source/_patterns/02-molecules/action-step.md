@@ -19,7 +19,9 @@ Description: Displays details about how to complete a step.
 ~~~
 actionStep: {
   accordion: 
-    type: boolean,
+    type: boolean
+  isExpanded
+    type: boolean
   accordionLabel: 
     type: string/required if accordion is true
   icon: 

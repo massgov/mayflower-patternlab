@@ -1,7 +1,10 @@
 .ma__action-step {
   @include ma-component-spacing;
-  border-width: 2px;
-  border-style: solid;
+  
+  &--accordion {
+    border-width: 2px;
+    border-style: solid;
+  }
 
   &__icon {
     position: absolute;
@@ -20,14 +23,14 @@
   }
 
   &__header {
-    padding: 20px 40px 20px 60px;
+    padding: 20px 0 20px 60px;
     position: relative;
-
   }
 
   &--accordion &__header {
     border: none;
     display: block;
+    padding: 20px 40px 20px 60px;
     text-align: left;
     width: 100%;
 
@@ -55,10 +58,15 @@
   }
 
   &__content {
-    padding: 0 40px 30px 60px;
+    padding-left: 60px;
   }
 
   &--accordion &__content {
+    padding-bottom: 30px;
+    padding-right: 40px;
+  }
+
+  .js &--accordion &__content {
     display: none;
   }
 

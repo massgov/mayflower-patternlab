@@ -11,6 +11,11 @@ export default function (window,document,$,undefined) {
 
     $el.attr('aria-expanded',open);
 
+    if(open) {
+      // setup the inline display block
+      $content.stop(true,true).slideDown();
+    }
+
     $link.on('click',function(e){
       if(active) {
         e.preventDefault();

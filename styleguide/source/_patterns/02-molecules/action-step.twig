@@ -1,7 +1,7 @@
 {% set accordion = actionStep.accordion %}
 
 <section 
-  class="ma__action-step {{ accordion ? 'js-accordion ma__action-step--accordion' : '' }}">
+  class="ma__action-step {{ accordion ? 'js-accordion ma__action-step--accordion' : '' }} {{ actionStep.isExpanded ? 'is-open':'' }}">
   {% if accordion %}
     <button 
       class="ma__action-step__header js-accordion-link"
