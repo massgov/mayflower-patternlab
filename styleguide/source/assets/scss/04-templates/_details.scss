@@ -11,4 +11,37 @@
       margin-left: $column-with-gutter * 2;
     }
   }
+
+  &__top-contact {
+    
+    @media($bp-large-min) {
+      display: none;
+    }
+  }
+
+  &__sidebar-contact {
+    
+    @media ($bp-large-max) {
+      display: none;
+    }
+  }
+
+  &__top-contact,
+  &__sidebar-contact {
+    @include ma-component-spacing;
+    
+    .ma__sidebar-heading,
+    .ma__comp-heading {
+      @include ma-heading-colored;
+      border: none;
+    }
+  }
+
+  &__sidebar {
+    .ma__sidebar-heading,
+    .ma__comp-heading {
+      @include ma-heading-colored;
+      border: none;
+    }
+  }
 }
