@@ -23,7 +23,7 @@ contactUs: {
         type: 
             type: string / required
         }
-    title: {
+    subTitle: {
         href:
             type: string (url) / optional
         target:

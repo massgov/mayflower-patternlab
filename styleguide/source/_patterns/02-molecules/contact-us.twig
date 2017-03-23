@@ -8,8 +8,18 @@
     typeof="{{contactUs.schemaSd.type}}"
   {% endif %} >
 
-  {% if contactUs.title %}
-    {% set columnHeading = contactUs.title %}
+  {# title should always be an h3 #}
+  {% if contactUs.compHeading %}
+    {% set compHeading = contactUs.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if contactUs.sidebarHeading %}
+    {% set sidebarHeading = contactUs.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+
+  {% if contactUs.subTitle %}
+    {% set columnHeading = contactUs.subTitle %}
     {% include "@atoms/04-headings/column-heading.twig" %}
   {% endif %}
 

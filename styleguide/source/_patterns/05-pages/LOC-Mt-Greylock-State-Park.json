@@ -645,7 +645,7 @@
           "property": "containedInPlace",
           "type": "CivicStructure"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Bascom Lodge",
           "chevron":"",
@@ -728,7 +728,7 @@
           "property": "containedInPlace",
           "type": "CivicStructure"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Museum",
           "chevron":""

@@ -52,7 +52,7 @@
       "path": "molecules-contact-us",
       "data": {
         "contactUs": {
-          "title": {
+          "subTitle": {
             "href":"#",
             "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
             "chevron":""

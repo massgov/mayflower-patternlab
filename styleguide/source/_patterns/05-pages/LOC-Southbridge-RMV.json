@@ -382,7 +382,7 @@
           "property": "department",
           "type": "Organization"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Bascom Lodge",
           "chevron":""
@@ -450,7 +450,7 @@
           "property": "department",
           "type": "Organization"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Museum",
           "chevron":""

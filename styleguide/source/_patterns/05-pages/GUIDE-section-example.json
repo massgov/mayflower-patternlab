@@ -217,7 +217,7 @@
         "path": "@molecules/contact-us.twig",
         "data": {
           "contactUs": {
-            "title": {
+            "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
               "chevron":""
