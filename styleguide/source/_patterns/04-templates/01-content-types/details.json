@@ -1,4 +1,8 @@
 {
+  "details": {
+    "contentTitle": "The Details"
+  },
+
   "pageHeader": {
     "divider": false,
     "title": "How To page Title",
@@ -42,5 +46,45 @@
       }
     }],
     "widgets": null
+  },
+
+  "stickyNav": {
+    "anchorLinks":[{
+      "href": "what-you-need",
+      "text": "What you need",
+      "info": ""
+    },{
+      "href": "fees",
+      "text": "Fees",
+      "info": ""
+    },{
+      "href": "how-to-apply",
+      "text": "How to apply",
+      "info": ""
+    },{
+      "href": "next-steps",
+      "text": "Next Steps",
+      "info": ""
+    },{
+      "href": "more-info",
+      "text": "More Info",
+      "info": ""
+    },{
+      "href": "downloads",
+      "text": "Downloads",
+      "info": ""
+    },{
+      "href": "contact",
+      "text": "Contact",
+      "info": ""
+    }]
+  },
+
+  "pageContent": {
+
+  },
+
+  "sidebar": {
+
   }
 }

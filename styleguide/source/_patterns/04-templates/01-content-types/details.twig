@@ -3,7 +3,7 @@
 
 <main 
   id="main-content"
-  class="ma__how-to" 
+  class="ma__details" 
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -13,9 +13,19 @@
   </div>
   <div class="main-content main-content--two">
     <div class="page-content">
-      {% block pageContent %}
-        {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
-      {% endblock %}
+      {% set coloredHeading = {
+        "text": details.contentTitle,
+        "color": "green"
+      } %}
+      {% include "@atoms/04-headings/colored-heading.twig" %}
+      <section class="ma__action-details">
+        <div class="ma__details__content">
+          {% include "@molecules/sticky-nav.twig" %}
+          {% block pageContent %}
+            {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
+          {% endblock %}
+        </div>
+      </section>
     </div>
     <aside class="sidebar">
       {% block sidebar %}
