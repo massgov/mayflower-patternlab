@@ -9,3 +9,19 @@ Title: Action Steps
 * action step
 
 ##Notes:
+
+### Variables 
+~~~ 
+{
+"actionSteps": {
+  "compHeading": {
+    type: object/optional/ see @atoms/04-headings/comp-heading.md
+  },
+  "richText": {
+    type: object/optional/ see @organisms/by-author/rich-text.md
+  },
+  "steps": [{
+    type: array of objects/required/ see @molecules/action-step.md
+  }]
+}
+~~~

@@ -1,4 +1,16 @@
 <section class="ma__action-steps">
+  {% if actionSteps.compHeading %}
+    {% set compHeading = actionSteps.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if actionSteps.sidebarHeading %}
+    {% set sidebarHeading = actionSteps.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+  {% if actionSteps.richText %}
+    {% set richText = actionSteps.richText %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+  {% endif %}  
   {% for actionStep in actionSteps.steps %}
     {% include "@molecules/action-step.twig" %}
   {% endfor %}

@@ -3,6 +3,8 @@
 {% block pageContent %}
   {% set richText = pageContent.richText1 %}
   {% include "@organisms/by-author/rich-text.twig" %}
+  {% set actionSteps = pageContent.actionSteps %}
+  {% include "@organisms/by-author/action-steps.twig" %}
 {% endblock %}
 {% block sidebar %}
   {% include "@organisms/by-author/sidebar-contact.twig" %}
