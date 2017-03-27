@@ -49,7 +49,7 @@
       }
     },
     {
-      "path": "molecules-contact-us",
+      "path": "@organisms/by-author/contact-us.twig",
       "data": {
         "contactUs": {
           "subTitle": {

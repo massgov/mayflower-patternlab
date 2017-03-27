@@ -6,7 +6,7 @@ title: Laptop Icon
 ### Used In:
 - [@molecules/action-step](/?p=molecules-action-step)
 - [@molecules/action-downloads](/?p=molecules-action-downloads)
-- [@molecules/contact-us](/?p=molecules-contact-us)
+- [@organisms/by-author/contact-us](/?p=organisms-contact-us)
 - [@molecules/contact-group](/?p=molecules-contact-group)
 - [@organisms/by-author/steps-unordered](/?p=organisms/steps-unordered)
 - [@organisms/by-author/form-download](/?p=organisms/form-download)

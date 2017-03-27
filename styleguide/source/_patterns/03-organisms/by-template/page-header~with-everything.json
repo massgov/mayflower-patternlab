@@ -33,7 +33,7 @@
         }
       }
     },{
-      "path": "@molecules/contact-us.twig",
+      "path": "@organisms/by-author/contact-us.twig",
       "data": {
         "contactUs": {
           "groups": [{

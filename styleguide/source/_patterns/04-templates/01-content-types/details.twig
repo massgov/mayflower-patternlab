@@ -17,7 +17,7 @@
       {% if sidebar.contactUs %}
         <div class="ma__details__top-contact">
           {% set contactUs = sidebar.contactUs %}
-          {% include "@molecules/contact-us.twig" %}
+          {% include "@organisms/by-author/contact-us.twig" %}
         </div>
       {% endif %}
       {% set coloredHeading = {
@@ -37,7 +37,7 @@
       {% if sidebar.contactUs %}
         <div class="ma__details__sidebar-contact">
           {% set contactUs = sidebar.contactUs %}
-          {% include "@molecules/contact-us.twig" %}
+          {% include "@organisms/by-author/contact-us.twig" %}
         </div>
       {% endif %}
       {% if sidebar %}

@@ -6,7 +6,7 @@ Description: Icon for address
 ## State: ALPHA
 
 ### Used In:
-- [@molecules/contact-us](/?p=molecules-contact-us)
+- [@organisms/by-author/contact-us](/?p=organisms-contact-us)
 - [@organisms/by-author/multi-row-section](/?p=organisms/multi-row-section)
 - [@organisms/by-author/sidebar-contact](/?p=organisms/sidebar-contact)
 - [@pages/ACTION-get-a-state-park-pass](/?p=pages-ACTION-get-a-state-park-pass)
