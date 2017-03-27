@@ -3,6 +3,10 @@
 
   & + & {
     padding-top: 25px;
+
+    .ma__split-columns & { 
+      padding-top: 10px; 
+    } 
   }
 
   &--small + &--small {
@@ -17,9 +21,20 @@
     overflow: hidden;
 
     & > svg {
-      height: 37px;
+      height: 36px;
       width: 35px;
     }
+
+    .ma__split-columns & { 
+      height: 25px; 
+      margin-top: 4px; 
+      width: 40px; 
+    
+      & > svg { 
+        height: 25px; 
+        width: 25px; 
+      } 
+    } 
   }
 
   &--small &__icon {
