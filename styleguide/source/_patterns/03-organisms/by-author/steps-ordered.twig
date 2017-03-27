@@ -1,12 +1,16 @@
 <section class="ma__steps-ordered">
+  {% if stepsOrdered.compHeading %}
+    {% set compHeading = stepsOrdered.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if stepsOrdered.sidebarHeading %}
+    {% set sidebarHeading = stepsOrdered.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
   <ol class="ma__steps-ordered__items">
-    {% for item in actionSeqLists %}
+    {% for actionStep in stepsOrdered.steps %}
       <li class="ma__steps-ordered__item">
-        <h4 class="ma__steps-ordered__title">{{item.title}}</h4>
-        <div class="ma__steps-ordered__content">
-          {% set richText = item.richText %}
-          {% include "@organisms/by-author/rich-text.twig" %}
-        </div>
+        {% include "@molecules/action-step.twig" %}
       </li>
     {% endfor %}
   </ol>

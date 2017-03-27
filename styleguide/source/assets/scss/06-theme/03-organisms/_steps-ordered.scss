@@ -1,18 +1,10 @@
 .ma__steps-ordered {
 
-  &__items {
-
-  }
-
   &__item {
 
     &:before {
-      @include ma-font(700);
+      font-weight: 700;
       color: $c-theme-green;
     }
-  }
-
-  &__title {
-    @include ma-font(700);
   }
 }

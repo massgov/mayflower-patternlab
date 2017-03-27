@@ -188,39 +188,7 @@
       },{
         "accordion": true,
         "isExpanded": false,
-        "accordionLabel": "Expand step for doing this in person",
-        "icon":"@atoms/05-icons/svg-profile.twig",
-        "title":"In Person at State Parks",
-        "richText": {
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph": {
-                "text": "Most parks and beaches that charge daily parking fees sell MassParks Passes at their contact stations during their paid parking seasons. Just ask to purchase a MassParks Pass and show your driver’s license or proof of residency. Please note: most parks cannot accept credit cards, so you’ll have to pay with cash or a check."
-              }
-            }
-          }]
-        }
-      },{
-        "accordion": true,
-        "isExpanded": false,
-        "accordionLabel": "Expand step for doing this in person",
-        "icon":"@atoms/05-icons/svg-circle-chevron.twig",
-        "title":"Some Other Method",
-        "richText": {
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph": {
-                "text": "If you concentrate really hard, a pass might magically appear in front of you"
-              }
-            }
-          }]
-        }
-      },{
-        "accordion": true,
-        "isExpanded": false,
-        "accordionLabel": "Expand step for doing this in person",
+        "accordionLabel": "By Phone",
         "icon":"@atoms/05-icons/svg-phone.twig",
         "title":"By Phone",
         "richText": {
@@ -233,40 +201,84 @@
             }
           }]
         }
-      },{
-        "accordion": true,
-        "isExpanded": false,
-        "accordionLabel": "Expand step for doing this in person",
-        "icon":"@atoms/05-icons/svg-mail.twig",
-        "title":"By Mail",
-        "richText" : {
+      }]
+    },
+
+    "stepsOrdered": {
+      "compHeading": {
+        "title": "Next Steps",
+        "sub": false,
+        "color": "",
+        "id": "next-steps",
+        "centered": ""
+      },
+      "steps": [{
+        "accordion": false,
+        "isExpanded": true,
+        "accordionLabel": "",
+        "icon": "",
+        "title": "Immediately log job search (required)",
+        "richText": {
           "rteElements": [{
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
               "paragraph": {
-                "text": "<i>(only if you're purchasing a Senior MassParks Pass)</i><br />Senior MassParks Passes can be purchased by mail by writing to the following address:</p><p>DCR MassParks<br />251 Causeway Street<br />Boston, MA 02114<br />Attn: Senior MassParks Pass Coordinator</p><p>and including a photocopy of your MA driver’s license or other official proof of MA residency and age, and a check for $10 made payable to the Commonwealth of Massachusetts."
+                "text": "You must start requesting weekly benefits on the Sunday after you submit your application form. Every time you request weekly benefits, you’ll be asked  3 questions for the previous week, Saturday to Saturday:"
+              }
+            }
+          },{
+            "path": "@atoms/08-lists/ordered-list.twig",
+            "data": {
+              "orderedList": [{ 
+                "text": "If you looked for work that week" 
+              },{ 
+                "text": "If you were able to work and available for work that week"
+              },{ 
+                "text": "If you worked during that week"
+              }]
+            }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "You have to complete this step every week to make sure you get your benefits. You must do this step online."
               }
             }
           }]
+        },
+        "downloadLinks": [{
+          "downloadLink": {
+            "iconSize": "small",
+            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "decorativeLink": {
+              "text": "Work Search Activity Log",
+              "href": "#",
+              "info": "",
+              "property": ""
+            },
+            "size": "1MB",
+            "format": "PDF"
+          }
+        }],
+        "decorativeLink": {
+          "href": "#",
+          "text": "Learn more about job search support",
+          "info": "",
+          "property": ""
         }
       },{
-        "accordion": true,
-        "isExpanded": false,
-        "accordionLabel": "Expand step for doing this in person",
-        "icon":"@atoms/05-icons/svg-fax-icon.twig",
-        "title":"By Fax",
+        "accordion": false,
+        "isExpanded": true,
+        "accordionLabel": "",
+        "icon": "",
+        "title": "Another next step",
         "richText": {
           "rteElements": [{
-            "path": "@atoms/08-lists/unordered-list.twig",
+            "path": "@atoms/11-text/paragraph.twig",
             "data": {
-              "unorderedList": [{ 
-                "text": "Download and fill out an <a href=\"#\">application for an EIN.</a>" 
-              },{ 
-                "text": "Fax it to (855) 641-6935",
-                "sublist" : [{
-                  "text":"If you include your fax number, an EIN will be faxed to you within 4 business days."
-                }]
-              }]
+              "paragraph": {
+                "text": "If there is only one next step, the number icons are not needed. This could also be just a bulleted list if they aren’t as robust."
+              }
             }
           }]
         }
@@ -285,7 +297,7 @@
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "This is optional section that is used in a variety of ways. Repudiandae accusamus distinctio dignissimos odit officiis est, ipsa <a href=\"#\">Internal Link</a> ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
+            "text": "This is an optional section that is used in a variety of ways. Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium. Nulla facilisi. Duis tincidunt, felis et luctus placerat, ipsum libero vestibulum sem, vitae elementum wisi ipsum a metus. Nulla a enim sed dui hendrerit lobortis."
           }
         }
       }]

@@ -16,7 +16,6 @@ $steps-ordered-icon-border: 3px;
       padding-left: 60px;
     }
 
-
     &:before {
       border: $steps-ordered-icon-border solid;
       border-radius: 50%;
@@ -37,18 +36,12 @@ $steps-ordered-icon-border: 3px;
     }
   }
 
-  &__title {
-    min-height: 32px;
-    padding-left: 50px;
+  .ma__action-step {
 
-    @media ($bp-small-min) {
-      margin-bottom: 0;
+    &__header,
+    &__content {
       padding-left: 0;
+      padding-top: 0;
     }
-  }
-
-  .ma__rich-text {
-    padding-left:0;
-    padding-right:0;
   }
 }
