@@ -3,7 +3,7 @@ $rich-text-spacing-mobile: 1.5rem;
 
 .ma__rich-text {
   @include clearfix;
-  margin-bottom: 1em;
+  @include ma-component-spacing;
 
   &--description {
     margin-bottom: 1rem;
@@ -18,12 +18,9 @@ $rich-text-spacing-mobile: 1.5rem;
   .main-content--full .page-content > & {
     @include ma-container('restricted');
   }
-
-  .main-content--two .page-content > & {
-    @include ma-component-spacing;
-  }
   
   .ma__split-columns__column > & {
+    margin-bottom: 1em;
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
