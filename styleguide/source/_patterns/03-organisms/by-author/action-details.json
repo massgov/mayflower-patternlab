@@ -93,7 +93,7 @@
       "title":"Get it Done",
       "intro": "",
       "id":"get-it-done",
-      "path": "organisms-action-steps",
+      "path": "@organisms/by-author/steps-unordered.twig",
       "data": {
         "actionSteps": {
           "steps": [{

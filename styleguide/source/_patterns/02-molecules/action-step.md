@@ -13,7 +13,7 @@ Description: Displays details about how to complete a step.
 - [@atoms/decorative-link](/?p=atoms-decorative-link)
 
 ### Used in:
-- [@organisms/by-author/action-steps](/?p=organisms-action-steps)
+- [@organisms/by-author/steps-unordered](/?p=organisms-steps-unordered)
 
 ### Variables
 ~~~

@@ -10,7 +10,7 @@ All base elements with no class or id are being moved into base pattern director
 
 ### Used In:
 - [@molecules/action-step](/?p=molecules-action-step)
-- [@organisms/by-author/action-steps](/?p=organisms-action-steps)
+- [@organisms/by-author/steps-unordered](/?p=organisms-steps-unordered)
 - [@organisms/by-author/rich-text](/?p=organisms-rich-text)
 - [@pages/GUIDE-movng-to-ma-part1](/?p=pages-GUIDE-movng-to-ma-part1)
 - [@pages/GUIDE-movng-to-ma-part2](/?p=pages-GUIDE-movng-to-ma-part2)

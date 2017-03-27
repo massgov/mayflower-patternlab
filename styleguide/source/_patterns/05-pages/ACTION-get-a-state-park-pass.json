@@ -335,7 +335,7 @@
       "title":"Get it Done",
       "intro": "",
       "id":"get-it-done",
-      "path": "organisms-action-steps",
+      "path": "@organisms/by-author/steps-unordered.twig",
       "data": {
         "actionSteps": {
           "steps": [{
@@ -415,7 +415,7 @@
       "title":"",
       "intro": "",
       "id":"",
-      "path": "molecules-action-seq-list",
+      "path": "@organisms/by-author/steps-ordered.twig",
       "data": {
         "actionSeqLists" : [{
           "title":"Lorem ipsum dolor sit amet",
