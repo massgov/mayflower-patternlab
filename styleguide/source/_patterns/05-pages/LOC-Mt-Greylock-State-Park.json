@@ -256,9 +256,9 @@
       "title":"",
       "intro": "",
       "id":"",
-      "path": "molecules-action-map",
+      "path": "@molecules/google-map.twig",
       "data": {
-        "actionMap": {
+        "googleMap": {
           "map": {
             "center": {
               "lat": 42.594129,

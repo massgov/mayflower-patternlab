@@ -1,5 +1,6 @@
 .ma__google-map {
-  
+  @include ma-component-spacing;
+
   &__map {
     height: 360px;
 
