@@ -38,7 +38,6 @@
 @import "02-molecules/action-event";
 @import "02-molecules/action-gallery";
 @import "02-molecules/action-image";
-@import "02-molecules/action-seq-list";
 @import "02-molecules/action-step";
 @import "02-molecules/button-alert";
 @import "02-molecules/callout-stats";
@@ -71,7 +70,6 @@
 @import "03-organisms/action-card";
 @import "03-organisms/action-details";
 @import "03-organisms/action-finder";
-@import "03-organisms/action-steps";
 @import "03-organisms/banner-carousel";
 @import "03-organisms/blog-feed";
 @import "03-organisms/breadcrumbs";
@@ -110,6 +108,8 @@
 @import "03-organisms/split-columns";
 @import "03-organisms/stacked-row-section";
 @import "03-organisms/suggested-pages";
+@import "03-organisms/steps-ordered";
+@import "03-organisms/steps-unordered";
 @import "03-organisms/teaser-text";
 @import "03-organisms/test-feed";
 @import "03-organisms/top-actions";
