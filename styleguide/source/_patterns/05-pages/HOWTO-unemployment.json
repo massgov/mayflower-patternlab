@@ -135,7 +135,7 @@
       }]
     },
 
-    "actionSteps": {
+    "stepsUnordered": {
       "compHeading": {
         "title": "How To Apply",
         "sub": true,
