@@ -207,7 +207,7 @@
     "stepsOrdered": {
       "compHeading": {
         "title": "Next Steps",
-        "sub": false,
+        "sub": true,
         "color": "",
         "id": "next-steps",
         "centered": ""
