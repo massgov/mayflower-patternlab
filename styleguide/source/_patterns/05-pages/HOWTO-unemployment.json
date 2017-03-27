@@ -45,10 +45,6 @@
       "text": "What you need",
       "info": ""
     },{
-      "href": "fees",
-      "text": "Fees",
-      "info": ""
-    },{
       "href": "how-to-apply",
       "text": "How to apply",
       "info": ""
@@ -72,7 +68,7 @@
   },
 
   "pageContent": {
-    "richText1": {
+    "intro": {
       "compHeading": {
         "title": "What you need",
         "sub": true,
@@ -141,10 +137,10 @@
 
     "actionSteps": {
       "compHeading": {
-        "title": "Title",
-        "sub": "",
+        "title": "How To Apply",
+        "sub": true,
         "color": "",
-        "id": "title",
+        "id": "how-to-apply",
         "centered": ""
       },
       "richText": {
@@ -152,12 +148,44 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+              "text": "You must submit a form. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium."
             }
           }
         }]
       },
       "steps": [{
+        "accordion": true,
+        "isExpanded": false,
+        "accordionLabel": "Expand step for doing this online",
+        "icon":"@atoms/05-icons/svg-laptop.twig",
+        "title":"Online",
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "To apply online, you can create an account on the <a href=\"#\">UI Online portal</a>. The website will walk you through filling out your application. Once you file your initial application, you'll be able to log into your account to check your status."
+              }
+            }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Don't have a compute?  Visit a <a href=\"#\">One-Stop Career Center</a> where you can use one of theirs to file your claim and get help finding a job."
+              }
+            }
+          },{
+            "path": "@atoms/08-lists/ordered-list.twig",
+            "data": {
+              "orderedList": [{ 
+                "text": "Ordered list example" 
+              },{ 
+                "text": "Use this if there are multiple steps within a how to area"
+              }]
+            }
+          }]
+        }
+      },{
         "accordion": true,
         "isExpanded": false,
         "accordionLabel": "Expand step for doing this in person",
@@ -185,22 +213,6 @@
             "data": {
               "paragraph": {
                 "text": "If you concentrate really hard, a pass might magically appear in front of you"
-              }
-            }
-          }]
-        }
-      },{
-        "accordion": true,
-        "isExpanded": false,
-        "accordionLabel": "Expand step for doing this in person",
-        "icon":"@atoms/05-icons/svg-laptop.twig",
-        "title":"Online",
-        "richText": {
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph": {
-                "text": "You can also <a href=\"http://www.google.com\">order a MassParks pass online through Reserve America</a>. There is an additional $2.75 charge to use this online service. Your pass will be mailed to your home within seven days."
               }
             }
           }]
@@ -257,6 +269,45 @@
               }]
             }
           }]
+        }
+      }]
+    },
+
+    "moreInfo": {
+      "compHeading": {
+        "title": "More info",
+        "sub": true,
+        "color": "",
+        "id": "more-info",
+        "centered": ""
+      },
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is optional section that is used in a variety of ways. Repudiandae accusamus distinctio dignissimos odit officiis est, ipsa <a href=\"#\">Internal Link</a> ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
+          }
+        }
+      }]
+    },
+
+    "formDownloads": {
+      "compHeading": {
+        "title": "Downloads",
+        "sub": true
+      },
+      "downloadLinks": [{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "Work Search Activity Log",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "1MB",
+          "format": "PDF"
         }
       }]
     }
