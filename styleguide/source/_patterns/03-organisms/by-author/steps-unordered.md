@@ -1,5 +1,5 @@
 ---
-Title: Action Steps
+Title: Steps Unordered
 ---
 
 ##Field:
@@ -13,7 +13,7 @@ Title: Action Steps
 ### Variables 
 ~~~ 
 {
-"actionSteps": {
+"stepsUnordered": {
   "compHeading": {
     type: object/optional/ see @atoms/04-headings/comp-heading.md
   },

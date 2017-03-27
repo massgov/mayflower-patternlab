@@ -3,7 +3,7 @@
 {% block pageContent %}
   {% set richText = pageContent.intro %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set actionSteps = pageContent.actionSteps %}
+  {% set stepsUnordered = pageContent.stepsUnordered %}
   {% include "@organisms/by-author/steps-unordered.twig" %}
   {% set richText = pageContent.moreInfo %}
   {% include "@organisms/by-author/rich-text.twig" %}

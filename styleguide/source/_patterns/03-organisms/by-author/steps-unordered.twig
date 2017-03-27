@@ -1,17 +1,17 @@
-<section class="ma__action-steps">
-  {% if actionSteps.compHeading %}
-    {% set compHeading = actionSteps.compHeading %}
+<section class="ma__steps-unordered">
+  {% if stepsUnordered.compHeading %}
+    {% set compHeading = stepsUnordered.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
   {% endif %}
-  {% if actionSteps.sidebarHeading %}
-    {% set sidebarHeading = actionSteps.sidebarHeading %}
+  {% if stepsUnordered.sidebarHeading %}
+    {% set sidebarHeading = stepsUnordered.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
-  {% if actionSteps.richText %}
-    {% set richText = actionSteps.richText %}
+  {% if stepsUnordered.richText %}
+    {% set richText = stepsUnordered.richText %}
     {% include "@organisms/by-author/rich-text.twig" %}
   {% endif %}  
-  {% for actionStep in actionSteps.steps %}
+  {% for actionStep in stepsUnordered.steps %}
     {% include "@molecules/action-step.twig" %}
   {% endfor %}
 </section>

@@ -1,9 +1,9 @@
-<section class="ma__action-seq-list">
-  <ol class="ma__action-seq-list__items">
+<section class="ma__steps-ordered">
+  <ol class="ma__steps-ordered__items">
     {% for item in actionSeqLists %}
-      <li class="ma__action-seq-list__item">
-        <h4 class="ma__action-seq-list__title">{{item.title}}</h4>
-        <div class="ma__action-seq-list__content">
+      <li class="ma__steps-ordered__item">
+        <h4 class="ma__steps-ordered__title">{{item.title}}</h4>
+        <div class="ma__steps-ordered__content">
           {% set richText = item.richText %}
           {% include "@organisms/by-author/rich-text.twig" %}
         </div>
