@@ -305,6 +305,30 @@
           "details":""
         }]
       }]
+    },
+
+    "linkList" : {
+      "compHeading": {
+        "title": "Related"
+      },
+      "stacked": true,
+      "links" : [{
+        "url":"#",
+        "text":"Log in to UI Online for recipients",
+        "info": "",
+        "property": ""
+      },{
+        "url":"#",
+        "text":"Appeal UI decision",
+        "info": "",
+        "property": ""
+      },{
+        "url":"#",
+        "text":"Apply for a job training program",
+        "info": "",
+        "property": ""
+      }]
     }
+
   }
 }

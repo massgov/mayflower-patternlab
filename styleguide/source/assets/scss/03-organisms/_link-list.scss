@@ -45,4 +45,11 @@
   &__item {
     padding: 5px 0;
   }
+
+  .sidebar &__item + &__item {
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin-top: 25px;
+    padding-top: 25px;
+  }
 }

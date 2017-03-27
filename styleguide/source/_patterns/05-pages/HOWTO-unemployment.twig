@@ -7,8 +7,8 @@
   {% include "@organisms/by-author/action-steps.twig" %}
 {% endblock %}
 {% block sidebar %}
-  {% include "@organisms/by-author/sidebar-contact.twig" %}
-  {% include "@organisms/by-author/sidebar-widget.twig" %}
+  {% set linkList = sidebar.linkList %}
+  {% include "@organisms/by-author/link-list.twig" %}
 {% endblock %}
 {% block postContent %}
 {% endblock %}

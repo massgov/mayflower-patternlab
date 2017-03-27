@@ -12,6 +12,7 @@
     {% endblock %}
   </div>
   <div class="main-content main-content--two">
+
     <div class="page-content">
       {% if sidebar.contactUs %}
         <div class="ma__details__top-contact">
@@ -31,6 +32,7 @@
         {% endblock %}
       </div>
     </div>
+
     <aside class="sidebar">
       {% if sidebar.contactUs %}
         <div class="ma__details__sidebar-contact">
@@ -39,13 +41,14 @@
         </div>
       {% endif %}
       {% if sidebar %}
-        {% block sidebar %}
-          <div class="ma__details__sidebar">
+        <div class="ma__details__sidebar">
+          {% block sidebar %}
             {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
-          </div>
-        {% endblock %}
+          {% endblock %}
+        </div>
       {% endif %}
     </aside>
+    
   </div>
   <div class="post-content">
     {% block postContent %}
