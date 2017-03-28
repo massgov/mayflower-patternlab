@@ -121,5 +121,19 @@
         "text" : "More"
       }]
     }]
+  },
+
+  "linkList" : {
+    "title": "Related Topics",
+    "links" : [{
+      "url":"#",
+      "text":"Hunting & Fishing"
+    },{
+      "url":"#",
+      "text":"Outdoor Activities"
+    },{
+      "url":"#",
+      "text":"Conservation & Wildlife"
+    }]
   }
 }
