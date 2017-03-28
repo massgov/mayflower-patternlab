@@ -4,6 +4,7 @@
 * DP-2114 - [pattern lab] Service Page
 * DP-2181 - Update Guide Page in Mayflower
 * DP-2206 - Implement org page level structured data json+ld object in Mayflower 
+* DP-2569 - Change header in Service page 
 
 ## 3.5.0
 ### DS-5

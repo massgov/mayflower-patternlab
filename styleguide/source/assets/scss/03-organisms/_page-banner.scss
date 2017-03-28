@@ -12,7 +12,7 @@ $page-banner-icon-width: $column + $gutter;
     height: 366px;
     margin-bottom: 40px;
   }
-  
+
   &--small,
   &--large {
     @media ($bp-small-min) {
@@ -101,10 +101,11 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--overlay &__content {
-    padding: 25px 0;
+    padding: 25px 20px 25px 0;
 
     @media ($bp-x-small-min) {
       transform: translateY(-50%);
+      padding-right: 0;
     }
 
     &:before {
@@ -147,7 +148,7 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--small &__icon {
-    
+
     @media ($bp-medium-min) {
       width: $column;
     }
@@ -227,7 +228,7 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--small &__icon + &__title {
-    
+
     @media ($bp-medium-min) {
       width: calc(100% - $column);
     }
@@ -235,16 +236,19 @@ $page-banner-icon-width: $column + $gutter;
 
   &__description {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1.813rem;
     letter-spacing: .02em;
     line-height: 2.188rem;
     margin-bottom: 0;
     margin-top: .8em;
 
     @media ($bp-x-small-min) {
-      font-size: 1.813rem;
       transform: skew(30deg);
-    }    
+    }
+
+    @media ($bp-large-min){
+      max-width: 820px;
+    }
   }
 
   &--overlay &__description {
