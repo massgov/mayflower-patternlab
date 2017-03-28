@@ -159,49 +159,78 @@
         {
           "path":"@organisms/by-author/form-downloads.twig",
           "data":{
-            "compHeading": {
-              "title": "Downloads & Links",
-              "sub": true
-            },
-            "actionDownloads": [{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "text": "Online Form: Out-of-Country Driver's License Conversion",
-              "href": "#",
-              "type": "external",
-              "size": "",
-              "format": "form"
-            },
-            {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "text": "Online Form: External link",
-              "href": "#",
-              "type": "external",
-              "size": "",
-              "format": "form"
-            },
-            {
-              "icon": "@atoms/05-icons/svg-doc-docx.twig",
-              "text": "Word download item",
-              "href": "#",
-              "type": "",
-              "size": "40kb",
-              "format": "DOCX"
-            },{
-              "icon": "@atoms/05-icons/svg-doc-generic.twig",
-              "text": "Generic download item",
-              "href": "#",
-              "type": "",
-              "size": "120kb",
-              "format": "CSV"
-            },
-            {
-              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-              "text": "RMV-1 Form",
-              "href": "#",
-              "type": "",
-              "size": "259KB",
-              "format": "PDF"
-            }]
+            "formDownloads": {
+              "compHeading": {
+                "title": "Downloads & Links",
+                "sub": true
+              },
+              "downloadLinks": [{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "decorativeLink": {
+                    "text": "Online Form: Out-of-Country Driver's License Conversion",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "",
+                  "format": "form"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "decorativeLink": {
+                    "text": "Online Form: External link",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "",
+                  "format": "form"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                  "decorativeLink": {
+                    "text": "Word download item",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "40kb",
+                  "format": "DOCX"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-doc-generic.twig",
+                  "decorativeLink": {
+                    "text": "Generic download item",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "120kb",
+                  "format": "CSV"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "decorativeLink": {
+                    "text": "RMV-1 Form",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "259KB",
+                  "format": "PDF"
+                }
+              }]
+            }
           }
         }
       ],
