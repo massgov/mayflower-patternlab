@@ -262,4 +262,12 @@ $page-banner-icon-width: $column + $gutter;
     transform: skew(0);
     z-index: 1;
   }
+
+  &--columns &__image {
+    height: 460px;
+    position: absolute;
+      right: 0;
+      top: 0;
+    width: 820px;
+  }
 }

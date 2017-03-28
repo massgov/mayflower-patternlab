@@ -13,11 +13,11 @@
   },
 
   "pageBanner": {
-    "bgWide": "/assets/images/placeholder/1600x400.png",
-    "bgNarrow": "/assets/images/placeholder/800x400.png",
-    "size": "small",
+    "bgWide": "/assets/images/placeholder/820x460.png",
+    "bgNarrow": "/assets/images/placeholder/820x460.png",
+    "size": "columns",
     "icon": "atoms-svg-lg-picnic-table",
-    "title": "State Parks & Recreation"
+    "title": "State Parks & Recreation",
     "description": "First line of this Topic that feeds description on cards.  Additional overview of this topic can be a couple of sentences long.  If it goes longer should the image size remain the same?"
   },
 

@@ -10,17 +10,19 @@
 
 
 <section class="ma__page-banner {{ sizeClass }} {{ colorClass }}">
-  <style>
-    .ma__page-banner {
-      background-image: url('{{ pageBanner.bgNarrow }}');
-    }
-
-    @media (min-width: 801px) {
+  {% if not pageBanner.size == "columns" %}
+    <style>
       .ma__page-banner {
-        background-image: url('{{ pageBanner.bgWide }}');
+        background-image: url('{{ pageBanner.bgNarrow }}');
       }
-    }
-  </style>
+
+      @media (min-width: 801px) {
+        .ma__page-banner {
+          background-image: url('{{ pageBanner.bgWide }}');
+        }
+      }
+    </style>
+  {% endif %}
   <div class="ma__page-banner__container">
     <div class="ma__page-banner__content" property="mainEntityOfPage">
       {% if pageBanner.icon %}
@@ -40,5 +42,24 @@
         </p>
       {% endif %}
     </div>
+    {% if pageBanner.description and ( pageBanner.size and pageBanner.size == "columns" ) %}
+      <p class="ma__page-banner__description">
+        {{ pageBanner.description }}
+      </p>
+    {% endif %}
+    {% if pageBanner.size and pageBanner.size == "columns" %}
+      <style>
+        .ma__page-banner__image {
+          background-image: url('{{ pageBanner.bgNarrow }}');
+        }
+
+        @media (min-width: 801px) {
+          .ma__page-banner__image {
+            background-image: url('{{ pageBanner.bgWide }}');
+          }
+        }
+      </style>
+      <div class="ma__page-banner__image"></div>
+    {% endif %}
   </div>
 </section>
