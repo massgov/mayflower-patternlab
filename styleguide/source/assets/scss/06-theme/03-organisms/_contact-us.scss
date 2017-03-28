@@ -4,16 +4,20 @@
     border-color: $c-bd-divider;
   }
 
-  &__name {
+  &--accordion {
+    border-color: $c-bg-section;
+  }
 
-    svg {
-      fill: $c-theme-green;
-    }
+  &--accordion:not(.is-open) &__header {
+    background-color: $c-bg-section;
+  }
 
-    span {
-      color: $c-font-dark;
-      font-weight: 700;
-    }
+  &--accordion.is-open &__header {
+    background-color: transparent;
+  }
+
+  &--accordion &__header:after {
+    color: $c-theme-green;
   }
 
   &__expand {
@@ -32,5 +36,4 @@
       }
     }
   }
-
 }

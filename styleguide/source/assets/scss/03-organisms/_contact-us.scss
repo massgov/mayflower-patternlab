@@ -1,40 +1,61 @@
 .ma__contact-us {
   @include ma-component-spacing;
 
+
+  & + & {
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  &--accordion {
+    border-width: 2px;
+    border-style: solid;
+  }
+
   // controls for when to activate accordion
   &:before {
     content: "true";
     display: none;
   }
 
-  & + & {
-    border-top: 1px solid;
-    margin-top: 30px;
-    padding-top: 30px;
-  }
+  &--accordion &__header {
+    border: none;
+    display: block;
+    padding: 20px 30px;
+    position: relative;
+    text-align: left;
+    width: 100%;
 
-  &__group {
-    padding-top: 20px;
+    &:after {
+      font-size: 2.5rem;
+      content: "+";
+      line-height: .65em;
+      overflow: hidden;
+      position: absolute;
+        right: 15px;
+        top: 25px;
+      transform-origin: center center;
+      transition: transform .2s ease;
+    }
 
-    &:first-child {
-      padding-top: 0;
+    .ma__column-heading {
+      margin-bottom: 0;
     }
   }
 
-  &__name {
+  &--accordion.is-open &__header:after {
+    transform: rotate(135deg);
+  }
 
-    & > svg {
-      display: inline-block;
-      height: 20px;
-      margin-right: .25em;
-      vertical-align: middle;
-      width: 20px;
-    }
+  &--accordion &__content {
+    padding: 0 30px 30px;
+    padding-right: 40px;
+  }
 
-    span {
-      display: inline-block;
-      vertical-align: middle;
-    }
+  .js &--accordion &__content {
+    display: none;
   }
 
   &__extra {
