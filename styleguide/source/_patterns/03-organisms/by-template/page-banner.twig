@@ -2,10 +2,14 @@
   {% set sizeClass = "ma__page-banner--" ~ pageBanner.size %}
 {% endif %}
 
+{% if pageBanner.color %}
+  {% set colorClass = "ma__page-banner--" ~ pageBanner.color %}
+{% endif %}
+
 {# adding ma__page-banner--child shows a different version #}
 
 
-<section class="ma__page-banner {{ sizeClass }}">
+<section class="ma__page-banner {{ sizeClass }} {{ colorClass }}">
   <style>
     .ma__page-banner {
       background-image: url('{{ pageBanner.bgNarrow }}');
@@ -30,6 +34,11 @@
           <span> {{ pageBanner.titleSubText }}</span>
         {% endif %}
       </h1>
+      {% if pageBanner.description %}
+        <p class="ma__page-banner__description">
+          {{ pageBanner.description }}
+        </p>
+      {% endif %}
     </div>
   </div>
 </section>

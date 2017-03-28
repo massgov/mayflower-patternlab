@@ -5,6 +5,8 @@
     "size": "small",
     "icon": "@atoms/05-icons/svg-lg-picnic-table.twig",
     "title": "State Parks & Recreation",
-    "titleSubText": ""
+    "titleSubText": "",
+    "description": "",
+    "color": null
   }
 }

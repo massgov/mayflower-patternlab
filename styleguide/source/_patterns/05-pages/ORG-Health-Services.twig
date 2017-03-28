@@ -13,3 +13,9 @@
 {% block postContent %}
 
 {% endblock %}
+{% block schemaContent %}
+  {% if schema.governmentOrganization %}
+    {% set governmentOrganization = schema.governmentOrganization %}
+    {% include "@meta/schema/government-organization.twig" %}
+  {% endif %}
+{% endblock %}

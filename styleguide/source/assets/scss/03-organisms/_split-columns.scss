@@ -11,14 +11,29 @@
   }
 
   &__column {
-    margin-bottom: 45px;
+    @include ma-component-spacing;
 
     // two items (50/50)
     &:first-child:nth-last-child(2),
     &:first-child:nth-last-child(2) ~ & {
       
       @media($bp-medium-min) {
-        @include span-columns(3 of 6);
+        @include span-columns(2 of 4);
+      }
+    }
+    @media($bp-x-large-min) {
+      &:first-child:nth-last-child(2),
+      &:first-child:nth-last-child(2) ~ & {
+        margin: 0;
+        width: 50%;
+      }
+
+      &:first-child:nth-last-child(2) {
+        padding-right: ($column + $gutter) /2;
+      }
+
+      &:first-child:nth-last-child(2) ~ & {
+        padding-left: ($column + $gutter) /2;
       }
     }
 
@@ -35,16 +50,13 @@
     .main-content--two &:first-child:nth-last-child(2),
     .main-content--two &:first-child:nth-last-child(2) ~ & {
       @media($bp-large-min) {
+        // restack when page-content becomes 2/3
         @include span-columns(12);
       }
 
       @media($bp-x-large-min) {
         @include span-columns(2 of 4);
       }
-    }
-
-    & > :last-child {
-      margin-bottom: 0;
     }
   }
 }
