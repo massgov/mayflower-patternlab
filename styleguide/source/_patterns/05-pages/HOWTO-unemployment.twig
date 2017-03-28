@@ -1,5 +1,11 @@
 {% extends '@templates/01-content-types/details.twig' %}
 
+
+{% block header %}
+  {% include "@organisms/by-template/header.twig" %}
+{% endblock %}
+
+
 {% block pageContent %}
   {% set richText = pageContent.intro %}
   {% include "@organisms/by-author/rich-text.twig" %}
@@ -13,12 +19,20 @@
   {% include "@organisms/by-author/form-downloads.twig" %}
   {% set contactList = pageContent.contactList %}
   {% include "@organisms/by-author/contact-list.twig" %}
-
 {% endblock %}
+
+
 {% block sidebar %}
   {% set linkList = sidebar.linkList %}
   {% include "@organisms/by-author/link-list.twig" %}
 {% endblock %}
-{% block postContent %}
+
+
+{% block postContent %}{% endblock %}
+
+
+{% block footer %}
+  {% include "@organisms/by-template/footer.twig" %}
 {% endblock %}
+
 

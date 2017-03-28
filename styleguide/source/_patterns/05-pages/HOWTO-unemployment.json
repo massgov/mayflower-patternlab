@@ -306,7 +306,10 @@
     "formDownloads": {
       "compHeading": {
         "title": "Downloads",
-        "sub": true
+        "sub": true,
+        "color": "",
+        "id": "downloads",
+        "centered": ""
       },
       "downloadLinks": [{
         "downloadLink": {
@@ -326,10 +329,10 @@
 
     "contactList": {
       "compHeading": {
-        "title": "Contacts",
+        "title": "Contact",
         "sub": true,
         "color": "",
-        "id": "contacts",
+        "id": "contact",
         "centered": ""
       },
 
