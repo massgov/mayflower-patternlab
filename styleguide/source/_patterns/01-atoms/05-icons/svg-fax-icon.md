@@ -5,7 +5,7 @@ title: Fax Icon
 
 ### Used In:
 - [@molecules/action-step](/?p=molecules-action-step)
-- [@organisms/by-author/contact-us](/?p=organisms-contact-us)
+- [@molecules/contact-us](/?p=molecules-contact-us)
 - [@molecules/contact-group](/?p=molecules-contact-group)
 - [@molecules/header-contact](/?p=molecules/header-contact)
 - [@organisms/by-author/steps-unordered](/?p=organisms/steps-unordered)

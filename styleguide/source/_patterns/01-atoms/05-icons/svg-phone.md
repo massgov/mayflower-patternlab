@@ -8,7 +8,7 @@ Description: Icon for phone numbers
 ### Used In:
 - [@molecules/action-step](/?p=molecules-action-step)
 - [@molecules/contact-group](/?p=molecules-contact-group)
-- [@organisms/by-author/contact-us](/?p=organisms-contact-us)
+- [@molecules/contact-us](/?p=molecules-contact-us)
 - [@molecules/header-contact](/?p=molecules-header-contact)
 - [@organisms/by-author/steps-unordered](/?p=organisms/steps-unordered)
 - [@organisms/by-author/multi-row-section](/?p=organisms/multi-row-section)

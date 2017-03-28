@@ -157,7 +157,7 @@
           }
         },
         {
-          "path":"@organisms/by-author/form-download.twig",
+          "path":"@organisms/by-author/form-downloads.twig",
           "data":{
             "compHeading": {
               "title": "Downloads & Links",
@@ -214,7 +214,7 @@
           }
         }
       },{
-        "path": "@organisms/by-author/contact-us.twig",
+        "path": "@molecules/contact-us.twig",
         "data": {
           "contactUs": {
             "subTitle": {

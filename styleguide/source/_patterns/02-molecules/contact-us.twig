@@ -12,15 +12,6 @@
 <section 
   class="ma__contact-us {{ accordionClass }} {{ contactUs.isExpanded ? 'is-open':'' }}">
 
-  {% if contactUs.compHeading %}
-    {% set compHeading = contactUs.compHeading %}
-    {% include "@atoms/04-headings/comp-heading.twig" %}
-  {% endif %}
-  {% if contactUs.sidebarHeading %}
-    {% set sidebarHeading = contactUs.sidebarHeading %}
-    {% include "@atoms/04-headings/sidebar-heading.twig" %}
-  {% endif %}
-
   {% if contactUs.subTitle %}
     {% if outerAccordion %}
       <button class="ma__contact-us__header js-accordion-link" type="button">

@@ -25,10 +25,6 @@ contactUs: {
     isExpanded:
         type: boolean
 
-    compHeading: {
-        type: object/optional - see @atoms/04-headings/comp-heading.md
-    }
-
     subTitle: {
         type: object/optional - see @atoms/04-headings/column-heading.md
     }
