@@ -86,11 +86,13 @@ $bp-illustrated-header-image-width: 360px;
     padding: 0;
 
     &__content {
-      padding-right: 0;
+      padding: 0;
       width: 100%;
     }
 
-    &__intro {
+    .page-content {
+      padding: 0;
+      width: 100%;
     }
   }
 }
