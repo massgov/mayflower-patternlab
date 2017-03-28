@@ -70,7 +70,7 @@
         }
       }
     },{
-      "path": "@molecules/callout-time.twig",
+      "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
           "text": "This usually takes approximately 4 weeks"
