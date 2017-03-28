@@ -35,7 +35,7 @@
       }
     },{
       "accordion": true,
-      "isExpanded": false,
+      "isExpanded": true,
       "accordionLabel": "Expand step for doing this in person",
       "icon":"@atoms/05-icons/svg-circle-chevron.twig",
       "title":"Some Other Method",
