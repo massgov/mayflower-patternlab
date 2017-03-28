@@ -20,39 +20,6 @@
     "title": "State Parks & Recreation"
   },
 
-  "topActions": {
-    "title": "Common Actions",
-    "links": [{
-      "calloutLink": {
-        "type": "",
-        "href": "#",
-        "text": "Get a State Park Pass",
-        "quickaction": ""
-      }
-    },{
-      "calloutLink": {
-        "type": "",
-        "href": "#",
-        "text": "Reserve an Athletic Field",
-        "quickaction": ""
-      }
-    },{
-      "calloutLink": {
-        "type": "",
-        "href": "#",
-        "text": "Plan a Vacation in Massachusetts",
-        "quickaction": ""
-      }
-    },{
-      "calloutLink": {
-        "type": "",
-        "href": "#",
-        "text": "Find a Campground",
-        "quickaction": ""
-      }
-    }]
-  },
-
   "sectionThreeUp" : {
     "compHeading": {
       "title": "More in State Parks & Recreation",
