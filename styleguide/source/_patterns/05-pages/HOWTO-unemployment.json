@@ -326,46 +326,47 @@
   },
 
   "sidebar": {
-    "contactUs": {
-      "schemaSd": "",
+    "contactList": {
       "sidebarHeading":{
         "title": "Contact"
       },
-      "subTitle": {
-        "href":"",
-        "text": "Department of Unemployement Assistance",
-        "chevron":""
-      },
-      "groups": [{
-        "icon": "@atoms/05-icons/svg-phone.twig",
-        "name": "Phone",
-        "items": [{
-          "type": "phone",
-          "property": "",
-          "label":"Main:",
-          "link": {
-            "href": "+16174438765",
-            "text": "(617) 443-8765",
-            "info": "",
-            "property": ""
-          },
-          "details":""
-        }]
-      },{
-        "icon": "@atoms/05-icons/svg-laptop.twig",
-        "name": "Online",
-        "hidden": "",
-        "items": [{
-          "type": "online",
-          "property": "",
-          "label":"Web:",
-          "link": {
-            "href":"#",
-            "text": "Contact Form",
-            "info": "",
-            "property": ""
-          },
-          "details":""
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Department of Unemployement Assistance",
+          "chevron":""
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+16174438765",
+              "text": "(617) 443-8765",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"Web:",
+            "link": {
+              "href":"#",
+              "text": "Contact Form",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
         }]
       }]
     },

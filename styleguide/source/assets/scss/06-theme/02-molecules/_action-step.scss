@@ -1,7 +1,7 @@
 .ma__action-step {
 
   &--accordion {
-    border-color: $c-bg-section;
+    border-color: $c-bd-divider;
   }
 
   &--accordion:not(.is-open) &__header {

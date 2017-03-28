@@ -1,6 +1,4 @@
 .ma__contact-us {
-  @include ma-component-spacing;
-
 
   & + & {
     border-top-width: 1px;
@@ -12,6 +10,10 @@
   &--accordion {
     border-width: 2px;
     border-style: solid;
+  }
+
+  &--accordion + &--accordion {
+    padding-top: 0;
   }
 
   // controls for when to activate accordion
