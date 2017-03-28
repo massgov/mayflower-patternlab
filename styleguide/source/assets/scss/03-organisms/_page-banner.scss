@@ -271,8 +271,9 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__description {
+    @include span-columns(4 of 12);
     margin-top: 0;
-    width: 400px;
+    //width: 400px;
     padding: 50px 0;
     position: relative;
       top: 50px;
