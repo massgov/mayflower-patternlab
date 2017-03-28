@@ -290,7 +290,7 @@
             },
             "downloadLinks": [{
               "downloadLink": {
-                "iconSize": "",
+                "iconSize": "small",
                 "icon": "@atoms/05-icons/svg-doc-pdf.twig",
                 "decorativeLink": {
                   "text": "Work Search Activity Log",
@@ -303,7 +303,7 @@
               }
             },{
               "downloadLink": {
-                "iconSize": "",
+                "iconSize": "small",
                 "icon": "@atoms/05-icons/svg-doc-docx.twig",
                 "decorativeLink": {
                   "text": "Name of Doc",
