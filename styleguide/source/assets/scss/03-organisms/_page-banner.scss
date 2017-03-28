@@ -252,4 +252,14 @@ $page-banner-icon-width: $column + $gutter;
   &--overlay &__description {
     transform: skew(0);
   }
+
+  &--columns &__description {
+    margin-top: 0;
+    width: 400px;
+    padding: 50px 0;
+    position: relative;
+      top: 50px;
+    transform: skew(0);
+    z-index: 1;
+  }
 }

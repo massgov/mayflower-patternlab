@@ -52,4 +52,9 @@ $page-banner-inner-width: 612px;
     color: $c-font-inverse;
     font-weight: 500;
   }
+
+  &--columns &__description {
+    color: $c-font-base;
+    font-weight: 400;
+  }
 }

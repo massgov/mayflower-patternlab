@@ -18,6 +18,7 @@
     "size": "small",
     "icon": "atoms-svg-lg-picnic-table",
     "title": "State Parks & Recreation"
+    "description": "First line of this Topic that feeds description on cards.  Additional overview of this topic can be a couple of sentences long.  If it goes longer should the image size remain the same?"
   },
 
   "sectionThreeUp" : {

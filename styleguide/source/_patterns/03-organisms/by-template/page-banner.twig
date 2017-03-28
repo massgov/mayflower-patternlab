@@ -34,7 +34,7 @@
           <span> {{ pageBanner.titleSubText }}</span>
         {% endif %}
       </h1>
-      {% if pageBanner.description %}
+      {% if pageBanner.description and ( pageBanner.size and not pageBanner.size == "columns" ) %}
         <p class="ma__page-banner__description">
           {{ pageBanner.description }}
         </p>
