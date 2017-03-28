@@ -124,7 +124,7 @@ $page-header-widget-width: 350px;
 
     .ma__contact-us {
 
-      &--accordion {
+      &.js-accordion {
         @include clearfix;
 
         // controls for when to activate accordion
@@ -146,7 +146,8 @@ $page-header-widget-width: 350px;
         }
       }
 
-      &--accordion > .ma__contact-group:nth-child(2) {
+      // more than two contacts
+      .ma__contact-group:nth-child(2):nth-last-child(3) {
         @media print, ($bp-small-min) {
           border-right-width: 1px;
           border-right-style: solid;
@@ -158,7 +159,7 @@ $page-header-widget-width: 350px;
         }
       }
 
-      &--accordion > .ma__contact-us__extra {
+      &__extra {
         @media print, ($bp-small-min) {
           border-left-width: 1px;
           border-left-style: solid;

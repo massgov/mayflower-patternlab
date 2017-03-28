@@ -11,8 +11,8 @@
 
   &__optional-content {
     @media print, ($bp-small-min) {
-      .ma__contact-us--accordion > .ma__contact-group:nth-child(2),
-      .ma__contact-us--accordion > .ma__contact-us__extra {
+      .ma__contact-us > .ma__contact-group:nth-child(2):nth-last-child(3),
+      .ma__contact-us > .ma__contact-us__extra {
         border-color: $c-bd-divider;
       }
     }
