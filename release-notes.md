@@ -1,11 +1,24 @@
-# Mass Gov Release Notes
+# Mayflower Release Notes
 ## 3.6.0
-### Pillar 1
+### SUMMARY
+If you'd like to read about these changes in JIRA:
 * [DP-2114](https://jira.state.ma.us/browse/DP-2114) - [pattern lab] Service Page
 * [DP-2181](https://jira.state.ma.us/browse/DP-2181) - Update Guide Page in Mayflower
 * [DP-2206](https://jira.state.ma.us/browse/DP-2206) - Implement org page level structured data json+ld object in Mayflower 
 * [DP-2569](https://jira.state.ma.us/browse/DP-2569) - Change header in Service page
-* [DP-2471](https://jira.state.ma.us/browse/DP-2471) - 	Mayflower: guide section with all possible elements
+* [DP-2471](https://jira.state.ma.us/browse/DP-2471) - Mayflower: guide section with all possible elements
+
+### NEW FEATURES
+- Ahem... introducing the latest page type to our family: Services! (Pages > Service Unemployment Benefits).  This is a great page type to use to help surface tons of information related to services, including: branding information, instructional videos, links to how-to's, location information listings, etc.
+- We're making Org Landing Pages (Pages > Org Landing Page) more machine and search friendly by adding a Government Organization structured data pattern (Meta > Schema > Government Organization) to the bottom of the page markup. 
+- For Mayflower implementers, we've created an example Guide page which shows all of the possible elements that can go into a Guide section (Pages > Guide Section Example)  
+
+### IMPROVEMENTS
+- We've revisited the guide page with some updates.  We've consolidated the formerly 3 guide pages into one shiny new guide page with just those components that our content friends have identified as being pertinent:
+  - removed the testimony component
+  - alerts links are now optional
+  - section key agencies are now optional
+  - the related guides show the guide card treatment as opposed to the related pages image thumbnail treatment.
 
 ## 3.5.0
 ### DS-5
