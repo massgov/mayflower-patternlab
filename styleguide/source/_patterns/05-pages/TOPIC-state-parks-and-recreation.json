@@ -18,7 +18,7 @@
     "size": "columns",
     "icon": "atoms-svg-lg-picnic-table",
     "title": "State Parks & Recreation",
-    "description": "First line of this Topic that feeds description on cards.  Additional overview of this topic can be a couple of sentences long.  If it goes longer should the image size remain the same?"
+    "description": "First line of this Topic that feeds description on cards.  This description can span multiple lines.  Is there a size limit?  Does the image size remain the same as the text grows?"
   },
 
   "sectionThreeUp" : {
