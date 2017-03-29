@@ -1,10 +1,11 @@
 # Mass Gov Release Notes
 ## 3.6.0
-### Pillar1
-* DP-2114 - [pattern lab] Service Page
-* DP-2181 - Update Guide Page in Mayflower
-* DP-2206 - Implement org page level structured data json+ld object in Mayflower 
-* DP-2569 - Change header in Service page 
+### Pillar 1
+* [DP-2114](https://jira.state.ma.us/browse/DP-2114) - [pattern lab] Service Page
+* [DP-2181](https://jira.state.ma.us/browse/DP-2181) - Update Guide Page in Mayflower
+* [DP-2206](https://jira.state.ma.us/browse/DP-2206) - Implement org page level structured data json+ld object in Mayflower 
+* [DP-2569](https://jira.state.ma.us/browse/DP-2569) - Change header in Service page
+* [DP-2471](https://jira.state.ma.us/browse/DP-2471) - 	Mayflower: guide section with all possible elements
 
 ## 3.5.0
 ### DS-5
