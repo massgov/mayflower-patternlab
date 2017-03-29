@@ -49,5 +49,11 @@
         {% endif %}
       </ul>
     </nav>
+    {% if sectionLinks.seeAll %}
+      <div class="ma__section-links__footer">
+        {% set decorativeLink = sectionLinks.seeAll %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
+    {% endif %}
   </div>
 </section>

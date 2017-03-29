@@ -29,20 +29,20 @@
         "href" : "#",
         "text" : "Recreation Service"
       },
-      "description":"",
+      "description":"First line of this Service that helps users know it's right.",
       "type": "callout",
       "links" : [{
         "href" : "#",
-        "text" : "Accessible Fishing"
+        "text" : "Service Action 1"
       },
       {
         "href" : "#",
-        "text" : "Accessible Swimming"
-      },
-      {
-        "href" : "#",
-        "text" : "Accessible Hiking"
-      }]
+        "text" : "Service Action 2"
+      }],
+      "seeAll": {
+        "href": "#",
+        "text": "more"
+      }
     },
     {
       "id": "GUIDasjdhf2",
@@ -51,7 +51,7 @@
         "href" : "#",
         "text" : "Active & Team Sports"
       },
-      "description":"",
+      "description":"First line of this Topic that feeds descriptions on cards.  Additional overview information augue ante, egestas nec semper.",
       "links" : [{
         "href" : "#",
         "text" : "Ice Skating"
@@ -63,10 +63,6 @@
       {
         "href" : "#",
         "text" : "Reserve an Athletic Field"
-      },
-      {
-        "href" : "#",
-        "text" : "More"
       }]
     }, 
     {
@@ -76,7 +72,7 @@
         "href" : "/patterns/05-pages-L2-nature-and-outdoor-activities/05-pages-L2-nature-and-outdoor-activities.html",
         "text" : "Nature & Outdoor Activities"
       },
-      "description":"",
+      "description":"First line of this Topic that feeds descriptions on cards.  Additional overview information augue ante, egestas nec semper.",
       "links" : [{
         "href" : "#",
         "text" : "Camping"
@@ -88,11 +84,11 @@
       {
         "href" : "#",
         "text" : "Biking"
-      },
-      {
-        "href" : "#",
-        "text" : "More"
-      }]
+      }],
+      "seeAll": {
+        "href": "#",
+        "text": "more"
+      }
     },
     {
       "id": "GUIDasjdhf4",
@@ -101,7 +97,7 @@
         "href" : "#",
         "text" : "Water Related Activities"
       },
-      "description":"",
+      "description":"First line of this Topic that feeds descriptions on cards.  Additional overview information augue ante, egestas nec semper.",
       "links" : [{
         "href" : "#",
         "text" : "Boating"
@@ -113,11 +109,11 @@
       {
         "href" : "#",
         "text" : "Canoeing"
-      },
-      {
-        "href" : "#",
-        "text" : "More"
-      }]
+      }],
+      "seeAll": {
+        "href": "#",
+        "text": "more"
+      }
     }]
   },
 
