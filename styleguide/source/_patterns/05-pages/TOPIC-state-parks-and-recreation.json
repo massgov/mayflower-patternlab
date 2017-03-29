@@ -27,9 +27,10 @@
       "catIcon": "",
       "title" : {
         "href" : "#",
-        "text" : "Accessible Recreation"
+        "text" : "Recreation Service"
       },
       "description":"",
+      "type": "callout",
       "links" : [{
         "href" : "#",
         "text" : "Accessible Fishing"
@@ -41,10 +42,6 @@
       {
         "href" : "#",
         "text" : "Accessible Hiking"
-      },
-      {
-        "href" : "#",
-        "text" : "More"
       }]
     },
     {

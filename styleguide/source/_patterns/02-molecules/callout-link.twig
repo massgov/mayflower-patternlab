@@ -1,4 +1,5 @@
-<a class="ma__callout-link" href="{{ calloutLink.href }}">
+{% set modifier = modifier ? " ma__callout-link--" ~ modifier : "" %}
+<a class="ma__callout-link{{ modifier }}" href="{{ calloutLink.href }}">
   <span class="ma__callout-link__container">
     <span class="ma__callout-link__text">
       {{ calloutLink.text }}{% if calloutLink.info %}<span class="ma__callout-link__info">{{ calloutLink.info }}</span>{% endif %}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}

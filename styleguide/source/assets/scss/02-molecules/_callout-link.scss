@@ -10,6 +10,10 @@
     padding: 20px 30px;
   }
 
+  &--full {
+    display: flex;
+  }
+
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
