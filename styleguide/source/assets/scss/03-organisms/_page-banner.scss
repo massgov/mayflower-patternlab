@@ -119,20 +119,15 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__content {
-    max-width: 640px; // 1000px
-    position: absolute;
-      //top: 105px;
-      top: 50%;
-
-    @media ($bp-x-small-min) {
-      height: 100%;
-      position: relative;
-        top: 50%;
-      transform: skew(-30deg);
-    }
+    max-width: 640px;
+    position: relative;
+      top: 230px;
 
     @media ($bp-medium-min) {
-      top: 50px;
+      height: 100%;
+      position: relative;
+        top: 50px;
+      transform: skew(-30deg);
     }
   }
 
@@ -280,24 +275,22 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__description {
-    @include ma-container;
     font-size: 1.813rem;
     letter-spacing: .02em;
     line-height: 2.188rem;
     margin-top: 0;
-    padding: 50px 0;
-    position: absolute;
-      top: 100%;
+    padding: 275px 0 20px;
     transform: skew(0);
-    width: calc(100% - 40px);
+    width: calc(100%);
     z-index: 1;
+
+    @media ($bp-x-small-max) {
+      padding-top: 295px;
+    }
 
     @media ($bp-medium-min){
       @include span-columns(4 of 12);
-      padding-right: 0;
-      padding-left: 0;
-      position: relative;
-        top: 50px;
+      padding-top: 100px;
     }
   }
 

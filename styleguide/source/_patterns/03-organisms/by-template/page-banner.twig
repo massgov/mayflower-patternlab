@@ -36,6 +36,9 @@
     </style>
   {% endif %}
   <div class="ma__page-banner__container">
+    {% if pageBanner.size and pageBanner.size == "columns" %}
+      <div class="ma__page-banner__image"></div>
+    {% endif %}
     <div class="ma__page-banner__content" property="mainEntityOfPage">
       {% if pageBanner.icon %}
         <div class="ma__page-banner__icon">
@@ -58,9 +61,6 @@
       <p class="ma__page-banner__description">
         {{ pageBanner.description }}
       </p>
-    {% endif %}
-    {% if pageBanner.size and pageBanner.size == "columns" %}
-      <div class="ma__page-banner__image"></div>
     {% endif %}
   </div>
 </section>
