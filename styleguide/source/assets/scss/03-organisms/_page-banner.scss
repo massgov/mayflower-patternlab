@@ -101,6 +101,7 @@ $page-banner-icon-width: $column + $gutter;
 
     @media ($bp-x-small-min) {
       margin-right: 105px;
+      top: 0;
       transform: skew(-30deg);
     }
   }
