@@ -3,7 +3,7 @@ $page-banner-icon-width: $column + $gutter;
 .ma__page-banner {
   background-size: cover;
   background-position: center center;
-  min-height: 400px;
+  height: 400px;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -27,7 +27,9 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns {
+    height: auto;
     min-height: 450px;
+
     @media ($bp-large-min) {
       margin-bottom: 70px;
     }
@@ -35,8 +37,13 @@ $page-banner-icon-width: $column + $gutter;
 
   &__container {
     @include ma-container;
-    min-height: 450px;
+    height: 100%;
     position: relative;
+  }
+
+  &--columns &__container {
+    height: auto;
+    min-height: 450px;
   }
 
   &--overlay &__container {
@@ -120,9 +127,27 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__content {
+    height: 400px;
     max-width: 640px;
     position: relative;
-      top: 230px;
+    top: 200px;
+
+    &:after {
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 50vw;
+
+      @media ($bp-x-small-min) {
+        left: 99%; // weird gap when skewed is shown
+      }
+
+      @media ($bp-medium-min) {
+        height: 460px;
+      }
+    }
 
     @media ($bp-medium-min) {
       height: 100%;
@@ -280,14 +305,10 @@ $page-banner-icon-width: $column + $gutter;
     letter-spacing: .02em;
     line-height: 2.188rem;
     margin-top: 0;
-    padding: 275px 0 20px;
+    padding: 25px 0 20px;
     transform: skew(0);
     width: calc(100%);
     z-index: 1;
-
-    @media ($bp-x-small-max) {
-      padding-top: 295px;
-    }
 
     @media ($bp-medium-min){
       @include span-columns(4 of 12);
@@ -297,7 +318,7 @@ $page-banner-icon-width: $column + $gutter;
 
   &--columns &__image {
     background-position: 50% 50%;
-    height: 460px;
+    height: 400px;
     position: absolute;
       right: 0;
       top: 0;
@@ -305,6 +326,7 @@ $page-banner-icon-width: $column + $gutter;
 
     @media ($bp-medium-min) {
       @include span-columns(7 of 12);
+      height: 460px;
       right: 40px;
     }
   }
