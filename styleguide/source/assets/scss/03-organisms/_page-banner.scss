@@ -327,6 +327,7 @@ $page-banner-icon-width: $column + $gutter;
     @media ($bp-medium-min) {
       @include span-columns(7 of 12);
       height: 460px;
+      margin-right: 0;
       right: 40px;
     }
   }
