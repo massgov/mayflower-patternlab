@@ -7,6 +7,8 @@ Description: A collection of featured and general links
 ### Notes 
 - If there are more than six general links to display a search filter input will be included.
 - See all link is optional
+- If the wide background image is omitted, an alternative styling is applied.
+- If the narrow background is provided and wide background must also be provided.
 
 ### Contains: 
 - [@molecules/keyword-search.twig](?p=molecules-keyword-search) 
@@ -21,16 +23,18 @@ Description: A collection of featured and general links
 ~~~ 
 {
   actionFinder: {
+    id:
+      type: string/uniqueID/required 
     bgWide:
-      type: string/image-url/required
+      type: string/image-url/optional/(required with bgNarrow)
     bgNarrow:
-      type: string/image-url/required,
+      type: string/image-url/optional
     title:
-      type: string/required,
+      type: string/required
     featuredHeading:
-      type: string/required,
+      type: string/required
     generalHeading:
-      type: string/required,
+      type: string/required
 
     seeAll: {
       href: 

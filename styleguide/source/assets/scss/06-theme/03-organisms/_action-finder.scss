@@ -2,19 +2,44 @@ $action-finder-bg-color: tint($c-theme-blue,89%);
 $action-finder-border-color: tint($c-theme-blue,50%);
 
 .ma__action-finder {
-
+  
   &:after {
     background-image: linear-gradient(180deg, rgba(#000,.6), transparent 90%, transparent);
   }
 
-  &__category {
-    @include ma-font(500);
-    color: $c-font-inverse;
+  &--no-background {
+    background-image: linear-gradient(180deg, $c-white 50px, $c-bg-section 51px);
+  }
+
+  &--no-background + &--no-background {
+    background-image: none;
+    background-color: $c-bg-section;
+  }
+
+
+  &--no-background &__header {
+    background-color: $c-theme-blue;
+
+    &:before {
+      background-color: $c-theme-blue;
+    }
   }
 
   &__title {
-    @include ma-border-decorative($c-theme-yellow,1);
     color: $c-font-inverse;
+  }
+
+  &:not(&--no-background) &__title {
+    @include ma-border-decorative($c-theme-yellow,1);
+  }
+
+  &__category {
+    color: $c-font-inverse;
+    font-wieght: 500;
+  }
+
+  &--no-background &__category {
+    color: $c-font-base;
   }
 
   &__search {
@@ -32,7 +57,6 @@ $action-finder-border-color: tint($c-theme-blue,50%);
     
     .ma__callout-link {
       background-color: $c-white;
-      border-color: transparent;
       box-shadow: none;
     }
 

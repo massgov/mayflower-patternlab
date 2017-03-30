@@ -19,12 +19,16 @@ pageBanner: {
   bgNarrow:
     type: string/required (path to image for narrow screens)
   size:
-    type: string(optional) ('small','large')
+    type: string(optional) ('small', 'large', 'overlay')
   icon:
     type: string/optional (path to icon file),
   title:
     type: string/required
   titleSubText:
-    type: string/optional 
+    type: string/optional
+  description:
+    type: string/optional
+  color: 
+    type: string/optional (null, 'blue') 
 }
 ~~~
