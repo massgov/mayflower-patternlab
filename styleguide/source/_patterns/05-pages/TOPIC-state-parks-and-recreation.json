@@ -33,11 +33,11 @@
       "type": "callout",
       "links" : [{
         "href" : "#",
-        "text" : "Service Action 1"
+        "text" : "Service How-To 1"
       },
       {
         "href" : "#",
-        "text" : "Service Action 2"
+        "text" : "Service Task 2"
       }],
       "seeAll": {
         "href": "#",
