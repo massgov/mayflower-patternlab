@@ -35,7 +35,6 @@
       <ul class="ma__section-links__items">
         {% if linkType == "callout" %}
           {% for calloutLink in sectionLinks.links %}
-            {% set modifier = "full" %}
             <li class="ma__section-links__item">
               {% include "@molecules/callout-link.twig" %}
             </li>
