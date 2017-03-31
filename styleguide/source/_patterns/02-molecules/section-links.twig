@@ -41,6 +41,7 @@
           {% endfor %}
         {% else %}
           {% for decorativeLink in sectionLinks.links %}
+            {% set modifier = "big" %}
             <li class="ma__section-links__item">
               {% include "@atoms/decorative-link.twig" %}
             </li>
@@ -51,6 +52,7 @@
     {% if sectionLinks.seeAll %}
       <div class="ma__section-links__footer">
         {% set decorativeLink = sectionLinks.seeAll %}
+        {% set modifier = "small" %}
         {% include "@atoms/decorative-link.twig" %}
       </div>
     {% endif %}
