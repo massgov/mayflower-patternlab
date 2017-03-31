@@ -1,19 +1,24 @@
 ---
 title: Section links
 ---
-Description: displays a set of links for topic or subtopic.
+Description: displays a set of links in a card layout.
 ## Status: Alpha
 ### Notes:
-- The way the icons are rendered is deprecrated and will need to be updated here once refactored.
+- The way the icons are rendered is deprecated and will need to be updated here once refactored.
 
 ### Contains:
 - [@atoms/05-icons/cat-icon](?p=atoms-cat-icon)
-- [@atoms/decorative-link](?p=atoms-decorative-link)
+- Either:
+  - [@atoms/decorative-link](?p=atoms-decorative-link)
+  - [@molecules/callout-link](?p=molecules-callout-link)
+  
+### Variations:
+- [Section Links with Callout Links](?p=molecules-section-links-callout-links)
 
 ### Used in:
 - [@organisms/by-author/sections-three-up](?p=organisms-sections-three-up)
 
-### Required Variables
+### Variables
 ~~~
 sectionLinks: {
   catIcon: {
@@ -30,11 +35,19 @@ sectionLinks: {
   },
   description:
     type: string
+  type:
+    type: string/optional ("callout" || defaults to "decorative")
   links: [{
     href:
       type: url/required
     text:
       type: string/required
   }]
+  seeAll: {
+    href:
+      type: url
+    text:
+      type: string
+  } / optional
 }
 ~~~

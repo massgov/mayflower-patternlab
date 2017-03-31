@@ -18,6 +18,7 @@
         "text" : "Recreational Licenses & Permits"
       },
       "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
+      "type": "callout",
       "links" : [{
         "href" : "#",
         "text" : "Boating"
@@ -25,11 +26,11 @@
       {
         "href" : "#",
         "text" : "Fishing"
-      },
-      {
+      }],
+      "seeAll" : {
         "href" : "#",
-        "text" : "Hunting"
-      }]
+        "text" : "more"
+      }
     },
     {
       "id": "GUIDasjdhf2",
@@ -85,7 +86,11 @@
       {
         "href" : "#",
         "text" : "Traveling to Massachusetts"
-      }]
+      }],
+      "seeAll" : {
+        "href" : "#",
+        "text" : "more"
+      }
     }]
   }
 }
