@@ -13,7 +13,8 @@ Description: displays a set of links in a card layout.
   - [@molecules/callout-link](?p=molecules-callout-link)
   
 ### Variations:
-- [Section Links with Callout Links](?p=molecules-section-links-callout-links)
+- [Section Links with Callout Links](?p=molecules-section-links-with-callout-links)
+- [Section Links with See All](?p=molecules-section-links-with-see-all)
 
 ### Used in:
 - [@organisms/by-author/sections-three-up](?p=organisms-sections-three-up)
