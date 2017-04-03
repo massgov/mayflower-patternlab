@@ -79,7 +79,11 @@
       {
         "href" : "#",
         "text" : "Water Related Activities"
-      }]
+      }],
+      "seeAll" : {
+        "href" : "#",
+        "text" : "more"
+      }
     }, 
     {
       "id": "GUIDasjdhf3",
@@ -107,7 +111,11 @@
       {
         "href" : "#",
         "text" : "Traveling to Massachusetts"
-      }]
+      }],
+      "seeAll" : {
+        "href" : "#",
+        "text" : "more"
+      }
     }]
   }
 }
