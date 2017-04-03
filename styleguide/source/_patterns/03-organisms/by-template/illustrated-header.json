@@ -6,14 +6,16 @@
     "pageHeader": {
       "title": "Moving to Massachusetts",
       "subTitle": "",
-      "rteElements": [{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "This part of the series will cover residency, employment, health care coverage, education, registering to vote, and taxes — important things to help you settle into your life in the Bay State."
+      "richText":{
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "This part of the series will cover residency, employment, health care coverage, education, registering to vote, and taxes — important things to help you settle into your life in the Bay State."
+            }
           }
-        }
-      }],
+        }]
+      },
       "headerTags": ""
     }
 

@@ -19,50 +19,50 @@
     "titleSubText": "(EOHHS)"
   },
 
-  "actionHeader": {
-    "pageHeader": {
-      "title": "Executive Office of Health and Human Services",
-      "titleNote": "(EOHHS)",
-      "subTitle": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
-      "rteElements": "",
-      "headerTags": ""
-    },
-
-    "contactUs": {
-      "groups": [{
-        "icon": "",
-        "name": "",
-        "items": [{
-          "type": "address",
-          "label": "",
-          "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
-          "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
-          "details": ""
-        }]
-      },{
-        "icon": "@atoms/05-icons/svg-phone.twig",
-        "name": "Phone",
-        "items": [{
-          "type": "phone",
-          "label":"Main:",
-          "value":"(413) 499-4262",
-          "link":"14134994262",
-          "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-        }]
-      },{
-        "icon": "@atoms/05-icons/svg-laptop.twig",
-        "name": "Online",
-        "items": [{
-          "type": "email",
-          "label":"Email:",
-          "value":"email@email.com",
-          "link":"email@email.com",
-          "details":""
-        }]
-      }]
-    },
-
+  "pageHeader": {
     "divider": true,
+    "title": "Executive Office of Health and Human Services",
+    "titleNote": "(EOHHS)",
+    "subTitle": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
+    "headerTags": null,
+    "optionalContents": [{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "groups": [{
+            "icon": "",
+            "name": "",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+              "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
+              "details": ""
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main:",
+              "value":"(413) 499-4262",
+              "link":"14134994262",
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "email",
+              "label":"Email:",
+              "value":"email@email.com",
+              "link":"email@email.com",
+              "details":""
+            }]
+          }]
+        }
+      }
+    }],
     "widgets": [{
       "path": "@atoms/09-media/image.twig",
       "data": {
@@ -84,28 +84,30 @@
     "pageContent": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
-        "rteElements": [{
-          "path": "@atoms/04-headings/heading-2.twig",
-          "data": {
-            "heading2": {
-              "text": "Who We Serve"
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/04-headings/heading-2.twig",
+            "data": {
+              "heading2": {
+                "text": "Who We Serve"
+              }
             }
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph": {
-              "text": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered."
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered."
+              }
             }
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph": {
-              "text": "<a href=\"http://www.google.com\">See news and updates</a>"
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "<a href=\"http://www.google.com\">See news and updates</a>"
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     }],
 

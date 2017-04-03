@@ -8,7 +8,7 @@ title: Fax Icon
 - [@molecules/contact-us](/?p=molecules-contact-us)
 - [@molecules/contact-group](/?p=molecules-contact-group)
 - [@molecules/header-contact](/?p=molecules/header-contact)
-- [@organisms/by-author/action-steps](/?p=organisms/action-steps)
+- [@organisms/by-author/steps-unordered](/?p=organisms/steps-unordered)
 - [@organisms/by-author/multi-row-section](/?p=organisms/multi-row-section)
 - [@organisms/by-author/sidebar-contact](/?p=organisms/sidebar-contact)
 - [@organisms/by-template/action-header](/?p=organisms-action-header)

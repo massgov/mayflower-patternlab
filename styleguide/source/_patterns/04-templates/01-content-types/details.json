@@ -1,0 +1,113 @@
+{
+  "details": {
+    "contentTitle": "The Details"
+  },
+
+  "pageHeader": {
+    "divider": false,
+    "title": "How To page Title",
+    "subTitle": "teaser text",
+    "headerTags": {
+      "taxonomyTerms": [{
+        "url": "#",
+        "term": "Term 1"
+      },{
+        "url": "#",
+        "term": "Term 2"
+      },{
+        "url": "#",
+        "term": "Term 3"
+      },{
+        "url": "#",
+        "term": "Term 4"
+      }]
+    },
+    "optionalContents": [{
+      "path": "@molecules/callout-time.twig",
+      "data": {
+        "calloutTime": {
+          "text": "turn around time for completion"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/key-actions.twig",
+      "data": {
+        "keyActions": {
+          "links":[{
+            "text": "Quick Action",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Eligibility Link",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  },
+
+  "stickyNav": {
+    "anchorLinks":[{
+      "href": "jump link",
+      "text": "jump-link",
+      "info": ""
+    },{
+      "href": "another link",
+      "text": "another-link",
+      "info": ""
+    }]
+  },
+
+  "pageContent": {
+
+  },
+
+  "sidebar": {
+    "contactList": {
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Department name",
+          "chevron":""
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"Web:",
+            "link": {
+              "href":"#",
+              "text": "Contact Form",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    }
+  }
+}

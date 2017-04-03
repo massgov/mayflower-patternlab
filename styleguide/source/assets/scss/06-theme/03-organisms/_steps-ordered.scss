@@ -1,0 +1,10 @@
+.ma__steps-ordered {
+
+  &__item {
+
+    &:before {
+      font-weight: 700;
+      color: $c-theme-green;
+    }
+  }
+}

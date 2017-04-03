@@ -1,0 +1,18 @@
+.ma__details {
+  &__top-contact {
+    
+    .ma__sidebar-heading,
+    .ma__comp-heading {
+      @include ma-heading-colored($c-theme-green);
+    }
+  }
+
+  &__sidebar,
+  &__sidebar-contact {
+    
+    .ma__sidebar-heading,
+    .ma__comp-heading {
+      @include ma-heading-colored($c-bg-comp-title);
+    }
+  }
+}

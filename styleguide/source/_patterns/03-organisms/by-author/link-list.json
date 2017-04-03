@@ -6,28 +6,44 @@
     "stacked": false,
     "links" : [{
       "url":"#",
-      "text":"MassParks"
+      "text":"MassParks",
+      "info": "",
+      "property": ""
     },{
       "url":"#",
-      "text":"Energy & Environmental Affairs (EEA)"
+      "text":"Energy & Environmental Affairs (EEA)",
+      "info": "",
+      "property": ""
     },{
       "url":"#",
-      "text":"Department of Conservation and Recreation (DCR)"
+      "text":"Department of Conservation and Recreation (DCR)",
+      "info": "",
+      "property": ""
     },{
       "url":"#",
-      "text":"Department of Agricultural Resources (DAR)"
+      "text":"Department of Agricultural Resources (DAR)",
+      "info": "",
+      "property": ""
     },{
       "url":"#",
-      "text":"Department of Energy Resources (DOER)"
+      "text":"Department of Energy Resources (DOER)",
+      "info": "",
+      "property": ""
     },{
       "url":"#",
-      "text":"Department of Energy Resources (DOER)"
+      "text":"Department of Energy Resources (DOER)",
+      "info": "",
+      "property": ""
     },{
       "url":"#",
-      "text":"Department of Fish and Game (DFG)"
+      "text":"Department of Fish and Game (DFG)",
+      "info": "",
+      "property": ""
     },{
       "url":"#",
-      "text":"Department of Public Utilities (DPU)"
+      "text":"Department of Public Utilities (DPU)",
+      "info": "",
+      "property": ""
     }]
   }
 }

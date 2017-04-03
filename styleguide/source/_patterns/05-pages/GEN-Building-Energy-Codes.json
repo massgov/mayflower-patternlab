@@ -25,127 +25,129 @@
   },
 
   "pageHeader": {
+    "divider": false,
     "title": "Building Energy Codes",
     "subTitle": "",
-    "rteElements": "",
-    "headerTags": {
-      "taxonomyTerms": ""
-    }
+    "headerTags": null,
+    "optionalContents": null,
+    "widgets": null
   },
 
-  "rteElements": [{
-    "path": "atoms-heading-2",
-    "data": {
-      "heading2" : {
-        "text":"Energy Efficiency Provisions of the State Building Code (780 CMR)"
+  "richText": {
+    "rteElements": [{
+      "path": "atoms-heading-2",
+      "data": {
+        "heading2" : {
+          "text":"Energy Efficiency Provisions of the State Building Code (780 CMR)"
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph" : {
-        "text": "In accordance with the Green Communities Act of 2008, Massachusetts is required to update its building code every three years to be consistent with the most recent version of the International Energy Conservation Code (IECC)."
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "In accordance with the Green Communities Act of 2008, Massachusetts is required to update its building code every three years to be consistent with the most recent version of the International Energy Conservation Code (IECC)."
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph" : {
-        "text": "On June 14, 2016, the Board of Building Regulations and Standards (“Board”) held a public hearing on proposed amendments to the current, Eighth Edition of 780 CMR (the building code) concerning energy standards. Specifically, the Board solicited feedback and took testimony on amendments to 780 CMR 13 (commercial energy efficiency standards), section 11 of 780 CMR 51 (residential energy standards), and 780 CMR 115 Appendix AA (Stretch Energy Code). The Board and Department of Public Safety (“Department”) also took feedback from the public and stakeholders in writing until June 28, 2016."
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "On June 14, 2016, the Board of Building Regulations and Standards (“Board”) held a public hearing on proposed amendments to the current, Eighth Edition of 780 CMR (the building code) concerning energy standards. Specifically, the Board solicited feedback and took testimony on amendments to 780 CMR 13 (commercial energy efficiency standards), section 11 of 780 CMR 51 (residential energy standards), and 780 CMR 115 Appendix AA (Stretch Energy Code). The Board and Department of Public Safety (“Department”) also took feedback from the public and stakeholders in writing until June 28, 2016."
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph" : {
-        "text": "Following the public comment period, the Board reviewed that feedback at its regular meeting on July 19, 2016. On that date, the Board voted recommended changes to the three energy chapters and approved the amendments for publication"
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "Following the public comment period, the Board reviewed that feedback at its regular meeting on July 19, 2016. On that date, the Board voted recommended changes to the three energy chapters and approved the amendments for publication"
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph" : {
-        "text": "The approved amendments were filed with the Office of the Secretary of the Commonwealth, Regulations Division, on July 28, 2016. The effective date of the new energy provisions in 780 CMR is therefore August 12, 2016."
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "The approved amendments were filed with the Office of the Secretary of the Commonwealth, Regulations Division, on July 28, 2016. The effective date of the new energy provisions in 780 CMR is therefore August 12, 2016."
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph": {
-        "text": "<a href=\"http://www.mass.gov/eopss/consumer-prot-and-bus-lic/license-type/buildings/amendments-to-780-cmr-effective-august-12-2016.html\" target=\"_blank\">learn more</a>"
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "<a href=\"http://www.mass.gov/eopss/consumer-prot-and-bus-lic/license-type/buildings/amendments-to-780-cmr-effective-august-12-2016.html\" target=\"_blank\">learn more</a>"
+        }
       }
-    }
-  },{
-    "path": "atoms-heading-2",
-    "data": {
-      "heading2" : {
-        "text":"Stretch Code Summary"
+    },{
+      "path": "atoms-heading-2",
+      "data": {
+        "heading2" : {
+          "text":"Stretch Code Summary"
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph" : {
-        "text": "In 2009, Massachusetts became the first state to adopt an above-code appendix to the \"base\" building energy code-the \"Stretch Code\" (780 CMR Appendix 115.AA). The Stretch Code, which emphasizes energy performance, as opposed to prescriptive requirements, is designed to result in cost-effective construction that is more energy efficient than that built to the \"base\" energy code. Alongside the base code update to the IECC2015, the Stretch Code is being updated, and is referred to as the 2015 Stretch code update."
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph" : {
+          "text": "In 2009, Massachusetts became the first state to adopt an above-code appendix to the \"base\" building energy code-the \"Stretch Code\" (780 CMR Appendix 115.AA). The Stretch Code, which emphasizes energy performance, as opposed to prescriptive requirements, is designed to result in cost-effective construction that is more energy efficient than that built to the \"base\" energy code. Alongside the base code update to the IECC2015, the Stretch Code is being updated, and is referred to as the 2015 Stretch code update."
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph": {
-        "text": "<a href=\"http://www.mass.gov/eopss/docs/dps/buildingcode/inf4/bbrs-780-cmr-appendix115aa-aug16.pdf\" target=\"_blank\">download (PDF)</a>"
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "<a href=\"http://www.mass.gov/eopss/docs/dps/buildingcode/inf4/bbrs-780-cmr-appendix115aa-aug16.pdf\" target=\"_blank\">download (PDF)</a>"
+        }
       }
-    }
-  },{
-    "path": "atoms-heading-2",
-    "data": {
-      "heading2" : {
-        "text":"Stretch code \"Residential Cash Flow Analysis\""
+    },{
+      "path": "atoms-heading-2",
+      "data": {
+        "heading2" : {
+          "text":"Stretch code \"Residential Cash Flow Analysis\""
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph": {
-        "text": "In 2015-2016, DOER hired an independent building energy consulting firm to look at the cost-benefit trade-off of building new single-family and multi-family homes to the 2015 Stretch Code update.  There are examples of both natural gas heated and non-gas heated homes, all of which show that homeowners see a positive cash-flow from day 1 from purchasing a 2015 stretch code home vs. a 2015 base code compliant home."
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "In 2015-2016, DOER hired an independent building energy consulting firm to look at the cost-benefit trade-off of building new single-family and multi-family homes to the 2015 Stretch Code update.  There are examples of both natural gas heated and non-gas heated homes, all of which show that homeowners see a positive cash-flow from day 1 from purchasing a 2015 stretch code home vs. a 2015 base code compliant home."
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph": {
-        "text": "Stretch Code Adoption by Community  pdf format of Stretch Code Adoption by Community"
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "Stretch Code Adoption by Community  pdf format of Stretch Code Adoption by Community"
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph": {
-        "text": "Municipalities may choose to adopt the Stretch Code in lieu of the base building energy code. Stretch code adoption is mandatory for designation as a \"Green Community\"under the GCA. As of October 4, 2016, 180 municipalities have adopted the Stretch Code, with more expected in the upcoming months. Building code officials have received free code training."
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "Municipalities may choose to adopt the Stretch Code in lieu of the base building energy code. Stretch code adoption is mandatory for designation as a \"Green Community\"under the GCA. As of October 4, 2016, 180 municipalities have adopted the Stretch Code, with more expected in the upcoming months. Building code officials have received free code training."
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph": {
-        "text": "<a href=\"http://www.mass.gov/eea/energy-utilities-clean-tech/energy-efficiency/policies-regs-for-ee/stretch-code-residential-cash-flow-analysis.html\" target=\"_blank\">learn more</a>"
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "<a href=\"http://www.mass.gov/eea/energy-utilities-clean-tech/energy-efficiency/policies-regs-for-ee/stretch-code-residential-cash-flow-analysis.html\" target=\"_blank\">learn more</a>"
+        }
       }
-    }
-  },{
-    "path": "atoms-heading-2",
-    "data": {
-      "heading2" : {
-        "text":"Massachusetts Energy Code Training"
+    },{
+      "path": "atoms-heading-2",
+      "data": {
+        "heading2" : {
+          "text":"Massachusetts Energy Code Training"
+        }
       }
-    }
-  },{
-    "path": "atoms-paragraph",
-    "data": {
-      "paragraph": {
-        "text": "The Mass Save statewide energy efficiency program in coordination with the Board of Building Regulations and Standards (BBRS) and the Department of Energy Resources (DOER) is continuing to sponsor training on the building energy code, including the Stretch Code, at various locations around the state. The training is open to all, and developed to serve both building officials and other building professionals (e.g., builders & architects). Training is free for building officials, and counts toward the new BBRS requirement that building officials be trained in energy efficiency. Other building professionals pay a nominal fee for the training, and may receive continuing education units (CEU's) for attending."
+    },{
+      "path": "atoms-paragraph",
+      "data": {
+        "paragraph": {
+          "text": "The Mass Save statewide energy efficiency program in coordination with the Board of Building Regulations and Standards (BBRS) and the Department of Energy Resources (DOER) is continuing to sponsor training on the building energy code, including the Stretch Code, at various locations around the state. The training is open to all, and developed to serve both building officials and other building professionals (e.g., builders & architects). Training is free for building officials, and counts toward the new BBRS requirement that building officials be trained in energy efficiency. Other building professionals pay a nominal fee for the training, and may receive continuing education units (CEU's) for attending."
+        }
       }
-    }
-  }],
+    }]
+  },
 
   "sidebarPromos":[{
     "sidebarHeading": {
