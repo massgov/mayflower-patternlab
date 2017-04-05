@@ -21,6 +21,10 @@
 
   }
 
+  &__footer {
+    border-top-color: $c-bd-divider;
+  }
+
   &__title {
 
     @media ($bp-x-small-min) {

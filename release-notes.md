@@ -1,4 +1,20 @@
 # Mayflower Release Notes
+
+## 3.7.0
+### SUMMARY
+We've updated the topic page!
+
+If you'd like to read about this changes in JIRA:
+
+* [DP-2117](https://jira.state.ma.us/browse/DP-2117) - [pattern lab] Topic Page Updates
+
+### Improvements
+* We've updated the Topic page! (Pages > Topic State Parks and Recreation) - and we're talking more than just a new name (no more L1's here!):
+   * The new header layout includes a a spot for a description and a nifty new image size.
+    * We've introduced some new variations to the card component (Molecules > Section Links) on the Topic Page:
+        * You can now choose between regular links (by default) or callout links (Molecules > Section Links Callout Links).  This will help to call out How-To's and tasks associated with a service on a given topic page.
+        * For those times when we don't want to fill the card up with too many links but we want people to know there are more goodies, we've add an optional more link to the bottom of the card.   
+
 ## 3.6.0
 ### SUMMARY
 If you'd like to read about these changes in JIRA:
