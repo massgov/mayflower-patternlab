@@ -1,12 +1,15 @@
 # Mayflower Release Notes
 
+## 3.8.0
+* [DP-2401](https://jira.state.ma.us/browse/DP-2401) - [a11y] The close button is announced as "close plus".
+* [DP-2399](https://jira.state.ma.us/browse/DP-2399) - [a11y] The site name is not announced correctly in Voiceover
+ 
+
 ## 3.7.0
 ### SUMMARY
 We've updated the topic page!
 
 If you'd like to read about this changes in JIRA:
-* [DP-2401](https://jira.state.ma.us/browse/DP-2401) - [a11y] The close button is announced as "close plus".
-* [DP-2399](https://jira.state.ma.us/browse/DP-2399) - [a11y] The site name is not announced correctly in Voiceover
 * [DP-2117](https://jira.state.ma.us/browse/DP-2117) - [pattern lab] Topic Page Updates
 
 ### Improvements
