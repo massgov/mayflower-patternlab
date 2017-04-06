@@ -3,7 +3,6 @@ $page-banner-inner-width: 612px;
 .ma__page-banner {
 
   &__container {
-
     &:before {
       background-color: rgba($c-theme-green, 0.8);
     }
@@ -35,6 +34,18 @@ $page-banner-inner-width: 612px;
     background-image: none;
   }
 
+  &--columns &__content {
+    &:after {
+      background-color: rgba($c-theme-green,.7);
+    }
+
+    @media ($bp-x-small-min) {
+      &:after {
+        background-color: transparent;
+      }
+    }
+  }
+
   &__icon {
 
     svg,
@@ -51,5 +62,10 @@ $page-banner-inner-width: 612px;
   &__description {
     color: $c-font-inverse;
     font-weight: 500;
+  }
+
+  &--columns &__description {
+    color: $c-font-base;
+    font-weight: 400;
   }
 }
