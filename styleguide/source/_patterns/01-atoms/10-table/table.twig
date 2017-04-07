@@ -1,5 +1,9 @@
 {% set tableHeaderRow = table.head.rows|last %}
-<table class="ma__table">
+
+{% if tableHeaderRow.cells|length > 3 %}
+  {% set tableWideClass = "ma__table--wide" %}
+{% endif %}
+<table class="ma__table {{ tableWideClass }}">
   <thead>
     {% for row in table.head.rows %}
     <tr>

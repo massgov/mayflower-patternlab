@@ -39,5 +39,80 @@
 
 .ma__table {
   
+  @media ($bp-small-max) {
+    display: block;
 
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+    }
+
+    tr {
+      display: block;
+    }
+
+    td,
+    th {
+      display: block;
+      padding-left: 40% !important;
+      position: relative;
+
+      &:before {
+        content: attr(data-label);
+        height: 100%;
+        position: absolute;
+          top: 10px;
+          left: 0;
+        text-align: right;
+        width: 35%;
+      }
+    }
+
+    th {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+.ma__table--wide {
+  
+  @media ($bp-medium-max) {
+    display: block;
+
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+    }
+
+    tr {
+      display: block;
+    }
+
+    td,
+    th {
+      display: block;
+      padding-left: 40% !important;
+      position: relative;
+
+      &:before {
+        content: attr(data-label);
+        height: 100%;
+        position: absolute;
+          top: 10px;
+          left: 0;
+        text-align: right;
+        width: 35%;
+      }
+    }
+
+    th {
+      font-size: 1.375rem;
+    }
+  }
 }

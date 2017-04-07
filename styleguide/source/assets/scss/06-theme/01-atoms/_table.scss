@@ -16,3 +16,39 @@
     border-color: $c-bd-divider;
   }
 }
+
+.ma__table {
+  
+  @media ($bp-small-max) {
+    td {
+      
+      &:before {
+        color: $c-font-heading;
+        font-weight: 500;
+      }
+    }
+
+    th {
+      color: $c-font-heading;
+      background-color: $c-bg-subtle;
+    }
+  }
+}
+
+.ma__table--wide {
+  
+  @media ($bp-medium-max) {
+    td {
+      
+      &:before {
+        color: $c-font-heading;
+        font-weight: 500;
+      }
+    }
+
+    th {
+      color: $c-font-heading;
+      background-color: $c-bg-subtle;
+    }
+  }
+}
