@@ -1,6 +1,12 @@
 .ma__action-downloads {
   @include ma-component-spacing;
 
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container('restricted');
+  }
+
   &__item {
     @include clearfix;
   }
@@ -32,8 +38,6 @@
         white-space: nowrap;
       }
     }
-
-
   }
 
   &__icon {
@@ -59,5 +63,4 @@
       }
     }
   }
-
 }
