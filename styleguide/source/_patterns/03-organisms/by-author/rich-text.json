@@ -190,7 +190,7 @@
         "table": {
           "head": {
             "rows": [{
-              "rowSpanOffset":"0",
+              "rowSpanOffset":false,
               "cells":[{
                 "heading": "true",
                 "colspan": "",
@@ -213,7 +213,7 @@
           },
           "bodies": [{
             "rows": [{
-              "rowSpanOffset":"0",
+              "rowSpanOffset":false,
               "cells":[{
                 "heading": "true",
                 "colspan": "",
@@ -234,7 +234,7 @@
               }]
             },
             {
-              "rowSpanOffset":"1",
+              "rowSpanOffset":true,
               "cells":[{
                 "heading": "false",
                 "colspan": "",
@@ -249,7 +249,7 @@
               }]
             },
             {
-              "rowSpanOffset":"1",
+              "rowSpanOffset":true,
               "cells":[{
                 "heading": "false",
                 "colspan": "",
@@ -263,7 +263,7 @@
               }]
             },
             {
-              "rowSpanOffset":"1",
+              "rowSpanOffset":true,
               "cells":[{
                 "heading": "false",
                 "colspan": "",
@@ -280,7 +280,7 @@
           },
           {
             "rows": [{
-              "rowSpanOffset":"0",
+              "rowSpanOffset":false,
               "cells":[{
                 "heading": "true",
                 "colspan": "",
@@ -301,7 +301,7 @@
               }]
             },
             {
-              "rowSpanOffset":"1",
+              "rowSpanOffset":true,
               "cells":[{
                 "heading": "false",
                 "colspan": "",
@@ -316,7 +316,7 @@
               }]
             },
             {
-              "rowSpanOffset":"1",
+              "rowSpanOffset":true,
               "cells":[{
                 "heading": "false",
                 "colspan": "",
@@ -330,7 +330,7 @@
               }]
             },
             {
-              "rowSpanOffset":"1",
+              "rowSpanOffset":true,
               "cells":[{
                 "heading": "false",
                 "colspan": "",
