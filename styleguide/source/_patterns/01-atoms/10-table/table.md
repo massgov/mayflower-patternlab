@@ -21,7 +21,7 @@ table {
                     type: boolean
                 cells [
                     heading:
-                        type: string ("true" || "false") / required
+                        type: boolean
                     colspan:
                         type: string (number)
                     rowspan:
