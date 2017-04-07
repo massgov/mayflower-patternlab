@@ -1,9 +1,13 @@
-<table>
+{% set tableHeaderRow = table.head.rows|last %}
+<table class="ma__table">
   <thead>
     {% for row in table.head.rows %}
     <tr>
       {% for cell in row.cells %}
-        <th scope="col" colspan="{{cell.colspan}}" rowspan="{{cell.rowspan}}">{{cell.text}}</th>
+        <th 
+          scope="col" 
+          {% if cell.colspan %}colspan="{{cell.colspan}}"{% endif %} 
+          {% if cell.rowspan %}rowspan="{{cell.rowspan}}"{% endif %}>{{ cell.text }}</th>
       {% endfor %}
     </tr>
   {% endfor %}
@@ -11,12 +15,20 @@
   {% for body in table.bodies %}
     <tbody>
       {% for row in body.rows %}
-        <tr class="{{row.rowSpanOffset != 0 ? 'is-offset' : ''}}">
+        <tr class="{{ row.rowSpanOffset ? 'is-offset' : '' }}">
+          {% set tableIndexOffset = row.rowSpanOffset ? 0 : 1 %}
           {% for cell in row.cells %}
             {% if cell.heading == "true" %}
-              <th scope="row" colspan="{{cell.colspan}}" rowspan="{{cell.rowspan}}">{{cell.text}}</th>
+              <th 
+                data-label="{{ tableHeaderRow.cells[loop.index - tableIndexOffset].text }}" 
+                scope="row" 
+                {% if cell.colspan %}colspan="{{cell.colspan}}"{% endif %} 
+                {% if cell.rowspan %}rowspan="{{cell.rowspan}}"{% endif %}>{{ cell.text }}</th>
             {% else %}
-              <td colspan="{{cell.colspan}}" rowspan="{{cell.rowspan}}">{{cell.text}}</td>
+              <td
+                data-label="{{ tableHeaderRow.cells[loop.index - tableIndexOffset].text }}" 
+              {% if cell.colspan %}colspan="{{cell.colspan}}"{% endif %} 
+              {% if cell.rowspan %}rowspan="{{cell.rowspan}}"{% endif %}>{{ cell.text }}</td>
             {% endif %}
           {% endfor %}
         </tr>
