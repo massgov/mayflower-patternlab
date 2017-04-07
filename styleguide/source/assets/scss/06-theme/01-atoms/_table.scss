@@ -20,6 +20,11 @@
 .ma__table {
   
   @media ($bp-small-max) {
+    thead + tbody,
+    tbody:first-child {
+      border-top: 0;
+    }
+
     td {
       
       &:before {
@@ -38,6 +43,11 @@
 .ma__table--wide {
   
   @media ($bp-medium-max) {
+    thead + tbody,
+    tbody:first-child {
+      border-top: 0;
+    }
+
     td {
       
       &:before {

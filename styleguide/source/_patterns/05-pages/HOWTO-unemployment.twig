@@ -9,6 +9,8 @@
 {% block pageContent %}
   {% set richText = pageContent.intro %}
   {% include "@organisms/by-author/rich-text.twig" %}
+  {% set tabularData = pageContent.tabularData %}
+  {% include "@organisms/by-author/tabular-data.twig" %}
   {% set stepsUnordered = pageContent.stepsUnordered %}
   {% include "@organisms/by-author/steps-unordered.twig" %}
   {% set stepsOrdered = pageContent.stepsOrdered %}
