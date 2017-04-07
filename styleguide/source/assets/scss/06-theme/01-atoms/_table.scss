@@ -1,0 +1,18 @@
+.rich-text table,
+.ma__table {
+  thead {
+    background-color: $c-bg-subtle;
+
+      th {
+        color: $c-font-heading;
+      }
+  }
+
+  tbody {
+    border-color: $c-bd-divider;
+  }
+
+  tr + tr {
+    border-color: $c-bd-divider;
+  }
+}
