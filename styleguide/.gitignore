@@ -6,5 +6,6 @@ public/*
 public/styleguide/html/styleguide.html
 public/styleguide/data/patternlab-data.js
 !public/index.html
+npm-debug.log
 
 /deploy
