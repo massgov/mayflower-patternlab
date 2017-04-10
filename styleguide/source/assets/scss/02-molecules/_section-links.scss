@@ -44,14 +44,14 @@
   }
 
   &__footer {
-    display: none;
+    align-self: flex-end;
+    border-top: 1px solid;
+    display: block;
+    padding: 0 20px 20px 0;
+    width: 100%;
 
-    @media ($bp-x-small-min) {
-      align-self: flex-end;
-      border-top: 1px solid;
-      display: block;
-      padding: 0 20px 20px 0;
-      width: 100%;
+    @media ($bp-x-small-max) {
+      display: none;
     }
   }
 
@@ -63,7 +63,7 @@
     }
 
     @media ($bp-x-small-min) {
-      margin: 1.4em auto -40px;
+      margin: -40px auto 1.4em;
     }
   }
 
