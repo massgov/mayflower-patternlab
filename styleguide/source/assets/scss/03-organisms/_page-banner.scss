@@ -9,7 +9,7 @@ $page-banner-icon-width: $column + $gutter;
   position: relative;
 
   @media ($bp-x-small-min) {
-    min-height: 366px;
+    height: 366px;
     margin-bottom: 40px;
   }
 
@@ -304,7 +304,7 @@ $page-banner-icon-width: $column + $gutter;
     margin-top: 0;
     padding: 25px 0 20px;
     transform: skew(0);
-    width: calc(100%);
+    width: 100%;
     z-index: 1;
 
     @media ($bp-medium-min){
@@ -326,11 +326,11 @@ $page-banner-icon-width: $column + $gutter;
     width: 100%;
 
     @media ($bp-medium-min) {
-      width: 62.12903%; // @include span(8 of 12) was too big
       height: 460px;
       margin-right: 1.6129%;
       max-width: 820px;
       right: 15px;
+      width: 62.12903%; // @include span(8 of 12) was too big
     }
   }
 }
