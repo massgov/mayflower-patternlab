@@ -138,7 +138,7 @@
     "tabularData": {
       "compHeading": {
         "title": "Fees",
-        "sub": "",
+        "sub": true,
         "color": "",
         "id": "",
         "centered": ""
