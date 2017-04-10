@@ -56,8 +56,12 @@
         }
       }]
     },
-    "activeFilters": {
-      "nearby": "02155"
+    "resultsHeading": {
+      "numResults": "1-12",
+      "totalResults": "108",
+      "tags": [{
+        "text": "02155"
+      }]
     },
     "imagePromos":[{
       "title": {
