@@ -10,7 +10,7 @@
     "headerTags": {
       "taxonomyTerms": [{
         "url": "#",
-        "term": "Unemployement Benefits"
+        "term": "Unemployment Benefits"
       }]
     },
     "optionalContents": [{
@@ -488,7 +488,7 @@
       "contacts":[{
         "subTitle": {
           "href":"",
-          "text": "Department of Unemployement Assistance",
+          "text": "Department of Unemployment Assistance",
           "chevron":""
         },
         "groups": [{
