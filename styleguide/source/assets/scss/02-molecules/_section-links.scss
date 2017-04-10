@@ -146,7 +146,9 @@
 
   &__toggle-content {
     padding: 10px 0 30px;
-    flex: 1 1 auto;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
 
     @media ($bp-x-small-max) {
       display: none;
