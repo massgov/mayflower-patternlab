@@ -8,11 +8,8 @@
   }
 
   .sidebar & {
-
-    @media ($bp-large-min) {
-      @include ma-component-spacing;
-      padding: 0;
-    }
+    @include ma-component-spacing;
+    padding: 0;
   }
 
   &:last-child {
@@ -27,10 +24,7 @@
     margin-bottom: 0;
 
     .sidebar & {
-
-      @media ($bp-large-min) {
-        @include ma-reset-list;
-      }
+      @include ma-reset-list;
     }
 
     &:first-child:nth-last-child(2),
