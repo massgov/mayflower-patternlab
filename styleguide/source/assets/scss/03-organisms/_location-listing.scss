@@ -81,8 +81,24 @@
       width: 60% - 3.25%; // subtract the margin right
     }
 
-    .ma__image-promo__link {
-      font-size: 18px;
+    .ma__image-promo {
+      padding-right: 40px;
+
+      &:first-child {
+        border-top-style: solid;
+        border-top-width: 2px;
+        padding-top: 29px;
+      }
+
+      &.is-active,
+      &:hover {
+        border-top-width: 3px;
+        padding-top: 28px;
+      }
+
+      &__link {
+        font-size: 18px;
+      }
     }
   }
 }

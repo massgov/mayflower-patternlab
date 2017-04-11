@@ -1,0 +1,15 @@
+.ma__location-listing {
+
+  .ma__image-promo {
+
+    &:first-child {
+      border-color: $c-bd-divider;
+    }
+
+    &.is-active,
+    &:hover {
+      border-color: $c-theme-yellow;
+      box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
+    }
+  }
+}

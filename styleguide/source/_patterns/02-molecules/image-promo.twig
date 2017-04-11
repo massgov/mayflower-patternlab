@@ -1,4 +1,4 @@
-<section class="ma__image-promo">
+<section class="ma__image-promo {{ imagePromo.location.map ? 'js-location-listing-link' : '' }}">
   {% if imagePromo.image %}
     {% if imagePromo.image.href %}
       <a href="{{ imagePromo.image.href }}">
@@ -23,7 +23,7 @@
       <div class="ma__image-promo__location">
         {% if imagePromo.location.map %}
           {% include "@atoms/05-icons/svg-marker.twig" %}
-          <a class="{{ imagePromo.location.map ? 'js-location-listing-link' : '' }}" href="#" role="button">{{ imagePromo.location.text }}</a>
+          <a href="#" role="button">{{ imagePromo.location.text }}</a>
         {% else %}
           <span>
             {{ imagePromo.location.text }}
