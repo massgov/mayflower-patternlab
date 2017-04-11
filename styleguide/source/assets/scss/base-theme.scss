@@ -30,18 +30,17 @@
 @import "06-theme/01-atoms/video";
 
 // Molecules - chunks of code that are used in Organisms/Components
-@import "06-theme/02-molecules/action-downloads";
 @import "06-theme/02-molecules/action-event";
 @import "06-theme/02-molecules/action-gallery";
 @import "06-theme/02-molecules/action-image";
 @import "06-theme/02-molecules/action-section";
-@import "06-theme/02-molecules/action-seq-list";
 @import "06-theme/02-molecules/action-step";
 @import "06-theme/02-molecules/button-alert";
 @import "06-theme/02-molecules/callout-stats";
 @import "06-theme/02-molecules/callout-link";
 @import "06-theme/02-molecules/contact-group";
 @import "06-theme/02-molecules/contact-us";
+@import "06-theme/02-molecules/download-link";
 @import "06-theme/02-molecules/emergency-alert";
 @import "06-theme/02-molecules/emergency-header";
 @import "06-theme/02-molecules/footer-links";
@@ -59,13 +58,13 @@
 @import "06-theme/02-molecules/results-heading";
 @import "06-theme/02-molecules/section-links";
 @import "06-theme/02-molecules/social-links";
+@import "06-theme/02-molecules/sticky-nav";
 @import "06-theme/02-molecules/wait-time";
 
 // Organisms - components
 @import "06-theme/03-organisms/action-card";
 @import "06-theme/03-organisms/action-details";
 @import "06-theme/03-organisms/action-finder";
-@import "06-theme/03-organisms/action-header";
 @import "06-theme/03-organisms/banner-carousel";
 @import "06-theme/03-organisms/blog-feed";
 @import "06-theme/03-organisms/breadcrumbs";
@@ -84,6 +83,7 @@
 @import "06-theme/03-organisms/illustrated-header";
 @import "06-theme/03-organisms/image-credit";
 @import "06-theme/03-organisms/jump-links";
+@import "06-theme/03-organisms/link-list";
 @import "06-theme/03-organisms/page-banner";
 @import "06-theme/03-organisms/page-discourse";
 @import "06-theme/03-organisms/page-header";
@@ -96,12 +96,14 @@
 @import "06-theme/03-organisms/suggested-pages";
 @import "06-theme/03-organisms/stacked-row-section";
 @import "06-theme/03-organisms/test-feed";
+@import "06-theme/03-organisms/steps-ordered";
 @import "06-theme/03-organisms/top-actions";
 @import "06-theme/03-organisms/transition-page";
 @import "06-theme/03-organisms/utility-nav";
 @import "06-theme/03-organisms/utility-panel";
 
 // Templates
+@import "06-theme/04-templates/details";
 @import "06-theme/04-templates/general";
 
 // Print styles

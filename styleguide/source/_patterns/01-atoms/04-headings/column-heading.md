@@ -17,6 +17,8 @@ columnHeading {
   text: 
     type: string / required
   href: 
-    type: string(url) / optional
+    type: string(url) / optional,
+  info:
+    type: string/optional - used to provide content for aria label
 }
 ~~~

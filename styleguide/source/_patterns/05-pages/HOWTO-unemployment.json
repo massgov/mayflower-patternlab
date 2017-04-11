@@ -1,0 +1,553 @@
+{
+  "details": {
+    "contentTitle": "The Details"
+  },
+
+  "pageHeader": {
+    "divider": false,
+    "title": "Apply for unemployment benefits",
+    "subTitle": "Have you lost your job?  You may qualify for temporary income to support you while you look for a new one",
+    "headerTags": {
+      "taxonomyTerms": [{
+        "url": "#",
+        "term": "Unemployment Benefits"
+      }]
+    },
+    "optionalContents": [{
+      "path": "@organisms/by-author/callout-time.twig",
+      "data": {
+        "calloutTime": {
+          "text": "Most applicants hear back within 4-6 weeks of applying"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/key-actions.twig",
+      "data": {
+        "keyActions": {
+          "links":[{
+            "text": "Apply online",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Check eligibility",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  },
+
+  "stickyNav": {
+    "anchorLinks":[{
+      "href": "what-you-need",
+      "text": "What you need",
+      "info": ""
+    },{
+      "href": "how-to-apply",
+      "text": "How to apply",
+      "info": ""
+    },{
+      "href": "next-steps",
+      "text": "Next Steps",
+      "info": ""
+    },{
+      "href": "more-info",
+      "text": "More Info",
+      "info": ""
+    },{
+      "href": "downloads",
+      "text": "Downloads",
+      "info": ""
+    },{
+      "href": "contact",
+      "text": "Contact",
+      "info": ""
+    }]
+  },
+
+  "pageContent": {
+    "intro": {
+      "compHeading": {
+        "title": "What you need",
+        "sub": true,
+        "color": "",
+        "id": "what-you-need",
+        "centered": ""
+      },
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "To apply for unemployment, you need to provide personal information including your Social Security number, birth date, home address, email address, and phone number."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "You also need information about your employment history from the last 15 months, including:"
+          }
+        }
+      },{
+        "path": "@atoms/08-lists/unordered-list.twig",
+        "data": {
+          "unorderedList": [{
+            "text": "Names of all employers, plus addresses and phone numbers" 
+          },{
+            "text": "Reasons for leaving those jobs" 
+          },{
+            "text": "Work start and end dates" 
+          },{
+            "text": "Recall date (if you were laid off but have a set date to return to work)" 
+          }]
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "You may need additional information in certain situations:"
+          }
+        }
+      },{
+        "path": "@atoms/08-lists/unordered-list.twig",
+        "data": {
+          "unorderedList": [{
+            "text": "If you are not a U.S. citizen — your Alien Registration number" 
+          },{
+            "text": "If you have children or other dependents — their birth dates and Social Security numbers" 
+          },{
+            "text": "If you’re in a union — your union name and local number" 
+          },{
+            "text": "If you were in the military — your DD-214 Member 4 form (optional). If you don’t have it, you can request your DD-214 online." 
+          },{
+            "text": "If you worked for the federal government — your SF8 form (optional)" 
+          }]
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "To receive payments by direct deposit, you’ll also need your bank account details and routing number. Otherwise, DUA will send you a debit card."
+          }
+        }
+      }]
+    },
+
+    "stepsUnordered": {
+      "compHeading": {
+        "title": "How To Apply",
+        "sub": true,
+        "color": "",
+        "id": "how-to-apply",
+        "centered": ""
+      },
+      "richText": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "You must submit a form. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium."
+            }
+          }
+        }]
+      },
+      "steps": [{
+        "accordion": true,
+        "isExpanded": false,
+        "accordionLabel": "Expand step for doing this online",
+        "icon":"@atoms/05-icons/svg-laptop.twig",
+        "title":"Online",
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "To apply online, you can create an account on the <a href=\"#\">UI Online portal</a>. The website will walk you through filling out your application. Once you file your initial application, you'll be able to log into your account to check your status."
+              }
+            }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Don't have a compute?  Visit a <a href=\"#\">One-Stop Career Center</a> where you can use one of theirs to file your claim and get help finding a job."
+              }
+            }
+          },{
+            "path": "@atoms/08-lists/ordered-list.twig",
+            "data": {
+              "orderedList": [{ 
+                "text": "Ordered list example" 
+              },{ 
+                "text": "Use this if there are multiple steps within a how to area"
+              }]
+            }
+          }]
+        }
+      },{
+        "accordion": true,
+        "isExpanded": false,
+        "accordionLabel": "By Phone",
+        "icon":"@atoms/05-icons/svg-phone.twig",
+        "title":"By Phone",
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imaperdiet purus pellentesque vel."
+              }
+            }
+          }]
+        }
+      }]
+    },
+
+    "stepsOrdered": {
+      "compHeading": {
+        "title": "Next Steps",
+        "sub": true,
+        "color": "",
+        "id": "next-steps",
+        "centered": ""
+      },
+      "steps": [{
+        "accordion": false,
+        "isExpanded": true,
+        "accordionLabel": "",
+        "icon": "",
+        "title": "Immediately log job search (required)",
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "You must start requesting weekly benefits on the Sunday after you submit your application form. Every time you request weekly benefits, you’ll be asked  3 questions for the previous week, Saturday to Saturday:"
+              }
+            }
+          },{
+            "path": "@atoms/08-lists/ordered-list.twig",
+            "data": {
+              "orderedList": [{ 
+                "text": "If you looked for work that week" 
+              },{ 
+                "text": "If you were able to work and available for work that week"
+              },{ 
+                "text": "If you worked during that week"
+              }]
+            }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "You have to complete this step every week to make sure you get your benefits. You must do this step online."
+              }
+            }
+          }]
+        },
+        "downloadLinks": [{
+          "downloadLink": {
+            "iconSize": "small",
+            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "decorativeLink": {
+              "text": "Work Search Activity Log",
+              "href": "#",
+              "info": "",
+              "property": ""
+            },
+            "size": "1MB",
+            "format": "PDF"
+          }
+        }],
+        "decorativeLink": {
+          "href": "#",
+          "text": "Learn more about job search support",
+          "info": "",
+          "property": ""
+        }
+      },{
+        "accordion": false,
+        "isExpanded": true,
+        "accordionLabel": "",
+        "icon": "",
+        "title": "Another next step",
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "If there is only one next step, the number icons are not needed. This could also be just a bulleted list if they aren’t as robust."
+              }
+            }
+          }]
+        }
+      }]
+    },
+
+    "moreInfo": {
+      "compHeading": {
+        "title": "More info",
+        "sub": true,
+        "color": "",
+        "id": "more-info",
+        "centered": ""
+      },
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is an optional section that is used in a variety of ways. Aliquam et nisl vel ligula consectetuer suscipit. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium. Nulla facilisi. Duis tincidunt, felis et luctus placerat, ipsum libero vestibulum sem, vitae elementum wisi ipsum a metus. Nulla a enim sed dui hendrerit lobortis."
+          }
+        }
+      }]
+    },
+
+    "formDownloads": {
+      "compHeading": {
+        "title": "Downloads",
+        "sub": true,
+        "color": "",
+        "id": "downloads",
+        "centered": ""
+      },
+      "downloadLinks": [{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "Work Search Activity Log",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "1MB",
+          "format": "PDF"
+        }
+      }]
+    },
+
+    "contactList": {
+      "compHeading": {
+        "title": "Contact",
+        "sub": true,
+        "color": "",
+        "id": "contact",
+        "centered": ""
+      },
+
+      "contacts":[{
+        "accordion": true,
+        "isExpanded": false,
+        "subTitle": {
+          "href":"",
+          "text": "Department of Unemployment Assistance"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "email",
+            "property": "",
+            "label":"Email:",
+            "link": {
+              "href":"email@state.ma.us",
+              "text": "email@state.ma.us",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "items": [{
+            "type": "fax",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href":"+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "items": [{
+            "type": "address",
+            "property": "",
+            "label": "",
+            "address": "555 Park Drive\nBoston, MA 02231",
+            "link": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "text": "directions",
+              "info": "",
+              "property": ""
+            },
+            "details": ""
+          }]
+        }]
+      },{
+        "accordion": true,
+        "isExpanded": false,
+        "subTitle": {
+          "href":"",
+          "text": "Benefits Claims Customer Service"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "email",
+            "property": "",
+            "label":"Email:",
+            "link": {
+              "href":"email@state.ma.us",
+              "text": "email@state.ma.us",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "items": [{
+            "type": "fax",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href":"+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "items": [{
+            "type": "address",
+            "property": "",
+            "label": "",
+            "address": "555 Park Drive\nBoston, MA 02231",
+            "link": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "text": "directions",
+              "info": "",
+              "property": ""
+            },
+            "details": ""
+          }]
+        }]
+      }]
+    }
+  },
+
+  "sidebar": {
+    "contactList": {
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Department of Unemployment Assistance",
+          "chevron":""
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+16174438765",
+              "text": "(617) 443-8765",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"Web:",
+            "link": {
+              "href":"#",
+              "text": "Contact Form",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    },
+
+    "linkList" : {
+      "compHeading": {
+        "title": "Related"
+      },
+      "stacked": true,
+      "links" : [{
+        "url":"#",
+        "text":"Log in to UI Online for recipients",
+        "info": "",
+        "property": ""
+      },{
+        "url":"#",
+        "text":"Appeal UI decision",
+        "info": "",
+        "property": ""
+      },{
+        "url":"#",
+        "text":"Apply for a job training program",
+        "info": "",
+        "property": ""
+      }]
+    }
+
+  }
+}

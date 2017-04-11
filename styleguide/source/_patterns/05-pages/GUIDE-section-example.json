@@ -46,17 +46,26 @@
     "bgImage": "/assets/images/placeholder/800x450.png",
     "category": "Guide",
     "pageHeader": {
-      "title": "Example Section with Everything",
+      "divider": false,
+      "title": "Moving to Massachusetts: Planning Your Move",
       "subTitle": "",
-      "rteElements": [{
-        "path": "@atoms/11-text/paragraph.twig",
+      "headerTags": null,
+      "optionalContents": [{
+        "path": "@organisms/by-author/rich-text.twig",
         "data": {
-          "paragraph" : {
-            "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this guide provides instructions for changing your license, tips for settling in, and other useful information."
+          "richText": {
+            "rteElements": [{
+              "path": "atoms-paragraph",
+              "data": {
+                "paragraph" : {
+                  "text": "The Commonwealth of Massachusetts welcomes new residents to enjoy all the state has to offer. To help make your move to the Bay State as smooth as possible, this guide provides instructions for changing your license, tips for settling in, and other useful information."
+                }
+              }
+            }]
           }
         }
       }],
-      "headerTags": ""
+      "widgets": null
     }
   },
   
@@ -85,37 +94,39 @@
         {
           "path": "@organisms/by-author/rich-text.twig",
           "data": {
-            "rteElements": [{
-              "path": "@molecules/callout-stats.twig",
-              "data": {
-                "statsCallout": {
-                  "pull": "right",
-                  "stat": "$75+",
-                  "content": "this includes a title and registration fee"
+            "richText": {
+              "rteElements": [{
+                "path": "@molecules/callout-stats.twig",
+                "data": {
+                  "statsCallout": {
+                    "pull": "right",
+                    "stat": "$75+",
+                    "content": "this includes a title and registration fee"
+                  }
                 }
-              }
-            },{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph" : {
-                  "text": "Lorem ipsum dolor sit amet, <a href=\"#\">consectetur adipiscing</a> elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+              },{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Lorem ipsum dolor sit amet, <a href=\"#\">consectetur adipiscing</a> elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+                  }
                 }
-              }
-            },{
-              "path": "@atoms/09-media/figure.twig",
-              "data": {
-                "figure": {
-                  "align": "",
-                  "image": {
-                    "alt": "alt text",
-                    "src": "/assets/images/placeholder/800x400.png",
-                    "height": "",
-                    "width": ""
-                  },
-                  "caption": ""
+              },{
+                "path": "@atoms/09-media/figure.twig",
+                "data": {
+                  "figure": {
+                    "align": "",
+                    "image": {
+                      "alt": "alt text",
+                      "src": "/assets/images/placeholder/800x400.png",
+                      "height": "",
+                      "width": ""
+                    },
+                    "caption": ""
+                  }
                 }
-              }
-            }]
+              }]
+            }
           }
         },
         {
@@ -146,51 +157,80 @@
           }
         },
         {
-          "path":"@organisms/by-author/form-download.twig",
+          "path":"@organisms/by-author/form-downloads.twig",
           "data":{
-            "compHeading": {
-              "title": "Downloads & Links",
-              "sub": true
-            },
-            "actionDownloads": [{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "text": "Online Form: Out-of-Country Driver's License Conversion",
-              "href": "#",
-              "type": "external",
-              "size": "",
-              "format": "form"
-            },
-            {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "text": "Online Form: External link",
-              "href": "#",
-              "type": "external",
-              "size": "",
-              "format": "form"
-            },
-            {
-              "icon": "@atoms/05-icons/svg-doc-docx.twig",
-              "text": "Word download item",
-              "href": "#",
-              "type": "",
-              "size": "40kb",
-              "format": "DOCX"
-            },{
-              "icon": "@atoms/05-icons/svg-doc-generic.twig",
-              "text": "Generic download item",
-              "href": "#",
-              "type": "",
-              "size": "120kb",
-              "format": "CSV"
-            },
-            {
-              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-              "text": "RMV-1 Form",
-              "href": "#",
-              "type": "",
-              "size": "259KB",
-              "format": "PDF"
-            }]
+            "formDownloads": {
+              "compHeading": {
+                "title": "Downloads & Links",
+                "sub": true
+              },
+              "downloadLinks": [{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "decorativeLink": {
+                    "text": "Online Form: Out-of-Country Driver's License Conversion",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "",
+                  "format": "form"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "decorativeLink": {
+                    "text": "Online Form: External link",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "",
+                  "format": "form"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                  "decorativeLink": {
+                    "text": "Word download item",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "40kb",
+                  "format": "DOCX"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-doc-generic.twig",
+                  "decorativeLink": {
+                    "text": "Generic download item",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "120kb",
+                  "format": "CSV"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "decorativeLink": {
+                    "text": "RMV-1 Form",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "259KB",
+                  "format": "PDF"
+                }
+              }]
+            }
           }
         }
       ],
@@ -206,7 +246,7 @@
         "path": "@molecules/contact-us.twig",
         "data": {
           "contactUs": {
-            "title": {
+            "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
               "chevron":""
