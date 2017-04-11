@@ -327,8 +327,8 @@
           "alt": "hunting image",
           "title": "Hunting",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
-          "linkTitle": "More",
-          "href": "#"
+          "linkTitle": "",
+          "href": ""
         },{
           "image": "/assets/images/placeholder/190x107.png",
           "alt": "bird image",
