@@ -32,6 +32,7 @@
 @import "01-atoms/site-logo";
 @import "01-atoms/svg-icons";
 @import "01-atoms/svg-loc-icons";
+@import "01-atoms/table";
 @import "01-atoms/video";
 
 // Molecules - chunks of code that are used in Organisms/Components
@@ -111,6 +112,7 @@
 @import "03-organisms/suggested-pages";
 @import "03-organisms/steps-ordered";
 @import "03-organisms/steps-unordered";
+@import "03-organisms/tabular-data";
 @import "03-organisms/teaser-text";
 @import "03-organisms/test-feed";
 @import "03-organisms/top-actions";
