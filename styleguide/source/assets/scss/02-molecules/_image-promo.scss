@@ -44,6 +44,25 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
     margin-bottom: 0;
   }
 
+  &__tags {
+    float: right;
+
+    & > span {
+      display: inline-block;
+      font-size: 0;
+      margin-left: 10px;
+    }
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &__tags + .ma__decorative-link {
+    display: block;
+  }
+
   &__description {
     margin-top: 10px;
     font-size: 1.25rem;
@@ -57,7 +76,7 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
   &__phone {
     font-size: 18px;
 
-    & > span,
+    & > a,
     & > svg {
       display: inline-block;
       vertical-align: middle;

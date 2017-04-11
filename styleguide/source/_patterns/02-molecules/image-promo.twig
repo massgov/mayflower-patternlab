@@ -12,6 +12,13 @@
   {% endif %}
   <div class="ma__image-promo__details">
     <h2 class="ma__image-promo__title">
+      {% if imagePromo.tags %}
+        <div class="ma__image-promo__tags">
+          {% for tag in imagePromo.tags %}
+            <span title="{{ tag.label }}">{% include tag.icon %}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
       {% if imagePromo.title.href %}
         {% set decorativeLink = imagePromo.title %}
         {% include "@atoms/decorative-link.twig" %}
@@ -33,9 +40,9 @@
     {% if imagePromo.phone %}
       <div class="ma__image-promo__phone">
         {% include "@atoms/05-icons/svg-phone.twig" %}
-        <span>
+        <a href="tel:{{ imagePromo.phone.href }}">
           {{ imagePromo.phone.text }}
-        </span>
+        </a>
       </div>
     {% endif %}
     <div class="ma__image-promo__description">

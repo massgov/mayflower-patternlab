@@ -90,6 +90,11 @@
         padding-top: 29px;
       }
 
+      &:last-child {
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+      }
+
       &.is-active,
       &:hover {
         border-top-width: 3px;
