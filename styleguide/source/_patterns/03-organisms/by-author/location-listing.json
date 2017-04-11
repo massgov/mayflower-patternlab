@@ -97,6 +97,9 @@
         "location": {
           "text": "251 Causeway Street,Suite 900, Boston, MA 02114",
           "map": true
+        },
+        "phone": {
+          "text": "(781) 322-7500"
         }
       },{
         "title": {
@@ -131,6 +134,9 @@
         "location": {
           "text": "24 Beacon St, Boston, MA 02133",
           "map": true
+        },
+        "phone": {
+          "text": "(781) 322-7500"
         }
       }]
     }

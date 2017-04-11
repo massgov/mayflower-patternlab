@@ -15,15 +15,16 @@
     display: inline-block;
     line-height: 1em;
     margin-right: .25em;
-    padding: 8px 11px 7px;
+    padding: 8px 11px;
     white-space: nowrap;
 
     &:after {
       content: "+";
       display: inline-block;
-      font-size: 1.65em;
+      font-size: 1.5em;
       line-height: 1.125rem;
       margin-left: .15em;
+      margin-top: -1px;
       transform: rotate(135deg);
       vertical-align: middle;
     }

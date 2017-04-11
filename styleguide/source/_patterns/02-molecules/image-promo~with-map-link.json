@@ -24,14 +24,16 @@
       }
     },
     "link": {
-      "text": "Read More",
+      "text": "Directions",
       "href": "#",
-      "type": "chevron",
-      "info": "Read More about Activity Title"
+      "info": "Directions to Activity Title"
     },
     "location": {
       "text": "89 Summer St, Malden, MA 02148",
       "map": true
+    },
+    "phone": {
+      "text": "(781) 322-7500"
     }
   }
 }

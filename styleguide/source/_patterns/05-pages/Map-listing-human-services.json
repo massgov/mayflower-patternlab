@@ -110,6 +110,8 @@
             "totalResults": "108",
             "tags": [{
               "text": "02155"
+            },{
+              "text": "item"
             }]
           },
           "imagePromos": {
@@ -146,8 +148,10 @@
               "location": {
                 "text": "251 Causeway Street, Suite 900, Boston, MA 02114",
                 "map": true
+              },
+              "phone": {
+                "text": "(781) 322-7500"
               }
-              
             },{
               "title": {
                 "text": "Department of Recreation and Fun",
@@ -181,8 +185,10 @@
               "location": {
                 "text": "24 Beacon St, Boston, MA 02133",
                 "map": true
-              }
-              
+              },
+              "phone": {
+                "text": "(781) 322-7500"
+              }            
             }]
           }
         }
