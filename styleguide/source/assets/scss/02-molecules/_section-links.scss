@@ -145,10 +145,11 @@
   }
 
   &__toggle-content {
-    padding: 10px 0 30px;
     flex-basis: auto;
     flex-grow: 1;
     flex-shrink: 1;
+    padding: 10px 0 30px;
+    width: 100%;
 
     @media ($bp-x-small-max) {
       display: none;
@@ -166,5 +167,12 @@
   // skip the first item
   &__item + &__item {
     margin-top: .75em;
+  }
+
+  // Make child content callout links full width
+  &__item > .ma__callout-link {
+    @include ma-container();
+    display: block;
+    width: 100%;
   }
 }

@@ -12,8 +12,7 @@
 
   .pre-content > &,
   .post-content > &,
-  .main-content--full .page-content > &,
-  .ma__section-links__item > & {
+  .main-content--full .page-content > & {
     @include ma-container();
     display: block;
     width: 100%;
