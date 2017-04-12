@@ -45,6 +45,10 @@
       "text": "What you need",
       "info": ""
     },{
+      "href": "fees",
+      "text": "Fees",
+      "info": ""
+    },{
       "href": "how-to-apply",
       "text": "How to apply",
       "info": ""
@@ -140,7 +144,7 @@
         "title": "Fees",
         "sub": true,
         "color": "",
-        "id": "",
+        "id": "fees",
         "centered": ""
       },
       "table": {
