@@ -90,11 +90,6 @@
         padding-top: 29px;
       }
 
-      &:last-child {
-        border-bottom-style: solid;
-        border-bottom-width: 2px;
-      }
-
       &.is-active,
       &:hover {
         border-top-width: 3px;
@@ -104,6 +99,12 @@
       &__link {
         font-size: 18px;
       }
+    }
+
+    .ma__pagination {
+      border-top-style: solid;
+      border-top-width: 2px;
+      padding: 20px 0;
     }
   }
 }

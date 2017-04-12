@@ -23,8 +23,11 @@
     &.is-active,
     &:hover {
       border-top-color: $c-theme-yellow;
-      border-bottom-color: transparent;
       box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
     }
+  }
+
+  .ma__pagination {
+    border-color: $c-bd-divider;
   }
 }

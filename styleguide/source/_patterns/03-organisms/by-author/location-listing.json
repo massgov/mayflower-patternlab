@@ -68,7 +68,7 @@
         "title": {
           "text": "Department of Conservation and Recreation",
           "href": "#",
-          "type": ""
+          "info": ""
         },
         "image": {
           "src":"/assets/images/placeholder/190x107.png",
@@ -91,7 +91,6 @@
         "link": {
           "text": "Directions",
           "href": "https://www.google.com/maps/place/251+Causeway+St+%23900,+Boston,+MA+02114",
-          "type": "external",
           "info": ""
         },
         "location": {
@@ -105,7 +104,7 @@
         "title": {
           "text": "Department of Recreation and Fun",
           "href": "#",
-          "type": ""
+          "info": ""
         },
         "image": {
           "src":"/assets/images/placeholder/190x107.png",
@@ -128,7 +127,6 @@
         "link": {
           "text": "Directions",
           "href": "https://www.google.com/maps/place/24+Beacon+St,+Boston,+MA+02133",
-          "type": "external",
           "info": ""
         },
         "location": {
@@ -138,6 +136,38 @@
         "phone": {
           "text": "(781) 322-7500"
         }
+      }]
+    },
+    "pagination": {
+      "next": {
+        "disabled": false,
+        "text": "Next"
+      },
+      "prev": {
+        "disabled": false,
+        "text": "Previous"
+      },
+      "pages": [{
+        "active": false,
+        "text": "1"
+      },{
+        "active": false,
+        "text": "spacer"
+      },{
+        "active": false,
+        "text": "5"
+      },{
+        "active": true,
+        "text": "6"
+      },{
+        "active": false,
+        "text": "7"
+      },{
+        "active": false,
+        "text": "spacer"
+      },{
+        "active": false,
+        "text": "10"
       }]
     }
   }
