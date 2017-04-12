@@ -1,6 +1,11 @@
 <div class="ma__pagination">
   {% if pagination.pages|length > 2 %}
-    <button class="ma__pagination__prev" type="button" {{ pagination.prev.disabled ? 'disabled' : '' }}>{{ pagination.prev.text }}</button>
+    <button 
+      class="ma__pagination__prev" 
+      type="button" 
+      {% if pagination.prev.disabled %}
+        disabled
+      {% endif %}>{{ pagination.prev.text }}</button>
   {% endif %}
   {% for page in pagination.pages %}
     {% if page.text == "spacer" %}
@@ -10,6 +15,11 @@
     {% endif %}
   {% endfor %}
   {% if pagination.pages|length > 2 %}
-    <button class="ma__pagination__next" type="button" {{ pagination.next.disabled ? 'disabled' : '' }}>{{ pagination.next.text }}</button>
+    <button 
+      class="ma__pagination__next" 
+      type="button"      
+      {% if pagination.next.disabled %}
+        disabled
+      {% endif %}>{{ pagination.next.text }}</button>
   {% endif %}
 </div>

@@ -12,6 +12,15 @@
     @media ($bp-small-min) {
       margin: 0 .1em;
     }
+
+    &:disabled {
+      cursor: default;
+      opacity: .5;
+    }
+
+    &.is-active {
+      cursor: default;
+    }
   }
 
   &__prev {
