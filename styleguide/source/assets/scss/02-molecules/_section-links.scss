@@ -44,14 +44,14 @@
   }
 
   &__footer {
-    display: none;
+    align-self: flex-end;
+    border-top: 1px solid;
+    display: block;
+    padding: 0 20px 20px 0;
+    width: 100%;
 
-    @media ($bp-x-small-min) {
-      align-self: flex-end;
-      border-top: 1px solid;
-      display: block;
-      padding: 0 20px 20px 0;
-      width: 100%;
+    @media ($bp-x-small-max) {
+      display: none;
     }
   }
 
@@ -63,7 +63,7 @@
     }
 
     @media ($bp-x-small-min) {
-      margin: 1.4em auto -40px;
+      margin: -40px auto 1.4em;
     }
   }
 
@@ -145,8 +145,11 @@
   }
 
   &__toggle-content {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
     padding: 10px 0 30px;
-    flex: 1 1 auto;
+    width: 100%;
 
     @media ($bp-x-small-max) {
       display: none;
@@ -164,5 +167,12 @@
   // skip the first item
   &__item + &__item {
     margin-top: .75em;
+  }
+
+  // Make child content callout links full width
+  &__item > .ma__callout-link {
+    @include ma-container();
+    display: block;
+    width: 100%;
   }
 }
