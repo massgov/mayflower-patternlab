@@ -1,0 +1,27 @@
+.ma__location-filters {
+  
+  &__row {
+    @include clearfix;
+  }
+
+  &__by-location {
+    @include span-columns(8 of 12);
+  }
+
+  &__by-activity {
+    @include span-columns(4 of 12);
+
+    .ma__select-box {
+      width: 100%;
+    }
+  }
+
+  &__by-keyword {
+    @include span-columns(4 of 12);
+  }
+
+  &__by-tag {
+    @include span-columns(4 of 12);
+    padding-left: 80px;
+  }
+}
