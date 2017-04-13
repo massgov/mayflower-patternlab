@@ -45,6 +45,10 @@
       "text": "What you need",
       "info": ""
     },{
+      "href": "fees",
+      "text": "Fees",
+      "info": ""
+    },{
       "href": "how-to-apply",
       "text": "How to apply",
       "info": ""
@@ -133,6 +137,64 @@
           }
         }
       }]
+    },
+
+    "tabularData": {
+      "compHeading": {
+        "title": "Fees",
+        "sub": true,
+        "color": "",
+        "id": "fees",
+        "centered": ""
+      },
+      "table": {
+        "head": {
+          "rows": [{
+            "rowSpanOffset":false,
+            "cells":[{
+              "heading": true,
+              "colspan": "",
+              "rowspan": "",
+              "text": "Name"
+            },
+            {
+              "heading": true,
+              "colspan": "",
+              "rowspan": "",
+              "text": "Fee"
+            },
+            {
+              "heading": true,
+              "colspan": "",
+              "rowspan": "",
+              "text": "Unit"
+            }]
+          }]
+        },
+        "bodies": [{
+          "rows": [{
+            "rowSpanOffset":false,
+            "cells":[{
+              "heading": false,
+              "colspan": "",
+              "rowspan": "",
+              "text": "Parking"
+            },
+            {
+              "heading": false,
+              "colspan": "",
+              "rowspan": "",
+              "text": "$2.00"
+            },
+            {
+              "heading": false,
+              "colspan": "",
+              "rowspan": "",
+              "text": "per day"
+            }]
+          }]
+        }]
+      }
     },
 
     "stepsUnordered": {

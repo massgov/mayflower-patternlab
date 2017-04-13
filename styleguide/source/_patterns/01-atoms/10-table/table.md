@@ -18,10 +18,10 @@ table {
         rows [
             {
                 rowSpanOffset:
-                    type: string (number)
+                    type: boolean
                 cells [
                     heading:
-                        type: string ("true" || "false") / required
+                        type: boolean
                     colspan:
                         type: string (number)
                     rowspan:
@@ -35,7 +35,7 @@ table {
     bodies [
         rows [
             rowSpanOffset:
-                type: string (number)
+                type: boolean
             cells [
                 heading:
                     type: string ("true" || "false") / required

@@ -20,6 +20,18 @@
           "colspan": "",
           "rowspan": "",
           "text": "Fee"
+        },
+        {
+          "heading": true,
+          "colspan": "",
+          "rowspan": "",
+          "text": "column4"
+        },
+        {
+          "heading": true,
+          "colspan": "",
+          "rowspan": "",
+          "text": "column5"
         }]
       }]
     },
@@ -43,6 +55,18 @@
           "colspan": "",
           "rowspan": "",
           "text": "$27.50"
+        },
+        {
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Resident Citizen or Non-Resident Fishing"
+        },
+        {
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Resident Citizen or Non-Resident Fishing"
         }]
       },
       {
@@ -58,6 +82,16 @@
           "colspan": "",
           "rowspan": "",
           "text": "FREE"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Resident Citizen or Non-Resident Minor Fishing (Age 15-17)"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Resident Citizen or Non-Resident Minor Fishing (Age 15-17)"
         }]
       },
       {
@@ -72,6 +106,16 @@
           "colspan": "",
           "rowspan": "",
           "text": "$16.25"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
         }]
       },
       {
@@ -87,6 +131,16 @@
           "colspan": "",
           "rowspan": "",
           "text": "FREE"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit amet."
         }]
       }]
     },
@@ -110,6 +164,16 @@
           "colspan": "",
           "rowspan": "",
           "text": "$27.50"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor."
         }]
       },
       {
@@ -125,6 +189,16 @@
           "colspan": "",
           "rowspan": "",
           "text": "$16.25"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
         }]
       },
       {
@@ -139,6 +213,16 @@
           "colspan": "",
           "rowspan": "",
           "text": "FREE"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
         }]
       },
       {
@@ -154,6 +238,16 @@
           "colspan": "",
           "rowspan": "",
           "text": "$27.50"
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
+        },{
+          "heading": false,
+          "colspan": "",
+          "rowspan": "",
+          "text": "Lorem ipsum dolor sit."
         }]
       }]
     }]

@@ -14,22 +14,4 @@
       border-bottom-width: 3px;
     }
   }
-
-  // TABLE styles
-  thead {
-    background-color: $c-bg-subtle;
-
-      th {
-        color: $c-font-heading;
-      }
-  }
-
-  tbody {
-    border-color: $c-bd-divider;
-  }
-
-  tr + tr {
-    border-color: $c-bd-divider;
-  }
-  // end Table styles
 }

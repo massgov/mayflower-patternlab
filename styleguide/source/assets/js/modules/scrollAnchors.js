@@ -97,7 +97,7 @@ export default function (window,document,$,undefined) {
       let topOffset = 0;
 
       headerBuffer = 0;
-      elHeight = $el.height();
+      elHeight = $el.outerHeight(true);
       upperLimit = $elParent.offset().top;
       isMobile = checkMobile($el);
 
