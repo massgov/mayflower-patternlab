@@ -1,0 +1,41 @@
+{
+  "pageHeader": {
+    "divider": false,
+    "title": "930 CMR 6.00: Exemptions Unrelated to Gifts",
+    "subTitle": "",
+    "headerTags": null,
+    "optionalContents": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "This is a regulation section detail page, and this is an optional description field. Its parent page is a regulation section listing page. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo judgement nisi nusu asdla tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra."
+              }
+            }
+          }]
+        }
+      }
+    },{
+      "path": "@molecules/listing-table.twig",
+      "data": {
+        "listingTable": {
+          "rows": [{
+            "label": "Last Updated:",
+            "text": "11/20/2016"
+          },{
+            "label": "Sponsoring legislator:",
+            "text": "The Massachusetts State Ethics Commission"
+          },{
+            "label": "Regulatory authority:",
+            "text": "760 CMR 4.00: M.G.L. c. 121B, §§ 26, 29, 31 and 34; M.G.L. c. 23B; E.O. 227, 390, 246, and 253"
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  }
+}
