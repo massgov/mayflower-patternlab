@@ -1,0 +1,12 @@
+<div class="ma__listing-table">
+  <div class="ma__listing-table__container">
+    <table>
+      {% for row in listingTable.rows %}
+        <tr>
+          <th scope="row">{{ row.label }}</th>
+          <td>{{ row.text }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
