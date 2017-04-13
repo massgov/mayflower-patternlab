@@ -1,14 +1,8 @@
 <section class="ma__location-listing js-location-listing">
-  {% if locationListing.form %}
-    {# pageFilters #}
+  {% if locationListing.locationFilters %}
     <div class="ma__location-listing__filters">
-      <div class="ma__location-listing__container">
-        <form action="{{ locationListing.form.action }}" class="js-location-listing-form">
-          {% for input in locationListing.form.inputs %}
-            {% include input.path with input.data %}
-          {% endfor %}
-        </form>
-      </div>
+      {% set locationFilters = locationListing.locationFilters %}
+      {% include "@molecules/location-filters.twig" %}
     </div>
   {% endif %}
   <div class="ma__location-listing__columns">
