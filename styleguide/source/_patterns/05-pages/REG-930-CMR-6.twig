@@ -10,5 +10,6 @@
   {% endfor %}
 {% endblock %}
 {% block postContent %}
-
+  {% set backButton = postContent.backButton %}
+  {% include "@molecules/back-button.twig" %}
 {% endblock %}
