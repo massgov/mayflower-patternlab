@@ -13,10 +13,16 @@
       "text": "1"
     },{
       "active": true,
-      "text": "2"
+      "text": "spacer"
     },{
       "active": false,
       "text": "3"
+    },{
+      "active": true,
+      "text": "4"
+    },{
+      "active": false,
+      "text": "5"
     },{
       "active": false,
       "text": "spacer"
