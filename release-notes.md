@@ -1,11 +1,18 @@
 # Mayflower Release Notes
 
 ## 3.7.1
-* [DP-2401](https://jira.state.ma.us/browse/DP-2401) - [a11y] The close button is announced as "close plus".
-* [DP-2399](https://jira.state.ma.us/browse/DP-2399) - [a11y] The site name is not announced correctly in Voiceover
-* [DP-2078](https://jira.state.ma.us/browse/DP-2078) - [dev] Update Interstitial Page Code
-* [DP-2400](https://jira.state.ma.us/browse/DP-2400) - [a11y] Add more context to the linked text "Log in to..."
+In this release of Mayflower, we're just stitching together a little patch with some TLC for the Topic page and also improving our accessibility.
 
+### SUMMARY
+Please feel free to check these tickets out in JIRA:
+- [DP-2399](https://jira.state.ma.us/browse/DP-2399) The site name is not announced correctly in Voiceover
+- [DP-2401](https://jira.state.ma.us/browse/DP-2401) The close button is announced as "close plus".
+- Github #398 JavaScript Type Errors
+
+### FIXED
+- The site logo now introduces itself more accurately, as Mass.gov (instead of Mass gov which was mistaken for Mass Governor), to screen readers and other machines.
+- The nifty little "X"  icon found on "close" buttons (think utility nav dropdown or mobile accordions for sub headings and cards) are now safely ignored by screen readers, since we already use text to describe the button.
+- We squashed a pesky javascript bug that might have been preventing other javascript from running on the site. (perhaps functionality for a video or map wasn't loading)
 
 ## 3.7.0
 ### SUMMARY
