@@ -9,7 +9,7 @@ $page-banner-icon-width: $column + $gutter;
   position: relative;
 
   @media ($bp-x-small-min) {
-    min-height: 366px;
+    height: 366px;
     margin-bottom: 40px;
   }
 
@@ -129,24 +129,7 @@ $page-banner-icon-width: $column + $gutter;
     height: 400px;
     max-width: 640px;
     position: relative;
-    top: 200px;
-
-    &:after {
-      content: "";
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 100%;
-      width: 50vw;
-
-      @media ($bp-x-small-min) {
-        left: 99%; // weird gap when skewed is shown
-      }
-
-      @media ($bp-medium-min) {
-        height: 460px;
-      }
-    }
+      top: 200px;
 
     @media ($bp-medium-min) {
       height: 100%;
@@ -304,7 +287,7 @@ $page-banner-icon-width: $column + $gutter;
     margin-top: 0;
     padding: 25px 0 20px;
     transform: skew(0);
-    width: calc(100%);
+    width: 100%;
     z-index: 1;
 
     @media ($bp-medium-min){
@@ -326,11 +309,10 @@ $page-banner-icon-width: $column + $gutter;
     width: 100%;
 
     @media ($bp-medium-min) {
-      width: 62.12903%; // @include span(8 of 12) was too big
       height: 460px;
-      margin-right: 1.6129%;
       max-width: 820px;
-      right: 15px;
+      right: 40px;
+      width: 62.12903%; // @include span(8 of 12) was too big
     }
   }
 }
