@@ -5,6 +5,7 @@
   &--right {
     padding-left: 0;
     padding-right: 70px;
+    text-align: right;
   }
 
   .ma__arrow-button {
@@ -16,8 +17,8 @@
     width: 50px;
   }
 
-  &--right &__button {
-    left: auto;
+  &--right .ma__arrow-button {
+    left: inherit;
     right: 0;
   }
 

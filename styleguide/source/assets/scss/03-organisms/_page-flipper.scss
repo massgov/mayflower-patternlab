@@ -1,0 +1,41 @@
+.ma__page-flipper {
+  @include ma-component-spacing;
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+
+  &__container {
+    border-top-style: solid;
+    border-top-width: 2px;
+    display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__prev,
+  &__next {
+    flex-basis: 400px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-top: 30px;
+  }
+
+  &__prev {
+    border-right-style: solid;
+    border-right-width: 1px;
+    margin-right: -1px;
+    padding-right: 20px;
+  }
+
+  &__next {
+    border-left-style: solid;
+    border-left-width: 1px;
+    margin-left: -1px;
+    padding-left: 20px;
+  }
+}
