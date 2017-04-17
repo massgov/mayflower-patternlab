@@ -1,6 +1,7 @@
 ---
 title: Back Button
 ---
+
 Description: Takes the user Back to the Previous page
 
 ## Status: alpha
