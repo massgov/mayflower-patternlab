@@ -2,10 +2,12 @@
   @include ma-button;
   @include ma-chevron;
   display: inline-block;
-  padding: 16px 14px;
+  padding: 8px 8px;
+  text-align: center;
+  transform: scale(-1);
   
-  &--left {
-    transform: scale(-1);
+  &--right {
+    transform: scale(1);
   }
 
   &:after {
