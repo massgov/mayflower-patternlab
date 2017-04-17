@@ -12,9 +12,9 @@
     {% endif %}
     {% for item in utilityNav.items %}
       <li class="ma__utility-nav__item js-util-nav-toggle">
-        <a class="ma__utility-nav__link" 
-          href="#" 
-          title="{{ item.text }}">
+        <a class="ma__utility-nav__link"
+          href="#"
+          aria-label="{% if item.ariaLabelText %}{{ item.ariaLabelText }}{% else %}{{ item.text }}{% endif %}">
           {% include item.icon %}
           <span>
             {{ item.text }}
@@ -23,7 +23,7 @@
         <div aria-hidden="true" class="ma__utility-nav__content js-util-nav-content is-closed">
           <div class="ma__utility-nav__container">
             <div class="ma__utility-nav__content-title">
-              <button class="ma__utility-nav__close js-close-util-nav"><span>{{ item.closeText }}</span><span role="presentation">+</span></button>
+              <button class="ma__utility-nav__close js-close-util-nav"><span>{{ item.closeText }}</span><span aria-hidden="true">+</span></button>
               {% include item.icon %}
               <span>{{ item.text }}</span>
             </div>
