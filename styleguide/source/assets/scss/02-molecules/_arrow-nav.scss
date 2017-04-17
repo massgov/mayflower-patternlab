@@ -1,0 +1,34 @@
+.ma__arrow-nav {
+  padding-left: 70px;
+  position: relative;
+
+  &--right {
+    padding-left: 0;
+    padding-right: 70px;
+  }
+
+  .ma__arrow-button {
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    width: 50px;
+  }
+
+  &--right &__button {
+    left: auto;
+    right: 0;
+  }
+
+  &__title {
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    @include ma-link-underline;
+  }
+}
