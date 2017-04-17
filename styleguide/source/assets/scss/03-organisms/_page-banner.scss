@@ -102,6 +102,8 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--large &__content {
+    display: flex;
+      align-items: center;
     height: 100%;
     max-width: 640px;
 

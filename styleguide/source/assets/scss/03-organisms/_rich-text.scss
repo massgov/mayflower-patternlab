@@ -9,23 +9,28 @@ $rich-text-spacing-mobile: 1.5rem;
     margin-bottom: 1rem;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container('restricted');
   }
-
+  
   .ma__split-columns__column > & {
+    margin-bottom: 1em;
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
 
-  & > :last-child {
-    margin-bottom: 0;
-  }
-
-  h2, h3, h4 {
+  // rich text has an optional title
+  h2:not(.ma__comp-heading),
+  h3:not(.ma__comp-heading),
+  h3:not(.ma__sidebar-heading),
+  h4 {
     @include ma-comp-heading;
   }
 
@@ -109,7 +114,6 @@ $rich-text-spacing-mobile: 1.5rem;
 
 // TABLE styles
   table {
-    border-collapse: collapse;
     margin-bottom: $rich-text-spacing-mobile;
     min-width: 450px;
     width: 100%;
@@ -117,39 +121,6 @@ $rich-text-spacing-mobile: 1.5rem;
     @media ($bp-small-min) {
       margin-bottom: $rich-text-spacing;
     }
-  }
-
-  thead {
-
-    th {
-      border: none;
-      font-size: 1.625rem;
-      line-height: 1.3;
-    }
-  }
-
-  tbody {
-    border-top: 2px solid;
-  }
-
-  tr + tr {
-    border-top: 1px solid;
-  }
-
-  th, td {
-    font-size: 1.25rem;
-    padding: 10px 20px 10px 0;
-    text-align: left;
-    vertical-align: top;
-
-    &:first-child {
-      padding-left: 15px;
-    }
-  }
-
-  .is-offset th:first-child,
-  .is-offset td:first-child {
-    padding-left: 0;
   }
 
   &__table-wrapper {
@@ -160,5 +131,10 @@ $rich-text-spacing-mobile: 1.5rem;
       margin-bottom: 0;
     }
   }
-  // end Table styles
+// end Table styles
+
+// last element in the rich text content
+  & > :last-child {
+    margin-bottom: 0 !important;
+  }
 }

@@ -25,30 +25,30 @@
     }]
   },
 
-  "actionHeader": {
-    "pageHeader": {
-      "title": "Southbridge RMV",
-      "subTitle": "",
-      "rteElements": "",
-      "headerTags": ""
-    },
-
-    "contactUs": {
-      "groups": [{
-        "icon": "",
-        "name": "",
-        "items": [{
-          "type": "address",
-          "property": "url",
-          "label": "",
-          "value": "6 Larochelle Way, Southbridge, MA 01550",
-          "link": "https://www.google.com/maps/place/6+Larochelle+Way,+Southbridge,+MA+01550",
-          "details": ""
-        }]
-      }]
-    },
-    
+  "pageHeader": {
     "divider": false,
+    "title": "Southbridge RMV",
+    "subTitle": "",
+    "headerTags": null,
+    "optionalContents": [{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "groups": [{
+            "icon": "",
+            "name": "",
+            "items": [{
+              "type": "address",
+              "property": "url",
+              "label": "",
+              "value": "6 Larochelle Way, Southbridge, MA 01550",
+              "link": "https://www.google.com/maps/place/6+Larochelle+Way,+Southbridge,+MA+01550",
+              "details": ""
+            }]
+          }]
+        }
+      }
+    }],
     "widgets": [{
       "path": "@molecules/wait-time.twig",
       "data": {
@@ -206,9 +206,9 @@
       "title":"",
       "intro": "",
       "id":"",
-      "path": "molecules-action-map",
+      "path": "@molecules/google-map.twig",
       "data": {
-        "actionMap": {
+        "googleMap": {
           "map": {
             "center": {
               "lat": 42.594129,
@@ -249,8 +249,147 @@
       "title":"Activities",
       "intro": "",
       "id":"activities",
-      "path": "organisms-rich-text",
-      "data": {}
+      "path": "@organisms/by-author/image-promos.twig",
+      "data": {
+        "imagePromos": {
+          "items": [{
+            "title": {
+              "text": "Hiking & Walking",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "hiking image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "Details & Maps",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Camping",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "camping image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Winter Sports",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "wintery image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Hunting",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "hunting image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Bird Watching",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "bird image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          }]
+        }
+      }
     },{
       "title":"Facilities",
       "intro": "",
@@ -285,30 +424,30 @@
       "data": {
         "richText": {
         "property": "",
-        "rteElements": [{
-          "path": "atoms-paragraph",
-          "data": {
-            "paragraph" : {
-              "text": "Vestibulum ornare feugiat sodales. Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum. Nulla facilisi. Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui. Sed hendrerit sit amet nunc sit amet ultrices. Pellentesque malesuada faucibus ligula ac tincidunt."
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Vestibulum ornare feugiat sodales. Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum. Nulla facilisi. Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui. Sed hendrerit sit amet nunc sit amet ultrices. Pellentesque malesuada faucibus ligula ac tincidunt."
+              }
             }
-          }
-        },
-        {
-          "path": "atoms-unordered-list",
-          "data": {
-            "unorderedList": [{
-              "text": "Vestibulum ornare feugiat sodales."
-            },{
-              "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-            },{
-              "text": "Nulla facilisi."
-            },{
-              "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
-            },{
-              "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            }]
-          }
-        }]
+          },
+          {
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Vestibulum ornare feugiat sodales."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+              },{
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }]
+            }
+          }]
         }
       }
     },{
@@ -382,7 +521,7 @@
           "property": "department",
           "type": "Organization"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Bascom Lodge",
           "chevron":""
@@ -450,7 +589,7 @@
           "property": "department",
           "type": "Organization"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Museum",
           "chevron":""

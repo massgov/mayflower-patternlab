@@ -1,0 +1,9 @@
+.ma__contact-list {
+  @include ma-component-spacing;
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+}

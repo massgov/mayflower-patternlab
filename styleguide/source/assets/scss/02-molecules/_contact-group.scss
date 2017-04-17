@@ -61,6 +61,7 @@
   .ma__content-link,
   .ma__decorative-link {
     display: inline-block;
+    width: auto;
 
     @media ($bp-small-min){
       font-size: 1.25rem;

@@ -1,5 +1,7 @@
 {
   "columnHeading" : {
-    "text": "Heading for the start of a column"
+    "text": "Heading for the start of a column",
+    "href": "",
+    "info": ""
   }
 }

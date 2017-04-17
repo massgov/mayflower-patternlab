@@ -20,58 +20,58 @@
     }]
   },
 
-  "actionHeader": {
-    "pageHeader": {
-      "title": "Mt Greylock State Park",
-      "subTitle": "",
-      "rteElements": "",
-      "headerTags": ""
-    },
-
-    "contactUs": {
-      "groups": [{
-        "icon": "",
-        "name": "",
-        "items": [{
-          "type": "address",
-          "label": "",
-          "address": "Visitor's Center, 30 Rockwell Road, Lanesborough, MA 01237",
-          "link": {
-            "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
-            "text": "directions",
-            "info": "directions to Mt Greylock State Park Vistor's Center",
-            "property": "url"
-          },
-          "details": ""
-        }]
-      },{
-        "icon": "@atoms/05-icons/svg-phone.twig",
-        "name": "Phone",
-        "items": [{
-          "type": "phone",
-          "label":"Main:",
-          "link": {
-            "href": "+14134994262",
-            "text":"(413) 499-4262"
-          },
-          "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-        }]
-      },{
-        "icon": "@atoms/05-icons/svg-laptop.twig",
-        "name": "Online",
-        "items": [{
-          "type": "email",
-          "label":"Email:",
-          "link": {
-            "text":"email@email.com",
-            "href":"email@email.com"
-          },
-          "details":""
-        }]
-      }]
-    },
-
+  "pageHeader": {
     "divider": false,
+    "title": "Mt Greylock State Park",
+    "subTitle": "",
+    "headerTags": null,
+    "optionalContents": [{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "groups": [{
+            "icon": "",
+            "name": "",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "address": "Visitor's Center, 30 Rockwell Road, Lanesborough, MA 01237",
+              "link": {
+                "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
+                "text": "directions",
+                "info": "directions to Mt Greylock State Park Vistor's Center",
+                "property": "url"
+              },
+              "details": ""
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main:",
+              "link": {
+                "href": "+14134994262",
+                "text":"(413) 499-4262"
+              },
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "email",
+              "label":"Email:",
+              "link": {
+                "text":"email@email.com",
+                "href":"email@email.com"
+              },
+              "details":""
+            }]
+          }]
+        }
+      }
+    }],
     "widgets": [{
       "path": "@molecules/location-icons.twig",
       "data": {
@@ -256,9 +256,9 @@
       "title":"",
       "intro": "",
       "id":"",
-      "path": "molecules-action-map",
+      "path": "@molecules/google-map.twig",
       "data": {
-        "actionMap": {
+        "googleMap": {
           "map": {
             "center": {
               "lat": 42.594129,
@@ -299,44 +299,146 @@
       "title":"Activities",
       "intro": "",
       "id":"activities",
-      "path": "molecules-action-activities",
+      "path": "@organisms/by-author/image-promos.twig",
       "data": {
-        "actionActivities": [{
-          "image": "/assets/images/placeholder/190x107.png",
-          "alt": "hiking image",
-          "title": "Hiking & Walking",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
-          "linkTitle": "Details & Maps",
-          "href": "#"
-        },{
-          "image": "/assets/images/placeholder/190x107.png",
-          "alt": "camping image",
-          "title": "Camping",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
-          "linkTitle": "More",
-          "href": "#"
-        },{
-          "image": "/assets/images/placeholder/190x107.png",
-          "alt": "wintery image",
-          "title": "Winter Sports",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
-          "linkTitle": "More",
-          "href": "#"
-        },{
-          "image": "/assets/images/placeholder/190x107.png",
-          "alt": "hunting image",
-          "title": "Hunting",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
-          "linkTitle": "More",
-          "href": "#"
-        },{
-          "image": "/assets/images/placeholder/190x107.png",
-          "alt": "bird image",
-          "title": "Bird Watching",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.",
-          "linkTitle": "More",
-          "href": "#"
-        }]
+        "imagePromos": {
+          "items": [{
+            "title": {
+              "text": "Hiking & Walking",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "hiking image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "Details & Maps",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Camping",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "camping image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Winter Sports",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "wintery image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Hunting",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "hunting image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Bird Watching",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "bird image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          }]
+        }
       }
     },{
       "title":"Facilities",
@@ -543,7 +645,7 @@
           "property": "containedInPlace",
           "type": "CivicStructure"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Bascom Lodge",
           "chevron":"",
@@ -626,7 +728,7 @@
           "property": "containedInPlace",
           "type": "CivicStructure"
         },
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Museum",
           "chevron":""

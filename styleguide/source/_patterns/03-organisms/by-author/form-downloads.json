@@ -1,0 +1,48 @@
+{
+  "formDownloads": {
+    "compHeading": {
+      "title": "Forms",
+      "sub": false
+    },
+    "downloadLinks": [{
+      "downloadLink": {
+        "iconSize": "",
+        "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+        "decorativeLink": {
+          "text": "PDF download item",
+          "href": "#",
+          "info": "",
+          "property": ""
+        },
+        "size": "30kb",
+        "format": "PDF"
+      }
+    },{
+      "downloadLink": {
+        "iconSize": "",
+        "icon": "@atoms/05-icons/svg-doc-docx.twig",
+        "decorativeLink": {
+          "text": "Word download item",
+          "href": "#",
+          "info": "",
+          "property": ""
+        },
+        "size": "40kb",
+        "format": "DOCX"
+      }
+    },{
+      "downloadLink": {
+        "iconSize": "",
+        "icon": "@atoms/05-icons/svg-laptop.twig",
+        "decorativeLink": {
+          "text": "Online Form: Out-of-Country Driver's License Conversion",
+          "href": "#",
+          "info": "",
+          "property": ""
+        },
+        "size": "",
+        "format": "form"
+      }
+    }]
+  }
+}

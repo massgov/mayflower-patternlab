@@ -4,7 +4,7 @@
       <a href="{{ imagePromo.image.href }}">
     {% endif %}
     <div class="ma__image-promo__image">
-      <img alt="{{ imagePromo.image.text }}" src="{{ imagePromo.image.image }}">
+      <img alt="{{ imagePromo.image.alt }}" src="{{ imagePromo.image.src }}">
     </div>
     {% if imagePromo.image.href %}
       </a>
@@ -32,7 +32,7 @@
       </div>
     {% endif %}
     <div class="ma__image-promo__description">
-      {% set richText = imagePromo.description %}
+      {% set richText = imagePromo.description.richText %}
       {% include "@organisms/by-author/rich-text.twig" %}
     </div>
     {% if imagePromo.link %}

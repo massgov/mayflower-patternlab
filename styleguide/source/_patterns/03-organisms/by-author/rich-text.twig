@@ -1,9 +1,15 @@
-{# Backward compatible with v3.2 #}
-{% if richText.rteElements %}
-  {% set rteElements = richText.rteElements %}
-{% endif %}
-<section class="ma__rich-text js-ma-rich-text"{% if richText.property %} property="{{ richText.property }}"{% endif %}>
-  {% for element in rteElements %}
+<section 
+  class="ma__rich-text js-ma-rich-text"
+  {% if richText.property %} property="{{ richText.property }}"{% endif %}>
+  {% if richText.compHeading %}
+    {% set compHeading = richText.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if richText.sidebarHeading %}
+    {% set sidebarHeading = richText.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+  {% for element in richText.rteElements %}
     {% include element.path with element.data %}  
   {% endfor %}
 </section>
