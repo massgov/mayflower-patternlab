@@ -6,7 +6,6 @@
 %}
 {% set titleClass = "ma__section-links__title js-accordion-link" %}
 {% set titleId = "section_titles_" ~ sectionLinks.id %}
-{% set linkType = sectionLinks.type ?: "decorative" %}
 
 <section class="ma__section-links js-accordion">
   <div class="ma__section-links__content">
@@ -33,7 +32,7 @@
         {% include "@atoms/decorative-link.twig" %}
       </div>
       <ul class="ma__section-links__items">
-        {% if linkType == "callout" %}
+        {% if sectionLinks.type == "callout" %}
           {% for calloutLink in sectionLinks.links %}
             <li class="ma__section-links__item">
               {% include "@molecules/callout-link.twig" %}

@@ -1,11 +1,49 @@
 # Mayflower Release Notes
 
+## 4.0.0
+Mayflower turns 4.0.0!  Oh man.  We've been in the lab creating a new page type called How-To (formerly known as Action) and we've got lots of other ~candies~ updates and ~peeps~ goodies packed in to this ~easter basket~ release. :)
+
+**Note:** This bump from 3.* to 4.* is considered a major release, which means all of our friends who make their sites Mayflowery with this code should read on and integrate locally before updating anything in production.  If you're interested, you can see our integration test steps for Drupal in this [google doc](https://docs.google.com/document/d/1pbb-l0G39y9o8QMElxGzSi7nBBxDaV9k7hHdxmWAiaU/edit#).
+
+### SUMMARY
+If you'd like to see the tickets in JIRA:
+- [DP-2228 [pattern lab] How-to page updates](https://jira.state.ma.us/browse/DP-2228)
+- [DP-2685 [mf] Add Tabular Fees module to How To Page](https://jira.state.ma.us/browse/DP-2685)
+
+### NEW FEATURES
+- Goodbye Action and hellooooooo How-To page.  Give her a spin at `Pages >
+ HOWTO Unemployment`.
+- That same left sticky nav that we all know and love in a How-To (Action) page is now it's own component. ;)  See `Molecules > Sticky Nav`
+- We've got a nifty new list of contacts that can optionally be collapsed / expanded in an accordion, like in the main column of a How-To.  See `Organisms > By Author > Contact List`
+- Since we were using it on a couple different page types, we created a Details template that contains the meat (or tofu) of the content area for How-Tos and Locations (they're similar in layout - remember right rail?!).  See `Templates > Content Types > Details`
+- We now have a mobile-friendly pattern for data tables!  This new component displays as a table on wide screens and as a list on narrow screens.  See `Organisms > By Author > Tabular Data` - and remember you can change display size in pattern lab to see it change layout!
+
+### IMPROVEMENTS
+- We've renamed the Action Activities component to Image Promos (See `Organisms > By Author > Image Promos`).  This is a list of image promo molecules (See `Molecules > Image Promo`) that we see on location pages as recommended activities and on map listing pages.
+- The Action Sequential List molecule has moved up in the world.  It's now called Steps Ordered and it's an organism!  This is the pattern that lists steps displayed as a numbered list.  See `Organisms > By Author > Steps - Ordered`
+- Similarly, the Action Steps organism is now called Steps Unordered and it's got a new look!  This lists steps displayed as accordions that you can collapse and expand. See `Organisms > By Author > Steps Unordered`, `Molecules > Action Step` (with lots of variations!)
+- We've made our downloads organism more flexible with an optional heading.  This allowed us to remove the Action Downloads molecule. We updated this new organism name to Form Downloads (replacing Form Download -- See `Organisms > By Author > Form Downloads`).  Finally, this organism includes several singular download link molecules.  See `Molecules > Download Link`.
+- Finally, our Page Header organism (See `Organisms > By Template > Page Header`) is shiny like new!  It's still got the title and divider, but now you can also add some optional components to the sidebar (widgets) or under the Title and Sub Title (optional contents).  You can see this flexible pattern in action on the Org Page (`Pages > Org Landing Page`) -- it's all the content in white in between the page banner (title/image) and the action finder (What would you like to do?).
+
+## 3.7.1
+In this release of Mayflower, we're just stitching together a little patch with some TLC for the Topic page and also improving our accessibility.
+
+### SUMMARY
+Please feel free to check these tickets out in JIRA:
+- [DP-2399](https://jira.state.ma.us/browse/DP-2399) The site name is not announced correctly in Voiceover
+- [DP-2401](https://jira.state.ma.us/browse/DP-2401) The close button is announced as "close plus".
+- Github #398 JavaScript Type Errors
+
+### FIXED
+- The site logo now introduces itself more accurately, as Mass.gov (instead of Mass gov which was mistaken for Mass Governor), to screen readers and other machines.
+- The nifty little "X"  icon found on "close" buttons (think utility nav dropdown or mobile accordions for sub headings and cards) are now safely ignored by screen readers, since we already use text to describe the button.
+- We squashed a pesky javascript bug that might have been preventing other javascript from running on the site. (perhaps functionality for a video or map wasn't loading)
+
 ## 3.7.0
 ### SUMMARY
 We've updated the topic page!
 
 If you'd like to read about this changes in JIRA:
-
 * [DP-2117](https://jira.state.ma.us/browse/DP-2117) - [pattern lab] Topic Page Updates
 
 ### Improvements
