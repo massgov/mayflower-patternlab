@@ -4,8 +4,8 @@
     border-color: $c-bd-divider;
   }
 
-  &__prev,
-  &__next {
+  &__blank,
+  .ma__arrow-nav {
     border-color: $c-bd-divider;
   }
 }
