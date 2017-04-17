@@ -1,0 +1,64 @@
+{# site header #}
+{% block header %}{% endblock %}
+
+<main 
+  id="main-content"
+  class="ma__details" 
+  tabindex="-1"
+  {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
+  <div class="pre-content">
+    {% block preContent %}
+      {% include "@organisms/by-template/page-header.twig" %}
+    {% endblock %}
+  </div>
+  <div class="main-content main-content--two">
+
+    <div class="page-content">
+      {% if sidebar.contactList %}
+        <div class="ma__details__top-contact">
+          {% set contactList = sidebar.contactList %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        </div>
+      {% endif %}
+      {% set coloredHeading = {
+        "text": details.contentTitle,
+        "color": "green"
+      } %}
+      {% include "@atoms/04-headings/colored-heading.twig" %}
+      <div class="ma__details__content">
+        {% include "@molecules/sticky-nav.twig" %}
+        {% block pageContent %}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      {% if sidebar.contactList %}
+        <div class="ma__details__sidebar-contact">
+          {% set contactList = sidebar.contactList %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        </div>
+      {% endif %}
+      {% if sidebar %}
+        <div class="ma__details__sidebar">
+          {% block sidebar %}
+            {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
+          {% endblock %}
+        </div>
+      {% endif %}
+    </aside>
+    
+  </div>
+  <div class="post-content">
+    {% block postContent %}
+      {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
+    {% endblock %}
+  </div>
+
+  {# structured content #}
+  {% block schemaContent %}{% endblock %}
+</main>
+
+{# site footer #}
+{% block footer %}{% endblock %}

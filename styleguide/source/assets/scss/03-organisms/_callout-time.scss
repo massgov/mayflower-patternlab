@@ -1,5 +1,5 @@
 .ma__callout-time {
-  margin-bottom: 30px;
+  @include ma-component-spacing;
   position: relative;
 
   &__icon {

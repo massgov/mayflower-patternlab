@@ -7,11 +7,16 @@
 {% endif %}
 
 {% if compHeading.sub %}
-  <h3 class="ma__comp-heading {{ colored }} {{ centered }}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %} tabindex="-1">
+  <h3 
+    class="ma__comp-heading {{ colored }} {{ centered }}" 
+    {% if compHeading.id %}id="{{compHeading.id}}"{% endif %} tabindex="-1">
     {{ compHeading.title }}
   </h3>
 {% else %}
-  <h2 class="ma__comp-heading {{ colored }} {{ centered }}" {% if compHeading.id %}id="{{compHeading.id}}"{% endif %}>
+  <h2 
+    class="ma__comp-heading {{ colored }} {{ centered }}" {% if compHeading.id %}
+    id="{{compHeading.id}}"{% endif %}
+    tabindex="-1">
     {{ compHeading.title }}
   </h2>
 {% endif %}

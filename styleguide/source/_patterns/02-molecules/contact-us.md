@@ -1,42 +1,36 @@
 ---
 title: Contact Us
 ---
-Description: `<section>` element which contains an `<h4>` title heading (an entity title) and several groups (or types IE phone, fax, email, address) of contact information.
+Description: Displays Contact information to the user.
 
-## State: Depreciated (should be promoted to Organism)
+## State: Alpha
 
 ### Notes:
-The first two contact groups should always be visible on page load.  Additional contact groups should be hidden within the accordion.
+- This component can be viewed as an accordion or in list view
+- in List view, the first two contact groups should be visible and the remainder are collapsed.
 
 ### Used In:
 [@organism/by-template/action-header](?p=organism-action-header)
 
 ### Contains
 [@molecules/contact-group](?p=molecules-contact-group)
+[@atoms/04-headings/comp-heading](?p=atoms-comp-heading)
+[@atoms/04-headings/column-heading](?p=atoms-column-heading)
 
 ### Variables:
 ~~~
 contactUs: {
-   schemaSd: {
-        property: 
-            type: string / required
-        type: 
-            type: string / required
-        }
-    title: {
-        href:
-            type: string (url) / optional
-        target:
-            type: string (_blank || "") / optional
-        text:
-            type: string / required
-        chevron:
-            type: string (boolean, "false") / required
-    } / required
-    groups: [
-      ...
-        contactGroup object instances, see @molecules/contact-group
-      ...
-    ] / required
+    accordion: 
+        type: boolean
+    isExpanded:
+        type: boolean
+
+    subTitle: {
+        type: object/optional - see @atoms/04-headings/column-heading.md
+    }
+
+    groups: [{
+        type: array of objects/required see @molecules/contact-group.md
+    }]
 }
 ~~~

@@ -1,0 +1,6 @@
+.ma__link-list {
+
+  .sidebar &__item + &__item {
+    border-color: $c-bd-divider;
+  }
+}

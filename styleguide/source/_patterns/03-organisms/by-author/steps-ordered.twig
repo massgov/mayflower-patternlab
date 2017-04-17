@@ -1,0 +1,17 @@
+<section class="ma__steps-ordered">
+  {% if stepsOrdered.compHeading %}
+    {% set compHeading = stepsOrdered.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if stepsOrdered.sidebarHeading %}
+    {% set sidebarHeading = stepsOrdered.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+  <ol class="ma__steps-ordered__items">
+    {% for actionStep in stepsOrdered.steps %}
+      <li class="ma__steps-ordered__item">
+        {% include "@molecules/action-step.twig" %}
+      </li>
+    {% endfor %}
+  </ol>
+</section>

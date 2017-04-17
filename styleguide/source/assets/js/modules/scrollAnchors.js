@@ -57,8 +57,20 @@ export default function (window,document,$,undefined) {
         // bring focus to the item we just scrolled to
         $(hash).focus();
       });
-      
     });
+
+    // if the content contains accordions, 
+    // readjust settings when there state changes.
+    $('.js-accordion-link').on('click',function() {
+      if(typeof debounceTimer === "number") {
+        window.clearTimeout(debounceTimer);
+      }
+      debounceTimer = window.setTimeout(function(){
+        setVariables();
+        setPosition();
+        activateLink();
+      },400);
+    })
 
     $el.find(".js-scroll-anchors-toggle").on('click',function() {
       $el.toggleClass('is-open');
@@ -85,7 +97,7 @@ export default function (window,document,$,undefined) {
       let topOffset = 0;
 
       headerBuffer = 0;
-      elHeight = $el.height();
+      elHeight = $el.outerHeight(true);
       upperLimit = $elParent.offset().top;
       isMobile = checkMobile($el);
 

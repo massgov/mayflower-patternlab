@@ -261,53 +261,66 @@
   },
 
   "splitColumns": {
-    "column1": [{
-      "path": "@organisms/by-author/link-list.twig",
-      "data": {
-        "linkList" : {
-          "sidebarHeading": {
-            "title": "Related Services"
-          },
-          "stacked": true,
-          "links" : [{
-            "url":"#",
-            "text":"Job Search Help"
-          },{
-            "url":"#",
-            "text":"Job Training"
-          },{
-            "url":"#",
-            "text":"Career Counseling"
-          }]
+    "columns": [{
+      "items": [{
+        "path": "@organisms/by-author/link-list.twig",
+        "data": {
+          "linkList" : {
+            "sidebarHeading": {
+              "title": "Related Services"
+            },
+            "stacked": true,
+            "links" : [{
+              "url":"#",
+              "text":"Job Search Help"
+            },{
+              "url":"#",
+              "text":"Job Training"
+            },{
+              "url":"#",
+              "text":"Career Counseling"
+            }]
+          }
         }
-      }
-    }],
-    "column2": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
-      "data": {
-        "sidebarHeading": {
-          "title": "Additional Resources"
-        }
-      }
+      }]
     },{
-      "path": "@molecules/action-downloads.twig",
-      "data": {
-        "actionDownloads": [{
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-          "text": "Work Search Activity Log",
-          "href": "#",
-          "type": "",
-          "size": "1MB",
-          "format": "PDF"
-        },{
-          "icon": "@atoms/05-icons/svg-doc-docx.twig",
-          "text": "Name of Doc",
-          "href": "#",
-          "type": "",
-          "size": "107KB",
-          "format": "DOCX"
-        }]
-      }
+      "items": [{
+        "path": "@organisms/by-author/form-downloads.twig",
+        "data": {
+          "formDownloads": {
+            "sidebarHeading": {
+              "title": "Additional Resources"
+            },
+            "downloadLinks": [{
+              "downloadLink": {
+                "iconSize": "",
+                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "decorativeLink": {
+                  "text": "Work Search Activity Log",
+                  "href": "#",
+                  "info": "",
+                  "property": ""
+                },
+                "size": "1MB",
+                "format": "PDF"
+              }
+            },{
+              "downloadLink": {
+                "iconSize": "",
+                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "decorativeLink": {
+                  "text": "Name of Doc",
+                  "href": "#",
+                  "info": "",
+                  "property": ""
+                },
+                "size": "107KB",
+                "format": "DOCX"
+              }
+            }]
+          }
+        }
+      }]
     }]
   }
 }

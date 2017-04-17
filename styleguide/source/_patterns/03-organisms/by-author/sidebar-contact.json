@@ -6,7 +6,7 @@
     },
     "items": [{
       "contactUs": {
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Bascom Lodge",
           "chevron":""
@@ -58,7 +58,7 @@
       }
     },{
       "contactUs": {
-        "title": {
+        "subTitle": {
           "href":"",
           "text": "Museum",
           "chevron":""

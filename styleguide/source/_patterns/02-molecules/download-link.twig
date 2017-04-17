@@ -1,0 +1,23 @@
+{% if downloadLink.iconSize %}
+  {% set sizeClass = "ma__download-link--" ~ downloadLink.iconSize %}
+{% endif %}
+<div class="ma__download-link {{ sizeClass }}">
+  <div class="ma__download-link__icon">
+    {% include downloadLink.icon %}
+  </div>
+  <div class="ma__download-link__title">
+    {% if downloadLink.format == "form" %}
+      {% set decorativeLink = downloadLink.decorativeLink %}
+      {% include "@atoms/decorative-link.twig" %}
+    {% else %}
+      <a 
+        class="ma__download-link__file-link" 
+        href="{{ downloadLink.decorativeLink.href}}">
+          {{ downloadLink.decorativeLink.text }}
+      </a>
+      {% if downloadLink.format or downloadLink.size %}
+        <span class="ma__download-link__file-spec">({{ downloadLink.format }} {{ downloadLink.size }})</span>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
