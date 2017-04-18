@@ -1,0 +1,31 @@
+{
+  "pageFlipper": {
+    "prev": {
+      "arrowButton": {
+        "href": "#",
+        "info": "",
+        "direction": "left"
+      },
+      "title": "Previous Section: previous page's title",
+      "link": {
+        "href": "#",
+        "text": "Page description from the previous page to this one",
+        "info": ""
+      }
+    },
+    "next": {
+      "arrowButton": {
+        "href": "#",
+        "info": "",
+        "direction": "right"
+      },
+      "title": "Next Section: next page's title",
+      "link": {
+        "href": "#",
+        "text": "Page description from the next page to this one",
+        "info": ""
+      }
+    }
+  }
+}
+
