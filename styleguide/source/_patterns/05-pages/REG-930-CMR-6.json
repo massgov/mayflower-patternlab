@@ -1,4 +1,30 @@
 {
+  "breadcrumbs":{
+    "light": "true",
+    "links": [{
+      "text": "Your Government",
+      "href": "#"
+    },{
+      "text": "State Agencies",
+      "href": "#"
+    },{
+      "text": "State Ethics Commission",
+      "href": "#"
+    },{
+      "text": "Overview & Mission",
+      "href": "#"
+    },{
+      "text": "Laws, Regulations & Policies",
+      "href": "#"
+    },{
+      "text": "Rules and Regulations Governing the Commision",
+      "href": "#"
+    },{
+      "text": "Section 930 CMR 6.00 Exemptions Unrelated to Gifts",
+      "href": "#"
+    }]
+  },
+
   "pageHeader": {
     "divider": false,
     "title": "930 CMR 6.00: Exemptions Unrelated to Gifts",
