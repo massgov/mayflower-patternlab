@@ -1,0 +1,40 @@
+.ma__results-heading {
+  margin-bottom: 16px;
+
+  &__title {
+    font-size: 1.188rem;
+    letter-spacing: .09em;
+    line-height: 1.563rem;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+  }
+
+  &__tag {
+    @include ma-button-reset;
+    font-size: 1.125rem;
+    display: inline-block;
+    line-height: 1em;
+    margin-right: .25em;
+    padding: 8px 11px;
+    white-space: nowrap;
+
+    &:after {
+      content: "+";
+      display: inline-block;
+      font-size: 1.5em;
+      line-height: 1.125rem;
+      margin-left: .15em;
+      margin-top: -1px;
+      transform: rotate(135deg);
+      vertical-align: middle;
+    }
+  }
+
+  &__clear {
+    @include ma-button-reset;
+    font-size: 1.125rem;
+    display: inline-block;
+    line-height: 1em;
+    padding: 9px 11px;
+  }
+}

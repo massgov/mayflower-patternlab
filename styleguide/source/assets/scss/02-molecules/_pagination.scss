@@ -1,0 +1,63 @@
+.ma__pagination {
+
+  &__prev,
+  &__next,
+  &__page {
+    @include ma-button-reset;
+    font-size: 20px;
+    line-height: 1;
+    padding: 8px 10px;
+    position: relative;
+
+    @media ($bp-small-min) {
+      margin: 0 .1em;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: .5;
+    }
+
+    &.is-active {
+      cursor: default;
+    }
+  }
+
+  &__prev {
+    @include ma-chevron('left');
+    
+    @media ($bp-small-max) {
+      font-size: 0;
+      height: 36px;
+      vertical-align: top;
+
+      &:before {
+        position: absolute;
+          right: 4px;
+          top: 12px;
+      }
+    }
+  }
+
+  &__next {
+    @include ma-chevron('right');
+
+    @media ($bp-small-max) {
+      font-size: 0;
+      height: 36px;
+      vertical-align: top;
+
+      &:after {
+        position: absolute;
+          left: 0;
+          top: 12px;
+      }
+    }
+  }
+
+  &__spacer {
+    @media ($bp-small-min) {
+      margin: 0 .25em;
+    }
+  }
+}

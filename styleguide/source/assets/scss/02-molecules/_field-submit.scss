@@ -4,13 +4,15 @@
 
   label {
     display: block;
-    margin-bottom: 0;
+  }
+
+  &__inputs {
+    display: flex;
   }
 
   input,
   button {
     float:left;
-    margin-top: .5rem;
 
     &:focus {
       position: relative;
@@ -19,16 +21,18 @@
   }
 
   input {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 200px;
     margin-right: -2px;
     max-width: 100%;
-    width: 400px;
-
-    @media ($bp-x-small-max) {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   button {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 
     svg {
       display: none;

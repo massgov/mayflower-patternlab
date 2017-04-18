@@ -5,6 +5,13 @@
       "href": "#",
       "type": ""
     },
+    "tags": [{
+      "label": "handicapped accessible",
+      "icon": "@atoms/05-icons/svg-wheelchair.twig"
+    },{
+      "label": "open now",
+      "icon": "@atoms/05-icons/svg-open-now.twig"
+    }],
     "image": {
       "src":"/assets/images/placeholder/190x107.png",
       "alt": "placeholder image",
@@ -24,14 +31,17 @@
       }
     },
     "link": {
-      "text": "Read More",
+      "text": "Directions",
       "href": "#",
-      "type": "chevron",
-      "info": "Read More about Activity Title"
+      "info": "Directions to Activity Title"
     },
     "location": {
       "text": "89 Summer St, Malden, MA 02148",
       "map": true
+    },
+    "phone": {
+      "text": "(781) 322-7500",
+      "href": "+17813227500"
     }
   }
 }

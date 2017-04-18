@@ -1,14 +1,8 @@
 <section class="ma__location-listing js-location-listing">
-  {% if locationListing.form %}
-    {# pageFilters #}
+  {% if locationListing.locationFilters %}
     <div class="ma__location-listing__filters">
-      <div class="ma__location-listing__container">
-        <form action="{{ locationListing.form.action }}" class="js-location-listing-form">
-          {% for input in locationListing.form.inputs %}
-            {% include input.path with input.data %}
-          {% endfor %}
-        </form>
-      </div>
+      {% set locationFilters = locationListing.locationFilters %}
+      {% include "@molecules/location-filters.twig" %}
     </div>
   {% endif %}
   <div class="ma__location-listing__columns">
@@ -20,13 +14,12 @@
         </div>
       </div>
       <div class="ma__location-listing__results js-location-listing-results">
-        {% if locationListing.activeFilters.nearby %}
-          {# TODO: refactor title and filter values into a separate molecule #}
-          <p>Showing {{ locationListing.imagePromos|length }} locations nearby: {{ locationListing.activeFilters.nearby }}</p>
-        {% endif %}
-        {% for imagePromo in locationListing.imagePromos %}
-          {% include "@molecules/image-promo.twig" %}
-        {% endfor %}
+        {% set resultsHeading = locationListing.resultsHeading %}
+        {% include "@molecules/results-heading.twig" %}
+        {% set imagePromos = locationListing.imagePromos %}
+        {% include "@organisms/by-author/image-promos.twig" %}
+          {% set pagination = locationListing.pagination %}
+          {% include "@molecules/pagination.twig" %}
       </div>
     </div>
   </div>
