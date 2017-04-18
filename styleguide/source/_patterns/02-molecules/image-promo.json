@@ -5,6 +5,7 @@
       "href": "#",
       "type": ""
     },
+    "tags": null,
     "image": {
       "src":"/assets/images/placeholder/190x107.png",
       "alt": "placeholder image",
@@ -29,6 +30,7 @@
       "type": "chevron",
       "info": "Read More about Activity Title"
     },
-    "location": null
+    "location": null,
+    "phone": null
   }
 }

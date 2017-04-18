@@ -1,0 +1,55 @@
+{
+  "locationFilters": {
+    "zipcode": {
+      "inputText": {
+        "labelText": "Find nearby",
+        "required": false,
+        "id": "find-nearby",
+        "name": "find-nearby",
+        "placeholder": "City, town, or ZIP code"
+      },
+      "buttonSearch": {
+        "text": "Submit"
+      }
+    },
+    "activity": {
+      "label":"Filter by activity / service",
+      "id":"activity-service",
+      "options":[{
+        "value":"",
+        "text":"Select"
+      },{
+        "value":"criminal-matters",
+        "text":"Criminal Matters"
+      },{
+        "value":"housing-cases",
+        "text":"Housing Cases"
+      }]
+    },
+    "keyword": {
+      "inputText": {
+        "labelText": "Filter by keyword",
+        "required": false,
+        "id": "filter-by-keyword",
+        "name": "filter-by-keyword",
+        "placeholder": ""
+      },
+      "buttonSearch": {
+        "text": "Submit"
+      }
+    },
+    "tags": [{
+      "value": "handicapped",
+      "id": "handicapped",
+      "label": "Wheelchair accessible",
+      "checked": "false",
+      "icon": "@atoms/05-icons/svg-wheelchair.twig"
+    },{
+      "value": "open",
+      "id": "open",
+      "label": "Open now",
+      "checked": "false",
+      "icon": "@atoms/05-icons/svg-open-now.twig"
+    }]   
+  }
+}

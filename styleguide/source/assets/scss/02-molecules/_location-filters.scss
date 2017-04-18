@@ -1,0 +1,97 @@
+.ma__location-filters {
+  padding-top: 30px;
+  
+  form {
+    @include ma-container;
+  }
+
+  &__row {
+    @include clearfix;
+    display: flex;
+      flex-wrap: wrap;
+  }
+
+  &__by-location {
+    margin-bottom: 20px;
+    width: 100%;
+
+    @media ($bp-large-min) {
+      @include span-columns(8 of 12);
+      margin-bottom: 40px;
+    }
+  }
+
+  &__by-activity,
+  &__by-keyword {
+    margin-bottom: 20px;
+    width: 100%;
+
+    @media ($bp-small-min) {
+      @include span-columns(4 of 8);
+      margin-right: 0;
+    }
+
+    @media ($bp-large-min) {
+      @include span-columns(4 of 12);
+      margin-bottom: 40px;
+    }
+  }
+
+  &__by-activity {
+    width: 100%;
+
+    @media ($bp-small-min) {
+      @include span-columns(4 of 8);
+    }
+
+    @media ($bp-large-min) {
+      @include span-columns(4 of 12);
+    }
+
+    .ma__select-box {
+      width: 100%;
+    }
+  }
+
+  &__by-tags {
+    margin-bottom: 30px;
+    width: 100%;
+
+    @media ($bp-small-max) {
+      margin-top: 10px;
+    } 
+
+    @media ($bp-large-min) {
+      @include span-columns(4 of 12);
+      align-self: flex-end;
+      margin-bottom: 40px;
+      padding-left: 80px;
+    }
+  }
+
+  &__tag {
+    font-size: 0;
+    margin-bottom: 10px;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-bottom: 5px;
+    }
+
+    .ma__input-checkbox {
+      margin-right: 5px;
+      vertical-align: top;
+      white-space: normal;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    & > svg {
+      height: 24px;
+      vertical-align: top;
+      width: 24px;
+    }
+  }
+}
