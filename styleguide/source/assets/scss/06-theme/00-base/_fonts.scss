@@ -114,10 +114,3 @@
   font-weight: 800;
   font-style: italic;
 }
-
-// TODO need to remove this sense it is no longer switching font-families.
-@mixin ma-font($weight) {
-  font-weight: $weight;
-  font-family: "Texta", "Helvetica", "Arial", "sans-serif";
-}
-

@@ -1,11 +1,11 @@
 .ma__error-page {
 
   &:before {
-    background-color: rgba($c-theme-yellow, .15);
+    background-color: rgba($c-theme-tertiary, .15);
   }
 
   &__label {
-    color: $c-theme-yellow;
+    color: $c-theme-tertiary;
     font-weight: 900;
   }
 

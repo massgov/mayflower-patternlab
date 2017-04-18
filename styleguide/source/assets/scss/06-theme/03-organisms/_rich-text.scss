@@ -1,14 +1,14 @@
 .ma__rich-text {
   h2, h3, h4 {
-    @include ma-comp-heading($c-theme-green);
+    @include ma-comp-heading($c-theme-secondary);
   }
 
   h5 {
-    @include ma-font(700);
+    font-weight: 700;
   }
 
   a {
-    border-bottom-color: rgba($c-font-link,.5);
+    border-bottom-color: rgba($c-font-link, .5);
 
     &:hover {
       border-bottom-width: 3px;

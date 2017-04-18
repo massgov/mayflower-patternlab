@@ -13,7 +13,7 @@
   }
 
   &__label {
-    @include ma-font(700);
+    font-weight: 700;
   }
 
   &__item {
@@ -30,7 +30,7 @@
         &:nth-last-child(2) {
 
           &:before {
-            border-color: $c-theme-blue;
+            border-color: $c-theme-primary;
           }
         }
       }
