@@ -8,4 +8,12 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  .post-content > &:last-child {
+    margin-bottom: 30px;
+
+    @media ($bp-small-min){
+      margin-bottom: 45px;
+    }
+  }
 }
