@@ -21,6 +21,7 @@
 
     "items": [{
       "text": "State Organizations",
+      "ariaLabelText": "",
       "icon": "@atoms/05-icons/svg-building.twig",
       "closeText": "Close",
       "panel": {
@@ -40,6 +41,7 @@
       }
     },{
       "text": "Log in to...",
+      "ariaLabelText": "Log in to the most requested services",
       "icon": "@atoms/05-icons/svg-login.twig",
       "closeText": "Close",
       "panel": {

@@ -44,7 +44,6 @@ Please feel free to check these tickets out in JIRA:
 We've updated the topic page!
 
 If you'd like to read about this changes in JIRA:
-
 * [DP-2117](https://jira.state.ma.us/browse/DP-2117) - [pattern lab] Topic Page Updates
 
 ### Improvements
