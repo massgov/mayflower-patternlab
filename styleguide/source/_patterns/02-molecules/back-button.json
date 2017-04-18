@@ -1,0 +1,9 @@
+{
+  "backButton": {
+    "link": {
+      "href": "#",
+      "text": "Back to previous page",
+      "info": "Back to page about Blah"
+    }
+  }
+}
