@@ -1,11 +1,11 @@
 .ma__header-tags {
-  @include ma-font(700);
+  font-weight: 700;
 
   &__terms {
 
     a {
-      @include ma-font(500);
       border-color: rgba($c-font-link,.2);
+      font-weight: 500;
 
       &:hover {
         border-color: $c-font-link;

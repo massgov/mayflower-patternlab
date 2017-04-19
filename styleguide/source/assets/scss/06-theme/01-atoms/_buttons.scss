@@ -1,42 +1,43 @@
 button {
-  @include ma-font(400);
+  font-family: "Texta", "Helvetica", "Arial", "sans-serif";
+  font-weight: 400;
 }
 
 .ma__button {
-  @include ma-button("normal","solid",$c-theme-blue);
+  @include ma-button("normal","solid",$c-theme-primary);
 }
 
 .ma__button--minor,
 .ma__button-minor {
-  @include ma-button("normal","outline",$c-theme-blue);
+  @include ma-button("normal","outline",$c-theme-primary);
 }
 
 .ma__button--alt,
 .ma__button-alt {
-  @include ma-button("normal","solid",$c-theme-gray);
+  @include ma-button("normal","solid",$c-theme-quaternary);
 }
 
 .ma__button-minor-alt {
-  @include ma-button("normal","outline",$c-theme-gray);
+  @include ma-button("normal","outline",$c-theme-quaternary);
 }
 
 .ma__button-search {
-  @include ma-font(700);
   background-color: $c-white;
   border-color: $c-bd-input;
-  color: $c-theme-green;
+  color: $c-theme-secondary;
   font-size: 14px;
+  font-weight: 700;
 
   &:hover {
-    background-color: $c-theme-green;
-    border-color: $c-theme-green;
-    color: $c-white;
+    background-color: $c-theme-secondary;
+    border-color: $c-theme-secondary;
+    color: $c-font-inverse;
 
     svg {
-      fill: $c-white;
+      fill: $c-font-inverse;
     } 
   }
   svg {
-    fill: $c-theme-green;
+    fill: $c-theme-secondary;
   }
 }

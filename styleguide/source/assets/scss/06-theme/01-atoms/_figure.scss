@@ -1,7 +1,6 @@
-
 .ma__figure {
 
   &__caption {
-    @include ma-font(300);
+    font-weight: 300;
   }
 }

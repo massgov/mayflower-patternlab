@@ -1,0 +1,20 @@
+.ma__location-filters {
+  background-color: $c-bg-section;
+
+  &__tag {
+
+    & > svg {
+      fill: $c-theme-secondary;
+    }
+  }
+
+  .ma__button-search {
+    color: $c-font-base;
+
+    &:hover {
+      background-color: $c-theme-quaternary;
+      border-color: $c-theme-quaternary;
+      color: $c-font-inverse;
+    }
+  }
+}

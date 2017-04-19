@@ -1,17 +1,24 @@
-<section class="ma__image-promo">
+<section class="ma__image-promo {{ imagePromo.location.map ? 'js-location-listing-link' : '' }}">
   {% if imagePromo.image %}
-    {% if imagePromo.image.href %}
-      <a href="{{ imagePromo.image.href }}">
-    {% endif %}
     <div class="ma__image-promo__image">
-      <img alt="{{ imagePromo.image.alt }}" src="{{ imagePromo.image.src }}">
+      {% if imagePromo.image.href %}
+        <a href="{{ imagePromo.image.href }}">
+      {% endif %}
+        <img alt="{{ imagePromo.image.alt }}" src="{{ imagePromo.image.src }}">
+      {% if imagePromo.image.href %}
+        </a>
+      {% endif %}
     </div>
-    {% if imagePromo.image.href %}
-      </a>
-    {% endif %}
   {% endif %}
   <div class="ma__image-promo__details">
     <h2 class="ma__image-promo__title">
+      {% if imagePromo.tags %}
+        <div class="ma__image-promo__tags">
+          {% for tag in imagePromo.tags %}
+            <span title="{{ tag.label }}">{% include tag.icon %}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
       {% if imagePromo.title.href %}
         {% set decorativeLink = imagePromo.title %}
         {% include "@atoms/decorative-link.twig" %}
@@ -19,23 +26,30 @@
         {{ imagePromo.title.text }}
       {% endif %}
     </h2>
-    {% if imagePromo.location %}
+    {% if imagePromo.location.text %}
       <div class="ma__image-promo__location">
-        {% if imagePromo.location.map %}
-          {% include "@atoms/05-icons/svg-marker.twig" %}
-          <a class="{{ imagePromo.location.map ? 'js-location-listing-link' : '' }}" href="#" role="button">{{ imagePromo.location.text }}</a>
-        {% else %}
-          <span>
-            {{ imagePromo.location.text }}
-          </span>
+        {{ imagePromo.location.text }}
+        {% if imagePromo.link %}
+          <div>
+            {% set decorativeLink = imagePromo.link %}
+            {% include "@atoms/decorative-link.twig" %}
+          </div>
         {% endif %}
+      </div>
+    {% endif %}
+    {% if imagePromo.phone %}
+      <div class="ma__image-promo__phone">
+        {% include "@atoms/05-icons/svg-phone.twig" %}
+        <a href="tel:{{ imagePromo.phone.href }}">
+          {{ imagePromo.phone.text }}
+        </a>
       </div>
     {% endif %}
     <div class="ma__image-promo__description">
       {% set richText = imagePromo.description.richText %}
       {% include "@organisms/by-author/rich-text.twig" %}
     </div>
-    {% if imagePromo.link %}
+    {% if imagePromo.link and not imagePromo.location.text %}
       <div class="ma__image-promo__link">
         {% set decorativeLink = imagePromo.link %}
         {% include "@atoms/decorative-link.twig" %}

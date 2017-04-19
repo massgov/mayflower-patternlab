@@ -1,0 +1,34 @@
+<section class="ma__location-filters">
+  <form action="{{ locationFilters.form.action }}">
+    <div class="ma__location-filters__row">
+      <div class="ma__location-filters__by-location">
+        {% set fieldSubmit = locationFilters.zipcode %}
+        {% include "@molecules/field-submit.twig" %}
+      </div>
+    </div>
+    <div class="ma__location-filters__row">
+      {% if locationFilters.activity %}
+        <div class="ma__location-filters__by-activity">
+          {% set selectBox = locationFilters.activity %}
+          {% include "@atoms/03-forms/select-box.twig" %}
+        </div>
+      {% endif %} 
+      {% if locationFilters.keyword %}
+        <div class="ma__location-filters__by-keyword">
+          {% set fieldSubmit = locationFilters.keyword %}
+          {% include "@molecules/field-submit.twig" %}
+        </div>
+      {% endif %}
+      {% if locationFilters.tags %}
+        <div class="ma__location-filters__by-tags">
+          {% for inputCheckbox in locationFilters.tags %}
+            <div class="ma__location-filters__tag">
+              {% include "@atoms/03-forms/input-checkbox.twig" %}
+              {% include inputCheckbox.icon %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </form>
+</section>

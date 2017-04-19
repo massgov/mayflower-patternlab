@@ -22,9 +22,15 @@ locationListing: {
   googleMap: {
     type: @molecules/google-map.twig
   }
-  imagePromos: [{
-    type: @molecules/image-promo.twig
-  }]
+  resultsHeading: {
+    type: @molecules/results-heading.twig
+  }
+  imagePromos: {
+    type: @organisms/by-author/image-promos.twig
+  }
+  pagination: {
+    type: @ molecules/pagination.twig
+  }
 }
 
 ~~~
