@@ -13,14 +13,6 @@
     }
   }
 
-  &__content {
-
-  }
-
-  &__toggle-content {
-
-  }
-
   &__footer {
     border-top-color: $c-bd-divider;
   }
@@ -28,11 +20,11 @@
   &__title {
 
     @media ($bp-x-small-min) {
-      @include ma-border-decorative($c-theme-yellow,1);
+      @include ma-border-decorative($c-theme-tertiary,1);
     }
 
     &:after {
-      color: $c-theme-green;
+      color: $c-theme-secondary;
     }
 
     a {
@@ -62,7 +54,7 @@
   &__link {
 
     &:hover {
-      border-bottom-color: rgba($c-theme-blue,.5);
+      border-bottom-color: rgba($c-theme-primary,.5);
     }
   }
 }

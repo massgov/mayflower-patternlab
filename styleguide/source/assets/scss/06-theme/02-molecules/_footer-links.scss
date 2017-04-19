@@ -8,11 +8,11 @@
   }
 
   &__link {
-    @include ma-font(500);
-    color: $c-font-link-subtle;
+    color: $c-font-dark;
+    font-weight: 500;
 
     &:hover {
-      border-bottom-color: rgba($c-font-link-subtle,.5);
+      border-bottom-color: rgba($c-font-dark,.5);
     }
   }
 }

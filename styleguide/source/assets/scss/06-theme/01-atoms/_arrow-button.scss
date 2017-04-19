@@ -1,5 +1,5 @@
 .ma__arrow-button {
-  @include ma-button("","solid",$c-theme-blue);
+  @include ma-button("","solid",$c-theme-primary);
 
   &:after {
     border-color: $c-font-inverse;

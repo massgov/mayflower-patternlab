@@ -1,7 +1,7 @@
 .ma__utility-nav {
 
   @media ($bp-header-toggle-min) {
-    background-color: $c-theme-blue;
+    background-color: $c-theme-primary;
     color: $c-font-inverse;
   }
 
@@ -9,10 +9,9 @@
     @media ($bp-header-toggle-max) {
       &:hover {
         background-color: $c-white;
-        box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+        box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
       }
     }
-
   }
 
   &__link,
@@ -20,17 +19,17 @@
     color: $c-font-base;
 
     @media ($bp-header-toggle-min) {
-      //background-color: $c-theme-blue;
+      //background-color: $c-theme-primary;
       color: $c-font-inverse;
     }
 
     &:after {
-      border-right-color: $c-theme-green;
-      border-bottom-color: $c-theme-green;
+      border-right-color: $c-theme-secondary;
+      border-bottom-color: $c-theme-secondary;
     }
 
     svg {
-      fill: $c-theme-blue;
+      fill: $c-theme-primary;
 
       @media ($bp-header-toggle-min) {
         fill: $c-font-inverse;
@@ -46,7 +45,7 @@
 
   &__translate {
     .goog-te-gadget {
-      @include ma-font(400);
+      font-weight: 400;
     }
 
     .goog-te-gadget-simple {
@@ -64,8 +63,8 @@
 
       @media ($bp-header-toggle-max) {
         &:after {
-          border-right-color: $c-theme-green;
-          border-bottom-color: $c-theme-green;
+          border-right-color: $c-theme-secondary;
+          border-bottom-color: $c-theme-secondary;
         }
       }
 
@@ -84,7 +83,7 @@
     color: $c-font-inverse;
 
     @media ($bp-header-toggle-min) {
-      background-color: $c-theme-blue;
+      background-color: $c-theme-primary;
     }
 
     a {
@@ -102,35 +101,34 @@
 
   &__container {
     @media ($bp-header-toggle-max) {
-      background-color: $c-theme-blue;
+      background-color: $c-theme-primary;
     }
 
   }
 
   &__close {
+    font-weight: 700;
 
     @media ($bp-header-toggle-max) {
       display: none;
     }
 
     span {
-      @include ma-font(700);
       color: $c-white;
       opacity: 0.7;
-
-      &:hover {
-        opacity: 1;
-      }
     }
 
-    span[role="presentation"] {
-      @include ma-font(400);
-      opacity: .7;
+    &:hover span {
+      opacity: 1;
     }
+  }
+  
+  &__close-icon {
+    font-weight: 400;
   }
 
   &__content-title {
-    @include ma-font(500);
+    font-weight: 500;
 
     svg {
       opacity: 0.7;

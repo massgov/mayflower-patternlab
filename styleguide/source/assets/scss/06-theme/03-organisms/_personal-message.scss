@@ -1,22 +1,14 @@
 .ma__personal-message {
   background-color: $c-bg-subtle;
 
-  &__container {
-
-  }
-
-  &__image {
-
-  }
-
   &__content {
 
     .ma__rich-text {
-      @include ma-font(400);
+      font-weight: 400;
     }
   }
 
   &__title {
-    @include ma-border-decorative($c-theme-green);
+    @include ma-border-decorative($c-theme-secondary);
   }
 }

@@ -4,7 +4,7 @@
   position: relative;
 
   &:after {
-    background-color: rgba($c-black,.6);
+    background-color: rgba($c-black, .6);
   }
 
   &__container {
@@ -21,10 +21,6 @@
     font-weight: 400;
   }
 
-  &__form {
-
-  }
-
   &__input {
 
     input {
@@ -33,25 +29,25 @@
       font-weight: 300;
     }
 
-    ::-webkit-input-placeholder {
+    &::-webkit-input-placeholder {
       color: $c-font-medium;
       font-weight: 300;
       font-style: italic;
     }
 
-    :-moz-placeholder { /* Firefox 18- */
+    &:-moz-placeholder { /* Firefox 18- */
       color: $c-font-medium;
       font-weight: 300;
       font-style: italic;
     }
 
-    ::-moz-placeholder {  /* Firefox 19+ */
+    &::-moz-placeholder {  /* Firefox 19+ */
       color: $c-font-medium;
       font-weight: 300;
       font-style: italic;
     }
 
-    :-ms-input-placeholder {
+    &:-ms-input-placeholder {
       color: $c-font-medium;
       font-weight: 300;
       font-style: italic;
@@ -68,7 +64,7 @@
     }
 
     &:hover {
-      background-color: $c-theme-green;
+      background-color: $c-theme-secondary;
       color: $c-font-inverse;
 
       & > svg {

@@ -4,7 +4,7 @@
   &__tag {
 
     & > svg {
-      fill: $c-theme-green;
+      fill: $c-theme-secondary;
     }
   }
 
@@ -12,8 +12,8 @@
     color: $c-font-base;
 
     &:hover {
-      background-color: $c-theme-gray;
-      border-color: $c-theme-gray;
+      background-color: $c-theme-quaternary;
+      border-color: $c-theme-quaternary;
       color: $c-font-inverse;
     }
   }
