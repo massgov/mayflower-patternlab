@@ -3,6 +3,14 @@
     @include ma-comp-heading($c-theme-secondary);
   }
 
+  h2 {
+    padding-top: .75em;
+  }
+
+  &:first-child h2 {
+    padding-top: 0;
+  }
+
   h5 {
     font-weight: 700;
   }
