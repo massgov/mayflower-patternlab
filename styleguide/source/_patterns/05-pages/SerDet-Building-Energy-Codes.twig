@@ -1,16 +1,31 @@
 {% extends '@templates/two-column.twig' %}
 
 {% block preContent %}
-  {% include "@organisms/by-template/breadcrumbs.twig" %}
   {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 {% block pageContent %}
+  {% set richText = richText1 %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set keyActions = keyActions1 %}
+  {% include "@organisms/by-author/key-actions.twig" %}
+  {% set richText = richText2 %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set formDownloads = formDownloads2 %}
+  {% include "@organisms/by-author/form-downloads.twig" %}
+  {% set richText = richText3 %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set keyActions = keyActions3 %}
+  {% include "@organisms/by-author/key-actions.twig" %}
+  {% set richText = richText4 %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set formDownloads = formDownloads4 %}
+  {% include "@organisms/by-author/form-downloads.twig" %}
+  {% set richText = richText5 %}
   {% include "@organisms/by-author/rich-text.twig" %}
 {% endblock %}
 {% block sidebar %}
-  {% for sidebarPromo in sidebarPromos %}
-    {% include "@organisms/by-author/sidebar-promo.twig" %}
-  {% endfor %}
+  {% set linkList = sidebar.linkList %}
+  {% include "@organisms/by-author/link-list.twig" %}
 {% endblock %}
 {% block postContent %}
   {% include "@organisms/by-template/breadcrumbs.twig" %}
