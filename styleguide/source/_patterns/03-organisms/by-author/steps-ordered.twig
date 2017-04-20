@@ -7,11 +7,16 @@
     {% set sidebarHeading = stepsOrdered.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
-  <ol class="ma__steps-ordered__items">
-    {% for actionStep in stepsOrdered.steps %}
-      <li class="ma__steps-ordered__item">
-        {% include "@molecules/action-step.twig" %}
-      </li>
-    {% endfor %}
-  </ol>
+  {% if stepsOrdered.steps|length > 1 %}
+    <ol class="ma__steps-ordered__items">
+      {% for actionStep in stepsOrdered.steps %}
+        <li class="ma__steps-ordered__item">
+          {% include "@molecules/action-step.twig" %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    {% set actionStep = stepsOrdered.steps|first %}
+    {% include "@molecules/action-step.twig" %}
+  {% endif %}
 </section>
