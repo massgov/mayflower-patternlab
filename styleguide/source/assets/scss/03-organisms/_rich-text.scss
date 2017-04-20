@@ -34,6 +34,14 @@ $rich-text-spacing-mobile: 1.5rem;
     @include ma-comp-heading;
   }
 
+  h2 {
+    padding-top: .75em;
+  }
+
+  &:first-child h2 {
+    padding-top: 0;
+  }
+
   h4 {
     margin-bottom: .6em;
     padding-bottom: .45em;
