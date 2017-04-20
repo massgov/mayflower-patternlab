@@ -49,7 +49,7 @@
       {% set richText = imagePromo.description.richText %}
       {% include "@organisms/by-author/rich-text.twig" %}
     </div>
-    {% if imagePromo.link and not imagePromo.location.text %}
+    {% if imagePromo.link.text and not imagePromo.location.text %}
       <div class="ma__image-promo__link">
         {% set decorativeLink = imagePromo.link %}
         {% include "@atoms/decorative-link.twig" %}

@@ -406,9 +406,9 @@
               }
             },
             "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
+              "text": "",
+              "type": "",
+              "href": ""
             }
           },{
             "title": {
