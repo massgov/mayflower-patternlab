@@ -12,7 +12,6 @@
     border-top-width: 2px;
     display: flex;
       align-items: stretch;
-      flex-wrap: wrap;
     overflow: hidden;
     width: 100%;
   }
@@ -22,10 +21,11 @@
     flex-basis: 400px;
     flex-grow: 1;
     flex-shrink: 1;
-    margin-top: 30px;
+    margin-top: 20px;
+    max-width: 50%;
 
-    @media ($bp-large-min) {
-      max-width: 50%;
+    @media ($bp-small-min) {
+      margin-top: 30px;
     }
   }
 
@@ -38,6 +38,10 @@
     border-right-width: 1px;
     margin-right: -1px;
     padding-right: 20px;
+
+    @media ($bp-small-min) {
+      padding-right: 40px;
+    }
   }
 
   .ma__arrow-nav:nth-child(2) {
@@ -45,6 +49,9 @@
     border-left-width: 1px;
     margin-left: -1px;
     padding-left: 20px;
-  }
 
+    @media ($bp-small-min) {
+      padding-left: 40px;
+    }
+  }
 }
