@@ -34,6 +34,10 @@
       }
     }
 
+    a:hover {
+      border-bottom-color: rgba($c-font-link,.5);
+    }
+
     @media ($bp-small-max) {
       font-weight: 500;
 

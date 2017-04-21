@@ -81,7 +81,7 @@
     overflow: hidden;
     position: absolute;
       right: 10px;
-      top: 9px;
+      top: 14px;
     transition: all .2s ease;
     transform-origin: center center;
     z-index: 1;
@@ -143,6 +143,11 @@
         top: 1px;
       transform: rotate(90deg);
       width: 22px;
+    }
+
+    a {
+      @include ma-link-underline;
+      line-height: 1.5;
     }
 
     @media ($bp-small-max) {

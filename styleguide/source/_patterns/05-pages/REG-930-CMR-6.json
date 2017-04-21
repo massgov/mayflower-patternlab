@@ -242,7 +242,8 @@
           "info": "930 CMR 5.00",
           "direction": "left"
         },
-        "title": "Previous Section: 930 CMR 5.00",
+        "label": "Previous Section",
+        "title": "930 CMR 5.00",
         "link": {
           "href": "#",
           "text": "Exemptions from M.G.L. C. 268A and M.G.L. C. 268B Related to Gifts",
@@ -255,7 +256,8 @@
           "info": "930 CMR 7.00",
           "direction": "right"
         },
-        "title": "Next Section: 930 CMR 7.00",
+        "label": "Next Section",
+        "title": "930 CMR 7.00",
         "link": {
           "href": "#",
           "text": "Definition of Governmental Body",
@@ -263,6 +265,5 @@
         }
       }
     }
-
   }
 }

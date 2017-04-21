@@ -18,6 +18,10 @@
     @include ma-container;
   }
 
+  &__container--restricted {
+    @include ma-container('restricted');
+  }
+
   &__title {
     padding-top: 45px;
   }
