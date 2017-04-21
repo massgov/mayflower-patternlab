@@ -3,53 +3,50 @@
   
   form {
     @include ma-container;
+    display: flex;
+      flex-wrap: wrap;
   }
 
   &__row {
     @include clearfix;
     display: flex;
       flex-wrap: wrap;
+    width: 100%;
+
+    @media ($bp-x-large-min) {
+      margin-right: 1.6129%;
+      margin-bottom: 20px;
+      width: 66.12903%; //@include span-columns(8 of 12);
+    }
   }
 
   &__by-location {
     margin-bottom: 20px;
     width: 100%;
 
-    @media ($bp-large-min) {
-      @include span-columns(8 of 12);
-      margin-bottom: 40px;
-    }
   }
 
   &__by-activity,
   &__by-keyword {
     margin-bottom: 20px;
     width: 100%;
-
-    @media ($bp-small-min) {
-      @include span-columns(4 of 8);
-      margin-right: 0;
-    }
-
-    @media ($bp-large-min) {
-      @include span-columns(4 of 12);
-      margin-bottom: 40px;
-    }
   }
 
   &__by-activity {
-    width: 100%;
 
-    @media ($bp-small-min) {
+    @media ($bp-medium-min) {
       @include span-columns(4 of 8);
-    }
-
-    @media ($bp-large-min) {
-      @include span-columns(4 of 12);
     }
 
     .ma__select-box {
       width: 100%;
+    }
+  }
+
+  &__by-activity + &__by-keyword {
+    
+    @media ($bp-medium-min) {
+      @include span-columns(4 of 8);
     }
   }
 
@@ -61,8 +58,8 @@
       margin-top: 10px;
     } 
 
-    @media ($bp-large-min) {
-      @include span-columns(4 of 12);
+    @media ($bp-x-large-min) {
+      width: 32.25806%; //@include span-columns(4 of 12);
       align-self: flex-end;
       margin-bottom: 40px;
       padding-left: 80px;
