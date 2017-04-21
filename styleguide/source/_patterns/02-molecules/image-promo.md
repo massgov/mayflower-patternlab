@@ -24,7 +24,7 @@ imagePromo: {
     type:
       type: string/optional ("external")
   } 
-  (optional) image: {  
+  image: (optional) {  
     src:
       type: string(path)/required
     alt: 
@@ -35,14 +35,18 @@ imagePromo: {
   description: {
     type: see [@organisms/by-author/rich-text](?p=organisms-rich-text) file
   },
-  (optional) link: {
+  link: (optional) {
     type: see [@atoms/decorative-link](?p=atoms-decorative-link) file
   },
-  (optional) location: {
+  location (optional) : {
     text: 
-      type: string/required
+      type: string/optional
     map:
       type: boolean
+  }
+  phone (optional) {
+    text: 
+      type: string/required
   }
 }
 ~~~

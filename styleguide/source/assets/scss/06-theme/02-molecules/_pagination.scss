@@ -1,0 +1,36 @@
+.ma__pagination {
+
+  &__prev,
+  &__next,
+  &__page {
+    color: $c-font-link;
+    font-weight: 700;
+  }
+
+  &__prev {
+    
+    &:before {
+      border-color: rgba($c-font-link, .5);
+    }
+  }
+
+  &__next {
+    
+    &:after {
+      border-color: rgba($c-font-link, .5);
+    }
+  }
+
+  &__page {
+
+    &.is-active {
+      background-color: $c-theme-primary;
+      color: #fff;
+    }
+
+  }
+
+  &__spacer {
+
+  }
+}

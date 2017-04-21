@@ -13,13 +13,13 @@
   }
 
   &--accordion &__header:after {
-    color: $c-theme-green;
+    color: $c-theme-secondary;
   }
 
   &__icon {
 
     svg {
-      fill: $c-theme-green;
+      fill: $c-theme-secondary;
     }
   }
 

@@ -1,12 +1,12 @@
 .ma__change-log {
 
   &__title {
-    @include ma-border-decorative($c-theme-green);
+    @include ma-border-decorative($c-theme-secondary);
   }
 
   &__date {
-    @include ma-font(900);
     color: $c-font-dark;
+    font-weight: 900;
   }
   
   &__view-all {

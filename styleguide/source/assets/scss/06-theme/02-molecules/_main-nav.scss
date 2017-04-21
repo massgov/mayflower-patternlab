@@ -5,11 +5,10 @@
     &:hover,
     &.is-open {
       background-color: $c-white;
-      box-shadow: 0 0.25rem 0.5rem rgba($c-black, 0.25);
+      box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
     }
     &.is-active {
-
-      @include ma-border-decorative($c-theme-green);
+      @include ma-border-decorative($c-theme-secondary);
     }
   }
 
@@ -20,8 +19,8 @@
     .has-subnav & {
   // chevron
       &:after {
-        border-right-color: $c-theme-green;
-        border-bottom-color: $c-theme-green;
+        border-right-color: $c-theme-secondary;
+        border-bottom-color: $c-theme-secondary;
       }
     }
   }
@@ -44,7 +43,7 @@
 
     @media ($bp-header-toggle-min) {
       background-color: $c-white;
-      box-shadow: 0 0.25em 0.5rem rgba($c-black, 0.25);
+      box-shadow: 0 0.25em 0.5rem rgba(#000, 0.25);
     }
   }
 
@@ -60,25 +59,25 @@
   }
 
   &__link {
-    font-weight: 500;
     color: $c-font-base;
+    font-weight: 500;
 
     &:hover, 
     &:focus {
       background-color: $c-bg-subtle;
-      color: $c-font-link-subtle;
+      color: $c-font-dark;
     }
   }
 
   &__subitem:first-child &__link {
-    font-weight: 700;
     color: $c-font-dark;
+    font-weight: 700;
   }
 
   &__subitem:last-child &__link {
-    font-weight: 700;
     background-color: $c-bg-subtle;
     color: $c-font-link;
+    font-weight: 700;
   
     &:hover {
       background-color: $c-gray-dcdcdc;

@@ -5,8 +5,8 @@
     border-left-color: $c-bd-input;
 
     &:hover {
-      background: $c-theme-green;
-      border-left-color: $c-theme-green;
+      background: $c-theme-secondary;
+      border-left-color: $c-theme-secondary;
     }
   }
 
@@ -14,27 +14,13 @@
     border-left-color: rgba($c-bd-input,.5);
 
     &:hover {
-      border-left-color: $c-theme-green;
+      border-left-color: $c-theme-secondary;
     }
   }
 
 
   &__reset {
-    @include ma-font(700);
-    color: $c-theme-green;
+    color: $c-theme-secondary;
+    font-weight: 700;
   }
-
-  ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: $c-font-inverse;
-    opacity:  .8;
-  }
-  ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: $c-font-inverse;
-    opacity:  .8;
-  }
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: $c-font-inverse;
-    opacity:  .8;
-  }
-
 }

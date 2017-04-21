@@ -49,136 +49,311 @@
       "path": "@organisms/by-author/location-listing.twig",
       "data": {
         "locationListing": {
-          "form": {
-            "action": "#",
-            "inputs":[{
-              "path":"@molecules/field-submit.twig",
-              "data":{
-                "fieldSubmit": {
-                  "inputText": {
-                    "labelText": "Find nearby",
-                    "required": false,
-                    "id": "filter-by-location",
-                    "name": "filter-by-location",
-                    "placeholder": "City, town or zipcode"
-                  },
-                  "buttonSearch": {
-                    "text": "Update"
-                  }
-                }
+          "locationFilters": {
+            "zipcode": {
+              "inputText": {
+                "labelText": "Find nearby",
+                "required": false,
+                "id": "find-nearby",
+                "name": "find-nearby",
+                "placeholder": "City, town, or ZIP code"
+              },
+              "buttonSearch": {
+                "text": "Submit"
               }
-            }]
+            },
+            "activity": {
+              "label":"Filter by activity / service",
+              "id":"activity-service",
+              "options":[{
+                "value":"",
+                "text":"Select"
+              },{
+                "value":"criminal-matters",
+                "text":"Criminal Matters"
+              },{
+                "value":"housing-cases",
+                "text":"Housing Cases"
+              }]
+            },
+            "keyword": {
+              "inputText": {
+                "labelText": "Filter by keyword",
+                "required": false,
+                "id": "filter-by-keyword",
+                "name": "filter-by-keyword",
+                "placeholder": ""
+              },
+              "buttonSearch": {
+                "text": "Submit"
+              }
+            },
+            "tags": [{
+              "value": "handicapped",
+              "id": "handicapped",
+              "label": "Wheelchair accessible",
+              "checked": "false",
+              "icon": "@atoms/05-icons/svg-wheelchair.twig"
+            },{
+              "value": "open",
+              "id": "open",
+              "label": "Open now",
+              "checked": "false",
+              "icon": "@atoms/05-icons/svg-open-now.twig"
+            }]   
           },
           "googleMap": {
             "map": {
               "center": {
-                "lat": 42.366565,
-                "lng": -71.058940
+                "lat": 42.430171,
+                "lng": -71.073886
               },
               "zoom": 16
             },
             "markers": [{
               "position": {
-                "lat": 42.366565,
-                "lng": -71.058940 
+                "lat": 42.430171,
+                "lng": -71.073886
               },
               "label": "",
               "infoWindow": {
-                "name": "Department of Conservation and Recreation",
-                "phone": "16176261250",
-                "fax": "16176261351",
-                "email": "mass.parks@state.ma.us",
-                "address": "251 Causeway Street, Suite 900\nBoston, MA 02114-2104"
+                "name": "Malden District Court",
+                "phone": "17813227500",
+                "fax": "",
+                "email": "",
+                "address": "89 Summer St, Malden, MA 02148"
               }
             },{
               "position": {
-                "lat": 42.358795,
-                "lng": -71.063858 
+                "lat": 42.430171,
+                "lng": -71.073886
               },
               "label": "",
               "infoWindow": {
-                "name": "Department of Recreation and Fun",
-                "phone": "16176261250",
+                "name": "Malden Housing Court",
+                "phone": "17813227500",
                 "fax": "",
-                "email": "mass.parks@state.ma.us",
-                "address": "24 Beacon St\nBoston, MA 02133"
+                "email": "",
+                "address": "89 Summer St, Malden, MA 02148"
+              }
+            },{
+              "position": {
+                "lat": 42.369584, 
+                "lng": -71.080485
+              },
+              "label": "",
+              "infoWindow": {
+                "name": "Middlesex Juvenile Court",
+                "phone": "17813227500",
+                "fax": "",
+                "email": "",
+                "address": "121 Third St, Cambridge, MA 02141"
+              }
+            },{
+              "position": {
+                "lat": 42.370769,
+                "lng": -71.079247
+              },
+              "label": "",
+              "infoWindow": {
+                "name": "Middlesex Probate and Family Court",
+                "phone": "17813227500",
+                "fax": "",
+                "email": "",
+                "address": "208 Cambridge St, Cambridge, MA 02141"
               }
             }]
           },
-          "activeFilters": {
-            "nearby": "02155"
+          "resultsHeading": {
+            "numResults": "11-20",
+            "totalResults": "108",
+            "tags": [{
+              "text": "02155"
+            },{
+              "text": "item"
+            },{
+              "text": "item"
+            }]
           },
-          "imagePromos":[{
-            "title": {
-              "text": "Department of Conservation and Recreation",
-              "href": "#",
-              "type": ""
-            },
-            "image": {
-              "src":"/assets/images/placeholder/190x107.png",
-              "alt": "placeholder image",
-              "href": "#"
-            },
-            "description": {
-              "property": "",
-              "richText": {
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+          "imagePromos": {
+            "items": [{
+              "title": {
+                "text": "Malden District Court",
+                "href": "#",
+                "info": ""
+              },
+              "tags": [{
+                "label": "handicapped accessible",
+                "icon": "@atoms/05-icons/svg-wheelchair.twig"
+              },{
+                "label": "open now",
+                "icon": "@atoms/05-icons/svg-open-now.twig"
+              }],
+              "image": {
+                "src":"/assets/images/placeholder/190x107.png",
+                "alt": "placeholder image",
+                "href": "#"
+              },
+              "description": {
+                "richText": {
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph" : {
+                        "text": "District Court hears criminal, civil, housing, juvenile, mental health, and other types of cases."
+                      }
                     }
-                  }
-                }]
+                  }]
+                }
+              },
+              "link": {
+                "text": "Directions",
+                "href": "https://www.google.com/maps/place/Malden+District+Court/",
+                "info": ""
+              },
+              "location": {
+                "text": "89 Summer St, Malden, MA 02148",
+                "map": true
+              },
+              "phone": {
+                "text": "(781) 322-7500",
+                "href": "+17813227500"
               }
-            },
-            "link": {
-              "text": "Directions",
-              "href": "https://www.google.com/maps/place/251+Causeway+St+%23900,+Boston,+MA+02114",
-              "type": "external",
-              "info": ""
-            },
-            "location": {
-              "text": "251 Causeway Street, Suite 900, Boston, MA 02114",
-              "map": true
-            }
-            
-          },{
-            "title": {
-              "text": "Department of Recreation and Fun",
-              "href": "#",
-              "type": ""
-            },
-            "image": {
-              "src":"/assets/images/placeholder/190x107.png",
-              "alt": "placeholder image",
-              "href": "#"
-            },
-            "description": {
-              "property": "",
-              "richText": {
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+            },{
+              "title": {
+                "text": "Malden Housing Court",
+                "href": "#",
+                "info": ""
+              },
+              "tags": [{
+                "label": "handicapped accessible",
+                "icon": "@atoms/05-icons/svg-wheelchair.twig"
+              }],
+              "image": {
+                "src":"/assets/images/placeholder/190x107.png",
+                "alt": "placeholder image",
+                "href": "#"
+              },
+              "description": {
+                "property": "",
+                "richText": {
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph" : {
+                        "text": "The Housing Court has jurisdiction over civil and criminal matters involving the use of resdiential property and activities affecting such use."
+                      }
                     }
-                  }
-                }]
+                  }]
+                }
+              },
+              "link": {
+                "text": "Directions",
+                "href": "https://www.google.com/maps/search/Malden+Housing+Court",
+                "info": ""
+              },
+              "location": {
+                "text": "89 Summer St, Malden, MA 02148",
+                "map": true
+              },
+              "phone": {
+                "text": "(781) 322-7500",
+                "href": "+17813227500"
               }
+            },{
+              "title": {
+                "text": "Middlesex Juvenile Court",
+                "href": "#",
+                "info": ""
+              },
+              "tags": null,
+              "image": {
+                "src":"/assets/images/placeholder/190x107.png",
+                "alt": "placeholder image",
+                "href": "#"
+              },
+              "description": null,
+              "link": {
+                "text": "",
+                "href": "https://www.google.com/maps/place/121+Third+St,+Cambridge,+MA+02141",
+                "info": ""
+              },
+              "location": {
+                "text": "121 Third St, Cambridge, MA 02141",
+                "map": true
+              },
+              "phone": {
+                "text": "(781) 322-7500",
+                "href": "+17813227500"
+              }
+            },{
+              "title": {
+                "text": "Middlesex Probate and Family Court",
+                "href": "#",
+                "info": ""
+              },
+              "tags": [{
+                "label": "open now",
+                "icon": "@atoms/05-icons/svg-open-now.twig"
+              }],
+              "image": {
+                "src":"/assets/images/placeholder/190x107.png",
+                "alt": "placeholder image",
+                "href": "#"
+              },
+              "description": {
+                "richText": {
+                  "rteElements": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph" : {
+                        "text": "Probate and Family Court has jurisdiction over a wide range of family matters, probate proceedings, and general equity"
+                      }
+                    }
+                  }]
+                }
+              },
+              "link": {
+                "text": "Directions",
+                "href": "https://www.google.com/maps/place/208+Cambridge+St,+Cambridge,+MA+02141",
+                "info": ""
+              },
+              "location": {
+                "text": "208 Cambridge St, Cambridge, MA 02141",
+                "map": true
+              },
+              "phone": {
+                "text": "(781) 322-7500",
+                "href": "+17813227500"
+              }            
+            }]
+          },
+          "pagination": {
+            "next": {
+              "disabled": false,
+              "text": "Next"
             },
-            "link": {
-              "text": "Directions",
-              "href": "https://www.google.com/maps/place/24+Beacon+St,+Boston,+MA+02133",
-              "type": "external",
-              "info": ""
+            "prev": {
+              "disabled": false,
+              "text": "Previous"
             },
-            "location": {
-              "text": "24 Beacon St, Boston, MA 02133",
-              "map": true
-            }
-            
-          }]
+            "pages": [{
+              "active": false,
+              "text": "1"
+            },{
+              "active": true,
+              "text": "2"
+            },{
+              "active": false,
+              "text": "3"
+            },{
+              "active": false,
+              "text": "spacer"
+            },{
+              "active": false,
+              "text": "10"
+            }]
+          }
         }
       }
     }]

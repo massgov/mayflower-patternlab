@@ -3,8 +3,8 @@
   &__item {
 
     &:before {
+      color: $c-theme-secondary;
       font-weight: 700;
-      color: $c-theme-green;
     }
   }
 }

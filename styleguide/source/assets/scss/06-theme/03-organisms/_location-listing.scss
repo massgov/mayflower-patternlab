@@ -14,12 +14,20 @@
     }
   }
 
-  &__results {
+  .ma__image-promo {
 
-    & > p {
+    &:first-child {
       border-color: $c-bd-divider;
-      color: $c-font-base;
-      font-weight: 700;
     }
+
+    &.is-active,
+    &:hover {
+      border-top-color: $c-theme-tertiary;
+      box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
+    }
+  }
+
+  .ma__pagination {
+    border-color: $c-bd-divider;
   }
 }
