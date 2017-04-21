@@ -195,7 +195,6 @@
                 "href": "#"
               },
               "description": {
-                "property": "",
                 "richText": {
                   "rteElements": [{
                     "path": "@atoms/11-text/paragraph.twig",
@@ -273,21 +272,9 @@
                 "alt": "placeholder image",
                 "href": "#"
               },
-              "description": {
-                "property": "",
-                "richText": {
-                  "rteElements": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph" : {
-                        "text": "Juvenile Court has general jurisdiction over delinquency, guardianship matters, and youthful offender cases."
-                      }
-                    }
-                  }]
-                }
-              },
+              "description": null,
               "link": {
-                "text": "Directions",
+                "text": "",
                 "href": "https://www.google.com/maps/place/121+Third+St,+Cambridge,+MA+02141",
                 "info": ""
               },
@@ -315,7 +302,6 @@
                 "href": "#"
               },
               "description": {
-                "property": "",
                 "richText": {
                   "rteElements": [{
                     "path": "@atoms/11-text/paragraph.twig",

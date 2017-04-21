@@ -29,7 +29,7 @@
     {% if imagePromo.location.text %}
       <div class="ma__image-promo__location">
         {{ imagePromo.location.text }}
-        {% if imagePromo.link %}
+        {% if imagePromo.link.text %}
           <div>
             {% set decorativeLink = imagePromo.link %}
             {% include "@atoms/decorative-link.twig" %}
@@ -45,10 +45,12 @@
         </a>
       </div>
     {% endif %}
-    <div class="ma__image-promo__description">
-      {% set richText = imagePromo.description.richText %}
-      {% include "@organisms/by-author/rich-text.twig" %}
-    </div>
+    {% if imagePromo.description.richText %}
+      <div class="ma__image-promo__description">
+        {% set richText = imagePromo.description.richText %}
+        {% include "@organisms/by-author/rich-text.twig" %}
+      </div>
+    {% endif %}
     {% if imagePromo.link.text and not imagePromo.location.text %}
       <div class="ma__image-promo__link">
         {% set decorativeLink = imagePromo.link %}
