@@ -42,15 +42,26 @@ $steps-ordered-icon-border: 3px;
     &__content {
       padding-left: 0;
       padding-top: 0;
+    }
+  }
 
-      @media ($bp-small-max) {
-        padding-left: 60px;
+  &__item {
+
+    .ma__action-step {
+      
+      &__header,
+      &__content {
+
+        @media ($bp-small-max) {
+          padding-left: 60px;
+        }
       }
     }
   }
 
   .ma__action-step__header + .ma__action-step__content {
     padding-left: 0 !important;
+    
     @media ($bp-small-max) {
       padding-left: 0 !important;
     }
