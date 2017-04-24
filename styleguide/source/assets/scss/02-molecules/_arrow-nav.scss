@@ -3,12 +3,17 @@
   padding-left: 40px;
   position: relative;
 
+  @media ($bp-small-max) {
+    display: flex;
+      align-items: center;
+  }
 
   @media ($bp-small-min) {
     padding-left: 70px;
   }
 
   &--right {
+    justify-content: flex-end;
     padding-left: 0;
     padding-right: 40px;
     text-align: right;
@@ -47,6 +52,7 @@
 
   &__title {
     font-size: 1rem;
+    letter-spacing: .1em;
     line-height: 1.625rem;
     margin-bottom: 0;
     text-transform: uppercase;
@@ -70,7 +76,7 @@
     @include ma-link-underline;
 
     @media ($bp-small-max) {
-      display: none;
+      @include ma-visually-hidden;
     }
   }
 }
