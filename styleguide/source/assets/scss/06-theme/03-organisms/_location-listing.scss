@@ -23,7 +23,10 @@
     &.is-active,
     &:hover {
       border-top-color: $c-theme-tertiary;
-      box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
+
+      @media ($bp-large-min) {
+        box-shadow: 0 0.25rem 0.5rem rgba(1, 1, 1, 0.25);
+      }
     }
   }
 

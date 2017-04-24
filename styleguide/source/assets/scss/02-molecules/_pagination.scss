@@ -1,4 +1,7 @@
 .ma__pagination {
+  @media ($bp-small-max) {
+    text-align: center;
+  }
 
   &__prev,
   &__next,
@@ -27,35 +30,31 @@
     @include ma-chevron('left');
     
     @media ($bp-small-max) {
-      font-size: 0;
-      height: 36px;
-      vertical-align: top;
-
-      &:before {
-        position: absolute;
-          right: 4px;
-          top: 12px;
-      }
+      margin-right: .5em;
     }
   }
 
   &__next {
     @include ma-chevron('right');
+  
+    @media ($bp-small-max) {
+      margin-left: .5em;
+    }
+  }
+
+  &__page {
 
     @media ($bp-small-max) {
-      font-size: 0;
-      height: 36px;
-      vertical-align: top;
-
-      &:after {
-        position: absolute;
-          left: 0;
-          top: 12px;
-      }
+      display: none;
     }
   }
 
   &__spacer {
+
+    @media ($bp-small-max) {
+      display: none;
+    }
+
     @media ($bp-small-min) {
       margin: 0 .25em;
     }
