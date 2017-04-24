@@ -156,8 +156,12 @@
       line-height: 1.2;
       padding: 10px 35px 10px 15px;
 
-      &.is-active, {
+      &.is-active {
         display: block;
+
+        a {
+          border: none;
+        }
       }
 
       .is-open & {
