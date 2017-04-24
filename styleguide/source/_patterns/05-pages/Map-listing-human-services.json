@@ -52,7 +52,7 @@
           "locationFilters": {
             "zipcode": {
               "inputText": {
-                "labelText": "Show closest",
+                "labelText": "Show closest to",
                 "required": false,
                 "id": "find-nearby",
                 "name": "find-nearby",
