@@ -2,8 +2,8 @@
   <form action="{{ locationFilters.form.action }}">
     <div class="ma__location-filters__row">
       <div class="ma__location-filters__by-location">
-        {% set fieldSubmit = locationFilters.zipcode %}
-        {% include "@molecules/field-submit.twig" %}
+        {% set inputText = locationFilters.zipcode.inputText %}
+        {% include "@atoms/03-forms/input-text.twig" %}
       </div>
       {% if locationFilters.activity %}
         <div class="ma__location-filters__by-activity">
@@ -13,8 +13,8 @@
       {% endif %} 
       {% if locationFilters.keyword %}
         <div class="ma__location-filters__by-keyword">
-          {% set fieldSubmit = locationFilters.keyword %}
-          {% include "@molecules/field-submit.twig" %}
+          {% set inputText = locationFilters.keyword.inputText %}
+          {% include "@atoms/03-forms/input-text.twig" %}
         </div>
       {% endif %}
     </div>
@@ -28,5 +28,10 @@
         {% endfor %}
       </div>
     {% endif %}
+    <div class="ma__location-filters__buttons">
+      <button class="ma__location-filters__submit" type="submit">
+        {{ locationFilters.submitButton }}
+      </button>
+    </div>
   </form>
 </section>

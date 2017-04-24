@@ -2,14 +2,11 @@
   "locationFilters": {
     "zipcode": {
       "inputText": {
-        "labelText": "Find nearby",
+        "labelText": "Show closest",
         "required": false,
         "id": "find-nearby",
         "name": "find-nearby",
         "placeholder": "City, town, or ZIP code"
-      },
-      "buttonSearch": {
-        "text": "Submit"
       }
     },
     "activity": {
@@ -33,9 +30,6 @@
         "id": "filter-by-keyword",
         "name": "filter-by-keyword",
         "placeholder": ""
-      },
-      "buttonSearch": {
-        "text": "Submit"
       }
     },
     "tags": [{
@@ -50,6 +44,7 @@
       "label": "Open now",
       "checked": "false",
       "icon": "@atoms/05-icons/svg-open-now.twig"
-    }]   
+    }],
+    "submitButton": "Submit"   
   }
 }

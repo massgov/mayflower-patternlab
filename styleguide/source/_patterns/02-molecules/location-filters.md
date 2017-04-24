@@ -12,74 +12,26 @@ Description: Form with input used on location listing organism
 ### Used in:
 - [@organism/by-author/location-listing](?p=organism-location-listing)
 
+### contains:
+- [@atoms/03-forms/input-text](?p=atoms-input-text)
+- [@atoms/03-forms/select-box](?p=atoms-select-box)
+- [@atoms/03-forms/input-checkbox](?p=atoms-input-checkbox)
+
 
 ### Required Variables
 ~~~
 "locationFilters": {
   "zipcode": {
-    type: object/required
-    "inputText": {
-      "labelText": 
-        type: string/required,
-      "required": 
-        type: boolean,
-      "id": 
-        type: string/required,
-      "name": 
-        type: string/required,
-      "placeholder": 
-        type: string/optional
-    },
-    "buttonSearch": {
-      "text": 
-        type: string/required
-    }
+    type: inputText/required - see atoms/03-forms/input-text.md
   },
   "activity": {
-    type: object/optional
-    "label":
-      type: string/required
-    "id":
-      type: string/required
-    "options":[{
-      type: array/required
-      "value":
-        type: string/required
-      "text":
-        type: string/required
-    }]
+    type: selectBox/optional - see atoms/03-forms/select-box.md
   },
   "keyword": {
-    type: object/optional
-    "inputText": {
-      "labelText": 
-        type: string/required,
-      "required": 
-        type: boolean,
-      "id": 
-        type: string/required,
-      "name": 
-        type: string/required,
-      "placeholder": 
-        type: string/optional
-    },
-    "buttonSearch": {
-      "text": 
-        type: string/required
-    }
+    type: inputText/optional - see atoms/03-forms/input-text.md
   },
   "tags": [{
-    type: array/optional
-    "value": 
-      type: string/required
-    "id": 
-      type: string/required
-    "label": 
-      type: string/required
-    "checked": 
-      type: string/optional ("true" or "false")
-    "icon": 
-      type: string/path/required
+    type: array of inputCheckbox/optional -  see atoms/03-forms/input-checkbox.md
   }]   
 }
 ~~~
