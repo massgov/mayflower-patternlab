@@ -1,82 +1,82 @@
-.ma__arrow-nav {
-  min-height: 45px;
-  padding-left: 40px;
-  position: relative;
-
-  @media ($bp-small-max) {
-    display: flex;
-      align-items: center;
-  }
-
-  @media ($bp-small-min) {
-    padding-left: 70px;
-  }
-
-  &--right {
-    padding-left: 0;
-    padding-right: 40px;
-    text-align: right;
-    justify-content: flex-end;
-
-    @media ($bp-small-min) {
-      padding-right: 70px;
-    }
-  }
-
-  .ma__arrow-button {
-    height: 100%;
-    position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-    width: 30px;
-
-    @media ($bp-small-min) {
-      width: 50px;
-    }
-
-    @media ($bp-small-max) {
-
-      &:after {
-        border-width: 3px;
-        height: 9px;
-        width: 9px;
-      }
-    }
-  }
-
-  &--right .ma__arrow-button {
-    left: inherit;
-    right: 0;
-  }
-
-  &__title {
-    font-size: 1rem;
-    letter-spacing: .1em;
-    line-height: 1.625rem;
-    margin-bottom: 0;
-    text-transform: uppercase;
-
-    &:before {
-      content: attr(data-label) ": ";
-
-      @media ($bp-small-max) {
-        content: attr(data-label);
-      }
-    }
-
-    span {
-      @media ($bp-small-max) {
-        display: none;
-      }
-    }
-  }
-
-  &__link {
-    @include ma-link-underline;
-
-    @media ($bp-small-max) {
-      @include ma-visually-hidden;
-    }
-  }
-}
+.ma__arrow-nav {
+  min-height: 45px;
+  padding-left: 40px;
+  position: relative;
+
+  @media ($bp-small-max) {
+    display: flex;
+      align-items: center;
+  }
+
+  @media ($bp-small-min) {
+    padding-left: 70px;
+  }
+
+  &--right {
+    padding-left: 0;
+    padding-right: 40px;
+    text-align: right;
+    justify-content: flex-end;
+
+    @media ($bp-small-min) {
+      padding-right: 70px;
+    }
+  }
+
+  .ma__arrow-button {
+    height: 100%;
+    position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+    width: 30px;
+
+    @media ($bp-small-min) {
+      width: 50px;
+    }
+
+    @media ($bp-small-max) {
+
+      &:after {
+        border-width: 3px;
+        height: 9px;
+        width: 9px;
+      }
+    }
+  }
+
+  &--right .ma__arrow-button {
+    left: inherit;
+    right: 0;
+  }
+
+  &__title {
+    font-size: 1rem;
+    letter-spacing: .1em;
+    line-height: 1.625rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    &:before {
+      content: attr(data-label) ": ";
+
+      @media ($bp-small-max) {
+        content: attr(data-label);
+      }
+    }
+
+    span {
+      @media ($bp-small-max) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    @include ma-link-underline;
+
+    @media ($bp-small-max) {
+      @include ma-visually-hidden;
+    }
+  }
+}
