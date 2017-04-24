@@ -15,20 +15,22 @@
 
     @media ($bp-x-large-min) {
       margin-right: 1.6129%;
-      margin-bottom: 20px;
       width: 66.12903%; //@include span-columns(8 of 12);
     }
   }
 
   &__by-location {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
 
+    input {
+      width: 100%;
+    }
   }
 
   &__by-activity,
   &__by-keyword {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
   }
 
@@ -50,6 +52,13 @@
     }
   }
 
+  &__by-keyword {
+
+    input {
+      width: 100%;
+    }
+  }
+
   &__by-tags {
     margin-bottom: 30px;
     width: 100%;
@@ -61,7 +70,7 @@
     @media ($bp-x-large-min) {
       width: 32.25806%; //@include span-columns(4 of 12);
       align-self: flex-end;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       padding-left: 80px;
     }
   }
@@ -90,5 +99,17 @@
       vertical-align: top;
       width: 24px;
     }
+  }
+
+  &__buttons {
+    margin-bottom: 30px;
+
+    @media ($bp-x-large-min) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__submit {
+    @include ma-button('small');
   }
 }
