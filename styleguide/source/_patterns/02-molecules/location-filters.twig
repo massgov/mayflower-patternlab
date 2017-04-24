@@ -5,8 +5,6 @@
         {% set fieldSubmit = locationFilters.zipcode %}
         {% include "@molecules/field-submit.twig" %}
       </div>
-    </div>
-    <div class="ma__location-filters__row">
       {% if locationFilters.activity %}
         <div class="ma__location-filters__by-activity">
           {% set selectBox = locationFilters.activity %}
@@ -19,16 +17,16 @@
           {% include "@molecules/field-submit.twig" %}
         </div>
       {% endif %}
-      {% if locationFilters.tags %}
-        <div class="ma__location-filters__by-tags">
-          {% for inputCheckbox in locationFilters.tags %}
-            <div class="ma__location-filters__tag">
-              {% include "@atoms/03-forms/input-checkbox.twig" %}
-              {% include inputCheckbox.icon %}
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
+    {% if locationFilters.tags %}
+      <div class="ma__location-filters__by-tags">
+        {% for inputCheckbox in locationFilters.tags %}
+          <div class="ma__location-filters__tag">
+            {% include "@atoms/03-forms/input-checkbox.twig" %}
+            {% include inputCheckbox.icon %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
   </form>
 </section>

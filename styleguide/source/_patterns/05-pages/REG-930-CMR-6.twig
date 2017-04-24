@@ -1,0 +1,19 @@
+{% extends '@templates/stacked-row-template.twig' %}
+
+{% block preContent %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
+  {% include "@organisms/by-template/page-header.twig" %}
+{% endblock %}
+{% block stackedRowContent %}
+  {% include "@organisms/by-template/jump-links.twig" %}
+  {% for stackedRowSection in stackedRowSections %}
+    {% include "@organisms/by-author/stacked-row-section.twig" %}
+  {% endfor %}
+{% endblock %}
+{% block postContent %}
+  {% set backButton = postContent.backButton %}
+  {% include "@molecules/back-button.twig" %}
+  {% set pageFlipper = postContent.pageFlipper %}
+  {% include "@organisms/by-author/page-flipper.twig" %}
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
+{% endblock %}

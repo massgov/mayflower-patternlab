@@ -59,6 +59,14 @@
 
   &__content {
     padding-left: 60px;
+
+    .ma__rich-text {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &--accordion &__content {

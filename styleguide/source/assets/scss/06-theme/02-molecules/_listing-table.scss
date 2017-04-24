@@ -1,0 +1,6 @@
+.ma__listing-table {
+
+  tr + tr {
+    border-top-color: $c-bd-divider;
+  }
+}

@@ -1,0 +1,59 @@
+.ma__listing-table {
+  @include ma-component-spacing;
+
+  &__container {
+
+    .pre-content > &,
+    .post-content > &,
+    .main-content--full .page-content > & {
+      @include ma-container();
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    @media ($bp-small-max) {
+      display: block;
+    }
+  }
+
+  tr {
+    @media ($bp-small-max) {
+      display: block;
+    }
+  }
+
+  tr + tr {
+    border-top-style: solid;
+    border-top-width: 1px;
+  }
+
+  td, th {
+    font-size: 16px;
+    line-height: 1.5rem;
+    padding: 10px 0;
+
+    @media ($bp-small-max) {
+      display: block;
+    }
+  }
+
+  th {
+    letter-spacing: .1em;
+    padding-right: 15px;
+    padding-bottom: 0;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media ($bp-small-min) {
+      padding-bottom: 10px;
+      width: 33%;
+    }
+  }
+
+  td {
+    font-size: 20px;
+  }
+}

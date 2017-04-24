@@ -1,0 +1,8 @@
+{% set arrowButton = arrowNav.arrowButton %}
+<section class="ma__arrow-nav {{ arrowButton.direction ? 'ma__arrow-nav--' ~ arrowButton.direction : '' }}">
+  {% include "@atoms/01-buttons/arrow-button.twig" %}
+  <h2 class="ma__arrow-nav__title" data-label="{{ arrowNav.label }}"><span>{{ arrowNav.title }}</span></h2>
+  <a class="ma__arrow-nav__link"
+    href="{{ arrowNav.link.href }}"
+    aria-label="{{ arrowNav.link.info }}">{{ arrowNav.link.text }}</a>
+</section>

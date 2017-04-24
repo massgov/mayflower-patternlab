@@ -6,7 +6,7 @@
   }
 
   &__title {
-    @include ma-border-decorative($c-theme-yellow,1);
+    @include ma-border-decorative($c-theme-tertiary,1);
     color: $c-font-inverse;
   }
 
@@ -15,11 +15,11 @@
     button,
     input[type="button"],
     input[type="submit"] {
-      @include ma-button("normal","solid",$c-theme-blue);
+      @include ma-button("normal","solid",$c-theme-primary);
     }
   }
 
   &__error-message {
-    color: red;
+    color: $c-font-error;
   }
 }

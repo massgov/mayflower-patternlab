@@ -7,6 +7,7 @@ $c-gray-primary: #535353;
 $c-yellow-secondary: #f6c51b;
 
 //other global colors
+$c-red: red;
 $c-white: white;
 $c-black: #141414;
 $c-gray-f2f2f2: #f2f2f2;
@@ -15,10 +16,10 @@ $c-gray-707070: #707070;
 $c-gray-757575: #757575;
 
 // 18F compliance we can't use variables with the color in the name
-$c-theme-blue: $c-blue-primary;
-$c-theme-green: $c-green-primary;
-$c-theme-gray: $c-gray-primary;
-$c-theme-yellow: $c-yellow-secondary;
+$c-theme-primary: $c-blue-primary;
+$c-theme-secondary: $c-green-primary;
+$c-theme-quaternary: $c-gray-primary;
+$c-theme-tertiary: $c-yellow-secondary;
 
 $c-font-base: $c-gray-primary;
 $c-font-dark: $c-black;
@@ -27,13 +28,14 @@ $c-font-medium: $c-gray-707070;
 $c-font-heading: $c-black;
 $c-font-inverse: $c-white;
 $c-font-link: $c-blue-primary;
-$c-font-link-subtle: $c-black;
+$c-font-error: $c-red;
 
 $c-bg-comp-title: $c-gray-primary;
 $c-bg-subtle: $c-gray-f2f2f2;
 $c-bg-section: $c-gray-f2f2f2;
 
 $c-bd-divider: $c-gray-dcdcdc;
+$c-bd-divider-dark: $c-gray-primary;
 $c-bd-input: $c-gray-dcdcdc;
 $c-bd-input-dark: $c-gray-757575;
 

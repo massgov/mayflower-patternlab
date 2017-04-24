@@ -1,7 +1,7 @@
 .ma__comp-heading {
-  @include ma-comp-heading($c-theme-green);
+  @include ma-comp-heading($c-theme-secondary);
 }
 
 .ma__comp-heading--yellow {
-  @include ma-border-decorative($c-theme-yellow, 1);
+  @include ma-border-decorative($c-yellow-secondary, 1);
 }

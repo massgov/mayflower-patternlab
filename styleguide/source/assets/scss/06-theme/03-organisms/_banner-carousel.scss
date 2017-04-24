@@ -1,6 +1,5 @@
 .ma__banner-carousel {
 
-
   .slick-arrow {
     
     &:after {
@@ -8,35 +7,22 @@
     }
 
     &:before {
-      background-color: rgba($c-theme-blue,.5);
+      background-color: rgba($c-theme-primary,.5);
     }
 
     &:hover:before {
-      background-color: $c-theme-blue;      
+      background-color: $c-theme-primary;      
     }
-  }
-
-  .slick-prev {
-
-  }
-
-  .slick-next {
-
   }
 
   .slick-dots {
     
     button {
-      background-color: $c-theme-blue;
+      background-color: $c-theme-primary;
     }
 
     .slick-active button {
       background-color: $c-white;
     }
   }
-
-
-  &__slide {
-
-  } 
 }

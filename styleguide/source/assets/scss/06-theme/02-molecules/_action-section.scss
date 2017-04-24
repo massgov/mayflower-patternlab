@@ -1,7 +1,7 @@
 .ma__action-section {
 
   h3 {
-    @include ma-border-decorative($c-theme-green);
+    @include ma-border-decorative($c-theme-secondary);
 
     a {
       color: $c-font-heading;

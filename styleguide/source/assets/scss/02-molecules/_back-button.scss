@@ -1,0 +1,18 @@
+.ma__back-button {
+  @include ma-component-spacing;
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+
+  a {
+    @include ma-button("small");
+    @include ma-chevron("left");
+
+    &:before {
+      margin-top: 0;
+    }
+  }
+}

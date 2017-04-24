@@ -1,12 +1,7 @@
 .ma__top-actions {
 
   &__title {
-    @include ma-border-decorative($c-theme-green);
-  }
-
-
-  &__items {
-
+    @include ma-border-decorative($c-theme-secondary);
   }
 
   &__item {
@@ -16,11 +11,11 @@
   &__link {
 
     a:hover {
-      border-bottom-color: rgba($c-theme-blue,.5);
+      border-bottom-color: rgba($c-theme-primary, .5);
     }
 
     svg {
-      fill: rgba($c-theme-blue,.5);
+      fill: rgba($c-theme-primary, .5);
     }
   }
 }
