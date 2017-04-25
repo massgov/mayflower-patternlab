@@ -1,0 +1,15 @@
+{% extends '@templates/01-content-types/services.twig' %}
+
+{% block header %}
+  <script>
+    document.querySelector('.js-base-theme').disabled = true;
+    document.querySelector('.js-gov-theme').removeAttribute('disabled');
+  </script>
+  {% include "@organisms/by-template/header.twig" %}
+{% endblock %}
+
+{% block footer %}
+  {% include "@organisms/by-template/footer.twig" %}
+{% endblock %}
+
+
