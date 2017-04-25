@@ -1,0 +1,7 @@
+.ma__colored-heading {
+  @include ma-heading-colored($c-bg-comp-title);
+
+  &--cranberry {
+    background-color: $c-cranberry-primary;
+  }
+}

@@ -1,0 +1,25 @@
+{% extends '@templates/stacked-row-template.twig' %}
+
+{% block preContent %}
+  <script>
+    document.querySelector('.js-base-theme').disabled = true;
+    document.querySelector('.js-gov-theme').removeAttribute('disabled');
+  </script>
+  {% include "@organisms/by-template/breadcrumbs.twig" %}
+  {% include "@organisms/by-template/page-banner.twig" %}
+  {% include "@organisms/by-template/page-header.twig" %}
+{% endblock %}
+{% block stackedRowContent %}
+  {% for stackedRowSection in stackedRowSections %}
+    {% include "@organisms/by-author/stacked-row-section.twig" %}
+  {% endfor %}
+{% endblock %}
+{% block postContent %}
+
+{% endblock %}
+{% block schemaContent %}
+  {% if schema.governmentOrganization %}
+    {% set governmentOrganization = schema.governmentOrganization %}
+    {% include "@meta/schema/government-organization.twig" %}
+  {% endif %}
+{% endblock %}
