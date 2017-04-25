@@ -157,6 +157,10 @@ $page-header-widget-width: 350px;
       margin: 0;
       padding: 0;
       width: 100%;
+
+      .page-content {
+        padding-bottom: 0;
+      }
     }
 
     .ma__rich-text {
