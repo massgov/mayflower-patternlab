@@ -73,15 +73,6 @@
                 "text":"Housing Cases"
               }]
             },
-            "keyword": {
-              "inputText": {
-                "labelText": "Filter by keyword",
-                "required": false,
-                "id": "filter-by-keyword",
-                "name": "filter-by-keyword",
-                "placeholder": ""
-              }
-            },
             "tags": [{
               "value": "handicapped",
               "id": "handicapped",
