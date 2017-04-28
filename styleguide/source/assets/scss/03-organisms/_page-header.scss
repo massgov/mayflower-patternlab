@@ -114,6 +114,13 @@ $page-header-widget-width: 350px;
     }
   }
 
+  &__category {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
   &__title {
     margin-bottom: .4em;
 
@@ -172,6 +179,7 @@ $page-header-widget-width: 350px;
     }
 
     .ma__contact-us {
+      @include ma-component-spacing;
 
       &.js-accordion {
         @include clearfix;
