@@ -21,7 +21,12 @@
     "divider": false,
     "title": "Executive Office of Health and Human Services Locations",
     "subTitle": "",
-    "headerTags": null,
+    "headerTags": {
+      "taxonomyTerms": [{
+        "url": "#",
+        "term": "Health and Human Services (EOHHS)"
+      }]
+    },
     "optionalContents": [{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
