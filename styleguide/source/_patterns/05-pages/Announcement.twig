@@ -1,0 +1,18 @@
+{% extends '@templates/two-column.twig' %}
+
+{% block preContent %}
+  {% include "@organisms/by-template/page-header.twig" %}
+{% endblock %}
+{% block pageContent %}
+  {% set video = pageContent.video %}
+  {% include "@atoms/09-media/video.twig" %}
+  {% set richText = pageContent.richText %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+{% endblock %}
+{% block sidebar %}
+  {% set contactList = sidebar.contactList %}
+  {% include "@organisms/by-author/contact-list.twig" %}
+{% endblock %}
+{% block postContent %}
+
+{% endblock %}
