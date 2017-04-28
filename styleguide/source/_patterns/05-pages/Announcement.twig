@@ -4,6 +4,8 @@
   {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 {% block pageContent %}
+  {% set pressStatus = pageContent.pressStatus %}
+  {% include "@molecules/press-status.twig" %}
   {% set video = pageContent.video %}
   {% include "@atoms/09-media/video.twig" %}
   {% set richText = pageContent.richText %}

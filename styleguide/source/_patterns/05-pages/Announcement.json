@@ -17,8 +17,17 @@
     "widgets": null
   },
 
-
   "pageContent": {
+    "pressStatus": {
+      "title": "For immediate release:",
+      "date": "1/21/2016",
+      "names": [{
+        "text": "Charlie Baker, Governor"
+      },{
+        "text": "Karyn Polito, Lieutenant Governor"
+      }]
+    },
+
     "video": {
       "src": "https://www.youtube.com/embed/sBd6GWvCLX0",
       "label": "Governor Charlie Baker: The state of our Commonwealth is strong",

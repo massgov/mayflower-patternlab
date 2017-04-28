@@ -1,0 +1,54 @@
+.ma__press-status {
+  @include ma-container;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+
+  .main-content--two .page-content > & {
+
+    @media ($bp-large-min) {
+
+      &:before {
+        content: "";
+        height: 100%;
+        position: absolute;
+          right: 100%;
+          top: 0;
+        width: 50vw;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .1em;
+    line-height: 1.875rem;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @include clearfix;
+  }
+
+  &__date {
+    font-size: 1.25rem;
+
+    @media ($bp-small-min) {
+      @include span-columns(3 of 8);
+    }
+  }
+
+  &__names {
+    @include ma-reset-list;
+
+    @media ($bp-small-min) {
+      @include span-columns(5 of 8);
+    }
+  }
+
+  &__name {
+    font-size: 1.25rem;
+  }
+}
