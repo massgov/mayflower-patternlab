@@ -23,6 +23,10 @@
         {% set contactList = pageContent.contactList %}
         {% include "@organisms/by-author/contact-list.twig" %}
       {% endif %}
+      {% if pageContent.personalMessage %}
+        {% set personalMessage = pageContent.personalMessage %}
+        {% include "@organisms/by-author/personal-message.twig" %}
+      {% endif %}
     </div>
     <aside class="sidebar ma__announcement__sidebar">
       {% if sidebar.contactList %}

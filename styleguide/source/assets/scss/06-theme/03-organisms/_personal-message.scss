@@ -1,14 +1,7 @@
 .ma__personal-message {
   background-color: $c-bg-subtle;
 
-  &__content {
-
-    .ma__rich-text {
-      font-weight: 400;
-    }
-  }
-
-  &__title {
-    @include ma-border-decorative($c-theme-secondary);
+  .main-content--two .page-content > &:before {
+    background-color: $c-bg-subtle;
   }
 }

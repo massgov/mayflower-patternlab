@@ -1,13 +1,18 @@
 .ma__press-status {
-  @include ma-container;
   margin-bottom: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
   position: relative;
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
 
   .main-content--two .page-content > & {
 
     @media ($bp-large-min) {
+      padding-left: 0;
 
       &:before {
         content: "";

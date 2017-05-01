@@ -1,11 +1,6 @@
 <section class="ma__personal-message">
   <div class="ma__personal-message__container">
-    <div class="ma__personal-message__image">
-      <img width="250" height="250" alt="{{personalMessage.imageAlt}}" src="{{personalMessage.imageSrc}}" />
-    </div>
-    <div class="ma__personal-message__content">
-      <h2 class="ma__personal-message__title">{{personalMessage.title}}</h2>
-      <section class="ma__rich-text">{{personalMessage.rte | raw}}</section>
-    </div>
+    {% set imagePromo = personalMessage.imagePromo %}
+    {% include "@molecules/image-promo.twig" %}
   </div>
 </section>
