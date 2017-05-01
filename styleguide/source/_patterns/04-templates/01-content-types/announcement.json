@@ -1,16 +1,16 @@
 {
   "pageHeader": {
-    "category": "speech",
+    "category": "type of annoucement",
     "divider": false,
-    "title": "Governor Baker Delivers State of the Commonwealth Address",
+    "title": "Page Title",
     "subTitle": "",
     "headerTags": {
       "taxonomyTerms": [{
         "url": "#",
-        "term": "Office of the Governor"
+        "term": "Parent Page"
       },{
         "url": "#",
-        "term": "Another Org Name"
+        "term": "Another Parent Page"
       }]
     },
     "optionalContents": null,
@@ -26,18 +26,6 @@
       },{
         "text": "Karyn Polito, Lieutenant Governor"
       }]
-    },
-
-    "video": {
-      "src": "https://www.youtube.com/embed/sBd6GWvCLX0",
-      "label": "Governor Charlie Baker: The state of our Commonwealth is strong",
-      "height": "315",
-      "width": "560",
-      "link": {
-        "href": "#",
-        "text": "view transcript"
-      },
-      "position": ""
     },
 
     "richText": {
