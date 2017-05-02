@@ -3,10 +3,16 @@
 {% endif %}
 
 <section class="ma__page-header {{ widgetsClass }}">
-  {% if pageHeader.headerTags.taxonomyTerms %}
+  {% if pageHeader.headerTags.taxonomyTerms or pageHeader.socialLinks.items %}
     <div class="ma__page-header__tags">
-      {% set headerTags = pageHeader.headerTags %}
-      {% include "@molecules/header-tags.twig" %}
+      {% if pageHeader.headerTags.taxonomyTerms %}
+        {% set headerTags = pageHeader.headerTags %}
+        {% include "@molecules/header-tags.twig" %}
+      {% endif %}
+      {% if pageHeader.socialLinks.items %}
+        {% set socialLinks = pageHeader.socialLinks %}
+        {% include "@molecules/social-links.twig" %}
+      {% endif %}
     </div>
   {% endif %}
   <div 

@@ -5,9 +5,12 @@ $page-header-widget-width: 350px;
   @include clearfix;
 
   &__tags {
-    clear: both;
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    clear: both;
+    display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
     padding-top: 18px;
     padding-bottom: 10px;
   }
