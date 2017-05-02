@@ -6,8 +6,8 @@
     border-color: $c-bd-input;
 
     &:hover {
-      background: $c-theme-green;
-      border-color: $c-theme-green;
+      background: $c-theme-secondary;
+      border-color: $c-theme-secondary;
     }
 
     // not the button in navigation
@@ -17,7 +17,7 @@
         background-color: $c-white;
 
         &:hover {
-          background: $c-theme-green;
+          background: $c-theme-secondary;
         }
       }
     }

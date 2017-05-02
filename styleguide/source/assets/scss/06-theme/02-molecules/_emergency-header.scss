@@ -1,5 +1,5 @@
 .ma__emergency-header {
-  background-color: $c-theme-yellow;
+  background-color: $c-theme-tertiary;
 
   &__icon {
 
@@ -11,7 +11,7 @@
   }
 
   &__title {
-    border-left-color: rgba($c-black,.3);
+    border-left-color: rgba($c-font-dark,.3);
     color: $c-font-dark;
     font-weight: 700;
   }

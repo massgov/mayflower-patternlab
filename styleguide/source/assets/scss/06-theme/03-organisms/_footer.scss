@@ -2,11 +2,11 @@
   background-color: $c-bg-section;
 
   &__back2top{
-    @include ma-button("normal","outline",$c-theme-blue);
+    @include ma-button("","outline",$c-theme-primary);
     background-color: rgba($c-white, .9);
 
     svg {
-      fill: rgba($c-theme-blue, .5);
+      fill: rgba($c-theme-primary, .5);
     }
 
     &:hover {
@@ -17,11 +17,11 @@
   }
 
   &__copyright {
-    @include ma-font(300);
     color: $c-gray-primary;
+    font-weight: 300;
 
     b {
-      @include ma-font(500);
+      font-weight: 500;
     }
   }
 }

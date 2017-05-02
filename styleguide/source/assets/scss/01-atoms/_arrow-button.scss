@@ -1,0 +1,22 @@
+.ma__arrow-button {
+  @include ma-button;
+  @include ma-chevron;
+  display: inline-block;
+  padding: 8px 8px;
+  text-align: center;
+  transform: scale(-1, 1);
+  
+  &--right {
+    transform: scale(1, 1);
+  }
+
+  &:after {
+    border-width: 5px;
+    height: 15px;
+    margin: 0;
+    position: absolute;
+      top: 45%;
+      left: 35%;
+    width: 15px;
+  }
+}

@@ -9,7 +9,7 @@
   }
   .post-content & {
     border-top: 1px solid;
-    margin-top: 2em;
+    margin-top: 30px;
 
     @media ($bp-medium-min) {
       display: none;
@@ -34,6 +34,7 @@
 
   &__items {
     @include ma-reset-list;
+    line-height: 1em;
     padding: 10px 0;
     position: relative;
 
@@ -87,6 +88,10 @@
           &:before {
             opacity: .5;
           }
+
+          a {
+            display: inline;
+          }
         }
       }
 
@@ -119,8 +124,8 @@
   a {
     display: inline-block;
     font-size: 17px;
-    line-height: 1em;
-    padding: 10px 0;
+    line-height: 1;
+    padding: 2px 0;
 
     &:hover {
       opacity: .6;

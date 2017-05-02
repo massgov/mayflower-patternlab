@@ -9,7 +9,7 @@
 
   &__button-container {
     @media ($bp-header-toggle-max) {
-      background-color: $c-theme-blue;
+      background-color: $c-theme-primary;
     }
   }
 
@@ -37,11 +37,11 @@
   }
 
   &__menu-icon {
-    background-color:  $c-font-inverse;
+    background-color: $c-font-inverse;
 
     &:before,
     &:after {
-      background-color:  $c-font-inverse;
+      background-color: $c-font-inverse;
     }
 
     .show-menu & {
@@ -71,8 +71,8 @@
 
     a {
       font-weight: 500;
-      background-color: tint($c-font-link,90%);
-      border-color: tint($c-font-link,50%);
+      background-color: tint($c-font-link, 90%);
+      border-color: tint($c-font-link, 50%);
       box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.25);
       color: $c-font-link;
       font-size: 1.25rem;
@@ -83,7 +83,7 @@
 
       &:focus {
         background-color: $c-white;
-        border-color: $c-theme-yellow !important;
+        border-color: $c-theme-tertiary !important;
       }
     }
   }

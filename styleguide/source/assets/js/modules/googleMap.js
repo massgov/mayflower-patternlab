@@ -43,24 +43,61 @@ export default function (window,document,$,undefined) {
           content: template
         });
 
+        let markerBouncing = null;
+
         marker.addListener('click', function(){
           infoWindow.open(map, marker);
         });
 
         marker.showInfo = () => {
           infoWindow.open(map, marker);
+          marker.open = true;
+        }
+        
+        marker.hideInfo = () => {
+          infoWindow.close(map, marker);
+          marker.open = false;
+        }
+
+        marker.bounce = () => {
+          clearTimeout(markerBouncing);
+          marker.setAnimation(null);
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+          markerBouncing = setTimeout(() => {
+            marker.setAnimation(null);
+          },3000);
         }
 
         markers.push(marker);
       });
 
       // listen for recenter command
-      $el.on( "recenter", function( event, markerIndex ) {
+      $el.on("recenter", function( event, markerIndex ) {
         if(typeof markers[markerIndex] === "undefined") {
           return false;
         }
-        map.setCenter(markers[markerIndex].getPosition());
-        markers[markerIndex].showInfo();        
+        let marker = markers[markerIndex];  
+        // center the map on this marker      
+        map.setCenter(marker.getPosition());
+        // close all open infoWindows
+        for (let i in markers) {
+          if(markers[i].open) {
+            markers[i].hideInfo();        
+          }
+        }
+        // show the infoWindow for this marker
+        marker.showInfo();
+      });    
+      // listen for bounce command
+      $el.on("bounce", function( event, markerIndex ) {
+        if(typeof markers[markerIndex] === "undefined") {
+          return false;
+        }
+        let marker = markers[markerIndex];  
+        // center the map on this marker      
+        map.setCenter(marker.getPosition());
+        // make the marker bounce three times
+        marker.bounce();
       });    
     });
   }

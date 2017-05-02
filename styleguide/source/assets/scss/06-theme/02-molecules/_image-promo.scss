@@ -1,18 +1,22 @@
 .ma__image-promo {
   border-color: $c-bd-divider;
 
-  &__location {
+  &__tags {
 
     svg {
-      fill: rgba($c-font-link, .5);
+      fill: $c-theme-secondary;
+    }
+  }
+
+  &__phone {
+
+    & > a {
+      color: $c-font-base;
+      font-weight: 400;
     }
 
-    a {
-      font-weight: 400;
-
-      &:hover {
-        border-bottom-color: rgba($c-font-link, .5);
-      }
+    & > svg {
+      fill: $c-theme-secondary;
     }
   }
 }

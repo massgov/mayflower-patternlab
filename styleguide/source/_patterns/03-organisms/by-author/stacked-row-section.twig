@@ -1,6 +1,7 @@
+{% set containerModifier = stackedRowSection.sideBar|length ? '' : 'ma__stacked-row-section__container--restricted' %}
 <section class="ma__stacked-row-section">
   {% if stackedRowSection.title %}
-    <div class="ma__stacked-row-section__container">
+    <div class="ma__stacked-row-section__container {{ containerModifier }}">
       <div class="ma__stacked-row-section__title">
         {% set compHeading = {
             "title": stackedRowSection.title,

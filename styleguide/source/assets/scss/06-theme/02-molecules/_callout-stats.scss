@@ -1,12 +1,12 @@
 .ma__callout-stats {
-  @include ma-font(900);
+  font-weight: 900;
 
   &:before {
-    background-color: rgba($c-theme-green,.2);
+    background-color: rgba($c-theme-secondary,.2);
   }
 
   &__stat {
-    color: $c-theme-green;
+    color: $c-theme-secondary;
   }
 
   &__content {

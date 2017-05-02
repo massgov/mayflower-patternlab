@@ -22,7 +22,7 @@
   }
   // theme
   @else {
-    @include ma-font(700);
+    font-weight: 700;
 
     @if($type == "solid") {
       background-color: $color;

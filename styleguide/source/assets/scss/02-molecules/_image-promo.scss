@@ -15,6 +15,10 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
     border-top-width: 1px;
   }
 
+  &.js-location-listing-link {
+    cursor: pointer;
+  }
+
   &__image {
     flex-shrink: 0;
     flex-grow: 0;
@@ -40,6 +44,25 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
     margin-bottom: 0;
   }
 
+  &__tags {
+    float: right;
+
+    & > span {
+      display: inline-block;
+      font-size: 0;
+      margin-left: 10px;
+    }
+
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &__tags + .ma__decorative-link {
+    display: block;
+  }
+
   &__description {
     margin-top: 10px;
     font-size: 1.25rem;
@@ -47,20 +70,21 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
 
   &__location {
     font-size: 18px;
-    padding: 5px 0;
-
-    svg {
-      float: left;
-      height: 1.5em;
-      margin-right: 5px;
-      vertical-align: bottom;
-      width: 1rem;
-    }
-
-    a {
-      @include ma-link-underline;
-      display: inline;
-    }
+    padding-bottom: 5px;
   }
 
+  &__phone {
+    font-size: 18px;
+
+    & > a,
+    & > svg {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    & > svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
 }

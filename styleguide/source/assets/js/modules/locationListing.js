@@ -4,24 +4,31 @@ export default function (window,document,$,undefined) {
 
   $('.js-location-listing').each(function(){
     let $el = $(this),
-      $map = $el.find('.js-location-listing-map');
+        $mapCol = $el.find('.js-location-listing-map'),
+        $map = $el.find('.js-google-map');
 
-    sticky.init($map);
+    sticky.init($mapCol);
 
     // find the location link
     $el.find('.js-location-listing-link').each(function(index) {
       let $link = $(this);
 
-      $link.on('click', function(e){
-        e.preventDefault();
-        // when link is clicked 
+      // when link is clicked 
+      $link.on('click', function(){
         // trigger map to recenter on this item based on it's index.
-        let $map = $el.find('.js-google-map'),
-          position = $map.offset().top;
-
         $map.trigger('recenter',index);
-        // focus on the map
+        // mark this link as active
+        $el.find('.js-location-listing-link.is-active').removeClass('is-active');
+        $(this).addClass('is-active');
+        // focus on the map - mainly for mobile when it is stacked
+        let position = $map.offset().top;
         $("html,body").stop(true,true).animate({scrollTop:position}, '750');
+      });
+
+      // when link is hovered
+      $link.on('mouseenter', function(){
+        // trigger map to recenter on this item and make the marker bounce
+        $map.trigger('bounce',index);
       });
     });
 

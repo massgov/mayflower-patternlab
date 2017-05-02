@@ -152,10 +152,23 @@ $page-header-widget-width: 350px;
   }
 
   &__optional-content {
+    
     .main-content {
       margin: 0;
       padding: 0;
       width: 100%;
+
+      .page-content {
+        padding-bottom: 0;
+      }
+    }
+
+    .ma__rich-text {
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     .ma__contact-us {

@@ -34,6 +34,14 @@ $rich-text-spacing-mobile: 1.5rem;
     @include ma-comp-heading;
   }
 
+  h2 {
+    padding-top: .75em;
+  }
+
+  &:first-child h2 {
+    padding-top: 0;
+  }
+
   h4 {
     margin-bottom: .6em;
     padding-bottom: .45em;
@@ -88,14 +96,24 @@ $rich-text-spacing-mobile: 1.5rem;
   }
 
   li {
+    margin-bottom: .5em;
     padding-left: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   ul ul,
+  ol ol,
   ol ul {
-      list-style-type: circle;
-      padding-left: 30px;
-      margin-bottom: 1em;
+    list-style-type: circle;
+    padding-left: 30px;
+    margin-bottom: 1em;
+  }
+
+  ol ol {
+    list-style-type: lower-alpha;
   }
 
 // end list styles

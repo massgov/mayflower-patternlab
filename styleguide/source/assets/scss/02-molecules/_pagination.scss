@@ -1,0 +1,62 @@
+.ma__pagination {
+  @media ($bp-small-max) {
+    text-align: center;
+  }
+
+  &__prev,
+  &__next,
+  &__page {
+    @include ma-button-reset;
+    font-size: 20px;
+    line-height: 1;
+    padding: 8px 10px;
+    position: relative;
+
+    @media ($bp-small-min) {
+      margin: 0 .1em;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: .5;
+    }
+
+    &.is-active {
+      cursor: default;
+    }
+  }
+
+  &__prev {
+    @include ma-chevron('left');
+    
+    @media ($bp-small-max) {
+      margin-right: .5em;
+    }
+  }
+
+  &__next {
+    @include ma-chevron('right');
+  
+    @media ($bp-small-max) {
+      margin-left: .5em;
+    }
+  }
+
+  &__page {
+
+    @media ($bp-small-max) {
+      display: none;
+    }
+  }
+
+  &__spacer {
+
+    @media ($bp-small-max) {
+      display: none;
+    }
+
+    @media ($bp-small-min) {
+      margin: 0 .25em;
+    }
+  }
+}

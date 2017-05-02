@@ -1,0 +1,11 @@
+.ma__page-flipper {
+
+  &__container {
+    border-color: $c-bd-divider;
+  }
+
+  &__blank,
+  .ma__arrow-nav {
+    border-color: $c-bd-divider;
+  }
+}
