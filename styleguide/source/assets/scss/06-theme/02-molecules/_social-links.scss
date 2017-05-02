@@ -1,10 +1,6 @@
 .ma__social-links {
 
-  &__link {
-    background-color: $c-theme-secondary;
-
-    & > svg {
-      fill: $c-white;    
-    }
+  &__label {
+    font-weight: 800;
   }
 }

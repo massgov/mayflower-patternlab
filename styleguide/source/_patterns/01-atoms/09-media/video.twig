@@ -3,7 +3,7 @@
 {% endif %}
 <div class="ma__video {{ posClass }}">
   <div class="js-ma-responsive-video">
-    <iframe width="video.width" height="video.height" src="{{video.src}}" frameborder="0" allowfullscreen aria-label="video.label"></iframe>
+    <iframe width="{{ video.width }}" height="{{ video.height }}" src="{{ video.src }}" frameborder="0" allowfullscreen aria-label="{{ video.label }}"></iframe>
   </div>
   {% if video.link %}
     {% set decorativeLink = video.link %}

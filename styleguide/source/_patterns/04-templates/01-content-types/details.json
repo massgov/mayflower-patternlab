@@ -8,6 +8,7 @@
     "title": "How To page Title",
     "subTitle": "teaser text",
     "headerTags": {
+      "label": "More about:",
       "taxonomyTerms": [{
         "url": "#",
         "term": "Term 1"

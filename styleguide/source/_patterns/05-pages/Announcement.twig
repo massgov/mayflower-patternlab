@@ -1,0 +1,14 @@
+{% extends '@templates/01-content-types/announcement.twig' %}
+
+{% block pageContent %}
+  {% set video = pageContent.video %}
+  {% include "@atoms/09-media/video.twig" %}
+  {% set richText = pageContent.richText %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+{% endblock %}
+{% block sidebar %}
+
+{% endblock %}
+{% block postContent %}
+
+{% endblock %}
