@@ -8,6 +8,7 @@
     "title": "Apply for unemployment benefits",
     "subTitle": "Have you lost your job?  You may qualify for temporary income to support you while you look for a new one",
     "headerTags": {
+      "label": "More about:",
       "taxonomyTerms": [{
         "url": "#",
         "term": "Unemployment Benefits"
