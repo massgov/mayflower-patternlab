@@ -2,12 +2,11 @@
   "waitTime": {
     "items":[{
       "label": "Licensing",
-      "time": "2:00",
-      "units": "hrs"
+      "time": "2 hours, 15 minutes"
     },{
       "label": "Registration",
-      "time": "24",
-      "units": "mins"
-    }]
+      "time": "24 minutes, 11 seconds"
+    }],
+    "refreshed": "4:48pm"
   }
 }
