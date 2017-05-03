@@ -137,9 +137,7 @@ table.field-group-format.group_additional td {
 }
 
 /* custom styles for dataset page */
-@import "bourbon";
 @import "00-base/variables";
-@import "neat";
 
 // Base variables
 @import "00-base/breakpoints";
@@ -148,10 +146,6 @@ table.field-group-format.group_additional td {
 
 // base theme variables
 @import "06-theme/00-base/colors";
-@import "06-theme/00-base/fonts";
-.node-resource .download .format-label {
-  display: inline-block;
-}
 
 .recline-data-explorer {
   font-family: "Texta", "Helvetica", "Arial", "sans-serif";
