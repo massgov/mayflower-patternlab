@@ -7,11 +7,11 @@
     "headerTags": {
       "label": "Related to:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Office of the Governor"
+        "href": "#",
+        "text": "Office of the Governor"
       },{
-        "url": "#",
-        "term": "Another Org Name"
+        "href": "#",
+        "text": "Another Org Name"
       }]
     },
     "socialLinks": {

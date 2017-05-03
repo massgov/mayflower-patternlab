@@ -31,8 +31,8 @@
     "headerTags": {
       "label": "More about:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Energy & Utilities"
+        "href": "#",
+        "text": "Energy & Utilities"
       }]
     },
     "optionalContents": null,

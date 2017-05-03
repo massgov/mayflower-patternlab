@@ -7,17 +7,17 @@
     "headerTags": {
       "label": "More about:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Term 1"
+        "href": "#",
+        "text": "Term 1"
       },{
-        "url": "#",
-        "term": "Term 2"
+        "href": "#",
+        "text": "Term 2"
       },{
-        "url": "#",
-        "term": "Term 3"
+        "href": "#",
+        "text": "Term 3"
       },{
-        "url": "#",
-        "term": "Term 4"
+        "href": "#",
+        "text": "Term 4"
       }]
     },
     "optionalContents": [{
