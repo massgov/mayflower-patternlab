@@ -7,11 +7,11 @@
     "headerTags": {
       "label": "Related to:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Office of the Governor"
+        "href": "#",
+        "text": "Office of the Governor"
       },{
-        "url": "#",
-        "term": "Another Org Name"
+        "href": "#",
+        "text": "Another Org Name"
       }]
     },
 
@@ -34,7 +34,6 @@
         "linkType": "linkedin"
       }]
     },
-
     "optionalContents": null,
     "widgets": null
   },
@@ -168,7 +167,7 @@
       "compHeading": {
         "title": "Media Contact"
       },
-
+      
       "contacts":[{
         "accordion": true,
         "isExpanded": false,
@@ -176,7 +175,6 @@
           "href":"",
           "text": "Tom Lyons"
         },
-
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
@@ -255,6 +253,7 @@
       "sidebarHeading": {
         "title": "Media Contact"
       },
+
       "contacts":[{
         "accordion": false,
         "isExpanded": false,
