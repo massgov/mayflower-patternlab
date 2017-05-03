@@ -1,5 +1,42 @@
 # Mayflower Release Notes
 
+## 5.0.0
+Sometimes you have to break a few eggs to make an Omlette.  For out next major release (5.0), we're introducing a new Announcement page type and had to change some existing code in progress.
+
+**Note:** This bump from 4.* to 5.* is considered a major release, which means all of our friends who make their sites Mayflowery with this code should read on and integrate locally before updating anything in production.  If you're interested, you can see our integration test steps for Drupal in this [google doc](https://docs.google.com/document/d/1pbb-l0G39y9o8QMElxGzSi7nBBxDaV9k7hHdxmWAiaU/edit#).
+
+### SUMMARY
+If you'd like to see the tickets in JIRA:
+- [DP-3167 [MF] News/Announcement Detail Page](https://jira.state.ma.us/browse/DP-3167)
+
+### NEW FEATURES
+- Mayflower now has a new Announcement Content Type and Page 
+
+### IMPROVEMENTS
+1. Page Header
+  a. Added Category field
+  b. Added Social Icons pattern
+2. Linked List
+  a. removed v3.5 compatibility code
+  b. Added optional eyebrow and date elements
+3. Personal Message (breaking change)
+  a. updated styling, html, json (Pilot version) to match designs for Announcement page
+4. Footer (breaking change)
+  a. Change data variable for socialLinks to footerSocialLinks
+  b. moved custom styling for social links into the footer.scss file
+5. Social Links
+  a. Added optional label
+  b. Added data attribute to record type of social icon (for JavaScript)
+6. SVG Social icons
+  a. now have a default color (fill value set on the path)
+7. Header Tags (breaking change)
+  a. Changed label to use JSON content
+8. Image Promo
+  a. Added missing height and width variables to image data
+  b. Using image atom instead of img tag.
+9. Video 
+  a. width and height variables were not coded correctly
+
 ## 4.1.0
 ### SUMMARY
 If you'd like to read about these changes in JIRA:
