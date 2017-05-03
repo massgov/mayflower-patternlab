@@ -48,7 +48,7 @@
       <h1 class="ma__page-banner__title">
         {{ pageBanner.title }}
         {% if pageBanner.titleSubText %}
-          <span> {{ pageBanner.titleSubText }}</span>
+          <span> ({{ pageBanner.titleSubText|upper }})</span>
         {% endif %}
       </h1>
       {% if pageBanner.description and ( pageBanner.size and not pageBanner.size == "columns" ) %}
