@@ -38,7 +38,7 @@
   }
 
   &__date {
-    font-size: 1.25rem;
+    margin-bottom: 5px;
 
     @media ($bp-small-min) {
       @include span-columns(3 of 8);
