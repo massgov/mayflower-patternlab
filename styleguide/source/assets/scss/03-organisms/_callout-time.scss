@@ -2,6 +2,16 @@
   @include ma-component-spacing;
   position: relative;
 
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container('restricted');
+  }
+
+  &__container {
+    position: relative;
+  }
+
   &__icon {
     font-size: 0;
     height: 30px;

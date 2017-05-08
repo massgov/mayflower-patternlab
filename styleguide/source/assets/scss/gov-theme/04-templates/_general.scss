@@ -1,0 +1,14 @@
+.ma__narrow-template {
+
+  &--blue:before {
+    background-color: rgba($c-blue-primary, .15);
+  }
+
+  &--cranberry:before {
+    background-color: rgba($c-cranberry-primary, .15);
+  }
+
+  &--yellow:before {
+    background-color: rgba($c-yellow-secondary, .15);
+  }
+}
