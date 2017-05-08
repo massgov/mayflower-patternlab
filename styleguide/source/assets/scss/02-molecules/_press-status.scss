@@ -1,5 +1,5 @@
 .ma__press-status {
-  margin-bottom: 50px;
+  @include ma-component-spacing;
   padding: 30px;
   position: relative;
 
