@@ -18,12 +18,13 @@
         "use strict";
 
         var forms = document.querySelectorAll('.js-header-search-form');
+        var themeCssEl = document.querySelector('.js-base-theme');
+
         var cookie = getCookie('cranberry') || 'false';
         cookie = cookie === 'false' ? false : true;
 
         if (cookie) {
-          document.querySelector('.js-base-theme').disabled = true;
-          document.querySelector('.js-gov-theme').removeAttribute('disabled');
+          themeCssEl.setAttribute('href',govThemeCss);
 
           switchClass('ma__colored-heading--green', 'ma__colored-heading--cranberry');
           switchClass('ma__narrow-template--green', 'ma__narrow-template--cranberry');
@@ -37,15 +38,13 @@
             var color = this.querySelector('.ma__header-search__input').value;
             if (color === 'cranberry') {
               if (cookie) {
-                document.querySelector('.js-base-theme').removeAttribute('disabled');
-                document.querySelector('.js-gov-theme').disabled = true;
+                themeCssEl.setAttribute('href',baseThemeCss);
                 switchClass('ma__colored-heading--cranberry', 'ma__colored-heading--green');
                 switchClass('ma__narrow-template--cranberry', 'ma__narrow-template--green');
                 switchClass('ma__action-card__item--cranberry', 'ma__action-card__item--green');
                 switchClass('ma__page-banner--cranberry', 'ma__page-banner--blue');
               } else {
-                document.querySelector('.js-base-theme').disabled = true;
-                document.querySelector('.js-gov-theme').removeAttribute('disabled');
+                themeCssEl.setAttribute('href',govThemeCss);
                 switchClass('ma__colored-heading--green', 'ma__colored-heading--cranberry');
                 switchClass('ma__narrow-template--green', 'ma__narrow-template--cranberry');
                 switchClass('ma__action-card__item--green', 'ma__action-card__item--cranberry');
