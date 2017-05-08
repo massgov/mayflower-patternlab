@@ -10,8 +10,8 @@
     "headerTags": {
       "label": "More about:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Unemployment Benefits"
+        "href": "#",
+        "text": "Unemployment Benefits"
       }]
     },
     "optionalContents": [{
