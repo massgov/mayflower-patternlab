@@ -18,41 +18,28 @@
         "use strict";
 
         var forms = document.querySelectorAll('.js-header-search-form');
-        var cookie = getCookie('cranberry') || 'false';
-        cookie = cookie === 'false' ? false : true;
-
-        if (cookie) {
-          document.querySelector('.js-base-theme').disabled = true;
-          document.querySelector('.js-gov-theme').removeAttribute('disabled');
-
-          switchClass('ma__colored-heading--green', 'ma__colored-heading--cranberry');
-          switchClass('ma__narrow-template--green', 'ma__narrow-template--cranberry');
-          switchClass('ma__action-card__item--green', 'ma__action-card__item--cranberry');
-          switchClass('ma__page-banner--blue', 'ma__page-banner--cranberry');
-        } 
+        var themeCssEl = document.querySelector('.js-base-theme');
+        var cranberry = false;
 
         for (var i = 0; i < forms.length; ++i) {
           forms[i].addEventListener("submit", function(e){
             e.preventDefault();
             var color = this.querySelector('.ma__header-search__input').value;
             if (color === 'cranberry') {
-              if (cookie) {
-                document.querySelector('.js-base-theme').removeAttribute('disabled');
-                document.querySelector('.js-gov-theme').disabled = true;
+              if (cranberry) { // revert back to base
+                themeCssEl.setAttribute('href',baseThemeCss);
                 switchClass('ma__colored-heading--cranberry', 'ma__colored-heading--green');
                 switchClass('ma__narrow-template--cranberry', 'ma__narrow-template--green');
                 switchClass('ma__action-card__item--cranberry', 'ma__action-card__item--green');
                 switchClass('ma__page-banner--cranberry', 'ma__page-banner--blue');
-              } else {
-                document.querySelector('.js-base-theme').disabled = true;
-                document.querySelector('.js-gov-theme').removeAttribute('disabled');
+              } else {  // convert to cranberry
+                themeCssEl.setAttribute('href',govThemeCss);
                 switchClass('ma__colored-heading--green', 'ma__colored-heading--cranberry');
                 switchClass('ma__narrow-template--green', 'ma__narrow-template--cranberry');
                 switchClass('ma__action-card__item--green', 'ma__action-card__item--cranberry');
                 switchClass('ma__page-banner--blue', 'ma__page-banner--cranberry');
               }
-              cookie = !cookie;
-              setCookie('cranberry','' + cookie);
+              cranberry = !cranberry;
             }
           });
         }
@@ -64,23 +51,6 @@
             el[i].classList.remove(source);
             el[i].classList.add(update);
           }
-        }
-
-        function setCookie(name, value, expires) {
-          if(typeof(expires) === 'number') {
-            var d = new Date();
-            d.setTime(d.getTime() + (expires*24*60*60*1000));
-            var expires = "expires="+d.toUTCString();
-            document.cookie = name + "=" + value + "; " + expires + "; path=/";
-          } else {
-            document.cookie = name + "=" + value + "; path=/";
-          }
-        }
-
-        function getCookie(name) {
-          var value = "; " + document.cookie;
-          var parts = value.split("; " + name + "=");
-          if (parts.length == 2) return parts.pop().split(";").shift();
         }
 
       })(window, document);
