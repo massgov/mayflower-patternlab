@@ -1,8 +1,38 @@
 {
   "personalMessage": {
-    "imageSrc": "/assets/images/placeholder/250x250.png",
-    "imageAlt": "Governor Baker",
-    "title": "A Message from Governor Baker",
-    "rte": "<p>&#8220;Mass.gov is the digital front door of government — the first place many people in the Commonwealth start their interactions with the state. In our ongoing mission to ensure that state government works better for everyone, we are excited to unveil the new Mass.gov pilot, an innovative testing laboratory to help you get the support you need and the answers you’re looking for — fast and easy. We welcome your feedback. Thanks for your help.&#8221; - Governor Charlie Baker</p>"
+    "imagePromo": {
+      "title": {
+        "text": "Office of the Governor",
+        "href": "",
+        "type": ""
+      },
+      "tags": null,
+      "image": {
+        "src":"/assets/images/placeholder/100x100.png",
+        "alt": "placeholder image",
+        "height": "100",
+        "width": "100",
+        "href": "#"
+      },
+      "description": {
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "Small statement about who the Office of the Governor is so when people read similar announcements that might have different perspectives, they can get a sense of why this groups says one thing and another says another. Could pull from the short description of the org page or be a manually entered field per news or announcement."
+              }
+            }
+          }]
+        }
+      },
+      "link": {
+        "text": "more information",
+        "href": "#",
+        "info": "more information about the office of the Governor"
+      },
+      "location": null,
+      "phone": null
+    }
   }
 }

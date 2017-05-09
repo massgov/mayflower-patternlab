@@ -14,6 +14,8 @@ Description: displays a list of sitewide social links
 ### Required Variables:
 ~~~
   socialLinks: {
+    label:
+      type: string/optional
     items: [{
       href: 
         type: string(url)/required,

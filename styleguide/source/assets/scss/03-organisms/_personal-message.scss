@@ -1,50 +1,41 @@
 .ma__personal-message {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px;
+  position: relative;
 
   @media ($bp-small-min) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .main-content--two .page-content > & {
+    @media ($bp-large-min) {
+      padding-left: 0;
+
+      &:before {
+        content: "";
+        height: 100%;
+        position: absolute;
+          right: 100%;
+          top: 0;
+        width: 50vw;
+      }
+    }
   }
 
   &__container {
-    @include ma-container;
-    @include clearfix;
+
+    .pre-content > &,
+    .post-content > &,
+    .main-content--full .page-content > & {
+      @include ma-container('restricted');
+    }
   }
 
-  &__image {
-    margin-bottom: 20px;
-    text-align: center;
-
-    @media ($bp-medium-min) {
-      float: left;
-      margin-bottom: 0;
-      margin-right: 35px;
-      width: 255px;
-    }
-
-    @media ($bp-x-large-min) {
-      margin-left: $column + $gutter;
-    }
-
+  .ma__image-promo {
+    padding: 0;
   }
 
-  &__content {
-    @include ma-reset-rich-text;
-
-    @media ($bp-medium-min) {
-      float: left;
-      width: calc(100% - 315px);
-    }
-
-    @media ($bp-x-large-min) {
-      width: calc(100% - 525px);
-    }
-
-  }
-
-  &__title {
-    @include ma-border-decorative;
-    padding-bottom: 15px;
+  .ma__image-promo__description {
+    font-size: 1.375rem;
   }
 }
