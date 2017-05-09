@@ -49,6 +49,16 @@
   }
 }
 
+.sidebar--colored {
+  
+  .ma__sidebar-heading,
+  .ma__comp-heading {
+    @include ma-heading-colored($direction: left);
+    border: none;
+  }
+}
+
+
 // guide page template
 .stacked-row-content {
   position: relative;
