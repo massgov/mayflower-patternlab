@@ -18,7 +18,7 @@ cacheBusterOn: 'true'
 exportDir: export
 publicDir: public
 sourceDir: source
-defaultPattern: pages-readme
+defaultPattern: pages-readme2
 defaultShowPatternInfo: false
 lineageMatch: '{%([ ]+)?include( |\()[&quot;\&#039;]([A-Za-z0-9-_]+)[&quot;\&#039;](\))?(.*)%}'
 lineageMatchKey: 3
