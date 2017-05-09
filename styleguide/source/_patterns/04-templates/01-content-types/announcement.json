@@ -3,7 +3,7 @@
     "category": "type of annoucement",
     "divider": false,
     "title": "Page Title",
-    "subTitle": "",
+    "subTitle": "Sub Title",
     "headerTags": {
       "label": "Related to:",
       "taxonomyTerms": [{
