@@ -5,14 +5,31 @@ $page-header-widget-width: 350px;
   @include clearfix;
 
   &__tags {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
     clear: both;
     display: flex;
-      justify-content: space-between;
+      align-items: flex-start;
       flex-wrap: wrap;
+      justify-content: space-between;
+    overflow: hidden;
     padding-top: 18px;
-    padding-bottom: 10px;
+
+    .ma__header-tags,
+    .ma__social-links {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      min-height: 48px;
+      position: relative;
+        top: 1px;
+    }
+
+    .ma__header-tags {
+      flex-grow: 1;
+      margin-bottom: 30px;
+    }
+
+    .ma__social-links {
+      flex-grow: 0;
+    }
   }
 
   &__content {

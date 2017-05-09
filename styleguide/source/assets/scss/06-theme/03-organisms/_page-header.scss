@@ -1,7 +1,11 @@
 .ma__page-header {
 
   &__tags {
-    border-color: $c-bd-divider;
+
+    .ma__header-tags,
+    .ma__social-links {
+      border-color: $c-bd-divider;
+    }
   }
 
   &__sub-title {
