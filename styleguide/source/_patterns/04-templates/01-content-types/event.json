@@ -252,7 +252,8 @@
   "bottomContent": {
     "eventListing": {
       "compHeading":{
-        "title": "Related Events"
+        "title": "Related Events",
+        "centered": true
       },
       "events":[{
         "title": {
@@ -277,12 +278,7 @@
         "time": "12:00 p.m. - 2:00 p.m.",
         "description": ""
       }],
-      "more":{
-        "href": "#",
-        "text": "view all events at this location",
-        "chevron": true,
-        "label": ""
-      }
+      "more": null
     }
   }
 }
