@@ -4,9 +4,6 @@
   <div class="ma__header__backto">
     <a href="http://www.mass.gov">Go to classic Mass.gov</a>
   </div>
-  <div class="ma__header__utility-nav">
-        {% include "@organisms/by-template/utility-nav.twig" %}
-      </div>
   <div class="ma__header__container">
     <div class="ma__header__logo">
       {% include "@atoms/09-media/site-logo.twig" %}
@@ -34,6 +31,9 @@
       {% endif %}
       <div class="ma__header__main-nav">
         {% include "@molecules/main-nav.twig" %}
+      </div>
+      <div class="ma__header__utility-nav">
+        {% include "@organisms/by-template/utility-nav.twig" %}
       </div>
     </div>
   </nav>
