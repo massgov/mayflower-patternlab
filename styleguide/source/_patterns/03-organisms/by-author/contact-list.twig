@@ -1,4 +1,4 @@
-<section class="ma__contact-list">
+<section class="ma__contact-list {{ contactList.viewSpecific ? 'ma__contact-list--view-specific' : '' }}">
   {% if contactList.compHeading %}
     {% set compHeading = contactList.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
