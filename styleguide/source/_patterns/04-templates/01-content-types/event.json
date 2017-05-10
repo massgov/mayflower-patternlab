@@ -1,6 +1,6 @@
 {
   "pageHeader": {
-    "category": "type of event",
+    "category": "optional type of event",
     "divider": true,
     "title": "Event Title",
     "subTitle": "",
@@ -34,6 +34,17 @@
       }]
     },
     "optionalContents": [{
+      "path": "@molecules/event-teaser.twig",
+      "data": {
+        "eventTeaser": {
+          "title": null,
+          "location": "",
+          "date": "Sunday, November 20, 2017",
+          "time": "8:00 a.m. - 10:00 a.m.",
+          "description": ""
+        }
+      }
+    },{
       "path": "@molecules/contact-us.twig",
       "data": {
         "contactUs": {
@@ -60,7 +71,7 @@
       "data": {
         "keyActions": {
           "links":[{
-            "text": "Sign up",
+            "text": "optional sign up",
             "type": "",
             "href": "#"
           }]
@@ -165,7 +176,7 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "Optional links"
+              "text": "Description about other available dates"
             }
           }
         }]
@@ -191,7 +202,7 @@
     }
   },
 
-  "sidebar": {
+  "sideContent": {
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
@@ -235,6 +246,43 @@
           }]
         }]
       }]
+    }
+  },
+
+  "bottomContent": {
+    "eventListing": {
+      "compHeading":{
+        "title": "Related Events"
+      },
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Winter Birding Event",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": "March 30, 2017",
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+      },{
+        "title": {
+          "href": "#",
+          "text": "First Day Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": "March 30, 2017 - April 10, 2017",
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": ""
+      }],
+      "more":{
+        "href": "#",
+        "text": "view all events at this location",
+        "chevron": true,
+        "label": ""
+      }
     }
   }
 }

@@ -21,6 +21,10 @@
   &__date,
   &__time {
     font-size: 1.125rem;
+
+    .ma__page-header & {
+      font-size: 1.813rem;
+    }
   }
 
   &__location {
@@ -42,4 +46,5 @@
       font-size: 1.25rem;
     }
   }
+
 }

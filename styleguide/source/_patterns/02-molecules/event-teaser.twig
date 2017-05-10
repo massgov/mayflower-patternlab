@@ -1,8 +1,10 @@
 <section class="ma__event-teaser">
-  <h3 class="ma__event-teaser__title">
-    {% set decorativeLink = eventTeaser.title %}
-    {% include "@atoms/decorative-link.twig" %}
-  </h3>
+  {% if eventTeaser.title %}
+    <h3 class="ma__event-teaser__title">
+      {% set decorativeLink = eventTeaser.title %}
+      {% include "@atoms/decorative-link.twig" %}
+    </h3>
+  {% endif %}
   {% if eventTeaser.location %}
     <div class="ma__event-teaser__location">
       {{ eventTeaser.location|nl2br }}

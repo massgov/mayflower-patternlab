@@ -11,8 +11,8 @@
   <div class="main-content main-content--two">
     <div class="page-content">
       {% block pageContent %}
-        {% if sidebar.contactList %}
-          {% set contactList = sidebar.contactList|merge({'compHeading': sidebar.contactList.sidebarHeading, 'sidebarHeading': null}) %}
+        {% if sideContent.contactList %}
+          {% set contactList = sideContent.contactList|merge({'compHeading': sideContent.contactList.sidebarHeading, 'sidebarHeading': null}) %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
 
@@ -39,8 +39,8 @@
     </div>
     <aside class="sidebar">
       {% block sidebar %}
-        {% if sidebar.contactList %}
-          {% set contactList = sidebar.contactList %}
+        {% if sideContent.contactList %}
+          {% set contactList = sideContent.contactList %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
       {% endblock %}
@@ -48,7 +48,10 @@
   </div>
   <div class="post-content">
     {% block postContent %}
-      {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
+      {% if bottomContent.eventListing %}
+        {% set eventListing = bottomContent.eventListing %}
+        {% include "@organisms/by-author/event-listing.twig" %}
+      {% endif %}
     {% endblock %}
   </div>
 
