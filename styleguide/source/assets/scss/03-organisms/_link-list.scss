@@ -26,6 +26,7 @@
 
   &__items {
     margin-bottom: 0;
+    padding-left: 20px;
 
     .sidebar & {
       @include ma-reset-list;
@@ -40,7 +41,7 @@
     }
   }
 
-  &__item {
+  .main-content--full .page-content > & &__item {
     padding: 5px 0;
   }
 
