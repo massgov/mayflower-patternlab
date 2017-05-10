@@ -1,674 +1,674 @@
-{
-  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
-
-  "COMMENT":"****PRECONTENT COMPONENTS****",
-
-  "schemaPageType": "GovernmentOffice",
-
-  "headerAlerts": [{
-    "guid": "GUID09058070137",
-    "text": "There's a hole in front of the door. Beware!",
-    "href": "#",
-    "target": ""
-  },{
-    "guid": "GUID09058070138",
-    "text": "Free cookies while you wait.",
-    "href": "#",
-    "target": ""
-  }],
-
-  "breadcrumbs":{
-    "light": "true",
-    "links": [{
-      "text": "Southbridge RMV",
-      "href": "#"
-    }]
-  },
-
-  "pageHeader": {
-    "divider": false,
-    "title": "Southbridge RMV",
-    "subTitle": "",
-    "headerTags": null,
-    "optionalContents": [{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "groups": [{
-            "icon": "",
-            "name": "",
-            "items": [{
-              "type": "address",
-              "property": "url",
-              "label": "",
-              "value": "6 Larochelle Way, Southbridge, MA 01550",
-              "link": "https://www.google.com/maps/place/6+Larochelle+Way,+Southbridge,+MA+01550",
-              "details": ""
-            }]
-          }]
-        }
-      }
-    }],
-    "widgets": [{
-      "path": "@molecules/wait-time.twig",
-      "data": {
-        "waitTime": {
-          "items":[{
-            "label": "Licensing",
-            "time": "2:00",
-            "units": "hrs"
-          },{
-            "label": "Registration",
-            "time": "24",
-            "units": "mins"
-          }]
-        }
-      }
-    }]
-  },
-
-  "bannerCarousel": {
-    "slides":[{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    },{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    },{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    },{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    }]
-  },
-
-  "COMMENT":"****PAGE CONTENT COMPONENTS****",
-
-  "actionDetails" : {
-    "sections": [{
-      "title":"Overview",
-      "intro": "",
-      "id":"overview",
-      "path": "organisms-rich-text",
-      "data": {
-        "richText": {
-          "property":"description",
-          "rteElements": [{
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph" : {
-                "text": "At 3,491 feet, Mount Greylock is the highest point in Massachusetts. Rising above the surrounding Berkshire landscape, dramatic views of 60-90 miles distant may be seen. It became Massachusetts' first wilderness state park, acquired by the Commonwealth in 1898, to preserve its natural environment for public enjoyment. Wild and rugged yet intimate and accessible, Mount Greylock rewards the visitor exploring this special place of scenic and natural beauty."
-              }
-            }
-          }]
-        }
-      }
-    },{
-      "title":"Hours",
-      "intro": "",
-      "id":"hours",
-      "path": "organisms-rich-text",
-      "data": {
-        "richText": {
-          "property": "",
-          "rteElements": [{
-            "path": "molecules-callout-stats",
-            "data": {
-              "statsCallout": {
-                "pull": "right",
-                "stat": "today",
-                "content": "6:15 a.m. - 7:45 p.m."
-              }
-            }
-          },
-          {
-            "path": "atoms-heading-4",
-            "data": {
-              "heading4" : {
-                  "text": "Park"
-              }
-            }
-          },
-          {
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph" : {
-                "text": "May - September:<br />Sunrise - Sunset<br /><br />October - April:<br />9:00 a.m. - 5:00 p.m."
-              }
-            }
-          },
-          {
-            "path": "atoms-heading-4",
-            "data": {
-              "heading4" : {
-                  "text": "Museum"
-              }
-            }
-          },
-          {
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph" : {
-                "text": "Monday - Friday:<br />9:00 a.m. - 5:00 p.m.<br /><br />Saturday:<br />12:00 p.m. - 7:00 p.m."
-              }
-            }
-          },
-          {
-            "path": "atoms-heading-4",
-            "data": {
-              "heading4" : {
-                  "text": "Beach"
-              }
-            }
-          },
-          {
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph" : {
-                "text": "May - September:<br />7am - 6pm"
-              }
-            }
-          }]
-        }
-      }
-    },{
-      "title":"Parking",
-      "intro": "",
-      "id":"parking",
-      "path": "organisms-rich-text",
-      "data": {
-        "richText": {
-          "property": "",
-          "rteElements": [{
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph" : {
-                "text": "<b>Parking Meters only accept Credit Cards.</b>"
-              }
-            }
-          },
-          {
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph" : {
-                "text": "Suspendisse non tempus justo. Pellentesque malesuada lectus augue, eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. In quis urna sollicitudin, dictum sapien sit amet, rutrum metus. Donec sed risus neque. Ut a orci ex. Morbi laoreet suscipit tortor at ullamcorper."
-              }
-            }
-          }]          
-        }
-      }
-    },{
-      "title":"",
-      "intro": "",
-      "id":"",
-      "path": "@molecules/google-map.twig",
-      "data": {
-        "googleMap": {
-          "map": {
-            "center": {
-              "lat": 42.594129,
-              "lng": -73.183715
-            },
-            "zoom": 12
-          },
-          "markers": [{
-            "position": {
-              "lat": 42.554129,
-              "lng": -73.213715
-            },
-            "label": "V",
-            "infoWindow": {
-              "name": "Visitor's Center",
-              "phone": "14134994262",
-              "fax": "",
-              "email": "mass.parks@state.ma.us",
-              "address": "30 Rockwell Road\nLanesborough, MA 01237"
-            }
-          },{
-            "position": {
-              "lat": 42.636875,
-              "lng": -73.166921
-            },
-            "label": "B",
-            "infoWindow": {
-              "name": "Bascom Lodge",
-              "phone": "14137431591",
-              "fax": "",
-              "email": "mail@bascomlodge.net",
-              "address": "30 Rockwell Road\nLanesborough, MA 01237"
-            }
-          }]
-        }
-      }
-    },{
-      "title":"Activities",
-      "intro": "",
-      "id":"activities",
-      "path": "@organisms/by-author/image-promos.twig",
-      "data": {
-        "imagePromos": {
-          "items": [{
-            "title": {
-              "text": "Hiking & Walking",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "hiking image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "Details & Maps",
-              "type": "chevron",
-              "href": "#"
-            }
-          },{
-            "title": {
-              "text": "Camping",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "camping image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
-          },{
-            "title": {
-              "text": "Winter Sports",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "wintery image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
-          },{
-            "title": {
-              "text": "Hunting",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "hunting image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
-          },{
-            "title": {
-              "text": "Bird Watching",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "bird image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
-          }]
-        }
-      }
-    },{
-      "title":"Facilities",
-      "intro": "",
-      "id":"facilities",
-      "path": "organisms-rich-text",
-      "data": {
-        "richText":{
-          "property": "",
-          "rteElements": [{
-            "path": "atoms-unordered-list",
-            "data": {
-              "unorderedList": [{
-                "text": "Vestibulum ornare feugiat sodales."
-              },{
-                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-              },{
-                "text": "Nulla facilisi."
-              },{
-                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
-              },{
-                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-              }]
-            }
-          }]
-        }
-      }
-    },{
-      "title":"Acessibility",
-      "intro": "",
-      "id":"acessibility",
-      "path": "organisms-rich-text",
-      "data": {
-        "richText": {
-        "property": "",
-          "rteElements": [{
-            "path": "atoms-paragraph",
-            "data": {
-              "paragraph" : {
-                "text": "Vestibulum ornare feugiat sodales. Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum. Nulla facilisi. Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui. Sed hendrerit sit amet nunc sit amet ultrices. Pellentesque malesuada faucibus ligula ac tincidunt."
-              }
-            }
-          },
-          {
-            "path": "atoms-unordered-list",
-            "data": {
-              "unorderedList": [{
-                "text": "Vestibulum ornare feugiat sodales."
-              },{
-                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-              },{
-                "text": "Nulla facilisi."
-              },{
-                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
-              },{
-                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-              }]
-            }
-          }]
-        }
-      }
-    },{
-      "title":"Restrictions",
-      "intro": "",
-      "id":"restrictions",
-      "path": "organisms-rich-text",
-      "data": {
-        "richText": {
-          "property": "",
-          "rteElements": [{
-            "path": "atoms-unordered-list",
-            "data": {
-              "unorderedList": [{
-                "text": "Vestibulum ornare feugiat sodales."
-              },{
-                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-              },{
-                "text": "Nulla facilisi."
-              },{
-                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-              },{
-                "text": "Nulla facilisi."
-              },{
-                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
-              },{
-                "text": "Nulla facilisi."
-              },{
-                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
-              },{
-                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-              }]
-            }
-          }]
-        }
-      }
-    }]
-  },
-
-
-  "COMMENT":"****SIDEBAR COMPONENTS****",
-  "sidebar": {
-    "coloredHeadings": true,
-
-    "quickActions":{
-      "coloredHeading": {
-        "text": "Quick Actions",
-        "color": "green"
-      },
-      "links": [{
-        "type": "",
-        "href": "#",
-        "text": "Reserve a Campsite"
-      },{
-        "type": "",
-        "href": "#",
-        "text": "Download a Park Map"
-      },{
-        "type": "",
-        "href": "#",
-        "text": "Download a Trail Map"
-      }]
-    },
-
-    "contactList": {
-      "sidebarHeading":{
-        "title": "Contact"
-      },
-      "contacts":[{
-        "subTitle": {
-          "href":"",
-          "text": "Bascom Lodge",
-          "chevron":""
-        },
-        "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
-          "name": "Phone",
-          "hidden": "",
-          "items": [{
-            "type": "phone",
-            "property": "telephone",
-            "label":"Main:",
-            "value":"(413) 499-4262",
-            "link":"14134994262",
-            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-          },{
-            "type": "phone",
-            "property": "",
-            "label":"TTY:",
-            "value":"(617) 555-7777",
-            "link":"16175557777",
-            "details":"For those who need accessible services"
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
-          "name": "Online",
-          "hidden": "",
-          "items": [{
-            "type": "email",
-            "property": "",
-            "label":"Email:",
-            "value":"mount.greylock@state.ma.us",
-            "link":"mount.greylock@state.ma.us",
-            "details":""
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-fax-icon.twig",
-          "name": "Fax",
-          "hidden": "true",
-          "items": [{
-            "type": "fax",
-            "property": "faxNumber",
-            "label":"",
-            "value":"(413) 499-4262",
-            "link":"14134994262",
-            "details":"Please allow 24 hours for a response"
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-marker.twig",
-          "name": "Address",
-          "hidden": "true",
-          "items": [{
-            "type": "address",
-            "property": "address",
-            "label": "",
-            "value":"555 Park Drive\nBoston, MA 02231",
-            "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-            "details": ""
-          }]
-        }]
-      },{
-        "subTitle": {
-          "href":"",
-          "text": "Museum",
-          "chevron":""
-        },
-        "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
-          "name": "Phone",
-          "hidden": "",
-          "items": [{
-            "type": "phone",
-            "property": "telephone",
-            "label":"Main:",
-            "value":"(413) 443-8765",
-            "link":"14134438765",
-            "details":""
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
-          "name": "Online",
-          "hidden": "",
-          "items": [{
-            "type": "email",
-            "property": "",
-            "label":"Email:",
-            "value":"mount.greylock@state.ma.us",
-            "link":"mount.greylock@state.ma.us",
-            "details":""
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-fax-icon.twig",
-          "name": "Fax",
-          "hidden": "true",
-          "items": [{
-            "type": "fax",
-            "property": "faxNumber",
-            "label":"",
-            "value":"(413) 499-4262",
-            "link":"14134994262",
-            "details":"Please allow 24 hours for a response"
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-marker.twig",
-          "name": "Address",
-          "hidden": "true",
-          "items": [{
-            "type": "address",
-            "property": "address",
-            "label":"",
-            "value":"555 Park Drive\nNorth Hampton, MA 02231",
-            "link": "",
-            "details":""
-          }]
-        }]
-      }]
-    },
-
-    "eventListing": {
-      "sidebarHeading":{
-        "title": "Upcoming Events"
-      },
-      "events":[{
-        "title": {
-          "href": "#",
-          "text": "Winter Birding Event",
-          "info": "",
-          "property": ""
-        },
-        "location": "Lanesborough, MA",
-        "date": "March 30, 2017",
-        "time": "12:00 p.m. - 2:00 p.m.",
-        "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
-      },{
-        "title": {
-          "href": "#",
-          "text": "First Day Hike",
-          "info": "",
-          "property": ""
-        },
-        "location": "Lanesborough, MA",
-        "date": "March 30, 2017 - April 10, 2017",
-        "time": "12:00 p.m. - 2:00 p.m.",
-        "description": ""
-      }],
-      "more":{
-        "href": "#",
-        "text": "view all events at this location",
-        "chevron": true,
-        "label": ""
-      }
-    }
-  }
-}
+{
+  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
+
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+
+  "schemaPageType": "GovernmentOffice",
+
+  "headerAlerts": [{
+    "guid": "GUID09058070137",
+    "text": "There's a hole in front of the door. Beware!",
+    "href": "#",
+    "target": ""
+  },{
+    "guid": "GUID09058070138",
+    "text": "Free cookies while you wait.",
+    "href": "#",
+    "target": ""
+  }],
+
+  "breadcrumbs":{
+    "light": "true",
+    "links": [{
+      "text": "Southbridge RMV",
+      "href": "#"
+    }]
+  },
+
+  "pageHeader": {
+    "divider": false,
+    "title": "Southbridge RMV",
+    "subTitle": "",
+    "headerTags": null,
+    "optionalContents": [{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "groups": [{
+            "icon": "",
+            "name": "",
+            "items": [{
+              "type": "address",
+              "property": "url",
+              "label": "",
+              "value": "6 Larochelle Way, Southbridge, MA 01550",
+              "link": "https://www.google.com/maps/place/6+Larochelle+Way,+Southbridge,+MA+01550",
+              "details": ""
+            }]
+          }]
+        }
+      }
+    }],
+    "widgets": [{
+      "path": "@molecules/wait-time.twig",
+      "data": {
+        "waitTime": {
+          "items":[{
+            "label": "Licensing",
+            "time": "2:00",
+            "units": "hrs"
+          },{
+            "label": "Registration",
+            "time": "24",
+            "units": "mins"
+          }]
+        }
+      }
+    }]
+  },
+
+  "bannerCarousel": {
+    "slides":[{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    },{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    },{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    },{
+      "image":"/assets/images/placeholder/800x400.png",
+      "imageLarge":"/assets/images/placeholder/1600x400.png",
+      "alt":"view from the lodge"
+    }]
+  },
+
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+
+  "actionDetails" : {
+    "sections": [{
+      "title":"Overview",
+      "intro": "",
+      "id":"overview",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText": {
+          "property":"description",
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "At 3,491 feet, Mount Greylock is the highest point in Massachusetts. Rising above the surrounding Berkshire landscape, dramatic views of 60-90 miles distant may be seen. It became Massachusetts' first wilderness state park, acquired by the Commonwealth in 1898, to preserve its natural environment for public enjoyment. Wild and rugged yet intimate and accessible, Mount Greylock rewards the visitor exploring this special place of scenic and natural beauty."
+              }
+            }
+          }]
+        }
+      }
+    },{
+      "title":"Hours",
+      "intro": "",
+      "id":"hours",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "molecules-callout-stats",
+            "data": {
+              "statsCallout": {
+                "pull": "right",
+                "stat": "today",
+                "content": "6:15 a.m. - 7:45 p.m."
+              }
+            }
+          },
+          {
+            "path": "atoms-heading-4",
+            "data": {
+              "heading4" : {
+                  "text": "Park"
+              }
+            }
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "May - September:<br />Sunrise - Sunset<br /><br />October - April:<br />9:00 a.m. - 5:00 p.m."
+              }
+            }
+          },
+          {
+            "path": "atoms-heading-4",
+            "data": {
+              "heading4" : {
+                  "text": "Museum"
+              }
+            }
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Monday - Friday:<br />9:00 a.m. - 5:00 p.m.<br /><br />Saturday:<br />12:00 p.m. - 7:00 p.m."
+              }
+            }
+          },
+          {
+            "path": "atoms-heading-4",
+            "data": {
+              "heading4" : {
+                  "text": "Beach"
+              }
+            }
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "May - September:<br />7am - 6pm"
+              }
+            }
+          }]
+        }
+      }
+    },{
+      "title":"Parking",
+      "intro": "",
+      "id":"parking",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "<b>Parking Meters only accept Credit Cards.</b>"
+              }
+            }
+          },
+          {
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Suspendisse non tempus justo. Pellentesque malesuada lectus augue, eu blandit ex hendrerit eget. In non convallis eros. Maecenas consectetur neque a nibh faucibus blandit. In quis urna sollicitudin, dictum sapien sit amet, rutrum metus. Donec sed risus neque. Ut a orci ex. Morbi laoreet suscipit tortor at ullamcorper."
+              }
+            }
+          }]          
+        }
+      }
+    },{
+      "title":"",
+      "intro": "",
+      "id":"",
+      "path": "@molecules/google-map.twig",
+      "data": {
+        "googleMap": {
+          "map": {
+            "center": {
+              "lat": 42.594129,
+              "lng": -73.183715
+            },
+            "zoom": 12
+          },
+          "markers": [{
+            "position": {
+              "lat": 42.554129,
+              "lng": -73.213715
+            },
+            "label": "V",
+            "infoWindow": {
+              "name": "Visitor's Center",
+              "phone": "14134994262",
+              "fax": "",
+              "email": "mass.parks@state.ma.us",
+              "address": "30 Rockwell Road\nLanesborough, MA 01237"
+            }
+          },{
+            "position": {
+              "lat": 42.636875,
+              "lng": -73.166921
+            },
+            "label": "B",
+            "infoWindow": {
+              "name": "Bascom Lodge",
+              "phone": "14137431591",
+              "fax": "",
+              "email": "mail@bascomlodge.net",
+              "address": "30 Rockwell Road\nLanesborough, MA 01237"
+            }
+          }]
+        }
+      }
+    },{
+      "title":"Activities",
+      "intro": "",
+      "id":"activities",
+      "path": "@organisms/by-author/image-promos.twig",
+      "data": {
+        "imagePromos": {
+          "items": [{
+            "title": {
+              "text": "Hiking & Walking",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "hiking image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "Details & Maps",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Camping",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "camping image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Winter Sports",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "wintery image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Hunting",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "hunting image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          },{
+            "title": {
+              "text": "Bird Watching",
+              "href": "#"
+            },
+            "image": {
+              "src": "/assets/images/placeholder/190x107.png",
+              "alt": "bird image",
+              "href": "#"
+            },
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": {
+              "text": "More",
+              "type": "chevron",
+              "href": "#"
+            }
+          }]
+        }
+      }
+    },{
+      "title":"Facilities",
+      "intro": "",
+      "id":"facilities",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText":{
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Vestibulum ornare feugiat sodales."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+              },{
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }]
+            }
+          }]
+        }
+      }
+    },{
+      "title":"Acessibility",
+      "intro": "",
+      "id":"acessibility",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText": {
+        "property": "",
+          "rteElements": [{
+            "path": "atoms-paragraph",
+            "data": {
+              "paragraph" : {
+                "text": "Vestibulum ornare feugiat sodales. Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum. Nulla facilisi. Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui. Sed hendrerit sit amet nunc sit amet ultrices. Pellentesque malesuada faucibus ligula ac tincidunt."
+              }
+            }
+          },
+          {
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Vestibulum ornare feugiat sodales."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+              },{
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }]
+            }
+          }]
+        }
+      }
+    },{
+      "title":"Restrictions",
+      "intro": "",
+      "id":"restrictions",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Vestibulum ornare feugiat sodales."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text": "Suspendisse fermentum augue eget semper feugiat. Sed tempor et ipsum semper elementum."
+              },{
+                "text": "Nulla facilisi."
+              },{
+                "text":"Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien. Integer quis suscipit dui."
+              },{
+                "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }]
+            }
+          }]
+        }
+      }
+    }]
+  },
+
+
+  "COMMENT":"****SIDEBAR COMPONENTS****",
+  "sidebar": {
+    "coloredHeadings": true,
+
+    "quickActions":{
+      "coloredHeading": {
+        "text": "Quick Actions",
+        "color": "green"
+      },
+      "links": [{
+        "type": "",
+        "href": "#",
+        "text": "Reserve a Campsite"
+      },{
+        "type": "",
+        "href": "#",
+        "text": "Download a Park Map"
+      },{
+        "type": "",
+        "href": "#",
+        "text": "Download a Trail Map"
+      }]
+    },
+
+    "contactList": {
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Bascom Lodge",
+          "chevron":""
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "hidden": "",
+          "items": [{
+            "type": "phone",
+            "property": "telephone",
+            "label":"Main:",
+            "value":"(413) 499-4262",
+            "link":"14134994262",
+            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          },{
+            "type": "phone",
+            "property": "",
+            "label":"TTY:",
+            "value":"(617) 555-7777",
+            "link":"16175557777",
+            "details":"For those who need accessible services"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "email",
+            "property": "",
+            "label":"Email:",
+            "value":"mount.greylock@state.ma.us",
+            "link":"mount.greylock@state.ma.us",
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "hidden": "true",
+          "items": [{
+            "type": "fax",
+            "property": "faxNumber",
+            "label":"",
+            "value":"(413) 499-4262",
+            "link":"14134994262",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "property": "address",
+            "label": "",
+            "value":"555 Park Drive\nBoston, MA 02231",
+            "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+            "details": ""
+          }]
+        }]
+      },{
+        "subTitle": {
+          "href":"",
+          "text": "Museum",
+          "chevron":""
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "hidden": "",
+          "items": [{
+            "type": "phone",
+            "property": "telephone",
+            "label":"Main:",
+            "value":"(413) 443-8765",
+            "link":"14134438765",
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "email",
+            "property": "",
+            "label":"Email:",
+            "value":"mount.greylock@state.ma.us",
+            "link":"mount.greylock@state.ma.us",
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "hidden": "true",
+          "items": [{
+            "type": "fax",
+            "property": "faxNumber",
+            "label":"",
+            "value":"(413) 499-4262",
+            "link":"14134994262",
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "property": "address",
+            "label":"",
+            "value":"555 Park Drive\nNorth Hampton, MA 02231",
+            "link": "",
+            "details":""
+          }]
+        }]
+      }]
+    },
+
+    "eventListing": {
+      "sidebarHeading":{
+        "title": "Upcoming Events"
+      },
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Winter Birding Event",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": "March 30, 2017",
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+      },{
+        "title": {
+          "href": "#",
+          "text": "First Day Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": "March 30, 2017 - April 10, 2017",
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": ""
+      }],
+      "more":{
+        "href": "#",
+        "text": "view all events at this location",
+        "chevron": true,
+        "label": ""
+      }
+    }
+  }
+}
