@@ -1,0 +1,240 @@
+{
+  "pageHeader": {
+    "category": "type of event",
+    "divider": true,
+    "title": "Event Title",
+    "subTitle": "",
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Parent Page"
+      },{
+        "href": "#",
+        "text": "Another Parent Page"
+      }]
+    },
+    "socialLinks": {
+      "label": "Share:",
+      "items": [{
+        "altText": "Follow us on Facebook",
+        "href": "#",
+        "icon": "@atoms/05-icons/svg-facebook.twig",
+        "linkType": "facebook"
+      },{
+        "altText": "Follow us on Twitter",
+        "href": "#",
+        "icon": "@atoms/05-icons/svg-twitter.twig",
+        "linkType": "twitter"
+      },{
+        "altText": "Follow us on LinkedIn",
+        "href": "#",
+        "icon": "@atoms/05-icons/svg-linkedin.twig",
+        "linkType": "linkedin"
+      }]
+    },
+    "optionalContents": [{
+      "path": "@molecules/contact-us.twig",
+      "data": {
+        "contactUs": {
+          "groups": [{
+            "icon": "",
+            "name": "",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "address": "Halibut Point State Park, Gott Avenue, Rockport, MA 01966",
+              "link": {
+                "href": "https://www.google.com/maps/place/Halibut+Point+State+Park",
+                "text": "directions",
+                "info": "directions to Halibut Point State Park",
+                "property": "url"
+              },
+              "details": ""
+            }]
+          }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/key-actions.twig",
+      "data": {
+        "keyActions": {
+          "links":[{
+            "text": "Sign up",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  },
+
+  "mainContent": {
+    "description": {
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Optional description of the event.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptates aliquam ad deserunt et ea aspernatur corporis! Porro pariatur ad corporis, mollitia iste maiores fugit dignissimos. Eos, fuga perferendis necessitatibus."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Optional description of the event.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptates aliquam ad deserunt et ea aspernatur corporis! Porro pariatur ad corporis, mollitia iste maiores fugit dignissimos. Eos, fuga perferendis necessitatibus."
+          }
+        }
+      }]
+    },
+
+    "youWillNeed": {
+      "compHeading": {
+        "title": "You will need",
+        "id": "",
+        "sub": false
+      },
+      "rteElements": [{
+        "path": "@atoms/08-lists/unordered-list.twig",
+        "data": {
+          "unorderedList": [{ 
+            "text": "first item to bring" 
+          },{ 
+            "text": "second item to bring" 
+          },{ 
+            "text": "third item to bring" 
+          }]
+        }
+      }]
+    },
+
+    "contactList": {
+      "viewSpecific": false,
+      "compHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
+        "accordion": true,
+        "isExpanded": false,
+        "subTitle": {
+          "href":"",
+          "text": "Person to Contact"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+17817401605",
+              "text": "(781) 740-1605",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"",
+            "link": {
+              "href":"#",
+              "text": "person@email.com",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    },
+
+    "linkList" : {
+      "compHeading": {
+        "title": "Other Dates"
+      },
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional links"
+            }
+          }
+        }]
+      },
+
+      "stacked": true,
+      "links" : [{
+        "url":"#",
+        "text":"first date",
+        "info": "",
+        "property": ""
+      },{
+        "url":"#",
+        "text":"second date",
+        "info": "",
+        "property": ""
+      },{
+        "url":"#",
+        "text":"thrid date",
+        "info": "",
+        "property": ""
+      }]
+    }
+  },
+
+  "sidebar": {
+    "contactList": {
+      "viewSpecific": true,
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Person to Contact"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+17817401605",
+              "text": "(781) 740-1605",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"",
+            "link": {
+              "href":"#",
+              "text": "person@email.com",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    }
+  }
+}
