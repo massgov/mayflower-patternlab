@@ -489,38 +489,34 @@
 
 
   "COMMENT":"****SIDEBAR COMPONENTS****",
+  "sidebar": {
+    "coloredHeadings": true,
 
-  "quickActions":{
-    "coloredHeading": {
-      "text": "Quick Actions",
-      "color": "green"
+    "quickActions":{
+      "coloredHeading": {
+        "text": "Quick Actions",
+        "color": "green"
+      },
+      "links": [{
+        "type": "",
+        "href": "#",
+        "text": "Reserve a Campsite"
+      },{
+        "type": "",
+        "href": "#",
+        "text": "Download a Park Map"
+      },{
+        "type": "",
+        "href": "#",
+        "text": "Download a Trail Map"
+      }]
     },
-    "links": [{
-      "type": "",
-      "href": "#",
-      "text": "Reserve a Campsite"
-    },{
-      "type": "",
-      "href": "#",
-      "text": "Download a Park Map"
-    },{
-      "type": "",
-      "href": "#",
-      "text": "Download a Trail Map"
-    }]
-  },
 
-  "sidebarContact": {
-    "coloredHeading": {
-      "text": "Contact",
-      "color": ""
-    },
-    "items": [{
-      "contactUs": {
-        "schemaSd": {
-          "property": "department",
-          "type": "Organization"
-        },
+    "contactList": {
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
         "subTitle": {
           "href":"",
           "text": "Bascom Lodge",
@@ -582,13 +578,7 @@
             "details": ""
           }]
         }]
-      }
-    },{
-      "contactUs": {
-        "schemaSd": {
-          "property": "department",
-          "type": "Organization"
-        },
+      },{
         "subTitle": {
           "href":"",
           "text": "Museum",
@@ -643,74 +633,42 @@
             "details":""
           }]
         }]
-      }
-    }]
-  },
-
-  "sidebarWidget": {
-    "coloredHeading": {
-      "text": "Upcoming Events",
-      "color": ""
+      }]
     },
-    "items": [{
-      "path": "molecules-action-event",
-      "data": {
-        "actionEvent": {
-          "name": {
-            "type": "",
-            "href": "#",
-            "text": "Fishing Clinic",
-            "property": "url"
-          },
-          "date":"June 24, 2017, 12:00pm",
-          "schemaDate": "2017-06-24T12:00",
-          "description":"This is a description of the event that will happen at a future date",
-          "meta": {
-            "location": {
-              "name":"Event Location Name",
-              "address1":"24 Beacon St.",
-              "address2":"",
-              "city":"Boston",
-              "state":"MA",
-              "zip":"02133",
-              "image": {
-                "src":"/assets/images/placeholder/800x400.png",
-                "alt":"view from the lodge"
-              }
-            }
-          }
-        }
+
+    "eventListing": {
+      "sidebarHeading":{
+        "title": "Upcoming Events"
+      },
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Winter Birding Event",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": "March 30, 2017",
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+      },{
+        "title": {
+          "href": "#",
+          "text": "First Day Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": "March 30, 2017 - April 10, 2017",
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": ""
+      }],
+      "more":{
+        "href": "#",
+        "text": "view all events at this location",
+        "info": "",
+        "property": ""
       }
-    },{
-      "path": "molecules-action-event",
-      "data": {
-        "actionEvent": {
-          "name": {
-            "type": "",
-            "href": "#",
-            "text": "Full Moon Hike",
-            "property": "url"
-          },
-          "date":"June 24, 2017, 9:00pm",
-          "schemaDate": "2017-06-24T21:00",
-          "description":"This is a description of the event that will happen at a future date",
-          "meta": {
-            "location": {
-              "name":"Event Location Name",
-              "address1":"206 Washington St.",
-              "address2":"",
-              "city":"Boston",
-              "state":"MA",
-              "zip":"02109",
-              "image": {
-                "src":"/assets/images/placeholder/800x400.png",
-                "alt":"view from the lodge"
-              }
-            }
-          }
-        }
-      }
-    }],
-    "more":"more"
+    }
   }
 }

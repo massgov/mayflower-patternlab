@@ -1,0 +1,17 @@
+.ma__event-teaser {
+
+  & + & {
+    border-top-color: $c-bd-divider;
+  }
+
+  &__location,
+  &__time,
+  &__date {
+    color: $c-font-dark;
+    font-weight: 700;
+  }
+
+  &__location {
+    font-style: italic;
+  }
+}

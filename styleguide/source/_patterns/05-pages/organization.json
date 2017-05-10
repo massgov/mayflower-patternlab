@@ -23,7 +23,7 @@
     "divider": true,
     "title": "Executive Office of Health and Human Services",
     "titleNote": "(EOHHS)",
-    "subTitle": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
+    "subTitle": "EOHHS oversees health and general support services to help people in Massachusetts - from young children to seniors - meet basic needs.",
     "headerTags": null,
     "optionalContents": [{
       "path": "@molecules/contact-us.twig",

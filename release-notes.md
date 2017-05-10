@@ -1,5 +1,30 @@
 # Mayflower Release Notes
 
+## 4.2.0
+### SUMMARY
+If you'd like to read about these changes in JIRA:
+
+* [DP-2956](https://jira.state.ma.us/browse/DP-2956) - 	[mf] Update "Pages" names on Mayflower to reflect internal language
+* [DP-2977](https://jira.state.ma.us/browse/DP-2977) - [dev] Locations not displayed on service page
+* [DP-2981](https://jira.state.ma.us/browse/DP-2981) - [mf] Fix style for time callout and downloads area in Guide sections
+* [DP-2983](https://jira.state.ma.us/browse/DP-2983) - [mf] Sidebar headers appear when there is no sidebar information.
+* [DP-3077](https://jira.state.ma.us/browse/DP-3077) - [MF] G2G Color Styles
+
+### NEW FEATURES
+We have a new color scheme for Gov to Gov pages and patterns!  Take a look under the new Pages > G2G dropdown!  Bonus: if you're on a different page, you can switch over to the G2G theme by typing "cranberry" into the header search and clicking "submit". :) (do this again to get back to the regular theme)
+
+
+### IMPROVEMENTS
+We updated the page patterns (see the Pages dropdown) to match our more generic page type names
+
+
+### FIXED
+As part of this release we fixed a few issues.
+
+1. We fixed a bug where some addresses with special characters weren't showing up on maps.
+2. Time callouts and downloads are now aligned with the rest of the page content, even when there is no sidebar content on the page or page section
+3. We should no longer see any sidebar widget markup when there is no content for them.
+
 ## 4.1.0
 ### SUMMARY
 If you'd like to read about these changes in JIRA:
@@ -29,6 +54,7 @@ If you'd like to read about these changes in JIRA:
 
 ### FIXED
 As part of this release we fixed a few issues.
+
 1. If a location didn't have any additional contacts the right rail contact us pattern was still showing the "Contacts" heading.  This pattern has been updated to check if it has contacts before rendering any html.
 2. The Image Promo pattern was updated to check to check if the read more link has a "text" value before adding that link to prevent an empty link from being added.
 3. When an Ordered Step pattern was added to a page with only one step, the number icon was still being shown and the html was being read as a list of one.  This pattern now checks the length of steps to render and only renders it as a numbered list if there are multiple steps.  Otherwise it just outputs a single Action Step item.

@@ -1,0 +1,45 @@
+.ma__event-teaser {
+
+  & + & {
+    border-top: 1px solid;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  &__title {
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: 0;
+
+    a {
+      font-size: 1.625rem;
+      line-height: 1.2;
+    }
+  }
+
+  &__location,
+  &__date,
+  &__time {
+    font-size: 1.125rem;
+  }
+
+  &__location {
+    margin-bottom: .25em;
+  }
+
+  &__date {
+    line-height: 1;
+  }
+
+  &__time {
+    line-height: 1;
+    margin-bottom: 1em;
+  }
+
+  &__description {
+    
+    @media ($bp-small-min){
+      font-size: 1.25rem;
+    }
+  }
+}

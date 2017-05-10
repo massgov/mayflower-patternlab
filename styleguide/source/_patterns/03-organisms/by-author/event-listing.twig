@@ -1,0 +1,22 @@
+<section class="ma__event-listing">
+  {% if eventListing.compHeading %}
+    {% set compHeading = eventListing.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if eventListing.sidebarHeading %}
+    {% set sidebarHeading = eventListing.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+  <div class="ma__event-listing__items">
+    {% for eventTeaser in eventListing.events %}
+      {% include "@molecules/event-teaser.twig" %}
+    {% endfor %}
+  </div>
+  {% if eventListing.more %}
+    <div class="ma__event-listing__more">
+      {% set decorativeLink = eventListing.more %}
+      {% include "@atoms/decorative-link.twig" %}
+    </div>
+  {% endif %}
+</section>
+

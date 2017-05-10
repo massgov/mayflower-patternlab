@@ -12,7 +12,7 @@
         {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
       {% endblock %}
     </div>
-    <aside class="sidebar">
+    <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
       {% block sidebar %}
         {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
       {% endblock %}
