@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <aside class="sidebar">
+    <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
       {% if sidebar.contactList %}
         <div class="ma__details__sidebar-contact">
           {% set contactList = sidebar.contactList %}

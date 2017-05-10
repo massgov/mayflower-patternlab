@@ -1,0 +1,26 @@
+<section class="ma__event-teaser">
+  <h3 class="ma__event-teaser__title">
+    {% set decorativeLink = eventTeaser.title %}
+    {% include "@atoms/decorative-link.twig" %}
+  </h3>
+  {% if eventTeaser.location %}
+    <div class="ma__event-teaser__location">
+      {{ eventTeaser.location|nl2br }}
+    </div>
+  {% endif %}
+  {% if eventTeaser.date %}
+    <div class="ma__event-teaser__date">
+      {{ eventTeaser.date }}
+    </div>
+  {% endif %}
+  {% if eventTeaser.time %}
+    <div class="ma__event-teaser__time">
+      {{ eventTeaser.time }}
+    </div>
+  {% endif %}
+  {% if eventTeaser.description %}
+    <div class="ma__event-teaser__description">
+      {{ eventTeaser.description }}
+    </div>
+  {% endif %}
+</section>
