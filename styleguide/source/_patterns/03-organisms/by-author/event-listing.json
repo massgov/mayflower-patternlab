@@ -29,8 +29,8 @@
     "more":{
       "href": "#",
       "text": "view all events at this location",
-      "info": "",
-      "property": ""
+      "chevron": true,
+      "label": ""
     }
   }
 }

@@ -14,8 +14,8 @@
   </div>
   {% if eventListing.more %}
     <div class="ma__event-listing__more">
-      {% set decorativeLink = eventListing.more %}
-      {% include "@atoms/decorative-link.twig" %}
+      {% set link = eventListing.more %}
+      {% include "@atoms/11-text/link.twig" %}
     </div>
   {% endif %}
 </section>
