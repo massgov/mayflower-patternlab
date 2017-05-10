@@ -2,8 +2,7 @@
 
 {% block header %}
   <script>
-    document.querySelector('.js-base-theme').disabled = true;
-    document.querySelector('.js-gov-theme').removeAttribute('disabled');
+    document.querySelector('.js-base-theme').setAttribute('href',govThemeCss);
   </script>
   {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
