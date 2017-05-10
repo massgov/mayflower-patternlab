@@ -3,8 +3,18 @@
     "compHeading": {
       "title": "Related Agencies"
     },
-    "description": null,
-    "stacked": false,
+    "description": {
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Optional description"
+          }
+        }
+      }]
+    },
+
+    "stacked": true,
     "links" : [{
       "url":"#",
       "text":"MassParks",
