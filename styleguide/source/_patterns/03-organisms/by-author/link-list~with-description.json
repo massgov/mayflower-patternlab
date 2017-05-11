@@ -14,7 +14,7 @@
       }]
     },
 
-    "stacked": true,
+    "stacked": false,
     "links" : [{
       "url":"#",
       "text":"MassParks",
