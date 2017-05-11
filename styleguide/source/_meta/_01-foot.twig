@@ -8,7 +8,8 @@
       var json = JSON.parse($("#sg-pattern-data-footer").html()),
         data = json.patternBreadcrumb.patternType;
       if(data !== 'templates' && data !== 'pages') {
-          $('body').addClass('pl__styleguide');
+          $('body').addClass('page-content');
+          $('html').addClass('main-content').addClass('main-content--full');
       }
     </script>
 
