@@ -16,9 +16,9 @@
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
 
-        {% if mainContent.description %}
-          {% set richText = mainContent.description %}
-          {% include "@organisms/by-author/rich-text.twig" %}
+        {% if mainContent.pageOverview %}
+          {% set pageOverview = mainContent.pageOverview %}
+          {% include "@organisms/by-author/page-overview.twig" %}
         {% endif %}
 
         {% if mainContent.youWillNeed %}

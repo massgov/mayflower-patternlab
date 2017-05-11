@@ -39,7 +39,9 @@
         "eventTeaser": {
           "title": null,
           "location": "",
-          "date": "Sunday, November 20, 2017",
+          "date": {
+            "summary": "Sunday, November 20, 2017"
+          },
           "time": "8:00 a.m. - 10:00 a.m.",
           "description": ""
         }
@@ -82,22 +84,49 @@
   },
 
   "mainContent": {
-    "description": {
-      "rteElements": [{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "Optional description of the event.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptates aliquam ad deserunt et ea aspernatur corporis! Porro pariatur ad corporis, mollitia iste maiores fugit dignissimos. Eos, fuga perferendis necessitatibus."
+    "pageOverview": {
+      "compHeading": {
+        "title": "Overview",
+        "sub": "",
+        "color": "",
+        "id": "",
+        "centered": ""
+      },
+      "image": { 
+        "alt": "alt text", 
+        "src": "/assets/images/placeholder/440x248.png",
+        "height": "248",
+        "width": "440"
+      },
+      "labelledList": {
+        "items": [{
+          "label": "rain date:",
+          "text": "This event is rain or shine"
+        },{
+          "label": "fees:",
+          "text": "free"
+        },{
+          "label": "capacity:",
+          "text": "unlimited"
+        }]
+      },
+      "richText": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt deleniti fuga consequuntur laudantium qui repellendus eveniet, culpa ipsum ullam libero quibusdam dolore, sit. Quasi alias sed atque saepe, tempora dolore dolor quod amet. Quaerat omnis illo, totam eligendi at."
+            }
           }
-        }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "Optional description of the event.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptates aliquam ad deserunt et ea aspernatur corporis! Porro pariatur ad corporis, mollitia iste maiores fugit dignissimos. Eos, fuga perferendis necessitatibus."
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consectetur eligendi recusandae, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
+            }
           }
-        }
-      }]
+        }]
+      }
     },
 
     "youWillNeed": {
