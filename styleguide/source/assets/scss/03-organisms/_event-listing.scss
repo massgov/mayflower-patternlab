@@ -25,6 +25,7 @@
     }
 
     .ma__event-teaser {
+      align-content: flex-start;
       border-top: none;
       margin-top: 0;
       padding-top: 0;
@@ -46,12 +47,23 @@
           width: 50%;
 
           &:nth-child(odd) {
-            padding-right: 70px;
+            padding-right: 40px;
           }
 
           &:nth-child(even) {
             border-left-width: 1px;
             border-left-style: solid;
+            padding-left: 40px;
+          }
+        }
+
+        @media ($bp-large-min) {
+
+          &:nth-child(odd) {
+            padding-right: 70px;
+          }
+
+          &:nth-child(even) {
             padding-left: 70px;
           }
         }
