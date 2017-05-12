@@ -51,10 +51,10 @@
     "googleMap": {
       "map": {
         "center": {
-          "lat": 42.366565,
-          "lng": -71.058940
+          "lat": 42.4072107,
+          "lng": -71.3824374
         },
-        "zoom": 16
+        "zoom": 8
       },
       "markers": [{
         "position": {
