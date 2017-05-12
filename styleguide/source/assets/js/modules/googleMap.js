@@ -96,8 +96,9 @@ export default function (window,document,$,undefined) {
           return false;
         }
         let marker = markers[markerIndex];  
-        // center the map on this marker      
+        // center and zoom the map on this marker
         map.setCenter(marker.getPosition());
+        map.setZoom(15);
         // make the marker bounce three times
         marker.bounce();
       });    
