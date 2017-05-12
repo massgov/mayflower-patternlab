@@ -10,7 +10,9 @@ export default function (window,document,$,undefined) {
   let compiledTemplate = getTemplate('googleMapInfo');
 
   // after the api is loaded this function is called
-  window.initMap = function() {
+  window.initMap = renderMap;
+
+  function renderMap() {
 
     $(".js-google-map").each(function(i) {
       const $el = $(this);
@@ -117,7 +119,8 @@ export default function (window,document,$,undefined) {
 
   // load Google's api
   var script = document.createElement('script');
-    script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyC-WIoNfS6fh7TOtOqpDEgKST-W_NBebTk&callback=initMap";
+
+    script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&callback=initMap";
     document.getElementsByTagName('head')[0].appendChild(script);
 
 
