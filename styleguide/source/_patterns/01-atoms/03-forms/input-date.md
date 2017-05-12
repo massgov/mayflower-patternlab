@@ -1,19 +1,19 @@
 ---
-title: Input Text
+title: Input Date
 ---
-Description: An `<input> [type='text']`  element with its corresponding `<label>` element.
+Description: An `<input> [type='date']`  element with its corresponding `<label>` element.
 
 ## State: ALPHA
 
 ### Notes:
 
+
 ### Used In:
-- [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)
-- [@molecules/search-banner-form](/?p=molecules-search-banner-form)
+
 
 ### Variables:
 ~~~
-  inputText: {
+  inputDate: {
     labelText:
       type: string\required,
     required: 

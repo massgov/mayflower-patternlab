@@ -1,0 +1,9 @@
+{
+  "inputDate": {
+    "labelText": "Select a Date",
+    "required": false,
+    "id": "date-input",
+    "name": "date-input",
+    "placeholder": "mm/dd/yy"
+  }
+}
