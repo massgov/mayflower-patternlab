@@ -714,26 +714,14 @@
         "text": "Previous"
       },
       "pages": [{
-        "active": false,
+        "active": true,
         "text": "1"
       },{
         "active": false,
         "text": "spacer"
       },{
         "active": false,
-        "text": "5"
-      },{
-        "active": true,
-        "text": "6"
-      },{
-        "active": false,
-        "text": "7"
-      },{
-        "active": false,
-        "text": "spacer"
-      },{
-        "active": false,
-        "text": "10"
+        "text": "3"
       }]
     }
   }
