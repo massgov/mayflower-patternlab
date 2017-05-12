@@ -3,5 +3,5 @@
 }
 
 .ma__comp-heading--yellow {
-  @include ma-border-decorative($c-yellow-secondary, 1);
+  @include ma-border-decorative($c-theme-yellow, 1);
 }
