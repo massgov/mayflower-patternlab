@@ -6,6 +6,10 @@
     @include ma-container('restricted');
   }
 
+  .post-content > &:last-child {
+    margin-bottom: 0;
+  }
+
   .post-content > & &__container {
     @include ma-container;
     padding-top: 60px;

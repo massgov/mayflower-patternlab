@@ -100,13 +100,13 @@
       },
       "labelledList": {
         "items": [{
-          "label": "rain date:",
+          "label": "Rain date:",
           "text": "This event is rain or shine"
         },{
-          "label": "fees:",
+          "label": "Fees:",
           "text": "free"
         },{
-          "label": "capacity:",
+          "label": "Capacity:",
           "text": "unlimited"
         }]
       },
@@ -133,7 +133,7 @@
       "compHeading": {
         "title": "You will need",
         "id": "",
-        "sub": false
+        "sub": true
       },
       "rteElements": [{
         "path": "@atoms/08-lists/unordered-list.twig",
@@ -149,10 +149,58 @@
       }]
     },
 
+    "formDownloads": {
+      "compHeading": {
+        "title": "Additional resources",
+        "sub": true
+      },
+      "downloadLinks": [{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "PDF download item",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "30kb",
+          "format": "PDF"
+        }
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-docx.twig",
+          "decorativeLink": {
+            "text": "Word download item",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "40kb",
+          "format": "DOCX"
+        }
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "decorativeLink": {
+            "text": "Online form or information page",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "",
+          "format": "form"
+        }
+      }]
+    },
+
     "contactList": {
       "viewSpecific": false,
       "compHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "sub": true
       },
       "contacts":[{
         "accordion": true,
@@ -196,9 +244,58 @@
       }]
     },
 
+    "mediaContact": {
+      "viewSpecific": false,
+      "compHeading":{
+        "title": "Media Contact",
+        "sub": true
+      },
+      "contacts":[{
+        "accordion": true,
+        "isExpanded": false,
+        "subTitle": {
+          "href":"",
+          "text": "Media Person to Contact"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+17817401605",
+              "text": "(781) 740-1605",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"",
+            "link": {
+              "href":"#",
+              "text": "person@email.com",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    },
+
     "linkList" : {
       "compHeading": {
-        "title": "Other Dates"
+        "title": "Other dates",
+        "sub": true
       },
       "description": {
         "rteElements": [{
@@ -241,6 +338,51 @@
         "subTitle": {
           "href":"",
           "text": "Person to Contact"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+17817401605",
+              "text": "(781) 740-1605",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"",
+            "link": {
+              "href":"#",
+              "text": "person@email.com",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    },
+
+    "mediaContact": {
+      "viewSpecific": true,
+      "sidebarHeading":{
+        "title": "Media Contact"
+      },
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Media Person to Contact"
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
