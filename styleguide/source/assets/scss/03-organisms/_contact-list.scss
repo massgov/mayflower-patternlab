@@ -6,4 +6,21 @@
   .main-content--full .page-content > & {
     @include ma-container();
   }
+
+  &--view-specific {
+
+    .page-content & {
+      
+      @media ($bp-large-min) {
+        display: none;
+      }
+    }
+
+    .sidebar & {
+      
+      @media ($bp-large-max) {
+        display: none;
+      }
+    }
+  }
 }

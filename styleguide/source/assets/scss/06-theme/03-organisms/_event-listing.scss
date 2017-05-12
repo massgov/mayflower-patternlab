@@ -1,0 +1,20 @@
+.ma__event-listing {
+
+  .post-content > & {
+    background-color: $c-bg-subtle;
+  }
+
+  .post-content > & &__container {
+
+    & > *:last-child {
+      border-bottom-color: $c-bd-divider;
+    }
+  }
+
+  .post-content > & &__items {
+
+    .ma__event-teaser {
+      border-left-color: $c-bd-divider;
+    }
+  }
+}

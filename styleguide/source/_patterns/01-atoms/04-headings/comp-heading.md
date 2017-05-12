@@ -30,7 +30,7 @@ compHeading: {
   id:
     type: string
   centered:
-    type: string ("true" || "" )
+    type: boolean
 }
 ~~~
 
