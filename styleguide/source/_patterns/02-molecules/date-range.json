@@ -1,0 +1,19 @@
+{
+  "dateRange": {
+    "label": "Filter by date",
+    "startDate": {
+      "labelText": "Select a start date",
+      "required": false,
+      "id": "start-date",
+      "name": "start-date",
+      "placeholder": "today"
+    },
+    "endDate": {
+      "labelText": "Select an end date",
+      "required": false,
+      "id": "end-date",
+      "name": "end-date",
+      "placeholder": "mm/dd/yy"
+    }
+  }
+}
