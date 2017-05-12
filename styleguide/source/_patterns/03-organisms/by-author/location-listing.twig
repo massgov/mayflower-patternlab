@@ -1,3 +1,4 @@
+{% set maxItems = locationListing.maxItems ?: locationListing.imagePromos.items.length %}
 <section class="ma__location-listing js-location-listing">
   {% if locationListing.locationFilters %}
     <div class="ma__location-listing__filters">
@@ -16,7 +17,8 @@
       <div class="ma__location-listing__results js-location-listing-results">
         {% set resultsHeading = locationListing.resultsHeading %}
         {% include "@molecules/results-heading.twig" %}
-        {% set imagePromos = locationListing.imagePromos %}
+        {% set items = locationListing.imagePromos.items[:maxItems] %}
+        {% set imagePromos = { items: items } %}
         {% include "@organisms/by-author/image-promos.twig" %}
           {% set pagination = locationListing.pagination %}
           {% include "@molecules/pagination.twig" %}
