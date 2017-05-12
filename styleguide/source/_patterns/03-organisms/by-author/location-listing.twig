@@ -20,8 +20,8 @@
         {% set items = locationListing.imagePromos.items[:maxItems] %}
         {% set imagePromos = { items: items } %}
         {% include "@organisms/by-author/image-promos.twig" %}
-          {% set pagination = locationListing.pagination %}
-          {% include "@molecules/pagination.twig" %}
+        {% set pagination = locationListing.pagination %}
+        {% include "@molecules/pagination.twig" %}
       </div>
     </div>
   </div>
