@@ -1,4 +1,8 @@
 .ma__pagination {
+  
+  &__container {
+    border-top-color: $c-bd-divider;
+  }
 
   &__prev,
   &__next,
