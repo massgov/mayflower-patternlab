@@ -793,7 +793,9 @@
           "property": ""
         },
         "location": "",
-        "date":"June 24, 2017, 12:00pm",
+        "date": {
+          "summary": "June 24, 2017, 12:00pm" 
+        },
         "time": "",
         "description":"This is a description of the event that will happen at a future date"
       },{
@@ -804,7 +806,9 @@
           "property": ""
         },
         "location": "",
-        "date":"June 24, 2017, 9:00pm",
+        "date": {
+          "summary": "June 24, 2017, 9:00pm"
+        },
         "time": "",
         "description":"This is a description of the event that will happen at a future date"
       }],

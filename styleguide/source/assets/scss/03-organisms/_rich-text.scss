@@ -36,10 +36,10 @@ $rich-text-spacing-mobile: 1.5rem;
 
   h2 {
     padding-top: .75em;
-  }
-
-  &:first-child h2 {
-    padding-top: 0;
+  
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
   h4 {
