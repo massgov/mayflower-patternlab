@@ -8,6 +8,9 @@
 @import "00-base/variables";
 @import "neat";
 
+// Bower vendors
+@import "../js/vendor/bower_components/pikaday/scss/pikaday";
+
 // Base variables
 @import "00-base/breakpoints";
 @import "00-base/mixins";
