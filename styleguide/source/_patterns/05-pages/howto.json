@@ -544,6 +544,8 @@
   },
 
   "sidebar": {
+    "coloredHeadings": true,
+    
     "contactList": {
       "sidebarHeading":{
         "title": "Contact"

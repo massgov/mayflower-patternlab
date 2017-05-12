@@ -4,7 +4,7 @@ title: DEPRECATED - Action Event
 Description: A singular event including title, link, date and a description of the event.
 ## State: DEPRECATED
 ### Notes
-- This style is deprecated as it should be generalized to display an event's information anywhere in the site.
+- This style is deprecated and was replace be the event-teaser pattern.
 ### Contains
 - [@atoms/decorative-link.twig](?p=atoms-decorative-link)
 ### Used in:

@@ -24,7 +24,7 @@
       }]
     },
     "optionalContents": [{
-      "path": "@molecules/callout-time.twig",
+      "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
           "text": "turn around time for completion"
@@ -66,6 +66,7 @@
   },
 
   "sidebar": {
+    "coloredHeadings": true,
     "contactList": {
       "sidebarHeading":{
         "title": "Contact"
