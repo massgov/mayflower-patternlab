@@ -2,6 +2,7 @@
   display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+  margin-bottom: -20px;
 
   & + & {
     border-top: 1px solid;
@@ -61,6 +62,10 @@
       font-size: 1.625rem;
       line-height: 1.2;
     }
+  }
+
+  &__content {
+    margin-bottom: 20px;
   }
 
   &__graphic + &__content {

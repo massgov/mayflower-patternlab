@@ -1,3 +1,190 @@
 {
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "title": "Event Listing Page Name",
+    "subTitle": "",
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Org Name"
+      }]
+    },
+    "socialLinks": null,
+    "optionalContents": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "richText": {
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "This is an optional descriptive paragraph field. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+              }
+            }
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  },
 
+  "mainContent": {
+    "eventFilters": {
+      "zipcode": {
+        "inputText": {
+          "labelText": "Show closest",
+          "required": false,
+          "id": "find-nearby",
+          "name": "find-nearby",
+          "placeholder": "City, town, or ZIP code"
+        }
+      },
+
+      "dateRange": {
+        "label": "Filter by date",
+        "startDate": {
+          "labelText": "Select a start date",
+          "required": false,
+          "id": "start-date",
+          "name": "start-date",
+          "placeholder": "today"
+        },
+        "endDate": {
+          "labelText": "Select an end date",
+          "required": false,
+          "id": "end-date",
+          "name": "end-date",
+          "placeholder": "mm/dd/yy"
+        }
+      },
+
+      "submitButton": "Submit"   
+    },
+
+    "resultsHeading": {
+      "numResults": "11-20",
+      "totalResults": "108",
+      "tags": null
+    },
+
+    "eventListing": {
+      "compHeading": null,
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Winter Birding Event",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": {
+          "summary": "March 30, 2017",
+          "startMonth": "Mar",
+          "startDay": "30",
+          "endMonth": "",
+          "endDay": ""
+        },
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+      },{
+        "title": {
+          "href": "#",
+          "text": "First Day Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lanesborough, MA",
+        "date": {
+          "summary": "March 30, 2017 - April 10, 2017",
+          "startMonth": "Mar",
+          "startDay": "30",
+          "endMonth": "Apr",
+          "endDay": "10"
+        },
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": ""
+      }],
+      "more": null
+    },
+
+    "pagination": {
+      "next": {
+        "disabled": false,
+        "text": "Next"
+      },
+      "prev": {
+        "disabled": false,
+        "text": "Previous"
+      },
+      "pages": [{
+        "active": false,
+        "text": "1"
+      },{
+        "active": false,
+        "text": "spacer"
+      },{
+        "active": false,
+        "text": "5"
+      },{
+        "active": true,
+        "text": "6"
+      },{
+        "active": false,
+        "text": "7"
+      },{
+        "active": false,
+        "text": "spacer"
+      },{
+        "active": false,
+        "text": "10"
+      }]
+    }
+  },
+
+  "bottomContent": {
+    "eventListing": {
+      "compHeading":{
+        "title": "Related Events",
+        "centered": true
+      },
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Angler Education Program",
+          "info": "",
+          "property": ""
+        },
+        "location": "Rockpot, MA",
+        "date": {
+          "summary": "January 15, 2018",
+          "startMonth": "Jan",
+          "startDay": "15",
+          "endMonth": "",
+          "endDay": ""
+        },
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": "Event description. Ut nulla. Vivamus bibendum, nulla ut congue fringilla, lorem ipsum ultricies risus, ut rutrum velit tortor vel purus."
+      },{
+        "title": {
+          "href": "#",
+          "text": "Boy Scout Ice Fishing Festival",
+          "info": "",
+          "property": ""
+        },
+        "location": "Lincoln, MA",
+        "date": {
+          "summary": "February 19, 2018",
+          "startMonth": "Feb",
+          "startDay": "19",
+          "endMonth": "",
+          "endDay": ""
+        },
+        "time": "12:00 p.m. - 2:00 p.m.",
+        "description": ""
+      }],
+      "more": null
+    }
+  }
 }
