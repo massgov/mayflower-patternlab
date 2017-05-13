@@ -8,6 +8,7 @@ import emergencyAlerts  from "./modules/emergencyAlerts.js";
 import formValidation   from "./modules/formValidation.js";
 import hideAlert        from "./modules/hideAlert.js";
 import keywordSearch    from "./modules/keywordSearch.js";
+import locationFilters  from "./modules/locationFilters.js";
 import locationListing  from "./modules/locationListing.js";
 import mainNav          from "./modules/mainNav.js";
 import mainNavPilot     from "./modules/mainNavPilot.js";
