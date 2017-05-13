@@ -54,12 +54,12 @@ export default function (window,document,$,undefined) {
         marker.showInfo = () => {
           infoWindow.open(map, marker);
           marker.open = true;
-        }
+        };
         
         marker.hideInfo = () => {
           infoWindow.close(map, marker);
           marker.open = false;
-        }
+        };
 
         marker.bounce = () => {
           clearTimeout(markerBouncing);
@@ -68,7 +68,7 @@ export default function (window,document,$,undefined) {
           markerBouncing = setTimeout(() => {
             marker.setAnimation(null);
           },3000);
-        }
+        };
 
         markers.push(marker);
       });
@@ -109,7 +109,7 @@ export default function (window,document,$,undefined) {
     let infoData = {
       phoneFormatted: formatPhone(data.phone),
       faxFormatted: formatPhone(data.fax)
-    }
+    };
     return Object.assign({},data,infoData);
   }
 
