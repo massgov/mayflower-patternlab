@@ -2,7 +2,7 @@
   <p class="ma__results-heading__title">Showing {{ resultsHeading.numResults }} {% if resultsHeading.totalResults %} of {{ resultsHeading.totalResults }}{% endif %} results {% if resultsHeading.tags %}for:{% endif %}</p>
   <div class="ma__results-heading__tags">
     {% for tag in resultsHeading.tags %}
-      <button type="button" class="ma__results-heading__tag">{{ tag.text }}</button>
+      <button type="button" class="ma__results-heading__tag" data-ma-filter-type="{{ tag.type }}" data-ma-filter-value="{{ tag.value }}">{{ tag.text }}</button>
     {% endfor %}
     {% if resultsHeading.tags %}
       <button type="button" class="ma__results-heading__clear">Clear all</button>

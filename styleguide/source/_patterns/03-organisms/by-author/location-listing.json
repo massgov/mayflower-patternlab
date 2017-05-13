@@ -35,8 +35,8 @@
         }
       },
       "tags": [{
-        "value": "handicapped",
-        "id": "handicapped",
+        "value": "wheelchair-accessible",
+        "id": "wheelchair-accessible",
         "label": "Wheelchair accessible",
         "checked": "false",
         "icon": "@atoms/05-icons/svg-wheelchair.twig"
@@ -218,6 +218,8 @@
       "numResults": "1-12",
       "totalResults": "108",
       "tags": [{
+        "type": "location",
+        "value": "02155",
         "text": "02155"
       }]
     },
