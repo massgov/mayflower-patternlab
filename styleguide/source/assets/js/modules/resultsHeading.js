@@ -2,8 +2,7 @@ import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
 
-  let resultsHeading = locationListing.resultsHeading,
-    $locationListing = $('.js-location-listing'),
+  let $locationListing = $('.js-location-listing'),
     compiledTemplate = getTemplate('locationListingResultsHeading'),
     resultsHeadingSelector = '.js-results-heading',
     clearAllButtonSelector = 'button.ma__results-heading__clear',
@@ -15,8 +14,8 @@ export default function (window,document,$,undefined) {
     $locationListing.trigger('maClearAllLocationFilters');
 
     // Remove all tags, clear all button from heading.
-    resultsHeading.tags = [];
-    renderResultsHeading(resultsHeading);
+    locationListing.resultsHeading.tags = [];
+    renderResultsHeading(locationListing.resultsHeading);
   });
 
   // Handle location filter event (triggered in locationFilters.js).
@@ -25,8 +24,8 @@ export default function (window,document,$,undefined) {
     if (location) {
       tags.push({'type': 'location', 'value': location, 'text': location});
     }
-    resultsHeading.tags = tags;
-    renderResultsHeading(resultsHeading);
+    locationListing.resultsHeading.tags = tags;
+    renderResultsHeading(locationListing.resultsHeading);
   });
 
   // Handle single filter button click and trigger single active filter clear event.
@@ -38,10 +37,10 @@ export default function (window,document,$,undefined) {
     };
 
     // Remove the clicked tag from the tags array.
-    resultsHeading.tags = resultsHeading.tags.filter(function(tag){
+    locationListing.resultsHeading.tags = locationListing.resultsHeading.tags.filter(function(tag){
       return tag.value !== clearedFilter.value;
     });
-    renderResultsHeading(resultsHeading);
+    renderResultsHeading(locationListing.resultsHeading);
 
     // Trigger the single filter clear event.
     $locationListing.trigger('maSingleFilterClear', [clearedFilter]);
