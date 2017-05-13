@@ -1,16 +1,20 @@
 export default function (window,document,$,undefined) {
+
+  // Only run this code if we have a js object from location-listing.twig with location listing data.
+  if (typeof locationListing === "undefined") {
+    return;
+  }
+
   $('.js-location-filters').each(function(){
     let $el = $(this),
       zipcodeSearchId = locationListing.locationFilters.zipcode.inputText.id,
       $byLocation = $el.find('#' + zipcodeSearchId),
       $byTags = $el.find('.ma__location-filters__by-tags'),
-      $submit = $el.find('.ma__location-filters__submit'),
       $locationListing = $el.parents('.js-location-listing');
 
-    // Create the autocomplete object and associate it with the submit button.
-    // Restrict the search to the default country, and to place type "cities".
     $locationListing.on('mapInitialized', function(){
-      console.log(locationListing.locationFilters.zipcode.id);
+      // Create the autocomplete object and associate it with the submit button.
+      // Restrict the search to the default country, and to place type "cities".
       let autocomplete = new google.maps.places.Autocomplete(document.getElementById(zipcodeSearchId));
     });
 
@@ -19,9 +23,9 @@ export default function (window,document,$,undefined) {
     $el.submit(function(e){
       e.preventDefault();
       // Get the various filter values.
-      let location = $byLocation.val();
+      let location = $byLocation.val(),
+        tags = [];
 
-      let tags = [];
       $byTags.find('input:checked').each(function() {
         tags.push({'type': 'tag', 'value': $(this).val(), 'text': $(this).next("label").text()});
       });

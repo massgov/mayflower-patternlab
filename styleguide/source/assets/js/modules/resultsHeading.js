@@ -2,6 +2,11 @@ import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
 
+  // Only run this code if we have a js object from location-listing.twig with location listing data.
+  if (typeof locationListing === "undefined") {
+    return;
+  }
+
   let $locationListing = $('.js-location-listing'),
     compiledTemplate = getTemplate('locationListingResultsHeading'),
     resultsHeadingSelector = '.js-results-heading',

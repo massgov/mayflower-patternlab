@@ -4,6 +4,11 @@ import getSvgFromPath from "../helpers/getSvgFromPath.js"
 
 export default function (window,document,$,undefined) {
 
+  // Only run this code if we have a js object from location-listing.twig with location listing data.
+  if (typeof locationListing === "undefined") {
+    return;
+  }
+
   $('.js-location-listing').each(function(){
     let $el = $(this),
         $mapCol = $el.find('.js-location-listing-map'),
