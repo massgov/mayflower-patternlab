@@ -121,7 +121,14 @@ export default function (window,document,$,undefined) {
   // load Google's api
   var script = document.createElement('script');
 
+    script.type = 'text/javascript';
+    script.async = 'true';
+    script.defer = 'true';
+
     script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&callback=initMap";
+    if (typeof locationListing !== 'undefined') {
+      script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&libraries=geometry,places,geocoder&callback=initMap";
+    }
     document.getElementsByTagName('head')[0].appendChild(script);
 
 
