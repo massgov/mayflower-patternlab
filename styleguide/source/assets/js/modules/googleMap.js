@@ -15,7 +15,8 @@ export default function (window,document,$,undefined) {
   function renderMap() {
 
     $(".js-google-map").each(function(i) {
-      const $el = $(this);
+      const $el = $(this),
+        $locationListing = $el.parents('.js-location-listing');
 
       // get the maps data
       // this could be replaced with an api
@@ -101,7 +102,9 @@ export default function (window,document,$,undefined) {
         map.setZoom(15);
         // make the marker bounce three times
         marker.bounce();
-      });    
+      });
+
+      $locationListing.trigger('mapInitialized');
     });
   }
 
