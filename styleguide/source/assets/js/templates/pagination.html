@@ -1,0 +1,25 @@
+<div class="ma__pagination">
+  {{# if pagination.pages.length > 2 }}
+  <button
+          class="ma__pagination__prev"
+          type="button"
+          {{ #if pagination.prev.disabled }}
+          disabled
+          {{/if}}>{{ pagination.prev.text }}</button>
+  {{/if}}
+  {{# each pagination.pages}}
+  {{# if page.text == "spacer" }}
+  <span class="ma__pagination__spacer">&hellip;</span>
+  {{#else }}
+  <button class="ma__pagination__page {{# if page.active }} is-active{{/if}}" type="button" data-page="{{ page.text }}">{{ page.text }}</button>
+  {{/if}}
+  {{/each}}
+  {{# if pagination.pages.length > 2 }}
+  <button
+          class="ma__pagination__next"
+          type="button"
+          {{# if pagination.next.disabled }}
+          disabled
+          {{/if}}>{{ pagination.next.text }}</button>
+  {{/if}}
+</div>
