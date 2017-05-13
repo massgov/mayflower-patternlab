@@ -31,11 +31,11 @@ export default function (window,document,$,undefined) {
       });
 
       // Trigger location listing filter event with current filter values.
-      $locationListing.trigger('maLocationFilter', [location, tags]);
+      $locationListing.trigger('maLocationListingFilter', [location, tags]);
     });
 
     // Listen for single filter clear. (Triggered in resultsHeading.js)
-    $locationListing.on('maSingleFilterClear', function(e, clearedFilter){
+    $locationListing.on('maSingleLocationFilterClear', function(e, clearedFilter){
       if (clearedFilter.type === "location") {
         // Clear location text input.
         $byLocation.val("");

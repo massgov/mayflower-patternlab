@@ -24,7 +24,7 @@ export default function (window,document,$,undefined) {
   });
 
   // Handle location filter event (triggered in locationFilters.js).
-  $locationListing.on('maLocationFilter', function(e, location, tags){
+  $locationListing.on('maLocationListingFilter', function(e, location, tags){
     // Build new active filter tags for selected location, tags.
     if (location) {
       tags.push({'type': 'location', 'value': location, 'text': location});
@@ -48,7 +48,7 @@ export default function (window,document,$,undefined) {
     renderResultsHeading(locationListing.resultsHeading);
 
     // Trigger the single filter clear event.
-    $locationListing.trigger('maSingleFilterClear', [clearedFilter]);
+    $locationListing.trigger('maSingleLocationFilterClear', [clearedFilter]);
   });
 
   function renderResultsHeading(resultsHeading) {
