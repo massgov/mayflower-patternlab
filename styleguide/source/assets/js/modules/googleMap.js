@@ -26,7 +26,7 @@ export default function (window,document,$,undefined) {
       // map defaults
       const initMapData = {
         scrollwheel: false
-      }
+      };
       // create map Data by combining the rawData with the defaults
       const mapData = Object.assign({}, rawData.map, initMapData);
 
