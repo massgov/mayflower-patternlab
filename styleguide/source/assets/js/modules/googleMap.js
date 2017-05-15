@@ -12,6 +12,11 @@ export default function (window,document,$,undefined) {
   // after the api is loaded this function is called
   window.initMap = renderMap;
 
+  if (typeof google !== "undefined" && typeof locationListing !== "undefined") {
+    window.geocoder = new google.maps.Geocoder();
+    // Keep track of the bounds so we can adjust based on markers.
+  }
+
   function renderMap() {
 
     $(".js-google-map").each(function(i) {
@@ -30,49 +35,44 @@ export default function (window,document,$,undefined) {
       };
       // create map Data by combining the rawData with the defaults
       const mapData = Object.assign({}, rawData.map, initMapData);
-
       const map = new google.maps.Map(this, mapData);
-
       let markers = [];
 
       // *** Add Markers with popups *** //
-      rawData.markers.forEach(function(d,i){
-        let markerData = Object.assign({map},d);
+      for (var key in rawData.markers) {
+        if (rawData.markers.hasOwnProperty(key)) {
+          var markerData = Object.assign({
+            position: new google.maps.LatLng({
+              lat: rawData.markers[key].position.lat,
+              lng: rawData.markers[key].position.lng}),
+            label: rawData.markers[key].label,
+            infoWindow: rawData.markers[key].infoWindow,
+            _listingKey: key
+          });
 
-        let marker =  new google.maps.Marker(markerData);
+          var marker = new google.maps.Marker(markerData);
 
-        let infoData = infoTransform(markerData.infoWindow);
-        let template = compiledTemplate(infoData);
-        let infoWindow = new google.maps.InfoWindow({
-          content: template
-        });
+          // Set properties, listeners on each marker.
+          initMarker(map, marker, markerData);
+        }
 
-        let markerBouncing = null;
+          // Add up to the maxItems of markers to the map.
+          if(markers.length < max) {
+            marker.setMap(map);
+          }
 
-        marker.addListener('click', function(){
-          infoWindow.open(map, marker);
-        });
+          // Add marker to array of all markers.
+          markers.push(marker);
+      }
 
-        marker.showInfo = () => {
-          infoWindow.open(map, marker);
-          marker.open = true;
-        };
-        
-        marker.hideInfo = () => {
-          infoWindow.close(map, marker);
-          marker.open = false;
-        };
+      // Listen for location listing filter.
+      $locationListing.on("maLocationListingPlaceChange", function(e, location, tags){
+        updateMap(location, tags, map, markers);
+      });
 
-        marker.bounce = () => {
-          clearTimeout(markerBouncing);
-          marker.setAnimation(null);
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-          markerBouncing = setTimeout(() => {
-            marker.setAnimation(null);
-          },3000);
-        };
+      // Listen for pagination.
+      $locationListing.on("maLocationListingPagination", function(e, map, markers){
 
-        markers.push(marker);
       });
 
       // listen for recenter command
@@ -86,18 +86,19 @@ export default function (window,document,$,undefined) {
         // close all open infoWindows
         for (let i in markers) {
           if(markers[i].open) {
-            markers[i].hideInfo();        
+            markers[i].hideInfo();
           }
         }
         // show the infoWindow for this marker
         marker.showInfo();
-      });    
+      });
+
       // listen for bounce command
       $el.on("bounce", function( event, markerIndex ) {
         if(typeof markers[markerIndex] === "undefined") {
           return false;
         }
-        let marker = markers[markerIndex];  
+        let marker = markers[markerIndex];
         // center and zoom the map on this marker
         map.setCenter(marker.getPosition());
         map.setZoom(15);
@@ -105,7 +106,8 @@ export default function (window,document,$,undefined) {
         marker.bounce();
       });
 
-      $locationListing.trigger('mapInitialized');
+      // let maBounds = new google.maps.LatLngBounds({lat: 41, lng: -69});
+      $locationListing.trigger('maMapInitialized');//, [maBounds]);
     });
   }
 
@@ -122,18 +124,128 @@ export default function (window,document,$,undefined) {
     return phoneTemp.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
   }
 
+  function updateMap(location, tags, map, markers) {
+    removeMarkersFromMap(markers);
+    let place = autocomplete.getPlace();
+
+    if (place.geometry) {
+      sortMarkersAroundPlace(place, map, markers);
+    }
+    else {
+      window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
+      geocodeAddressString(location, sortMarkersAroundPlace, [map, markers]);
+    }
+
+  }
+
+  function geocodeAddressString(address, fn, args) {
+    if (typeof window.geocoder === "undefined") {
+      return;
+    }
+    // Wrap it in a function so it is not called asynchronously.
+    geocoder.geocode({address: address}, function (results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        fn(results[0], args[0], args[1]);
+      }
+      else {
+        console.warn('Geocode was not successful for the following reason: ' + status);
+        return;
+      }
+    });
+  }
+
+  function sortMarkersAroundPlace(place, map, markers) {
+    // Reset bounds to remove previous search locations.
+    let bounds = new google.maps.LatLngBounds();
+    // Get the location points from the filter.
+    bounds.extend(place.geometry.location);
+
+    // Get distance number on all existing markers.
+    for (var key in markers) {
+      if (markers.hasOwnProperty(key)) {
+        markers[key].distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, markers[key].getPosition());
+        // Extend the bounds to include each marker's position.
+        bounds.extend(markers[key].position);
+      }
+    }
+
+    // Sort existing markers to get the closest locations.
+    markers.sort(function (a, b) {
+      return a.distance - b.distance;
+    });
+
+    // Filter down to those location <= 25 miles away.
+    let filteredMarkers = markers.filter(function(marker){
+      return Math.round(convertMetersToMiles(marker.distance)) <= 25;
+    });
+
+    // Add the new markers to the map.
+    addMarkers(filteredMarkers, map);
+
+    // Make the map zoom to fit the bounds, showing all locations.
+    map.fitBounds(bounds);
+
+    $('.js-location-listing').trigger("maLocationMarkersSorted", [filteredMarkers]);
+  }
+
+  function removeMarkersFromMap(markers) {
+    for(i=0; i<markers.length; i++){
+      markers[i].setMap(null);
+    }
+  }
+
+  function addMarkers(markers, map) {
+    let max = markers.length < maxItems ? markers.length : maxItems;
+    for (var i = 0; i < max; i++) {
+      markers[i].setMap(map);
+    }
+  }
+
+  function initMarker(map, marker, markerData) {
+    let infoData = infoTransform(markerData.infoWindow);
+    let template = compiledTemplate(infoData);
+    let infoWindow = new google.maps.InfoWindow({
+      content: template
+    });
+
+    let markerBouncing = null;
+    marker.addListener('click', function(){
+      infoWindow.open(map, marker);
+    });
+
+    marker.showInfo = () => {
+      infoWindow.open(map, marker);
+      marker.open = true;
+    };
+
+    marker.hideInfo = () => {
+      infoWindow.close(map, marker);
+      marker.open = false;
+    };
+
+    marker.bounce = () => {
+      clearTimeout(markerBouncing);
+      marker.setAnimation(null);
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+      markerBouncing = setTimeout(() => {
+        marker.setAnimation(null);
+      },3000);
+    };
+  }
+
+  function convertMetersToMiles(distance) {
+    return distance * 0.000621371192;
+  }
+
   // load Google's api
   var script = document.createElement('script');
-
-    script.type = 'text/javascript';
-    script.async = 'true';
-    script.defer = 'true';
-
-    script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&callback=initMap";
-    if (typeof locationListing !== 'undefined') {
-      script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&libraries=geometry,places,geocoder&callback=initMap";
-    }
-    document.getElementsByTagName('head')[0].appendChild(script);
-
-
+  script.type = 'text/javascript';
+  script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&callback=initMap";
+  // Load additional google map api libraries if this is a location listing map.
+  if (typeof locationListing !== 'undefined') {
+    script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&libraries=geometry,places,geocoder&callback=initMap";
+    // Set max number of markers, listing items per page, if provided.
+    var maxItems = locationListing.maxItems;
+  }
+  document.getElementsByTagName('head')[0].appendChild(script);
 }(window,document,jQuery);

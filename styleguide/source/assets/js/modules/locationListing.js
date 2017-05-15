@@ -9,6 +9,10 @@ export default function (window,document,$,undefined) {
     return;
   }
 
+  let maxItems = locationListing.maxItems ? locationListing.maxItems : locationListing.imagePromos.items.length,
+    listing = [],
+    listingMarkup = [];
+
   $('.js-location-listing').each(function(){
     let $el = $(this),
         $mapCol = $el.find('.js-location-listing-map'),
@@ -17,34 +21,56 @@ export default function (window,document,$,undefined) {
     sticky.init($mapCol);
 
     // Set up click, hover handlers for location listing links.
-    $el.find('.js-location-listing-link').each(function(index) {
-      let $link = $(this);
+    // $el.find('.js-location-listing-link').each(function(index) {
+    //   let $link = $(this);
 
-      // when link is clicked 
-      $link.on('click', function(){
+      // when link is clicked
+      $el.on('click', '.js-location-listing-link', function(e){
+        let index = $(e.currentTarget).index();
         // trigger map to recenter on this item based on it's index.
         $map.trigger('recenter',index);
         // mark this link as active
         $el.find('.js-location-listing-link.is-active').removeClass('is-active');
-        $(this).addClass('is-active');
+        $(e.currentTarget).addClass('is-active'); // in case the event is triggered on a child element.
         // focus on the map - mainly for mobile when it is stacked
         let position = $map.offset().top;
         $("html,body").stop(true,true).animate({scrollTop:position}, '750');
       });
 
       // when link is hovered
-      $link.on('mouseenter', function(){
+      $el.on('mouseenter', '.js-location-listing-link', function(e){
+        // remove active state from previously selected list item
+        $el.find('.js-location-listing-link.is-active').removeClass('is-active');
+
+        let index = $(e.currentTarget).index();
         // trigger map to recenter on this item and make the marker bounce
         $map.trigger('bounce',index);
       });
+    // });
+
+    $el.on('maMapInitialized', function() {
+      listing = locationListing.imagePromos.items;
+      listingMarkup = transformLocationListingPromos(locationListing.imagePromos.items);
+    });
+
+    // Handle location listings filter event (triggerd by locationFilters.js).
+    $el.on('maLocationListingFilter', function(e, location, tags) {
+      if(location){
+        $el.trigger('maLocationListingPlaceChange', [location, tags]);
+      }
+    });
+
+    // Handle map update, marker sort event (triggered by googleMap.js).
+    $el.on('maLocationMarkersSorted', function(e, markers) {
+      clearListingPage();
+
+      // Render our new sorted location listing.
+      let sortedListingMarkup = sortListingOnMarkersOrder(markers);
+      renderListingPage(sortedListingMarkup.slice(0, maxItems));
+
     });
 
   });
-
-  // Ensure that locationListing variable was written successfully in location-listing twig template.
-  if (typeof locationListing !== "undefined") {
-    let listingMarkup = transformLocationListingPromos(locationListing.imagePromos.items);
-  }
 
   // Create new array with generated markup for location listing items, preserving original index.
   function transformLocationListingPromos(promos) {
@@ -72,6 +98,33 @@ export default function (window,document,$,undefined) {
       label: tag.label,
       svg: getSvgFromPath(tag.icon)
     };
+  }
+
+  // Reorder listingMarkup array, based on the order of the map markers.
+  function sortListingOnMarkersOrder(markers) {
+    let sortedListingMarkup = [];
+    for (var index in markers) {
+      if (markers.hasOwnProperty(index)) {
+        sortedListingMarkup.push(listingMarkup[markers[index]._listingKey]);
+        // $('.js-location-listing-results').append(listingRow(locations.imagePromos.items[markers[index]._nid], index));
+      }
+    }
+
+    return sortedListingMarkup;
+  }
+
+  // Remove the imagePromos children content on the current location listing page.
+  function clearListingPage() {
+    $('.js-location-listing-results').find('.ma__image-promos').html('');
+  }
+
+  // Render new imagePromo items.
+  function renderListingPage(filteredListing) {
+    let $el = $('.js-location-listing-results').find('.ma__image-promos');
+    filteredListing.map(function(listingRow){
+      $el.append(listingRow);
+    });
+    sticky.init($('.js-location-listing-map'));
   }
 
 }(window,document,jQuery);
