@@ -1,7 +1,7 @@
 ---
 title: Date Range
 ---
-Description: Labelled input with two date inputs
+Description: fieldset with legend including two date inputs
 
 ## Status: Alpha
 
