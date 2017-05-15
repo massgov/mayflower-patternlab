@@ -1,0 +1,17 @@
+<section class="ma__press-listing">
+  <div class="ma__press-listing__container">
+    {% if pressListing.compHeading %}
+      {% set compHeading = pressListing.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% endif %}
+    {% if pressListing.sidebarHeading %}
+      {% set sidebarHeading = pressListing.sidebarHeading %}
+      {% include "@atoms/04-headings/sidebar-heading.twig" %}
+    {% endif %}
+    <div class="ma__press-listing__items">
+      {% for pressTeaser in pressListing.items %}
+        {% include "@molecules/press-teaser.twig" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
