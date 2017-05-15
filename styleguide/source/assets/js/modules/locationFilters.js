@@ -42,6 +42,7 @@ export default function (window,document,$,undefined) {
     // Listen for single filter clear. (Triggered in resultsHeading.js)
     $locationListing.on('maSingleLocationFilterClear', function(e, clearedFilter){
       if (clearedFilter.type === "location") {
+        $locationListing.trigger("maLocationListingPlaceReset");
         // Clear location text input.
         $byLocation.val("");
         return;

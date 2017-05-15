@@ -66,8 +66,13 @@ export default function (window,document,$,undefined) {
       }
 
       // Listen for location listing filter.
-      $locationListing.on("maLocationListingPlaceChange", function(e, location, tags){
-        updateMap(location, tags, map, markers);
+      $locationListing.on("maLocationListingPlaceFilter", function(e, location){
+        updateMapByLocation(location, map, markers);
+      });
+
+      // Listen for location listing location reset.
+      $locationListing.on("maLocationListingPlaceReset", function() {
+        resetMapLocation(map, markers);
       });
 
       // Listen for pagination.
@@ -124,18 +129,43 @@ export default function (window,document,$,undefined) {
     return phoneTemp.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
   }
 
-  function updateMap(location, tags, map, markers) {
+  function updateMapByLocation(location, map, markers) {
     removeMarkersFromMap(markers);
-    let place = autocomplete.getPlace();
+    let place = autocomplete.getPlace(),
+      sortedMarkers = [];
 
+    // Reset bounds to remove previous search locations.
+    let bounds = new google.maps.LatLngBounds();
     if (place.geometry) {
-      sortMarkersAroundPlace(place, map, markers);
+      sortedMarkers = sortMarkersAroundPlace(place, markers);
+      // Get the location points from the filter.
+      bounds.extend(place.geometry.location);
     }
     else {
       window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
-      geocodeAddressString(location, sortMarkersAroundPlace, [map, markers]);
+      sortedMarkers = geocodeAddressString(location, sortMarkersAroundPlace, [map, markers]);
     }
 
+    // Filter down to those locations <= 25 miles away.
+    let filteredMarkers = filterMarkersByMilesRadius(sortedMarkers, 25);
+
+    // Add the new markers to the map and set new bounds based on filtered markers.
+    addMarkers(filteredMarkers, map, bounds);
+
+    $('.js-location-listing').trigger("maLocationMarkersSorted", [filteredMarkers]);
+  }
+
+  function resetMapLocation(map, markers) {
+    removeMarkersFromMap(markers);
+    let sortedMarkers = sortMarkersAlphabetically(markers);
+
+    // Reset bounds to remove previous search locations.
+    let bounds = new google.maps.LatLngBounds();
+
+    // Add the new markers to the map and set new bounds based on filtered markers.
+    addMarkers(sortedMarkers, map, bounds);
+
+    $('.js-location-listing').trigger("maLocationMarkersSorted", [sortedMarkers]);
   }
 
   function geocodeAddressString(address, fn, args) {
@@ -154,38 +184,21 @@ export default function (window,document,$,undefined) {
     });
   }
 
-  function sortMarkersAroundPlace(place, map, markers) {
-    // Reset bounds to remove previous search locations.
-    let bounds = new google.maps.LatLngBounds();
-    // Get the location points from the filter.
-    bounds.extend(place.geometry.location);
-
+  function sortMarkersAroundPlace(place, markers) {
     // Get distance number on all existing markers.
     for (var key in markers) {
       if (markers.hasOwnProperty(key)) {
         markers[key].distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, markers[key].getPosition());
-        // Extend the bounds to include each marker's position.
-        bounds.extend(markers[key].position);
       }
     }
 
     // Sort existing markers to get the closest locations.
-    markers.sort(function (a, b) {
+    return markers.sort(function (a, b) {
       return a.distance - b.distance;
     });
+  }
 
-    // Filter down to those location <= 25 miles away.
-    let filteredMarkers = markers.filter(function(marker){
-      return Math.round(convertMetersToMiles(marker.distance)) <= 25;
     });
-
-    // Add the new markers to the map.
-    addMarkers(filteredMarkers, map);
-
-    // Make the map zoom to fit the bounds, showing all locations.
-    map.fitBounds(bounds);
-
-    $('.js-location-listing').trigger("maLocationMarkersSorted", [filteredMarkers]);
   }
 
   function removeMarkersFromMap(markers) {
@@ -194,11 +207,17 @@ export default function (window,document,$,undefined) {
     }
   }
 
-  function addMarkers(markers, map) {
+  function addMarkers(markers, map, bounds) {
     let max = markers.length < maxItems ? markers.length : maxItems;
+
     for (var i = 0; i < max; i++) {
       markers[i].setMap(map);
+      // Extend the bounds to include each marker's position.
+      bounds.extend(markers[i].position);
     }
+
+    // Make the map zoom to fit the bounds, showing all locations.
+    map.fitBounds(bounds);
   }
 
   function initMarker(map, marker, markerData) {
@@ -235,6 +254,12 @@ export default function (window,document,$,undefined) {
 
   function convertMetersToMiles(distance) {
     return distance * 0.000621371192;
+  }
+
+  function filterMarkersByMilesRadius(markers, distance) {
+    return markers.filter(function(marker){
+      return Math.round(convertMetersToMiles(marker.distance)) <= distance;
+    });
   }
 
   // load Google's api

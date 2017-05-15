@@ -55,19 +55,17 @@ export default function (window,document,$,undefined) {
 
     // Handle location listings filter event (triggerd by locationFilters.js).
     $el.on('maLocationListingFilter', function(e, location, tags) {
-      if(location){
-        $el.trigger('maLocationListingPlaceChange', [location, tags]);
+      if (location){
+        $el.trigger('maLocationListingPlaceFilter', [location]);
       }
     });
 
     // Handle map update, marker sort event (triggered by googleMap.js).
     $el.on('maLocationMarkersSorted', function(e, markers) {
       clearListingPage();
-
       // Render our new sorted location listing.
-      let sortedListingMarkup = sortListingOnMarkersOrder(markers);
+      let sortedListingMarkup = sortListingMarkupOnMarkersOrder(markers);
       renderListingPage(sortedListingMarkup.slice(0, maxItems));
-
     });
 
   });
@@ -101,12 +99,11 @@ export default function (window,document,$,undefined) {
   }
 
   // Reorder listingMarkup array, based on the order of the map markers.
-  function sortListingOnMarkersOrder(markers) {
+  function sortListingMarkupOnMarkersOrder(markers) {
     let sortedListingMarkup = [];
     for (var index in markers) {
       if (markers.hasOwnProperty(index)) {
         sortedListingMarkup.push(listingMarkup[markers[index]._listingKey]);
-        // $('.js-location-listing-results').append(listingRow(locations.imagePromos.items[markers[index]._nid], index));
       }
     }
 
