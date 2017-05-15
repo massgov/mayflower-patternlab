@@ -66,6 +66,7 @@
 @import "02-molecules/location-filters";
 @import "02-molecules/main-nav";
 @import "02-molecules/pagination";
+@import "02-molecules/press-status";
 @import "02-molecules/related-action";
 @import "02-molecules/results-heading";
 @import "02-molecules/section-links";
@@ -129,6 +130,7 @@
 @import "03-organisms/utility-panel";
 
 // Templates - page content types
+@import "04-templates/announcement";
 @import "04-templates/details";
 @import "04-templates/general";
 @import "04-templates/services";
