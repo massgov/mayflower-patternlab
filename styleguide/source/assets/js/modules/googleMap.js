@@ -47,7 +47,7 @@ export default function (window,document,$,undefined) {
               lng: rawData.markers[key].position.lng}),
             label: rawData.markers[key].label,
             infoWindow: rawData.markers[key].infoWindow,
-            _listingKey: key
+            _listingKey: key // relationship key between markers + listings
           });
 
           var marker = new google.maps.Marker(markerData);
@@ -143,7 +143,7 @@ export default function (window,document,$,undefined) {
     }
     else {
       window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
-      sortedMarkers = geocodeAddressString(location, sortMarkersAroundPlace, [map, markers]);
+      sortedMarkers = geocodeAddressString(location, sortMarkersAroundPlace, markers);
     }
 
     // Filter down to those locations <= 25 miles away.
@@ -168,18 +168,17 @@ export default function (window,document,$,undefined) {
     $('.js-location-listing').trigger("maLocationMarkersSorted", [sortedMarkers]);
   }
 
-  function geocodeAddressString(address, fn, args) {
+  function geocodeAddressString(address, fn, arg) {
     if (typeof window.geocoder === "undefined") {
       return;
     }
     // Wrap it in a function so it is not called asynchronously.
-    geocoder.geocode({address: address}, function (results, status) {
+    return geocoder.geocode({address: address}, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
-        fn(results[0], args[0], args[1]);
+        return fn(results[0], arg);
       }
       else {
         console.warn('Geocode was not successful for the following reason: ' + status);
-        return;
       }
     });
   }
