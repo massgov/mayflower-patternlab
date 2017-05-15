@@ -25,7 +25,7 @@ linkList : {
     type: object (compHeading)/ optional
   },
   sidebarHeading: { 
-  type: object (sidebarHeading)/ optional
+    type: object (sidebarHeading)/ optional
   },
   description: {
     type: object (Rich text)/ optional

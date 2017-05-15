@@ -22,14 +22,8 @@
       <ul class="ma__link-list__items">
         {% for link in linkList.links %}
           <li class="ma__link-list__item">
-            {% if link.eyebrow %}
-              <div class="ma__link-list__eyebrow"><span>{{ link.eyebrow }}</span></div>
-            {% endif %}
             {% set decorativeLink = { "url": link.url, "text": link.text, "info": link.info } %}
             {% include "@atoms/decorative-link.twig" %}
-            {% if link.date %}
-              <div class="ma__link-list__date">{{ link.date }}</div>
-            {% endif %}
           </li>
         {% endfor %}
       </ul>
