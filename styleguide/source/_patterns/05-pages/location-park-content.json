@@ -794,7 +794,7 @@
         },
         "location": "Walden Pond, Concord, MA",
         "date":"June 24, 2017",
-        "time": "12:00pm",
+        "time": "12:00 p.m.",
         "description":"This is a description of the event that will happen at a future date"
       },{
         "title": {
@@ -805,7 +805,7 @@
         },
         "location": "Concord, MA",
         "date":"June 24, 2017",
-        "time": "9:00pm",
+        "time": "9:00 p.m.",
         "description":"This is a description of the event that will happen at a future date"
       }],
       "more":{
