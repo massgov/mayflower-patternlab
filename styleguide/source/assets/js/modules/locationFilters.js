@@ -12,12 +12,17 @@ export default function (window,document,$,undefined) {
       $byTags = $el.find('.ma__location-filters__by-tags'),
       $locationListing = $el.parents('.js-location-listing');
 
-    $locationListing.on('mapInitialized', function(){
+    $locationListing.on('maMapInitialized', function(e, maBounds){
+      let options = {
+        // bounds: maBounds,
+        // strictBounds: true,
+        types: ['(cities)', '(regions)'],
+        componentRestrictions: {country: 'us'}
+      };
       // Create the autocomplete object and associate it with the submit button.
       // Restrict the search to the default country, and to place type "cities".
-      let autocomplete = new google.maps.places.Autocomplete(document.getElementById(zipcodeSearchId));
+      window.autocomplete = new google.maps.places.Autocomplete(document.getElementById(zipcodeSearchId));
     });
-
 
     // Handle filter form submission.
     $el.submit(function(e){
@@ -47,7 +52,7 @@ export default function (window,document,$,undefined) {
       }
     });
 
-    // Listen for clear filters event. (Triggered in resultsHeading.js)
+    // Listen for clear all filters event. (Triggered in resultsHeading.js)
     $locationListing.on('maClearAllLocationFilters', function(e){
       // Clear location text input.
       $byLocation.val("");
