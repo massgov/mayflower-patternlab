@@ -21,7 +21,8 @@ export default function (window,document,$,undefined) {
       // get the maps data
       // this could be replaced with an api
       const rawData = googleMapData[i];
-      
+      const max = maxItems ? maxItems : googleMapData[i].markers.length;
+
       // *** Create the Map *** //
       // map defaults
       const initMapData = {

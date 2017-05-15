@@ -16,8 +16,7 @@
         zoom: {{googleMap.map.zoom}}
       },
       markers: [
-      {% set maxItems = maxItems ?: googleMap.markers.length %}
-      {% for marker in googleMap.markers[:maxItems] %}
+      {% for marker in googleMap.markers %}
         {
           position: {
             lat: {{marker.position.lat}},
