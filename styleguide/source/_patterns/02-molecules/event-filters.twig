@@ -1,0 +1,17 @@
+<section class="ma__event-filters">
+  <form action="{{ eventFilters.form.action }}">
+    <div class="ma__event-filters__by-location">
+      {% set inputText = eventFilters.zipcode.inputText %}
+      {% include "@atoms/03-forms/input-text.twig" %}
+    </div>
+    <div class="ma__event-filters__date-range">
+      {% set dateRange = eventFilters.dateRange %}
+      {% include "@molecules/date-range.twig" %}
+    </div>
+    <div class="ma__event-filters__buttons">
+      <button class="ma__event-filters__submit" type="submit">
+        {{ eventFilters.submitButton }}
+      </button>
+    </div>
+  </form>
+</section>

@@ -9,9 +9,16 @@
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
 
+  {% if linkList.description %}
+    <div class="ma__link-list__description">
+      {% set richText = linkList.description %}
+      {% include "@organisms/by-author/rich-text.twig" %}
+    </div>
+  {% endif %}
+
   <div class="ma__link-list__container">
     {# added for backward compatibilty with v3.5 #}
-    {% if linkList.stacked %}
+    {% if linkList.stacked or linkList.links|length < 4 %}
       <ul class="ma__link-list__items">
         {% for link in linkList.links %}
           <li class="ma__link-list__item">

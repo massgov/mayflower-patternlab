@@ -113,11 +113,6 @@ $page-header-widget-width: 350px;
   }
 
   &__tags ~ &__widgets {
-    padding-top: 30px;
-
-    @media ($bp-medium-min){
-      padding-top: 40px;
-    }
 
     @media ($bp-large-min){
       padding-top: 50px;

@@ -16,6 +16,7 @@
   }
 
   &__items {
+    margin-bottom: -30px;
 
     @media ($bp-medium-min) {
       display: flex;

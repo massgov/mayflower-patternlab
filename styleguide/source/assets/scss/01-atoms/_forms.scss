@@ -89,6 +89,11 @@ label {
       content: url("../images/checkmark.svg"); //"✔";
     }
   }
+}
 
+.ma__input-date[type=text] {
+  background-image: url("../images/svg-icons/date-picker.svg");
+  background-position: right 8px top 10px;
+  background-repeat: no-repeat;
 }
 

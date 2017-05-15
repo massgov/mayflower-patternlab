@@ -137,7 +137,7 @@
   },
 
 
-  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+ "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
   "actionDetails" : {
     "sections": [{
@@ -612,7 +612,8 @@
   },
 
 
-  "COMMENT":"****SIDEBAR COMPONENTS****",
+
+"COMMENT":"****SIDEBAR COMPONENTS****",
   "sidebar": {
     "coloredHeadings": true,
 
@@ -793,7 +794,9 @@
           "property": ""
         },
         "location": "Walden Pond, Concord, MA",
-        "date":"June 24, 2017",
+        "date": {
+          "summary": "June 24, 2017, 12:00pm" 
+        },
         "time": "12:00 p.m.",
         "description":"This is a description of the event that will happen at a future date"
       },{
@@ -804,7 +807,9 @@
           "property": ""
         },
         "location": "Concord, MA",
-        "date":"June 24, 2017",
+        "date": {
+          "summary": "June 24, 2017, 9:00pm"
+        },
         "time": "9:00 p.m.",
         "description":"This is a description of the event that will happen at a future date"
       }],
