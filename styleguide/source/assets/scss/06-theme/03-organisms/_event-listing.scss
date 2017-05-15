@@ -1,5 +1,9 @@
 .ma__event-listing {
 
+  &__item + &__item {
+    border-top-color: $c-bd-divider;
+  }
+
   .post-content > & {
     background-color: $c-bg-subtle;
   }
@@ -11,10 +15,7 @@
     }
   }
 
-  .post-content > & &__items {
-
-    .ma__event-teaser {
-      border-left-color: $c-bd-divider;
-    }
+  .post-content > & &__item {
+    border-left-color: $c-bd-divider;
   }
 }
