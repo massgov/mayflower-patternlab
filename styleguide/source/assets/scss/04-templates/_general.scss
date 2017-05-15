@@ -58,6 +58,37 @@
   }
 }
 
+// reversed two column layout
+.main-content--reversed {
+
+  .page-content {
+    padding-bottom: 0;
+    padding-right: 0;
+
+    @media ($bp-large-min){
+      float:left;
+      padding-left: $column;
+      width: calc(100% - #{$layout-sidebar-width});
+    }
+
+    @media ($bp-x-large-min) {
+      padding-left: $column + ($gutter * 2);
+    }
+  }
+
+  .sidebar {
+    padding-bottom: 45px;
+
+    // two column layout with sidebar on the left
+    @media ($bp-large-min){
+      float: left;
+      padding-bottom: 0;
+      width: $layout-sidebar-width;
+    }
+  }
+}
+
+
 
 // guide page template
 .stacked-row-content {
