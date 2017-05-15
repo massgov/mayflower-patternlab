@@ -1,0 +1,28 @@
+{
+  "pageHeader": {
+    "divider": false,
+    "title": "News & Announcements",
+    "subTitle": "",
+    "headerTags": null,
+    "optionalContents": null,
+    "widgets": [{
+      "path": "@molecules/social-links.twig",
+      "data": {
+        "socialLinks": {
+          "label": "Get Updates:",
+          "items": [{
+            "altText": "Follow our Blog Feed",
+            "href": "#",
+            "icon": "@atoms/05-icons/svg-blog.twig",
+            "linkType": "blog"
+          },{
+            "altText": "Get our emails",
+            "href": "#",
+            "icon": "@atoms/05-icons/svg-mail.twig",
+            "linkType": "email"
+          }]
+        }
+      }
+    }]
+  }
+}
