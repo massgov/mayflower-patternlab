@@ -9,8 +9,10 @@
   }
   
   &__container {
+    @include clearfix;
     border-bottom-style: solid;
     border-bottom-width: 2px;
+    padding-bottom: 10px;
   }
 
   &__title {
@@ -19,6 +21,21 @@
     line-height: 1.563rem;
     margin-bottom: .5em;
     text-transform: uppercase;
+
+    @media ($bp-x-small-min) {
+      display: inline-block;
+      float: left;
+    }
+  }
+
+  &__tags {
+    margin-bottom: 10px;
+
+    @media ($bp-x-small-min) {
+      clear: left;
+      float: left;
+      margin-bottom: 0;
+    }
   }
 
   &__tag {
@@ -48,5 +65,21 @@
     display: inline-block;
     line-height: 1em;
     padding: 9px 11px;
+  }
+
+  &__sort {
+
+    @media ($bp-x-small-min) {
+      float: right;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__tags + &__sort {
+
+    @media ($bp-x-small-min) {
+      position: relative;
+        top: 10px;
+    }
   }
 }

@@ -1,13 +1,19 @@
 <div class="ma__results-heading">
   <div class="ma__results-heading__container">
-    <p class="ma__results-heading__title">Showing {{ resultsHeading.numResults }} {% if resultsHeading.totalResults %} of {{ resultsHeading.totalResults }}{% endif %} results {% if resultsHeading.tags %}for:{% endif %}</p>
-    <div class="ma__results-heading__tags">
-      {% for tag in resultsHeading.tags %}
-        <button type="button" class="ma__results-heading__tag">{{ tag.text }}</button>
-      {% endfor %}
-      {% if resultsHeading.tags %}
+    <div class="ma__results-heading__title">Showing {{ resultsHeading.numResults }} {% if resultsHeading.totalResults %} of {{ resultsHeading.totalResults }}{% endif %} results {% if resultsHeading.tags %}for:{% endif %}</div>
+    {% if resultsHeading.tags %}
+      <div class="ma__results-heading__tags">
+        {% for tag in resultsHeading.tags %}
+          <button type="button" class="ma__results-heading__tag">{{ tag.text }}</button>
+        {% endfor %}
         <button type="button" class="ma__results-heading__clear">Clear all</button>
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
+    {% if resultsHeading.sortResults %}
+      <div class="ma__results-heading__sort">
+        {% set sortResults = resultsHeading.sortResults %}
+        {% include "@molecules/sort-results.twig" %}
+      </div>
+    {% endif %}
   </div>
 </div>
