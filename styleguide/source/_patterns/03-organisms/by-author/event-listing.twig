@@ -8,11 +8,13 @@
       {% set sidebarHeading = eventListing.sidebarHeading %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
-    <div class="ma__event-listing__items">
+    <ul class="ma__event-listing__items">
       {% for eventTeaser in eventListing.events %}
-        {% include "@molecules/event-teaser.twig" %}
+        <li class="ma__event-listing__item">
+          {% include "@molecules/event-teaser.twig" %}
+        </li>
       {% endfor %}
-    </div>
+    </ul>
     {% if eventListing.more %}
       <div class="ma__event-listing__more">
         {% set link = eventListing.more %}

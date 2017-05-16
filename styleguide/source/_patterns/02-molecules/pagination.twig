@@ -1,25 +1,27 @@
 <div class="ma__pagination">
-  {% if pagination.pages|length > 2 %}
-    <button 
-      class="ma__pagination__prev" 
-      type="button" 
-      {% if pagination.prev.disabled %}
-        disabled
-      {% endif %}>{{ pagination.prev.text }}</button>
-  {% endif %}
-  {% for page in pagination.pages %}
-    {% if page.text == "spacer" %}
-      <span class="ma__pagination__spacer">&hellip;</span>
-    {% else %}
-    <button class="ma__pagination__page {{ page.active ? 'is-active' : '' }}" type="button" data-page="{{ page.text }}">{{ page.text }}</button>
+  <div class="ma__pagination__container">
+    {% if pagination.pages|length > 2 %}
+      <button 
+        class="ma__pagination__prev" 
+        type="button" 
+        {% if pagination.prev.disabled %}
+          disabled
+        {% endif %}>{{ pagination.prev.text }}</button>
     {% endif %}
-  {% endfor %}
-  {% if pagination.pages|length > 2 %}
-    <button 
-      class="ma__pagination__next" 
-      type="button"      
-      {% if pagination.next.disabled %}
-        disabled
-      {% endif %}>{{ pagination.next.text }}</button>
-  {% endif %}
+    {% for page in pagination.pages %}
+      {% if page.text == "spacer" %}
+        <span class="ma__pagination__spacer">&hellip;</span>
+      {% else %}
+      <button class="ma__pagination__page {{ page.active ? 'is-active' : '' }}" type="button" data-page="{{ page.text }}">{{ page.text }}</button>
+      {% endif %}
+    {% endfor %}
+    {% if pagination.pages|length > 2 %}
+      <button 
+        class="ma__pagination__next" 
+        type="button"      
+        {% if pagination.next.disabled %}
+          disabled
+        {% endif %}>{{ pagination.next.text }}</button>
+    {% endif %}
+  </div>
 </div>

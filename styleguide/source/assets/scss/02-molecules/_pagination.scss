@@ -1,6 +1,19 @@
 .ma__pagination {
+
   @media ($bp-small-max) {
     text-align: center;
+  }
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+  
+  &__container {
+    border-top-style: solid;
+    border-top-width: 2px;
+    padding: 20px 0;
   }
 
   &__prev,
