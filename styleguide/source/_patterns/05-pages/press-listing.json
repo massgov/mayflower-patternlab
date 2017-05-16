@@ -24,5 +24,155 @@
         }
       }
     }]
+  },
+
+  "resultsHeading": {
+    "numResults": "1-12",
+    "totalResults": "108",
+    "sortResults": {
+      "label": "Sort by:",
+      "sortButtons": [{
+        "text": "Date",
+        "direction": "dsc"
+      }]
+    },
+    "tags": null
+  },
+
+  "pressListing": {
+    "items": [{
+      "eyebrow": "Press Release",
+      "title" : {
+        "url":"#",
+        "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+        "info": "",
+        "property": ""
+      },
+      "date": "4/4/2017",
+      "org": "Health & Human Services, Public Safety",
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+            }
+          }
+        }]
+      }
+    },{
+      "eyebrow": "Press Statement",
+      "title" : {
+        "url":"#",
+        "text":"Governor Baker Statement on Supreme Court Marriage Equality Decision",
+        "info": "",
+        "property": ""
+      },
+      "date": "4/3/2017",
+      "org": "Office of the Governor",
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+            }
+          }
+        }]
+      }
+    },{
+      "eyebrow": "News Article",
+      "title" : {
+        "url":"#",
+        "text":"Tree House Brweing Co. Expands Its Horizons",
+        "info": "",
+        "property": ""
+      },
+      "date": "4/3/2017",
+      "org": "Mass Development",
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+            }
+          }
+        }]
+      }
+    },{
+      "eyebrow": "Blog Post",
+      "title" : {
+        "url":"#",
+        "text":"Surviving the transtition from high school to college",
+        "info": "",
+        "property": ""
+      },
+      "date": "4/3/2017",
+      "org": "Massachusetts Educational Financing Authority",
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+            }
+          }
+        }]
+      }
+    },{
+      "eyebrow": "Speech",
+      "title" : {
+        "url":"#",
+        "text":"Governor Baker Delivers State of the Commonwealth Address",
+        "info": "",
+        "property": ""
+      },
+      "date": "4/2/2017",
+      "org": "Office of the Governor",
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+            }
+          }
+        }]
+      }
+    }]
+  },
+
+  "pagination": {
+    "next": {
+      "disabled": false,
+      "text": "Next"
+    },
+    "prev": {
+      "disabled": false,
+      "text": "Previous"
+    },
+    "pages": [{
+      "active": false,
+      "text": "1"
+    },{
+      "active": true,
+      "text": "spacer"
+    },{
+      "active": false,
+      "text": "3"
+    },{
+      "active": true,
+      "text": "4"
+    },{
+      "active": false,
+      "text": "5"
+    },{
+      "active": false,
+      "text": "spacer"
+    },{
+      "active": false,
+      "text": "10"
+    }]
   }
 }

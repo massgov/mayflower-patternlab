@@ -1,4 +1,5 @@
 .ma__press-listing {
+  @include ma-component-spacing;
 
   .pre-content > &,
   .post-content > &,
