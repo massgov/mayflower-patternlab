@@ -11,26 +11,17 @@ export default function (window,document,$,undefined) {
     compiledTemplate = getTemplate('locationListingResultsHeading'),
     resultsHeadingSelector = '.js-results-heading',
     clearAllButtonSelector = 'button.ma__results-heading__clear',
-    filterButtonSelector = 'button.ma__results-heading__tag';
+    filterButtonSelector = 'button.ma__results-heading__tag',
+    masterData = [];
 
   // Handle clear all button click + trigger clear all event.
   $locationListing.on('click', clearAllButtonSelector, function(){
-    // Trigger clear all location listing filters event.
-    $locationListing.trigger('maClearAllLocationFilters');
-
     // Remove all tags, clear all button from heading.
-    locationListing.resultsHeading.tags = [];
-    renderResultsHeading(locationListing.resultsHeading);
-  });
+    masterData.resultsHeading.tags = [];
+    // renderResultsHeading(masterData.resultsHeading);
 
-  // Handle location filter event (triggered in locationFilters.js).
-  $locationListing.on('maLocationListingFilter', function(e, location, tags){
-    // Build new active filter tags for selected location, tags.
-    if (location) {
-      tags.push({'type': 'location', 'value': location, 'text': location});
-    }
-    locationListing.resultsHeading.tags = tags;
-    renderResultsHeading(locationListing.resultsHeading);
+    // Trigger clear all location listing filters event.
+    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [masterData]);
   });
 
   // Handle single filter button click and trigger single active filter clear event.
@@ -42,14 +33,27 @@ export default function (window,document,$,undefined) {
     };
 
     // Remove the clicked tag from the tags array.
-    locationListing.resultsHeading.tags = locationListing.resultsHeading.tags.filter(function(tag){
+    masterData.resultsHeading.tags = masterData.resultsHeading.tags.filter(function(tag){
       return tag.value !== clearedFilter.value;
     });
-    renderResultsHeading(locationListing.resultsHeading);
+    // renderResultsHeading(masterData.resultsHeading);
 
+    console.log('trigger ma:LocationListing:ActiveTagInteraction: ', masterData, clearedFilter);
     // Trigger the single filter clear event.
-    $locationListing.trigger('maSingleLocationFilterClear', [clearedFilter]);
+    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [masterData, clearedFilter]);
   });
+
+  // Listen for new listing page load to create new results heading
+  $locationListing.on('ma:LocationListing:ListingsUpdated', function(e, data){
+    masterData = transformResultsHeading(data);
+    renderResultsHeading(masterData.resultsHeading);
+  });
+
+  function transformResultsHeading(data) {
+    data.resultsHeading.totalResults = data.items.length;
+    data.resultsHeading.numResults = "1-" + data.resultsHeading.shownItems.length;
+    return data;
+  }
 
   function renderResultsHeading(resultsHeading) {
     resultsHeading.markup = compiledTemplate(resultsHeading);

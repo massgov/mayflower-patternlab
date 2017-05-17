@@ -7,17 +7,14 @@ export default function (window,document,$,undefined) {
     return;
   }
 
+  if (typeof google !== "undefined" && typeof locationListing !== "undefined") {
+    window.geocoder = new google.maps.Geocoder();
+  }
+
   let compiledTemplate = getTemplate('googleMapInfo');
 
   // after the api is loaded this function is called
-  window.initMap = renderMap;
-
-  if (typeof google !== "undefined" && typeof locationListing !== "undefined") {
-    window.geocoder = new google.maps.Geocoder();
-    // Keep track of the bounds so we can adjust based on markers.
-  }
-
-  function renderMap() {
+  window.initMap = function () {
 
     $(".js-google-map").each(function(i) {
       const $el = $(this),
@@ -37,8 +34,9 @@ export default function (window,document,$,undefined) {
       const mapData = Object.assign({}, rawData.map, initMapData);
       const map = new google.maps.Map(this, mapData);
       let markers = [];
+      let bounds = new google.maps.LatLngBounds();
 
-      // *** Add Markers with popups *** //
+      // *** Add master Markers with popups *** //
       for (var key in rawData.markers) {
         if (rawData.markers.hasOwnProperty(key)) {
           var markerData = Object.assign({
@@ -56,37 +54,37 @@ export default function (window,document,$,undefined) {
           initMarker(map, marker, markerData);
         }
 
-          // Add up to the maxItems of markers to the map.
-          if(markers.length < max) {
-            marker.setMap(map);
-          }
+        // Add up to the maxItems of markers to the map.
+        if(markers.length < max) {
+          marker.setMap(map);
+          // Extend the bounds to include each marker's position.
+          bounds.extend(marker.position);
+        }
 
-          // Add marker to array of all markers.
-          markers.push(marker);
+        // Add marker to array of all markers.
+        markers.push(marker);
+
+        // Make the map zoom to fit the bounds, showing all locations.
+        map.fitBounds(bounds);
       }
 
-      // Listen for location listing filter.
-      $locationListing.on("maLocationListingPlaceFilter", function(e, location){
-        updateMapByLocation(location, map, markers);
+      // Listen for data change event to update markers by place or filters.
+      $locationListing.on("ma:LocationListing:UpdateMarkers", function(e, data, place){
+        console.log('update markers data: ', data);
+        if (place) {
+          updateMapByPlace(data, place, map, markers, false);
+        }
+        else {
+          updateMapByMarkers(data, map, markers);
+        }
       });
-
-      // Listen for location listing location reset.
-      $locationListing.on("maLocationListingPlaceReset", function() {
-        resetMapLocation(map, markers);
-      });
-
-      // Listen for pagination.
-      $locationListing.on("maLocationListingPagination", function(e, map, markers){
-
-      });
-
-      // listen for recenter command
+      // Listen for listing marker recenter command
       $el.on("recenter", function( event, markerIndex ) {
         if(typeof markers[markerIndex] === "undefined") {
           return false;
         }
-        let marker = markers[markerIndex];  
-        // center the map on this marker      
+        let marker = markers[markerIndex];
+        // center the map on this marker
         map.setCenter(marker.getPosition());
         // close all open infoWindows
         for (let i in markers) {
@@ -97,8 +95,7 @@ export default function (window,document,$,undefined) {
         // show the infoWindow for this marker
         marker.showInfo();
       });
-
-      // listen for bounce command
+      // Listen for listing marker bounce command
       $el.on("bounce", function( event, markerIndex ) {
         if(typeof markers[markerIndex] === "undefined") {
           return false;
@@ -111,10 +108,9 @@ export default function (window,document,$,undefined) {
         marker.bounce();
       });
 
-      // let maBounds = new google.maps.LatLngBounds({lat: 41, lng: -69});
-      $locationListing.trigger('maMapInitialized');//, [maBounds]);
+      $locationListing.trigger('ma:LocationListing:MapInitialized', [markers, map]);
     });
-  }
+  };
 
   function infoTransform(data) {
     let infoData = {
@@ -129,43 +125,47 @@ export default function (window,document,$,undefined) {
     return phoneTemp.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
   }
 
-  function updateMapByLocation(location, map, markers) {
+  function updateMapByPlace(data, place, map, markers, radius) {
     removeMarkersFromMap(markers);
-    let place = autocomplete.getPlace(),
-      sortedMarkers = [];
 
     // Reset bounds to remove previous search locations.
-    let bounds = new google.maps.LatLngBounds();
-    if (place.geometry) {
-      sortedMarkers = sortMarkersAroundPlace(place, markers);
-      // Get the location points from the filter.
+    let bounds = new google.maps.LatLngBounds(),
+      sortedData = [];
+
+    if (place = autocomplete.getPlace()) {
+      sortedData = sortDataAroundPlace(place, data);
+      // Get the location points based on the place value.
       bounds.extend(place.geometry.location);
     }
     else {
       window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
-      sortedMarkers = geocodeAddressString(location, sortMarkersAroundPlace, markers);
+      sortedData = geocodeAddressString(place, sortDataAroundPlace, data);
     }
 
-    // Filter down to those locations <= 25 miles away.
-    let filteredMarkers = filterMarkersByMilesRadius(sortedMarkers, 25);
+    console.log('sortedData: ', sortedData);
+
+    let placeMarkers = getMarkers(sortedData, markers);
+
+    // If we want to sort + filter within a distance radius
+    if (radius) {
+      // Filter down to those locations <= 25 miles away.
+      placeMarkers = filterMarkersByMilesRadius(placeMarkers, radius);
+    }
 
     // Add the new markers to the map and set new bounds based on filtered markers.
-    addMarkers(filteredMarkers, map, bounds);
+    addMarkers(placeMarkers, map, bounds);
 
-    $('.js-location-listing').trigger("maLocationMarkersSorted", [filteredMarkers]);
+    $('.js-location-listing').trigger("ma:LocationListing:MarkersSorted", [sortedData]);
   }
 
-  function resetMapLocation(map, markers) {
+  function updateMapByMarkers(data, map, markers) {
     removeMarkersFromMap(markers);
-    let sortedMarkers = sortMarkersAlphabetically(markers);
-
     // Reset bounds to remove previous search locations.
-    let bounds = new google.maps.LatLngBounds();
+    let bounds = new google.maps.LatLngBounds(),
+      filteredMarkers = getMarkers(data, markers);
 
-    // Add the new markers to the map and set new bounds based on filtered markers.
-    addMarkers(sortedMarkers, map, bounds);
-
-    $('.js-location-listing').trigger("maLocationMarkersSorted", [sortedMarkers]);
+    addMarkers(filteredMarkers, map, bounds);
+    $('.js-location-listing').trigger("ma:LocationListing:MapMarkersUpdated", [filteredMarkers]);
   }
 
   function geocodeAddressString(address, fn, arg) {
@@ -175,6 +175,7 @@ export default function (window,document,$,undefined) {
     // Wrap it in a function so it is not called asynchronously.
     return geocoder.geocode({address: address}, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
+        console.log(results[0]);
         return fn(results[0], arg);
       }
       else {
@@ -183,27 +184,54 @@ export default function (window,document,$,undefined) {
     });
   }
 
-  function sortMarkersAroundPlace(place, markers) {
+  function sortDataAroundPlace(place, data) {
     // Get distance number on all existing markers.
-    for (var key in markers) {
-      if (markers.hasOwnProperty(key)) {
-        markers[key].distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, markers[key].getPosition());
+    for (var key in data.items) {
+      if (data.items.hasOwnProperty(key)) {
+        data.items[key].marker.distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, data.items[key].marker.getPosition());
       }
     }
 
     // Sort existing markers to get the closest locations.
-    return markers.sort(function (a, b) {
-      return a.distance - b.distance;
+    data.items.sort(function (a, b) {
+      return a.marker.distance - b.marker.distance;
     });
-  }
 
-    });
+    return data;
   }
 
   function removeMarkersFromMap(markers) {
     for(i=0; i<markers.length; i++){
       markers[i].setMap(null);
     }
+  }
+
+  function getMarkers(data, markers) {
+    // Get just the markers from our active sorted/filtered data listing.
+    let dataMarkers = data.items.filter(function(item) {
+      return item.isActive;
+    }).map(function(item) {
+      return item.marker;
+    });
+
+    // @todo initialize the data listing markers with infowindow and listeners instead of this
+    // Sort the existing map markers, based on the order of the markers in the data listing.
+    dataMarkers.map(function(dataMarker, index){
+      // Get the current index of the marker that we want.
+      let currentMarkerIndex = markers.map(function(marker) {
+        return marker._listingKey;
+      }).indexOf(dataMarker._listingKey);
+
+      if (currentMarkerIndex) {
+        // Swap markers items to sort.
+        let tmp = markers[index];
+        markers[index] = markers[currentMarkerIndex];
+        markers[currentMarkerIndex] = tmp;
+      }
+    });
+
+    // Trim the excess markers
+    return markers.slice(0,dataMarkers.length);
   }
 
   function addMarkers(markers, map, bounds) {
