@@ -16,13 +16,13 @@
   }
 
   &__items {
-    margin-bottom: -30px;
 
     @media ($bp-medium-min) {
       display: flex;
         flex-wrap: wrap;
         align-items: stretch;
       margin-left: -2.43902%;
+      margin-bottom: -30px;
     }
 
     @media ($bp-large-min) {
@@ -74,6 +74,7 @@
         width: 50% - 2.43902%;
       }
 
+      // stacked (two column was too narrow)
       @media ($bp-large-min) and ($bp-x-large-max) {
         width: 100% - 2.43902%; 
       }
