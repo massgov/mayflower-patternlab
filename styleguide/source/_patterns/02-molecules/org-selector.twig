@@ -8,7 +8,7 @@
     var orgSelector = orgSelector || [];
     var organizations = {};
     {% for orgInfo in orgSelector.organizations %}
-      organizations[{{ orgInfo.value }}] = {
+      organizations["{{ orgInfo.value }}"] = {
         "image": {
           "href": "{{ orgInfo.image.href|e('js') }}",
           "alt": "{{ orgInfo.image.alt|e('js') }}",

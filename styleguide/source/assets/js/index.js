@@ -12,7 +12,7 @@ import locationListing  from "./modules/locationListing.js";
 import mainNav          from "./modules/mainNav.js";
 import mainNavPilot     from "./modules/mainNavPilot.js";
 import mobileNav        from "./modules/mobileNav.js";
-import orgInfo          from "./modules/orgInfo.js";
+import orgSelector      from "./modules/orgSelector.js";
 import pikaday          from "./modules/pikaday.js";
 import responsiveVideo  from "./modules/responsiveVideo.js";
 import richText         from "./modules/richText.js";

@@ -7,16 +7,16 @@
         "value":"",
         "text":"All Organizations"
       },{
-        "value":"0",
+        "value":"attorney-general-office",
         "text":"Attorney General's Office"
       },{
-        "value":"1",
-        "text":"Governors Office"
+        "value":"governors-office",
+        "text":"Governor's Office"
       }]
     },
 
     "organizations": [{
-      "value": "1",
+      "value": "attorney-general-office",
       "image": {
         "href": "#",
         "alt": "Maura Healey",
@@ -36,7 +36,7 @@
         "info": "learn more about Organization"
       }
     },{
-      "value": "2",
+      "value": "governors-office",
       "image": {
         "href": "#",
         "alt": "Charles Baker",

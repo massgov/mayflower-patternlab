@@ -9,29 +9,26 @@ export default function (window,document,$,undefined) {
     let $select = $el.find('select').first();
     let $placeholder = $el.find('.js-org-info');
 
-    // get the current select value
-
-    // if the value is not null (default) 
-
-      //render the template based on the value
-      renderTemplate("1");
+    //render the template based on the current value
+    renderTemplate($select.val());
 
     // When the select changes
-
-      // get the current select value
-
-      // value is null
-
-        // remove the template
-
-      // otherwise render the template based on the value
+    $select.change(() => {
+      //render the template based on the new value
+      renderTemplate($select.val());
+    });
 
     // Render the template based on value
     function renderTemplate(value) {
+      if (typeof(data.organizations[value]) === "undefined") {
+        $placeholder.html("");
+        return false;
+      }
+
       $placeholder.html(compiledTemplate(data.organizations[value]));
+
+      return true;
     }
-
-
   });
 
 }(window,document,jQuery);
