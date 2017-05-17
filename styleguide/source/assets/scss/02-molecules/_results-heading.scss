@@ -1,5 +1,17 @@
 .ma__results-heading {
-  margin-bottom: 16px;
+  margin-bottom: 30px;
+  padding-top: 40px;
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+  
+  &__container {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
 
   &__title {
     font-size: 1.188rem;

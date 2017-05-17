@@ -1,23 +1,25 @@
-<section class="ma__event-listing">
-  <div class="ma__event-listing__container">
-    {% if eventListing.compHeading %}
-      {% set compHeading = eventListing.compHeading %}
-      {% include "@atoms/04-headings/comp-heading.twig" %}
-    {% endif %}
-    {% if eventListing.sidebarHeading %}
-      {% set sidebarHeading = eventListing.sidebarHeading %}
-      {% include "@atoms/04-headings/sidebar-heading.twig" %}
-    {% endif %}
-    <div class="ma__event-listing__items">
-      {% for eventTeaser in eventListing.events %}
-        {% include "@molecules/event-teaser.twig" %}
-      {% endfor %}
-    </div>
-    {% if eventListing.more %}
-      <div class="ma__event-listing__more">
-        {% set link = eventListing.more %}
-        {% include "@atoms/11-text/link.twig" %}
-      </div>
-    {% endif %}
-  </div>
-</section>
+<section class="ma__event-listing">
+  <div class="ma__event-listing__container">
+    {% if eventListing.compHeading %}
+      {% set compHeading = eventListing.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% endif %}
+    {% if eventListing.sidebarHeading %}
+      {% set sidebarHeading = eventListing.sidebarHeading %}
+      {% include "@atoms/04-headings/sidebar-heading.twig" %}
+    {% endif %}
+    <ul class="ma__event-listing__items">
+      {% for eventTeaser in eventListing.events %}
+        <li class="ma__event-listing__item">
+          {% include "@molecules/event-teaser.twig" %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% if eventListing.more %}
+      <div class="ma__event-listing__more">
+        {% set link = eventListing.more %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+    {% endif %}
+  </div>
+</section>

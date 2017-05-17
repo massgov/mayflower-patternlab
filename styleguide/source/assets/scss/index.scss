@@ -8,6 +8,9 @@
 @import "00-base/variables";
 @import "neat";
 
+// Bower vendors
+@import "../js/vendor/bower_components/pikaday/scss/pikaday";
+
 // Base variables
 @import "00-base/breakpoints";
 @import "00-base/mixins";
@@ -48,9 +51,11 @@
 @import "02-molecules/callout-link";
 @import "02-molecules/contact-group";
 @import "02-molecules/contact-us";
+@import "02-molecules/date-range";
 @import "02-molecules/download-link";
 @import "02-molecules/emergency-alert";
 @import "02-molecules/emergency-header";
+@import "02-molecules/event-filters";
 @import "02-molecules/event-teaser";
 @import "02-molecules/field-submit";
 @import "02-molecules/footer-links";
