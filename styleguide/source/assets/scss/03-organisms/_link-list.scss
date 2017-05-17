@@ -41,8 +41,12 @@
     }
   }
 
-  .main-content--full .page-content > & &__item {
+  &__item {
     padding: 5px 0;
+
+    .ma__decorative-link {
+      display: block;
+    }
   }
 
   .sidebar &__item + &__item {
@@ -50,6 +54,7 @@
     border-top-style: solid;
     margin-top: 25px;
     padding-top: 25px;
+    padding-bottom: 0;
   }
 
   .sidebar &__item {
