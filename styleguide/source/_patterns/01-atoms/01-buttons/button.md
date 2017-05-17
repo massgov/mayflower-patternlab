@@ -1,7 +1,7 @@
 ---
-title: Button Link
+title: Button
 ---
-Description: A link `<a>` element which is styled to look like a button.
+Description: A `<button>` element styled solid or outline and regular or small size
 
 ## State: ALPHA
 
@@ -11,11 +11,11 @@ Description: A link `<a>` element which is styled to look like a button.
 
 ### Variables:
 ~~~
-buttonLink {
+buttonMain {
   text: 
-    type: string / reuired
-  href:
-    type: string (url) / required
+    type: string / required
+  type:
+    type: string / optional (ex: "button", "submit")
   size:
     type: string / optional ("" or "small")
   theme:
