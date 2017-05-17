@@ -49,14 +49,16 @@
           "required": false,
           "id": "start-date",
           "name": "start-date",
-          "placeholder": "today"
+          "placeholder": "today",
+          "restrict": "min"
         },
         "endDate": {
           "labelText": "Select an end date",
           "required": false,
           "id": "end-date",
           "name": "end-date",
-          "placeholder": "mm/dd/yy"
+          "placeholder": "mm/dd/yy",
+          "restrict": "min"
         }
       },
 
@@ -140,51 +142,6 @@
         "active": false,
         "text": "10"
       }]
-    }
-  },
-
-  "bottomContent": {
-    "eventListing": {
-      "compHeading":{
-        "title": "Related Events",
-        "centered": true
-      },
-      "events":[{
-        "title": {
-          "href": "#",
-          "text": "Angler Education Program",
-          "info": "",
-          "property": ""
-        },
-        "location": "Rockpot, MA",
-        "date": {
-          "summary": "January 15, 2018",
-          "startMonth": "Jan",
-          "startDay": "15",
-          "endMonth": "",
-          "endDay": ""
-        },
-        "time": "12:00 p.m. - 2:00 p.m.",
-        "description": "Event description. Ut nulla. Vivamus bibendum, nulla ut congue fringilla, lorem ipsum ultricies risus, ut rutrum velit tortor vel purus."
-      },{
-        "title": {
-          "href": "#",
-          "text": "Boy Scout Ice Fishing Festival",
-          "info": "",
-          "property": ""
-        },
-        "location": "Lincoln, MA",
-        "date": {
-          "summary": "February 19, 2018",
-          "startMonth": "Feb",
-          "startDay": "19",
-          "endMonth": "",
-          "endDay": ""
-        },
-        "time": "12:00 p.m. - 2:00 p.m.",
-        "description": ""
-      }],
-      "more": null
     }
   }
 }
