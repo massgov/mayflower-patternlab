@@ -35,17 +35,17 @@
         }
       },
       "tags": [{
-        "value": "wheelchair-accessible",
         "id": "wheelchair-accessible",
         "label": "Wheelchair accessible",
-        "checked": "false",
-        "icon": "@atoms/05-icons/svg-wheelchair.twig"
+        "icon": "@atoms/05-icons/svg-wheelchair.twig",
+        "value": "wheelchair-accessible",
+        "checked": "false"
       },{
-        "value": "open",
         "id": "open",
         "label": "Open now",
-        "checked": "false",
-        "icon": "@atoms/05-icons/svg-open-now.twig"
+        "icon": "@atoms/05-icons/svg-open-now.twig",
+        "value": "open",
+        "checked": "false"
       }],
       "submitButton": "Submit"   
     },
@@ -216,12 +216,7 @@
     },
     "resultsHeading": {
       "numResults": "1-12",
-      "totalResults": "108",
-      "tags": [{
-        "type": "location",
-        "value": "02155",
-        "text": "02155"
-      }]
+      "totalResults": "108"
     },
     "imagePromos": {
       "items": [{
@@ -231,8 +226,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/attleboro-450x299.jpg",
@@ -271,8 +267,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/barnstabledc-450x299.jpg",
@@ -311,8 +308,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-pittsfieldsc-450x299.jpg",
@@ -351,8 +349,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "open now",
+          "icon": "@atoms/05-icons/svg-open-now.twig",
+          "id": "open"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-brookline-450x299.jpg",
@@ -391,8 +390,13 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
+        },{
+          "label": "open now",
+          "icon": "@atoms/05-icons/svg-open-now.twig",
+          "id": "open"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-medford-450x299.jpg",
@@ -431,8 +435,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-concord-450x299.jpg",
@@ -471,8 +476,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-edgartown-450x299.jpg",
@@ -511,8 +517,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-lowelldc-450x299.jpg",
@@ -551,8 +558,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-marlborough-450x299.jpg",
@@ -591,8 +599,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-salemruane-450x299.jpg",
@@ -631,8 +640,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-scch-299x450.jpg",
@@ -671,8 +681,9 @@
           "info": ""
         },
         "tags": [{
-          "label": "handicapped accessible",
-          "icon": "@atoms/05-icons/svg-wheelchair.twig"
+          "label": "wheelchair accessible",
+          "icon": "@atoms/05-icons/svg-wheelchair.twig",
+          "id": "wheelchair-accessible"
         }],
         "image": {
           "src":"http://www.mass.gov/courts/images/trial-courts/courthouses/thumb-tauntonnew-450x299.jpg",
