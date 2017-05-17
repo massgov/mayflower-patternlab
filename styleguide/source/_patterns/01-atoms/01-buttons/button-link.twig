@@ -1,3 +1,14 @@
-<a href="{{buttonMain.href}}" class="ma__button">
-	{{buttonMain.text}}
+{% set buttonClassSize = button.size ? "ma__button--" ~ button.size : "" %}
+{% set buttonClass = "ma__button" %}
+
+{% if buttonLink.outline %}
+  {% set buttonClass = buttonClass ~ "-minor" %}
+{% endif %}
+
+{% if buttonLink.theme %}
+  {% set buttonClass = buttonClass ~ "-" ~ buttonLink.theme %}
+{% endif %}
+
+<a href="{{ buttonLink.href }}" class="{{ buttonClass }} {{ buttonClassSize }}">
+	{{ buttonLink.text }}
 </a>

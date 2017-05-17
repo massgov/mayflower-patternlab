@@ -1,7 +1,7 @@
 {
-	"buttonLink":{
-    "text":"Button a tag",
-    "href":"#",
+  "button": {
+    "text": "Button",
+    "type": "button",
     "size": "",
     "theme": "",
     "outline": false

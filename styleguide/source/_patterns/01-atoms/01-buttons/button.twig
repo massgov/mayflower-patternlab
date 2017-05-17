@@ -1,0 +1,12 @@
+{% set buttonClassSize = button.size ? "ma__button--" ~ button.size : "" %}
+{% set buttonClass = "ma__button" %}
+
+{% if button.outline %}
+  {% set buttonClass = buttonClass ~ "-minor" %}
+{% endif %}
+
+{% if button.theme %}
+  {% set buttonClass = buttonClass ~ "-" ~ button.theme %}
+{% endif %}
+
+<button type="{{ button.type }}" class="{{ buttonClass }} {{ buttonClassSize }}">{{ button.text }}</button>
