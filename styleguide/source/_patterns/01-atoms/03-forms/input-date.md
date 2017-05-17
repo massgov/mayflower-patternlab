@@ -6,7 +6,7 @@ Description: An `<input> [type='date']`  element with its corresponding `<label>
 ## State: ALPHA
 
 ### Notes:
-
+- restrict controls whether the user can pick any date (''), today and prior ('max') or today and future ('min')
 
 ### Used In:
 
@@ -24,5 +24,7 @@ Description: An `<input> [type='date']`  element with its corresponding `<label>
       type: string\required
     placeholder:
       type: string
+    restrict:
+      type: string ('','max','min')
   }
 ~~~
