@@ -1,0 +1,43 @@
+.ma__org-info {
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+    width: 100px;
+
+    a {
+      display: block;
+      font-size: 0;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  &__job-title {
+    font-size: 1.25rem;
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+
+  &__content {
+    font-size: 1.125rem;
+
+    .ma__rich-text {
+      margin-bottom: 10px;
+    }
+
+  }
+}
