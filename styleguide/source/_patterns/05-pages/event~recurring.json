@@ -156,7 +156,7 @@
       },{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "icon": "",
           "decorativeLink": {
             "text": "Archive of monthly board meeting minutes",
             "href": "#",
@@ -337,7 +337,7 @@
             "label":"",
             "link": {
               "href":"#",
-              "text": "susan.sacc0@state.ma.us",
+              "text": "susan.sacco@state.ma.us",
               "info": "",
               "property": ""
             },

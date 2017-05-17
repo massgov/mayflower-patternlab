@@ -25,6 +25,7 @@
     padding: 8px 10px;
     position: relative;
 
+
     @media ($bp-small-min) {
       margin: 0 .1em;
     }
@@ -45,19 +46,53 @@
     @media ($bp-small-max) {
       margin-right: .5em;
     }
+
+    &:after {
+      @include ma-link-underline;
+      content: "";
+      display: block;
+      margin-left: 16px;
+      position: absolute;
+        bottom: 5px;
+        right: 8px;
+      width: calc(100% - 35px);
+    }
+
   }
 
   &__next {
     @include ma-chevron('right');
-  
+
     @media ($bp-small-max) {
       margin-left: .5em;
+    }
+
+    &:before {
+      @include ma-link-underline;
+      content: "";
+      display: block;
+      margin-right: 16px;
+      position: absolute;
+        bottom: 5px;
+        left: 9px;
+      width: calc(100% - 35px);
     }
   }
 
   &__page {
 
     @media ($bp-small-max) {
+      display: none;
+    }
+
+    &:after {
+      @include ma-link-underline;
+      content: "";
+      display: block;
+      padding: 0;
+    }
+
+    &.is-active:after {
       display: none;
     }
   }
