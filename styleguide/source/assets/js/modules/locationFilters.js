@@ -1,21 +1,28 @@
 export default function (window,document,$,undefined) {
 
-  // Only run this code if we have a js object from location-listing.twig with location listing data.
-  if (typeof locationListing === "undefined") {
-    return;
-  }
-
-  $('.js-location-filters').each(function(){
+  $('.js-location-filters').each(function(i){
     let $el = $(this),
-      zipcodeSearchId = locationListing.locationFilters.zipcode.inputText.id,
-      $byLocation = $el.find('#' + zipcodeSearchId),
-      $byTags = $el.find('.ma__location-filters__by-tags'),
-      $locationListing = $el.parents('.js-location-listing');
+      placeId = ''; // specified per instance
 
+    /**
+     * Location Listing config, event listeners
+     */
+    let $locationListing = $el.parents('.js-location-listing');
+
+    // Set location listing specific listeners, when parent component is initialized.
     $locationListing.on('ma:LocationListing:ListingInitialized', function() {
+      // Set location listing specific placeId.
+      placeId = locationListing.locationFilters.zipcode.inputText.id;
+
       // Create the google places autocomplete object and associate it with the zip code text input.
-      window.autocomplete = new google.maps.places.Autocomplete(document.getElementById(zipcodeSearchId));
+      window.autocomplete = new google.maps.places.Autocomplete(document.getElementById(placeId));
       window.autocomplete.setComponentRestrictions({country: 'us'});
+
+
+      // Listen for location listing tag interaction event, update form.
+      $locationListing.on('ma:LocationListing:ActiveTagInteraction', function(e, data){
+        renderForm({data: data.clearedFilter, form: $el, placeId: placeId});
+      });
     });
 
     // window.autocomplete.setBounds(new google.maps.LatLngBounds(new google.maps.LatLng(41,74), new google.maps.LatLng(43,69)));
@@ -34,77 +41,78 @@ export default function (window,document,$,undefined) {
     //   }
     // });
 
-    // Handle filter form submission.
+    // Handle global form submission.
     $el.submit(function(e){
       e.preventDefault();
       // Update master data with the various filter values.
-       let filters = getFormData();
+      let filters = getFormData({form: $(this), placeId: placeId});
 
       // Trigger location listing filter event with current filter values.
       $locationListing.trigger('ma:LocationListing:FormInteraction', [{filters: filters}]);
     });
 
-    $locationListing.on('ma:LocationListing:ActiveTagInteraction', function(e, args){
-      renderForm(args.clearedFilter);
+  });
+
+  function renderForm(args) {
+    // The clear all button was pressed.
+    if (args.data === 'all') {
+      clearForm(args);
+    }
+    // Single filter button was pressed.
+    else {
+      clearDeactivatedFilter(args);
+    }
+  }
+
+  function getFormData(args) {
+    let $form = $(args.form),
+      $tags = $form.find('.ma__location-filters__by-tags'),
+      $place = $form.find('#' + args.placeId),
+      place = $place.val(),
+      filters = [];
+
+    if (place) {
+      filters.push({
+        type: 'location',
+        text: place,
+        value: place
+      });
+    }
+
+    $tags.find('input:checked').each(function() {
+      filters.push({'type': 'tag', 'value': $(this).val(), 'text': $(this).next("label").text()});
     });
 
+    return filters;
+  }
 
-    function getFormData() {
-      let location = getLocation(),
-        filters = [];
+  function clearDeactivatedFilter(args) {
+    let $form = $(args.form),
+      $place = $form.find(args.placeId),
+      $tags = $form.find('.ma__location-filters__by-tags'),
+      clearedFilter = args.data;
 
-      if (location) {
-        filters.push({
-          type: 'location',
-          text: location,
-          value: location
-        });
-      }
-
-      $byTags.find('input:checked').each(function() {
-        filters.push({'type': 'tag', 'value': $(this).val(), 'text': $(this).next("label").text()});
-      });
-
-      return filters;
+    // If the cleared filter button was for a location filter.
+    if (clearedFilter.type === 'location') {
+      $place.val("");
+      return;
     }
 
-    function getLocation() {
-      return $byLocation.val();
+    // If the cleared filter button was for a tag filter.
+    if (clearedFilter.type === 'tag') {
+      $tags.find('input[type=checkbox][value=' + clearedFilter.value + ']').prop('checked', false);
     }
+  }
 
-    function renderForm(clearedFilter) {
-      // If the clear all button or the last single filter button was pressed.
-      if (clearedFilter === 'all') {
-        // clear all filters
-        clearForm();
-        return;
-      }
-      else {
-        clearDeactivatedFilter(clearedFilter);
-      }
-    }
+  function clearForm(args) {
+    let $form = $(args.form),
+      $tags = $form.find('.ma__location-filters__by-tags'),
+      $place = $form.find('#' + args.placeId);
 
-    function clearDeactivatedFilter(filter) {
-      // If the cleared filter button was for a location filter.
-      if (filter.type === 'location') {
-        $byLocation.val("");
-        return;
-      }
-
-      // If the cleared filter button was for a tag filter.
-      if (filter.type === 'tag') {
-        $byTags.find('input[type=checkbox][value=' + filter.value + ']').prop('checked', false);
-        return;
-      }
-    }
-
-    function clearForm() {
-      // Clear location text input.
-      $byLocation.val("");
-      // Uncheck checked tags inputs.
-      $byTags.find('input:checked').prop('checked', false);
-    }
-
-  });
+    // Clear location text input.
+    $place.val("");
+    // Uncheck all checked tags inputs.
+    $tags.find('input:checked').prop('checked', false);
+  }
 
 }(window,document,jQuery);

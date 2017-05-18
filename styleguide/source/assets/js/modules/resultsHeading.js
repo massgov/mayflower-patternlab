@@ -16,25 +16,28 @@ export default function (window,document,$,undefined) {
 
     // Set location listing specific config
     let $locationListing = $el.parents('.js-location-listing'); // context
+    // Set location listing specific listeners, when parent component is initialized.
+    $locationListing.on('ma:LocationListing:ListingInitialized', function() {
+      // Set event listeners on parent component because original DOM nodes will be replaced on render().
 
-    // Set event listeners on parent component because original DOM nodes will be replaced on render().
-    // Listen for clear all button click + trigger interaction event on parent.
-    $locationListing.on('click', clearAllButton, function () {
-      $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: 'all'}]);
-    });
-    // Listen for single filter button click and trigger interaction event on parent.
-    $locationListing.on('click', filterButton, function (e) {
-      let clearedFilter = {
-        'type': $(e.target).data('ma-filter-type'),
-        'value': $(e.target).data('ma-filter-value'),
-        'text': $(e.target).text()
-      };
+      // Listen for clear all button click + trigger interaction event on parent.
+      $locationListing.on('click', clearAllButton, function () {
+        $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: 'all'}]);
+      });
+      // Listen for single filter button click and trigger interaction event on parent.
+      $locationListing.on('click', filterButton, function (e) {
+        let clearedFilter = {
+          'type': $(e.target).data('ma-filter-type'),
+          'value': $(e.target).data('ma-filter-value'),
+          'text': $(e.target).text()
+        };
 
-      $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: clearedFilter}]);
-    });
-    // Listen for new location listing results load, render new results heading.
-    $locationListing.on('ma:LocationListing:ListingsUpdated', function (e, data) {
-      renderResultsHeading({data: data.resultsHeading, context: $locationListing});
+        $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: clearedFilter}]);
+      });
+      // Listen for new location listing results load, render new results heading.
+      $locationListing.on('ma:LocationListing:ListingsUpdated', function (e, data) {
+        renderResultsHeading({data: data.resultsHeading, context: $locationListing});
+      });
     });
 
   });
