@@ -21,57 +21,57 @@ export default function (window,document,$,undefined) {
 
     sticky.init($mapCol);
 
-    // Set up click, hover handlers for location listing rows.
-    $el.on('click', '.js-location-listing-link', function(e){
-      let index = $(e.currentTarget).index();
-      // trigger map to recenter on this item based on it's index.
-      $map.trigger('recenter',index);
-      // mark this link as active
-      $el.find('.js-location-listing-link.is-active').removeClass('is-active');
-      $(e.currentTarget).addClass('is-active'); // in case the event is triggered on a child element.
-      // focus on the map - mainly for mobile when it is stacked
-      let position = $map.offset().top;
-      $("html,body").stop(true,true).animate({scrollTop:position}, '750');
-    });
-    $el.on('mouseenter', '.js-location-listing-link', function(e){
-      // remove active state from previously selected list item
-      $el.find('.js-location-listing-link.is-active').removeClass('is-active');
-
-      let index = $(e.currentTarget).index();
-      // trigger map to recenter on this item and make the marker bounce
-      $map.trigger('bounce',index);
-    });
-
-    // Handle location listings form interaction (triggered by locationFilters.js).
-    $el.on('ma:LocationListing:FormInteraction', function(e, args) {
-      transformData(args);
-    });
-
-    // Handle active filter/tag button interactions (triggered by resultsHeading.js).
-    $el.on('ma:LocationListing:ActiveTagInteraction', function(e, args) {
-      transformData(args);
-    });
-
-    // Handle map update, marker sort event (triggered by googleMap.js).
-    $el.on('ma:LocationListing:MarkersSorted', function(e, sortedData) {
-      // Render page 1 of our new sorted location listing.
-      renderListingPage({data: sortedData, page: 1});
-    });
-
-    // Handle pagination event, render targetPage
-    $el.on('ma:LocationListing:Pagination', function(e, target) {
-      masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
-      renderListingPage({data: masterData, page: target});
-      $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: target}]);
-    });
-
     // Populate master data structures.
     $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
+      // Populate master data structure
       masterData.maxItems = maxItems;
       masterData.resultsHeading = locationListing.resultsHeading;
       masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers);
       masterData.pagination = locationListing.pagination;
       masterData.totalPages = Math.ceil(markers.length / maxItems);
+
+      // Set up click, hover handlers for location listing rows.
+      $el.on('click', '.js-location-listing-link', function (e) {
+        let index = $(e.currentTarget).index();
+        // trigger map to recenter on this item based on it's index.
+        $map.trigger('recenter', index);
+        // mark this link as active
+        $el.find('.js-location-listing-link.is-active').removeClass('is-active');
+        $(e.currentTarget).addClass('is-active'); // in case the event is triggered on a child element.
+        // focus on the map - mainly for mobile when it is stacked
+        let position = $map.offset().top;
+        $("html,body").stop(true, true).animate({scrollTop: position}, '750');
+      });
+      $el.on('mouseenter', '.js-location-listing-link', function (e) {
+        // remove active state from previously selected list item
+        $el.find('.js-location-listing-link.is-active').removeClass('is-active');
+
+        let index = $(e.currentTarget).index();
+        // trigger map to recenter on this item and make the marker bounce
+        $map.trigger('bounce', index);
+      });
+
+      // Handle location listings form interaction (triggered by locationFilters.js).
+      $el.on('ma:LocationListing:FormInteraction', function (e, args) {
+        transformData(args);
+      });
+      // Handle active filter/tag button interactions (triggered by resultsHeading.js).
+      $el.on('ma:LocationListing:ActiveTagInteraction', function (e, args) {
+        transformData(args);
+      });
+      // Handle map update, marker sort event (triggered by googleMap.js).
+      $el.on('ma:LocationListing:MarkersSorted', function (e, sortedData) {
+        // Render page 1 of our new sorted location listing.
+        renderListingPage({data: sortedData, page: 1});
+      });
+      // Handle pagination event, render targetPage
+      $el.on('ma:LocationListing:Pagination', function (e, target) {
+        masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
+        renderListingPage({data: masterData, page: target});
+        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: target}]);
+      });
+
+      // Trigger location listing initialization event.
       $el.trigger('ma:LocationListing:ListingInitialized', [masterData]);
     });
   });
