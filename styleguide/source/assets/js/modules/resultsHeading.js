@@ -11,17 +11,12 @@ export default function (window,document,$,undefined) {
     compiledTemplate = getTemplate('locationListingResultsHeading'),
     resultsHeadingSelector = '.js-results-heading',
     clearAllButtonSelector = 'button.ma__results-heading__clear',
-    filterButtonSelector = 'button.ma__results-heading__tag',
-    masterData = [];
+    filterButtonSelector = 'button.ma__results-heading__tag';
 
   // Handle clear all button click + trigger clear all event.
   $locationListing.on('click', clearAllButtonSelector, function(){
-    // Remove all tags, clear all button from heading.
-    masterData.resultsHeading.tags = [];
-    // renderResultsHeading(masterData.resultsHeading);
-
     // Trigger clear all location listing filters event.
-    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [masterData]);
+    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: 'all'}]);
   });
 
   // Handle single filter button click and trigger single active filter clear event.
@@ -32,28 +27,14 @@ export default function (window,document,$,undefined) {
       'text': $(e.target).text()
     };
 
-    // Remove the clicked tag from the tags array.
-    masterData.resultsHeading.tags = masterData.resultsHeading.tags.filter(function(tag){
-      return tag.value !== clearedFilter.value;
-    });
-    // renderResultsHeading(masterData.resultsHeading);
-
-    console.log('trigger ma:LocationListing:ActiveTagInteraction: ', masterData, clearedFilter);
     // Trigger the single filter clear event.
-    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [masterData, clearedFilter]);
+    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: clearedFilter}]);
   });
 
   // Listen for new listing page load to create new results heading
   $locationListing.on('ma:LocationListing:ListingsUpdated', function(e, data){
-    masterData = transformResultsHeading(data);
-    renderResultsHeading(masterData.resultsHeading);
+    renderResultsHeading(data.resultsHeading);
   });
-
-  function transformResultsHeading(data) {
-    data.resultsHeading.totalResults = data.items.length;
-    data.resultsHeading.numResults = "1-" + data.resultsHeading.shownItems.length;
-    return data;
-  }
 
   function renderResultsHeading(resultsHeading) {
     resultsHeading.markup = compiledTemplate(resultsHeading);

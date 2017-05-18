@@ -10,14 +10,12 @@ export default function (window,document,$,undefined) {
       zipcodeSearchId = locationListing.locationFilters.zipcode.inputText.id,
       $byLocation = $el.find('#' + zipcodeSearchId),
       $byTags = $el.find('.ma__location-filters__by-tags'),
-      $locationListing = $el.parents('.js-location-listing'),
-      masterData = [];
+      $locationListing = $el.parents('.js-location-listing');
 
-    $locationListing.on('ma:LocationListing:ListingInitialized', function(e, data) {
+    $locationListing.on('ma:LocationListing:ListingInitialized', function() {
       // Create the google places autocomplete object and associate it with the zip code text input.
       window.autocomplete = new google.maps.places.Autocomplete(document.getElementById(zipcodeSearchId));
       window.autocomplete.setComponentRestrictions({country: 'us'});
-      masterData = data;
     });
 
     // window.autocomplete.setBounds(new google.maps.LatLngBounds(new google.maps.LatLng(41,74), new google.maps.LatLng(43,69)));
@@ -40,19 +38,18 @@ export default function (window,document,$,undefined) {
     $el.submit(function(e){
       e.preventDefault();
       // Update master data with the various filter values.
-      masterData.resultsHeading.tags = transformFilterData();
+       let filters = getFormData();
 
-      console.log('trigger ma:LocationListing:FormInteraction: ', [masterData] );
       // Trigger location listing filter event with current filter values.
-      $locationListing.trigger('ma:LocationListing:FormInteraction', [masterData]);
+      $locationListing.trigger('ma:LocationListing:FormInteraction', [{filters: filters}]);
     });
 
-    $locationListing.on('ma:LocationListing:ActiveTagInteraction', function(e, data, clearedFilter){
-      renderForm(data, clearedFilter);
+    $locationListing.on('ma:LocationListing:ActiveTagInteraction', function(e, args){
+      renderForm(args.clearedFilter);
     });
 
 
-    function transformFilterData() {
+    function getFormData() {
       let location = getLocation(),
         filters = [];
 
@@ -75,16 +72,16 @@ export default function (window,document,$,undefined) {
       return $byLocation.val();
     }
 
-    function renderForm(data, clearedFilter) {
-      let filters = data.resultsHeading.tags;
+    function renderForm(clearedFilter) {
       // If the clear all button or the last single filter button was pressed.
-      if (clearedFilter === 'all' || !filters.length) {
+      if (clearedFilter === 'all') {
         // clear all filters
         clearForm();
         return;
       }
-
-      clearDeactivatedFilter(clearedFilter);
+      else {
+        clearDeactivatedFilter(clearedFilter);
+      }
     }
 
     function clearDeactivatedFilter(filter) {
