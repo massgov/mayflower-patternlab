@@ -12,7 +12,7 @@
     }
 
     @media ($bp-large-min){
-      .sidebar {
+      .sidebar & {
         margin-top: 25px;
         padding-top: 25px;
       }

@@ -1,6 +1,7 @@
 ---
 title: Button Sort
 ---
+
 Description: A `<button>` element that determines the sort order of your results
 
 ## State: ALPHA
