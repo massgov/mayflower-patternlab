@@ -7,14 +7,23 @@ export default function (window,document,$,undefined) {
     return;
   }
 
-  if (typeof google !== "undefined" && typeof locationListing !== "undefined") {
-    window.geocoder = new google.maps.Geocoder();
-  }
+  let compiledTemplate = getTemplate('googleMapInfo'),
+    max = '', // updated per instance
+    mapInitialized = false;
 
-  let compiledTemplate = getTemplate('googleMapInfo');
+  // Test for presence of google maps default library, loaded in the <head> with api key
+  let checkForGoogleMaps = setInterval(function() {
+    // if (window.googleMapsLoaded) {
+    if (window.google && window.google.maps && !mapInitialized) {
+      initMap();
+    }
+  }, 100);
 
   // after the api is loaded this function is called
-  window.initMap = function () {
+  function initMap () {
+    // Stop checking for google maps library.
+    mapInitialized = true;
+    clearInterval(checkForGoogleMaps);
 
     $(".js-google-map").each(function(i) {
       const $el = $(this);
@@ -22,7 +31,7 @@ export default function (window,document,$,undefined) {
       // get the maps data
       // this could be replaced with an api
       const rawData = googleMapData[i];
-      const max = maxItems ? maxItems : googleMapData[i].markers.length;
+      max = (window.locationListing && window.locationListing.maxItems) ? window.locationListing.maxItems : googleMapData[i].markers.length;
 
       // *** Create the Map *** //
       // map defaults
@@ -36,40 +45,41 @@ export default function (window,document,$,undefined) {
       let bounds = new google.maps.LatLngBounds();
 
       // *** Add master Markers with popups *** //
-      for (var key in rawData.markers) {
+      for (let key in rawData.markers) {
         if (rawData.markers.hasOwnProperty(key)) {
-          var markerData = Object.assign({
+          let markerData = Object.assign({
             position: new google.maps.LatLng({
               lat: rawData.markers[key].position.lat,
-              lng: rawData.markers[key].position.lng}),
+              lng: rawData.markers[key].position.lng
+            }),
             label: rawData.markers[key].label,
             infoWindow: rawData.markers[key].infoWindow,
             _listingKey: key // relationship key between markers + listings
           });
 
-          var marker = new google.maps.Marker(markerData);
+          let marker = new google.maps.Marker(markerData);
 
-          // Set properties, listeners on each marker.
           initMarker(map, marker, markerData);
+
+          // Add up to the maxItems of markers to the map.
+          if (markers.length < max) {
+            marker.setMap(map);
+            // Extend the bounds to include each marker's position.
+            bounds.extend(marker.position);
+          }
+
+          // Add marker to array of all markers.
+          markers.push(marker);
         }
-
-        // Add up to the maxItems of markers to the map.
-        if(markers.length < max) {
-          marker.setMap(map);
-          // Extend the bounds to include each marker's position.
-          bounds.extend(marker.position);
-        }
-
-        // Add marker to array of all markers.
-        markers.push(marker);
-
-        // Make the map zoom to fit the bounds, showing all locations.
-        map.fitBounds(bounds);
       }
 
-      // Listen for listing marker recenter command
-      $el.on("recenter", function( event, markerIndex ) {
-        if(typeof markers[markerIndex] === "undefined") {
+      // Make the map zoom to fit the bounds, showing all locations.
+      map.fitBounds(bounds);
+
+      console.log("Just created: ", map, markers);
+
+      $el.on("recenter", function (event, markerIndex) {
+        if (typeof markers[markerIndex] === "undefined") {
           return false;
         }
         let marker = markers[markerIndex];
@@ -77,7 +87,7 @@ export default function (window,document,$,undefined) {
         map.setCenter(marker.getPosition());
         // close all open infoWindows
         for (let i in markers) {
-          if(markers[i].open) {
+          if (markers[i].open) {
             markers[i].hideInfo();
           }
         }
@@ -96,31 +106,33 @@ export default function (window,document,$,undefined) {
         // make the marker bounce three times
         marker.bounce();
       });
-
-      $el.trigger('ma:GoogleMap:MapInitialized', [markers, map]);
+      
+      $el.trigger('ma:GoogleMap:MapInitialized', [markers]);
 
       /**
        * Location Listing config, event listeners
        */
-
       // Set location listing specific config
       let $locationListing = $el.parents('.js-location-listing'); // context
+      $locationListing.on('ma:LocationListing:ListingInitialized', function(e) {
+        // Set up google geocoder class
+        window.geocoder = new google.maps.Geocoder();
 
-      // Set location listing specific listeners, when parent component is initialized.
-      $locationListing.on('ma:LocationListing:ListingInitialized', function() {
         // Listen for data change event to update markers by place or filters.
         $locationListing.on("ma:LocationListing:UpdateMarkers", function (e, args) {
+          console.log('ma:LocationListing:UpdateMarkers', args);
+          console.log('original: ', map, markers);
           if (args.place) {
             updateMapByPlace({data: args.data, place: args.place, map: map, markers: markers, page: args.page});
           }
           else {
             updateMapByMarkers({data: args.data, map: map, markers: markers, page: args.page});
+            console.log('original after: ', map, markers);
           }
         });
       });
-
     });
-  };
+  }
 
   function infoTransform(data) {
     let infoData = {
@@ -168,6 +180,7 @@ export default function (window,document,$,undefined) {
   }
 
   function updateMapByMarkers(args) {
+    console.log('passed: ', args.map, args.markers);
     removeMarkersFromMap(args.markers);
     let pageNumber = args.page ? args.page : 1;
     // Reset bounds to remove previous search locations.
@@ -175,6 +188,14 @@ export default function (window,document,$,undefined) {
       filteredMarkers = getMarkers(args.data, args.markers, pageNumber);
 
     addMarkers(filteredMarkers, args.map, bounds);
+
+    // If there is only one marker, zoom out to provide some context.
+    if (filteredMarkers.length === 1) {
+      args.map.setZoom(16);
+    }
+
+    console.log('after: ', args.map, args.markers);
+
     $('.js-location-listing').trigger("ma:LocationListing:MapMarkersUpdated", [filteredMarkers]);
   }
 
@@ -216,7 +237,7 @@ export default function (window,document,$,undefined) {
       pageTotal = 0;
     return items.map(function(item){
       if (item.isActive) {
-        if (pageTotal < maxItems){
+        if (pageTotal < max){
           item.page = page;
         }
         else {
@@ -265,9 +286,9 @@ export default function (window,document,$,undefined) {
   }
 
   function addMarkers(markers, map, bounds) {
-    let max = markers.length < maxItems ? markers.length : maxItems;
+    let maxItems = markers.length < max ? markers.length : max;
 
-    for (var i = 0; i < max; i++) {
+    for (var i = 0; i < maxItems; i++) {
       markers[i].setMap(map);
       // Extend the bounds to include each marker's position.
       bounds.extend(markers[i].position);
@@ -319,15 +340,4 @@ export default function (window,document,$,undefined) {
     });
   }
 
-  // load Google's api
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&callback=initMap";
-  // Load additional google map api libraries if this is a location listing map.
-  if (typeof locationListing !== 'undefined') {
-    script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&libraries=geometry,places,geocoder&callback=initMap";
-    // Set max number of markers, listing items per page, if provided.
-    var maxItems = locationListing.maxItems;
-  }
-  document.getElementsByTagName('head')[0].appendChild(script);
 }(window,document,jQuery);

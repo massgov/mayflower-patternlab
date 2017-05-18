@@ -9,27 +9,29 @@ export default function (window,document,$,undefined) {
     return;
   }
 
-  let maxItems = locationListing.maxItems ? locationListing.maxItems : locationListing.imagePromos.items.length,
-    masterListing = locationListing.imagePromos.items,
-    masterListingMarkup = transformLocationListingPromos(masterListing),
-    masterData = []; // to preserve state
+  let masterData = []; // to preserve state
 
   $('.js-location-listing').each(function(){
     let $el = $(this),
-        $mapCol = $el.find('.js-location-listing-map'),
-        $map = $el.find('.js-google-map');
+      $mapCol = $el.find('.js-location-listing-map'),
+      $map = $el.find('.js-google-map');
 
     sticky.init($mapCol);
 
-    // Populate master data structures.
     $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
+      let masterListing = locationListing.imagePromos.items,
+        masterListingMarkup = transformLocationListingPromos(masterListing);
+
       // Populate master data structure
-      masterData.maxItems = maxItems;
+      masterData.maxItems = locationListing.maxItems ? locationListing.maxItems : locationListing.imagePromos.items.length;
       masterData.resultsHeading = locationListing.resultsHeading;
       masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers);
       masterData.pagination = locationListing.pagination;
-      masterData.totalPages = Math.ceil(markers.length / maxItems);
+      masterData.totalPages = Math.ceil(markers.length / masterData.maxItems);
+    });
 
+
+    $(document).on('ma:LibrariesLoaded:GoogleMaps', function(){
       // Set up click, hover handlers for location listing rows.
       $el.on('click', '.js-location-listing-link', function (e) {
         let index = $(e.currentTarget).index();
@@ -68,7 +70,8 @@ export default function (window,document,$,undefined) {
       $el.on('ma:LocationListing:Pagination', function (e, target) {
         masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
         renderListingPage({data: masterData, page: target});
-        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: target}]);
+        console.log('on ma:locationListing:UpdateMarkers pagination', masterData);
+        $el.trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: target}]);
       });
 
       // Trigger location listing initialization event.
@@ -82,7 +85,7 @@ export default function (window,document,$,undefined) {
     markers.forEach(function (item, index) {
       items[index] = {
         isActive: true,
-        page: Math.ceil((index+1) / maxItems),
+        page: Math.ceil((index+1) / masterData.maxItems),
         marker: item,
         markup: markup[item._listingKey],
         promo: listing[item._listingKey]
@@ -112,6 +115,7 @@ export default function (window,document,$,undefined) {
       // No filters, sort masterData alphabetically, make all active (i.e. no filter applied).
       let sortedData = sortDataAlphabetically(makeAllActive(masterData));
       renderListingPage({data: sortedData, page: 1});
+      console.log('ma:LocationListing:UpdateMarkers reset', masterData);
       $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: 1}]);
     }
     else {
@@ -132,12 +136,14 @@ export default function (window,document,$,undefined) {
         // Get just the place value from the filters array.
         let place = getFilterValues(filters, 'location'),
           placeData = hasTags ? filteredData : makeAllActive(masterData);
+        console.log('ma:LocationListing:UpdateMarkers hasPlace', placeData);
         $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: placeData, place: place}]);
       }
       else {
         let sortedData = sortDataAlphabetically(filteredData);
-        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: sortedData}]);
         renderListingPage({data: sortedData, page: 1});
+        console.log('ma:LocationListing:UpdateMarkers noPlace', masterData);
+        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData}]);
       }
     }
   }
@@ -254,7 +260,6 @@ export default function (window,document,$,undefined) {
 
   // Filter listings by tags.
   function filterDataByTags(tags, data){
-    // renderListingPage(currentListing.slice(0, maxItems));
     data.items = data.items.map(function(item) {
       item.isActive = doesPromoContainTags(item.promo.tags, tags);
       return item;
@@ -277,7 +282,7 @@ export default function (window,document,$,undefined) {
       pageTotal = 0;
     return items.map(function(item){
       if (item.isActive) {
-        if (pageTotal < maxItems){
+        if (pageTotal < masterData.maxItems){
           item.page = page;
         }
         else {
