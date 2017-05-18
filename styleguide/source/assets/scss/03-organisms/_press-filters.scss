@@ -1,0 +1,41 @@
+.ma__press-filters {
+  
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+  
+  &__heading {
+
+    .ma__colored-heading {
+      margin: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__form {
+    padding: 30px 30px 45px;
+  }
+
+  &__organizations {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__topic,
+  &__type,
+  &__date {
+    margin-bottom: 30px;
+  }
+
+  .ma__select-box {
+    max-width: 780px;
+    width: 100%;
+  }
+}
