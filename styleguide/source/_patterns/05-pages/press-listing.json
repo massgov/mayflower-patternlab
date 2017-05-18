@@ -307,7 +307,7 @@
     "submitButton": {
       "text": "Submit",
       "type": "submit",
-      "size": "",
+      "size": "small",
       "theme": "",
       "outline": false
     }

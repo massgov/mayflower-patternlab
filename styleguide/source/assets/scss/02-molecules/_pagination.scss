@@ -45,6 +45,7 @@
     
     @media ($bp-small-max) {
       margin-right: .5em;
+      min-width: 45%;
     }
 
     &:after {
@@ -65,6 +66,7 @@
 
     @media ($bp-small-max) {
       margin-left: .5em;
+      min-width: 45%;
     }
 
     &:before {

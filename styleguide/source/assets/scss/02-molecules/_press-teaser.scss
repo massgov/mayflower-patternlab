@@ -3,8 +3,20 @@
   & + & {
     border-top-width: 1px;
     border-top-style: solid;
-    margin-top: 25px;
-    padding-top: 25px;
+    margin-top: 30px;
+    padding-top: 30px;
+
+    @media ($bp-medium-min){
+      margin-top: 45px;
+      padding-top: 45px;
+    }
+
+    @media ($bp-large-min){
+      .sidebar {
+        margin-top: 25px;
+        padding-top: 25px;
+      }
+    }
   }
 
   .pre-content > &,
