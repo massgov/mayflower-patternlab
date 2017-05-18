@@ -5,6 +5,11 @@
   .main-content--full .page-content > & {
     @include ma-container();
   }
+
+  @media ($bp-small-max) {
+    margin-left: -20px;
+    margin-right: -20px
+  }
   
   &__heading {
 
@@ -18,18 +23,34 @@
   }
 
   &__form {
-    padding: 30px 30px 45px;
+    padding: 20px 20px 30px;
+
+    @media ($bp-medium-min) {
+      padding: 30px 30px 45px;
+    }
   }
 
   &__organizations {
     border-bottom-width: 2px;
     border-bottom-style: solid;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+
+    @media ($bp-small-min) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
   }
 
   &__topic,
-  &__type,
+  &__type {
+    margin-bottom: 15px;
+
+    @media ($bp-small-min) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__date {
     margin-bottom: 30px;
   }

@@ -67,12 +67,12 @@
 
     @media ($bp-large-min){
       float:left;
-      padding-left: $column;
-      width: calc(100% - #{$layout-sidebar-width});
+      padding-left: $gutter;
+      width: calc(100% - #{$layout-sidebar-width-reversed});
     }
 
     @media ($bp-x-large-min) {
-      padding-left: $column + ($gutter * 2);
+      padding-left: 50px;
     }
   }
 
@@ -83,7 +83,7 @@
     @media ($bp-large-min){
       float: left;
       padding-bottom: 0;
-      width: $layout-sidebar-width;
+      width: $layout-sidebar-width-reversed;
     }
   }
 }
