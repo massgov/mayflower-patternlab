@@ -67,25 +67,36 @@
     }]
   },
 
-  "bannerCarousel": {
-    "slides":[{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    },{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    },{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    },{
-      "image":"/assets/images/placeholder/800x400.png",
-      "imageLarge":"/assets/images/placeholder/1600x400.png",
-      "alt":"view from the lodge"
-    }]
+  "locationBanner": {
+    "bgTitle":"Mt Greylock State Park",
+    "bgWide":"/assets/images/placeholder/1600x400.png",
+    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "id": "GUID24872901570",
+    "googleMap": {
+      "map": {
+        "center": {
+          "lat": 42.077474,
+          "lng": -72.0352727
+        },
+        "zoom": 12
+      },
+      "markers": [{
+        "position": {
+          "lat": 42.077474,
+          "lng": -72.0352727
+        },
+        "label": "",
+        "infoWindow": {
+          "name": "Southbridge RMV",
+          "phone": "14134994262",
+          "fax": "",
+          "email": "",
+          "address": "6 Larochelle Way\nSouthbridge, MA 01550"
+        }
+      }]
+    }
   },
+
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
@@ -651,7 +662,7 @@
         "date": {
           "summary": "March 30, 2017" 
         },
-        "time": "12:00 p.m. - 2:00 p.m.",
+        "time": "12 p.m. - 2 p.m.",
         "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
       },{
         "title": {
@@ -664,7 +675,7 @@
         "date": {
           "summary": "March 30, 2017 - April 10, 2017"
         },
-        "time": "12:00 p.m. - 2:00 p.m.",
+        "time": "12 p.m. - 2 p.m.",
         "description": ""
       }],
       "more":{
