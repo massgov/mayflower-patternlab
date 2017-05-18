@@ -98,7 +98,8 @@
     "bgTitle":"Mt Greylock State Park",
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "actionMap": {
+    "id": "GUID24872901570",
+    "googleMap": {
       "map": {
         "center": {
           "lat": 42.594129,
