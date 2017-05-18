@@ -196,7 +196,28 @@ export default function (window,document,$,undefined) {
       return a.marker.distance - b.marker.distance;
     });
 
+    data.items = updatePageNumbers(data.items);
+
     return data;
+  }
+
+  function updatePageNumbers(items) {
+    let page = 1,
+      pageTotal = 0;
+    return items.map(function(item){
+      if (item.isActive) {
+        if (pageTotal < maxItems){
+          item.page = page;
+        }
+        else {
+          page += 1;
+          pageTotal = 0;
+          item.page = page;
+        }
+        pageTotal += 1;
+      }
+      return item;
+    });
   }
 
   function removeMarkersFromMap(markers) {
@@ -205,10 +226,10 @@ export default function (window,document,$,undefined) {
     }
   }
 
-  function getMarkers(data, markers) {
+  function getMarkers(data, markers, page) {
     // Get just the markers from our active sorted/filtered data listing.
     let dataMarkers = data.items.filter(function(item) {
-      return item.isActive;
+      return item.isActive && item.page === page;
     }).map(function(item) {
       return item.marker;
     });
