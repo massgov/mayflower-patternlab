@@ -69,15 +69,15 @@ export default function (window,document,$,undefined) {
       }
 
       // Listen for data change event to update markers by place or filters.
-      $locationListing.on("ma:LocationListing:UpdateMarkers", function(e, data, place){
-        console.log('update markers data: ', data);
-        if (place) {
-          updateMapByPlace(data, place, map, markers, false);
+      $locationListing.on("ma:LocationListing:UpdateMarkers", function(e, args){
+        if (args.place) {
+          updateMapByPlace({data: args.data, place: args.place, map: map, markers: markers, page: args.page});
         }
         else {
-          updateMapByMarkers(data, map, markers);
+          updateMapByMarkers({data: args.data, map: map, markers: markers, page: args.page});
         }
       });
+
       // Listen for listing marker recenter command
       $el.on("recenter", function( event, markerIndex ) {
         if(typeof markers[markerIndex] === "undefined") {
@@ -125,46 +125,46 @@ export default function (window,document,$,undefined) {
     return phoneTemp.replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3');
   }
 
-  function updateMapByPlace(data, place, map, markers, radius) {
-    removeMarkersFromMap(markers);
+  function updateMapByPlace(args) {
+    removeMarkersFromMap(args.markers);
 
     // Reset bounds to remove previous search locations.
     let bounds = new google.maps.LatLngBounds(),
       sortedData = [];
 
-    if (place = autocomplete.getPlace()) {
-      sortedData = sortDataAroundPlace(place, data);
+    if (args.place = autocomplete.getPlace()) {
+      sortedData = sortDataAroundPlace(args.place, args.data);
       // Get the location points based on the place value.
-      bounds.extend(place.geometry.location);
+      bounds.extend(args.place.geometry.location);
     }
     else {
       window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
-      sortedData = geocodeAddressString(place, sortDataAroundPlace, data);
+      sortedData = geocodeAddressString(args.place, sortDataAroundPlace, args.data);
     }
 
-    console.log('sortedData: ', sortedData);
-
-    let placeMarkers = getMarkers(sortedData, markers);
+    let page = args.page ? args.page : 1;
+    let placeMarkers = getMarkers(sortedData, args.markers, page);
 
     // If we want to sort + filter within a distance radius
-    if (radius) {
+    if (args.hasOwnProperty('radius')) {
       // Filter down to those locations <= 25 miles away.
-      placeMarkers = filterMarkersByMilesRadius(placeMarkers, radius);
+      placeMarkers = filterMarkersByMilesRadius(placeMarkers, args.radius);
     }
 
     // Add the new markers to the map and set new bounds based on filtered markers.
-    addMarkers(placeMarkers, map, bounds);
+    addMarkers(placeMarkers, args.map, bounds);
 
     $('.js-location-listing').trigger("ma:LocationListing:MarkersSorted", [sortedData]);
   }
 
-  function updateMapByMarkers(data, map, markers) {
-    removeMarkersFromMap(markers);
+  function updateMapByMarkers(args) {
+    removeMarkersFromMap(args.markers);
+    let pageNumber = args.page ? args.page : 1;
     // Reset bounds to remove previous search locations.
     let bounds = new google.maps.LatLngBounds(),
-      filteredMarkers = getMarkers(data, markers);
+      filteredMarkers = getMarkers(args.data, args.markers, pageNumber);
 
-    addMarkers(filteredMarkers, map, bounds);
+    addMarkers(filteredMarkers, args.map, bounds);
     $('.js-location-listing').trigger("ma:LocationListing:MapMarkersUpdated", [filteredMarkers]);
   }
 
@@ -175,7 +175,6 @@ export default function (window,document,$,undefined) {
     // Wrap it in a function so it is not called asynchronously.
     return geocoder.geocode({address: address}, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
-        console.log(results[0]);
         return fn(results[0], arg);
       }
       else {
