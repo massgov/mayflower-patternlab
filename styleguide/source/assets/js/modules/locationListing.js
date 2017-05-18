@@ -66,7 +66,7 @@ export default function (window,document,$,undefined) {
     });
 
     // Populate master data structures.
-    $el.on('ma:LocationListing:MapInitialized', function(e, markers) {
+    $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
       masterData.maxItems = maxItems;
       masterData.resultsHeading = locationListing.resultsHeading;
       masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers);

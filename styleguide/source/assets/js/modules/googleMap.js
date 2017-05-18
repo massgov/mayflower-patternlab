@@ -2,7 +2,7 @@ import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
 
-  // only run this code if there is a google map component on the page
+  // Only run this code if there is a google map component on the page.
   if(!$('.js-google-map').length || typeof googleMapData === 'undefined'){
     return;
   }
@@ -17,8 +17,7 @@ export default function (window,document,$,undefined) {
   window.initMap = function () {
 
     $(".js-google-map").each(function(i) {
-      const $el = $(this),
-        $locationListing = $el.parents('.js-location-listing');
+      const $el = $(this);
 
       // get the maps data
       // this could be replaced with an api
@@ -68,16 +67,6 @@ export default function (window,document,$,undefined) {
         map.fitBounds(bounds);
       }
 
-      // Listen for data change event to update markers by place or filters.
-      $locationListing.on("ma:LocationListing:UpdateMarkers", function(e, args){
-        if (args.place) {
-          updateMapByPlace({data: args.data, place: args.place, map: map, markers: markers, page: args.page});
-        }
-        else {
-          updateMapByMarkers({data: args.data, map: map, markers: markers, page: args.page});
-        }
-      });
-
       // Listen for listing marker recenter command
       $el.on("recenter", function( event, markerIndex ) {
         if(typeof markers[markerIndex] === "undefined") {
@@ -108,7 +97,28 @@ export default function (window,document,$,undefined) {
         marker.bounce();
       });
 
-      $locationListing.trigger('ma:LocationListing:MapInitialized', [markers, map]);
+      $el.trigger('ma:GoogleMap:MapInitialized', [markers, map]);
+
+      /**
+       * Location Listing config, event listeners
+       */
+
+      // Set location listing specific config
+      let $locationListing = $el.parents('.js-location-listing'); // context
+
+      // Set location listing specific listeners, when parent component is initialized.
+      $locationListing.on('ma:LocationListing:ListingInitialized', function() {
+        // Listen for data change event to update markers by place or filters.
+        $locationListing.on("ma:LocationListing:UpdateMarkers", function (e, args) {
+          if (args.place) {
+            updateMapByPlace({data: args.data, place: args.place, map: map, markers: markers, page: args.page});
+          }
+          else {
+            updateMapByMarkers({data: args.data, map: map, markers: markers, page: args.page});
+          }
+        });
+      });
+
     });
   };
 
