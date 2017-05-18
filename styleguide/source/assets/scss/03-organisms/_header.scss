@@ -18,7 +18,25 @@ body {
       min-height: 100%;
     }
   }
+
+  .ma__header__utility-nav--mobile {
+      display: none;
+      visibility: hidden;
+    }
+
+  @media (max-width: 840px) {
+  .ma__header__utility-nav {
+    display: none;
+  }
+
+  .ma__header__utility-nav--mobile, 
+  .ma__utility-nav__items{
+    display: block;
+    visibility: visible;
+  } 
 }
+}
+
 
 .ma__header {
   padding-top: 43px; // height of the util nav
