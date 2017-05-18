@@ -27,5 +27,7 @@
   </div>
 </section>
 <script>
-  var locationListing = {{ locationListing|json_encode|raw }};
+  var locationListing = locationListing || [];
+
+  locationListing.push({{ locationListing|json_encode|raw }});
 </script>

@@ -11,7 +11,7 @@ export default function (window,document,$,undefined) {
 
   let masterData = []; // to preserve state
 
-  $('.js-location-listing').each(function(){
+  $('.js-location-listing').each(function(i){
     let $el = $(this),
       $mapCol = $el.find('.js-location-listing-map'),
       $map = $el.find('.js-google-map');
@@ -19,14 +19,14 @@ export default function (window,document,$,undefined) {
     sticky.init($mapCol);
 
     $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
-      let masterListing = locationListing.imagePromos.items,
+      let masterListing = locationListing[i].imagePromos.items,
         masterListingMarkup = transformLocationListingPromos(masterListing);
 
       // Populate master data structure
-      masterData.maxItems = locationListing.maxItems ? locationListing.maxItems : locationListing.imagePromos.items.length;
-      masterData.resultsHeading = locationListing.resultsHeading;
+      masterData.maxItems = locationListing[i].maxItems ? locationListing[i].maxItems : locationListing[i].imagePromos.items.length;
+      masterData.resultsHeading = locationListing[i].resultsHeading;
       masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers);
-      masterData.pagination = locationListing.pagination;
+      masterData.pagination = locationListing[i].pagination;
       masterData.totalPages = Math.ceil(markers.length / masterData.maxItems);
     });
 
@@ -70,7 +70,6 @@ export default function (window,document,$,undefined) {
       $el.on('ma:LocationListing:Pagination', function (e, target) {
         masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
         renderListingPage({data: masterData, page: target});
-        console.log('on ma:locationListing:UpdateMarkers pagination', masterData);
         $el.trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: target}]);
       });
 
@@ -115,7 +114,6 @@ export default function (window,document,$,undefined) {
       // No filters, sort masterData alphabetically, make all active (i.e. no filter applied).
       let sortedData = sortDataAlphabetically(makeAllActive(masterData));
       renderListingPage({data: sortedData, page: 1});
-      console.log('ma:LocationListing:UpdateMarkers reset', masterData);
       $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: 1}]);
     }
     else {
@@ -136,13 +134,11 @@ export default function (window,document,$,undefined) {
         // Get just the place value from the filters array.
         let place = getFilterValues(filters, 'location'),
           placeData = hasTags ? filteredData : makeAllActive(masterData);
-        console.log('ma:LocationListing:UpdateMarkers hasPlace', placeData);
         $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: placeData, place: place}]);
       }
       else {
         let sortedData = sortDataAlphabetically(filteredData);
         renderListingPage({data: sortedData, page: 1});
-        console.log('ma:LocationListing:UpdateMarkers noPlace', masterData);
         $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData}]);
       }
     }

@@ -12,7 +12,7 @@ export default function (window,document,$,undefined) {
     // Set location listing specific listeners, when parent component is initialized.
     $locationListing.on('ma:LocationListing:ListingInitialized', function() {
       // Set location listing specific placeId.
-      placeId = locationListing.locationFilters.zipcode.inputText.id;
+      placeId = locationListing[i].locationFilters.zipcode.inputText.id;
 
       // Create the google places autocomplete object and associate it with the zip code text input.
       window.autocomplete = new google.maps.places.Autocomplete(document.getElementById(placeId));

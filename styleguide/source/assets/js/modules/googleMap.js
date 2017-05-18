@@ -31,7 +31,7 @@ export default function (window,document,$,undefined) {
       // get the maps data
       // this could be replaced with an api
       const rawData = googleMapData[i];
-      max = (window.locationListing && window.locationListing.maxItems) ? window.locationListing.maxItems : googleMapData[i].markers.length;
+      max = (window.locationListing[i] && window.locationListing[i].maxItems) ? window.locationListing[i].maxItems : googleMapData[i].markers.length;
 
       // *** Create the Map *** //
       // map defaults
@@ -76,8 +76,6 @@ export default function (window,document,$,undefined) {
       // Make the map zoom to fit the bounds, showing all locations.
       map.fitBounds(bounds);
 
-      console.log("Just created: ", map, markers);
-
       $el.on("recenter", function (event, markerIndex) {
         if (typeof markers[markerIndex] === "undefined") {
           return false;
@@ -120,14 +118,11 @@ export default function (window,document,$,undefined) {
 
         // Listen for data change event to update markers by place or filters.
         $locationListing.on("ma:LocationListing:UpdateMarkers", function (e, args) {
-          console.log('ma:LocationListing:UpdateMarkers', args);
-          console.log('original: ', map, markers);
           if (args.place) {
             updateMapByPlace({data: args.data, place: args.place, map: map, markers: markers, page: args.page});
           }
           else {
             updateMapByMarkers({data: args.data, map: map, markers: markers, page: args.page});
-            console.log('original after: ', map, markers);
           }
         });
       });
@@ -180,7 +175,6 @@ export default function (window,document,$,undefined) {
   }
 
   function updateMapByMarkers(args) {
-    console.log('passed: ', args.map, args.markers);
     removeMarkersFromMap(args.markers);
     let pageNumber = args.page ? args.page : 1;
     // Reset bounds to remove previous search locations.
@@ -193,8 +187,6 @@ export default function (window,document,$,undefined) {
     if (filteredMarkers.length === 1) {
       args.map.setZoom(16);
     }
-
-    console.log('after: ', args.map, args.markers);
 
     $('.js-location-listing').trigger("ma:LocationListing:MapMarkersUpdated", [filteredMarkers]);
   }
