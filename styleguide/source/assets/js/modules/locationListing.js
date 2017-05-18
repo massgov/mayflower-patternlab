@@ -12,7 +12,7 @@ export default function (window,document,$,undefined) {
   let maxItems = locationListing.maxItems ? locationListing.maxItems : locationListing.imagePromos.items.length,
     masterListing = locationListing.imagePromos.items,
     masterListingMarkup = transformLocationListingPromos(masterListing),
-    masterData = [];
+    masterData = []; // to preserve state
 
   $('.js-location-listing').each(function(){
     let $el = $(this),
@@ -43,26 +43,35 @@ export default function (window,document,$,undefined) {
     });
 
     // Handle location listings form interaction (triggered by locationFilters.js).
-    $el.on('ma:LocationListing:FormInteraction', function(e, data) {
-        transformData(data);
+    $el.on('ma:LocationListing:FormInteraction', function(e, args) {
+      transformData(args);
     });
 
     // Handle active filter/tag button interactions (triggered by resultsHeading.js).
-    $el.on('ma:LocationListing:ActiveTagInteraction', function(e, data) {
-      transformData(data);
+    $el.on('ma:LocationListing:ActiveTagInteraction', function(e, args) {
+      transformData(args);
     });
 
     // Handle map update, marker sort event (triggered by googleMap.js).
     $el.on('ma:LocationListing:MarkersSorted', function(e, sortedData) {
-      // Render our new sorted location listing.
-      renderListingPage(sortedData);
+      // Render page 1 of our new sorted location listing.
+      renderListingPage({data: sortedData, page: 1});
+    });
+
+    // Handle pagination event, render targetPage
+    $el.on('ma:LocationListing:Pagination', function(e, target) {
+      masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
+      renderListingPage({data: masterData, page: target});
+      $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: target}]);
     });
 
     // Populate master data structures.
     $el.on('ma:LocationListing:MapInitialized', function(e, markers) {
+      masterData.maxItems = maxItems;
       masterData.resultsHeading = locationListing.resultsHeading;
       masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers);
       masterData.pagination = locationListing.pagination;
+      masterData.totalPages = Math.ceil(markers.length / maxItems);
       $el.trigger('ma:LocationListing:ListingInitialized', [masterData]);
     });
   });
@@ -72,6 +81,8 @@ export default function (window,document,$,undefined) {
     let items = [];
     markers.forEach(function (item, index) {
       items[index] = {
+        isActive: true,
+        page: Math.ceil((index+1) / maxItems),
         marker: item,
         markup: markup[item._listingKey],
         promo: listing[item._listingKey]
@@ -92,14 +103,16 @@ export default function (window,document,$,undefined) {
     return listingMarkup;
   }
 
-  function transformData(data) {
-    console.log('transformData: ', data);
-    let filters = data.resultsHeading.tags;
+  function transformData(args) {
+    let filters = getFilters(args);
+    masterData.resultsHeading.tags = filters;
+    masterData.pagination = transformPaginationData({data: masterData, targetPage: 1});
+
     if (!filters.length) {
-      // No filters, sort masterData alphabetically.
-      let sortedData = sortDataAlphabetically(data);
-      $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [sortedData]);
-      renderListingPage(sortedData);
+      // No filters, sort masterData alphabetically, make all active (i.e. no filter applied).
+      let sortedData = sortDataAlphabetically(makeAllActive(masterData));
+      renderListingPage({data: sortedData, page: 1});
+      $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: 1}]);
     }
     else {
       // Determine which filter / sort values are present.
@@ -111,22 +124,78 @@ export default function (window,document,$,undefined) {
       if (hasTags) {
         // Get just the tag values from the filters array.
         let tags = getFilterValues(filters, 'tag');
-        filteredData = filterDataByTags(tags, data);
+        filteredData = filterDataByTags(tags, masterData);
       }
 
       // If place (zip/city/address field) value is present, sort (filtered) master list based on the value.
       if (hasPlace) {
         // Get just the place value from the filters array.
         let place = getFilterValues(filters, 'location'),
-          placeData = hasTags ? filteredData : makeAllActive(data);
-        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [placeData, place]);
+          placeData = hasTags ? filteredData : makeAllActive(masterData);
+        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: placeData, place: place}]);
       }
       else {
         let sortedData = sortDataAlphabetically(filteredData);
-        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [sortedData]);
-        renderListingPage(sortedData);
+        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: sortedData}]);
+        renderListingPage({data: sortedData, page: 1});
       }
     }
+  }
+
+  function transformPaginationData(args) {
+    let transformedData = args.data;
+
+    // Make new page active
+    transformedData.pagination.pages = switchActivePage(transformedData.pagination.pages, getCurrentPage(transformedData.pagination.pages), args.targetPage);
+    return transformedData.pagination;
+  }
+
+  function transformResultsHeading(data) {
+    let firstItem = (Number(data.maxItems) * Number(data.currentPage)) - (Number(data.maxItems) - 1),
+      lastItem = firstItem + (Number(data.pageTotal) - 1);
+
+    data.resultsHeading.totalResults = data.totalActive;
+    data.resultsHeading.numResults = firstItem + " - " + lastItem;
+    return data.resultsHeading;
+  }
+
+  function getCurrentPage(pages) {
+    let currentPage = '';
+    pages.forEach(function(page, index) {
+      if (page.hasOwnProperty('active') && page.active === true) {
+        currentPage = index;
+      }
+    });
+    return currentPage;
+  }
+
+  function switchActivePage(pages, currentPage, targetPage) {
+    pages[currentPage].active = false;
+    pages.forEach(function(page) {
+      if (page.text === targetPage.toString()) {
+        page.active = true;
+      }
+    });
+    return pages;
+  }
+
+  function getFilters(args) {
+    if (args.hasOwnProperty('clearedFilter')) {
+      // Single filter button clicked, so remove that filter from the list.
+      if (args.clearedFilter !== "all") {
+        let filters = masterData.resultsHeading.tags;
+        // Remove the clicked tag from the tags array.
+        return filters.filter(function (tag) {
+          return tag.value !== args.clearedFilter.value;
+        });
+      }
+      else {
+        // Clear all button was clicked so remove all filters.
+        return [];
+      }
+    }
+    // This was a form submission so return the applied filters.
+    return args.filters;
   }
 
   function hasFilter(filters, type) {
@@ -171,7 +240,7 @@ export default function (window,document,$,undefined) {
       return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
     });
 
-    data.items = items;
+    data.items = updatePageNumbers(items);
     return data;
   }
 
@@ -203,27 +272,57 @@ export default function (window,document,$,undefined) {
     });
   }
 
+  function updatePageNumbers(items) {
+    let page = 1,
+      pageTotal = 0;
+    return items.map(function(item){
+      if (item.isActive) {
+        if (pageTotal < maxItems){
+          item.page = page;
+        }
+        else {
+          page += 1;
+          pageTotal = 0;
+          item.page = page;
+        }
+        pageTotal += 1;
+      }
+      return item;
+    });
+  }
+
   // Remove the imagePromos children content on the current location listing page.
   function clearListingPage() {
     $('.js-location-listing-results').find('.ma__image-promos').html('');
   }
 
   // Render new imagePromo items.
-  function renderListingPage(data) {
+  function renderListingPage(args) {
     clearListingPage();
-    let $el = $('.js-location-listing-results').find('.ma__image-promos');
+    let $el = $('.js-location-listing-results').find('.ma__image-promos'),
+      pageTotal = 0,
+      totalActive = 0,
+      data = args.data,
+      page = args.page;
 
-    // Create an array of shown items.
-    data.resultsHeading.shownItems = [];
-
-    data.items.slice(0, maxItems).map(function(item, index){
+    data.items.map(function(item){
       if (item.isActive) {
-        data.resultsHeading.shownItems.push(index);
-        $el.append(item.markup);
+        totalActive += 1;
+        if (item.page === page) {
+          $el.append(item.markup);
+          pageTotal += 1;
+        }
       }
     });
     sticky.init($('.js-location-listing-map'));
 
+    data.currentPage = page;
+    data.totalActive = totalActive;
+    data.pageTotal = pageTotal;
+
+    data.resultsHeading = transformResultsHeading(data);
+
+    masterData = data; // preserve state
     $('.js-location-listing').trigger('ma:LocationListing:ListingsUpdated', [data]);
   }
 

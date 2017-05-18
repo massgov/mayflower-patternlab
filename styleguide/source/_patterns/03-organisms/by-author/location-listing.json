@@ -215,8 +215,8 @@
       }]
     },
     "resultsHeading": {
-      "numResults": "1-12",
-      "totalResults": "108"
+      "numResults": "1-8",
+      "totalResults": "12"
     },
     "imagePromos": {
       "items": [{
@@ -723,7 +723,7 @@
         "text": "Next"
       },
       "prev": {
-        "disabled": false,
+        "disabled": true,
         "text": "Previous"
       },
       "pages": [{
@@ -731,10 +731,7 @@
         "text": "1"
       },{
         "active": false,
-        "text": "spacer"
-      },{
-        "active": false,
-        "text": "3"
+        "text": "2"
       }]
     }
   }

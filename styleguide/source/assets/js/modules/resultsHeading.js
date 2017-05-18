@@ -1,44 +1,66 @@
 import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
+  // Set up global component config
+  let compiledTemplate = getTemplate('locationListingResultsHeading'),
+    el = '.js-results-heading',
+    clearAllButton = 'button.ma__results-heading__clear', // events triggered on parent
+    filterButton = 'button.ma__results-heading__tag'; // events triggered on parent
 
-  // Only run this code if we have a js object from location-listing.twig with location listing data.
-  if (typeof locationListing === "undefined") {
-    return;
-  }
+  $(".js-results-heading").each(function() {
+    const $el = $(this);
 
-  let $locationListing = $('.js-location-listing'),
-    compiledTemplate = getTemplate('locationListingResultsHeading'),
-    resultsHeadingSelector = '.js-results-heading',
-    clearAllButtonSelector = 'button.ma__results-heading__clear',
-    filterButtonSelector = 'button.ma__results-heading__tag';
+    /**
+     * Location Listing config, event listeners
+     */
 
-  // Handle clear all button click + trigger clear all event.
-  $locationListing.on('click', clearAllButtonSelector, function(){
-    // Trigger clear all location listing filters event.
-    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: 'all'}]);
+    // Set location listing specific config
+    let $locationListing = $el.parents('.js-location-listing'); // context
+
+    // Set event listeners on parent component because original DOM nodes will be replaced on render().
+    // Listen for clear all button click + trigger interaction event on parent.
+    $locationListing.on('click', clearAllButton, function () {
+      $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: 'all'}]);
+    });
+    // Listen for single filter button click and trigger interaction event on parent.
+    $locationListing.on('click', filterButton, function (e) {
+      let clearedFilter = {
+        'type': $(e.target).data('ma-filter-type'),
+        'value': $(e.target).data('ma-filter-value'),
+        'text': $(e.target).text()
+      };
+
+      $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: clearedFilter}]);
+    });
+    // Listen for new location listing results load, render new results heading.
+    $locationListing.on('ma:LocationListing:ListingsUpdated', function (e, data) {
+      renderResultsHeading({data: data.resultsHeading, context: $locationListing});
+    });
+
   });
 
-  // Handle single filter button click and trigger single active filter clear event.
-  $locationListing.on('click', filterButtonSelector, function(e){
-    let clearedFilter = {
-      'type': $(e.target).data('ma-filter-type'),
-      'value': $(e.target).data('ma-filter-value'),
-      'text': $(e.target).text()
-    };
+  /**
+   * Renders the contents of a specific results heading component.
+   *
+   * @param args
+   *   The arguments object, can contain the following properties:
+   *      data: data object from which to populate handlebars template variables (required),
+   *      context: the parent component selector
+   */
+  function renderResultsHeading(args) {
+    // Don't attempt to render anything if we don't have new data.
+    if (!args.data) {
+      return;
+    }
 
-    // Trigger the single filter clear event.
-    $locationListing.trigger('ma:LocationListing:ActiveTagInteraction', [{clearedFilter: clearedFilter}]);
-  });
+    // Create new markup using handlebars template, helper.
+    args.data.markup = compiledTemplate(args.data);
 
-  // Listen for new listing page load to create new results heading
-  $locationListing.on('ma:LocationListing:ListingsUpdated', function(e, data){
-    renderResultsHeading(data.resultsHeading);
-  });
-
-  function renderResultsHeading(resultsHeading) {
-    resultsHeading.markup = compiledTemplate(resultsHeading);
-    $locationListing.find(resultsHeadingSelector).replaceWith(resultsHeading.markup);
+    // Populate the appropriate instance.
+    if (args.context) {
+      args.context.find(el).replaceWith(args.data.markup);
+    }
+    else $(el).replaceWith(args.data.markup);
   }
 
 }(window,document,jQuery);
