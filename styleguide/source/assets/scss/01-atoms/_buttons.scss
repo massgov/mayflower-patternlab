@@ -8,6 +8,12 @@ button {
 .ma__button-minor,
 .ma__button-minor-alt {
   @include ma-button("normal");
+
+  .pre-content > &,
+  .post-content > &,
+  .page-content > & {
+    @include ma-component-spacing;
+  }
 }
 
 .ma__button--small,
@@ -15,27 +21,4 @@ button {
 .ma__button-minor--small,
 .ma__button-minor-alt--small {
   @include ma-button("small");
-}
-
-.ma__button-search {
-  border: 2px solid;
-  display: inline-block;
-  letter-spacing: .1em;
-  min-height: 46px;
-  padding: 0 14px;
-  text-transform: uppercase;
-  transition: background-color .4s, color .4s, border .4s, fill .4s;
-  white-space: nowrap;
-
-  span,
-  & > svg {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  & > svg {
-    height: 20px;
-    transition: fill .4s;
-    width: 20px;
-  }
 }

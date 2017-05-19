@@ -1,5 +1,15 @@
 .ma__social-links {
 
+  .ma__page-header__widgets & {
+
+    &:first-child {
+      @media ($bp-large-min) {
+        padding-top: 20px;
+      }
+    }
+
+  }
+
   &__label {
     display: inline-block;
     font-size: 16px;

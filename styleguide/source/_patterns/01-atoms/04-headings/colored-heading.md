@@ -19,7 +19,7 @@ coloredHeading {
     text: 
         type: string / required
     color:
-        type: string ('green')
+        type: string ('','green')
 }
 ~~~
 
