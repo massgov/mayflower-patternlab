@@ -3,4 +3,15 @@
   &__label {
     font-weight: 600;
   }
+
+  &__link {
+
+    &[data-social-share = blog] > svg path {
+      fill: $c-theme-secondary;
+    }
+
+    &[data-social-share = email] > svg path {
+      fill: $c-theme-secondary;
+    }
+  }
 }
