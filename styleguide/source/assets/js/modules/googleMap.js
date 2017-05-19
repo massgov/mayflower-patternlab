@@ -53,7 +53,7 @@ export default function (window,document,$,undefined) {
       // Initialize all markers, add up to max to the map
       for (let key in rawData.markers) {
         if (rawData.markers.hasOwnProperty(key)) {
-          let markerData = Object.assign({
+          let markerData = {
             position: new google.maps.LatLng({
               lat: rawData.markers[key].position.lat,
               lng: rawData.markers[key].position.lng
@@ -61,7 +61,7 @@ export default function (window,document,$,undefined) {
             label: rawData.markers[key].label,
             infoWindow: rawData.markers[key].infoWindow,
             _listingKey: key // relationship key between markers + listings
-          });
+          };
 
           let marker = new google.maps.Marker(markerData);
 

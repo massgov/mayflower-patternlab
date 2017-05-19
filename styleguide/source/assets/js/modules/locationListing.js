@@ -112,7 +112,7 @@ export default function (window,document,$,undefined) {
     // Get template for location listing (organisms > imagePromo)
     let compiledTemplate = getTemplate('locationListingRow');
     let listingMarkup = [];
-    promos.map(function (data, index) {
+    promos.forEach(function (data, index) {
       let promoData = promoTransform(data);
       listingMarkup[index] = compiledTemplate(promoData);
     });
