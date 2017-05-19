@@ -47,10 +47,14 @@
     }
   }
 
+  &__details {
+    padding: 2px 0 4px;
+  }
+
   &__date,
   &__org {
-    font-size: 1.125rem;
-    line-height: 2.125rem;
+    font-size: 18px;
+    line-height: 1;
     margin-bottom: 1em;
   }
 
