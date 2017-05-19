@@ -31,7 +31,7 @@ export default function (window,document,$,undefined) {
     $(".js-google-map").each(function(i) {
       const $el = $(this);
       // @todo consider adding maxItems property to googleMap data structure
-      max = (window.locationListing[i] && window.locationListing[i].maxItems) ? window.locationListing[i].maxItems : googleMapData[i].markers.length;
+      max = (window.locationListing && window.locationListing[i].maxItems) ? window.locationListing[i].maxItems : googleMapData[i].markers.length;
 
       // Get the maps data (this could be replaced with an api)
       const rawData = googleMapData[i]; // Data object created in @molecules/google-map.twig
