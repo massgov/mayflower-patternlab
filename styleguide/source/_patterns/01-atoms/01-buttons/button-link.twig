@@ -9,6 +9,9 @@
   {% set buttonClass = buttonClass ~ "-" ~ buttonLink.theme %}
 {% endif %}
 
-<a href="{{ buttonLink.href }}" class="{{ buttonClass }} {{ buttonClassSize }}">
+<a 
+  href="{{ buttonLink.href }}" 
+  class="{{ buttonClass }} {{ buttonClassSize }}"
+  title="{{ buttonLink.info }}">
 	{{ buttonLink.text }}
 </a>
