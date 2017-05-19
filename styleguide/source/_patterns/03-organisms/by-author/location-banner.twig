@@ -1,26 +1,25 @@
+{% set locationBannerId = locationBanner.id ? locationBanner.id : 'banner-id' %}
+
 <section class="ma__location-banner">
   <style>
-    #GUID24872901570 {
-      background-image: url('{{locationBanner.bgNarrow}}');
+    #{{ locationBannerId }} {
+      background-image: url('{{ locationBanner.bgNarrow }}');
     }
     
     @media (min-width: 801px) {
-      #GUID24872901570 {
-        background-image: url('{{locationBanner.bgWide}}');
+      #{{ locationBannerId }} {
+        background-image: url('{{ locationBanner.bgWide }}');
       }
     }
   </style>
   <div class="ma__location-banner__map">
-    {% set googleMap = locationBanner.actionMap %}
+    {% set googleMap = locationBanner.actionMap ? locationBanner.actionMap : locationBanner.googleMap %}
     {% include "@molecules/google-map.twig" %}
   </div>
   <div 
     class="ma__location-banner__image" 
-    id="GUID24872901570"
+    id="{{ locationBannerId }}"
     role="image"
-    title="{{locationBanner.bgTitle}}">
+    title="{{ locationBanner.bgTitle }}">
   </div>
-{% if schemaPageType %}
-  <meta property="image" src="{{locationBanner.bgNarrow}}" alt="{{locationBanner.bgTitle}}" />
-{% endif %}
 </section>

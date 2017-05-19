@@ -20,6 +20,7 @@ body {
   }
 }
 
+
 .ma__header {
   padding-top: 43px; // height of the util nav
   position: relative;
@@ -300,10 +301,20 @@ body {
 
   &__utility-nav {
 
-    @media ($bp-header-toggle-min){
+    &--narrow {
+      @media ($bp-header-toggle-min){
+        display: none;
+      }
+    }
+
+    &--wide {
       position: absolute;
         top: 0;
       width: 100%;
+
+      @media ($bp-header-toggle-max) {
+        display: none;
+      }
     }
   }
 

@@ -11,7 +11,7 @@
 
   &__event-image {
     
-    @media ($bp-x-small-min) {
+    @media ($bp-small-min) {
       // @include span-columns(4 of 8);
       float: right;
       font-size: 0;
