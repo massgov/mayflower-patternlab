@@ -18,23 +18,6 @@ body {
       min-height: 100%;
     }
   }
-
-  .ma__header__utility-nav--mobile {
-      display: none;
-      visibility: hidden;
-    }
-
-  @media (max-width: 840px) {
-  .ma__header__utility-nav {
-    display: none;
-  }
-
-  .ma__header__utility-nav--mobile, 
-  .ma__utility-nav__items{
-    display: block;
-    visibility: visible;
-  } 
-}
 }
 
 
@@ -318,10 +301,20 @@ body {
 
   &__utility-nav {
 
+    &--narrow {
     @media ($bp-header-toggle-min){
+      display: none;
+    }
+  }
+
+    &--wide {
       position: absolute;
         top: 0;
       width: 100%;
+
+      @media ($bp-header-toggle-max) {
+        display: none;
+      }
     }
   }
 
