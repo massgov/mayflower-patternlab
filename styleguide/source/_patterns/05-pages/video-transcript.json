@@ -1,30 +1,11 @@
 {
   "pageHeader": {
-    "category": "",
+    "category": "transcript",
     "divider": false,
     "title": "Governor Baker Delivers State of the Commonwealth Address",
     "subTitle": "",
     "headerTags": null,
-
-    "socialLinks": {
-      "label": "Share:",
-      "items": [{
-        "altText": "Follow us on Facebook",
-        "href": "#",
-        "icon": "@atoms/05-icons/svg-facebook.twig",
-        "linkType": "facebook"
-      },{
-        "altText": "Follow us on Twitter",
-        "href": "#",
-        "icon": "@atoms/05-icons/svg-twitter.twig",
-        "linkType": "twitter"
-      },{
-        "altText": "Follow us on LinkedIn",
-        "href": "#",
-        "icon": "@atoms/05-icons/svg-linkedin.twig",
-        "linkType": "linkedin"
-      }]
-    },
+    "socialLinks": null,
     "optionalContents": null,
     "widgets": null
   },
@@ -38,13 +19,12 @@
     "position": ""
   },
 
-  "buttonLink":{
-    "text":"Back to previous page",
-    "href":"#",
-    "info": "",
-    "size": "small",
-    "theme": "",
-    "outline": false
+  "backButton": {
+    "link": {
+      "href": "#",
+      "text": "Back to previous page",
+      "info": "Back to page about Blah"
+    }
   },
 
   "richText": {
@@ -52,7 +32,7 @@
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
-          "text": "<b>BOSTON</b> &mdash; Today, Governor Charlie Baker delivers his first State of the Commonwealth address from the House Chamber of the Massachusetts State House. Remarks as prepared for delivery:"
+          "text": "Today, Governor Charlie Baker delivers his first State of the Commonwealth address from the House Chamber of the Massachusetts State House. Remarks as prepared for delivery:"
         }
       }
     },{
