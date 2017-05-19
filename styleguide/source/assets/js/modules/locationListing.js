@@ -9,7 +9,7 @@ export default function (window,document,$,undefined) {
     return;
   }
 
-  let masterData = []; // to preserve state
+  let masterData = []; // master data structure to preserve state
 
   $('.js-location-listing').each(function(i){
     let $el = $(this),
@@ -18,7 +18,9 @@ export default function (window,document,$,undefined) {
 
     sticky.init($mapCol);
 
+    // Listen for map initialization, populate master data structure using locationListing, markers.
     $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
+      // Get the listing imagePromos, generate markup for each
       let masterListing = locationListing[i].imagePromos.items,
         masterListingMarkup = transformLocationListingPromos(masterListing);
 
@@ -36,7 +38,7 @@ export default function (window,document,$,undefined) {
       $el.on('click', '.js-location-listing-link', function (e) {
         let index = $(e.currentTarget).index();
         // trigger map to recenter on this item based on it's index.
-        $map.trigger('recenter', index);
+        $map.trigger('ma:GoogleMap:MapRecenter', index);
         // mark this link as active
         $el.find('.js-location-listing-link.is-active').removeClass('is-active');
         $(e.currentTarget).addClass('is-active'); // in case the event is triggered on a child element.
@@ -50,7 +52,7 @@ export default function (window,document,$,undefined) {
 
         let index = $(e.currentTarget).index();
         // trigger map to recenter on this item and make the marker bounce
-        $map.trigger('bounce', index);
+        $map.trigger('ma:GoogleMap:MarkerBounce', index);
       });
 
       // Handle location listings form interaction (triggered by locationFilters.js).
