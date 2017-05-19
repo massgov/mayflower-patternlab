@@ -9,7 +9,7 @@ export default function (window,document,$,undefined) {
 
   // Initialize global (at component scope) map properties
   let max = false, // Maximum number of map markers per map, can be updated instance
-    mapInitialized = false; // Flag to set to trigger clearInterval(checkForGoogleMaps)
+    mapsInitialized = false; // Flag to set to trigger clearInterval(checkForGoogleMaps)
 
   /**
    * Test for presence of google maps default library (without geocode, places, etc.) until we find it.
@@ -17,15 +17,15 @@ export default function (window,document,$,undefined) {
    * @todo set up config to pull in dynamic api key
    */
   let checkForGoogleMaps = setInterval(function() {
-    if (window.google && window.google.maps && !mapInitialized) {
-      initMap();
+    if (window.google && window.google.maps && !mapsInitialized) {
+      initMaps();
     }
   }, 100);
 
   // Initialize the map
-  function initMap () {
+  function initMaps () {
     // Stop checking for google maps library.
-    mapInitialized = true;
+    mapsInitialized = true;
     clearInterval(checkForGoogleMaps);
 
     $(".js-google-map").each(function(i) {
@@ -121,20 +121,15 @@ export default function (window,document,$,undefined) {
       // Set location listing specific config, listeners
       let $locationListing = $el.parents('.js-location-listing');
       $locationListing.on('ma:LocationListing:ListingInitialized', function() {
-        // Listen for data change event to update markers by place or filters.
+        // Listen for data change event to update markers by filters.
         $locationListing.on("ma:LocationListing:UpdateMarkers", function (e, args) {
-          // Is address information set to sort around
-          if (args.place) {
-            // Set up google geocoder class to translate street address -> geolocation data
-            window.geocoder = new google.maps.Geocoder();
-            // Update map by sorting markers by proximity to place, then broadcast the order.
-            updateMapByPlace({data: args.data, place: args.place, map: map, markers: markers, page: args.page});
-          }
-          // No address information
-          else {
-            // Update map based on pre-sorted markers order
-            updateMapByMarkers({data: args.data, map: map, markers: markers, page: args.page});
-          }
+          // Update map based on pre-sorted markers order
+          updateMapByMarkers({
+            dataMarkers: args.markers,
+            map: map,
+            markers: markers,
+            place: args.place ? args.place : false
+          });
         });
       });
     });
@@ -228,83 +223,32 @@ export default function (window,document,$,undefined) {
    * Location listing specific map helper functions
    */
 
+
   /**
-   * Renders a new map, with markers sorted by proximity to address argument (1 of 2 main map updates).
+   * Renders a new map, with markers  reference to passed marker order and length.
    *
    * @param args
    *  arguments object:
    *    {
-   *      data: args.data, // transformed instance of location listing masterData
+   *      dataMarkers: args.markers, // sorted array of markers by witch to sort and filter master markers
+   *      map: map, // initialized map instance
+   *      markers: markers, // master list of markers (relates to location listing master data on _listingKey)
    *      place: args.place, // location filter place input
-   *      map: map, // initialized map instance
-   *      markers: markers, // master list of markers (relates to location listing master data on _listingKey)
-   *      radius: args.radius, // (optional) number of miles to filter results by,
-   *      page: args.page // (optional) current "page" of makers which should be rendered, defaults to 1
-   *    }
-   */
-  function updateMapByPlace(args) {
-    removeMarkersFromMap(args.markers);
 
-    // Reset bounds to remove previous search locations.
-    let bounds = new google.maps.LatLngBounds(),
-      sortedData = [];
-
-    // If place argument is was selected from locationFilter autocomplete
-    if (args.place = autocomplete.getPlace()) {
-      // Sort the markers and instance of locationListing masterData.
-      sortedData = sortDataAroundPlace(args.place, args.data);
-      // Get the location points based on the place value.
-      bounds.extend(args.place.geometry.location);
-    }
-    else {
-      // If place argument was populated from locationFilter but not selected from Place autocomplete.
-      window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
-      // Geocode the address, then sort the markers and instance of locationListing masterData.
-      sortedData = geocodeAddressString(args.place, sortDataAroundPlace, args.data);
-    }
-
-    // Default to first "page" of markers unless another was passed from location listing pagination.
-    let page = args.page ? args.page : 1;
-
-    // Get only the needed markers.
-    let  placeMarkers = getMarkers(sortedData, args.markers, page);
-
-    // If we want to sort + filter within a distance radius
-    if (args.hasOwnProperty('radius')) {
-      // Filter down to only those markers <= args.radius miles away.
-      placeMarkers = filterMarkersByMilesRadius(placeMarkers, args.radius);
-    }
-
-    // Add the new markers to the map and set new bounds based on filtered markers.
-    addMarkers(placeMarkers, args.map, bounds);
-
-    // Trigger markers sorted event and broadcast sorted data (used to update location listing image promos).
-    $('.js-location-listing').trigger("ma:LocationListing:MarkersSorted", [sortedData]);
-  }
-
-  /**
-   * Renders a new map, with markers sorted by proximity to address argument (2 of 2 main map updates).
-   *
-   * @param args
-   *  arguments object:
-   *    {
-   *      data: args.data, // transformed instance of location listing masterData
-   *      map: map, // initialized map instance
-   *      markers: markers, // master list of markers (relates to location listing master data on _listingKey)
-   *      page: args.page // (optional) current "page" of makers which should be rendered, defaults to 1
    *    }
    */
   function updateMapByMarkers(args) {
     removeMarkersFromMap(args.markers);
 
-    // Default to first "page" of markers unless another was passed from location listing pagination.
-    let pageNumber = args.page ? args.page : 1;
-
     // Reset bounds to remove previous search locations.
     let bounds = new google.maps.LatLngBounds();
+    if (args.place && autocomplete.getPlace()) {
+      // Ensure the map includes the provided location based on the place value.
+      bounds.extend(args.place.geometry.location);
+    }
 
     // Filter the markers based on pre-sorted, flagged location listing instance of masterData.
-    let filteredMarkers = getMarkers(args.data, args.markers, pageNumber);
+    let filteredMarkers = getActiveMarkers({dataMarkers: args.dataMarkers, markers: args.markers});
 
     // Add the new markers to the map and set new bounds based on filtered markers.
     addMarkers(filteredMarkers, args.map, bounds);
@@ -316,95 +260,6 @@ export default function (window,document,$,undefined) {
 
     // Trigger markers updated event and broadcast filtered markers.
     $('.js-location-listing').trigger("ma:LocationListing:MapMarkersUpdated", [filteredMarkers]);
-  }
-
-  /**
-   * Geocodes an address string arg and executes callback upon successful return.
-   *
-   * @param address
-   *   Address string to be geocoded.
-   * @param callback
-   *   Callback function to execute (with callbackArg).
-   * @param callbackArg
-   *   Argument to pass to callback.
-   *
-   * @returns {*}
-   *   Upon success, the return value of the passed callback function.
-   */
-  function geocodeAddressString(address, callback, callbackArg) {
-    // Only attempt to execute if google's geocode library is loaded.
-    if (typeof window.geocoder === "undefined") {
-      return;
-    }
-    // Geocode address string, then execute callback with argument upon success.
-    return geocoder.geocode({address: address}, function (results, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-        return callback(results[0], callbackArg);
-      }
-      else {
-        console.warn('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-
-  /**
-   * Returns instance of location listing masterData, sorted proximity to place on marker._listingKey.
-   * // @todo consider keeping this functionality in locationlisting.js prior to rendering
-   *
-   * @param place
-   *   The geocode information by which to sort.
-   * @param data
-   *   The instance of location listing masterData.
-   * @returns {*}
-   *   Sorted instance of location listing masterData.
-   */
-  function sortDataAroundPlace(place, data) {
-    // Get all existing marker distance from place, assign as marker property.
-    for (let key in data.items) {
-      if (data.items.hasOwnProperty(key)) {
-        data.items[key].marker.distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, data.items[key].marker.getPosition());
-      }
-    }
-
-    // Sort existing markers by closest to the place.
-    data.items.sort(function (a, b) {
-      return a.marker.distance - b.marker.distance;
-    });
-
-    // Update each location listing item's page number based on new marker sort order.
-    data.items = updatePageNumbers(data.items);
-
-    // Return the newly sorted instance of location listing masterData.
-    return data;
-  }
-
-  /**
-   * Returns location listing masterData.items with updated page information.
-   * // @todo consider keeping this functionality in locationlisting.js prior to rendering
-   *
-   * @param items
-   *   The location listing masterData.items to be sorted.
-   *
-   * @return
-   *   The sorted location listing masterData.items.
-   */
-  function updatePageNumbers(items) {
-    let page = 1,
-      pageTotal = 0;
-    return items.map(function(item){
-      if (item.isActive) {
-        if (pageTotal < max){
-          item.page = page;
-        }
-        else {
-          page += 1;
-          pageTotal = 0;
-          item.page = page;
-        }
-        pageTotal += 1;
-      }
-      return item;
-    });
   }
 
   /**
@@ -421,7 +276,6 @@ export default function (window,document,$,undefined) {
 
   /**
    * Returns the markers which correspond to a given "page" of a given instance of location listing masterData.
-   * // @todo update this to only take array of dataMarkers
    *
    * @param data
    *   Given instance of location listing masterData.
@@ -430,13 +284,9 @@ export default function (window,document,$,undefined) {
    * @param page
    *   Given page of data items by which to get markers.
    */
-  function getMarkers(data, markers, page) {
-    // Get just the markers from our active sorted/filtered data listing.
-    let dataMarkers = data.items.filter(function(item) {
-      return item.isActive && item.page === page;
-    }).map(function(item) {
-      return item.marker;
-    });
+  function getActiveMarkers(args) {
+    let dataMarkers = args.dataMarkers,
+      markers = args.markers;
 
     // @todo initialize the data listing markers with infowindow and listeners instead of this
     // Sort the existing map markers, based on the order of the markers in the data listing.
@@ -480,31 +330,6 @@ export default function (window,document,$,undefined) {
 
     // Make the map zoom to fit the bounds, showing all locations.
     map.fitBounds(bounds);
-  }
-
-  /**
-   * Converts a given number of meters to miles.
-   *
-   * @param meters
-   * @returns {number}
-   *  Corresponding number of miles.
-   */
-  function convertMetersToMiles(meters) {
-    return meters * 0.000621371192;
-  }
-
-  /**
-   * Filters map markers by a given radius.
-   *
-   * @param markers
-   *   Markers to be filtered.
-   * @param radius
-   *   Radius (in meters) by which to filter.
-   */
-  function filterMarkersByMilesRadius(markers, radius) {
-    return markers.filter(function(marker){
-      return Math.round(convertMetersToMiles(marker.distance)) <= radius;
-    });
   }
 
 }(window,document,jQuery);

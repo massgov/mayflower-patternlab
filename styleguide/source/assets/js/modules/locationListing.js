@@ -4,13 +4,6 @@ import getSvgFromPath from "../helpers/getSvgFromPath.js"
 
 export default function (window,document,$,undefined) {
 
-  // Only run this code if we have a js object from location-listing.twig with location listing data.
-  if (typeof locationListing === "undefined") {
-    return;
-  }
-
-  let masterData = []; // master data structure to preserve state
-
   $('.js-location-listing').each(function(i){
     let $el = $(this),
       $mapCol = $el.find('.js-location-listing-map'),
@@ -18,21 +11,15 @@ export default function (window,document,$,undefined) {
 
     sticky.init($mapCol);
 
+    // Get the location listing component data (this could be replaced with an api)
+    const rawData = locationListing[i]; // Data object created in @organisms/by-author/location-listing.twig
+    let masterData = []; // master data structure to preserve state
+
     // Listen for map initialization, populate master data structure using locationListing, markers.
     $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
-      // Get the listing imagePromos, generate markup for each
-      let masterListing = locationListing[i].imagePromos.items,
-        masterListingMarkup = transformLocationListingPromos(masterListing);
-
-      // Populate master data structure
-      masterData.maxItems = locationListing[i].maxItems ? locationListing[i].maxItems : locationListing[i].imagePromos.items.length;
-      masterData.resultsHeading = locationListing[i].resultsHeading;
-      masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers);
-      masterData.pagination = locationListing[i].pagination;
-      masterData.totalPages = Math.ceil(markers.length / masterData.maxItems);
+      masterData = populateMasterDataSource(rawData, markers); // to preserve state
     });
-
-
+    
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function(){
       // Set up click, hover handlers for location listing rows.
       $el.on('click', '.js-location-listing-link', function (e) {
@@ -56,23 +43,27 @@ export default function (window,document,$,undefined) {
       });
 
       // Handle location listings form interaction (triggered by locationFilters.js).
-      $el.on('ma:LocationListing:FormInteraction', function (e, args) {
-        transformData(args);
+      $el.on('ma:LocationListing:FormInteraction', function (e, formValues) {
+        let transformation = transformData(masterData, formValues);
+        masterData = transformation.data; // preserve state
+        $el.trigger('ma:LocationListing:UpdateMarkers', [{markers: transformation.markers}]);
       });
+
       // Handle active filter/tag button interactions (triggered by resultsHeading.js).
-      $el.on('ma:LocationListing:ActiveTagInteraction', function (e, args) {
-        transformData(args);
+      $el.on('ma:LocationListing:ActiveTagInteraction', function (e, clearedFilter) {
+        let transformation = transformData(masterData, clearedFilter);
+        masterData = transformation.data; // preserve state
+        $el.trigger('ma:LocationListing:UpdateMarkers', [{markers: transformation.markers}]);
       });
-      // Handle map update, marker sort event (triggered by googleMap.js).
-      $el.on('ma:LocationListing:MarkersSorted', function (e, sortedData) {
-        // Render page 1 of our new sorted location listing.
-        renderListingPage({data: sortedData, page: 1});
-      });
+
       // Handle pagination event, render targetPage
       $el.on('ma:LocationListing:Pagination', function (e, target) {
         masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
+        masterData.resultsHeading = transformResultsHeading({data: masterData, page: target});
         renderListingPage({data: masterData, page: target});
-        $el.trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: target}]);
+
+        let markers = getActiveMarkers({data: masterData, page: target});
+        $el.trigger('ma:LocationListing:UpdateMarkers', [{markers: markers, page: target}]);
       });
 
       // Trigger location listing initialization event.
@@ -80,13 +71,34 @@ export default function (window,document,$,undefined) {
     });
   });
 
+  /**
+   * Master data initialization.
+   */
+
+  function populateMasterDataSource(listing, markers) {
+    let masterData = [];
+
+    // Get the listing imagePromos, generate markup for each
+    let masterListing = listing.imagePromos.items,
+      masterListingMarkup = transformLocationListingPromos(masterListing);
+
+    // Populate master data structure
+    masterData.maxItems = listing.maxItems ? listing.maxItems : listing.imagePromos.items.length;
+    masterData.resultsHeading = listing.resultsHeading;
+    masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers, masterData.maxItems);
+    masterData.pagination = listing.pagination;
+    masterData.totalPages = Math.ceil(markers.length / masterData.maxItems);
+
+    return masterData;
+  }
+
   // Create a master data source with listing information and markup.
-  function getMasterListingWithMarkupAndMarkers(listing, markup, markers) {
+  function getMasterListingWithMarkupAndMarkers(listing, markup, markers, max) {
     let items = [];
     markers.forEach(function (item, index) {
       items[index] = {
         isActive: true,
-        page: Math.ceil((index+1) / masterData.maxItems),
+        page: Math.ceil((index+1) / max),
         marker: item,
         markup: markup[item._listingKey],
         promo: listing[item._listingKey]
@@ -107,60 +119,116 @@ export default function (window,document,$,undefined) {
     return listingMarkup;
   }
 
-  function transformData(args) {
-    let filters = getFilters(args);
-    masterData.resultsHeading.tags = filters;
-    masterData.pagination = transformPaginationData({data: masterData, targetPage: 1});
 
-    if (!filters.length) {
-      // No filters, sort masterData alphabetically, make all active (i.e. no filter applied).
-      let sortedData = sortDataAlphabetically(makeAllActive(masterData));
-      renderListingPage({data: sortedData, page: 1});
-      $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData, page: 1}]);
-    }
-    else {
-      // Determine which filter / sort values are present.
-      let hasPlace = hasFilter(filters, 'location'),
-        hasTags = hasFilter(filters, 'tag'),
-        filteredData = [];
+  /**
+   * Master data transformation.
+   */
 
-      // If tag filter is present, filter the master list based on current tag values.
-      if (hasTags) {
-        // Get just the tag values from the filters array.
-        let tags = getFilterValues(filters, 'tag');
-        filteredData = filterDataByTags(tags, masterData);
-      }
+  function transformData(data, transformation) {
+    let filteredData = filterListingData(data, transformation),
+      sortedData = sortDataAlphabetically(filteredData);
 
-      // If place (zip/city/address field) value is present, sort (filtered) master list based on the value.
-      if (hasPlace) {
-        // Get just the place value from the filters array.
-        let place = getFilterValues(filters, 'location'),
-          placeData = hasTags ? filteredData : makeAllActive(masterData);
-        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: placeData, place: place}]);
+    if (hasFilter(filteredData.resultsHeading.tags, 'location')) {
+      let place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
+      // If place argument is was selected from locationFilter autocomplete
+      if (autocomplete.getPlace()) {
+        place = autocomplete.getPlace();
+        // Sort the markers and instance of locationListing masterData.
+        sortedData = sortDataAroundPlace(place, filteredData);
       }
       else {
-        let sortedData = sortDataAlphabetically(filteredData);
-        renderListingPage({data: sortedData, page: 1});
-        $('.js-location-listing').trigger('ma:LocationListing:UpdateMarkers', [{data: masterData}]);
+        // If place argument was populated from locationFilter but not selected from Place autocomplete.
+        window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
+        // Geocode the address, then sort the markers and instance of locationListing masterData.
+        sortedData = geocodeAddressString(place, sortDataAroundPlace, filteredData);
       }
+    }
+
+    sortedData.resultsHeading = transformResultsHeading({data: sortedData});
+    renderListingPage({data: sortedData});
+
+    let markers = getActiveMarkers({data: sortedData});
+
+    // Preserve state of current data
+    return {
+      data: sortedData,
+      markers: markers
+    };
+  }
+
+  function filterListingData(data, filterData) {
+    let filters = transformActiveTagsData({data: data, filterData: filterData});
+    data.resultsHeading.tags = filters;
+    data.pagination = transformPaginationData({data: data});
+
+    // If tag (checkbox) filter is present, filter based on current tag values.
+    if (hasFilter(filters, 'tag')) {
+      // Get just the tag values from the filters array.
+      let tags = getFilterValues(filters, 'tag');
+      // Identify active data based on filter
+      return filterDataByTags(tags, data);
+    }
+
+    // Either there are no filters or the only active filter is location, make all items active
+    return makeAllActive(data);
+  }
+
+  /**
+   * Returns the markers which correspond to a given "page" of location listing data.
+   */
+  function getActiveMarkers(args) {
+    let data = args.data,
+      page = args.page ? args.page : 1;
+
+    // Get just the markers from our active sorted/filtered data listing.
+    return data.items.filter(function(item) {
+      return item.isActive && item.page === page;
+    }).map(function(item) {
+      return item.marker;
+    });
+  }
+
+  function transformActiveTagsData(args) {
+    if (args.filterData.hasOwnProperty('clearedFilter')) {
+      return getActiveFilters(args.data, args.filterData); // This was an active tag interaction
+    }
+    else {
+      return args.filterData.filters; // This was a form submission so return the applied filters.
     }
   }
 
   function transformPaginationData(args) {
-    let transformedData = args.data;
+    let data = args.data;
+    let targetPage = args.targetPage ? args.targetPage : 1; // default to first page if none passed
 
     // Make new page active
-    transformedData.pagination.pages = switchActivePage(transformedData.pagination.pages, getCurrentPage(transformedData.pagination.pages), args.targetPage);
-    return transformedData.pagination;
+    data.pagination.pages = switchActivePage(data.pagination.pages, getCurrentPage(data.pagination.pages), targetPage);
+    return data.pagination;
   }
 
-  function transformResultsHeading(data) {
-    let firstItem = (Number(data.maxItems) * Number(data.currentPage)) - (Number(data.maxItems) - 1),
-      lastItem = firstItem + (Number(data.pageTotal) - 1);
+  function transformResultsHeading(args) {
 
-    data.resultsHeading.totalResults = data.totalActive;
-    data.resultsHeading.numResults = firstItem + " - " + lastItem;
-    return data.resultsHeading;
+    let pageTotal = 0,
+      totalActive = 0,
+      page = args.page ? args.page : 1,
+      data = args.data,
+      resultsHeading = data.resultsHeading; // preserve active resultsHeading.tags
+
+    data.items.map(function(item){
+      if (item.isActive) {
+        totalActive += 1;
+        if (item.page === page) {
+          pageTotal += 1;
+        }
+      }
+    });
+
+    let firstItem = (Number(data.maxItems) * Number(page)) - (Number(data.maxItems) - 1),
+      lastItem = firstItem + (Number(pageTotal) - 1);
+
+    resultsHeading.totalResults = totalActive;
+    resultsHeading.numResults = firstItem + " - " + lastItem;
+    return resultsHeading;
   }
 
   function getCurrentPage(pages) {
@@ -183,23 +251,19 @@ export default function (window,document,$,undefined) {
     return pages;
   }
 
-  function getFilters(args) {
-    if (args.hasOwnProperty('clearedFilter')) {
-      // Single filter button clicked, so remove that filter from the list.
-      if (args.clearedFilter !== "all") {
-        let filters = masterData.resultsHeading.tags;
-        // Remove the clicked tag from the tags array.
-        return filters.filter(function (tag) {
-          return tag.value !== args.clearedFilter.value;
-        });
-      }
-      else {
-        // Clear all button was clicked so remove all filters.
-        return [];
-      }
+  function getActiveFilters(data, filterData) {
+    // Single filter button clicked, so remove that filter from the list.
+    if (filterData.clearedFilter !== "all") {
+      let filters = data.resultsHeading.tags;
+      // Remove the clicked tag from the tags array.
+      return filters.filter(function (tag) {
+        return tag.value !== filterData.clearedFilter.value;
+      });
     }
-    // This was a form submission so return the applied filters.
-    return args.filters;
+    else {
+      // Clear all button was clicked so remove all filters.
+      return [];
+    }
   }
 
   function hasFilter(filters, type) {
@@ -244,8 +308,67 @@ export default function (window,document,$,undefined) {
       return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
     });
 
-    data.items = updatePageNumbers(items);
+    data.items = paginateItems(items, data.maxItems);
     return data;
+  }
+
+  /**
+   * Returns instance of location listing masterData, sorted proximity to place on marker._listingKey.
+   *
+   * @param place
+   *   The geocode information by which to sort.
+   * @param data
+   *   The instance of location listing masterData.
+   * @returns {*}
+   *   Sorted instance of location listing masterData.
+   */
+  function sortDataAroundPlace(place, data) {
+    // Get all existing marker distance from place, assign as marker property.
+    for (let key in data.items) {
+      if (data.items.hasOwnProperty(key)) {
+        data.items[key].marker.distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, data.items[key].marker.getPosition());
+      }
+    }
+
+    // Sort existing markers by closest to the place.
+    data.items.sort(function (a, b) {
+      return a.marker.distance - b.marker.distance;
+    });
+
+    // Update each location listing item's page number based on new marker sort order.
+    data.items = paginateItems(data.items, data.maxItems);
+
+    // Return the newly sorted instance of location listing masterData.
+    return data;
+  }
+
+  /**
+   * Geocodes an address string arg and executes callback upon successful return.
+   *
+   * @param address
+   *   Address string to be geocoded.
+   * @param callback
+   *   Callback function to execute (with callbackArg).
+   * @param callbackArg
+   *   Argument to pass to callback.
+   *
+   * @returns {*}
+   *   Upon success, the return value of the passed callback function.
+   */
+  function geocodeAddressString(address, callback, callbackArg) {
+    // Only attempt to execute if google's geocode library is loaded.
+    if (typeof window.geocoder === "undefined") {
+      return;
+    }
+    // Geocode address string, then execute callback with argument upon success.
+    return geocoder.geocode({address: address}, function (results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        return callback(results[0], callbackArg);
+      }
+      else {
+        console.warn('Geocode was not successful for the following reason: ' + status);
+      }
+    });
   }
 
   function makeAllActive(data) {
@@ -275,12 +398,12 @@ export default function (window,document,$,undefined) {
     });
   }
 
-  function updatePageNumbers(items) {
+  function paginateItems(items, max) {
     let page = 1,
       pageTotal = 0;
     return items.map(function(item){
       if (item.isActive) {
-        if (pageTotal < masterData.maxItems){
+        if (pageTotal < max){
           item.page = page;
         }
         else {
@@ -303,30 +426,17 @@ export default function (window,document,$,undefined) {
   function renderListingPage(args) {
     clearListingPage();
     let $el = $('.js-location-listing-results').find('.ma__image-promos'),
-      pageTotal = 0,
-      totalActive = 0,
-      data = args.data,
-      page = args.page;
+      page = args.page ? args.page : 1;
 
-    data.items.map(function(item){
-      if (item.isActive) {
-        totalActive += 1;
-        if (item.page === page) {
-          $el.append(item.markup);
-          pageTotal += 1;
-        }
+    args.data.items.forEach(function(item){
+      if (item.isActive && item.page === page) {
+        $el.append(item.markup);
       }
     });
+
     sticky.init($('.js-location-listing-map'));
+    $('.js-location-listing').trigger('ma:LocationListing:ListingsUpdated', [args.data]);
 
-    data.currentPage = page;
-    data.totalActive = totalActive;
-    data.pageTotal = pageTotal;
-
-    data.resultsHeading = transformResultsHeading(data);
-
-    masterData = data; // preserve state
-    $('.js-location-listing').trigger('ma:LocationListing:ListingsUpdated', [data]);
   }
 
 }(window,document,jQuery);

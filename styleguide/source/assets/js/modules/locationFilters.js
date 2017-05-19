@@ -67,10 +67,11 @@ export default function (window,document,$,undefined) {
   function getFormData(args) {
     let $form = $(args.form),
       $tags = $form.find('.ma__location-filters__by-tags'),
-      placeId = '#' + args.placeId,
-      $place = $form.find(placeId),
-      place = $place.val(),
       filters = [];
+
+    // Get place
+    let placeId = '#' + args.placeId;
+    let place = $form.find(placeId).val();
 
     if (place) {
       filters.push({
