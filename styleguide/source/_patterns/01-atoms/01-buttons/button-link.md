@@ -13,9 +13,11 @@ Description: A link `<a>` element which is styled to look like a button.
 ~~~
 buttonLink {
   text: 
-    type: string / reuired
+    type: string / required
   href:
     type: string (url) / required
+  info: 
+    type: string / optional
   size:
     type: string / optional ("" or "small")
   theme:
