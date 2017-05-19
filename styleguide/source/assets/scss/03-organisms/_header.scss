@@ -302,10 +302,10 @@ body {
   &__utility-nav {
 
     &--narrow {
-    @media ($bp-header-toggle-min){
-      display: none;
+      @media ($bp-header-toggle-min){
+        display: none;
+      }
     }
-  }
 
     &--wide {
       position: absolute;
