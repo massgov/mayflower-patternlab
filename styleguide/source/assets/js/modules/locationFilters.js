@@ -21,7 +21,7 @@ export default function (window,document,$,undefined) {
 
       // Listen for location listing tag interaction event, update form.
       $locationListing.on('ma:LocationListing:ActiveTagInteraction', function(e, data){
-        renderForm({data: data.clearedFilter, form: $el, placeId: placeId});
+        renderForm({data: data.clearedFilter, form: $el, placeId: '#' + placeId});
       });
     });
 
@@ -45,7 +45,7 @@ export default function (window,document,$,undefined) {
     $el.submit(function(e){
       e.preventDefault();
       // Update master data with the various filter values.
-      let filters = getFormData({form: $(this), placeId: placeId});
+      let filters = getFormData({form: $(this), placeId: '#' + placeId});
 
       // Trigger location listing filter event with current filter values.
       $locationListing.trigger('ma:LocationListing:FormInteraction', [{filters: filters}]);
@@ -70,7 +70,7 @@ export default function (window,document,$,undefined) {
       filters = [];
 
     // Get place
-    let placeId = '#' + args.placeId;
+    let placeId = args.placeId;
     let place = $form.find(placeId).val();
 
     if (place) {
@@ -109,7 +109,7 @@ export default function (window,document,$,undefined) {
   function clearForm(args) {
     let $form = $(args.form),
       $tags = $form.find('.ma__location-filters__by-tags'),
-      $place = $form.find('#' + args.placeId);
+      $place = $form.find(args.placeId);
 
     // Clear location text input.
     $place.val("");
