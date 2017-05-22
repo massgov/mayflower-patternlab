@@ -13,6 +13,17 @@ export default function (window,document,$,undefined) {
 
     // Get the location listing component data (this could be replaced with an api)
     const rawData = locationListing[i]; // Data object created in @organisms/by-author/location-listing.twig
+
+    // Ensure locationListing.imagePromos.items is an array
+    let promosArray = [];
+    $.map(rawData.imagePromos.items, function(val, index) { promosArray[index] = val; });
+    rawData.imagePromos.items = promosArray;
+
+    // Ensure locationListing.pagination.pages is an array
+    let pages = [];
+    $.map(rawData.pagination.pages, function(val, index) { pages[index] = val; });
+    rawData.pagination.pages = pages;
+
     let masterData = []; // master data structure to preserve state
 
     // Listen for map initialization, populate master data structure using locationListing, markers.
@@ -286,6 +297,11 @@ export default function (window,document,$,undefined) {
 
   // Do any necessary data transformation to make imagePromo data fit locationListingRow template.
   function promoTransform(data) {
+    // Ensure tags are an array
+    let tags = [];
+    $.map(data.tags, function(val, index) { tags[index] = val; });
+    data.tags = tags;
+
     let tagsData = {
       tagsFormatted: data.tags.map(transformTag)
     };
