@@ -28,12 +28,12 @@
   &__end-date,
   &__spacer {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: baseline;
   }
 
   &__spacer {
     height: 6px;
-    margin: 0 2px;
+    margin: 0 2px 0.75em;
     width: 20px;
   }
 
