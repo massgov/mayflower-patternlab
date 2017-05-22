@@ -14,23 +14,24 @@ export default function (window,document,$,undefined) {
     // Get the location listing component data (this could be replaced with an api)
     const rawData = locationListing[i]; // Data object created in @organisms/by-author/location-listing.twig
 
-    // Ensure locationListing.imagePromos.items is an array
+    // Ensure locationListing.imagePromos.items is an array (the twig template json_encode()'s a php array)
     let promosArray = [];
     $.map(rawData.imagePromos.items, function(val, index) { promosArray[index] = val; });
     rawData.imagePromos.items = promosArray;
 
-    // Ensure locationListing.pagination.pages is an array
+    // Ensure locationListing.pagination.pages is an array (the twig template json_encode()'s a php array)
     let pages = [];
     $.map(rawData.pagination.pages, function(val, index) { pages[index] = val; });
     rawData.pagination.pages = pages;
 
     let masterData = []; // master data structure to preserve state
 
-    // Listen for map initialization, populate master data structure using locationListing, markers.
+    // Listen for map initialization, populate master data structure using locationListing, map markers.
     $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
       masterData = populateMasterDataSource(rawData, markers); // to preserve state
     });
-    
+
+    // Listen for Google Map api library load completion, with geocode, geometry, and places libraries
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function(){
       // Set up click, hover handlers for location listing rows.
       $el.on('click', '.js-location-listing-link', function (e) {
@@ -83,32 +84,80 @@ export default function (window,document,$,undefined) {
   });
 
   /**
-   * Master data initialization.
+   * Data initialization.
    */
 
+  /**
+   * Returns a master data structure with page level / listing item level data and markup, to reflect component state.
+   *
+   * @param listing
+   *   The locationListing data structure to use as a source
+   * @param markers
+   *   The array of map markers created by component google map (googleMaps.js module)
+   * @returns {Array}
+   *   An array with the following structure:
+   *    [
+   *      maxItems: the max number of items to show per listing "page" if provided, defaults to all
+ *        totalPages: the number of pages of items that should render, given the current filters
+   *      resultsHeading: the data structure necessary to render a resultsHeading component
+   *      items: an array of listing items [
+   *        isActive: whether or not the listing should be shown, given current filters state
+   *        page: the page that the listing, if active, will appear on, given the current sort order
+   *        promo: the data structure for the imagePromo component
+   *        markup: the compiled imagePromo markup
+   *        marker: the related map marker data structure for the listing item
+   *      ]
+   *      pagination: the data structure necessary to render a pagination component
+   *    ]
+   */
   function populateMasterDataSource(listing, markers) {
+    // Populate master data structure
     let masterData = [];
 
     // Get the listing imagePromos, generate markup for each
     let masterListing = listing.imagePromos.items,
       masterListingMarkup = transformLocationListingPromos(masterListing);
 
-    // Populate master data structure
+    // The max number of items per page, if designated in locationListing data structure, else all
     masterData.maxItems = listing.maxItems ? listing.maxItems : listing.imagePromos.items.length;
+    // The initial results heading data structure
     masterData.resultsHeading = listing.resultsHeading;
+    // The array of items and their respective page, in/active status, marker data, imagePromo data, and markup
     masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers, masterData.maxItems);
+    // The initial pagination data structure
     masterData.pagination = listing.pagination;
+    // The total number of pages, given the number of items and the maxItems variable
     masterData.totalPages = Math.ceil(markers.length / masterData.maxItems);
 
     return masterData;
   }
 
-  // Create a master data source with listing information and markup.
+  /**
+   * Creates the master data structure items array
+   *
+   * @param listing
+   *   The locationListing data structure
+   * @param markup
+   *   The generated array of item markup
+   * @param markers
+   *   The associated map markers for each item
+   * @param max
+   *   The maximum number of items per page
+   * @returns {Array}
+   *  An array of listing items with the following structure:
+   *  [
+   *      isActive: whether or not the listing should be shown, given current filters state
+   *      page: the page that the listing, if active, will appear on, given the current sort order
+   *      promo: the data structure for the imagePromo component
+   *      markup: the compiled imagePromo markup
+   *      marker: the related map marker data structure for the listing item
+   *   ]
+   */
   function getMasterListingWithMarkupAndMarkers(listing, markup, markers, max) {
     let items = [];
     markers.forEach(function (item, index) {
       items[index] = {
-        isActive: true,
+        isActive: true, // @todo consider checking for this in case of server side preprocessing of state
         page: Math.ceil((index+1) / max),
         marker: item,
         markup: markup[item._listingKey],
@@ -118,7 +167,15 @@ export default function (window,document,$,undefined) {
     return items;
   }
 
-  // Create new array with generated markup for location listing items, preserving original index.
+  /**
+   * Creates an array with generated markup for location listing items, preserving original index.
+   *
+   * @param promos
+   *  The locationListing.imagePromos array of items
+   *
+   * @returns {Array}
+   *  An array of compiled markup
+   */
   function transformLocationListingPromos(promos) {
     // Get template for location listing (organisms > imagePromo)
     let compiledTemplate = getTemplate('locationListingRow');
@@ -132,51 +189,80 @@ export default function (window,document,$,undefined) {
 
 
   /**
-   * Master data transformation.
+   * Data transformation.
    */
 
+  /**
+   * The main data transformation wrapper, returns an instance of masterData which reflects the component state.
+   *
+   * @param data
+   *  An instance of masterData to start from.
+   * @param transformation
+   *  An object representing the change in state (locationFilter form data, resultsHeading tag interaction, etc.)
+   *
+   * @returns {{data: *, markers: *}}
+   *  An object with the current state masterData instance and an array of their related sorted markers to send to map.
+   */
   function transformData(data, transformation) {
+    // First filter the data based on component state, then sort alphabetically by default.
     let filteredData = filterListingData(data, transformation),
       sortedData = sortDataAlphabetically(filteredData);
 
+    // Sort data by location, if that filter is present.
     if (hasFilter(filteredData.resultsHeading.tags, 'location')) {
       let place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
-      // If place argument is was selected from locationFilter autocomplete
+      // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       if (autocomplete.getPlace()) {
         place = autocomplete.getPlace();
         // Sort the markers and instance of locationListing masterData.
         sortedData = sortDataAroundPlace(place, filteredData);
       }
+      // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
       else {
-        // If place argument was populated from locationFilter but not selected from Place autocomplete.
-        window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
         // Geocode the address, then sort the markers and instance of locationListing masterData.
+        window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
+        // @todo limit geocode results to MA?
         sortedData = geocodeAddressString(place, sortDataAroundPlace, filteredData);
       }
     }
 
+    // Update the results heading based on the current items state.
     sortedData.resultsHeading = transformResultsHeading({data: sortedData});
+    // Render the listing page.
     renderListingPage({data: sortedData});
 
+    // Get the associated markers based on the listing items.
     let markers = getActiveMarkers({data: sortedData});
 
-    // Preserve state of current data
+    // Preserve state of current data.
     return {
       data: sortedData,
       markers: markers
     };
   }
 
+  /**
+   * Filters the listing data based on component filter state.
+   *
+   * @param data
+   *  An instance of masterData to start from.
+   * @param filterData
+   *  Data structure representing either the newly applied or cleared filters.
+   * @returns {*}
+   */
   function filterListingData(data, filterData) {
+    // Get the currently active filters.
     let filters = transformActiveTagsData({data: data, filterData: filterData});
+    // Update the results heading tags with the new active filters.
     data.resultsHeading.tags = filters;
-    data.pagination = transformPaginationData({data: data});
+    // Update pagination data structure, reset to first page
+    data.pagination = transformPaginationData({data: data}); // @todo this should probably go last so we know page #s
 
     // If tag (checkbox) filter is present, filter based on current tag values.
     if (hasFilter(filters, 'tag')) {
       // Get just the tag values from the filters array.
       let tags = getFilterValues(filters, 'tag');
-      // Identify active data based on filter
+      // Identify active data based on filter.
       return filterDataByTags(tags, data);
     }
 
@@ -186,10 +272,20 @@ export default function (window,document,$,undefined) {
 
   /**
    * Returns the markers which correspond to a given "page" of location listing data.
+   *
+   * @param args
+   *  An object with the following structure:
+   *    {
+   *      data: instance of filtered, sorted masterData off of which to base markers
+   *      page: the target page of items/markers to render
+   *    }
+   *
+   * @returns
+   *   An array of corresponding map marker objects which should be rendered
    */
   function getActiveMarkers(args) {
     let data = args.data,
-      page = args.page ? args.page : 1;
+      page = args.page ? args.page : 1; // default to first page if non provided
 
     // Get just the markers from our active sorted/filtered data listing.
     return data.items.filter(function(item) {
@@ -199,32 +295,87 @@ export default function (window,document,$,undefined) {
     });
   }
 
+  /**
+   * Creates the active filter object based on either cleared or submitted filter data.
+   *
+   * @param args
+   *   An object with the following structure:
+   *   data {
+   *    [masterData current instance]
+   *   },
+   *   filterData: {
+   *     clearedFilter: (optional cleared filter data)
+   *     {
+   *       type: '[filter type]: location || tag',
+   *       text: '[filter text or label]',
+   *       value: '[filter value]'
+   *     }, || 'all' (if clear all button was pressed)
+   *     {
+   *       filters: (optional submitted filter data)
+   *       [
+   *         {
+   *           type: '[filter type] location || tag',
+   *           text: '[filter label]',
+   *           value: '[filter value]'
+   *         }, ...
+   *       ]
+   *     }
+   *   }
+   *
+   * @returns {*}
+   */
   function transformActiveTagsData(args) {
     if (args.filterData.hasOwnProperty('clearedFilter')) {
-      return getActiveFilters(args.data, args.filterData); // This was an active tag interaction
+      return getActiveFilters(args.data, args.filterData); // This was an active tag interaction, get remaining filters.
     }
     else {
-      return args.filterData.filters; // This was a form submission so return the applied filters.
+      return args.filterData.filters; // This was a form submission, so just return the applied filters.
     }
   }
 
+  /**
+   * Returns the data structure necessary to render pagination component, reflecting current state.
+   *
+   * @param args
+   *   An object with the following structure:
+   *   {
+   *     data: [instance of filtered, sorted master data],
+   *     targetPage: (optional) the page which should be active
+   *   }
+   *
+   * @returns {*}
+   *   Data structure necessary to render pagination component
+   */
   function transformPaginationData(args) {
     let data = args.data;
     let targetPage = args.targetPage ? args.targetPage : 1; // default to first page if none passed
 
-    // Make new page active
+    // Make new page active.
     data.pagination.pages = switchActivePage(data.pagination.pages, getCurrentPage(data.pagination.pages), targetPage);
+    // @todo determine previous, next button state, as well as the necessary number of pages based on filters.
     return data.pagination;
   }
 
+  /**
+   * Updates the resultsHeading data structure to reflect the current component state.
+   *
+   * @param args
+   *    Arguments object with the following structure:
+   *    args: {
+   *      data: the current instance of master data,
+   *      page: (optional) the current page, defaults to 1
+   *    }
+   *
+   * @returns {resultsHeading|{numResults, totalResults}|*}
+   */
   function transformResultsHeading(args) {
-
     let pageTotal = 0,
       totalActive = 0,
       page = args.page ? args.page : 1,
       data = args.data,
       resultsHeading = data.resultsHeading; // preserve active resultsHeading.tags
 
+    // Tally the total active and page length.
     data.items.map(function(item){
       if (item.isActive) {
         totalActive += 1;
@@ -234,16 +385,26 @@ export default function (window,document,$,undefined) {
       }
     });
 
+    // Get the index (from 1) of the first and last items on this page.
     let firstItem = (Number(data.maxItems) * Number(page)) - (Number(data.maxItems) - 1),
       lastItem = firstItem + (Number(pageTotal) - 1);
 
     resultsHeading.totalResults = totalActive;
-    resultsHeading.numResults = firstItem + " - " + lastItem;
+    resultsHeading.numResults = firstItem + " - " + lastItem; // @todo add accessibility consideration here
     return resultsHeading;
   }
 
+  /**
+   * Returns the index of the current page in the pagination.pages array
+   *
+   * @param pages
+   *   An array representing pagination.pages
+   *
+   * @returns {int}
+   *   The index of the current page in the pagination.pages array
+   */
   function getCurrentPage(pages) {
-    let currentPage = '';
+    let currentPage = 0;
     pages.forEach(function(page, index) {
       if (page.hasOwnProperty('active') && page.active === true) {
         currentPage = index;
@@ -252,6 +413,18 @@ export default function (window,document,$,undefined) {
     return currentPage;
   }
 
+  /**
+   * Returns the pagination.pages array with updated active page
+   *
+   * @param pages
+   *   The current pagination.pages array
+   * @param currentPage
+   *   The index of the currently active Page
+   * @param targetPage
+   *   The page which should be active (identified by its page button text, not index!)
+   * @returns array
+   *   Updated pagination.pages array
+   */
   function switchActivePage(pages, currentPage, targetPage) {
     pages[currentPage].active = false;
     pages.forEach(function(page) {
@@ -262,6 +435,30 @@ export default function (window,document,$,undefined) {
     return pages;
   }
 
+  /**
+   * Returns an array of the currently active filters, based on passed filterData.
+   *
+   * @param data
+   *   The current instance of master data structure.
+   *
+   * @param filterData
+   *  An object representing the cleared filter:
+   *  {
+   *    clearedFilter: {
+   *       type: '[filter type]: location || tag',
+   *       text: '[filter text or label]',
+   *       value: '[filter value]'
+   *     } || 'all' (if clear all button was pressed)
+   *  }
+   *
+   * @returns {Array}
+   *   An array of the currently active filters:
+   *   [  {
+   *        type:
+   *        text:
+   *        value:
+   *      }, ... ]
+   */
   function getActiveFilters(data, filterData) {
     // Single filter button clicked, so remove that filter from the list.
     if (filterData.clearedFilter !== "all") {
@@ -277,38 +474,71 @@ export default function (window,document,$,undefined) {
     }
   }
 
+  /**
+   * Returns true if the passed filters array includes an item with the passed type.
+   *
+   * @param filters
+   *   Array of filters.
+   * @param type
+   *   The type of filter to search for.
+   *
+   * @returns {*|boolean}
+   */
   function hasFilter(filters, type) {
     return filters.some(function (filter) {
-      return hasValue(filter, 'type', type);
+      return filter.hasOwnProperty('type') && filter['type'] === type;
     });
   }
 
-  function hasValue(obj, key, value) {
-        return obj.hasOwnProperty(key) && obj[key] === value;
-      }
-
-  function getFilterValues(array, filter) {
-    return array.filter(function(data) {
-      return data.type === filter;
+  /**
+   * Returns the value(s) of the passed filters of the passed type.
+   *
+   * @param filters
+   *   Array of filters from which to abstract values.
+   * @param type
+   *   The type of filter to search for.
+   *
+   * @return array
+   *   An array of filter values of type.
+   */
+  function getFilterValues(filters, type) {
+    return filters.filter(function(data) {
+      return data.type === type;
     }).map(function(data) {
       return data.value;
     })
   }
 
   // Do any necessary data transformation to make imagePromo data fit locationListingRow template.
-  function promoTransform(data) {
-    // Ensure tags are an array
+  /**
+   * Returns transformed imagePromo data object.
+   *
+   * @param promo
+   *   The imagePromo.item[]{} being transformed.
+   *
+   * @returns {*}
+   *   The original imagePromo object with a formatted tag property.
+   */
+  function promoTransform(promo) {
+    // Ensure tags are an array.
     let tags = [];
-    $.map(data.tags, function(val, index) { tags[index] = val; });
-    data.tags = tags;
+    $.map(promo.tags, function(val, index) { tags[index] = val; });
+    promo.tags = tags;
 
     let tagsData = {
-      tagsFormatted: data.tags.map(transformTag)
+      tagsFormatted: promo.tags.map(transformTag)
     };
-    return Object.assign({},data,tagsData);
+    return Object.assign({},promo,tagsData);
   }
 
-  // Transform tag template, get svg code from twig template path.
+  /**
+   * Returns a formatted imagePromo.tag object with a label and svg icon markup.
+   *
+   * @param tag
+   *   The tag being transformed.
+   *
+   * @returns {{label, svg: boolean}}
+   */
   function transformTag(tag) {
     return {
       label: tag.label,
@@ -317,6 +547,15 @@ export default function (window,document,$,undefined) {
   }
 
   // Reorder listingMarkup array, based on the order of the map markers.
+  /**
+   * Returns an instance of master data which is sorted alphabetically by imagePromo.title.text
+   *
+   * @param data
+   *    The instance of master data being sorted.
+   *
+   * @returns {*}
+   *    Sorted instance of master data.
+   */
   function sortDataAlphabetically(data) {
     let items = data.items.sort(function(a, b) {
       let nameA = a.promo.title.text.toUpperCase(),
@@ -387,6 +626,15 @@ export default function (window,document,$,undefined) {
     });
   }
 
+  /**
+   * Resets all items in a master data instance to active (i.e. not filtered out).
+   *
+   * @param data
+   *    The instance of master data whose items are being made active.
+   *
+   * @returns {*}
+   *    The master data instance with all active items.
+   */
   function makeAllActive(data) {
     data.items = data.items.map(function(item){
       item.isActive = true;
@@ -396,6 +644,18 @@ export default function (window,document,$,undefined) {
   }
 
   // Filter listings by tags.
+  /**
+   * Returns masterData with necessary filtered items flagged inactive.
+   *
+   * @param tags
+   *  The array of filters by which to filter.
+   *
+   * @param data
+   *   The current instance of master data being filtered.
+   *
+   * @returns {*}
+   *   The 'filtered' (flagged) instance of master data.
+   */
   function filterDataByTags(tags, data){
     data.items = data.items.map(function(item) {
       item.isActive = doesPromoContainTags(item.promo.tags, tags);
@@ -405,7 +665,17 @@ export default function (window,document,$,undefined) {
     return data;
   }
 
-  // @todo abstract this to be useful elsewhere
+  /**
+   * Determines if an masterData item contains the necessary tag(s).
+   *
+   * @param haystack
+   *  The imagePromo object in question.
+   *
+   * @param needle
+   *   The tag(s) being searched for.
+   *
+   * @returns {boolean|*}
+   */
   function doesPromoContainTags(haystack, needle) {
     return needle.every(function(v) {
       return Boolean(haystack.filter(function(item){
@@ -414,6 +684,18 @@ export default function (window,document,$,undefined) {
     });
   }
 
+  /**
+   * Assigns page values to masterData items, based on the provided max number.
+   *
+   * @param items
+   *   The master data items.
+   *
+   * @param max
+   *   The max number of items to show per page.
+   *
+   * @returns
+   *   The updated master data items.
+   */
   function paginateItems(items, max) {
     let page = 1,
       pageTotal = 0;
@@ -438,7 +720,16 @@ export default function (window,document,$,undefined) {
     $('.js-location-listing-results').find('.ma__image-promos').html('');
   }
 
-  // Render new imagePromo items.
+  /**
+   * Renders the new page of location listing image promos and broadcasts the rendered master data instance.
+   *
+   * @param args
+   *   Arguments object with the following structure:
+   *   {
+   *      page: (optional) the page to be rendered, defaults to 1
+   *      data: the instance of master data to render
+   *   }
+   */
   function renderListingPage(args) {
     clearListingPage();
     let $el = $('.js-location-listing-results').find('.ma__image-promos'),
@@ -452,7 +743,6 @@ export default function (window,document,$,undefined) {
 
     sticky.init($('.js-location-listing-map'));
     $('.js-location-listing').trigger('ma:LocationListing:ListingsUpdated', [args.data]);
-
   }
 
 }(window,document,jQuery);
