@@ -22,11 +22,17 @@ export default function (window,document,$,undefined) {
     }
   }, 100);
 
+  // Stop checking for google maps library after 2 minutes
+  let stopChecking = setTimeout(function() {
+    clearInterval(checkForGoogleMaps);
+  }, 2 * 60 * 1000);
+
   // Initialize the map
   function initMaps () {
     // Stop checking for google maps library.
     mapsInitialized = true;
     clearInterval(checkForGoogleMaps);
+    clearTimeout(stopChecking);
 
     $(".js-google-map").each(function(i) {
       const $el = $(this);
