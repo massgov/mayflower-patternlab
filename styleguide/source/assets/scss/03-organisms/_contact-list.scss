@@ -12,6 +12,10 @@
       
       @media ($bp-large-min) {
         display: none;
+
+        &:first-child ~ & + * {
+          margin-top: 0;
+        }
       }
     }
 
@@ -19,6 +23,22 @@
       
       @media ($bp-large-max) {
         display: none;
+
+        &:first-child + * {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .page-content &:first-child ~ & + * {
+      @media ($bp-large-min) {
+        margin-top: 0;
+      }
+    }
+
+    .sidebar &:first-child ~ & + * {
+      @media ($bp-large-max) {
+        margin-top: 0;
       }
     }
   }

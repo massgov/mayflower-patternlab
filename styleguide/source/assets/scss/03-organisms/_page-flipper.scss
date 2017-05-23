@@ -6,6 +6,14 @@
     @include ma-container();
   }
 
+  .post-content > &:last-child {
+    margin-bottom: 30px;
+
+    @media ($bp-medium-min) {
+      margin-bottom: 45px;
+    }
+  }
+
   &__container {
     border-top-style: solid;
     border-top-width: 2px;
