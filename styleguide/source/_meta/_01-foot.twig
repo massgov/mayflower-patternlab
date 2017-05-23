@@ -5,11 +5,15 @@
     <script src="/assets/js/vendor-generated.js"></script>
     <script src="/assets/js/index-generated.js"></script>
     <script> 
-      var json = JSON.parse($("#sg-pattern-data-footer").html()),
+      if($('.main-content').length === 0){
+        var json = JSON.parse($("#sg-pattern-data-footer").html()),
+        
         data = json.patternBreadcrumb.patternType;
-      if(data !== 'templates' && data !== 'pages') {
+
+        if(data !== 'templates' && data !== 'pages') {
           $('body').addClass('page-content');
           $('html').addClass('main-content').addClass('main-content--full');
+        }
       }
     </script>
 

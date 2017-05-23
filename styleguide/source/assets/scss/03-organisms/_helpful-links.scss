@@ -1,5 +1,11 @@
 .ma__helpful-links {
 
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+
   &__items {
     @include ma-reset-list;
   }
@@ -8,10 +14,6 @@
     @media ($bp-small-min) {
       column-count: 2;
     }
-  }
-
-  &__item  {
-
   }
 
   .ma__comp-heading {

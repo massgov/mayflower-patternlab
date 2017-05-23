@@ -8,9 +8,14 @@
   }
 
   &__by-location,
-  &__date-range {
-    @include ma-component-spacing;
+  &__date-range,
+  &__buttons {
+    margin-bottom: 30px;
     width: 100%;
+
+    @media ($bp-x-large-min) {
+      margin-bottom: 45px;
+    }
   }
 
   &__by-location {
@@ -18,16 +23,6 @@
     input {
       max-width: 820px;
       width: 100%;
-    }
-  }
-
-
-  &__buttons {
-    margin-bottom: 30px;
-    width: 100%;
-
-    @media ($bp-x-large-min) {
-      margin-bottom: 45px;
     }
   }
 

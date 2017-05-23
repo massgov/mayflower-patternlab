@@ -8,12 +8,6 @@ button {
 .ma__button-minor,
 .ma__button-minor-alt {
   @include ma-button("normal");
-
-  .pre-content > &,
-  .post-content > &,
-  .page-content > & {
-    @include ma-component-spacing;
-  }
 }
 
 .ma__button--small,

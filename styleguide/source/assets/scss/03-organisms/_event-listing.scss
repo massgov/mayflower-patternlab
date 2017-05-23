@@ -1,5 +1,4 @@
 .ma__event-listing {
-  @include ma-component-spacing;
 
   .pre-content > &,
   .main-content--full .page-content > & {
@@ -10,6 +9,10 @@
     }
   }
 
+  .main-content--full .page-content > .ma__results-heading + & {
+    @include ma-component-spacing;
+  }
+
   &__items {
     @include ma-reset-list;
   }
@@ -17,32 +20,16 @@
   &__item + &__item {
     border-top-style: solid;
     border-top-width: 1px;
+    margin-top: 30px;
     padding-top: 30px;
   }
 
-  .post-content > &:last-child {
-    margin-bottom: 0;
-  }
-
   &__more {
+    margin-top: 30px;
 
-    @media ($bp-small-min) {
-      margin-top: 15px;
+    @media ($bp-medium-min) {
+      margin-top: 45px;
     }
-  }
-
-  .post-content > & &__container {
-    @include ma-container;
-    padding-top: 60px;
-
-    & > *:last-child {
-      border-bottom: 2px solid;
-      padding-bottom: 50px;
-    }
-  }
-
-  .post-content > &:last-child {
-    margin-bottom: 0;
   }
 
   .post-content > & &__container {
@@ -79,9 +66,6 @@
     }
 
     &:not(:only-of-type) {
-      @media ($bp-medium-max){
-        @include ma-component-spacing;
-      }
 
       @media ($bp-medium-min) {
         flex-grow: 0;

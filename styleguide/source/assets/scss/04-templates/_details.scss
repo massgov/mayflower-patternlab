@@ -10,12 +10,20 @@
     @media ($bp-x-large-min) {
       margin-left: $column-with-gutter * 2;
     }
+
+    & > * {
+      @include ma-component-spacing;
+    }
   }
 
   &__top-contact {
     
     @media($bp-large-min) {
       display: none;
+
+      & + * {
+        margin-top: 0 !important;
+      }
     }
   }
 
@@ -23,12 +31,15 @@
     
     @media ($bp-large-max) {
       display: none;
+
+      & + * {
+        margin-top: 0 !important;
+      }
     }
   }
 
   &__top-contact,
   &__sidebar-contact {
-    @include ma-component-spacing;
     
     .ma__sidebar-heading,
     .ma__comp-heading {
