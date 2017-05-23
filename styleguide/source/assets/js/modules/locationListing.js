@@ -1,6 +1,5 @@
 import sticky from "../helpers/sticky.js";
 import getTemplate from "../helpers/getHandlebarTemplate.js";
-import getSvgFromPath from "../helpers/getSvgFromPath.js"
 
 export default function (window,document,$,undefined) {
 
@@ -542,11 +541,24 @@ export default function (window,document,$,undefined) {
   function transformTag(tag) {
     return {
       label: tag.label,
-      svg: getSvgFromPath(tag.icon)
+      svg: getSvgFromTag(tag.id)
     };
   }
 
-  // Reorder listingMarkup array, based on the order of the map markers.
+  /**
+   * Returns the svg element markup from the corresponding tag filter checkbox label icon
+   *
+   * @param tag
+   *  The imagePromo tag.id whose icon we need
+   *
+   * @return string
+   *  The svg element for the matching filter form tag input.
+   */
+  function getSvgFromTag(tag) {
+    // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
+    return $('.ma__location-filters__tag').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+  }
+
   /**
    * Returns an instance of master data which is sorted alphabetically by imagePromo.title.text
    *
