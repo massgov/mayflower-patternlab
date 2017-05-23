@@ -1,9 +1,5 @@
 .ma__announcement {
 
-  .ma__placeholder {
-    @include ma-component-spacing;
-  }
-
   &__page-content {
     
     .ma__contact-list:first-child,

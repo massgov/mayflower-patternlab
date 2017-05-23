@@ -1,19 +1,9 @@
 .ma__link-list {
-  @include ma-component-spacing;
 
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container();
-  }
-
-  .main-content--full .page-content > & {
-    @include ma-component-padding;
-    margin-bottom: 0;
-
-    &:last-child {
-      padding-bottom: 0;
-    }
   }
 
   &__description {

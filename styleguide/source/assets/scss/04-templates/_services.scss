@@ -2,11 +2,15 @@
 
   .page-content--intro {
 
-    & > .ma__image:first-child {
-      @include ma-component-spacing;
-
-      @media ($bp-large-min) {
+    @media ($bp-large-min) {
+      
+      & > .ma__image:first-child {
         display: none;
+      }
+
+      .ma__video--right,
+      .ma__teaser-text {
+        margin-top: 0;
       }
     }
   }
@@ -37,10 +41,13 @@
 
   .sidebar--intro {
     & > .ma__image:first-child {
-      margin-bottom: 30px;
 
       @media ($bp-large-max) {
         display: none;
+
+        & + * {
+          margin-top: 0;
+        }
       }
     }
   }

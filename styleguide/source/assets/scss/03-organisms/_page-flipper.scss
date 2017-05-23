@@ -1,10 +1,17 @@
 .ma__page-flipper {
-  @include ma-component-spacing;
 
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container();
+  }
+
+  .post-content > &:last-child {
+    margin-bottom: 30px;
+
+    @media ($bp-medium-min) {
+      margin-bottom: 45px;
+    }
   }
 
   &__container {
