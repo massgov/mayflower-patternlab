@@ -108,8 +108,4 @@
 // guide page template
 .stacked-row-content {
   position: relative;
-
-  & > * {
-    @include ma-component-spacing;
-  }
 }
