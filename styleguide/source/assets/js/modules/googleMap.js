@@ -264,40 +264,6 @@ export default function (window,document,$,undefined) {
   }
 
   /**
-   * Returns the markers which correspond to a given "page" of a given instance of location listing masterData.
-   *
-   * @param data
-   *   Given instance of location listing masterData.
-   * @param markers
-   *   Array of map marker objects.
-   * @param page
-   *   Given page of data items by which to get markers.
-   */
-  function getActiveMarkers(args) {
-    let dataMarkers = args.dataMarkers,
-      markers = args.markers;
-
-    // @todo initialize the data listing markers with infowindow and listeners instead of this
-    // Sort the existing map markers, based on the order of the markers in the data listing.
-    dataMarkers.map(function(dataMarker, index){
-      // Get the current index of the marker that we want.
-      let currentMarkerIndex = markers.map(function(marker) {
-        return marker._listingKey;
-      }).indexOf(dataMarker._listingKey);
-
-      if (currentMarkerIndex) {
-        // Swap markers items to sort.
-        let tmp = markers[index];
-        markers[index] = markers[currentMarkerIndex];
-        markers[currentMarkerIndex] = tmp;
-      }
-    });
-
-    // Return only the markers we need for this page.
-    return markers.slice(0,dataMarkers.length);
-  }
-
-  /**
    * Adds markers to a given map and sets bounds based on those markers.
    *
    * @param markers
