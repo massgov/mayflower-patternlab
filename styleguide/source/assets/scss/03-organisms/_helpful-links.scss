@@ -15,14 +15,4 @@
       column-count: 2;
     }
   }
-
-  .ma__comp-heading {
-    letter-spacing: .1em;
-    margin-bottom: .75em;
-
-    .ma__narrow-template &:after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
 }
