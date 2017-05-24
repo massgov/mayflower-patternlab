@@ -38,6 +38,21 @@
           }]
         }
       }
+    },{
+      "path": "@organisms/by-author/key-actions.twig",
+      "data": {
+        "keyActions": {
+          "links":[{
+            "text": "Apply for a License",
+            "type": "",
+            "href": "#"
+          },{
+            "text": "Registration renewal",
+            "type": "",
+            "href": "#"
+          }]
+        }
+      }
     }],
     "widgets": null
   },
@@ -105,6 +120,10 @@
       "href": "restrictions",
       "text": "Restrictions",
       "info": ""
+    },{
+      "href": "contacts",
+      "text": "Contacts",
+      "info": ""
     }]
   },
 
@@ -161,7 +180,7 @@
         "path": "atoms-paragraph",
         "data": {
           "paragraph" : {
-            "text": "May - September:<br />Sunrise - Sunset<br /><br />October - April:<br />9:00 a.m. - 5:00 p.m."
+            "text": "May - September:<br />Sunrise - Sunset<br /><br />October - April:<br />9 a.m. - 5 p.m."
           }
         }
       },
@@ -177,7 +196,7 @@
         "path": "atoms-paragraph",
         "data": {
           "paragraph" : {
-            "text": "Monday - Friday:<br />9:00 a.m. - 5:00 p.m.<br /><br />Saturday:<br />12:00 p.m. - 7:00 p.m."
+            "text": "Monday - Friday:<br />9 a.m. - 5 p.m.<br /><br />Saturday:<br />12 p.m. - 7 p.m."
           }
         }
       },
@@ -475,20 +494,20 @@
           }]
         }
       }]
-    }
-  },
-
-
-
-  "COMMENT":"****SIDEBAR COMPONENTS****",
-  "sidebar": {
-    "coloredHeadings": true,
+    },
 
     "contactList": {
-      "sidebarHeading":{
-        "title": "Contact"
+      "viewSpecific": false,
+      "compHeading":{
+        "title": "Contacts",
+        "sub": "true",
+        "color": "",
+        "id": "contacts",
+        "centered": ""
       },
       "contacts":[{
+        "accordion": true,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Bascom Lodge"
@@ -505,7 +524,160 @@
               "href":"+14134994262",
               "text":"(413) 499-4262"
             },
-            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+          },{
+            "type": "phone",
+            "property": "",
+            "label":"TTY:",
+            "link": {
+              "href": "+16175557777",
+              "text": "(617) 555-7777"
+            },
+            "details":"For those who need accessible services"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "email",
+            "property": "",
+            "label": "Email:",
+            "link": {
+              "href":"mount.greylock@state.ma.us",
+              "text":"mount.greylock@state.ma.us"
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "hidden": "true",
+          "items": [{
+            "type": "fax",
+            "property": "faxNumber",
+            "label":"",
+            "link": {
+              "href": "+14134994262",
+              "text": "(413) 499-4262"
+            },
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "property": "address",
+            "label": "",
+            "address": "555 Park Drive\nBoston, MA 02231",
+            "link": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "text": "directions",
+              "info": "Directions to Bascom Lodge",
+              "property": "url"
+            }, 
+            "details":""
+          }]
+        }]
+      },{
+        "accordion": true,
+        "isExpanded": false,
+        "subTitle": {
+          "href":"",
+          "text": "Museum",
+          "chevron":""
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "hidden": "",
+          "items": [{
+            "type": "phone",
+            "property": "telephone",
+            "label":"Main:",
+            "link": {
+              "href": "+14134438765",
+              "text": "(413) 443-8765"
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "email",
+            "property": "",
+            "label":"Email:",
+            "link": {
+              "href": "mount.greylock@state.ma.us",
+              "text": "mount.greylock@state.ma.us"
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "hidden": "true",
+          "items": [{
+            "type": "fax",
+            "property": "faxNumber",
+            "label":"",
+            "link": {
+              "href": "+14134994262",
+              "text": "(413) 499-4262"
+            },
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "hidden": "true",
+          "items": [{
+            "type": "address",
+            "property": "address",
+            "label":"",
+            "value":"555 Park Drive\nNorth Hampton, MA 02231",
+            "link": "",
+            "details":""
+          }]
+        }]
+      }]
+    }
+  },
+
+
+  "COMMENT":"****SIDEBAR COMPONENTS****",
+  "sidebar": {
+    "coloredHeadings": true,
+
+    "contactList": {
+      "viewSpecific": true,
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
+        "accordion": false,
+        "isExpanded": false,
+        "subTitle": {
+          "href":"",
+          "text": "Bascom Lodge"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "hidden": "",
+          "items": [{
+            "type": "phone",
+            "property": "telephone",
+            "label":"Main:",
+            "link": {
+              "href":"+14134994262",
+              "text":"(413) 499-4262"
+            },
+            "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
@@ -523,6 +695,8 @@
           }]
         }]
       },{
+        "accordion": false,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Museum"
