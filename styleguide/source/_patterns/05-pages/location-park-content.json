@@ -10,14 +10,6 @@
     "target": ""
   }],
 
-  "breadcrumbs":{
-    "light": "true",
-    "links": [{
-      "text": "Mt Greylock State Park",
-      "href": "#"
-    }]
-  },
-
   "pageHeader": {
     "divider": false,
     "title": "Mt Greylock State Park",

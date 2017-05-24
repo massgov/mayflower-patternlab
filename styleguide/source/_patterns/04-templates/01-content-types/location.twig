@@ -11,9 +11,6 @@
       {% for headerAlert in headerAlerts %}
         {% include "@organisms/by-template/header-alert.twig" %}
       {% endfor %}
-      {% if breadcrumbs %}
-        {% include "@organisms/by-template/breadcrumbs.twig" %}
-      {% endif %}
       {% include "@organisms/by-template/page-header.twig" %}
       {% if locationBanner %}
         {% include "@organisms/by-author/location-banner.twig" %}
@@ -53,9 +50,6 @@
     {% block postContent %}
       {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
     {% endblock %}
-    {% if breadcrumbs %}
-      {% include "@organisms/by-template/breadcrumbs.twig" %}
-    {% endif %}
   </div>
 
   {# structured content #}

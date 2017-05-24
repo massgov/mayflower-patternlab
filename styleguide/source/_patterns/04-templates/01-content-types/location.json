@@ -10,14 +10,6 @@
     "target": ""
   }],
 
-  "breadcrumbs":{
-    "light": "true",
-    "links": [{
-      "text": "location content type",
-      "href": "#"
-    }]
-  },
-
   "pageHeader": {
     "divider": false,
     "title": "Page Title",

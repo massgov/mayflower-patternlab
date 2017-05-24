@@ -15,14 +15,6 @@
     "target": ""
   }],
 
-  "breadcrumbs":{
-    "light": "true",
-    "links": [{
-      "text": "Southbridge RMV",
-      "href": "#"
-    }]
-  },
-
   "pageHeader": {
     "divider": false,
     "title": "Southbridge RMV",
