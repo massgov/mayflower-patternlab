@@ -64,11 +64,19 @@ export default function (window,document,$,undefined) {
 
       // Handle pagination event (triggered by pagination.js), render targetPage
       $pagination.on('ma:Pagination:Pagination', function (e, target) {
-        masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
-        masterData.resultsHeading = transformResultsHeading({data: masterData, page: target});
-        renderListingPage({data: masterData, page: target});
+        let nextPage = target;
+        if (target === "next") {
+          nextPage = masterData.pagination.currentPage + 1;
+        }
+        if (target === "previous") {
+          nextPage = masterData.pagination.currentPage - 1;
+        }
 
-        let markers = getActiveMarkers({data: masterData, page: target});
+        masterData.pagination = transformPaginationData({data: masterData, targetPage: nextPage});
+        masterData.resultsHeading = transformResultsHeading({data: masterData, page: nextPage});
+        renderListingPage({data: masterData, page: nextPage});
+
+        let markers = getActiveMarkers({data: masterData, page: nextPage});
         // Trigger child components render with updated data
         updateChildComponents({data: masterData, markers: markers});
       });
@@ -241,6 +249,8 @@ export default function (window,document,$,undefined) {
 
     // Update the results heading based on the current items state.
     sortedData.resultsHeading = transformResultsHeading({data: sortedData});
+    // Update pagination data structure, reset to first page
+    sortedData.pagination = transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
     // Render the listing page.
     renderListingPage({data: sortedData});
 
@@ -269,8 +279,6 @@ export default function (window,document,$,undefined) {
     let filters = transformActiveTagsData({data: data, filterData: filterData});
     // Update the results heading tags with the new active filters.
     data.resultsHeading.tags = filters;
-    // Update pagination data structure, reset to first page
-    data.pagination = transformPaginationData({data: data}); // @todo this should probably go last so we know page #s
 
     // If tag (checkbox) filter is present, filter based on current tag values.
     if (hasFilter(filters, 'tag')) {
@@ -363,10 +371,29 @@ export default function (window,document,$,undefined) {
   function transformPaginationData(args) {
     let data = args.data;
     let targetPage = args.targetPage ? args.targetPage : 1; // default to first page if none passed
+    let totalPages = data.totalPages;
+    let pages = [];
 
-    // Make new page active.
-    data.pagination.pages = switchActivePage(data.pagination.pages, getCurrentPage(data.pagination.pages), targetPage);
-    // @todo determine previous, next button state, as well as the necessary number of pages based on filters.
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push({
+        text: i.toString(),
+        active: i === targetPage
+      });
+    }
+
+    data.pagination.prev = {
+      text: "previous",
+      disabled: targetPage === 1
+    };
+
+    data.pagination.next = {
+      text: "next",
+      disabled: targetPage === totalPages
+    };
+
+    data.pagination.pages = pages;
+    data.pagination.currentPage = targetPage;
+
     return data.pagination;
   }
 
@@ -407,47 +434,6 @@ export default function (window,document,$,undefined) {
     resultsHeading.numResults = firstItem + " - " + lastItem; // @todo add accessibility consideration here
 
     return resultsHeading;
-  }
-
-  /**
-   * Returns the index of the current page in the pagination.pages array
-   *
-   * @param pages
-   *   An array representing pagination.pages
-   *
-   * @returns {int}
-   *   The index of the current page in the pagination.pages array
-   */
-  function getCurrentPage(pages) {
-    let currentPage = 0;
-    pages.forEach(function(page, index) {
-      if (page.hasOwnProperty('active') && page.active === true) {
-        currentPage = index;
-      }
-    });
-    return currentPage;
-  }
-
-  /**
-   * Returns the pagination.pages array with updated active page
-   *
-   * @param pages
-   *   The current pagination.pages array
-   * @param currentPage
-   *   The index of the currently active Page
-   * @param targetPage
-   *   The page which should be active (identified by its page button text, not index!)
-   * @returns array
-   *   Updated pagination.pages array
-   */
-  function switchActivePage(pages, currentPage, targetPage) {
-    pages[currentPage].active = false;
-    pages.forEach(function(page) {
-      if (page.text === targetPage.toString()) {
-        page.active = true;
-      }
-    });
-    return pages;
   }
 
   /**
@@ -590,7 +576,9 @@ export default function (window,document,$,undefined) {
       return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
     });
 
-    data.items = paginateItems(items, data.maxItems);
+    let paginated = paginateItems(items, data.maxItems);
+    data.items = paginated.items;
+    data.totalPages = paginated.totalPages;
     return data;
   }
 
@@ -618,7 +606,9 @@ export default function (window,document,$,undefined) {
     });
 
     // Update each location listing item's page number based on new marker sort order.
-    data.items = paginateItems(data.items, data.maxItems);
+    let paginated = paginateItems(data.items, data.maxItems);
+    data.items = paginated.items;
+    data.totalPages = paginated.totalPages;
 
     // Return the newly sorted instance of location listing masterData.
     return data;
@@ -725,7 +715,7 @@ export default function (window,document,$,undefined) {
   function paginateItems(items, max) {
     let page = 1,
       pageTotal = 0;
-    return items.map(function(item){
+    let paginatedItems = items.map(function(item){
       if (item.isActive) {
         if (pageTotal < max){
           item.page = page;
@@ -739,6 +729,11 @@ export default function (window,document,$,undefined) {
       }
       return item;
     });
+
+    return {
+      items: paginatedItems,
+      totalPages: page
+    }
   }
 
   // Remove the imagePromos children content on the current location listing page.

@@ -56,7 +56,7 @@ export default function (window,document,$,undefined) {
     });
     // Listen for next button click and trigger pagination event.
     $el.on('click', nextButton, function () {
-      $el.trigger('ma:LocationListing:Pagination', ['next']);
+      $el.trigger('ma:Pagination:Pagination', ['next']);
     });
     // Listen for page number button click and trigger pagination event;
     $el.on('click', pageButton, function (e) {
