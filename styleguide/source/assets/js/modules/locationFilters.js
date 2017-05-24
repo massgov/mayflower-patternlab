@@ -7,8 +7,17 @@ export default function (window,document,$,undefined) {
       let $locationFilter = $('.ma__location-filters__by-location', $el).find('input');
       if ($locationFilter.length) {
         // Create the google places autocomplete object and associate it with the zip code text input.
-        ma.autocomplete = new google.maps.places.Autocomplete(document.getElementById($locationFilter.attr('id')));
-        ma.autocomplete.setComponentRestrictions({country: 'us'});
+        let locationInput = document.getElementById($locationFilter.attr('id'));
+        let defaultBounds = new google.maps.LatLngBounds(new google.maps.LatLng(40.727093,-73.97864), new google.maps.LatLng(43.004778, -69.845299));
+
+        // See options: https://developers.google.com/maps/documentation/javascript/places-autocomplete#add_autocomplete
+        let options = {
+          bounds: defaultBounds,
+          strictBounds: true,
+          types: ['geocode'],
+          componentRestrictions: {country: 'us'}
+        };
+        ma.autocomplete = new google.maps.places.Autocomplete(locationInput, options);
       }
     });
 
@@ -17,21 +26,14 @@ export default function (window,document,$,undefined) {
       renderForm({clearedFilter: data.clearedFilter, $form: $el});
     });
 
-    // window.autocomplete.setBounds(new google.maps.LatLngBounds(new google.maps.LatLng(41,74), new google.maps.LatLng(43,69)));
-    // window.autocomplete.setBounds(new google.maps.LatLngBounds({east: 69, north: 43, south: 41, west: 74}));
-    // window.autocomplete.strictBounds = true;
-    // window.autocomplete.geocode = true;
-    // window.autocomplete.setTypes(['(locality)']);
-    // console.log('bounds:', window.autocomplete.getBounds());
-
-    // $el.keydown(function(e) {
-    //   if (e.keyCode === 13) {
-    //     if (e.target !== $('button.ma__location-filters__submit')) {
-    //       console.log(e.target);
-    //       e.preventDefault();
-    //     }
-    //   }
-    // });
+    // Don't submit the form when a user selects the autocomplete dropdown item with enter
+    $el.keydown(function(e) {
+      if (e.keyCode === 13) {
+        if  ($(e.target).is($('.ma__location-filters__by-location', $el).find('input'))) {
+          e.preventDefault();
+        }
+      }
+    });
 
     // Handle global form submission.
     $el.submit(function(e){
