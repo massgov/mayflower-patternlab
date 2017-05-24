@@ -1,28 +1,39 @@
-{% extends '@templates/two-column.twig' %}
+{% extends '@templates/01-content-types/location.twig' %}
 
-{% block preContent %}
-  {% for headerAlert in headerAlerts %}
-    {% include "@organisms/by-template/header-alert.twig" %}
-  {% endfor %}
-  {% include "@organisms/by-template/breadcrumbs.twig" %}
-  {% include "@organisms/by-template/page-header.twig" %}
-  {% include "@organisms/by-author/location-banner.twig" %}
+{% block header %}
+  {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
+
 {% block pageContent %}
-  {% set quickActions = sidebar.quickActions %}
-  {% include "@organisms/by-author/quick-actions.twig" %}
-  {% include "@organisms/by-author/action-details.twig" %}
+  {% set richText = pageContent.overview %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = pageContent.hours %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = pageContent.parking %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set googleMap = pageContent.googleMap %}
+  {% include "@molecules/google-map.twig" %}
+  {% set imagePromos = pageContent.imagePromos %}
+  {% include "@organisms/by-author/image-promos.twig" %}
+  {% set richText = pageContent.allActivities %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = pageContent.facilities %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = pageContent.acessibility %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = pageContent.restrictions %}
+  {% include "@organisms/by-author/rich-text.twig" %}
 {% endblock %}
+
 {% block sidebar %}
-  {% set quickActions = sidebar.quickActions %}
-  {% include "@organisms/by-author/quick-actions.twig" %}
-  {% set contactList = sidebar.contactList %}
-  {% include "@organisms/by-author/contact-list.twig" %}
   {% if sidebar.eventListing %}
     {% set eventListing = sidebar.eventListing %}
     {% include "@organisms/by-author/event-listing.twig" %}
   {% endif %}
 {% endblock %}
-{% block postContent %}
-  {% include "@organisms/by-template/breadcrumbs.twig" %}
+
+{% block postContent %}{% endblock %}
+
+{% block footer %}
+  {% include "@organisms/by-template/footer.twig" %}
 {% endblock %}
