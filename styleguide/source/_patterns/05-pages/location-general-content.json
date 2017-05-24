@@ -110,7 +110,7 @@
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
-  "pageContent" : {
+  "mainContent" : {
     "overview": {
       "compHeading": {
         "title": "Overview",

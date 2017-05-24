@@ -5,23 +5,23 @@
 {% endblock %}
 
 {% block pageContent %}
-  {% set richText = pageContent.overview %}
+  {% set richText = mainContent.overview %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set richText = pageContent.hours %}
+  {% set richText = mainContent.hours %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set richText = pageContent.parking %}
+  {% set richText = mainContent.parking %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set googleMap = pageContent.googleMap %}
+  {% set googleMap = mainContent.googleMap %}
   {% include "@molecules/google-map.twig" %}
-  {% set imagePromos = pageContent.imagePromos %}
+  {% set imagePromos = mainContent.imagePromos %}
   {% include "@organisms/by-author/image-promos.twig" %}
-  {% set richText = pageContent.allActivities %}
+  {% set richText = mainContent.allActivities %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set richText = pageContent.facilities %}
+  {% set richText = mainContent.facilities %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set richText = pageContent.acessibility %}
+  {% set richText = mainContent.acessibility %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set richText = pageContent.restrictions %}
+  {% set richText = mainContent.restrictions %}
   {% include "@organisms/by-author/rich-text.twig" %}
 {% endblock %}
 
