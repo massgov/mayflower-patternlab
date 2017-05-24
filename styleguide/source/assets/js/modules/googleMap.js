@@ -1,9 +1,8 @@
 import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
-
   // Only run this code if there is a google map component on the page.
-  if(!$('.js-google-map').length || typeof googleMapData === 'undefined'){
+  if(!$('.js-google-map').length || typeof ma.googleMapData === 'undefined'){
     return;
   }
 
@@ -22,7 +21,7 @@ export default function (window,document,$,undefined) {
     }
   }, 100);
 
-  // Stop checking for google maps library after 2 minutes
+  // Stop checking for google maps library after 2 minutes.
   let stopChecking = setTimeout(function() {
     clearInterval(checkForGoogleMaps);
   }, 2 * 60 * 1000);
@@ -36,11 +35,10 @@ export default function (window,document,$,undefined) {
 
     $(".js-google-map").each(function(i) {
       const $el = $(this);
-      // @todo consider adding maxItems property to googleMap data structure
-      max = (window.locationListing && window.locationListing[i].maxItems) ? window.locationListing[i].maxItems : googleMapData[i].markers.length;
+      max = ma.googleMapData[i].maxItems ? ma.googleMapData[i].maxItems : ma.googleMapData[i].markers.length;
 
       // Get the maps data (this could be replaced with an api)
-      const rawData = googleMapData[i]; // Data object created in @molecules/google-map.twig
+      const rawData = ma.googleMapData[i]; // Data object created in @molecules/google-map.twig
 
       // *** Create the Map *** //
       // Map default config.
@@ -51,42 +49,15 @@ export default function (window,document,$,undefined) {
       const mapData = Object.assign({}, rawData.map, initMapData);
       // Create google map object assigned to this component instance with map data.
       const map = new google.maps.Map(this, mapData);
-
       // Initialize global markers, map bounds.
-      let markers = [];
       let bounds = new google.maps.LatLngBounds();
+      // Initialize all markers
+      let markers = initMarkers(map, rawData.markers);
+      // Add up to max markers to the map, zoom map to fit all bounds
+      addMarkersToMap(markers, map, bounds);
 
-      // Initialize all markers, add up to max to the map
-      for (let key in rawData.markers) {
-        if (rawData.markers.hasOwnProperty(key)) {
-          let markerData = {
-            position: new google.maps.LatLng({
-              lat: rawData.markers[key].position.lat,
-              lng: rawData.markers[key].position.lng
-            }),
-            label: rawData.markers[key].label,
-            infoWindow: rawData.markers[key].infoWindow,
-            _listingKey: key // relationship key between markers + listings
-          };
-
-          let marker = new google.maps.Marker(markerData);
-
-          initMarker(map, marker, markerData);
-
-          // Add up to the maxItems of markers to the map.
-          if (markers.length < max) {
-            marker.setMap(map);
-            // Extend the bounds to include each marker's position.
-            bounds.extend(marker.position);
-          }
-
-          // Add marker to array of all markers.
-          markers.push(marker);
-        }
-      }
-
-      // Make the map zoom to fit the bounds, showing up to given max of markers.
-      map.fitBounds(bounds);
+      // Trigger map initialized event, broadcast master markers.
+      $el.trigger('ma:GoogleMap:MapInitialized', [markers]);
 
       // Listen for map recenter event
       $el.on("ma:GoogleMap:MapRecenter", function (event, markerIndex) {
@@ -117,33 +88,49 @@ export default function (window,document,$,undefined) {
         // make the marker bounce three times
         marker.bounce();
       });
-
-      // Trigger map initialized event, broadcast master markers.
-      $el.trigger('ma:GoogleMap:MapInitialized', [markers]);
-
-      /**
-       * Location Listing config, event listeners
-       */
-      // Set location listing specific config, listeners
-      let $locationListing = $el.parents('.js-location-listing');
-      $locationListing.on('ma:LocationListing:ListingInitialized', function() {
-        // Listen for data change event to update markers by filters.
-        $locationListing.on("ma:LocationListing:UpdateMarkers", function (e, args) {
-          // Update map based on pre-sorted markers order
-          updateMapByMarkers({
-            dataMarkers: args.markers,
-            map: map,
-            markers: markers,
-            place: args.place ? args.place : false
-          });
+      // Listen for data change event to update markers by filters.
+      $el.on("ma:GoogleMap:MarkersUpdated", function (e, args) {
+        // Update map based on pre-sorted markers order
+        markers = updateMapByMarkers({
+          dataMarkers: args.markers,
+          map: map,
+          markers: markers,
+          place: args.place ? args.place : false
         });
       });
     });
   }
 
   /**
-   * Generic GoogleMap helper functions (used by all maps)
+   * Returns the array of initialized current map markers.
+   *
+   * @param map
+   *  The current map object.
+   *
+   * @param markers
+   *  The markers to be initialized.
+   *
+   * @return {Array}
    */
+  function initMarkers(map, markers) {
+    let initializedMarkers = [];
+    markers.forEach(function(data) {
+      let markerData = {
+        position: new google.maps.LatLng({
+          lat: data.position.lat,
+          lng: data.position.lng
+        }),
+        label: data.label,
+        infoWindow: data.infoWindow,
+      };
+      let marker =  new google.maps.Marker(markerData);
+      initMarker(map, marker, markerData);
+
+      initializedMarkers.push(marker);
+    });
+
+    return initializedMarkers;
+  }
 
   /**
    * Initializes a given map marker object with listeners, properties, methods.
@@ -238,8 +225,8 @@ export default function (window,document,$,undefined) {
    *    {
    *      dataMarkers: args.markers, // sorted array of markers by witch to sort and filter master markers
    *      map: map, // initialized map instance
-   *      markers: markers, // master list of markers (relates to location listing master data on _listingKey)
-   *      place: args.place, // location filter place input
+   *      markers: markers, // master list of current map markers
+   *      place: args.place, // optional location filter place input
 
    *    }
    */
@@ -248,24 +235,20 @@ export default function (window,document,$,undefined) {
 
     // Reset bounds to remove previous search locations.
     let bounds = new google.maps.LatLngBounds();
-    if (args.place && autocomplete.getPlace()) {
+    if (args.place && ma.autocomplete.getPlace()) {
       // Ensure the map includes the provided location based on the place value.
       bounds.extend(args.place.geometry.location);
     }
 
-    // Filter the markers based on pre-sorted, flagged location listing instance of masterData.
-    let filteredMarkers = getActiveMarkers({dataMarkers: args.dataMarkers, markers: args.markers});
-
     // Add the new markers to the map and set new bounds based on filtered markers.
-    addMarkers(filteredMarkers, args.map, bounds);
+    addMarkersToMap(args.dataMarkers, args.map, bounds);
 
     // If there is only one marker, zoom out to provide some context.
-    if (filteredMarkers.length === 1) {
+    if (args.dataMarkers.length === 1) {
       args.map.setZoom(16);
     }
 
-    // Trigger markers updated event and broadcast filtered markers.
-    $('.js-location-listing').trigger("ma:LocationListing:MapMarkersUpdated", [filteredMarkers]);
+    return args.dataMarkers;
   }
 
   /**
@@ -324,16 +307,17 @@ export default function (window,document,$,undefined) {
    * @param bounds
    *   Initialized map bounds object.
    */
-  function addMarkers(markers, map, bounds) {
-    // @todo see if markers.forEach would work instead
+  function addMarkersToMap(markers, map, bounds) {
+    // Set max number of markers to whichever is smaller: max or the number of markers sent.
     let maxItems = markers.length < max ? markers.length : max;
 
-    for (var i = 0; i < maxItems; i++) {
-      markers[i].setMap(map);
-      // Extend the bounds to include each marker's position.
-      bounds.extend(markers[i].position);
-    }
-
+    markers.forEach(function(marker, index) {
+      if (index < maxItems) {
+        marker.setMap(map);
+        // Extend the bounds to include each marker's position.
+        bounds.extend(marker.position);
+      }
+    });
     // Make the map zoom to fit the bounds, showing all locations.
     map.fitBounds(bounds);
   }

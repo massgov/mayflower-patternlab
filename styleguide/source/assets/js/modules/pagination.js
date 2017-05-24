@@ -43,42 +43,30 @@ export default function (window,document,$,undefined) {
 
   // Set up global component config
   let compiledTemplate = getTemplate('pagination'),
-    el = '.js-pagination',
     prevButton = 'button.ma__pagination__prev',
     nextButton = 'button.ma__pagination__next',
     pageButton = 'button.ma__pagination__page';
 
   $('.js-pagination').each(function(){
-    // Set up instance specific config
     let $el = $(this);
 
-    /**
-     * Location Listing config, event listeners
-     */
+    // Listen for previous page button click and trigger pagination event.
+    $el.on('click', prevButton, function () {
+      $el.trigger('ma:Pagination:Pagination', ['previous']);
+    });
+    // Listen for next button click and trigger pagination event.
+    $el.on('click', nextButton, function () {
+      $el.trigger('ma:LocationListing:Pagination', ['next']);
+    });
+    // Listen for page number button click and trigger pagination event;
+    $el.on('click', pageButton, function (e) {
+      let targetPageNumber = $(e.target).data('page');
+      $el.trigger('ma:Pagination:Pagination', [targetPageNumber]);
+    });
 
-    // Set location listing specific config
-    let $locationListing = $el.parents('.js-location-listing'); // context
-    // Set location listing specific listeners, when parent component is initialized.
-    $locationListing.on('ma:LocationListing:ListingInitialized', function() {
-      // Set event listeners on parent component because original DOM nodes will be replaced on render().
-
-      // Listen for previous page button click and trigger pagination event.
-      $locationListing.on('click', prevButton, function () {
-        $locationListing.trigger('ma:LocationListing:Pagination', ['previous']);
-      });
-      // Listen for next button click and trigger pagination event.
-      $locationListing.on('click', nextButton, function () {
-        $locationListing.trigger('ma:LocationListing:Pagination', ['next']);
-      });
-      // Listen for page number button click and trigger pagination event;
-      $locationListing.on('click', pageButton, function (e) {
-        let targetPageNumber = $(e.target).data('page');
-        $locationListing.trigger('ma:LocationListing:Pagination', [targetPageNumber]);
-      });
-      // Listen for new location listing results load, render new results heading.
-      $locationListing.on('ma:LocationListing:ListingsUpdated', function (e, data) {
-        renderPagination({data: data.pagination, context: $locationListing});
-      });
+    // Listen for new data, render new pagination.
+    $el.on('ma:Pagination:DataUpdated', function (e, data) {
+      renderPagination({data: data, $el: $el});
     });
   });
 
@@ -97,13 +85,8 @@ export default function (window,document,$,undefined) {
     }
 
     // Create new markup using handlebars template, helper.
-    args.data.markup = compiledTemplate(args.data);
-
-    // Populate the appropriate instance.
-    if (args.context) {
-      args.context.find(el).replaceWith(args.data.markup);
-    }
-    else $(el).replaceWith(args.data.markup);
+    let markup = compiledTemplate(args.data);
+    args.$el.html(markup);
   }
 
 }(window,document,jQuery);

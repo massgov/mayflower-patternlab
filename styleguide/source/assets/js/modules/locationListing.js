@@ -2,29 +2,20 @@ import sticky from "../helpers/sticky.js";
 import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
-
   $('.js-location-listing').each(function(i){
     let $el = $(this),
       $mapCol = $el.find('.js-location-listing-map'),
-      $map = $el.find('.js-google-map');
+      $map = $el.find('.js-google-map'),
+      $resultsHeading = $el.find('.js-results-heading'),
+      $pagination = $el.find('.js-pagination'),
+      $locationFilter = $el.find('.js-location-filters');
 
     sticky.init($mapCol);
 
     // Get the location listing component data (this could be replaced with an api)
-    const rawData = locationListing[i]; // Data object created in @organisms/by-author/location-listing.twig
-
-    // Ensure locationListing.imagePromos.items is an array (the twig template json_encode()'s a php array)
-    let promosArray = [];
-    $.map(rawData.imagePromos.items, function(val, index) { promosArray[index] = val; });
-    rawData.imagePromos.items = promosArray;
-
-    // Ensure locationListing.pagination.pages is an array (the twig template json_encode()'s a php array)
-    let pages = [];
-    $.map(rawData.pagination.pages, function(val, index) { pages[index] = val; });
-    rawData.pagination.pages = pages;
+    const rawData = ma.locationListing[i]; // Data object created in @organisms/by-author/location-listing.twig
 
     let masterData = []; // master data structure to preserve state
-
     // Listen for map initialization, populate master data structure using locationListing, map markers.
     $map.on('ma:GoogleMap:MapInitialized', function(e, markers) {
       masterData = populateMasterDataSource(rawData, markers); // to preserve state
@@ -54,32 +45,44 @@ export default function (window,document,$,undefined) {
       });
 
       // Handle location listings form interaction (triggered by locationFilters.js).
-      $el.on('ma:LocationListing:FormInteraction', function (e, formValues) {
+      $locationFilter.on('ma:LocationFilter:FormSubmitted', function (e, formValues) {
         let transformation = transformData(masterData, formValues);
         masterData = transformation.data; // preserve state
-        $el.trigger('ma:LocationListing:UpdateMarkers', [{markers: transformation.markers}]);
+        // Trigger child components render with updated data
+        updateChildComponents(transformation);
       });
 
       // Handle active filter/tag button interactions (triggered by resultsHeading.js).
-      $el.on('ma:LocationListing:ActiveTagInteraction', function (e, clearedFilter) {
+      $resultsHeading.on('ma:ResultsHeading:ActiveTagClicked', function (e, clearedFilter) {
         let transformation = transformData(masterData, clearedFilter);
         masterData = transformation.data; // preserve state
-        $el.trigger('ma:LocationListing:UpdateMarkers', [{markers: transformation.markers}]);
+        transformation.clearedFilter = clearedFilter;
+
+        // Trigger child components render with updated data
+        updateChildComponents(transformation);
       });
 
-      // Handle pagination event, render targetPage
-      $el.on('ma:LocationListing:Pagination', function (e, target) {
+      // Handle pagination event (triggered by pagination.js), render targetPage
+      $pagination.on('ma:Pagination:Pagination', function (e, target) {
         masterData.pagination = transformPaginationData({data: masterData, targetPage: target});
         masterData.resultsHeading = transformResultsHeading({data: masterData, page: target});
         renderListingPage({data: masterData, page: target});
 
         let markers = getActiveMarkers({data: masterData, page: target});
-        $el.trigger('ma:LocationListing:UpdateMarkers', [{markers: markers, page: target}]);
+        // Trigger child components render with updated data
+        updateChildComponents({data: masterData, markers: markers});
       });
-
-      // Trigger location listing initialization event.
-      $el.trigger('ma:LocationListing:ListingInitialized', [masterData]);
     });
+
+    // Trigger events to update child components with new data.
+    function updateChildComponents(args) {
+      $resultsHeading.trigger('ma:ResultsHeading:DataUpdated', [args.data.resultsHeading]);
+      $map.trigger('ma:GoogleMap:MarkersUpdated', [{markers: args.markers, place: args.place}]);
+      $pagination.trigger('ma:Pagination:DataUpdated', [args.data.pagination]);
+      if (args.clearedFilter) {
+        $locationFilter.trigger('ma:FormFilter:DataUpdated', [args.clearedFilter]);
+      }
+    }
   });
 
   /**
@@ -97,7 +100,7 @@ export default function (window,document,$,undefined) {
    *   An array with the following structure:
    *    [
    *      maxItems: the max number of items to show per listing "page" if provided, defaults to all
- *        totalPages: the number of pages of items that should render, given the current filters
+   *      totalPages: the number of pages of items that should render, given the current filters
    *      resultsHeading: the data structure necessary to render a resultsHeading component
    *      items: an array of listing items [
    *        isActive: whether or not the listing should be shown, given current filters state
@@ -113,6 +116,16 @@ export default function (window,document,$,undefined) {
     // Populate master data structure
     let masterData = [];
 
+    // Ensure locationListing.imagePromos.items is an array (the twig template json_encode()'s a php array)
+    let promosArray = [];
+    $.map(listing.imagePromos.items, function(val, index) { promosArray[index] = val; });
+    listing.imagePromos.items = promosArray;
+
+    // Ensure locationListing.pagination.pages is an array (the twig template json_encode()'s a php array)
+    let pages = [];
+    $.map(listing.pagination.pages, function(val, index) { pages[index] = val; });
+    listing.pagination.pages = pages;
+
     // Get the listing imagePromos, generate markup for each
     let masterListing = listing.imagePromos.items,
       masterListingMarkup = transformLocationListingPromos(masterListing);
@@ -126,7 +139,7 @@ export default function (window,document,$,undefined) {
     // The initial pagination data structure
     masterData.pagination = listing.pagination;
     // The total number of pages, given the number of items and the maxItems variable
-    masterData.totalPages = Math.ceil(markers.length / masterData.maxItems);
+    masterData.totalPages = Math.ceil(masterData.items.length / masterData.maxItems);
 
     return masterData;
   }
@@ -159,8 +172,8 @@ export default function (window,document,$,undefined) {
         isActive: true, // @todo consider checking for this in case of server side preprocessing of state
         page: Math.ceil((index+1) / max),
         marker: item,
-        markup: markup[item._listingKey],
-        promo: listing[item._listingKey]
+        markup: markup[index],
+        promo: listing[index]
       };
     });
     return items;
@@ -205,21 +218,22 @@ export default function (window,document,$,undefined) {
   function transformData(data, transformation) {
     // First filter the data based on component state, then sort alphabetically by default.
     let filteredData = filterListingData(data, transformation),
-      sortedData = sortDataAlphabetically(filteredData);
+      sortedData = sortDataAlphabetically(filteredData),
+      place = '';
 
     // Sort data by location, if that filter is present.
     if (hasFilter(filteredData.resultsHeading.tags, 'location')) {
-      let place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
+      place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
-      if (autocomplete.getPlace()) {
-        place = autocomplete.getPlace();
+      if (ma.autocomplete.getPlace()) {
+        place = ma.autocomplete.getPlace();
         // Sort the markers and instance of locationListing masterData.
         sortedData = sortDataAroundPlace(place, filteredData);
       }
       // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
       else {
         // Geocode the address, then sort the markers and instance of locationListing masterData.
-        window.geocoder = window.geocoder ? window.geocoder : new google.maps.Geocoder();
+        ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
         // @todo limit geocode results to MA?
         sortedData = geocodeAddressString(place, sortDataAroundPlace, filteredData);
       }
@@ -236,7 +250,8 @@ export default function (window,document,$,undefined) {
     // Preserve state of current data.
     return {
       data: sortedData,
-      markers: markers
+      markers: markers,
+      place: place
     };
   }
 
@@ -310,7 +325,7 @@ export default function (window,document,$,undefined) {
    *       value: '[filter value]'
    *     }, || 'all' (if clear all button was pressed)
    *     {
-   *       filters: (optional submitted filter data)
+   *       formData: (optional submitted form filter data)
    *       [
    *         {
    *           type: '[filter type] location || tag',
@@ -328,7 +343,7 @@ export default function (window,document,$,undefined) {
       return getActiveFilters(args.data, args.filterData); // This was an active tag interaction, get remaining filters.
     }
     else {
-      return args.filterData.filters; // This was a form submission, so just return the applied filters.
+      return args.filterData.formData; // This was a form submission, so just return the applied form data.
     }
   }
 
@@ -390,6 +405,7 @@ export default function (window,document,$,undefined) {
 
     resultsHeading.totalResults = totalActive;
     resultsHeading.numResults = firstItem + " - " + lastItem; // @todo add accessibility consideration here
+
     return resultsHeading;
   }
 
@@ -508,7 +524,6 @@ export default function (window,document,$,undefined) {
     })
   }
 
-  // Do any necessary data transformation to make imagePromo data fit locationListingRow template.
   /**
    * Returns transformed imagePromo data object.
    *
@@ -580,7 +595,7 @@ export default function (window,document,$,undefined) {
   }
 
   /**
-   * Returns instance of location listing masterData, sorted proximity to place on marker._listingKey.
+   * Returns instance of location listing masterData, sorted proximity to place.
    *
    * @param place
    *   The geocode information by which to sort.
@@ -624,7 +639,7 @@ export default function (window,document,$,undefined) {
    */
   function geocodeAddressString(address, callback, callbackArg) {
     // Only attempt to execute if google's geocode library is loaded.
-    if (typeof window.geocoder === "undefined") {
+    if (typeof ma.geocoder === "undefined") {
       return;
     }
     // Geocode address string, then execute callback with argument upon success.
@@ -655,7 +670,6 @@ export default function (window,document,$,undefined) {
     return data;
   }
 
-  // Filter listings by tags.
   /**
    * Returns masterData with necessary filtered items flagged inactive.
    *
@@ -754,7 +768,6 @@ export default function (window,document,$,undefined) {
     });
 
     sticky.init($('.js-location-listing-map'));
-    $('.js-location-listing').trigger('ma:LocationListing:ListingsUpdated', [args.data]);
   }
 
 }(window,document,jQuery);

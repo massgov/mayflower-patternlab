@@ -1,3 +1,4 @@
+{# set max number of items / markers to render per listing page / map if passed one, default to all #}
 {% set maxItems = locationListing.maxItems ?: locationListing.imagePromos.items.length %}
 <section class="ma__location-listing js-location-listing">
   {% if locationListing.locationFilters %}
@@ -27,7 +28,8 @@
   </div>
 </section>
 <script>
-  var locationListing = locationListing || [];
-
-  locationListing.push({{ locationListing|json_encode|raw }});
+  // Make locationListing data object available in locationListing module js.
+  var ma = ma || {};
+  ma.locationListing = ma.locationListing || [];
+  ma.locationListing.push({{ locationListing|json_encode|raw }});
 </script>
