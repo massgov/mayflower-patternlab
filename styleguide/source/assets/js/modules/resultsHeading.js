@@ -2,7 +2,7 @@ import getTemplate from "../helpers/getHandlebarTemplate.js";
 
 export default function (window,document,$,undefined) {
   // Set up global component config
-  let compiledTemplate = getTemplate('locationListingResultsHeading'),
+  let compiledTemplate = getTemplate('resultsHeading'),
     clearAllButton = 'button.ma__results-heading__clear', // events triggered on parent
     filterButton = 'button.ma__results-heading__tag'; // events triggered on parent
 

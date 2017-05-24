@@ -1,0 +1,17 @@
+<p class="ma__results-heading__title">Showing {{{numResults}}}
+  {{# if totalResults }}
+    of {{{totalResults}}}
+  {{/if}}
+  results
+  {{# if tags }}
+    for:
+  {{/if}}
+</p>
+<div class="ma__results-heading__tags">
+  {{#each tags}}
+  <button type="button" class="ma__results-heading__tag" data-ma-filter-type="{{{ this.type }}}" data-ma-filter-value="{{{ this.value }}}">{{{this.text}}}</button>
+  {{/each}}
+  {{# if tags }}
+  <button type="button" class="ma__results-heading__clear">Clear all</button>
+  {{/if}}
+</div>
