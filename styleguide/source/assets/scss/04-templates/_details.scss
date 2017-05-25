@@ -24,13 +24,4 @@
       border: none;
     }
   }
-
-  &__sidebar {
-
-    .ma__sidebar-heading,
-    .ma__comp-heading {
-      @include ma-heading-colored;
-      border: none;
-    }
-  }
 }

@@ -7,12 +7,4 @@
       @include ma-heading-colored($c-theme-secondary);
     }
   }
-
-  .sidebar {
-    
-    .ma__sidebar-heading,
-    .ma__comp-heading {
-      @include ma-heading-colored($c-bg-comp-title);
-    }
-  }
 }
