@@ -34,6 +34,9 @@ sectionLinks: {
     text:
       type: string/required
   },
+  subTitle: {
+    type: boolean
+  },
   description:
     type: string
   type:
@@ -43,7 +46,7 @@ sectionLinks: {
       type: url/required
     text:
       type: string/required
-  }]
+  }] / optional
   seeAll: {
     href:
       type: url
