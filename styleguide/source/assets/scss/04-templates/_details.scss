@@ -16,30 +16,7 @@
     }
   }
 
-  &__top-contact {
-    
-    @media($bp-large-min) {
-      display: none;
-
-      & + * {
-        margin-top: 0 !important;
-      }
-    }
-  }
-
-  &__sidebar-contact {
-    
-    @media ($bp-large-max) {
-      display: none;
-
-      & + * {
-        margin-top: 0 !important;
-      }
-    }
-  }
-
-  &__top-contact,
-  &__sidebar-contact {
+  .page-content > .ma__contact-list {
     
     .ma__sidebar-heading,
     .ma__comp-heading {
