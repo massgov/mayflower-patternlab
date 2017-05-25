@@ -1,15 +1,8 @@
 .ma__results-heading {
-  margin-bottom: 30px;
-  padding-top: 40px;
 
-  &:first-child {
-    padding-top: 0;
-  }
-
-  .pre-content > &,
-  .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container();
+    @include ma-component-spacing;
   }
   
   &__container {

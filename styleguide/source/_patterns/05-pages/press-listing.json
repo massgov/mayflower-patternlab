@@ -196,6 +196,9 @@
         },{
           "value":"governors-office",
           "text":"Governor's Office"
+        },{
+          "value":"massdot",
+          "text":"massDOT"
         }]
       },
 
@@ -238,6 +241,26 @@
           "text": "more information",
           "href": "#",
           "info": "learn more about Organization"
+        }
+      },{
+        "value": "massdot",
+        "image": {
+          "href": "#",
+          "alt": "Mass Dot Logo",
+          "src": "/assets/images/placeholder/190x107.png",
+          "height": "107",
+          "width": "190"
+        },
+        "name": {
+          "text": "Massachusetts Department of Transportation (MassDOT)",
+          "href": "#"
+        },
+        "jobTitle": "",
+        "message": "MassDOT oversees roads, public transit, aeronautics, and transportation licensing and registration across the state. It includes: the RMV, the MBTA, and the Aeronautics Division",
+        "moreLink": {
+          "text": "more information",
+          "href": "#",
+          "info": "learn more about massDot"
         }
       }]
     },

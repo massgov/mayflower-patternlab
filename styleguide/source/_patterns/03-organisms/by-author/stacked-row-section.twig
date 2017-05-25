@@ -1,7 +1,8 @@
-{% set containerModifier = stackedRowSection.sideBar|length ? '' : 'ma__stacked-row-section__container--restricted' %}
-<section class="ma__stacked-row-section">
+{% set stackRowRestriction = stackedRowSection.sideBar|length ? '' : 'ma__stacked-row-section--restricted' %}
+
+<section class="ma__stacked-row-section {{ stackRowRestriction }}">
   {% if stackedRowSection.title %}
-    <div class="ma__stacked-row-section__container {{ containerModifier }}">
+    <div class="ma__stacked-row-section__container">
       <div class="ma__stacked-row-section__title">
         {% set compHeading = {
             "title": stackedRowSection.title,
@@ -13,7 +14,7 @@
         {% include "@atoms/04-headings/comp-heading.twig" %}
       </div>
     </div>
-  {% endif %}
+  {% endif %}    
   <div class="main-content {{ stackedRowSection.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
     <div class="page-content">
       {% for content in stackedRowSection.pageContent %}

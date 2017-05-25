@@ -140,64 +140,49 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "path": "@organisms/by-author/contact-list.twig",
       "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "subTitle": {
-            "href":"#",
-            "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
-            "chevron":""
+        "contactList": {
+          "viewSpecific": false,
+          "sidebarHeading": {
+            "title": "Key Agencies"
           },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(413) 499-4262",
-              "rawVal":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "email",
-              "label":"Email:",
-              "value":"email@email.com",
-              "link":"email@email.com",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"#",
+              "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "email",
+                "label":"Email:",
+                "link": {
+                  "href": "email@email.com",
+                  "text": "email@email.com",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
             }]
           }]
         }
@@ -256,64 +241,49 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "path": "@organisms/by-author/contact-list.twig",
       "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "subTitle": {
-            "href":"#",
-            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-            "chevron":""
+        "contactList": {
+          "viewSpecific": false,
+          "sidebarHeading": {
+            "title": "Key Agencies"
           },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "online",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"#",
+              "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "online",
+                "label":"",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
             }]
           }]
         }
@@ -373,120 +343,86 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "path": "@organisms/by-author/contact-list.twig",
       "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "subTitle": {
-            "href":"#",
-            "text": "Executive Office of Energy and Environmental Affairs (EEA)",
-            "chevron":""
+        "contactList": {
+          "viewSpecific": false,
+          "sidebarHeading": {
+            "title": "Key Agencies"
           },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"#",
+              "text": "Executive Office of Energy and Environmental Affairs (EEA)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "link": {
+                  "href": "+16176251250",
+                  "text": "(617) 625-1250",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "online",
+                "label":"",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
             }]
           },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "online",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
-            }]
-          }]
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "subTitle": {
-            "href":"#",
-            "text": "Massachusetts Department of Public Utilities (DPU)",
-            "chevron":""
-          },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "online",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
+            "accordion": false,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"#",
+              "text": "Massachusetts Department of Public Utilities (DPU)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "link": {
+                  "href": "+16176251250",
+                  "text": "(617) 625-1250",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "online",
+                "label":"",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
             }]
           }]
         }
@@ -536,7 +472,7 @@
       }
     }],
 
-    "sideBar": ""
+    "sideBar": null
   },{
     "title": "Another Section Name",
     "id": "another-section-name1",
@@ -584,64 +520,49 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "path": "@organisms/by-author/contact-list.twig",
       "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "subTitle": {
-            "href":"#",
-            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-            "chevron":""
+        "contactList": {
+          "viewSpecific": false,
+          "sidebarHeading": {
+            "title": "Key Agencies"
           },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "online",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"#",
+              "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "link": {
+                  "href": "+16176251250",
+                  "text": "(617) 625-1250",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "online",
+                "label":"",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
             }]
           }]
         }
@@ -681,64 +602,49 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "path": "@organisms/by-author/contact-list.twig",
       "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "subTitle": {
-            "href":"#",
-            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-            "chevron":""
+        "contactList": {
+          "viewSpecific": false,
+          "sidebarHeading": {
+            "title": "Key Agencies"
           },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "online",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"#",
+              "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "link": {
+                  "href": "+16176251250",
+                  "text": "(617) 625-1250",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "online",
+                "label":"",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
             }]
           }]
         }
@@ -799,64 +705,49 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
+      "path": "@organisms/by-author/contact-list.twig",
       "data": {
-        "sidebarHeading": {
-          "title": "Key Agencies"
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "subTitle": {
-            "href":"#",
-            "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-            "chevron":""
+        "contactList": {
+          "viewSpecific": false,
+          "sidebarHeading": {
+            "title": "Key Agencies"
           },
-          "groups": [{
-            "icon": "@atoms/05-icons/svg-phone.twig",
-            "name": "Phone",
-            "hidden": "",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(617) 625-1250",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
-            "name": "Online",
-            "hidden": "",
-            "items": [{
-              "type": "online",
-              "label":"",
-              "value":"Contact Form",
-              "link":"#",
-              "details":""
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-fax-icon.twig",
-            "name": "Fax",
-            "hidden": "true",
-            "items": [{
-              "type": "fax",
-              "label":"",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"Please allow 24 hours for a response"
-            }]
-          },{
-            "icon": "@atoms/05-icons/svg-marker.twig",
-            "name": "Address",
-            "hidden": "true",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "555 Park Drive\nBoston, MA 02231",
-              "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-              "details": ""
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"#",
+              "text": "Massachusetts Registry of Motor Vehicles (RMV)",
+              "chevron":""
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "link": {
+                  "href": "+16176251250",
+                  "text": "(617) 625-1250",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "online",
+                "label":"",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
             }]
           }]
         }
@@ -969,7 +860,7 @@
       }
     }],
 
-    "sideBar": []
+    "sideBar": null
   }
   ],
 

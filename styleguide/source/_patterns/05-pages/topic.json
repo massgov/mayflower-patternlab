@@ -22,6 +22,7 @@
   },
 
   "sectionThreeUp" : {
+    "compHeading": null,
     "sections": [{
       "id": "GUIDasjdhf1",
       "catIcon": "",
@@ -118,7 +119,13 @@
   },
 
   "linkList" : {
-    "title": "Related Topics",
+    "compHeading": {
+      "title": "Related Agencies",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
     "links" : [{
       "url":"#",
       "text":"Hunting & Fishing"
