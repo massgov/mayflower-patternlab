@@ -3,16 +3,4 @@
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-
-  &__info {
-    @include ma-visually-hidden;
-  }
-
-  &--small {
-    font-size: 1.25rem;
-  }
-
-  &--big {
-    @include ma-h5;
-  }
 }

@@ -236,16 +236,16 @@
       ],
 
       "sideBar": [{
-        "path": "@atoms/04-headings/sidebar-heading.twig",
-        "data": {
+      "path": "@organisms/by-author/contact-list.twig",
+      "data": {
+        "contactList": {
+          "viewSpecific": false,
           "sidebarHeading": {
             "title": "Key Agencies"
-          }
-        }
-      },{
-        "path": "@molecules/contact-us.twig",
-        "data": {
-          "contactUs": {
+          },
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
             "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
@@ -254,51 +254,36 @@
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",
               "name": "Phone",
-              "hidden": "",
               "items": [{
                 "type": "phone",
                 "label":"Main:",
-                "value":"(617) 625-1250",
-                "link":"14134994262",
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
               "icon": "@atoms/05-icons/svg-laptop.twig",
               "name": "Online",
-              "hidden": "",
               "items": [{
                 "type": "online",
                 "label":"",
-                "value":"Contact Form",
-                "link":"#",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
                 "details":""
               }]
-            },{
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
-              "name": "Fax",
-              "hidden": "true",
-              "items": [{
-                "type": "fax",
-                "label":"",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
-                "details":"Please allow 24 hours for a response"
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-marker.twig",
-              "name": "Address",
-              "hidden": "true",
-              "items": [{
-                "type": "address",
-                "label": "",
-                "value": "555 Park Drive\nBoston, MA 02231",
-                "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-                "details": ""
-              }]
             }]
-          }
+          }]
         }
-      }]
+      }
+    }]
     }
   ],
 
