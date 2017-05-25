@@ -13,7 +13,7 @@
       @media ($bp-large-min) {
         display: none;
 
-        &:first-child ~ & + * {
+        &:first-child + * {
           margin-top: 0;
         }
       }
