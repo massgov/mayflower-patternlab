@@ -6,10 +6,7 @@ Description: An `<h2>` or `<h3>` element with a styled underline color designate
 ## State: ALPHA
 
 ### Notes:
-- _compHeading.color - 'yellow' is currently the only optional value that can be passed to this variable_
-- _compHeading.sub - 'true' is the only optional value that can be passed to this variable_
-- _compHeading.centered - 'true' is the only optional value that can be passed to this variable_
-- `{{ modifier }}` is a local twig variable which is set in the atom twig template by appending `compHeading.color` to a CSS class name
+
 
 ### Used In:
 - [@molecules/action-section](/?p=molecules-action-section)
