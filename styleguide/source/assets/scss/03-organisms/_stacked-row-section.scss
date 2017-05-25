@@ -39,7 +39,14 @@
     max-width: 820px;
   }
   
-  .main-content .page-content > * {
-    @include ma-component-spacing;
+  .main-content {
+
+    @media ($bp-large-max) {
+      margin-bottom: 0;
+    }
+
+    .page-content > * {
+      @include ma-component-spacing;
+    }
   }
 }
