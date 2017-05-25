@@ -82,14 +82,14 @@
       "text":"Continuing Education"
     }]
   },{
-    "href":"/patterns/05-pages-L0-visiting-and-exploring/05-pages-L0-visiting-and-exploring.html",
+    "href":"/patterns/05-pages-section-landing/05-pages-section-landing.html",
     "text":"Visiting & Exploring",
     "active":"true",
     "subNav":[{
       "href":"#",
       "text":"Recreational Licenses & Permits"
     },{
-      "href":"/patterns/05-pages-L1-state-parks-and-recreation/05-pages-L1-state-parks-and-recreation.html",
+      "href":"/patterns/05-pages-topic/05-pages-topic.html",
       "text":"State Parks & Recreation"
     },{
       "href":"#",
@@ -109,7 +109,7 @@
       "href":"#",
       "text":"State Agencies"
     },{
-      "href":"#",
+      "href":"/patterns/05-pages-topic-your-government/05-pages-topic-your-government.html",
       "text":"Executive Branch"
     },{
       "href":"#",
