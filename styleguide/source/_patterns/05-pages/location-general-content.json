@@ -81,7 +81,8 @@
           "phone": "14134994262",
           "fax": "",
           "email": "",
-          "address": "6 Larochelle Way\nSouthbridge, MA 01550"
+          "address": "6 Larochelle Way\nSouthbridge, MA 01550",
+          "directions": "https://www.google.com/maps/place/6+Larochelle+Way,+Southbridge,+MA+01550"
         }
       }]
     }
@@ -244,7 +245,7 @@
         }
       }]
     },
-
+    
     "googleMap": {
       "map": {
         "center": {
@@ -264,7 +265,8 @@
           "phone": "14134994262",
           "fax": "",
           "email": "mass.parks@state.ma.us",
-          "address": "30 Rockwell Road\n Lanesborough, MA 01237"
+          "address": "30 Rockwell Road\nLanesborough, MA 01237",
+          "directions": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225"
         }
       },{
         "position": {
@@ -277,7 +279,8 @@
           "phone": "14137431591",
           "fax": "",
           "email": "mail@bascomlodge.net",
-          "address": "30 Rockwell Road\n Lanesborough, MA 01237"
+          "address": "30 Rockwell Road\nLanesborough, MA 01237",
+          "directions": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225"
         }
       }]
     },

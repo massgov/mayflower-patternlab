@@ -1,18 +1,4 @@
 {
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Working",
-      "href": ""
-    },{
-      "text": "Unemployment",
-      "href": ""
-    },{
-      "text": "Unemployment Benefits",
-      "href": ""
-    }]
-  },
-
   "pageBanner": {
     "bgWide": "/assets/images/placeholder/1600x400.png",
     "bgNarrow": "/assets/images/placeholder/800x400.png",
