@@ -91,7 +91,8 @@
           "phone": "14134994262",
           "fax": "",
           "email": "",
-          "address": "6 Larochelle Way\nSouthbridge, MA 01550"
+          "address": "6 Larochelle Way\nSouthbridge, MA 01550",
+          "directions": "https://www.google.com/maps/place/6+Larochelle+Way,+Southbridge,+MA+01550"
         }
       }]
     }

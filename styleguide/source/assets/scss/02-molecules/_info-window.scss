@@ -10,10 +10,6 @@
     margin-bottom: 0;
   }
 
-  &__contact {
-    margin-bottom: 1em;
-  }
-
   &__phone {
     white-space: nowrap;
   }
@@ -24,5 +20,9 @@
 
   &__address {
     margin-bottom: 12px;
+  }
+
+  &__directions {
+    margin-top: 6px;
   }
 }
