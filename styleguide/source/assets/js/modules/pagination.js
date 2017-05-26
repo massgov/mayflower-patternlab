@@ -43,9 +43,9 @@ export default function (window,document,$,undefined) {
 
   // Set up global component config
   let compiledTemplate = getTemplate('pagination'),
-    prevButton = 'button.ma__pagination__prev',
-    nextButton = 'button.ma__pagination__next',
-    pageButton = 'button.ma__pagination__page';
+    prevButton = '.js-pagination-prev',
+    nextButton = '.js-pagination-next',
+    pageButton = '.js-pagination-page';
 
   $('.js-pagination').each(function(){
     let $el = $(this);
