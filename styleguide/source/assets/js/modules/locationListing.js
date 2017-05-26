@@ -557,7 +557,7 @@ export default function (window,document,$,undefined) {
    */
   function getSvgFromTag(tag) {
     // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
-    return $('.ma__location-filters__tag').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+    return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
   }
 
   /**
@@ -738,7 +738,7 @@ export default function (window,document,$,undefined) {
 
   // Remove the imagePromos children content on the current location listing page.
   function clearListingPage() {
-    $('.js-location-listing-results').find('.ma__image-promos').html('');
+    $('.js-location-listing-results').find('.js-image-promos').html('');
   }
 
   /**
@@ -753,7 +753,7 @@ export default function (window,document,$,undefined) {
    */
   function renderListingPage(args) {
     clearListingPage();
-    let $el = $('.js-location-listing-results').find('.ma__image-promos'),
+    let $el = $('.js-location-listing-results').find('.js-image-promos'),
       page = args.page ? args.page : 1;
 
     args.data.items.forEach(function(item){
