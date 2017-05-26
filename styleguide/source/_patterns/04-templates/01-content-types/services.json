@@ -25,25 +25,23 @@
       }
     },
 
-    "teaserText": {
-      "richText": {
-        "property": "",
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "Required - Intro Paragraph followed by an optional Learn More link for services that may be more complicated, and require more explanation.  This 'Learn More' link could send end users to a page with additional information about this service to help them decide if it's the service they want or need."
-            }
+    "intro": {
+      "property": "",
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Required - Intro Paragraph followed by an optional Learn More link for services that may be more complicated, and require more explanation.  This 'Learn More' link could send end users to a page with additional information about this service to help them decide if it's the service they want or need."
           }
-        }]
-      },
-
-      "decorativeLink": {
-        "href": "#",
-        "text": "Learn More",
-        "info": "Learn More about this generic service",
-        "property": ""
-      }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<a href=\"#\">Learn more</a>"
+          }
+        }
+      }]
     },
 
     "keyActions": {
