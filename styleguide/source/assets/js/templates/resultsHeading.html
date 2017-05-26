@@ -9,9 +9,9 @@
 </p>
 <div class="ma__results-heading__tags">
   {{#each tags}}
-  <button type="button" class="ma__results-heading__tag" data-ma-filter-type="{{{ this.type }}}" data-ma-filter-value="{{{ this.value }}}">{{{this.text}}}</button>
+  <button type="button" class="ma__results-heading__tag js-results-heading-tag" data-ma-filter-type="{{{ this.type }}}" data-ma-filter-value="{{{ this.value }}}">{{{this.text}}}</button>
   {{/each}}
   {{# if tags }}
-  <button type="button" class="ma__results-heading__clear">Clear all</button>
+  <button type="button" class="ma__results-heading__clear js-results-heading-clear">Clear all</button>
   {{/if}}
 </div>
