@@ -4,7 +4,7 @@ export default function (window,document,$,undefined) {
 
     // When google map libraries are loaded, initialize places.autocomplete on the location input, if it exists.
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function() {
-      let $locationFilter = $('.ma__location-filters__by-location', $el).find('input');
+      let $locationFilter = $('.js-filter-by-location', $el).find('input');
       if ($locationFilter.length) {
         // Create the google places autocomplete object and associate it with the zip code text input.
         let locationInput = document.getElementById($locationFilter.attr('id'));
@@ -29,7 +29,7 @@ export default function (window,document,$,undefined) {
     // Don't submit the form when a user selects the autocomplete dropdown item with enter
     $el.keydown(function(e) {
       if (e.keyCode === 13) {
-        if  ($(e.target).is($('.ma__location-filters__by-location', $el).find('input'))) {
+        if  ($(e.target).is($('.js-filter-by-location', $el).find('input'))) {
           e.preventDefault();
         }
       }
@@ -61,8 +61,8 @@ export default function (window,document,$,undefined) {
 
   function getFormData(args) {
     let $form = $(args.$form),
-      $location = $form.find('.ma__location-filters__by-location'),
-      $tags = $form.find('.ma__location-filters__by-tags'),
+      $location = $form.find('.js-filter-by-location'),
+      $tags = $form.find('.js-filter-by-tags'),
       formData = [];
 
     // Get location
@@ -86,8 +86,8 @@ export default function (window,document,$,undefined) {
 
   function clearDeactivatedFilter(args) {
     let $form = $(args.$form),
-      $place = $form.find('.ma__location-filters__by-location'),
-      $tags = $form.find('.ma__location-filters__by-tags'),
+      $place = $form.find('.js-filter-by-location'),
+      $tags = $form.find('.js-filter-by-tags'),
       clearedFilter = args.clearedFilter;
 
     // If the cleared filter button was for a location filter.
@@ -104,8 +104,8 @@ export default function (window,document,$,undefined) {
 
   function clearForm(args) {
     let $form = $(args.$form),
-      $tags = $('.ma__location-filters__by-tags', $form),
-      $place = $('.ma__location-filters__by-location', $form).find('input');
+      $tags = $('.js-filter-by-tags', $form),
+      $place = $('.js-filter-by-location', $form).find('input');
 
     // Clear location text input.
     if ($place.length) {
