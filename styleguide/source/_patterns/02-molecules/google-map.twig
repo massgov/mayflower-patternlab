@@ -1,5 +1,5 @@
 {# if maxItems was set by parent component, use it.  Otherwise set it to all. #}
-{% set  maxItems = maxItems ? maxItems : googleMap.markers.length %}
+{% set  maxItems = maxItems ? maxItems : googleMap.markers|length %}
 <div
   class="ma__google-map" 
   aria-hidden="true" 
