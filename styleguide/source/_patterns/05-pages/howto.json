@@ -547,10 +547,13 @@
     "coloredHeadings": true,
     
     "contactList": {
-      "sidebarHeading":{
+      "viewSpecific": true,
+      "sidebarHeading": {
         "title": "Contact"
       },
       "contacts":[{
+        "accordion": false,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Department of Unemployment Assistance",
