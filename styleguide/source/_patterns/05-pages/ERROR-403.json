@@ -1,7 +1,8 @@
 {
   "narrowTemplate": {
     "side": "right",
-    "color": "yellow"
+    "color": "yellow",
+    "centered": true
   },
   
   "errorPage": {

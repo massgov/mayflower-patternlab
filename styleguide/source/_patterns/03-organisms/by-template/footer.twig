@@ -8,6 +8,7 @@
         <img src="/{{ directory }}/images/stateseal.png" alt="Massachusetts State Seal" width="120" height="120" />
       </div>
       <div class="ma__footer__social">
+        {% set socialLinks = footerSocialLinks %}
         {% include "@molecules/social-links.twig" %}
       </div>
       <div class="ma__footer__copyright">

@@ -25,10 +25,15 @@
   &--accordion &__header {
     border: none;
     display: block;
-    padding: 20px 30px;
+    padding: 20px;
+    padding-right: 30px;
     position: relative;
     text-align: left;
     width: 100%;
+
+    @media ($bp-medium-min) {
+      padding: 20px 30px;
+    }
 
     &:after {
       font-size: 2.5rem;
@@ -52,8 +57,13 @@
   }
 
   &--accordion &__content {
-    padding: 0 30px 30px;
-    padding-right: 40px;
+    padding: 0 20px 30px;
+    padding-right: 30px;
+
+    @media ($bp-medium-min) {
+      padding: 0 30px 30px;
+      padding-right: 40px;
+    }
   }
 
   .js &--accordion &__content {

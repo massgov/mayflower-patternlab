@@ -1,10 +1,17 @@
 .ma__social-links {
 
-  &__link {
-    background-color: $c-theme-secondary;
+  &__label {
+    font-weight: 600;
+  }
 
-    & > svg {
-      fill: $c-white;    
+  &__link {
+
+    &[data-social-share = blog] > svg path {
+      fill: $c-theme-secondary;
+    }
+
+    &[data-social-share = email] > svg path {
+      fill: $c-theme-secondary;
     }
   }
 }

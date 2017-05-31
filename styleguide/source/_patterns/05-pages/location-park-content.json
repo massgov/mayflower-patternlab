@@ -98,7 +98,8 @@
     "bgTitle":"Mt Greylock State Park",
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "actionMap": {
+    "id": "GUID24872901570",
+    "googleMap": {
       "map": {
         "center": {
           "lat": 42.594129,
@@ -117,7 +118,8 @@
           "phone": "14134994262",
           "fax": "",
           "email": "mass.parks@state.ma.us",
-          "address": "30 Rockwell Road\nLanesborough, MA 01237"
+          "address": "30 Rockwell Road\nLanesborough, MA 01237",
+          "directions": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225"
         }
       },{
         "position": {
@@ -130,14 +132,15 @@
           "phone": "14137431591",
           "fax": "",
           "email": "mail@bascomlodge.net",
-          "address": "30 Rockwell Road\nLanesborough, MA 01237"
+          "address": "30 Rockwell Road\nLanesborough, MA 01237",
+          "directions": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225"
         }
       }]
     }
   },
 
 
-  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+ "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
   "actionDetails" : {
     "sections": [{
@@ -277,7 +280,8 @@
               "phone": "14134994262",
               "fax": "",
               "email": "mass.parks@state.ma.us",
-              "address": "30 Rockwell Road\n Lanesborough, MA 01237"
+              "address": "30 Rockwell Road\nLanesborough, MA 01237",
+              "directions": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225"
             }
           },{
             "position": {
@@ -290,15 +294,16 @@
               "phone": "14137431591",
               "fax": "",
               "email": "mail@bascomlodge.net",
-              "address": "30 Rockwell Road\n Lanesborough, MA 01237"
+              "address": "30 Rockwell Road\nLanesborough, MA 01237",
+              "directions": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225"
             }
           }]
         }
       }
     },{
-      "title":"Activities",
+      "title":"Recommended Activities",
       "intro": "",
-      "id":"activities",
+      "id":"recommended-activities",
       "path": "@organisms/by-author/image-promos.twig",
       "data": {
         "imagePromos": {
@@ -324,11 +329,7 @@
                 }]
               }
             },
-            "link": {
-              "text": "Details & Maps",
-              "type": "chevron",
-              "href": "#"
-            }
+            "link": null
           },{
             "title": {
               "text": "Camping",
@@ -351,11 +352,7 @@
                 }]
               }
             },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
+            "link": null
           },{
             "title": {
               "text": "Winter Sports",
@@ -378,64 +375,42 @@
                 }]
               }
             },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
-          },{
-            "title": {
-              "text": "Hunting",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "hunting image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "",
-              "type": "",
-              "href": ""
-            }
-          },{
-            "title": {
-              "text": "Bird Watching",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "bird image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
+            "link": null
+          }]
+        }
+      }
+    },{
+      "title":"All Activities",
+      "intro": "",
+      "id":"all-activities",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Hiking"
+              },{
+                "text": "Bird Watching"
+              },{
+                "text": "Swimming"
+              },{
+                "text": "Bug Collecting"
+              },{
+                "text": "Whale Riding"
+              },{
+                "text": "Mountain Biking"
+              },{
+                "text": "Camping"
+              },{
+                "text": "More Taxonomy"
+              },{
+                "text": "More Taxonomy"
+              },{
+                "text": "More Taxonomy"
+              }]
             }
           }]
         }
@@ -612,39 +587,36 @@
   },
 
 
-  "COMMENT":"****SIDEBAR COMPONENTS****",
 
-  "quickActions":{
-    "coloredHeading": {
-      "text":"Quick Actions",
-      "color":"green"
-    },
-    "links": [{
-      "type": "",
-      "href": "#",
-      "text": "Reserve a Campsite"
-    },{
-      "type": "",
-      "href": "#",
-      "text": "Download a Park Map"
-    },{
-      "type": "",
-      "href": "#",
-      "text": "Download a Trail Map"
-    }]
-  },
+"COMMENT":"****SIDEBAR COMPONENTS****",
+  "sidebar": {
+    "coloredHeadings": true,
 
-  "sidebarContact": {
-    "coloredHeading": {
-      "text": "Contact",
-      "color": ""
+    "quickActions":{
+      "coloredHeading": {
+        "text":"Quick Actions",
+        "color":"green"
+      },
+      "links": [{
+        "type": "",
+        "href": "#",
+        "text": "Reserve a Campsite"
+      },{
+        "type": "",
+        "href": "#",
+        "text": "Download a Park Map"
+      },{
+        "type": "",
+        "href": "#",
+        "text": "Download a Trail Map"
+      }]
     },
-    "items": [{
-      "contactUs": {
-        "schemaSd": {
-          "property": "containedInPlace",
-          "type": "CivicStructure"
-        },
+
+    "contactList": {
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
         "subTitle": {
           "href":"",
           "text": "Bascom Lodge",
@@ -721,13 +693,7 @@
             "details":""
           }]
         }]
-      }
-    },{
-      "contactUs": {
-        "schemaSd": {
-          "property": "containedInPlace",
-          "type": "CivicStructure"
-        },
+      },{
         "subTitle": {
           "href":"",
           "text": "Museum",
@@ -788,74 +754,46 @@
             "details":""
           }]
         }]
-      }
-    }]
-  },
-
-  "sidebarWidget": {
-    "coloredHeading": {
-      "text": "Upcoming Events",
-      "color": ""
+      }]
     },
-    "items": [{
-      "path": "molecules-action-event",
-      "data": {
-        "actionEvent": {
-          "name": {
-            "type": "",
-            "href": "#",
-            "text": "Fishing Clinic",
-            "property": "url"
-          },
-          "date":"June 24, 2017, 12:00pm",
-          "schemaDate": "2017-06-24T12:00",
-          "description":"This is a description of the event that will happen at a future date",
-          "meta": {
-            "location": {
-              "name":"Event Location Name",
-              "address1":"24 Beacon St.",
-              "address2":"",
-              "city":"Boston",
-              "state":"MA",
-              "zip":"02133",
-              "image": {
-                "alt":"",
-                "src":""
-              }
-            }
-          }
-        }
+
+    "eventListing": {
+      "sidebarHeading":{
+        "title": "Upcoming Events"
+      },
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Fishing Clinic",
+          "info": "",
+          "property": ""
+        },
+        "location": "Walden Pond, Concord, MA",
+        "date": {
+          "summary": "June 24, 2017" 
+        },
+        "time": "12 p.m.",
+        "description":"This is a description of the event that will happen at a future date"
+      },{
+        "title": {
+          "href": "#",
+          "text": "Full Moon Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Concord, MA",
+        "date": {
+          "summary": "June 24, 2017"
+        },
+        "time": "9 p.m.",
+        "description":"This is a description of the event that will happen at a future date"
+      }],
+      "more":{
+        "href": "#",
+        "text": "view all events at this location",
+        "chevron": true,
+        "label": ""
       }
-    },{
-      "path": "molecules-action-event",
-      "data": {
-        "actionEvent": {
-          "name": {
-            "type": "",
-            "href": "#",
-            "text": "Full Moon Hike",
-            "property": "url"
-          },
-          "date":"June 24, 2017, 9:00pm",
-          "schemaDate": "2017-06-24T21:00",
-          "description":"This is a description of the event that will happen at a future date",
-          "meta": {
-            "location": {
-              "name":"Event Location Name",
-              "address1":"address 1",
-              "address2":"address 2",
-              "city":"City",
-              "state":"State",
-              "zip":"00000",
-              "image": {
-                "alt":"",
-                "src":""
-              }
-            }
-          }
-        }
-      }
-    }],
-    "more":"more"
+    }
   }
 }

@@ -1,4 +1,8 @@
 .ma__results-heading {
+  
+  &__container {
+    border-bottom-color: $c-bd-divider;
+  }
 
   &__title {
     font-weight: 700;

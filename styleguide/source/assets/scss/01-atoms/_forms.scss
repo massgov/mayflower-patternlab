@@ -11,7 +11,7 @@ textarea {
 
 label {
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: .25em;
 }
 
 .ma__input-radio {
@@ -89,6 +89,10 @@ label {
       content: url("../images/checkmark.svg"); //"✔";
     }
   }
-
 }
 
+.ma__input-date[type=text] {
+  background-image: url("../images/svg-icons/date-picker.svg");
+  background-position: right 8px top 10px;
+  background-repeat: no-repeat;
+}

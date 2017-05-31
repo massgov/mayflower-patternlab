@@ -19,12 +19,9 @@
   }
 
   &__map {
-    margin-bottom: 40px;
-    //position: relative;  //removed to allow the map to expand all the way to the right.
 
     @media ($bp-large-min){
       min-height: 100vh;
-      margin-bottom: 0;
       order: 2;
       width: 40%;    
     }
@@ -73,8 +70,12 @@
     @media ($bp-large-min){
       margin-right: 3.25%;
       order: 1;
-      padding-top: 40px;
       width: 60% - 3.25%; // subtract the margin right
+    }
+
+    .ma__results-heading {
+      margin-bottom: 0;
+      padding-top: 40px;
     }
 
     .ma__image-promo {
@@ -82,8 +83,9 @@
 
       &:first-child {
         border-top-style: solid;
-        border-top-width: 2px;
-        padding-top: 29px;
+        border-top-width: 1px;
+        margin-top: -2px;
+        padding-top: 30px;
       }
 
       &.is-active,
@@ -95,12 +97,6 @@
       &__link {
         font-size: 18px;
       }
-    }
-
-    .ma__pagination {
-      border-top-style: solid;
-      border-top-width: 2px;
-      padding: 20px 0;
     }
   }
 }

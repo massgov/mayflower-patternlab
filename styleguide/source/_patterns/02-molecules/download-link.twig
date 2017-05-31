@@ -2,9 +2,11 @@
   {% set sizeClass = "ma__download-link--" ~ downloadLink.iconSize %}
 {% endif %}
 <div class="ma__download-link {{ sizeClass }}">
-  <div class="ma__download-link__icon">
-    {% include downloadLink.icon %}
-  </div>
+  {% if downloadLink.icon %}
+    <div class="ma__download-link__icon">
+      {% include downloadLink.icon %}
+    </div>
+  {% endif %}
   <div class="ma__download-link__title">
     {% if downloadLink.format == "form" %}
       {% set decorativeLink = downloadLink.decorativeLink %}
