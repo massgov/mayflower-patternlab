@@ -41,8 +41,12 @@
     }
   }
 
-  .main-content--full .page-content > & &__item {
+  &__item {
     padding: 5px 0;
+
+    .ma__decorative-link {
+      display: block;
+    }
   }
 
   .sidebar &__item + &__item {
@@ -50,6 +54,7 @@
     border-top-style: solid;
     margin-top: 25px;
     padding-top: 25px;
+    padding-bottom: 0;
   }
 
   .sidebar &__item {
@@ -57,21 +62,5 @@
       font-size: 1.625rem;
       line-height: 1.2;
     }
-  }
-
-  &__eyebrow {
-    margin-bottom: 5px;
-
-    span {
-      font-size: 0.813rem;
-      letter-spacing: .1em;
-      padding: 5px 7px;
-      text-transform: uppercase;
-    }
-  }
-
-  &__date {
-    font-size: 1.125rem;
-    line-height: 2.125rem;
   }
 }

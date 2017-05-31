@@ -98,7 +98,8 @@
     "bgTitle":"Mt Greylock State Park",
     "bgWide":"/assets/images/placeholder/1600x400.png",
     "bgNarrow":"/assets/images/placeholder/800x400.png",
-    "actionMap": {
+    "id": "GUID24872901570",
+    "googleMap": {
       "map": {
         "center": {
           "lat": 42.594129,
@@ -137,7 +138,7 @@
   },
 
 
-  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+ "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
   "actionDetails" : {
     "sections": [{
@@ -296,9 +297,9 @@
         }
       }
     },{
-      "title":"Activities",
+      "title":"Recommended Activities",
       "intro": "",
-      "id":"activities",
+      "id":"recommended-activities",
       "path": "@organisms/by-author/image-promos.twig",
       "data": {
         "imagePromos": {
@@ -324,11 +325,7 @@
                 }]
               }
             },
-            "link": {
-              "text": "Details & Maps",
-              "type": "chevron",
-              "href": "#"
-            }
+            "link": null
           },{
             "title": {
               "text": "Camping",
@@ -351,11 +348,7 @@
                 }]
               }
             },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
+            "link": null
           },{
             "title": {
               "text": "Winter Sports",
@@ -378,64 +371,42 @@
                 }]
               }
             },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
-            }
-          },{
-            "title": {
-              "text": "Hunting",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "hunting image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "",
-              "type": "",
-              "href": ""
-            }
-          },{
-            "title": {
-              "text": "Bird Watching",
-              "href": "#"
-            },
-            "image": {
-              "src": "/assets/images/placeholder/190x107.png",
-              "alt": "bird image",
-              "href": "#"
-            },
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": {
-              "text": "More",
-              "type": "chevron",
-              "href": "#"
+            "link": null
+          }]
+        }
+      }
+    },{
+      "title":"All Activities",
+      "intro": "",
+      "id":"all-activities",
+      "path": "organisms-rich-text",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "atoms-unordered-list",
+            "data": {
+              "unorderedList": [{
+                "text": "Hiking"
+              },{
+                "text": "Bird Watching"
+              },{
+                "text": "Swimming"
+              },{
+                "text": "Bug Collecting"
+              },{
+                "text": "Whale Riding"
+              },{
+                "text": "Mountain Biking"
+              },{
+                "text": "Camping"
+              },{
+                "text": "More Taxonomy"
+              },{
+                "text": "More Taxonomy"
+              },{
+                "text": "More Taxonomy"
+              }]
             }
           }]
         }
@@ -612,7 +583,8 @@
   },
 
 
-  "COMMENT":"****SIDEBAR COMPONENTS****",
+
+"COMMENT":"****SIDEBAR COMPONENTS****",
   "sidebar": {
     "coloredHeadings": true,
 
@@ -792,11 +764,11 @@
           "info": "",
           "property": ""
         },
-        "location": "",
+        "location": "Walden Pond, Concord, MA",
         "date": {
-          "summary": "June 24, 2017, 12:00pm" 
+          "summary": "June 24, 2017" 
         },
-        "time": "",
+        "time": "12 p.m.",
         "description":"This is a description of the event that will happen at a future date"
       },{
         "title": {
@@ -805,11 +777,11 @@
           "info": "",
           "property": ""
         },
-        "location": "",
+        "location": "Concord, MA",
         "date": {
-          "summary": "June 24, 2017, 9:00pm"
+          "summary": "June 24, 2017"
         },
-        "time": "",
+        "time": "9 p.m.",
         "description":"This is a description of the event that will happen at a future date"
       }],
       "more":{

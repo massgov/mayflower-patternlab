@@ -4,6 +4,7 @@
     "required": false,
     "id": "date-input",
     "name": "date-input",
-    "placeholder": "mm/dd/yy"
+    "placeholder": "mm/dd/yy",
+    "restrict": "max"
   }
 }

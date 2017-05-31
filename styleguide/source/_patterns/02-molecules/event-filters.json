@@ -17,14 +17,16 @@
         "required": false,
         "id": "start-date",
         "name": "start-date",
-        "placeholder": "today"
+        "placeholder": "today",
+        "restrict": "min"
       },
       "endDate": {
         "labelText": "Select an end date",
         "required": false,
         "id": "end-date",
         "name": "end-date",
-        "placeholder": "mm/dd/yy"
+        "placeholder": "mm/dd/yy",
+        "restrict": "min"
       }
     },
 

@@ -2,12 +2,11 @@
   display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
 
   & + & {
     border-top-style: solid;
     border-top-width: 1px;
-    margin-top: 30px;
     padding-top: 30px;
   }
 
@@ -29,12 +28,12 @@
   &__end-date,
   &__spacer {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: baseline;
   }
 
   &__spacer {
     height: 6px;
-    margin: 0 2px;
+    margin: 0 2px 0.75em;
     width: 20px;
   }
 
@@ -76,7 +75,7 @@
   }
 
   &__graphic + &__content &__date {
-    
+
     @media ($bp-small-min) {
       @include ma-visually-hidden;
     }
@@ -93,23 +92,25 @@
   }
 
   &__location {
+    font-size: 1.25rem;
     margin-bottom: .25em;
   }
 
   &__date {
+    font-size: 18px;
     line-height: 1.2;
   }
 
   &__time {
+    font-size: 18px;
     line-height: 1.2;
-    margin-bottom: 1em;
   }
 
   &__description {
-    
+    margin-top: 18px;
+
     @media ($bp-small-min){
       font-size: 1.25rem;
     }
   }
-
 }

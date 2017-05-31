@@ -13,9 +13,4 @@
   {% set pagination = mainContent.pagination %}
   {% include "@molecules/pagination.twig" %}
 {% endblock %}
-{% block postContent %}
-  {% if bottomContent.eventListing %}
-    {% set eventListing = bottomContent.eventListing %}
-    {% include "@organisms/by-author/event-listing.twig" %}
-  {% endif %}
-{% endblock %}
+{% block postContent %}{% endblock %}
