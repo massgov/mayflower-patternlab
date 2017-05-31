@@ -1,5 +1,36 @@
 # Mayflower Release Notes
 
+## 5.2.0
+
+### SUMMARY
+If you'd like to see the tickets in JIRA:
+
+- [DP-3352 [MF]Add directions link to pin click on locations](https://jira.state.ma.us/browse/DP-3352)
+- [DP-3364 [MF/VD] Mayflower for Video description page](https://jira.state.ma.us/browse/DP-3364)
+- [DP-3514 [MF] Update Spacing between Patterns.](https://jira.state.ma.us/browse/DP-3514)
+- [DP-3517 [MF] Update Homepage in Pattern Lab](https://jira.state.ma.us/browse/DP-3517)
+- [DP-3518 [MF] Update guides in Pattern Lab](https://jira.state.ma.us/browse/DP-3518)
+- [DP-3519 [MF] Update Location General Page in Pattern Lab](https://jira.state.ma.us/browse/DP-3519)
+- [DP-3520 [MF] Update Location Park Page in Pattern Lab](https://jira.state.ma.us/browse/DP-3520)
+- [DP-3521 [MF] Update Details Content Type in Pattern Lab](https://jira.state.ma.us/browse/DP-3521)
+- [DP-3522 [MF] Update Org page and G2G org in Pattern Lab](https://jira.state.ma.us/browse/DP-3522)
+- [DP-3523 [MF] Update Section Landing Page in Pattern Lab](https://jira.state.ma.us/browse/DP-3523)
+- [DP-3524 [MF] Update Topic Page in Pattern Lab](https://jira.state.ma.us/browse/DP-3524)
+- [DP-3525 [MF] Update Transition Page in Pattern Lab](https://jira.state.ma.us/browse/DP-3525)
+- [DP-3526 [MF] News/Announcement Detail Page](https://jira.state.ma.us/browse/DP-3526)
+- [DP-3656 [MF] New Topic Your Government page](https://jira.state.ma.us/browse/DP-3656)
+- [DP-3698 Learn more link on Service Page](https://jira.state.ma.us/browse/DP-3698)
+- [DP-3712 [MF] Update date formatting for location page](https://jira.state.ma.us/browse/DP-3712)
+
+
+
+## 5.1.0
+
+### SUMMARY
+If you'd like to see the tickets in JIRA:
+
+
+
 ## 5.0.0
 
 Sometimes you have to break a few eggs to make an Omlette.  For our next major release (5.0), we're introducing a new Announcement page type and had to change some existing code in progress.
