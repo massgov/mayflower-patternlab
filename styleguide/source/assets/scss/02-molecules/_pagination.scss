@@ -48,7 +48,6 @@
     }
 
     &:after {
-      @include ma-link-underline;
       content: "";
       display: block;
       margin-left: 16px;
@@ -56,6 +55,10 @@
         bottom: 5px;
         right: 8px;
       width: calc(100% - 35px);
+
+      @media ($bp-small-min) {
+        @include ma-link-underline;
+      }
     }
 
   }
@@ -69,7 +72,6 @@
     }
 
     &:before {
-      @include ma-link-underline;
       content: "";
       display: block;
       margin-right: 16px;
@@ -77,6 +79,10 @@
         bottom: 5px;
         left: 9px;
       width: calc(100% - 35px);
+
+      @media ($bp-small-min) {
+        @include ma-link-underline;
+      }
     }
   }
 
