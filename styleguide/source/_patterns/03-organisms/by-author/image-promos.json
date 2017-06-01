@@ -1,5 +1,12 @@
 {
   "imagePromos": {
+    "compHeading": {
+      "title": "Image Promos",
+      "sub": false,
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
     "items": [{
       "title": {
         "text": "Hiking & Walking",

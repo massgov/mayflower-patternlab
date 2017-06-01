@@ -1,17 +1,10 @@
 .ma__details {
-  &__top-contact {
+
+  .page-content > .ma__contact-list {
     
     .ma__sidebar-heading,
     .ma__comp-heading {
       @include ma-heading-colored($c-theme-secondary);
-    }
-  }
-
-  .sidebar {
-    
-    .ma__sidebar-heading,
-    .ma__comp-heading {
-      @include ma-heading-colored($c-bg-comp-title);
     }
   }
 }
