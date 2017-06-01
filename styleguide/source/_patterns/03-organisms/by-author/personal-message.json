@@ -1,6 +1,6 @@
 {
   "personalMessage": {
-    "imagePromo": {
+    "imagePromos": [{
       "title": {
         "text": "Office of the Governor",
         "href": "",
@@ -33,6 +33,6 @@
       },
       "location": null,
       "phone": null
-    }
+    }]
   }
 }
