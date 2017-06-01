@@ -42,11 +42,14 @@
       "title": "For immediate release:",
       "date": "1/21/2016",
       "names": [{
-        "text": "Charlie Baker, Governor"
+        "text": "Office of the Governor"
       },{
-        "text": "Karyn Polito, Lieutenant Governor"
+        "text": "Another Org"
+      },{
+        "text": "A third party, non state organization"
       }]
     },
+
 
     "richText": {
       "rteElements": [{
