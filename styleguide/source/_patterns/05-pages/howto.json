@@ -600,17 +600,17 @@
       },
       "stacked": true,
       "links" : [{
-        "url":"#",
+        "href":"#",
         "text":"Log in to UI Online for recipients",
         "info": "",
         "property": ""
       },{
-        "url":"#",
+        "href":"#",
         "text":"Appeal UI decision",
         "info": "",
         "property": ""
       },{
-        "url":"#",
+        "href":"#",
         "text":"Apply for a job training program",
         "info": "",
         "property": ""

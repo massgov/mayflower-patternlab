@@ -310,17 +310,17 @@
 
       "stacked": true,
       "links" : [{
-        "url":"#",
+        "href":"#",
         "text":"first date",
         "info": "",
         "property": ""
       },{
-        "url":"#",
+        "href":"#",
         "text":"second date",
         "info": "",
         "property": ""
       },{
-        "url":"#",
+        "href":"#",
         "text":"thrid date",
         "info": "",
         "property": ""

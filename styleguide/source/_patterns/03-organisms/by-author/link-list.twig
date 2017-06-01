@@ -20,9 +20,8 @@
     {# added for backward compatibilty with v3.5 #}
     {% if linkList.stacked or linkList.links|length < 4 %}
       <ul class="ma__link-list__items">
-        {% for link in linkList.links %}
+        {% for decorativeLink in linkList.links %}
           <li class="ma__link-list__item">
-            {% set decorativeLink = { "url": link.url, "text": link.text, "info": link.info } %}
             {% include "@atoms/decorative-link.twig" %}
           </li>
         {% endfor %}
