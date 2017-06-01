@@ -145,16 +145,16 @@
         "centered": ""
       },
       "links" : [{
-        "url":"#",
+        "href":"#",
         "text":"This is a Related Topic Name1"
       },{
-        "url":"#",
+        "href":"#",
         "text":"This is a Related Topic Name2"
       },{
-        "url":"#",
+        "href":"#",
         "text":"This is a Related Topic Name3"
       },{
-        "url":"#",
+        "href":"#",
         "text":"This is a Related Topic Name4"
       }]
     }
