@@ -12,21 +12,7 @@
       }]
     },
     "socialLinks": null,
-    "optionalContents": [{
-      "path": "@organisms/by-author/rich-text.twig",
-      "data": {
-        "richText": {
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph" : {
-                "text": "This is an optional descriptive paragraph field. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
-              }
-            }
-          }]
-        }
-      }
-    }],
+    "optionalContents": null,
     "widgets": null
   },
 
