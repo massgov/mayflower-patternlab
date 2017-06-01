@@ -20,8 +20,9 @@ If you'd like to see the tickets in JIRA:
 - [DP-3526 [MF] News/Announcement Detail Page](https://jira.state.ma.us/browse/DP-3526)
 - [DP-3656 [MF] New Topic Your Government page](https://jira.state.ma.us/browse/DP-3656)
 - [DP-3698 Learn more link on Service Page](https://jira.state.ma.us/browse/DP-3698)
+- [DP-3711 [MF] Update Event Listing Spec](https://jira.state.ma.us/browse/DP-3711)
 - [DP-3712 [MF] Update date formatting for location page](https://jira.state.ma.us/browse/DP-3712)
-
+- [DP-3812 [MF] Announcement Detail Updates / Press Release](https://jira.state.ma.us/browse/DP-3812)
 
 
 ## 5.1.0
