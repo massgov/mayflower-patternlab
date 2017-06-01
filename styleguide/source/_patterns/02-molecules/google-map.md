@@ -33,15 +33,17 @@ googleMap: {
         type: string/required
       infoWindow: {
         name:
-          type: string(html)/required
+          type: string/required
         phone:
-          type: string/optional
+          type: string (number with no spaces)/optional
         fax:
           type: string/optional
         email:
           type: string/optional
         address:
-          type: string(html)/required
+          type: string/required
+        directions:
+          type: string(url)/optional
       }
     }]
   }

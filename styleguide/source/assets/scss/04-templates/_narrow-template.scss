@@ -120,4 +120,13 @@ $narrow-template-header-height: 170px;
     position: relative;
     text-align: center;
   }
+
+  .ma__helpful-links .ma__comp-heading {
+    text-align: center;
+    
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }

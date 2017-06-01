@@ -1,17 +1,4 @@
 {
-  "urlPath": "/?p=pages-TOPIC-state-parks-and-recreation",
-
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Your Government",
-      "href": "/?p=pages-visiting-and-exploring"
-    },{
-      "text": "Executive Branch",
-      "href": "#"
-    }]
-  },
-
   "pageBanner": {
     "bgWide": "/assets/images/placeholder/820x460.png",
     "bgNarrow": "/assets/images/placeholder/800x400.png",

@@ -35,6 +35,10 @@
     }
   }
 
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
   .main-content--two &  > * {
     @include ma-component-spacing;
   }
@@ -43,9 +47,11 @@
     @include ma-component-spacing(large);
   }
 
-  & > :last-child {
-    margin-bottom: 0;
-  }
+  // Almost works, but needs to only apply while the item is floated
+  // .main-content & > *:first-child[class*='--left'] + *,
+  // .main-content & > *:first-child[class*='--right'] + * {
+  //   margin-top: 0;
+  // }
 }
 
 .post-content > * {
