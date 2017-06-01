@@ -5,19 +5,11 @@
   {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
 
+{% block pageContent %}{% endblock %}
 
-{% block pageContent %}
-  {% set video = pageContent.video %}
-  {% include "@atoms/09-media/video.twig" %}
-  {% set richText = pageContent.richText %}
-  {% include "@organisms/by-author/rich-text.twig" %}
-{% endblock %}
-{% block sidebar %}
+{% block sidebar %}{% endblock %}
 
-{% endblock %}
-{% block postContent %}
-
-{% endblock %}
+{% block postContent %}{% endblock %}
 
 {% block footer %}
   {% include "@organisms/by-template/footer.twig" %}
