@@ -268,13 +268,13 @@
             },
             "stacked": true,
             "links" : [{
-              "url":"#",
+              "href":"#",
               "text":"Job Search Help"
             },{
-              "url":"#",
+              "href":"#",
               "text":"Job Training"
             },{
-              "url":"#",
+              "href":"#",
               "text":"Career Counseling"
             }]
           }

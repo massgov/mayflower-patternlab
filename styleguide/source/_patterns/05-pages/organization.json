@@ -363,19 +363,19 @@
             "centered": ""
           },
           "links" : [{
-            "url":"#",
+            "href":"#",
             "text":"Executive Office of Elder Affairs"
           },{
-            "url":"#",
+            "href":"#",
             "text":"Department of Public Health"
           },{
-            "url":"#",
+            "href":"#",
             "text":"Department of Transitional Assistance"
           },{
-            "url":"#",
+            "href":"#",
             "text":"Massachusetts Health Connector"
           },{
-            "url":"#",
+            "href":"#",
             "text":"Executive Office of Health & Human Services"
           }]
         }

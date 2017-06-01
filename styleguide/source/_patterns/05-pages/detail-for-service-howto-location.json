@@ -219,12 +219,12 @@
       },
       "stacked": true,
       "links" : [{
-        "url":"#",
+        "href":"#",
         "text":"Stretch Code Summary",
         "info": "",
         "property": ""
       },{
-        "url":"#",
+        "href":"#",
         "text":"Stretch code \"Residential Cash Flow Analysis\"",
         "info": "",
         "property": ""
