@@ -2,7 +2,7 @@
   "pageHeader": {
     "category": "transcript",
     "divider": false,
-    "title": "Governor Baker Delivers State of the Commonwealth Address",
+    "title": "Governor Charlie Baker: The state of our Commonwealth is strong",
     "subTitle": "",
     "headerTags": null,
     "socialLinks": null,
@@ -29,13 +29,6 @@
 
   "richText": {
     "rteElements": [{
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Today, Governor Charlie Baker delivers his first State of the Commonwealth address from the House Chamber of the Massachusetts State House. Remarks as prepared for delivery:"
-        }
-      }
-    },{
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
@@ -117,13 +110,6 @@
       "data": {
         "paragraph" : {
           "text": "“To the Speaker, Senate President and the members of the legislature. Thank you for putting partisanship aside and for engaging with us in good faith and good humor as we work to solve some very challenging problems."
-        }
-      }
-    },{
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "###"
         }
       }
     }]
