@@ -4,15 +4,12 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
   @include clearfix();
   display: flex;
     flex-wrap: wrap;
-  padding: 30px 0;
-
-  &:first-child {
-    padding-top: 0;
-  }
 
   & + & {
     border-top-style: solid;
     border-top-width: 1px;
+    margin-top: 30px;
+    padding-top: 30px;
   }
 
   &.js-location-listing-link {
