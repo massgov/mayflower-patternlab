@@ -31,6 +31,10 @@ body {
 
   &__skip-nav {
     @include ma-visually-hidden;
+    display: block;
+    margin: 0 auto;
+    width: 240px !important;
+    text-align: center;
   }
 
   &__container {
@@ -319,15 +323,21 @@ body {
   }
 
   &__backto {
-    @include ma-container;
-    display: block;
-    height: 0;
-    position: relative;
-    transition: left 0.5s ease;
-    z-index: $z-dropdown + 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
 
-    @media ($bp-header-toggle-min) {
-      z-index: $z-dropdown - 1;
+    &__container {
+      @include ma-container;
+      display: block;
+      height: 0;
+      position: relative;
+      transition: left 0.5s ease;
+      z-index: $z-dropdown + 1;
+
+      @media ($bp-header-toggle-min) {
+        z-index: $z-dropdown - 1;
+      }
     }
 
     a {
@@ -346,7 +356,6 @@ body {
 
       @media ($bp-header-toggle-min){
         position: absolute;
-          top: -$header-mobile-controls-height - 4px;
       }
 
       @media ($bp-large-min) {
