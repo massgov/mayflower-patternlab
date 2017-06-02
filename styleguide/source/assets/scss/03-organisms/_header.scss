@@ -355,7 +355,7 @@ body {
       }
 
       @media ($bp-header-toggle-min){
-        position: absolute;
+        position: relative;
       }
 
       @media ($bp-large-min) {
