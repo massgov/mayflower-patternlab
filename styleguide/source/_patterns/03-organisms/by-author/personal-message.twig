@@ -1,6 +1,7 @@
 <section class="ma__personal-message">
   <div class="ma__personal-message__container">
-    {% set imagePromo = personalMessage.imagePromo %}
-    {% include "@molecules/image-promo.twig" %}
+    {% for imagePromo in personalMessage.imagePromos %}
+      {% include "@molecules/image-promo.twig" %}
+    {% endfor %}
   </div>
 </section>
