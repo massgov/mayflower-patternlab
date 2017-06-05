@@ -30,11 +30,15 @@ body {
   }
 
   &__skip-nav {
-    @include ma-visually-hidden;
     display: block;
     margin: 0 auto;
-    width: 240px !important;
+    width: 240px;
     text-align: center;
+
+    &:not(:focus) {
+      @include ma-visually-hidden;
+      width: 240px;
+    }
   }
 
   &__container {
@@ -323,21 +327,15 @@ body {
   }
 
   &__backto {
-    position: absolute;
-    top: 0;
-    width: 100%;
+    @include ma-container;
+    display: block;
+    height: 0;
+    position: relative;
+    transition: left 0.5s ease;
+    z-index: $z-dropdown + 1;
 
-    &__container {
-      @include ma-container;
-      display: block;
-      height: 0;
-      position: relative;
-      transition: left 0.5s ease;
-      z-index: $z-dropdown + 1;
-
-      @media ($bp-header-toggle-min) {
-        z-index: $z-dropdown - 1;
-      }
+    @media ($bp-header-toggle-min) {
+      z-index: $z-dropdown - 1;
     }
 
     a {
@@ -355,7 +353,8 @@ body {
       }
 
       @media ($bp-header-toggle-min){
-        position: relative;
+        position: absolute;
+          top: -$header-mobile-controls-height - 4px;
       }
 
       @media ($bp-large-min) {
