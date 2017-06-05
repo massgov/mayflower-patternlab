@@ -18,6 +18,12 @@
   <div 
     class="ma__page-header__content"
     {% if schemaPageType %} property="mainEntityOfPage"{% endif %}>
+      {% if pageHeader.publishState %}
+        <div class="ma__page-header__publish-state">
+          {% set publishState = pageHeader.publishState %}
+          {% include "@atoms/11-text/publish-state.twig" %}
+        </div>
+      {% endif %}
       {% if pageHeader.category %}
         <div class="ma__page-header__category">
           {{ pageHeader.category }}
