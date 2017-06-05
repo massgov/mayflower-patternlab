@@ -15,6 +15,9 @@
       }]
     },
     "socialLinks": null,
+    "publishState": {
+      "text": "Draft"
+    },
     "optionalContents": [{
       "path": "@molecules/listing-table.twig",
       "data": {
@@ -212,7 +215,7 @@
 
   "sideContent": {
     "contactList": {
-      "viewSpecific": false,
+      "viewSpecific": true,
       "sidebarHeading":{
         "title": "Contact"
       },
