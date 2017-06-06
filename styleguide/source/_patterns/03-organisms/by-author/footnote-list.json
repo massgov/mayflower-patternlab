@@ -3,6 +3,7 @@
     "items": [{
       "number": 1,
       "target": "#",
+      "id": "footnotemsg1",
       "richText": {
         "property": "",
         "rteElements": [{
@@ -24,6 +25,7 @@
     },{
       "number": 2,
       "target": "#",
+      "id": "footnotemsg1",
       "richText": {
         "property": "",
         "rteElements": [{

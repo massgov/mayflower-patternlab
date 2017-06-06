@@ -1,7 +1,7 @@
 ---
 title: Footnote
 ---
-Description: A Footnote containing Rich Text and links back to content in a previous Rich Text.
+Description: A Footnote containing Rich Text that is linked to from a Rich Text footnote.
 
 ## Status: ALPHA
 
@@ -15,7 +15,11 @@ Description: A Footnote containing Rich Text and links back to content in a prev
 ~~~
 footnote: {
   number: 
-    type: number/required,
+    type: number/required
+  target:
+    type: string/required
+  id:
+    type: string/required
   richText: 
     type: richText/required 
 }
