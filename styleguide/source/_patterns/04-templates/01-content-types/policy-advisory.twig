@@ -32,9 +32,10 @@
         {% include "@organisms/by-author/contact-list.twig" %}
       {% endif %}
 
-      {% for footnote in mainContent.footnotes %}
-
-      {% endfor %}
+      {% if mainContent.footnoteList %}
+        {% set footnoteList = mainContent.footnoteList %}
+        {% include "@organisms/by-author/footnote-list.twig" %}
+      {% endif %}
 
       {% if mainContent.references %}
         {% set headerTags = mainContent.references %}

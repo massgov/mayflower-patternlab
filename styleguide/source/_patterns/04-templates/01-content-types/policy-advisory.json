@@ -94,6 +94,20 @@
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consectetur eligendi recusandae<a class=\"ma__rich-text__footnote js-rich-text-footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Lorem ipsum dolor sit amet, consectetur<a class=\"ma__rich-text__footnote js-rich-text-footnote\" id=\"footnoteref2\" title=\"source for this information\" href=\"#footnotemsg2\">2</a> adipisicing elit. Tenetur consectetur eligendi recusandae, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consectetur eligendi recusandae, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
           }
         }
@@ -198,6 +212,54 @@
             "details":""
           }]
         }]
+      }]
+    },
+
+    "footnoteList": {
+      "items": [{
+        "number": 1,
+        "target": "#footnoteref1",
+        "id": "footnotemsg1",
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "<b><i>Optional Description of this policy</i></b>"
+              }
+            }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+              }
+            }
+          }]
+        }
+      },{
+        "number": 2,
+        "target": "#footnoteref2",
+        "id": "footnotemsg2",
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "<b><i>Optional Description of this policy</i></b>"
+              }
+            }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+              }
+            }
+          }]
+        }
       }]
     },
 
