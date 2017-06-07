@@ -1,5 +1,9 @@
 .ma__comp-heading {
   @include ma-comp-heading($c-theme-secondary);
+
+  .sidebar & {
+    @include ma-sidebar-heading($c-bd-divider,$c-font-base);
+  }
 }
 
 .ma__comp-heading--yellow {

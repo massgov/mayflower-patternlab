@@ -9,4 +9,12 @@
       transform: translateX(-50%);
     }
   }
+
+  .sidebar & {
+    @include ma-sidebar-heading;
+
+    &:after {
+      display: none;
+    }
+  }
 }
