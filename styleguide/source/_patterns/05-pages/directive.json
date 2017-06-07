@@ -242,12 +242,12 @@
           "name": "Online",
           "hidden": "",
           "items": [{
-            "type": "online",
+            "type": "email",
             "property": "",
             "label":"Email:",
             "link": {
-              "href":"#",
-              "text": "person@email.com",
+              "href":"Rulesandregulations@DOR.State.MA.US",
+              "text": "Rulesandregulations@DOR.State.MA.US",
               "info": "",
               "property": ""
             },
@@ -304,11 +304,11 @@
           "name": "Online",
           "hidden": "",
           "items": [{
-            "type": "online",
+            "type": "email",
             "property": "",
             "label":"Email:",
             "link": {
-              "href":"#",
+              "href":"Rulesandregulations@DOR.State.MA.US",
               "text": "Rulesandregulations@DOR.State.MA.US",
               "info": "",
               "property": ""
