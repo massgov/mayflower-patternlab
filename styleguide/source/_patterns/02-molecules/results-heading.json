@@ -2,6 +2,19 @@
   "resultsHeading": {
     "numResults": "1-12",
     "totalResults": "108",
+    "sortResults": {
+      "label": "Sort by:",
+      "sortButtons": [{
+        "text": "Date",
+        "direction": "dsc"
+      },{
+        "text": "Price",
+        "direction": ""
+      },{
+        "text": "Color",
+        "direction": ""
+      }]
+    },
     "tags": [{
       "text": "Item"
     },{

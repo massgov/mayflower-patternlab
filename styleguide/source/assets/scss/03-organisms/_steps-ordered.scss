@@ -1,6 +1,6 @@
 $steps-ordered-icon-border: 3px;
+
 .ma__steps-ordered {
-  @include ma-component-spacing;
 
   &__items {
     @include ma-reset-list;

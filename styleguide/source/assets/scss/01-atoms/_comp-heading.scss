@@ -5,7 +5,8 @@
     text-align: center;
 
     &:after {
-      left: calc(50% - .9em); // half the width defined above
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

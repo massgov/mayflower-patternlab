@@ -1,0 +1,9 @@
+{
+  "button": {
+    "text": "Button",
+    "type": "button",
+    "size": "",
+    "theme": "alt",
+    "outline": false
+  }
+}

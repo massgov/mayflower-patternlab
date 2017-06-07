@@ -83,16 +83,12 @@
       color: $c-font-inverse;
       font-weight: 400;
 
-      & > svg {
-        fill: rgba($c-font-inverse, .5);
+      &:hover {
+        border-bottom-color: rgba($c-font-inverse, .5);
       }
 
-      span {
-        border-bottom-color: rgba($c-font-inverse, .5);
-
-        &:hover {
-          border-bottom-color: rgba($c-font-inverse, .5);
-        }
+      & > svg {
+        fill: rgba($c-font-inverse, .5);
       }
     }
   }

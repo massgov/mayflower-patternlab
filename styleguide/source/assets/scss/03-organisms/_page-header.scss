@@ -30,6 +30,10 @@ $page-header-widget-width: 350px;
 
     .ma__social-links {
       flex-grow: 0;
+
+      @media ($bp-small-max) {
+        width: 100%;
+      }
     }
   }
 
@@ -104,6 +108,14 @@ $page-header-widget-width: 350px;
       padding-top: 85px;
     }
 
+    & > * {
+      margin-top: 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
     .ma__image {
       @media ($bp-large-min){
         clear: both;
@@ -113,11 +125,6 @@ $page-header-widget-width: 350px;
   }
 
   &__tags ~ &__widgets {
-    padding-top: 30px;
-
-    @media ($bp-medium-min){
-      padding-top: 40px;
-    }
 
     @media ($bp-large-min){
       padding-top: 50px;
@@ -191,16 +198,7 @@ $page-header-widget-width: 350px;
       }
     }
 
-    .ma__rich-text {
-      margin-bottom: 1rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
     .ma__contact-us {
-      @include ma-component-spacing;
 
       &.js-accordion {
         @include clearfix;

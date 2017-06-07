@@ -1,5 +1,4 @@
 .ma__video {
-  @include ma-component-spacing;
   padding: 13px;
 
   @media ($bp-small-min) {

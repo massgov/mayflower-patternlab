@@ -1,5 +1,15 @@
 <section class="ma__image-promos">
-  {% for imagePromo in imagePromos.items %}
-    {% include "@molecules/image-promo.twig" %}
-  {% endfor %}
+  {% if imagePromos.compHeading %}
+    {% set compHeading = imagePromos.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+  {% if imagePromos.sidebarHeading %}
+    {% set sidebarHeading = imagePromos.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+  <div>
+    {% for imagePromo in imagePromos.items %}
+      {% include "@molecules/image-promo.twig" %}
+    {% endfor %}
+  </div>
 </section>

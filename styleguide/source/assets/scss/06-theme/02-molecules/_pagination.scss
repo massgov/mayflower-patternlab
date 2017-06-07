@@ -1,4 +1,8 @@
 .ma__pagination {
+  
+  &__container {
+    border-top-color: $c-bd-divider;
+  }
 
   &__prev,
   &__next,
@@ -12,6 +16,14 @@
     &:before {
       border-color: rgba($c-font-link, .5);
     }
+
+    &:after {
+      border-color: transparent;
+    }
+
+    &:hover:after {
+      border-color: rgba($c-font-link, .5);
+    }
   }
 
   &__next {
@@ -19,13 +31,33 @@
     &:after {
       border-color: rgba($c-font-link, .5);
     }
+
+    &:before {
+      border-color: transparent;
+    }
+
+    &:hover:before {
+      border-color: rgba($c-font-link, .5);
+    }
   }
 
   &__page {
 
+    &:after {
+      border-color: transparent;
+    }
+
     &.is-active {
       background-color: $c-theme-primary;
       color: #fff;
+
+      &:hover:after {
+        border-color: transparent;
+      }
+    }
+
+    &:hover:after {
+      border-color: rgba($c-font-link, .5);
     }
 
   }

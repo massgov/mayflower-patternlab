@@ -1,29 +1,28 @@
 ---
-title: Button Main Link
+title: Button Link
 ---
-Description: A link `<a>` element which is styled to look like a main button.
+Description: A link `<a>` element which is styled to look like a button.
 
 ## State: ALPHA
-### Notes:
-The button atoms are too similar to keep as separate files. This should be refactored to use one file, and one object that has href, text and type.
 
-These CSS classes can also be applied to `<button>` elements when a link is not required.
+### Notes:
+
 ### Used In:
+
 ### Variables:
 ~~~
-buttonMain {
-    href:
-        type: string (url) / required
-    text: 
-        type: string / reuired
+buttonLink {
+  text: 
+    type: string / required
+  href:
+    type: string (url) / required
+  info: 
+    type: string / optional
+  size:
+    type: string / optional ("" or "small")
+  theme:
+    type: string / optional ("" or "alt")
+  outline: 
+    type: boolean
 }
 ~~~
-## Variations
-* [Main](/?p=atoms-button-link)
-* [Main Alt](/?p=atoms-button-link-alt)
-* [Main Alt Small](/?p=atoms-button-link-alt-sm)
-* [Minor](/?p=atoms-button-link2)
-* [Minor Alt](/?p=atoms-button-link2-alt)
-* [Minor Alt Small](/?p=atoms-button-link2-alt-sm)
-* [Small](/?p=atoms-button-link-sm)
-* [Search](/?p=atoms-button-search)

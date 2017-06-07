@@ -31,8 +31,8 @@
     }
   }
 
-  .ma__image-promo {
-    padding: 0;
+  .ma__image-promo__details {
+    flex-basis: calc(100% - 130px)
   }
 
   .ma__image-promo__description {

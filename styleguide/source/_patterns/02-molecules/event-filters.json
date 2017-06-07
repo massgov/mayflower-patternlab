@@ -1,0 +1,35 @@
+{
+  "eventFilters": {
+    "zipcode": {
+      "inputText": {
+        "labelText": "Show closest",
+        "required": false,
+        "id": "find-nearby",
+        "name": "find-nearby",
+        "placeholder": "City, town, or ZIP code"
+      }
+    },
+    
+    "dateRange": {
+      "label": "Filter by date",
+      "startDate": {
+        "labelText": "Select a start date",
+        "required": false,
+        "id": "start-date",
+        "name": "start-date",
+        "placeholder": "today",
+        "restrict": "min"
+      },
+      "endDate": {
+        "labelText": "Select an end date",
+        "required": false,
+        "id": "end-date",
+        "name": "end-date",
+        "placeholder": "mm/dd/yy",
+        "restrict": "min"
+      }
+    },
+
+    "submitButton": "Submit"   
+  }
+}
