@@ -126,13 +126,13 @@
       "centered": ""
     },
     "links" : [{
-      "url":"#",
+      "href":"#",
       "text":"Hunting & Fishing"
     },{
-      "url":"#",
+      "href":"#",
       "text":"Outdoor Activities"
     },{
-      "url":"#",
+      "href":"#",
       "text":"Conservation & Wildlife"
     }]
   }

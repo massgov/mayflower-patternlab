@@ -46,7 +46,14 @@ export default function (window,document,$,undefined) {
         let markerBouncing = null;
 
         marker.addListener('click', function(){
-          infoWindow.open(map, marker);
+          // hide all info windows
+          for (let i in markers) {
+            if(markers[i].open) {
+              markers[i].hideInfo();        
+            }
+          }
+          // show this info window
+          marker.showInfo();
         });
 
         marker.showInfo = () => {

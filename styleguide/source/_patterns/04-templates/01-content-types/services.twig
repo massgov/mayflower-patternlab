@@ -27,8 +27,8 @@
               {% include "@atoms/09-media/video.twig" %}
             {% endif %}
 
-            {% set teaserText = introPageContent.teaserText %}
-            {% include "@organisms/by-author/teaser-text.twig" %}
+            {% set richText = introPageContent.intro %}
+            {% include "@organisms/by-author/rich-text.twig" %}
 
             {% if introPageContent.keyActions %}
               {% set keyActions = introPageContent.keyActions %}

@@ -3,23 +3,25 @@
 
 <main 
   id="main-content"
-  class="ma__details" 
+  class="ma__details ma__details--location" 
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
     {% block preContent %}
+      {% for headerAlert in headerAlerts %}
+        {% include "@organisms/by-template/header-alert.twig" %}
+      {% endfor %}
       {% include "@organisms/by-template/page-header.twig" %}
+      {% if locationBanner %}
+        {% include "@organisms/by-author/location-banner.twig" %}
+      {% endif %}
     {% endblock %}
   </div>
   <div class="main-content main-content--two">
 
     <div class="page-content">
-      {% if sidebar.contactList %}
-        {% set contactList = sidebar.contactList %}
-        {% include "@organisms/by-author/contact-list.twig" %}
-      {% endif %}
       {% set coloredHeading = {
-        "text": details.contentTitle,
+        "text": location.contentTitle,
         "color": "green"
       } %}
       {% include "@atoms/04-headings/colored-heading.twig" %}
@@ -28,15 +30,19 @@
         {% block pageContent %}
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
         {% endblock %}
+        {% if mainContent.contactList %}
+          {% set contactList = mainContent.contactList %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
       </div>
     </div>
 
     <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
-      {% if sidebar.contactList %}
-        {% set contactList = sidebar.contactList %}
-        {% include "@organisms/by-author/contact-list.twig" %}
-      {% endif %}
       {% if sidebar %}
+        {% if sidebar.contactList %}
+          {% set contactList = sidebar.contactList %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
         {% block sidebar %}
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
         {% endblock %}

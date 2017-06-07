@@ -43,9 +43,11 @@
       "title": "For immediate release:",
       "date": "1/21/2016",
       "names": [{
-        "text": "Charlie Baker, Governor"
+        "text": "Office of the Governor"
       },{
-        "text": "Karyn Polito, Lieutenant Governor"
+        "text": "Another Org"
+      },{
+        "text": "A third party, non state organization"
       }]
     },
 
@@ -61,12 +63,14 @@
       "position": ""
     },
 
+    "location": "Boston",
+
     "richText": {
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "<b>BOSTON</b> &mdash; Today, Governor Charlie Baker delivers his first State of the Commonwealth address from the House Chamber of the Massachusetts State House. Remarks as prepared for delivery:"
+            "text": "Today, Governor Charlie Baker delivers his first State of the Commonwealth address from the House Chamber of the Massachusetts State House. Remarks as prepared for delivery:"
           }
         }
       },{
@@ -153,21 +157,14 @@
             "text": "“To the Speaker, Senate President and the members of the legislature. Thank you for putting partisanship aside and for engaging with us in good faith and good humor as we work to solve some very challenging problems."
           }
         }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "..."
-          }
-        }
       }]
     },
 
     "contactList": {
       "compHeading": {
-        "title": "Media Contact"
+        "title": "Media Contacts"
       },
-      
+
       "contacts":[{
         "accordion": true,
         "isExpanded": false,
@@ -206,15 +203,116 @@
             },
             "details":""
           }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "items": [{
+            "type": "fax",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href":"+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "items": [{
+            "type": "address",
+            "property": "",
+            "label": "",
+            "address": "555 Park Drive\nBoston, MA 02231",
+            "link": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "text": "directions",
+              "info": "",
+              "property": ""
+            },
+            "details": ""
+          }]
+        }]
+      },{
+        "accordion": true,
+        "isExpanded": false,
+        "subTitle": {
+          "href":"",
+          "text": "Betty White"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"This line is open from 9 a.m. - 5 p.m., M-F"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "email",
+            "property": "",
+            "label":"Email:",
+            "link": {
+              "href":"email@state.ma.us",
+              "text": "email@state.ma.us",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "name": "Fax",
+          "items": [{
+            "type": "fax",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href":"+14134994262",
+              "text": "(413) 499-4262",
+              "info": "",
+              "property": ""
+            },
+            "details":"Please allow 24 hours for a response"
+          }]
+        },{
+          "icon": "@atoms/05-icons/svg-marker.twig",
+          "name": "Address",
+          "items": [{
+            "type": "address",
+            "property": "",
+            "label": "",
+            "address": "555 Park Drive\nBoston, MA 02231",
+            "link": {
+              "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+              "text": "directions",
+              "info": "",
+              "property": ""
+            },
+            "details": ""
+          }]
         }]
       }]
     },
 
     "personalMessage": {
-      "imagePromo": {
+      "imagePromos": [{
         "title": {
           "text": "Office of the Governor",
-          "href": "",
+          "href": "#",
           "type": ""
         },
         "tags": null,
@@ -244,7 +342,67 @@
         },
         "location": null,
         "phone": null
-      }
+      },{
+        "title": {
+          "text": "Another Org",
+          "href": "#",
+          "type": ""
+        },
+        "tags": null,
+        "image": {
+          "src":"/assets/images/placeholder/190x107.png",
+          "alt": "placeholder image",
+          "height": "107",
+          "width": "190",
+          "href": "#"
+        },
+        "description": {
+          "richText": {
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "Small statement about who the Another Org is so when people read similar announcements that might have different perspectives, they can get a sense of why this groups says one thing and another says another. Could pull from the short description of the org page or be a manually entered field per news or announcement."
+                }
+              }
+            }]
+          }
+        },
+        "link": {
+          "text": "more information",
+          "href": "#",
+          "info": "more information about Another Org"
+        },
+        "location": null,
+        "phone": null
+      },{
+        "title": {
+          "text": "A third party, non state organization",
+          "href": "#",
+          "type": ""
+        },
+        "tags": null,
+        "image": null,
+        "description": {
+          "richText": {
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "Small statement about who A third party, non state organization is so when people read similar announcements that might have different perspectives, they can get a sense of why this groups says one thing and another says another. Could pull from the short description of the org page or be a manually entered field per news or announcement."
+                }
+              }
+            }]
+          }
+        },
+        "link": {
+          "text": "more information",
+          "href": "#",
+          "info": "more information about A third party, non state organization"
+        },
+        "location": null,
+        "phone": null
+      }]
     }
   },
 
