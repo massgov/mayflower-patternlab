@@ -4,10 +4,9 @@
     text-align: center;
   }
 
-  .pre-content > &,
-  .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container();
+    @include ma-component-spacing;
   }
   
   &__container {

@@ -3,7 +3,6 @@ $rich-text-spacing-mobile: 1.5rem;
 
 .ma__rich-text {
   @include clearfix;
-  @include ma-component-spacing;
 
   &--description {
     margin-bottom: 1rem;

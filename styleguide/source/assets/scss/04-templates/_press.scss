@@ -1,8 +1,4 @@
-.ma__announcement {
-
-  .ma__placeholder {
-    @include ma-component-spacing;
-  }
+.ma__press {
 
   &__page-content {
     
@@ -13,6 +9,14 @@
         display: none;
       }
     }
+  }
+
+  &__location-label {
+    float: left;
+    line-height: 1em;
+    margin-bottom: 0;
+    padding-top: .25em;
+    text-transform: uppercase;
   }
 
   &__sidebar {
