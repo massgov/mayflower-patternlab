@@ -61,9 +61,15 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
   }
 
   &__description {
-    margin-top: 10px;
     font-size: 1.25rem;
-    margin-bottom: 10px;
+  }
+
+  &__title + &__description {
+    margin-top: 10px;
+  }
+
+  &__description + &__link {
+    margin-top: 10px;
   }
 
   &__location {
