@@ -35,5 +35,99 @@
         "text": "<a href=\"#\">Executive Order No. 538</a>"
       }]
     }
+  },
+
+  "sideContent": {
+    "contactList": {
+      "viewSpecific": true,
+      "sidebarHeading":{
+        "title": "Contact"
+      },
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Person to Contact"
+        },
+        "groups": [{
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"Email:",
+            "link": {
+              "href":"#",
+              "text": "person@email.com",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    },
+
+    "pressListing": {
+      "sidebarHeading": {
+        "title": "Related"
+      },
+      "items": [{
+        "eyebrow": "Letter Ruling",
+        "title" : {
+          "url":"#",
+          "text":"Link to Ruling",
+          "info": "",
+          "property": ""
+        },
+        "date": "4/3/2017",
+        "org": "",
+        "description": null
+      },{
+        "eyebrow": "Regulation",
+        "title" : {
+          "url":"#",
+          "text":"Link to Regulation",
+          "info": "",
+          "property": ""
+        },
+        "date": "4/3/2017",
+        "org": "",
+        "description": null
+      },{
+        "eyebrow": "Regulation",
+        "title" : {
+          "url":"#",
+          "text":"Link to Regulation",
+          "info": "",
+          "property": ""
+        },
+        "date": "",
+        "org": "",
+        "description": null
+      }]
+    },
+
+    "eventListing": {
+      "sidebarHeading":{
+        "title": "Upcoming Events"
+      },
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Name of Event",
+          "info": "",
+          "property": ""
+        },
+        "location": "location",
+        "date": {
+          "summary": "Date" 
+        },
+        "time": "Time",
+        "description":"This is a description of the event that will happen at a future date"
+      }],
+      "more": null
+    }
   }
+
 }

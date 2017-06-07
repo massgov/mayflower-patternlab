@@ -11,7 +11,14 @@
 {% endblock %}
 
 {% block sidebar %}
+  {% set contactList = sideContent.contactList %}
+  {% include "@organisms/by-author/contact-list.twig" %}
+  
+  {% set pressListing = sideContent.pressListing %}
+  {% include "@organisms/by-author/press-listing.twig" %}
 
+  {% set eventListing = sideContent.eventListing %}
+  {% include "@organisms/by-author/event-listing.twig" %}
 {% endblock %}
 {% block postContent %}
 
