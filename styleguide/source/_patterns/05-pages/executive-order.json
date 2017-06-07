@@ -36,6 +36,88 @@
       }]
     },
 
+    "richText": {
+      "compHeading": null,
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "WHEREAS, the Commonwealth of Massachusetts gives thanks for the selfless service of our veterans, who put their own lives at risk to secure our nation’s freedom and safety;"
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "WHEREAS, the Commonwealth recognizes and honors the discipline, loyalty and virtue of these men and women who served our country in the global war on terror and recent military engagements in Afghanistan, Iraq, and the Gulf War as well as in past conflicts to achieve world stability and peace;"
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "WHEREAS, it is the duty and desire of the Commonwealth to appropriately support our veterans, particularly as they encounter challenges uniquely attributable to the hardships and sacrifices associated with military service; and"
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "WHEREAS, the Commonwealth re-affirms its commitment to strengthen opportunities for the veteran community as needed to ensure equal opportunity and access to public and private employment and other critical services and programming so that all veterans may participate in full, healthy and productive lives as citizens of Massachusetts."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "NOW, THEREFORE, I, Charles D. Baker, Governor of the Commonwealth of Massachusetts, by virtue of the authority vested in me by the Constitution, Part 2, c. 2, § I, Art. I, do hereby revoke Executive Order No. 538 and order as follows:"
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<b>Section 1.</b> The Governor’s Advisory Council on Veterans’ Services is hereby reaffirmed and established to advise the Governor on issues relating to and how best to support the veterans of the Commonwealth."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<b>Section 2.</b> The Council shall consist of a Chair and 12 members, one of whom shall be the Secretary of Veterans’ Services.  Each member, including the Chair, shall be appointed by the Governor and shall serve at his pleasure, without compensation, in an advisory capacity for a term of three years, except for the Secretary of Veterans’ Services, who shall serve ex officio."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<b>Section 3.</b> The Council shall review and assess federal and state laws and regulations and existing programs and services relating to veterans in order to enhance the lives of veterans in the Commonwealth.  In particular, the Council shall consider how the state can improve veterans’ access to employment and job training, healthcare and well-being services, affordable and accommodating housing choices, and educational opportunities that will best position veterans to enter or re-enter the Commonwealth’s workforce successfully.  To achieve this goal, the Council may ask the Secretary of Veterans’ Services to supply data, reports and other relevant information and assistance."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<b>Section 4.</b> The Council shall meet at least quarterly each year at the direction of the Chair, and shall submit to the Governor an annual report that addresses the stated mission of the Council, targeted objectives, options and recommended actions, and metrics to measure the effect of such recommendations on the lives of veterans."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<b>Section 5.</b> The Chair, as needed, may establish subcommittees comprised of members of the Council and non-members drawn from various groups and organizations committed to veterans and veteran-related issues, including the United States Department of Veterans Affairs and the United States Department of Labor, to accomplish the purposes of this Executive Order. All subcommittees shall be chaired by a member of the Council designated by the Chair. Subcommittees shall meet from time to time, as scheduled by the Chair or the Chair’s designee."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<b>Section 6.</b> This Executive Order shall take effect on November 4, 2016 and shall continue in effect until amended, superseded or revoked by subsequent Executive Order."
+          }
+        }
+      }]
+    },
+
     "formDownloads": {
       "compHeading": {
         "title": "Downloads",
@@ -69,6 +151,8 @@
         "centered": ""
       },
       "contacts":[{
+        "accordion": true,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Office of the Governor"
@@ -119,6 +203,8 @@
         "centered": ""
       },
       "contacts":[{
+        "accordion": false,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Office of the Governor"

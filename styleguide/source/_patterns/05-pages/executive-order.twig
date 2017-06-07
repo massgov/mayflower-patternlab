@@ -11,6 +11,9 @@
   {% set contactList = sideContent.contactList %}
   {% include "@organisms/by-author/contact-list.twig" %}
 
+  {% set richText = mainContent.richText %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+
   {% set formDownloads = mainContent.formDownloads %}
   {% include "@organisms/by-author/form-downloads.twig" %}
 
