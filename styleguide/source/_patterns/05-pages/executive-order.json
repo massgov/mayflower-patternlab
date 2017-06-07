@@ -36,6 +36,29 @@
       }]
     },
 
+    "personalMessage": {
+      "imagePromos": [{
+        "title": null,
+        "tags": null,
+        "image": null,
+        "description": {
+          "richText": {
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "This is an executive order detail page, and this is an optional description field. It can be used to give a short overview of the detailed content below. Here is an extra sentence to show it could be longer. Lorem ipsum, more lorem ipsum and then some more lorem ipsum my friends. Here is an extra sentence to show it could be longer."
+                }
+              }
+            }]
+          }
+        },
+        "link": null,
+        "location": null,
+        "phone": null
+      }]
+    },
+
     "richText": {
       "compHeading": null,
       "rteElements": [{
@@ -251,29 +274,29 @@
         "eyebrow": "Letter Ruling",
         "title" : {
           "url":"#",
-          "text":"Link to Ruling",
+          "text":"LR 12-3: Internet-Based Marketing and Customer-Communications Solutions",
           "info": "",
           "property": ""
         },
-        "date": "4/3/2017",
+        "date": "3/12/2016",
         "org": "",
         "description": null
       },{
         "eyebrow": "Regulation",
         "title" : {
           "url":"#",
-          "text":"Link to Regulation",
+          "text":"830 CMR 64H.1.3",
           "info": "",
           "property": ""
         },
-        "date": "4/3/2017",
+        "date": "4/17/2016",
         "org": "",
         "description": null
       },{
-        "eyebrow": "Regulation",
+        "eyebrow": "",
         "title" : {
           "url":"#",
-          "text":"Link to Regulation",
+          "text":"Related Non News, Announcements, Reg, or Law Here",
           "info": "",
           "property": ""
         },
@@ -290,19 +313,18 @@
       "events":[{
         "title": {
           "href": "#",
-          "text": "Name of Event",
+          "text": "Public Hearing",
           "info": "",
           "property": ""
         },
-        "location": "location",
+        "location": "Boston, MA",
         "date": {
-          "summary": "Date" 
+          "summary": "May 20, 2017" 
         },
-        "time": "Time",
-        "description":"This is a description of the event that will happen at a future date"
+        "time": "12 p.m. - 2 p.m.",
+        "description": "Event description. Ut nulla. Vivamus bibendum, nulla ut congue fringilla, lorem ipsum ultricies risus, ut rutrum velit tortor vel purus."
       }],
       "more": null
     }
   }
-
 }
