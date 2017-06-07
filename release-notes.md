@@ -19,7 +19,7 @@ https://jira.state.ma.us/projects/DP/versions/14638
 ### IMPROVEMENTS
 
 - The main menu (at the top of all pages) is much more accessible with improved ordering if you're tabbing between links.
-- More spacing between patterns has been added.
+- Consistent spacing between patterns has been added.
 - Southbridge location page had its banner coursel replaced with a banner image and Google map.
 - Coloring and spacing fixes on the homepage.
 - Wording and width adjusted on guides.
