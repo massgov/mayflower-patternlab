@@ -1,0 +1,39 @@
+{
+  "pageHeader": {
+    "category": "Executive Order",
+    "divider": false,
+    "title": "No. 573: Reaffirming and restructuring the Governor's advisory council on verterans' services",
+    "subTitle": "",
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Office of the Governor"
+      }]
+    },
+    "socialLinks": null,
+    "optionalContents": null,
+    "widgets": null
+  },
+
+  "mainContent": {
+    "listingTable": {
+      "rows": [{
+        "label": "Date:",
+        "text": "11/14/2016"
+      },{
+        "label": "Issuer:",
+        "text": "Charlie Baker, Governor<br />Karyn Polito, Lieutenant Governor"
+      },{
+        "label": "Mass Register:",
+        "text": "No. 1326"
+      },{
+        "label": "Revoking:",
+        "text": "<a href=\"#\">Executive Order No. 538</a>"
+      },{
+        "label": "Superseeding:",
+        "text": "<a href=\"#\">Executive Order No. 538</a>"
+      }]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{% extends '@templates/two-column.twig' %}
+
+{% block preContent %}
+  {% include "@organisms/by-template/page-header.twig" %}
+{% endblock %}
+
+{% block pageContent %}
+  {% set listingTable = mainContent.listingTable %}
+  {% include "@molecules/listing-table.twig" %}
+
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock %}
+{% block postContent %}
+
+{% endblock %}
+
