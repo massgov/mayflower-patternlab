@@ -17,4 +17,12 @@
       display: none;
     }
   }
+
+  .sidebar--colored & {
+    @include ma-heading-colored($direction: left);
+
+    &:after {
+      display: block;
+    }
+  }
 }
