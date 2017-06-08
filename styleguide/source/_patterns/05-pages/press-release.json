@@ -51,18 +51,6 @@
       }]
     },
 
-    "video": {
-      "src": "https://www.youtube.com/embed/sBd6GWvCLX0",
-      "label": "Governor Charlie Baker: The state of our Commonwealth is strong",
-      "height": "315",
-      "width": "560",
-      "link": {
-        "href": "#",
-        "text": "View transcript"
-      },
-      "position": ""
-    },
-
     "location": "Boston",
 
     "richText": {
