@@ -4,24 +4,18 @@
   {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 {% block pageContent %}
-  {% set richText = richText1 %}
-  {% include "@organisms/by-author/rich-text.twig" %}
-  {% set keyActions = keyActions1 %}
-  {% include "@organisms/by-author/key-actions.twig" %}
-  {% set richText = richText2 %}
-  {% include "@organisms/by-author/rich-text.twig" %}
-  {% set formDownloads = formDownloads2 %}
-  {% include "@organisms/by-author/form-downloads.twig" %}
-  {% set richText = richText3 %}
-  {% include "@organisms/by-author/rich-text.twig" %}
-  {% set keyActions = keyActions3 %}
-  {% include "@organisms/by-author/key-actions.twig" %}
-  {% set richText = richText4 %}
-  {% include "@organisms/by-author/rich-text.twig" %}
-  {% set formDownloads = formDownloads4 %}
-  {% include "@organisms/by-author/form-downloads.twig" %}
-  {% set richText = richText5 %}
-  {% include "@organisms/by-author/rich-text.twig" %}
+  {% for section in sections %}
+    {% set richText = section.richText %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+    {% if section.formDownloads %}
+      {% set formDownloads = section.formDownloads %}
+      {% include "@organisms/by-author/form-downloads.twig" %}
+    {% endif %}
+    {% if section.video %}
+      {% set video = section.video %}
+      {% include "@atoms/09-media/video.twig" %}
+    {% endif %}
+  {% endfor %}
 {% endblock %}
 {% block sidebar %}
   {% set linkList = sidebar.linkList %}
