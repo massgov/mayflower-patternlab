@@ -5,8 +5,21 @@
 {% endblock %}
 {% block pageContent %}
   {% include "@organisms/by-author/form-requirements.twig" %}
-  <form>
-
+  <form class="ma__form-page" action="{{ form.action }}">
+    {% for group in form.groups %}
+      {% set compHeading = group.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+      {% for row in group.rows %}
+        <fieldset>
+          {% if row.title %}
+            <title>{{ row.title }}</title>
+          {% endif %}
+          {% if row.path %}
+            {% include row.path with row.data %}
+          {% endif %}
+        </fieldset>
+      {% endfor %}
+    {% endfor %}
   </form>
 {% endblock %}
 {% block sidebar %}

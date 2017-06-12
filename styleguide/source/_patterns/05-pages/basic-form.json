@@ -56,5 +56,29 @@
         }]
       }
     }
+  },
+
+  "form": {
+    "groups": [{
+      "compHeading": {
+        "title": "Name of Section",
+        "sub": "",
+        "color": "",
+        "id": "",
+        "centered": ""
+      },
+      "rows": [{
+        "path": "@atoms/03-forms/input-text.twig",
+        "data": {
+          "inputText": {
+            "labelText": "Your Name*",
+            "required": true,
+            "id": "text-input",
+            "name": "text-input",
+            "placeholder": "full name"
+          }
+        }
+      }]
+    }]
   }
 }
