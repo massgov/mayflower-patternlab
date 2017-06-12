@@ -14,6 +14,12 @@ label {
   margin-bottom: .25em;
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .ma__input-radio {
   display: inline-block;
   position: relative;
