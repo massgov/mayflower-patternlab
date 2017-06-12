@@ -70,15 +70,6 @@
   }
 }
 
-.sidebar--colored {
-  
-  .ma__sidebar-heading,
-  .ma__comp-heading {
-    @include ma-heading-colored($direction: left);
-    border: none;
-  }
-}
-
 // reversed two column layout
 .main-content--reversed {
 
