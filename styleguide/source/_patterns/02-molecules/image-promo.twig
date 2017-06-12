@@ -15,21 +15,23 @@
     </div>
   {% endif %}
   <div class="ma__image-promo__details">
-    <h2 class="ma__image-promo__title">
-      {% if imagePromo.tags %}
-        <div class="ma__image-promo__tags">
-          {% for tag in imagePromo.tags %}
-            <span title="{{ tag.label }}">{% include tag.icon %}</span>
-          {% endfor %}
-        </div>
-      {% endif %}
-      {% if imagePromo.title.href %}
-        {% set decorativeLink = imagePromo.title %}
-        {% include "@atoms/decorative-link.twig" %}
-      {% else %}
-        {{ imagePromo.title.text }}
-      {% endif %}
-    </h2>
+    {% if imagePromo.title %}
+      <h2 class="ma__image-promo__title">
+        {% if imagePromo.tags %}
+          <div class="ma__image-promo__tags">
+            {% for tag in imagePromo.tags %}
+              <span title="{{ tag.label }}">{% include tag.icon %}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if imagePromo.title.href %}
+          {% set decorativeLink = imagePromo.title %}
+          {% include "@atoms/decorative-link.twig" %}
+        {% else %}
+          {{ imagePromo.title.text }}
+        {% endif %}
+      </h2>
+    {% endif %}
     {% if imagePromo.location.text %}
       <div class="ma__image-promo__location">
         {{ imagePromo.location.text }}
