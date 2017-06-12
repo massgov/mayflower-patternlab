@@ -75,15 +75,11 @@
   }
 
 
-  &__link {
+  a {
     display: none;
     font-size: 20px;
     line-height: 1.2;
     padding: 10px 15px;
-
-    @media ($bp-small-min) {
-      line-height: 1.5;
-    }
 
     @media ($bp-medium-min) {
       display: block;
@@ -94,27 +90,24 @@
     &.is-active, {
       display: block;
     }
-
-    a {
-      @include ma-link-underline;
-    }
   }
 
   @media ($bp-medium-min) {
-    &__link + &__link {
-      border-top-width: 1px;
-      border-top-style: solid;
+    a + a {
+      border-top: 1px solid;
       padding-top: 12px;
     }
   }
 
-  &.is-open &__link {
-    display: block;
-  }
+  &.is-open {
 
-  &.is-open &__link + &__link {
-    border-top-width: 1px;
-    border-top-style: solid;
+    a {
+      display: block;
+    }
+
+    a + a {
+      border-top: 1px solid;
+    }
   }
 
   &__toggle-link {

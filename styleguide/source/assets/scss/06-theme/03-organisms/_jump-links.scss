@@ -34,23 +34,21 @@
       }
     }
 
-    &:hover a {
+    a:hover {
       border-bottom-color: rgba($c-font-link,.5);
     }
 
     @media ($bp-small-max) {
-      a {
-        font-weight: 500;
-      }
+      font-weight: 500;
 
       &.is-active a {
         color: $c-font-dark;
         font-weight: 700;
-      }
 
-      &.is-active:hover a {
-        color: $c-font-dark;
-        border-bottom-color: transparent;
+        &:hover {
+          color: $c-font-dark;
+          border-bottom-color: transparent;
+        }
       }
 
       & + & {
