@@ -91,37 +91,23 @@ export default function (window,document,$,undefined) {
         return;
       }
 
-      // left arrow key
-      if(e.keyCode === 37) {
+      // left or right arrow keys
+      if(e.keyCode === 37 || e.keyCode === 39) {
         e.preventDefault();
         // hide content
         // If menubar focus
-        //  - Previous menubar item
+        //  - Change menubar item
         //
         // If dropdown focus
         //  - Open previous pull down menu and select first item
         hide($openContent);
         $topLevelLink.attr('aria-expanded','false');
-        let index = $topLevelLinks.index($topLevelLink)-1;
-        let linkCount = $topLevelLinks.length;
-        index = ((index % linkCount) + linkCount) % linkCount;
-        $topLevelLinks[index].focus();
-        return;
-
-      }
-      // right arrow key
-      if(e.keyCode === 39) {
-        e.preventDefault();
-        // hide content
-        // If menubar focus
-        //  - Next menubar item
-        //
-        // If dropdown focus
-        //  - Open next pull menu and select first item
-        hide($openContent);
-        $topLevelLink.attr('aria-expanded','false');
-        let index = $topLevelLinks.index($topLevelLink)+1;
-        let linkCount = $topLevelLinks.length;
+        let leftArrow = e.keyCode === 37,
+            index = $topLevelLinks.index($topLevelLink),
+            linkCount = $topLevelLinks.length;
+        // Get previous item if left arrow, next item if right arrow.
+        index += (leftArrow ? -1 : 1);
+        // Wrap around if at the end of the set of menus.
         index = ((index % linkCount) + linkCount) % linkCount;
         $topLevelLinks[index].focus();
         return;
