@@ -14,6 +14,11 @@ label {
   margin-bottom: .25em;
 }
 
+// override if an input label combo is added directly to the page-content area
+.main-content .page-content > label + input {
+  margin-top: 0;
+}
+
 fieldset {
   border: none;
   margin: 0;
