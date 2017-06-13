@@ -22,10 +22,12 @@
           {% include "@atoms/03-forms/input-text.twig" %}
         </div>
         <div class="ma__feedback-form__email">
-          {% include "@atoms/03-forms/input-email.twig" %}
+          {% set inputText = feedbackForm.email %}
+          {% include "@atoms/03-forms/input-text.twig" %}
         </div>
         <div class="ma__feedback-form__feedback">
-          {% include "@atoms/03-forms/input-textarea.twig" %}
+          {% set textarea = feedbackForm.textarea %}
+          {% include "@atoms/03-forms/textarea.twig" %}
         </div>
         <div class="ma__feedback-form__type">
           {% set selectBox = feedbackForm.selectBox %}
