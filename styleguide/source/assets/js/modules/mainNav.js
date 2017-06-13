@@ -32,6 +32,7 @@ export default function (window,document,$,undefined) {
           $topLevelItem = $focusedElement.parents('.ma__main-nav__item'),
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
           $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
+          dropdownLinksLength = $dropdownLinks.length,
           focusIndexInDropdown = $dropdownLinks.index($focusedElement),
           isShift = !!e.shiftKey; // typecast to boolean
 
@@ -44,52 +45,40 @@ export default function (window,document,$,undefined) {
         // If dropdown focus
         //  - Select next menu item
         e.preventDefault();
-        if(open) {
-          if(focusIndexInDropdown === ($dropdownLinks.length-1) ) {
-            return;
-          } else {
-            if(focusIndexInDropdown === -1) {
-              $dropdownLinks[1].focus();
-            } else {
-              $dropdownLinks[focusIndexInDropdown+1].focus();
-            }
-            return;
-          }
-        } else {
+        if(!open) {
           show($topLevelItem.find('.js-main-nav-content'));
           $topLevelLink.attr('aria-expanded', 'true');
           $link.addClass(openClass);
-          if($dropdownLinks[1]) {
-            $dropdownLinks[1].focus();
-          }
-          return;
         }
+        // If focused element isn't in dropdown, start with the 0th item instead.
+        let newIndex = Math.max(0, focusIndexInDropdown);
+        // Focus should wrap around at end of list. Skip 0th item.
+        newIndex = Math.max(1, (newIndex + 1) % dropdownLinksLength);
+        $dropdownLinks[newIndex].focus();
+        return;
       }
 
        // up arrow or shift+tab keys
        if((e.keyCode === 38) || (e.keyCode === 9 && isShift)) {
         // hide content
         // If menubar focus
-        //  - Open pull down menu and select first menu item
+        //  - Open pull down menu and select last menu item
         //
         // If dropdown focus
         //  - Select previous menu item
         e.preventDefault();
-        if(open) {
-          if(focusIndexInDropdown <= 1 ) { // not 0 bc of hidden first link
-            hide($openContent);
-            $topLevelLink.focus().attr('aria-expanded', 'false');
-            return;
-          } else {
-            $dropdownLinks[focusIndexInDropdown-1].focus();
-            return;
-          }
-        } else {
+        if(!open) {
           show($topLevelItem.find('.js-main-nav-content'));
           $topLevelLink.focus().attr('aria-expanded', 'true');
           $link.addClass(openClass);
-          return;
         }
+        // If focused element isn't in dropdown, or is 0th (hidden) or 1st item,
+        // it needs to wrap around to the last element.
+        if(focusIndexInDropdown <= 1 ) {
+          focusIndexInDropdown = dropdownLinksLength;
+        }
+        $dropdownLinks[focusIndexInDropdown-1].focus();
+        return;
       }
 
       // esc key
@@ -114,9 +103,9 @@ export default function (window,document,$,undefined) {
         hide($openContent);
         $topLevelLink.attr('aria-expanded','false');
         let index = $topLevelLinks.index($topLevelLink)-1;
-        if($topLevelLinks[index]) {
-          $topLevelLinks[index].focus();
-        }
+        let linkCount = $topLevelLinks.length;
+        index = ((index % linkCount) + linkCount) % linkCount;
+        $topLevelLinks[index].focus();
         return;
 
       }
@@ -132,9 +121,9 @@ export default function (window,document,$,undefined) {
         hide($openContent);
         $topLevelLink.attr('aria-expanded','false');
         let index = $topLevelLinks.index($topLevelLink)+1;
-        if($topLevelLinks[index]) {
-          $topLevelLinks[index].focus();
-        }
+        let linkCount = $topLevelLinks.length;
+        index = ((index % linkCount) + linkCount) % linkCount;
+        $topLevelLinks[index].focus();
         return;
       }
 
