@@ -6,15 +6,15 @@
     margin-top: 30px;
     padding-top: 30px;
 
-    @media ($bp-medium-min){
+    @media ($bp-large-min){
       margin-top: 45px;
       padding-top: 45px;
     }
 
     @media ($bp-large-min){
       .sidebar & {
-        margin-top: 25px;
-        padding-top: 25px;
+        margin-top: 20px;
+        padding-top: 20px;
       }
     }
   }

@@ -50,6 +50,17 @@
       }]
     },
 
+    "figure": {
+      "align": "",
+      "image": { 
+        "alt": "alt text", 
+        "src": "/assets/images/placeholder/820x460.png",
+        "height": "",
+        "width": ""
+      },
+      "caption": "This is an optional caption that can wrap to multiple lines."
+    },
+
     "video": {
       "src": "https://www.youtube.com/embed/sBd6GWvCLX0",
       "label": "Governor Charlie Baker: The state of our Commonwealth is strong",
@@ -69,7 +80,7 @@
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "Press Release details. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias exercitationem, doloremque officia perspiciatis nemo dolores, quis soluta placeat pariatur itaque dolorum, possimus quidem dolorem perferendis eaque enim quia a nisi."
+            "text": "Press Release details. <b>Authors can add either a featured image, a featured video or neither</b>.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias exercitationem, doloremque officia perspiciatis nemo dolores, quis soluta placeat pariatur itaque dolorum, possimus quidem dolorem perferendis eaque enim quia a nisi."
           }
         }
       }]
@@ -369,32 +380,43 @@
       }]
     },
 
-    "linkList" : {
+    "pressListing": {
       "sidebarHeading": {
         "title": "Related"
       },
-      "stacked": true,
-      "links" : [{
-        "url":"#",
-        "text":"Admin Releases Unprecendented Report on Opiod Epidemic",
-        "info": "",
-        "property": "",
+      "items": [{
         "eyebrow": "Press Release",
-        "date": "4/3/2017"
+        "title" : {
+          "url":"#",
+          "text":"Admin Releases Unprecendented Report on Opiod Epidemic",
+          "info": "",
+          "property": ""
+        },
+        "date": "4/3/2017",
+        "org": "",
+        "description": null
       },{
-        "url":"#",
-        "text":"Dispensing procedures for pharmacists (105 CMR 722)",
-        "info": "",
-        "property": "",
         "eyebrow": "Regulation",
-        "date": ""
+        "title" : {
+          "url":"#",
+          "text":"Dispensing procedures for pharmacists (105 CMR 722)",
+          "info": "",
+          "property": ""
+        },
+        "date": "",
+        "org": "",
+        "description": null
       },{
-        "url":"#",
-        "text":"Related Non News, Annoucement, Reg, or Law Here",
-        "info": "",
-        "property": "",
-        "eyebrow": "",
-        "date": ""
+        "eyebrow": "Regulation",
+        "title" : {
+          "url":"#",
+          "text":"Related Non News, Annoucement, Reg, or Law Here",
+          "info": "",
+          "property": ""
+        },
+        "date": "",
+        "org": "",
+        "description": null
       }]
     }
   }
