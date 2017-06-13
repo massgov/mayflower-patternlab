@@ -71,6 +71,7 @@ h6 {
 
 // end heading styles
 
+.ma__visually-hidden,
 .visually-hidden {
   @include ma-visually-hidden;
 }
