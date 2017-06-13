@@ -1,0 +1,10 @@
+{
+  "inputText": {
+    "labelText": "Email Address",
+    "required": false,
+    "id": "text-input",
+    "name": "text-input",
+    "type": "email",
+    "placeholder": "you@email.com"
+  }
+}

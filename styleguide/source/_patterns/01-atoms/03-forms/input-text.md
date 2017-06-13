@@ -22,6 +22,8 @@ Description: An `<input> [type='text']`  element with its corresponding `<label>
       type: string\unique\required
     name: 
       type: string\required
+    type:
+      type: string\required ('text','email', etc...)
     placeholder:
       type: string
   }
