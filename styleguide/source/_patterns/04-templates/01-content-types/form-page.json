@@ -75,6 +75,7 @@
             "required": true,
             "id": "text-input",
             "name": "text-input",
+            "type": "text",
             "placeholder": "full name"
           }
         }
