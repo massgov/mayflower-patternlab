@@ -23,7 +23,7 @@ export default function (window,document,$,undefined) {
 
     // Listen for Google Map api library load completion, with geocode, geometry, and places libraries
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function(){
-      // Set up click, hover handlers for location listing rows.
+      // Set up click handler for location listing rows.
       $el.on('click', '.js-location-listing-link', function (e) {
         let index = $(e.currentTarget).index();
         // trigger map to recenter on this item based on it's index.
@@ -35,13 +35,32 @@ export default function (window,document,$,undefined) {
         let position = $map.offset().top;
         $("html,body").stop(true, true).animate({scrollTop: position}, '750');
       });
-      $el.on('mouseenter', '.js-location-listing-link', function (e) {
+
+      // Set up hover / focus event for listing rows.
+      $el.on('mouseenter focusin', '.js-location-listing-link', function (e) {
         // remove active state from previously selected list item
         $el.find('.js-location-listing-link.is-active').removeClass('is-active');
 
+        // Don't bounce the marker again if focus moves within the same listing.
+        if ($(e.currentTarget).hasClass('is-marker-bounce')) {
+          return false;
+        }
+
+        // Remove "focus" class from any "focused" location listing row.
+        // ("focus" vs focus because hover doesn't bring focus to element.)
+        $el.find('.js-location-listing-link.is-marker-bounce').removeClass('is-marker-bounce');
+
+        // Focus moved into listing for first time, so flag with class, recenter + bounce marker.
+        $(e.currentTarget).addClass('is-marker-bounce');
         let index = $(e.currentTarget).index();
-        // trigger map to recenter on this item and make the marker bounce
+
+        // Trigger map to recenter on this item and make the marker bounce
         $map.trigger('ma:GoogleMap:MarkerBounce', index);
+      });
+
+      // Remove "focus" class from any "focused" location listing row.
+      $el.on('mouseleave', '.js-location-listing-link', function (e) {
+        $el.find('.js-location-listing-link.is-marker-bounce').removeClass('is-marker-bounce');
       });
 
       // Handle location listings form interaction (triggered by locationFilters.js).
@@ -761,6 +780,11 @@ export default function (window,document,$,undefined) {
         $el.append(item.markup);
       }
     });
+
+    // Focus on the first focusable element in the first listing
+    let $firstListing = $el.find('.js-location-listing-link').first();
+    // :focusable is possible with helpers/jQueryExtend.js
+    $firstListing.find(':focusable').eq(0).focus();
 
     sticky.init($('.js-location-listing-map'));
   }
