@@ -1,0 +1,8 @@
+<label for="input-type-textarea">{{ textarea.labelText }}</label>
+<textarea 
+  class="{{ textarea.required ? 'js-is-required' : ''}}" 
+  name="{{ textarea.name }}" 
+  id="{{ textarea.id }}" 
+  data-type="{{ textarea.type }}"
+  {{ textarea.required ? 'required' : '' }} /></textarea>
+  

@@ -1,0 +1,8 @@
+{
+  "textarea":  {
+    "labelText": "Text Area",
+    "required": false,
+    "id": "textarea",
+    "name": "textarea"
+  }
+}
