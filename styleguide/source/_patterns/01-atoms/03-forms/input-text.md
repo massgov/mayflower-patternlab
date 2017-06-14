@@ -15,15 +15,17 @@ Description: An `<input> [type='text']`  element with its corresponding `<label>
 ~~~
   inputText: {
     labelText:
-      type: string\required,
+      type: string/required,
     required: 
       type: boolean,
     id: 
-      type: string\unique\required
+      type: string/unique/required
     name: 
-      type: string\required
+      type: string/required
     type:
-      type: string\required ('text','email', etc...)
+      type: string ('text','email', etc...) / required
+    width:
+      type: string (number value) / optional
     placeholder:
       type: string
   }

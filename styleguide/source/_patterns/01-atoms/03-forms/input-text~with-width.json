@@ -5,7 +5,7 @@
     "id": "text-input",
     "name": "text-input",
     "type": "text",
-    "width": "",
-    "placeholder": "type something"
+    "width": "500",
+    "placeholder": "this field is 500px wide"
   }
 }

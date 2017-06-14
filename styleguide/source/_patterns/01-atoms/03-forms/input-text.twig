@@ -8,4 +8,7 @@
   type="{{ inputText.type }}" 
   placeholder="{{ inputText.placeholder }}" 
   data-type="{{ inputText.type }}"
+  {% if inputText.width %}
+    style="width: {{ inputText.width }}px" 
+  {% endif %}
   {{ inputText.required ? 'required' : '' }} />
