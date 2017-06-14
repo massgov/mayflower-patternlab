@@ -1,4 +1,12 @@
+{# backward compatible for v5.1 #}
+{% if inputRadio.checked == 'true' %}
+  {% set inputRadio.checked = true %}
+{% endif %}
+{% if inputRadio.checked == 'false' %}
+  {% set inputRadio.checked = false %}
+{% endif %}
+
 <span class="ma__input-radio">
-  <input name="{{inputRadio.name}}" type="radio" value="{{inputRadio.value}}" id="{{inputRadio.id}}" {{inputRadio.checked == 'true' ? 'checked' : ''}}>
-  <label for="{{inputRadio.id}}"><span>{{inputRadio.label}}</span></label>
+  <input name="{{ inputRadio.name }}" type="radio" value="{{ inputRadio.value }}" id="{{ inputRadio.id }}" {{ inputRadio.checked ? 'checked' : '' }}>
+  <label for="{{ inputRadio.id }}"><span>{{ inputRadio.label }}</span></label>
 </span>
