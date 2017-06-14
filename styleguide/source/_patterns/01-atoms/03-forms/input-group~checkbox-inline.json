@@ -9,19 +9,19 @@
       "value": "male",
       "id": "cbi-gender-male",
       "label": "Male",
-      "checked": "true"
+      "checked": true
     },{
       "name": "gender",
       "value": "female",
       "id": "cbi-gender-female",
       "label": "Female",
-      "checked": "false"
+      "checked": false
     },{
       "name": "gender",
       "value": "other",
       "id": "cbi-gender-other",
       "label": "Other",
-      "checked": "false"
+      "checked": false
     }]
   }
 }
