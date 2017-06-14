@@ -36,48 +36,32 @@ export default function (window,document,$,undefined) {
           focusIndexInDropdown = $dropdownLinks.index($focusedElement),
           isShift = !!e.shiftKey; // typecast to boolean
 
-      // down arrow or tab key
-      if((e.keyCode === 40) || (e.keyCode === 9 && !isShift)) {
-        // hide content
+      // up/down arrows or tab key
+      if(e.keyCode === 40 || e.keyCode === 38 || e.keyCode === 9) {
+        e.preventDefault();
         // If menubar focus
-        //  - Open pull down menu and select first menu item
+        //  - Open pull down menu and select appropriate menu item
         //
         // If dropdown focus
-        //  - Select next menu item
-        e.preventDefault();
-        if(!open) {
-          show($topLevelItem.find('.js-main-nav-content'));
-          $topLevelLink.attr('aria-expanded', 'true');
-          $link.addClass(openClass);
-        }
-        // If focused element isn't in dropdown, start with the 0th item instead.
-        let newIndex = Math.max(0, focusIndexInDropdown);
-        // Focus should wrap around at end of list. Skip 0th item.
-        newIndex = Math.max(1, (newIndex + 1) % dropdownLinksLength);
-        $dropdownLinks[newIndex].focus();
-        return;
-      }
-
-       // up arrow or shift+tab keys
-       if((e.keyCode === 38) || (e.keyCode === 9 && isShift)) {
-        // hide content
-        // If menubar focus
-        //  - Open pull down menu and select last menu item
-        //
-        // If dropdown focus
-        //  - Select previous menu item
-        e.preventDefault();
+        //  - Change selected menu item
+        let up = e.keyCode === 38 || (e.keyCode === 9 && isShift);
         if(!open) {
           show($topLevelItem.find('.js-main-nav-content'));
           $topLevelLink.focus().attr('aria-expanded', 'true');
           $link.addClass(openClass);
         }
-        // If focused element isn't in dropdown, or is 0th (hidden) or 1st item,
-        // it needs to wrap around to the last element.
-        if(focusIndexInDropdown <= 1 ) {
-          focusIndexInDropdown = dropdownLinksLength;
+        if(up) {
+          if(focusIndexInDropdown <= 1 ) {
+            focusIndexInDropdown = dropdownLinksLength;
+          }
+          $dropdownLinks[focusIndexInDropdown-1].focus();
+        } else {
+          // If focused element isn't in dropdown, start with the 0th item instead.
+          let newIndex = Math.max(0, focusIndexInDropdown);
+          // Focus should wrap around at end of list. Skip 0th item.
+          newIndex = Math.max(1, (newIndex + 1) % dropdownLinksLength);
+          $dropdownLinks[newIndex].focus();
         }
-        $dropdownLinks[focusIndexInDropdown-1].focus();
         return;
       }
 
@@ -113,8 +97,7 @@ export default function (window,document,$,undefined) {
         return;
       }
 
-      // key code 9 is the tab key
-      if(open || (typeof(e.keycode) !== "undefined" && e.keycode !== 9)) {
+      if(open || (typeof(e.keycode) !== "undefined")) {
         return;
       }
 
