@@ -1,9 +1,6 @@
 {# backward compatible for v5.1 #}
-{% if inputRadio.checked == 'true' %}
-  {% set inputRadio.checked = true %}
-{% endif %}
-{% if inputRadio.checked == 'false' %}
-  {% set inputRadio.checked = false %}
+{% if inputRadio.checked == 'true' or inputRadio.checked == 'false' %}
+  {% set inputRadio = inputRadio|merge({'checked': inputRadio.checked == 'true' ? true : false }) %}
 {% endif %}
 
 <span class="ma__input-radio">
