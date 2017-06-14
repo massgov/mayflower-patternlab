@@ -1,8 +1,8 @@
 {
   "inputCheckbox": {
-    "value": "male",
-    "id": "gender-male",
-    "label": "Male",
+    "value": "checkbox",
+    "id": "checkbox-test",
+    "label": "Checkbox",
     "checked": "true"
   }
 }
