@@ -240,6 +240,68 @@
           }
         }]
       }]
+    },{
+      "compHeading": {
+        "title": "Payment",
+        "sub": "",
+        "color": "",
+        "id": "",
+        "centered": ""
+      },
+      "fieldsets": [{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/03-forms/input-text.twig",
+          "data": {
+            "inputText": {
+              "labelText": "Card Number",
+              "required": true,
+              "id": "credit-card-number",
+              "name": "credit-card-number",
+              "type": "text",
+              "placeholder": ""
+            }
+          }
+        },{
+          "path": "@atoms/03-forms/input-text.twig",
+          "data": {
+            "inputText": {
+              "labelText": "Expiration Date",
+              "required": true,
+              "id": "",
+              "name": "",
+              "type": "text",
+              "placeholder": ""
+            }
+          }
+        },{
+          "path": "@atoms/03-forms/input-text.twig",
+          "data": {
+            "inputText": {
+              "labelText": "CVV",
+              "required": true,
+              "id": "cvv-number",
+              "name": "cvv-number",
+              "type": "text",
+              "placeholder": ""
+            }
+          }
+        },{
+          "path": "@molecules/tooltip.twig",
+          "data": {
+            "tooltip": {
+              "controlId": "GUID278590287",
+              "location": "",
+              "info": "what is a cvv value",
+              "openText": "What is this?",
+              "openIcon": "@atoms/05-icons/svg-question-mark.twig",
+              "closeText": "Close",
+              "title": "",
+              "message": "You can find your CVV number on the back of your credit card.  It is usually a three or four digit number"
+            }
+          }
+        }]
+      }]
     }]
   }
 }
