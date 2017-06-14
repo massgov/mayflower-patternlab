@@ -7,6 +7,15 @@
     font-size: 1.375rem;
   }
 
+  &--optional &__label {
+
+    &:after {
+      content: "(optional)";
+      font-size: .8em;
+      margin-left: .25em;
+    }
+  }
+
   &__field {
     display: block;
     font-size: 0;
@@ -29,6 +38,7 @@
     border: 2px solid;
     font-size: 1.25rem;
     line-height: 40px;
+    min-height: 44px;
     overflow: hidden;
     padding-left: 18px;
     padding-right: 58px;
