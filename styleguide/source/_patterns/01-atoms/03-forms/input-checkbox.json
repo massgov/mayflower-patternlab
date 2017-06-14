@@ -3,6 +3,6 @@
     "value": "checkbox",
     "id": "checkbox-test",
     "label": "Checkbox",
-    "checked": "true"
+    "checked": true
   }
 }
