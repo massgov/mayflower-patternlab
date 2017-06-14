@@ -113,6 +113,108 @@
             }
           }
         }]
+      },{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/03-forms/input-group.twig",
+          "data": {
+            "inputGroup": {
+              "required": true,
+              "inline": true,
+              "title": "Simple radio button question?",
+              "type": "radio",
+              "items": [{
+                "name": "simple-radio",
+                "value": "yes",
+                "id": "simple-radio-yes",
+                "label": "Yes",
+                "checked": false
+              },{
+                "name": "simple-radio",
+                "value": "no",
+                "id": "simple-radio-no",
+                "label": "No",
+                "checked": true
+              }]
+            }
+          }
+        }]
+      },{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/03-forms/input-group.twig",
+          "data": {
+            "inputGroup": {
+              "required": true,
+              "inline": false,
+              "title": "Longer radio button question?",
+              "type": "radio",
+              "items": [{
+                "name": "longer-radio",
+                "value": "1",
+                "id": "longer-radio-1",
+                "label": "An option (that could be much longer to explain)",
+                "checked": false
+              },{
+                "name": "longer-radio",
+                "value": "2",
+                "id": "longer-radio-2",
+                "label": "Another option",
+                "checked": true
+              },{
+                "name": "longer-radio",
+                "value": "3",
+                "id": "longer-radio-3",
+                "label": "And another",
+                "checked": false
+              },{
+                "name": "longer-radio",
+                "value": "4",
+                "id": "longer-radio-4",
+                "label": "And yet another, again",
+                "checked": false
+              }]
+            }
+          }
+        }]
+      },{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/03-forms/input-group.twig",
+          "data": {
+            "inputGroup": {
+              "required": false,
+              "inline": false,
+              "title": "Multiple select question?",
+              "type": "checkbox",
+              "items": [{
+                "name": "",
+                "value": "1",
+                "id": "checkbox1",
+                "label": "An option",
+                "checked": true
+              },{
+                "name": "",
+                "value": "2",
+                "id": "checkbox2",
+                "label": "Another option",
+                "checked": false
+              },{
+                "name": "",
+                "value": "3",
+                "id": "checkbox3",
+                "label": "And another",
+                "checked": false
+              },{
+                "name": "",
+                "value": "4",
+                "id": "checkbox4",
+                "label": "And yet another, again",
+                "checked": false
+              }]
+            }
+          }
+        }]
       }]
     }]
   }
