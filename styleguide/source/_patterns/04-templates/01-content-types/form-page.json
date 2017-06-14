@@ -67,18 +67,29 @@
         "id": "",
         "centered": ""
       },
-      "rows": [{
-        "path": "@atoms/03-forms/input-text.twig",
-        "data": {
-          "inputText": {
-            "labelText": "Your Name*",
-            "required": true,
-            "id": "text-input",
-            "name": "text-input",
-            "type": "text",
-            "placeholder": "full name"
+      "fieldsets": [{
+        "title": "",
+        "items": [{
+          "path": "@atoms/03-forms/input-text.twig",
+          "data": {
+            "inputText": {
+              "labelText": "Your Name*",
+              "required": true,
+              "id": "your-name-23489",
+              "name": "text-input",
+              "type": "text",
+              "placeholder": "full name"
+            }
           }
-        }
+        },{
+          "path": "@atoms/03-forms/helper-text.twig",
+          "data": {
+            "helperText": {
+              "inputId": "your-name-23489",
+              "message": "helper text for the input located above"
+            }
+          }
+        }]
       }]
     }]
   }

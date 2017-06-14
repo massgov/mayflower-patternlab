@@ -15,14 +15,16 @@
         {% for group in form.groups %}
           {% set compHeading = group.compHeading %}
           {% include "@atoms/04-headings/comp-heading.twig" %}
-          {% for row in group.rows %}
+          {% for fieldset in group.fieldsets %}
             <fieldset>
-              {% if row.title %}
-                <title>{{ row.title }}</title>
+              {% if fieldset.title %}
+                <title>{{ fieldset.title }}</title>
               {% endif %}
-              {% if row.path %}
-                {% include row.path with row.data %}
-              {% endif %}
+              {% for item in fieldset.items %}
+                {% if item.path %}
+                  {% include item.path with item.data %}
+                {% endif %}
+              {% endfor %}
             </fieldset>
           {% endfor %}
         {% endfor %}
