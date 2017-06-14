@@ -14,7 +14,6 @@
   }
 
   &__modal {
-    background-color: $c-bg-section;
 
     &--below {
 
@@ -24,6 +23,10 @@
         border-bottom-color: $c-theme-primary;
       }
     }
+  }
+
+  &__container {
+    background-color: $c-bg-section;
   }
 
   &__close {

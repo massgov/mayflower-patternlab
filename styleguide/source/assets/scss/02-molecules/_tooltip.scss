@@ -1,7 +1,8 @@
 .ma__tooltip {
+  display: inline-block;
+  position: relative;
   
   &__open {
-    display: inline;
     font-size: 1em;
   }
 
@@ -11,14 +12,14 @@
   }
 
   &__modal {
-    box-shadow: 2px 2px 4px  rgba(1, 1, 1, 0.1),-2px 2px 4px  rgba(1, 1, 1, 0.1);    
     display: none;
     margin-top: 10px;
+    max-width: 280px;
     position: absolute;
       top: 100%;
       left: 50%;
     transform: translateX(-50%);
-    width: 300px;
+    width: 100%;
 
     &--below {
 
@@ -39,6 +40,14 @@
 
   &__control:checked ~ &__modal {
     display: block;
+  }
+
+  &__container {
+    box-shadow: 2px 2px 4px  rgba(1, 1, 1, 0.1),-2px 2px 4px  rgba(1, 1, 1, 0.1);    
+    position: absolute;
+      left: 0;
+      top: 0;
+    width: 280px;
   }
 
   &__close {
