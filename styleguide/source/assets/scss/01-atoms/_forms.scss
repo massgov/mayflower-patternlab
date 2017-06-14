@@ -25,6 +25,20 @@ fieldset {
   padding: 0;
 }
 
+// Special label handling
+.ma__label {
+
+  &--optional {
+
+    &:after {
+      content: "(optional)";
+      font-size: .8em;
+      margin-left: .25em;
+    }
+  }
+}
+
+// Custom Radio Buttons
 .ma__input-radio {
   display: inline-block;
   position: relative;
@@ -61,6 +75,7 @@ fieldset {
   }
 }
 
+// Custom Checkboxes
 .ma__input-checkbox {
   display: inline-block;
   position: relative;
@@ -102,6 +117,7 @@ fieldset {
   }
 }
 
+// Custom Date input
 .ma__input-date[type=text] {
   background-image: url("../images/svg-icons/date-picker.svg");
   background-position: right 8px top 10px;
