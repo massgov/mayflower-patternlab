@@ -15,12 +15,6 @@
     }
   }
 
-  &__control:focus ~ &__open {
-    border-style: solid;
-    border-width: 2px;
-    margin-left: -2px;
-  }
-
   &__modal {
     display: none;
     margin-top: 10px;

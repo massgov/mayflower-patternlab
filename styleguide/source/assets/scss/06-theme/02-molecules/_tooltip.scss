@@ -10,18 +10,13 @@
     }
   }
 
-  &__control:focus ~ &__open {
-    border-color: Highlight !important;
-
-    /* WebKit gets its native focus styles.
-     */
-    @media (-webkit-min-device-pixel-ratio:0) {
-      outline-color: -webkit-focus-ring-color;
-    }
-  }
-
+  &__control:focus ~ &__open,
   &__control:checked + &__open {
     border-color: rgba($c-font-link, .5);
+  }
+
+  &__control:not(:focus) ~ &__open {
+    border-color: transparent;
   }
 
   &__modal {
