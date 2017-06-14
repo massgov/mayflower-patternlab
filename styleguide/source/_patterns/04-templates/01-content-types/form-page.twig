@@ -17,8 +17,8 @@
           {% include "@atoms/04-headings/comp-heading.twig" %}
           {% for fieldset in group.fieldsets %}
             <fieldset>
-              {% if fieldset.title %}
-                <title>{{ fieldset.title }}</title>
+              {% if fieldset.legend %}
+                <legend>{{ fieldset.legend }}</legend>
               {% endif %}
               {% for item in fieldset.items %}
                 {% if item.path %}
