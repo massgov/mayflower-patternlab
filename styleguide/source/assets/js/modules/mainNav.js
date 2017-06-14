@@ -33,34 +33,42 @@ export default function (window,document,$,undefined) {
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
           $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
           dropdownLinksLength = $dropdownLinks.length,
-          focusIndexInDropdown = $dropdownLinks.index($focusedElement),
-          isShift = !!e.shiftKey; // typecast to boolean
+          focusIndexInDropdown = $dropdownLinks.index($focusedElement);
 
-      // up/down arrows or tab key
-      if(e.keyCode === 40 || e.keyCode === 38 || e.keyCode === 9) {
+      // tab key
+      if(e.keyCode === 9) {
+        // Close any currently-open menu
+        hide($openContent);
+        $link.removeClass(openClass);
+        $topLevelLink.attr('aria-expanded','false');
+        return;
+      }
+
+      // up/down arrows
+      if(e.keyCode === 40 || e.keyCode === 38) {
         e.preventDefault();
         // If menubar focus
         //  - Open pull down menu and select appropriate menu item
         //
         // If dropdown focus
         //  - Change selected menu item
-        let up = e.keyCode === 38 || (e.keyCode === 9 && isShift);
         if(!open) {
           show($topLevelItem.find('.js-main-nav-content'));
           $topLevelLink.focus().attr('aria-expanded', 'true');
           $link.addClass(openClass);
         }
-        if(up) {
+        // Up arrow was used
+        if(e.keyCode === 38) {
           if(focusIndexInDropdown <= 1 ) {
             focusIndexInDropdown = dropdownLinksLength;
           }
           $dropdownLinks[focusIndexInDropdown-1].focus();
         } else {
           // If focused element isn't in dropdown, start with the 0th item instead.
-          let newIndex = Math.max(0, focusIndexInDropdown);
+          focusIndexInDropdown = Math.max(0, focusIndexInDropdown);
           // Focus should wrap around at end of list. Skip 0th item.
-          newIndex = Math.max(1, (newIndex + 1) % dropdownLinksLength);
-          $dropdownLinks[newIndex].focus();
+          focusIndexInDropdown = Math.max(1, (focusIndexInDropdown + 1) % dropdownLinksLength);
+          $dropdownLinks[focusIndexInDropdown].focus();
         }
         return;
       }
