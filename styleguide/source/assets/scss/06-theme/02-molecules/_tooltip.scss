@@ -1,11 +1,22 @@
 .ma__tooltip {
 
   &__open {
+    border-color: transparent;
     color: $c-font-dark;
     font-weight: bold;
 
     & > svg {
       fill: tint($c-font-link, 50%);  
+    }
+  }
+
+  &__control:focus ~ &__open {
+    border-color: Highlight !important;
+
+    /* WebKit gets its native focus styles.
+     */
+    @media (-webkit-min-device-pixel-ratio:0) {
+      outline-color: -webkit-focus-ring-color;
     }
   }
 

@@ -1,31 +1,33 @@
 <div class="ma__tooltip">
-  <input 
-    id="{{ tooltip.controlId }}" 
-    type="checkbox" 
-    class="ma__tooltip__control ma__visually-hidden"
-    aria-label="{{ tooltip.info }}" />
-  <label 
-    for="{{ tooltip.controlId }}"
-    class="ma__tooltip__open"
-    aria-labelledby="{{ tooltip.controlId }}">
-    {{ tooltip.openText }}
-    {% if tooltip.openIcon %}
-      {% include tooltip.openIcon %}
-    {% endif %}
-  </label>
-  <section class="ma__tooltip__modal {{ tooltip.location == 'above'? ma__tooltip__modal--above : 'ma__tooltip__modal--below' }}">
-    <div class="ma__tooltip__container">
-      <label 
-        for="{{ tooltip.controlId }}" 
-        class="ma__tooltip__close"
-        tabindex="-1"
-        aria-labelledby="{{ tooltip.controlId }}">{{ tooltip.closeText }}</label>
-      {% if tooltip.title %}
-        <h2 class="ma__tooltip__title">{{ tooltip.title }}</h2>
+  <div class="ma__tooltip__inner">
+    <input 
+      id="{{ tooltip.controlId }}" 
+      type="checkbox" 
+      class="ma__tooltip__control ma__visually-hidden"
+      aria-label="{{ tooltip.info }}" />
+    <label 
+      for="{{ tooltip.controlId }}"
+      class="ma__tooltip__open"
+      aria-labelledby="{{ tooltip.controlId }}">
+      {{ tooltip.openText }}
+      {% if tooltip.openIcon %}
+        {% include tooltip.openIcon %}
       {% endif %}
-      <div class="ma__tooltip__message">
-        {{ tooltip.message|raw }}
+    </label>
+    <section class="ma__tooltip__modal {{ tooltip.location == 'above'? ma__tooltip__modal--above : 'ma__tooltip__modal--below' }}">
+      <div class="ma__tooltip__container">
+        <label 
+          for="{{ tooltip.controlId }}" 
+          class="ma__tooltip__close"
+          tabindex="-1"
+          aria-labelledby="{{ tooltip.controlId }}">{{ tooltip.closeText }}</label>
+        {% if tooltip.title %}
+          <h2 class="ma__tooltip__title">{{ tooltip.title }}</h2>
+        {% endif %}
+        <div class="ma__tooltip__message">
+          {{ tooltip.message|raw }}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>

@@ -1,14 +1,24 @@
 .ma__tooltip {
-  display: inline-block;
-  position: relative;
+
+  &__inner {
+    display: inline-block;
+    position: relative;
+  }
   
   &__open {
-    font-size: 1em;
-  }
-
-  &__control:checked + &__open {
     border-bottom-style: dotted;
     border-bottom-width: 2px;
+    font-size: 1rem;
+
+    & > svg {
+      margin-bottom: -.2em;
+    }
+  }
+
+  &__control:focus ~ &__open {
+    border-style: solid;
+    border-width: 2px;
+    margin-left: -2px;
   }
 
   &__modal {
@@ -38,8 +48,13 @@
     }
   }
 
+  &__control:focus ~ &__modal,
   &__control:checked ~ &__modal {
     display: block;
+  }
+
+  &__control:not(:focus) ~ &__modal {
+    display: none;
   }
 
   &__container {
