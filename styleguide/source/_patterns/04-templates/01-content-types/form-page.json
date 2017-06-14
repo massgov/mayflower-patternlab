@@ -215,6 +215,30 @@
             }
           }
         }]
+      },{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/03-forms/select-box.twig",
+          "data": {
+            "selectBox":{
+              "label":"How many blanks?",
+              "id":"blanks",
+              "options":[{
+                "value":"",
+                "text":""
+              },{
+                "value":"one",
+                "text":"One"
+              },{
+                "value":"two",
+                "text":"Two"
+              },{
+                "value":"three",
+                "text":"Three"
+              }]
+            }
+          }
+        }]
       }]
     }]
   }
