@@ -259,6 +259,7 @@
               "id": "credit-card-number",
               "name": "credit-card-number",
               "type": "text",
+              "width": "295",
               "placeholder": ""
             }
           }
@@ -283,6 +284,7 @@
               "id": "cvv-number",
               "name": "cvv-number",
               "type": "text",
+              "width": "85",
               "placeholder": ""
             }
           }
