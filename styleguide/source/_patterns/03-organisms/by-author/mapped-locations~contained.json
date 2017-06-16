@@ -7,7 +7,7 @@
       "id": "",
       "centered": ""
     },
-    "contained": false,
+    "contained": true,
     "link": {
       "href": "#",
       "text":"See a list of all locations",
