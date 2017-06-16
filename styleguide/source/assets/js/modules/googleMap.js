@@ -97,6 +97,13 @@ export default function (window,document,$,undefined) {
           markers: markers,
           place: args.place ? args.place : false
         });
+
+        // hide all info windows
+        for (let i in markers) {
+          if(markers[i].open) {
+            markers[i].hideInfo();
+          }
+        }
       });
     });
   }
