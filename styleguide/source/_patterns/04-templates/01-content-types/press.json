@@ -380,32 +380,43 @@
       }]
     },
 
-    "linkList" : {
+    "pressListing": {
       "sidebarHeading": {
         "title": "Related"
       },
-      "stacked": true,
-      "links" : [{
-        "url":"#",
-        "text":"Admin Releases Unprecendented Report on Opiod Epidemic",
-        "info": "",
-        "property": "",
+      "items": [{
         "eyebrow": "Press Release",
-        "date": "4/3/2017"
+        "title" : {
+          "url":"#",
+          "text":"Admin Releases Unprecendented Report on Opiod Epidemic",
+          "info": "",
+          "property": ""
+        },
+        "date": "4/3/2017",
+        "org": "",
+        "description": null
       },{
-        "url":"#",
-        "text":"Dispensing procedures for pharmacists (105 CMR 722)",
-        "info": "",
-        "property": "",
         "eyebrow": "Regulation",
-        "date": ""
+        "title" : {
+          "url":"#",
+          "text":"Dispensing procedures for pharmacists (105 CMR 722)",
+          "info": "",
+          "property": ""
+        },
+        "date": "",
+        "org": "",
+        "description": null
       },{
-        "url":"#",
-        "text":"Related Non News, Annoucement, Reg, or Law Here",
-        "info": "",
-        "property": "",
-        "eyebrow": "",
-        "date": ""
+        "eyebrow": "Regulation",
+        "title" : {
+          "url":"#",
+          "text":"Related Non News, Annoucement, Reg, or Law Here",
+          "info": "",
+          "property": ""
+        },
+        "date": "",
+        "org": "",
+        "description": null
       }]
     }
   }

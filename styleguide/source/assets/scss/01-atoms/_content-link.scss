@@ -3,6 +3,7 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
+  max-width: 100%;
 
   &--chevron {
     @include ma-chevron;

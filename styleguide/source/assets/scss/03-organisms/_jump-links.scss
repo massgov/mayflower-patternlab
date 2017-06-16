@@ -14,7 +14,7 @@
   &__inner {
 
     @media ($bp-small-min) {
-      padding-bottom: 45px;
+      padding-bottom: 35px;
     }
   }
 
@@ -34,6 +34,10 @@
 
     @media ($bp-small-max) {
       display: none;
+    }
+
+    @media ($bp-small-min) {
+      margin-bottom: 15px;
     }
   }
 
