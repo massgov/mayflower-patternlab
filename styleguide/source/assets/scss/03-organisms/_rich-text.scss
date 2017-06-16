@@ -28,7 +28,7 @@ $rich-text-spacing-mobile: 1.5rem;
   // extra specificity was needed to override & a { ... }
   & &__footnote {
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     font-size: .6em;
     line-height: 1;
     padding: 0 .3em;

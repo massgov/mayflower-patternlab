@@ -10,6 +10,13 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
     border-top-width: 1px;
     margin-top: 30px;
     padding-top: 30px;
+
+    @media ($bp-large-min){
+      .sidebar & {
+        margin-top: 20px;
+        padding-top: 20px;
+      }
+    }
   }
 
   &.js-location-listing-link {
