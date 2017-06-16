@@ -1,6 +1,5 @@
 .ma__top-actions {
   @include ma-container;
-  @include ma-component-padding;
 
   &__title {
     @include ma-border-decorative;

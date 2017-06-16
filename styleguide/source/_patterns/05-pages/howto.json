@@ -8,9 +8,10 @@
     "title": "Apply for unemployment benefits",
     "subTitle": "Have you lost your job?  You may qualify for temporary income to support you while you look for a new one",
     "headerTags": {
+      "label": "More about:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Unemployment Benefits"
+        "href": "#",
+        "text": "Unemployment Benefits"
       }]
     },
     "optionalContents": [{
@@ -418,7 +419,7 @@
               "info": "",
               "property": ""
             },
-            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
@@ -488,7 +489,7 @@
               "info": "",
               "property": ""
             },
-            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
@@ -546,10 +547,13 @@
     "coloredHeadings": true,
     
     "contactList": {
-      "sidebarHeading":{
+      "viewSpecific": true,
+      "sidebarHeading": {
         "title": "Contact"
       },
       "contacts":[{
+        "accordion": false,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Department of Unemployment Assistance",
@@ -596,17 +600,17 @@
       },
       "stacked": true,
       "links" : [{
-        "url":"#",
+        "href":"#",
         "text":"Log in to UI Online for recipients",
         "info": "",
         "property": ""
       },{
-        "url":"#",
+        "href":"#",
         "text":"Appeal UI decision",
         "info": "",
         "property": ""
       },{
-        "url":"#",
+        "href":"#",
         "text":"Apply for a job training program",
         "info": "",
         "property": ""

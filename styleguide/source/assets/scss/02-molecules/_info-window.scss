@@ -3,26 +3,27 @@
 .ma__info-window {
   font-size: 1.25rem;
   line-height: 1.4;
-  padding-bottom: 0;
+  padding: 20px;
+  padding-right: 0;
 
   &__name {
     font-size: 1.5rem;
     margin-bottom: 0;
   }
 
-  &__contact {
-    margin-bottom: 1em;
-  }
-
   &__phone {
     white-space: nowrap;
   }
 
-  &__email {
+  &__email-link {
     @include ma-link-underline;
   }
 
   &__address {
     margin-bottom: 12px;
+  }
+
+  &__directions {
+    margin-top: 6px;
   }
 }

@@ -9,6 +9,8 @@
     "image": {
       "src":"/assets/images/placeholder/190x107.png",
       "alt": "placeholder image",
+      "width": "190",
+      "height": "107",
       "href": "#"
     },
     "description": {
@@ -26,7 +28,6 @@
     "link": {
       "text": "Read More",
       "href": "#",
-      "type": "chevron",
       "info": "Read More about Activity Title"
     },
     "location": null,

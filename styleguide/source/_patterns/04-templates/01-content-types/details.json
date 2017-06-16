@@ -8,18 +8,19 @@
     "title": "How To page Title",
     "subTitle": "teaser text",
     "headerTags": {
+      "label": "More about:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Term 1"
+        "href": "#",
+        "text": "Term 1"
       },{
-        "url": "#",
-        "term": "Term 2"
+        "href": "#",
+        "text": "Term 2"
       },{
-        "url": "#",
-        "term": "Term 3"
+        "href": "#",
+        "text": "Term 3"
       },{
-        "url": "#",
-        "term": "Term 4"
+        "href": "#",
+        "text": "Term 4"
       }]
     },
     "optionalContents": [{
@@ -66,11 +67,15 @@
 
   "sidebar": {
     "coloredHeadings": true,
+
     "contactList": {
-      "sidebarHeading":{
+      "viewSpecific": true,
+      "sidebarHeading": {
         "title": "Contact"
       },
       "contacts":[{
+        "accordion": false,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Department name",

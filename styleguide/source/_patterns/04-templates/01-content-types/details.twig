@@ -15,10 +15,8 @@
 
     <div class="page-content">
       {% if sidebar.contactList %}
-        <div class="ma__details__top-contact">
-          {% set contactList = sidebar.contactList %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        </div>
+        {% set contactList = sidebar.contactList %}
+        {% include "@organisms/by-author/contact-list.twig" %}
       {% endif %}
       {% set coloredHeading = {
         "text": details.contentTitle,
@@ -35,17 +33,13 @@
 
     <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
       {% if sidebar.contactList %}
-        <div class="ma__details__sidebar-contact">
-          {% set contactList = sidebar.contactList %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        </div>
+        {% set contactList = sidebar.contactList %}
+        {% include "@organisms/by-author/contact-list.twig" %}
       {% endif %}
       {% if sidebar %}
-        <div class="ma__details__sidebar">
-          {% block sidebar %}
-            {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
-          {% endblock %}
-        </div>
+        {% block sidebar %}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
+        {% endblock %}
       {% endif %}
     </aside>
     
@@ -62,3 +56,4 @@
 
 {# site footer #}
 {% block footer %}{% endblock %}
+  

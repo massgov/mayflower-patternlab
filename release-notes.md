@@ -1,6 +1,74 @@
 # Mayflower Release Notes
 
+## 5.1.0
+
+To kick June off, there's a new Mayflower minor release. Announcements Listings and Events are the headliners, but lots of improvements make an appearance at the concert too.
+
+For folks that want to see all the notes:
+https://jira.state.ma.us/projects/DP/versions/14638
+
+### NEW FEATURES
+
+- Announcing all the things! Announcement Listing pages cover everything from press releases to speeches. Additionally, content on this page can be filtered by type, agency, topic, and other classifications.
+- Event listings and event details for single instance events and those that recur.
+- Directions link now appears after clicking on map pins
+- All available activities at a location are now listed on Location pages
+- Video description/transcript page has been added
+- "Your Government" version of Topic pages now exist
+
+### IMPROVEMENTS
+
+- The main menu (at the top of all pages) is much more accessible with improved ordering if you're tabbing between links.
+- Consistent spacing between patterns has been added.
+- Southbridge location page had its banner coursel replaced with a banner image and Google map.
+- Coloring and spacing fixes on the homepage.
+- Wording and width adjusted on guides.
+- Adjustments to the Location page, with some items removed (quick actions, breadcrumbs, wait times) and added (key actions, contact list).
+- Key actions added to Location Park page.
+- Details content type is more adaptive to different screen sizes.
+- Small label/text changes and other tiny adjustments on Org, G2G, Section Landing, Topic Transition, Helpful Links, Service, Location, and Event Listin pages.
+
+## 5.0.0
+
+Sometimes you have to break a few eggs to make an Omlette.  For our next major release (5.0), we're introducing a new Announcement page type and had to change some existing code in progress.
+
+**Note:** This bump from 4.* to 5.* is considered a major release, which means all of our friends who make their sites Mayflowery with this code should read on and integrate locally before updating anything in production.  If you're interested, you can see our integration test steps for Drupal in this [google doc](https://docs.google.com/document/d/1pbb-l0G39y9o8QMElxGzSi7nBBxDaV9k7hHdxmWAiaU/edit#).
+
+### SUMMARY
+If you'd like to see the tickets in JIRA:
+
+- [DP-3167 [MF] News/Announcement Detail Page](https://jira.state.ma.us/browse/DP-3167)
+
+### NEW FEATURES
+- Mayflower now has a new Announcement Content Type and Page
+
+### IMPROVEMENTS
+1. Page Header
+  a. Added Category field
+  b. Added Social Icons pattern
+2. Linked List
+  a. removed v3.5 compatibility code
+  b. Added optional eyebrow and date elements
+3. Personal Message (breaking change)
+  a. updated styling, html, json (Pilot version) to match designs for Announcement page
+4. Footer (breaking change)
+  a. Change data variable for socialLinks to footerSocialLinks
+  b. moved custom styling for social links into the footer.scss file
+5. Social Links
+  a. Added optional label
+  b. Added data attribute to record type of social icon (for JavaScript)
+6. SVG Social icons
+  a. now have a default color (fill value set on the path)
+7. Header Tags (breaking change)
+  a. Changed label to use JSON content
+8. Image Promo
+  a. Added missing height and width variables to image data
+  b. Using image atom instead of img tag.
+9. Video
+  a. width and height variables were not coded correctly
+
 ## 4.2.0
+
 ### SUMMARY
 If you'd like to read about these changes in JIRA:
 
@@ -13,10 +81,8 @@ If you'd like to read about these changes in JIRA:
 ### NEW FEATURES
 We have a new color scheme for Gov to Gov pages and patterns!  Take a look under the new Pages > G2G dropdown!  Bonus: if you're on a different page, you can switch over to the G2G theme by typing "cranberry" into the header search and clicking "submit". :) (do this again to get back to the regular theme)
 
-
 ### IMPROVEMENTS
 We updated the page patterns (see the Pages dropdown) to match our more generic page type names
-
 
 ### FIXED
 As part of this release we fixed a few issues.
@@ -26,54 +92,59 @@ As part of this release we fixed a few issues.
 3. We should no longer see any sidebar widget markup when there is no content for them.
 
 ## 4.1.0
+
 ### SUMMARY
 If you'd like to read about these changes in JIRA:
-* [DP-2042](https://jira.state.ma.us/browse/DP-2042) - [Pattern Lab] Location Listings 
-* [DP-2078](https://jira.state.ma.us/browse/DP-2078) - [dev] Update Interstitial Page Code 
+
+* [DP-2042](https://jira.state.ma.us/browse/DP-2042) - [Pattern Lab] Location Listings
+* [DP-2078](https://jira.state.ma.us/browse/DP-2078) - [dev] Update Interstitial Page Code
 * [DP-2400](https://jira.state.ma.us/browse/DP-2400) - [a11y] Add more context to the linked text "Log in to..."
 * [DP-2693](https://jira.state.ma.us/browse/DP-2693) - [dev] Update template to remove arrow in Activities
-* [DP-2734](https://jira.state.ma.us/browse/DP-2734) - [Pattern Lab] Regulations 
+* [DP-2734](https://jira.state.ma.us/browse/DP-2734) - [Pattern Lab] Regulations
 * [DP-2853](https://jira.state.ma.us/browse/DP-2853) - [dev] Contact section appears even when there is no additional contact added.
-* [DP-2963](https://jira.state.ma.us/browse/DP-2963) - [Pattern Lab] Update color variable names 
+* [DP-2963](https://jira.state.ma.us/browse/DP-2963) - [Pattern Lab] Update color variable names
 * [DP-3094](https://jira.state.ma.us/browse/DP-3094) - [mf] Update "Service Detail" page to match inputs on build specs
 * [DP-3149](https://jira.state.ma.us/browse/DP-3149) - [mf] - Ordered Steps - remove number if only one step
 * [DP-3151](https://jira.state.ma.us/browse/DP-3151) - [mf] - Rich Text - nested ordered list
 * [DP-3152](https://jira.state.ma.us/browse/DP-3152) - [mf] - Image Promo - optional description
-* [DP-3155](https://jira.state.ma.us/browse/DP-3155) - [mf] - Location Filters - Refactor layout to accommodate more tags 
-
+* [DP-3155](https://jira.state.ma.us/browse/DP-3155) - [mf] - Location Filters - Refactor layout to accommodate more tags
 
 ### NEW FEATURES
+
 - Ahem... introducing the latest page type to our family: Regulation Details! (Pages > REG 930 CMR 6).  This is a great page type to use to make it easy to read information regarding a specific regulation.
 - Wait there's more... We also created a new Service Detail Page (Pages > Service Details).  Services might give you the top level information, but this is where the real information is for a specific service.
 
 ### IMPROVEMENTS
+
 1. We've revisited how we named our Sass color variables.  Instead of using $c-theme-blue for example we are now using $c-theme-primary.  This update will make it easy for others to create new color schemes for the Mayflower Patterns.
 2. The Location Listing page (Pages > Map listing human services) has been updated from the MVP version to the final version.  The Filters area was expanded to include additonal choices.  The Results area was updated to include tags to show which filters are currently being applied along with pagination.  The Results are also using a newer design that highlights the active or hovered location and makes the corresponding map marker bounce.
 3. For the Image Promo pattern, we've changed the description from being a required field to being an optional field.
 4. After testing the transition page with low to no vision users, we identified that changing the message from a paragraph to an H1 tag was an added benefit.    
 
 ### FIXED
+
 As part of this release we fixed a few issues.
 
 1. If a location didn't have any additional contacts the right rail contact us pattern was still showing the "Contacts" heading.  This pattern has been updated to check if it has contacts before rendering any html.
 2. The Image Promo pattern was updated to check to check if the read more link has a "text" value before adding that link to prevent an empty link from being added.
 3. When an Ordered Step pattern was added to a page with only one step, the number icon was still being shown and the html was being read as a list of one.  This pattern now checks the length of steps to render and only renders it as a numbered list if there are multiple steps.  Otherwise it just outputs a single Action Step item.
 4. When a nested ordered list was added to a Rich Text pattern, the nested list items were also being rendered as numbers.  We've updated this to render letters instead.
-5. The utility nav was having issue with accessibilty trying to understand the "login to..." link found in the utility nav.  A hidden element has been added to the link to provide more information that screen readers can see. 
+5. The utility nav was having issue with accessibilty trying to understand the "login to..." link found in the utility nav.  A hidden element has been added to the link to provide more information that screen readers can see.
 
 ## 4.0.0
+
 Mayflower turns 4.0.0!  Oh man.  We've been in the lab creating a new page type called How-To (formerly known as Action) and we've got lots of other ~candies~ updates and ~peeps~ goodies packed in to this ~easter basket~ release. :)
 
 **Note:** This bump from 3.* to 4.* is considered a major release, which means all of our friends who make their sites Mayflowery with this code should read on and integrate locally before updating anything in production.  If you're interested, you can see our integration test steps for Drupal in this [google doc](https://docs.google.com/document/d/1pbb-l0G39y9o8QMElxGzSi7nBBxDaV9k7hHdxmWAiaU/edit#).
 
 ### SUMMARY
 If you'd like to see the tickets in JIRA:
+
 - [DP-2228 [pattern lab] How-to page updates](https://jira.state.ma.us/browse/DP-2228)
 - [DP-2685 [mf] Add Tabular Fees module to How To Page](https://jira.state.ma.us/browse/DP-2685)
 
 ### NEW FEATURES
-- Goodbye Action and hellooooooo How-To page.  Give her a spin at `Pages >
- HOWTO Unemployment`.
+- Goodbye Action and hellooooooo How-To page.  Give her a spin at `Pages > HOWTO Unemployment`.
 - That same left sticky nav that we all know and love in a How-To (Action) page is now it's own component. ;)  See `Molecules > Sticky Nav`
 - We've got a nifty new list of contacts that can optionally be collapsed / expanded in an accordion, like in the main column of a How-To.  See `Organisms > By Author > Contact List`
 - Since we were using it on a couple different page types, we created a Details template that contains the meat (or tofu) of the content area for How-Tos and Locations (they're similar in layout - remember right rail?!).  See `Templates > Content Types > Details`
@@ -91,6 +162,7 @@ In this release of Mayflower, we're just stitching together a little patch with 
 
 ### SUMMARY
 Please feel free to check these tickets out in JIRA:
+
 - [DP-2399](https://jira.state.ma.us/browse/DP-2399) The site name is not announced correctly in Voiceover
 - [DP-2401](https://jira.state.ma.us/browse/DP-2401) The close button is announced as "close plus".
 - Github #398 JavaScript Type Errors
@@ -101,31 +173,35 @@ Please feel free to check these tickets out in JIRA:
 - We squashed a pesky javascript bug that might have been preventing other javascript from running on the site. (perhaps functionality for a video or map wasn't loading)
 
 ## 3.7.0
+
 ### SUMMARY
 We've updated the topic page!
 
 If you'd like to read about this changes in JIRA:
+
 * [DP-2117](https://jira.state.ma.us/browse/DP-2117) - [pattern lab] Topic Page Updates
 
 ### Improvements
 * We've updated the Topic page! (Pages > Topic State Parks and Recreation) - and we're talking more than just a new name (no more L1's here!):
-   * The new header layout includes a a spot for a description and a nifty new image size.
+    * The new header layout includes a a spot for a description and a nifty new image size.
     * We've introduced some new variations to the card component (Molecules > Section Links) on the Topic Page:
         * You can now choose between regular links (by default) or callout links (Molecules > Section Links Callout Links).  This will help to call out How-To's and tasks associated with a service on a given topic page.
         * For those times when we don't want to fill the card up with too many links but we want people to know there are more goodies, we've add an optional more link to the bottom of the card.   
 
 ## 3.6.0
+
 ### SUMMARY
 If you'd like to read about these changes in JIRA:
+
 * [DP-2114](https://jira.state.ma.us/browse/DP-2114) - [pattern lab] Service Page
 * [DP-2181](https://jira.state.ma.us/browse/DP-2181) - Update Guide Page in Mayflower
-* [DP-2206](https://jira.state.ma.us/browse/DP-2206) - Implement org page level structured data json+ld object in Mayflower 
+* [DP-2206](https://jira.state.ma.us/browse/DP-2206) - Implement org page level structured data json+ld object in Mayflower
 * [DP-2569](https://jira.state.ma.us/browse/DP-2569) - Change header in Service page
 * [DP-2471](https://jira.state.ma.us/browse/DP-2471) - Mayflower: guide section with all possible elements
 
 ### NEW FEATURES
 - Ahem... introducing the latest page type to our family: Services! (Pages > Service Unemployment Benefits).  This is a great page type to use to help surface tons of information related to services, including: branding information, instructional videos, links to how-to's, location information listings, etc.
-- We're making Org Landing Pages (Pages > Org Landing Page) more machine and search friendly by adding a Government Organization structured data pattern (Meta > Schema > Government Organization) to the bottom of the page markup. 
+- We're making Org Landing Pages (Pages > Org Landing Page) more machine and search friendly by adding a Government Organization structured data pattern (Meta > Schema > Government Organization) to the bottom of the page markup.
 - For Mayflower implementers, we've created an example Guide page which shows all of the possible elements that can go into a Guide section (Pages > Guide Section Example)  
 
 ### IMPROVEMENTS
@@ -136,6 +212,7 @@ If you'd like to read about these changes in JIRA:
   - the related guides show the guide card treatment as opposed to the related pages image thumbnail treatment.
 
 ## 3.5.0
+
 ### DS-5
 * DP-1307 - Display spacing issue in Agency Links area on subtopic (L2) pages
 * DP-1734 - Word "Unemployment" not resizing correctly on Subtopic page on iPhone 5
@@ -158,7 +235,6 @@ If you'd like to read about these changes in JIRA:
 ### Maintaince & Support
 * DP-1995 - CLONE - Addresses in Contact Groups not showing all line breaks
 
-
 ## 3.4.2
 * DP-1434 - Update location and design of feedback form
 
@@ -166,6 +242,7 @@ If you'd like to read about these changes in JIRA:
 * Reset the gulp copy task to include the svg files
 
 ## 3.4.0 (Sprint 13)
+
 ### DS-5
 * DP-1653 - Implement static MVP Map page in Patternlab
 * DP-1670 - Remove static label "Guide:" from illustrated link
@@ -179,8 +256,8 @@ If you'd like to read about these changes in JIRA:
 ### Maintaince & Support
 * DP-1434 - Update location and design of feedback form
 
-
 ## 3.3.0 (Sprint 12)
+
 ### DS-5
 * DP-691 - Implement Google Translate in Pattern Lab
 * DP-981 - PatternLab - Refactor header contact us
@@ -228,6 +305,7 @@ If you'd like to read about these changes in JIRA:
 * DP-1521 - External links under jclickable containers were not firing the interstitial js
 
 ## 3.1.0 (Sprint 10)
+
 ### Org Page
 * DP-708 - Implement Organization Page in PatternLab
 * DP-867 - FE - Action Finder
@@ -246,8 +324,8 @@ If you'd like to read about these changes in JIRA:
 * DP-730 - Implement footer in Pattern Lab
 * DP-796 - Implement MVP Header - Utility Nav in Patternlab
 
-
 ## 3.0.0 (Sprint 9)
+
 ### Homepage search
 * MGRP-339 - FE: Homepage build-out
 * MGRP-304 - FE: Homepage - Multi-row template - refactor
@@ -273,9 +351,10 @@ If you'd like to read about these changes in JIRA:
 * MGRP-344 - FE - Update rich text image to allow captions and different classes.
 * MGVDU-448 - Pilot Header update
 
-
 ## 2.2.0 (Sprint 8)
+
 ### MQA bugs
+
 * MQA-23 - Links in the body are turning into a weird display
 * MQA-62 - Pilot Homepage Header on mobile has wrong coloring
 * MQA-65 - Opening the Common Actions menu in mobile also opens the common actions section on the pilot homepage
@@ -290,8 +369,8 @@ If you'd like to read about these changes in JIRA:
 * MGRP-278 - FE Dev: Emergency alert bar
 * MGRP-258 - Updated Pattern Lab Documentation (atoms)
 
-
 ## 2.1.0 (Sprint 7)
+
 ### Error pages
 * MGVDU-253 - Front end: 404 page
 * MGVDU-256 - Front end: 403 page
@@ -303,8 +382,8 @@ If you'd like to read about these changes in JIRA:
 * MGVDU-312 - FE Dev - Contact Group - refactor address
 * MGVDU-313 - Firefox text wrapping bug on Related Topics section on some but not all pages
 
-
 ## 1.1.0 (Sprint 6)
+
 ### MGVDU-219 - FE Dev: Guide Page
 * MGVDU-216 - FE Dev: Guide Page - Header Banner
 * MGVDU-217 - FE Dev: Guide Page - Action Steps
@@ -330,8 +409,8 @@ If you'd like to read about these changes in JIRA:
 * MGRP-154 - Callout Link - bottom margin
 * MGRP-156 - Email link doesn't wrap.
 
-
 ## 0.5.0 (Sprint 5)
+
 ### MGVDU-181 - Location Page
 * MGVDU-172 - Component: Hero Banner Carousel (Location Page)
 * MGVDU-204 - FE Dev: Location - Wait Time Indicator
@@ -349,8 +428,8 @@ If you'd like to read about these changes in JIRA:
 ### Other
 * MGVDU-220 - FE Dev: Image credit component
 
-
 ## 0.4.0 (Sprint 4)
+
 ### Action Detail page modifications
 * MGVDU-120 - FE Dev: Modifications to Action page: Image / diagram
 * MGVDU-118 - FE Dev: Modifications to Action page: Sequential Lists
@@ -366,8 +445,8 @@ If you'd like to read about these changes in JIRA:
 ### Pilot Page
 * MGVDU-87 - Feedback Form
 
-
 ## 0.3.0 (Sprint 3)
+
 ### Level 0,1,2 pages - Action Funnel
 * MGVDU-53 - FE Dev: L0 Page (contains sub tickets)
 * MGVDU-54 - FE Dev: L1 Page
@@ -384,8 +463,8 @@ If you'd like to read about these changes in JIRA:
 * MGVDU-139 - Action Page Header Update
 * MGVDU-117 - Forms/Downloads
 
-
 ## 0.2.0 (Sprint 2)
+
 ### Action Detail page
 * MGRV-89 - Related Contact Call-Out
 * MGRV-88 - Task Detail Section
@@ -393,15 +472,15 @@ If you'd like to read about these changes in JIRA:
 * MGRV-92 - Breadcrumbs
 * MGRV-91 - Task Detail Header
 
-
 ## 0.1.0 (Sprint 1)
+
 ### Header and Footer
 * MGRV-38 - Header plus navigation
 * MGRV-51 - Global Styling for elements
 * MGRV-39 - Footer
 
-
 ## Sprint A
+
 ### Environment Setup
 * MGRV-66 - Breakpoints (mobile desktop flow)
 * MGRV-37 – Create Github Repo
@@ -413,4 +492,3 @@ If you'd like to read about these changes in JIRA:
 * MGRV-46 - Populate asset folder with icons used (generate SVG sprite)
 * MGRV-47 - setup up Web-Based Styleguid outline and scaffolding
 * MGRV-50 - Setup dev environment
-

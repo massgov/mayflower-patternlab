@@ -6,7 +6,6 @@ Description: An `<input> [type='text']`  element with its corresponding `<label>
 ## State: ALPHA
 
 ### Notes:
-Any text input field will have the same label (Your Name) and will always be required.
 
 ### Used In:
 - [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)

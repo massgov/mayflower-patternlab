@@ -22,9 +22,10 @@
     "title": "Executive Office of Health and Human Services Locations",
     "subTitle": "",
     "headerTags": {
+      "label": "More about:",
       "taxonomyTerms": [{
-        "url": "#",
-        "term": "Health and Human Services (EOHHS)"
+        "href": "#",
+        "text": "Health and Human Services (EOHHS)"
       }]
     },
     "optionalContents": [{

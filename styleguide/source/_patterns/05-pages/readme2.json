@@ -5,9 +5,8 @@
   },
 
   "errorPage": {
-    "type": "v4.2 (5/8/2017)",
+    "type": "v5.1.1 (6/16/2017)",
     "title": "Welcome to Mayflower, the Commonwealth's Design System",
     "message": "Use the navigation menu above to browse our patterns."
   }
 }
-

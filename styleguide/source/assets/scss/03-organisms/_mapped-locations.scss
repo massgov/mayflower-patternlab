@@ -1,5 +1,4 @@
 .ma__mapped-locations {
-  @include ma-component-padding;
   @include ma-container;
   
   @media ($bp-page-width-min) {

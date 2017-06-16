@@ -1,8 +1,11 @@
 <!-- Begin .header -->
 <header class="ma__header" id="header">
-  <a class="ma__header__skip-nav" href="#main-content">skip to main content</a>
   <div class="ma__header__backto">
     <a href="http://www.mass.gov">Go to classic Mass.gov</a>
+  </div>
+  <a class="ma__header__skip-nav" href="#main-content">skip to main content</a>
+  <div class="ma__header__utility-nav ma__header__utility-nav--wide">
+    {% include "@organisms/by-template/utility-nav.twig" %}
   </div>
   <div class="ma__header__container">
     <div class="ma__header__logo">
@@ -32,7 +35,7 @@
       <div class="ma__header__main-nav">
         {% include "@molecules/main-nav.twig" %}
       </div>
-      <div class="ma__header__utility-nav">
+      <div class="ma__header__utility-nav ma__header__utility-nav--narrow">
         {% include "@organisms/by-template/utility-nav.twig" %}
       </div>
     </div>

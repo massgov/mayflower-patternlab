@@ -30,6 +30,10 @@ $page-banner-icon-width: $column + $gutter;
     height: auto;
     min-height: 450px;
 
+    @media ($bp-medium-min) {
+      padding-top: 45px;
+    }
+
     @media ($bp-large-min) {
       margin-bottom: 70px;
     }

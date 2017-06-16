@@ -1,10 +1,4 @@
 <section class="ma__link-list">
-  {# added test for title for backward compatibilty with v3.5 #}
-  {% if linkList.title %}
-    {% set compHeading = { "title": linkList.title } %}
-    {% include "@atoms/04-headings/comp-heading.twig" %}
-  {% endif %}
-
   {% if linkList.compHeading %}
     {% set compHeading = linkList.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
@@ -15,9 +9,16 @@
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
 
+  {% if linkList.description %}
+    <div class="ma__link-list__description">
+      {% set richText = linkList.description %}
+      {% include "@organisms/by-author/rich-text.twig" %}
+    </div>
+  {% endif %}
+
   <div class="ma__link-list__container">
     {# added for backward compatibilty with v3.5 #}
-    {% if linkList.stacked %}
+    {% if linkList.stacked or linkList.links|length < 4 %}
       <ul class="ma__link-list__items">
         {% for decorativeLink in linkList.links %}
           <li class="ma__link-list__item">

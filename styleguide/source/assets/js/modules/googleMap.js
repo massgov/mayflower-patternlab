@@ -124,55 +124,49 @@ export default function (window,document,$,undefined) {
         infoWindow: data.infoWindow,
       };
       let marker =  new google.maps.Marker(markerData);
-      initMarker(map, marker, markerData);
+      let infoData = infoTransform(markerData.infoWindow);
+      let compiledTemplate = getTemplate('googleMapInfo');
+      let template = compiledTemplate(infoData);
+      let infoWindow = new google.maps.InfoWindow({
+        content: template
+      });
+      let markerBouncing = null;
+
+      marker.addListener('click', function(){
+        // hide all info windows
+        for (let i in initializedMarkers) {
+          if(initializedMarkers[i].open) {
+            initializedMarkers[i].hideInfo();
+          }
+        }
+
+        // show this info window
+        marker.showInfo();
+      });
+
+      marker.showInfo = () => {
+        infoWindow.open(map, marker);
+        marker.open = true;
+      };
+
+      marker.hideInfo = () => {
+        infoWindow.close(map, marker);
+        marker.open = false;
+      };
+
+      marker.bounce = () => {
+        clearTimeout(markerBouncing);
+        marker.setAnimation(null);
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        markerBouncing = setTimeout(() => {
+          marker.setAnimation(null);
+        },3000);
+      };
 
       initializedMarkers.push(marker);
     });
 
     return initializedMarkers;
-  }
-
-  /**
-   * Initializes a given map marker object with listeners, properties, methods.
-   *
-   * @param map
-   *   The map object for which this is a marker.
-   * @param marker
-   *   The marker object to initialize.
-   * @param markerData
-   *   The marker's popup information.
-   */
-  function initMarker(map, marker, markerData) {
-    let infoData = infoTransform(markerData.infoWindow);
-    let compiledTemplate = getTemplate('googleMapInfo');
-    let template = compiledTemplate(infoData);
-    let infoWindow = new google.maps.InfoWindow({
-      content: template
-    });
-
-    let markerBouncing = null;
-    marker.addListener('click', function(){
-      infoWindow.open(map, marker);
-    });
-
-    marker.showInfo = () => {
-      infoWindow.open(map, marker);
-      marker.open = true;
-    };
-
-    marker.hideInfo = () => {
-      infoWindow.close(map, marker);
-      marker.open = false;
-    };
-
-    marker.bounce = () => {
-      clearTimeout(markerBouncing);
-      marker.setAnimation(null);
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-      markerBouncing = setTimeout(() => {
-        marker.setAnimation(null);
-      },3000);
-    };
   }
 
   /**

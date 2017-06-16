@@ -5,7 +5,24 @@
     text-align: center;
 
     &:after {
-      left: calc(50% - .9em); // half the width defined above
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .sidebar & {
+    @include ma-sidebar-heading;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .sidebar--colored & {
+    @include ma-heading-colored($direction: left);
+
+    &:after {
+      display: block;
     }
   }
 }

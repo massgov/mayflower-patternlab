@@ -2,7 +2,8 @@
 
   &__icon {
 
-    & > svg {
+    & > svg,
+    & > svg path {
       fill: $c-theme-secondary;
     }
   }

@@ -1,5 +1,5 @@
 .ma__figure {
-  margin: 0 0 1.75rem;
+  margin: 0;
 
   @media ($bp-small-min) {
     &.align-left {
@@ -17,6 +17,10 @@
     }
   }
 
+  .rich-text & {
+    margin-bottom: 1.75em;
+  }
+
   img {    
     width: 100%;
   }
@@ -25,7 +29,6 @@
     font-size: 1.125rem;
     font-style: italic;
     line-height: 1.57;
-    margin-bottom: .25em;
 
     @media ($bp-small-min) {
       &:nth-last-child(2) {

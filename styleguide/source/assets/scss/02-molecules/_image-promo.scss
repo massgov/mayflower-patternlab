@@ -4,15 +4,19 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
   @include clearfix();
   display: flex;
     flex-wrap: wrap;
-  padding: 30px 0;
-
-  &:first-child {
-    padding-top: 0;
-  }
 
   & + & {
     border-top-style: solid;
     border-top-width: 1px;
+    margin-top: 30px;
+    padding-top: 30px;
+
+    @media ($bp-large-min){
+      .sidebar & {
+        margin-top: 20px;
+        padding-top: 20px;
+      }
+    }
   }
 
   &.js-location-listing-link {
@@ -35,7 +39,7 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
   &__details {
     flex-shrink: 1;
     flex-grow: 1;
-    flex-basis: calc(100% - 220px);
+    flex-basis: 250px;
     min-width: 250px;
   }
 
@@ -64,8 +68,15 @@ $image-promo-bp-x-large-min: "min-width: 1160px";
   }
 
   &__description {
-    margin-top: 10px;
     font-size: 1.25rem;
+  }
+
+  &__title + &__description {
+    margin-top: 10px;
+  }
+
+  &__description + &__link {
+    margin-top: 10px;
   }
 
   &__location {

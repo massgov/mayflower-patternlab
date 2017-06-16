@@ -1,22 +1,14 @@
 .ma__narrow-template {
 
   &--blue:before {
-    background-color: rgba($c-blue-primary, .15);
+    background-color: rgba($c-theme-blue, .15);
   }
 
   &--green:before {
-    background-color: rgba($c-green-primary, .15);
+    background-color: rgba($c-theme-green, .15);
   }
 
   &--yellow:before {
-    background-color: rgba($c-yellow-secondary, .15);
-  }
-}
-
-.sidebar--colored {
-  
-  .ma__sidebar-heading,
-  .ma__comp-heading {
-    @include ma-heading-colored($c-bg-comp-title);
+    background-color: rgba($c-theme-yellow, .15);
   }
 }

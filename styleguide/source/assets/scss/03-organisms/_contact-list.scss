@@ -1,9 +1,45 @@
 .ma__contact-list {
-  @include ma-component-spacing;
 
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container();
+  }
+
+  &--view-specific {
+
+    .page-content & {
+      
+      @media ($bp-large-min) {
+        display: none;
+
+        &:first-child + * {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .sidebar & {
+      
+      @media ($bp-large-max) {
+        display: none;
+
+        &:first-child + * {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .page-content &:first-child ~ & + * {
+      @media ($bp-large-min) {
+        margin-top: 0;
+      }
+    }
+
+    .sidebar &:first-child ~ & + * {
+      @media ($bp-large-max) {
+        margin-top: 0;
+      }
+    }
   }
 }
