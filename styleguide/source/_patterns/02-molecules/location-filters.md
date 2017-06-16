@@ -31,7 +31,9 @@ Description: Form with input used on location listing organism
     type: inputText/optional - see atoms/03-forms/input-text.md
   },
   "tags": [{
-    type: array of inputCheckbox/optional -  see atoms/03-forms/input-checkbox.md
+    type: array of inputCheckbox/optional + icon property
+    // see @atoms/forms/input-checkbox.md
+    // see @molecules/image-promo.md
   }]   
 }
 ~~~

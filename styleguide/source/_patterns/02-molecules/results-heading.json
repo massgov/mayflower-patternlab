@@ -18,7 +18,9 @@
     "tags": [{
       "text": "Item"
     },{
-      "text": "Item"
+      "type": "item-type",
+      "text": "Item",
+      "value": "item-value"
     },{
       "text": "Item"
     }]

@@ -4,7 +4,7 @@
     {% if resultsHeading.tags %}
       <div class="ma__results-heading__tags">
         {% for tag in resultsHeading.tags %}
-          <button type="button" class="ma__results-heading__tag js-results-heading-tag">{{ tag.text }}</button>
+          <button type="button" class="ma__results-heading__tag js-results-heading-tag"{% if tag.type %} data-ma-filter-type="{{ tag.type }}"{% endif %}{% if tag.value %} data-ma-filter-value="{{ tag.value }}"{%  endif %}>{{ tag.text }}</button>
         {% endfor %}
         <button type="button" class="ma__results-heading__clear js-results-heading-clear">Clear all</button>
       </div>
