@@ -21,7 +21,11 @@
   position: relative;
 
   .main-content--two & {
-    padding-bottom: 45px;
+    padding-bottom: 40px;
+
+    @media ($bp-small-min) {
+      padding-bottom: 65px;
+    }
 
     @media ($bp-large-min){
       float:left;
@@ -66,7 +70,15 @@
   }
 
   & > * {
-    @include ma-component-spacing;
+    margin-top: 40px;
+
+    @media ($bp-small-min) {
+      margin-top: 65px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
