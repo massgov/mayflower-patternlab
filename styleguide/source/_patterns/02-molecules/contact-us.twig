@@ -1,3 +1,4 @@
+{% set level = level ?: 2 %}
 {% set outerAccordion = contactUs.accordion %}
 
 {% if outerAccordion %}
@@ -21,6 +22,7 @@
     {% if outerAccordion %}
       </button>
     {% endif %}
+    {% set level = level + 1 %}
   {% endif %}
 
   {% if inlineAccordion %}
@@ -46,5 +48,8 @@
         {% include "@molecules/contact-group.twig" %}
       {% endfor %}
     </div>
+  {% endif %}
+  {% if contactUs.subTitle %}
+    {% set level = level - 1 %}
   {% endif %}
 </section>
