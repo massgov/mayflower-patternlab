@@ -1,4 +1,5 @@
 .ma__floating-action {
+  z-index: $z-sticky-content;
   position: fixed;
     bottom: 1.3125rem;
 
