@@ -157,13 +157,6 @@
     "text":"Feedback",
     "active":"",
     "subNav":[]
-  }],
-  "floatingAction": {
-    "alignment":"right",
-    "href": "#",
-    "text": "Give us your feedback",
-    "color": "green",
-    "outline": true
-  }
+  }]
 
 }
