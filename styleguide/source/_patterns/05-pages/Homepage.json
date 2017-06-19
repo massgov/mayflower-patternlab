@@ -1,8 +1,8 @@
 {
   "hideHeaderSearch": true,
-  
+
   "schemaPageType": "Home",
-  
+
   "stackedRowSections": [{
     "title":"",
     "id":"",
@@ -63,5 +63,10 @@
         }
       }
     }]
-  }]
+  }],
+
+  "floatingAction": {
+    "text": "Feedback",
+    "href": "#"
+  }
 }
