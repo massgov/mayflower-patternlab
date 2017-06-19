@@ -1,0 +1,7 @@
+<div class="ma__footnote js-footnote" id="{{ footnote.id }}" tabindex="-1">
+  <a class="ma__footnote__link js-footnote-link" href="{{ footnote.target }}">{{ footnote.number }}</a>
+  <div class="ma__footnote__rich-text js-footnote-message">
+    {% set richText = footnote.richText %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+  </div>
+</div>

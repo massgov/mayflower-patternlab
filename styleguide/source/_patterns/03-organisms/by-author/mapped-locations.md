@@ -19,6 +19,8 @@ Description: A google map with a title and see all link
 ~~~
 mappedLocations: {
   compHeading: see: atoms/04-headings/compHeading.json
+  contained: 
+    type: boolean
   link: see: atoms/11-text/link.json
   map: see: molecules/google-map.json
 }

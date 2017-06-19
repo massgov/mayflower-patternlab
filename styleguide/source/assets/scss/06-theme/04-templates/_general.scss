@@ -12,11 +12,3 @@
     background-color: rgba($c-theme-yellow, .15);
   }
 }
-
-.sidebar--colored {
-  
-  .ma__sidebar-heading,
-  .ma__comp-heading {
-    @include ma-heading-colored($c-bg-comp-title);
-  }
-}

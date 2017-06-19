@@ -1,5 +1,11 @@
 .ma__button-sort {
+  color: $c-font-link;
   font-weight: 700;
+
+  &--asc,
+  &--dsc {
+    color: $c-font-base;
+  }
 
   &:before {
     border-bottom-color: $c-font-link;

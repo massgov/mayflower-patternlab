@@ -1,4 +1,7 @@
 .ma__sidebar-heading {
-  border-color: $c-bd-divider;
-  color: $c-font-base;
+  @include ma-sidebar-heading($c-bd-divider, $c-font-base);
+
+  .sidebar--colored & {
+    @include ma-heading-colored($c-bg-comp-title);
+  }
 }

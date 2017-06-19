@@ -16,6 +16,7 @@ Description: Page Header with multiple spots (see optional content + widgets pro
 ### Contains:
 - [@molecules/header-tags.twig](/?p=molecules-header-tags)
 - [@molecules/header-contact.twig](/?p=molecules-header-contact)
+- [@atoms/11-text/publish-state.twig](/?p=atoms-publish-state)
 
 
 ### Required Variables
@@ -31,6 +32,10 @@ pageHeader:
     type: string
   headerTags:
     type: see @molecules/header-tags
+  publishState:
+    type: object / optional
+      text: 
+        type: string/required   
   optionalContents:
     type: array / optional (used to populate header main column under subTitle)
     path:
