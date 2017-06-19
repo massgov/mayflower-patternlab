@@ -1,3 +1,6 @@
+{% if floatingAction %}
+  {% include "@molecules/floating-action.twig" %}
+{% endif %}
 <footer class="ma__footer js-footer" id="footer">
   <div class="ma__footer__container">
     <div class="ma__footer__nav">
@@ -17,11 +20,13 @@
       </div>
     </section>
   </div>
-  <button class="ma__footer__back2top js-back2top is-hidden">
-    {% include "@atoms/05-icons/svg-arrow.twig" %}
-    <span aria-hidden="true">Top</span>
-    <span class="visually-hidden">Go to the top of the page</span>
-  </button>
+  {% if backToTopButton %}
+    <button class="ma__footer__back2top js-back2top is-hidden">
+      {% include "@atoms/05-icons/svg-arrow.twig" %}
+      <span aria-hidden="true">Top</span>
+      <span class="visually-hidden">Go to the top of the page</span>
+    </button>
+  {% endif %}
 </footer>
 
 {% if googleLanguages %}
