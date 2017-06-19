@@ -1,7 +1,7 @@
 ---
 title: Floating Action
 ---
-Description: A floating action button.
+Description: A floating action link/button.
 
 ## Status: ALPHA
 
@@ -13,14 +13,22 @@ Description: A floating action button.
 
 ### Required Variables
 ~~~
-footnote: {
-  number:
-    type: number/required
-  target:
-    type: string/required
-  id:
-    type: string/required
-  richText:
-    type: richText/required
+floatingAction: {
+    alignment:
+        type: string
+        values: "left"||"right"
+    href: 
+        type: string / URL
+    text: 
+        type: string,
+        description: link text
+    color: 
+        type: string
+        values: "green"
+        description: color skin for the button/link
+    outline:
+        type: boolean
+        description: whether or not to use the "minor" modifier
+        @see: @atoms/buttons/button.md
 }
 ~~~

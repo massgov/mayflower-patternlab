@@ -1,1 +1,21 @@
-<button type="button" class="ma__button" href="{{ floatingAction.text }}">{{ floatingAction.text }}</button>
+{% set buttonClassFloat = "ma__floating-action" %}
+{% set buttonClassAlignment = floatingAction.alignment ? "ma__floating-action--alignment-" ~ floatingAction.alignment : "" %}
+{% set buttonClassColor = floatingAction.color ? "ma__floating-action--" ~ floatingAction.color : "" %}
+{% set buttonClassSize = floatingAction.size ? "ma__button--" ~ floatingAction.size : "" %}
+
+{% set buttonClass = "ma__button" %}
+
+{% if floatingAction.outline %}
+  {% set buttonClass = buttonClass ~ "-minor" %}
+{% endif %}
+
+{% if floatingAction.theme %}
+  {% set buttonClass = buttonClass ~ "-" ~ floatingAction.theme %}
+{% endif %}
+
+<a
+    class="ma__button {{ buttonClass }} {{ buttonClassSize }} {{ buttonClassFloat }} {{ buttonClassAlignment }} {{ buttonClassColor }}"
+    href="{{ floatingAction.href }}"
+    title="{{ floatingAction.info }}">
+  {{ floatingAction.text }}
+</a>
