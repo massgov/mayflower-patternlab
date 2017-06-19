@@ -6,6 +6,7 @@ Description: A `<button>` element styled solid or outline and regular or small s
 ## State: ALPHA
 
 ### Notes:
+- 'theme' eventually needs to be changed to 'color' and used as a modifier class (--color)
 
 ### Used In:
 
