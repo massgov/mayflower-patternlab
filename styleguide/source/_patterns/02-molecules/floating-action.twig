@@ -1,21 +1,12 @@
-{% set buttonClassFloat = "ma__floating-action" %}
 {% set buttonClassAlignment = floatingAction.alignment ? "ma__floating-action--alignment-" ~ floatingAction.alignment : "ma__floating-action--alignment-right" %}
-{% set buttonClassColor = floatingAction.color ? "ma__floating-action--" ~ floatingAction.color : "" %}
-{% set buttonClassSize = floatingAction.size ? "ma__button--" ~ floatingAction.size : "" %}
 
-{% set buttonClass = "ma__button" %}
-
-{% if floatingAction.outline %}
-  {% set buttonClass = buttonClass ~ "-minor" %}
-{% endif %}
-
-{% if floatingAction.theme %}
-  {% set buttonClass = buttonClass ~ "-" ~ floatingAction.theme %}
-{% endif %}
-
-<a
-    class="ma__button {{ buttonClass }} {{ buttonClassSize }} {{ buttonClassFloat }} {{ buttonClassAlignment }} {{ buttonClassColor }}"
-    href="{{ floatingAction.href }}"
-    title="{{ floatingAction.info }}">
-  {{ floatingAction.text }}
-</a>
+<div class="ma__floating-action {{buttonClassAlignment}}">
+  {% if floatingAction.type == "button" %}
+    {% set button = floatingAction.button %}
+    {% include "@atoms/01-buttons/button.twig" %}
+  {% endif %}
+  {% if floatingAction.type == "buttonLink" %}
+    {% set buttonLink = floatingAction.button %}
+    {% include "@atoms/01-buttons/button-link.twig" %}
+  {% endif %}
+</div>

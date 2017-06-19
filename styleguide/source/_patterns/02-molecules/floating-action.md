@@ -9,26 +9,15 @@ Description: A floating action link/button.
 - [@organisms/by-template/footer](?p=organisms-footer)
 
 ### Contains:
-
+- [@atoms/01-buttons/button](?p=atoms-button) or [@atoms/01-buttons/button-link](?p=atoms-button-link)
 
 ### Required Variables
 ~~~
 floatingAction: {
     alignment:
-        type: string
+        type: "button"||"buttonLink"
         values: "left"||"right"
-    href: 
-        type: string / URL
-    text: 
-        type: string,
-        description: link text
-    color: 
-        type: string
-        values: "green"
-        description: color skin for the button/link
-    outline:
-        type: boolean
-        description: whether or not to use the "minor" modifier
-        @see: @atoms/buttons/button.md
+    button:
+        @see: @atoms/01-buttons/button.md
 }
 ~~~

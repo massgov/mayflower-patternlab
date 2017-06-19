@@ -20,3 +20,8 @@ button {
 .ma__button-minor-alt {
   @include ma-button("normal","outline",$c-theme-quaternary);
 }
+
+
+.ma__button-minor-green {
+  @include ma-button("normal","outline",$c-theme-secondary);
+}

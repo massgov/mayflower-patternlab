@@ -1,12 +1,6 @@
 .ma__floating-action {
-  font-size: 1rem;
-  letter-spacing: .1em;
-  opacity: 1;
-  padding: .5em .7em;
   position: fixed;
     bottom: 1.3125rem;
-  transition: all .5s;
-  visibility: visible;
 
   &--alignment-right {
     right: 1.5625rem;
@@ -16,8 +10,7 @@
   }
 
   @media ($bp-small-max) {
-    position: fixed;
-      bottom: 1rem;
+    bottom: 1rem;
 
     &--alignment-right {
       right: 1rem;
