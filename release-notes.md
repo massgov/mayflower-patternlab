@@ -2,7 +2,7 @@
 
 ## 5.2.0
 
-In this short-but-sweet minor release we add a new pilot logo to the header, create a new fixed call to action that floats left/right down at the bottom of the page (see: @molecules/floating-action.md), and fix a pesky bug that was centering many headings that should not have been centered.
+In this short-but-sweet minor release we add a new pilot logo to the header, create a new fixed call to action that floats left/right down at the bottom of the page (see: `@molecules/floating-action.md`), and fix a pesky bug that was centering many headings that should not have been centered.
 
 ## 5.1.0
 
