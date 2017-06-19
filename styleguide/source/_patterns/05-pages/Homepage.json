@@ -63,10 +63,5 @@
         }
       }
     }]
-  }],
-
-  "floatingAction": {
-    "text": "Feedback",
-    "href": "#"
-  }
+  }]
 }
