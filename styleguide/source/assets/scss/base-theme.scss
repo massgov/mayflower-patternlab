@@ -31,6 +31,7 @@
 @import "06-theme/01-atoms/helper-text";
 @import "06-theme/01-atoms/icon-list";
 @import "06-theme/01-atoms/input-group";
+@import "06-theme/01-atoms/publish-state";
 @import "06-theme/01-atoms/select-box";
 @import "06-theme/01-atoms/sidebar-heading";
 @import "06-theme/01-atoms/video";
@@ -56,6 +57,7 @@
 @import "06-theme/02-molecules/event-filters";
 @import "06-theme/02-molecules/event-teaser";
 @import "06-theme/02-molecules/footer-links";
+@import "06-theme/02-molecules/footnote";
 @import "06-theme/02-molecules/header-contact";
 @import "06-theme/02-molecules/header-search";
 @import "06-theme/02-molecules/header-tags";
@@ -97,7 +99,11 @@
 @import "06-theme/03-organisms/event-listing";
 @import "06-theme/03-organisms/feedback-form";
 @import "06-theme/03-organisms/footer";
+<<<<<<< HEAD
 @import "06-theme/03-organisms/form-requirements";
+=======
+@import "06-theme/03-organisms/footnote-list";
+>>>>>>> dev
 @import "06-theme/03-organisms/header";
 @import "06-theme/03-organisms/header-alert";
 @import "06-theme/03-organisms/icon-links";
@@ -106,6 +112,7 @@
 @import "06-theme/03-organisms/jump-links";
 @import "06-theme/03-organisms/link-list";
 @import "06-theme/03-organisms/location-listing";
+@import "06-theme/03-organisms/mapped-locations";
 @import "06-theme/03-organisms/page-banner";
 @import "06-theme/03-organisms/page-discourse";
 @import "06-theme/03-organisms/page-flipper";

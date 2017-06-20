@@ -1,0 +1,13 @@
+{
+  "floatingAction": {
+    "type":"buttonLink",
+    "alignment": "right",
+    "button": {
+      "href": "#",
+      "text": "Tell us what you think",
+      "theme": "green",
+      "outline": true,
+      "size": "small"
+    }
+  }
+}
