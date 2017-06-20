@@ -59,6 +59,7 @@
   },
 
   "form": {
+    "action": "#",
     "groups": [{
       "compHeading": {
         "title": "Name of Section",
@@ -350,6 +351,20 @@
               "maxlength": 100,
               "id": "sample-textarea",
               "name": "sample-textarea"
+            }
+          }
+        }]
+      },{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/01-buttons/button.twig",
+          "data": {
+            "button": {
+              "text": "Done",
+              "type": "submit",
+              "size": "small",
+              "theme": "",
+              "outline": false
             }
           }
         }]
