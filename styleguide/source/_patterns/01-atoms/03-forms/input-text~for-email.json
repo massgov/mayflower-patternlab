@@ -1,5 +1,6 @@
 {
   "inputText": {
+    "hiddenLabel": false,
     "labelText": "Email Address",
     "required": false,
     "id": "text-input",

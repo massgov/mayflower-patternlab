@@ -1,5 +1,6 @@
 {
   "inputText": {
+    "hiddenLabel": false,
     "labelText": "Text Input",
     "required": true,
     "id": "text-input",

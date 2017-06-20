@@ -1,6 +1,8 @@
-<label 
+{% if inputText.labelText %}
+  <label 
   for="{{ inputText.id }}"
-  class="ma__label {{ inputText.required ? 'ma__label--required' : 'ma__label--optional'}}">{{inputText.labelText}}</label>
+  class="ma__label {{ inputText.required ? 'ma__label--required' : 'ma__label--optional'}} {{ inputText.hiddenLabel ? 'ma__label--hidden' : '' }}">{{inputText.labelText}}</label>
+{% endif %}
 <input 
   class="ma__input {{ inputText.required ? 'js-is-required' : ''}}" 
   name="{{ inputText.name }}" 
