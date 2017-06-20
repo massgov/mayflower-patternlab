@@ -3,10 +3,9 @@
 {% endif %}
 
 {# string value is backward compatible for v5.0.0 #}
-{% if compHeading.centered == 'true' %}
+{% if compHeading.centered == 'true' or compHeading.centered == 1 %}
   {% set compHeading = compHeading|merge({'centered': true}) %}
-{% endif %}
-{% if compHeading.centered == 'false' %}
+{% else %}
   {% set compHeading = compHeading|merge({'centered': false}) %}
 {% endif %}
 
