@@ -264,15 +264,41 @@
             }
           }
         },{
-          "path": "@atoms/03-forms/input-text.twig",
+          "path": "@molecules/forms/divided-inputs.twig",
           "data": {
-            "inputText": {
-              "labelText": "Expiration Date",
+            "dividedInputs": {
+              "title": "Expiration Date",
               "required": true,
-              "id": "",
-              "name": "",
-              "type": "text",
-              "placeholder": ""
+              "divider": "/",
+              "inputs": [{
+                "path": "@atoms/03-forms/input-text.twig",
+                "data": {
+                  "inputText": {
+                    "hiddenLabel": true,
+                    "labelText": "Month",
+                    "required": true,
+                    "id": "exp-month",
+                    "name": "exp-month",
+                    "type": "text",
+                    "width": "85",
+                    "placeholder": ""
+                  }
+                }
+              },{
+                "path": "@atoms/03-forms/input-text.twig",
+                "data": {
+                  "inputText": {
+                    "hiddenLabel": true,
+                    "labelText": "Year",
+                    "required": true,
+                    "id": "exp-year",
+                    "name": "exp-year",
+                    "type": "text",
+                    "width": "85",
+                    "placeholder": ""
+                  }
+                }
+              }]
             }
           }
         },{
@@ -300,6 +326,30 @@
               "closeText": "Close",
               "title": "",
               "message": "You can find your CVV number on the back of your credit card.  It is usually a three or four digit number"
+            }
+          }
+        }]
+      }]
+    },{
+      "compHeading": {
+        "title": "Section Title",
+        "sub": "",
+        "color": "",
+        "id": "",
+        "centered": ""
+      },
+      "fieldsets": [{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/03-forms/textarea.twig",
+          "data": {
+            "textarea":  {
+              "labelText": "A text area",
+              "hiddenLabel": false,
+              "required": false,
+              "maxlength": 100,
+              "id": "sample-textarea",
+              "name": "sample-textarea"
             }
           }
         }]

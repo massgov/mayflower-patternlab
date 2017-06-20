@@ -1,8 +1,16 @@
 .ma__form-page {
 
-  fieldset {
+  & > * {
     @include ma-component-spacing;
+  }
 
+  & > .ma__comp-heading {
+    margin-bottom: 0;
+  }
+
+  fieldset {
+
+    & > fieldset,
     & > label {
       margin-top: 30px;
 
@@ -20,6 +28,11 @@
       max-width: 500px;
       width: 100%;
     }
+  }
+
+  textarea,
+  .ma__textarea__wrapper {
+    width: 100%;
   }
 
   .ma__helper-text {
