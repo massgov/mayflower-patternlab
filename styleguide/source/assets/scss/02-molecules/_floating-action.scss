@@ -1,0 +1,23 @@
+.ma__floating-action {
+  z-index: $z-sticky-content;
+  position: fixed;
+    bottom: 1.3125rem;
+
+  &--alignment-right {
+    right: 1.5625rem;
+  }
+  &--alignment-left {
+    left: 1.5625rem;
+  }
+
+  @media ($bp-small-max) {
+    bottom: 1rem;
+
+    &--alignment-right {
+      right: 1rem;
+    }
+    &--alignment-left {
+      left: 1rem;
+    }
+  }
+}

@@ -150,6 +150,8 @@
       text-transform: uppercase;
 
       &:after {
+        //left: calc(50% - 42px); // half width -- only necessary if not centered.
+        left: calc(50%);
         width: 84px;
       }
     }
