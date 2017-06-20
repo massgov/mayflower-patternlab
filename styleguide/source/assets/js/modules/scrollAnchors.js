@@ -89,8 +89,13 @@ export default function (window,document,$,undefined) {
     });
 
     $(window).scroll(function () {
-      setPosition();
-      activateLink();
+      if(typeof debounceTimer === "number") {
+        window.clearTimeout(debounceTimer);
+      }
+      debounceTimer = window.setTimeout(function(){
+        setPosition();
+        activateLink();
+      },300);
     });
 
     function setVariables() {
@@ -200,7 +205,5 @@ export default function (window,document,$,undefined) {
         $links.eq(activeAnchorIndex).addClass(activeClass);
       }
     }
-
   });
-
 }(window,document,jQuery);
