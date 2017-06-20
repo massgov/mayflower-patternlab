@@ -1,23 +1,44 @@
 input {
   border: 2px solid;
-  min-height: 46px;
+  min-height: 40px;
   padding: 0 18px;
 }
 
 textarea {
   border: 2px solid;
+  min-height: 135px;
   padding: 18px;
 }
 
+.ma__textarea__wrapper {
+  display: inline-block;
+
+  &:after {
+    content: attr(data-char-left);
+    display: block;
+    font-size: 17px;
+    line-height: 1.625rem;
+    text-align: right;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}
+
+legend,
 label {
   display: block;
   margin-bottom: .25em;
 }
 
 // override if an input label combo is added directly to the page-content area
-.main-content .page-content > label + input {
+.main-content .page-content > label:not(.ma__label--hidden) + textarea,
+.main-content .page-content > label:not(.ma__label--hidden) + .ma__textarea__wrapper,
+.main-content .page-content > label:not(.ma__label--hidden) + input {
   margin-top: 0;
 }
+
 
 fieldset {
   border: none;
@@ -26,6 +47,7 @@ fieldset {
 }
 
 // Special label handling
+.ma__legend,
 .ma__label {
 
   &--optional {
@@ -34,6 +56,14 @@ fieldset {
       content: "(optional)";
       font-size: .8em;
       margin-left: .25em;
+    }
+  }
+
+  &--hidden {
+    @include ma-visually-hidden;
+
+    & + input {
+      margin-top: inherit;
     }
   }
 }
@@ -120,6 +150,6 @@ fieldset {
 // Custom Date input
 .ma__input-date[type=text] {
   background-image: url("../images/svg-icons/date-picker.svg");
-  background-position: right 8px top 10px;
+  background-position: right 8px top 7px;
   background-repeat: no-repeat;
 }

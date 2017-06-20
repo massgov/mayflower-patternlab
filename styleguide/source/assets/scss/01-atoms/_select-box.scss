@@ -37,8 +37,8 @@
   &__link {
     border: 2px solid;
     font-size: 1.25rem;
-    line-height: 40px;
-    min-height: 44px;
+    line-height: 36px;
+    min-height: 40px;
     overflow: hidden;
     padding-left: 18px;
     padding-right: 58px;
@@ -60,7 +60,7 @@
 
     &:after {
       margin: 0;
-      transform: rotate(45deg);
+      transform: translateY(-2px) rotate(45deg);
     }
   }
 
