@@ -11,7 +11,7 @@ export default function (window,document,$,undefined) {
 
     $el.parent().attr('data-char-left',message);
 
-    $el.on('keyup mouseup', function(){
+    $el.on('keyup mouseup blur', function(){
       remaining = maxlength - $el.val().length;
       message = `${remaining}/${maxlength}`;
       $el.parent().attr('data-char-left',message);
