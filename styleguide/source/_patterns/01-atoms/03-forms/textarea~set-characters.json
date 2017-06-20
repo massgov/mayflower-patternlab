@@ -3,7 +3,7 @@
     "labelText": "Text Area",
     "hiddenLabel": false,
     "required": false,
-    "maxlength": null,
+    "maxlength": 100,
     "id": "textarea",
     "name": "textarea"
   }

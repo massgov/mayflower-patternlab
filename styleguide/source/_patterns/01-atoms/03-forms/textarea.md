@@ -16,8 +16,12 @@ Description: A `<textarea>`  element with its corresponding `<label>` element.
 textarea:  {
   labelText:
     type: string\required,
+  hiddenLabel:
+    type: boolean,
   required: 
     type: boolean,
+  maxlength:
+    type: number/optional
   id: 
     type: string\unique\required
   name: 
