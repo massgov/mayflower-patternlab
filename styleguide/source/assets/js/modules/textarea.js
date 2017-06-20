@@ -16,8 +16,6 @@ export default function (window,document,$,undefined) {
       message = `${remaining}/${maxlength}`;
       $el.parent().attr('data-char-left',message);
     });
-
   });
-
 
 }(window,document,jQuery);
