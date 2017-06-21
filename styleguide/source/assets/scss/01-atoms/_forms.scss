@@ -4,6 +4,12 @@ input {
   padding: 0 18px;
 }
 
+input[type=file] {
+  border: none;
+  min-height: 0;
+  padding: 0;
+}
+
 .ma__input-number {
   display: inline-block;
   position: relative;
