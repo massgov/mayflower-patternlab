@@ -54,6 +54,22 @@ input {
   }
 }
 
+.ma__input-number {
+
+  &__plus,
+  &__minus {
+    border-color: $c-bd-input;
+
+    &:after {
+      border-color: $c-font-dark;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+}
+
+
+
 textarea {
   background-color: $c-white;
   border-color: $c-bd-input;

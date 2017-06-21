@@ -4,6 +4,63 @@ input {
   padding: 0 18px;
 }
 
+.ma__input-number {
+  display: inline-block;
+  position: relative;
+
+  input {
+    padding-right: 58px;
+  }
+
+  &__plus,
+  &__minus {
+    @include ma-button-reset;
+    display: block;
+    height: 50%;
+    padding: 0;
+    position: absolute;
+      right: 0;
+    width: 40px;
+
+    &:after {
+      border-style: solid;
+      border-width: 5px;
+      border-top: none;
+      border-bottom-width: 6px;
+      content: "";
+      display: block;
+      height: 0;
+      margin: 0 auto;
+      position: absolute;
+        bottom: 2px;
+        left: 50%;
+      transform: translateX(-50%);
+      vertical-align: bottom;
+      width: 0;
+    }
+  }
+
+  &__plus {
+    border-left-style: solid;
+    border-left-width: 2px;
+    bottom: 50%;
+
+    &:after {
+    }
+  }
+
+  &__minus {
+    border-right-style: solid;
+    border-right-width: 2px;
+    top: 50%;
+    transform: rotate(180deg);
+
+    &:after {
+
+    }
+  }
+}
+
 textarea {
   border: 2px solid;
   min-height: 135px;
@@ -38,6 +95,7 @@ label {
 // override if an input label combo is added directly to the page-content area
 .main-content .page-content > label:not(.ma__label--hidden) + textarea,
 .main-content .page-content > label:not(.ma__label--hidden) + .ma__textarea__wrapper,
+.main-content .page-content > label:not(.ma__label--hidden) + .ma__input-number,
 .main-content .page-content > label:not(.ma__label--hidden) + input {
   margin-top: 0;
 }
