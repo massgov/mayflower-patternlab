@@ -11,11 +11,9 @@
       padding-top: 45px;
     }
 
-    @media ($bp-large-min){
-      .sidebar & {
-        margin-top: 20px;
-        padding-top: 20px;
-      }
+    .sidebar & {
+      margin-top: 20px;
+      padding-top: 20px;
     }
   }
 
