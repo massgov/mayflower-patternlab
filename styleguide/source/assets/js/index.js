@@ -18,5 +18,5 @@ import pikaday          from "./modules/pikaday.js";
 import responsiveVideo  from "./modules/responsiveVideo.js";
 import richText         from "./modules/richText.js";
 import scrollAnchors    from "./modules/scrollAnchors.js";
-import textarea         from "./modules/textarea.js";
+import formInputs       from "./modules/formInputs.js";
 import utilNav          from "./modules/utilNav.js";
