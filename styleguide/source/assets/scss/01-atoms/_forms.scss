@@ -98,14 +98,6 @@ label {
   margin-bottom: .25em;
 }
 
-// override if an input label combo is added directly to the page-content area
-.main-content .page-content > label:not(.ma__label--hidden) + textarea,
-.main-content .page-content > label:not(.ma__label--hidden) + .ma__textarea__wrapper,
-.main-content .page-content > label:not(.ma__label--hidden) + .ma__input-number,
-.main-content .page-content > label:not(.ma__label--hidden) + input {
-  margin-top: 0;
-}
-
 
 fieldset {
   border: none;
@@ -220,3 +212,41 @@ fieldset {
   background-position: right 8px top 7px;
   background-repeat: no-repeat;
 }
+
+// error message
+.ma__error-msg {
+  display: none;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: .5em;
+
+  &.has-error {
+    display: block;
+  }
+}
+
+// override if an input label combo is added directly to the page-content area
+// This is mainly for Pattern Lab
+.main-content .page-content > label:not(.ma__label--hidden) {
+  
+  & + textarea,
+  & + .ma__textarea__wrapper,
+  & + .ma__input-number,
+  & + input {
+    margin-top: 0;
+  }
+
+  & + .ma__error-msg {
+    margin-top: 0;
+
+    & + textarea,
+    & + .ma__textarea__wrapper,
+    & + .ma__input-number,
+    & + input {
+      margin-top: 0;
+    }
+  }
+}
+
+
+

@@ -175,3 +175,9 @@ label {
     }
   }
 }
+
+// error message
+.ma__error-msg {
+  color: $c-font-error;
+  font-weight: 700;
+}

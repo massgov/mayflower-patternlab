@@ -27,6 +27,8 @@ Description: An `<input> [type='text']`  element with its corresponding `<label>
     width:
       type: string (number value) / optional
     placeholder:
-      type: string
+      type: string /optional
+    errorMsg:
+      type: string /optional
   }
 ~~~

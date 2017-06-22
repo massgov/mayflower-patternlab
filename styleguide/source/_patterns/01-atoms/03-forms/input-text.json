@@ -7,6 +7,7 @@
     "name": "text-input",
     "type": "text",
     "width": "",
-    "placeholder": "type something"
+    "placeholder": "type something",
+    "errorMsg": "you did not type something"
   }
 }
