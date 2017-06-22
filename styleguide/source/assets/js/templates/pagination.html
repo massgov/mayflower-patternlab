@@ -1,6 +1,4 @@
-{{# compare pages.length 2 operator=">" }}
 <button class="ma__pagination__prev js-pagination-prev" type="button" {{# if prev.disabled }}disabled {{/if}}>{{ prev.text }}</button>
-{{/compare}}
 {{# each pages}}
   {{# compare this.text "spacer" operator="==" }}
     <span class="ma__pagination__spacer">&hellip;</span>
@@ -8,6 +6,4 @@
     <button class="ma__pagination__page js-pagination-page {{# if this.active }}is-active{{/if}}" type="button" data-page="{{ this.text }}">{{ this.text }}</button>
   {{/compare}}
 {{/each}}
-{{# compare pages.length 2 operator=">" }}
-  <button class="ma__pagination__next js-pagination-next" type="button" {{# if next.disabled }}disabled {{/if}}>{{ next.text }}</button>
-{{/compare}}
+<button class="ma__pagination__next js-pagination-next" type="button" {{# if next.disabled }}disabled {{/if}}>{{ next.text }}</button>
