@@ -1,0 +1,16 @@
+{
+  "errorList": {
+    "title": "Sorry, please correct the indicated errors",
+    "links": [{
+      "href": "#issue1",
+      "text": "Lorem ipsum dolor sit amet.",
+      "info": "",
+      "property": ""
+    },{
+      "href": "#issue2",
+      "text": "Lorem ipsum dolor sit amet.",
+      "info": "",
+      "property": ""
+    }]
+  }
+}
