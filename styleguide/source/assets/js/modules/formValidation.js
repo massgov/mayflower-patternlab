@@ -21,7 +21,11 @@ export default function (window,document,$,undefined) {
       return;
     }
 
-    $form.on('submit', function(e){
+    // $form.on('submit', function(e){
+    //   e.preventDefault();
+    // });
+
+    $form.find('button[type="submit"], input[type="submit"]').on('click',function(e){
       let submitForm = true;
 
       // validate each required field
@@ -31,10 +35,10 @@ export default function (window,document,$,undefined) {
         item.valid = validate(value,item.type);
 
         if(item.valid) {
-          item.$el.attr('data-valid','is-valid');
+          clearError(item.$el);
         } else {
           submitForm = false;
-          item.$el.attr('data-valid','is-invalid');
+          addError(item.$el);
         }
       });
 
@@ -42,16 +46,22 @@ export default function (window,document,$,undefined) {
         // prevent the form from submitting
         e.preventDefault();
         // show the form error message 
-        // or blink the message if it is already visible
-        $form.find('.js-error-msg')
-          .attr('hidden',true);
-        setTimeout(function() {
-          $form.find('.js-error-msg')
-            .removeAttr('hidden');
-          },100);
+        $form.addClass('has-error')
       }
     });
   });
+
+  // receives the jquery object of the input
+  function clearError($el){
+    $el.removeClass('has-error');
+    $el.prev('.ma__error-msg').removeClass('has-error');
+  }
+
+  // receives the jquery object of the input
+  function addError($el) {
+    $el.addClass('has-error');
+    $el.prev('.ma__error-msg').addClass('has-error');
+  }
 
   function validate(value,type='text'){
     let valid = false;
