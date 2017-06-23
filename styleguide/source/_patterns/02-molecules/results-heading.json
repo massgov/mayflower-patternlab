@@ -16,13 +16,21 @@
       }]
     },
     "tags": [{
-      "text": "Item"
+      "type": "zipcode",
+      "text": "02341",
+      "value": "02341"
     },{
-      "type": "item-type",
-      "text": "Item",
-      "value": "item-value"
+      "type": "activity",
+      "text": "Hiking",
+      "value": "hiking"
     },{
-      "text": "Item"
+      "type": "keyword",
+      "text": "Beginner",
+      "value": "beginner"
+    },{
+      "type": "tag",
+      "text": "Wheelchair Accessible",
+      "value": "wheelchair-accessible"
     }]
   }
 }

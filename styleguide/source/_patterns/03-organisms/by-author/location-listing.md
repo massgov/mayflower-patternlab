@@ -23,6 +23,9 @@ locationListing: {
     type: int
     required: no
     description: the max number of items to appear per listing "page" / map
+  locationFilters: {
+    type: @molecules/location-filters.twig
+  }
   googleMap: {
     type: @molecules/google-map.twig
   }

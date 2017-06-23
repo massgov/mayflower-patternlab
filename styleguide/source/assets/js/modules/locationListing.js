@@ -93,14 +93,17 @@ export default function (window,document,$,undefined) {
         updateChildComponents(transformation);
       });
 
-      // Handle pagination event (triggered by pagination.js), render targetPage
+      // Handle pagination event (triggered by pagination.js), render targetPage.
       $pagination.on('ma:Pagination:Pagination', function (e, target) {
         let nextPage = target;
+
+        // Get the current page, default to first page if not in global data object.
+        let currentPage = masterData.pagination.currentPage ? masterData.pagination.currentPage : 1;
         if (target === "next") {
-          nextPage = masterData.pagination.currentPage + 1;
+          nextPage = currentPage + 1;
         }
         if (target === "previous") {
-          nextPage = masterData.pagination.currentPage - 1;
+          nextPage = currentPage - 1;
         }
 
         masterData.pagination = transformPaginationData({data: masterData, targetPage: nextPage});
@@ -165,6 +168,14 @@ export default function (window,document,$,undefined) {
     $.map(listing.pagination.pages, function(val, index) { pages[index] = val; });
     listing.pagination.pages = pages;
 
+    // Get the current page from the initial data structure, default to 1 if none passed.
+    let currentPage = 1;
+    pages.forEach(function(page) {
+      if (page.active) {
+        currentPage = Number(page.text);
+      }
+    });
+
     // Get the listing imagePromos, generate markup for each
     let masterListing = listing.imagePromos.items,
       masterListingMarkup = transformLocationListingPromos(masterListing);
@@ -175,8 +186,9 @@ export default function (window,document,$,undefined) {
     masterData.resultsHeading = listing.resultsHeading;
     // The array of items and their respective page, in/active status, marker data, imagePromo data, and markup
     masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers, masterData.maxItems);
-    // The initial pagination data structure
+    // The initial pagination data structure + currentPage;
     masterData.pagination = listing.pagination;
+    masterData.pagination.currentPage = currentPage;
     // The total number of pages, given the number of items and the maxItems variable
     masterData.totalPages = Math.ceil(masterData.items.length / masterData.maxItems);
 
@@ -413,12 +425,12 @@ export default function (window,document,$,undefined) {
     }
 
     data.pagination.prev = {
-      text: "previous",
+      text: "Previous",
       disabled: targetPage === 1
     };
 
     data.pagination.next = {
-      text: "next",
+      text: "Next",
       disabled: targetPage === totalPages
     };
 
