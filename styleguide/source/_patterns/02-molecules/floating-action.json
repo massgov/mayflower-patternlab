@@ -1,0 +1,12 @@
+{
+  "floatingAction": {
+    "type":"button",
+    "alignment": "right",
+    "button": {
+      "text": "Tell us what you think",
+      "outline": true,
+      "theme": "green",
+      "size": "small"
+    }
+  }
+}

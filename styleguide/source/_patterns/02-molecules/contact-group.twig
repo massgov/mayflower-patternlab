@@ -12,7 +12,7 @@
       {% set link = {
         "href": item.link,
         "text": item.type == "address" ? "directions" : item.value,
-        "info": "",
+        "info": item.info,
         "property": item.type == "address" ? "url" : item.property
       } %}
     {% else %}
