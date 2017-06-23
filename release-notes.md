@@ -1,5 +1,17 @@
 # Mayflower Release Notes
 
+## 5.3.0
+We've added some functionality to the location listings organism ([@organisms/by-author/location-listing](http://mayflower.digital.mass.gov/?p=organisms-location-listing))!  You can sort, filter, and paginate listing results! 
+
+Note: The location listing organism is made up of lots of other patterns:
+  - [@molecules/location-filters](http://mayflower.digital.mass.gov/?p=molecules-location-filters)
+  - [@molecules/results-heading](http://mayflower.digital.mass.gov/?p=molecules-results-heading)
+  - [@molecules/google-map](http://mayflower.digital.mass.gov/?p=molecules-google-map)
+  - [@molecules/pagination](http://mayflower.digital.mass.gov/?p=molecules-pagination)
+  - [@organisms/by-author/image-promos](http://mayflower.digital.mass.gov/?p=organisms-image-promos)
+  
+  And of course, you can still use those patterns in other components!
+
 ## 5.2.0
 
 In this short-but-sweet minor release we add a new pilot logo to the header, create a new fixed call to action that floats left/right down at the bottom of the page (see: `@molecules/floating-action.md`), and fix a pesky bug that was centering many headings that should not have been centered.
