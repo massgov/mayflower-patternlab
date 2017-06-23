@@ -12,6 +12,10 @@
         {% include "@organisms/by-author/form-requirements.twig" %}
       {% endif %}
       <form class="ma__form-page" action="{{ form.action }}">
+        {% if form.errorList %}
+          {% set errorList = form.errorList %}
+          {% include "@molecules/error-list.twig" %}
+        {% endif %}
         {% for group in form.groups %}
           {% set compHeading = group.compHeading %}
           {% include "@atoms/04-headings/comp-heading.twig" %}

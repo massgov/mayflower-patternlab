@@ -107,6 +107,22 @@
 
   "form": {
     "action": "#",
+
+    "errorList": {
+      "title": "Sorry, please correct the indicated errors",
+      "links": [{
+        "href": "#issue1",
+        "text": "Lorem ipsum dolor sit amet.",
+        "info": "",
+        "property": ""
+      },{
+        "href": "#issue2",
+        "text": "Lorem ipsum dolor sit amet.",
+        "info": "",
+        "property": ""
+      }]
+    },
+
     "groups": [{
       "compHeading": {
         "title": "Name of Section",
@@ -126,7 +142,8 @@
               "id": "your-name-23489",
               "name": "first-text-input",
               "type": "text",
-              "placeholder": ""
+              "placeholder": "",
+              "errorMsg": "you did not type something"
             }
           }
         },{
@@ -149,7 +166,8 @@
               "id": "your-name-23489",
               "name": "first-text-input",
               "type": "text",
-              "placeholder": ""
+              "placeholder": "",
+              "errorMsg": ""
             }
           }
         },{
@@ -308,7 +326,8 @@
               "name": "credit-card-number",
               "type": "text",
               "width": "295",
-              "placeholder": ""
+              "placeholder": "",
+              "errorMsg": "Please fix your credit card"
             }
           }
         },{
@@ -329,7 +348,8 @@
                     "name": "exp-month",
                     "type": "text",
                     "width": "85",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "errorMsg": "missing month"
                   }
                 }
               },{
@@ -343,7 +363,8 @@
                     "name": "exp-year",
                     "type": "text",
                     "width": "85",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "errorMsg": "missing year"
                   }
                 }
               }]
@@ -359,7 +380,8 @@
               "name": "cvv-number",
               "type": "text",
               "width": "85",
-              "placeholder": ""
+              "placeholder": "",
+              "errorMsg": "missing cvv number"
             }
           }
         },{
@@ -413,7 +435,8 @@
               "name": "number-input",
               "type": "number",
               "width": "190",
-              "placeholder": ""
+              "placeholder": "",
+              "errorMsg": "Please enter a number"
             }
           }
         }]
