@@ -28,7 +28,7 @@
     <div class="ma__header__nav-container">
       {% if not hideHeaderSearch %}
         <div class="ma__header__nav-search">
-          {% set headerSearch = {'placeholder':'Search','id':'nav-search'} %}
+          {% set headerSearch = headerSearch|merge({'id':'nav-search'}) %}
           {% include "@molecules/header-search.twig" %}
         </div>
       {% endif %}
