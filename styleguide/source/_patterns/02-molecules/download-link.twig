@@ -14,7 +14,8 @@
     {% else %}
       <a 
         class="ma__download-link__file-link" 
-        href="{{ downloadLink.decorativeLink.href}}">
+        href="{{ downloadLink.decorativeLink.href}}"
+        aria-label="Open {{ downloadLink.format?: '' }} file for {{ downloadLink.decorativeLink.text }}">
           {{ downloadLink.decorativeLink.text }}
       </a>
       {% if downloadLink.format or downloadLink.size %}

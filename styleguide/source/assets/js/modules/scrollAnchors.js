@@ -31,6 +31,8 @@ export default function (window,document,$,undefined) {
     $links.on('click',function(e) {
       e.preventDefault();
 
+      let $link = $(this);
+
       // is the menu closed on mobile
       if(!$el.hasClass('is-open') && isMobile) {     
         // just show the menu
@@ -43,10 +45,6 @@ export default function (window,document,$,undefined) {
       let position = anchors[activeAnchorIndex].position;
       // close the menu
       $el.removeClass('is-open');
-      // remove active flag from other links
-      $el.find('.' + activeClass).removeClass(activeClass);
-      // mark this link as active
-      $(this).addClass(activeClass);
       // prevent the scroll event from updating active links
       linkScrolling = true;
 
@@ -56,6 +54,12 @@ export default function (window,document,$,undefined) {
         let hash = anchors[activeAnchorIndex].hash;
         // bring focus to the item we just scrolled to
         $(hash).focus();
+        // timing issue with window.scroll event firing.
+        setTimeout(function(){
+          // set this link as active.
+          $el.find('.' + activeClass).removeClass(activeClass);
+          $link.addClass(activeClass);
+        },30);
       });
     });
 
@@ -90,7 +94,10 @@ export default function (window,document,$,undefined) {
 
     $(window).scroll(function () {
       setPosition();
-      activateLink();
+
+      if(!linkScrolling){
+        activateLink();
+      }
     });
 
     function setVariables() {
@@ -200,7 +207,5 @@ export default function (window,document,$,undefined) {
         $links.eq(activeAnchorIndex).addClass(activeClass);
       }
     }
-
   });
-
 }(window,document,jQuery);

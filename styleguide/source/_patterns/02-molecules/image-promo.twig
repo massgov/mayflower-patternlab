@@ -1,4 +1,4 @@
-<section class="ma__image-promo {{ imagePromo.location.map ? 'js-location-listing-link' : '' }}">
+<section class="ma__image-promo{{ imagePromo.location.map ? ' js-location-listing-link' : '' }}">
   {% if imagePromo.image %}
     <div class="ma__image-promo__image"
       {% if imagePromo.image.width %}
@@ -16,21 +16,21 @@
   {% endif %}
   <div class="ma__image-promo__details">
     {% if imagePromo.title %}
-      <h2 class="ma__image-promo__title">
-        {% if imagePromo.tags %}
-          <div class="ma__image-promo__tags">
-            {% for tag in imagePromo.tags %}
-              <span title="{{ tag.label }}">{% include tag.icon %}</span>
-            {% endfor %}
-          </div>
-        {% endif %}
-        {% if imagePromo.title.href %}
-          {% set decorativeLink = imagePromo.title %}
-          {% include "@atoms/decorative-link.twig" %}
-        {% else %}
-          {{ imagePromo.title.text }}
-        {% endif %}
-      </h2>
+    <h2 class="ma__image-promo__title">
+      {% if imagePromo.tags %}
+        <div class="ma__image-promo__tags">
+          {% for tag in imagePromo.tags %}
+            <span title="{{ tag.label }}" data-ma-tag-id="{{ tag.id }}">{% include tag.icon %}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if imagePromo.title.href %}
+        {% set decorativeLink = imagePromo.title %}
+        {% include "@atoms/decorative-link.twig" %}
+      {% else %}
+        {{ imagePromo.title.text }}
+      {% endif %}
+    </h2>
     {% endif %}
     {% if imagePromo.location.text %}
       <div class="ma__image-promo__location">

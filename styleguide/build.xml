@@ -118,6 +118,18 @@
             </fileset>
         </copy>
 
+        <!-- Overwrite env.js themePath to fit Drupal theme -->
+        <reflexive>
+            <fileset dir="${deploy.dir}/assets/js">
+                <include pattern="env.js" />
+            </fileset>
+            <filterchain>
+                <replaceregexp>
+                    <regexp pattern="/assets" replace="/themes/custom/mass_theme"/>
+                </replaceregexp>
+            </filterchain>
+        </reflexive>
+
         <copy todir="${deploy.dir}/twig" preservemode="true" overwrite="yes">
             <fileset dir="${app.twig}">
                 <include name="**" />

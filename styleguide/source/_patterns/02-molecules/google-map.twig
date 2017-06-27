@@ -1,13 +1,16 @@
-<div 
+{# if maxItems was set by parent component, use it.  Otherwise set it to all. #}
+{% set  maxItems = maxItems ? maxItems : googleMap.markers|length %}
+<div
   class="ma__google-map" 
   aria-hidden="true" 
   role="presentation">
   <div class="ma__google-map__map js-google-map"></div>
   {# user editable data used in this specific map #}
   <script>
-    var googleMapData = googleMapData || [];
-
-    googleMapData.push({
+    // Make googleMap data object available in google map module js.
+    var ma = ma || {};
+    ma.googleMapData = ma.googleMapData || [];
+    ma.googleMapData.push({
       map: {
         center: {
           lat: {{googleMap.map.center.lat}},
@@ -15,6 +18,7 @@
         },
         zoom: {{googleMap.map.zoom}}
       },
+      maxItems: {{ maxItems }},
       markers: [
       {% for marker in googleMap.markers %}
         {

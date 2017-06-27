@@ -1,6 +1,6 @@
 {% set calloutAlert = calloutAlert.decorativeLink %}
 
-<section class="ma__callout-alert js-clickable">
+<section class="ma__callout-alert {{ calloutAlert.href ? 'js-clickable' : ''}}">
   {% if calloutAlert.href %}
     <a class="ma__callout-alert__content" 
       href="{{ calloutAlert.href }}"
