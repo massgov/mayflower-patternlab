@@ -67,6 +67,12 @@ export default function (window,document,$,undefined) {
       let position = $(target).offset();
       let top = position.top - ($(window).height()/2);
 
+      // don't scroll if the target is above 50vh
+      if( top < $form.offset().top){
+        $(target).focus();
+        return false;
+      }
+
       $("html,body").stop(true,true).animate({scrollTop:top}, '750', function(){
         // bring focus to the item we just scrolled to
         $(target).focus();
