@@ -41,15 +41,18 @@
     font-size: 1rem;
     margin-bottom: 0;
     padding-left: 53px;
+  }
 
-    a {
-      border-bottom-style: solid;
-      border-bottom-width: 1px;
-      font-size: 1.25rem;
+  &__link {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin-bottom: 2px;
 
-      &:hover {
-        border-bottom-width: 3px;
-      }
+    &:hover {
+      border-bottom-width: 3px;
+      margin-bottom: 0;
     }
   }
 }

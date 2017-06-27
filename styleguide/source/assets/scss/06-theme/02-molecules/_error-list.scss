@@ -10,12 +10,9 @@
     font-weight: 700;
   }
 
-  &__messages {
-
-    a {
-      border-color: $c-bd-error;
-      color: $c-font-error;
-      font-weight: 400;
-    }
+  &__link {
+    border-color: $c-bd-error;
+    color: $c-font-error;
+    font-weight: 400;
   }
 }

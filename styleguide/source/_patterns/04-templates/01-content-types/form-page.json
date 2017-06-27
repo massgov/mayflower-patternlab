@@ -111,15 +111,13 @@
     "errorList": {
       "title": "Sorry, please correct the indicated errors",
       "links": [{
-        "href": "#issue1",
-        "text": "Lorem ipsum dolor sit amet.",
-        "info": "",
-        "property": ""
+        "inputId": "your-name-23489",
+        "text": "Please fill in the first field",
+        "info": ""
       },{
-        "href": "#issue2",
-        "text": "Lorem ipsum dolor sit amet.",
-        "info": "",
-        "property": ""
+        "inputId": "credit-card-number",
+        "text": "Credit card cannot be blank",
+        "info": ""
       }]
     },
 

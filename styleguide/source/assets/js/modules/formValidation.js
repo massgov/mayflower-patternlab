@@ -2,7 +2,8 @@ export default function (window,document,$,undefined) {
 
   $('form').each(function(){
     let $form = $(this),
-        requiredFields = [];
+        requiredFields = [],
+        $errorList = $form.find('.js-error-list');
 
     // find all required fields
     $('.js-is-required').each(function(){
@@ -46,9 +47,32 @@ export default function (window,document,$,undefined) {
         // prevent the form from submitting
         e.preventDefault();
         // show the form error message 
-        $form.addClass('has-error')
+        $form.addClass('has-error');
+        // scroll up to the error message
+        let position = $form.offset();
+        
+        // scroll to the top of the form where the list of errors should be
+        // using 100px offset to compenstate for possible sticky headers
+        $("html,body").stop(true,true).animate({scrollTop:position.top - 100}, '750', function(){
+          // bring focus to the item we just scrolled to
+          $errorList.focus();
+        });
       }
     });
+
+    $errorList.find('.js-error-list-link').click(function(e){
+      e.preventDefault();
+
+      let target = $(this).attr('href');
+      let position = $(target).offset();
+      let top = position.top - ($(window).height()/2);
+
+      $("html,body").stop(true,true).animate({scrollTop:top}, '750', function(){
+        // bring focus to the item we just scrolled to
+        $(target).focus();
+      });
+    });
+
   });
 
   // receives the jquery object of the input

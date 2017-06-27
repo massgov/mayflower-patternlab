@@ -2,15 +2,13 @@
   "errorList": {
     "title": "Sorry, please correct the indicated errors",
     "links": [{
-      "href": "#issue1",
+      "inputId": "issue1",
       "text": "Lorem ipsum dolor sit amet.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
-      "href": "#issue2",
+      "inputId": "issue2",
       "text": "Lorem ipsum dolor sit amet.",
-      "info": "",
-      "property": ""
+      "info": ""
     }]
   }
 }
