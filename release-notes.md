@@ -1,5 +1,26 @@
 # Mayflower Release Notes
 
+## 5.4.0
+We've introduced two new Law pages, Policy Advisory and Executive Order in this release along with several fixes.
+
+New Pages:
+DP-3825 - [MF] Policy Advisory
+DP-3829 - [MF] Executive Order
+
+Fixes:
+DP-3209 - [mf] - Location page icons should be right aligned
+DP-3227 - A11y Link Text for Directions can be more descriptive
+DP-3256 - A11y Alert Link
+DP-3495 - Add Medium to list of acceptable Social Media link URLs
+DP-3822 - [VD/MF] Different stylings for mobile sticky navs
+DP-3831 - [MF] News Item with Featured Image
+DP-3890 - [MF] Multiple Sort by options
+DP-3891 - [MF] Update detail page for service, how-to, location to remove key actions, add video and map
+DP-3895 - [mf] Homepage - underline not centered
+DP-4026 - There is a one pixel wide issue with the thumbnail images on guide cards
+
+
+
 ## 5.3.0
 We've added some functionality to the location listings organism ([@organisms/by-author/location-listing](http://mayflower.digital.mass.gov/?p=organisms-location-listing))!  You can sort, filter, and paginate listing results! 
 
