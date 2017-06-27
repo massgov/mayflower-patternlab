@@ -1,4 +1,4 @@
-v: 2.5.0
+v: 2.6.0
 overrideConfig: q
 ie:
     - DS_Store
@@ -20,7 +20,8 @@ publicDir: public
 sourceDir: source
 defaultPattern: pages-readme2
 defaultShowPatternInfo: false
-lineageMatch: '{%([ ]+)?include( |\()[&quot;\&#039;]([A-Za-z0-9-_]+)[&quot;\&#039;](\))?(.*)%}'
+baseDir: /Users/sghoweri/mayflower/styleguide/
+lineageMatch: '{%([ ]+)?(?:include|extends|embed)( |\()[&quot;\&#039;]([\/.@A-Za-z0-9-_]+)[&quot;\&#039;]([\s\S+]*?)%}'
 lineageMatchKey: 3
 patternExtension: twig
 twigDebug: false
@@ -32,7 +33,7 @@ twigFilterExt: filter.php
 twigFunctionExt: function.php
 twigTagExt: tag.php
 twigTestExt: test.php
-ishMinimum: '320'
+ishMinimum: '240'
 ishMaximum: '2600'
 ishControlsHide:
     - hay

@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
 {
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Component\\Yaml\\' => 23,
@@ -24,6 +28,10 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
@@ -127,6 +135,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'AbstractPHPLocFormatter' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/phploc/AbstractPHPLocFormatter.php',
         'AbstractPropertySetterTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/property/AbstractPropertySetterTask.php',
         'AbstractSAXParser' => __DIR__ . '/..' . '/phing/phing/classes/phing/parser/AbstractSAXParser.php',
+        'AbstractSelectorContainer' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/selectors/AbstractSelectorContainer.php',
         'AdhocTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/AdhocTask.php',
         'AdhocTaskdefTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/AdhocTaskdefTask.php',
         'AdhocTypedefTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/AdhocTypedefTask.php',
@@ -148,12 +157,14 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'BaseSelectorContainer' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/selectors/BaseSelectorContainer.php',
         'Basename' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/Basename.php',
         'BatchTest' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/phpunit/BatchTest.php',
+        'BlockForTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/BlockForTask.php',
         'BufferedReader' => __DIR__ . '/..' . '/phing/phing/classes/phing/system/io/BufferedReader.php',
         'BufferedWriter' => __DIR__ . '/..' . '/phing/phing/classes/phing/system/io/BufferedWriter.php',
         'BuildEvent' => __DIR__ . '/..' . '/phing/phing/classes/phing/BuildEvent.php',
         'BuildException' => __DIR__ . '/..' . '/phing/phing/classes/phing/BuildException.php',
         'BuildListener' => __DIR__ . '/..' . '/phing/phing/classes/phing/BuildListener.php',
         'BuildLogger' => __DIR__ . '/..' . '/phing/phing/classes/phing/BuildLogger.php',
+        'BuildTimeoutException' => __DIR__ . '/..' . '/phing/phing/classes/phing/BuildTimeoutException.php',
         'Capsule' => __DIR__ . '/..' . '/phing/phing/classes/phing/lib/Capsule.php',
         'CapsuleTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/CapsuleTask.php',
         'CaseTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/SwitchTask.php',
@@ -218,6 +229,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'Description' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/Description.php',
         'Diagnostics' => __DIR__ . '/..' . '/phing/phing/classes/phing/Diagnostics.php',
         'DiagnosticsTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/DiagnosticsTask.php',
+        'DifferentSelector' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/selectors/DifferentSelector.php',
         'DirSet' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/DirSet.php',
         'DirectoryScanner' => __DIR__ . '/..' . '/phing/phing/classes/phing/util/DirectoryScanner.php',
         'Dirname' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/Dirname.php',
@@ -290,6 +302,18 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'GrowlNotifyTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/GrowlNotifyTask.php',
         'HasFreeSpaceCondition' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/HasFreeSpaceCondition.php',
         'HeadFilter' => __DIR__ . '/..' . '/phing/phing/classes/phing/filters/HeadFilter.php',
+        'HgAddTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgAddTask.php',
+        'HgArchiveTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgArchiveTask.php',
+        'HgBaseTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgBaseTask.php',
+        'HgCloneTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgCloneTask.php',
+        'HgCommitTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgCommitTask.php',
+        'HgInitTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgInitTask.php',
+        'HgLogTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgLogTask.php',
+        'HgPullTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgPullTask.php',
+        'HgPushTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgPushTask.php',
+        'HgRevertTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgRevertTask.php',
+        'HgTagTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgTagTask.php',
+        'HgUpdateTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/hg/HgUpdateTask.php',
         'HtmlColorLogger' => __DIR__ . '/..' . '/phing/phing/classes/phing/listener/HtmlColorLogger.php',
         'HttpCondition' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/HttpCondition.php',
         'HttpGetTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/HttpGetTask.php',
@@ -318,6 +342,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'IoncubeLicenseTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/ioncube/IoncubeLicenseTask.php',
         'IsFailure' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/IsFailure.php',
         'IsFalseCondition' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/IsFalseCondition.php',
+        'IsFileSelected' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/IsFileSelected.php',
         'IsPropertyFalseCondition' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/IsPropertyFalseCondition.php',
         'IsPropertyTrueCondition' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/IsPropertyTrueCondition.php',
         'IsSetCondition' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/IsSetCondition.php',
@@ -345,7 +370,10 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'MailTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/MailTask.php',
         'MajoritySelector' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/selectors/MajoritySelector.php',
         'ManifestTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/ManifestTask.php',
+        'MapEntry' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/PathConvert.php',
         'Mapper' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/Mapper.php',
+        'MappingSelector' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/selectors/MappingSelector.php',
+        'Matches' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/Matches.php',
         'MatchingTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/MatchingTask.php',
         'MergeMapper' => __DIR__ . '/..' . '/phing/phing/classes/phing/mappers/MergeMapper.php',
         'MkdirTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/MkdirTask.php',
@@ -395,6 +423,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'Parameterizable' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/Parameterizable.php',
         'PatchTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/PatchTask.php',
         'Path' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/Path.php',
+        'PathConvert' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/PathConvert.php',
         'PathElement' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/Path.php',
         'PathToFileSet' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/property/PathToFileSet.php',
         'PathTokenizer' => __DIR__ . '/..' . '/phing/phing/classes/phing/util/PathTokenizer.php',
@@ -480,6 +509,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'S3GetTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/Service/Amazon/S3/S3GetTask.php',
         'S3PutTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/Service/Amazon/S3/S3PutTask.php',
         'SQLExecTransaction' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/creole/CreoleSQLExecTask.php',
+        'SassTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/SassTask.php',
         'ScpTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/ssh/ScpTask.php',
         'SecurityException' => __DIR__ . '/..' . '/phing/phing/classes/phing/system/lang/SecurityException.php',
         'SelectSelector' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/selectors/SelectSelector.php',
@@ -499,8 +529,12 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'SimpleTestTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/simpletest/SimpleTestTask.php',
         'SimpleTestXmlResultFormatter' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/simpletest/SimpleTestXmlResultFormatter.php',
         'SizeSelector' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/selectors/SizeSelector.php',
+        'SleepTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/SleepTask.php',
         'SmartyTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/SmartyTask.php',
         'SocketCondition' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/condition/SocketCondition.php',
+        'SonarConfigurationFileParser' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/sonar/SonarConfigurationFileParser.php',
+        'SonarProperty' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/sonar/SonarProperty.php',
+        'SonarTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/sonar/SonarTask.php',
         'SortFilter' => __DIR__ . '/..' . '/phing/phing/classes/phing/filters/SortFilter.php',
         'SourceFileScanner' => __DIR__ . '/..' . '/phing/phing/classes/phing/util/SourceFileScanner.php',
         'Ssh2MethodConnectionParam' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/ssh/Ssh2MethodConnectionParam.php',
@@ -543,6 +577,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'TaskContainer' => __DIR__ . '/..' . '/phing/phing/classes/phing/TaskContainer.php',
         'TaskdefTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/TaskdefTask.php',
         'TempFile' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/TempFile.php',
+        'TextElement' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/AppendTask/TextElement.php',
         'ThrowTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/ext/ThrowTask.php',
         'TidyFilter' => __DIR__ . '/..' . '/phing/phing/classes/phing/filters/TidyFilter.php',
         'Timer' => __DIR__ . '/..' . '/phing/phing/classes/phing/system/util/Timer.php',
@@ -552,6 +587,7 @@ class ComposerStaticInit8b1bb549747f81cdd4aa7e4da433b26e
         'TokenSource' => __DIR__ . '/..' . '/phing/phing/classes/phing/types/TokenSource.php',
         'TouchTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/TouchTask.php',
         'TranslateGettext' => __DIR__ . '/..' . '/phing/phing/classes/phing/filters/TranslateGettext.php',
+        'TruncateTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/TruncateTask.php',
         'TryCatchTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/TryCatchTask.php',
         'TstampCustomFormat' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/TstampTask.php',
         'TstampTask' => __DIR__ . '/..' . '/phing/phing/classes/phing/tasks/system/TstampTask.php',
