@@ -21,12 +21,20 @@ input[type=file] {
   &__plus,
   &__minus {
     @include ma-button-reset;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
     display: block;
     height: 50%;
     padding: 0;
     position: absolute;
       right: 0;
     width: 40px;
+
+    &:focus {
+      border-bottom-style: dotted;
+      border-bottom-width: 1px;
+    }
 
     &:after {
       border-style: solid;
@@ -47,23 +55,12 @@ input[type=file] {
   }
 
   &__plus {
-    border-left-style: solid;
-    border-left-width: 2px;
     bottom: 50%;
-
-    &:after {
-    }
   }
 
   &__minus {
-    border-right-style: solid;
-    border-right-width: 2px;
     top: 50%;
     transform: rotate(180deg);
-
-    &:after {
-
-    }
   }
 }
 

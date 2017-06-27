@@ -50,7 +50,7 @@ export default function (window,document,$,undefined) {
     $plus.on('click', function(){
       let value = parseInt($el.val().trim(),10);
 
-      if(Number.isNaN(value)) {
+      if(value !== value) {
         value = 0;
       }
 
@@ -60,7 +60,7 @@ export default function (window,document,$,undefined) {
     $minus.on('click', function(){
       let value = parseInt($el.val(),10);
       
-      if(Number.isNaN(value)) {
+      if(value !== value) {
         value = 0;
       }
            
