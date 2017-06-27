@@ -24,22 +24,22 @@
 		}
 	},
 	"repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/drupal-pattern-lab/patternlab-php-core"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/drupal-pattern-lab/patternengine-php-twig"
-    },
 		{
-      "type": "vcs",
-      "url": "https://github.com/drupal-pattern-lab/styleguidekit-assets-default"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/drupal-pattern-lab/styleguidekit-twig-default"
-    }
+			"type": "vcs",
+			"url": "https://github.com/drupal-pattern-lab/patternlab-php-core"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/drupal-pattern-lab/patternengine-php-twig"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/drupal-pattern-lab/styleguidekit-assets-default"
+		},
+		{
+			"type": "vcs",
+			"url": "https://github.com/drupal-pattern-lab/styleguidekit-twig-default"
+		}
   ],
 	"require": {
 		"php": ">=5.4",
