@@ -9,9 +9,9 @@
       </span>
     </div>
     <ul class="ma__error-list__messages">
-      {% for link in errorList.links %}
+      {% for label in errorList.labels %}
         <li class="ma__error-list__message">
-          <a class="ma__error-list__link js-error-list-link" href="#{{ link.inputId }}" aria-label="{{ link.info }}">{{ link.text }}</a>
+          <label class="ma__error-list__label" for="{{ label.inputId }}" aria-label="{{ label.info }}">{{ label.text }}</label>
         </li>
       {% endfor %}
     </ul>

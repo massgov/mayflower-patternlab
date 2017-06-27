@@ -110,7 +110,7 @@
 
     "errorList": {
       "title": "Sorry, please correct the indicated errors",
-      "links": [{
+      "labels": [{
         "inputId": "your-name-23489",
         "text": "Please fill in the first field",
         "info": ""

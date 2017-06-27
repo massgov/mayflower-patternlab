@@ -1,7 +1,7 @@
 {
   "errorList": {
     "title": "Sorry, please correct the indicated errors",
-    "links": [{
+    "labels": [{
       "inputId": "issue1",
       "text": "Lorem ipsum dolor sit amet.",
       "info": ""

@@ -17,7 +17,7 @@ Description: Displays a list of error message and links to the inputs.
 errorList: {
   title: 
     type: string/required
-  links: [{
+  labels: [{
     inputId: 
       type: string/id/required
     text: 
