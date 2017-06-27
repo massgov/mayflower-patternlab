@@ -1,6 +1,6 @@
 {# backward compatible for v5.1 #}
-{% if inputRadio.checked == 'true' or inputRadio.checked == 'false' %}
-  {% set inputRadio = inputRadio|merge({'checked': inputRadio.checked == 'true' ? true : false }) %}
+{% if inputCheckbox.checked == 'true' or inputCheckbox.checked == 'false' %}
+  {% set inputCheckbox = inputCheckbox|merge({'checked': inputCheckbox.checked == 'true' ? true : false }) %}
 {% endif %}
 
 <span class="ma__input-checkbox">
