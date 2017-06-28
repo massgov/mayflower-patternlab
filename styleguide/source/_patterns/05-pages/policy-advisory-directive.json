@@ -2,7 +2,7 @@
   "pageHeader": {
     "category": "Directive",
     "divider": false,
-    "title": "Directive 13-XX: Criteria for Determining Whether a Transaction is a Taxable Sale of Pre-written Software or a Non-taxable Service",
+    "title": "Criteria for Determining Whether a Transaction is a Taxable Sale of Pre-written Software or a Non-taxable Service",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
@@ -29,7 +29,7 @@
             "label": "Issuer:",
             "text": "Mark E. Nunnelly, Commissioner of Revenue"
           },{
-            "label": "Referenced Legistration:",
+            "label": "Referenced Sources:",
             "text": "<a href=\"#\">M. G.L. c. 51, § 47C</a><br/><a href=\"#\">G.L. c. 64H, § 6</a>"
           }]
         }
