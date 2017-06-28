@@ -120,18 +120,6 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
 
-  ul ul,
-  ol ol,
-  ol ul {
-    list-style-type: circle;
-    padding-left: 30px;
-    margin-bottom: 1em;
-  }
-
-  ol ol {
-    list-style-type: lower-alpha;
-  }
-
 // end list styles
 
 // link styles
