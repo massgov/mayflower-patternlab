@@ -1,5 +1,8 @@
 .ma__error-list {
-  display: none;
+  
+  form & {
+    display: none;
+  }
 
   .has-error & {
     display: block;
