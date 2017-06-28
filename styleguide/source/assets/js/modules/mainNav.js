@@ -54,7 +54,7 @@ export default function (window,document,$,undefined) {
         //  - Change selected menu item
         if(!open) {
           show($topLevelItem.find('.js-main-nav-content'));
-          $topLevelLink.focus().attr('aria-expanded', 'true');
+          $topLevelLink.attr('aria-expanded', 'true');
           $link.addClass(openClass);
         }
         // Up arrow was used
