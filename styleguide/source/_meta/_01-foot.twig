@@ -17,16 +17,18 @@
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&v=3.27&libraries=geometry,places,geocoder&callback=initGoogleMaps"></script>
 
     <script> 
-      if($('.main-content').length === 0){
-        var json = JSON.parse($("#sg-pattern-data-footer").html()),
-        
-        data = json.patternBreadcrumb.patternType;
+      try {
+        if($('.main-content').length === 0){
+          var json = JSON.parse($("#sg-pattern-data-footer").html()),
+          
+          data = json.patternBreadcrumb.patternType;
 
-        if(data !== 'templates' && data !== 'pages') {
-          $('body').addClass('page-content');
-          $('html').addClass('main-content').addClass('main-content--full');
+          if(data !== 'templates' && data !== 'pages') {
+            $('body').addClass('page-content');
+            $('html').addClass('main-content').addClass('main-content--full');
+          }
         }
-      }
+      } catch(e) {}
     </script>
 
     <!-- JS to switch theme colors -->
