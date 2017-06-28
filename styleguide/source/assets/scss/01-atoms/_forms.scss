@@ -2,6 +2,12 @@ input {
   border: 2px solid;
   min-height: 40px;
   padding: 0 18px;
+
+  &.has-error {
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
 }
 
 input[type=file] {

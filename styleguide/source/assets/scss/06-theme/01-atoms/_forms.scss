@@ -43,6 +43,7 @@ input {
   color: $c-font-base;
 
   &.has-error {
+    background-image: url('../images/svg-icons/input-error.svg');
     border-color: $c-bd-error;
   }
 
