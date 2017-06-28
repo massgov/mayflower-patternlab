@@ -40,16 +40,7 @@ searchBanner: {
       buttonText:
         type: string / required
       inputText: {
-        labelText:
-          type: string / required
-        required:
-          type: boolean / required
-        id:
-          type: string / required
-        name:
-          type: string
-        placeholder:
-          type: string / required
+        type: object / inputText / required
       }
     }
   }

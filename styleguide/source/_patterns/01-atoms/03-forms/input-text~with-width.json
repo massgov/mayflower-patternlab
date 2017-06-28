@@ -1,0 +1,12 @@
+{
+  "inputText": {
+    "hiddenLabel": false,
+    "labelText": "Text Input",
+    "required": true,
+    "id": "text-input",
+    "name": "text-input",
+    "type": "text",
+    "width": "500",
+    "placeholder": "this field is 500px wide"
+  }
+}

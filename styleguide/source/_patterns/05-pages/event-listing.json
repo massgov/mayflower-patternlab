@@ -24,6 +24,7 @@
           "required": false,
           "id": "find-nearby",
           "name": "find-nearby",
+          "type": "text",
           "placeholder": "City, town, or ZIP code"
         }
       },

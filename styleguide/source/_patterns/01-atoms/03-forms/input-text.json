@@ -1,9 +1,13 @@
 {
   "inputText": {
-    "labelText": "Your Name*",
+    "hiddenLabel": false,
+    "labelText": "Text Input",
     "required": true,
     "id": "text-input",
     "name": "text-input",
-    "placeholder": "full name"
+    "type": "text",
+    "width": "",
+    "placeholder": "type something",
+    "errorMsg": "you did not type something"
   }
 }
