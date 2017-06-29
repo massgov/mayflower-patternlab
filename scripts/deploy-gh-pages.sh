@@ -77,12 +77,12 @@ TARGET_URL="git@github.com:${targetEnv}.git"
 git ls-remote "${TARGET_URL}" &>/dev/null
 if [ "$?" -ne 0 ];
 then
-    line="Validated target remote repo url: ${TARGET_URL}..."
-    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
-else
     line="Unable to read from '${TARGET_URL}', check your remote repo.  Should be something like username/mayflower"
     echo -e "\n \x1B[01;91m"$line"\x1B[0m"
     exit 1;
+else
+    line="Validated target remote repo url: ${TARGET_URL}..."
+    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
 fi
 
 # Confirm a deploy to prod if "massgov/mayflower" provided as target.
