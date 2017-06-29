@@ -78,6 +78,12 @@
     },{
       "text": "6.04: Exemption for the National Guard and Volunteer Medical or Rescue Organizations in Exigent Circumstances",
       "href": "link4"
+    },{
+      "text": "Downloads",
+      "href": "downloads"
+    },{
+      "text": "Contact",
+      "href": "contact"
     }]
   },
 
@@ -282,6 +288,7 @@
         }]
       }]
     }
+
   },
 
   "sideContent": {
