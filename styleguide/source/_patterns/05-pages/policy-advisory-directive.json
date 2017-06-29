@@ -23,10 +23,10 @@
       "data": {
         "listingTable": {
           "rows": [{
-            "label": "Date:",
+            "label": "Last Updated:",
             "text": "3/2/2017"
           },{
-            "label": "Issuer:",
+            "label": "Organization:",
             "text": "Mark E. Nunnelly, Commissioner of Revenue"
           },{
             "label": "Referenced Sources:",
