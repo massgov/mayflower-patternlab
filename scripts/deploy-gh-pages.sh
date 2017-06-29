@@ -55,9 +55,9 @@ fi
 git rev-parse ${buildSrc}
 if [ "$?" -ne 0 ];
 then
-    echo "Validated git build source: ${buildSrc}..."
+    echo "Validated git build source: ${buildSrc} ..."
 else
-    echo -e "Hmmm, couldn't find the build source ${buildSrc}... check your branch or tag name, and make sure you've pulled it down to your local repo."
+    echo -e "Hmmm, couldn't find the build source ${buildSrc} ... check your branch or tag name, and make sure you've pulled it down to your local repo."
     exit 1;
 fi
 
