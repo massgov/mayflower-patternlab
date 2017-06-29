@@ -45,14 +45,15 @@ do
 done
 
 # Validate build source environment exists
-if ${buildSrc} = false;
+if [ ${buildSrc} == false ];
 then
     echo -e "Whoops, we need a git branch or tag name to checkout and build from."
     exit 1;
 fi
 
 # Validate that passed build source is a valid git branch or tag
-if git rev-parse ${buildSrc} >/dev/null 2>&1
+git rev-parse ${buildSrc} &>-
+if [ "$?" -ne 0 ];
 then
     echo "Validated git build source: ${buildSrc}..."
 else
@@ -61,7 +62,7 @@ else
 fi
 
 # Validate target environment argument exists
-if ${targetEnv} = false;
+if [ ${targetEnv} == false ];
 then
     echo -e "Whoops, we need a target repo that we can push to."
     exit 1;
