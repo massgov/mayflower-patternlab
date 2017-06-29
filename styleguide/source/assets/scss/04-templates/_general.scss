@@ -21,16 +21,10 @@
   position: relative;
 
   .main-content--two & {
-    padding-bottom: 40px;
-
-    @media ($bp-small-min) {
-      padding-bottom: 65px;
-    }
 
     @media ($bp-large-min){
       float:left;
       padding-right: $column;
-      padding-bottom: 0;
       width: calc(100% - #{$layout-sidebar-width});
     }
 
@@ -79,6 +73,18 @@
     &:first-child {
       margin-top: 0;
     }
+  }
+}
+
+.page-content + .sidebar {
+  padding-top: 40px;
+
+  @media ($bp-small-min) {
+    padding-top: 65px;
+  }
+
+  @media ($bp-large-min){
+    padding-top: 0;
   }
 }
 
