@@ -17,8 +17,11 @@
     }
   }
 
+  &__control {
+    @include ma-visually-hidden;
+  }
+
   &__modal {
-    display: none;
     margin-top: 10px;
     max-width: 280px;
     position: absolute;
@@ -45,13 +48,18 @@
     }
   }
 
-  &__control:focus ~ &__modal,
-  &__control:checked ~ &__modal {
-    display: block;
+  &__control:not(:checked) ~ &__modal,
+  &__control:not(:focus) ~ &__modal {
+    @include ma-visually-hidden;
   }
 
-  &__control:not(:focus) ~ &__modal {
-    display: none;
+  &__open:hover ~ &__modal {
+    overflow: visible;
+    clip: auto;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
   }
 
   &__container {
