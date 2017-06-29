@@ -52,7 +52,7 @@ then
 fi
 
 # Validate that passed build source is a valid git branch or tag
-git rev-parse ${buildSrc} &>-
+git rev-parse ${buildSrc}
 if [ "$?" -ne 0 ];
 then
     echo "Validated git build source: ${buildSrc}..."
@@ -70,7 +70,7 @@ fi
 
 # Validate that target argument is a remote repo
 TARGET_URL = "git@github.com:${targetEnv}.git"
-git ls-remote "${TARGET_URL}" &>-
+git ls-remote "${TARGET_URL}"
 if [ "$?" -ne 0 ];
 then
     echo -e "Unable to read from '${TARGET_URL}', check your remote repo.  It is likely something like username/mayflower"
