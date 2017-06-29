@@ -45,7 +45,7 @@ do
 done
 
 # Validate build source environment exists
-if [ ${buildSrc} == false ];
+if [ !${buildSrc} ];
 then
     echo -e "Whoops, we need a git branch or tag name to checkout and build from."
     exit 1;
@@ -62,7 +62,7 @@ else
 fi
 
 # Validate target environment argument exists
-if [ ${targetEnv} == false ];
+if [ !${targetEnv} ];
 then
     echo -e "Whoops, we need a target repo that we can push to."
     exit 1;
