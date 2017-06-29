@@ -2,7 +2,7 @@
   "pageHeader": {
     "category": "Executive Order",
     "divider": false,
-    "title": "No. 573: Reaffirming and restructuring the Governor's advisory council on verterans' services",
+    "title": "No. 573: Reaffirming and restructuring the Governor's advisory council on veterans' services",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
@@ -31,7 +31,7 @@
         "label": "Revoking:",
         "text": "<a href=\"#\">Executive Order No. 538</a>"
       },{
-        "label": "Superseeding:",
+        "label": "Superseding:",
         "text": "<a href=\"#\">Executive Order No. 538</a>"
       }]
     },
