@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Deploying Mayflower to Github Pages
 # -----------------------------------------------------
