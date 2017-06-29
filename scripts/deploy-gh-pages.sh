@@ -35,12 +35,12 @@ targetEnv=false
 buildSrc=false
 
 # Get passed arguments
-while getopts t:b option
+while getopts b:t option
 do
   case "${option}"
     in
-      t) targetEnv=${OPTARG};;
       b) buildSrc=${OPTARG};;
+      t) targetEnv=${OPTARG};;
     esac
 done
 
