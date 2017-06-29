@@ -47,36 +47,42 @@ done
 # Validate build source environment exists
 if [ "$buildSrc" = false ];
 then
-    echo -e "Whoops, we need a git branch or tag name to checkout and build from."
+    line="Whoops, we need a git branch or tag name to checkout and build from."
+    echo -e "\n \x1B[01;91m"$line"\x1B[0m \n"
     exit 1;
 fi
 
 # Validate that passed build source is a valid git branch or tag
-git rev-parse ${buildSrc}
+git rev-parse $buildSrc &>/dev/null
 if [ "$?" -ne 0 ];
 then
-    echo "Validated git build source: ${buildSrc} ..."
-else
-    echo -e "Hmmm, couldn't find the build source ${buildSrc} ... check your branch or tag name, and make sure you've pulled it down to your local repo."
+    line="Hmmm, couldn't find a branch/tag named ${buildSrc} ... check spelling and make sure you've pulled it."
+    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
     exit 1;
+else
+    line="Validated git build source: ${buildSrc} ..."
+    echo -e "\n\x1B[01;92m"$line"\x1B[0m"
 fi
 
 # Validate target environment argument exists
 if [ "$targetEnv" = false ];
 then
-    echo -e "Whoops, we need a target repo that we can push to."
+    line="Whoops, we need a target repo that we can push to."
+    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
     exit 1;
 fi
 
 # Validate that target argument is a remote repo
-git ls-remote "${TARGET_URL}"
 TARGET_URL="git@github.com:${targetEnv}.git"
+git ls-remote "${TARGET_URL}" &>/dev/null
 if [ "$?" -ne 0 ];
 then
-    echo -e "Unable to read from '${TARGET_URL}', check your remote repo.  It is likely something like username/mayflower"
-    exit 1;
+    line="Validated target remote repo url: ${TARGET_URL}..."
+    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
 else
-    echo "Validated target remote repo url: ${TARGET_URL}..."
+    line="Unable to read from '${TARGET_URL}', check your remote repo.  Should be something like username/mayflower"
+    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
+    exit 1;
 fi
 
 # Confirm a deploy to prod if "massgov/mayflower" provided as target.
