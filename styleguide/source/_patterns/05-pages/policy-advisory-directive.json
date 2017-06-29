@@ -291,8 +291,12 @@
   "sideContent": {
     "contactList": {
       "viewSpecific": true,
-      "sidebarHeading":{
-        "title": "Contact"
+      "compHeading":{
+        "title": "Contact",
+        "sub": false,
+        "color": "",
+        "id": "",
+        "centered": ""
       },
       "contacts":[{
         "subTitle": {
