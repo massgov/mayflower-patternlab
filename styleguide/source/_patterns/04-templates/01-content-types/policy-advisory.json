@@ -317,7 +317,7 @@
       "items": [{
         "eyebrow": "Letter Ruling",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Link to Ruling",
           "info": "",
           "property": ""
@@ -328,7 +328,7 @@
       },{
         "eyebrow": "Regulation",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Link to Regulation",
           "info": "",
           "property": ""
@@ -339,7 +339,7 @@
       },{
         "eyebrow": "Regulation",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Link to Regulation",
           "info": "",
           "property": ""
