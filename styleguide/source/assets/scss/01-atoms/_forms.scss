@@ -16,6 +16,16 @@ input[type=file] {
   padding: 0;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0; /* Removes leftover margin */
+}
+
 .ma__input-number {
   display: inline-block;
   position: relative;

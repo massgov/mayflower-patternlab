@@ -437,6 +437,7 @@
               "name": "number-input",
               "type": "number",
               "width": "190",
+              "pattern": "[0-9]*",
               "placeholder": "",
               "errorMsg": "Please enter a number"
             }

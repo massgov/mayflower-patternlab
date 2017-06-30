@@ -23,7 +23,7 @@ Description: An `<input> [type='text']`  element with its corresponding `<label>
     name: 
       type: string/required
     type:
-      type: string ('text','email', etc...) / required
+      type: string ('text','email', 'number', etc...) / required
     maxlength:
       type: number / optional
     pattern:
