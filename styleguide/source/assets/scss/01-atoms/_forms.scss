@@ -58,6 +58,10 @@ input[type=file] {
       vertical-align: bottom;
       width: 0;
     }
+
+    &:focus:after {
+      bottom: 1px;
+    }
   }
 
   &__plus {
