@@ -3,7 +3,7 @@
   &--grid &__item {
     border-color: $c-bd-divider;
 
-    &:before {
+    &:after {
       border-color: $c-bd-divider;
     }
   }

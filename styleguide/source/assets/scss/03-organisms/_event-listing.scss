@@ -44,12 +44,12 @@ $event-listing-bp-show-grid: $bp-medium-min;
       padding-top: 0;
       position: relative;
 
-      &:before {
+      &:after {
         border-top-style: solid;
         border-top-width: 1px;
         content: "";
         position: absolute;
-          top: -30px;
+          bottom: -30px;
           left: 0;
         width: calc(100% + 1px);
       }
@@ -59,6 +59,14 @@ $event-listing-bp-show-grid: $bp-medium-min;
         margin-top: 0;
         
         &:before {
+          display: none;
+        }
+      }
+
+      &:last-child,
+      &:nth-last-child(2):nth-child(odd) {
+        
+        &:after {
           display: none;
         }
       }

@@ -55,23 +55,6 @@
       },
       "time": "12 p.m. - 2 p.m.",
       "description": ""
-    },{
-      "title": {
-        "href": "#",
-        "text": "First Day Hike",
-        "info": "",
-        "property": ""
-      },
-      "location": "Lanesborough, MA",
-      "date": {
-        "summary": "March 30, 2017 - April 10, 2017",
-        "startMonth": "Mar",
-        "startDay": "30",
-        "endMonth": "Apr",
-        "endDay": "10"
-      },
-      "time": "12 p.m. - 2 p.m.",
-      "description": ""
     }],
     "more":{
       "href": "#",
