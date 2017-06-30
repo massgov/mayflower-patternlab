@@ -1,8 +1,8 @@
 {
   "pageHeader": {
-    "category": "Directive",
+    "category": "Decision",
     "divider": false,
-    "title": "Criteria for Determining Whether a Transaction is a Taxable Sale of Pre-written Software or a Non-taxable Service",
+    "title": "Department of Public Health v. Deli Market",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
@@ -24,13 +24,38 @@
         "listingTable": {
           "rows": [{
             "label": "Last Updated:",
-            "text": "3/2/2017"
+            "text": "8/11/2009"
           },{
             "label": "Organization:",
-            "text": "Mark E. Nunnelly, Commissioner of Revenue"
+            "text": "Division of Administrative Law Appeals"
+          },{
+            "label": "Docket Number:",
+            "text": "PH-07-539"
+          },{
+            "label": "Location:",
+            "text": "Suffolk County"
           },{
             "label": "Referenced Sources:",
             "text": "<a href=\"#\">M. G.L. c. 51, § 47C</a><br/><a href=\"#\">G.L. c. 64H, § 6</a>"
+          }]
+        }
+      }
+    },{
+      "path": "@molecules/labelled-list.twig",
+      "data": {
+        "labelledList": {
+          "items": [{
+            "label": "Petitioner:",
+            "text": "Deli Grocery, Shilpi Begum, Owner and Enamul Malik, Manager"
+          },{
+            "label": "Appearance for Petitioner:",
+            "text": "Madeline Grace Piper, Esquire, Deputy General Counsel, MDPH"
+          },{
+            "label": "Appearance for Respondent:",
+            "text": "Pro Se, Enamul Malik, Deli Grocery"
+          },{
+            "label": "Administrative Magistrate:",
+            "text": "Judithann Burke"
           }]
         }
       }
@@ -43,14 +68,7 @@
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
               "paragraph" : {
-                "text": "<b><i>This is a working draft for practitioner comment. Please contact the Rules and Regulations Bureau for feedback.</i></b>"
-              }
-            }
-          },{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph" : {
-                "text": "Attached for public comment is a draft Directive that addresses the application of the Massachusetts sales and use tax to sales of software and computer related services. This Directive has been drafted in response to the large number of recent ruling requests pertaining to the Computer Industry Services and Products regulation,830 CMR 64H.1.3, particularly involving sales of \"Software as a Service,\" \"Cloud Computing,\" and so-called \"Business Solutions,\" all of which involve software, sometimes bundled with other non-taxable services.  Long established rules provide that software sales involving a tangible medium transferred to the customer are taxable; the focus of this Directive is on the taxation of software sales that involve remote access to software following the statutory change announced in TIR 05-15.  Given that the Department does not have the resources to individually rule on every product involving software, the Directive lists factors that DOR will use in determining if a sale is a taxable sale of software or a non-taxable sale of services. The factors will be considered cumulatively; no one factor is determinative of taxability."
+                "text": "This is a board decisions page, and this is an optional description field.  For shorter content, authors may choose to use only the overview field.  For longer content, this may be a place to summerize findings or to provide a short introduction. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, ex, eius. Magnam, beatae quibusdam. Nemo adipisci veniam earum minus similique."
               }
             }
           }]
@@ -63,11 +81,14 @@
   "jumpLinks": {
     "title": "In this Section",
     "links": [{
-      "text": "Working Draft for Practitioner Comment",
-      "href": "working-draft"
+      "text": "Decision",
+      "href": "decision"
     },{
-      "text": "Another Section",
-      "href": "another-section"
+      "text": "Findings of Fact",
+      "href": "finding-of-fact"
+    },{
+      "text": "Conclusion",
+      "href": "conclusion"
     },{
       "text": "Downloads",
       "href": "downloads"
@@ -80,103 +101,108 @@
   "mainContent": {
     "contents": [{
       "compHeading": {
-        "title": "Working Draft for Practitioner Comment",
+        "title": "Decision",
         "sub": false,
         "color": "",
-        "id": "working-draft",
+        "id": "decision",
         "centered": false
       },
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "<b>Sales & Use Tax - Directive 13-XX</b>"
+            "text": "On April 9, 2008, pursuant to 7 CFR 246.12(g)(3)(i), the Petitioner, Department of Public Health-WIC Program (DPH), issued a Notice of Termination of WIC Vendor Agreement and Disqualification from the WIC Program for the period of one year to the Respondents, Deli Grocery, Shilpi Begum, owner, and Enamul Malik, manager, (WIC Vendor No. 5812). (Exhibit 1). The Respondents filed a timely appeal and request for hearing on April 30, 2008. (Exhibit 2). A hearing was held on August 22, 2008 at the offices of the Division of Administrative Law Appeals (DALA), 98 North Washington Street, Boston, MA, pursuant to G.L. 30A, 801 CMR 1.02 et seq., the Informal Rules, and interagency agreement."
           }
         }
       },{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "<b>Criteria for Determining Whether a Transaction is a Taxable Sale of Pre-written Software or a Non-taxable Service</b>"
+            "text": "At the hearing, seven (7) exhibits were marked. The Petitioner presented the testimony of: Mary Blocksidge, the DPH WIC Program Director; the undercover compliance buyer for the WIC Program, whose identity was protected by a screen during testimony; and, Lisa Viveiros, Fall River WIC Program Assistant. The Respondent, Enamul Malik, manager of Deli Grocery, provided testimony on behalf of Deli Grocery. Both parties stated their arguments for the record. One (1) tape was made of the proceedings."
           }
         }
-      },{
+      }]
+    },{
+      "compHeading": {
+        "title": "Findings of Fact",
+        "sub": false,
+        "color": "",
+        "id": "findings-of-fact",
+        "centered": false
+      },
+      "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "<b>Introduction:</b> This Directive is being issued in response to the large number of recent requests for guidance received by the Department of Revenue pertaining to the Computer Industry Services and Products regulation at 830 CMR 64H.1.3. That regulation explains the application of the Massachusetts sales and use taxes, G.L. c. 64H and G.L. c. 64I, to computer products and software and provides that taxable transfers of prewritten software include sales effected in any of the following ways regardless of the method of delivery (including electronic delivery or load and leave):  licenses, leases, transfers of rights to use software installed on a remote server, upgrades, and license upgrades. A taxable sale may involve a one-time payment or periodic payments, as in the case of transactions structured as a \"subscription.\""
+            "text": "Based upon the testimony and documents submitted during the hearing in the above-entitled matter, I hereby render the following findings of fact:"
           }
         }
       },{
-        "path": "@atoms/11-text/paragraph.twig",
+        "path": "@atoms/08-lists/ordered-list.twig",
         "data": {
-          "paragraph" : {
-            "text": "Long-established rules provide that software sales involving a tangible medium transferred to the customer are taxable.  In 2005, the Massachusetts sales/use tax definition of taxable tangible property was expanded to include software sales that do not involve transfers of or in a tangible medium. St. 2005, c. 163 §§ 27, 29, 34, 59, 61; see TIR 05-15.  The focus of this Directive is on the taxation of software sales that involve remote access to software following that statutory change, which became effective on April 1, 2006."
-          }
-        }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "Software-related products and the terminology used to describe and market them are evolving at a rapid rate.  As technology develops, purchasers increasingly have access to sophisticated software which is hosted on sellers’ or third party servers and marketed in various ways and with terminology that may be suggestive of the provision of services, e.g., as Software-as-a-Service, Cloud Computing, or \"business solutions\". Several recent Letter Rulings have addressed whether sales of various “business solutions” and products were taxable as sales of prewritten software or instead were non-taxable services.<a class=\"ma__rich-text__footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>"
-          }
-        }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "This Directive is meant to be a general guide for taxpayers, providing criteria the Commissioner considers when determining whether a transaction a taxable sale or other transfer of the right to use pre-written software or, instead, involves a product that is a non-taxable personal or professional service. The factors mentioned below will be considered cumulatively; no one factor is determinative of taxability. In those instances where both services and the right to use software may be integrated or bundled in one transaction, the Commissioner applies an “object of the transaction” test.  Where the object of the transaction is the purchase or use of the software, the transaction will be taxable.  Where the object of the transaction is determined to be a non-taxable service, and any use or access to pre-written software is incidental, the transaction will be non-taxable."
-          }
-        }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "<b>Issue 1:</b> What criteria indicate to the Commissioner that a transaction is a taxable transfer of pre-written software?"
-          }
-        }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "<b>Directive 1:</b> Factors that indicate that a transaction should be characterized as a taxable transfer of pre-written software include the following:"
-          }
-        }
-      },{
-        "path": "@atoms/08-lists/unordered-list.twig",
-        "data": {
-          "unorderedList": [{ 
-            "text": "A contract or written agreement provides for a transfer by license, sale, subscription, lease, or other means, of prewritten software for consideration."
+          "orderedList": [{ 
+            "text": "The DPH is responsible for administering the Massachusetts WIC Program and enforcing the laws, rules and regulations pertaining to said program. (Testimony)." 
           },{ 
-            "text": "A customer can access a seller’s prewritten software on its own or the seller’s or a third party server, and can enter its own information, manipulate that information, and/or run reports.  (Mere search queries in a seller’s database are not considered \"entering information.\")"
+            "text": "The WIC Program is a nutrition and education program, whose purpose is to provide food supplements and nutrition information to eligible low-income pregnant women, breastfeeding mothers, infants and children up to five (5) years of age. The WIC Program was created by the Federal Child Nutrition Act of 1996, and is found at 42 U.S.C. s. 1771 et. seq. Regulations governing the WIC Program are found at 7 CFR 246 et. seq. The program is administered on a federal level by the United States Department of Agriculture, and on the state level, by the DPH. (Id.)." 
           },{ 
-            "text": "The seller provides the customer with the use of software that functions with little or no personal intervention by the seller or seller’s employees other than “help desk” assistance for customers having difficulty using the software."
+            "text": "Vendors participating in the WIC Program are required to stock mandatory minimum inventory of approved WIC products. (Exhibits 1 and 1A)." 
+          },{ 
+            "text": "Persons eligible for participation in the WIC program are issued WIC checks [vouchers/prescriptions] which can be used to purchase prescribed WIC products at stores authorized to redeem them. (Id.)." 
+          },{ 
+            "text": "These checks can be redeemed only at authorized WIC vendors' stores. A store seeking to become an authorized WIC vendor must apply to the DPH to participate. (Exhibit 6). <a class=\"ma__rich-text__footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>" 
           },{
-            "text": "The seller refers to itself as an Application Service Provider (ASP) or its product as Software as a Service (SaaS) or in a similar manner, although the seller’s characterization of a product is not ultimately determinative of its treatment for tax purposes."
-          },{ 
-            "text": "The seller provides access to software, including operating system software or application software, even if no software is transferred to the customer; this may be referred to as \"cloud computing.\""
-          },{
-            "text": "The software provides an organizational tool or function that is used by customer, e.g., screen sharing."
-          },{ 
-            "text": "Pre-written software is bundled with a non-taxable service and sold for a single price, but only where the software constitutes the predominant value of the sale."
-          },{
-            "text": "The seller provides an application that is downloaded to any device, including but not limited to a Smart-phone, PC or Tablet, and there is a charge for the application."
+            "text": "The WIC Vendor Application is a written document that specifically states that the store owner will be \"bound by the WIC Program regulations and policies\" including: <br/>…accepting responsibility on behalf of the store and its owner(s), manager(s), and employees including new, part-time, paid or unpaid employees for violations of WIC procedures committed." 
           }]
         }
       }]
     },{
       "compHeading": {
-        "title": "Another section",
+        "title": "Conclusion",
         "sub": false,
         "color": "",
-        "id": "another-section",
+        "id": "conclusion",
         "centered": false
       },
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "Donec gravida posuere arcu. Nulla facilisi. Phasellus imperdiet. Vestibulum at metus. Integer euismod. Nullam placerat rhoncus sapien. Ut euismod. Praesent libero. Morbi pellentesque libero sit amet ante. Maecenas tellus. Maecenas erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+            "text": "The DPH has met its burden of proving by a preponderance of the evidence that the statutory and regulatory Class IV violations set forth in the April 9, 2008 Notice of Termination of the WIC Vendor Agreement and Disqualification From the WIC Program took place on February 11, February 26 and April 2, 2008."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "The Petitioner has put forth a strong and credible case both in documentary and testimonial evidence which the Respondent has failed to refute. In rendering this conclusion, I have credited the testimony of the compliance buyer who systematically recorded observations of the store inventory or lack thereof, and any items purchased, all within a very short period of time after each monitoring visit. The individual appeared to be a methodical professional who demonstrated no bias or other hidden agenda against the Respondent or any other motive to be less than truthful. The Respondent did not contest the fact, but rather asked for a reprieve, promising to comply in the future. Unfortunately, this promise is too little too late. The Respondent had already received a letter of warning in March 2008 which went unheeded. The request for leniency cannot halt the disqualification process. Neither DPH nor DALA have any discretion but to uphold the controlling regulations in this case."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "The Respondent raised neither any legitimate legal issues concerning the alleged lack of due process in the Petitioner's management of this case, nor, any regulatory or legal violations by the Petitioner that would negate the Findings of Fact set forth herein or those actions taken by the Petitioner in pursuit of the sanctions to be imposed upon the Respondents."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Accordingly, the Vendor Agreement for Deli Grocery is terminated, and, there is a disqualification from participating in the WIC Program for one year."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "So ordered."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Division of Administrative Law Appeals,<br />BY:<br />----------------------------------------------<br />Judithann Burke<br />Administrative Magistrate"
           }
         }
       }]
