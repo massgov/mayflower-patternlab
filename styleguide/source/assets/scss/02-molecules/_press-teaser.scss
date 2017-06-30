@@ -1,4 +1,7 @@
 .ma__press-teaser {
+  @include clearfix();
+  display: flex;
+    flex-wrap: wrap;
 
   & + & {
     border-top-width: 1px;
@@ -21,6 +24,23 @@
   .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container('restricted');
+  }
+
+  &__image {
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: auto;
+    font-size: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__details {
+    // flex-basis: calc(100% - 220px)
   }
 
   &__eyebrow {
