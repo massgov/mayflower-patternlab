@@ -108,7 +108,7 @@
       },
       "stacked": true,
       "links" : [{
-        "url":"#",
+        "href":"#",
         "text":"Link to organization page"
       }]
     }
