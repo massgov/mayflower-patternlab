@@ -1,4 +1,6 @@
-<section class="ma__press-teaser">
+{% set imageClass = pressTeaser.image ? 'ma__press-teaser--image' : '' %}
+
+<section class="ma__press-teaser {{ imageClass }}">
   {% if pressTeaser.image %}
     <div class="ma__press-teaser__image"
       {% if pressTeaser.image.width %}

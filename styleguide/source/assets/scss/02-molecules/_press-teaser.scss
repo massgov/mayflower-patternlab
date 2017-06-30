@@ -1,7 +1,10 @@
 .ma__press-teaser {
   @include clearfix();
-  display: flex;
-    flex-wrap: wrap;
+  
+  &--image {
+    display: flex;
+      flex-wrap: wrap;
+  }
 
   & + & {
     border-top-width: 1px;
@@ -33,14 +36,12 @@
     font-size: 0;
     margin-right: 30px;
     margin-bottom: 10px;
-
-    img {
-      width: 100%;
-    }
   }
 
-  &__details {
-    // flex-basis: calc(100% - 220px)
+  &__image + &__details {
+    flex-basis: 300px;
+    flex-shrink: 1;
+    flex-grow: 1;
   }
 
   &__eyebrow {
