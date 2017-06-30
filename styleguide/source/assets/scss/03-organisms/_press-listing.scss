@@ -128,4 +128,12 @@
       }
     }
   }
+
+  &__more {
+    margin-top: 30px;
+
+    @media ($bp-large-min) {
+      margin-top: 45px;
+    }
+  }
 }

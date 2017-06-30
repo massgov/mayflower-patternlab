@@ -24,5 +24,11 @@
         {% endfor %}
       </ul>
     {% endif %}
+    {% if pressListing.more %}
+      <div class="ma__press-listing__more">
+        {% set link = pressListing.more %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+    {% endif %}
   </div>
 </section>
