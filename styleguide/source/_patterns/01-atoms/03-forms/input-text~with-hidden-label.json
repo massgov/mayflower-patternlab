@@ -3,10 +3,13 @@
     "hiddenLabel": true,
     "labelText": "Text Input",
     "required": true,
-    "id": "text-input",
-    "name": "text-input",
+    "id": "hidden-label",
+    "name": "hidden-label",
     "type": "text",
     "width": "",
-    "placeholder": "hidden label"
+    "maxlength": "",
+    "pattern": "",
+    "placeholder": "hidden label",
+    "errorMsg": ""
   }
 }

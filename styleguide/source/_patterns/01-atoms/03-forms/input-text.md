@@ -24,6 +24,10 @@ Description: An `<input> [type='text']`  element with its corresponding `<label>
       type: string/required
     type:
       type: string ('text','email', etc...) / required
+    maxlength:
+      type: number / optional
+    pattern:
+      type: string / optional (ex: "[0-9]" for numbers only)
     width:
       type: string (number value) / optional
     placeholder:
