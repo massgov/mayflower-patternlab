@@ -1,7 +1,15 @@
 .ma__event-listing {
 
+  &--grid &__item {
+    border-color: $c-bd-divider;
+
+    &:before {
+      border-color: $c-bd-divider;
+    }
+  }
+
   &__item + &__item {
-    border-top-color: $c-bd-divider;
+    border-color: $c-bd-divider;
   }
 
   .post-content > & {
