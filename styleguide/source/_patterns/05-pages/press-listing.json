@@ -43,7 +43,7 @@
     "items": [{
       "eyebrow": "Press Release",
       "title" : {
-        "url":"#",
+        "href":"#",
         "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
         "info": "",
         "property": ""
@@ -63,7 +63,7 @@
     },{
       "eyebrow": "Press Statement",
       "title" : {
-        "url":"#",
+        "href":"#",
         "text":"Governor Baker Statement on Supreme Court Marriage Equality Decision",
         "info": "",
         "property": ""
@@ -83,7 +83,7 @@
     },{
       "eyebrow": "News Article",
       "title" : {
-        "url":"#",
+        "href":"#",
         "text":"Tree House Brweing Co. Expands Its Horizons",
         "info": "",
         "property": ""
@@ -103,7 +103,7 @@
     },{
       "eyebrow": "Blog Post",
       "title" : {
-        "url":"#",
+        "href":"#",
         "text":"Surviving the transtition from high school to college",
         "info": "",
         "property": ""
@@ -123,7 +123,7 @@
     },{
       "eyebrow": "Speech",
       "title" : {
-        "url":"#",
+        "href":"#",
         "text":"Governor Baker Delivers State of the Commonwealth Address",
         "info": "",
         "property": ""

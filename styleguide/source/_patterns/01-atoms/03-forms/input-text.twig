@@ -13,6 +13,12 @@
   type="{{ inputText.type }}" 
   placeholder="{{ inputText.placeholder }}" 
   data-type="{{ inputText.type }}"
+  {% if inputText.maxlength %}
+    maxlength="{{ inputText.maxlength }}"
+  {% endif %}
+  {% if inputText.pattern %}
+    pattern="{{ inputText.pattern }}*"
+  {% endif %}
   {% if inputText.width %}
     style="width: {{ inputText.width }}px" 
   {% endif %}

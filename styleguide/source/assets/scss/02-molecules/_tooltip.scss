@@ -48,18 +48,8 @@
     }
   }
 
-  &__control:not(:checked) ~ &__modal,
   &__control:not(:focus) ~ &__modal {
     @include ma-visually-hidden;
-  }
-
-  &__open:hover ~ &__modal {
-    overflow: visible;
-    clip: auto;
-    height: auto;
-    width: 100%;
-    margin: 0;
-    margin-top: 10px;
   }
 
   &__container {
