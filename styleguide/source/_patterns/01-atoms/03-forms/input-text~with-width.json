@@ -3,10 +3,13 @@
     "hiddenLabel": false,
     "labelText": "Text Input",
     "required": true,
-    "id": "text-input",
-    "name": "text-input",
+    "id": "width-input",
+    "name": "width-input",
     "type": "text",
     "width": "500",
-    "placeholder": "this field is 500px wide"
+    "maxlength": "",
+    "pattern": "",
+    "placeholder": "this field is 500px wide",
+    "errorMsg": ""
   }
 }

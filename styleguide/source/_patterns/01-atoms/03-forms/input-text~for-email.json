@@ -3,9 +3,13 @@
     "hiddenLabel": false,
     "labelText": "Email Address",
     "required": false,
-    "id": "text-input",
-    "name": "text-input",
+    "id": "email-input",
+    "name": "email-input",
     "type": "email",
-    "placeholder": "you@email.com"
+    "width": "",
+    "maxlength": "",
+    "pattern": "",
+    "placeholder": "you@email.com",
+    "errorMsg": ""
   }
 }

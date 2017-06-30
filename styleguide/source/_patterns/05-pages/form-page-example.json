@@ -289,7 +289,7 @@
               "id":"blanks",
               "options":[{
                 "value":"",
-                "text":""
+                "text":"Please select"
               },{
                 "value":"one",
                 "text":"One"
@@ -318,14 +318,16 @@
           "path": "@atoms/03-forms/input-text.twig",
           "data": {
             "inputText": {
-              "labelText": "Card Number",
-              "required": true,
               "id": "credit-card-number",
+              "errorMsg": "Please fix your credit card",
+              "labelText": "Card Number",
+              "maxlength": 19,
               "name": "credit-card-number",
-              "type": "text",
-              "width": "295",
+              "pattern": "[0-9]",
               "placeholder": "",
-              "errorMsg": "Please fix your credit card"
+              "required": true,
+              "type": "text",
+              "width": "295"
             }
           }
         },{
@@ -378,6 +380,8 @@
               "name": "cvv-number",
               "type": "text",
               "width": "85",
+              "maxlength": 4,
+              "pattern": "[0-9]",
               "placeholder": "",
               "errorMsg": "missing cvv number"
             }
@@ -433,6 +437,7 @@
               "name": "number-input",
               "type": "number",
               "width": "190",
+              "pattern": "[0-9]*",
               "placeholder": "",
               "errorMsg": "Please enter a number"
             }
