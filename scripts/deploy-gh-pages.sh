@@ -106,6 +106,19 @@ fi
 NOW=$(date +"%c")
 MESSAGE="GH Pages deployed ${buildSrc} on: ${NOW}"
 
+function cleanup {
+    # Cleanup
+    echo "Getting back to previous directory..."
+    cd -
+
+    echo "Cleaning up temp dir..."
+    rm -rf ~/tmp/mayflower
+
+    # Check out the previous branch
+    echo "Checking out your previous branch..."
+    git checkout @{-1}
+}
+
 # checkout the latest tag/release
 echo "Checking out the build source: ${buildSrc}"
 git checkout ${buildSrc}
@@ -148,23 +161,13 @@ if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"D
 then
     line="Git push was successful!"
     echo -e "\n\x1B[01;92m"$line" \x1B[0m"
+    cleanup
+    # Success message.
+    line="Success! You should be able to see your updates at: http(s)://<username>.github.io/<projectname> (i.e. http://jesconstantine.github.io/mayflower)."
+    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
 else
     line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
     echo -e "\n \x1B[01;91m"$line"\x1B[0m"
+    cleanup
     exit 1;
 fi
-
-# Cleanup
-echo "Getting back to previous directory..."
-cd -
-
-echo "Cleaning up temp dir..."
-rm -rf ~/tmp/mayflower
-
-# Check out the previous branch
-echo "Checking out your previous branch..."
-git checkout @{-1}
-
-# Success message.
-line="Success! You should be able to see your updates at: http(s)://<username>.github.io/<projectname> (i.e. http://jesconstantine.github.io/mayflower)."
-echo -e "\n\x1B[01;92m"$line" \x1B[0m"
