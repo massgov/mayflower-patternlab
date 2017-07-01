@@ -118,7 +118,7 @@ cd $(git rev-parse --show-toplevel)/styleguide
 echo "Building mayflower static assets..."
 gulp prod
 
-# make temp directory to copy public  assets
+# Make temp directory to copy public  assets
 echo "Making ~/tmp/mayflower directory..."
 if [ -d "~/tmp" ];
 then
@@ -128,15 +128,15 @@ else
     mkdir ~/tmp/mayflower
 fi
 
-# copy built assets in /public into temp directory
+# Copy built assets in /public into temp directory
 echo "Copying PL build output to ~/tmp/mayflower directory..."
 cp -R public ~/tmp/mayflower
 
-# get to temp directory build output
+# Get to temp directory build output
 echo "Changing directory to ~/tmp/mayflower/public..."
 cd ~/tmp/mayflower/public
 
-# initialize temp git repo + push up to gh-pages
+# Initialize temp git repo + push up to gh-pages
 echo "Creating temporary repo and committing build to master branch..."
 git init
 git add .
@@ -144,19 +144,27 @@ git commit -m "$MESSAGE"
 
 echo "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
 git remote add target git@github.com:${TARGET_URL}.git
-git push target master:refs/heads/gh-pages --force
+if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"Done"* ]]
+then
+    line="Git push was successful!"
+    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
+else
+    line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
+    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
 
-# cleanup
+fi
+
+# Cleanup
 echo "Getting back to mayflower repo root /styleguide directory..."
 cd -
 
 echo "Cleaning up temp dir..."
 rm -rf ~/tmp/mayflower
 
-# check out the previous branch
+# Check out the previous branch
 echo "Checking out your previous branch..."
 git checkout @{-1}
 
-# success message.
+# Success message.
 line="Success! You should be able to see your updates at: http(s)://<username>.github.io/<projectname> (i.e. http://jesconstantine.github.io/mayflower)."
 echo -e "\n\x1B[01;92m"$line" \x1B[0m"
