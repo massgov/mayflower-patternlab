@@ -3,18 +3,18 @@
 # Deploying Mayflower to Github Pages
 # -----------------------------------------------------
 #
-# Run from the repo root, with and must have a clean working directory.
+# Run from the repo root, must have a clean working directory.
 #
 # Usage:
-# ./scripts/deploy-gh-pages.sh [-t (remote-repo)] [-b (git-branch-or-tag)]
-#   -t Target: the remote repo whose gh-pages branch is being pushed to (required)
+# ./scripts/deploy-gh-pages.sh [-b (git-branch-or-tag)] [-t (remote-repo)]
 #   -b Build source: the git branch or tag to build from (required)
+#   -t Target: the remote repo whose gh-pages branch is being pushed to (required)
 #
 #   Example: ./scripts/deploy-gh-pages.sh -t jesconstantine/mayflower -b DP-1234-my-branch-name
 #
 # Description:
 # 1. Validate the passed arguments: build source and target repo
-# 2. Attempt to checkout passed build source, defaults to master branch
+# 2. Attempt to checkout passed build source
 # 3. Build pattern lab static assets
 # 4. Copy static assets (build output: styleguide/public/) into a new temp directory
 # 5. Initialize a temp repo in the temp directory
@@ -23,7 +23,7 @@
 # 8. Push all build assets to target remote gh-pages branch
 # 9. Remove the temp directory
 # 10. Get back to mayflower/styleguide directory
-# 11. Checkout prior branch
+# 11. Check out prior branch
 #
 # @todo
 # - use AWS cli to push/rsync to bucket
@@ -35,25 +35,39 @@ targetEnv=false
 buildSrc=false
 
 # Get passed arguments
-while getopts b:t option
+while getopts :b:t: option
 do
-  case "${option}"
-    in
-      b) buildSrc=${OPTARG};;
-      t) targetEnv=${OPTARG};;
+    case "${option}" in
+        b) buildSrc=${OPTARG};;
+        t) targetEnv=${OPTARG};;
+        : ) line="Missing argument for parameter [-${OPTARG}]";
+             echo -e "\n \x1B[01;91m"$line"\x1B[0m \n" >&2;
+             exit 1;;
+        \? ) line="Whoops, this script only accepts arguments for: git build branch/tag [-b] and target repo [-t]";
+             echo -e "\n \x1B[01;91m"$line"\x1B[0m \n" >&2;
+             exit 1;;
     esac
 done
 
-# Validate build source environment exists
+# Validate build source environment argument exists
 if [ "$buildSrc" = false ];
 then
-    line="Whoops, we need a git branch or tag name to checkout and build from."
+    line="Whoops, we need a git branch or tag name to checkout and build from [-b]."
     echo -e "\n \x1B[01;91m"$line"\x1B[0m \n"
     exit 1;
 fi
 
+# Validate target environment argument exists
+if [ "$targetEnv" = false ];
+then
+    line="Whoops, we need a target repo that we can push to [-t]."
+    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
+    exit 1;
+fi
+
+
 # Validate that passed build source is a valid git branch or tag
-git rev-parse $buildSrc &>/dev/null
+git rev-parse ${buildSrc} &>/dev/null
 if [ "$?" -ne 0 ];
 then
     line="Hmmm, couldn't find a branch/tag named ${buildSrc} ... check spelling and make sure you've pulled it."
@@ -64,20 +78,12 @@ else
     echo -e "\n\x1B[01;92m"$line"\x1B[0m"
 fi
 
-# Validate target environment argument exists
-if [ "$targetEnv" = false ];
-then
-    line="Whoops, we need a target repo that we can push to."
-    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
-    exit 1;
-fi
-
-# Validate that target argument is a remote repo
-TARGET_URL="git@github.com:${targetEnv}.git"
-git ls-remote "${TARGET_URL}" &>/dev/null
+# Validate that passed target argument is a valid remote repo
+TARGET_URL="git@github.com:"${targetEnv}".git"
+git ls-remote ${TARGET_URL} &>/dev/null
 if [ "$?" -ne 0 ];
 then
-    line="Unable to read from '${TARGET_URL}', check your remote repo.  Should be something like username/mayflower"
+    line="Unable to reach remote repo at '${TARGET_URL}'. Check your target repo, should be something like 'username/mayflower'."
     echo -e "\n \x1B[01;91m"$line"\x1B[0m"
     exit 1;
 else
@@ -148,5 +154,9 @@ echo "Cleaning up temp dir..."
 rm -rf ~/tmp/mayflower
 
 # check out the previous branch
-echo "Checking out prior branch..."
+echo "Checking out your previous branch..."
 git checkout @{-1}
+
+# success message.
+line="Success! You should be able to see your updates at: http(s)://<username>.github.io/<projectname> (i.e. http://jesconstantine.github.io/mayflower)."
+echo -e "\n\x1B[01;92m"$line" \x1B[0m"
