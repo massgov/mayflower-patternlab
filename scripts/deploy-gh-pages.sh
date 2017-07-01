@@ -194,7 +194,11 @@ then
     log "success" "$line";
     cleanup
     # Success message.
-    line="Woo-hoo! Deploy complete! You should be able to see your updates at: \n http(s)://<username>.github.io/<projectname> \n (i.e. http://jesconstantine.github.io/mayflower)."
+    if [[ "$buildSrc" == "massgov/mayflower" ]]; then
+        line="Woo-hoo! Deploy complete! \n You should see the release live at http://mayflower.digital.mass.gov ... Time for release notes! ;)"
+    else
+        line="Woo-hoo! Deploy complete! You should be able to see your updates at: \n http(s)://<username>.github.io/<projectname> \n (i.e. http://jesconstantine.github.io/mayflower)."
+    fi
     log "success" "$line";
 else
     line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
