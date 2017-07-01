@@ -151,7 +151,7 @@ then
 else
     line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
     echo -e "\n \x1B[01;91m"$line"\x1B[0m"
-    exit 1;;
+    exit 1;
 fi
 
 # Cleanup
