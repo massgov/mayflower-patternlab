@@ -18,7 +18,7 @@
 # 3. Build pattern lab static assets
 # 4. Copy static assets (build output: styleguide/public/) into a new temp directory
 # 5. Initialize a temp repo in the temp directory
-# 6. Commit all of the static asset files
+# 6. Commit all of the static asset files (+ create a CNAME file for stage / prod)
 # 7. Add the passed target as remote
 # 8. Push all build assets to target remote gh-pages branch
 # 9. Remove the temp directory
@@ -118,9 +118,9 @@ else
 fi
 
 # Confirm a deploy to prod if "massgov/mayflower" provided as target.
-if [ ${targetEnv} = "jesconstantine/mayflower" ];
+if [ ${targetEnv} = "massgov/mayflower" ];
 then
-    read -p "You've indicated a deploy to jesconstantine, are you sure?" -n 1 -r
+    read -p "You've indicated a deploy to production, are you sure? [y/n] " -n 1 -r
     echo    # move to a new line
     if [[ ! $REPLY =~ ^[Yy]$ ]];
     then
@@ -168,9 +168,18 @@ git init
 git add .
 git commit -m "$MESSAGE"
 
+# Create staging CNAME record
 if [[ "$targetEnv" == "jesconstantine/mayflower" ]]; then
     echo "Creating CNAME for 'stage-mayflower.digital.mass.gov'";
     echo "stage-mayflower.digital.mass.gov" >> CNAME
+    git add .
+    git commit -m "Create CNAME"
+fi
+
+# Create prod CNAME record
+if [[ "$targetEnv" == "massgov/mayflower" ]]; then
+    echo "Creating CNAME for 'mayflower.digital.mass.gov'";
+    echo "mayflower.digital.mass.gov" >> CNAME
     git add .
     git commit -m "Create CNAME"
 fi
