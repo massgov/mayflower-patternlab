@@ -118,9 +118,9 @@ else
 fi
 
 # Confirm a deploy to prod if "massgov/mayflower" provided as target.
-if [ ${targetEnv} = "massgov/mayflower" ];
+if [ ${targetEnv} = "jesconstantine/mayflower" ];
 then
-    read -p "You've indicated a deploy to prod, are you sure?" -n 1 -r
+    read -p "You've indicated a deploy to jesconstantine, are you sure?" -n 1 -r
     echo    # move to a new line
     if [[ ! $REPLY =~ ^[Yy]$ ]];
     then
