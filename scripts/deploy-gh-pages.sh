@@ -155,7 +155,7 @@ else
 fi
 
 # Cleanup
-echo "Getting back to mayflower repo root /styleguide directory..."
+echo "Getting back to previous directory..."
 cd -
 
 echo "Cleaning up temp dir..."
