@@ -109,7 +109,7 @@ TARGET_URL="git@github.com:"${targetEnv}".git"
 git ls-remote ${TARGET_URL} &>/dev/null
 if [ "$?" -ne 0 ];
 then
-    line="Unable to reach remote repo at '${TARGET_URL}'. Check your target repo, should be something like 'username/mayflower'."
+    line="Unable to reach remote repo at '${TARGET_URL}'. Check your target repo, should be something like 'yourGithubUsername/mayflower'."
     log "error" "$line";
     exit 1;
 else
