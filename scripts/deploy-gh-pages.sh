@@ -171,13 +171,15 @@ git commit -m "$MESSAGE"
 
 echo "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
 git remote add target ${TARGET_URL}
+
+# Make sure we can push to remote, return success or error based on result.
 if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"Done"* ]]
 then
     line="Git push was successful!"
     log "success" "$line";
     cleanup
     # Success message.
-    line="Success! You should be able to see your updates at: http(s)://<username>.github.io/<projectname> (i.e. http://jesconstantine.github.io/mayflower)."
+    line="Woo-hoo! Deploy complete! You should be able to see your updates at: \n http(s)://<username>.github.io/<projectname> \n (i.e. http://jesconstantine.github.io/mayflower)."
     log "success" "$line";
 else
     line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
