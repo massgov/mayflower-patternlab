@@ -28,7 +28,35 @@
 # @todo
 # - use AWS cli to push/rsync to bucket
 # - build into ci process
-#
+
+# Steps to clean up after script execution
+# Runs on success and failure.
+function cleanup {
+    # Cleanup
+    echo "Getting back to previous directory..."
+    cd -
+
+    echo "Cleaning up temp dir..."
+    rm -rf ~/tmp/mayflower
+
+    # Check out the previous branch
+    echo "Checking out your previous branch..."
+    git checkout @{-1}
+}
+
+# Output success or error log during execution
+function log {
+    # parameters
+    local theLogType=$1
+    local theMessage=$2
+
+    if [[ theLogType == "success" ]]; then
+        echo -e "\n\x1B[01;92m"$theMessage"\x1B[0m \n"
+    else
+        echo -e "\n \x1B[01;91m"$theMessage" \x1B[0m \n" >&2
+        exit
+    fi
+}
 
 # Default arguments
 targetEnv=false
@@ -41,10 +69,10 @@ do
         b) buildSrc=${OPTARG};;
         t) targetEnv=${OPTARG};;
         : ) line="Missing argument for parameter [-${OPTARG}]";
-             echo -e "\n \x1B[01;91m"$line"\x1B[0m \n" >&2;
-             exit 1;;
+              log "error" "$line";
+              exit 1;;
         \? ) line="Whoops, this script only accepts arguments for: git build branch/tag [-b] and target repo [-t]";
-             echo -e "\n \x1B[01;91m"$line"\x1B[0m \n" >&2;
+             log "error" "$line";
              exit 1;;
     esac
 done
@@ -53,7 +81,7 @@ done
 if [ "$buildSrc" = false ];
 then
     line="Whoops, we need a git branch or tag name to checkout and build from [-b]."
-    echo -e "\n \x1B[01;91m"$line"\x1B[0m \n"
+    log "error" "$line";
     exit 1;
 fi
 
@@ -61,21 +89,20 @@ fi
 if [ "$targetEnv" = false ];
 then
     line="Whoops, we need a target repo that we can push to [-t]."
-    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
+    log "error" "$line";
     exit 1;
 fi
-
 
 # Validate that passed build source is a valid git branch or tag
 git rev-parse ${buildSrc} &>/dev/null
 if [ "$?" -ne 0 ];
 then
     line="Hmmm, couldn't find a branch/tag named ${buildSrc} ... check spelling and make sure you've pulled it."
-    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
+    log "error" "$line";
     exit 1;
 else
     line="Validated git build source: ${buildSrc} ..."
-    echo -e "\n\x1B[01;92m"$line"\x1B[0m"
+    log "success" "$line";
 fi
 
 # Validate that passed target argument is a valid remote repo
@@ -84,11 +111,11 @@ git ls-remote ${TARGET_URL} &>/dev/null
 if [ "$?" -ne 0 ];
 then
     line="Unable to reach remote repo at '${TARGET_URL}'. Check your target repo, should be something like 'username/mayflower'."
-    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
+    log "error" "$line";
     exit 1;
 else
     line="Validated target remote repo url: ${TARGET_URL}..."
-    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
+    log "success" "$line";
 fi
 
 # Confirm a deploy to prod if "massgov/mayflower" provided as target.
@@ -105,19 +132,6 @@ fi
 # Local variables
 NOW=$(date +"%c")
 MESSAGE="GH Pages deployed ${buildSrc} on: ${NOW}"
-
-function cleanup {
-    # Cleanup
-    echo "Getting back to previous directory..."
-    cd -
-
-    echo "Cleaning up temp dir..."
-    rm -rf ~/tmp/mayflower
-
-    # Check out the previous branch
-    echo "Checking out your previous branch..."
-    git checkout @{-1}
-}
 
 # checkout the latest tag/release
 echo "Checking out the build source: ${buildSrc}"
@@ -160,14 +174,14 @@ git remote add target ${TARGET_URL}
 if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"Done"* ]]
 then
     line="Git push was successful!"
-    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
+    log "success" "$line";
     cleanup
     # Success message.
     line="Success! You should be able to see your updates at: http(s)://<username>.github.io/<projectname> (i.e. http://jesconstantine.github.io/mayflower)."
-    echo -e "\n\x1B[01;92m"$line" \x1B[0m"
+    log "success" "$line";
 else
     line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
-    echo -e "\n \x1B[01;91m"$line"\x1B[0m"
+    log "error" "$line";
     cleanup
     exit 1;
 fi
