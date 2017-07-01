@@ -50,10 +50,10 @@ function log {
     local theLogType=$1
     local theMessage=$2
 
-    if [[ theLogType == "success" ]]; then
+    if [[ "$theLogType" == "success" ]]; then
         echo -e "\n\x1B[01;92m"$theMessage"\x1B[0m \n"
     else
-        echo -e "\n \x1B[01;91m"$theMessage" \x1B[0m \n" >&2
+        echo -e "\n \x1B[01;91m"$theMessage"\x1B[0m \n" >&2
     fi
 }
 
