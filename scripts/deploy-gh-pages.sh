@@ -54,7 +54,6 @@ function log {
         echo -e "\n\x1B[01;92m"$theMessage"\x1B[0m \n"
     else
         echo -e "\n \x1B[01;91m"$theMessage" \x1B[0m \n" >&2
-        exit
     fi
 }
 
