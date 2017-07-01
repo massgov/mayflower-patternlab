@@ -143,7 +143,7 @@ cd $(git rev-parse --show-toplevel)/styleguide
 
 # Build pattern to generate prod static assets
 echo "Building mayflower static assets..."
-gulp prod
+gulp build prod
 
 # Make temp directory to copy public  assets
 echo "Making ~/tmp/mayflower directory..."
