@@ -184,5 +184,7 @@ else
     line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
     log "error" "$line";
     cleanup
+    line="Bummer! Deploy unsuccessful. Check your spellings for git branches + remotes.  And check your permissions.  Then try again!"
+    log "error" "$line";
     exit 1;
 fi
