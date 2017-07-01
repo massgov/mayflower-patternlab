@@ -156,7 +156,7 @@ git add .
 git commit -m "$MESSAGE"
 
 echo "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
-git remote add target git@github.com:${TARGET_URL}.git
+git remote add target ${TARGET_URL}
 if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"Done"* ]]
 then
     line="Git push was successful!"
