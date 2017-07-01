@@ -168,6 +168,13 @@ git init
 git add .
 git commit -m "$MESSAGE"
 
+if [[ "$targetEnv" == "jesconstantine/mayflower" ]]; then
+    echo "Creating CNAME for 'stage-mayflower.digital.mass.gov'";
+    echo "stage-mayflower.digital.mass.gov" >> CNAME
+    git add .
+    git commit -m "Create CNAME"
+fi
+
 echo "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
 git remote add target ${TARGET_URL}
 
