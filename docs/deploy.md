@@ -11,7 +11,7 @@ On this page:
 #### Deploy feature work to your fork's Github Pages for review and testing
 Developers and contributors can follow these steps to deploy your branch to your fork's Github Pages environment.  This will allow reviewers to test your code without having to build from your branch locally.
 
-1. Set up your Mayflower fork + local repository, see our [Contribute](#contribute) section for directions.
+1. Set up your Mayflower fork + local repository, see our [CONTRIBUTING.md](https://github.com/massgov/mayflower/blob/master/CONTRIBUTING.md) for directions.
 1. Make sure your local repository is in a clean working state: `git status`.  If it's not, you can `git commit` or [stash](https://git-scm.com/book/en/v1/Git-Tools-Stashing) your local changes.
 1. Make sure you have the thing you are deploying (branch or tag) pulled down locally
 1. Change directory to the root directory of your local repo (likely `mayflower`).
