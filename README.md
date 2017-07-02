@@ -65,4 +65,4 @@ This project is licensed under the is licensed under the GNU General Public Lice
 ## Acknowledgments
 
 * [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/) methodology by Brad Frost
-* This awesome [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by []@PurpleBooth](https://gist.github.com/PurpleBooth)
+* This awesome [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by [@PurpleBooth](https://gist.github.com/PurpleBooth)
