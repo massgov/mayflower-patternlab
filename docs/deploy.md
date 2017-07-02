@@ -27,7 +27,8 @@ This project uses [Github Pages](https://help.github.com/articles/what-is-github
 
 1. On GitHub, navigate to your Mayflower fork's repository.
 1. Under your repository name, click the Settings tab.
-1. Use the Select source drop-down menu to select `gh-pages` as your GitHub Pages publishing source. (You must have a `gh-pages` branch present for this option show)
+1. From the Settings tab, scroll down to the Github Pages section.
+1. Under Source, use the drop-down menu to select `gh-pages` as your GitHub Pages publishing source. (You must have a `gh-pages` branch present for this option show)
 1. Click Save.
 
 You should now be able to see the work that you just deployed at `http://<your-github-username>.github.io/mayflower`!
