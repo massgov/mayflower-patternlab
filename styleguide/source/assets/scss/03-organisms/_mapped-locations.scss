@@ -1,15 +1,15 @@
 .ma__mapped-locations {
-  @include ma-container;
   
-  @media ($bp-page-width-min) {
-    max-width: 100%;
-    padding-right: 0;
-    padding-left: 0;
+  .main-content--full .page-content > & {
+    @include ma-container;
   }
 
-  .main-content--two & {
-    padding-right: 0;
-    padding-left: 0;
+  .main-content--full .page-content > &:not(&--contained) {
+    @media ($bp-page-width-min) {
+      max-width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   &__header {
@@ -19,16 +19,29 @@
     }
   }
 
+  &--contained &__header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__link {
     margin-bottom: 20px;
   }
 
+  &--contained &__link {
+    margin-bottom: 12px;
+  }
 
-  &__map {
+
+  &__map .ma__google-map{
     height: 360px;
 
     @media ($bp-x-small-min) {
       height: 500px;
     }
+  }
+
+  &--contained &__map {
+    padding: 13px;
   }
 }

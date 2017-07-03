@@ -30,7 +30,15 @@ body {
   }
 
   &__skip-nav {
-    @include ma-visually-hidden;
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+    text-align: center;
+
+    &:not(:focus) {
+      @include ma-visually-hidden;
+      width: 240px;
+    }
   }
 
   &__container {

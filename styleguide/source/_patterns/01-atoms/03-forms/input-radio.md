@@ -23,6 +23,6 @@ inputRadio {
     label:
         type: string / required
     checked:
-        type: string ("true" || "")
+        type: boolean
 }
 ~~~

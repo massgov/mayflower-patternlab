@@ -419,7 +419,7 @@
               "info": "",
               "property": ""
             },
-            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
@@ -489,7 +489,7 @@
               "info": "",
               "property": ""
             },
-            "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",

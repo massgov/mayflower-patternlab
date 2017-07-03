@@ -1,7 +1,11 @@
 {
   "linkList" : {
     "compHeading": {
-      "title": "Related Agencies"
+      "title": "Related Topics",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": false
     },
     "description": {
       "rteElements": [{

@@ -16,6 +16,8 @@ _No limit to number of objects in options array_
 selectBox {
     label:
         type: string / required
+    required:
+        type: boolean
     id:
         type: string / required
     options: [

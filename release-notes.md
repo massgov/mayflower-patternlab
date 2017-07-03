@@ -1,5 +1,70 @@
 # Mayflower Release Notes
 
+## 5.4.0
+We've introduced two new Law pages, Policy Advisory and Executive Order in this release along with several fixes.
+
+New Pages:
+DP-3825 - [MF] Policy Advisory
+DP-3829 - [MF] Executive Order
+
+Fixes:
+DP-3209 - [mf] - Location page icons should be right aligned
+DP-3227 - A11y Link Text for Directions can be more descriptive
+DP-3256 - A11y Alert Link
+DP-3495 - Add Medium to list of acceptable Social Media link URLs
+DP-3822 - [VD/MF] Different stylings for mobile sticky navs
+DP-3831 - [MF] News Item with Featured Image
+DP-3890 - [MF] Multiple Sort by options
+DP-3891 - [MF] Update detail page for service, how-to, location to remove key actions, add video and map
+DP-3895 - [mf] Homepage - underline not centered
+DP-4026 - There is a one pixel wide issue with the thumbnail images on guide cards
+
+
+
+## 5.3.0
+We've added some functionality to the location listings organism ([@organisms/by-author/location-listing](http://mayflower.digital.mass.gov/?p=organisms-location-listing))!  You can sort, filter, and paginate listing results! 
+
+Note: The location listing organism is made up of lots of other patterns:
+  - [@molecules/location-filters](http://mayflower.digital.mass.gov/?p=molecules-location-filters)
+  - [@molecules/results-heading](http://mayflower.digital.mass.gov/?p=molecules-results-heading)
+  - [@molecules/google-map](http://mayflower.digital.mass.gov/?p=molecules-google-map)
+  - [@molecules/pagination](http://mayflower.digital.mass.gov/?p=molecules-pagination)
+  - [@organisms/by-author/image-promos](http://mayflower.digital.mass.gov/?p=organisms-image-promos)
+  
+  And of course, you can still use those patterns in other components!
+
+## 5.2.0
+
+In this short-but-sweet minor release we add a new pilot logo to the header, create a new fixed call to action that floats left/right down at the bottom of the page (see: `@molecules/floating-action.md`), and fix a pesky bug that was centering many headings that should not have been centered.
+
+## 5.1.0
+
+To kick June off, there's a new Mayflower minor release. Announcements Listings and Events are the headliners, but lots of improvements make an appearance at the concert too.
+
+For folks that want to see all the notes:
+https://jira.state.ma.us/projects/DP/versions/14638
+
+### NEW FEATURES
+
+- Announcing all the things! Announcement Listing pages cover everything from press releases to speeches. Additionally, content on this page can be filtered by type, agency, topic, and other classifications.
+- Event listings and event details for single instance events and those that recur.
+- Directions link now appears after clicking on map pins
+- All available activities at a location are now listed on Location pages
+- Video description/transcript page has been added
+- "Your Government" version of Topic pages now exist
+
+### IMPROVEMENTS
+
+- The main menu (at the top of all pages) is much more accessible with improved ordering if you're tabbing between links.
+- Consistent spacing between patterns has been added.
+- Southbridge location page had its banner coursel replaced with a banner image and Google map.
+- Coloring and spacing fixes on the homepage.
+- Wording and width adjusted on guides.
+- Adjustments to the Location page, with some items removed (quick actions, breadcrumbs, wait times) and added (key actions, contact list).
+- Key actions added to Location Park page.
+- Details content type is more adaptive to different screen sizes.
+- Small label/text changes and other tiny adjustments on Org, G2G, Section Landing, Topic Transition, Helpful Links, Service, Location, and Event Listin pages.
+
 ## 5.0.0
 
 Sometimes you have to break a few eggs to make an Omlette.  For our next major release (5.0), we're introducing a new Announcement page type and had to change some existing code in progress.
@@ -68,18 +133,18 @@ As part of this release we fixed a few issues.
 ### SUMMARY
 If you'd like to read about these changes in JIRA:
 
-* [DP-2042](https://jira.state.ma.us/browse/DP-2042) - [Pattern Lab] Location Listings 
-* [DP-2078](https://jira.state.ma.us/browse/DP-2078) - [dev] Update Interstitial Page Code 
+* [DP-2042](https://jira.state.ma.us/browse/DP-2042) - [Pattern Lab] Location Listings
+* [DP-2078](https://jira.state.ma.us/browse/DP-2078) - [dev] Update Interstitial Page Code
 * [DP-2400](https://jira.state.ma.us/browse/DP-2400) - [a11y] Add more context to the linked text "Log in to..."
 * [DP-2693](https://jira.state.ma.us/browse/DP-2693) - [dev] Update template to remove arrow in Activities
-* [DP-2734](https://jira.state.ma.us/browse/DP-2734) - [Pattern Lab] Regulations 
+* [DP-2734](https://jira.state.ma.us/browse/DP-2734) - [Pattern Lab] Regulations
 * [DP-2853](https://jira.state.ma.us/browse/DP-2853) - [dev] Contact section appears even when there is no additional contact added.
-* [DP-2963](https://jira.state.ma.us/browse/DP-2963) - [Pattern Lab] Update color variable names 
+* [DP-2963](https://jira.state.ma.us/browse/DP-2963) - [Pattern Lab] Update color variable names
 * [DP-3094](https://jira.state.ma.us/browse/DP-3094) - [mf] Update "Service Detail" page to match inputs on build specs
 * [DP-3149](https://jira.state.ma.us/browse/DP-3149) - [mf] - Ordered Steps - remove number if only one step
 * [DP-3151](https://jira.state.ma.us/browse/DP-3151) - [mf] - Rich Text - nested ordered list
 * [DP-3152](https://jira.state.ma.us/browse/DP-3152) - [mf] - Image Promo - optional description
-* [DP-3155](https://jira.state.ma.us/browse/DP-3155) - [mf] - Location Filters - Refactor layout to accommodate more tags 
+* [DP-3155](https://jira.state.ma.us/browse/DP-3155) - [mf] - Location Filters - Refactor layout to accommodate more tags
 
 ### NEW FEATURES
 
@@ -101,7 +166,7 @@ As part of this release we fixed a few issues.
 2. The Image Promo pattern was updated to check to check if the read more link has a "text" value before adding that link to prevent an empty link from being added.
 3. When an Ordered Step pattern was added to a page with only one step, the number icon was still being shown and the html was being read as a list of one.  This pattern now checks the length of steps to render and only renders it as a numbered list if there are multiple steps.  Otherwise it just outputs a single Action Step item.
 4. When a nested ordered list was added to a Rich Text pattern, the nested list items were also being rendered as numbers.  We've updated this to render letters instead.
-5. The utility nav was having issue with accessibilty trying to understand the "login to..." link found in the utility nav.  A hidden element has been added to the link to provide more information that screen readers can see. 
+5. The utility nav was having issue with accessibilty trying to understand the "login to..." link found in the utility nav.  A hidden element has been added to the link to provide more information that screen readers can see.
 
 ## 4.0.0
 
@@ -167,13 +232,13 @@ If you'd like to read about these changes in JIRA:
 
 * [DP-2114](https://jira.state.ma.us/browse/DP-2114) - [pattern lab] Service Page
 * [DP-2181](https://jira.state.ma.us/browse/DP-2181) - Update Guide Page in Mayflower
-* [DP-2206](https://jira.state.ma.us/browse/DP-2206) - Implement org page level structured data json+ld object in Mayflower 
+* [DP-2206](https://jira.state.ma.us/browse/DP-2206) - Implement org page level structured data json+ld object in Mayflower
 * [DP-2569](https://jira.state.ma.us/browse/DP-2569) - Change header in Service page
 * [DP-2471](https://jira.state.ma.us/browse/DP-2471) - Mayflower: guide section with all possible elements
 
 ### NEW FEATURES
 - Ahem... introducing the latest page type to our family: Services! (Pages > Service Unemployment Benefits).  This is a great page type to use to help surface tons of information related to services, including: branding information, instructional videos, links to how-to's, location information listings, etc.
-- We're making Org Landing Pages (Pages > Org Landing Page) more machine and search friendly by adding a Government Organization structured data pattern (Meta > Schema > Government Organization) to the bottom of the page markup. 
+- We're making Org Landing Pages (Pages > Org Landing Page) more machine and search friendly by adding a Government Organization structured data pattern (Meta > Schema > Government Organization) to the bottom of the page markup.
 - For Mayflower implementers, we've created an example Guide page which shows all of the possible elements that can go into a Guide section (Pages > Guide Section Example)  
 
 ### IMPROVEMENTS

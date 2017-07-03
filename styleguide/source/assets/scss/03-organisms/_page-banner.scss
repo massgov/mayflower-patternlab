@@ -46,6 +46,7 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__container {
+    @include clearfix;
     height: auto;
     min-height: 450px;
   }

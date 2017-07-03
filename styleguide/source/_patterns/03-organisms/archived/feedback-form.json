@@ -11,7 +11,24 @@
       "required": true,
       "id": "name-input",
       "name": "name",
+      "type": "text",
       "placeholder": ""
+    },
+
+    "email": {
+      "labelText": "Your Email Address*",
+      "required": true,
+      "id": "email-input",
+      "name": "email-input",
+      "type": "email",
+      "placeholder": ""
+    },
+
+    "textarea":  {
+      "labelText": "Feedback*",
+      "required": true,
+      "id": "textarea",
+      "name": "textarea"
     },
 
     "radioButtons":[{

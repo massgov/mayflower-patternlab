@@ -5,6 +5,13 @@
     border-top-style: solid;
     margin-top: 30px;
     padding-top: 30px;
+
+    @media ($bp-large-min){
+      .sidebar & {
+        margin-top: 20px;
+        padding-top: 20px;
+      }
+    }
   }
 
   &--accordion {

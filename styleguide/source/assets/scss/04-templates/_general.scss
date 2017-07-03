@@ -21,12 +21,10 @@
   position: relative;
 
   .main-content--two & {
-    padding-bottom: 45px;
 
     @media ($bp-large-min){
       float:left;
       padding-right: $column;
-      padding-bottom: 0;
       width: calc(100% - #{$layout-sidebar-width});
     }
 
@@ -66,16 +64,27 @@
   }
 
   & > * {
-    @include ma-component-spacing;
+    margin-top: 40px;
+
+    @media ($bp-small-min) {
+      margin-top: 65px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
-.sidebar--colored {
-  
-  .ma__sidebar-heading,
-  .ma__comp-heading {
-    @include ma-heading-colored($direction: left);
-    border: none;
+.page-content + .sidebar {
+  padding-top: 40px;
+
+  @media ($bp-small-min) {
+    padding-top: 65px;
+  }
+
+  @media ($bp-large-min){
+    padding-top: 0;
   }
 }
 

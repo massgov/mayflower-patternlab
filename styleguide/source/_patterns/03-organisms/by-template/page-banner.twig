@@ -1,13 +1,6 @@
-{% if pageBanner.size %}
-  {% set sizeClass = "ma__page-banner--" ~ pageBanner.size %}
-{% endif %}
+{% set sizeClass = pageBanner.size ? "ma__page-banner--" ~ pageBanner.size : '' %}
 
-{% if pageBanner.color %}
-  {% set colorClass = "ma__page-banner--" ~ pageBanner.color %}
-{% endif %}
-
-{# adding ma__page-banner--child shows a different version #}
-
+{% set colorClass = pageBanner.color ? "ma__page-banner--" ~ pageBanner.color : '' %}
 
 <section class="ma__page-banner {{ sizeClass }} {{ colorClass }}">
   {% if pageBanner.size == "columns" %}
@@ -51,13 +44,13 @@
           <span> {{ pageBanner.titleSubText }}</span>
         {% endif %}
       </h1>
-      {% if pageBanner.description and ( pageBanner.size and not pageBanner.size == "columns" ) %}
+      {% if pageBanner.description and not (pageBanner.size == "columns") %}
         <p class="ma__page-banner__description">
           {{ pageBanner.description }}
         </p>
       {% endif %}
     </div>
-    {% if pageBanner.description and ( pageBanner.size and pageBanner.size == "columns" ) %}
+    {% if pageBanner.description and pageBanner.size == "columns" %}
       <p class="ma__page-banner__description">
         {{ pageBanner.description }}
       </p>

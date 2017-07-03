@@ -18,6 +18,12 @@
     }
   }
 
+  tbody {
+    @media ($bp-small-max) {
+      display: block;
+    }
+  }
+
   tr {
     @media ($bp-small-max) {
       display: block;
@@ -31,11 +37,13 @@
 
   td, th {
     font-size: 16px;
-    line-height: 1.5rem;
+    line-height: 1.5;
     padding: 10px 0;
+    vertical-align: top;
 
     @media ($bp-small-max) {
       display: block;
+      line-height: 1.25;
     }
   }
 

@@ -1,0 +1,30 @@
+.ma__press {
+
+  &__page-content {
+    
+    .ma__contact-list:first-child,
+    .ma__contact-list:nth-child(2) {
+
+      @media ($bp-large-min) {
+        display: none;
+      }
+    }
+  }
+
+  &__location-label {
+    float: left;
+    line-height: 1em;
+    margin-bottom: 0;
+    padding-top: .25em;
+    text-transform: uppercase;
+  }
+
+  &__sidebar {
+    .ma__contact-list {
+
+      @media ($bp-large-max) {
+        display: none;
+      }
+    }
+  }
+}

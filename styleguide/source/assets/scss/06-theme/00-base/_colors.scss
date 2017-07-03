@@ -5,7 +5,7 @@ $c-theme-gray: #535353;
 $c-theme-yellow: #f6c51b;
 
 //other global colors
-$c-red: red;
+$c-red: #cd0d0d;
 $c-white: white;
 $c-black: #141414;
 $c-gray-f2f2f2: #f2f2f2;
@@ -35,6 +35,7 @@ $c-bg-section: $c-gray-f2f2f2;
 
 $c-bd-divider: $c-gray-dcdcdc;
 $c-bd-divider-dark: $c-theme-gray;
+$c-bd-error: $c-red;
 $c-bd-input: $c-gray-dcdcdc;
 $c-bd-input-dark: $c-gray-757575;
 

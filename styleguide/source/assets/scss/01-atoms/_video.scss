@@ -12,6 +12,7 @@
   }
 
   .main-content--full .page-content > & {
+    // @include ma-container();  // can't use this due to bg color apply to padding
     margin-left: 20px;
     margin-right: 20px;
     max-width: $max-width;
