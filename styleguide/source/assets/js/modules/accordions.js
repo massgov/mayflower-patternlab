@@ -4,13 +4,13 @@ export default function (window,document,$,undefined) {
 
   $('.js-accordion').each(function(index){
     let $el = $(this),
-        id = $el.attr('id') || 'accordion' + (index + 1),
         $link = $el.find('.js-accordion-link'),
         $content = $el.find('.js-accordion-content'),
+        id = $content.attr('id') || 'accordion' + (index + 1),
         active = checkActive($el),
         open = $el.hasClass('is-open');
 
-    $el.attr('id', id);
+    $content.attr('id', id);
     $link.attr('aria-expanded',open).attr('aria-controls', id);
 
     if(open) {
