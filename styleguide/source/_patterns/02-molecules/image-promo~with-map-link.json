@@ -13,7 +13,7 @@
       "icon": "@atoms/05-icons/svg-open-now.twig"
     }],
     "image": {
-      "src":"/assets/images/placeholder/190x107.png",
+      "src":"../../assets/images/placeholder/190x107.png",
       "alt": "placeholder image",
       "href": "#"
     },

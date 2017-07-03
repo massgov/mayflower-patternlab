@@ -11,8 +11,8 @@
   },
 
   "pageBanner": {
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "bgWide":"../../assets/images/placeholder/1600x400.png",
+    "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "size": "large",
     "icon": null,
     "title": "Executive Office of Health and Human Services",
@@ -68,7 +68,7 @@
       "data": {
         "image": {
           "alt": "eohhs logo",
-          "src": "/assets/images/placeholder/230x130.png",
+          "src": "../../assets/images/placeholder/230x130.png",
           "height": "130",
           "width": "230"
         }
@@ -155,8 +155,8 @@
       "data": {
         "actionFinder": {
           "id": "GUID831741781374893",
-          "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
-          "bgNarrow":"/assets/images/placeholder/800x800.png",
+          "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+          "bgNarrow":"../../assets/images/placeholder/800x800.png",
           "title": "What Would You Like to Do?",
           "featuredHeading":"Top Services:",
           "generalHeading":"Other Services:",
