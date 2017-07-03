@@ -40,12 +40,12 @@ See [/docs/deploy.md](https://github.com/massgov/mayflower/blob/master/docs/depl
 ### Mayflower Artifacts
 Tagged releases are automatically (via CircleCI) deployed to the [Mayflower Artifacts](https://github.com/palantirnet/mayflower-artifacts) repo for consumption by the Palantir team. Tags should follow [semantic versioning](https://github.com/sindresorhus/semver-regex) conventions.
 
-In order to be deployed, tags must follow the format: `#.#.#-optionalwords-optionalwords` (regex: `/\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/`).  
+In order to be deployed, tags must follow the format: `#.#.#-optionalword-optionalword`.  
 
 If you do not see your tag being deployed:
-1. Make sure your tag name is unique
-1. Test your tag name [here](https://regex101.com/r/UJGppF/2)
-1. Check circleci builds for mayflower project to see if there are any errors
+1. Make sure your tag name is unique.
+1. Test your tag name with this [regex test](https://regex101.com/r/UJGppF/2).
+1. Check CircleCI builds for Mayflower project to see if there are any errors.
 
 ## Built With
 
