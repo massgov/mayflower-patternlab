@@ -76,15 +76,21 @@ Now you can spin up your new branch:
 git checkout -b my-issue-number-feature-name
 ```
 
+If you are working on a ticket DP-1234-create-backto-link, then you would type:
+
+```
+git checkout -b DP-1234-create-backto-link
+```
+
 ## Working with Pattern Lab
 
-Serve Mayflower and watch it reload as you make your changes:
+Serve Mayflower locally and as you save your changes, it will update automatically:
 
 1. Run `gulp`
 1. Browse to [http://localhost:3000/](http://localhost:3000/) (or port shown in gulp output if you've configured it differently)
 1. Browser will automatically refresh as you make changes
 
-Sections about how + what to contribute coming soon...
+*Sections about how + what to contribute coming soon...*
 
 **Note:** It is helpful to have 2 terminal tabs open when working on this project: one to manage `gulp` tasks and the other to manage `git`.  From the tab running `gulp`, type `CTRL` + `C` to kill that task when you're done.
 
@@ -100,7 +106,7 @@ For more information, read the [Pattern Lab documentation](http://patternlab.io/
 
 ## Committing your work
 
-Make your changes and commit them.  Ensure that you only fix the thing you're working on.  Make sure that you commit in logical blocks. Each commit message should be sane. Read Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+Make your changes and commit them.  Ensure that you only commit the thing you're working on.  Make sure that you commit in logical blocks. Each commit message should be sane. Read Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
 ```
 git add . 
@@ -108,23 +114,28 @@ git commit -m "Helpful commit message"
 ```
 
 ## Pushing your branch
-In order to create a Pull Request (PR) where maintainers can review your work, you first need to push your branch to the origin remote and then press some buttons on GitHub.
+In order to create a Pull Request (PR) where maintainers can review your work, you first need to push your branch to the origin remote (your Mayflower fork) and then press some buttons on GitHub.
 
 To push a new branch:
 
 ```
-git push -u origin my-ticket/issue-number-feature-name
+git push -u origin DP-1234-create-backto-link
 ```
 
-This will create the branch on your GitHub project. The `-u` flag links this branch with the remote one, so that in the future, you can simply type `git push origin`.
+This will create the branch on your Mayflower fork. The `-u` flag links this branch with the remote one, so that in the future, you can simply type `git push origin`.
 
 ## Creating a Pull Request
 Pull requests (PRs) let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.  *Learn more about [Pull Requests on Github](https://help.github.com/articles/about-pull-requests/)*.
 
-1. Swap back to the browser and navigate to your fork of the project and you'll see that your new branch is listed at the top with a handy "Compare & pull request" button.
+1. Swap back to the browser and navigate to your Mayflower fork and you'll see that your new branch is listed at the top with a handy "Compare & pull request" button.
 1. Go ahead and press that button!
-1. On the next page, ensure that the "base fork" points to the correct repository and branch.  For new features and non-emergency bugfixes related to Mayflower, these should be "base fork": `massgov/mayflower` and "base" (branch): `dev`.  *Learn more about [Creating Pull Requests across forks on Github](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)*.
-1. Then ensure that you provide a good, succinct title for your pull request and explain why you have created it in the description box. Add any relevant issue numbers if you have them.
+1. On the next page, ensure that the "base fork" points to `massgov/mayflower` and that "base" (branch) points to `dev`.  *Learn more about [Creating Pull Requests across forks on Github](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)*.
+1. For your PR title, use: `TICKET Description of ticket`, i.e. `DP-1234 Add back-to button on Announcement template`.  Follow the PR template for the rest of the information.  Keep in mind:
+    - Anyone could be reading this Pull Request, so the content and tone may inform people other than those taking part, now or later.
+    - Be explicit about what feedback you want, if any: a quick pair of eyes on the code, discussion on the technical approach, critique on design, a review of copy.
+    - Be explicit about when you want feedback, if the Pull Request is work in progress, say so. A prefix of “[WIP]” in the title is a simple, common pattern to indicate that state.
+    - @mention individuals that you specifically want to involve in the discussion, and mention why. (“/cc @jesconstantine for clarification on this logic”)
+    - @mention teams that you want to involve in the discussion, and mention why. (“/cc @github/security, any concerns with this approach?”)
 
 ## Review by Maintainers
 
