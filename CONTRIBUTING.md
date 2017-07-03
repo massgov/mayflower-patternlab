@@ -1,6 +1,7 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
+Thanks for contributing to Mayflower!  Follow the steps on this page to get up an running.  
+
 
 **On this page:**
 1. [Prerequisites](#prerequisites)
@@ -14,7 +15,7 @@ When contributing to this repository, please first discuss the change you wish t
 1. [Pushing your branch](#pushing-your-branch)
 1. [Creating a Pull Request](#creating-a-pull-request)
 1. [Review by Maintainers](#review-by-maintainers)
-1. [Acknowledgements](#acknowldegements)
+1. [Acknowledgements](#acknowledgements)
 
 ## Prerequisites
    
@@ -130,7 +131,7 @@ Pull requests (PRs) let you tell others about changes you've pushed to a reposit
 1. Swap back to the browser and navigate to your Mayflower fork and you'll see that your new branch is listed at the top with a handy "Compare & pull request" button.
 1. Go ahead and press that button!
 1. On the next page, ensure that the "base fork" points to `massgov/mayflower` and that "base" (branch) points to `dev`.  *Learn more about [Creating Pull Requests across forks on Github](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)*.
-1. For your PR title, use: `TICKET Description of ticket`, i.e. `DP-1234 Add back-to button on Announcement template`.  Follow the PR template for the rest of the information.  Keep in mind:
+1. For your PR title, please use: `TICKET Description of ticket`, i.e. `DP-1234 Add back-to button on Announcement template`.  Follow the PR template for the rest of the information.  Keep in mind:
     - Anyone could be reading this Pull Request, so the content and tone may inform people other than those taking part, now or later.
     - Be explicit about what feedback you want, if any: a quick pair of eyes on the code, discussion on the technical approach, critique on design, a review of copy.
     - Be explicit about when you want feedback, if the Pull Request is work in progress, say so. A prefix of “[WIP]” in the title is a simple, common pattern to indicate that state.
@@ -139,7 +140,7 @@ Pull requests (PRs) let you tell others about changes you've pushed to a reposit
 
 ## Review by Maintainers
 
-For your work to be integrated into the project, the maintainers will review your work and either request changes or merge it.
+Once you've opened your PR, Mayflower maintainers will review and either request changes or merge it.  Thanks again!
 
 ## Acknowledgements
 
