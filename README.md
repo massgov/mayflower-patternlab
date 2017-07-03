@@ -49,7 +49,7 @@ If you do not see your tag being deployed:
 
 ## Built With
 
-* [Pattern Lab 2 (PHP)](http://patternlab.io/docs/index.html) - The framework used
+* [Pattern Lab 2 (PHP)](http://patternlab.io/docs/index.html) - The pattern framework / static site generator
 * [Twig](https://twig.sensiolabs.org/) - The templating language
 
 ## Contribute
