@@ -13,6 +13,7 @@ Thanks for contributing to Mayflower!  Follow the steps on this page to get up a
 1. [Working with Pattern Lab](#working-with-pattern-lab)
 1. [Committing your work](#committing-your-work)
 1. [Pushing your branch](#pushing-your-branch)
+1. [Deploying your work](#deploying-your-work)
 1. [Creating a Pull Request](#creating-a-pull-request)
 1. [Review by Maintainers](#review-by-maintainers)
 1. [Acknowledgements](#acknowledgements)
@@ -124,6 +125,10 @@ git push -u origin DP-1234-create-backto-link
 ```
 
 This will create the branch on your Mayflower fork. The `-u` flag links this branch with the remote one, so that in the future, you can simply type `git push origin`.
+
+## Deploying your work
+
+Once your work is complete, deploy your branch to your Mayflower fork's Github Pages, so that its functionality can be tested and reviewed by someone who doesn't have Mayflower running locally.  See [our deployment docs](https://github.com/massgov/mayflower/blob/master/docs/deploy.md#developer-deployment) for step by step instructions.
 
 ## Creating a Pull Request
 Pull requests (PRs) let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.  *Learn more about [Pull Requests on Github](https://help.github.com/articles/about-pull-requests/)*.
