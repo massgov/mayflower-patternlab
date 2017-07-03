@@ -5,6 +5,7 @@ public/*
 !public/styleguide
 public/styleguide/html/styleguide.html
 public/styleguide/data/patternlab-data.js
+source/_data/url.json
 !public/index.html
 
 /deploy
