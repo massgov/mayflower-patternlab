@@ -1,7 +1,7 @@
 <span class="ma__decorative-link">
   <a 
     href="{{decorativeLink.href}}" 
-    class="js-clickable-link"
+    class="js-clickable-link {{ decorativeLink.class }}"
     {% if decorativeLink.property %} 
       property="{{decorativeLink.property}}"
     {% endif %}
