@@ -9,7 +9,7 @@
       </div>
     {% endif %}
     {% set headingLevel = sectionLinks.subTitle ? 'h3' : 'h2' %}
-    <{{ headingLevel }} class="ma__section-links__title" id="{{ titleId }}">
+      <{{ headingLevel }} class="ma__section-links__title" id="{{ titleId }}">
     {% set decorativeLink = sectionLinks.title|merge({ 'class' : 'js-accordion-link'}) %}
       {% include "@atoms/decorative-link.twig" %}
     </{{ headingLevel }}>
