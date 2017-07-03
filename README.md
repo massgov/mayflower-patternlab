@@ -27,7 +27,8 @@ Follow these steps to get up and running to *view* or *test* Mayflower.  Develop
 1. Install npm dependencies `npm install`
 1. Run `gulp`
 1. Browse to [http://localhost:3000/](http://localhost:3000/) (or port shown in gulp output if you've configured it differently)
-1. From your active terminal session, type `CTRL` + `C` to kill the `gulp` task execution when you're done.
+1. Take a look through Mayflower.  You can use the menu to look at whole page layouts, templates, components (organisms and molecules), and child elements (molecules and atoms). 
+1. When you're done looking, type `CTRL` + `C`  execution from your active terminal session to kill the `gulp` task.  You can always run `gulp` again from the `mayflower/styleguide` directory to get it back up and running.
 
 ## Deployment
 
