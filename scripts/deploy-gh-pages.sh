@@ -120,10 +120,12 @@ fi
 # Confirm a deploy to prod if "massgov/mayflower" provided as target.
 if [ ${targetEnv} = "massgov/mayflower" ];
 then
-    read -p "You've indicated a deploy to production, are you sure? [y/n] " -n 1 -r
+    read -p "You've indicated a deploy to production ([-t] massgov/mayflower), are you sure? [y/n] " -n 1 -r
     echo    # move to a new line
     if [[ ! $REPLY =~ ^[Yy]$ ]];
     then
+        line="Aborting deploy.  Execute the script again with a different value for [-t]."
+        log "error" "$line";
         exit 1;
     fi
 fi
