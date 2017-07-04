@@ -16,7 +16,6 @@ Thanks for contributing to Mayflower!  Follow the steps on this page to get up a
 1. [Deploying your work](#deploying-your-work)
 1. [Creating a Pull Request](#creating-a-pull-request)
 1. [Review by Maintainers](#review-by-maintainers)
-1. [Acknowledgements](#acknowledgements)
 
 ## Prerequisites
    
