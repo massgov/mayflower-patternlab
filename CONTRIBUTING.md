@@ -133,7 +133,7 @@ Once your work is complete, deploy your branch to your Mayflower fork's Github P
 ## Creating a Pull Request
 Pull requests (PRs) let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.  *Learn more about [Pull Requests on Github](https://help.github.com/articles/about-pull-requests/)*.
 
-1. Swap back to the browser and navigate to your Mayflower fork and you'll see that your new branch is listed at the top with a handy "Compare & pull request" button.
+1. Swap back to the browser and navigate to your Mayflower fork and (since you've recently pushed your branch up) you'll see that your new branch is listed at the top with a handy green "Compare & pull request" button.  *If you don't see that button, there will always be a gray "New Pull Request" button next to the branch drop down on the "Code" tab.*
 1. Go ahead and press that button!
 1. On the next page, ensure that the "base fork" points to `massgov/mayflower` and that "base" (branch) points to `dev`.  *Learn more about [Creating Pull Requests across forks on Github](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)*.
 1. For your PR title, please use: `TICKET Description of ticket`, i.e. `DP-1234 Add back-to button on Announcement template`.  Follow the PR template for the rest of the information.  Keep in mind:
