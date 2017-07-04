@@ -19,7 +19,7 @@ In order to run Mayflower locally, you need to have some things installed and se
     - Run `npm install -g gulp-cli` from your command line
 
 ### Installing
-Follow these steps to get up and running to *view* or *test* Mayflower.  Developers should see our [Contribute](#contribute) section for directions on how to set up your repo for development and contribution purposes.
+Follow these steps to get up and running to *browse* or *test* Mayflower.  Developers should see our [Contribute](#contribute) section for directions on how to set up your repo for development and contribution purposes.
 
 1. Clone this repo `git clone git@github.com:massgov/mayflower.git`
 1. Move into the styleguide directory `cd mayflower/styleguide`
@@ -60,7 +60,7 @@ Please read [CONTRIBUTING.md](https://github.com/massgov/mayflower/blob/master/C
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/massgov/mayflower/tags).
 
-What SemVer means for Mayflower section coming soon...
+**What SemVer means for Mayflower section coming soon...**
 
 ## License
 
