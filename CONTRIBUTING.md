@@ -92,21 +92,19 @@ Serve Mayflower locally and as you save your changes, it will update automatical
    - You can emulate different device sizes by using the size buttons at the top right of the menu bar (S M L FULL RANDOM DISCO).
    - You can learn about patterns by clicking the top right COG icon, then selecting "Show Pattern Info" from the drop down.
 1. All work is done in the `/styleguide/source` directory.
-    - Most patterns will have a `.twig` markup file (learn about [Twig](https://twig.sensiolabs.org/)), `.json` default [data file](http://patternlab.io/docs/data-pattern-specific.html), and `.md` [documentation file](http://patternlab.io/docs/pattern-documenting.html) in the `/styleguide/source/_patterns` directory.
+    - Most patterns will have a `.twig` [markup file](https://twig.sensiolabs.org/), `.json` default [data file](http://patternlab.io/docs/data-pattern-specific.html), and `.md` [documentation file](http://patternlab.io/docs/pattern-documenting.html) in the `/styleguide/source/_patterns` directory.
     - If a pattern has styles associated with it, the corresponding `.scss` files can be found in the `/styleguide/source/assets/scss` directory.  We use [SMACSS](https://smacss.com/book/categorizing) to organize and [BEM](http://getbem.com/introduction/) to structure our css.
      - If a pattern has js functionality associated with it, the corresponding [ES6 module](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) `.js` file can be found in the `/styleguide/source/assets/js/modules` directory.
 1. These assets will automatically recompile and the browser will refresh as you save changes.
 
-**Note:** It is helpful to have 2 terminal tabs open when working on this project: one to manage `gulp` tasks and the other to manage `git`.  From the tab running `gulp`, type `CTRL` + `C` to kill that task when you're done.
-
 ### Other notes
 
+* It is helpful to have 2 terminal tabs open when working on this project: one to manage `gulp` tasks and the other to manage `git`.  From the tab running `gulp`, type `CTRL` + `C` to kill that task when you're done.
 * `Gulp` will build the Pattern Lab static assets and generate a static site in the `/styleguide/public` directory.  See `/styleguide/tools/gulp/gulp-readme.md`.
 * Pattern Lab specific files are in the `/styleguide/public/styleguide` directory (the `styleguide.html` file is automatically generated when twig templates are updated).
+* For more information, read the [Pattern Lab documentation](http://patternlab.io/docs/index.html).
 
-**For more information, read the [Pattern Lab documentation](http://patternlab.io/docs/index.html).**
-
-*Sections about how + what to contribute coming soon...*
+**Sections about how + what to contribute coming soon...**
 
 ## Committing your work
 
