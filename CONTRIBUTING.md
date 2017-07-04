@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to Mayflower!  Follow the steps on this page to get up an running.  
+Thanks for contributing to Mayflower!  Follow the steps on this page to get up and running.  
 
 
 **On this page:**
@@ -34,16 +34,13 @@ A fork is a *copy* of a repository. Forking a repository allows you to freely ex
 Right now, you have a fork of the Mayflower repository, but you don't have the files in that repository on your computer. Let's create a clone of your fork locally on your computer.
 
 1. On GitHub, navigate to your fork of the Mayflower repository at `https://github.com/<your-github-username>/mayflower`.
-1. Click the green Clone or download button in the top right corner.
-1. In the Clone with SSH dialog, click the clipboard icon to copy the clone URL for the repository.
-1. From your terminal, type `git clone `, and then paste the URL you copied. It will look like this, with your GitHub username instead of `<your-github-username>`: `git clone git@github.com:<your-github-username>/mayflower.git`.
-1. Press Enter. Your local clone will be created.
+1. Click the green "Clone or download" button in the top right corner.
+1. In the "Clone with SSH" dialog, click the clipboard icon to copy the clone URL for the repository.
+1. From your terminal, type `git clone `, and then paste the URL you copied. It will look like this, with your GitHub username instead of `<your-github-username>`: `git clone git@github.com:<your-github-username>/mayflower.git`.  Press Enter to create your clone.
 
 You now have a local representation of *your* Mayflower fork.
 
 ## Installing project dependencies
-
-Follow these steps if this is your first time working with the Mayflower project.
 
 1. Move into the styleguide directory `cd mayflower/styleguide`
 1. Generate pattern lab default files `php core/console --generate`
@@ -78,7 +75,7 @@ Now you can spin up your new branch:
 git checkout -b my-issue-number-feature-name
 ```
 
-If you are working on a ticket DP-1234-create-backto-link, then you would type:
+If you were working on ticket DP-1234-create-backto-link, then you would type:
 
 ```
 git checkout -b DP-1234-create-backto-link
@@ -92,8 +89,6 @@ Serve Mayflower locally and as you save your changes, it will update automatical
 1. Browse to [http://localhost:3000/](http://localhost:3000/) (or port shown in gulp output if you've configured it differently)
 1. Browser will automatically refresh as you make changes
 
-*Sections about how + what to contribute coming soon...*
-
 **Note:** It is helpful to have 2 terminal tabs open when working on this project: one to manage `gulp` tasks and the other to manage `git`.  From the tab running `gulp`, type `CTRL` + `C` to kill that task when you're done.
 
 ### Pattern Lab notes
@@ -106,14 +101,16 @@ Serve Mayflower locally and as you save your changes, it will update automatical
 
 For more information, read the [Pattern Lab documentation](http://patternlab.io/docs/index.html).
 
+**Sections about how + what to contribute coming soon...**
+
 ## Committing your work
 
-Make your changes and commit them.  Ensure that you only commit the thing you're working on.  Make sure that you commit in logical blocks. Each commit message should be sane. Read Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+Make your changes and commit them.  Ensure that you only commit the thing you're working on.  Make sure that you commit in logical blocks.
+ 
+Chris Beam explains  [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/):
+>  ... a well-crafted Git commit message is the best way to communicate context about a change to fellow developers (and indeed to their future selves). A diff will tell you *what* changed, but only the commit message can properly tell you *why*.
 
-```
-git add . 
-git commit -m "Helpful commit message"
-```
+We also love the model Git commit message in Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
 ## Pushing your branch
 In order to create a Pull Request (PR) where maintainers can review your work, you first need to push your branch to the origin remote (your Mayflower fork) and then press some buttons on GitHub.
@@ -145,8 +142,12 @@ Pull requests (PRs) let you tell others about changes you've pushed to a reposit
 
 ## Review by Maintainers
 
-Once you've opened your PR, Mayflower maintainers will review and either request changes or merge it.  Thanks again!
+Once you've opened your PR, Mayflower maintainers will review and either request changes or merge it.  
 
-## Acknowledgements
+Thanks!
 
-Thanks to Rob Allen's [The beginner's guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) and Matt Stauffer's [How to contribute to an open-source GitHub project using your own fork](https://mattstauffer.co/blog/how-to-contribute-to-an-open-source-github-project-using-your-own-fork) for providing these helpful instructions on working with github open source projects.
+***
+
+**Acknowledgements**
+
+Thanks to Rob Allen's [The beginner's guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) and Matt Stauffer's [How to contribute to an open-source GitHub project using your own fork](https://mattstauffer.co/blog/how-to-contribute-to-an-open-source-github-project-using-your-own-fork) for providing these helpful instructions on working with Github open source projects which we relied heavily on for this document.
