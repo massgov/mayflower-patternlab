@@ -43,14 +43,8 @@ http://<your-github-username>.github.io/mayflower
 ## Release deployment
 Mayflower release managers with the necessary repo permissions can follow these steps to deploy a release to production.
 
-Release docs coming soon.
+**Release docs coming soon.**
 
 ## Static assets
 
-It is possible to build Mayflower's static assets without serving them.  There are two different gulp tasks, depending on the type of environment for which you are building:
-
-##### Building for a dev environment
-1. Run `gulp build` from your command line
-
-##### Building for a production environment
-1. Run `gulp prod` from your command line
+It is possible to build Mayflower's static assets without serving them.  See the [gulp-readme](https://github.com/massgov/mayflower/blob/master/styleguide/tools/gulp/gulp-readme.md) for more information.
