@@ -42,7 +42,7 @@ input {
   border-color: $c-bd-input;
   color: $c-font-base;
 
-  &.has-error {
+  &.has-error:not(:focus) {
     background-image: url('../images/svg-icons/input-error.svg');
     border-color: $c-bd-error;
   }
