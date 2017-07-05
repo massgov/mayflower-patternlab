@@ -24,8 +24,6 @@ The svg reference could possibly change. 05-icons and 06-icons-location may stil
 decorativeLink {
     href:
         type: string/required
-    class:
-        type: string/optional
     text:
         type: string/required
     info: (description of link for in use in aria-label)
