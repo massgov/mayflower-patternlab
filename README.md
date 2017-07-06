@@ -19,7 +19,7 @@ Please follow the steps in [Contributing docs](https://github.com/massgov/mayflo
 Please see [Deployment docs](https://github.com/massgov/mayflower/blob/master/docs/deploy.md) for steps on [deploying development work to a Mayflower fork's Github Pages](https://github.com/massgov/mayflower/blob/master/docs/deploy.md#developer-deployment) as well as [production release deployment](https://github.com/massgov/mayflower/blob/master/docs/deploy.md#release-deployment).
 
 ## Mayflower Artifacts
-Some Mass Digital Services projects (i.e. [massgov/mass](https://github.com/massgov/mass)) use twig templates for markup in addition to the static css, js, + icon assets from Mayflower.  To establish that dependency, those projects point their dependency manager (i.e. [composer](https://getcomposer.org/doc/00-intro.md)) to the [Mayflower Artifacts](https://github.com/palantirnet/mayflower-artifacts) repository which consists of these assets.
+Some Mass Digital Services projects (i.e. [massgov/mass](https://github.com/massgov/mass)) use twig templates for markup in addition to the static css, js, + icon assets from Mayflower.  To establish that dependency, those projects point their dependency manager (i.e. [composer](https://getcomposer.org/doc/00-intro.md)) to the [Mayflower Artifacts](https://github.com/massgov/mayflower-artifacts) repository which consists of these assets.
 
 Tagged releases from Mayflower are automatically (via CircleCI) deployed to the Mayflower Artifacts repository. Tags should follow [semantic versioning](https://github.com/sindresorhus/semver-regex) conventions and must follow the format: `#.#.#-optionalword-optionalword`.  
 
