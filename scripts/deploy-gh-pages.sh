@@ -200,8 +200,8 @@ then
     log "success" "$line";
     cleanup
     # Success message.
-    if [[ "$buildSrc" == "massgov/mayflower" ]]; then
-        line="Woo-hoo! Deploy complete! \n You should see the release live at http://mayflower.digital.mass.gov ... Time for release notes! ;)"
+    if [[ ${cname} != false ]]; then
+        line="Woo-hoo! Deploy complete! \n You should see the release live at ${cname}!"
     else
         line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://<your-github-username>.github.io/mayflower"
     fi
