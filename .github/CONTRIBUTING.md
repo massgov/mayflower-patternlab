@@ -113,7 +113,7 @@ Chris Beam explains  [How to Write a Git Commit Message](https://chris.beams.io/
 We also love the model Git commit message in Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
 ## Pushing your branch
-In order to create a Pull Request (PR) where maintainers can review your work, you first need to push your branch to the origin remote (your Mayflower fork) and then press some buttons on GitHub.
+In order to create a Pull Request (PR) where maintainers can review your work, you first need to push your branch to the origin remote (your Mayflower fork).
 
 To push a new branch:
 
