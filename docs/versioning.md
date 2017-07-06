@@ -35,7 +35,7 @@ Example:
 
 
 ### Major versions (1.0.0)
-A Major version is done when it was not possible to correct an issue or add a new feature to an existing pattern in a backward compatible manner.  These versions will always denote that you will need to carefully test and upgrade your site to work with the new code.
+A Major version is done when it was not possible to correct an issue or add a new feature to an existing pattern in a backward compatible manner or that a pattern may have been removed or renamed.  These changes will always denote that you will need to carefully test and upgrade your site to work with the new code.
 
 Example:
 
