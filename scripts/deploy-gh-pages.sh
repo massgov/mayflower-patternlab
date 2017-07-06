@@ -10,7 +10,7 @@
 #   -b Build source: the git branch or tag to build from (required)
 #   -t Target: the remote repo whose gh-pages branch is being pushed to (required)
 #
-#   Example: ./scripts/deploy-gh-pages.sh -t jesconstantine/mayflower -b DP-1234-my-branch-name
+#   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name
 #
 # Description:
 # 1. Validate the passed arguments: build source and target repo
