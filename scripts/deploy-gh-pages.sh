@@ -202,7 +202,7 @@ then
     # Success message.
     if [ "${cname}" != false ];
     then
-        line="Woo-hoo! Deploy complete! \n You should see the release live at ${cname}!"
+        line="Woo-hoo! Deploy complete! \n You should see your updates at ${cname}!"
     else
         line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://<your-github-username>.github.io/mayflower"
     fi
