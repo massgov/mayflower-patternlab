@@ -133,7 +133,7 @@ then
     fi
 
     # Make sure cname argument (i.e. mayflower.digital.mass.gov) is passed for production deploys.
-    if [ ${cname} = false ];
+    if [ "${cname}" = false ];
     then
         line="Please include a cname value for production deployments.  Execute the script again with a value for [-cname] i.e. 'mayflower.digital.mass.gov'."
         log "error" "$line";
@@ -182,7 +182,7 @@ git add .
 git commit -m "$MESSAGE"
 
 # Create CNAME if argument passed
- if [ ${cname} != false ];
+ if [ "${cname}" != false ];
     then
         echo "${cname}" >> CNAME
         git add .
@@ -200,7 +200,8 @@ then
     log "success" "$line";
     cleanup
     # Success message.
-    if [[ ${cname} != false ]]; then
+    if [ "${cname}" != false ];
+    then
         line="Woo-hoo! Deploy complete! \n You should see the release live at ${cname}!"
     else
         line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://<your-github-username>.github.io/mayflower"
