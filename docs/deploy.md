@@ -21,7 +21,7 @@ Developers and contributors can follow these steps to deploy your branch to your
 1. Change directory to the root directory of your local repo (likely `mayflower`).
 1. Execute the deploy script by running `./scripts/deploy-gh-pages.sh -b <your-branch-or-tag-name> -t <your-github-username>/mayflower`
     - Where `-b` is the build source (required): your git branch or tag name.
-    - Where `-t` is the target remote repo (required): likely `<your-github-username>/mayflower`.  For example, the fork at [github.com/jesconstantine/mayflower](http://github.com/jesconstantine/mayflower) would use `jesconstantine/mayflower`.
+    - Where `-t` is the target remote repo (required): likely `<your-github-username>/mayflower`.
     - For example, to deploy the branch `DP-1234-my-awesome-thing` to the mayflower forked repo `jesconstantine/mayflower`, use `./scripts/deploy-gh-pages.sh -b DP-1234-my-awesome-thing -t jesconstantine/mayflower`.
  1. If this is your first deployment, follow the steps below to set up your Mayflower fork with Github Pages.
     
