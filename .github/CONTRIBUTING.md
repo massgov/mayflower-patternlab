@@ -33,11 +33,9 @@ A fork is a *copy* of a repository. Forking a repository allows you to freely ex
 Right now, you have a fork of the Mayflower repository, but you don't have the files in that repository on your computer. Let's create a clone of your fork locally on your computer.
 
 1. On GitHub, navigate to your fork of the Mayflower repository at `https://github.com/<your-github-username>/mayflower`.
-1. Click the green "Clone or download" button in the top right corner.
-1. In the "Clone with SSH" dialog, click the clipboard icon to copy the clone URL for the repository.
-1. From your terminal, type `git clone `, and then paste the URL you copied. It will look like this, with your GitHub username instead of `<your-github-username>`: `git clone git@github.com:<your-github-username>/mayflower.git`.  Press Enter to create your clone.
+1. Follow from Step 2 of [Github Help: Cloning a repository](https://help.github.com/articles/cloning-a-repository/).
 
-You now have a local representation of *your* Mayflower fork.
+You now have a local representation of *your* Mayflower!
 
 ## Installing project dependencies
 
@@ -130,17 +128,16 @@ This will create the branch on your Mayflower fork. The `-u` flag links this bra
 Once your work is complete, deploy your branch to your Mayflower fork's Github Pages, so that its functionality can be tested and reviewed by someone who doesn't have Mayflower running locally.  See [our deployment docs](https://github.com/massgov/mayflower/blob/master/docs/deploy.md#developer-deployment) for step by step instructions.
 
 ## Creating a Pull Request
-Pull requests (PRs) let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.  *Learn more about [Pull Requests on Github](https://help.github.com/articles/about-pull-requests/)*.
+Pull requests (PRs) let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.  
 
-1. Swap back to the browser and navigate to your Mayflower fork and (since you've recently pushed your branch up) you'll see that your new branch is listed at the top with a handy green "Compare & pull request" button.  *If you don't see that button, there will always be a gray "New Pull Request" button next to the branch drop down on the "Code" tab.*
-1. Go ahead and press that button!
-1. On the next page, ensure that the "base fork" points to `massgov/mayflower` and that "base" (branch) points to `dev`.  *Learn more about [Creating Pull Requests across forks on Github](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)*.
-1. For your PR title, please use: `TICKET Description of ticket`, i.e. `DP-1234 Add back-to button on Announcement template`.  Follow the PR template for the rest of the information.  Keep in mind:
-    - Anyone could be reading this Pull Request, so the content and tone may inform people other than those taking part, now or later.
-    - Be explicit about what feedback you want, if any: a quick pair of eyes on the code, discussion on the technical approach, critique on design, a review of copy.
-    - Be explicit about when you want feedback, if the Pull Request is work in progress, say so. A prefix of “[WIP]” in the title is a simple, common pattern to indicate that state.
-    - @mention individuals that you specifically want to involve in the discussion, and mention why. (“/cc @jesconstantine for clarification on this logic”)
-    - @mention teams that you want to involve in the discussion, and mention why. (“/cc @github/security, any concerns with this approach?”)
+1. Follow the steps on [Github Help: Creating a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+    - Make sure that the "base fork" points to `massgov/mayflower` and that "base" (branch) points to `dev`.
+    - For your PR title, please use: `TICKET Description of ticket`, i.e. `DP-1234 Add back-to button on Announcement template`.  Follow the PR template for the rest of the information.  Keep in mind:
+        - Anyone could be reading this Pull Request, so the content and tone may inform people other than those taking part, now or later.
+        - Be explicit about what feedback you want, if any: a quick pair of eyes on the code, discussion on the technical approach, critique on design, a review of copy.
+        - Be explicit about when you want feedback, if the Pull Request is work in progress, say so. A prefix of “[WIP]” in the title is a simple, common pattern to indicate that state.
+        - @mention individuals that you specifically want to involve in the discussion, and mention why. (“/cc @jesconstantine for clarification on this logic”)
+        - @mention teams that you want to involve in the discussion, and mention why. (“/cc @github/security, any concerns with this approach?”)
 
 ## Review by Maintainers
 
