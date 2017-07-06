@@ -9,8 +9,9 @@
 # ./scripts/deploy-gh-pages.sh [-b (git-branch-or-tag)] [-t (remote-repo)]
 #   -b Build source: the git branch or tag to build from (required)
 #   -t Target: the remote repo whose gh-pages branch is being pushed to (required)
+#   -cname CNAME record: a custom domain to point to Github Pages (required only when deploying to massgov/mayflower: "mayflower.digital.mass.gov")
 #
-#   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name
+#   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name -cname mayflower.digital.mass.gov
 #
 # Description:
 # 1. Validate the passed arguments: build source and target repo
@@ -60,13 +61,15 @@ function log {
 # Default arguments
 targetEnv=false
 buildSrc=false
+cname=false
 
 # Get passed arguments
-while getopts :b:t: option
+while getopts :b:t:cname: option
 do
     case "${option}" in
         b) buildSrc=${OPTARG};;
         t) targetEnv=${OPTARG};;
+        cname) cname=${OPTARG};;
         : ) line="Missing argument for parameter [-${OPTARG}]";
               log "error" "$line";
               exit 1;;
@@ -128,6 +131,14 @@ then
         log "error" "$line";
         exit 1;
     fi
+
+    # Make sure cname argument (i.e. mayflower.digital.mass.gov) is passed for production deploys.
+    if [ ${cname} = false ];
+    then
+        line="Please include a cname value for production deployments.  Execute the script again with a value for [-cname] i.e. 'mayflower.digital.mass.gov'."
+        log "error" "$line";
+        exit 1;
+    fi
 fi
 
 # Local variables
@@ -170,20 +181,13 @@ git init
 git add .
 git commit -m "$MESSAGE"
 
-# Create staging CNAME record
-if [[ "$targetEnv" == "jesconstantine/mayflower" ]]; then
-    echo "Creating CNAME for 'stage-mayflower.digital.mass.gov'";
-    echo "stage-mayflower.digital.mass.gov" >> CNAME
-    git add .
-    git commit -m "Create CNAME"
-fi
-
-# Create prod CNAME record
-if [[ "$targetEnv" == "massgov/mayflower" ]]; then
-    echo "Creating CNAME for 'mayflower.digital.mass.gov'";
-    echo "mayflower.digital.mass.gov" >> CNAME
-    git add .
-    git commit -m "Create CNAME"
+# Create CNAME if argument passed
+ if [ ${cname} != false ];
+    then
+        echo "${cname}" >> CNAME
+        git add .
+        git commit -m "Create CNAME for '${cname}'"
+        echo "Creating CNAME for '${cname}'";
 fi
 
 echo "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
@@ -199,7 +203,7 @@ then
     if [[ "$buildSrc" == "massgov/mayflower" ]]; then
         line="Woo-hoo! Deploy complete! \n You should see the release live at http://mayflower.digital.mass.gov ... Time for release notes! ;)"
     else
-        line="Woo-hoo! Deploy complete! You should be able to see your updates at: \n http(s)://<username>.github.io/<projectname> \n (i.e. http://jesconstantine.github.io/mayflower)."
+        line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://<your-github-username>.github.io/mayflower"
     fi
     log "success" "$line";
 else
