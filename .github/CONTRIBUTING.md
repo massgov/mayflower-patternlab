@@ -57,7 +57,7 @@ If you check your remotes (`git remote -v`), you can now see that you have two "
 
 Any new features and non-emergency bugfixes should branch from the `dev` branch.  Make sure you're on the `dev`  branch and that it's up-to-date with the source repo. 
 
-If you just forked it, it always will be—but if there have been a lot of changes to the original repo since you forked it, yours might be out of sync. Here's how to get yours in sync:
+If you just forked it, you're probably all set.  But if there have been a lot of changes to the original repo since you forked it, yours might be out of sync. Here's how to get yours in sync:
 
 ```
 git checkout dev
