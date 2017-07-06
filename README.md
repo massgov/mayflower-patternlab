@@ -3,35 +3,16 @@ Mayflower is the enterprise design system for the Commonwealth of Massachusetts.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for *browsing* and *testing* purposes. 
-- See [Contribute](#contribute) section for instructions on setting up your fork and repo for development and contribution purposes.
-- See [Deployment](#deployment) section for notes on how to deploy the project to a live environment.
+### Setting up your environment
 
-### Prerequisites
-
-In order to run Mayflower locally, you need to have some things installed and set up on your machine:
-
-1. Install PHP ([v5.6.4](https://secure.php.net/get/php-5.6.4.tar.bz2/from/a/mirror))
-    - See steps for [windows](https://www.sitepoint.com/how-to-install-php-on-windows/) || [mac os](https://ryanwinchester.ca/posts/install-php-5-6-in-osx-10-with-homebrew)
-2. Install NodeJS ([v6.9.4](https://nodejs.org/en/blog/release/v6.9.4/))
-    - If you need a different version of NodeJS for another project, you can use a tool like [N](https://github.com/tj/n) or [NVM](https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/) to manage multiple versions.
-3. Install GulpJS [globally](https://docs.npmjs.com/getting-started/installing-npm-packages-globally) 
-    - Run `npm install -g gulp-cli` from your command line
+In order to run Mayflower locally, you need to have some things installed and set up on your machine.  Follow the steps in [Setting up your environment](/docs/setting-up-environment.md).
 
 ### Installing
-Follow these steps to get up and running to *browse* or *test* Mayflower.  Developers should see our [Contribute](#contribute) section for directions on how to set up your repo for development and contribution purposes.
+- Follow the steps in [Demo Install](/docs/demo-install.md) to get a copy of the project up and running on your local machine for *demo* and *testing* purposes. 
+- See the [Contribute docs](#contribute) for instructions on setting up your fork and repo for *development* and *contribution* purposes.
+- See the [Deployment docs](https://github.com/massgov/mayflower/blob/master/docs/deploy.md)  for notes on how to deploy the project to a live environment.
 
-1. Clone this repo `git clone git@github.com:massgov/mayflower.git`
-1. Move into the styleguide directory `cd mayflower/styleguide`
-1. Generate pattern lab default files `php core/console --generate`
-1. Install npm dependencies `npm install`
-1. Run `gulp`
-1. Browse to [http://localhost:3000/](http://localhost:3000/) (or port shown in gulp output if you've configured it differently)
-1. Take a look through Mayflower!  
-    - You can use the menu to look at whole page layouts (pages), templates, components (organisms and molecules), child elements (molecules and atoms), and some nuts and bolts (base).
-    - You can emulate different device sizes by using the size buttons at the top right of the menu bar (S M L FULL RANDOM DISCO).  
-    - You can learn about patterns by clicking the top right COG icon, then selecting "Show Pattern Info" from the drop down.
-1. When you're done looking, type `CTRL` + `C`  from your active terminal session to kill the `gulp` task.  You can always run `gulp` again from the `mayflower/styleguide` directory to get it back up and running.
+
 
 ## Deployment
 
