@@ -82,6 +82,7 @@ git checkout -b DP-1234-create-backto-link
 
 Serve Mayflower locally and as you save your changes, it will update automatically:
 
+1. Read the [Pattern Lab docs](http://patternlab.io/docs/index.html)!
 1. Run `gulp`
 1. Browse to [http://localhost:3000/](http://localhost:3000/) (or port shown in gulp output if you've configured it differently)
 1. Familiarize yourself with Mayflower:
@@ -99,7 +100,6 @@ Serve Mayflower locally and as you save your changes, it will update automatical
 * It is helpful to have 2 terminal tabs open when working on this project: one to manage `gulp` tasks and the other to manage `git`.  From the tab running `gulp`, type `CTRL` + `C` to kill that task when you're done.
 * `Gulp` will build the Pattern Lab static assets and generate a static site in the `/styleguide/public` directory.  See `/styleguide/tools/gulp/gulp-readme.md`.
 * Pattern Lab specific files are in the `/styleguide/public/styleguide` directory (the `styleguide.html` file is automatically generated when twig templates are updated).
-* For more information, read the [Pattern Lab documentation](http://patternlab.io/docs/index.html).
 
 **Sections about how + what to contribute coming soon...**
 
