@@ -9,9 +9,9 @@
 # ./scripts/deploy-gh-pages.sh [-b (git-branch-or-tag)] [-t (remote-repo)]
 #   -b Build source: the git branch or tag to build from (required)
 #   -t Target: the remote repo whose gh-pages branch is being pushed to (required)
-#   -cname CNAME record: a custom domain to point to Github Pages (required only when deploying to massgov/mayflower: "mayflower.digital.mass.gov")
+#   -c CNAME record: a custom domain to point to Github Pages (required only when deploying to massgov/mayflower: "mayflower.digital.mass.gov")
 #
-#   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name -cname mayflower.digital.mass.gov
+#   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name -c mayflower.digital.mass.gov
 #
 # Description:
 # 1. Validate the passed arguments: build source and target repo
@@ -64,12 +64,12 @@ buildSrc=false
 cname=false
 
 # Get passed arguments
-while getopts :b:t:cname: option
+while getopts :b:t:c: option
 do
     case "${option}" in
         b) buildSrc=${OPTARG};;
         t) targetEnv=${OPTARG};;
-        cname) cname=${OPTARG};;
+        c) cname=${OPTARG};;
         : ) line="Missing argument for parameter [-${OPTARG}]";
               log "error" "$line";
               exit 1;;
