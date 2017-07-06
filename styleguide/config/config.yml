@@ -36,6 +36,7 @@ ishMinimum: '320'
 ishMaximum: '2600'
 ishControlsHide:
     - hay
+    - disco
 styleguideKit: pattern-lab/styleguidekit-twig-default
 styleguideKitPath: vendor/pattern-lab/styleguidekit-twig-default
 phpBin: 'C:\php'
