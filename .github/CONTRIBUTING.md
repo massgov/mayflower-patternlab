@@ -53,7 +53,7 @@ git remote add upstream git@github.com:massgov/mayflower.git
 
 If you check your remotes (`git remote -v`), you can now see that you have two "remotes" that your local repo is pointed towards: `origin`, which points to *your* Mayflower fork, and `upstream`, which points to `massgov/mayflower`.
 
-## Spinning up a branch
+## Creating a branch
 
 Any new features and non-emergency bugfixes should branch from the `dev` branch.  Make sure you're on the `dev`  branch and that it's up-to-date with the source repo. 
 
@@ -66,7 +66,7 @@ git merge upstream/dev
 git push origin dev
 ```
 
-Now you can spin up your new branch:
+Now you can create your new branch:
 
 ```
 git checkout -b my-issue-number-feature-name
