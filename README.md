@@ -12,7 +12,9 @@ In order to run Mayflower locally, you need to have some things installed and se
 - See the [Contribute docs](#contribute) for instructions on setting up your fork and repo for *development* and *contribution* purposes.
 - See the [Deployment docs](https://github.com/massgov/mayflower/blob/master/docs/deploy.md)  for notes on how to deploy the project to a live environment.
 
+## Contribute
 
+Please read [CONTRIBUTING.md](https://github.com/massgov/mayflower/blob/master/.github/CONTRIBUTING.md) for details on the process for submitting pull requests to us.
 
 ## Deployment
 
@@ -32,10 +34,6 @@ If you do not see your tag being deployed:
 
 * [Pattern Lab 2 (PHP)](http://patternlab.io/docs/index.html) - The pattern framework / static site generator
 * [Twig](https://twig.sensiolabs.org/) - The templating language
-
-## Contribute
-
-Please read [CONTRIBUTING.md](https://github.com/massgov/mayflower/blob/master/CONTRIBUTING.md) for details on the process for submitting pull requests to us.
 
 ## Versioning
 
