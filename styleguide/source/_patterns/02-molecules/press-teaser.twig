@@ -1,31 +1,50 @@
-<section class="ma__press-teaser">
-  {% if pressTeaser.eyebrow %}
-    <div class="ma__press-teaser__eyebrow">
-      <span>{{ pressTeaser.eyebrow }}</span>
-    </div>
-  {% endif %}
-  <h2 class="ma__press-teaser__title">
-    {% set decorativeLink = pressTeaser.title %}
-    {% include "@atoms/decorative-link.twig" %}
-  </h2>
-  {% if pressTeaser.date or pressTeaser.org %}
-    <div class="ma__press-teaser__details">
-      {% if pressTeaser.date %}
-        <span class="ma__press-teaser__date">
-          {{ pressTeaser.date }}
-        </span>
+{% set imageClass = pressTeaser.image ? 'ma__press-teaser--image' : '' %}
+
+<section class="ma__press-teaser {{ imageClass }}">
+  {% if pressTeaser.image %}
+    <div class="ma__press-teaser__image"
+      {% if pressTeaser.image.width %}
+        style="flex-basis: {{ pressTeaser.image.width }}px"
+      {% endif %}>
+      {% if pressTeaser.image.href %}
+        <a href="{{ pressTeaser.image.href }}">
       {% endif %}
-      {% if pressTeaser.org %}
-        <span class="ma__press-teaser__org">
-          {{ pressTeaser.org }}
-        </span>
+        {% set image = pressTeaser.image %}
+        {% include "@atoms/09-media/image.twig" %}
+      {% if pressTeaser.image.href %}
+        </a>
       {% endif %}
     </div>
   {% endif %}
-  {% if pressTeaser.description %}
-    <div class="ma__press-teaser__description">
-      {% set richText = pressTeaser.description %}
-      {% include "@organisms/by-author/rich-text.twig" %}
-    </div>
-  {% endif %}
+  <div class="ma__press-teaser__details">
+    {% if pressTeaser.eyebrow %}
+      <div class="ma__press-teaser__eyebrow">
+        <span>{{ pressTeaser.eyebrow }}</span>
+      </div>
+    {% endif %}
+    <h2 class="ma__press-teaser__title">
+      {% set decorativeLink = pressTeaser.title %}
+      {% include "@atoms/decorative-link.twig" %}
+    </h2>
+    {% if pressTeaser.date or pressTeaser.org %}
+      <div class="ma__press-teaser__details">
+        {% if pressTeaser.date %}
+          <span class="ma__press-teaser__date">
+            {{ pressTeaser.date }}
+          </span>
+        {% endif %}
+        {% if pressTeaser.org %}
+          <span class="ma__press-teaser__org">
+            {{ pressTeaser.org }}
+          </span>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if pressTeaser.description %}
+      <div class="ma__press-teaser__description">
+        {% set richText = pressTeaser.description %}
+        {% include "@organisms/by-author/rich-text.twig" %}
+      </div>
+    {% endif %}
+  </div>
 </section>

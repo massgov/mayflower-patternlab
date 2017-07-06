@@ -1,6 +1,12 @@
 {
   "pressTeaser" : {
-    "image": null,
+    "image": {
+      "src":"/assets/images/placeholder/320x180.png",
+      "alt": "placeholder image",
+      "width": "320",
+      "height": "180",
+      "href": "#"
+    },
     "eyebrow": "Press Release",
     "title" : {
       "href":"#",

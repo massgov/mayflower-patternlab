@@ -41,6 +41,7 @@
 
   "pressListing": {
     "items": [{
+      "image": null,
       "eyebrow": "Press Release",
       "title" : {
         "href":"#",
@@ -61,6 +62,7 @@
         }]
       }
     },{
+      "image": null,
       "eyebrow": "Press Statement",
       "title" : {
         "href":"#",
@@ -81,6 +83,7 @@
         }]
       }
     },{
+      "image": null,
       "eyebrow": "News Article",
       "title" : {
         "href":"#",
@@ -101,6 +104,7 @@
         }]
       }
     },{
+      "image": null,
       "eyebrow": "Blog Post",
       "title" : {
         "href":"#",
@@ -121,6 +125,7 @@
         }]
       }
     },{
+      "image": null,
       "eyebrow": "Speech",
       "title" : {
         "href":"#",
