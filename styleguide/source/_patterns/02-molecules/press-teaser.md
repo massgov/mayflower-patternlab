@@ -19,18 +19,8 @@ Description: Short teaser for a related press event
 
 ~~~
 pressTeaser : {
-  image: (optional)
-  image {
-    alt:
-      type: string / required
-    src:
-      type: string (url) / required
-    height:
-      type: string
-    width:
-      type: string
-    href: 
-      type: string/url/optional
+  image: {
+    type: object/image/optional
   }
   eyebrow: 
     type: string/optional

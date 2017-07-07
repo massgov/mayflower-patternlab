@@ -40,6 +40,16 @@
 
   &__secondary-item {
 
+    @media($bp-x-small-max) {
+      &:nth-child(n + 4){
+        display: none;
+      }
+
+      .ma__press-teaser__image {
+        display: none;
+      }      
+    }
+
     @media($bp-medium-max) {
       
       & + & {

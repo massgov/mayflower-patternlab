@@ -32,10 +32,17 @@
   &__image {
     flex-shrink: 1;
     flex-grow: 0;
-    flex-basis: auto;
+    flex-basis: 400px;
     font-size: 0;
     margin-right: 30px;
     margin-bottom: 10px;
+
+    span {
+      background-size: cover;
+      display: block;
+      padding-top: 56.25%;
+      width: 100%;
+    }
   }
 
   &__image + &__details {
@@ -86,5 +93,9 @@
 
   &__description {
     font-size: 1.25rem;
+
+    @media ($bp-x-small-max) {
+      display: none;
+    }
   }
 }
