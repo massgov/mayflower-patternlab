@@ -2,19 +2,17 @@
 
 <section class="ma__press-teaser {{ imageClass }}">
   {% if pressTeaser.image %}
-    <div class="ma__press-teaser__image"
-      {% if pressTeaser.image.width %}
-        style="flex-basis: {{ pressTeaser.image.width }}px"
-      {% endif %}>
-      {% if pressTeaser.image.href %}
-        <a href="{{ pressTeaser.image.href }}">
-      {% endif %}
-        {% set image = pressTeaser.image %}
-        {% include "@atoms/09-media/image.twig" %}
-      {% if pressTeaser.image.href %}
-        </a>
-      {% endif %}
-    </div>
+    <a 
+      class="ma__press-teaser__image"
+      href="{{ pressTeaser.title.href }}" 
+      title="{{ pressTeaser.title.text }}">
+      {% set image = pressTeaser.image %}
+      <span 
+        aria-label="{{ image.alt }}" 
+        role="img"
+        style="background-image: url('{{ image.src }}')">
+      </span>
+    </a>
   {% endif %}
   <div class="ma__press-teaser__details">
     {% if pressTeaser.eyebrow %}
