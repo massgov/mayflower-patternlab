@@ -29,8 +29,6 @@ pressTeaser : {
       type: string
     width:
       type: string
-    href: 
-      type: string/url/optional
   }
   eyebrow: 
     type: string/optional
