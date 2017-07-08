@@ -219,7 +219,7 @@ else
 fi
 
 # 5. Copy built assets in /public into temp directory
-line="Copying PL build output to ~/tmp/mayflower directory..."
+line="Copying Pattern Lab build output to ~/tmp/mayflower directory..."
 log "log" "$line";
 
 cp -R public ~/tmp/mayflower >/dev/null
@@ -231,7 +231,7 @@ log "log" "$line";
 cd ~/tmp/mayflower/public
 
 # 6. Initialize temp git repo + push up to gh-pages
-line= "Creating temporary repo and committing build to master branch..."
+line="Creating temporary repo and committing build to master branch..."
 log "log" "$line";
 
 git init
