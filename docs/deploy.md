@@ -19,7 +19,7 @@ Developers and contributors can follow these steps to deploy your branch to your
 1. Make sure your local repository is in a clean working state: `git status`.  If it's not, you can `git commit` or [stash](https://git-scm.com/book/en/v1/Git-Tools-Stashing) your local changes.
 1. Make sure you have the thing you are deploying (branch or tag) pulled down locally.
 1. Change directory to the root directory of your local repo (`mayflower`) if you're not already there.
-1. Execute the deploy script by running `./scripts/deploy-gh-pages.sh -b <your-branch-or-tag-name> -t <your-github-username>/mayflower`
+1. Execute the deploy script by running `./scripts/deploy-gh-pages.sh -b <your-branch-or-tag-name> -t <your-github-username>`
     - Where `-b` is the build source (required): your git branch or tag name.
     - Where `-t` is the target remote repo owner (required): `<your-github-username>`.
     - For example, to deploy the branch `DP-1234-my-awesome-thing` to the mayflower forked repo `jesconstantine/mayflower`, use `./scripts/deploy-gh-pages.sh -b DP-1234-my-awesome-thing -t jesconstantine`.
