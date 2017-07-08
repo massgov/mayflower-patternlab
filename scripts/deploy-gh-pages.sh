@@ -243,11 +243,12 @@ git commit -m "$MESSAGE" >/dev/null
 # Create CNAME if argument passed
  if [ "${cname}" != false ];
     then
+        line="Creating CNAME for '${cname}'";
+        log "log" "$line";
+
         echo "${cname}" >> CNAME
         git add .
         git commit -m "Create CNAME for '${cname}'"
-        line="Creating CNAME for '${cname}'";
-        log "log" "$line";
 fi
 
 # 8. Add target as remote repo
