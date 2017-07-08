@@ -8,24 +8,26 @@
 # Usage:
 # ./scripts/deploy-gh-pages.sh [-b (git-branch-or-tag)] [-t (remote-repo)]
 #   -b Build source: the git branch or tag to build from (required)
-#   -t Target: the remote repo whose gh-pages branch is being pushed to (required)
-#   -c CNAME record: a custom domain to point to Github Pages (required only when deploying to massgov/mayflower: "mayflower.digital.mass.gov")
+#   -t Target: the target remote repo owner whose gh-pages branch is being pushed (required).
+#              This will often be the <your-github-username>.  For prod releases, this is "massgov".
+#   -c CNAME record: a custom domain to point to Github Pages (required only when deploying to prod: "mayflower.digital.mass.gov")
 #
 #   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name -c mayflower.digital.mass.gov
 #
 # Description:
 # 1. Validate the passed arguments: build source and target repo
 # 2. Attempt to checkout passed build source
-# 3. Build pattern lab static assets
-# 4. Copy static assets (build output: styleguide/public/) into a new temp directory
-# 5. Initialize a temp repo in the temp directory
-# 6. Commit all of the static asset files (+ create a CNAME file for stage / prod)
-# 7. Add the passed target as remote
-# 8. Push all build assets to target remote gh-pages branch
-# 9. Remove the temp directory
+# 3. Write config to support hosting from subdirectory, if necessary
+# 4. Build pattern lab static assets
+# 5. Copy static assets (build output: styleguide/public/) into a new temp directory
+# 6. Initialize a temp repo in the temp directory
+# 7. Commit all of the static asset files (+ create a CNAME file for stage / prod)
+# 8. Add the passed target as remote
+# 9. Push all build assets to target remote gh-pages branch
 # 10. Get back to mayflower/styleguide directory
-# 11. Check out prior branch
-#
+# 11. Remove the temp directory
+# 12. Check out prior branch
+
 # @todo
 # - use AWS cli to push/rsync to bucket
 # - build into ci process
@@ -33,15 +35,16 @@
 # Steps to clean up after script execution
 # Runs on success and failure.
 function cleanup {
-    # Cleanup
-    echo "Getting back to previous directory..."
+    # 10. Get back to mayflower/styleguide directory
+    echo -e "Getting back to previous directory...\n"
     cd -
 
-    echo "Cleaning up temp dir..."
+    # 11. Remove temp directory
+    echo -e "Cleaning up tmp dir...\n"
     rm -rf ~/tmp/mayflower
 
-    # Check out the previous branch
-    echo "Checking out your previous branch..."
+    # 12. Check out the previous branch
+    echo -e "Checking out your previous branch...\n"
     git checkout @{-1}
 }
 
@@ -79,7 +82,7 @@ do
     esac
 done
 
-# Validate build source environment argument exists
+# 1. Validate build source environment argument exists
 if [ "$buildSrc" = false ];
 then
     line="Whoops, we need a git branch or tag name to checkout and build from [-b]."
@@ -145,20 +148,52 @@ fi
 NOW=$(date +"%c")
 MESSAGE="GH Pages deployed ${buildSrc} on: ${NOW}"
 
-# checkout the latest tag/release
-echo "Checking out the build source: ${buildSrc}"
+# 2. Checkout the build source
+echo -e "Checking out the build source: ${buildSrc} \n"
 git checkout ${buildSrc}
 
 # Get to styleguide directory (inside of repo root), does not assume repo root is "mayflower"
-echo "Changing directory into mayflower repo root/styleguide"
+echo -e "Changing directory into mayflower/styleguide\n"
 cd $(git rev-parse --show-toplevel)/styleguide
 
-# Build pattern to generate prod static assets
-echo "Building mayflower static assets..."
-gulp build prod
+# 3. Set the domain and asset path config
+# When there is a cname: url.domain = cname, url.assetsPath = assets
+# When there is no cname: url.domain = <githug-username>.github.io, url.assetsPath = mayflower/assets
+echo -e "Setting the domain and asset path config...\n"
+
+# If we're deploying something that doesn't have the url.json.example file, create it first
+if [ ! -f ./source/_data/url.json.example ];
+    then
+        urljson='{\n\t"url": {\n\t\t"comment": "Save this file as url.json and enter your domain and the path to the assets folder",\n\t\t"domain": "http://localhost:3000",\n\t\t"assetsPath": "assets"\n\t}\n}'
+        echo -e ${urljson} > ./source/_data/url.json.example
+
+        # Set flag to undo these changes in the working directory before leaving script.
+        cleanup=true
+fi
+
+# Create url.json from the .example and set the appropriate domain and assetsPath values
+cp ./source/_data/url.json.example ./source/_data/url.json
+
+# Determine the value of url.domain, url.assetsPath based on whether or not we have a cname argument
+domain="https:\/\/${owner}.github.io"
+assetsPath="mayflower\/assets\""
+
+if [ ! "${cname}" = false ];
+then
+    domain="http:\/\/${cname}"
+    assetsPath="assets\""
+fi
+
+# Set url.domain and url.assetsPath
+find ./source/_data -type f -name "url.json" -exec sed -i "" "s/http:\/\/localhost:3000/${domain}/g" {} \;
+find ./source/_data -type f -name "url.json" -exec sed -i "" "s/assets\"/${assetsPath}/g" {} \;
+
+# 4. Build pattern to generate prod static assets
+echo -e "Building mayflower static assets...\n"
+gulp build
 
 # Make temp directory to copy public  assets
-echo "Making ~/tmp/mayflower directory..."
+echo -e "Making ~/tmp/mayflower directory...\n"
 if [ -d "~/tmp" ];
 then
     mkdir ~/tmp/mayflower
@@ -167,18 +202,20 @@ else
     mkdir ~/tmp/mayflower
 fi
 
-# Copy built assets in /public into temp directory
-echo "Copying PL build output to ~/tmp/mayflower directory..."
+# 5. Copy built assets in /public into temp directory
+echo -e "Copying PL build output to ~/tmp/mayflower directory...\n"
 cp -R public ~/tmp/mayflower
 
 # Get to temp directory build output
-echo "Changing directory to ~/tmp/mayflower/public..."
+echo -e "Changing directory to ~/tmp/mayflower/public...\n"
 cd ~/tmp/mayflower/public
 
-# Initialize temp git repo + push up to gh-pages
-echo "Creating temporary repo and committing build to master branch..."
+# 6. Initialize temp git repo + push up to gh-pages
+echo -e "Creating temporary repo and committing build to master branch...\n"
 git init
 git add .
+
+# 7. Commit the built assets, and CNAME if passed
 git commit -m "$MESSAGE"
 
 # Create CNAME if argument passed
@@ -190,10 +227,11 @@ git commit -m "$MESSAGE"
         echo "Creating CNAME for '${cname}'";
 fi
 
-echo "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
+# 8. Add target as remote repo
+echo -e "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch...\n"
 git remote add target ${TARGET_URL}
 
-# Make sure we can push to remote, return success or error based on result.
+# 9. Make sure we can push to remote, return success or error based on result.
 if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"Done"* ]]
 then
     line="Git push was successful!"
