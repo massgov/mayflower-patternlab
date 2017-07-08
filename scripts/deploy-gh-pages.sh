@@ -36,15 +36,21 @@
 # Runs on success and failure.
 function cleanup {
     # 10. Get back to mayflower/styleguide directory
-    echo -e "Getting back to previous directory...\n"
+    line="Getting back to previous directory..."
+    log "log" "$line";
+
     cd -
 
     # 11. Remove temp directory
-    echo -e "Cleaning up tmp dir...\n"
+    line="Cleaning up tmp dir..."
+    log "log" "$line";
+
     rm -rf ~/tmp/mayflower
 
     # 12. Check out the previous branch
-    echo -e "Checking out your previous branch...\n"
+    line="Checking out your previous branch..."
+    log "log" "$line";
+
     git checkout @{-1}
 }
 
@@ -54,10 +60,12 @@ function log {
     local theLogType=$1
     local theMessage=$2
 
-    if [[ "$theLogType" == "success" ]]; then
-        echo -e "\n\x1B[01;92m"$theMessage"\x1B[0m \n"
+    if [ "$theLogType" == "success" ]; then
+        echo -e "\n\x1B[01;92m [success] "${theMessage}"\x1B[0m \n"
+    elif [ "$theLogType" == "error" ]; then
+        echo -e "\n\x1B[01;91m [error] "${theMessage}"\x1B[0m \n" >&2
     else
-        echo -e "\n \x1B[01;91m"$theMessage"\x1B[0m \n" >&2
+        echo -e "\n\x1B[01;34m [info] "${theMessage}"\x1B[0m \n"
     fi
 }
 
@@ -102,11 +110,11 @@ fi
 git rev-parse ${buildSrc} &>/dev/null
 if [ "$?" -ne 0 ];
 then
-    line="Hmmm, couldn't find a branch/tag named ${buildSrc} ... check spelling and make sure you've pulled it."
+    line="Hmmm, couldn't find a branch/tag named ${buildSrc}... check spelling and make sure you've pulled it."
     log "error" "$line";
     exit 1;
 else
-    line="Validated git build source: ${buildSrc} ..."
+    line="Validated git build source: ${buildSrc}..."
     log "success" "$line";
 fi
 
@@ -149,17 +157,22 @@ NOW=$(date +"%c")
 MESSAGE="GH Pages deployed ${buildSrc} on: ${NOW}"
 
 # 2. Checkout the build source
-echo -e "Checking out the build source: ${buildSrc} \n"
+line="Checking out the build source: ${buildSrc}"
+log "log" "$line";
+
 git checkout ${buildSrc}
 
 # Get to styleguide directory (inside of repo root), does not assume repo root is "mayflower"
-echo -e "Changing directory into mayflower/styleguide\n"
+line="Changing directory into mayflower/styleguide..."
+log "log" "$line";
+
 cd $(git rev-parse --show-toplevel)/styleguide
 
 # 3. Set the domain and asset path config
 # When there is a cname: url.domain = cname, url.assetsPath = assets
 # When there is no cname: url.domain = <githug-username>.github.io, url.assetsPath = mayflower/assets
-echo -e "Setting the domain and asset path config...\n"
+line="Setting the domain and asset path config..."
+log "log" "$line";
 
 # If we're deploying something that doesn't have the url.json.example file, create it first
 if [ ! -f ./source/_data/url.json.example ];
@@ -189,11 +202,14 @@ find ./source/_data -type f -name "url.json" -exec sed -i "" "s/http:\/\/localho
 find ./source/_data -type f -name "url.json" -exec sed -i "" "s/assets\"/${assetsPath}/g" {} \;
 
 # 4. Build pattern to generate prod static assets
-echo -e "Building mayflower static assets...\n"
-gulp build
+line="Building mayflower static assets..."
+log "log" "$line";
+gulp build >/dev/null
 
 # Make temp directory to copy public  assets
-echo -e "Making ~/tmp/mayflower directory...\n"
+line="Making ~/tmp/mayflower directory..."
+log "log" "$line";
+
 if [ -d "~/tmp" ];
 then
     mkdir ~/tmp/mayflower
@@ -203,20 +219,26 @@ else
 fi
 
 # 5. Copy built assets in /public into temp directory
-echo -e "Copying PL build output to ~/tmp/mayflower directory...\n"
-cp -R public ~/tmp/mayflower
+line="Copying PL build output to ~/tmp/mayflower directory..."
+log "log" "$line";
+
+cp -R public ~/tmp/mayflower >/dev/null
 
 # Get to temp directory build output
-echo -e "Changing directory to ~/tmp/mayflower/public...\n"
+line="Changing directory to ~/tmp/mayflower/public..."
+log "log" "$line";
+
 cd ~/tmp/mayflower/public
 
 # 6. Initialize temp git repo + push up to gh-pages
-echo -e "Creating temporary repo and committing build to master branch...\n"
+line= "Creating temporary repo and committing build to master branch..."
+log "log" "$line";
+
 git init
-git add .
+git add . >/dev/null
 
 # 7. Commit the built assets, and CNAME if passed
-git commit -m "$MESSAGE"
+git commit -m "$MESSAGE" >/dev/null
 
 # Create CNAME if argument passed
  if [ "${cname}" != false ];
@@ -224,11 +246,14 @@ git commit -m "$MESSAGE"
         echo "${cname}" >> CNAME
         git add .
         git commit -m "Create CNAME for '${cname}'"
-        echo "Creating CNAME for '${cname}'";
+        line="Creating CNAME for '${cname}'";
+        log "log" "$line";
 fi
 
 # 8. Add target as remote repo
-echo -e "Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch...\n"
+line="Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
+log "log" "$line";
+
 git remote add target ${TARGET_URL}
 
 # 9. Make sure we can push to remote, return success or error based on result.
