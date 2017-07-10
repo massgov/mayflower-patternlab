@@ -17,11 +17,6 @@ export default function (window,document,$,undefined) {
         breakpoint = 800; // matches CSS breakpoint for Main Nav
 
     $mainNavItems.on('keydown', function(e) {
-      if(windowWidth <= breakpoint) {
-        // only for desktop
-        return;
-      }
-
       // Grab all the DOM info we need...
       let $link = $(this),
           $topLevelLinks = $parent.find('.ma__main-nav__top-link'),
