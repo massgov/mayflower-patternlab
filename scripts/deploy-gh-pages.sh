@@ -11,6 +11,7 @@
 #   -t Target: the target remote repo owner whose gh-pages branch is being pushed (required).
 #              This will often be the <your-github-username>.  For prod releases, this is "massgov".
 #   -c CNAME record: a custom domain to point to Github Pages (required only when deploying to prod: "mayflower.digital.mass.gov")
+#   -a Assets path: the root relative path to the assets/ directory i.e. 'mayflower/assets' (only required when passing a cname [-c] for an environment which will not serve Mayflower from the root directory)
 #
 #   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name -c mayflower.digital.mass.gov
 #
@@ -73,11 +74,13 @@ function log {
 targetEnv=false
 buildSrc=false
 cname=false
+assetsPath=false
 
 # Get passed arguments
 while getopts :b:t:c: option
 do
     case "${option}" in
+        a) assetsPath=${OPTARG};;
         b) buildSrc=${OPTARG};;
         t) targetEnv=${OPTARG};;
         c) cname=${OPTARG};;
@@ -193,8 +196,13 @@ assetsPath="mayflower/assets\""
 
 if [ ! "${cname}" = false ];
 then
-    assetsPath="assets\""
     domain="http://${cname}"
+    if [ ! "${assetsPath}" = false ];
+    then
+        assetsPath="${assetsPath}\""
+    else
+        assetsPath="assets\""
+    fi
 fi
 
 # Set url.domain and url.assetsPath
