@@ -102,10 +102,6 @@ export default function (window,document,$,undefined) {
         return;
       }
 
-      if(open || (typeof(e.keycode) !== "undefined")) {
-        return;
-      }
-
     });
     $mainNavItems.on('mouseenter', function(e) {
       $(this).children('button').attr("aria-expanded","true");
