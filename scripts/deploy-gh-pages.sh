@@ -8,7 +8,7 @@
 # Usage:
 # ./scripts/deploy-gh-pages.sh [-b (git-branch-or-tag)] [-t (remote-repo)]
 #   -b Build source: the git branch or tag to build from (required)
-#   -t Target: the target remote repo owner whose gh-pages branch is being pushed (required).
+#   -t Target repo owner: the target remote repo owner whose gh-pages branch is being pushed (required).
 #              This will often be the <your-github-username>.  For prod releases, this is "massgov".
 #   -c CNAME record: a custom domain to point to Github Pages (required only when deploying to prod: "mayflower.digital.mass.gov")
 #   -a Assets path: the root relative path to the assets/ directory i.e. 'mayflower/assets' (only required when passing a cname [-c] for an environment which will not serve Mayflower from the root directory)
@@ -82,7 +82,8 @@ do
     case "${option}" in
         a) assetsPath=${OPTARG};;
         b) buildSrc=${OPTARG};;
-        t) targetEnv=${OPTARG};;
+        t) owner=${OPTARG}
+            targetEnv="${owner}/mayflower";;
         c) cname=${OPTARG};;
         : ) line="Missing argument for parameter [-${OPTARG}]";
               log "error" "$line";
@@ -126,7 +127,7 @@ TARGET_URL="git@github.com:"${targetEnv}".git"
 git ls-remote ${TARGET_URL} &>/dev/null
 if [ "$?" -ne 0 ];
 then
-    line="Unable to reach remote repo at '${TARGET_URL}'. Check your target repo, should be something like 'yourGithubUsername/mayflower'."
+    line="Unable to reach remote repo at '${TARGET_URL}'. Check your target repo, should be something like '<your-github-username>/mayflower'."
     log "error" "$line";
     exit 1;
 else
@@ -276,7 +277,7 @@ find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${asset
 #    then
 #        line="Woo-hoo! Deploy complete! \n You should see your updates at ${cname}!"
 #    else
-#        line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://<your-github-username>.github.io/mayflower"
+#        line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://${owner}.github.io/mayflower"
 #    fi
 #    log "success" "$line";
 #else
