@@ -59,6 +59,7 @@ export default function (window,document,$,undefined) {
           }
           $dropdownLinks[focusIndexInDropdown-1].focus();
         } else {
+          // Down arrow was used.
           // If focused element isn't in dropdown, start with the 0th item instead.
           focusIndexInDropdown = Math.max(0, focusIndexInDropdown);
           // Focus should wrap around at end of list. Skip 0th item.
@@ -80,6 +81,10 @@ export default function (window,document,$,undefined) {
 
       // left or right arrow keys
       if(e.keyCode === 37 || e.keyCode === 39) {
+        let leftArrow = e.keyCode === 37,
+            index = $topLevelLinks.index($topLevelLink),
+            linkCount = $topLevelLinks.length;
+
         e.preventDefault();
         // hide content
         // If menubar focus
@@ -89,9 +94,6 @@ export default function (window,document,$,undefined) {
         //  - Open previous pull down menu and select first item
         hide($openContent);
         $topLevelLink.attr('aria-expanded','false');
-        let leftArrow = e.keyCode === 37,
-            index = $topLevelLinks.index($topLevelLink),
-            linkCount = $topLevelLinks.length;
         // Get previous item if left arrow, next item if right arrow.
         index += (leftArrow ? -1 : 1);
         // Wrap around if at the end of the set of menus.
@@ -122,11 +124,11 @@ export default function (window,document,$,undefined) {
       }
     });
     $mainNavToggle.children('button, a').on('click', function(e) {
-      let $el = $(this);
-      let $elParent = $(this).parent();
-      let $content = $elParent.find('.js-main-nav-content');
-      let $openContent = $parent.find('.js-main-nav-content.' + openClass);
-      let isOpen = $content.hasClass(openClass);
+      let $el = $(this),
+          $elParent = $el.parent(),
+          $content = $elParent.find('.js-main-nav-content'),
+          $openContent = $parent.find('.js-main-nav-content.' + openClass),
+          isOpen = $content.hasClass(openClass);
 
       // mobile
       if(windowWidth <= breakpoint) {
