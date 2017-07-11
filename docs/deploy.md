@@ -23,6 +23,7 @@ Developers and contributors can follow these steps to deploy your branch to your
     - Where `-b` is the build source (required): your git branch or tag name.
     - Where `-t` is the target remote repo owner (required): `<your-github-username>`.
     - For example, to deploy the branch `DP-1234-my-awesome-thing` to the mayflower forked repo `jesconstantine/mayflower`, use `./scripts/deploy-gh-pages.sh -b DP-1234-my-awesome-thing -t jesconstantine`.
+    - **NOTE:** if you have a custom domain pointing to your `<github-username>.github.io`, you can pass `-c <your-custom-cname>` and `-a <path-to-assets-directory>` where `-c` is your cname (domain) and `-t` is the root relative path to the mayflower `assests/` directory (defaults to `mayflower/assets` for `<github-username>.github.io/mayflower` 
  1. If this is your first deployment, follow the steps below to set up your Mayflower fork with Github Pages.
     
 ### Setting up your Fork with Github Pages
