@@ -77,7 +77,7 @@ cname=false
 assetsPath=false
 
 # Get passed arguments
-while getopts :b:t:c: option
+while getopts :b:t:c:a: option
 do
     case "${option}" in
         a) assetsPath=${OPTARG};;
@@ -210,80 +210,80 @@ find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost
 find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${assetsPath}!g" {} \;
 
 # 4. Build pattern to generate prod static assets
-line="Building mayflower static assets..."
-log "log" "$line";
-gulp build >/dev/null
-
-# Make temp directory to copy public  assets
-line="Making ~/tmp/mayflower directory..."
-log "log" "$line";
-
-if [ -d "~/tmp" ];
-then
-    mkdir ~/tmp/mayflower
-else
-    mkdir ~/tmp
-    mkdir ~/tmp/mayflower
-fi
-
-# 5. Copy built assets in /public into temp directory
-line="Copying Pattern Lab build output to ~/tmp/mayflower directory..."
-log "log" "$line";
-
-cp -R public ~/tmp/mayflower >/dev/null
-
-# Get to temp directory build output
-line="Changing directory to ~/tmp/mayflower/public..."
-log "log" "$line";
-
-cd ~/tmp/mayflower/public
-
-# 6. Initialize temp git repo + push up to gh-pages
-line="Creating temporary repo and committing build to master branch..."
-log "log" "$line";
-
-git init
-git add . >/dev/null
-
-# 7. Commit the built assets, and CNAME if passed
-git commit -m "$MESSAGE" >/dev/null
-
-# Create CNAME if argument passed
- if [ "${cname}" != false ];
-    then
-        line="Creating CNAME for '${cname}'";
-        log "log" "$line";
-
-        echo "${cname}" >> CNAME
-        git add .
-        git commit -m "Create CNAME for '${cname}'"
-fi
-
-# 8. Add target as remote repo
-line="Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
-log "log" "$line";
-
-git remote add target ${TARGET_URL}
-
-# 9. Make sure we can push to remote, return success or error based on result.
-if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"Done"* ]]
-then
-    line="Git push was successful!"
-    log "success" "$line";
-    cleanup
-    # Success message.
-    if [ "${cname}" != false ];
-    then
-        line="Woo-hoo! Deploy complete! \n You should see your updates at ${cname}!"
-    else
-        line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://<your-github-username>.github.io/mayflower"
-    fi
-    log "success" "$line";
-else
-    line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
-    log "error" "$line";
-    cleanup
-    line="Bummer! Deploy unsuccessful. Check your spellings for git branches + remotes.  And check your permissions.  Then try again!"
-    log "error" "$line";
-    exit 1;
-fi
+#line="Building mayflower static assets..."
+#log "log" "$line";
+#gulp build >/dev/null
+#
+## Make temp directory to copy public  assets
+#line="Making ~/tmp/mayflower directory..."
+#log "log" "$line";
+#
+#if [ -d "~/tmp" ];
+#then
+#    mkdir ~/tmp/mayflower
+#else
+#    mkdir ~/tmp
+#    mkdir ~/tmp/mayflower
+#fi
+#
+## 5. Copy built assets in /public into temp directory
+#line="Copying Pattern Lab build output to ~/tmp/mayflower directory..."
+#log "log" "$line";
+#
+#cp -R public ~/tmp/mayflower >/dev/null
+#
+## Get to temp directory build output
+#line="Changing directory to ~/tmp/mayflower/public..."
+#log "log" "$line";
+#
+#cd ~/tmp/mayflower/public
+#
+## 6. Initialize temp git repo + push up to gh-pages
+#line="Creating temporary repo and committing build to master branch..."
+#log "log" "$line";
+#
+#git init
+#git add . >/dev/null
+#
+## 7. Commit the built assets, and CNAME if passed
+#git commit -m "$MESSAGE" >/dev/null
+#
+## Create CNAME if argument passed
+# if [ "${cname}" != false ];
+#    then
+#        line="Creating CNAME for '${cname}'";
+#        log "log" "$line";
+#
+#        echo "${cname}" >> CNAME
+#        git add .
+#        git commit -m "Create CNAME for '${cname}'"
+#fi
+#
+## 8. Add target as remote repo
+#line="Adding ${TARGET_URL} as a remote and force pushing build to gh-pages branch..."
+#log "log" "$line";
+#
+#git remote add target ${TARGET_URL}
+#
+## 9. Make sure we can push to remote, return success or error based on result.
+#if [[ "$(git push target master:refs/heads/gh-pages --force --porcelain)" == *"Done"* ]]
+#then
+#    line="Git push was successful!"
+#    log "success" "$line";
+#    cleanup
+#    # Success message.
+#    if [ "${cname}" != false ];
+#    then
+#        line="Woo-hoo! Deploy complete! \n You should see your updates at ${cname}!"
+#    else
+#        line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://<your-github-username>.github.io/mayflower"
+#    fi
+#    log "success" "$line";
+#else
+#    line="Hmmm, looks like we couldn't push.  Check your remote repo permissions."
+#    log "error" "$line";
+#    cleanup
+#    line="Bummer! Deploy unsuccessful. Check your spellings for git branches + remotes.  And check your permissions.  Then try again!"
+#    log "error" "$line";
+#    exit 1;
+#fi
