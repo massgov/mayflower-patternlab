@@ -150,7 +150,7 @@ then
     # Make sure cname argument (i.e. mayflower.digital.mass.gov) is passed for production deploys.
     if [ "${cname}" = false ];
     then
-        line="Please include a cname value for production deployments.  Execute the script again with a value for [-cname] i.e. 'mayflower.digital.mass.gov'."
+        line="Please include a cname value for production deployments.  Execute the script again with a value for [-c] i.e. 'mayflower.digital.mass.gov'."
         log "error" "$line";
         exit 1;
     fi
