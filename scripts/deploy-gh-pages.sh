@@ -188,18 +188,18 @@ fi
 cp ./source/_data/url.json.example ./source/_data/url.json
 
 # Determine the value of url.domain, url.assetsPath based on whether or not we have a cname argument
-domain="https:\/\/${owner}.github.io"
-assetsPath="mayflower\/assets\""
+domain="https://${owner}.github.io"
+assetsPath="mayflower/assets\""
 
 if [ ! "${cname}" = false ];
 then
-    domain="http:\/\/${cname}"
     assetsPath="assets\""
+    domain="http://${cname}"
 fi
 
 # Set url.domain and url.assetsPath
-find ./source/_data -type f -name "url.json" -exec sed -i "" "s/http:\/\/localhost:3000/${domain}/g" {} \;
-find ./source/_data -type f -name "url.json" -exec sed -i "" "s/assets\"/${assetsPath}/g" {} \;
+find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost:3000!${domain}!g" {} \;
+find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${assetsPath}!g" {} \;
 
 # 4. Build pattern to generate prod static assets
 line="Building mayflower static assets..."
