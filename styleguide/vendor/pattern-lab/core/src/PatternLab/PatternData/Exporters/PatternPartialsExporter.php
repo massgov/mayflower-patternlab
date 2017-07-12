@@ -19,9 +19,16 @@ use \PatternLab\Timer;
 
 class PatternPartialsExporter extends \PatternLab\PatternData\Exporter {
 	
+	protected $store;
+	protected $cacheBuster;
+	protected $styleGuideExcludes;
+	
 	public function __construct($options = array()) {
 		
 		parent::__construct($options);
+		$this->store       = PatternData::get();
+		$this->cacheBuster = Data::getOption("cacheBuster");
+		$this->styleGuideExcludes = Config::getOption("styleGuideExcludes");
 		
 	}
 	
@@ -37,18 +44,17 @@ class PatternPartialsExporter extends \PatternLab\PatternData\Exporter {
 		
 		// default vars
 		$patternPartials    = array();
-		$styleGuideExcludes = Config::getOption("styleGuideExcludes");
+		$suffixRendered     =	Config::getOption("outputFileSuffixes.rendered");
 		
-		$store = PatternData::get();
-		foreach ($store as $patternStoreKey => $patternStoreData) {
+		foreach ($this->store as $patternStoreKey => $patternStoreData) {
 			
-			if (($patternStoreData["category"] == "pattern") && isset($patternStoreData["hidden"]) && (!$patternStoreData["hidden"]) && (!$patternStoreData["noviewall"]) && ($patternStoreData["depth"] > 1) && (!in_array($patternStoreData["type"],$styleGuideExcludes))) {
+			if (($patternStoreData["category"] == "pattern") && isset($patternStoreData["hidden"]) && (!$patternStoreData["hidden"]) && (!$patternStoreData["noviewall"]) && ($patternStoreData["depth"] > 1) && (!in_array($patternStoreData["type"],$this->styleGuideExcludes))) {
 				
 				if ((($patternStoreData["type"] == $type) && empty($subtype)) || (empty($type) && empty($subtype)) || (($patternStoreData["type"] == $type) && ($patternStoreData["subtype"] == $subtype))) {
 					
 					$patternPartialData                            = array();
-					$patternPartialData["patternName"]             = strtoupper($patternStoreData["nameClean"]);
-					$patternPartialData["patternLink"]             = $patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].".html";
+					$patternPartialData["patternName"]             = $patternStoreData["nameClean"];
+					$patternPartialData["patternLink"]             = $patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].$suffixRendered.".html";
 					$patternPartialData["patternPartial"]          = $patternStoreData["partial"];
 					$patternPartialData["patternPartialCode"]      = $patternStoreData["code"];
 					$patternPartialData["patternState"]            = $patternStoreData["state"];
@@ -81,12 +87,12 @@ class PatternPartialsExporter extends \PatternLab\PatternData\Exporter {
 				
 				}
 				
-			} else if (($patternStoreData["category"] == "patternSubtype") && (!in_array($patternStoreData["type"],$styleGuideExcludes))) {
+			} else if (($patternStoreData["category"] == "patternSubtype") && (!in_array($patternStoreData["type"],$this->styleGuideExcludes))) {
 				
 				if ((($patternStoreData["type"] == $type) && empty($subtype)) || (empty($type) && empty($subtype)) || (($patternStoreData["type"] == $type) && ($patternStoreData["name"] == $subtype))) {
 					
 					$patternPartialData                            = array();
-					$patternPartialData["patternName"]             = strtoupper($patternStoreData["nameClean"]);
+					$patternPartialData["patternName"]             = $patternStoreData["nameClean"];
 					$patternPartialData["patternLink"]             = $patternStoreData["pathDash"]."/index.html";
 					$patternPartialData["patternPartial"]          = $patternStoreData["partial"];
 					$patternPartialData["patternSectionSubtype"]   = true;
@@ -100,7 +106,7 @@ class PatternPartialsExporter extends \PatternLab\PatternData\Exporter {
 			
 		}
 		
-		return array("partials" => $patternPartials, "cacheBuster" => Data::getOption("cacheBuster"));
+		return array("partials" => $patternPartials, "cacheBuster" => $this->cacheBuster);
 		
 	}
 	
