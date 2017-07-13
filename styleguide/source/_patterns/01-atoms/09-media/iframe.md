@@ -6,7 +6,7 @@ Description: an atom for an '<iframe>' element.
 
 ### Used In:
 ~~~
-This is an item in 'pageContent' in Section in details page.
+This is an item in Section field in 'pageContent'.
 ~~~
 
 ### Required Variables
