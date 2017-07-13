@@ -6,6 +6,7 @@ import bannerCarousel   from "./modules/bannerCarousel.js";
 import clickable        from "./modules/clickable.js";
 import dropdown         from "./modules/dropdown.js";
 import emergencyAlerts  from "./modules/emergencyAlerts.js";
+import footnote         from "./modules/footnote.js";
 import formValidation   from "./modules/formValidation.js";
 import hideAlert        from "./modules/hideAlert.js";
 import keywordSearch    from "./modules/keywordSearch.js";

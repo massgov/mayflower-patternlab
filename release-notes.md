@@ -1,5 +1,31 @@
 # Mayflower Release Notes
 
+## 5.4.0
+In this new minor release, we've introduced two new Law pages: Policy Advisory and Executive Order, along with several improvements and fixes.
+
+**Projects implementing Mayflower should see the [release tickets](https://jira.state.ma.us/projects/DP/versions/14641) and confirm, make, and test any markup changes introduced by this release prior to updating in production.*
+
+### New Features
+- Created a [Policy Advisory](http://mayflower.digital.mass.gov/?p=pages-policy-advisory-directive) page type (`@pages/policy-advisory-directive`, `@templates/01-content-types/policy-advisory`) used for Directives, Letter Rulings, Administrative Procedures, Opinions, TIRs. (DP-3825)
+- Created an [Executive Order](http://mayflower.digital.mass.gov/?p=pages-executive-order) page type (`@pages/executive-order.twig
+`, touched `@molecules/image-promo.twig`, `@molecules/listing-table.twig`) (DP-3829)
+
+### Improvements
+- We now have a medium icon (`@atoms/05-icons/svg-medium`) available for patterns like the social media link lists (DP-3495)
+- News items can now have an optional featured image (`@templates/01-content-types/press`) (DP-3831)
+- Detail page (for service, how-to, location - `@pages/detail-for-service-howto-location`) has been updated: removed key actions, added video (`@atoms/09-media/video`) and map (`@organisms/by-author/mapped-locations`) (DP-3891)
+
+### Fixes
+- We've made "Directions" link text (`@molecules/contact-group`) more helpful for screen readers (DP-3227)
+- Callout alert links (`@organisms/by-author/callout-alert`)  are now more semantic and accessible (DP-3236)
+- The "Go to class Mass.gov" link no longer overlaps with the skip-to link (`@organisms/by-template/header`) for keyboard users (DP-3191)
+- Sticky nav links (`@molecules/sticky-nav`) for location and location detail pages are now consistent (DP-3822)
+- Inactive (i.e. clickable) sort buttons (`@atoms/01-buttons/button-sort`) now appear clickable, like a link (DP-3890)
+-  Homepage > popular searches underline (`@organisms/search-banner.scss`) is now centered (DP-3895)
+-  Background images on illustrated links (`@molecules/illustrated-link`) no longer repeats right edge (DP-4026)
+- Long text renders in the sidebar correctly (`@atoms/content_link.scss`) (DP-2352)
+- Page banner images (`@organisms/page_banner.scss`) will scale as large as possible (be zoomed out) to cover the page banner. (DP-4310)
+
 ## 5.3.0
 We've added some functionality to the location listings organism ([@organisms/by-author/location-listing](http://mayflower.digital.mass.gov/?p=organisms-location-listing))!  You can sort, filter, and paginate listing results! 
 

@@ -1,6 +1,6 @@
 {
   "pageHeader": {
-    "category": "speech",
+    "category": "Press Release",
     "divider": false,
     "title": "Governor Baker Delivers State of the Commonwealth Address",
     "subTitle": "",
@@ -49,18 +49,6 @@
       },{
         "text": "A third party, non state organization"
       }]
-    },
-
-    "video": {
-      "src": "https://www.youtube.com/embed/sBd6GWvCLX0",
-      "label": "Governor Charlie Baker: The state of our Commonwealth is strong",
-      "height": "315",
-      "width": "560",
-      "link": {
-        "href": "#",
-        "text": "View transcript"
-      },
-      "position": ""
     },
 
     "location": "Boston",
