@@ -1,0 +1,8 @@
+{% if iframe.position %}
+  {% set posClass = "ma__iframe--" ~ iframe.position %}
+{% endif %}
+<div class="ma__iframe {{ posClass }}">
+  <div class="js-ma-responsive-iframe">
+    <iframe height="{{ iframe.height }}" src="{{ iframe.url }}" allowfullscreen title="{{ iframe.title }}"></iframe>
+  </div>
+</div>
