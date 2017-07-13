@@ -10,7 +10,7 @@
     "items": [{
       "eyebrow": "Press Release",
       "title" : {
-        "url":"#",
+        "href":"#",
         "text":"MassParks",
         "info": "",
         "property": ""
@@ -30,7 +30,7 @@
     },{
       "eyebrow": "Press Release",
       "title" : {
-        "url":"#",
+        "href":"#",
         "text":"MassParks",
         "info": "",
         "property": ""

@@ -449,7 +449,7 @@
       "items": [{
         "eyebrow": "Press Release",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Admin Releases Unprecendented Report on Opiod Epidemic",
           "info": "",
           "property": ""
@@ -460,7 +460,7 @@
       },{
         "eyebrow": "Regulation",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Dispensing procedures for pharmacists (105 CMR 722)",
           "info": "",
           "property": ""
@@ -471,7 +471,7 @@
       },{
         "eyebrow": "",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Related Non News, Annoucement, Reg, or Law Here",
           "info": "",
           "property": ""
