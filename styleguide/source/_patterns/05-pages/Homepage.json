@@ -22,10 +22,11 @@
               "action": "",
               "buttonText": "Search",
               "inputText": {
-                "labelText": "Search",
+                "labelText": "Search terms",
                 "required": false,
                 "id": "GUID138490237",
                 "name": "search",
+                "type": "text",
                 "placeholder": "Search..."
               }
             }

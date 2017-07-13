@@ -100,6 +100,10 @@ $rich-text-spacing-mobile: 1.5rem;
     @media ($bp-small-min) {
       margin-bottom: $rich-text-spacing;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   ol {
@@ -108,6 +112,10 @@ $rich-text-spacing-mobile: 1.5rem;
 
     @media ($bp-small-min) {
       margin-bottom: $rich-text-spacing;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -118,18 +126,6 @@ $rich-text-spacing-mobile: 1.5rem;
     &:last-child {
       margin-bottom: 0;
     }
-  }
-
-  ul ul,
-  ol ol,
-  ol ul {
-    list-style-type: circle;
-    padding-left: 30px;
-    margin-bottom: 1em;
-  }
-
-  ol ol {
-    list-style-type: lower-alpha;
   }
 
 // end list styles

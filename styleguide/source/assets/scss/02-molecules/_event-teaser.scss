@@ -9,11 +9,9 @@
     border-top-width: 1px;
     padding-top: 30px;
 
-    @media ($bp-large-min){
-      .sidebar & {
-        margin-top: 20px;
-        padding-top: 20px;
-      }
+    .sidebar & {
+      margin-top: 20px;
+      padding-top: 20px;
     }
   }
 
@@ -114,10 +112,11 @@
   }
 
   &__description {
+    font-size: 1.25rem;
     margin-top: 18px;
 
-    @media ($bp-small-min){
-      font-size: 1.25rem;
+    @media ($bp-x-small-max) {
+      display: none;
     }
   }
 }

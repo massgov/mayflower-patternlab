@@ -4,17 +4,31 @@
     <script src="/assets/js/env.js"></script>
     <script src="/assets/js/vendor-generated.js"></script>
     <script src="/assets/js/index-generated.js"></script>
-    <script> 
-      if($('.main-content').length === 0){
-        var json = JSON.parse($("#sg-pattern-data-footer").html()),
-        
-        data = json.patternBreadcrumb.patternType;
-
-        if(data !== 'templates' && data !== 'pages') {
-          $('body').addClass('page-content');
-          $('html').addClass('main-content').addClass('main-content--full');
-        }
+    <script type="text/javascript">
+      window.initGoogleMaps = function() {
+        // Set a flag that the library has loaded, in case google maps js misses event.
+        window.googleMapsLoaded = true;
+        let mapsLibLoadEvent = new CustomEvent('ma:LibrariesLoaded:GoogleMaps');
+        // Emit an event that the library has loaded.
+        document.dispatchEvent(mapsLibLoadEvent);
       }
+    </script>
+    <!-- @todo set up config for api keys -->
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&v=3.27&libraries=geometry,places,geocoder&callback=initGoogleMaps"></script>
+
+    <script> 
+      try {
+        if($('.main-content').length === 0){
+          var json = JSON.parse($("#sg-pattern-data-footer").html()),
+          
+          data = json.patternBreadcrumb.patternType;
+
+          if(data !== 'templates' && data !== 'pages') {
+            $('body').addClass('page-content');
+            $('html').addClass('main-content').addClass('main-content--full');
+          }
+        }
+      } catch(e) {}
     </script>
 
     <!-- JS to switch theme colors -->

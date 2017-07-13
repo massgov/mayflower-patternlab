@@ -1,3 +1,16 @@
+// toggle JS to adjust for mobile elements, like the header, sticky-nav, jump-links.
+.js-footnote {
+  
+  &:before {
+    content: "true";
+    display: none;
+
+    @media ($bp-large-min) {
+      content: "false";
+    }
+  }
+}
+
 .ma__footnote {
   position: relative;
 

@@ -14,14 +14,14 @@
     </div>
   {% endif %}
   <div class="ma__mapped-locations__map">
-    {% set googleMap = mappedLocations.googleMap %}
-    {% include "@molecules/google-map.twig" %}
-
     {% if mappedLocations.link and mappedLocations.contained %}
       <div class="ma__mapped-locations__link">
         {% set decorativeLink = mappedLocations.link %}
         {% include "@atoms/decorative-link.twig" %}
       </div>
     {% endif %}
+    {% set googleMap = mappedLocations.googleMap %}
+    {% include "@molecules/google-map.twig" %}
+
   </div>
 </section>

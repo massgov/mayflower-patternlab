@@ -2,7 +2,7 @@
   "pageHeader": {
     "category": "Directive",
     "divider": false,
-    "title": "Directive 13-XX: Criteria for Determining Whether a Transaction is a Taxable Sale of Pre-written Software or a Non-taxable Service",
+    "title": "Criteria for Determining Whether a Transaction is a Taxable Sale of Pre-written Software or a Non-taxable Service",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
@@ -23,13 +23,13 @@
       "data": {
         "listingTable": {
           "rows": [{
-            "label": "Date:",
+            "label": "Last Updated:",
             "text": "3/2/2017"
           },{
-            "label": "Issuer:",
+            "label": "Organization:",
             "text": "Mark E. Nunnelly, Commissioner of Revenue"
           },{
-            "label": "Referenced Legistration:",
+            "label": "Referenced Sources:",
             "text": "<a href=\"#\">M. G.L. c. 51, § 47C</a><br/><a href=\"#\">G.L. c. 64H, § 6</a>"
           }]
         }
@@ -118,7 +118,7 @@
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "Software-related products and the terminology used to describe and market them are evolving at a rapid rate.  As technology develops, purchasers increasingly have access to sophisticated software which is hosted on sellers’ or third party servers and marketed in various ways and with terminology that may be suggestive of the provision of services, e.g., as Software-as-a-Service, Cloud Computing, or \"business solutions\". Several recent Letter Rulings have addressed whether sales of various “business solutions” and products were taxable as sales of prewritten software or instead were non-taxable services.<a class=\"ma__rich-text__footnote js-rich-text-footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>"
+            "text": "Software-related products and the terminology used to describe and market them are evolving at a rapid rate.  As technology develops, purchasers increasingly have access to sophisticated software which is hosted on sellers’ or third party servers and marketed in various ways and with terminology that may be suggestive of the provision of services, e.g., as Software-as-a-Service, Cloud Computing, or \"business solutions\". Several recent Letter Rulings have addressed whether sales of various “business solutions” and products were taxable as sales of prewritten software or instead were non-taxable services.<a class=\"ma__rich-text__footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>"
           }
         }
       },{
@@ -169,7 +169,7 @@
         "title": "Another section",
         "sub": false,
         "color": "",
-        "id": "working-draft",
+        "id": "another-section",
         "centered": false
       },
       "rteElements": [{
@@ -291,8 +291,12 @@
   "sideContent": {
     "contactList": {
       "viewSpecific": true,
-      "sidebarHeading":{
-        "title": "Contact"
+      "compHeading":{
+        "title": "Contact",
+        "sub": false,
+        "color": "",
+        "id": "",
+        "centered": ""
       },
       "contacts":[{
         "subTitle": {
@@ -326,7 +330,7 @@
       "items": [{
         "eyebrow": "Letter Ruling",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"LR 12-3: Internet-Based Marketing and Customer-Communications Solutions",
           "info": "",
           "property": ""
@@ -337,7 +341,7 @@
       },{
         "eyebrow": "Regulation",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"830 CMR 64H.1.3",
           "info": "",
           "property": ""
@@ -348,7 +352,7 @@
       },{
         "eyebrow": "",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Related Non News, Announcements, Reg, or Law Here",
           "info": "",
           "property": ""

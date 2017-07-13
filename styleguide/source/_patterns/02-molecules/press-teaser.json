@@ -1,8 +1,9 @@
 {
   "pressTeaser" : {
+    "image": null,
     "eyebrow": "Press Release",
     "title" : {
-      "url":"#",
+      "href":"#",
       "text":"MassParks",
       "info": "",
       "property": ""
