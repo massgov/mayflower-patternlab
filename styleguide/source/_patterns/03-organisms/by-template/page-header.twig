@@ -1,6 +1,4 @@
-{% if pageHeader.widgets %}
-  {% set widgetsClass = "ma__page-header--has-widgets" %}
-{% endif %}
+{% set widgetsClass = pageHeader.widgets ? "ma__page-header--has-widgets" : "" %}
 {% set prefix = pageHeader.category|default(pageHeader.prefix) %}
 
 <section class="ma__page-header {{ widgetsClass }}">
@@ -33,7 +31,7 @@
       <h1 
       class="ma__page-header__title"
       {% if schemaPageType %} property="name"{% endif %}>
-        {% if prefix %}<span class="visually-hidden">{{ prefix }} </span>{% endif %}
+        {% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}
         {{pageHeader.title}}
       </h1>
     {% if pageHeader.subTitle %}
