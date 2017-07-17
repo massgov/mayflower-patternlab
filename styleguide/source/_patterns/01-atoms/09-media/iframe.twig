@@ -2,7 +2,7 @@
 
 <div class="ma__iframe {{ posClass }}">
   <div class="ma__iframe__container js-ma-responsive-iframe">
-    <iframe height="{{ iframe.height }}" src="{{ iframe.url }}" allowfullscreen title="{{ iframe.title }}"></iframe>
+    <iframe height="{{ iframe.height }}" src="{{ iframe.src }}" allowfullscreen title="{{ iframe.title }}"></iframe>
     {% if iframe.link %}
       <div class="ma__iframe__link">
         {% set decorativeLink = iframe.link %}

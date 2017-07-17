@@ -12,7 +12,7 @@ This is an item in Section field in 'pageContent'.
 ### Required Variables
 ~~~
 iframe {
-  url:
+  src:
       type: string (url) / required    
   title:
       type: string / required
