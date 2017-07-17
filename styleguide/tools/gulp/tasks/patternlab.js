@@ -9,8 +9,9 @@ var gulp         = require('gulp'),
 
 module.exports = function patternLabTask(config, env){
 
+    var bsPort = config.local.browserSyncPort || 3000;
     gulp.task('patternlab', function() {
-        run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec();
+        run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly && browser-sync reload --port ' + bsPort).exec();
     });
 
     // gulp.task('patternlab', function(next) {
