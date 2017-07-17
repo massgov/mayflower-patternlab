@@ -1,12 +1,12 @@
-{% if video.position %}
-  {% set posClass = "ma__video--" ~ video.position %}
-{% endif %}
+{% set posClass = video.position ? "ma__video--" ~ video.position : '' %}
 <div class="ma__video {{ posClass }}">
-  <div class="js-ma-responsive-video">
+  <div class="ma__video__container js-ma-responsive-video">
     <iframe width="{{ video.width }}" height="{{ video.height }}" src="{{ video.src }}" frameborder="0" allowfullscreen aria-label="{{ video.label }}"></iframe>
+    {% if video.link %}
+      <div class="ma__video__link">
+        {% set decorativeLink = video.link %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
+    {% endif %}
   </div>
-  {% if video.link %}
-    {% set decorativeLink = video.link %}
-    {% include "@atoms/decorative-link.twig" %}
-  {% endif %}
 </div>
