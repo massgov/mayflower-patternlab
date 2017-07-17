@@ -1,0 +1,7 @@
+{
+  "url": {
+    "comment": "Save this file as url.json and enter your domain and the path to the assets folder",
+    "domain": "http://localhost:3000",
+    "assetsPath": "assets"
+  }
+}

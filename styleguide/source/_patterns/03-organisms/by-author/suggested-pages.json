@@ -7,7 +7,7 @@
       "text": "Do Something"
     },
     "pages": [{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -15,7 +15,7 @@
         "text": "Title Link I"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -23,7 +23,7 @@
         "text": "Title Link II"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -31,7 +31,7 @@
         "text": "Title Link III"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",

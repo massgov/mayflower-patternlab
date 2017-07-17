@@ -10,8 +10,8 @@
       "path": "@organisms/by-author/search-banner.twig",
       "data": {
         "searchBanner": {
-          "bgWide": "/assets/images/placeholder/1600x800.png",
-          "bgNarrow": "/assets/images/placeholder/800x800.png",
+          "bgWide": "../../assets/images/placeholder/1600x800.png",
+          "bgNarrow": "../../assets/images/placeholder/800x800.png",
           "imageName": "MIT Media Lab",
           "imageAuthor": "Sir Mix Alot",
           "title": "Welcome to Massachusetts",

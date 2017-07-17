@@ -105,8 +105,8 @@
 
   "locationBanner": {
     "bgTitle":"Mt Greylock State Park",
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "bgWide":"../../assets/images/placeholder/1600x400.png",
+    "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "id": "GUID24872901570",
     "googleMap": {
       "map": {
@@ -359,7 +359,7 @@
          "href": "#"
        },
        "image": {
-         "src": "/assets/images/placeholder/190x107.png",
+         "src": "../../assets/images/placeholder/190x107.png",
          "alt": "hiking image",
          "href": "#"
        },
@@ -382,7 +382,7 @@
          "href": "#"
        },
        "image": {
-         "src": "/assets/images/placeholder/190x107.png",
+         "src": "../../assets/images/placeholder/190x107.png",
          "alt": "camping image",
          "href": "#"
        },
@@ -405,7 +405,7 @@
          "href": "#"
        },
        "image": {
-         "src": "/assets/images/placeholder/190x107.png",
+         "src": "../../assets/images/placeholder/190x107.png",
          "alt": "wintery image",
          "href": "#"
        },
@@ -720,7 +720,7 @@
       "text": "Do Something"
     },
     "pages": [{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -728,7 +728,7 @@
         "text": "Nearby State Parks"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -736,7 +736,7 @@
         "text": "Similar State Park"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -744,7 +744,7 @@
         "text": "Great Sight Seeing"
       }
     },{
-      "image": "/assets/images/placeholder/230x130.png",
+      "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
