@@ -8,7 +8,7 @@
   "googleLanguages": "ar,es,fr,pt,ht,it,km,ko,ru,vi,zh-CN",
   "url": {
     "comment": "These are the defaults that get override by the data in url.json",
-    "domain": "localhost:3000",
+    "domain": "",
     "assetsPath": "assets"
   }
 }
