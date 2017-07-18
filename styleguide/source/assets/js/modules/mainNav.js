@@ -13,7 +13,7 @@ export default function (window,document,$,undefined) {
         $parent = $(this),
         $mainNavToggle = $parent.find('.js-main-nav-toggle'),
         $mainNavItems = $parent.find('.js-main-nav-toggle, .js-main-nav-top-link'),
-        breakpoint = 800; // matches CSS breakpoint for Main Nav
+        breakpoint = 840; // matches CSS breakpoint for Main Nav
 
     $mainNavItems.on('keydown', function(e) {
       // Grab all the DOM info we need...
@@ -22,6 +22,7 @@ export default function (window,document,$,undefined) {
           open = $link.hasClass(openClass),
           $openContent = $parent.find('.js-main-nav-content.' + openClass),
           $focusedElement = $(document.activeElement),
+          menuFlipped = (windowWidth < breakpoint),
       // relevant if open..
           $topLevelItem = $focusedElement.parents('.ma__main-nav__item'),
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
@@ -44,55 +45,59 @@ export default function (window,document,$,undefined) {
         e.preventDefault();
       }
 
-      // tab key
+      // Skip out of the menu and close any currently-open submenus.
       if(action.skip) {
-        // Close any currently-open menu
         hide($openContent);
         $link.removeClass(openClass);
         $topLevelLink.attr('aria-expanded','false');
         return;
       }
 
-      // up/down arrows
-      if(action.up || action.down) {
-        // If menubar focus
-        //  - Open pull down menu and select appropriate menu item
-        //
-        // If dropdown focus
-        //  - Change selected menu item
-        if(!open) {
+      // Navigate into or within a submenu. This is needed on up/down actions
+      // (unless the menu is flipped and closed) and when using the right arrow
+      // while the menu is flipped and submenu is closed.
+      if(((action.up || action.down) && !(menuFlipped && !open))
+        || (action.right && menuFlipped && !open)) {
+        // Open pull down menu if necessary.
+        if (!open) {
           show($topLevelItem.find('.js-main-nav-content'));
           $topLevelLink.attr('aria-expanded', 'true');
           $link.addClass(openClass);
         }
-        if(action.up) {
-          if(focusIndexInDropdown <= 1 ) {
-            focusIndexInDropdown = dropdownLinksLength;
+
+        // Adjust index of active menu item based on performed action.
+        focusIndexInDropdown += (action.up ? -1 : 1);
+        // If the menu is flipped, skip the last item in each submenu. Otherwise,
+        // skip the first item. This is done by repeating the index adjustment.
+        if(menuFlipped) {
+          if(focusIndexInDropdown === dropdownLinksLength - 1) {
+            focusIndexInDropdown += (action.up ? -1 : 1);
           }
-          $dropdownLinks[focusIndexInDropdown-1].focus();
         } else {
-          // Down arrow was used.
-          // If focused element isn't in dropdown, start with the 0th item instead.
-          focusIndexInDropdown = Math.max(0, focusIndexInDropdown);
-          // Focus should wrap around at end of list. Skip 0th item.
-          focusIndexInDropdown = Math.max(1, (focusIndexInDropdown + 1) % dropdownLinksLength);
-          $dropdownLinks[focusIndexInDropdown].focus();
+          if(focusIndexInDropdown === 0 || focusIndexInDropdown >= dropdownLinksLength) {
+            focusIndexInDropdown += (action.up ? -1 : 1);
+          }
         }
+        // Wrap around if at the end of the submenu.
+        focusIndexInDropdown = ((focusIndexInDropdown % dropdownLinksLength) + dropdownLinksLength) % dropdownLinksLength;
+        $dropdownLinks[focusIndexInDropdown].focus();
         return;
       }
 
-      // esc key
-      if(action.close) {
-        // Close menu and return focus to menubar
+      // Close menu and return focus to menubar
+      if(action.close || (menuFlipped && action.left)) {
         hide($openContent);
         $link.removeClass(openClass);
         $topLevelLink.focus().attr('aria-expanded','false');
         return;
       }
 
-      // left or right arrow keys
-      if(action.left || action.right) {
+      // Navigate between submenus. This is needed for left/right actions in
+      // normal layout, or up/down actions in flipped layout (when nav is closed).
+      if(((action.left || action.right) && !menuFlipped) ||
+         ((action.up || action.down) && menuFlipped && !open)) {
         let index = $topLevelLinks.index($topLevelLink),
+            prev = action.left || action.up,
             linkCount = $topLevelLinks.length;
 
         // hide content
@@ -104,7 +109,7 @@ export default function (window,document,$,undefined) {
         hide($openContent);
         $topLevelLink.attr('aria-expanded','false');
         // Get previous item if left arrow, next item if right arrow.
-        index += (action.left ? -1 : 1);
+        index += (prev ? -1 : 1);
         // Wrap around if at the end of the set of menus.
         index = ((index % linkCount) + linkCount) % linkCount;
         $topLevelLinks[index].focus();
