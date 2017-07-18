@@ -4,7 +4,7 @@ The Mayflower Style Library is using Semantic Versioning to help maintain depend
 
 You can read more about Semantic Versioning [here](http://semver.org/)
 
-## Terms used in this document:
+### Terms used in this document:
 1. Markup - The twig or html code for a pattern
 2. CSS - The generated index and base-theme CSS file generated from the SASS files.
 3. JS - The generated index.js JavaScript file
