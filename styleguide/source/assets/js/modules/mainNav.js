@@ -22,13 +22,14 @@ export default function (window,document,$,undefined) {
           open = $link.hasClass(openClass),
           $openContent = $parent.find('.js-main-nav-content.' + openClass),
           $focusedElement = $(document.activeElement),
-          keycode = e.keyCode,
       // relevant if open..
           $topLevelItem = $focusedElement.parents('.ma__main-nav__item'),
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
           $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
           dropdownLinksLength = $dropdownLinks.length,
           focusIndexInDropdown = $dropdownLinks.index($focusedElement),
+      // Easy access to the key that was pressed.
+          keycode = e.keyCode,
           action = {
             'skip': keycode === 9,
             'close': keycode === 27,
@@ -37,6 +38,11 @@ export default function (window,document,$,undefined) {
             'up': keycode === 38,
             'down': keycode === 40
           };
+
+      // Default behavior is prevented for all actions except 'skip'.
+      if (action.close || action.left || action.right || action.up || action.down) {
+        e.preventDefault();
+      }
 
       // tab key
       if(action.skip) {
@@ -49,7 +55,6 @@ export default function (window,document,$,undefined) {
 
       // up/down arrows
       if(action.up || action.down) {
-        e.preventDefault();
         // If menubar focus
         //  - Open pull down menu and select appropriate menu item
         //
@@ -79,7 +84,6 @@ export default function (window,document,$,undefined) {
       // esc key
       if(action.close) {
         // Close menu and return focus to menubar
-        e.preventDefault();
         hide($openContent);
         $link.removeClass(openClass);
         $topLevelLink.focus().attr('aria-expanded','false');
@@ -91,7 +95,6 @@ export default function (window,document,$,undefined) {
         let index = $topLevelLinks.index($topLevelLink),
             linkCount = $topLevelLinks.length;
 
-        e.preventDefault();
         // hide content
         // If menubar focus
         //  - Change menubar item
