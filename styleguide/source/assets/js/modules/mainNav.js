@@ -13,7 +13,6 @@ export default function (window,document,$,undefined) {
         $parent = $(this),
         $mainNavToggle = $parent.find('.js-main-nav-toggle'),
         $mainNavItems = $parent.find('.js-main-nav-toggle, .js-main-nav-top-link'),
-        previousKey = null,
         breakpoint = 800; // matches CSS breakpoint for Main Nav
 
     $mainNavItems.on('keydown', function(e) {
@@ -23,15 +22,24 @@ export default function (window,document,$,undefined) {
           open = $link.hasClass(openClass),
           $openContent = $parent.find('.js-main-nav-content.' + openClass),
           $focusedElement = $(document.activeElement),
+          keycode = e.keyCode,
       // relevant if open..
           $topLevelItem = $focusedElement.parents('.ma__main-nav__item'),
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
           $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
           dropdownLinksLength = $dropdownLinks.length,
-          focusIndexInDropdown = $dropdownLinks.index($focusedElement);
+          focusIndexInDropdown = $dropdownLinks.index($focusedElement),
+          action = {
+            'skip': keycode === 9,
+            'close': keycode === 27,
+            'left': keycode === 37,
+            'right': keycode === 39,
+            'up': keycode === 38,
+            'down': keycode === 40
+          };
 
       // tab key
-      if(e.keyCode === 9) {
+      if(action.skip) {
         // Close any currently-open menu
         hide($openContent);
         $link.removeClass(openClass);
@@ -40,7 +48,7 @@ export default function (window,document,$,undefined) {
       }
 
       // up/down arrows
-      if(e.keyCode === 40 || e.keyCode === 38) {
+      if(action.up || action.down) {
         e.preventDefault();
         // If menubar focus
         //  - Open pull down menu and select appropriate menu item
@@ -52,8 +60,7 @@ export default function (window,document,$,undefined) {
           $topLevelLink.attr('aria-expanded', 'true');
           $link.addClass(openClass);
         }
-        // Up arrow was used
-        if(e.keyCode === 38) {
+        if(action.up) {
           if(focusIndexInDropdown <= 1 ) {
             focusIndexInDropdown = dropdownLinksLength;
           }
@@ -70,7 +77,7 @@ export default function (window,document,$,undefined) {
       }
 
       // esc key
-      if(e.keyCode === 27) {
+      if(action.close) {
         // Close menu and return focus to menubar
         e.preventDefault();
         hide($openContent);
@@ -80,9 +87,8 @@ export default function (window,document,$,undefined) {
       }
 
       // left or right arrow keys
-      if(e.keyCode === 37 || e.keyCode === 39) {
-        let leftArrow = e.keyCode === 37,
-            index = $topLevelLinks.index($topLevelLink),
+      if(action.left || action.right) {
+        let index = $topLevelLinks.index($topLevelLink),
             linkCount = $topLevelLinks.length;
 
         e.preventDefault();
@@ -95,7 +101,7 @@ export default function (window,document,$,undefined) {
         hide($openContent);
         $topLevelLink.attr('aria-expanded','false');
         // Get previous item if left arrow, next item if right arrow.
-        index += (leftArrow ? -1 : 1);
+        index += (action.left ? -1 : 1);
         // Wrap around if at the end of the set of menus.
         index = ((index % linkCount) + linkCount) % linkCount;
         $topLevelLinks[index].focus();
