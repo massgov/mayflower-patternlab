@@ -20,7 +20,7 @@ Versions of Mayflower are denoted by three values 1.0.0 that represent Major, Mi
 A Patch version is created when an issue found within a pattern in Mayflower has been resolved.  The changes made will be done in a backward compatible manner that doesn't require changes to Markup or Data Objects.
 
 #### How to upgrade
-Patch versions may require an update to the CSS, JS or Markup, but the Data Object will never need to be updated.  Any CSS and JS changes will always be done in a way to make them work with older Markup from the same Major version. To get all of the fixes, you may have to update the Markup files.
+Patch versions may require an update to the CSS, JS or Markup, but the Data Object will never need to be updated.  Any CSS and JS changes will always be done in a way to make them work with older Markup from the same Major version. To get all the fixes, you may have to update the Markup files.
 
 #### Example of possible changes
 * CSS or JS modified to resolve a styling or interaction issue (ie: link color, or button trigger).
@@ -29,7 +29,7 @@ Patch versions may require an update to the CSS, JS or Markup, but the Data Obje
 * Markup changed to use the proper variable defined in the Data Object (ie: typo in variable name).
 
 #### Example Version
-[5.1.2](https://github.com/massgov/mayflower/pull/475/files) - Was done to resolve a issue found with Comp Heading pattern.  We had recently upgraded the `compHeading.centered` variable in the Data Object to use a Boolean instead of a String, but the logic to make this backward compatible didn't take into consideration truthy values.  To resolve this we updated the logic in the Markup.
+[5.1.2](https://github.com/massgov/mayflower/pull/475/files) - Was done to resolve a issue found with Comp Heading pattern.  We had recently upgraded the `compHeading.centered` variable in the Data Object to use a Boolean instead of a String, but the logic to make this backward compatible didn't take into consideration truthy values.  To resolve this, we updated the logic in the Markup.
 
 [5.3.1](https://github.com/massgov/mayflower/pull/497) - Was an incorrect Patch version.  We found a mistake in the Data Object where one of the new patterns introduced used `url` in the Data Object and `href` in the Markup.  This seemed like a small fix to correct the Data Object, but this should have been a Major version instead since we required the new variable in the Data Object.  This should have been done in a backward compatible manner that checks for the old variable and uses that if it exists.  
 
