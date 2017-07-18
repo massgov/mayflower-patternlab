@@ -1,6 +1,5 @@
-{% if pageHeader.widgets %}
-  {% set widgetsClass = "ma__page-header--has-widgets" %}
-{% endif %}
+{% set widgetsClass = pageHeader.widgets ? "ma__page-header--has-widgets" : "" %}
+{% set prefix = pageHeader.category|default(pageHeader.prefix) %}
 
 <section class="ma__page-header {{ widgetsClass }}">
   {% if pageHeader.headerTags.taxonomyTerms or pageHeader.socialLinks.items %}
@@ -25,13 +24,16 @@
         </div>
       {% endif %}
       {% if pageHeader.category %}
-        <div class="ma__page-header__category">
+        <div class="ma__page-header__category" aria-hidden="true">
           {{ pageHeader.category }}
         </div>
       {% endif %}
       <h1 
       class="ma__page-header__title"
-      {% if schemaPageType %} property="name"{% endif %}>{{pageHeader.title}}</h1>
+      {% if schemaPageType %} property="name"{% endif %}>
+        {% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}
+        {{pageHeader.title}}
+      </h1>
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>
     {% endif %}

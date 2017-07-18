@@ -1,7 +1,8 @@
-.ma__video {
+.ma__iframe {
   @include clearfix;
   
   &__container {
+    font-size: 0;
     padding: 13px;
   }
 
@@ -18,8 +19,13 @@
   .main-content--full .page-content > & {
     @include ma-container();
   }
-
+  
   &__link {
     margin-top: 12px;
+  }
+
+  iframe {
+    width: 100%;
+    border: none;
   }
 }

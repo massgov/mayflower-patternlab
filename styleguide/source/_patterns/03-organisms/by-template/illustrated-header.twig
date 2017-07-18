@@ -1,10 +1,11 @@
 <section class="ma__illustrated-header">
   <div class="ma__illustrated-header__container">
     <div class="ma__illustrated-header__content">
-      <div class="ma__illustrated-header__category">
+      <div class="ma__illustrated-header__category" aria-hidden="true">
         {{illustratedHeader.category}}
       </div>
       {% set pageHeader = illustratedHeader.pageHeader %}
+      {% set pageHeader = pageHeader|merge({ 'prefix': illustratedHeader.category }) %}
       {% include "@organisms/by-template/page-header.twig" %}
     </div>
   </div>

@@ -26,6 +26,8 @@ Description: Page Header with multiple spots (see optional content + widgets pro
 pageHeader:
   divider: 
     type: boolean
+  prefix:
+    type: string / optional
   title:
     type: string
   subTitle:

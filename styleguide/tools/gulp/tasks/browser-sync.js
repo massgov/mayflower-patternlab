@@ -19,6 +19,7 @@ module.exports = function(config, env){
         open: false, // or  "external"
         notify: false,
         ghostMode: false,
+        reloadDelay: 200,
 
         // watch these files and reload the browser when they change
         files: [
