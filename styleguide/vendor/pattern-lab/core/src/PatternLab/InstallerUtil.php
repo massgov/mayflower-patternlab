@@ -349,14 +349,15 @@ class InstallerUtil {
 				// iterate over the returned objects
 				foreach ($finder as $file) {
 					
-					$ext = $file->getExtension();
+					$ext      = $file->getExtension();
+					$pathName = $file->getPathname();
 					
 					if ($ext == "css") {
-						$componentTypes["stylesheets"][] = str_replace($sourceBase.$source,$destination,$file->getPathname());
+						$componentTypes["stylesheets"][] = str_replace(DIRECTORY_SEPARATOR,"/",str_replace($sourceBase.$source,$destination,$pathName));
 					} else if ($ext == "js") {
-						$componentTypes["javascripts"][] = str_replace($sourceBase.$source,$destination,$file->getPathname());
+						$componentTypes["javascripts"][] = str_replace(DIRECTORY_SEPARATOR,"/",str_replace($sourceBase.$source,$destination,$pathName));
 					} else if ($ext == $templateExtension) {
-						$componentTypes["templates"][]   = str_replace($sourceBase.$source,$destination,$file->getPathname());
+						$componentTypes["templates"][]   = str_replace(DIRECTORY_SEPARATOR,"/",str_replace($sourceBase.$source,$destination,$pathName));
 					}
 					
 				}
@@ -468,7 +469,7 @@ class InstallerUtil {
 				// see if the directory is essentially empty
 				$files = scandir($path);
 				foreach ($files as $key => $file) {
-					$ignore = array("..",".",".gitkeep","README",".DS_Store");
+					$ignore = array("..",".",".gitkeep","README",".DS_Store","patternlab-components");
 					$file = explode("/",$file);
 					if (in_array($file[count($file)-1],$ignore)) {
 						unset($files[$key]);
@@ -591,11 +592,6 @@ class InstallerUtil {
 		// initialize a bunch of stuff like config and console
 		self::init();
 		
-		// make sure user is prompted to install starterkit
-		if (!empty($installerInfo["suggestedStarterKits"])) {
-			self::promptStarterKitInstall($installerInfo["suggestedStarterKits"]);
-		}
-		
 		// reorder packages so the starterkit is first if it's being installed as a package
 		if (isset($installerInfo["packages"])) {
 			
@@ -631,6 +627,11 @@ class InstallerUtil {
 				
 			}
 			
+		}
+		
+		// make sure user is prompted to install starterkit
+		if (!empty($installerInfo["suggestedStarterKits"])) {
+			self::promptStarterKitInstall($installerInfo["suggestedStarterKits"]);
 		}
 		
 		// override any configs that have been set-up
