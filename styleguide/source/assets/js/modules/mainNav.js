@@ -143,18 +143,6 @@ export default function (window,document,$,undefined) {
         }
       }
     });
-    $mainNavToggle.last()
-      .find('.js-main-nav-content li')
-        .last()
-          .find('a').on('keydown', function(e) {
-            e.stopPropagation();
-            // previous key was not a shift
-            if(e.keyCode === 9 && previousKey !== 16) {  // tab arrow\
-              let $openContent = $parent.find('.js-main-nav-content.' + openClass);
-              hide($openContent);
-            }
-            previousKey = e.keyCode;
-      });
 
     $('.js-close-sub-nav').on('click', function(){
       let $openContent = $parent.find('.js-main-nav-content.' + openClass);
