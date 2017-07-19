@@ -89,3 +89,15 @@
   border-top: 1px solid #ccc;
 }
 
+.sg-tabs-panel code[class*=language-], 
+.sg-tabs-panel pre[class*=language-] {
+  font-size: 16px;
+}
+
+.sg-pattern-desc {
+  font-size: 16px;
+}
+
+.sg-pattern-desc hr + h2 {
+  display: none;
+}
