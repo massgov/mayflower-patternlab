@@ -1,34 +1,103 @@
 {
-  "comments" : [
-    {
-      "el": "header[role=banner]",
-      "title" : "Masthead",
-      "comment": "The main header of the site doesn't take up too much screen real estate in order to keep the focus on the core content. It's using a linear CSS gradient instead of a background image to give greater design flexibility and reduce HTTP requests."
-    },
-    {
-      "el": ".logo",
-      "title" : "Logo",
-      "comment": "The logo image is an SVG file, which ensures that the logo displays crisply even on high resolution displays. A PNG fallback is provided for browsers that don't support SVG images.</p><p>Further reading: <a href=\"http://bradfrostweb.com/blog/mobile/hi-res-optimization/\">Optimizing Web Experiences for High Resolution Screens</a></p>"
-    },
-    {
-      "el": "#nav",
-      "title" : "Navigation",
-      "comment": "<p>Navigation for adaptive web experiences can be tricky. Top navigations are typical on desktop sites, but mobile screen sizes don't give us the luxury of space. We're dealing with this situation by creating a simple menu anchor that toggles the main navigation on small screens. This is just one method. <a href=\"http://bagcheck.com/\">Bagcheck</a> and <a href=\"http://contentsmagazine.com/\">Contents Magazine</a> add an anchor in the header that jumps users to the navigation which is placed in the footer. This solution works well because it doesn't require any Javascript in order to work. Other methods exist too. For example, <a href=\"http://m.espn.com\">ESPN's mobile navigation</a> overlays the main content of the page.</p><p>The nav is only hidden when a certain level of javascript is supported in order to ensure that users with little/poor javascript support can still access the navigation. Once the screen size is large enough to accommodate the nav, we show the main navigation links and hide the menu anchor.<p><p>See also: <a href=\"http://bradfrostweb.com/blog/web/responsive-nav-patterns/\">Responsive Navigation Patterns</a></p>"
-    },
-    {
-      "el": ".search-form",
-      "title" : "Search",
-      "comment": "<p>Search is an incredibly important priority, especially for mobile. It is a great idea to give users the ability to jump directly to what they are looking for without forcing them to wade through your site's navigation. Check out the <a href=\"http://burton.com\">Burton</a> and <a href=\"http://yelp.com\">Yelp</a> mobile sites for great examples of experiences that prioritize search.</p><p>We're also using the <a href=\"http://dev.w3.org/html5/markup/input.search.html\">HTML5 search input type</a>, which is great for mobile devices that can <a href=\"http://diveintohtml5.info/forms.html\">bring up the appropriate virtual keyboard</a> for many smartphones. And like the main header navigation, we're hiding the search form on small screens to save space. Clicking the search anchor toggles the form. </p>"
-    },
-    {
-      "el": ".article-header h1",
-      "title" : "Article Header",
-      "comment": "<p>The article header should be no more than 140 characters. </p>"
-    },
-    {
-      "el": ".block-hero",
-      "title" : "Hero",
-      "comment": "<p>The hero area highlights one major story using a large image and a captivating headline.</p>"
-    }
-  ]
+  "comments" : [{
+      "el": "#main-content .js-accordion",
+      "title" : "Accordion",
+      "comment": " - assets/js/modules/accordion.js"
+    },{
+      "el": "#main-content .js-back2top",
+      "title" : "Back to Top",
+      "comment": " - assets/js/modules/back2top.js"
+    },{
+      "el": "#main-content .js-clickable",
+      "title" : "Clickable Item",
+      "comment": " - assets/js/modules/clickable.js"
+    },{
+      "el": "#main-content .js-dropdown",
+      "title" : "Dropdown Menu",
+      "comment": " - assets/js/modules/dropdown.js"
+    },{
+      "el": "#main-content .js-emergency-alerts",
+      "title" : "Emergency Alerts",
+      "comment": " - assets/js/modules/emergencyAlerts.js"
+    },{
+      "el": "#main-content .js-footnote",
+      "title" : "Footnotes",
+      "comment": " - assets/js/modules/footnote.js"
+    },{
+      "el": "#main-content textarea[maxlength]",
+      "title" : "Text Area with maxlenth",
+      "comment": " - assets/js/modules/formInputs.js"
+    },{
+      "el": "#main-content input[type='number']",
+      "title" : "Input of type number",
+      "comment": " - assets/js/modules/formInputs.js"
+    },{
+      "el": "#main-content .js-input-number",
+      "title" : "Input of type number",
+      "comment": " - assets/js/modules/formInputs.js"
+    },{
+      "el": "#main-content form",
+      "title" : "Form with basic validation",
+      "comment": " - assets/js/modules/formValidation.js"
+    },{
+      "el": "#main-content .js-google-map",
+      "title" : "Google Map",
+      "comment": " - assets/js/modules/googleMap.js"
+    },{
+      "el": "#main-content .js-header-alert",
+      "title" : "Header Alerts",
+      "comment": " - assets/js/modules/hideAlert.js"
+    },{
+      "el": "#main-content .js-keyword-search",
+      "title" : "Keyword Search",
+      "comment": " - assets/js/modules/keywordSearch.js"
+    },{
+      "el": "#main-content .js-location-filters",
+      "title" : "Location Filters",
+      "comment": " - assets/js/modules/locationFilters.js"
+    },{
+      "el": "#main-content .js-location-listing",
+      "title" : "Location Listing",
+      "comment": " - assets/js/modules/locationListing.js"
+    },{
+      "el": "#main-content .js-main-nav",
+      "title" : "Main Navigation",
+      "comment": " - assets/js/modules/mainNav.js"
+    },{
+      "el": "#main-content .js-header-menu-button",
+      "title" : "Mobile Navigation",
+      "comment": " - assets/js/modules/mobileNav.js"
+    },{
+      "el": "#main-content .js-org-selector",
+      "title" : "Organization Selector",
+      "comment": " - assets/js/modules/orgSelector.js"
+    },{
+      "el": "#main-content .js-pagination",
+      "title" : "Pagination",
+      "comment": " - assets/js/modules/pagination.js"
+    },{
+      "el": "#main-content .js-input-date",
+      "title" : "Date Picker",
+      "comment": " - assets/js/modules/pickaday.js"
+    },{
+      "el": "#main-content .js-ma-responsive-video",
+      "title" : "Responsive Video",
+      "comment": " - assets/js/modules/responsiveVideo.js"
+    },{
+      "el": "#main-content .js-results-heading",
+      "title" : "Results Heading",
+      "comment": " - assets/js/modules/resultsHeading.js"
+    },{
+      "el": "#main-content .js-ma-rich-text table",
+      "title" : "Rich Text Table",
+      "comment": " - assets/js/modules/richText.js"
+    },{
+      "el": "#main-content .js-scroll-anchors",
+      "title" : "Scrolling Navigation",
+      "comment": " - assets/js/modules/scrollAnchors.js"
+    },{
+      "el": "#main-content .js-util-nav",
+      "title" : "Utility Navigation",
+      "comment": " - assets/js/modules/utilNav.js"
+    }]
 }
