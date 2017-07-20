@@ -101,3 +101,17 @@
 .sg-pattern-desc hr + h2 {
   display: none;
 }
+
+.sg-pattern-lineage {
+  font-size: 14px;
+}
+
+.sg-pattern-lineage:first-of-type:before {
+  content: "Lineage";
+  display: block;
+  font-size: 1.34em;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
