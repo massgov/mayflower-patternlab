@@ -1,32 +1,30 @@
 # Semantic Versioning
 
-The Mayflower Style Library is using [Semantic Versioning](http://semver.org/) to help maintain dependencies with consumers of the patterns contained within.  This method will help convey what will be required to upgrade a site to a newer version of Mayflower.
+The Mayflower Style Library is using [Semantic Versioning](http://semver.org/) to convey meaning about the underlying code and what has been modified from one version to the next to help consumers keep their sites up to date with the latest features and bug fixes.
 
-### Terms used in this document
-* Markup - The twig or html code for a pattern
-* CSS - The Style Sheet index-generated.css and base-theme-generated.css files
-* JS - The JavaScript index-generated.js and vendor-generated.js files
-* Data Object - The JSON data used for a pattern
-
-
-## Our Contract with you
-We will make sure that the Data Object for all patterns, except pages, works consistently between Major versions.  
-*- Pages are there as examples to show different ways to combining patterns.*
+## Our Contract with the consumer
+- *Patch:* consumer doesn't need to re-write any Markup, things just get better, nothing new is available, nothing breaks just by updating
+- *Minor:* consumer doesn't need to re-write any Markup, has access to new features available, maybe an option to do something a better way, nothing breaks just by updating
+- *Major:* consumer has to walk through a 'migration' step to update since this will break things
 
 ## The Basics
 Versions of Mayflower are denoted by three values 1.0.0 that represent Major, Minor, and Patch changes respectively.  Major changes can contain Minor changes which can contain Patch changes.  When Major and Minor versions are made the numbers to the right will always be reset to zero.
 
+### Key Terms
+* Markup - The twig or html code for a pattern
+* Artifacts - The SVG icons, fonts, CSS, and JavaScript files
+* Data Object - The JSON data variables used for a pattern
+
 ### Patch versions (0.0.1) 
-A Patch version is created when an issue found within a pattern in Mayflower has been resolved.  The changes made will be done in a backward compatible manner that doesn't require changes to Markup or Data Objects.
+A Patch version is created to resolve issues found within a pattern in Mayflower.  The changes made will only be done to Mayflower's Artifacts in a manner that doesn't require changes to the Markup or Data Object.
 
 #### How to upgrade
-Patch versions may require an update to the CSS, JS or Markup, but the Data Object will never need to be updated.  Any CSS and JS changes will always be done in a way to make them work with older Markup from the same Major version. To get all the fixes, you may have to update the Markup files.
+A Patch version may require updating your site to use one or more newer files within Mayflower's Artifacts.
 
 #### Example of possible changes
-* CSS or JS modified to resolve a styling or interaction issue (ie: link color, or button trigger).
-* Markup updated to include a missing HTML element or attribute (ie: missing a class name).
-* Markup modified to use a different HTML element type (ie: use a span instead of a div).
-* Markup changed to use the proper variable defined in the Data Object (ie: typo in variable name).
+* CSS or JavaScript modified to resolve a styling or interaction issue (ie: link color or button trigger).
+* SVG icon replaced with a new version
+* Fonts changed to include additional font weights
 
 #### Example Version
 [5.1.2](https://github.com/massgov/mayflower/pull/475/files) - Was done to resolve a issue found with Comp Heading pattern.  We had recently upgraded the `compHeading.centered` variable in the Data Object to use a Boolean instead of a String, but the logic to make this backward compatible didn't take into consideration truthy values.  To resolve this, we updated the logic in the Markup.
@@ -35,30 +33,30 @@ Patch versions may require an update to the CSS, JS or Markup, but the Data Obje
 
 
 ### Minor versions (0.1.0)
-A Minor version is created when new features have been added to a pattern or a new pattern has been introduced into Mayflower.  These new features will will be done as an extention of the existing pattern without requiring any modifications to the existing Markup or Data Object.
+A Minor version is created when new features are added to an existing Pattern, a new Pattern is created, or an issue has been resolved that required Markup changes. New features will always be written as an optional extention of the existing pattern without requiring any modifications to the existing Markup or Data Object.
 
 #### How to upgrade
-Minor versions may require an update to the CSS, JS, Markup or adding new variables to the Data Object, but the changes will always work with an older Data Object from the same Major version.  In order to use the new Patterns, you may have to update the Data Object to include the new variables.
+A Minor version may require updating your site to use one or more newer files within Mayflower's Artifacts, enhancing an existing Pattern with new Markup or Data Object, creating new Markup and Data Object for a new Pattern, or modifing existing Markup to resolve an issue.  Markup changes made to resolve an issue, will be noted in the release notes.
 
 #### Example of possible changes
 * New Pattern created (ie: a new button atom).
-* Optional Markup added to include a new feature (ie: an optional title).
-* Markup modified to work with new CSS, JS, or Data Object variables (ie: new 'centered' variable for the title).
-* Data Object updated to include new variables (ie: adding a view more link).
+* Additional Markup or Data Object for a new feature added to an existing Pattern (ie: an optional title added to the Link List organism).
+* Existing Markup enhanced to work with a new optional feature (ie: new 'centered' variable for the title).
+* Broken Markup, CSS, or JS changed to resolve an issue (ie: typo found in a class name, twig variable, or CSS selector)
 
 #### Example version
-[5.4.0](https://github.com/massgov/mayflower/pull/507) - We introduced several new patterns and a resolved a few issues with existing patterns.  The new patterns were introduced to facilitate a new Executive Order and Policy Advisory pages.  We also resolved several issues we found in the previous 5.3 version.
+[5.4.0](https://github.com/massgov/mayflower/pull/507) - We introduced several new patterns and resolved a few issues with existing patterns.  The new patterns were introduced to facilitate a new Executive Order and Policy Advisory pages.  We also resolved several issues we found in the previous 5.3 version.
 
 
 ### Major versions (1.0.0)
-A Major version is created when it was not possible to correct an issue or update a pattern in a backward compatible manner.  The changes made will require a change to the Data Object.
+A Major version is created when the new code requires changes to the Markup or Data Object to prevent breaking existing styling or functionality.
 
 #### How to upgrade
-Major versions will require an update to the Data Object and may require an update to the CSS, JS, or Markup.
+A Major version will require a carefully updating your site's Artifacts, Markup, or Data Object.  A full site wide regression test is advised.
 
 #### Example of possible changes
 * Data Object updated to replace existing variables (ie: renaming 'url' to 'href').
-* Change the Type of a variable in the Data Object (ie: switching the 'centered' value from Type String to Boolean).
+* Data Object changed to use a different Type value (ie: switching the 'centered' value from Type String to Boolean).
 * Patterns renamed or moved to a new folder (ie: renaming Action Map to Google Map).
 * Markup changed so it becomes dependent on new variables (ie: new 'color' variable required to set background).
 
