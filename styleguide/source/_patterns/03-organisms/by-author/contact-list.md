@@ -12,12 +12,6 @@ Displays one of more Contacts Us patterns as a stacked list of accordions.
 * Contact Us
 * Comp Heading
 
-### Usage Guidelines
-* Can be added as the first item in the sidebar displayed witout the accordions
-* Can be added near the bottom of the main content displayed with accordions
-* if used in the sidebar and main content, then the sidebar contact should have the 'viewSpecific' variable enabled and ideally a copy of the sidebar contact should be added to the top of the main content with 'viewSpecific' enabled.
-* See Contact Us and Comp Heading for more details
-
 ### Variant options
 * Turning on the viewSpecific variable, will hide the component at certain points when used on a two column layout.  When placed in the sidebar, it will hide when the page is a single column.  When placed in the page-content, it will hide when the page is two columns.
 
