@@ -35,7 +35,7 @@ Patch versions may require an update to the CSS, JS or Markup, but the Data Obje
 
 
 ### Minor versions (0.1.0)
-A Minor version is created when new features have been added to a pattern or a new pattern has been introduced into Mayflower.  The changes made will be done in a backward compatible manner that doesn't require changes to the Data Object.
+A Minor version is created when new features have been added to a pattern or a new pattern has been introduced into Mayflower.  These new features will will be done as an extention of the existing pattern without requiring any modifications to the existing Markup or Data Object.
 
 #### How to upgrade
 Minor versions may require an update to the CSS, JS, Markup or adding new variables to the Data Object, but the changes will always work with an older Data Object from the same Major version.  In order to use the new Patterns, you may have to update the Data Object to include the new variables.
