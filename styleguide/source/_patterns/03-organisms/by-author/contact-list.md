@@ -1,7 +1,3 @@
----
-title: Contact List
----
-
 ### Description
 Displays one of more Contacts Us patterns as a stacked list of accordions.
 

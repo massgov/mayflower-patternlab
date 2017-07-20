@@ -1,7 +1,3 @@
----
-title: Image
----
-
 ### Description
 Displays an image using the image HTML element
 

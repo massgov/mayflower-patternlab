@@ -98,10 +98,6 @@
   font-size: 16px;
 }
 
-.sg-pattern-desc hr + h2 {
-  display: none;
-}
-
 .sg-pattern-lineage {
   font-size: 14px;
 }
