@@ -10,6 +10,8 @@ Description: A list of icons displayed for a location.
 ### Required Variables
 ~~~
 locationIcons: {
+  title:
+    type: string/optional (visually hidden)
   icons: [{
     path:
       type: string/required

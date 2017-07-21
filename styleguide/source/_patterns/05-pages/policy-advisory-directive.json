@@ -23,10 +23,10 @@
       "data": {
         "listingTable": {
           "rows": [{
-            "label": "Date:",
+            "label": "Last Updated:",
             "text": "3/2/2017"
           },{
-            "label": "Issuer:",
+            "label": "Organization:",
             "text": "Mark E. Nunnelly, Commissioner of Revenue"
           },{
             "label": "Referenced Sources:",
@@ -291,8 +291,12 @@
   "sideContent": {
     "contactList": {
       "viewSpecific": true,
-      "sidebarHeading":{
-        "title": "Contact"
+      "compHeading":{
+        "title": "Contact",
+        "sub": false,
+        "color": "",
+        "id": "",
+        "centered": ""
       },
       "contacts":[{
         "subTitle": {
@@ -326,7 +330,7 @@
       "items": [{
         "eyebrow": "Letter Ruling",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"LR 12-3: Internet-Based Marketing and Customer-Communications Solutions",
           "info": "",
           "property": ""
@@ -337,7 +341,7 @@
       },{
         "eyebrow": "Regulation",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"830 CMR 64H.1.3",
           "info": "",
           "property": ""
@@ -348,7 +352,7 @@
       },{
         "eyebrow": "",
         "title" : {
-          "url":"#",
+          "href":"#",
           "text":"Related Non News, Announcements, Reg, or Law Here",
           "info": "",
           "property": ""

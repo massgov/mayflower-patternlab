@@ -59,6 +59,39 @@ export default function (window,document,$,undefined) {
       // Trigger map initialized event, broadcast master markers.
       $el.trigger('ma:GoogleMap:MapInitialized', [markers]);
 
+      // Add keyboard navigation only after the map is rendered (becoming idle).
+      google.maps.event.addListenerOnce(map, 'idle', function() {
+        let $mapItems = $(".js-google-map").find(
+          'div[title="Show street map"],' +
+          'div[title="Show street map with terrain"],' +
+          'div[title="Show satellite imagery"],' +
+          'div[title="Zoom in to show 45 degree view"],' +
+          'div[title="Show imagery with street names"],' +
+          'div[title="Pan up"],' +
+          'div[title="Pan down"],' +
+          'div[title="Pan left"],' +
+          'div[title="Pan right"],' +
+          'div[title="Return to the last result"],' +
+          'div[title="Zoom in"],' +
+          'div[title="Zoom out"],' +
+          'img[title="Rotate map 90 degrees"],' +
+          '.gmnoprint area'
+        );
+        $mapItems.each(function(i, o){
+          $(o).attr({
+            role: 'button',
+            tabindex: '0',
+            'aria-label': o.title
+          }).bind('keydown', function(ev){
+            // If enter is pressed on one of these elements, trigger a click of the element.
+            if (ev.which == 13){
+              ev.preventDefault();
+              $(o).trigger('click');
+            }
+          });
+        });
+      });
+
       // Listen for map recenter event
       $el.on("ma:GoogleMap:MapRecenter", function (event, markerIndex) {
         if (typeof markers[markerIndex] === "undefined") {
@@ -129,6 +162,7 @@ export default function (window,document,$,undefined) {
         }),
         label: data.label,
         infoWindow: data.infoWindow,
+        title: 'Marker: ' + data.infoWindow.name
       };
       let marker =  new google.maps.Marker(markerData);
       let infoData = infoTransform(markerData.infoWindow);

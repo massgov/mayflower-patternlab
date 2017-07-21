@@ -1,0 +1,12 @@
+{
+  "tooltip": {
+    "controlId": "GUID1272384732",
+    "location": "",
+    "info": "show more information about this thing",
+    "openText": "Show Tooltip",
+    "openIcon": "@atoms/05-icons/svg-question-mark.twig",
+    "closeText": "Close",
+    "title": "What does this term mean?",
+    "message": "This term is defined as Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fugiat voluptatibus, magnam, facilis error corporis beatae non minus eius unde."
+  }
+}

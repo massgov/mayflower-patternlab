@@ -1,5 +1,10 @@
 import getTemplate from "../helpers/getHandlebarTemplate.js";
 export default function (window,document,$,undefined) {
+
+  if($('.js-pagination').length === 0) {
+    return;
+  }
+
   // {{compare unicorns ponies operator="<"}}
   // 	I knew it, unicorns are just low-quality ponies!
   // {{/compare}}

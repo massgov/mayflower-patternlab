@@ -37,20 +37,43 @@ textarea {
   font-weight: 400;
 }
 
-
 input {
   background-color: $c-white;
   border-color: $c-bd-input;
   color: $c-font-base;
 
-  &[data-valid ="is-invalid"] {
-    border-color: red;
+  &.has-error:not(:focus) {
+    background-image: url('../images/svg-icons/input-error.svg');
+    border-color: $c-bd-error;
   }
 
   .ma__form--light & {
     background-color: rgba($c-white, 0.1);
     border-color: rgba($c-bd-input,.5);
     color: $c-font-inverse;
+
+    &.has-error {
+      border-color: $c-bd-error;
+    }
+  }
+}
+
+.ma__input-number {
+
+  &__plus,
+  &__minus {
+    border-color: $c-bd-input;
+
+    &:after {
+      border-color: $c-font-dark;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+
+  input.has-error ~ &__plus,
+  input.has-error ~ &__minus {
+    border-color: $c-bd-error;
   }
 }
 
@@ -58,17 +81,26 @@ textarea {
   background-color: $c-white;
   border-color: $c-bd-input;
 
-  &[data-valid ="is-invalid"] {
-    border-color: rgba(red,.7);
+  &.has-error {
+    border-color: $c-bd-error;
   }
 
   .ma__form--light & {
     background-color: rgba($c-white, 0.1);
     border-color: rgba($c-bd-input,.5);
     color: $c-font-inverse;
+
+    &.has-error {
+      border-color: $c-bd-error;
+    }
   }
 }
 
+.ma__textarea__wrapper {
+  font-weight: 500;
+}
+
+legend,
 label {
   font-weight: 500;
 }
@@ -76,6 +108,7 @@ label {
 .ma__input-radio {
 
   label {
+    font-weight: 400;
 
     &:before {
       background-color: $c-white;
@@ -87,6 +120,10 @@ label {
         border-color: rgba($c-bd-input,.5);
       }
     }
+  }
+
+  input.has-error ~ label:before {
+    border-color: $c-bd-error;
   }
 
   input:checked ~ label {
@@ -114,6 +151,7 @@ label {
 .ma__input-checkbox {
 
   label {
+    font-weight: 400;
 
     &:before {
       background-color: $c-white;
@@ -126,6 +164,10 @@ label {
     }
   }
 
+  input.has-error ~ label:before {
+    border-color: $c-bd-error;
+  }
+
   input:focus ~ label:before {
     border-color: Highlight !important;
 
@@ -135,4 +177,10 @@ label {
       outline: -webkit-focus-ring-color auto 5px;
     }
   }
+}
+
+// error message
+.ma__error-msg {
+  color: $c-font-error;
+  font-weight: 500;
 }

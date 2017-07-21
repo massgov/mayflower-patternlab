@@ -1,19 +1,150 @@
 input {
   border: 2px solid;
-  min-height: 46px;
+  min-height: 40px;
   padding: 0 18px;
+
+  &.has-error:not(:focus) {
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+}
+
+input[type=file] {
+  border: none;
+  min-height: 0;
+  padding: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0; /* Removes leftover margin */
+}
+
+.ma__input-number {
+  display: inline-block;
+  position: relative;
+
+  input {
+    padding-right: 58px;
+  }
+
+  &__plus,
+  &__minus {
+    @include ma-button-reset;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
+    display: block;
+    height: 50%;
+    padding: 0;
+    position: absolute;
+      right: 0;
+    width: 40px;
+
+    &:focus {
+      border-bottom-style: dotted;
+      border-bottom-width: 1px;
+    }
+
+    &:after {
+      border-style: solid;
+      border-width: 5px;
+      border-top: none;
+      border-bottom-width: 6px;
+      content: "";
+      display: block;
+      height: 0;
+      margin: 0 auto;
+      position: absolute;
+        bottom: 2px;
+        left: 50%;
+      transform: translateX(-50%);
+      vertical-align: bottom;
+      width: 0;
+    }
+
+    &:focus:after {
+      bottom: 1px;
+    }
+  }
+
+  &__plus {
+    bottom: 50%;
+  }
+
+  &__minus {
+    top: 50%;
+    transform: rotate(180deg);
+  }
 }
 
 textarea {
   border: 2px solid;
+  min-height: 135px;
   padding: 18px;
 }
 
+.ma__textarea__wrapper {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: attr(data-char-left);
+    display: block;
+    font-size: 17px;
+    line-height: 1.625rem;
+    position: absolute;
+      right: 0;
+      top: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}
+
+legend,
 label {
   display: block;
   margin-bottom: .25em;
 }
 
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Special label handling
+.ma__legend,
+.ma__label {
+
+  &--optional {
+
+    &:after {
+      content: "(optional)";
+      font-size: .8em;
+      margin-left: .25em;
+    }
+  }
+
+  &--hidden {
+    @include ma-visually-hidden;
+
+    & + input {
+      margin-top: inherit;
+    }
+  }
+}
+
+// Custom Radio Buttons
 .ma__input-radio {
   display: inline-block;
   position: relative;
@@ -37,7 +168,7 @@ label {
       line-height: calc(.45em - 11px);
       margin-right: .125em;
       position: absolute;
-        top: -.05em;
+        top: -.025em;
         left: 0;
       text-align: center;
       width: .45em;
@@ -50,6 +181,7 @@ label {
   }
 }
 
+// Custom Checkboxes
 .ma__input-checkbox {
   display: inline-block;
   position: relative;
@@ -72,7 +204,7 @@ label {
       line-height: 1.5;
       padding-top: .25em;
       position: absolute;
-        top: 0;
+        top: 0.125em;
         left: 0;
       text-align: center;
       width: 2em;
@@ -91,8 +223,47 @@ label {
   }
 }
 
+// Custom Date input
 .ma__input-date[type=text] {
   background-image: url("../images/svg-icons/date-picker.svg");
-  background-position: right 8px top 10px;
+  background-position: right 8px top 7px;
   background-repeat: no-repeat;
 }
+
+// error message
+.ma__error-msg {
+  display: none;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: .5em;
+
+  &.has-error {
+    display: block;
+  }
+}
+
+// override if an input label combo is added directly to the page-content area
+// This is mainly for Pattern Lab
+.main-content .page-content > label:not(.ma__label--hidden) {
+  
+  & + textarea,
+  & + .ma__textarea__wrapper,
+  & + .ma__input-number,
+  & + input {
+    margin-top: 0;
+  }
+
+  & + .ma__error-msg {
+    margin-top: 0;
+
+    & + textarea,
+    & + .ma__textarea__wrapper,
+    & + .ma__input-number,
+    & + input {
+      margin-top: 0;
+    }
+  }
+}
+
+
+
