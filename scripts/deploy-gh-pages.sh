@@ -13,7 +13,7 @@
 #   -c CNAME record: a custom domain to point to Github Pages (required only when deploying to prod: "mayflower.digital.mass.gov")
 #   -a Assets path: the root relative path to the assets/ directory i.e. 'mayflower/assets' (only required when passing a cname [-c] for an environment which will not serve Mayflower from the root directory)
 #
-#   Example: ./scripts/deploy-gh-pages.sh -t massgov/mayflower -b DP-1234-my-branch-name -c mayflower.digital.mass.gov
+#   Example: ./scripts/deploy-gh-pages.sh -t massgov -b DP-1234-my-branch-name -c mayflower.digital.mass.gov
 #
 # Description:
 # 1. Validate the passed arguments: build source and target repo
@@ -215,6 +215,9 @@ line="Building mayflower static assets..."
 log "log" "$line";
 gulp build >/dev/null
 
+# Remove url.json to keep repo clean
+rm source/_data/url.json
+
 # Make temp directory to copy public  assets
 line="Making ~/tmp/mayflower directory..."
 log "log" "$line";
@@ -277,7 +280,7 @@ then
     then
         line="Woo-hoo! Deploy complete! \n You should see your updates at ${cname}!"
     else
-        line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n http(s)://${owner}.github.io/mayflower"
+        line="Woo-hoo! Deploy complete! You should be able to see your updates at your Mayflower fork's Github Pages: \n https://${owner}.github.io/mayflower"
     fi
     log "success" "$line";
 else
