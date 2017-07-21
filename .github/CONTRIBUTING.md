@@ -36,14 +36,14 @@ A fork is a *copy* of a repository. Forking a repository allows you to freely ex
 ### Cloning the repo
 Right now, you have a fork of the Mayflower repository, but you don't have the files in that repository on your computer. Let's create a clone of your fork locally on your computer.
 
-1. On GitHub, navigate to your fork of the Mayflower repository at `https://github.com/<your-github-username>/mayflower`.
-1. Follow from Step 2 of [Github Help: Cloning a repository](https://help.github.com/articles/cloning-a-repository/).
-
-You now have a local representation of *your* Mayflower!
+1. `git clone git@github.com:<your github username>/mayflower.git`
+1. Or, if you don't have [ssh set up on your local environment or with github](https://help.github.com/articles/connecting-to-github-with-ssh/), navigate to your fork of the Mayflower repository at `https://github.com/<your-github-username>/mayflower`.
+    1. Follow from Step 2 of [Github Help: Cloning a repository](https://help.github.com/articles/cloning-a-repository/).
+1. You now have a local representation of *your* Mayflower!  Change directory into the repo root: `cd mayflower`
 
 ### Installing project dependencies
 
-1. Move into the styleguide directory `cd mayflower/styleguide`
+1. Move into the styleguide directory `cd styleguide`
 1. Generate pattern lab default files `php core/console --generate`
 1. Install npm dependencies `npm install`
 
