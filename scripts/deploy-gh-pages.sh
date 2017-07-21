@@ -211,6 +211,10 @@ find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost
 find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${assetsPath}\"!g" {} \;
 
 # 4. Build pattern to generate prod static assets
+line="Generating mayflower patterns..."
+log "log" "$line";
+php core/console --generate >/dev/null
+
 line="Building mayflower static assets..."
 log "log" "$line";
 gulp prod >/dev/null
