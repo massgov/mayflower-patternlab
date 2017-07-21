@@ -36,10 +36,6 @@
     vertical-align: middle;
   }
 
-  &__info {
-    @include ma-visually-hidden;
-  }
-
   &__text {
     @include ma-link-underline;
     font-size: 1.625rem;
