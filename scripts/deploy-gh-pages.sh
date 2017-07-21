@@ -213,7 +213,7 @@ find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${asset
 # 4. Build pattern to generate prod static assets
 line="Building mayflower static assets..."
 log "log" "$line";
-gulp build >/dev/null
+gulp prod >/dev/null
 
 # Remove url.json to keep repo clean
 rm source/_data/url.json
