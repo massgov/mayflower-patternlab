@@ -131,7 +131,7 @@ This will create the branch on your Mayflower fork. The `-u` flag links this bra
 
 ### Deploying your work
 
-Once your work is complete, deploy your branch to your Mayflower fork's Github Pages, so that its functionality can be tested and reviewed by someone who doesn't have Mayflower running locally.  See [our deployment docs](https://github.com/massgov/mayflower/blob/master/docs/deploy.md#developer-deployment) for step by step instructions.
+Once your work is complete, deploy your branch to your Mayflower fork's Github Pages, so that its functionality can be tested and reviewed by someone who doesn't have Mayflower running locally.  See [our deployment docs](../docs/deploy.md#developer-deployment) for step by step instructions.
 
 ### Creating a Pull Request
 Pull requests (PRs) let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.  
