@@ -11,7 +11,7 @@ On this page:
 
 #### Prerequisite
 
-Set up your Mayflower fork + local repository, see our [CONTRIBUTING.md](https://github.com/massgov/mayflower/blob/master/CONTRIBUTING.md) for directions.
+Set up your Mayflower fork + local repository, see our [CONTRIBUTING.md](../.github/CONTRIBUTING.md) for directions.
 
 #### Deploy feature work to your fork's Github Pages for review and testing
 Developers and contributors can follow these steps to deploy your branch to your fork's Github Pages environment.  This will allow reviewers to test your code without having to build from your branch locally.
@@ -48,4 +48,4 @@ Mayflower release managers with the necessary repo permissions can follow these 
 
 ## Static assets
 
-It is possible to build Mayflower's static assets without serving them.  See the [gulp-readme](https://github.com/massgov/mayflower/blob/master/styleguide/tools/gulp/gulp-readme.md) for more information.
+It is possible to build Mayflower's static assets without serving them.  See the [gulp-readme](../styleguide/tools/gulp/gulp-readme.md) for more information.

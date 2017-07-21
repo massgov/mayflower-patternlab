@@ -23,7 +23,7 @@ Thanks for contributing to Mayflower!  Follow the steps on this page to get up a
 
 ### Setting up your environment
    
-In order to run Mayflower locally, you need to have some things installed and set up on your machine.  See the [Setting up your environment](https://github.com/massgov/mayflower/blob/master/docs/setting-up-environment.md).
+In order to run Mayflower locally, you need to have some things installed and set up on your machine.  See the [Setting up your environment](../docs/setting-up-environment.md).
 
 ### Forking the repo
 

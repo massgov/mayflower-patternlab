@@ -1,6 +1,6 @@
 # Demo Install
 
-Follow these steps to get up and running to *demo* or *test* Mayflower.  Developers should see our [Contribute docs](/.github/CONTRIBUTING.md) for directions on how to set up your repo for development and contribution purposes.
+Follow these steps to get up and running to *demo* or *test* Mayflower.  Developers should see our [Contribute docs](../.github/CONTRIBUTING.md) for directions on how to set up your repo for development and contribution purposes.
 
 1. Clone this repo `git clone git@github.com:massgov/mayflower.git`
 1. Move into the styleguide directory `cd mayflower/styleguide`

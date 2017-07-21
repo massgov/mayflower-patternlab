@@ -5,21 +5,21 @@ Mayflower is the enterprise design system for the Commonwealth of Massachusetts.
 
 ### Setting up your environment
 
-In order to run Mayflower locally, you need to have some things installed and set up on your machine.  Follow the steps in [Setting up your environment](/docs/setting-up-environment.md).
+In order to run Mayflower locally, you need to have some things installed and set up on your machine.  Follow the steps in [Setting up your environment](docs/setting-up-environment.md).
 
 #### Demo Install
-- Follow the steps in [Demo Install](/docs/demo-install.md) to get a copy of the project up and running on your local machine for *demo* and *testing* purposes. 
+- Follow the steps in [Demo Install](docs/demo-install.md) to get a copy of the project up and running on your local machine for *demo* and *testing* purposes. 
 
 ## Contribute
 
-Please follow the steps in [Contributing docs](https://github.com/massgov/mayflower/blob/master/.github/CONTRIBUTING.md) to set up your fork and repo for *development* and *contribution* purposes.
+Please follow the steps in [Contributing docs](.github/CONTRIBUTING.md) to set up your fork and repo for *development* and *contribution* purposes.
 
 ## Deployment
 
 Please see [Deployment docs](https://github.com/massgov/mayflower/blob/master/docs/deploy.md) for steps on [deploying development work to a Mayflower fork's Github Pages](https://github.com/massgov/mayflower/blob/master/docs/deploy.md#developer-deployment) as well as [production release deployment](https://github.com/massgov/mayflower/blob/master/docs/deploy.md#release-deployment).
 
 ## Mayflower Artifacts
-Some Mass Digital Services projects (i.e. [massgov/mass](https://github.com/massgov/mass)) use twig templates for markup in addition to the static css, js, + icon assets from Mayflower.  To establish that dependency, those projects point their dependency manager (i.e. [composer](https://getcomposer.org/doc/00-intro.md)) to the [Mayflower Artifacts](https://github.com/massgov/mayflower-artifacts) repository which consists of these assets.  Learn more about Mayflower Artifacts in the [massgov/mass docs](https://github.com/massgov/mass/blob/DP-4049-document-mayflower-drupal-relationship/docs/Mayflower.md#mayflower-artifacts).
+Some Mass Digital Services projects (i.e. [massgov/mass](https://github.com/massgov/mass)) use twig templates for markup in addition to the static css, js, + icon assets from Mayflower.  To establish that dependency, those projects point their dependency manager (i.e. [composer](https://getcomposer.org/doc/00-intro.md)) to the [Mayflower Artifacts](https://github.com/massgov/mayflower-artifacts) repository which consists of these assets.  Learn more about Mayflower Artifacts in the [massgov/mass docs](https://github.com/massgov/mass/blob/master/docs/Mayflower.md#mayflower-artifacts).
 
 ## Built With
 
