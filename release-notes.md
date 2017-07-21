@@ -1,5 +1,26 @@
 # Mayflower Release Notes
 
+## 5.5.0
+
+Here comes another Mayflower release, hot off the summertime presses!  We've got 2 new page types and lots of little improvements and fixes coming your way.
+ 
+ **JIRA fans can check out the [release tickets](https://jira.state.ma.us/projects/DP/versions/14642) for more information.*
+ **Mayflower project consumers can take a look at PR's below to confirm, make, and test any markup changes introduced by this release prior to updating in production.*
+ 
+### New Features
+- New page type: [Board Decisions](http://mayflower.digital.mass.gov/?p=pages-board-decision), which is used for rulings, decisions and opinions issued by agency boards or individuals given the authority to decide specific matters. ([@pages/board-decision](http://mayflower.digital.mass.gov/?p=pages-board-decision), See [PR #494](https://github.com/massgov/mayflower/pull/494))
+- We've also added an example [Form Page](http://mayflower.digital.mass.gov/?p=pages-form-page-example) to highlight form styles (projects likely implement forms using other services) (See [PR #490](https://github.com/massgov/mayflower/pull/490) - Markup)
+- News ([@organisms/by-author/press-listing](http://mayflower.digital.mass.gov/?p=organisms-press-listing)) and events ([@organisms/by-author/event-listing](http://mayflower.digital.mass.gov/?p=organisms-event-listing)) are now surfaced on additional page types (See [PR #498](https://github.com/massgov/mayflower/pull/498) - Markup)
+
+### Improvements
+- We've added some keyboard functionality to our google map ([@molecules/googlemap](http://mayflower.digital.mass.gov/?p=molecules-google-map)) pattern (See [PR #489](https://github.com/massgov/mayflower/pull/489) - JS only)
+- We've made the [Regulation page type](http://mayflower.digital.mass.gov/?p=pages-regulation)  more uniform to other "law" page types (See [PR #494](https://github.com/massgov/mayflower/pull/494) - Markup))
+
+### Fixes
+- The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should render (See [PR #493](https://github.com/massgov/mayflower/pull/493))
+- Assistive tech like screenreaders will now read callout stats ([@molecules/callout-stats](http://mayflower.digital.mass.gov/?p=molecules-callout-stats)) more naturally (See [PR #500](https://github.com/massgov/mayflower/pull/500) - Markup + CSS)
+- Semantic search form ([@molecules/header-search]()) label and placeholder text are more understandable (See [PR #485](https://github.com/massgov/mayflower/pull/485) - Markup + demo content)
+ 
 ## 5.4.0
 In this new minor release, we've introduced two new Law pages: Policy Advisory and Executive Order, along with several improvements and fixes.
 
