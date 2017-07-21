@@ -7,8 +7,8 @@ This pattern shows a grid containing a combination of Callout links and Illustra
 ### Pattern Contains
 * Comp Heading atom (optional)
 * Sidebar Heading atom (optional)
-* Callout Link
-* Illustrated Link (optional)
+* Callout Link molecule
+* Illustrated Link molecule (optional)
 
 ### Variant options
 * This pattern can also contain Illustrated Links in addition to just Callout Links.
