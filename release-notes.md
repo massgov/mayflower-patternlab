@@ -1,5 +1,26 @@
 # Mayflower Release Notes
 
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+
+```
+<ticket/issue #>: Human-friendly description, with hyperlinked patterns (<Link to #PR>)
+```
+
+**For example**
+- DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493)) 
+
+## Upcoming (add in progress changes here)
+
+### Added
+
+### Changed
+
+### Removed
+
+### Migrate path
+
 ## 5.4.0
 We've introduced two new Law pages, Policy Advisory and Executive Order in this release along with several fixes.
 
