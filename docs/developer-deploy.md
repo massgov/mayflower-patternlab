@@ -1,19 +1,10 @@
-# Deployment
+# Developer Deployment
 
-On this page:
+## Prerequisite
 
-- [Developer deployment](#developer-deployment)
-    - [Setting up your Fork with Github Pages](#setting-up-your-fork-with-github-pages)
-- [Release deployment](#release-deployment)
-- [Static assets](#static-assets)
+Set up your Mayflower fork + local repository, see our [CONTRIBUTING.md](../.github/CONTRIBUTING.md) for directions.
 
-## Developer deployment
-
-#### Prerequisite
-
-Set up your Mayflower fork + local repository, see our [CONTRIBUTING.md](https://github.com/massgov/mayflower/blob/master/CONTRIBUTING.md) for directions.
-
-#### Deploy feature work to your fork's Github Pages for review and testing
+## Deploy feature work to your fork's Github Pages for review and testing
 Developers and contributors can follow these steps to deploy your branch to your fork's Github Pages environment.  This will allow reviewers to test your code without having to build from your branch locally.
 
 1. Make sure your local repository is in a clean working state: `git status`.  If it's not, you can `git commit` or [stash](https://git-scm.com/book/en/v1/Git-Tools-Stashing) your local changes.
@@ -40,12 +31,3 @@ You should now be able to see the work that you just deployed!  Just visit:
 ```
 http://<your-github-username>.github.io/mayflower
 ```
-
-## Release deployment
-Mayflower release managers with the necessary repo permissions can follow these steps to deploy a release to production.
-
-**Release docs coming soon.**
-
-## Static assets
-
-It is possible to build Mayflower's static assets without serving them.  See the [gulp-readme](https://github.com/massgov/mayflower/blob/master/styleguide/tools/gulp/gulp-readme.md) for more information.

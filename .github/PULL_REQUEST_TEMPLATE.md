@@ -9,7 +9,7 @@
 - [Github issue]()
 
 ## Steps to Test
-<!-- Outline the steps to test or reproduce the PR here.  Whenever possible deploy your branch to your fork Github Pages so UAT can be done without rebuilding. See: https://github.com/massgov/mayflower/blob/master/docs/deploy.md -->
+<!-- Outline the steps to test or reproduce the PR here.  Whenever possible deploy your branch to your fork Github Pages so UAT can be done without rebuilding. See: https://github.com/massgov/mayflower/blob/master/docs/developer-deploy.md -->
 
 1. 
 
