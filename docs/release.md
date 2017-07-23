@@ -17,6 +17,7 @@ If you've done this before, here's a quick refresher:
 1. Verify release notes against the site rendered on your GH-Pages.
 1. Smoke test most important stuff.
 1. Merge (no squash!) GitHub PR: release --> master.
+1. Cut release tag off Master (include release notes)
 1. Deploy release tag to Prod (`massgov/mayflower` `gh-pages`).
 1. Smoke test [Prod](http://mayflower.digital.mass.gov).
 1. GitHub PR: master --> develop.
