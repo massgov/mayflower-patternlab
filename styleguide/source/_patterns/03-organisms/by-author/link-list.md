@@ -16,6 +16,9 @@ List of links that can be rendered stack or as two columns
 * [Stacked](./?p=organisms-link-list-as-stacked) by setting the stacked variable to true
 * With a [short description](./?p=organisms-link-list-with-description) by setting the 'richText variable'
 
+### Usage Guidelines
+* When this pattern is used in the Right Rail, the Comp Heading will render as a Sidebar Heading and the bullets will disappear.
+
 
 ### Variables
 ~~~
