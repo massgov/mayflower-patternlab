@@ -1,7 +1,7 @@
 {
   "linkList" : {
     "compHeading": {
-      "title": "Related Topics",
+      "title": "Link List",
       "sub": "",
       "color": "",
       "id": "",
@@ -11,17 +11,17 @@
     "stacked": false,
     "links" : [{
       "href":"#",
-      "text":"MassParks",
+      "text":"Lorem ipsum dolor sit amet.",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Energy & Environmental Affairs (EEA)",
+      "text":"Lorem ipsum dolor sit amet, consectetur.",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Department of Conservation and Recreation (DCR)",
+      "text":"Lorem ipsum dolor sit.",
       "info": "",
       "property": ""
     }]

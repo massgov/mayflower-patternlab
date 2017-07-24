@@ -1,14 +1,11 @@
 {
   "linkList" : {
-    "compHeading": {
-      "title": "Link List",
-      "sub": "",
-      "color": "",
-      "id": "",
-      "centered": false
+    "sidebarHeading": {
+      "title": "Link List"
     },
+    "compHeading": null,
     "description": null,
-    "stacked": false,
+    "stacked": true,
     "links" : [{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet.",
@@ -32,21 +29,6 @@
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet",
-      "info": "",
-      "property": ""
-    },{
-      "href":"#",
-      "text":"Lorem ipsum dolor sit amet, consectetur.",
-      "info": "",
-      "property": ""
-    },{
-      "href":"#",
-      "text":"Lorem ipsum dolor",
-      "info": "",
-      "property": ""
-    },{
-      "href":"#",
-      "text":"Lorem ipsum dolor sit ",
       "info": "",
       "property": ""
     }]
