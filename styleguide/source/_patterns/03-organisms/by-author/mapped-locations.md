@@ -1,27 +1,33 @@
----
-title: Mapped Locations
----
-Description: A google map with a title and see all link
+### Description
+A google map with a title and see all link
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Contains
-- [@atoms/11-text/link.twig](?p=atoms-link)
-- [@atoms/04-headings/compHeading.twig](?p=atoms-comp-heading)
-- [@molecules/google-map.twig](?p=molecules-google-map)
+### Pattern Contains
+* Comp Heading (optional)
+* Google Map
+* Decorative Link
 
-### Used in:
-- [@organisms/by-author/location-banner](?p=organisms-location-banner)
-- [@pages/ORG-Health-Services](?p=pages-ORG-Health-Services)
+### Variant options
+* Wrapped in a colored [container](./?p=organisms-mapped-locations-contained)
 
-### Required Variables
+### Usage Guidelines
+* The decorative link is placed above the map for accessibility reasons.
 
+### JavaScript Used
+* This pattern uses JavaScript for the Google map (js/modules/googleMap.js)
+
+### Variables
 ~~~
 mappedLocations: {
-  compHeading: see: atoms/04-headings/compHeading.json
+  compHeading: 
+    type: compHeading / optional
   contained: 
     type: boolean
-  link: see: atoms/11-text/link.json
-  map: see: molecules/google-map.json
+  link: 
+    type: decorativeLink / optional
+  map: 
+    type: googleMap / required
 }
 ~~~
