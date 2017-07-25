@@ -173,7 +173,7 @@ class PseudoPatternRule extends \PatternLab\PatternData\Rule {
 			* brought up in https://github.com/drupal-pattern-lab/patternlab-php-core/issues/12 until the ability
 			* to officially swap out or change core PL rule behavior is added
 			*
-			* 1. Changed occurances of `array_replace_recursive` back to original `array_merge`
+			* 1. Changed occurrences of `array_replace_recursive` back to original `array_merge`
 			*
 			**/
 
