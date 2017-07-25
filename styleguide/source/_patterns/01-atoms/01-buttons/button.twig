@@ -1,12 +1,16 @@
-{% set buttonClassSize = button.size ? "ma__button--" ~ button.size : "" %}
-{% set buttonClass = "ma__button" %}
+{% set buttonSize = button.size ? "ma__button--" ~ button.size : "" %}
 
-{% if button.outline %}
-  {% set buttonClass = buttonClass ~ "-minor" %}
+{% set buttonStyle = button.outline ? "ma__button--minor" : "" %}
+
+{% set buttonColor = button.color ? "ma__button--" ~ button.color %}
+
+{% if button.href %}
+  <a 
+    href="{{ button.href }}" 
+    class="ma__button {{ buttonSize }} {{buttonColor}} {{buttonStyle}}"
+    title="{{ button.info }}">
+    {{ button.text }}
+  </a>
+{% else %}
+  <button type="{{ button.type }}" class="ma__button {{ buttonSize }} {{buttonColor}} {{buttonStyle}}" aria-label="{{ button.info }}">{{ button.text }}</button>
 {% endif %}
-
-{% if button.theme %}
-  {% set buttonClass = buttonClass ~ "-" ~ button.theme %}
-{% endif %}
-
-<button type="{{ button.type }}" class="{{ buttonClass }} {{ buttonClassSize }}">{{ button.text }}</button>
