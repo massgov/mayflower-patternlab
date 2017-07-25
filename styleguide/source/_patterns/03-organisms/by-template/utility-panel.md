@@ -2,7 +2,7 @@
 A Rich Text field followed by 1-3 optional decorative links.
 
 ### Status
-* Stable as of 5.0.0
+* In Progress as of 5.0.0
 
 ### Pattern Contains
 * Rich Text

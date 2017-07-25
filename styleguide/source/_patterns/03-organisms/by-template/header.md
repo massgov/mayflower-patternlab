@@ -2,7 +2,7 @@
 This is a pattern for the site header.
 
 ### Status
-* Stable as of 5.0.0
+* in Progress as of 5.0.0
 
 ### Pattern Contains
 * Utility Nav
@@ -15,6 +15,7 @@ This is a pattern for the site header.
 * Scrolling Nav (js/modules/scrollAnchors.js)
 * Utility Nav (js/modules/utilNav.js)
 * Main Nav (js/modules/mainNav.js)
+* Google Translate (code is in the footer.twig)
 
 ### Variables
 ~~~
