@@ -14,5 +14,5 @@ button {
 .ma__button-alt--small,
 .ma__button-minor--small,
 .ma__button-minor-alt--small {
-   @include ma-button("small");
+  @include ma-button("small");
 }
