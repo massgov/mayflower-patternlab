@@ -11,6 +11,7 @@ button {
   @include ma-button("normal","outline",$c-theme-primary);
 }
 
+.ma__button--alt,
 .ma__button--gray {
   @include ma-button("normal","solid",$c-theme-quaternary);
 }
