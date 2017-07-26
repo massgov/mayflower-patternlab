@@ -3,7 +3,7 @@
     "iconSize": "small",
     "icon": "@atoms/05-icons/svg-doc-docx.twig",
     "decorativeLink": {
-      "text": "Online Form: Out-of-Country Driver's License Conversion",
+      "text": "link using a small icon",
       "href": "#",
       "info": "",
       "property": ""
