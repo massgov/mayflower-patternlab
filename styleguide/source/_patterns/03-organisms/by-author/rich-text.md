@@ -7,8 +7,18 @@ This pattern displays the contents of a rich text editor.
 ### Pattern Contains
 * Comp Heading
 * Sidebar Heading
+* Acceptable patterns for Rich Text
+  * Paragraph
+  * Headings 2-6
+  * Unordered List
+  * Ordered List
+  * Table
+  * Check List
+  * Icon List
+  * Figure
 * Any pattern can be rendered in these columns by setting the 'path' variable to the location of the pattern and setting the 'data' variable to container of the data object of that pattern.  
-** {% include item.path with item.data %}
+  * {% include item.path with item.data %}
+
 
 
 ### Variant options

@@ -21,7 +21,7 @@
             "height": "",
             "width": ""
           },
-          "caption": "This is a Figure with caption floated right"
+          "caption": "This is a Figure floated right with a caption"
         }
       }
     },
@@ -42,14 +42,6 @@
       }
     },
     {
-      "path": "@atoms/04-headings/heading-3.twig",
-      "data": {
-        "heading3" : {
-          "text": "This is a Heading-3 atom (H3)"
-        }
-      }
-    },
-    {
       "path": "@atoms/09-media/figure.twig",
       "data": {
         "figure": {
@@ -65,10 +57,41 @@
       }
     },
     {
-      "path": "@atoms/04-headings/heading-4.twig",
+      "path": "@atoms/09-media/figure.twig",
       "data": {
-        "heading4" : {
-          "text": "This is a Heading-4 atom (H4)"
+        "figure": {
+          "align": "align-left",
+          "image": { 
+            "alt": "alt text", 
+            "src": "../../assets/images/placeholder/400x300.png",
+            "height": "",
+            "width": ""
+          },
+          "caption": "This is a Figure floated left with an optional caption"
+        }
+      }
+    },
+    {
+      "path": "@atoms/11-text/paragraph.twig",
+      "data": {
+        "paragraph" : {
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet sint quia  est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
+        }
+      }
+    },
+    {
+      "path": "@atoms/11-text/paragraph.twig",
+      "data": {
+        "paragraph" : {
+          "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+        }
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-3.twig",
+      "data": {
+        "heading3" : {
+          "text": "This is a Heading-3 atom (H3)"
         }
       }
     },
@@ -115,10 +138,61 @@
       }
     },
     {
+      "path": "@atoms/04-headings/heading-4.twig",
+      "data": {
+        "heading4" : {
+          "text": "This is a Heading-4 atom (H4)"
+        }
+      }
+    },{
+      "path": "@atoms/08-lists/checklist.twig",
+      "data": {
+        "checkList": [
+            { "text": "This is a list item in an un-ordered list" },
+            { "text": "When the user prints this list, check boxes will appear instead of bullets" },
+            { "text": "This is the last list item"}
+        ]
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-4.twig",
+      "data": {
+        "heading4" : {
+          "text": "This is a Heading-4 atom (H4)"
+        }
+      }
+    },{
+      "path": "@atoms/06-rich-text/icon-list.twig",
+      "data": {
+        "iconList": [{ 
+          "text": "This is an icon list item" 
+        },{ 
+          "text": "An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line."
+        },{ 
+          "text": "Lists can be nested inside of each other",
+          "sublist" : [{
+            "text":"This is a nested list item"
+          },{
+            "text":"This is another nested list item in an unordered list"
+          }]
+        },{
+          "text":"This is the last list item"
+        }]
+      }
+    },
+    {
       "path": "@atoms/04-headings/heading-5.twig",
       "data": {
         "heading5" : {
           "text": "This is a Heading 5 - H5"
+        }
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-6.twig",
+      "data": {
+        "heading6" : {
+          "text": "This is a Heading 6 - H6"
         }
       }
     },
@@ -291,45 +365,6 @@
               }]
             }]
           }]
-        }
-      }
-    },
-    {
-      "path": "@atoms/04-headings/heading-6.twig",
-      "data": {
-        "heading6" : {
-          "text": "This is a Heading 6 - H6"
-        }
-      }
-    },
-    {
-      "path": "@atoms/09-media/figure.twig",
-      "data": {
-        "figure": {
-          "align": "align-left",
-          "image": { 
-            "alt": "alt text", 
-            "src": "../../assets/images/placeholder/400x300.png",
-            "height": "",
-            "width": ""
-          },
-          "caption": "This is a Figure with an optional caption floated left"
-        }
-      }
-    },
-    {
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet sint quia  est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
-        }
-      }
-    },
-    {
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
         }
       }
     }]
