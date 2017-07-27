@@ -1,5 +1,5 @@
 ### Description
-This Displays a styled table used in a Rich Text Editor
+This Displays a styled table that converts to a list on narrow screens
 
 ### Status
 * Stable as of 5.0.0
