@@ -2,6 +2,12 @@ $steps-ordered-icon-border: 3px;
 
 .ma__steps-ordered {
 
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container('restricted');
+  }
+
   &__items {
     @include ma-reset-list;
     counter-reset: li; // Initiate a counter
