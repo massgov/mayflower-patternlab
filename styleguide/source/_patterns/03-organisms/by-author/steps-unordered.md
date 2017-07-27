@@ -1,27 +1,32 @@
----
-Title: Steps Unordered
----
+### Description
+An unordered list of steps with an optional description
 
-##Field:
-* items - array of action step molecules
+### Status
+* Stable as of 5.0.0
 
-##Partials:
-* action step
+### Pattern Contains
+* Comp Heading
+* sidebar Heading
+* Rich Text
+* Action Step
 
-##Notes:
+### JavaScript Used
+* Accordions (js/modules/accordions.js)
 
-### Variables 
-~~~ 
-{
-"stepsUnordered": {
-  "compHeading": {
-    type: object/optional/ see @atoms/04-headings/comp-heading.md
+### Variables
+~~~
+stepsUnordered: {
+  compHeading: {
+    type: compHeading / optional
   },
-  "richText": {
-    type: object/optional/ see @organisms/by-author/rich-text.md
+  sidebarHeading: {
+    type: sidebarHeading / optional
   },
-  "steps": [{
-    type: array of objects/required/ see @molecules/action-step.md
+  richText {
+    type: richText / optional
+  }
+  steps: [{
+    type: array of actionStep / required
   }]
 }
 ~~~
