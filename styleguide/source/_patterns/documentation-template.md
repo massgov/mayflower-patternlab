@@ -5,8 +5,8 @@ This is a sample of documentation to use for patterns.
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Contact Us molecule
-* Comp Heading atom
+* Comp Heading
+* Contact Us
 
 ### Variant options
 * describe the different variants that can be created and link them to the actual variant
