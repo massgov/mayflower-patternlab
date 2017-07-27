@@ -9,7 +9,6 @@
     "groups": [{
       "icon": "@atoms/05-icons/svg-phone.twig",
       "name": "Phone",
-      "hidden": "",
       "items": [{
         "type": "phone",
         "label": "Main:",
@@ -38,7 +37,6 @@
     },{
       "icon": "@atoms/05-icons/svg-laptop.twig",
       "name": "Online",
-      "hidden": "",
       "items": [{
         "type": "email",
         "label": "Email:",
@@ -55,7 +53,6 @@
     },{
       "icon": "@atoms/05-icons/svg-fax-icon.twig",
       "name": "Fax",
-      "hidden": "true",
       "items": [{
         "type": "fax",
         "label":"",
