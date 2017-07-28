@@ -1,7 +1,22 @@
+### Description
+Content describing the overall emergency.
+
+### Status
+* Stable as of 5.0.0
+
+### Variables
+~~~
+emergencyHeader: {
+  title:
+    type: "string / required"
+}
+~~~
+
+
 ---
 title: Emergency Header
 ---
-Description: Content describing the overall emergency.
+Description: 
 ## State: ALPHA
 ###  Notes
 
