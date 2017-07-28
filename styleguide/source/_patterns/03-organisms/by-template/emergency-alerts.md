@@ -15,6 +15,7 @@ This pattern is designed to be used site wide to show important alert messages
   * This Organism should only render if the alerts array is populated
   * Accordion only stays closed per session if the browser supports JS determined by a JS class on the html tag
   * The Id value should be consistent across the site, but can be changed when new alerts are created to reopen the accordion
+  * Messages should be sorted with the newest one first
 
 ### JavaScript Used
 * Accordions (js/modules/accordions.js)
