@@ -1,58 +1,38 @@
----
-title: Emergency Alert
----
-Description: an organism to show any current emergency alerts 
+### Description
+This pattern is designed to be used site wide to show important alert messages 
 
-## State: ALPHA
 
-### Notes 
-  1. This Organism should only render if the alerts array is populated
-  2. Accordion only stays closed per session if the browser supports JS determined by a JS class on the html tag
-  3. The Id value should be consistent across the site, but can be changed when new alerts are created to reopen the accordion
+### Status
+* Stable as of 5.0.0
 
-### Used in: 
-* [@templates/multi-row-template.twig](/?p=templates-multi-row-template)
-* [@templates/single-column.twig](/?p=templates-single-column)
-* [@templates/two-column.twig](/?p=templates-two-column)
 
-### Contains:
-* [@molecules/emergency-header.twig](/?p=molecules-emergency-header)
-* [@molecules/emergency-alert.twig](/?p=molecules-emergency-alert)
-* [@molecules/button-alert.twig](/?p=molecules-button-alert)
+### Pattern Contains
+* Emergency Header
+* Button Alert
+* Emergency Alert
 
-### Variables 
-~~~ 
+### Usage Guidelines 
+  * This Organism should only render if the alerts array is populated
+  * Accordion only stays closed per session if the browser supports JS determined by a JS class on the html tag
+  * The Id value should be consistent across the site, but can be changed when new alerts are created to reopen the accordion
+
+### JavaScript Used
+* Accordions (js/modules/accordions.js)
+* Emergency Alerts (js/modules/emergencyAlerts.js)
+
+### Variables
+~~~
 emergencyAlerts: {
   id: 
     type: string/guid/required
   buttonAlert: {
-    hideText: 
-      type: string/required,
-    showText: 
-      type: string/required,
-    text: 
-      type: string/required
+    type: buttonAlert / required
   },
-
   emergencyHeader: {
-    title: 
-      type: string/required
+    type: emergencyHeader / required
   },
-
   alerts: [{
-    message: 
-      type: string/required
-    timeStamp: 
-      type: date/required
-      format: mm.dd.yy, h:mm am/pm
-    link: {
-      href: 
-        type: string/url/required,
-      text:
-        type: string/required
-      chevron: 
-        type: boolean/required
-    }
+    type: array of emergencyAlert / required
   }]
 }
 ~~~
