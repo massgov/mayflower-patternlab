@@ -192,19 +192,19 @@
     "title": "Bringing Leased Vehicles to MA",
     "id": "bringing-leased-vehicles-to-ma",
     "pageContent": [{
+      "path": "@molecules/callout-stats.twig",
+      "data": {
+        "statsCallout": {
+          "pull": "right",
+          "stat": "$75+",
+          "content": "this includes a title and registration fee"
+        }
+      }
+    },{
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
         "richText": {
           "rteElements": [{
-            "path": "@molecules/callout-stats.twig",
-            "data": {
-              "statsCallout": {
-                "pull": "right",
-                "stat": "$75+",
-                "content": "this includes a title and registration fee"
-              }
-            }
-          },{
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
               "paragraph" : {
