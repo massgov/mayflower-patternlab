@@ -1,16 +1,38 @@
----
-Title: Stacked Row Section
----
+### Description
+This is a row of content used in the Stacked Row Template
 
-##Field:
-* Title - string
-* Id - string - value should be a URL friendly version of the Title.
-* page content - placeholder for other components
-* sidebar - placeholder for other components
+### Status
+* Stable as of 5.0.0
 
-##Partials:
-* follows the standards for a two column page template page-content and sidebar locations
+### Pattern Contains
+* Comp Heading
+* Any pattern can be rendered in these columns by setting the 'path' variable to the location of the pattern and setting the 'data' variable to container the data object of that pattern.  
+  * {% include content.path with content.data %}
+  * {% include sidebar.path with sidebar.data %}
 
-##Notes:
-* If Sidebar is empty it should be ommitted so the row can expand to full width
+### Variant options
+* Can be viewed as a [single column](./?p=organisms-stacked-row-section-single)
 
+### Variables
+~~~
+stackedRowSection: {
+  title:
+    type: string / optional,
+  id: 
+    type: string (unique id) / optional
+  pageContent: [{
+    path: 
+      type: string / required,
+    data: {
+      type: object / required
+    }
+  }],
+  sideBar: (optional) [{
+    path: 
+      type: string / required,
+    data: {
+      type: object / required
+    }
+  }]
+}
+~~~
