@@ -6,7 +6,7 @@
 {% set classChevron = link.chevron %}
 
 {# backward compatible with Release5.0.0 #}
-{% if link.chevron == 'true' %}
+{% if link.chevron and link.chevron == 'true' %}
   {% set classChevron = true %}
 {% endif %}
 
