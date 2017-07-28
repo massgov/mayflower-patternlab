@@ -1,15 +1,20 @@
-{# decorative link uses info instead of label #}
-{% if link.info %}
-  {% set link = link|merge({"label": link.info}) %}
+{# Updated to use info instead of label after version 5.5 #}
+{% if link.label %}
+  {% set link = link|merge({"info": link.label}) %}
 {% endif %}
+
+{% set classChevron = link.chevron %}
 
 {# backward compatible with Release5.0.0 #}
 {% if link.chevron == 'true' %}
-  {% set link = link|merge({"chevron": true}) %}
+  {% set classChevron = true %}
+{% endif %}
+
+{% if link.chevron == 'false' %}
+  {% set classChevron = false %}
 {% endif %}
 
 <a 
-  class="ma__content-link {{ link.chevron ? 'ma__content-link--chevron' : '' }}" 
+  class="ma__content-link {{ classChevron ? 'ma__content-link--chevron' : '' }}" 
   href="{{ link.href }}"
-  {% if link.property %} property="{{ link.property }}"{% endif %}
-  {% if link.info %} aria-label="{{ link.label }}"{% endif %}><span>{{ link.text }}</span></a>
+  title="{{ link.info }}"><span>{{ link.text }}</span></a>
