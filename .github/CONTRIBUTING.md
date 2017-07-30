@@ -33,7 +33,7 @@ We use labels to help identify and organize issues.  Here's what they represent 
 - `confirmed` - Issues that have been confirmed with a reduced test case and identify a bug in Mayflower.
 - `css` - Issues stemming from our compiled CSS or source Sass files.
 - `docs` - Issues for improving or updating our documentation.
-- `examples` - Issues involving the example templates included in our docs.
+- `examples` - Issues involving the example patterns (i.e. content or data) included on our site.
 - `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified. New features require a minor version bump (e.g., `v3.0.0` to `v3.1.0`).
 - `gulp` - Issues with our build system, which is used to run all our tests, concatenate and compile source files, and more.
 - `help wanted` - Issues we need or would love help from the community to resolve.
