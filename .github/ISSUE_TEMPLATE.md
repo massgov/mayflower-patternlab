@@ -1,12 +1,19 @@
-### Description:
+Before opening an issue:
 
-Write a sentence or two about what the issue is about.
+- [Search for duplicate or closed issues](https://github.com/massgov/mayflower/issues?utf8=%E2%9C%93&q=is%3Aissue)
+- Read the [contributing guidelines](https://github.com/massgov/mayflower/blob/master/CONTRIBUTING.md)
 
-- Mayflower Version:
-- Platform / Device:
-- Browser:
+When reporting a bug, include:
 
-### Steps to reproduce:
-- Reproducible Code Snippet or URL:
+- Mayflower version
+- Operating system and version (Windows, Mac OS X, Android, iOS, Win10 Mobile)
+- Browser and version (Chrome, Firefox, Safari, IE, MS Edge, Opera 15+, Android Browser)
+- Description (write a sentence or two about the issue)
+- Steps to reproduce on live site
+- Prepare a [reduced test case](https://css-tricks.com/reduced-test-cases/)
 
-1. Steps to reproduce
+When suggesting a feature, include:
+
+- As much detail as possible for what we should add and why it's important to Mayflower
+- Relevant links to prior art, screenshots, or live demos whenever possible
+
