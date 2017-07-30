@@ -76,7 +76,7 @@ Example:
 
 ### Reporting upstream browser bugs
 
-Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in Bootstrap per se.  When feasible, we aim to report such upstream bugs to the relevant browser vendor(s).
+Sometimes bugs reported to us are actually caused by bugs in the browser(s) themselves, not bugs in Mayflower per se.  When feasible, we aim to report such upstream bugs to the relevant browser vendor(s).
 
 | Vendor(s)     | Browser(s)                   | Rendering engine | Bug reporting website(s)                                                              | Notes                                                    |
 | ------------- | ---------------------------- | ---------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------- |
