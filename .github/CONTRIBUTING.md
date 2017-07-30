@@ -188,8 +188,6 @@ Serve Mayflower locally and as you save your changes, it will update automatical
 * `Gulp` will build the Pattern Lab static assets and generate a static site in the `/styleguide/public` directory.  See `/styleguide/tools/gulp/gulp-readme.md`.
 * Pattern Lab specific files are in the `/styleguide/public/styleguide` directory (the `styleguide.html` file is automatically generated when twig templates are updated).
 
-**Sections about how + what to contribute coming soon...**
-
 #### Committing your work
 
 Make your changes and commit them.  Ensure that you only commit the thing you're working on.  Make sure that you commit in logical blocks.
@@ -230,10 +228,10 @@ Pull requests (PRs) let you tell others about changes you've pushed to a reposit
 
 Once you've opened your PR, Mayflower maintainers will review and either request changes or merge it.  
 
-Thanks!
+Thanks again!
 
 ***
 
-**Acknowledgements**
+## Acknowledgements
 
 Thanks to the [Twitter Bootstrap](https://github.com/twbs/bootstrap) for having great contribution guidelines, and also to Rob Allen's [The beginner's guide to contributing to a GitHub project](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/) and Matt Stauffer's [How to contribute to an open-source GitHub project using your own fork](https://mattstauffer.co/blog/how-to-contribute-to-an-open-source-github-project-using-your-own-fork) for providing helpful instructions on working with Github open source projects.
