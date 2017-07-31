@@ -8,8 +8,8 @@ This is the standard button pattern
 * Using a [link](./?p=atoms-button-as-link) instead of a button
 * [small](./?p=atoms-button-as-small)
 * [outline](./?p=atoms-button-as-outline)
-* [gray](./?p=atoms-button-as-alt-color) color
-* [green with an outline](./?p=atoms-button-as-alt-color)
+* [gray](./?p=atoms-button-as-gray) color
+* [green with an outline](./?p=atoms-button-as-green)
 
 
 ### Variables
