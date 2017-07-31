@@ -13,10 +13,9 @@ Page Header with used at the top of a page that contains placeholders for option
   * {% include item.path with item.data %}
 
 ### Variant options
-* [Version](./?p=organisms-page-header-for-howto) used on the HowTo page 
+* As used on the [How To](./?p=organisms-page-header-for-howto) page 
+* As used on the [Location](./?p=organisms-page-header-for-location) page 
 
-### JavaScript Used
-* This pattern uses JavaScript for the accordions (js/modules/accordions.js)
 
 ### Variables
 ~~~
