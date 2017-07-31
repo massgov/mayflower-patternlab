@@ -1,5 +1,5 @@
 <div class="ma__footnote js-footnote" tabindex="-1">
-  <a class="ma__footnote__link js-footnote-link" id="{{ footnote.id }}" href="{{ footnote.target }}">{{ footnote.number }}</a>
+  {% if footnote.number %}<a class="ma__footnote__link js-footnote-link" id="{{ footnote.id }}" href="{{ footnote.target }}">{{ footnote.number }}</a>{% endif %}
   <div class="ma__footnote__rich-text js-footnote-message">
     {% set richText = footnote.richText %}
     {% include "@organisms/by-author/rich-text.twig" %}
