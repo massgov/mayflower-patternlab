@@ -1,24 +1,20 @@
----
-title: Column Heading
----
-Description: An `<h4>` used at the start of a column, designated by its CSS class.
+### Description
+An `<h4>` used at the start of a column, designated by its CSS class.
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Notes:
+### Variant options
+* Can be rendered as a [link](./?p=atoms-column-heading-as-link)
 
-### Used In:
-- [@pages/GUIDE-movng-to-ma-part1](/?p=pages-GUIDE-movng-to-ma-part1)
-- [@pages/GUIDE-movng-to-ma-part3](/?p=pages-GUIDE-movng-to-ma-part3)
-
-### Variables:
+### Variables
 ~~~
 columnHeading {
   text: 
     type: string / required
   href: 
-    type: string(url) / optional,
+    type: string (url) / optional,
   info:
-    type: string/optional - used to provide content for aria label
+    type: string / optional - used to provide content for aria label
 }
 ~~~
