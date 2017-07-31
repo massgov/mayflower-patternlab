@@ -8,7 +8,7 @@
 
   &--view-specific {
 
-    .page-content & {
+    .main-content--two .page-content & {
       
       @media ($bp-large-min) {
         display: none;
@@ -30,7 +30,7 @@
       }
     }
 
-    .page-content &:first-child ~ & + * {
+    .main-content--two .page-content &:first-child ~ & + * {
       @media ($bp-large-min) {
         margin-top: 0;
       }

@@ -75,6 +75,7 @@
 
 
   &__link {
+    cursor: pointer;
     display: none;
     font-size: 20px;
     line-height: 1.2;
@@ -92,6 +93,10 @@
 
     &.is-active, {
       display: block;
+
+      @media ($bp-medium-min) {
+        cursor: default;
+      }
     }
 
     a {

@@ -19,7 +19,7 @@
     border-style: solid;
   }
 
-  &--accordion + &--accordion {
+  & + &--accordion {
     padding-top: 0;
   }
 
