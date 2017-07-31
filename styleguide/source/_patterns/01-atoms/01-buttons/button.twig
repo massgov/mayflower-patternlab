@@ -2,10 +2,14 @@
 
 {% set buttonStyle = button.outline ? "ma__button--minor" : "" %}
 
-{# Depreciated after version 5.0 #}
-{% set buttonColor = button.theme ? "ma__button--" ~ button.theme %}
+{% set buttonColor = button.color ? "ma__button--" ~ button.color : "" %}
 
-{% set buttonColor = button.color ? "ma__button--" ~ button.color %}
+{# Depreciated after version 5.0 #}
+{% if button.theme %}
+  {% set buttonColor = "ma__button--" ~ button.theme %}
+{% endif %}
+
+
 
 {% if button.href %}
   <a 
