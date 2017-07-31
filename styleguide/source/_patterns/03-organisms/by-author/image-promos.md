@@ -1,5 +1,5 @@
 ### Description
-This is a list of image promos.
+An illustrated list where each item displays an image, title, description and a link to further information
 
 ### Status
 * Stable as of 5.0.0
