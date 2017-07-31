@@ -1,49 +1,48 @@
----
-title: Google Map
----
-Description: A google map with multiple markers
+### Description
+A google map with multiple markers and info windows
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Used in:
-- [@organisms/by-author/location-banner](?p=organisms-location-banner)
-- [@organisms/by-author/mapped-locations](?p=organisms-mapped-locations)
 
-### Required Variables
+### JavaScript Used
+* Google Map (js/modules/googleMap.js)
+
+### Variables
 ~~~
 googleMap: {
   map: {
     center: {
       lat:
-        type: integer/required
+        type: integer / required
       lng:
-        type: integer/required
+        type: integer / required
       },
       zoom:
-        type: integer/required
+        type: integer / required
     },
     markers: [{
       position: {
         lat:
-          type: integer/required
+          type: integer / required
         lng:
-          type: integer/required
+          type: integer / required
       },
       label:
-        type: string/required
+        type: string / required
       infoWindow: {
         name:
-          type: string/required
+          type: string / required
         phone:
-          type: string (number with no spaces)/optional
+          type: string (number with no spaces) / optional
         fax:
-          type: string/optional
+          type: string / optional
         email:
-          type: string/optional
+          type: string / optional
         address:
-          type: string/required
+          type: string / required
         directions:
-          type: string(url)/optional
+          type: string (url) / optional
       }
     }]
   }
