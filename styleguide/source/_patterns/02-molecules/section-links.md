@@ -1,57 +1,41 @@
----
-title: Section links
----
-Description: displays a set of links in a card layout.
-## Status: Alpha
-### Notes:
-- The way the icons are rendered is deprecated and will need to be updated here once refactored.
+### Description
+Displays a set of links in a card layout.
 
-### Contains:
-- [@atoms/05-icons/cat-icon](?p=atoms-cat-icon)
-- Either:
-  - [@atoms/decorative-link](?p=atoms-decorative-link)
-  - [@molecules/callout-link](?p=molecules-callout-link)
-  
-### Variations:
-- [Section Links with Callout Links](?p=molecules-section-links-with-callout-links)
-- [Section Links with See All](?p=molecules-section-links-with-see-all)
+### Status
+* Stable as of 5.0.0
 
-### Used in:
-- [@organisms/by-author/sections-three-up](?p=organisms-sections-three-up)
+### Pattern Contains
+* Decorative Link
+* Callout Link
+* Cat Icon
+
+### Variant options
+* Can be used with [Callout Links](./?p=molecules-section-links-with-callout-links)
+
+### JavaScript Used
+* This pattern uses JavaScript for the accordions (js/modules/accordions.js)
 
 ### Variables
 ~~~
 sectionLinks: {
-  catIcon: {
-    icon:
-      type: string/path to icon
-    small:
-      type: boolean/true
+  catIcon: { 
+    type: catIcon / optional
   },
   title: {
-    href:
-      type: url/required
-    text:
-      type: string/required
+    type: decorativeLink / required
   },
   subTitle: {
     type: boolean
   },
   description:
-    type: string
+    type: string / optional
   type:
-    type: string/optional ("callout" || defaults to "decorative")
+    type: string ("", "callout") / optional
   links: [{
-    href:
-      type: url/required
-    text:
-      type: string/required
-  }] / optional
+    type: decorativeLink and calloutLink / required
+  }]
   seeAll: {
-    href:
-      type: url
-    text:
-      type: string
-  } / optional
+    type: decorativeLink / optional
+  }
 }
 ~~~
