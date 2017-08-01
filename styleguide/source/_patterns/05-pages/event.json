@@ -133,9 +133,9 @@
         "sub": true
       },
       "rteElements": [{
-        "path": "@atoms/08-lists/unordered-list.twig",
+        "path": "@atoms/08-lists/checklist.twig",
         "data": {
-          "unorderedList": [{ 
+          "checkList": [{ 
             "text": "Sports clothes and shoes" 
           },{ 
             "text": "To ensure all children are accompanied by an adult" 
