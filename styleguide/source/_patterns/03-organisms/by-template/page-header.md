@@ -15,6 +15,7 @@ Page Header with used at the top of a page that contains placeholders for option
 ### Variant options
 * As used on the [How To](./?p=organisms-page-header-for-howto) page 
 * As used on the [Location](./?p=organisms-page-header-for-location) page 
+* As used on the [Recurring Events](./?p=organisms-page-header-for-event) page 
 
 
 ### Variables
