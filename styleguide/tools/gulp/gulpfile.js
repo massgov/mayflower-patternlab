@@ -30,7 +30,7 @@ var defaults = {
     dest: path.resolve(__dirname, "../../public/assets"),
     patternLabRoot: path.resolve(__dirname, "../../"),
     rootSite: path.resolve(__dirname, "../../public"),
-    tasks: ["copy", "js", "css", "bower"],
+    tasks: ["copy", "js", "css", "bower", "patternlab"],
     env: "development", // "development", "production", "local"
     watch: false,
     browserSync: false
@@ -45,8 +45,7 @@ gulp.task("default", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : true,
-        browserSync : true,
-        tasks : defaults.tasks.concat("patternlab")
+        browserSync : true
     });
 
     quench.build(config);
@@ -76,8 +75,7 @@ gulp.task("build", function(){
     var config = Object.assign({}, defaults, {
         env   : "development",
         watch : false,
-        browserSync: false,
-        tasks : defaults.tasks.concat("patternlab")
+        browserSync: false
     });
 
     quench.build(config);
