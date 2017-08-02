@@ -1,7 +1,8 @@
-<a class="ma__callout-link" href="{{ calloutLink.href }}">
+<div class="ma__callout-link">
   <span class="ma__callout-link__container">
     <span class="ma__callout-link__text">
-      {{ calloutLink.text }}{% if calloutLink.info %}<span class="ma__callout-link__info">{{ calloutLink.info }}</span>{% endif %}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}
+      <a href="{{ calloutLink.href }}">{{ calloutLink.text }}</a>
+      {% if calloutLink.info %}<span class="ma__callout-link__info">{{ calloutLink.info }}</span>{% endif %}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}
     </span>
   </span>
-</a>
+</div>
