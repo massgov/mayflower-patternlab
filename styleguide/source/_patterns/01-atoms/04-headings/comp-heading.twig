@@ -19,10 +19,6 @@
     {% if compHeading.id %}id="{{compHeading.id}}"{% endif %} tabindex="-1">
     {{ compHeading.title }}
   </h3>
-  <h3 class="ma__comp-heading--sidebar"
-    {% if sidebarHeading.id %}id="{{sidebarHeading.id}}"{% endif %}>
-    {{sidebarHeading.title}}
-  </h3>
 {% else %}
   <h2 
     class="ma__comp-heading {{ colored }} {{ centered }}" {% if compHeading.id %}
@@ -30,5 +26,11 @@
     tabindex="-1">
     {{ compHeading.title }}
   </h2>
+{% endif %}
+{% if compHeading.sidebar %}
+<h3 class="ma__comp-heading--sidebar"
+    {% if sidebarHeading.id %}id="{{sidebarHeading.id}}"{% endif %}>
+    {{sidebarHeading.title}}
+  </h3>
 {% endif %}
 
