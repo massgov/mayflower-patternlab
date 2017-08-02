@@ -12,6 +12,7 @@ A list of events where each item displays the Name, Location, Time, Date and a b
 
 ### Variant options
 * Can be used in the [Right Rail](./?p=organisms-event-listing-as-sidebar)
+* Renders as two columns with a background in [Post Content](./?p=organisms-event-listing-as-post-content)
 
 
 ### Variables
