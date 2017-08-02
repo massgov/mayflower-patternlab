@@ -8,7 +8,7 @@
       {% set sidebarHeading = keyActions.sidebarHeading %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
-    <div class="ma__key-actions__items" aria-labelledby="{{compHeading.id}}">
+    <div class="ma__key-actions__items" aria-labelledby="">
       {% for link in keyActions.links %}
         {% if link.image %}
           {% set illustratedLink = link %}
