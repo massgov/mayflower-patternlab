@@ -3,31 +3,6 @@ Mayflower release managers with the necessary repo permissions can follow these 
 
 *Note: this assumes that your local environment is already set up and functioning.  If this is not true, follow the steps in [Getting Started](../.github/CONTRIBUTING.md#getting-started).*
 
-### Short Version
-
-If you've done this before, here's a quick refresher:
-
-1. Email: Notify the team of upcoming release
-1. Checkout `dev`.
-1. Create release branch.
-1. Curate release "Updates" in release-notes.md, and then commit.
-1. Bump version in front page pattern `readme2`.
-1. Push release branch to `massgov/mayflower`.
-1. Deploy release branch to your GH-Pages.
-1. Verify release notes against the site rendered on your GH-Pages.
-1. Smoke test most important stuff.
-1. Merge (no squash!) GitHub PR: release --> master.
-1. Cut release tag off Master (include release notes)
-1. Deploy release tag to Prod (`massgov/mayflower` `gh-pages`).
-1. Smoke test [Prod](http://mayflower.digital.mass.gov).
-1. GitHub PR: master --> develop.
-1. Set JIRA Fix Version for delivered tickets.
-1. Email: Release notes.
-
-### Long Version
-
-First time or need more detail?  Read these:
-
 1. If there is new code to be delivered, notify the team at least two hours ahead of time that a release is coming. Follow the [Communicate Releases](https://wiki.state.ma.us/display/massgovredesign/Communicating+Releases) instructions for Upcoming Deployments.
 1. Pull and checkout the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev): `git fetch upstream && git checkout dev`.
 1. Create a release branch `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about Mayflower and semantic versioning in the docs (*@todo link to versioning docs*).
