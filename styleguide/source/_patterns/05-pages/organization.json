@@ -2,13 +2,6 @@
   "urlPath": "/?p=pages-ORG-Health-Services",
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Health and Human Services (EOHHS)",
-      "href": "#"
-    }]
-  },
 
   "pageBanner": {
     "bgWide":"../../assets/images/placeholder/1600x400.png",
