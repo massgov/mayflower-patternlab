@@ -11,17 +11,24 @@
   {% set centered = "ma__comp-heading--centered" %}
 {% endif %}
 
-{% set headingLevel = compHeading.sub ? 3 : 2 %}
-
 {% set sidebar = compHeading.sidebar ? 'ma__comp-heading--sidebar' : '' %}
 
-
-<h{{ headingLevel }} 
-  class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
-  {% if compHeading.id %}
-    id="{{compHeading.id}}"
-  {% endif %} 
-  tabindex="-1">
-  {{ compHeading.title }}
-</h{{ headingLevel }}>
-
+{% if compHeading.sub %}
+  <h3
+    class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
+    {% if compHeading.id %}
+      id="{{compHeading.id}}"
+    {% endif %} 
+    tabindex="-1">
+    {{ compHeading.title }}
+  </h3>
+{% else %}
+  <h2 
+    class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
+    {% if compHeading.id %}
+      id="{{compHeading.id}}"
+    {% endif %} 
+    tabindex="-1">
+    {{ compHeading.title }}
+  </h2>
+{% endif %}
