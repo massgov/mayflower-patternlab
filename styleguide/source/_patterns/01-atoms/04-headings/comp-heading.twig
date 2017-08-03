@@ -1,6 +1,4 @@
-{% if compHeading.color %}
-  {% set colored = "ma__comp-heading--" ~ compHeading.color %}
-{% endif %}
+{% set colored = compHeading.color ? "ma__comp-heading--" ~ compHeading.color : "" %}
 
 {# string value is backward compatible for v5.0.0 #}
 {% if compHeading.centered == 'true' or compHeading.centered == 1 %}
@@ -13,24 +11,17 @@
   {% set centered = "ma__comp-heading--centered" %}
 {% endif %}
 
-{% if compHeading.sub %}
-  <h3 
-    class="ma__comp-heading {{ colored }} {{ centered }}" 
-    {% if compHeading.id %}id="{{compHeading.id}}"{% endif %} tabindex="-1">
-    {{ compHeading.title }}
-  </h3>
-{% else %}
-  <h2 
-    class="ma__comp-heading {{ colored }} {{ centered }}" {% if compHeading.id %}
-    id="{{compHeading.id}}"{% endif %}
-    tabindex="-1">
-    {{ compHeading.title }}
-  </h2>
-{% endif %}
-{% if compHeading.sidebar %}
-<h3 class="ma__comp-heading--sidebar"
-    {% if sidebarHeading.id %}id="{{sidebarHeading.id}}"{% endif %}>
-    {{sidebarHeading.title}}
-  </h3>
-{% endif %}
+{% set headingLevel = compHeading.sub ? 3 : 2 %}
+
+{% set sidebar = compHeading.sidebar ? 'ma__comp-heading--sidebar' : '' %}
+
+
+<h{{ headingLevel }} 
+  class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
+  {% if compHeading.id %}
+    id="{{compHeading.id}}"
+  {% endif %} 
+  tabindex="-1">
+  {{ compHeading.title }}
+</h{{ headingLevel }}>
 

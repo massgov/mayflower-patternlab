@@ -1,22 +1,25 @@
 .ma__comp-heading {
-  @include ma-comp-heading;
 
   &:not(&--sidebar) {
     @include ma-comp-heading;
   }
 
   &--sidebar,
-   .sidebar & {
+  .sidebar & {
     @include ma-sidebar-heading;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &--centered:not(&--sidebar) {
+    text-align: center;
 
     &:after {
       left: 50%;
       transform: translateX(-50%);
     }
-  }
-
-  &--centered {
-    text-align: center;
   }
 
   .sidebar--colored & {
