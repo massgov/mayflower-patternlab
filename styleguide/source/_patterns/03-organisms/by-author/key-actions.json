@@ -2,7 +2,7 @@
   "keyActions": {
     "compHeading": {
       "title": "Key Actions",
-      "sub":true,
+      "sub": false,
       "id": "key-action-id"
     },
     "links":[{
