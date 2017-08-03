@@ -2,22 +2,15 @@
 
 {% set buttonStyle = button.outline ? "ma__button--minor" : "" %}
 
-{% set buttonColor = button.color ? "ma__button--" ~ button.color : "" %}
-
-{# Depreciated after version 5.0 #}
-{% if button.theme %}
-  {% set buttonColor = "ma__button--" ~ button.theme %}
-{% endif %}
-
-
+{% set buttonTheme = button.theme ? "ma__button--" ~ button.theme : "" %}
 
 {% if button.href %}
   <a 
     href="{{ button.href }}" 
-    class="ma__button {{ buttonSize }} {{buttonColor}} {{buttonStyle}}"
+    class="ma__button {{ buttonSize }} {{buttonTheme}} {{buttonStyle}}"
     title="{{ button.info }}">
     {{ button.text }}
   </a>
 {% else %}
-  <button type="{{ button.type }}" class="ma__button {{ buttonSize }} {{buttonColor}} {{buttonStyle}}" aria-label="{{ button.info }}">{{ button.text }}</button>
+  <button type="{{ button.type }}" class="ma__button {{ buttonSize }} {{buttonTheme}} {{buttonStyle}}" aria-label="{{ button.info }}">{{ button.text }}</button>
 {% endif %}

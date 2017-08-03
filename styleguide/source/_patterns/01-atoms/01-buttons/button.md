@@ -8,8 +8,8 @@ This is the standard button pattern
 * Using a [link](./?p=atoms-button-as-link) instead of a button
 * [small](./?p=atoms-button-as-small)
 * [outline](./?p=atoms-button-as-outline)
-* [gray](./?p=atoms-button-as-gray) color
-* [green with an outline](./?p=atoms-button-as-green)
+* [gray](./?p=atoms-button-as-quaternary-color) color
+* [green with an outline](./?p=atoms-button-as-secondary-color)
 
 
 ### Variables
@@ -25,8 +25,8 @@ button: {
     type: string / optional (ex: "button", "submit")
   size:
     type: string / optional ("" or "small")
-  color:
-    type: string / optional ("" or "gray")
+  theme:
+    type: string / optional ("", "secondary", or "secondary")
   outline: 
     type: boolean
 }
