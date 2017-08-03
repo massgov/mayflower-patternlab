@@ -1,36 +1,28 @@
----
-title: Press Teaser
----
-Description: Short teaser for a related press event
+### Description
+Short teaser for a related press event
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Notes
-
-
-### Contains
-- [@organisms/by-author/rich-text](?p=organisms-rich-text)
-- [@atoms/decorative-link](?p=atoms-decorative-link)
-
-### Used in:
+### Pattern Contains
+* Decorative Link
+* Rich Text
 
 
-### Required Variables
-
+### Variables
 ~~~
 pressTeaser : {
   eyebrow: 
-    type: string/optional
+    type: string / optional
   title : {
-    type: object/decorativeLink/required
+    type: decorativeLink / required
   },
   date: 
-    type: string/optional,
+    type: string / optional,
   org: 
-    type: string/optional,
+    type: string / optional,
   description: {
-    type: object/richText/optional
+    type: richText / optional
   }
 }
-
 ~~~
