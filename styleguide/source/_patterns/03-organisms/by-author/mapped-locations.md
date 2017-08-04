@@ -14,6 +14,7 @@ A google map with a title and see all link
 
 ### Usage Guidelines
 * The decorative link was placed above the map to make it easy for screen readers to use instead of placing it after the map like we normally do for a 'view more' type link.
+* The decorative link should take the user to a page that lists out all of the address contained within the map.
 
 ### JavaScript Used
 * This pattern uses JavaScript for the Google map (js/modules/googleMap.js)
