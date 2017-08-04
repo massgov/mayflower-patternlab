@@ -5,10 +5,6 @@
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
-{% if actionFinder.links|length <= 6 and hideFilter %}
-  {% set filterClass = "ma__action-finder--no-filter" %}
-{% endif %}
-
 <section class="ma__action-finder {{ noBgClass }} {{ filterClass }}" id="{{ actionFinder.id }}">
   {% if actionFinder.bgWide %}
     <style>
@@ -28,10 +24,7 @@
       <h2 class="ma__action-finder__title">
         {{ actionFinder.title }}
       </h2>
-      {% if actionFinder.links|length > 6 and not hideFilter %}
-        <div class="ma__action-finder__search">
-          {% include "@molecules/keyword-search.twig" %}
-        </div>
+      {% if actionFinder.links %}
       {% endif %}
     </header>
     {% if actionFinder.featuredLinks %}
