@@ -15,7 +15,7 @@ Displays a video using an iframe with an optional link.
 ~~~
 video {
   src: 
-    type: string(url) / required
+    type: string (video url) / required
   label: 
     type: string / required
   width: 
@@ -25,7 +25,7 @@ video {
   link: 
     type: decorativeLink / optional
   position: 
-    type: string (null, 'right') / optional
+    type: string ('', 'right') / optional
 }
 ~~~
 
