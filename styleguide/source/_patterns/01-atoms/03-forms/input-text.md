@@ -10,6 +10,10 @@ This Pattern is a stylized input text field.
 * The label can also be visually [hidden](./?p=atoms-input-text-with-hidden-label)
 * Next to the label, the word [optional](./?p=atoms-input-text-as-optional) appears if the input isn't required
 
+### Usage Guidelines
+* use the Input Date Pattern instead of setting the type variable to date here.
+
+
 ### JavaScript Used
 * to increment the number input type and to enforce the [0-9] pattern value (js/modules/formInputs.js)
 
