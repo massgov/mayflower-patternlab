@@ -1,5 +1,5 @@
 ### Description
-An `<h4>` used at the start of a column, designated by its CSS class.
+This pattern shows an `<h4>` heading that can also be rendered as a link
 
 ### Status
 * Stable as of 5.0.0
