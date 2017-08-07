@@ -1,5 +1,5 @@
 ### Description
-This pattern displays contact information grouped by type
+This pattern displays a collection of Contact Groups
 
 ### Status
 * Stable as of 5.0.0
