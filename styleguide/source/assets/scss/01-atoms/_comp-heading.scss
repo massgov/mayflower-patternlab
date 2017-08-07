@@ -1,20 +1,24 @@
 .ma__comp-heading {
-  @include ma-comp-heading;
 
-  &--centered {
-    text-align: center;
-
-    &:after {
-      left: 50%;
-      transform: translateX(-50%);
-    }
+  &:not(&--sidebar) {
+    @include ma-comp-heading;
   }
 
+  &--sidebar,
   .sidebar & {
     @include ma-sidebar-heading;
 
     &:after {
       display: none;
+    }
+  }
+
+  &--centered:not(&--sidebar) {
+    text-align: center;
+
+    &:after {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
