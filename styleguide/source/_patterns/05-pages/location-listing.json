@@ -3,20 +3,6 @@
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
-  "breadcrumbs":{
-    "light": "true",
-    "links": [{
-      "text": "Your Government",
-      "href": ""
-    },{
-      "text": "State Agencies",
-      "href": ""
-    },{
-      "text": "Human Services",
-      "href": "#"
-    }]
-  },
-
   "pageHeader": {
     "divider": false,
     "title": "Executive Office of Health and Human Services Locations",
