@@ -26,7 +26,7 @@ button: {
   size:
     type: string / optional ("" or "small")
   theme:
-    type: string / optional ("", "secondary", or "secondary")
+    type: string / optional ("", "secondary", or "quaternary")
   outline: 
     type: boolean
 }
