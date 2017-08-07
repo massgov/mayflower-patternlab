@@ -1,11 +1,10 @@
 {% set noBgClass = "" %}
-{% set filterClass = "" %}
 
 {% if not actionFinder.bgWide %}
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
-<section class="ma__action-finder {{ noBgClass }} {{ filterClass }}" id="{{ actionFinder.id }}">
+<section class="ma__action-finder {{ noBgClass }}" id="{{ actionFinder.id }}">
   {% if actionFinder.bgWide %}
     <style>
       #{{ actionFinder.id }} {
@@ -24,8 +23,6 @@
       <h2 class="ma__action-finder__title">
         {{ actionFinder.title }}
       </h2>
-      {% if actionFinder.links %}
-      {% endif %}
     </header>
     {% if actionFinder.featuredLinks %}
       {% if actionFinder.featuredHeading %}
