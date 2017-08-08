@@ -5,7 +5,7 @@
     "text": "Button",
     "type": "button",
     "size": "",
-    "color": "gray",
+    "theme": "quaternary",
     "outline": false
   }
 }

@@ -13,13 +13,16 @@ This is a row of content used in the Stacked Row Template
 ### Variant options
 * Can be viewed as a [single column](./?p=organisms-stacked-row-section-single)
 
+### Usage Guidelines
+* The ID value is used as an anchor tag when the Jump Links pattern is added as a table of contents (see guide pages)
+
 ### Variables
 ~~~
 stackedRowSection: {
   title:
     type: string / optional,
   id: 
-    type: string (unique id) / optional
+    type: string (unique per page) / optional
   pageContent: [{
     path: 
       type: string / required,

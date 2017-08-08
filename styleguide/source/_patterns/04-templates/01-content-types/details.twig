@@ -28,7 +28,7 @@
           {% include "@molecules/sticky-nav.twig" %}
         </div>
         {% block pageContent %}
-          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
         {% endblock %}
       </div>
     </div>
@@ -40,7 +40,7 @@
       {% endif %}
       {% if sidebar %}
         {% block sidebar %}
-          {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Right Rail'}} %}
         {% endblock %}
       {% endif %}
     </aside>
