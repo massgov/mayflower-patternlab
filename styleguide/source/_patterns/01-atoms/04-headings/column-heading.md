@@ -15,6 +15,6 @@ columnHeading {
   href: 
     type: string (url) / optional,
   info:
-    type: string / optional - used to provide content for aria label
+    type: string (content for screen readers) / optional
 }
 ~~~
