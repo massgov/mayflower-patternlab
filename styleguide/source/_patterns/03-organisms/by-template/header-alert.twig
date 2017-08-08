@@ -1,6 +1,13 @@
+{% set alertId = headerAlert.id ? headerAlert.id : '' %}
+
+{# backward compatible to v5.5 #}
+{% if headerAlert.guid %}
+  {% set alertId = headerAlert.guid %}
+{% endif %}
+
 <section 
   class="ma__header-alert js-header-alert" 
-  data-id="{{headerAlert.guid}}"
+  data-id="{{ alertId }}"
   role="alert">
   <div class="ma__header-alert__container">
     <span class="ma__header-alert__label">alert!</span>
@@ -9,7 +16,7 @@
         {% set decorativeLink = headerAlert %}
         {% include "@atoms/decorative-link.twig" %}
       {% else %}
-        {{headerAlert.text}}
+        {{ headerAlert.text }}
       {% endif %}
     </span>
   </div>
