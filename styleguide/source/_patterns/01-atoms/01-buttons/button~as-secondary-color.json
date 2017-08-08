@@ -5,7 +5,7 @@
     "text": "Button",
     "type": "button",
     "size": "small",
-    "color": "green",
+    "theme": "secondary",
     "outline": true
   }
 }

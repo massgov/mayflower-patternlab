@@ -15,6 +15,6 @@ calloutLink: {
   text:
     type: string / required
   info:
-    type: string (adds more description to the link) / optional
+    type: string (adds more description about the link) / optional
 }
 ~~~
