@@ -1,5 +1,5 @@
 ### Description
-This is a Two Column content type with a sticky left nav that is being used for How To pages on Mass gov.
+This pattern is based off of the Two Column template with an additional sticky left nav.
 
 ### Status
 * Stable as of 5.0.0
@@ -9,14 +9,12 @@ This is a Two Column content type with a sticky left nav that is being used for 
 * Contact List
 * Colored Heading
 * Sticky Nav
+* This template contains Twig Blocks that can be used to populated the Page Content, Right Rail, or Post Content sections with patterns found in Mayflower
 
 
 ### JavaScript Used
 * Sticky Nav (js/modules/scrollAnchors.js)
 * Contact List Accordion (js/modules/accordions.js)
-
-### Notes
-* This Pattern's Layout is based off of the Two Column template
 
 
 ### Variables

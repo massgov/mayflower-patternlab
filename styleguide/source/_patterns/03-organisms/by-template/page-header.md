@@ -1,5 +1,5 @@
 ### Description
-Page Header with used at the top of a page that contains placeholders for optional content and widgets.
+This pattern is used to add a `<h1>` page title to a page that helps define its content.
 
 ### Status
 * Stable as of 5.0.0

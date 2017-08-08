@@ -19,17 +19,17 @@ A collection of featured and general links
 ~~~
 actionFinder: {
   id:
-    type: string/uniqueID/required 
+    type: string (unique per page) /required 
   bgWide:
-    type: string/image-url/optional/(required with bgNarrow)
+    type: string (image path) / optional / (required with bgNarrow)
   bgNarrow:
-    type: string/image-url/optional
+    type: string (image path) / optional
   title:
-    type: string/required
+    type: string / required
   featuredHeading:
-    type: string/required
+    type: string / required
   generalHeading:
-    type: string/required
+    type: string / required
 
   seeAll: {
     type: decorativeLink / optional

@@ -1,5 +1,5 @@
 ### Description
-Displays a collect of components to help describe an available Service on Mass Gov
+Displays a collection of components to help describe an available Service on Mass Gov
 
 ### Status
 * Stable as of 5.0.0
