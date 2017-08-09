@@ -60,8 +60,7 @@
 
   .ma__content-link,
   .ma__decorative-link {
-    display: inline;
-    width: auto;
+    display: inline-block;
 
     a {
       hyphens: auto;
