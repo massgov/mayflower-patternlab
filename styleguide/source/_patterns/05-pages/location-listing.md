@@ -5,7 +5,9 @@ This is a filter page used to search for locations.
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Stacked Row Template
+* Header
+* Footer
+* Stacked Row (template)
 * Page Header
 * Stacked Row Section
 * Location Listing

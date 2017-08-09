@@ -7,7 +7,7 @@ Example of a Location template to show how it could be used as a General Locatio
 ### Pattern Contains
 * Header
 * Footer
-* Location Template
+* Location (template)
 * Contact List
 * Key Actions
 * Rich Text

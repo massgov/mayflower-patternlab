@@ -7,7 +7,7 @@ Example of a Location template to show how it could be used as a Park Location p
 ### Pattern Contains
 * Header
 * Footer
-* Location Template
+* Location (template)
 * Location Icons
 * Contact List
 * Key Actions

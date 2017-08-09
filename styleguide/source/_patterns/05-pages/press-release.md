@@ -7,7 +7,7 @@ Displays a collection of components to help describe a Press Release on Mass Gov
 ### Pattern Contains
 * Header 
 * Footer
-* Press Template
+* Press (template)
 
 ### Variant options
 * The press release can include an optional [image](./?p=pages-press-release-with-image) or [video](./?p=pages-press-release-with-video)

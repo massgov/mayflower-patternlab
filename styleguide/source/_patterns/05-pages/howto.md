@@ -7,7 +7,7 @@ Example of a details template to show how it could be used as a How to apply for
 ### Pattern Contains
 * Header
 * Footer
-* Details Template
+* Details (template)
 * Rich Text
 * Tabular Data
 * Steps Unordered

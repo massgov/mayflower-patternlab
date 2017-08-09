@@ -7,9 +7,9 @@ This is an example of an Organization page for Mass.gov using a stacked row temp
 ### Pattern Contains
 * Header
 * Footer
-* Stacked Row template
-* Page Banner (large)
-* Page Header (location)
+* Stacked Row (template)
+* Page Header - location
+* Page Banner - large
 * Stacked Row Section
 * Rich Text
 * Icon Links
