@@ -487,12 +487,16 @@
             },
             "details": ""
           }]
-        }]
+        }],
+        "decorativeLink": {
+          "href": "#",
+          "text": "Learn more about this organization",
+          "info": "Learn more about this generic"
+        }
       },{
         "accordion": true,
         "isExpanded": false,
         "subTitle": {
-          "href":"",
           "text": "Benefits Claims Customer Service"
         },
         "groups": [{
@@ -557,14 +561,18 @@
             },
             "details": ""
           }]
-        }]
+        }],
+        "decorativeLink": {
+          "href": "#",
+          "text": "Learn more about this organization",
+          "info": "Learn more about this generic"
+        }
       }]
     }
   },
 
   "sidebar": {
     "coloredHeadings": true,
-    
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading": {
@@ -574,7 +582,7 @@
         "accordion": false,
         "isExpanded": false,
         "subTitle": {
-          "href":"",
+          "href":"#",
           "text": "Department of Unemployment Assistance",
           "chevron":""
         },
