@@ -13,28 +13,28 @@
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "To apply for unemployment, you need to provide personal information including your Social Security number, birth date, home address, email address, and phone number."
+            "text": "This is an optional description. Lorem ipsum ..."
           }
         }
       },{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "You also need information about your employment history from the last 15 months, including:"
+            "text": "This is an optional description. Lorem ipsum ..."
           }
         }
       },{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "You may need additional information in certain situations:"
+            "text": "This is an optional description. Lorem ipsum ..."
           }
         }
       },{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "To receive payments by direct deposit, you’ll also need your bank account details and routing number. Otherwise, DUA will send you a debit card."
+            "text": "This is an optional description. Lorem ipsum ..."
           }
         }
       }]
