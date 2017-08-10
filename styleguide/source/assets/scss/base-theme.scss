@@ -38,7 +38,10 @@
 @import "06-theme/01-atoms/table";
 
 // Molecules - chunks of code that are used in Organisms/Components
+@import "06-theme/02-molecules/action-event";
 @import "06-theme/02-molecules/action-gallery";
+@import "06-theme/02-molecules/action-image";
+@import "06-theme/02-molecules/action-section";
 @import "06-theme/02-molecules/action-step";
 @import "06-theme/02-molecules/arrow-nav";
 @import "06-theme/02-molecules/back-button";
@@ -56,6 +59,7 @@
 @import "06-theme/02-molecules/event-teaser";
 @import "06-theme/02-molecules/footer-links";
 @import "06-theme/02-molecules/footnote";
+@import "06-theme/02-molecules/header-contact";
 @import "06-theme/02-molecules/header-search";
 @import "06-theme/02-molecules/header-tags";
 @import "06-theme/02-molecules/illustrated-link";
@@ -71,14 +75,17 @@
 @import "06-theme/02-molecules/pagination";
 @import "06-theme/02-molecules/press-status";
 @import "06-theme/02-molecules/press-teaser";
+@import "06-theme/02-molecules/related-action";
 @import "06-theme/02-molecules/results-heading";
 @import "06-theme/02-molecules/section-links";
 @import "06-theme/02-molecules/social-links";
 @import "06-theme/02-molecules/sticky-nav";
 @import "06-theme/02-molecules/tooltip";
+@import "06-theme/02-molecules/wait-time";
 
 // Organisms - components
 @import "06-theme/03-organisms/action-card";
+@import "06-theme/03-organisms/action-details";
 @import "06-theme/03-organisms/action-finder";
 @import "06-theme/03-organisms/banner-carousel";
 @import "06-theme/03-organisms/blog-feed";
@@ -111,8 +118,10 @@
 @import "06-theme/03-organisms/personal-message";
 @import "06-theme/03-organisms/press-filters";
 @import "06-theme/03-organisms/press-listing";
+@import "06-theme/03-organisms/quick-actions";
 @import "06-theme/03-organisms/rich-text";
 @import "06-theme/03-organisms/search-banner";
+@import "06-theme/03-organisms/sidebar-widget";
 @import "06-theme/03-organisms/split50";
 @import "06-theme/03-organisms/suggested-pages";
 @import "06-theme/03-organisms/stacked-row-section";
