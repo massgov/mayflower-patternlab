@@ -1,5 +1,5 @@
 ### Description
-Displays a collection of components to help describe a Press Release on Mass Gov
+This template is a collection of components to help describe a Press Release on Mass Gov and is based on the Two Column template
 
 ### Status
 * Stable as of 5.0.0
