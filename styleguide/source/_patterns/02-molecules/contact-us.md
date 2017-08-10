@@ -1,5 +1,5 @@
 ### Description
-This pattern displays contact information grouped by type.
+This pattern displays a collection of Contact Groups
 
 ### Status
 * Stable as of 5.0.0
@@ -10,12 +10,13 @@ This pattern displays contact information grouped by type.
 
 ### Variant options
 * With a [linked title](./?p=molecules-contact-us-with-linked-title)
-* As a [accordion](./?p=molecules-contact-us-as-accordion)
-* 
+* As an [accordion](./?p=molecules-contact-us-as-accordion)
+
 
 ### Usage Guidelines
 * This component can be viewed as an accordion or in list view
-* in List view, the first two contact groups should be visible and the remainder are collapsed.
+* When in the Accordion view, all or no contact groups (depending on accordion state)
+* When in the List view, the first two contact groups or shown by default with the remainder collapsed.
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions (js/modules/accordions.js)

@@ -6,7 +6,8 @@ A google map with multiple markers and info windows
 
 
 ### JavaScript Used
-* Google Map (js/modules/googleMap.js)
+* Google's API (//maps.googleapis.com/maps/api/js)
+* The rendering of the map (js/modules/googleMap.js)
 
 ### Variables
 ~~~
@@ -14,9 +15,9 @@ googleMap: {
   map: {
     center: {
       lat:
-        type: integer / required
+        type: float / required
       lng:
-        type: integer / required
+        type: float / required
       },
       zoom:
         type: integer / required
@@ -24,9 +25,9 @@ googleMap: {
     markers: [{
       position: {
         lat:
-          type: integer / required
+          type: float / required
         lng:
-          type: integer / required
+          type: float / required
       },
       label:
         type: string / required
@@ -42,7 +43,7 @@ googleMap: {
         address:
           type: string / required
         directions:
-          type: string (url) / optional
+          type: string (url to goole maps) / optional
       }
     }]
   }
