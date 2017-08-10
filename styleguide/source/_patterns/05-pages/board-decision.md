@@ -11,7 +11,7 @@ Example of an Board Decision Page for Mass Gov [extending](https://twig.symfony.
 
 ### JavaScript Used
 * Contact List (js/modules/accordions.js)
-* Footnotes (js/modules/footnote.js)
+* Footnote List (js/modules/footnote.js)
 * Jump Links (js/modules/scrollAnchors.js)
 
 ### Variables
