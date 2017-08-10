@@ -5,7 +5,7 @@
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
-{% if actionFinder.links|length <= 6 and hideFilter %}
+{% if actionFinder.links|length <= 6 or hideFilter %}
   {% set filterClass = "ma__action-finder--no-filter" %}
 {% endif %}
 

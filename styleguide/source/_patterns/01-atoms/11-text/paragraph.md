@@ -1,15 +1,13 @@
----
-title: Paragraph
----
-Description: Displays the ```<p>``` tag. 
+### Description
+Displays the `<p>` tag. 
 
-## State: Alpha
-### Used In:
-[alot of elements]
-### Required Variables:
+### Status
+* Stable as of 5.0.0
+
+### Variables:
 ~~~
 paragraph {
-    text:
-        type: string
+  text:
+    type: string
 }
 ~~~

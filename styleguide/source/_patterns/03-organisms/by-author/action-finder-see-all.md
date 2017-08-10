@@ -1,6 +1,5 @@
----
-title: Action Finder with See All
----
-Description: Action Finder with See All variant
+### Description
+This is a variant of the [Action Finder](./?p=organisms-action-finder) showing an example with a see all link at the bottom.
 
-### Base: [@organism/by-author/action-finder.twig](?p=organisms-action-finder)
+### How to generate
+* Populate the 'seeAll' variable with 'decorativeLink' data

@@ -1,10 +1,5 @@
----
-title: Comp Subheading
----
-Description: Subheading Variant of Comp Heading.
+### Description
+This is a variant of the [Comp Heading](./?p=atoms-comp-heading) showing an example as a sub heading (H3).
 
-### Notes
-- _sub variable is set to 'true'_
-
-### Base
-- [@atoms/04-headings/comp-heading](/?p=atoms-comp-heading)
+### How to generate
+* Set the 'sub' variable equal to the boolean value true

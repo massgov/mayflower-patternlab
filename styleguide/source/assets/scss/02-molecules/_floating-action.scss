@@ -1,23 +1,22 @@
 .ma__floating-action {
-  z-index: $z-sticky-content;
   position: fixed;
     bottom: 1.3125rem;
-
-  &--alignment-right {
-    right: 1.5625rem;
-  }
-  &--alignment-left {
     left: 1.5625rem;
-  }
+  z-index: $z-sticky-content;
 
   @media ($bp-small-max) {
     bottom: 1rem;
+    left: 1rem;
+  }
 
-    &--alignment-right {
+  &--alignment-right,
+  &--right {
+    left: inherit;
+    right: 1.5625rem;
+
+    @media ($bp-small-max) {
+      left: inherit;
       right: 1rem;
-    }
-    &--alignment-left {
-      left: 1rem;
     }
   }
 }

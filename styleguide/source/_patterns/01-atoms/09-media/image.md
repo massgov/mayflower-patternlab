@@ -2,7 +2,7 @@
 Displays an image using the image HTML element
 
 ### Status
-* Stable as of 1.0.0
+* Stable as of 4.0.0
 
 ### Variables
 ~~~
