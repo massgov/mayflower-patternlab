@@ -3,7 +3,7 @@ input {
   min-height: 40px;
   padding: 0 18px;
 
-  &.has-error {
+  &.has-error:not(:focus) {
     background-position: center right 10px;
     background-repeat: no-repeat;
     padding-right: 40px;
