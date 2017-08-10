@@ -5,11 +5,15 @@ Displays one of more Contacts Us patterns as a stacked list of accordions.
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Contact Us
 * Comp Heading
+* Sidebar Heading
+* Contact Us
 
 ### Variant options
-* Turning on the viewSpecific variable, will hide the component at certain points when used on a two column layout.  When placed in the sidebar, it will hide when the page is a single column.  When placed in the page-content, it will hide when the page is two columns.
+* [Right Rail](./?p=organisms-contact-list-without-accordion) version
+
+### Usage Guidelines
+* The viewSpecific variable is used to hide the pattern in the Page Content area for wide screens and hide the pattern in the Sidebar area for narrow screens.  Typically this variable is used when you want to show the Contacts in the Right Rail of a two column template at the top of the Page Content when the columns stack.
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions (js/modules/accordions.js)
@@ -22,7 +26,11 @@ contactList: {
   compHeading: {
     type: compHeading / optional
   },
+  sidebarHeading: {
+    type: sidebarHeading / optional
+  }
   contacts:[{
     type: array of contactUs / required
   }]
+}
 ~~~

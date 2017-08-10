@@ -1,5 +1,7 @@
 <div class="ma__header-tags">
-  <span>{{ headerTags. label }}</span>
+  {% if headerTags.label %}
+    <span>{{ headerTags.label }}</span>
+  {% endif %}
   <div class="ma__header-tags__terms">
     {% for item in headerTags.taxonomyTerms %}
       <a href="{{ item.href }}">{{ item.text }}</a>

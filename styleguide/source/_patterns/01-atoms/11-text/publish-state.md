@@ -1,13 +1,11 @@
----
-title: Publish State
----
-Description: Displays the large text depicting the state of content. 
+### Description
+Displays large text depicting the state of the page's content.  This is usually added as part of the Page Header.
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Used In:
 
-### Required Variables:
+### Variables
 ~~~
 publishState {
   text:

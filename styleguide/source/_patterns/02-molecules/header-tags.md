@@ -1,22 +1,20 @@
----
-title: Header tags
----
-Description: a molecule for a set of taxonomy links in the header.
-## Status: ALPHA
-### Notes
+### Description
+This is a set of related links with an optional label that are typically used to navigate to a parent page.
 
-### Used in:
-- [@organisms/by-template/page-header](/?p=organisms-page-header)
-### Required Variables
+### Status
+* Stable as of 5.0.0
+
+### Variables
 ~~~
 headerTags: {
   label:
-    type: string/required
+    type: string / optional
   taxonomyTerms: [{
     href:
-      string
+      type: string / required
     text:
-      string
+      type: string / required
   }]
 }
 ~~~
+

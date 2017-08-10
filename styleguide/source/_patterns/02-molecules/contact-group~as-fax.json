@@ -1,7 +1,7 @@
 {
   "contactGroup": {
-    "icon": "@atoms/05-icons/svg-phone.twig",
-    "name": "Phone",
+    "icon": "@atoms/05-icons/svg-fax-icon.twig",
+    "name": "Fax",
     "items": [{
       "type": "phone",
       "label": "Main:",
@@ -21,7 +21,7 @@
         "text": "(800) 432-4321",
         "info": ""
       },
-      "details": "This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+      "details": ""
     }]
   }
 }

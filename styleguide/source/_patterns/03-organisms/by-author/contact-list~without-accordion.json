@@ -1,11 +1,8 @@
 {
   "contactList": {
-    "compHeading": {
-      "title": "Contacts",
-      "sub": "",
-      "color": "",
-      "id": "contacts",
-      "centered": ""
+    "compHeading": null,
+    "sidebarHeading": {
+      "title": "Contacts"
     },
 
     "contacts":[{

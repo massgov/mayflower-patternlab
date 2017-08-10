@@ -1,6 +1,6 @@
 {
   "actionStep": {
-    "accordion": false,
+    "accordion": true,
     "isExpanded": false,
     "accordionLabel": "Expand Generic steps on completing something",
     "icon": "@atoms/05-icons/svg-circle-chevron.twig",
