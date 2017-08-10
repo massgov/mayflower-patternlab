@@ -1,23 +1,19 @@
----
-title: Back Button
----
+### Description
+This Pattern is a button that is designed to take the user Back to the Previous page.
 
-Description: Takes the user Back to the Previous page
-
-## Status: alpha
-
-### Notes:
+### Status
+* Stable as of 5.0.0
 
 ### Variables
 ~~~
-"backButton": {
-  "link": {
-    "href": 
-      type: string/required
-    "text":  
-      type: string/required
-    "info":  
-      type: string/optional (for screen readers if text isn't descriptive)
+backButton: {
+  link: {
+    href: 
+      type: string / required
+    text:  
+      type: string / required
+    info:  
+      type: string / optional (for screen readers if text isn't descriptive)
   }
 }
 ~~~
