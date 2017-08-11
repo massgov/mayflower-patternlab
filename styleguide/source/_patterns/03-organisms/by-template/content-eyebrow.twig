@@ -1,0 +1,14 @@
+<section class="ma__content-eyebrow">
+  {% if contentEyebrow.headerTags.taxonomyTerms or contentEyebrow.socialLinks.items %}
+    <div class="ma__content-eyebrow__tags">
+      {% if contentEyebrow.headerTags.taxonomyTerms %}
+        {% set headerTags = contentEyebrow.headerTags %}
+        {% include "@molecules/header-tags.twig" %}
+      {% endif %}
+      {% if contentEyebrow.socialLinks.items %}
+        {% set socialLinks = contentEyebrow.socialLinks %}
+        {% include "@molecules/social-links.twig" %}
+      {% endif %}
+    </div>
+  {% endif %}
+</section>
