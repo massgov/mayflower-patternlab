@@ -1,4 +1,22 @@
 {
+  "contentEyebrow": {
+    "headerTags": {
+      "label": "More about:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Term 1"
+      },{
+        "href": "#",
+        "text": "Term 2"
+      },{
+        "href": "#",
+        "text": "Term 3"
+      },{
+        "href": "#",
+        "text": "Term 4"
+      }]
+    }
+  },
   "pageBanner": {
     "bgWide": "/assets/images/placeholder/1600x400.png",
     "bgNarrow": "/assets/images/placeholder/800x400.png",
