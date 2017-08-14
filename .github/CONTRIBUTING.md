@@ -29,12 +29,12 @@ The [issue tracker](https://github.com/massgov/mayflower/issues) is the preferre
 ### Issue Labels
 We use labels to help identify and organize issues.  Here's what they represent and how we use them:
 
-- `browser bug` - Issues that are reported to us, but actually are the result of a browser-specific bug. These are diagnosed with reduced test cases and result in an issue opened on that browser's own bug tracker.
+- `browser bug` - Issues that are reported to us that are the result of a browser-specific bug. These are diagnosed with reduced test cases and result in an issue opened on that browser's own bug tracker.
 - `confirmed` - Issues that have been confirmed with a reduced test case and identify a bug in Mayflower.
 - `css` - Issues stemming from our compiled CSS or source Sass files.
 - `docs` - Issues for improving or updating our documentation.
 - `examples` - Issues involving the example patterns (i.e. content or data) included on our site.
-- `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified. New features require a minor version bump (e.g., `v3.0.0` to `v3.1.0`).
+- `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified.
 - `build` - Issues with our build system, which is used to run all our tests, concatenate and compile source files, and more.
 - `help wanted` - Issues we need or would love help from the community to resolve.
 - `js` - Issues stemming from our compiled or source JavaScript files.
@@ -60,8 +60,13 @@ Example:
 
 > Short and descriptive example bug report title
 >
-> A summary of the issue and the browser/OS environment in which it occurs. If
-> suitable, include the steps required to reproduce the bug.
+> The browser/OS environment and Mayflower Version in which it occurs.
+ 
+> Expected behavior - what you would expect to happen on the page / site.
+
+> Existing behavior - what is currently happen on the page / site.
+
+> If suitable, include the steps required to reproduce the bug.
 >
 > 1. This is the first step
 > 2. This is the second step
@@ -69,10 +74,7 @@ Example:
 >
 > `<url>` - a link to the reduced test case
 >
-> Any other information you want to share that is relevant to the issue being
-> reported. This might include the lines of code that you have identified as
-> causing the bug, and potential solutions (and your opinions on their
-> merits).
+> Any other information you want to share that is relevant to the issue being reported. This might include the lines of code that you have identified as causing the bug, and potential solutions (and your opinions on their merits).
 
 ## Feature requests
 
@@ -84,10 +86,13 @@ Good pull requests—patches, improvements, new features—are a fantastic help!
 
 **Please ask first** before embarking on any significant pull request (e.g. implementing features, refactoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
-You should only edit the source files in [`/styleguide/source/assets/scss/`](https://github.com/massgov/mayflower/tree/master/styleguide/source/assets/scss)
-and/or [`/styleguide/source/assets/js/`](https://github.com/massgov/mayflower/tree/master/styleguide/source/assets/js) and/or [`/styleguide/source/_patterns`](https://github.com/massgov/mayflower/tree/master/styleguide/source/_patterns).
+### Work in source directories
+You can modify these files in order to resolve issues and add new features:
+ - Styles: [`/styleguide/source/assets/scss/`](https://github.com/massgov/mayflower/tree/master/styleguide/source/assets/scss)
+- Javascript functionality: [`/styleguide/source/assets/js/`](https://github.com/massgov/mayflower/tree/master/styleguide/source/assets/js)
+ - Pattern markup, documentation, and data: [`/styleguide/source/_patterns`](https://github.com/massgov/mayflower/tree/master/styleguide/source/_patterns)
 
-**Do not edit the `gh-pages` branch.** That branch is generated and managed separately by the MassDS team.
+**Please do not edit the `gh-pages` branch.** That branch is generated and used to deploy work for testing.
 
 ### Getting Started
 
@@ -131,9 +136,11 @@ If you check your remotes (`git remote -v`), you can now see that you have two "
 
 #### Creating a branch
 
-Any new features and non-emergency bugfixes should branch from the `dev` branch.  Make sure you're on the `dev`  branch and that it's up-to-date with the source repo. 
+Any new features and non-emergency bugfixes should branch from the `dev` branch.  Hot fixes (production bug fixes) should be branched from the latest release `tag` in the `master` branch.  
 
-If you just forked it, you're probably all set.  But if there have been a lot of changes to the original repo since you forked it, yours might be out of sync. Here's how to get yours in sync:
+Make sure your local branch (`dev` for features, `master` for prod bugs) is up-to-date with the `upstream` repo (`massgov/mayflower`). 
+
+If you just forked it, you're probably all set.  But if there have been a lot of changes to `massgov/mayflower` since you forked it, yours might be out of sync. Here's how to get yours in sync:
 
 ```
 git checkout dev
@@ -159,7 +166,7 @@ git checkout -b DP-1234-create-backto-link
 Serve Mayflower locally and as you save your changes, it will update automatically:
 
 1. Read the [Pattern Lab docs](http://patternlab.io/docs/index.html)!
-1. Run `gulp`
+1. Run `gulp` from the `/styleguide` directory.
 1. Browse to [http://localhost:3000/](http://localhost:3000/) (or port shown in gulp output if you've configured it differently)
 1. Familiarize yourself with Mayflower:
     - You can use the menu to look at whole page layouts (pages), templates, components (organisms and molecules), child elements (molecules and atoms), and some nuts and bolts (base).
@@ -174,7 +181,7 @@ Serve Mayflower locally and as you save your changes, it will update automatical
 ##### Other notes
 
 * It is helpful to have 2 terminal tabs open when working on this project: one to manage `gulp` tasks and the other to manage `git`.  From the tab running `gulp`, type `CTRL` + `C` to kill that task when you're done.
-* `Gulp` will build the Pattern Lab static assets and generate a static site in the `/styleguide/public` directory.  See `/styleguide/tools/gulp/gulp-readme.md`.
+* `gulp` will build the Pattern Lab static assets and generate a static site in the `/styleguide/public` directory.  See `/styleguide/tools/gulp/gulp-readme.md`.
 * Pattern Lab specific files are in the `/styleguide/public/styleguide` directory (the `styleguide.html` file is automatically generated when twig templates are updated).
 
 #### Committing your work
@@ -187,9 +194,9 @@ Chris Beam explains  [How to Write a Git Commit Message](https://chris.beams.io/
 We also love the model Git commit message in Tim Pope's [A Note About Git Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
 #### Pushing your branch
-In order to create a Pull Request (PR) where maintainers can review your work, you first need to push your branch to the origin remote (your Mayflower fork).
+In order to create a Pull Request (PR) where maintainers can review your work, you first need to push your branch to the `origin` remote (i.e. your Mayflower fork).
 
-To push a new branch:
+To push a new branch up to your fork:
 
 ```
 git push -u origin DP-1234-create-backto-link
@@ -205,7 +212,7 @@ Once your work is complete, deploy your branch to your Mayflower fork's Github P
 Pull requests (PRs) let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before the changes are merged into the repository.  
 
 1. Follow the steps on [Github Help: Creating a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
-    - Make sure that the "base fork" points to `massgov/mayflower` and that "base" (branch) points to `dev`.
+    - Make sure that the "base fork" points to `massgov/mayflower` and that "base" (branch) points to `dev` for features, `master` for production bug fixes.
     - For your PR title, please use: `TICKET Description of ticket`, i.e. `DP-1234 Add back-to button on Announcement template`.  Follow the PR template for the rest of the information.  Keep in mind:
         - Anyone could be reading this Pull Request, so the content and tone may inform people other than those taking part, now or later.
         - Be explicit about what feedback you want, if any: a quick pair of eyes on the code, discussion on the technical approach, critique on design, a review of copy.
