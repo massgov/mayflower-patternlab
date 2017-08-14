@@ -1,11 +1,11 @@
 {
   "illustratedHeader": {
-    "bgTitle": null,
-    "bgImage": null,
+    "bgInfo": "",
+    "bgImage": "",
     "category": "Guide",
     "pageHeader": {
       "title": "Moving to Massachusetts",
-      "subTitle": null,
+      "subTitle": "",
       "optionalContents": [{
         "path": "@organisms/by-author/rich-text.twig",
         "data": {

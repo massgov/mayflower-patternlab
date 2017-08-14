@@ -13,8 +13,8 @@ This is a page level alert message that can be dismissed.
 ### Variables
 ~~~
 headerAlert: {
-  guid: 
-    type: string (unique) / required
+  id: 
+    type: string (unique per page) / required
   text: 
     type: string / required
   href:

@@ -8,6 +8,7 @@
       "centered": ""
     },
     "items": [{
+      "image": null,
       "eyebrow": "Press Release",
       "title" : {
         "href":"#",
@@ -28,6 +29,7 @@
         }]
       }
     },{
+      "image": null,
       "eyebrow": "Press Release",
       "title" : {
         "href":"#",

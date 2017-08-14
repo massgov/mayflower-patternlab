@@ -42,7 +42,7 @@ input {
   border-color: $c-bd-input;
   color: $c-font-base;
 
-  &.has-error {
+  &.has-error:not(:focus) {
     background-image: url('../images/svg-icons/input-error.svg');
     border-color: $c-bd-error;
   }
@@ -102,12 +102,13 @@ textarea {
 
 legend,
 label {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .ma__input-radio {
 
   label {
+    font-weight: 400;
 
     &:before {
       background-color: $c-white;
@@ -150,6 +151,7 @@ label {
 .ma__input-checkbox {
 
   label {
+    font-weight: 400;
 
     &:before {
       background-color: $c-white;
@@ -180,5 +182,5 @@ label {
 // error message
 .ma__error-msg {
   color: $c-font-error;
-  font-weight: 700;
+  font-weight: 500;
 }
