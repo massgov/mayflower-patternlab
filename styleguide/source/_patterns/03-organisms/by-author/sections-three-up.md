@@ -6,6 +6,7 @@ This patten shows a grid of Section Link Patterns.
 
 ### Pattern Contains
 * Comp Heading
+* Section Links
 
 
 ### JavaScript Used
