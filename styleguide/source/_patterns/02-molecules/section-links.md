@@ -13,7 +13,7 @@ Displays a set of links in a card layout.
 * Can be used with [Callout Links](./?p=molecules-section-links-with-callout-links)
 
 ### JavaScript Used
-* This pattern uses JavaScript for the accordions (js/modules/accordions.js)
+* This pattern uses JavaScript for the accordions shown on narrow screens (js/modules/accordions.js)
 
 ### Variables
 ~~~
