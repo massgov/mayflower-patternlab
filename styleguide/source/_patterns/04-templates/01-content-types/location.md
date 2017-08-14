@@ -13,9 +13,6 @@ This Pattern is a variant of the [details](./?p=templates-details) template that
 * Contact List
 * This template contains [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html) that can be used to populated the Page Content, Right Rail, or Post Content sections with patterns found in Mayflower
 
-### Variant options
-* describe the different variants that can be created and link them to the actual variant
-
 ### JavaScript Used
 * Contact List Accordion (js/modules/accordions.js)
 * Google Map (js/modules/googleMap.js)

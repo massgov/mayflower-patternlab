@@ -12,6 +12,9 @@ Short teaser for a related press event
 ### Variables
 ~~~
 pressTeaser : {
+  image: {
+    type: object/image/optional
+  }
   eyebrow: 
     type: string / optional
   title : {

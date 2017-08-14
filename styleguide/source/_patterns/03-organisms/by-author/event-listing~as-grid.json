@@ -1,7 +1,7 @@
 {
   "eventListing": {
-    "compHeading" : null,
-    "sidebarHeading":{
+    "grid": true,
+    "compHeading":{
       "title": "Upcoming Events"
     },
     "events":[{
@@ -14,8 +14,8 @@
       "location": "Lanesborough, MA",
       "date": {
         "summary": "March 30, 2017",
-        "startMonth": "",
-        "startDay": "",
+        "startMonth": "Mar",
+        "startDay": "30",
         "endMonth": "",
         "endDay": ""
       },
@@ -31,10 +31,27 @@
       "location": "Lanesborough, MA",
       "date": {
         "summary": "March 30, 2017 - April 10, 2017",
-        "startMonth": "",
-        "startDay": "",
-        "endMonth": "",
-        "endDay": ""
+        "startMonth": "Mar",
+        "startDay": "30",
+        "endMonth": "Apr",
+        "endDay": "10"
+      },
+      "time": "12 p.m. - 2 p.m.",
+      "description": ""
+    },{
+      "title": {
+        "href": "#",
+        "text": "First Day Hike",
+        "info": "",
+        "property": ""
+      },
+      "location": "Lanesborough, MA",
+      "date": {
+        "summary": "March 30, 2017 - April 10, 2017",
+        "startMonth": "Mar",
+        "startDay": "30",
+        "endMonth": "Apr",
+        "endDay": "10"
       },
       "time": "12 p.m. - 2 p.m.",
       "description": ""
@@ -42,8 +59,8 @@
     "more":{
       "href": "#",
       "text": "view all events at this location",
-      "info": "view all upcoming events for this location",
-      "chevron": true
+      "chevron": true,
+      "label": ""
     }
   }
 }
