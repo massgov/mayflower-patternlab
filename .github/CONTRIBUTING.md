@@ -91,9 +91,9 @@ and/or [`/styleguide/source/assets/js/`](https://github.com/massgov/mayflower/tr
 
 ### Getting Started
 
-#### Setting up your environment
+#### Get set up
    
-In order to run Mayflower locally, you need to have some things installed and set up on your machine.  See the [Setting up your environment](../docs/setting-up-environment.md).
+In order to run Mayflower locally, you need to have some things installed and set up on your machine.  See [setting up your machine](../docs/machine-setup.md).
 
 #### Forking the repo
 
