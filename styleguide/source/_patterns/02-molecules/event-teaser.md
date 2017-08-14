@@ -10,6 +10,9 @@ A Pattern that displays the Name, Location, Time, Date and a brief description o
 ### Variant options
 * Can be shown with the Date as a [graphic](./?p=molecules-event-teaser-with-graphic)
 
+### Usage Guidelines
+* The start and end month variables should always be a three letter month abreviation.
+* The `time` variable should be formated as '12 p.m.' (not 12:00 p.m.)
 
 ### Variables
 ~~~
@@ -18,17 +21,17 @@ eventTeaser: {
     type: decorativeLink / optional
   location: 
     type: string (address) / optional
-  date (optional) : {
+  date: {
     summary: 
-      type: string (date) / required
+      type: string (human readable date) / required
     startMonth: 
-      type: string / optional
+      type: string (ie: Mar) / optional
     startDay:
-      type: string / optional
+      type: string (number) / optional
     endMonth: 
-      type: string / optional
+      type: string (ie: Apr) / optional
     endDay:
-      type: string / optional
+      type: string (number) / optional
   }
   time: 
     type: string / optional

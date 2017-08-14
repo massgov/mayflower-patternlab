@@ -1,5 +1,5 @@
 ### Description
-This is a sample of documentation to use for patterns.
+This Pattern shows a collection of images and links to other pages on the site.
 
 ### Status
 * Stable as of 5.0.0

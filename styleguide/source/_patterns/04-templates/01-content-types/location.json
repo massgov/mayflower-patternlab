@@ -173,22 +173,7 @@
             "details":""
           }]
         }]
-      },{
-      "path": "@organisms/by-author/key-actions.twig",
-      "data": {
-        "keyActions": {
-          "links":[{
-            "text": "Quick Action",
-            "type": "",
-            "href": "#"
-          },{
-            "text": "Quick Action",
-            "type": "",
-            "href": "#"
-          }]
-        }
-      }
-    }]
+      }]
     }
   },
 

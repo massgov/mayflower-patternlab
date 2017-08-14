@@ -1,5 +1,5 @@
 ### Description
-This is a location based template.
+This Pattern is a variant of the [details](./?p=templates-details) template that has been extended to include patterns needed to help provide information about a given location.
 
 ### Status
 * Stable as of 5.0.0
@@ -11,9 +11,7 @@ This is a location based template.
 * Colored Heading
 * Sticky Nav
 * Contact List
-
-### Variant options
-* describe the different variants that can be created and link them to the actual variant
+* This template contains [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html) that can be used to populated the Page Content, Right Rail, or Post Content sections with patterns found in Mayflower
 
 ### JavaScript Used
 * Contact List Accordion (js/modules/accordions.js)

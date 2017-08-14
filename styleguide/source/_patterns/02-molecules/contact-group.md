@@ -1,5 +1,5 @@
 ### Description
-This pattern shows a single type of contact information.
+This pattern shows a group of related contact information (phone, fax, online, or address).
 
 ### Status
 * Stable as of 5.0.0

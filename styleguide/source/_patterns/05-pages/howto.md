@@ -1,5 +1,5 @@
 ### Description
-Example of a details template to show how it could be used as a How to apply for Unemployment Benefits Page on mass gov.
+This page [extends](https://twig.symfony.com/doc/2.x/tags/extends.html) the details template to show how it could be used as a "How to Apply for Unemployment Benefits" page on Mass.gov.
 
 ### Status
 * Stable as of 5.0.0

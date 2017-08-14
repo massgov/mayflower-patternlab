@@ -6,7 +6,7 @@
       "text": "Tell us what you think",
       "info": "",
       "type": "",
-      "theme": "green",
+      "theme": "secondary",
       "outline": true,
       "size": "small"
     }

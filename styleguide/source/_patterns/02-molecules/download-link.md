@@ -17,7 +17,7 @@ This pattern is a link to a file or online form.
 ~~~
 downloadLink: {
   iconSize: 
-    type: string (null or 'small') / optional
+    type: string ('' or 'small') / optional
   icon: 
     type: string (icon path) / optional
   decorativeLink: {

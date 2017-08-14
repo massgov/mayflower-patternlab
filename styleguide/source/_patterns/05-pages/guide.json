@@ -1,6 +1,10 @@
 {
   "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
 
+  "floatingAction": null,
+
+  "backToTopButton": true,
+
   "emergencyAlerts": {
     "id":"GUID18378923w38789",
     "buttonAlert": {

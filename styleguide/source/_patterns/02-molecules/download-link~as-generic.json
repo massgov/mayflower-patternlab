@@ -5,8 +5,7 @@
     "decorativeLink": {
       "text": "Link with a generic icon",
       "href": "#",
-      "info": "",
-      "property": ""
+      "info": ""
     },
     "size": "40kb",
     "format": "JSON"
