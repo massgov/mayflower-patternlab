@@ -1,4 +1,14 @@
 {
+  "contentEyebrow": {
+    "headerTags": {
+      "label": "More about:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Visiting & Exploring"
+      }]
+    }
+  },
+
   "pageBanner": {
     "bgWide": "/assets/images/placeholder/820x460.png",
     "bgNarrow": "/assets/images/placeholder/800x400.png",
