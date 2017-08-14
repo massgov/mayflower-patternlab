@@ -1,5 +1,5 @@
-<section class="ma__content-eyebrow">
-  {% if contentEyebrow.headerTags.taxonomyTerms or contentEyebrow.socialLinks.items %}
+{% if contentEyebrow.headerTags.taxonomyTerms or contentEyebrow.socialLinks.items %}
+  <section class="ma__content-eyebrow">
     <div class="ma__content-eyebrow__tags">
       {% if contentEyebrow.headerTags.taxonomyTerms %}
         {% set headerTags = contentEyebrow.headerTags %}
@@ -10,5 +10,5 @@
         {% include "@molecules/social-links.twig" %}
       {% endif %}
     </div>
-  {% endif %}
-</section>
+  </section>
+{% endif %}
