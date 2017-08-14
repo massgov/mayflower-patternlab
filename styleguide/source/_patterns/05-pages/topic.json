@@ -1,5 +1,6 @@
 {
   "contentEyebrow": {
+    "hideBorder": true,
     "headerTags": {
       "label": "More about:",
       "taxonomyTerms": [{
