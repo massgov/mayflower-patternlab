@@ -10,33 +10,33 @@
       "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
-        "type": "",
         "href": "#",
-        "text": "Title Link I"
+        "text": "Title Link I",
+        "info": ""
       }
     },{
       "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
-        "type": "",
         "href": "#",
-        "text": "Title Link II"
+        "text": "Title Link II",
+        "info": ""
       }
     },{
       "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
-        "type": "",
         "href": "#",
-        "text": "Title Link III"
+        "text": "Title Link III",
+        "info": ""
       }
     },{
       "image": "../../assets/images/placeholder/230x130.png",
       "altTag": "Place Holder Image",
       "link": {
-        "type": "",
         "href": "#",
-        "text": "Title Link IV"
+        "text": "Title Link IV",
+        "info": ""
       }
     }]
   }
