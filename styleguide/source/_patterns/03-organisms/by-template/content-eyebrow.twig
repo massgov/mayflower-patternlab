@@ -1,5 +1,5 @@
 {% if contentEyebrow.headerTags.taxonomyTerms or contentEyebrow.socialLinks.items %}
-  <section class="ma__content-eyebrow{{contentEyebrow.hideBorder ? '--borderless' : ''}}">
+  <section class="ma__content-eyebrow {{contentEyebrow.hideBorder ? 'ma__content-eyebrow--borderless' : ''}}">
     <div class="ma__content-eyebrow__tags">
       {% if contentEyebrow.headerTags.taxonomyTerms %}
         {% set headerTags = contentEyebrow.headerTags %}

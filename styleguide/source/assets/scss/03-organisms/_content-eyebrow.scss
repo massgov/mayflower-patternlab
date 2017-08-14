@@ -36,9 +36,7 @@
     }
   }
 
-  &--borderless {
-    @include ma-container;
-    @include clearfix;
+  &--borderless &__tags {
 
     .ma__header-tags,
     .ma__social-links {
