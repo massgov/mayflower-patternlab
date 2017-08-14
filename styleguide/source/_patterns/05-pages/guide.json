@@ -42,6 +42,7 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "contentEyebrow": {
+    "hideBorder": true,
     "headerTags": {
       "label": "More about:",
       "taxonomyTerms": [{
