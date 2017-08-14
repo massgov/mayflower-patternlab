@@ -309,6 +309,7 @@ $page-banner-icon-width: $column + $gutter;
 
   &--columns &__image {
     background-position: 50% 50%;
+    background-size: cover;
     height: 400px;
     position: absolute;
       right: 0;

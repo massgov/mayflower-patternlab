@@ -1,25 +1,51 @@
 # Mayflower Release Notes
 
+## 5.5.0
+
+Here comes another Mayflower release, hot off the summertime presses!  We've got 2 new page types and lots of little improvements and fixes coming your way.
+ 
+ **JIRA fans can check out the [release tickets](https://jira.state.ma.us/projects/DP/versions/14642) for more information.*
+ **Mayflower project consumers can take a look at PR's below to confirm, make, and test any markup changes introduced by this release prior to updating in production.*
+ 
+### New Features
+- New page type: [Board Decisions](http://mayflower.digital.mass.gov/?p=pages-board-decision), which is used for rulings, decisions and opinions issued by agency boards or individuals given the authority to decide specific matters. ([@pages/board-decision](http://mayflower.digital.mass.gov/?p=pages-board-decision), See [PR #494](https://github.com/massgov/mayflower/pull/494))
+- We've also added an example [Form Page](http://mayflower.digital.mass.gov/?p=pages-form-page-example) to highlight form styles (projects likely implement forms using other services) (See [PR #490](https://github.com/massgov/mayflower/pull/490) - Markup)
+- News ([@organisms/by-author/press-listing](http://mayflower.digital.mass.gov/?p=organisms-press-listing)) and events ([@organisms/by-author/event-listing](http://mayflower.digital.mass.gov/?p=organisms-event-listing)) are now surfaced on additional page types (See [PR #498](https://github.com/massgov/mayflower/pull/498) - Markup)
+
+### Improvements
+- We've added some keyboard functionality to our google map ([@molecules/googlemap](http://mayflower.digital.mass.gov/?p=molecules-google-map)) pattern (See [PR #489](https://github.com/massgov/mayflower/pull/489) - JS only)
+- We've made the [Regulation page type](http://mayflower.digital.mass.gov/?p=pages-regulation)  more uniform to other "law" page types (See [PR #494](https://github.com/massgov/mayflower/pull/494) - Markup))
+
+### Fixes
+- The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should render (See [PR #493](https://github.com/massgov/mayflower/pull/493))
+- Assistive tech like screenreaders will now read callout stats ([@molecules/callout-stats](http://mayflower.digital.mass.gov/?p=molecules-callout-stats)) more naturally (See [PR #500](https://github.com/massgov/mayflower/pull/500) - Markup + CSS)
+- Semantic search form ([@molecules/header-search]()) label and placeholder text are more understandable (See [PR #485](https://github.com/massgov/mayflower/pull/485) - Markup + demo content)
+ 
 ## 5.4.0
-We've introduced two new Law pages, Policy Advisory and Executive Order in this release along with several fixes.
+In this new minor release, we've introduced two new Law pages: Policy Advisory and Executive Order, along with several improvements and fixes.
 
-New Pages:
-DP-3825 - [MF] Policy Advisory
-DP-3829 - [MF] Executive Order
+**Projects implementing Mayflower should see the [release tickets](https://jira.state.ma.us/projects/DP/versions/14641) and confirm, make, and test any markup changes introduced by this release prior to updating in production.*
 
-Fixes:
-DP-3209 - [mf] - Location page icons should be right aligned
-DP-3227 - A11y Link Text for Directions can be more descriptive
-DP-3256 - A11y Alert Link
-DP-3495 - Add Medium to list of acceptable Social Media link URLs
-DP-3822 - [VD/MF] Different stylings for mobile sticky navs
-DP-3831 - [MF] News Item with Featured Image
-DP-3890 - [MF] Multiple Sort by options
-DP-3891 - [MF] Update detail page for service, how-to, location to remove key actions, add video and map
-DP-3895 - [mf] Homepage - underline not centered
-DP-4026 - There is a one pixel wide issue with the thumbnail images on guide cards
+### New Features
+- Created a [Policy Advisory](http://mayflower.digital.mass.gov/?p=pages-policy-advisory-directive) page type (`@pages/policy-advisory-directive`, `@templates/01-content-types/policy-advisory`) used for Directives, Letter Rulings, Administrative Procedures, Opinions, TIRs. (DP-3825)
+- Created an [Executive Order](http://mayflower.digital.mass.gov/?p=pages-executive-order) page type (`@pages/executive-order.twig
+`, touched `@molecules/image-promo.twig`, `@molecules/listing-table.twig`) (DP-3829)
 
+### Improvements
+- We now have a medium icon (`@atoms/05-icons/svg-medium`) available for patterns like the social media link lists (DP-3495)
+- News items can now have an optional featured image (`@templates/01-content-types/press`) (DP-3831)
+- Detail page (for service, how-to, location - `@pages/detail-for-service-howto-location`) has been updated: removed key actions, added video (`@atoms/09-media/video`) and map (`@organisms/by-author/mapped-locations`) (DP-3891)
 
+### Fixes
+- We've made "Directions" link text (`@molecules/contact-group`) more helpful for screen readers (DP-3227)
+- Callout alert links (`@organisms/by-author/callout-alert`)  are now more semantic and accessible (DP-3236)
+- The "Go to class Mass.gov" link no longer overlaps with the skip-to link (`@organisms/by-template/header`) for keyboard users (DP-3191)
+- Sticky nav links (`@molecules/sticky-nav`) for location and location detail pages are now consistent (DP-3822)
+- Inactive (i.e. clickable) sort buttons (`@atoms/01-buttons/button-sort`) now appear clickable, like a link (DP-3890)
+-  Homepage > popular searches underline (`@organisms/search-banner.scss`) is now centered (DP-3895)
+-  Background images on illustrated links (`@molecules/illustrated-link`) no longer repeats right edge (DP-4026)
+- Long text renders in the sidebar correctly (`@atoms/content_link.scss`) (DP-2352)
+- Page banner images (`@organisms/page_banner.scss`) will scale as large as possible (be zoomed out) to cover the page banner. (DP-4310)
 
 ## 5.3.0
 We've added some functionality to the location listings organism ([@organisms/by-author/location-listing](http://mayflower.digital.mass.gov/?p=organisms-location-listing))!  You can sort, filter, and paginate listing results! 

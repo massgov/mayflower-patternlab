@@ -19,6 +19,9 @@ Description: Short teaser for a related press event
 
 ~~~
 pressTeaser : {
+  image: {
+    type: object/image/optional
+  }
   eyebrow: 
     type: string/optional
   title : {
