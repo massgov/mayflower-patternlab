@@ -1,4 +1,14 @@
 {
+  "contentEyebrow": {
+    "hideBorder": true,
+    "headerTags": {
+      "label": "More about:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Unemployment"
+      }]
+    }
+  },
   "pageBanner": {
     "bgWide": "/assets/images/placeholder/1600x400.png",
     "bgNarrow": "/assets/images/placeholder/800x400.png",

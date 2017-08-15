@@ -41,6 +41,26 @@
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
+  "contentEyebrow": {
+    "hideBorder": true,
+    "headerTags": {
+      "label": "More about:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Term 1"
+      },{
+        "href": "#",
+        "text": "Term 2"
+      },{
+        "href": "#",
+        "text": "Term 3"
+      },{
+        "href": "#",
+        "text": "Term 4"
+      }]
+    }
+  },
+
   "illustratedHeader": {
     "bgTitle": "Forest of the Berkshires",
     "bgImage": "/assets/images/placeholder/800x450.png",
