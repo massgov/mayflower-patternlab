@@ -1,21 +1,14 @@
----
-title: Search Banner Form
----
-Description: A form that displays over a banner background image.
+### Description
+This Pattern is a form with an large search input and button.
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-###  Notes
+### Pattern Contains
+* Input Text
 
-### Used in: 
-[@organisms/by-author/search-banner.twig](/?p=organisms-search-banner)
-
-### Contains
-[@atoms/03-forms/input-text.twig](/?p=atoms-input-text)
-[@atoms/05-icons/svg-search.twig](/?p=atoms-svg-search)
-
-### Variables 
-~~~ 
+### Variables
+~~~
 form: {
   content: {
     action:
@@ -23,7 +16,7 @@ form: {
     buttonText:
       type: string / required
     inputText: {
-      type: object / inputText / required
+      type: inputText / required
     }
   }
 }
