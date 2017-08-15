@@ -1,21 +1,13 @@
----
-title: DEPRECATED - Heading - Level 6
----
-Description: An `<h6>` element with no CSS class.
+### Description
+This is a H6 tag used in a Rich Text.
 
-## State: DEPRECATED
+### Status
+* Stable as of 1.0.0
 
-### Notes:
-All base elements with no class or id are being moved into base pattern directory.
-
-### Used In:
--[@organisms/by-author/rich-text](/?p=organisms-rich-text)
--[@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
-
-### Variables:
+### Variables
 ~~~
 heading6: {
-    text:
-        type: string / required
+  text:
+    type: string / required
   }
 ~~~

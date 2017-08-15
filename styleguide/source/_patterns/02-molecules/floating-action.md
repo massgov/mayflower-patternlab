@@ -1,23 +1,18 @@
----
-title: Floating Action
----
-Description: A floating action link/button.
+### Description
+A floating action link/button.
 
-## Status: ALPHA
+### Status
+* in Progress as of 5.0.0
 
-### Used in:
-- [@organisms/by-template/footer](?p=organisms-footer)
+### Pattern Contains
+* Button 
 
-### Contains:
-- [@atoms/01-buttons/button](?p=atoms-button) or [@atoms/01-buttons/button-link](?p=atoms-button-link)
-
-### Required Variables
+### Variables
 ~~~
 floatingAction: {
-    alignment:
-        type: "button"||"buttonLink"
-        values: "left"||"right"
-    button:
-        @see: @atoms/01-buttons/button.md
+  alignment:
+    type: string (null, 'right') / optional
+  button:
+    type: button / required
 }
 ~~~

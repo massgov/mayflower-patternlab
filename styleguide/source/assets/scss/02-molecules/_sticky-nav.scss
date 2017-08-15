@@ -25,17 +25,23 @@
   .page-content & {
 
     @media ($bp-medium-min) {
-      margin-left: -160px;
       margin-bottom: 0;
       padding-right: $gutter * 2;
       position: absolute;
         top: 0;
       width: 160px;
+
+      .main-content--two & {
+        margin-left: -160px;
+      }
     }
 
     @media ($bp-x-large-min) {
-      margin-left: -$column-with-gutter * 2;
       width: $column-with-gutter * 2;
+
+      .main-content--two & {
+        margin-left: -$column-with-gutter * 2;
+      }
     }
   }
 

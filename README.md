@@ -5,7 +5,7 @@ Mayflower is the enterprise design system for the Commonwealth of Massachusetts.
 
 ### Setting up your environment
 
-In order to run Mayflower locally, you need to have some things installed and set up on your machine.  Follow the steps in [Setting up your environment](/docs/setting-up-environment.md).
+In order to run Mayflower locally, you need to have some things installed and set up on your machine.  Follow the steps in [setting up your machine](docs/machine-setup.md).
 
 #### Demo Install
 - Follow the steps in [Demo Install](/docs/demo-install.md) to get a copy of the project up and running on your local machine for *demo* and *testing* purposes. 

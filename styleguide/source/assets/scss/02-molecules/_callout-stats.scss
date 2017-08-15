@@ -10,6 +10,10 @@
     &--right {
       min-width: 230px;
       width: 45%;
+
+      & + * {
+        margin-top: 0 !important; // level of specificity was too great to override on stacked row templates
+      }
     }
 
     &--left {
@@ -21,7 +25,7 @@
       float: right;
       margin-left: $gutter;
     }
-  }
+  } 
 
   .ma__action-details & {
     @media ($bp-large-min) and ($bp-x-large-max) {
@@ -52,6 +56,7 @@
   }
 
   &__content {
+    display: block;
     font-size: 1.438rem;
     line-height: 1.3;
   }

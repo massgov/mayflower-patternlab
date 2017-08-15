@@ -1,29 +1,22 @@
----
-title: Social links
----
-Description: displays a list of sitewide social links
-## Status: Alpha
-### Notes:
-- The links are currently hardcoded and do not have real urls.
-- Since the only visual content for the link is an icon, the pattern provides visually hidden contextual (action oriented ) link text for assistive technology
+### Description
+Displays a list of social links for sharing a page with an optional label
+
+### Status
+* Stable as of 5.0.0
 
 
-### Used in:
-- [@organisms/by-template/footer](?p=organisms-footer)
-
-### Required Variables:
+### Variables
 ~~~
-  socialLinks: {
-    label:
-      type: string/optional
-    items: [{
-      href: 
-        type: string(url)/required,
-      icon: 
-        type: string(path to icon)/required
-      altText:
-        type: string/required
-    }
-  }]
-
+socialLinks: {
+  label:
+    type: string / optional
+  items: [{
+    href: 
+      type: string(url) / required,
+    icon: 
+      type: string(path to icon) / required
+    altText:
+      type: string / required for accessibilty
+  }
+}]
 ~~~

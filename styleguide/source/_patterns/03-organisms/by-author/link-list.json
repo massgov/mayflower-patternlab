@@ -1,7 +1,7 @@
 {
   "linkList" : {
     "compHeading": {
-      "title": "Related Topics",
+      "title": "Link List",
       "sub": "",
       "color": "",
       "id": "",
@@ -11,42 +11,42 @@
     "stacked": false,
     "links" : [{
       "href":"#",
-      "text":"MassParks",
+      "text":"Lorem ipsum dolor sit amet.",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Energy & Environmental Affairs (EEA)",
+      "text":"Lorem ipsum dolor sit amet, consectetur.",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Department of Conservation and Recreation (DCR)",
+      "text":"Lorem ipsum dolor sit.",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Department of Agricultural Resources (DAR)",
+      "text":"Lorem ipsum dolor",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Department of Energy Resources (DOER)",
+      "text":"Lorem ipsum dolor sit amet",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Department of Energy Resources (DOER)",
+      "text":"Lorem ipsum dolor sit amet, consectetur.",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Department of Fish and Game (DFG)",
+      "text":"Lorem ipsum dolor",
       "info": "",
       "property": ""
     },{
       "href":"#",
-      "text":"Department of Public Utilities (DPU)",
+      "text":"Lorem ipsum dolor sit ",
       "info": "",
       "property": ""
     }]

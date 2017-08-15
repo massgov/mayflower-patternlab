@@ -1,6 +1,6 @@
---- 
-title: Action Finder with Filter
---- 
-Description: Filter variant of Action Finder
+### Description
+This is a variant of the [Action Finder](./?p=organisms-action-finder) showing an example with a search filter.
 
-### Base: [@organism/by-author/action-finder.twig](?p=organisms-action-finder)
+### How to generate
+* Shows up automatically when there are more than six non-feature links.
+* Set the 'hideFilter' variable to false

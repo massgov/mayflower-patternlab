@@ -1,4 +1,6 @@
-<section class="ma__event-listing">
+{% set gridClass = eventListing.grid ? 'ma__event-listing--grid' : '' %}
+
+<section class="ma__event-listing {{ gridClass }}">
   <div class="ma__event-listing__container">
     {% if eventListing.compHeading %}
       {% set compHeading = eventListing.compHeading %}
