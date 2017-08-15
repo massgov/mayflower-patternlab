@@ -8,11 +8,11 @@ Mayflower is the enterprise design system for the Commonwealth of Massachusetts.
 In order to run Mayflower locally, you need to have some things installed and set up on your machine.  Follow the steps in [setting up your machine](docs/machine-setup.md).
 
 #### Demo Install
-- Follow the steps in [Demo Install](/docs/demo-install.md) to get a copy of the project up and running on your local machine for *demo* and *testing* purposes. 
+- Follow the steps in [Demo Install](docs/demo-install.md) to get a copy of the project up and running on your local machine for *demo* and *testing* purposes. 
 
 ## Contribute
 
-Please follow the steps in [Contributing docs](https://github.com/massgov/mayflower/blob/master/.github/CONTRIBUTING.md) to set up your fork and repo for *development* and *contribution* purposes.
+Please follow the steps in [Contributing docs](.github/CONTRIBUTING.md) to set up your fork and repo for *development* and *contribution* purposes.
 
 ## Deployment
 
