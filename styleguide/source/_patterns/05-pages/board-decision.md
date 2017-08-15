@@ -1,5 +1,5 @@
 ### Description
-Example of an Board Decision Page for Mass Gov [extending](https://twig.symfony.com/doc/2.x/tags/extends.html) the Policy Advisory template
+Example of a Board Decision page for Mass Gov [extending](https://twig.symfony.com/doc/2.x/tags/extends.html) the Policy Advisory template
 
 ### Status
 * Stable as of 5.0.0
