@@ -6,15 +6,14 @@ Mayflower release managers with the necessary repo permissions can follow these 
 1. If there is new code to be delivered, notify the team at least two hours ahead of time that a release is coming. Follow the [Communicate Releases](https://wiki.state.ma.us/display/massgovredesign/Communicating+Releases) instructions for Upcoming Deployments.
 1. Pull and checkout the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev): `git fetch upstream && git checkout dev`.
 1. Create a release branch `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about [Mayflower and semantic versioning](docs/versioning.md) to ensure that your are creating the right type of version..
-1. Document the new release based on the "Updates" queue at the top of release-notes.md, and then commit.
+1. Document the new release based on the "Upcoming" queue at the top of [release-notes.md](/release-notes.md), and then commit.
 1. Bump the version in `@pages/readme2.json` by updating the version and date text in `errorPage.type`, and then commit.
 1. Push release branch to `massgov/mayflower` (i.e. `git push upstream release-#.#.#`).
 1. Deploy release branch to *your personal fork's* GH-Pages by running `./scripts/deploy-gh-pages.sh -b <your-release-branch-name> -t <your-github-username>` from the repo root.
 1. Verify release notes against the site rendered on your GH-Pages: `<your-github-username>.github.io/mayflower`.
 1. Smoke test most Mayflower featureset. (*@todo define Mayflower featureset*)
-1. Open a Github Pull Request to merge the release branch into the `master` branch.  Have a peer do the merge unless it's an emergency and you can't find an available peer.
-    1. Add the relevant release notes and a link to your gh-pages site to the PR notes.
-    1. Have a peer do the merge (no squash!) unless it's an emergency and you can't find an available peer.
+1. Open a Github Pull Request to merge (no squash!) the release branch into the `master` branch.
+    1. Add the relevant release notes to the PR notes.
 1. [Create a production release](https://help.github.com/articles/creating-releases/) off the `master` branch in GitHub, remember to add the release notes!
 1. Pull down and checkout the your release tag by running `git pull --tags && git checkout <your-release-tag>` (*Note: you should see a message from git that you are in a [detached head state](https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit) and that is okay.*)
 1. Deploy release tag to [Prod](http://mayflower.digital.mass.gov) by running `./scripts/deploy-gh-pages.sh -b <your-release-tag> -t massgov -c mayflower.digital.mass.gov` from the repo root, where:
@@ -25,7 +24,7 @@ Mayflower release managers with the necessary repo permissions can follow these 
 1. Smoke test [Prod](http://mayflower.digital.mass.gov) 
     - Make sure the home page reflects the date and version
     - Ensure Mayflower featureset (*@todo define*) is functional
-1. Open a GitHub Pull Request to merge `master` into `develop` (this should only bring an updated `release-notes.md`, `@pages/readme2.json`). Have a peer do the merge after a quick review. If no peers are available (such as during a late night hot fix), proceed with your merge into develop, but ask for a review the following day. If it doesn't pass review, you may have to rollback the delivery.
+1. Open a GitHub Pull Request to merge `master` into `develop` (this should only bring an updated `release-notes.md`, `@pages/readme2.json`). If possible, have a peer do the merge after a quick review. If no peers are available, proceed with your merge into develop, but ask for a review the following day. If it doesn't pass review, you may have to rollback the delivery.
 1. In JIRA Go to the [DP project](https://jira.state.ma.us/projects/DP/).
     1. Click on the Releases icon on the left side (it looks like a boat/ship).
     1. Add a new release version with today's date.
