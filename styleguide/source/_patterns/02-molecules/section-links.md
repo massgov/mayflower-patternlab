@@ -32,7 +32,12 @@ sectionLinks: {
   type:
     type: string ("", "callout") / optional
   links: [{
-    type: decorativeLink and calloutLink / required
+    href:
+      type: string / required
+    text:
+      type: string / required
+    info:
+      type: string (adds more description about the link) / optional
   }]
   seeAll: {
     type: decorativeLink / optional
