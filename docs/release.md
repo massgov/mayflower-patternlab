@@ -5,7 +5,7 @@ Mayflower release managers with the necessary repo permissions can follow these 
 
 1. If there is new code to be delivered, notify the team at least two hours ahead of time that a release is coming. Follow the [Communicate Releases](https://wiki.state.ma.us/display/massgovredesign/Communicating+Releases) instructions for Upcoming Deployments.
 1. Pull and checkout the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev): `git fetch upstream && git checkout dev`.
-1. Create a release branch `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about Mayflower and semantic versioning in the docs (*@todo link to versioning docs*).
+1. Create a release branch `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about [Mayflower and semantic versioning](docs/versioning.md) to ensure that your are creating the right type of version..
 1. Document the new release based on the "Updates" queue at the top of release-notes.md, and then commit.
 1. Bump the version in `@pages/readme2.json` by updating the version and date text in `errorPage.type`, and then commit.
 1. Push release branch to `massgov/mayflower` (i.e. `git push upstream release-#.#.#`).
