@@ -4,7 +4,6 @@ This is a stylized selectbox.
 ### Status
 * Stable as of 5.0.0
 
-
 ### JavaScript Used
 * (js/modules/dropdown.js)
 
