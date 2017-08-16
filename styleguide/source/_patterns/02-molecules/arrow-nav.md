@@ -1,33 +1,30 @@
----
-title: Arrow Nav
----
-Description: displays a link to the previous or next page
+### Description
+This pattern displays a link to the previous or next page.
 
-## Status: alpha
+### Status
+* Stable as of 5.0.0
 
-### Notes:
+### Pattern Contains
+* Arrow Button
 
-### Contains
-- [@atoms/01-buttons/arrow-button](/?p=atoms-arrow-button)
-
-### Used in:
-
+### Variant options
+* This can also be view as a [next](./?p=molecules-arrow-nav-as-next-page) page navigation
 
 ### Variables
 ~~~
-"arrowNav": {
-  "arrowButton": {
-    type: object/required - see arrow-button.twig
+arrowNav: {
+  arrowButton: {
+    type: arrowButton / required
   },
-  "title": 
-    type: string/required
-  "link": {
-    "href": 
-      type: string/url/required
-    "text": 
-      type: string/required
-    "info": 
-      type: string/optional - used for screen readers
+  title: 
+    type: string / required
+  link: {
+    href: 
+      type: string (url) / required
+    text: 
+      type: string / required
+    info: 
+      type: string (adds more description to the link) / optional
   }
 }
 ~~~
