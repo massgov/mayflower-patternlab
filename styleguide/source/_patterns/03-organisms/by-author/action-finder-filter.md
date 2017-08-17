@@ -3,4 +3,4 @@ This is a variant of the [Action Finder](./?p=organisms-action-finder) showing a
 
 ### How to generate
 * Shows up automatically when there are more than six non-feature links.
-* Set the 'hideFilter' variable to false
+* Set the `hideFilter` variable to false
