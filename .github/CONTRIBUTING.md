@@ -9,7 +9,7 @@ Thanks for contributing to Mayflower!  Please take a minute to review the proces
 1. [Feature Requests](#feature-requests)
 1. [Submitting Pull Requests](#submitting-pull-requests)
     1. [Getting started](#getting-started)
-        1. [Setting up your environment](#setting-up-your-environment)
+        1. [Get Set Up](#get-set-up)
         1. [Forking the repo](#forking-the-repo)
         1. [Cloning the repo](#cloning-the-repo)
         1. [Installing project dependencies](#installing-project-dependencies)
