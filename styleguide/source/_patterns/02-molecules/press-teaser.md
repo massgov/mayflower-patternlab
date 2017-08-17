@@ -1,5 +1,5 @@
 ### Description
-Short teaser for a related press event
+Short teaser for a related press event with an optional image
 
 ### Status
 * Stable as of 5.0.0
@@ -12,8 +12,11 @@ Short teaser for a related press event
 ### Variables
 ~~~
 pressTeaser : {
-  image: {
-    type: object/image/optional
+  image: (optional) {
+    src:
+      type: string (image path) / required
+    alt: 
+      type: string (imgage description) / required
   }
   eyebrow: 
     type: string / optional
