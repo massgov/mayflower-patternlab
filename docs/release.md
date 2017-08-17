@@ -1,7 +1,7 @@
 # Release to Production
 Mayflower release managers with the necessary repo permissions can follow these steps to deploy code to production (i.e. do a release).
 
-*Note: this assumes that your local environment is already set up and functioning.  If this is not true, follow the steps in [Getting Started](../.github/CONTRIBUTING.md#getting-started).*
+*Note: the following steps assume that your local machine and repository is already set up and functioning according to our [Getting Started docs](../.github/CONTRIBUTING.md#getting-started).*
 
 1. If there is new code to be delivered, notify the team at least two hours ahead of time that a release is coming. Follow the [Communicate Releases](https://wiki.state.ma.us/display/massgovredesign/Communicating+Releases) instructions for Upcoming Deployments.
 1. Pull and checkout the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev): `git fetch upstream && git checkout dev`.
