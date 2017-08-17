@@ -1,5 +1,5 @@
 ### Status
-* Obsolete as of 5.0.0
+* Archived as of 6.0.0
 
 Description: A teaser for a gallery of images with a link to view the full gallery.
 
