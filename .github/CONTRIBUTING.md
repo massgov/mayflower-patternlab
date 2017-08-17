@@ -36,7 +36,7 @@ We use labels to help identify and organize issues.  Here's what they represent 
 - `examples` - Issues involving the example patterns (i.e. content or data) included on our site.
 - `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified.
 - `build` - Issues with our build system, which is used to run all our tests, concatenate and compile source files, and more.
-- `help wanted` - Issues we need or would love help from the community to resolve.
+- `PRs welcome` - Issues we need or would love help from the community to resolve.
 - `js` - Issues stemming from our compiled or source JavaScript files.
 - `meta` - Issues with the project itself or our GitHub repository.
 
