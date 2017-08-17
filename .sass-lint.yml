@@ -25,7 +25,7 @@ rules:
   hex-notation: 1
   id-name-format: 0
   indentation:
-    - 1
+    - 0
     - size: 2
   leading-zero:
     - 1
@@ -51,8 +51,132 @@ rules:
   no-vendor-prefixes: 1
   placeholder-in-extend: 1
   placeholder-name-format: 0
-  property-sort-order: 1
-  property-units: 1
+  property-sort-order:
+    - 0 # disabled for now
+    - ignore-custom-properties: false
+      order:
+        # alphabetical - with position properties also grouped under position
+        - background
+        - background-attachment
+        - background-color
+        - background-image
+        - background-position
+        - background-repeat
+        - background-size
+        - border-collapse
+        - border-color
+        - border-top
+        - border-right
+        - border-bottom
+        - border-left
+        - border-image
+        - border-top-color
+        - border-right-color
+        - border-bottom-color
+        - border-left-color
+        - border-spacing
+        - border-style
+        - border-top-style
+        - border-right-style
+        - border-bottom-style
+        - border-left-style
+        - border-width
+        - border-top-width
+        - border-right-width
+        - border-bottom-width
+        - border-left-width
+        - border-radius
+        - border-top-right-radius
+        - border-bottom-right-radius
+        - border-bottom-left-radius
+        - border-top-left-radius
+        - border-radius-topright
+        - border-radius-bottomright
+        - border-radius-bottomleft
+        - border-radius-topleft
+        - bottom
+        - clear
+        - clip
+        - color
+        - content
+        - cursor
+        - display
+        - filter
+        - float
+        - font
+        - height
+        - hyphens
+        - left
+        - letter-spacing
+        - line-height
+        - list-style
+        - list-style-type
+        - list-style-position
+        - list-style-image
+        - margin
+        - max-height
+        - max-width
+        - min-height
+        - min-width
+        - overflow
+        - padding
+        - pointer-events
+        - position
+        - top
+        - right
+        - bottom
+        - left
+        - outline
+        - outline-offset
+        - opacity
+        - quotes
+        - right
+        - size
+        - src
+        - text-align
+        - top
+        - vertical-align
+        - visibility
+        - word
+        - white-space
+        - width
+        - z-index
+        - zoom
+
+        # still needs to be sorted
+        - transform
+        - box-align
+        - box-flex
+        - box-orient
+        - box-pack
+        - box-shadow
+        - box-sizing
+        - table-layout
+        - animation
+        - animation-delay
+        - animation-duration
+        - animation-iteration-count
+        - animation-name
+        - animation-play-state
+        - animation-timing-function
+        - animation-fill-mode
+        - transition
+        - transition-delay
+        - transition-duration
+        - transition-property
+        - transition-timing-function
+        - background-clip
+        - backface-visibility
+        - resize
+        - appearance
+        - user-select
+        - interpolation-mode
+        - direction
+        - marks
+        - page
+        - set-link-source
+        - unicode-bidi
+        - speak  property-units: 1
   quotes:
     - 1
     - style: double
