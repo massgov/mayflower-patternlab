@@ -8,6 +8,10 @@ This Pattern shows a list of Press Teaser patterns.
 * Comp Heading
 * Sidebar Heading
 * Press Teaser
+* Link
+
+### Variant options
+* Can be rendered followed by a [grid](./?p=organisms-press-listing-as-grid) of secondary Press Teasers
 
 ### Variables
 ~~~
@@ -19,7 +23,13 @@ pressListing: {
     type: sidebarHeading / optional
   },
   items: [{
-    type: pressTeaser / required
-  }]
+    type: pressTeaser / optional
+  }],
+  "secondaryItems": [{
+    type: pressTeaser / optional
+  }],
+  "more":{
+    type: link / optional
+  }
 }
 ~~~
