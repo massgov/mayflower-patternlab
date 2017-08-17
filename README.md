@@ -18,7 +18,7 @@ Please follow the steps in [Contributing docs](.github/CONTRIBUTING.md) to set u
 
 ### Developer Deployment
 
-Please see [Deployment docs](docs/developer-deploy.md) for steps on deploying development work to a Mayflower fork's Github Pages.
+Please see [Deployment docs](docs/developer-deploy.md) for steps on deploying development work to a fork of Mayflower's Github Pages.
  
 ### Production Deployment
 
