@@ -11,7 +11,8 @@ A list of events where each item displays the Name, Location, Time, Date and a b
 * Link
 
 ### Variant options
-* Can be used in the [Right Rail](./?p=organisms-event-listing-as-sidebar)
+* This pattern can also be used in the [Right Rail](./?p=organisms-event-listing-in-template) or as two columns with a background in [Post Content](./?p=organisms-event-listing-in-template)
+* This Pattern can also be rendered as a [Grid](./?p=organisms-event-listing-as-grid)
 
 
 ### Variables

@@ -136,9 +136,9 @@
         "sub": true
       },
       "rteElements": [{
-        "path": "@atoms/08-lists/unordered-list.twig",
+        "path": "@atoms/08-lists/checklist.twig",
         "data": {
-          "unorderedList": [{ 
+          "checkList": [{ 
             "text": "first item to bring" 
           },{ 
             "text": "second item to bring" 

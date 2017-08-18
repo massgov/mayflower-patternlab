@@ -15,6 +15,7 @@ This pattern is used to add a `<h1>` page title to a page that helps define its 
 ### Variant options
 * As used on the [How To](./?p=organisms-page-header-for-howto) page 
 * As used on the [Location](./?p=organisms-page-header-for-location) page 
+* As used on the [Recurring Events](./?p=organisms-page-header-for-event) page 
 
 
 ### Variables
