@@ -1,5 +1,5 @@
 {# Option to remove js functionality and hide the footnote link (this is an implementation workaround). #}
-{% set footnoteJs = footnote.number ? '' : 'js-footnote' %}
+{% set footnoteJs = footnote.number ? 'js-footnote' : '' %}
 
 <div class="ma__footnote {{ footnoteJs }}" tabindex="-1">
   {% if footnote.number %}
