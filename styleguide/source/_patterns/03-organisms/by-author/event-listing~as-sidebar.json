@@ -1,14 +1,9 @@
 {
   "eventListing": {
-    "grid": false,
-    "compHeading":{
-      "title": "Upcoming Events",
-      "sub": "",
-      "color": "",
-      "id": "",
-      "centered": ""
+    "compHeading" : null,
+    "sidebarHeading":{
+      "title": "Upcoming Events"
     },
-    "sidebarHeading": null,
     "events":[{
       "title": {
         "href": "#",
@@ -19,8 +14,8 @@
       "location": "Lanesborough, MA",
       "date": {
         "summary": "March 30, 2017",
-        "startMonth": "Mar",
-        "startDay": "30",
+        "startMonth": "",
+        "startDay": "",
         "endMonth": "",
         "endDay": ""
       },
@@ -36,10 +31,10 @@
       "location": "Lanesborough, MA",
       "date": {
         "summary": "March 30, 2017 - April 10, 2017",
-        "startMonth": "Mar",
-        "startDay": "30",
-        "endMonth": "Apr",
-        "endDay": "10"
+        "startMonth": "",
+        "startDay": "",
+        "endMonth": "",
+        "endDay": ""
       },
       "time": "12 p.m. - 2 p.m.",
       "description": ""
@@ -47,7 +42,7 @@
     "more":{
       "href": "#",
       "text": "view all events at this location",
-      "info": "",
+      "info": "view all upcoming events for this location",
       "chevron": true
     }
   }

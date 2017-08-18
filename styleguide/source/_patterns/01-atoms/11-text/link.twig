@@ -6,11 +6,11 @@
 {% set classChevron = link.chevron %}
 
 {# backward compatible with Release5.0.0 #}
-{% if link.chevron and link.chevron == 'true' %}
+{% if link.chevron and link.chevron is same as ('true') %}
   {% set classChevron = true %}
 {% endif %}
 
-{% if link.chevron == 'false' %}
+{% if link.chevron is same as ('false') %}
   {% set classChevron = false %}
 {% endif %}
 
