@@ -17,9 +17,9 @@
   {% endif %}
 
   <div class="ma__link-list__container">
-    {# added for backward compatibilty with v3.5 #}
+    {% set bulletClass = linkList.hideBullets ? "ma__link-list__items--no-bullets": "" %}
     {% if linkList.stacked or linkList.links|length < 4 %}
-      <ul class="ma__link-list__items">
+      <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links %}
           <li class="ma__link-list__item">
             {% include "@atoms/decorative-link.twig" %}
@@ -29,14 +29,14 @@
     {% else %}
       {% set length = linkList.links|length/2 %}
       {% set half = length|round(0,'ceil') %}
-      <ul class="ma__link-list__items">
+      <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links[start:half] %}
           <li class="ma__link-list__item">
             {% include "@atoms/decorative-link.twig" %}
           </li>
         {% endfor %}
       </ul>
-      <ul class="ma__link-list__items">
+      <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links[half:length] %}
           <li class="ma__link-list__item">
             {% include "@atoms/decorative-link.twig" %}

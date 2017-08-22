@@ -6,6 +6,7 @@
     "compHeading": null,
     "description": null,
     "stacked": true,
+    "hideBullets": false,
     "links" : [{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet.",
