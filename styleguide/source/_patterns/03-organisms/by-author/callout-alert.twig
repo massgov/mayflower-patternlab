@@ -1,4 +1,6 @@
-{% set calloutAlert = calloutAlert.decorativeLink %}
+{% if calloutAlert.decorativeLink %}
+  {% set calloutAlert = calloutAlert.decorativeLink %}
+{% endif %}
 
 <section class="ma__callout-alert">
   {% if calloutAlert.href %}
