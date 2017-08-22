@@ -468,10 +468,8 @@
       "path":"@organisms/by-author/callout-alert.twig",
       "data":{
         "calloutAlert": {
-          "decorativeLink": {
-            "href": "",
-            "text": "Massachusetts requires you to license your dog"
-          }
+          "href": "",
+          "text": "Massachusetts requires you to license your dog"
         }
       }
     }],
