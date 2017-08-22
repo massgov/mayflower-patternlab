@@ -1,13 +1,15 @@
 # Atomic Design in Mayflower
 
 ## About Atomic Design
-This design system is a way of looking at a design as a collection of smaller re-usable parts.  Starting at the page level, you would look for common patterns between pages, which would be become templates.  You would then look for common components on these pages which might become Organisms or Molecules.  Organisms can then be broken down further into Molecules and Atoms or even other Organisms.  Molecules can then be broken down into Atoms or even Molecules.  Eventually your design is broken down into the smallest indivisible units giving you a re-usable palette to build new patterns from.
+Atomic Design is a way of viewing a web page as a collection of smaller re-usable parts.  It's very similar to building with LEGO bricks.  Each piece can be combinded with others making it quicker and easier to build web pages.
+
+The easiest approach to get stated is to a take a complete web page and try breaking it down.  Viewing a web page, you would look for areas that would be consistent between each variant of that page to help determine your Template.  From that template, you would look for  logical groups (components) which might become Organisms or Molecules.  Even these patterns might be able to broken down into smaller parts so you start looking for common individual elements (buttons, headers, lists, ...) to find your Atoms.  Eventually your web page has been broken down into the smallest indivisible units giving you a re-usable palette of pieces to build new patterns and web pages.
 
 As defined by [Brad Frost](http://atomicdesign.bradfrost.com/chapter-2/).
 
 
 ### Atoms (an "indivisible unit")
-An Atom is the smallest logical stylized pattern in Atomic Design.  Dividing an Atom into smaller parts would result in an unstable pattern that is dependent on another pattern.  As such Atoms would never include other patterns.
+An Atom is the smallest logical stylized pattern in Atomic Design.  Dividing an Atom into smaller parts would result in an unstable pattern that would be dependent on another pattern.  As such Atoms would never include other patterns.
 
 An Atom can be a single HTML element (`a`, `h1`, etc...) or a single complex HTML5 elment that has nested dependent children (`table`, `ul`, `figure`, etc...).  It could also be two elements that would never be used seperately like an input with a label.
 
@@ -18,10 +20,11 @@ Since Atoms are so small they are rarely if ever used directly on a page.  Inste
 * Contains multiple HTML elements that cannot be use seperately
 * Almost always contains a theme SCSS file
 * Can not be broken down into smaller logical elements
+* If possible, includes content data (ie: `hr` doesn't include content)
 
 
 ### Molecules - (stylized collections)
-Molecules are similar to Atoms, since they can contain HTML elements, but they can also contain Atoms and even other Molecules as building blocks to create a more complex pattern.
+Molecules are built by including Atoms or even Molecules to create a more complex stylized pattern.  Molecules can contain HTML elements as well to help layout the included patterns or to render content.
 
 Molecules have the greatest flexibility of all the patterns so you should use caution when using HTML elements to make sure they shouldn't be an included Atoms instead.
 
@@ -32,7 +35,7 @@ Molecules have the greatest flexibility of all the patterns so you should use ca
  
 
 ### Organisms
-Like Molecules, Organisms include other patterns to create a more complex pattern.  The difference is that the only HTML5 elements and CSS styling used is for layout only.  All content used in an Organism would be rendered within an Atom or Molecule.  The only styles used in a Organism would be to layout the patterns and include some theming css like background-colors and borders to help define the layout.
+Like Molecules, Organisms are built by including other patterns to create a more complex pattern.  The difference is that the only HTML5 elements and CSS styling used is for laying out this patterns and all content is passed on to these patterns.  The only styles used in an Organism would be to layout the patterns and include some theming css like background-colors and borders to help define the layout.
 
 #### Quick guide:
 * Includes other patterns.
