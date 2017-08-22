@@ -1,40 +1,34 @@
+### Description
+This pattern shows a Form with inputs tailored to filtering locations
 
+### Status
+* Stable as of 5.0.0
 
----
-title: Location Filters
----
-Description: Form with input used on location listing organism
+### Pattern Contains
+* Input Text
+* Select Box
+* Input Checkbox
 
-## State: Alpha
+### JavaScript Used
+* Select Box (js/modules/dropdown.js)
+* When included as part of the Location Listing page (js/modules/locationFilters.js)
 
-### Notes
-
-### Used in:
-- [@organism/by-author/location-listing](?p=organism-location-listing)
-
-### contains:
-- [@atoms/03-forms/input-text](?p=atoms-input-text)
-- [@atoms/03-forms/select-box](?p=atoms-select-box)
-- [@atoms/03-forms/input-checkbox](?p=atoms-input-checkbox)
-
-
-### Required Variables
+### Variables
 ~~~
-"locationFilters": {
-  "zipcode": {
-    type: inputText/required - see atoms/03-forms/input-text.md
+locationFilters: {
+  zipcode: {
+    type: inputText / required
   },
-  "activity": {
-    type: selectBox/optional - see atoms/03-forms/select-box.md
+  activity: {
+    type: selectBox / optional
   },
-  "keyword": {
-    type: inputText/optional - see atoms/03-forms/input-text.md
+  keyword: {
+    type: inputText / optional
   },
-  "tags": [{
-    type: array of inputCheckbox/optional + icon property
-    // see @atoms/forms/input-checkbox.md
-    // see @molecules/image-promo.md
+  tags (optional): [{
+    type: array of inputCheckbox / required
+    icon: 
+      type: string (icon path) / required
   }]   
 }
 ~~~
-

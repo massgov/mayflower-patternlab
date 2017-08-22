@@ -1,6 +1,6 @@
----
-title: DEPRECATED - Action Section
----
+### Status
+* Obsolete as of 5.0.0
+
 Description: A section of content on an action page that includes a title and multiple types of content.
 ## State: DEPRECATED
 ### Notes
