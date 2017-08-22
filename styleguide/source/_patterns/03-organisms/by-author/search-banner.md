@@ -7,7 +7,7 @@ This pattern shows an image banner with large search input as the focus followed
 ### Pattern Contains
 * Input Text
 * Search Banner Form
-* Helpful Links
+* Link List
 
 ### Usage Guidelines
 * The Search Banner Form is the only pattern that should be included by the `searchBanner.form` object.
@@ -35,8 +35,8 @@ searchBanner: {
       type: object / required
     }
   }
-  helpfulLinks: {
-    type: helpfulLinks / required
+  linkList: {
+    type: linkList / required
   }
 }
 ~~~

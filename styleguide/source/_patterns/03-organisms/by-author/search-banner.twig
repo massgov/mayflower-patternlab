@@ -20,8 +20,8 @@
       {{ form.content }}
     {% endif %}
     <div class="ma__search-banner__links">
-      {% set helpfulLinks = searchBanner.helpfulLinks %}
-      {% include "@organisms/by-author/helpful-links.twig" %}
+      {% set linkList = searchBanner.linkList %}
+      {% include "@organisms/by-author/link-list.twig" %}
     </div>
   </div>
   {% if searchBanner.imageName and searchBanner.imageAuthor %}

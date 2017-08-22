@@ -31,15 +31,17 @@
               }
             }
           },
-          "helpfulLinks": {
-            "columns": "true",
+          "linkList": {
             "compHeading": {
               "title": "Popular Searches",
               "sub": "true",
               "color": "yellow",
               "centered": true
             },
-            "items": [{
+            "description": null,
+            "stacked": false,
+            "hideBullets": true,
+            "links" : [{
               "href": "#",
               "text":"Apply for Unemployment",
               "chevron": "true"
