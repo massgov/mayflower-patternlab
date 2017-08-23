@@ -28,7 +28,7 @@
         "info": "",
         "property": ""
       },
-      "location": "Lanesborough, MA",
+      "location": "Chicago, IL",
       "date": {
         "summary": "March 30, 2017 - April 10, 2017",
         "startMonth": "Mar",
@@ -38,6 +38,23 @@
       },
       "time": "12 p.m. - 2 p.m.",
       "description": ""
+    },{
+      "title": {
+        "href": "#",
+        "text": "Indianapolis Hike",
+        "info": "",
+        "property": ""
+      },
+      "location": "Indianapolis, IN",
+      "date": {
+        "summary": "March 2, 2017 - April 25, 2017",
+        "startMonth": "Mar",
+        "startDay": "2",
+        "endMonth": "Apr",
+        "endDay": "25"
+      },
+      "time": "2 p.m. - 3 p.m.",
+      "description": "sit amet, consectetur adipisicing elit"
     }],
     "more":{
       "href": "#",
@@ -47,4 +64,3 @@
     }
   }
 }
- 
