@@ -79,7 +79,7 @@
     }]
   },
 
-  "stackedRowSections": [{
+  "stackedRows": [{
       "title": "Section with Everything",
       "id": "another-section-name6",
       "pageContent": [

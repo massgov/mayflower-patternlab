@@ -9,7 +9,6 @@ This is a filter page used to search for locations.
 * Footer
 * Stacked Row (template)
 * Page Header
-* Stacked Row Section
 * Location Listing
 
 ### JavaScript Used
