@@ -2,15 +2,15 @@
 
 <section class="ma__event-listing {{ gridClass }}">
   <div class="ma__event-listing__container">
-    {% if eventListing.coloredHeading %}
-      {% set coloredHeading = eventListing.coloredHeading %}
-      {% include "@atoms/04-headings/colored-heading.twig" %}
-    {% elseif eventListing.compHeading %}
+    {% if eventListing.compHeading %}
       {% set compHeading = eventListing.compHeading %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
     {% elseif eventListing.sidebarHeading %}
       {% set sidebarHeading = eventListing.sidebarHeading %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
+    {% elseif eventListing.coloredHeading %}
+      {% set coloredHeading = eventListing.coloredHeading %}
+      {% include "@atoms/04-headings/colored-heading.twig" %}
     {% endif %}
     <ul class="ma__event-listing__items">
       {% for eventTeaser in eventListing.events %}
