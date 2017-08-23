@@ -193,7 +193,6 @@ cp ./source/_data/url.json.example ./source/_data/url.json
 
 # Determine the value of url.domain, url.assetsPath based on whether or not we have a cname argument
 domain="https://${owner}.github.io"
-#assetsPath="mayflower/assets"
 
 if [ ! "${cname}" = false ];
 then
@@ -204,6 +203,8 @@ then
     else
         assetsPath="assets"
     fi
+else
+    assetsPath="mayflower/assets"
 fi
 
 # Set url.domain and url.assetsPath
