@@ -2,11 +2,13 @@
 
 <section class="ma__event-listing {{ gridClass }}">
   <div class="ma__event-listing__container">
-    {% if eventListing.compHeading %}
+    {% if eventListing.coloredHeading %}
+      {% set coloredHeading = eventListing.coloredHeading %}
+      {% include "@atoms/04-headings/colored-heading.twig" %}
+    {% elseif eventListing.compHeading %}
       {% set compHeading = eventListing.compHeading %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
-    {% endif %}
-    {% if eventListing.sidebarHeading %}
+    {% elseif eventListing.sidebarHeading %}
       {% set sidebarHeading = eventListing.sidebarHeading %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
