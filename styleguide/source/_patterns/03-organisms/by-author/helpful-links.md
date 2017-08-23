@@ -2,7 +2,8 @@
 List of links that can be rendered stack or as two columns
 
 ### Status
-* Stable as of 5.0.0
+* Obsolete as of 5.7.0
+* Use [Link List](./?p=organisms-link-lists) instead
 
 ### Pattern Contains
 * Comp Heading
