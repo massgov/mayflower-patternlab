@@ -27,7 +27,7 @@
         "image": {
           "href": "#",
           "alt": "Maura Healey",
-          "src": "/assets/images/placeholder/100x100.png",
+          "src": "../../assets/images/placeholder/100x100.png",
           "height": "100",
           "width": "100"
         },
@@ -47,7 +47,7 @@
         "image": {
           "href": "#",
           "alt": "Charles Baker",
-          "src": "/assets/images/placeholder/100x100.png",
+          "src": "../../assets/images/placeholder/100x100.png",
           "height": "100",
           "width": "100"
         },

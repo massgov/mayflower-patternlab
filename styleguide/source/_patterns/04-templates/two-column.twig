@@ -1,5 +1,7 @@
-{% include "@organisms/by-template/emergency-alerts.twig" %}
-{% include "@organisms/by-template/header.twig" %}
+{% block header %}
+  {% include "@organisms/by-template/emergency-alerts.twig" %}
+  {% include "@organisms/by-template/header.twig" %}
+{% endblock %}
 <main id="main-content" tabindex="-1">
   <div class="pre-content">
     {% block preContent %}
@@ -25,4 +27,7 @@
   </div>
   {% block schemaContent %}{% endblock %}
 </main>
-{% include "@organisms/by-template/footer.twig" %}
+
+{% block footer %}
+  {% include "@organisms/by-template/footer.twig" %}
+{% endblock %}

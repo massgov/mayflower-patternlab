@@ -1,34 +1,32 @@
----
-Title: Page Banner
----
-Description: Page Header with title, icon and background used at the top of a page.
+### Description
+Full width banner image shown behind a wedge shaped overlay containing a title and an optional description or icon.
 
-## Status: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Used in:
-- [@pages\L1-state-parks-and-recreation](/?p=pages-L1-state-parks-and-recreation)
-- [@pages/L0-visiting-and-exploring](/?p=pages-L0-visiting-and-exploring)
-- [@pages/ORG-Health-Services](/?p=pages-ORG-Health-Services)
+### Variant options
+* There are four layouts, in addition to the default: ['small'](./?p=organisms-page-banner-as-small), ['large'](./?p=organisms-page-banner-as-large), ['overlay'](./?p=organisms-page-banner-as-overlay), and ['columns'](./?p=organisms-page-banner-as-columns).
+* There is ['blue'](./?p=organisms-page-banner-as-blue) option 
+* The icon and description are both optional
 
-
-### Required Variables
+### Variables
 ~~~
 pageBanner: {
   bgWide:
-    type: string/required (path to image for wide screens)
+    type: string (image path - wide screens) / required
   bgNarrow:
-    type: string/required (path to image for narrow screens)
+    type: string (image path - narrow screens) / required 
   size:
-    type: string(optional) ('small', 'large', 'overlay')
+    type: string ('', 'small', 'medium', 'large', 'overlay', 'columns') / optional
   icon:
-    type: string/optional (path to icon file),
+    type: string (path to icon file) / optional,
   title:
-    type: string/required
+    type: string / required
   titleSubText:
-    type: string/optional
+    type: string / optional
   description:
-    type: string/optional
+    type: string / optional
   color: 
-    type: string/optional (null, 'blue') 
+    type: string ('', 'blue') / optional 
 }
 ~~~

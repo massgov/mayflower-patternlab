@@ -20,8 +20,8 @@
   },
 
   "pageBanner": {
-    "bgWide": "/assets/images/placeholder/1600x400.png",
-    "bgNarrow": "/assets/images/placeholder/800x400.png",
+    "bgWide": "../../assets/images/placeholder/1600x400.png",
+    "bgNarrow": "../../assets/images/placeholder/800x400.png",
     "size": "overlay",
     "icon": "",
     "title": "Required - Services title",
@@ -70,7 +70,7 @@
         "sub": true
       },
       "links":[{
-        "image": "/assets/images/placeholder/130x160.png",
+        "image": "../../assets/images/placeholder/130x160.png",
         "text": "Name of Optional Guide",
         "href": "#",
         "label": "Guide:"
@@ -87,7 +87,7 @@
   "introSidebar": {
     "logo": {
       "alt": "alt text", 
-      "src": "/assets/images/placeholder/230x130.png",
+      "src": "../../assets/images/placeholder/230x130.png",
       "height": "130",
       "width": "230"
     },
@@ -161,7 +161,7 @@
         "text": "Get a State Park Pass",
         "href": "#"
       },{
-        "image": "/assets/images/placeholder/130x160.png",
+        "image": "../../assets/images/placeholder/130x160.png",
         "text": "Fall Activity Planner",
         "href": "#",
         "label": "Guide:"
@@ -204,7 +204,7 @@
         "text": "Get a State Park Pass",
         "href": "#"
       },{
-        "image": "/assets/images/placeholder/130x160.png",
+        "image": "../../assets/images/placeholder/130x160.png",
         "text": "Fall Activity Planner",
         "type": "",
         "label": "Guide:"

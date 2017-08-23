@@ -1,5 +1,3 @@
-{% if coloredHeading.color %}
-  {% set class = "ma__colored-heading--" ~ coloredHeading.color %}
-{% endif %}
+{% set class = coloredHeading.color ? "ma__colored-heading--" ~ coloredHeading.color : "" %}
 
 <h2 class="ma__colored-heading {{class}}">{{coloredHeading.text}}</h2>

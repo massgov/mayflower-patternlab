@@ -1,25 +1,20 @@
----
-title: Callout link
----
-Description: An decorative link `<a>` element which wraps a styled container.
+Description: This pattern shows a link styled as a card
 
-## Status: BETA
+### Status
+* Stable as of 6.0.0
 
-### Used in:
-- [@organisms/by-author/action-finder](/?p=organisms-action-finder)
-- [@organisms/by-author/key-actions](/?p=organisms-key-actions)
-- [@organisms/by-author/top-actions](/?p=organisms-top-actions)
+### Pattern Contains
+* SVG Arrow atom
 
-### Required Variables
+
+### Variables
 ~~~
 calloutLink: {
   href:
-    type: string/required
+    type: string / required
   text:
-    type: string/required
-  type:
-    type: string/optional ("external")
+    type: string / required
   info:
-    type: string/optional
+    type: string (adds more description about the link) / optional
 }
 ~~~

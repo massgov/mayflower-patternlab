@@ -1,26 +1,26 @@
----
-title: Steps - Ordered
----
-Description: An ordered list of steps
+### Description
+An ordered list of steps.
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Notes:
-
-
-### Contains:
-- [@atoms/04-headings/comp-heading](?p=atoms-comp-heading)
-- [@molecules/action-step](?p=molecules-action-step)
+### Pattern Contains
+* Comp Heading
+* sidebar Heading
+* Action Step
 
 
-### Required Variables
+### Variables
 ~~~
-"stepsOrdered": {
-  "compHeading": {
-    type: object/optional - see @atoms/04-headings/comp-heading.md
+stepsOrdered: {
+  compHeading: {
+    type: compHeading / optional
   },
-  "steps": [{
-    type: array of objects/required - see @molecules/action-step.md
+  sidebarHeading: {
+    type: sidebarHeading / optional
+  }
+  steps: [{
+    type: array of actionStep / required
   }]
 }
 ~~~

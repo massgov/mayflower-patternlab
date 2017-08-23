@@ -1,24 +1,20 @@
----
-title: Category Icon
----
-Description: An `<figure>` element which contains an icon atom (`<svg>` element) used as the category icon on a topic page section links list. Can optionally be indicated as small using `catIcon.small`
+### Description
+This Pattern shows a small category flag.
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Used In:
-- [@molecules/section-links](/?p=molecules-section-links)
+### Variant options
+* This can be rendered in a [smaller](./?p=atoms-cat-icon-small) size
 
-### Contains:
-- Any supplied icon atom, such as:
-[@atoms/05-icons/svg-lg-picnic-table](/?p=atoms-svg-lg-picnic-table)
 
-### Variables:
+### Variables
 ~~~
 catIcon: {
-    icon:
-        type: string / required 
-        (a complete path to an icon atom twig template, such as "@atoms/05-icons/svg-picnic-table.twig")
-    small:
-        type: string ("true" || "")
-  }
+  icon:
+    type: string (path to icon) / required 
+  small:
+    type: string ("true" || "") / optional
+}
 ~~~
+

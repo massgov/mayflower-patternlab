@@ -2,11 +2,5 @@
   <a 
     href="{{decorativeLink.href}}" 
     class="js-clickable-link"
-    {% if decorativeLink.property %} 
-      property="{{decorativeLink.property}}"
-    {% endif %}
-    {% if decorativeLink.info %}
-      aria-label="{{ decorativeLink.info }}"
-    {% endif %}
-    >{{decorativeLink.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+    title="{{ decorativeLink.info }}">{{decorativeLink.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
 </span>

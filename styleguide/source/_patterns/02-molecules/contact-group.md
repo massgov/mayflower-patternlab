@@ -1,50 +1,38 @@
----
-title: Contact Group
----
-Description: A list of a specific type of contact information for an entity wrapped in a container, described by a title and optional icon.
+### Description
+This pattern shows a group of related contact information (phone, fax, online, or address).
 
-## State: ALPHA
-### Notes:
-* Multiple contact groups are often aggregated into an array, used by Contact Us molecule.
-* Most fields for the item are optional and will render differently based on the item.type used.
-### Used In:
-- [@molecules/contact-us](/?p=molecules-contact-us)
+### Status
+* Stable as of 5.0.0
 
-### Contains
+### Pattern Contains
+* Decorative Link
+
+### Variant options
+* Phone is currently shown
+* [Online](./?p=molecules-contact-group-as-online)
+* [Fax](./?p=molecules-contact-group-as-fax)
+* [Address](./?p=molecules-contact-group-as-address)
 
 
-### Variables:
+### Variables
 ~~~
-group: { // aggregated in array contactUs.contactGroups
+group: {
   icon:
-    type: string (include path to icon twig template) / optional
+    type: string (path to icon) / optional
   name:
-    type: string ("Phone" || "Online" || "Address" || "Fax") / optional
-  items: [
-    ...,
-    {
-      type: 
-        type: string ("email", "phone", "online", "address", "fax" ) / required,
-      property:
-        type: string / optional
-      label:
-        type: string / optional
-      address:
-        type: string (html allowed) / optional
-      link: {
-        href: 
-          type: string (url) / optional,
-        text: 
-          type: string / required if href exists,
-        info: 
-          type: string / optional,
-        property": 
-          type: string / optional
-      }
-      details: 
-        type: string / optional
-    },
-    ...
-  ] / required
+    type: string ("Phone", "Online", "Fax", or "Address") / optional
+  items: [{
+    type: 
+      type: string ("phone", "online", "email", "address" ) / required,
+    label:
+      type: string / optional
+    address:
+      type: string (html allowed) / optional
+    link: {
+      type: decorativeLink (href is optional for type "address") / required
+    }
+    details: 
+      type: string / optional
+  }]
 }
 ~~~

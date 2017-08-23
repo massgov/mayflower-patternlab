@@ -1,10 +1,5 @@
----
-title: Comp Heading Centered 
----
-Description: Centered Variant of Comp Heading.
+### Description
+This is a variant of the [Comp Heading](./?p=atoms-comp-heading) showing an example with a centered underline.
 
-### Notes
-- _centered variable is set to 'true'_
-
-### Base
-- [@atoms/04-headings/comp-heading](/?p=atoms-comp-heading)
+### How to generate
+* Set the 'centered' variable equal to boolean value true
