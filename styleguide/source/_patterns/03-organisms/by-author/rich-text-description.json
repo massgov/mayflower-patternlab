@@ -73,7 +73,7 @@
           "align": "",
           "image": { 
             "alt": "alt text", 
-            "src": "/assets/images/placeholder/800x400.png",
+            "src": "../../assets/images/placeholder/800x400.png",
             "height": "",
             "width": ""
           },
@@ -96,7 +96,7 @@
           "align": "align-right",
           "image": { 
             "alt": "alt text", 
-            "src": "/assets/images/placeholder/400x300.png",
+            "src": "../../assets/images/placeholder/400x300.png",
             "height": "",
             "width": ""
           },
@@ -135,7 +135,7 @@
           "align": "align-left",
           "image": { 
             "alt": "alt text", 
-            "src": "/assets/images/placeholder/400x300.png",
+            "src": "../../assets/images/placeholder/400x300.png",
             "height": "",
             "width": ""
           },

@@ -1,92 +1,12 @@
 {
   "richText": {
+    "compHeading": null,
     "property": "",
     "rteElements": [{
       "path": "@atoms/04-headings/heading-2.twig",
       "data": {
         "heading2" : {
-          "text": "H2 - This component is usually used on a two column page"
-        }
-      }
-    },
-    {
-      "path": "@atoms/04-headings/heading-3.twig",
-      "data": {
-        "heading3" : {
-          "text": "This is a heading 3 - H3"
-        }
-      }
-    },
-    {
-      "path": "@atoms/04-headings/heading-4.twig",
-      "data": {
-        "heading4" : {
-          "text": "This is an Heading 4 - H4"
-        }
-      }
-    },
-    {
-      "path": "@atoms/04-headings/heading-5.twig",
-      "data": {
-        "heading5" : {
-          "text": "This is an Heading 5 - H5"
-        }
-      }
-    },
-    {
-      "path": "@atoms/04-headings/heading-6.twig",
-      "data": {
-        "heading6" : {
-          "text": "This is an Heading 6 - H6"
-        }
-      }
-    },
-    {
-      "path": "@molecules/callout-stats.twig",
-      "data": {
-        "statsCallout": {
-          "pull": "right",
-          "stat": "$12",
-          "content": "standard fee for residents"
-        }
-      }
-    },
-    {
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
-        }
-      }
-    },
-    {
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Lorem ipsum dolor sit amet, <a href=\"#\">Internal Link</a> consectetur <a href=\"http://www.google.com\">External Link</a> adipisicing elit. Suscipit amet sint quia est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
-        }
-      }
-    },
-    {
-      "path": "@atoms/09-media/figure.twig",
-      "data": {
-        "figure": {
-          "align": "",
-          "image": { 
-            "alt": "alt text", 
-            "src": "/assets/images/placeholder/800x400.png",
-            "height": "",
-            "width": ""
-          },
-          "caption": ""
-        }
-      }
-    },
-    {
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, <a href=\"http://www.google.com\">External Link</a> fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+          "text": "This is an Heading-2 atom (H2)"
         }
       }
     },
@@ -97,11 +17,11 @@
           "align": "align-right",
           "image": { 
             "alt": "alt text", 
-            "src": "/assets/images/placeholder/400x300.png",
+            "src": "../../assets/images/placeholder/400x300.png",
             "height": "",
             "width": ""
           },
-          "caption": ""
+          "caption": "This is a Figure floated right with a caption"
         }
       }
     },
@@ -109,7 +29,7 @@
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
-          "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+          "text": "<b>This is a paragraph atom</b>. Lorem ipsum dolor sit amet, consectetur adipisicing elit.  <a href=\"#\">This is a link within a paragraph</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, nemo? Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias."
         }
       }
     },
@@ -117,15 +37,22 @@
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
-          "text": "Voluptatibus, dicta consequatur placeat aliquid laudantium quo minima assumenda perspiciatis maxime id architecto tenetur a in dolore ipsa dolorum ratione aut qui ex asperiores, laborum, rerum numquam animi. Mollitia, a?"
+          "text": "<i>This is another paragraph atom</i>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quis doloribus expedita facilis illum aperiam?  <a href=\"#\">This is a link within a paragraph</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, nemo? Explicabo itaque possimus dignissimos?"
         }
       }
     },
     {
-      "path": "@atoms/11-text/paragraph.twig",
+      "path": "@atoms/09-media/figure.twig",
       "data": {
-        "paragraph" : {
-          "text": "Repudiandae accusamus <a href=\"#\">Internal Link</a> distinctio dignissimos odit officiis est, ipsa ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
+        "figure": {
+          "align": "",
+          "image": { 
+            "alt": "alt text", 
+            "src": "../../assets/images/placeholder/800x400.png",
+            "height": "",
+            "width": ""
+          },
+          "caption": "This is a full width Figure atom with a caption"
         }
       }
     },
@@ -136,11 +63,11 @@
           "align": "align-left",
           "image": { 
             "alt": "alt text", 
-            "src": "/assets/images/placeholder/400x300.png",
+            "src": "../../assets/images/placeholder/400x300.png",
             "height": "",
             "width": ""
           },
-          "caption": ""
+          "caption": "This is a Figure floated left with an optional caption"
         }
       }
     },
@@ -148,7 +75,7 @@
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
-          "text": "Lorem ipsum dolor sit amet, consectetur <a href=\"http://www.google.com\">External Link</a> adipisicing elit. Suscipit amet sint quia <a href=\"http://www.google.com\">External Link</a> est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet sint quia  est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
         }
       }
     },
@@ -161,10 +88,111 @@
       }
     },
     {
-      "path": "@atoms/11-text/paragraph.twig",
+      "path": "@atoms/04-headings/heading-3.twig",
       "data": {
-        "paragraph" : {
-          "text": "Voluptatibus, dicta consequatur placeat aliquid laudantium quo minima assumenda perspiciatis maxime <a href=\"#\">Internal Link</a> id architecto tenetur a in dolore ipsa dolorum ratione aut qui ex asperiores, laborum, rerum numquam animi. Mollitia, a?"
+        "heading3" : {
+          "text": "This is a Heading-3 atom (H3)"
+        }
+      }
+    },
+    {
+      "path": "@atoms/08-lists/unordered-list.twig",
+      "data": {
+        "unorderedList": [
+          { "text": "This is a list item in an unordered list" },
+          { "text": "An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line." },
+          { 
+            "text": "Lists can be nested inside of each other",
+            "sublist" : [
+              {"text":"This is a nested list item"},
+              {"text":"This is another nested list item in an unordered list"}
+            ]
+          },
+          {"text":"This is the last list item"}
+        ]
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-4.twig",
+      "data": {
+        "heading4" : {
+          "text": "This is a Heading-4 atom (H4)"
+        }
+      }
+    },
+    {
+      "path": "@atoms/08-lists/ordered-list.twig",
+      "data": {
+        "orderedList": [
+          { "text": "This is a list item in an ordered list" },
+          { "text": "An ordered list is a list in which the sequence of items is important." },
+          {
+              "text": "Lists can be nested inside of each other",
+              "sublist" : [
+                  {"text":"This is a nested list item"},
+                  {"text":"This is another nested list item in an ordered list"}
+              ]
+          },
+          {"text":"This is the last list item"}
+        ]
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-4.twig",
+      "data": {
+        "heading4" : {
+          "text": "This is a Heading-4 atom (H4)"
+        }
+      }
+    },{
+      "path": "@atoms/08-lists/checklist.twig",
+      "data": {
+        "checkList": [
+            { "text": "This is a list item in an un-ordered list" },
+            { "text": "When the user prints this list, check boxes will appear instead of bullets" },
+            { "text": "This is the last list item"}
+        ]
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-4.twig",
+      "data": {
+        "heading4" : {
+          "text": "This is a Heading-4 atom (H4)"
+        }
+      }
+    },{
+      "path": "@atoms/06-rich-text/icon-list.twig",
+      "data": {
+        "iconList": [{ 
+          "text": "This is an icon list item" 
+        },{ 
+          "text": "An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line."
+        },{ 
+          "text": "Lists can be nested inside of each other",
+          "sublist" : [{
+            "text":"This is a nested list item"
+          },{
+            "text":"This is another nested list item in an unordered list"
+          }]
+        },{
+          "text":"This is the last list item"
+        }]
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-5.twig",
+      "data": {
+        "heading5" : {
+          "text": "This is a Heading 5 - H5"
+        }
+      }
+    },
+    {
+      "path": "@atoms/04-headings/heading-6.twig",
+      "data": {
+        "heading6" : {
+          "text": "This is a Heading 6 - H6"
         }
       }
     },
@@ -172,15 +200,7 @@
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
-          "text": "Lorem ipsum dolor <a href=\"http://www.google.com\">External Link</a> sit amet, consectetur adipisicing elit. Suscipit amet sint quia est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
-        }
-      }
-    },
-    {
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Repudiandae accusamus distinctio dignissimos odit officiis est, ipsa <a href=\"#\">Internal Link</a> ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
+          "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
         }
       }
     },
@@ -346,48 +366,6 @@
             }]
           }]
         }
-      }
-    },
-    {
-      "path": "@atoms/11-text/paragraph.twig",
-      "data": {
-        "paragraph" : {
-          "text": "Repudiandae accusamus distinctio <a href=\"http://www.google.com\">External Link</a> dignissimos odit officiis est, ipsa ipsam magnam fuga! Rerum rem aperiam nobis quos blanditiis. Inventore, iusto ducimus pariatur autem deserunt illo, aut, quibusdam sint eum iure molestiae!"
-        }
-      }
-    },
-    {
-      "path": "@atoms/08-lists/unordered-list.twig",
-      "data": {
-        "unorderedList": [
-          { "text": "This is a list item in an unordered list" },
-          { "text": "An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line." },
-          { 
-            "text": "Lists can be nested inside of each other",
-            "sublist" : [
-              {"text":"This is a nested list item"},
-              {"text":"This is another nested list item in an unordered list"}
-            ]
-          },
-          {"text":"This is the last list item"}
-        ]
-      }
-    },
-    {
-      "path": "@atoms/08-lists/ordered-list.twig",
-      "data": {
-        "orderedList": [
-          { "text": "This is a list item in an ordered list" },
-          { "text": "An ordered list is a list in which the sequence of items is important." },
-          {
-              "text": "Lists can be nested inside of each other",
-              "sublist" : [
-                  {"text":"This is a nested list item"},
-                  {"text":"This is another nested list item in an ordered list"}
-              ]
-          },
-          {"text":"This is the last list item"}
-        ]
       }
     }]
   }

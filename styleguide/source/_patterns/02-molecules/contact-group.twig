@@ -12,8 +12,7 @@
       {% set link = {
         "href": item.link,
         "text": item.type == "address" ? "directions" : item.value,
-        "info": item.info,
-        "property": item.type == "address" ? "url" : item.property
+        "info": item.info
       } %}
     {% else %}
       {% set link = item.link %}
@@ -40,37 +39,21 @@
       {% elseif item.type == "phone" %}
         <a 
           href="tel:{{ link.href }}" 
-          class="ma__content-link ma__content-link--phone"
-          {% if link.property %}
-            property="{{ link.property }}"
-          {% endif %}>{{ link.text }}</a>
+          class="ma__content-link ma__content-link--phone">{{ link.text }}</a>
         
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
         <a 
           href="mailto:{{ link.href }}" 
-          class="ma__content-link"
-          {% if link.property %} 
-            property="{{ link.property }}"
-          {% endif %}>{{ link.text }}</a>
+          class="ma__content-link">{{ link.text }}</a>
 
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
-        <div 
-          class="ma__contact-group__address"
-          {% if link.property %} 
-            property="address"
-            typeof="PostalAddress"
-          {% endif %}>
+        <div class="ma__contact-group__address">
           {{ address|nl2br|raw }}
         </div>
         {% if link.href %}
-          <div 
-            class="ma__contact-group__directions"
-            {% if link.property %} 
-              property="hasMap" 
-              typeof="Map"
-            {% endif %}>
+          <div class="ma__contact-group__directions">
             {% set decorativeLink = link %}
             {% include "@atoms/decorative-link.twig" %}
           </div>
@@ -79,9 +62,6 @@
       {# Default - just spit out the value #}
       {% else %}
         <span class="ma__contact-group__value">{{ link.text }}</span>
-        {% if link.property %}
-          <meta property="{{ link.property }}" content="{{ link.text }}" />
-        {% endif %}
       {% endif %}
     </div>
     {% if item.details %}

@@ -1,51 +1,52 @@
+### Description
+This pattern is used to add a `<h1>` page title to a page that helps define its content.
 
----
-Title: Page Header
----
-Description: Page Header with multiple spots (see optional content + widgets properties below) to add sub-modules for additional content.
+### Status
+* Stable as of 5.0.0
 
-## Status: ALPHA
+### Pattern Contains
+* Header Tags
+* Social Links
+* Publish State
+* Divider
+* Any pattern can be rendered in the optional content or widgets areas by setting the 'path' variable to the location of the pattern and setting the 'data' variable to container of the data object of that pattern.  
+  * {% include item.path with item.data %}
 
-### Used in:
-- [@pages/LOC-Mt-Greylock-State-Park](/?p=pages-LOC-Mt-Greylock-State-Park)
-- [@pages/LOC-Southbridge-RMV](/?p=pages-LOC-Southbridge-RMV)
-- [@pages/ORG-Health-Services](/?p=pages-ORG-Health-Services)
-- [@pages/HOWTO-unemployment](/?p=pages-HOWTO-unemployment)
-
-
-### Contains:
-- [@molecules/header-tags.twig](/?p=molecules-header-tags)
-- [@molecules/header-contact.twig](/?p=molecules-header-contact)
-- [@atoms/11-text/publish-state.twig](/?p=atoms-publish-state)
+### Variant options
+* As used on the [How To](./?p=organisms-page-header-for-howto) page 
+* As used on the [Location](./?p=organisms-page-header-for-location) page 
+* As used on the [Recurring Events](./?p=organisms-page-header-for-event) page 
 
 
-### Required Variables
-- See sub modules listed above for more details
-
+### Variables
 ~~~
-pageHeader:
+pageHeader: {
+  category: 
+    type: string / optional,
   divider: 
     type: boolean
   title:
-    type: string
+    type: string / required
   subTitle:
-    type: string
-  headerTags:
-    type: see @molecules/header-tags
-  publishState:
-    type: object / optional
-      text: 
-        type: string/required   
-  optionalContents:
-    type: array / optional (used to populate header main column under subTitle)
+    type: string / optional
+  headerTags: {
+    type: headerTags / optional
+  }
+  publishState: {
+    type: publishState / optional
+  }
+  optionalContents: (optional) [{
     path:
-      type: string / path/to/pattern
-    data:
-      type: object / see/submodules
-  widgets:
-    type: array/optional (used to populate the right rail in Pattern Lab)
+      type: string (path to pattern) / required
+    data: {
+      type: object / contains data object of pattern to include
+    }
+  }]
+  widgets: [{
     path:
-      type: string / path/to/pattern
-    data:
-      type: object / see/submodules
+      type: string (path to pattern) / required
+    data: {
+      type: object / contains data object of pattern to include
+    }
+  }]
 ~~~

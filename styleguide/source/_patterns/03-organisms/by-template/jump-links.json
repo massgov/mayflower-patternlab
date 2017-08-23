@@ -3,19 +3,24 @@
     "title": "In this guide",
     "links": [{
       "text": "Residency",
-      "href": "residency"
+      "href": "residency",
+      "info": ""
     },{
       "text": "Employment",
-      "href": "employment"
+      "href": "employment",
+      "info": ""
     },{
       "text": "Section Name1",
-      "href": "section-name2"
+      "href": "section-name2",
+      "info": ""
     },{
       "text": "Section Name1",
-      "href": "section-name2"
+      "href": "section-name2",
+      "info": ""
     },{
       "text": "Section Name1",
-      "href": "section-name2"
+      "href": "section-name2",
+      "info": ""
     }]
   }
 }

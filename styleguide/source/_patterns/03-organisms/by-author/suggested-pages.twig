@@ -5,11 +5,10 @@
       {% if suggestedPages.view == "guide" %}
         {% for page in suggestedPages.pages %}
           {% set illustratedLink = { 
-            "text": page.link.text, 
-            "type": page.link.type, 
             "href": page.link.href, 
-            "image": page.image,
-            "label": page.link.label } %}
+            "text": page.link.text, 
+            "info": page.link.info, 
+            "image": page.image } %}
           <div class="ma__suggested-pages__item ma__suggested-pages__item--guide">
             {% include "@molecules/illustrated-link.twig" %}
           </div>

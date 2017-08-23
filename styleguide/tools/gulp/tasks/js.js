@@ -29,13 +29,8 @@ module.exports = function jsTask(config, env){
         config.root + "/js/**/*.jsx"
     ]);
 
-    gulp.task('copy-env-js', function() {
-        return gulp.src(config.root + "/js/**/env.js")
-            .pipe(gulp.dest(jsConfig.dest));
-    });
-
     /* compile application javascript */
-    gulp.task("js", ['copy-env-js'], function(){
+    gulp.task("js", function(){
 
         var commonPackages = quench.getInstalledNPMPackages();
 
@@ -52,7 +47,6 @@ module.exports = function jsTask(config, env){
             .pipe(cached("js"))
             .pipe(gulp.dest(jsConfig.dest))
             .pipe(debug({title: "js: "}));
-
     });
 }
 

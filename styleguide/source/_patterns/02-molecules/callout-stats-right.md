@@ -1,10 +1,5 @@
----
-title: Callout stats - Right
----
-Description: Right Variant of Callout stats.
+### Description
+This is a variant of the [Callout Stats](./?p=molecules-callout-stats) pattern showing an example floated to the right.
 
-### Notes:
-- _pull variable is set to 'right'_
-
-### Base
-- [@molecules/callout-stats](/?p=molecules-callout-stats)
+### How to generate
+* set the 'pull' variable to 'right'

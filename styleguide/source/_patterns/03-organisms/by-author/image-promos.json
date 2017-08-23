@@ -13,7 +13,7 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "hiking image",
         "href": "#"
       },
@@ -40,7 +40,7 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "camping image",
         "href": "#"
       },
@@ -67,7 +67,7 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "wintery image",
         "href": "#"
       },
@@ -94,7 +94,7 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "hunting image",
         "href": "#"
       },
@@ -121,7 +121,7 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "bird image",
         "href": "#"
       },

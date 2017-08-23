@@ -4,26 +4,22 @@
     "name": "Phone",
     "items": [{
       "type": "phone",
-      "property": "telephone",
       "label": "Main:",
       "address": "",
       "link": {
         "href": "+14134994262",
         "text": "(413) 499-4262",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "details": "This line is open from 9:00 a.m. - 5:00 p.m., M-F"
     },{
       "type": "phone",
-      "property": "",
       "label": "Toll Free:",
       "address": "",
       "link":{
         "href": "+18004324321",
         "text": "(800) 432-4321",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "details": "This line is open from 9:00 a.m. - 5:00 p.m., M-F"
     }]

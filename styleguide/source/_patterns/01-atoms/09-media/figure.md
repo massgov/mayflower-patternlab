@@ -1,37 +1,30 @@
----
-title: Figure
----
-Description: an atom for `<figure>` elements with and image and caption elements along with an optional 'float' direction
+### Description
+This shows an Image using a `<figure>` elements with an optional caption
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-## Used In:
-- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
-- [@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
-- [@pages/GUIDE-movng-to-ma-part3](/?p=pages-GUIDE-movng-to-ma-part3)
+### Variant options
+* [Floated Left](/?p=atoms-figure-left)
+* [Floated Right](/?p=atoms-figure-right)
 
 
 ### Variables
 ~~~
 figure: {
   align: 
-    type: string / optional - ('align-left', 'align-right'),
+    type: string ('left', 'right') / optional
   image: {
     alt:
-        type: string / required
+      type: string / required
     src:
-        type: string (url) / required
+      type: string (url) / required
     height:
-        type: string
+      type: string
     width:
-        type: string
+      type: string
   }
   caption: 
     type: string
 }
 ~~~
-
-### Variations
-- [@atoms/09-media/figure](/?p=atoms-figure)
-- [@atoms/09-media/figure-left](/?p=atoms-figure-left)
-- [@atoms/09-media/figure-right](/?p=atoms-figure-right)

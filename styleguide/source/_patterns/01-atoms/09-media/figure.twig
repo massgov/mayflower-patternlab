@@ -1,9 +1,11 @@
-<figure class="ma__figure {{figure.align}}">
+{% set figureClass = figure.align ? "ma__figure--" ~ figure.align : "" %}
+
+<figure class="ma__figure {{ figureClass }}">
   {% set image = figure.image %}
   {% include "@atoms/09-media/image.twig" %}
   {% if figure.caption %}
     <figcaption class="ma__figure__caption">
-      {{figure.caption}}
+      {{ figure.caption }}
     </figcaption>
   {% endif %}
 </figure>

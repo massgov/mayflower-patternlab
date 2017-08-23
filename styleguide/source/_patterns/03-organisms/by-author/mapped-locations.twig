@@ -1,4 +1,5 @@
-<section class="ma__mapped-locations {{ mappedLocations.contained == 'bottom' ? 'ma__mapped-locations--contained' : '' }}">
+{% set modClass = mappedLocations.contained ? 'ma__mapped-locations--contained' : '' %}
+<section class="ma__mapped-locations {{ modClass }}">
   {% if mappedLocations.compHeading or mappedLocations.link %}
     <div class="ma__mapped-locations__header">
       {% if mappedLocations.compHeading %}
@@ -22,6 +23,5 @@
     {% endif %}
     {% set googleMap = mappedLocations.googleMap %}
     {% include "@molecules/google-map.twig" %}
-
   </div>
 </section>

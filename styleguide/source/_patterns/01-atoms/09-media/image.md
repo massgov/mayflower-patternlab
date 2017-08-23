@@ -1,26 +1,21 @@
----
-title: Image
----
-Description: an atom for `<image>` elements with alt text
+### Description
+Displays an image using the image HTML element
 
-## State: ALPHA
-
-## Used In:
-- [@organisms/by-author/sidebar-promo](/?p=organisms-sidebar-promo)
-
-## Notes:
-
+### Status
+* Stable as of 4.0.0
 
 ### Variables
 ~~~
 image {
-    alt:
-        type: string / required
-    src:
-        type: string (url) / required
-    height:
-        type: string
-    width:
-        type: string
+  alt:
+    type: string / required
+  src:
+    type: string (url) / required
+  height:
+    type: string / required
+  width:
+    type: string / required
 }
+~~~
+
 

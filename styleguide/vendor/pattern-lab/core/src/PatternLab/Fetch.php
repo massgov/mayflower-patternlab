@@ -24,24 +24,6 @@ use \Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 class Fetch {
 	
 	/**
-	 * Fetch a package using Composer
-	 * @param  {String}    the path to the package to be downloaded
-	 *
-	 * @return {String}    the modified file contents
-	 */
-	public function fetchPackage($package = "") {
-		
-		if (empty($package)) {
-			Console::writeError("please provide a path for the package before trying to fetch it...");
-		}
-		
-		// run composer
-		$composerPath = Config::getOption("coreDir").DIRECTORY_SEPARATOR."bin/composer.phar";
-		passthru("php ".$composerPath." require ".$package);
-		
-	}
-	
-	/**
 	 * Fetch a package from GitHub
 	 * @param  {String}    the command option to provide the rule for
 	 * @param  {String}    the path to the package to be downloaded
@@ -68,7 +50,7 @@ class Fetch {
 		//get the path to the GH repo and validate it
 		$tarballUrl = "https://github.com/".$org."/".$repo."/archive/".$tag.".tar.gz";
 		
-		Console::writeInfo("downloading the starterkit...");
+		Console::writeInfo("downloading the starterkit. this may take a few minutes...");
 		
 		// try to download the given package
 		if (!$package = @file_get_contents($tarballUrl)) {
@@ -96,10 +78,14 @@ class Fetch {
 		}
 		
 		// extract, if the zip is supposed to be unpacked do that (e.g. stripdir)
-		$zippy = Zippy::load();
-		$zippy->addStrategy(new UnpackFileStrategy());
-		$zippy->getAdapterFor('tar.gz')->open($tempFile)->extract($tempDirSK);
-
+		try {
+			$zippy = Zippy::load();
+			$zippy->addStrategy(new UnpackFileStrategy());
+			$zippy->getAdapterFor('tar.gz')->open($tempFile)->extract($tempDirSK);
+		} catch(\RuntimeException $e) {
+			Console::writeError("failed to extract the starterkit. easiest solution is to manually download it and copy <path>./dist</path to <path>./source/</path>...");
+		}
+		
 		if (!is_dir($tempDirDist)) {
 			// try without repo dir
 			$tempDirDist  = $tempDirSK.DIRECTORY_SEPARATOR."dist";
@@ -177,7 +163,7 @@ class Fetch {
 		// set default vars
 		$fsOptions = array();
 		$emptyDir = true;
-		$validFiles = array("README",".gitkeep",".DS_Store","styleguide");
+		$validFiles = array("README",".gitkeep",".DS_Store","styleguide","patternlab-components");
 		
 		// see if the source directory is empty
 		if (is_dir($sourceDir)) {
