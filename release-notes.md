@@ -21,6 +21,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Migrate path
 
+## 5.6.1
+
+## Added
+
+## Changed
+- For developers - update the deploy script to not require an asset path by default for a prod or fork deploy and to not set the default to mayflower/assets for prod releases.
+
+## Removed
+
 ## 5.6.0
 
 ### Added
