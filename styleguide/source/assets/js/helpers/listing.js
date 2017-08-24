@@ -254,7 +254,7 @@ module.exports = function(window, document, undefined){
 
     let items = data.items.sort(function(a, b) {
       // To use for events, maybe we create a map array of the "item" i.e. promo, event
-      $.each( type, function( key, value ) {
+      $.each(type, function( key, value ) {
         if (a.hasOwnProperty(value)) {
           let nameA = a.value.title.text.toUpperCase(),
             nameB = b.value.title.text.toUpperCase();

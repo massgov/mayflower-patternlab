@@ -3,7 +3,7 @@ import listing from "../helpers/listing.js";
 
 
 export default function (window,document,$,undefined) {
-   $('.js-event-listing-interactive').each(function(i) {
+  $('.js-event-listing-interactive').each(function(i) {
     let $el = $(this),
         $resultsHeading = $el.find('.js-results-heading'),
         $pagination = $el.find('.js-pagination'),
@@ -17,24 +17,23 @@ export default function (window,document,$,undefined) {
 
     masterData = populateMasterDataSource(rawData); // to preserve state
 
-   // Handle location listings form interaction (triggered by locationFilters.js).
-   $eventFilter.on('ma:EventFilter:FormSubmitted', function (e, formValues) {
-     let transformation = transformData(masterData, formValues);
-     masterData = transformation.data; // preserve state
-     // Trigger child components render with updated data
-     updateChildComponents(transformation);
-   });
+    // Handle location listings form interaction (triggered by locationFilters.js).
+    $eventFilter.on('ma:EventFilter:FormSubmitted', function (e, formValues) {
+      let transformation = transformData(masterData, formValues);
+      masterData = transformation.data; // preserve state
+      // Trigger child components render with updated data
+      updateChildComponents(transformation);
+    });
 
 
-   // Handle active filter/tag button interactions (triggered by resultsHeading.js).
-   $resultsHeading.on('ma:ResultsHeading:ActiveTagClicked', function (e, clearedFilter) {
-     let transformation = transformData(masterData, clearedFilter);
-     masterData = transformation.data; // preserve state
-     transformation.clearedFilter = clearedFilter;
-     // Trigger child components render with updated data
-     updateChildComponents(transformation);
-   });
-
+    // Handle active filter/tag button interactions (triggered by resultsHeading.js).
+    $resultsHeading.on('ma:ResultsHeading:ActiveTagClicked', function (e, clearedFilter) {
+      let transformation = transformData(masterData, clearedFilter);
+      masterData = transformation.data; // preserve state
+      transformation.clearedFilter = clearedFilter;
+      // Trigger child components render with updated data
+      updateChildComponents(transformation);
+    });
 
     // Handle pagination click events -- winning!
     $pagination.on('ma:Pagination:Pagination', function (e, target) {
@@ -57,7 +56,6 @@ export default function (window,document,$,undefined) {
       // Trigger child components render with updated data
       updateChildComponents({data: masterData});
     });
-
 
     // Trigger events to update child components with new data.
     function updateChildComponents(args) {
@@ -118,7 +116,7 @@ export default function (window,document,$,undefined) {
       let masterListing = listing.eventListing.events,
 
       // Pass in listing and template name.
-        masterListingMarkup = transformListing(masterListing, 'eventListingRow');
+      masterListingMarkup = transformListing(masterListing, 'eventListingRow');
 
       // The max number of items per page, if designated in locationListing data structure, else all
       masterData.maxItems = listing.maxItems ? listing.maxItems : masterListing.length;
@@ -146,8 +144,6 @@ export default function (window,document,$,undefined) {
      *   The locationListing data structure
      * @param markup
      *   The generated array of item markup
-     * @param markers
-     *   The associated map markers for each item
      * @param max
      *   The maximum number of items per page
      * @returns {Array}
@@ -190,7 +186,8 @@ export default function (window,document,$,undefined) {
     let compiledTemplate = getTemplate(template);
     let listingMarkup = [];
     listing.forEach(function (data, index) {
-      listingMarkup[index] = compiledTemplate(data);
+      let itemData = itemTransform(data);
+      listingMarkup[index] = compiledTemplate(itemData);
     });
     return listingMarkup;
   }
@@ -257,24 +254,39 @@ export default function (window,document,$,undefined) {
   }
 
   /**
-   * Returns transformed imagePromo data object.
+   * Returns transformed item data object.
    *
-   * @param promo
-   *   The imagePromo.item[]{} being transformed.
+   * @param item
+   *   The item.item[]{} being transformed.
    *
    * @returns {*}
-   *   The original imagePromo object with a formatted tag property.
+   *   The original item object with a formatted tag property.
    */
-  function eventTransform(event) {
+  function itemTransform(item) {
     // Ensure tags are an array.
     let tags = [];
-    $.map(promo.tags, function(val, index) { tags[index] = val; });
-    promo.tags = tags;
+    $.map(item.tags, function(val, index) { tags[index] = val; });
+    item.tags = tags;
 
     let tagsData = {
-      tagsFormatted: promo.tags.map(transformTag)
+      tagsFormatted: item.tags.map(transformTag)
     };
-    return Object.assign({},promo,tagsData);
+    return Object.assign({},item,tagsData);
+  }
+
+  /**
+   * Returns a formatted imagePromo.tag object with a label and svg icon markup.
+   *
+   * @param tag
+   *   The tag being transformed.
+   *
+   * @returns {{label, svg: boolean}}
+   */
+  function transformTag(tag) {
+    return {
+      label: tag.label,
+      svg: getSvgFromTag(tag.id)
+    };
   }
 
   /**
@@ -311,7 +323,6 @@ export default function (window,document,$,undefined) {
     // Return the newly sorted instance of location listing masterData.
     return data;
   }
-
 
   /**
    * Calculate distance from lat/lng.
@@ -355,7 +366,6 @@ export default function (window,document,$,undefined) {
    *   }
    */
   function renderListingPage(args) {
-
     $('.js-event-listing-items').html('');
     let $el = $('.js-event-listing-items'),
       page = args.page ? args.page : 1;
