@@ -250,11 +250,17 @@ module.exports = function(window, document, undefined){
    *    Sorted instance of master data.
    */
   function sortDataAlphabetically(data) {
+    let type = ['promo', 'event'];
+
     let items = data.items.sort(function(a, b) {
       // To use for events, maybe we create a map array of the "item" i.e. promo, event
-      let nameA = a.promo.title.text.toUpperCase(),
-          nameB = b.promo.title.text.toUpperCase();
-      return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
+      $.each( type, function( key, value ) {
+        if (a.hasOwnProperty(value)) {
+          let nameA = a.value.title.text.toUpperCase(),
+            nameB = b.value.title.text.toUpperCase();
+          return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
+        }
+      });
     });
 
     let paginated = paginateItems(items, data.maxItems);
@@ -351,6 +357,37 @@ module.exports = function(window, document, undefined){
       return item;
     });
     return data;
+  }
+
+  /**
+   * Calculate distance from lat/lng.
+   *
+   * @param lat1
+   *    Latitude 1 input.
+   * @param lng1
+   *    Longitude 1 input.
+   * @param lat2
+   *    Latitude 2 input.
+   * @param lng2
+   *    Longitude 2 input.
+   *
+   * @returns {*}
+   *    Return the distance from points.
+   */
+  function calculateDistance(lat1, lon1, lat2, lon2, unit) {
+    var radlat1 = Math.PI * lat1/180
+    var radlat2 = Math.PI * lat2/180
+    var radlon1 = Math.PI * lon1/180
+    var radlon2 = Math.PI * lon2/180
+    var theta = lon1-lon2
+    var radtheta = Math.PI * theta/180
+    var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+    dist = Math.acos(dist)
+    dist = dist * 180/Math.PI
+    dist = dist * 60 * 1.1515
+    if (unit=="K") { dist = dist * 1.609344 }
+    if (unit=="N") { dist = dist * 0.8684 }
+    return dist
   }
 
   return {
