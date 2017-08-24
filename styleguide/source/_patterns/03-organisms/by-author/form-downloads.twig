@@ -15,4 +15,10 @@
       {% endfor %}
     </div>
   {% endif %}
+  {% if formDownloads.more %}
+    <div class="ma__form-downloads__see-all">
+      {% set decorativeLink = formDownloads.more %}
+      {% include "@atoms/decorative-link.twig" %}
+    </div>
+  {% endif %}
 </section>

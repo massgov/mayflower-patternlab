@@ -28,6 +28,8 @@ compHeading: {
     type: string
   centered:
     type: boolean
+  sidebar: 
+    type: boolean
 }
 ~~~
 

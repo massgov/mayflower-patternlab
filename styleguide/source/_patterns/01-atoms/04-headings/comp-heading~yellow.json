@@ -1,9 +1,9 @@
 {
   "compHeading": {
     "title": "Employment",
-    "sub":"",
+    "sub": false,
     "color": "yellow",
     "id": "",
-    "centered": ""
+    "centered": false
   }
 }

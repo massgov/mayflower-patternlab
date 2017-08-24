@@ -1,5 +1,8 @@
 # Mayflower Release Notes
 
+## 5.5.1
+- DP-4297 - Adds conditional logic around footnote anchor in footnote molecule.
+
 ## 5.5.0
 
 Here comes another Mayflower release, hot off the summertime presses!  We've got 2 new page types and lots of little improvements and fixes coming your way.
