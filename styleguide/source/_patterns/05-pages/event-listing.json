@@ -59,6 +59,7 @@
     },
 
     "eventListing": {
+      "maxItems": 8,
       "compHeading": null,
       "events":[{
         "title": {
@@ -68,6 +69,10 @@
           "property": ""
         },
         "location": "Lanesborough, MA",
+        "position": {
+          "lat": 42.517306,
+          "lng": -73.228160
+        },
         "date": {
           "summary": "March 30, 2017",
           "startMonth": "Mar",
@@ -85,6 +90,10 @@
           "property": ""
         },
         "location": "Lanesborough, MA",
+        "position": {
+          "lat": 42.517306,
+          "lng": -73.228160
+        },
         "date": {
           "summary": "March 30, 2017 - April 10, 2017",
           "startMonth": "Mar",
@@ -94,6 +103,174 @@
         },
         "time": "12 p.m. - 2 p.m.",
         "description": ""
+      },{
+        "title": {
+          "href": "#",
+          "text": "First Day Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Chicago, IL",
+        "position": {
+          "lat": 41.878114,
+          "lng": -87.629798
+        },
+        "date": {
+          "summary": "March 30, 2017 - April 10, 2017",
+          "startMonth": "Mar",
+          "startDay": "30",
+          "endMonth": "Apr",
+          "endDay": "10"
+        },
+        "time": "12 p.m. - 2 p.m.",
+        "description": ""
+      },{
+        "title": {
+          "href": "#",
+          "text": "Indianapolis Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Indianapolis, IN",
+        "position": {
+          "lat": 39.768403,
+          "lng": -86.158068
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
+          "text": "Indianapolis Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Indianapolis, IN",
+        "position": {
+          "lat": 39.768403,
+          "lng": -86.158068
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
+          "text": "Indianapolis Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Indianapolis, IN",
+        "position": {
+          "lat": 39.768403,
+          "lng": -86.158068
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
+          "text": "Albuquerque Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Albuquerque, New Mexico",
+        "position": {
+          "lat": 35.085334,
+          "lng": -106.605553
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
+          "text": "New York Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "New York, NY",
+        "position": {
+          "lat": 40.712784,
+          "lng": -74.005941
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
+          "text": "Los Angeles Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Los Angeles, CA",
+        "position": {
+          "lat": 34.052234,
+          "lng": -118.243685
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
+          "text": "Cincinnati Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Cincinnati, OH",
+        "position": {
+          "lat": 39.103118,
+          "lng": -84.512020
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
       }],
       "more": null
     },
@@ -107,28 +284,7 @@
         "disabled": false,
         "text": "Previous"
       },
-      "pages": [{
-        "active": false,
-        "text": "1"
-      },{
-        "active": false,
-        "text": "spacer"
-      },{
-        "active": false,
-        "text": "5"
-      },{
-        "active": true,
-        "text": "6"
-      },{
-        "active": false,
-        "text": "7"
-      },{
-        "active": false,
-        "text": "spacer"
-      },{
-        "active": false,
-        "text": "10"
-      }]
+      "pages": []
     }
   }
 }

@@ -1,4 +1,5 @@
 {% set gridClass = eventListing.grid ? 'ma__event-listing--grid' : '' %}
+{% set maxItems = eventListing.maxItems ?: eventListing.events.length %}
 
 <section class="ma__event-listing {{ gridClass }}">
   <div class="ma__event-listing__container">
@@ -10,13 +11,7 @@
       {% set sidebarHeading = eventListing.sidebarHeading %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
-    <ul class="ma__event-listing__items">
-      {% for eventTeaser in eventListing.events %}
-        <li class="ma__event-listing__item">
-          {% include "@molecules/event-teaser.twig" %}
-        </li>
-      {% endfor %}
-    </ul>
+    <ul class="ma__event-listing__items"></ul>
     {% if eventListing.more %}
       <div class="ma__event-listing__more">
         {% set link = eventListing.more %}
@@ -25,3 +20,11 @@
     {% endif %}
   </div>
 </section>
+<script>
+  // Make eventListing data object available in eventListing module js.
+  var ma = ma || {};
+  ma.eventListing = ma.eventListing || [];
+  ma.eventListing.push({{ eventListing|json_encode|raw }});
+</script>
+
+

@@ -11,7 +11,11 @@
         "info": "",
         "property": ""
       },
-      "location": "Lanesborough, MA",
+      "location": {
+        "place": "Lanesborough, MA",
+        "lat": "42.5173058",
+        "lng": "-73.2281596"
+      },
       "date": {
         "summary": "March 30, 2017",
         "startMonth": "Mar",
@@ -28,7 +32,11 @@
         "info": "",
         "property": ""
       },
-      "location": "Lanesborough, MA",
+      "location": {
+        "place": "Lanesborough, MA",
+        "lat": "42.5173058",
+        "lng": "-73.2281596"
+      },
       "date": {
         "summary": "March 30, 2017 - April 10, 2017",
         "startMonth": "Mar",
@@ -45,7 +53,11 @@
         "info": "",
         "property": ""
       },
-      "location": "Lanesborough, MA",
+      "location": {
+        "place": "Chicago, IL",
+        "lat": "41.8781136",
+        "lng": "-87.6297982"
+      },
       "date": {
         "summary": "March 30, 2017 - April 10, 2017",
         "startMonth": "Mar",
@@ -55,6 +67,27 @@
       },
       "time": "12 p.m. - 2 p.m.",
       "description": ""
+    },{
+      "title": {
+        "href": "#",
+        "text": "Indianapolis Hike",
+        "info": "",
+        "property": ""
+      },
+      "location": {
+        "place": "Indianapolis, IN",
+        "lat": "39.768403",
+        "lng": "-86.158068"
+      },
+      "date": {
+        "summary": "March 2, 2017 - April 25, 2017",
+        "startMonth": "Mar",
+        "startDay": "2",
+        "endMonth": "Apr",
+        "endDay": "25"
+      },
+      "time": "2 p.m. - 3 p.m.",
+      "description": "sit amet, consectetur adipisicing elit"
     }],
     "more":{
       "href": "#",
@@ -64,4 +97,3 @@
     }
   }
 }
- 
