@@ -3,9 +3,9 @@
     "accordion": false,
     "isExpanded": false,
     "subTitle": {
+      "level": 2,
       "href":"",
       "text": "Department of Conservation and Recreation",
-      "level": 2,
     },
     "groups": [{
       "icon": "@atoms/05-icons/svg-phone.twig",
