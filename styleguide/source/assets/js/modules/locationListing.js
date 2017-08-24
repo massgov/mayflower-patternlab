@@ -1,5 +1,6 @@
 import sticky from "../helpers/sticky.js";
 import getTemplate from "../helpers/getHandlebarTemplate.js";
+import listing from "../helpers/listing.js";
 
 export default function (window,document,$,undefined) {
   // Active state classes for location listing rows.
@@ -106,7 +107,7 @@ export default function (window,document,$,undefined) {
           nextPage = currentPage - 1;
         }
 
-        masterData.pagination = transformPaginationData({data: masterData, targetPage: nextPage});
+        masterData.pagination = listing.transformPaginationData({data: masterData, targetPage: nextPage});
         masterData.resultsHeading = transformResultsHeading({data: masterData, page: nextPage});
         renderListingPage({data: masterData, page: nextPage});
 
@@ -293,7 +294,7 @@ export default function (window,document,$,undefined) {
     // Update the results heading based on the current items state.
     sortedData.resultsHeading = transformResultsHeading({data: sortedData});
     // Update pagination data structure, reset to first page
-    sortedData.pagination = transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
+    sortedData.pagination = listing.transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
     // Render the listing page.
     renderListingPage({data: sortedData});
 
@@ -396,48 +397,6 @@ export default function (window,document,$,undefined) {
     else {
       return args.filterData.formData; // This was a form submission, so just return the applied form data.
     }
-  }
-
-  /**
-   * Returns the data structure necessary to render pagination component, reflecting current state.
-   *
-   * @param args
-   *   An object with the following structure:
-   *   {
-   *     data: [instance of filtered, sorted master data],
-   *     targetPage: (optional) the page which should be active
-   *   }
-   *
-   * @returns {*}
-   *   Data structure necessary to render pagination component
-   */
-  function transformPaginationData(args) {
-    let data = args.data;
-    let targetPage = args.targetPage ? args.targetPage : 1; // default to first page if none passed
-    let totalPages = data.totalPages;
-    let pages = [];
-
-    for (let i = 1; i <= totalPages; i++) {
-      pages.push({
-        text: i.toString(),
-        active: i === targetPage
-      });
-    }
-
-    data.pagination.prev = {
-      text: "Previous",
-      disabled: targetPage === 1
-    };
-
-    data.pagination.next = {
-      text: "Next",
-      disabled: targetPage === totalPages
-    };
-
-    data.pagination.pages = pages;
-    data.pagination.currentPage = targetPage;
-
-    return data.pagination;
   }
 
   /**
