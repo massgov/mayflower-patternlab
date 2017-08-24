@@ -6,25 +6,49 @@ export default function (window,document,$,undefined) {
     let $el = $(this),
         $resultsHeading = $el.find('.js-results-heading'),
         $pagination = $el.find('.js-pagination'),
-        $eventFilter = $el.find('.js-event-filters');
+        $eventFilter = $el.find('.js-event-filters'),
+        $events = $el.find('.js-event-listing-items');
 
+    /**
+     * Initialize Data (for results heading, events, and pagination.
+     */
     // Get the location listing component data (this could be replaced with an api)
     const rawData = ma.eventListingInteractive[i]; // Data object created in @organisms/by-author/event-listing-interactive.twig
-    let masterData = rawData;
-    // ^^ calculate total pages, set maxItems, cache event markup form templates, with this data structure.
+    let masterData = rawData; // this should change to = initMasterData(rawData), see below.
+    // ^^ This data structure should now have resultsHeading, eventFilters, pagination, and event data.  So at this point you can create the master data structure:
+    /**
+     * [
+     *    maxItems: the max number of items to show per listing "page" if provided, defaults to all
+     *    totalPages: the number of pages of items that should render, given the current filters
+     *    resultsHeading: the data structure necessary to render a resultsHeading component
+     *    items: an array of listing items [
+     *      isActive: whether or not the listing should be shown, given current filters state
+     *      page: the page that the listing, if active, will appear on, given the current sort order
+     *      event: the data structure for the event-teaser component // might need to abstract this to be "data" if need to share code with location listing (imagePromo)
+     *      markup: the compiled event-teaser markup (from handlebars)
+     *    ]
+     *    pagination: the data structure necessary to render a pagination component
+     *  ]
+     */
+    // See the "Data initialization." functions in location listing js
     masterData.totalPages = 2; // needs to be configured based on total results, maxItems
 
+    // These will likely go away once you create the master data structure
     // let eventListing = $('.ma__event-listing__items');
     let submitButton = $('.ma__event-filters__submit');
     // let resultsHeader = $('.ma__results-heading__title');
     let eventsList = masterData['eventListing']['events'];
     let totalItems = eventsList.length;
     let currentPage = 0; // don't need this because you'll render 1st time via twig then this will be passed
-    let maxItems = 8;
+    let maxItems = 8; // 10 or 20 might be better for this since there's no map UI constraints
     let numberedPages = '';
 
+
+    // This event filter init stuff should probably be encapsulated in to eventFilter module js
+    // See modules/locationFilters.js
     // Build our autocomplete.
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function () {
+      // nice-to-have: abstract out what we do for both zip filters into the helper listing.js
       let $locationFilter = $('.ma__event-filters').find('input');
       if ($locationFilter.length) {
         // Create the google places autocomplete object and associate it with the zip code text input.
@@ -38,6 +62,23 @@ export default function (window,document,$,undefined) {
         };
         ma.autocomplete = new google.maps.places.Autocomplete(locationInput, options);
       }
+    });
+
+    /**
+     * Handle events from eventFilters (zip sort), resultsHeading (clear zip sort), and pagination
+     */
+
+    // Handle active filter/tag button interactions (triggered by resultsHeading.js).
+    $resultsHeading.on('ma:ResultsHeading:ActiveTagClicked', function (e, clearedFilter) {
+      // This will mean a sort / filter has been removed / cleared.
+
+      // Empty current listing events
+      listing.clearListingPage($el, $events);
+
+      // transform page data (likely reset to default sort) - based on clearedFilter
+      // transform results heading data - based on clearedFilter
+      // transform pagination data - based page data / on clearedFilter
+      // emit events to resultsHeading, pagination, and render new page of event data
     });
 
     // Handle pagination click events -- winning!
@@ -54,21 +95,38 @@ export default function (window,document,$,undefined) {
         nextPage = currentPage - 1;
       }
 
-      let pagination = listing.transformPaginationData({data: masterData, targetPage: nextPage});
+      // Empty current listing events
+      listing.clearListingPage($el, $events);
 
+      // determine the group of events for the next page
+      // render the page of events
+      // determine the results heading data
+      // trigger the event for the results heading, passing data
+
+      // Determine pagination data structure based on event
+      let pagination = listing.transformPaginationData({data: masterData, targetPage: nextPage});
+      // Trigger event for pagination, passing data
       $pagination.trigger('ma:Pagination:DataUpdated', [pagination]);
+
     });
 
-    // vvv I'd put this filter click event stuff in it's own JS file see modules/locationFilter.js
+    // This submitButton.on() should update to listen for events emitted by modules/eventFilters js
+    // See modules/locationFilters.js to model filter events
+    // For example:
+    // Handle location event form interaction (triggered by eventFilters.js).
+    // $locationFilter.on('ma:EventFilter:FormSubmitted', function (e, formValues) {
     submitButton.on('click', function (e) {
       "use strict";
       e.preventDefault();
+      // This autocomplete data should be determined in eventFilter.js, which should send a data object like locationFilters.js @#72
       // Get autocomplete data.
       let place = ma.autocomplete.getPlace();
       // Autocomplete not right.
       if (typeof place === "undefined" || !place.geometry) {
         return;
       }
+      // I would send that ^ place data as an event (see comment above)
+      // Then I'd encapsulate this sort functionality below into a help
       let lat = place.geometry.location.lat(),
           lng = place.geometry.location.lng();
       // Sort events by autocomplete location and get distance.
@@ -79,10 +137,19 @@ export default function (window,document,$,undefined) {
       eventsList.sort(function (a, b) {
         return parseFloat(a.distance) - parseFloat(b.distance)
       });
+
       renderList(eventsList, maxItems);
+      // Transform pagination data - reset back to first page
+      // Transform results heading - reset back to first page of results, of total; apply filter tag
+      // updateChildComponents(args);
     });
   });
 
+  /**
+   * Helper functions - data transformation (for events) and rendering
+   */
+
+  // This is good to keep here
   function renderList(list, maxItems) {
     "use strict";
     // Reload pages variable and load 8 per page.
