@@ -134,7 +134,12 @@
       "generalHeading":"All How-Tos:",
       "hideFilter": true,
 
-      "seeAll": null,
+      "seeAll": {
+        "type": "internal",
+        "href": "http://www.google.com",
+        "text": "See all 15 How-To's",
+        "info": ""
+      },
 
       "featuredLinks": [{
         "image": "",
@@ -163,6 +168,36 @@
         "image": "",
         "text": "Find an unemployment location",
         "href": "#"
+      },{
+        "image": "",
+        "text": "Log in to UI Online for recipients",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Check your status ",
+        "href": "#",
+        "label": ""
+      },{
+        "image": "",
+        "text": "Log work hours",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Appeal your status",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Find an unemployment location",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Log in to UI Online for recipients",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Check your status ",
+        "href": "#",
+        "label": ""
       }]
     }
   },
@@ -177,11 +212,30 @@
       "generalHeading":"",
       "hideFilter": true,
 
-      "seeAll": null,
+      "seeAll": {
+        "type": "internal",
+        "href": "http://www.google.com",
+        "text": "See all 10 pages",
+        "info": ""
+      },
 
       "featuredLinks": "",
 
       "links": [{
+        "image": "/assets/images/placeholder/130x160.png",
+        "text": "Name of optional guide",
+        "href": "#",
+        "label": "Guide:"
+      },{
+        "image": "",
+        "text": "Learn about the appeals process",
+        "href": "#"
+      },{
+        "image": "",
+        "text": "Learn about on the job training programs",
+        "type": "",
+        "label": ""
+      },{
         "image": "/assets/images/placeholder/130x160.png",
         "text": "Name of optional guide",
         "href": "#",
@@ -322,7 +376,22 @@
             },{
               "href":"#",
               "text":"Career Counseling"
-            }]
+            },{
+              "href":"#",
+              "text":"Job Search Help"
+            },{
+              "href":"#",
+              "text":"Job Training"
+            },{
+              "href":"#",
+              "text":"Career Counseling"
+            }],
+            "more": {
+              "href": "#",
+              "text": "See all 10 related services",
+              "chevron": true,
+              "label": "See all of the resources for Executive Office of Health and Human Services"
+            }
           }
         }
       }]
@@ -360,7 +429,65 @@
                 "size": "107KB",
                 "format": "DOCX"
               }
-            }]
+            },{
+              "downloadLink": {
+                "iconSize": "small",
+                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "decorativeLink": {
+                  "text": "Work Search Activity Log",
+                  "href": "#",
+                  "info": "",
+                  "property": ""
+                },
+                "size": "1MB",
+                "format": "PDF"
+              }
+            },{
+              "downloadLink": {
+                "iconSize": "small",
+                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "decorativeLink": {
+                  "text": "Name of Doc",
+                  "href": "#",
+                  "info": "",
+                  "property": ""
+                },
+                "size": "107KB",
+                "format": "DOCX"
+              }
+            },{
+              "downloadLink": {
+                "iconSize": "small",
+                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "decorativeLink": {
+                  "text": "Work Search Activity Log",
+                  "href": "#",
+                  "info": "",
+                  "property": ""
+                },
+                "size": "1MB",
+                "format": "PDF"
+              }
+            },{
+              "downloadLink": {
+                "iconSize": "small",
+                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "decorativeLink": {
+                  "text": "Name of Doc",
+                  "href": "#",
+                  "info": "",
+                  "property": ""
+                },
+                "size": "107KB",
+                "format": "DOCX"
+              }
+            }],
+            "more": {
+              "href": "#",
+              "text": "See all 10 additional resources",
+              "chevron": true,
+              "label": "See all of the resources for Executive Office of Health and Human Services"
+            }
           }
         }
       }]

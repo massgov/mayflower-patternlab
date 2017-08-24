@@ -43,6 +43,12 @@
         "size": "",
         "format": "form"
       }
-    }]
+    }],
+    "more": {
+      "href": "#",
+      "text": "See all 10 additional resources",
+      "chevron": true,
+      "label": "See all of the resources for Executive Office of Health and Human Services"
+    }
   }
 }
