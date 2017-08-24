@@ -28,6 +28,8 @@ actionStep: {
     type: string/path/optional
   title: 
     type: string/required
+  level: 
+    type: integer / required
   richText: 
     type: object/required @organisms/by-author/rich-text.twig
   downloadLinks: 

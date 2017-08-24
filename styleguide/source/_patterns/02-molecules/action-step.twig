@@ -1,9 +1,9 @@
 {% set accordion = actionStep.accordion %}
 
-<section 
+<section
   class="ma__action-step {{ accordion ? 'js-accordion ma__action-step--accordion' : '' }} {{ actionStep.isExpanded ? 'is-open':'' }}">
   {% if accordion %}
-    <button 
+    <button
       class="ma__action-step__header js-accordion-link"
       aria-label="{{ actionStep.accordionLabel }}">
   {% else %}
@@ -12,9 +12,10 @@
     {% if actionStep.icon %}
       <div class="ma__action-step__icon">
         {% include actionStep.icon %}
-      </div> 
-    {% endif %} 
-    <h2 class="ma__action-step__title">{{ actionStep.title }}</h2>
+      </div>
+    {% endif %}
+    {% set level = actionStep.level ? : 4 %}
+    <h{{ level }} class="ma__action-step__title">{{ actionStep.title }}</h{{ level }}>
   {% if accordion %}
     </button>
   {% else %}

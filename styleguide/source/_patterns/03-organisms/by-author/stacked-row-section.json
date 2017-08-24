@@ -1,10 +1,12 @@
 {
   "stackedRowSection": {
     "title":"Buying or Renting a Home",
+    "level": 2,
     "id":"buying-or-renting-a-home",
     "pageContent": [{
       "path": "organisms-rich-text",
       "data": {
+        "level": 3,
         "richText": {
           "rteElements": [{
             "path": "atoms-paragraph",
@@ -17,14 +19,14 @@
           {
             "path": "atoms-unordered-list",
             "data": {
-              "unorderedList": [{ 
-                "text": "Protection from unlawful discrimination" 
-              },{ 
-                "text": "Rental agreements for leases and tenancy-at-will" 
-              },{ 
-                "text": "Rent withholding and deductions for repairs" 
-              },{ 
-                "text": "Lease termination, eviction, and moving out" 
+              "unorderedList": [{
+                "text": "Protection from unlawful discrimination"
+              },{
+                "text": "Rental agreements for leases and tenancy-at-will"
+              },{
+                "text": "Rent withholding and deductions for repairs"
+              },{
+                "text": "Lease termination, eviction, and moving out"
               }]
             }
           },
@@ -44,7 +46,8 @@
       "path": "atoms-sidebar-heading",
       "data": {
         "sidebarHeading": {
-          "title": "Key Agencies"
+          "title": "Key Agencies",
+          "level": 3,
         }
       }
     },
@@ -55,9 +58,11 @@
           "subTitle": {
             "href":"#",
             "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
+            "level": 4,
             "chevron":""
           },
           "groups": [{
+            "level": 5,
             "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
             "hidden": "",
@@ -69,6 +74,7 @@
               "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
             }]
           },{
+            "level": 5,
             "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
             "hidden": "",
@@ -80,6 +86,7 @@
               "details":""
             }]
           },{
+            "level": 5,
             "icon": "@atoms/05-icons/svg-fax-icon.twig",
             "name": "Fax",
             "hidden": "true",
@@ -91,6 +98,7 @@
               "details":"Please allow 24 hours for a response"
             }]
           },{
+            "level": 5,
             "icon": "@atoms/05-icons/svg-marker.twig",
             "name": "Address",
             "items": [{

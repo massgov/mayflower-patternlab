@@ -20,6 +20,8 @@ Description: An `<h2>` or `<h3>` element with a styled underline color designate
 compHeading: {
   title:
     type: string / required
+  level:
+    type: integer / required
   sub:
     type: string ("true" || "" )
   color:
@@ -27,8 +29,6 @@ compHeading: {
   id:
     type: string
   centered:
-    type: boolean
-  sidebar: 
     type: boolean
 }
 ~~~

@@ -1,9 +1,10 @@
+{% set level = contactGroup.level ?: 2 %}
 <div class="ma__contact-group">
   {% if contactGroup.name and contactGroup.icon %}
-    <h5 class="ma__contact-group__name">
+    <h{{ level }} class="ma__contact-group__name">
       {% include contactGroup.icon %}
       <span>{{contactGroup.name}}</span>
-    </h5>
+    </h{{ level }}>
   {% endif %}
   {% for item in contactGroup.items %}
     {# if using the older 3.4.1 data model #}
@@ -38,37 +39,37 @@
         {% include "@atoms/decorative-link.twig" %}
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
-        <a 
-          href="tel:{{ link.href }}" 
+        <a
+          href="tel:{{ link.href }}"
           class="ma__content-link ma__content-link--phone"
           {% if link.property %}
             property="{{ link.property }}"
           {% endif %}>{{ link.text }}</a>
-        
+
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
-        <a 
-          href="mailto:{{ link.href }}" 
+        <a
+          href="mailto:{{ link.href }}"
           class="ma__content-link"
-          {% if link.property %} 
+          {% if link.property %}
             property="{{ link.property }}"
           {% endif %}>{{ link.text }}</a>
 
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
-        <div 
+        <div
           class="ma__contact-group__address"
-          {% if link.property %} 
+          {% if link.property %}
             property="address"
             typeof="PostalAddress"
           {% endif %}>
           {{ address|nl2br|raw }}
         </div>
         {% if link.href %}
-          <div 
+          <div
             class="ma__contact-group__directions"
-            {% if link.property %} 
-              property="hasMap" 
+            {% if link.property %}
+              property="hasMap"
               typeof="Map"
             {% endif %}>
             {% set decorativeLink = link %}

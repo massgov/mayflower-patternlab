@@ -18,5 +18,7 @@ Description: An `<h3>` element used as a subheading in the sidebar, designated b
 sidebarHeading: {
     title:
         type: string / required
+    level:
+        type: integer / required
   }
 ~~~

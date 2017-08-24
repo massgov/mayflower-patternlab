@@ -16,6 +16,8 @@ Description: A list of a specific type of contact information for an entity wrap
 ### Variables:
 ~~~
 group: { // aggregated in array contactUs.contactGroups
+  level: 
+    type: integer / required
   icon:
     type: string (include path to icon twig template) / optional
   name:

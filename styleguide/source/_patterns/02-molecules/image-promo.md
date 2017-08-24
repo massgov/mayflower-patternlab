@@ -18,7 +18,9 @@ Description: An illustrated list where each item displays an image, title, descr
 imagePromo: {
   title: {
     text: 
-      type: string/required,
+      type: string/required
+    level:
+      type: integer / required
     href: 
       type: string(url)/optional
     type:

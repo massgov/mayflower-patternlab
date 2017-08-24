@@ -1,9 +1,12 @@
+{% set level = level ? : 2 %}
 <section class="ma__action-details">
-  <h2 class="ma__action-details__title">The Details</h2>
+  <h{{ level }} class="ma__action-details__title">The Details</h{{ level }}>
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
 
   <div class="ma__action-details__content">
     <nav class="ma__action-details__anchor-links js-scroll-anchors" aria-labelledby="page_contents">
-        <h3 class="visually-hidden" id="page_contents">Page Contents</h3>
+        <h{{ level }} class="visually-hidden" id="page_contents">Page Contents</h{{ level }}>
         <button class="ma__action-details__toggle-link js-scroll-anchors-toggle">+</button>
         {% for section in actionDetails.sections %}
           {% if section.id and section.title %}
@@ -11,7 +14,9 @@
           {% endif %}
         {% endfor %}
     </nav>
+
     {% for actionSection in actionDetails.sections %}
+      {% set actionSection = actionSection|merge({'level': level }) %}
       {% include "@molecules/action-section.twig" %}
     {% endfor %}
   </div>

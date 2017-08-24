@@ -18,6 +18,8 @@ Description: An `<h3>` element with a designated background color indicated by i
 coloredHeading {
     text: 
         type: string / required
+    level: 
+        type: integer / required
     color:
         type: string ('','green')
 }

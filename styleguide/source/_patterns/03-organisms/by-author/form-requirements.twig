@@ -1,9 +1,9 @@
-
 {% if formRequirements.richText %}
   <section class="ma__form-requirements">
     <div class="ma__form-requirements__container">
       {% if formRequirements.rteTitle %}
         {% set columnHeading = formRequirements.rteTitle %}
+        {% set columnHeading = columnHeading|merge({'level': formRequirements.level}) %}
         {% include "@atoms/04-headings/column-heading.twig" %}
       {% endif %}
       {% set richText = formRequirements.richText %}

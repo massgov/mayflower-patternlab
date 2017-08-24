@@ -1,3 +1,4 @@
+{% set level = imagePromos.level ? : 2 %}
 <section class="ma__image-promo{{ imagePromo.location.map ? ' js-location-listing-link' : '' }}">
   {% if imagePromo.image %}
     <div class="ma__image-promo__image"
@@ -16,7 +17,7 @@
   {% endif %}
   <div class="ma__image-promo__details">
     {% if imagePromo.title %}
-    <h2 class="ma__image-promo__title">
+    <h{{ level }} class="ma__image-promo__title">
       {% if imagePromo.tags %}
         <div class="ma__image-promo__tags">
           {% for tag in imagePromo.tags %}
@@ -30,7 +31,7 @@
       {% else %}
         {{ imagePromo.title.text }}
       {% endif %}
-    </h2>
+    </h{{ level }}>
     {% endif %}
     {% if imagePromo.location.text %}
       <div class="ma__image-promo__location">

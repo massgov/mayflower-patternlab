@@ -2,8 +2,8 @@
   "keyActions": {
     "compHeading": {
       "title": "Key Actions",
-      "sub": false,
-      "id": "key-action-id"
+      "level": 2,
+      "sub":true
     },
     "links":[{
       "text": "Register to Vote",

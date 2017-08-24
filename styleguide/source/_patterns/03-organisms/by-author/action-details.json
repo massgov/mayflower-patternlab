@@ -1,7 +1,9 @@
 {
   "actionDetails" : {
+    "level": 2,
     "sections": [{
       "title":"Overview",
+      "level": 3,
       "intro": "",
       "id":"overview",
       "path": "organisms-rich-text",
@@ -42,7 +44,7 @@
             }
           }]
         }
-      } 
+      }
     },
     {
       "title":"Fees",
@@ -234,5 +236,5 @@
         }
       }
     }]
-  }  
+  }
 }

@@ -9,7 +9,7 @@
   {% endif %}
 {% endif %}
 
-<section 
+<section
   class="ma__contact-us {{ accordionClass }} {{ contactUs.isExpanded ? 'is-open':'' }}">
 
   {% if contactUs.subTitle %}
@@ -17,21 +17,36 @@
       <button class="ma__contact-us__header js-accordion-link" type="button">
     {% endif %}
       {% set columnHeading = contactUs.subTitle %}
+      {# Check if the heading is for sidebar content. #}
+      {% if outerAccordion != true %}
+        {% set level = level ? level + 1 : 4 %}
+        {% set columnHeading = columnHeading|merge({'level': level}) %}
+      {% endif %}
+      {% set level = columnHeading.level ?: 3 %}
       {% include "@atoms/04-headings/column-heading.twig" %}
+      {% set columnHeadingLevel = level %}
     {% if outerAccordion %}
       </button>
     {% endif %}
   {% endif %}
 
+  {# This sets parent heading level (h1) for optional contact in the preContent. #}
+  {% if columnHeadingLevel == null %}
+    {% set columnHeadingLevel = 1 %}
+  {% endif %}
+  {# Increase the heading level by 1 based on its parent. #}
+  {% set contactGroupLevel = columnHeadingLevel + 1 %}
   {% if inlineAccordion %}
     {# Show first 2 contact groups outside of accordion #}
     {% for contactGroup in contactUs.groups[:2] %}
+        {% set contactGroup = contactGroup|merge({'level': contactGroupLevel}) %}
       {% include "@molecules/contact-group.twig" %}
     {% endfor %}
-    
+
     {# Show 3rd+ contact groups inside of accordion (if they exist) #}
     <div class="ma__contact-us__extra js-accordion-content">
       {% for contactGroup in contactUs.groups[2:last] %}
+        {% set contactGroup = contactGroup|merge({'level': contactGroupLevel}) %}
         {% include "@molecules/contact-group.twig" %}
       {% endfor %}
     </div>
@@ -43,6 +58,7 @@
   {% else %}
     <div class="ma__contact-us__content js-accordion-content">
       {% for contactGroup in contactUs.groups %}
+        {% set contactGroup = contactGroup|merge({'level': contactGroupLevel}) %}
         {% include "@molecules/contact-group.twig" %}
       {% endfor %}
       {% if contactUs.decorativeLink %}

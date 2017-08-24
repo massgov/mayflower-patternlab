@@ -1,14 +1,15 @@
 {% set imageClass = pressTeaser.image ? 'ma__press-teaser--image' : '' %}
+{% set level = pressTeaser.level ? : 2 %}
 
 <section class="ma__press-teaser {{ imageClass }}">
   {% if pressTeaser.image %}
-    <a 
+    <a
       class="ma__press-teaser__image"
-      href="{{ pressTeaser.title.href }}" 
+      href="{{ pressTeaser.title.href }}"
       title="{{ pressTeaser.title.text }}">
       {% set image = pressTeaser.image %}
-      <span 
-        aria-label="{{ image.alt }}" 
+      <span
+        aria-label="{{ image.alt }}"
         role="img"
         style="background-image: url('{{ image.src }}')">
       </span>
@@ -20,10 +21,10 @@
         <span>{{ pressTeaser.eyebrow }}</span>
       </div>
     {% endif %}
-    <h2 class="ma__press-teaser__title">
+    <h{{ level }} class="ma__press-teaser__title">
       {% set decorativeLink = pressTeaser.title %}
       {% include "@atoms/decorative-link.twig" %}
-    </h2>
+    </h{{ level }}>
     {% if pressTeaser.date or pressTeaser.org %}
       <div class="ma__press-teaser__details">
         {% if pressTeaser.date %}
