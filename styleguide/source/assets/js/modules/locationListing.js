@@ -108,7 +108,7 @@ export default function (window,document,$,undefined) {
         }
 
         masterData.pagination = listing.transformPaginationData({data: masterData, targetPage: nextPage});
-        masterData.resultsHeading = transformResultsHeading({data: masterData, page: nextPage});
+        masterData.resultsHeading = listing.transformResultsHeading({data: masterData, page: nextPage});
         renderListingPage({data: masterData, page: nextPage});
 
         let markers = getActiveMarkers({data: masterData, page: nextPage});
@@ -270,12 +270,12 @@ export default function (window,document,$,undefined) {
   function transformData(data, transformation) {
     // First filter the data based on component state, then sort alphabetically by default.
     let filteredData = filterListingData(data, transformation),
-      sortedData = sortDataAlphabetically(filteredData),
+      sortedData = listing.sortDataAlphabetically(filteredData),
       place = '';
 
     // Sort data by location, if that filter is present.
-    if (hasFilter(filteredData.resultsHeading.tags, 'location')) {
-      place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
+    if (listing.hasFilter(filteredData.resultsHeading.tags, 'location')) {
+      place = listing.getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       if (ma.autocomplete.getPlace()) {
         place = ma.autocomplete.getPlace();
@@ -287,12 +287,12 @@ export default function (window,document,$,undefined) {
         // Geocode the address, then sort the markers and instance of locationListing masterData.
         ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
         // @todo limit geocode results to MA?
-        sortedData = geocodeAddressString(place, sortDataAroundPlace, filteredData);
+        sortedData = listing.geocodeAddressString(place, sortDataAroundPlace, filteredData);
       }
     }
 
     // Update the results heading based on the current items state.
-    sortedData.resultsHeading = transformResultsHeading({data: sortedData});
+    sortedData.resultsHeading = listing.transformResultsHeading({data: sortedData});
     // Update pagination data structure, reset to first page
     sortedData.pagination = listing.transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
     // Render the listing page.
@@ -320,20 +320,20 @@ export default function (window,document,$,undefined) {
    */
   function filterListingData(data, filterData) {
     // Get the currently active filters.
-    let filters = transformActiveTagsData({data: data, filterData: filterData});
+    let filters = listing.transformActiveTagsData({data: data, filterData: filterData});
     // Update the results heading tags with the new active filters.
     data.resultsHeading.tags = filters;
 
     // If tag (checkbox) filter is present, filter based on current tag values.
-    if (hasFilter(filters, 'tag')) {
+    if (listing.hasFilter(filters, 'tag')) {
       // Get just the tag values from the filters array.
-      let tags = getFilterValues(filters, 'tag');
+      let tags = listing.getFilterValues(filters, 'tag');
       // Identify active data based on filter.
-      return filterDataByTags(tags, data);
+      return listing.filterDataByTags(tags, data);
     }
 
     // Either there are no filters or the only active filter is location, make all items active
-    return makeAllActive(data);
+    return listing.makeAllActive(data);
   }
 
   /**
@@ -359,157 +359,6 @@ export default function (window,document,$,undefined) {
     }).map(function(item) {
       return item.marker;
     });
-  }
-
-  /**
-   * Creates the active filter object based on either cleared or submitted filter data.
-   *
-   * @param args
-   *   An object with the following structure:
-   *   data {
-   *    [masterData current instance]
-   *   },
-   *   filterData: {
-   *     clearedFilter: (optional cleared filter data)
-   *     {
-   *       type: '[filter type]: location || tag',
-   *       text: '[filter text or label]',
-   *       value: '[filter value]'
-   *     }, || 'all' (if clear all button was pressed)
-   *     {
-   *       formData: (optional submitted form filter data)
-   *       [
-   *         {
-   *           type: '[filter type] location || tag',
-   *           text: '[filter label]',
-   *           value: '[filter value]'
-   *         }, ...
-   *       ]
-   *     }
-   *   }
-   *
-   * @returns {*}
-   */
-  function transformActiveTagsData(args) {
-    if (args.filterData.hasOwnProperty('clearedFilter')) {
-      return getActiveFilters(args.data, args.filterData); // This was an active tag interaction, get remaining filters.
-    }
-    else {
-      return args.filterData.formData; // This was a form submission, so just return the applied form data.
-    }
-  }
-
-  /**
-   * Updates the resultsHeading data structure to reflect the current component state.
-   *
-   * @param args
-   *    Arguments object with the following structure:
-   *    args: {
-   *      data: the current instance of master data,
-   *      page: (optional) the current page, defaults to 1
-   *    }
-   *
-   * @returns {resultsHeading|{numResults, totalResults}|*}
-   */
-  function transformResultsHeading(args) {
-    let pageTotal = 0,
-      totalActive = 0,
-      page = args.page ? args.page : 1,
-      data = args.data,
-      resultsHeading = data.resultsHeading; // preserve active resultsHeading.tags
-
-    // Tally the total active and page length.
-    data.items.map(function(item){
-      if (item.isActive) {
-        totalActive += 1;
-        if (item.page === page) {
-          pageTotal += 1;
-        }
-      }
-    });
-
-    // Get the index (from 1) of the first and last items on this page.
-    let firstItem = (Number(data.maxItems) * Number(page)) - (Number(data.maxItems) - 1),
-      lastItem = firstItem + (Number(pageTotal) - 1);
-
-    resultsHeading.totalResults = totalActive;
-    resultsHeading.numResults = firstItem + " - " + lastItem; // @todo add accessibility consideration here
-
-    return resultsHeading;
-  }
-
-  /**
-   * Returns an array of the currently active filters, based on passed filterData.
-   *
-   * @param data
-   *   The current instance of master data structure.
-   *
-   * @param filterData
-   *  An object representing the cleared filter:
-   *  {
-   *    clearedFilter: {
-   *       type: '[filter type]: location || tag',
-   *       text: '[filter text or label]',
-   *       value: '[filter value]'
-   *     } || 'all' (if clear all button was pressed)
-   *  }
-   *
-   * @returns {Array}
-   *   An array of the currently active filters:
-   *   [  {
-   *        type:
-   *        text:
-   *        value:
-   *      }, ... ]
-   */
-  function getActiveFilters(data, filterData) {
-    // Single filter button clicked, so remove that filter from the list.
-    if (filterData.clearedFilter !== "all") {
-      let filters = data.resultsHeading.tags;
-      // Remove the clicked tag from the tags array.
-      return filters.filter(function (tag) {
-        return tag.value !== filterData.clearedFilter.value;
-      });
-    }
-    else {
-      // Clear all button was clicked so remove all filters.
-      return [];
-    }
-  }
-
-  /**
-   * Returns true if the passed filters array includes an item with the passed type.
-   *
-   * @param filters
-   *   Array of filters.
-   * @param type
-   *   The type of filter to search for.
-   *
-   * @returns {*|boolean}
-   */
-  function hasFilter(filters, type) {
-    return filters.some(function (filter) {
-      return filter.hasOwnProperty('type') && filter['type'] === type;
-    });
-  }
-
-  /**
-   * Returns the value(s) of the passed filters of the passed type.
-   *
-   * @param filters
-   *   Array of filters from which to abstract values.
-   * @param type
-   *   The type of filter to search for.
-   *
-   * @return array
-   *   An array of filter values of type.
-   */
-  function getFilterValues(filters, type) {
-    return filters.filter(function(data) {
-      return data.type === type;
-    }).map(function(data) {
-      return data.value;
-    })
   }
 
   /**
@@ -563,28 +412,6 @@ export default function (window,document,$,undefined) {
   }
 
   /**
-   * Returns an instance of master data which is sorted alphabetically by imagePromo.title.text
-   *
-   * @param data
-   *    The instance of master data being sorted.
-   *
-   * @returns {*}
-   *    Sorted instance of master data.
-   */
-  function sortDataAlphabetically(data) {
-    let items = data.items.sort(function(a, b) {
-      let nameA = a.promo.title.text.toUpperCase(),
-        nameB = b.promo.title.text.toUpperCase();
-      return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
-    });
-
-    let paginated = paginateItems(items, data.maxItems);
-    data.items = paginated.items;
-    data.totalPages = paginated.totalPages;
-    return data;
-  }
-
-  /**
    * Returns instance of location listing masterData, sorted proximity to place.
    *
    * @param place
@@ -608,139 +435,12 @@ export default function (window,document,$,undefined) {
     });
 
     // Update each location listing item's page number based on new marker sort order.
-    let paginated = paginateItems(data.items, data.maxItems);
+    let paginated = listing.paginateItems(data.items, data.maxItems);
     data.items = paginated.items;
     data.totalPages = paginated.totalPages;
 
     // Return the newly sorted instance of location listing masterData.
     return data;
-  }
-
-  /**
-   * Geocodes an address string arg and executes callback upon successful return.
-   *
-   * @param address
-   *   Address string to be geocoded.
-   * @param callback
-   *   Callback function to execute (with callbackArg).
-   * @param callbackArg
-   *   Argument to pass to callback.
-   *
-   * @returns {*}
-   *   Upon success, the return value of the passed callback function.
-   */
-  function geocodeAddressString(address, callback, callbackArg) {
-    // Only attempt to execute if google's geocode library is loaded.
-    if (typeof ma.geocoder === "undefined") {
-      return;
-    }
-    // Geocode address string, then execute callback with argument upon success.
-    return geocoder.geocode({address: address}, function (results, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-        return callback(results[0], callbackArg);
-      }
-      else {
-        console.warn('Geocode was not successful for the following reason: ' + status);
-      }
-    });
-  }
-
-  /**
-   * Resets all items in a master data instance to active (i.e. not filtered out).
-   *
-   * @param data
-   *    The instance of master data whose items are being made active.
-   *
-   * @returns {*}
-   *    The master data instance with all active items.
-   */
-  function makeAllActive(data) {
-    data.items = data.items.map(function(item){
-      item.isActive = true;
-      return item;
-    });
-    return data;
-  }
-
-  /**
-   * Returns masterData with necessary filtered items flagged inactive.
-   *
-   * @param tags
-   *  The array of filters by which to filter.
-   *
-   * @param data
-   *   The current instance of master data being filtered.
-   *
-   * @returns {*}
-   *   The 'filtered' (flagged) instance of master data.
-   */
-  function filterDataByTags(tags, data){
-    data.items = data.items.map(function(item) {
-      item.isActive = doesPromoContainTags(item.promo.tags, tags);
-      return item;
-    });
-
-    return data;
-  }
-
-  /**
-   * Determines if an masterData item contains the necessary tag(s).
-   *
-   * @param haystack
-   *  The imagePromo object in question.
-   *
-   * @param needle
-   *   The tag(s) being searched for.
-   *
-   * @returns {boolean|*}
-   */
-  function doesPromoContainTags(haystack, needle) {
-    return needle.every(function(v) {
-      return Boolean(haystack.filter(function(item){
-        return Object.values(item).indexOf(v) !== -1;
-      }).length);
-    });
-  }
-
-  /**
-   * Assigns page values to masterData items, based on the provided max number.
-   *
-   * @param items
-   *   The master data items.
-   *
-   * @param max
-   *   The max number of items to show per page.
-   *
-   * @returns
-   *   The updated master data items.
-   */
-  function paginateItems(items, max) {
-    let page = 1,
-      pageTotal = 0;
-    let paginatedItems = items.map(function(item){
-      if (item.isActive) {
-        if (pageTotal < max){
-          item.page = page;
-        }
-        else {
-          page += 1;
-          pageTotal = 0;
-          item.page = page;
-        }
-        pageTotal += 1;
-      }
-      return item;
-    });
-
-    return {
-      items: paginatedItems,
-      totalPages: page
-    }
-  }
-
-  // Remove the imagePromos children content on the current location listing page.
-  function clearListingPage() {
-    $(listingCol).find(listingParent).html('');
   }
 
   /**
@@ -754,7 +454,7 @@ export default function (window,document,$,undefined) {
    *   }
    */
   function renderListingPage(args) {
-    clearListingPage();
+    listing.clearListingPage(listingCol,listingParent);
     let $el = $(listingCol).find(listingParent),
       page = args.page ? args.page : 1;
 
