@@ -876,8 +876,12 @@
       "text": "See All Guides"
     },
     "pages": [{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -885,8 +889,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -894,8 +902,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
