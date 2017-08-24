@@ -51,9 +51,6 @@ Displays a collection of components to help describe an available Service on Mas
     },
 
     social: {
-      sidebarHeading: {
-        type: sidebarHeading / optional
-      },
       iconLinks: {
         type: iconLinks / optional
       }

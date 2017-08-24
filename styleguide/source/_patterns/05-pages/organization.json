@@ -105,16 +105,16 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
-      "data": {
-        "sidebarHeading": {
-          "title": "Social"
-        }
-      }
-    },{
       "path": "@molecules/icon-links.twig",
       "data": {
         "iconLinks": {
+          "compHeading": {
+            "title": "Social",
+            "sub": true,
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
           "items": [{
             "icon": "@atoms/05-icons/svg-twitter.twig",
             "link": {
