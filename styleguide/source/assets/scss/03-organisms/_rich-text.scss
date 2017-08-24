@@ -48,6 +48,7 @@ $rich-text-spacing-mobile: 1.5rem;
   h3:not(.ma__sidebar-heading),
   h4 {
     @include ma-comp-heading;
+    display: block;
   }
 
   h2 {
@@ -68,7 +69,12 @@ $rich-text-spacing-mobile: 1.5rem;
   }
 
   h5 {
+    display: block;
     margin-bottom: 0;
+  }
+
+  h6 {
+    display: block;
   }
 
   p {

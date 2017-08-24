@@ -3,11 +3,11 @@
     "title": {
       "text": "Activity Title",
       "href": "#",
-      "type": ""
+      "info": ""
     },
     "tags": null,
     "image": {
-      "src":"/assets/images/placeholder/190x107.png",
+      "src":"../../assets/images/placeholder/190x107.png",
       "alt": "placeholder image",
       "width": "190",
       "height": "107",

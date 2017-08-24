@@ -1,25 +1,19 @@
----
-title: Callout Alert
----
-Description: Displays an icon followed by an alert message which is usually a link to more information about the alert. 
+### Description
+Designed to Alert the reader to imporant information and can also be a link to another page.
 
-## Status: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Uses:
-- [@atoms/decorative-link](/?p=atoms-decorative-link)
-
-### Required Variables
+### Variables
 ~~~
 calloutAlert {
   decorativeLink: {
     href:
-      type: string/optional
+      type: string / optional
     text:
-      type: string/required
-    property:
-      type: string/optional ("schema")
+      type: string / required
     info:
-      type: string/optional
+      type: string / optional
     }
   }
 }

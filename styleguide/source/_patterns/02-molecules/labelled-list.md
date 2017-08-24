@@ -1,15 +1,8 @@
----
-title: Labelled List
----
-Description: Displays a list of data preceeded by a label about the data.
+### Description
+Displays a list of data preceeded by a label about the data
 
-## Status: alpha
-
-### Notes:
-
-### Contains
-
-### Used in:
+### Status
+* Stable as of 5.0.0
 
 
 ### Variables
@@ -17,9 +10,9 @@ Description: Displays a list of data preceeded by a label about the data.
 labelledList: {
   items: [{
     label: 
-      type: string/required,
+      type: string / required,
     text: 
-      type: string/required
+      type: string / required
   }]
 }
 ~~~

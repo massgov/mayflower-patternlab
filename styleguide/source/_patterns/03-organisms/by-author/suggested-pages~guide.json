@@ -1,46 +1,34 @@
 {
   "suggestedPages": {
     "title": "Related Guides",
-    "view":"guide",
+    "view": "guide",
     "buttonMinor" : {
       "href": "#",
-      "text": "See All Guides"
+      "text": "Do Something"
     },
     "pages": [{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
-        "type": "",
         "href": "#",
-        "text": "Buying Your First Home",
-        "label": "Guide:"
+        "text": "Title Link I",
+        "info": ""
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
-        "type": "",
         "href": "#",
-        "text": "Shopping for Auto Insurance",
-        "label": "Guide:"
+        "text": "Title Link II",
+        "info": ""
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
-        "type": "",
         "href": "#",
-        "text": "Education in Massachusetts",
-        "label": "Guide:"
-      }
-    },{
-      "image": "/assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
-      "link": {
-        "type": "",
-        "href": "#",
-        "text": "Education in Massachusetts",
-        "label": "Guide:"
+        "text": "Title Link III",
+        "info": ""
       }
     }]
   }

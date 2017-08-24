@@ -1,0 +1,15 @@
+{
+  "locationIcons": {
+    "title": "payment options",
+    "icons": [{
+      "path":"@atoms/05-icons/svg-credit.twig",
+      "name":"credit card"
+    },{
+      "path":"@atoms/05-icons/svg-check.twig",
+      "name":"check"
+    },{
+      "path":"@atoms/05-icons/svg-cash.twig",
+      "name":"cash"
+    }]
+  }
+}

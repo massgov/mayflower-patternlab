@@ -1,19 +1,10 @@
----
-title: Sidebar Heading
----
-Description: An `<h3>` element used as a subheading in the sidebar, designated by its CSS class.
+### Description
+An `<h3>` element used as a subheading.  Typically used in the right rail or in a 50/50 column container.
 
-## State: ALPHA
+### Status
+* Stable as of 3.0.0
 
-### Notes:
-
-### Used In:
-- [@pages/GUIDE-movng-to-ma-part1](/?p=pages-GUIDE-movng-to-ma-part1)
-- [@pages/GUIDE-movng-to-ma-part2](/?p=pages-GUIDE-movng-to-ma-part2)
-- [@pages/GUIDE-movng-to-ma-part3](/?p=pages-GUIDE-movng-to-ma-part3)
-- [@organisms/by-author/quick-actions](/?p=organisms-quick-actions)
-
-### Variables:
+### Variables
 ~~~
 sidebarHeading: {
     title:

@@ -54,7 +54,7 @@
       "align": "",
       "image": { 
         "alt": "alt text", 
-        "src": "/assets/images/placeholder/820x460.png",
+        "src": "../../assets/images/placeholder/820x460.png",
         "height": "",
         "width": ""
       },
@@ -243,7 +243,7 @@
         },
         "tags": null,
         "image": {
-          "src":"/assets/images/placeholder/100x100.png",
+          "src":"../../assets/images/placeholder/100x100.png",
           "alt": "placeholder image",
           "height": "100",
           "width": "100",
@@ -276,7 +276,7 @@
         },
         "tags": null,
         "image": {
-          "src":"/assets/images/placeholder/190x107.png",
+          "src":"../../assets/images/placeholder/190x107.png",
           "alt": "placeholder image",
           "height": "107",
           "width": "190",

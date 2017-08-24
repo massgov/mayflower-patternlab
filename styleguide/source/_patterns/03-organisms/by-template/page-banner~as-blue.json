@@ -1,0 +1,12 @@
+{
+  "pageBanner": {
+    "bgWide": "../../assets/images/placeholder/1600x400.png",
+    "bgNarrow": "../../assets/images/placeholder/800x400.png",
+    "size": "",
+    "icon": "@atoms/05-icons/svg-lg-park.twig",
+    "title": "Visiting & Exploring",
+    "titleSubText": "",
+    "description": "",
+    "color": "blue"
+  }
+}

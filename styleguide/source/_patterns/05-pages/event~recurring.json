@@ -71,7 +71,7 @@
       "data": {
         "image": { 
           "alt": "Mass Wildlife", 
-          "src": "/assets/images/placeholder/190x220.png",
+          "src": "../../assets/images/placeholder/190x220.png",
           "height": "220",
           "width": "190"
         }

@@ -1,40 +1,28 @@
----
-title: Comp Heading
----
-Description: An `<h2>` or `<h3>` element with a styled underline color designated by its CSS class.
+### Description
+An `<h2>` element with a styled underline color
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Notes:
+### Variant options
+* [Sub Heading](./?p=atoms-comp-heading-subheading) by setting 'sub' to true.
+* [Centered](./?p=atoms-comp-heading-centered) by setting 'centered' to true
+* [Yelllow Underline](./?p=atoms-comp-heading-yellow) by setting 'color' to "yellow"
 
-
-### Used In:
-- [@molecules/action-section](/?p=molecules-action-section)
-- [@organisms/by-author/key-actions](/?p=organisms-key-actions)
-- [@organisms/by-author/helpful-links](/?p=organisms-helpful-links)
-- [@organisms/by-author/form-download](/?p=organisms-form-download)
-- [@organisms/by-author/multi-row-section](/?p=organisms-multi-row-section)
-
-### Variables:
+### Variables
 ~~~
 compHeading: {
   title:
     type: string / required
   sub:
-    type: string ("true" || "" )
+    type: string ("true" || "" ) / optional
   color:
-    type: string ("yellow")
+    type: string ("yellow") / optional
   id:
-    type: string
+    type: string (unique per page) / optional
   centered:
     type: boolean
   sidebar: 
     type: boolean
 }
 ~~~
-
-### Variations
-- [@atoms/04-headings/comp-heading](/?p=atoms-comp-heading)
-- [@atoms/04-headings/comp-heading-subheading](/?p=atoms-comp-heading-subheading)
-- [@atoms/04-headings/comp-heading-yellow](/?p=atoms-comp-heading-yellow)
-- [@atoms/04-headings/comp-heading-centered](/?p=atoms-comp-heading-centered)

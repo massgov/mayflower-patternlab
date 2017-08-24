@@ -187,7 +187,7 @@
             "align": "align-right",
             "image": { 
               "alt": "alt text", 
-              "src": "/assets/images/placeholder/400x300.png",
+              "src": "../../assets/images/placeholder/400x300.png",
               "height": "",
               "width": ""
             },
