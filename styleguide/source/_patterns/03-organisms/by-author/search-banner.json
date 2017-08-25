@@ -2,25 +2,27 @@
   "searchBanner": {
     "bgWide": "../../assets/images/placeholder/1600x800.png",
     "bgNarrow": "../../assets/images/placeholder/800x800.png",
+    "id": "GUID935283478A",
     "imageName": "MIT Media Lab",
     "imageAuthor": "Sir Mix Alot",
-    "form": {
-      "path": "@molecules/search-banner-form.twig",
-      "content": {
-        "action": "",
-        "buttonText": "Search",
-        "inputText": {
-          "labelText": "Search terms",
-          "required": false,
-          "id": "GUID138490237",
-          "name": "search",
-          "type": "text",
-          "placeholder": "Search..."
-        }
+    "searchBannerForm": {
+      "action": "",
+      "buttonText": "Search",
+      "inputText": {
+        "labelText": "Search terms",
+        "required": false,
+        "id": "GUID138490237",
+        "name": "search",
+        "type": "text",
+        "placeholder": "Search..."
       }
     },
-    "title": "Welcome to Massachusetts",
-    "intro": "What would you like to do?",
+    "pageIntro": {
+      "pageTitle": {
+        "text": "Welcome to Massachusetts"
+      },
+      "subTitle": "What would you like to do?"
+    },
     "linkList": {
       "compHeading": {
         "title": "Popular Searches",

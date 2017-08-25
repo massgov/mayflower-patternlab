@@ -1,24 +1,25 @@
-<section class="ma__search-banner" id="GUID935283478">
+{% set patternId = searchBanner.id ? : "GUID935283478" %}
+
+<section class="ma__search-banner" id="{{ patternId }}">
   <style>
-    #GUID935283478 {
-      background-image: url('{{searchBanner.bgNarrow}}');
+    #{{ patternId }} {
+      background-image: url('{{ searchBanner.bgNarrow }}');
     }
 
     @media (min-width: 801px) {
-      #GUID935283478 {
-        background-image: url('{{searchBanner.bgWide}}');
+      #{{ patternId }} {
+        background-image: url('{{ searchBanner.bgWide }}');
       }
     }
   </style>
   <div class="ma__search-banner__container">
-    <h1 class="ma__search-banner__title">{{searchBanner.title}}</h1>
-    <div class="ma__search-banner__intro">{{searchBanner.intro}}</div>
-    {% set form = searchBanner.form %}
-    {% if form.path is not empty and form.content is not empty %}
-      {% include form.path with form.content %}
-    {% elseif form.content is not empty %}
-      {{ form.content }}
-    {% endif %}
+    {# backward compatible with v5.6 - pageIntro replaced title and intro #}
+    {% set pageIntro = searchBanner.pageIntro ? : { "pageTitle": { "text": searchBanner.title }, "subTitle": searchBanner.intro } %}
+    {% include "@molecules/page-intro.twig" %}
+
+    {% set searchBannerForm = searchBanner.searchBannerForm %}
+    {% include "@molecules/search-banner-form.twig" %}
+
     <div class="ma__search-banner__links">
       {% set linkList = searchBanner.linkList %}
       {% include "@organisms/by-author/link-list.twig" %}

@@ -11,11 +11,26 @@
     @include ma-container;
   }
 
+  .ma__page-intro {
+
+    h1 {
+      color: $c-font-inverse;
+      font-weight: 300;
+    }
+
+    &__sub-title {
+      color: $c-font-inverse;
+      font-weight: 400;
+    }
+  }
+
+  // backward compatible with v5.6 - title was replaced with Page Intro
   &__title {
     color: $c-font-inverse;
     font-weight: 300;
   }
 
+  // backward compatible with v5.6 - intro was replaced with Page Intro
   &__intro {
     color: $c-font-inverse;
     font-weight: 400;
