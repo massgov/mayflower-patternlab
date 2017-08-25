@@ -367,16 +367,22 @@ export default function (window,document,$,undefined) {
    *      data: the instance of master data to render
    *   }
    */
+
   function renderListingPage(args) {
-    $('.js-event-listing-items').html('');
-    let $el = $('.js-event-listing-items'),
-      page = args.page ? args.page : 1;
+    listing.clearListingPage('.js-event-listing-interactive','.js-event-listing-items');
+    let $el = $('.js-event-listing-interactive').find('.js-event-listing-items'),
+        page = args.page ? args.page : 1;
 
     args.data.items.forEach(function(item){
       if (item.isActive && item.page === page) {
         $el.append(item.markup);
       }
     });
+
+    // Focus on the first focusable element in the first listing
+    let $firstListing = $el.find('.ma__event-listing__item').first();
+    // :focusable is possible with helpers/jQueryExtend.js
+    $firstListing.find(':focusable').eq(0).focus();
   }
 
 
