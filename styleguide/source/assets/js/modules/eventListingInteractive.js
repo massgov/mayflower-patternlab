@@ -71,7 +71,7 @@ export default function (window,document,$,undefined) {
      * Returns a master data structure with page level / listing item level data and markup, to reflect component state.
      *
      * @param listing
-     *   The locationListing data structure to use as a source
+     *   The listing data structure to use as a source
      * @returns {Array}
      *   An array with the following structure:
      *    [
@@ -206,10 +206,11 @@ export default function (window,document,$,undefined) {
     let filteredData = listing.filterListingData(data, transformation),
         sortedData = listing.sortDataAlphabetically(filteredData),
         place = '';
-
-    if (ma.autocomplete.getPlace()) {
-      place = ma.autocomplete.getPlace();
-      sortedData = sortDataAroundPlace(place, sortedData);
+    if (listing.hasFilter(filteredData.resultsHeading.tags, 'location')) {
+      if (ma.autocomplete.getPlace()) {
+        place = ma.autocomplete.getPlace();
+        sortedData = sortDataAroundPlace(place, sortedData);
+      }
     }
 
     // Update the results heading based on the current items state.
