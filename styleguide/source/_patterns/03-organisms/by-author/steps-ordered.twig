@@ -1,8 +1,12 @@
+{% set level = stepsOrdered.compHeading.level ? : 3 %}
 <section class="ma__steps-ordered">
   {% if stepsOrdered.compHeading %}
     {% set compHeading = stepsOrdered.compHeading %}
+    {% set compHeading = compHeading|merge({'level': level}) %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
   {% endif %}
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   {% if stepsOrdered.sidebarHeading %}
     {% set sidebarHeading = stepsOrdered.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
@@ -11,6 +15,7 @@
     <ol class="ma__steps-ordered__items">
       {% for actionStep in stepsOrdered.steps %}
         <li class="ma__steps-ordered__item">
+          {% set actionStep = actionStep|merge({'level': level}) %}
           {% include "@molecules/action-step.twig" %}
         </li>
       {% endfor %}

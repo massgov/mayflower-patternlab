@@ -19,6 +19,8 @@ An Heading element with a background color
 coloredHeading {
   text: 
     type: string / required
+  level: 
+    type: integer / required
   color:
     type: string ('','green') / optional
 }
