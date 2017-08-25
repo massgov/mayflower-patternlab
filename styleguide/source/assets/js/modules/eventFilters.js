@@ -107,8 +107,10 @@ export default function (window,document,$,undefined) {
     if ($place.length) {
       $place.val("");
     }
-    // Uncheck all checked tags inputs.
-    $tags.find('input:checked').prop('checked', false);
+    // Check for tags and uncheck all checked tags inputs.
+    if (typeof $tags != "undefined") {
+      $tags.find('input:checked').prop('checked', false);
+    }
   }
 
 }(window,document,jQuery);
