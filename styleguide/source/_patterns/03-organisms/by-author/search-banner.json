@@ -3,8 +3,6 @@
     "bgWide": "../../assets/images/placeholder/1600x800.png",
     "bgNarrow": "../../assets/images/placeholder/800x800.png",
     "id": "GUID935283478A",
-    "imageName": "MIT Media Lab",
-    "imageAuthor": "Sir Mix Alot",
     "searchBannerForm": {
       "action": "",
       "buttonText": "Search",
@@ -54,6 +52,10 @@
         "text":"Learn about Fishing and Hunting",
         "chevron": "true"
       }]
+    },
+    "bannerCredit": {
+      "imageName": "MIT Media Lab",
+      "imageAuthor": "Sir Mix Alot"
     }
   }
 }

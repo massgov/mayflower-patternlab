@@ -192,6 +192,17 @@
     }
   }
 
+  .ma__banner-credit {
+    @include ma-container;
+    position: absolute;
+      bottom: 20px;
+      left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 3;
+  }
+
+  // Start backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
   &__image-credit {
     @include ma-container;
     position: absolute;
@@ -227,4 +238,6 @@
     font-size: 0.875rem;
     line-height: 1.125rem;
   }
+  // End backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
+
 }

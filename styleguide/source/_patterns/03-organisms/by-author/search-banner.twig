@@ -25,15 +25,13 @@
       {% include "@organisms/by-author/link-list.twig" %}
     </div>
   </div>
+  {# backward compatible with v5.6 - replaced imageName and imageAuthor with bannerCredit #}
   {% if searchBanner.imageName and searchBanner.imageAuthor %}
-    <div class="ma__search-banner__image-credit">
-      <div class="ma__search-banner__credits-container">
-        <div class="ma__search-banner__icon">
-          {% include "@atoms/05-icons/svg-marker-outline.twig" %}
-        </div>
-        <div class="ma__search-banner__image-name">{{ searchBanner.imageName }}</div>
-        <div class="ma__search-banner__image-author">{{ searchBanner.imageAuthor }}</div>
-      </div>
-    </div>
+    {% set bannerCredit = { "imageName": searchBanner.imageName, "imageAuthor": searchBanner.imageAuthor } %}
+    {% include "@molecules/banner-credit.twig" %}
+  {% endif %}
+  {% if searchBanner.bannerCredit %}
+    {% set bannerCredit = searchBanner.bannerCredit %}
+    {% include "@molecules/banner-credit.twig" %}
   {% endif %}
 </section>

@@ -108,6 +108,25 @@
     }
   }
 
+  .ma__banner-credit {
+    
+    &__icon {
+
+      & > svg {
+        fill: $c-font-inverse;
+      }
+    }
+
+    &__image-name {
+      color: rgba($c-font-inverse,.9);
+    }
+
+    &__image-author {
+      color: rgba($c-font-inverse, .5);
+    }
+  }
+
+  // Start backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
   &__image-credit {
 
   }
@@ -132,4 +151,5 @@
     color: rgba($c-font-inverse, .5);
     font-weight: 400;
   }
+  // End backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
 }
