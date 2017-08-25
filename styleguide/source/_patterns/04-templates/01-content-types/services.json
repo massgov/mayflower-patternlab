@@ -67,6 +67,7 @@
     "keyActions": {
       "compHeading": {
         "title": "Optional but required for eligibility requirements",
+        "level": 2,
         "sub": true
       },
       "links":[{
@@ -86,7 +87,7 @@
 
   "introSidebar": {
     "logo": {
-      "alt": "alt text", 
+      "alt": "alt text",
       "src": "../../assets/images/placeholder/230x130.png",
       "height": "130",
       "width": "230"
@@ -94,7 +95,8 @@
 
     "social": {
       "sidebarHeading": {
-        "title": "Social"
+        "title": "Social",
+        "level": 2,
       },
       "iconLinks": {
         "items": [{
@@ -124,7 +126,8 @@
 
     "linkList" : {
       "sidebarHeading": {
-        "title": "Optional - Offered By"
+        "title": "Optional - Offered By",
+        "level": 2,
       },
       "stacked": true,
       "links" : [{
@@ -215,6 +218,7 @@
   "mappedLocations": {
     "compHeading": {
       "title": "Locations",
+      "level": 2,
       "sub": "",
       "color": "",
       "id": "",
@@ -237,7 +241,7 @@
       "markers": [{
         "position": {
           "lat": 42.366565,
-          "lng": -71.058940 
+          "lng": -71.058940
         },
         "label": "A",
         "infoWindow": {
@@ -250,7 +254,7 @@
       },{
         "position": {
           "lat": 42.358795,
-          "lng": -71.063858 
+          "lng": -71.063858
         },
         "label": "B",
         "infoWindow": {
@@ -268,6 +272,7 @@
     "grid": true,
     "compHeading":{
       "title": "Upcoming Events",
+      "level": 2,
       "sub": "",
       "color": "",
       "id": "",
@@ -323,7 +328,8 @@
         "data": {
           "linkList" : {
             "sidebarHeading": {
-              "title": "Related Services"
+              "title": "Related Services",
+              "level": 2
             },
             "stacked": true,
             "links" : [{
@@ -345,7 +351,8 @@
         "data": {
           "formDownloads": {
             "sidebarHeading": {
-              "title": "Additional Resources"
+              "title": "Additional Resources",
+              "level": 2
             },
             "downloadLinks": [{
               "downloadLink": {

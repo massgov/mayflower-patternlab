@@ -1,4 +1,5 @@
 {
+  "level": 1,
   "pageHeader": {
     "category": "",
     "divider": false,
@@ -13,6 +14,7 @@
   "formRequirements": {
     "rteTitle": {
       "text": "You will need:",
+      "level": 2,
       "href": "",
       "info": ""
     },
@@ -21,11 +23,11 @@
       "rteElements": [{
         "path": "@atoms/08-lists/unordered-list.twig",
         "data": {
-          "unorderedList": [{ 
-            "text": "Vestibulum ornare feugiat sodales" 
-          },{ 
+          "unorderedList": [{
+            "text": "Vestibulum ornare feugiat sodales"
+          },{
             "text": "Suspendisse fermentum augue eget semper feugiat"
-          },{ 
+          },{
             "text": "Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien"
           },{
             "text":"Integer quis suscipit dui"
@@ -62,14 +64,17 @@
     "contactList": {
       "viewSpecific": false,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "level": 2
       },
       "contacts":[{
         "subTitle": {
           "href":"",
-          "text": "Name of Agency or Organization"
+          "text": "Name of Agency or Organization",
+          "level": 3
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -85,6 +90,7 @@
             "details":""
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -110,6 +116,7 @@
 
     "errorList": {
       "title": "Sorry, please correct the indicated errors",
+      "level": 2,
       "labels": [{
         "inputId": "your-name-23489",
         "text": "Please fill in the first field",
@@ -120,6 +127,7 @@
     "groups": [{
       "compHeading": {
         "title": "Name of Section",
+        "level": 3,
         "sub": "",
         "color": "",
         "id": "",

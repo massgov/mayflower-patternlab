@@ -1,4 +1,5 @@
 {
+  "level": 1,
   "pageHeader": {
     "category": "type of press release",
     "divider": false,
@@ -52,8 +53,8 @@
 
     "figure": {
       "align": "",
-      "image": { 
-        "alt": "alt text", 
+      "image": {
+        "alt": "alt text",
         "src": "../../assets/images/placeholder/820x460.png",
         "height": "",
         "width": ""
@@ -88,7 +89,8 @@
 
     "contactList": {
       "compHeading": {
-        "title": "Media Contacts"
+        "title": "Media Contacts",
+        "level": 2
       },
 
       "contacts":[{
@@ -96,9 +98,11 @@
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Tom Lyons"
+          "text": "Tom Lyons".
+          "level": 3
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -114,6 +118,7 @@
             "details": ""
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -130,6 +135,7 @@
             "details":""
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
           "items": [{
@@ -145,6 +151,7 @@
             "details":"Please allow 24 hours for a response"
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-marker.twig",
           "name": "Address",
           "items": [{
@@ -166,9 +173,11 @@
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Betty White"
+          "text": "Betty White",
+          "level": 3
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -184,6 +193,7 @@
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -200,6 +210,7 @@
             "details":""
           }]
         },{
+         "level": 4,
           "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
           "items": [{
@@ -215,6 +226,7 @@
             "details":"Please allow 24 hours for a response"
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-marker.twig",
           "name": "Address",
           "items": [{
@@ -238,6 +250,7 @@
       "imagePromos": [{
         "title": {
           "text": "Office of the Governor",
+          "level": 2,
           "href": "#",
           "type": ""
         },
@@ -271,6 +284,7 @@
       },{
         "title": {
           "text": "Another Org",
+          "level": 2,
           "href": "#",
           "type": ""
         },
@@ -335,7 +349,8 @@
   "sidebar": {
     "contactList": {
       "sidebarHeading": {
-        "title": "Media Contact"
+        "title": "Media Contact",
+        "level": 2
       },
 
       "contacts":[{
@@ -343,9 +358,11 @@
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Tom Lyons"
+          "text": "Tom Lyons",
+          "level": 3
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -361,6 +378,7 @@
             "details": ""
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -382,7 +400,8 @@
 
     "pressListing": {
       "sidebarHeading": {
-        "title": "Related"
+        "title": "Related",
+        "level": 2
       },
       "items": [{
         "eyebrow": "Press Release",

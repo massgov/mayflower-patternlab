@@ -1,3 +1,6 @@
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
 {% include "@organisms/by-template/emergency-alerts.twig" %}
 {% include "@organisms/by-template/header.twig" %}
 <main class="ma__form-page" id="main-content" tabindex="-1">
@@ -6,6 +9,8 @@
       {% include "@organisms/by-template/page-header.twig" %}
     {% endblock %}
   </div>
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   <div class="main-content main-content--two">
     <div class="page-content">
       {% if formRequirements %}

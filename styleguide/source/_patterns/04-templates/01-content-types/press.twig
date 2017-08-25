@@ -1,3 +1,6 @@
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
 {# site header #}
 {% block header %}{% endblock %}
 
@@ -7,6 +10,8 @@
       {% include "@organisms/by-template/page-header.twig" %}
     {% endblock %}
   </div>
+{# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   <div class="main-content main-content--two">
     <div class="page-content ma__press__page-content">
       {% if pageContent.pressStatus %}
@@ -28,7 +33,7 @@
         {% set video = pageContent.video %}
         {% include "@atoms/09-media/video.twig" %}
       {% endif %}
-      
+
       {% if pageContent.location %}
         <p class="ma__press__location-label"><b>{{ pageContent.location }}</b>&nbsp;&mdash;&nbsp;</p>
       {% endif %}
@@ -44,11 +49,15 @@
 
       {% if pageContent.contactList %}
         {% set contactList = pageContent.contactList %}
+        {% set compHeading = contactList.compHeading|merge({'level': level}) %}
+        {% set contactList = contactList|merge({'compHeading': compHeading}) %}
         {% include "@organisms/by-author/contact-list.twig" %}
       {% endif %}
 
       {% if pageContent.personalMessage %}
         {% set personalMessage = pageContent.personalMessage %}
+        {% set imagePromos = personalMessage.imagePromos|merge({'level': level}) %}
+        {% set personalMessage = personalMessage|merge({'imagePromos': imagePromos}) %}
         {% include "@organisms/by-author/personal-message.twig" %}
       {% endif %}
 

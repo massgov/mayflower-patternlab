@@ -1,9 +1,12 @@
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
 {# site header #}
 {% block header %}{% endblock %}
 
-<main 
+<main
   id="main-content"
-  class="ma__details ma__details--location" 
+  class="ma__details ma__details--location"
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -17,11 +20,14 @@
       {% endif %}
     {% endblock %}
   </div>
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   <div class="main-content main-content--two">
 
     <div class="page-content">
       {% set coloredHeading = {
         "text": location.contentTitle,
+        "level": 2,
         "color": "green"
       } %}
       {% include "@atoms/04-headings/colored-heading.twig" %}
@@ -50,7 +56,7 @@
         {% endblock %}
       {% endif %}
     </aside>
-    
+
   </div>
   <div class="post-content">
     {% block postContent %}
@@ -64,4 +70,4 @@
 
 {# site footer #}
 {% block footer %}{% endblock %}
-  
+

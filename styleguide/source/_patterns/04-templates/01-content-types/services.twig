@@ -1,11 +1,14 @@
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
 {% set mainContentClass = introSidebar ? 'main-content--two' : 'main-content--full' %}
 
 {% block header %}
 
 {% endblock %}
-<main 
-  id="main-content" 
-  class="ma__services" 
+<main
+  id="main-content"
+  class="ma__services"
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -14,6 +17,8 @@
       {% include "@organisms/by-template/page-banner.twig" %}
     {% endblock %}
   </div>
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   <div class="stacked-row-content">
     <section class="ma__stacked-row-section">
       <div class="main-content {{ mainContentClass }}">
@@ -33,6 +38,8 @@
 
             {% if introPageContent.keyActions %}
               {% set keyActions = introPageContent.keyActions %}
+              {% set keyActions = keyActions|merge({'level': level}) %}
+              {% include "@organisms/by-author/key-actions.twig" %}
               {% include "@organisms/by-author/key-actions.twig" %}
             {% endif %}
           {% endblock %}

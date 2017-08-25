@@ -1,4 +1,5 @@
 {
+  "level": 1,
   "pageHeader": {
     "category": "required category",
     "divider": false,
@@ -78,6 +79,7 @@
     "contents": [{
       "compHeading": {
         "title": "Rich text",
+        "level": 2,
         "sub": false,
         "color": "",
         "id": "rich-text",
@@ -117,6 +119,7 @@
     "formDownloads": {
       "compHeading": {
         "title": "Downloads",
+        "level": 2,
         "sub": false,
         "color": "",
         "id": "downloads",
@@ -168,6 +171,7 @@
       "viewSpecific": false,
       "compHeading":{
         "title": "Contact",
+        "level": 2,
         "sub": false,
         "color": "",
         "id": "contact",
@@ -178,9 +182,11 @@
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Person to Contact"
+          "text": "Person to Contact",
+          "level": 3
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -196,6 +202,7 @@
             "details":""
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -363,7 +370,7 @@
         },
         "location": "location",
         "date": {
-          "summary": "Date" 
+          "summary": "Date"
         },
         "time": "Time",
         "description":"This is a description of the event that will happen at a future date"
