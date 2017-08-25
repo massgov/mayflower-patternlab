@@ -48,6 +48,48 @@
       "events":[{
         "title": {
           "href": "#",
+          "text": "Indianapolis Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Indianapolis, IN",
+        "position": {
+          "lat": 39.768403,
+          "lng": -86.158068
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
+          "text": "Albuquerque Hike",
+          "info": "",
+          "property": ""
+        },
+        "location": "Albuquerque, New Mexico",
+        "position": {
+          "lat": 35.085334,
+          "lng": -106.605553
+        },
+        "date": {
+          "summary": "March 2, 2017 - April 25, 2017",
+          "startMonth": "Mar",
+          "startDay": "2",
+          "endMonth": "Apr",
+          "endDay": "25"
+        },
+        "time": "2 p.m. - 3 p.m.",
+        "description": "sit amet, consectetur adipisicing elit"
+      },{
+        "title": {
+          "href": "#",
           "text": "Winter Birding Event",
           "info": "",
           "property": ""
@@ -153,35 +195,14 @@
       },{
         "title": {
           "href": "#",
-          "text": "Indianapolis Hike",
+          "text": "Attleboro Hike",
           "info": "",
           "property": ""
         },
-        "location": "Indianapolis, IN",
+        "location": "Attleboro, MA",
         "position": {
-          "lat": 39.768403,
-          "lng": -86.158068
-        },
-        "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
-          "startDay": "2",
-          "endMonth": "Apr",
-          "endDay": "25"
-        },
-        "time": "2 p.m. - 3 p.m.",
-        "description": "sit amet, consectetur adipisicing elit"
-      },{
-        "title": {
-          "href": "#",
-          "text": "Albuquerque Hike",
-          "info": "",
-          "property": ""
-        },
-        "location": "Albuquerque, New Mexico",
-        "position": {
-          "lat": 35.085334,
-          "lng": -106.605553
+          "lat": 41.9462525,
+          "lng": -71.289677
         },
         "date": {
           "summary": "March 2, 2017 - April 25, 2017",
