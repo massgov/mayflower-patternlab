@@ -1,13 +1,13 @@
 .ma__video {
   @include clearfix;
-  
+
   &__container {
     padding: 13px;
   }
 
   @media ($bp-small-min) {
-  
-    &--right &__container {
+
+    &--right {
       float: right;
       margin-left: 1em;
       margin-bottom: 1em;
