@@ -7,6 +7,7 @@
 <main id="main-content" tabindex="-1"{% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   {# Increase heading number by 1 from the parent heading. #}
   {% set level = level + 1 %}
+  {% set compHeadingLevel = level %}
   <div class="pre-content">
     {% block preContent %}
       {% include "@organisms/by-template/page-header.twig" %}
