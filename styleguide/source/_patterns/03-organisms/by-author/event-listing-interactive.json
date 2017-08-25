@@ -1,5 +1,6 @@
 {
   "eventListingInteractive": {
+    "maxItems": 10,
     "eventFilters": {
       "zipcode": {
         "inputText": {
