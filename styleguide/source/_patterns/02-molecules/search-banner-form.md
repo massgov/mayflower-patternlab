@@ -9,15 +9,13 @@ This Pattern is a form with an large search input and button.
 
 ### Variables
 ~~~
-form: {
-  content: {
-    action:
-      type: string / required
-    buttonText:
-      type: string / required
-    inputText: {
-      type: inputText / required
-    }
+searchBannerForm: {
+  action:
+    type: string / required
+  buttonText:
+    type: string / required
+  inputText: {
+    type: inputText / required
   }
 }
 ~~~
