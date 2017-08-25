@@ -204,8 +204,10 @@ export default function (window,document,$,undefined) {
    *  An object with the current state masterData instance and an array of their related sorted markers to send to map.
    */
   function transformData(data, transformation) {
-    let sortedData = listing.sortDataAlphabetically(data);
-    let place = '';
+    // First filter the data based on component state, then sort alphabetically by default.
+    let filteredData = filterListingData(data, transformation),
+        sortedData = listing.sortDataAlphabetically(filteredData),
+        place = '';
 
     if (ma.autocomplete.getPlace()) {
       place = ma.autocomplete.getPlace();
