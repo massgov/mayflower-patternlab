@@ -14,6 +14,7 @@
   <div class="main-content main-content--two">
     <div class="page-content">
       {% if formRequirements %}
+        {% set formRequirements = formRequirements|merge({'level': level}) %}
         {% include "@organisms/by-author/form-requirements.twig" %}
       {% endif %}
       {% block pageContentAbove %}
