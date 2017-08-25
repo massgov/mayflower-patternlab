@@ -225,7 +225,7 @@ export default function (window,document,$,undefined) {
         page: Math.ceil((index+1) / max),
         marker: item,
         markup: markup[index],
-        promo: listing[index]
+        data: listing[index]
       };
     });
     return items;

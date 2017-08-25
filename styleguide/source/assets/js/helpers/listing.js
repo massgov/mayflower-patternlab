@@ -241,7 +241,7 @@ module.exports = function(window, document, undefined, $){
   }
 
   /**
-   * Returns an instance of master data which is sorted alphabetically by imagePromo.title.text
+   * Returns an instance of master data which is sorted alphabetically by item data.title.text
    *
    * @param data
    *    The instance of master data being sorted.
@@ -250,17 +250,11 @@ module.exports = function(window, document, undefined, $){
    *    Sorted instance of master data.
    */
   function sortDataAlphabetically(data) {
-    let type = ['promo', 'event'];
-
     let items = data.items.sort(function(a, b) {
-      // To use for events, maybe we create a map array of the "item" i.e. promo, event
-      $.each(type, function( key, value ) {
-        if (a.hasOwnProperty(value)) {
-          let nameA = a.value.title.text.toUpperCase(),
-            nameB = b.value.title.text.toUpperCase();
-          return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
-        }
-      });
+      let nameA = a.data.title.text.toUpperCase();
+      let nameB = b.data.title.text.toUpperCase();
+      // Sort the items alphabetically
+      return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
     });
 
     let paginated = paginateItems(items, data.maxItems);
@@ -315,8 +309,9 @@ module.exports = function(window, document, undefined, $){
    *   The 'filtered' (flagged) instance of master data.
    */
   function filterDataByTags(tags, data){
+    // @todo use map similar to sortDataAlphabetically
     data.items = data.items.map(function(item) {
-      item.isActive = doesPromoContainTags(item.promo.tags, tags);
+      item.isActive = doesItemContainTags(item.data.tags, tags);
       return item;
     });
 
@@ -327,14 +322,14 @@ module.exports = function(window, document, undefined, $){
    * Determines if an masterData item contains the necessary tag(s).
    *
    * @param haystack
-   *  The imagePromo object in question.
+   *  The data object in question.
    *
    * @param needle
    *   The tag(s) being searched for.
    *
    * @returns {boolean|*}
    */
-  function doesPromoContainTags(haystack, needle) {
+  function doesItemContainTags(haystack, needle) {
     return needle.every(function(v) {
       return Boolean(haystack.filter(function(item){
         return Object.values(item).indexOf(v) !== -1;
@@ -400,6 +395,7 @@ module.exports = function(window, document, undefined, $){
     paginateItems,
     clearListingPage,
     sortDataAlphabetically,
+    geocodeAddressString,
     makeAllActive
   };
 
