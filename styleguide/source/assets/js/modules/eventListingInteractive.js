@@ -120,11 +120,11 @@ export default function (window,document,$,undefined) {
 
       // The max number of items per page, if designated in locationListing data structure, else all
       masterData.maxItems = listing.maxItems ? listing.maxItems : masterListing.length;
+
       // The initial results heading data structure
       masterData.resultsHeading = listing.resultsHeading;
-      // The array of items and their respective page, in/active status, marker data, imagePromo data, and markup
 
-      // Create a new function "getMasterListingWithMarkup"
+      // Create items with listing and markup.
       masterData.items = getMasterListingWithMarkup(masterListing, masterListingMarkup, masterData.maxItems);
 
       // The initial pagination data structure + currentPage;
@@ -275,24 +275,9 @@ export default function (window,document,$,undefined) {
     item.tags = tags;
 
     let tagsData = {
-      tagsFormatted: item.tags.map(transformTag)
+      tagsFormatted: item.tags.map(listing.transformTag)
     };
     return Object.assign({}, item, tagsData);
-  }
-
-  /**
-   * Returns a formatted item.tag object with a label and svg icon markup.
-   *
-   * @param tag
-   *   The tag being transformed.
-   *
-   * @returns {{label, svg: boolean}}
-   */
-  function transformTag(tag) {
-    return {
-      label: tag.label,
-      svg: getSvgFromTag(tag.id)
-    };
   }
 
   /**

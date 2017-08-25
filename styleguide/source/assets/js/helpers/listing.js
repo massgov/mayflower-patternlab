@@ -385,6 +385,21 @@ module.exports = function(window, document, undefined, $){
     return dist
   }
 
+  /**
+   * Returns a formatted item.tag object with a label and svg icon markup.
+   *
+   * @param tag
+   *   The tag being transformed.
+   *
+   * @returns {{label, svg: boolean}}
+   */
+  function transformTag(tag) {
+    return {
+      label: tag.label,
+      svg: getSvgFromTag(tag.id)
+    };
+  }
+
   return {
     transformPaginationData,
     transformResultsHeading,
@@ -397,7 +412,8 @@ module.exports = function(window, document, undefined, $){
     sortDataAlphabetically,
     geocodeAddressString,
     makeAllActive,
-    calculateDistance
+    calculateDistance,
+    transformTag
   };
 
 }(window, document, undefined, jQuery);

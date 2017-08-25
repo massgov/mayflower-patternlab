@@ -377,24 +377,9 @@ export default function (window,document,$,undefined) {
     promo.tags = tags;
 
     let tagsData = {
-      tagsFormatted: promo.tags.map(transformTag)
+      tagsFormatted: promo.tags.map(listing.transformTag)
     };
     return Object.assign({},promo,tagsData);
-  }
-
-  /**
-   * Returns a formatted imagePromo.tag object with a label and svg icon markup.
-   *
-   * @param tag
-   *   The tag being transformed.
-   *
-   * @returns {{label, svg: boolean}}
-   */
-  function transformTag(tag) {
-    return {
-      label: tag.label,
-      svg: getSvgFromTag(tag.id)
-    };
   }
 
   /**
