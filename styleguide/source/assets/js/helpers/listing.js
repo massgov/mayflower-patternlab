@@ -1,4 +1,6 @@
-module.exports = function(window, document, undefined, $){
+import getTemplate from "../helpers/getHandlebarTemplate.js";
+
+export default  function(window, document, undefined, $){
   "use strict";
 
   /**
@@ -84,6 +86,30 @@ module.exports = function(window, document, undefined, $){
     resultsHeading.numResults = firstItem + " - " + lastItem; // @todo add accessibility consideration here
 
     return resultsHeading;
+  }
+
+  /**
+   * Creates an array with generated markup for location listing items, preserving original index.
+   *
+   * @param listing
+   *  The array of items
+   * @param template
+   *  The string name of the template
+   * @param transformFunction
+   *  The name of the function to call to transform pattern data
+   *
+   * @returns {Array}
+   *  An array of compiled markup
+   */
+  function transformListing(listing, template, transformFunction) {
+    // Get template for location listing (organisms > imagePromo)
+    let compiledTemplate = getTemplate(template);
+    let listingMarkup = [];
+    listing.forEach(function (data, index) {
+      let itemData = transformFunction(data);
+      listingMarkup[index] = compiledTemplate(itemData);
+    });
+    return listingMarkup;
   }
 
   /**
@@ -241,6 +267,33 @@ module.exports = function(window, document, undefined, $){
   }
 
   /**
+   * Filters the listing data based on component filter state.
+   *
+   * @param data
+   *  An instance of masterData to start from.
+   * @param filterData
+   *  Data structure representing either the newly applied or cleared filters.
+   * @returns {*}
+   */
+  function filterListingData(data, filterData) {
+    // Get the currently active filters.
+    let filters = transformActiveTagsData({data: data, filterData: filterData});
+    // Update the results heading tags with the new active filters.
+    data.resultsHeading.tags = filters;
+
+    // If tag (checkbox) filter is present, filter based on current tag values.
+    if (hasFilter(filters, 'tag')) {
+      // Get just the tag values from the filters array.
+      let tags = getFilterValues(filters, 'tag');
+      // Identify active data based on filter.
+      return filterDataByTags(tags, data);
+    }
+
+    // Either there are no filters or the only active filter is location, make all items active
+    return makeAllActive(data);
+  }
+
+  /**
    * Returns an instance of master data which is sorted alphabetically by item data.title.text
    *
    * @param data
@@ -253,6 +306,7 @@ module.exports = function(window, document, undefined, $){
     let items = data.items.sort(function(a, b) {
       let nameA = a.data.title.text.toUpperCase();
       let nameB = b.data.title.text.toUpperCase();
+
       // Sort the items alphabetically
       return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
     });
@@ -293,8 +347,21 @@ module.exports = function(window, document, undefined, $){
   }
 
   /**
-   * Location Listing Specific
+   * Resets all items in a master data instance to active (i.e. not filtered out).
+   *
+   * @param data
+   *    The instance of master data whose items are being made active.
+   *
+   * @returns {*}
+   *    The master data instance with all active items.
    */
+  function makeAllActive(data) {
+    data.items = data.items.map(function(item){
+      item.isActive = true;
+      return item;
+    });
+    return data;
+  }
 
   /**
    * Returns masterData with necessary filtered items flagged inactive.
@@ -319,6 +386,10 @@ module.exports = function(window, document, undefined, $){
   }
 
   /**
+   * Location Listing Specific
+   */
+
+  /**
    * Determines if an masterData item contains the necessary tag(s).
    *
    * @param haystack
@@ -338,20 +409,24 @@ module.exports = function(window, document, undefined, $){
   }
 
   /**
-   * Resets all items in a master data instance to active (i.e. not filtered out).
+   * Returns transformed imagePromo data object.
    *
-   * @param data
-   *    The instance of master data whose items are being made active.
+   * @param promo
+   *   The imagePromo.item[]{} being transformed.
    *
    * @returns {*}
-   *    The master data instance with all active items.
+   *   The original imagePromo object with a formatted tag property.
    */
-  function makeAllActive(data) {
-    data.items = data.items.map(function(item){
-      item.isActive = true;
-      return item;
-    });
-    return data;
+  function promoTransform(promo) {
+    // Ensure tags are an array.
+    let tags = [];
+    $.map(promo.tags, function(val, index) { tags[index] = val; });
+    promo.tags = tags;
+
+    let tagsData = {
+      tagsFormatted: promo.tags.map(listings.transformTag)
+    };
+    return Object.assign({},promo,tagsData);
   }
 
   /**
@@ -400,9 +475,24 @@ module.exports = function(window, document, undefined, $){
     };
   }
 
+  /**
+   * Returns the svg element markup from the corresponding tag filter checkbox label icon
+   *
+   * @param tag
+   *  The imagePromo tag.id whose icon we need
+   *
+   * @return string
+   *  The svg element for the matching filter form tag input.
+   */
+  function getSvgFromTag(tag) {
+    // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
+    return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+  }
+
   return {
     transformPaginationData,
     transformResultsHeading,
+    filterListingData,
     hasFilter,
     getFilterValues,
     filterDataByTags,
@@ -413,7 +503,8 @@ module.exports = function(window, document, undefined, $){
     geocodeAddressString,
     makeAllActive,
     calculateDistance,
-    transformTag
+    transformTag,
+    transformListing
   };
 
 }(window, document, undefined, jQuery);

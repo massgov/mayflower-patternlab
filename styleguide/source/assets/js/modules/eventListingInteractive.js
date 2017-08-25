@@ -72,8 +72,6 @@ export default function (window,document,$,undefined) {
      *
      * @param listing
      *   The locationListing data structure to use as a source
-     * @param markers
-     *   The array of map markers created by component google map (googleMaps.js module)
      * @returns {Array}
      *   An array with the following structure:
      *    [
@@ -205,7 +203,7 @@ export default function (window,document,$,undefined) {
    */
   function transformData(data, transformation) {
     // First filter the data based on component state, then sort alphabetically by default.
-    let filteredData = filterListingData(data, transformation),
+    let filteredData = listing.filterListingData(data, transformation),
         sortedData = listing.sortDataAlphabetically(filteredData),
         place = '';
 
@@ -226,33 +224,6 @@ export default function (window,document,$,undefined) {
       data: sortedData,
       place: place
     };
-  }
-
-  /**
-   * Filters the listing data based on component filter state.
-   *
-   * @param data
-   *  An instance of masterData to start from.
-   * @param filterData
-   *  Data structure representing either the newly applied or cleared filters.
-   * @returns {*}
-   */
-  function filterListingData(data, filterData) {
-    // Get the currently active filters.
-    let filters = listing.transformActiveTagsData({data: data, filterData: filterData});
-    // Update the results heading tags with the new active filters.
-    data.resultsHeading.tags = filters;
-
-    // If tag (checkbox) filter is present, filter based on current tag values.
-    if (listing.hasFilter(filters, 'tag')) {
-      // Get just the tag values from the filters array.
-      let tags = listing.getFilterValues(filters, 'tag');
-      // Identify active data based on filter.
-      return listing.filterDataByTags(tags, data);
-    }
-
-    // Either there are no filters or the only active filter is location, make all items active
-    return listing.makeAllActive(data);
   }
 
   /**
