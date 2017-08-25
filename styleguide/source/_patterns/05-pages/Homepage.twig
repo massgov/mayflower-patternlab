@@ -5,7 +5,9 @@
   {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
 
-{% block preContent %}{% endblock %}
+{% block preContent %}
+  {% include "@organisms/by-author/search-banner.twig" %}
+{% endblock %}
 
 {% block postContent %}{% endblock %}
 
