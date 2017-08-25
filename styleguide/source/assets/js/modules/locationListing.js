@@ -247,7 +247,7 @@ export default function (window,document,$,undefined) {
    */
   function transformData(data, transformation) {
     // First filter the data based on component state, then sort alphabetically by default.
-    let filteredData = filterListingData(data, transformation),
+    let filteredData = listings.filterListingData(data, transformation),
       sortedData = listings.sortDataAlphabetically(filteredData),
       place = '';
 
@@ -285,6 +285,27 @@ export default function (window,document,$,undefined) {
       markers: markers,
       place: place
     };
+  }
+
+  /**
+   * Returns transformed imagePromo data object.
+   *
+   * @param promo
+   *   The imagePromo.item[]{} being transformed.
+   *
+   * @returns {*}
+   *   The original imagePromo object with a formatted tag property.
+   */
+  function promoTransform(promo) {
+    // Ensure tags are an array.
+    let tags = [];
+    $.map(promo.tags, function(val, index) { tags[index] = val; });
+    promo.tags = tags;
+
+    let tagsData = {
+      tagsFormatted: promo.tags.map(listings.transformTag)
+    };
+    return Object.assign({},promo,tagsData);
   }
 
   /**

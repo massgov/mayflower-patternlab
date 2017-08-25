@@ -409,27 +409,6 @@ export default  function(window, document, undefined, $){
   }
 
   /**
-   * Returns transformed imagePromo data object.
-   *
-   * @param promo
-   *   The imagePromo.item[]{} being transformed.
-   *
-   * @returns {*}
-   *   The original imagePromo object with a formatted tag property.
-   */
-  function promoTransform(promo) {
-    // Ensure tags are an array.
-    let tags = [];
-    $.map(promo.tags, function(val, index) { tags[index] = val; });
-    promo.tags = tags;
-
-    let tagsData = {
-      tagsFormatted: promo.tags.map(listings.transformTag)
-    };
-    return Object.assign({},promo,tagsData);
-  }
-
-  /**
    * Calculate distance from lat/lng.
    *
    * @param lat1
