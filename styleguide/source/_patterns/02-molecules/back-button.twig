@@ -1,3 +1,18 @@
 <div class="ma__back-button">
-  <a href="{{ backButton.link.href }}" title="{{ backButton.link.info }}">{{ backButton.link.text }}</a>
+  {% set button = backButton.button %}
+
+  {# backward compatible with v5.6 - swapped custom link with a button #}
+  {% if backButton.link %} 
+    {% set button =  
+    { "href": backButton.link.href,
+      "info": backButton.link.info,
+      "text": backButton.link.text,
+      "type": "link",
+      "size": "small",
+      "theme": "",
+      "outline": true
+    } %}
+  {% endif %}
+
+  {% include "@atoms/01-buttons/button.twig" %}
 </div>
