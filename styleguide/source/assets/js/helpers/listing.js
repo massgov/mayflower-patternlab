@@ -1,4 +1,4 @@
-module.exports = function(window, document, undefined){
+module.exports = function(window, document, undefined, $){
   "use strict";
 
   /**
@@ -403,5 +403,5 @@ module.exports = function(window, document, undefined){
     makeAllActive
   };
 
-}(window, document);
+}(window, document, undefined, jQuery);
 
