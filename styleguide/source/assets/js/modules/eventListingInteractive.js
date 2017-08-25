@@ -267,17 +267,21 @@ export default function (window,document,$,undefined) {
   function itemTransform(item) {
     // Ensure tags are an array.
     let tags = [];
-    $.map(item.tags, function(val, index) { tags[index] = val; });
+
+    $.map(item.tags, function(val, index) {
+      tags[index] = val;
+    });
+
     item.tags = tags;
 
     let tagsData = {
       tagsFormatted: item.tags.map(transformTag)
     };
-    return Object.assign({},item,tagsData);
+    return Object.assign({}, item, tagsData);
   }
 
   /**
-   * Returns a formatted imagePromo.tag object with a label and svg icon markup.
+   * Returns a formatted item.tag object with a label and svg icon markup.
    *
    * @param tag
    *   The tag being transformed.
@@ -308,7 +312,7 @@ export default function (window,document,$,undefined) {
     // Get all existing marker distance from place, assign as marker property.
     for (let key in data.items) {
       if (data.items.hasOwnProperty(key)) {
-        data.items[key].distance = calculateDistance(data.items[key].data.position.lat, data.items[key].data.position.lng, lat, lng, "K");
+        data.items[key].distance = listing.calculateDistance(data.items[key].data.position.lat, data.items[key].data.position.lng, lat, lng, "K");
       }
     }
 
@@ -327,37 +331,6 @@ export default function (window,document,$,undefined) {
   }
 
   /**
-   * Calculate distance from lat/lng.
-   *
-   * @param lat1
-   *    Latitude 1 input.
-   * @param lng1
-   *    Longitude 1 input.
-   * @param lat2
-   *    Latitude 2 input.
-   * @param lng2
-   *    Longitude 2 input.
-   *
-   * @returns {*}
-   *    Return the distance from points.
-   */
-  function calculateDistance(lat1, lon1, lat2, lon2, unit) {
-    var radlat1 = Math.PI * lat1/180
-    var radlat2 = Math.PI * lat2/180
-    var radlon1 = Math.PI * lon1/180
-    var radlon2 = Math.PI * lon2/180
-    var theta = lon1-lon2
-    var radtheta = Math.PI * theta/180
-    var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
-    dist = Math.acos(dist)
-    dist = dist * 180/Math.PI
-    dist = dist * 60 * 1.1515
-    if (unit=="K") { dist = dist * 1.609344 }
-    if (unit=="N") { dist = dist * 0.8684 }
-    return dist
-  }
-
-  /**
    * Renders the new page of location listing image promos and broadcasts the rendered master data instance.
    *
    * @param args
@@ -367,7 +340,6 @@ export default function (window,document,$,undefined) {
    *      data: the instance of master data to render
    *   }
    */
-
   function renderListingPage(args) {
     listing.clearListingPage('.js-event-listing-interactive','.js-event-listing-items');
     let $el = $('.js-event-listing-interactive').find('.js-event-listing-items'),

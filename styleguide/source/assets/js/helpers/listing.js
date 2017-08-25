@@ -396,7 +396,8 @@ module.exports = function(window, document, undefined, $){
     clearListingPage,
     sortDataAlphabetically,
     geocodeAddressString,
-    makeAllActive
+    makeAllActive,
+    calculateDistance
   };
 
 }(window, document, undefined, jQuery);
