@@ -63,7 +63,7 @@ export default function (window,document,$,undefined) {
 
       $pagination.trigger('ma:Pagination:DataUpdated', [args.data.pagination]);
       if (args.clearedFilter) {
-        $locationFilter.trigger('ma:FormFilter:DataUpdated', [args.clearedFilter]);
+        $eventFilter.trigger('ma:FormFilter:DataUpdated', [args.clearedFilter]);
       }
     }
 
