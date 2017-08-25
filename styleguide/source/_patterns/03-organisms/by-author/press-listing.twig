@@ -1,16 +1,22 @@
+{% set level = level ? : 2 %}
 <section class="ma__press-listing">
   <div class="ma__press-listing__container">
     {% if pressListing.compHeading %}
       {% set compHeading = pressListing.compHeading %}
+       {% set compHeading = compHeading|merge({'level': level}) %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
     {% endif %}
     {% if pressListing.sidebarHeading %}
       {% set sidebarHeading = pressListing.sidebarHeading %}
+      {% set sidebarHeading = sidebarHeading|merge({'level': level}) %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
+    {# Increase heading number by 1 from the parent heading. #}
+    {% set level = level + 1 %}
     {% if pressListing.items %}
       <div class="ma__press-listing__items">
         {% for pressTeaser in pressListing.items %}
+          {% set pressTeaser = pressTeaser|merge({'level': level}) %}
           {% include "@molecules/press-teaser.twig" %}
         {% endfor %}
       </div>
@@ -19,6 +25,7 @@
       <ul class="ma__press-listing__secondary-items">
         {% for pressTeaser in pressListing.secondaryItems %}
            <li class="ma__press-listing__secondary-item">
+            {% set pressTeaser = pressTeaser|merge({'level': level}) %}
             {% include "@molecules/press-teaser.twig" %}
           </li>
         {% endfor %}

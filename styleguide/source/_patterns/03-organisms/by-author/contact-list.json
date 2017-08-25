@@ -3,6 +3,7 @@
     "viewSpecific": false,
     "compHeading": {
       "title": "Contacts",
+      "level": 3,
       "sub": "",
       "color": "",
       "id": "contacts",
@@ -13,10 +14,12 @@
       "accordion": true,
       "isExpanded": false,
       "subTitle": {
+        "level": 4,
         "href":"",
         "text": "Department of Conservation and Recreation"
       },
       "groups": [{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-phone.twig",
         "name": "Phone",
         "items": [{
@@ -65,6 +68,7 @@
           "details":""
         }]
       },{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-laptop.twig",
         "name": "Online",
         "hidden": "",
@@ -92,6 +96,7 @@
           "details":""
         }]
       },{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-fax-icon.twig",
         "name": "Fax",
         "items": [{
@@ -107,6 +112,7 @@
           "details":"Please allow 24 hours for a response"
         }]
       },{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-marker.twig",
         "name": "Address",
         "items": [{
@@ -127,10 +133,12 @@
       "accordion": true,
       "isExpanded": false,
       "subTitle": {
+        "level": 4,
         "href":"",
         "text": "Department of Conservation and Recreation"
       },
       "groups": [{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-phone.twig",
         "name": "Phone",
         "items": [{
@@ -179,6 +187,7 @@
           "details":""
         }]
       },{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-laptop.twig",
         "name": "Online",
         "hidden": "",
@@ -206,6 +215,7 @@
           "details":""
         }]
       },{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-fax-icon.twig",
         "name": "Fax",
         "items": [{
@@ -221,6 +231,7 @@
           "details":"Please allow 24 hours for a response"
         }]
       },{
+        "level": 5,
         "icon": "@atoms/05-icons/svg-marker.twig",
         "name": "Address",
         "items": [{

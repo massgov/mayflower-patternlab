@@ -2,6 +2,7 @@
   "pressListing": {
     "compHeading": {
       "title": "Press Listing",
+      "level": 2,
       "sub": "",
       "color": "",
       "id": "",
@@ -13,6 +14,7 @@
       "title" : {
         "href":"#",
         "text":"MassParks",
+        "level": 3,
         "info": "",
         "property": ""
       },
@@ -34,6 +36,7 @@
       "title" : {
         "href":"#",
         "text":"MassParks",
+        "level": 3,
         "info": "",
         "property": ""
       },
