@@ -36,7 +36,7 @@ export default function (window,document,$,undefined) {
     // Listen for Google Map api library load completion, with geocode, geometry, and places libraries
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function(){
       // Set up click handler for location listing rows.
-      $el.on('click', locationListingRow, function (e) {
+      $el.on('click', row, function (e) {
         let index = $(e.currentTarget).index();
         // trigger map to recenter on this item based on it's index.
         $map.trigger('ma:GoogleMap:MapRecenter', index);
@@ -49,7 +49,7 @@ export default function (window,document,$,undefined) {
       });
 
       // Set up hover / focus event for listing rows.
-      $el.on('mouseenter focusin', locationListingRow, function (e) {
+      $el.on('mouseenter focusin', row, function (e) {
         // remove active state from previously selected list item
         $el.find(activeLocationListingRow).removeClass(activeClass);
 
@@ -71,7 +71,7 @@ export default function (window,document,$,undefined) {
       });
 
       // Remove "focus" class from any "focused" location listing row.
-      $el.on('mouseleave', locationListingRow, function (e) {
+      $el.on('mouseleave', row, function (e) {
         $el.find(markerActiveLocationListingRow).removeClass(markerActiveClass);
       });
 
