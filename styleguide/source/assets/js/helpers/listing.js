@@ -1,4 +1,5 @@
 import getTemplate from "../helpers/getHandlebarTemplate.js";
+import sticky from "../helpers/sticky.js";
 
 export default  function(window, document, undefined, $){
   "use strict";
@@ -6,6 +7,46 @@ export default  function(window, document, undefined, $){
   /**
    * Common Helpers between event + location listings
    */
+
+
+  /**
+   * Renders the new page of location listing image promos and broadcasts the rendered master data instance.
+   *
+   * @param args
+   *   Arguments object with the following structure:
+   *   {
+   *      page: (optional) the page to be rendered, defaults to 1
+   *      data: the instance of master data to render
+   *   }
+   */
+  function renderListingPage(args) {
+    if (args.data.hasOwnProperty('selectors')) {
+      console.log(args.data.selectors);
+      clearListingPage(args.data.selectors.container, args.data.selectors.parent);
+      let $el = $(args.data.selectors.container).find(args.data.selectors.parent),
+          page = args.page ? args.page : 1;
+
+      args.data.items.forEach(function (item) {
+        if (item.isActive && item.page === page) {
+          $el.append(item.markup);
+        }
+      });
+
+      // Focus on the first focusable element in the first listing
+      let $firstListing = $el.find(args.data.selectors.row).first();
+      // :focusable is possible with helpers/jQueryExtend.js
+      $firstListing.find(':focusable').eq(0).focus();
+
+      if (args.data.selectors.hasOwnProperty('map') && args.data.selectors.map) {
+        sticky.init($(args.data.selectors.map));
+      }
+    }
+    else {
+      console.warn("masterData.selectors must be set for this listing.");
+      return false;
+    }
+  }
+
 
   /**
    * Returns the data structure necessary to render pagination component, reflecting current state.
@@ -101,15 +142,70 @@ export default  function(window, document, undefined, $){
    * @returns {Array}
    *  An array of compiled markup
    */
-  function transformListing(listing, template, transformFunction) {
+  function transformListing(listing, template) {
     // Get template for location listing (organisms > imagePromo)
     let compiledTemplate = getTemplate(template);
     let listingMarkup = [];
     listing.forEach(function (data, index) {
-      let itemData = transformFunction(data);
+      let itemData = itemTransform(data);
       listingMarkup[index] = compiledTemplate(itemData);
     });
     return listingMarkup;
+  }
+
+
+  /**
+   * Returns transformed item data object.
+   *
+   * @param item
+   *   The item.item[]{} being transformed.
+   *
+   * @returns {*}
+   *   The original item object with a formatted tag property.
+   */
+  function itemTransform(item) {
+    // Ensure tags are an array.
+    let tags = [];
+
+    $.map(item.tags, function(val, index) {
+      tags[index] = val;
+    });
+
+    item.tags = tags;
+
+    let tagsData = {
+      tagsFormatted: item.tags.map(transformTag)
+    };
+    return Object.assign({}, item, tagsData);
+  }
+
+  /**
+   * Returns a formatted item.tag object with a label and svg icon markup.
+   *
+   * @param tag
+   *   The tag being transformed.
+   *
+   * @returns {{label, svg: boolean}}
+   */
+  function transformTag(tag) {
+    return {
+      label: tag.label,
+      svg: getSvgFromTag(tag.id)
+    };
+  }
+
+  /**
+   * Returns the svg element markup from the corresponding tag filter checkbox label icon
+   *
+   * @param tag
+   *  The imagePromo tag.id whose icon we need
+   *
+   * @return string
+   *  The svg element for the matching filter form tag input.
+   */
+  function getSvgFromTag(tag) {
+    // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
+    return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
   }
 
   /**
@@ -439,36 +535,8 @@ export default  function(window, document, undefined, $){
     return dist
   }
 
-  /**
-   * Returns a formatted item.tag object with a label and svg icon markup.
-   *
-   * @param tag
-   *   The tag being transformed.
-   *
-   * @returns {{label, svg: boolean}}
-   */
-  function transformTag(tag) {
-    return {
-      label: tag.label,
-      svg: getSvgFromTag(tag.id)
-    };
-  }
-
-  /**
-   * Returns the svg element markup from the corresponding tag filter checkbox label icon
-   *
-   * @param tag
-   *  The imagePromo tag.id whose icon we need
-   *
-   * @return string
-   *  The svg element for the matching filter form tag input.
-   */
-  function getSvgFromTag(tag) {
-    // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
-    return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
-  }
-
   return {
+    renderListingPage,
     transformPaginationData,
     transformResultsHeading,
     filterListingData,
@@ -482,7 +550,6 @@ export default  function(window, document, undefined, $){
     geocodeAddressString,
     makeAllActive,
     calculateDistance,
-    transformTag,
     transformListing
   };
 

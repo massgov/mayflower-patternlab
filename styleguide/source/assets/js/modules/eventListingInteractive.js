@@ -1,13 +1,15 @@
-import getTemplate from "../helpers/getHandlebarTemplate.js";
-import listing from "../helpers/listing.js";
+import listings from "../helpers/listing.js";
 
 
 export default function (window,document,$,undefined) {
+  let container = '.js-event-listing-interactive',
+      parent = '.js-event-listing-items',
+      row = '.js-event-listing-item';
+
   $('.js-event-listing-interactive').each(function(i) {
     let $el = $(this),
         $resultsHeading = $el.find('.js-results-heading'),
         $pagination = $el.find('.js-pagination'),
-        $events = $el.find('.js-event-listing-items'),
         $eventFilter = $el.find('.js-event-location-filters');
 
     // Get the location listing component data (this could be replaced with an api)
@@ -49,9 +51,9 @@ export default function (window,document,$,undefined) {
         nextPage = currentPage - 1;
       }
 
-      masterData.pagination = listing.transformPaginationData({data: masterData, targetPage: nextPage});
-      masterData.resultsHeading = listing.transformResultsHeading({data: masterData, page: nextPage});
-      renderListingPage({data: masterData, page: nextPage});
+      masterData.pagination = listings.transformPaginationData({data: masterData, targetPage: nextPage});
+      masterData.resultsHeading = listings.transformResultsHeading({data: masterData, page: nextPage});
+      listings.renderListingPage({data: masterData, page: nextPage});
 
       // Trigger child components render with updated data
       updateChildComponents({data: masterData});
@@ -85,7 +87,8 @@ export default function (window,document,$,undefined) {
      *        markup: the compiled imagePromo markup
      *        marker: the related map marker data structure for the listing item
      *      ]
-     *      pagination: the data structure necessary to render a pagination component
+     *      pagination: the data structure necessary to render a pagination component,
+     *      selectors: the necessary $selectors for rendering the listing
      *    ]
      */
     function populateMasterDataSource(listing) {
@@ -114,7 +117,7 @@ export default function (window,document,$,undefined) {
       let masterListing = listing.eventListing.events,
 
       // Pass in listing and template name.
-      masterListingMarkup = transformListing(masterListing, 'eventListingRow');
+      masterListingMarkup = listings.transformListing(masterListing, 'eventListingRow');
 
       // The max number of items per page, if designated in locationListing data structure, else all
       masterData.maxItems = listing.maxItems ? listing.maxItems : masterListing.length;
@@ -131,6 +134,12 @@ export default function (window,document,$,undefined) {
 
       // The total number of pages, given the number of items and the maxItems variable
       masterData.totalPages = Math.ceil(masterData.items.length / masterData.maxItems);
+
+      // Set the selector properties necessary to render
+      masterData.selectors = {};
+      masterData.selectors.container = container;
+      masterData.selectors.parent = parent;
+      masterData.selectors.row = row;
 
       return masterData;
     }
@@ -168,27 +177,6 @@ export default function (window,document,$,undefined) {
     }
 
   });
-  /**
-   * Creates an array with generated markup for location listing items, preserving original index.
-   *
-   * @param listing
-   *  The array of items
-   * @param template
-   *  The string name of the template
-   *
-   * @returns {Array}
-   *  An array of compiled markup
-   */
-  function transformListing(listing, template) {
-    // Get template for location listing (organisms > imagePromo)
-    let compiledTemplate = getTemplate(template);
-    let listingMarkup = [];
-    listing.forEach(function (data, index) {
-      let itemData = itemTransform(data);
-      listingMarkup[index] = compiledTemplate(itemData);
-    });
-    return listingMarkup;
-  }
 
   /**
    * The main data transformation wrapper, returns an instance of masterData which reflects the component state.
@@ -203,53 +191,39 @@ export default function (window,document,$,undefined) {
    */
   function transformData(data, transformation) {
     // First filter the data based on component state, then sort alphabetically by default.
-    let filteredData = listing.filterListingData(data, transformation),
-        sortedData = listing.sortDataAlphabetically(filteredData),
+    let filteredData = listings.filterListingData(data, transformation),
+        sortedData = listings.sortDataAlphabetically(filteredData),
         place = '';
-    if (listing.hasFilter(filteredData.resultsHeading.tags, 'location')) {
+
+    // Sort data by location, if that filter is present.
+    if (listings.hasFilter(filteredData.resultsHeading.tags, 'location')) {
+      place = listings.getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
+      // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       if (ma.autocomplete.getPlace()) {
         place = ma.autocomplete.getPlace();
         sortedData = sortDataAroundPlace(place, sortedData);
       }
+      // If place argument was populated from event/locationFilter (zipcode text input) but not from Place autocomplete.
+      else {
+        // Geocode the address, then sort the markers and instance of locationListing masterData.
+        ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
+        // @todo limit geocode results to MA?
+        sortedData = listings.geocodeAddressString(place, sortDataAroundPlace, filteredData);
+      }
     }
 
     // Update the results heading based on the current items state.
-    sortedData.resultsHeading = listing.transformResultsHeading({data: sortedData});
+    sortedData.resultsHeading = listings.transformResultsHeading({data: sortedData});
     // Update pagination data structure, reset to first page
-    sortedData.pagination = listing.transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
+    sortedData.pagination = listings.transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
     // Render the listing page.
-    renderListingPage({data: sortedData});
+    listings.renderListingPage({data: sortedData});
 
     // Preserve state of current data.
     return {
       data: sortedData,
       place: place
     };
-  }
-
-  /**
-   * Returns transformed item data object.
-   *
-   * @param item
-   *   The item.item[]{} being transformed.
-   *
-   * @returns {*}
-   *   The original item object with a formatted tag property.
-   */
-  function itemTransform(item) {
-    // Ensure tags are an array.
-    let tags = [];
-
-    $.map(item.tags, function(val, index) {
-      tags[index] = val;
-    });
-
-    item.tags = tags;
-
-    let tagsData = {
-      tagsFormatted: item.tags.map(listing.transformTag)
-    };
-    return Object.assign({}, item, tagsData);
   }
 
   /**
@@ -269,7 +243,7 @@ export default function (window,document,$,undefined) {
     // Get all existing marker distance from place, assign as marker property.
     for (let key in data.items) {
       if (data.items.hasOwnProperty(key)) {
-        data.items[key].distance = listing.calculateDistance(data.items[key].data.position.lat, data.items[key].data.position.lng, lat, lng, "K");
+        data.items[key].distance = listings.calculateDistance(data.items[key].data.position.lat, data.items[key].data.position.lng, lat, lng, "K");
       }
     }
 
@@ -279,40 +253,12 @@ export default function (window,document,$,undefined) {
     });
 
     // Update each location listing item's page number based on new marker sort order.
-    let paginated = listing.paginateItems(data.items, data.maxItems);
+    let paginated = listings.paginateItems(data.items, data.maxItems);
     data.items = paginated.items;
     data.totalPages = paginated.totalPages;
 
     // Return the newly sorted instance of location listing masterData.
     return data;
   }
-
-  /**
-   * Renders the new page of location listing image promos and broadcasts the rendered master data instance.
-   *
-   * @param args
-   *   Arguments object with the following structure:
-   *   {
-   *      page: (optional) the page to be rendered, defaults to 1
-   *      data: the instance of master data to render
-   *   }
-   */
-  function renderListingPage(args) {
-    listing.clearListingPage('.js-event-listing-interactive','.js-event-listing-items');
-    let $el = $('.js-event-listing-interactive').find('.js-event-listing-items'),
-        page = args.page ? args.page : 1;
-
-    args.data.items.forEach(function(item){
-      if (item.isActive && item.page === page) {
-        $el.append(item.markup);
-      }
-    });
-
-    // Focus on the first focusable element in the first listing
-    let $firstListing = $el.find('.ma__event-listing__item').first();
-    // :focusable is possible with helpers/jQueryExtend.js
-    $firstListing.find(':focusable').eq(0).focus();
-  }
-
 
 }(window,document,jQuery);

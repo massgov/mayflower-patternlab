@@ -6,12 +6,12 @@ export default function (window,document,$,undefined) {
   let activeClass = 'is-active',
     markerActiveClass = 'is-marker-bounce',
     // Selectors for event listeners on dynamic content.
-    locationListingRow = '.js-location-listing-link',
-    activeLocationListingRow = locationListingRow + '.' + activeClass,
-    markerActiveLocationListingRow = locationListingRow + '.' + markerActiveClass,
+    row = '.js-location-listing-link',
+    activeLocationListingRow = row + '.' + activeClass,
+    markerActiveLocationListingRow = row + '.' + markerActiveClass,
     // Parent component selectors.
-    listingCol = '.js-location-listing-results',
-    listingParent = '.js-image-promos',
+    container = '.js-location-listing-results',
+    parent = '.js-image-promos',
     mapCol = '.js-location-listing-map';
 
   $('.js-location-listing').each(function(i){
@@ -108,7 +108,7 @@ export default function (window,document,$,undefined) {
 
         masterData.pagination = listings.transformPaginationData({data: masterData, targetPage: nextPage});
         masterData.resultsHeading = listings.transformResultsHeading({data: masterData, page: nextPage});
-        renderListingPage({data: masterData, page: nextPage});
+        listings.renderListingPage({data: masterData, page: nextPage});
 
         let markers = getActiveMarkers({data: masterData, page: nextPage});
         // Trigger child components render with updated data
@@ -152,6 +152,7 @@ export default function (window,document,$,undefined) {
    *        marker: the related map marker data structure for the listing item
    *      ]
    *      pagination: the data structure necessary to render a pagination component
+   *      selectors: the selectors for the listing, listing items, listing row, and map
    *    ]
    */
   function populateMasterDataSource(listing, markers) {
@@ -178,7 +179,7 @@ export default function (window,document,$,undefined) {
 
     // Get the listing imagePromos, generate markup for each
     let masterListing = listing.imagePromos.items,
-      masterListingMarkup = listings.transformListing(masterListing, 'locationListingRow', promoTransform);
+      masterListingMarkup = listings.transformListing(masterListing, 'locationListingRow');
 
     // The max number of items per page, if designated in locationListing data structure, else all
     masterData.maxItems = listing.maxItems ? listing.maxItems : listing.imagePromos.items.length;
@@ -191,6 +192,12 @@ export default function (window,document,$,undefined) {
     masterData.pagination.currentPage = currentPage;
     // The total number of pages, given the number of items and the maxItems variable
     masterData.totalPages = Math.ceil(masterData.items.length / masterData.maxItems);
+    // Set the selector properties necessary to render
+    masterData.selectors = {};
+    masterData.selectors.container = container;
+    masterData.selectors.parent = parent;
+    masterData.selectors.row = row;
+    masterData.selectors.map = mapCol;
 
     return masterData;
   }
@@ -274,7 +281,7 @@ export default function (window,document,$,undefined) {
     // Update pagination data structure, reset to first page
     sortedData.pagination = listings.transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
     // Render the listing page.
-    renderListingPage({data: sortedData});
+    listings.renderListingPage({data: sortedData});
 
     // Get the associated markers based on the listing items.
     let markers = getActiveMarkers({data: sortedData});
@@ -285,27 +292,6 @@ export default function (window,document,$,undefined) {
       markers: markers,
       place: place
     };
-  }
-
-  /**
-   * Returns transformed imagePromo data object.
-   *
-   * @param promo
-   *   The imagePromo.item[]{} being transformed.
-   *
-   * @returns {*}
-   *   The original imagePromo object with a formatted tag property.
-   */
-  function promoTransform(promo) {
-    // Ensure tags are an array.
-    let tags = [];
-    $.map(promo.tags, function(val, index) { tags[index] = val; });
-    promo.tags = tags;
-
-    let tagsData = {
-      tagsFormatted: promo.tags.map(listings.transformTag)
-    };
-    return Object.assign({},promo,tagsData);
   }
 
   /**
@@ -363,35 +349,6 @@ export default function (window,document,$,undefined) {
 
     // Return the newly sorted instance of location listing masterData.
     return data;
-  }
-
-  /**
-   * Renders the new page of location listing image promos and broadcasts the rendered master data instance.
-   *
-   * @param args
-   *   Arguments object with the following structure:
-   *   {
-   *      page: (optional) the page to be rendered, defaults to 1
-   *      data: the instance of master data to render
-   *   }
-   */
-  function renderListingPage(args) {
-    listings.clearListingPage(listingCol,listingParent);
-    let $el = $(listingCol).find(listingParent),
-      page = args.page ? args.page : 1;
-
-    args.data.items.forEach(function(item){
-      if (item.isActive && item.page === page) {
-        $el.append(item.markup);
-      }
-    });
-
-    // Focus on the first focusable element in the first listing
-    let $firstListing = $el.find(locationListingRow).first();
-    // :focusable is possible with helpers/jQueryExtend.js
-    $firstListing.find(':focusable').eq(0).focus();
-
-    sticky.init($(mapCol));
   }
 
 }(window,document,jQuery);
