@@ -12,7 +12,7 @@
     {% endif %}
     <ul class="ma__event-listing__items js-event-listing-items">
       {% for eventTeaser in eventListing.events %}
-        <li class="ma__event-listing__item">
+        <li class="ma__event-listing__item js-event-listing-item">
           {% include "@molecules/event-teaser.twig" %}
         </li>
       {% endfor %}
