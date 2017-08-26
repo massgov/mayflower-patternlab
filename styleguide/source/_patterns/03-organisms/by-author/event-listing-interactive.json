@@ -61,8 +61,10 @@
           "summary": "December 2, 2017",
           "startMonth": "Dec",
           "startDay": "2",
+          "startTimestamp": "12/2/2017 - 14:00",
           "endMonth": "",
-          "endDay": ""
+          "endDay": "",
+          "endTimestamp": "12/2/2017 - 15:00"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -82,8 +84,10 @@
           "summary": "March 2, 2017 - April 25, 2017",
           "startMonth": "Mar",
           "startDay": "2",
+          "startTimestamp": "3/2/2017 - 14:00",
           "endMonth": "Apr",
-          "endDay": "25"
+          "endDay": "25",
+          "endTimestamp": "4/25/2017 - 15:00"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -103,8 +107,10 @@
           "summary": "June 2, 2017",
           "startMonth": "Jun",
           "startDay": "2",
+          "startTimestamp": "6/2/2017 - 12:00",
           "endMonth": "",
-          "endDay": ""
+          "endDay": "",
+          "endTimestamp": "6/2/2017 - 14:00"
         },
         "time": "12 p.m. - 2 p.m.",
         "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
@@ -124,8 +130,10 @@
           "summary": "March 30, 2017 - April 10, 2017",
           "startMonth": "Mar",
           "startDay": "30",
+          "startTimestamp": "3/30/2017 - 12:00",
           "endMonth": "Apr",
-          "endDay": "10"
+          "endDay": "10",
+          "endTimestamp": "4/10/2017 - 14:00"
         },
         "time": "12 p.m. - 2 p.m.",
         "description": ""
@@ -142,11 +150,13 @@
           "lng": -87.629798
         },
         "date": {
-          "summary": "March 30, 2017 - April 10, 2017",
+          "summary": "August 26, 2017 - August 30, 2017",
           "startMonth": "Aug",
           "startDay": "26",
+          "startTimestamp": "8/26/2017 12:00",
           "endMonth": "Aug",
-          "endDay": "30"
+          "endDay": "30",
+          "endTimestamp": "8/30/2017 - 14:00"
         },
         "time": "12 p.m. - 2 p.m.",
         "description": ""
@@ -166,8 +176,10 @@
           "summary": "January 12, 2017 - April 25, 2017",
           "startMonth": "Jan",
           "startDay": "12",
+          "startTimestamp": "1/12/2017 - 14:00",
           "endMonth": "Apr",
-          "endDay": "25"
+          "endDay": "25",
+          "endTimestamp": "4/25/2017 - 15:00"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -187,8 +199,10 @@
           "summary": "October 16, 2017 - October 18, 2017",
           "startMonth": "Oct",
           "startDay": "16",
+          "startTimestamp": "10/16/2017 - 14:00",
           "endMonth": "Oct",
-          "endDay": "18"
+          "endDay": "18",
+          "endTimestamp": "10/18/2017 - 15:00"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -205,11 +219,13 @@
           "lng": -71.289677
         },
         "date": {
-          "summary": "May 1, 2017 - May 26, 2017",
-          "startMonth": "May",
-          "startDay": "1",
-          "endMonth": "May",
-          "endDay": "26"
+          "summary": "June 2, 2017",
+          "startMonth": "Jun",
+          "startDay": "2",
+          "startTimestamp": "6/2/2017 - 14:00",
+          "endMonth": "",
+          "endDay": "",
+          "endTimestamp": "6/2/2017 - 15:00"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -226,11 +242,13 @@
           "lng": -74.005941
         },
         "date": {
-          "summary": "July, 4 2017",
-          "startMonth": "Jul",
-          "startDay": "4",
+          "summary": "June, 2 2017",
+          "startMonth": "Jun",
+          "startDay": "2",
+          "startTimestamp": "6/2/2017 - 14:00",
           "endMonth": "",
-          "endDay": ""
+          "endDay": "",
+          "endTimestamp": ""
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -250,8 +268,10 @@
           "summary": "September 19, 2017 - September 25, 2017",
           "startMonth": "Sep",
           "startDay": "19",
+          "startTimestamp": "9/19/2017 - 14:00",
           "endMonth": "Sep",
-          "endDay": "25"
+          "endDay": "25",
+          "endTimestamp": "9/25/2017 - 15:00"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -271,8 +291,10 @@
           "summary": "February 17, 2017 - February 25, 2017",
           "startMonth": "Feb",
           "startDay": "17",
+          "startTimestamp": "2/17/2017 - 14:00",
           "endMonth": "Feb",
-          "endDay": "25"
+          "endDay": "25",
+          "endTimestamp": "2/25/2017 - 15:00"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
