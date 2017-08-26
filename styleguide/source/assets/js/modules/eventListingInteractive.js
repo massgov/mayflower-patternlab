@@ -1,6 +1,5 @@
 import listings from "../helpers/listing.js";
 
-
 export default function (window,document,$,undefined) {
   let container = '.js-event-listing-interactive',
       parent = '.js-event-listing-items',
@@ -83,9 +82,9 @@ export default function (window,document,$,undefined) {
      *      items: an array of listing items [
      *        isActive: whether or not the listing should be shown, given current filters state
      *        page: the page that the listing, if active, will appear on, given the current sort order
-     *        promo: the data structure for the imagePromo component
-     *        markup: the compiled imagePromo markup
-     *        marker: the related map marker data structure for the listing item
+     *        data: the data structure for the eventTeaser component
+     *        markup: the compiled eventTeaser markup
+     *        start: the momentjs object for the start date
      *      ]
      *      pagination: the data structure necessary to render a pagination component,
      *      selectors: the necessary $selectors for rendering the listing
@@ -97,7 +96,10 @@ export default function (window,document,$,undefined) {
 
       // Ensure locationListing.imagePromos.items is an array (the twig template json_encode()'s a php array)
       let listArray = [];
-      $.map(listing.eventListing.events, function(val, index) { listArray[index] = val; });
+      $.map(listing.eventListing.events, function(val, index) {
+        listArray[index] = val;
+      });
+
       listing.eventListing.events = listArray;
 
       // Ensure locationListing.pagination.pages is an array (the twig template json_encode()'s a php array)
@@ -158,19 +160,24 @@ export default function (window,document,$,undefined) {
      *  [
      *      isActive: whether or not the listing should be shown, given current filters state
      *      page: the page that the listing, if active, will appear on, given the current sort order
-     *      promo: the data structure for the imagePromo component
+     *      data: the data structure for the eventListing component
      *      markup: the compiled imagePromo markup
-     *      marker: the related map marker data structure for the listing item
+     *      start: the start momentjs object for this item
      *   ]
      */
     function getMasterListingWithMarkup(listing, markup, max) {
       let items = [];
       listing.forEach(function (item, index) {
+        // determine if there is an end date to this event
+        let endDate = listing[index].date.endDay.length;
+
         items[index] = {
           isActive: true, // @todo consider checking for this in case of server side preprocessing of state
           page: Math.ceil((index+1) / max),
           markup: markup[index],
-          data: listing[index]
+          data: listing[index],
+          start: listings.makeMoment({data: listing[index].date, type: 'start'}),
+          end: (endDate) ? listings.makeMoment({data: listing[index].date, type: 'end'}) : endDate
         };
       });
       return items;
@@ -186,13 +193,13 @@ export default function (window,document,$,undefined) {
    * @param transformation
    *  An object representing the change in state (locationFilter form data, resultsHeading tag interaction, etc.)
    *
-   * @returns {{data: *, markers: *}}
+   * @returns {{data: *, place: *}}
    *  An object with the current state masterData instance and an array of their related sorted markers to send to map.
    */
   function transformData(data, transformation) {
     // First filter the data based on component state, then sort alphabetically by default.
     let filteredData = listings.filterListingData(data, transformation),
-        sortedData = listings.sortDataAlphabetically(filteredData),
+        sortedData = listings.sortDataByDate(filteredData),
         place = '';
 
     // Sort data by location, if that filter is present.

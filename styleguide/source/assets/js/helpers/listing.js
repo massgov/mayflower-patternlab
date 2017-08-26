@@ -1,5 +1,6 @@
 import getTemplate from "../helpers/getHandlebarTemplate.js";
 import sticky from "../helpers/sticky.js";
+import moment from "../vendor/bower_components/moment/src/moment";
 
 export default  function(window, document, undefined, $){
   "use strict";
@@ -21,7 +22,6 @@ export default  function(window, document, undefined, $){
    */
   function renderListingPage(args) {
     if (args.data.hasOwnProperty('selectors')) {
-      console.log(args.data.selectors);
       clearListingPage(args.data.selectors.container, args.data.selectors.parent);
       let $el = $(args.data.selectors.container).find(args.data.selectors.parent),
           page = args.page ? args.page : 1;
@@ -136,8 +136,6 @@ export default  function(window, document, undefined, $){
    *  The array of items
    * @param template
    *  The string name of the template
-   * @param transformFunction
-   *  The name of the function to call to transform pattern data
    *
    * @returns {Array}
    *  An array of compiled markup
@@ -414,7 +412,7 @@ export default  function(window, document, undefined, $){
   }
 
   /**
-   * Geocodes an address string arg and executes callback upon successful return.
+   * Geocode an address string arg and executes callback upon successful return.
    *
    * @param address
    *   Address string to be geocoded.
@@ -505,34 +503,118 @@ export default  function(window, document, undefined, $){
   }
 
   /**
+   * Event Listing specific helpers
+   */
+
+  /**
    * Calculate distance from lat/lng.
    *
    * @param lat1
    *    Latitude 1 input.
-   * @param lng1
+   * @param lon1
    *    Longitude 1 input.
    * @param lat2
    *    Latitude 2 input.
-   * @param lng2
+   * @param lon2
    *    Longitude 2 input.
+   * @param unit
    *
    * @returns {*}
    *    Return the distance from points.
    */
   function calculateDistance(lat1, lon1, lat2, lon2, unit) {
-    var radlat1 = Math.PI * lat1/180
-    var radlat2 = Math.PI * lat2/180
-    var radlon1 = Math.PI * lon1/180
-    var radlon2 = Math.PI * lon2/180
-    var theta = lon1-lon2
-    var radtheta = Math.PI * theta/180
-    var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
-    dist = Math.acos(dist)
-    dist = dist * 180/Math.PI
-    dist = dist * 60 * 1.1515
-    if (unit=="K") { dist = dist * 1.609344 }
-    if (unit=="N") { dist = dist * 0.8684 }
+    let radlat1 = Math.PI * lat1/180;
+    let radlat2 = Math.PI * lat2/180;
+    let radlon1 = Math.PI * lon1/180;
+    let radlon2 = Math.PI * lon2/180;
+    let theta = lon1-lon2;
+    let radtheta = Math.PI * theta/180;
+    let dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+    dist = Math.acos(dist);
+    dist = dist * 180/Math.PI;
+    dist = dist * 60 * 1.1515;
+
+    if (unit === "K") {
+      dist = dist * 1.609344
+    }
+    if (unit === "N") {
+      dist = dist * 0.8684
+    }
     return dist
+  }
+
+  /**
+   * Create a moment.js object for a passed eventTeaser date data
+   *
+   * @param args
+   *   Data structure for eventTeaser.date and a type ("start" || "end") property
+   * @returns
+   *   A moment.js object for the event start/end date in MM/D format.
+   *   See: https://momentjs.com/docs/#/parsing/string-format/
+   */
+  function makeMoment(args) {
+    /**
+     * args: {
+     *   data: {
+     *     summary: "March 2, 2017 - April 25, 2017",
+     *     startMonth: "Mar",
+     *     startDay: "2",
+     *     startTimestamp: "3/2/2017 - 14:00",
+     *     endMonth: "Apr",
+     *     endDay: "25",
+     *     endTimestamp: "4/25/2017 - 15:00"
+     *   },
+     *   type: 'start' || 'end'
+     * }
+     */
+    // Create moment.js object for start timestamp
+    if (args.hasOwnProperty('type') && args.type === 'start') {
+      return moment(args.data.startTimestamp, 'M/D/YYYY - H:mm')
+    }
+    // Create a moment.js object for end timestamp
+    if (args.hasOwnProperty('type') && args.type === 'end') {
+      return args.data.endTimestamp ? moment(args.data.endTimestamp, 'M/D/YYYY - H:mm') : "";
+    }
+    return false;
+  }
+
+  /**
+   * Returns an instance of master data which is sorted by start timestamp then alphabetically by item data.title.text
+   *
+   * @param data
+   *    The instance of master data being sorted.
+   * @param dateType
+   *    The type of date by which to sort: start || end
+   *
+   * @returns {*}
+   *    Sorted instance of master data.
+   */
+  function sortDataByDate(data, dateType) {
+    let type = dateType ? dateType : 'start';
+    let dateA = '';
+    let dateB = '';
+    let items = data.items.sort(function(a, b) {
+      if (type !== "end") {
+        dateA = a.start;
+        dateB = b.start;
+      }
+      else {
+        dateA = a.end;
+        dateB = b.end;
+      }
+
+      let nameA = a.data.title.text.toUpperCase();
+      let nameB = b.data.title.text.toUpperCase();
+
+      // Sort the items by start date timestamp, then alphabetically.
+      // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+      return (dateA.isBefore(dateB, 'minute')) ? -1 : (dateA.isAfter(dateB, 'minute')) ? 1 : (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
+    });
+
+    let paginated = paginateItems(items, data.maxItems);
+    data.items = paginated.items;
+    data.totalPages = paginated.totalPages;
+    return data;
   }
 
   return {
@@ -547,11 +629,12 @@ export default  function(window, document, undefined, $){
     paginateItems,
     clearListingPage,
     sortDataAlphabetically,
+    sortDataByDate,
     geocodeAddressString,
     makeAllActive,
     calculateDistance,
-    transformListing
+    transformListing,
+    makeMoment
   };
 
 }(window, document, undefined, jQuery);
-
