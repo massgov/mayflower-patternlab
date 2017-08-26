@@ -58,11 +58,11 @@
           "lng": -86.158068
         },
         "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
+          "summary": "December 2, 2017",
+          "startMonth": "Dec",
           "startDay": "2",
-          "endMonth": "Apr",
-          "endDay": "25"
+          "endMonth": "",
+          "endDay": ""
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -100,9 +100,9 @@
           "lng": -73.228160
         },
         "date": {
-          "summary": "March 30, 2017",
-          "startMonth": "Mar",
-          "startDay": "30",
+          "summary": "June 2, 2017",
+          "startMonth": "Jun",
+          "startDay": "2",
           "endMonth": "",
           "endDay": ""
         },
@@ -143,10 +143,10 @@
         },
         "date": {
           "summary": "March 30, 2017 - April 10, 2017",
-          "startMonth": "Mar",
-          "startDay": "30",
-          "endMonth": "Apr",
-          "endDay": "10"
+          "startMonth": "Aug",
+          "startDay": "26",
+          "endMonth": "Aug",
+          "endDay": "30"
         },
         "time": "12 p.m. - 2 p.m.",
         "description": ""
@@ -163,9 +163,9 @@
           "lng": -86.158068
         },
         "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
-          "startDay": "2",
+          "summary": "January 12, 2017 - April 25, 2017",
+          "startMonth": "Jan",
+          "startDay": "12",
           "endMonth": "Apr",
           "endDay": "25"
         },
@@ -184,11 +184,11 @@
           "lng": -86.158068
         },
         "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
-          "startDay": "2",
-          "endMonth": "Apr",
-          "endDay": "25"
+          "summary": "October 16, 2017 - October 18, 2017",
+          "startMonth": "Oct",
+          "startDay": "16",
+          "endMonth": "Oct",
+          "endDay": "18"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -205,11 +205,11 @@
           "lng": -71.289677
         },
         "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
-          "startDay": "2",
-          "endMonth": "Apr",
-          "endDay": "25"
+          "summary": "May 1, 2017 - May 26, 2017",
+          "startMonth": "May",
+          "startDay": "1",
+          "endMonth": "May",
+          "endDay": "26"
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -226,11 +226,11 @@
           "lng": -74.005941
         },
         "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
-          "startDay": "2",
-          "endMonth": "Apr",
-          "endDay": "25"
+          "summary": "July, 4 2017",
+          "startMonth": "Jul",
+          "startDay": "4",
+          "endMonth": "",
+          "endDay": ""
         },
         "time": "2 p.m. - 3 p.m.",
         "description": "sit amet, consectetur adipisicing elit"
@@ -247,10 +247,10 @@
           "lng": -118.243685
         },
         "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
-          "startDay": "2",
-          "endMonth": "Apr",
+          "summary": "September 19, 2017 - September 25, 2017",
+          "startMonth": "Sep",
+          "startDay": "19",
+          "endMonth": "Sep",
           "endDay": "25"
         },
         "time": "2 p.m. - 3 p.m.",
@@ -268,10 +268,10 @@
           "lng": -84.512020
         },
         "date": {
-          "summary": "March 2, 2017 - April 25, 2017",
-          "startMonth": "Mar",
-          "startDay": "2",
-          "endMonth": "Apr",
+          "summary": "February 17, 2017 - February 25, 2017",
+          "startMonth": "Feb",
+          "startDay": "17",
+          "endMonth": "Feb",
           "endDay": "25"
         },
         "time": "2 p.m. - 3 p.m.",
