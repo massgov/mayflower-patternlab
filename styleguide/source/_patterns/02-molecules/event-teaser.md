@@ -28,10 +28,14 @@ eventTeaser: {
       type: string (ie: Mar) / optional
     startDay:
       type: string (number) / optional
+    startTimestamp:
+      type: string (MM/D/YYYY - HH:MM) / required only for event listing interactive
     endMonth: 
       type: string (ie: Apr) / optional
     endDay:
       type: string (number) / optional
+    endTimestamp:
+      type: string (MM/D/YYYY - HH:MM) / required only for event listing interactive
   }
   time: 
     type: string / optional
