@@ -1,28 +1,25 @@
----
-title: Colored Heading
----
-Description: An `<h3>` element with a designated background color indicated by its CSS class.
+### Description
+An Heading element with a background color
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Notes:
-- _'green' is currently the only value that should be passed for optional variable coloredHeading.color_
+### Variant options
+* With a [green](./?p=atoms-colored-heading-green) background
+* Usage [example](./?p=atoms-colored-heading-usage-example) showing green heading for Page Content and gray for Right Rail
 
-### Used In:
-- [@organisms/by-author/sidebar-contact](/?p=organisms-sidebar-contact)
-- [@organisms/by-author/sidebar-widget](/?p=organisms-sidebar-widget)
-- [@organisms/by-author/quick-actions](/?p=organisms-quick-actions)
+### Usage Guidelines
+* Green color would only be used at the top of the Page Content
+* Gray color would be used in the Right Rail
+* When used in the Right Rail the diagonal will automatically appear on the left
 
-### Variables:
+
+### Variables
 ~~~
 coloredHeading {
-    text: 
-        type: string / required
-    color:
-        type: string ('','green')
+  text: 
+    type: string / required
+  color:
+    type: string ('','green') / optional
 }
 ~~~
-
-### Variations
-- [@atoms/04-headings/colored-heading](/?p=atoms-colored-heading)
-- [@atoms/04-headings/colored-heading-green](/?p=atoms-colored-heading-green)

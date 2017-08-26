@@ -1,22 +1,23 @@
----
-title: Location Icons
----
-Description: A list of icons displayed for a location.
-## State: Alpha
+### Description
+This pattern shows a list of icons with a label.
 
-### Used in:
-- [@organisms/by-author/action-header](/?p=organisms-action-header)
+### Status
+* Stable as of 5.0.0
 
-### Required Variables
+### Variant options
+* This pattern was also used for [payment types](./?p=molecules-location-icons-as-payment)
+
+
+### Variables
 ~~~
 locationIcons: {
   title:
-    type: string/optional (visually hidden)
+    type: string / optional (for screen readers)
   icons: [{
     path:
-      type: string/required
+      type: string (path to icon) / required
     name:
-      type: string/required
+      type: string / required
   }]
 }
 ~~~

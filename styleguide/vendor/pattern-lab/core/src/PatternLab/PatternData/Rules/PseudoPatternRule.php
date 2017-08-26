@@ -167,11 +167,29 @@ class PseudoPatternRule extends \PatternLab\PatternData\Rule {
 
 		}
 
+		/** Revert array_replace_recursive function to the original array_merge behavior (added to PL Core in July of 2016
+			* https://github.com/pattern-lab/patternlab-php-core/commit/613c7b6db41610ee858b0a6b80c9e0ffc7aab08f )
+			* NOTE: this should be treated as a temporary workaround to address the differences in behavior
+			* brought up in https://github.com/drupal-pattern-lab/patternlab-php-core/issues/12 until the ability
+			* to officially swap out or change core PL rule behavior is added
+			*
+			* 1. Changed occurrences of `array_replace_recursive` back to original `array_merge`
+			*
+			**/
+
+
 		// make sure the pattern data is an array before merging the data
-		$patternStoreData["data"] = is_array($patternData) ? array_merge($patternDataBase, $patternData) : $patternDataBase;
+		$patternStoreData["data"] = is_array($patternData) ? array_merge($patternDataBase, $patternData) : $patternDataBase; /* [1] */
 
 		// if the pattern data store already exists make sure it is merged and overwrites this data
-		$patternStoreData = (PatternData::checkOption($patternStoreKey)) ? array_merge(PatternData::getOption($patternStoreKey),$patternStoreData) : $patternStoreData;
+    if (PatternData::checkOption($patternStoreKey)) {
+      $existingData = PatternData::getOption($patternStoreKey);
+      if (array_key_exists('nameClean', $existingData)) {
+        // don't overwrite nameClean
+        unset($patternStoreData['nameClean']);
+      }
+      $patternStoreData = array_merge($existingData, $patternStoreData); /* [1] */
+    }
 		PatternData::setOption($patternStoreKey, $patternStoreData);
 
 	}

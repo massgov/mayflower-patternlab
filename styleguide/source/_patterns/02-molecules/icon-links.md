@@ -1,22 +1,20 @@
----
-title: Icon Links
----
-Description: A list of links with corresponding icon.
+### Description
+This is a list of links with a corresponding icon.
 
-## State: ALPHA
-### Notes:
-The way icons are referenced will change and require an update here as well.
-### Variables:
+### Status
+* Stable as of 5.0.0
+
+### Pattern Contains
+* Decorative Link
+
+### Variables
 ~~~
 iconLinks: {
   items: [{
     icon:
-      type: string (path to icon) / required
+      type: string (path to SVG icon) / required
     link: {
-      href:
-        type: string (url) / required
-      text:
-        type: string / required
+      type: decorativeLink / required
     }
   }]
 }

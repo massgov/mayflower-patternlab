@@ -1,7 +1,13 @@
 .ma__figure {
   margin: 0;
 
+  .main-content--full .page-content > & {
+    @include ma-container;
+  }
+
   @media ($bp-small-min) {
+    &--left,
+    &--align-left,
     &.align-left {
       float: left;
       margin-right: .5em;
@@ -9,6 +15,8 @@
       width: 50%;
     }
 
+    &--right,
+    &--align-right,
     &.align-right {
       float: right;
       margin-left: .5em;
@@ -29,13 +37,6 @@
     font-size: 1.125rem;
     font-style: italic;
     line-height: 1.57;
-
-    @media ($bp-small-min) {
-      &:nth-last-child(2) {
-        @include span-columns(6);
-        margin-bottom: 0;
-      }
-    }
   }
 
 }

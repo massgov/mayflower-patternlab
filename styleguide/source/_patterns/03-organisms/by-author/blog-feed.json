@@ -3,7 +3,7 @@
     "title": "The Latest from Our Team",
     "items": [{
       "image": {
-        "src": "/assets/images/placeholder/320x180.png",
+        "src": "../../assets/images/placeholder/320x180.png",
         "alt": "something about this image"
       },
       "date": "11.15.16",
@@ -16,7 +16,7 @@
     },
     {
       "image": {
-        "src": "/assets/images/placeholder/320x180.png",
+        "src": "../../assets/images/placeholder/320x180.png",
         "alt": "something about this image"
       },
       "date": "10.14.16",

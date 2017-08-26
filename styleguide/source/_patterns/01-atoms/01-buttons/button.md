@@ -1,18 +1,24 @@
----
-title: Button
----
-Description: A `<button>` element styled solid or outline and regular or small size
+### Description
+This is the standard button pattern
 
-## State: ALPHA
+### Status
+* Stable as of 6.0.0
 
-### Notes:
-- 'theme' eventually needs to be changed to 'color' and used as a modifier class (--color)
+### Variant options
+* Using a [link](./?p=atoms-button-as-link) instead of a button
+* [small](./?p=atoms-button-as-small)
+* [outline](./?p=atoms-button-as-outline)
+* [gray](./?p=atoms-button-as-quaternary-color) color
+* [green with an outline](./?p=atoms-button-as-secondary-color)
 
-### Used In:
 
-### Variables:
+### Variables
 ~~~
-buttonMain {
+button: {
+  href:
+    type: string (url) / optional
+  info: 
+    type: string / optional
   text: 
     type: string / required
   type:
@@ -20,7 +26,7 @@ buttonMain {
   size:
     type: string / optional ("" or "small")
   theme:
-    type: string / optional ("" or "alt")
+    type: string / optional ("", "secondary", or "quaternary")
   outline: 
     type: boolean
 }

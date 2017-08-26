@@ -1,11 +1,5 @@
----
-title: Figure
----
-Description: Left aligned version of the Figure atom
+### Description
+This is a variant of the [Figure](./?p=atoms-figure) pattern showing an example floated to the left.
 
-## State: ALPHA
-
-### Variations
-- [@atoms/09-media/figure](/?p=atoms-figure)
-- [@atoms/09-media/figure-left](/?p=atoms-figure-left)
-- [@atoms/09-media/figure-right](/?p=atoms-figure-right)
+### How to generate
+* set the 'align' variable to 'left'

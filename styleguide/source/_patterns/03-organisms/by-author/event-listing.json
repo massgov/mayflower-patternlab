@@ -2,8 +2,13 @@
   "eventListing": {
     "grid": false,
     "compHeading":{
-      "title": "Upcoming Events"
+      "title": "Upcoming Events",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
     },
+    "sidebarHeading": null,
     "events":[{
       "title": {
         "href": "#",
@@ -59,8 +64,8 @@
     "more":{
       "href": "#",
       "text": "view all events at this location",
-      "chevron": true,
-      "label": ""
+      "info": "",
+      "chevron": true
     }
   }
 }

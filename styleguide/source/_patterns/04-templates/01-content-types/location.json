@@ -74,8 +74,8 @@
   
   "locationBanner": {
     "bgTitle":"Mt Greylock State Park",
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "bgWide":"../../assets/images/placeholder/1600x400.png",
+    "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "id": "GUID24872901570",
     "googleMap": {
       "map": {
@@ -173,22 +173,7 @@
             "details":""
           }]
         }]
-      },{
-      "path": "@organisms/by-author/key-actions.twig",
-      "data": {
-        "keyActions": {
-          "links":[{
-            "text": "Quick Action",
-            "type": "",
-            "href": "#"
-          },{
-            "text": "Quick Action",
-            "type": "",
-            "href": "#"
-          }]
-        }
-      }
-    }]
+      }]
     }
   },
 

@@ -6,11 +6,7 @@
     <ul class="ma__social-links__items">
       {% for item in socialLinks.items %}
         <li class="ma__social-links__item">
-          <a href="{{ item.href }}" class="ma__social-links__link js-social-share" data-social-share="{{ item.linkType }}">
-            {# Maintain backwards compatibility for v3.1 & enable accessibility #}
-            {% if item.altText is defined and item.altText %}
-                <span class="visually-hidden">{{ item.altText }}</span>
-            {% endif %}
+          <a href="{{ item.href }}" class="ma__social-links__link js-social-share" data-social-share="{{ item.linkType }}" title="{{ item.altText }}">
             {% include item.icon %}
           </a>
         </li>

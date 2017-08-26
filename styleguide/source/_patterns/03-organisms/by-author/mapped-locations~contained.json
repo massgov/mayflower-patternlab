@@ -1,12 +1,6 @@
 {
   "mappedLocations": {
-    "compHeading": {
-      "title": "All Locations",
-      "sub": "",
-      "color": "",
-      "id": "",
-      "centered": ""
-    },
+    "compHeading": null,
     "contained": true,
     "link": {
       "href": "#",

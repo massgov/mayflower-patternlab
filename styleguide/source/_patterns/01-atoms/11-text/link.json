@@ -2,8 +2,7 @@
   "link": {
     "href": "#",
     "text":"This is a link",
-    "chevron": "",
-    "label": "",
-    "property": ""
+    "info": "",
+    "chevron": ""
   }
 }
