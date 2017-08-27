@@ -36,10 +36,14 @@
           {% include "@molecules/sticky-nav.twig" %}
         </div>
         {% block pageContent %}
+          {# Increase heading number by 1 from the parent heading. #}
+          {% set level = level + 1 %}
+          {% set compHeadingLevel = level %}
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
         {% endblock %}
         {% if mainContent.contactList %}
           {% set contactList = mainContent.contactList %}
+          {% set compHeadingLevel = level + 1 %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
       </div>

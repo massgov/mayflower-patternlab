@@ -35,6 +35,7 @@
               "details": ""
             }]
           },{
+            "level": 2,
             "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
             "items": [{
@@ -47,6 +48,7 @@
               "details":"This line is open from 9 a.m. - 5 p.m., M-F"
             }]
           },{
+            "level": 2,
             "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
             "items": [{
@@ -68,10 +70,10 @@
         "placeholder": {
           "text": "Optional widgets"
         }
-      }      
+      }
     }]
   },
-  
+
   "locationBanner": {
     "bgTitle":"Mt Greylock State Park",
     "bgWide":"../../assets/images/placeholder/1600x400.png",
@@ -131,7 +133,8 @@
     "contactList": {
       "viewSpecific": false,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "level": 3
       },
       "contacts":[{
         "accordion": true,
@@ -139,9 +142,11 @@
         "subTitle": {
           "href":"",
           "text": "Department name",
+          "level": 4,
           "chevron":""
         },
         "groups": [{
+          "level": 5,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -157,6 +162,7 @@
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
+          "level": 5,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -182,7 +188,8 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "level": 2
       },
       "contacts":[{
         "accordion": false,
@@ -190,9 +197,11 @@
         "subTitle": {
           "href":"",
           "text": "Department name",
+          "level": 3,
           "chevron":""
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -208,6 +217,7 @@
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
