@@ -1,25 +1,35 @@
----
-Title: Suggested Pages
----
+### Description
+This Pattern shows a collection of images and links to other pages on the site.
 
-##Fields:
-* title - string
-* view (optional) - string ("guide" or "") - toggles the view between illustrated links and Figure links 
-* buttonMinor - object
-  * link - string/url,
-  * text - string 
-* pages - array of objects
-  * image - string/url
-  * altTag - string - description of the image
-  * link - object
-    * type - string ("" or "external")
-    * href - string/url
-    * text - string
+### Status
+* Stable as of 5.0.0
 
-##Partials:
+### Pattern Contains
 * Illustrated link
 * Decorative Link
-* Button Link 2(secondary) Small
 
-##Notes:
-* Component can show Guide links (illustrated links) or Images with a link below, but it can not show both.
+### Variant options
+* The pattern can be shown with [Illustrated Links](./?p=organisms-suggested-pages-guide)
+
+## Usage Guidelines:
+* This Pattern can show Illustrated links or Images with a link below, but it can not show both.
+* Only three Illustrated Links should be shown or four Images with a link below.
+
+### Variables
+~~~
+"suggestedPages": {
+  "title": 
+    type: string / required,
+  "view": 
+    type: string ('', 'guide') / optional,
+  "pages": [{
+    "image": 
+      type: string (image path) / required,
+    "altTag": 
+      type: string / required,
+    "link": {
+      type: decorativeLink / required
+    }
+  }]
+}
+~~~

@@ -3,7 +3,7 @@
     "category": "Press Release",
     "divider": false,
     "title": "Governor Baker Delivers State of the Commonwealth Address",
-    "subTitle": "",
+    "subTitle": "Governor Charlie Baker delivers his second State of the Commonwealth address from the House Chamber of the Massachusetts State House.",
     "headerTags": {
       "label": "Related to:",
       "taxonomyTerms": [{
@@ -305,7 +305,7 @@
         },
         "tags": null,
         "image": {
-          "src":"/assets/images/placeholder/100x100.png",
+          "src":"../../assets/images/placeholder/100x100.png",
           "alt": "placeholder image",
           "height": "100",
           "width": "100",
@@ -338,7 +338,7 @@
         },
         "tags": null,
         "image": {
-          "src":"/assets/images/placeholder/190x107.png",
+          "src":"../../assets/images/placeholder/190x107.png",
           "alt": "placeholder image",
           "height": "107",
           "width": "190",

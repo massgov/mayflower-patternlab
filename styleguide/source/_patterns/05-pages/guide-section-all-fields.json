@@ -43,7 +43,7 @@
 
   "illustratedHeader": {
     "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/assets/images/placeholder/800x450.png",
+    "bgImage": "../../assets/images/placeholder/800x450.png",
     "category": "Guide",
     "pageHeader": {
       "divider": false,
@@ -118,7 +118,7 @@
                     "align": "",
                     "image": {
                       "alt": "alt text",
-                      "src": "/assets/images/placeholder/800x400.png",
+                      "src": "../../assets/images/placeholder/800x400.png",
                       "height": "",
                       "width": ""
                     },
@@ -297,7 +297,7 @@
       "text": "See All Guides"
     },
     "pages": [{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -306,7 +306,7 @@
         "label": "Guide:"
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",
@@ -315,7 +315,7 @@
         "label": "Guide:"
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "altTag": "Place Holder Image",
       "link": {
         "type": "",

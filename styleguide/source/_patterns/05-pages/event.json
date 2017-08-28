@@ -39,7 +39,7 @@
           "date": {
             "summary": "Sunday, November 20, 2017"
           },
-          "time": "8:00 a.m. - 10:00 a.m.",
+          "time": "8 a.m. - 10 a.m.",
           "description": ""
         }
       }
@@ -91,7 +91,7 @@
       },
       "image": { 
         "alt": "alt text", 
-        "src": "/assets/images/placeholder/600x338.png",
+        "src": "../../assets/images/placeholder/600x338.png",
         "width": "600",
         "height": "338"
       },
@@ -133,9 +133,9 @@
         "sub": true
       },
       "rteElements": [{
-        "path": "@atoms/08-lists/unordered-list.twig",
+        "path": "@atoms/08-lists/checklist.twig",
         "data": {
-          "unorderedList": [{ 
+          "checkList": [{ 
             "text": "Sports clothes and shoes" 
           },{ 
             "text": "To ensure all children are accompanied by an adult" 

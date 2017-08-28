@@ -1,14 +1,24 @@
----
-title: Jump Links
----
+### Description
+This is a Table of Contents Navigation Pattern.
 
-##Fields:
+### Status
+* Stable as of 5.0.0
 
-* Title - string
-* Links - array - objects containing:
-  - href - string - id of the elment to scroll to
-  - text - string - displayed text
+### JavaScript Used
+* Sticky Nav and smooth scrolling (js/modules/scrollAnchors.js)
 
-##Notes:
-
-* If the href doesn't match any elements on the page clicking the link will scroll to the top of this component's position relative parent. 
+### Variables
+~~~
+jumpLinks: {
+  title: 
+    type: string / required
+  links: [{
+    text: 
+      type: string / required,
+    href: 
+      type: string (url) / required,
+    info: 
+      type: string / optional
+  }]
+}
+~~~

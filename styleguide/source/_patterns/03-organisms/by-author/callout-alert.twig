@@ -1,14 +1,11 @@
 {% set calloutAlert = calloutAlert.decorativeLink %}
 
-<section class="ma__callout-alert {{ calloutAlert.href ? 'js-clickable' : ''}}">
+<section class="ma__callout-alert">
   {% if calloutAlert.href %}
     <a class="ma__callout-alert__content" 
       href="{{ calloutAlert.href }}"
       {% if calloutAlert.info %}
-        aria-label="{{ calloutAlert.info }}"
-      {% endif %}
-      {% if calloutAlert.property %}
-        property="{{ calloutAlert.property }}"
+        title="{{ calloutAlert.info }}"
       {% endif %}>
       <div class="ma__callout-alert__icon">
         {% include "@atoms/05-icons/svg-alert.twig" %}

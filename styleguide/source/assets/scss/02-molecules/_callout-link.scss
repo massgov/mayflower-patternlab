@@ -39,6 +39,7 @@
     width: 100%;
   }
 
+  // removed after version 5.5.0
   &__info {
     @include ma-visually-hidden;
   }

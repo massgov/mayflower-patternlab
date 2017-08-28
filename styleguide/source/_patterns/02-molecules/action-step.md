@@ -1,19 +1,20 @@
----
-title: Action Step
----
-Description: Displays details about how to complete a step.
+### Description
+Displays details about how to complete a step.
 
-## Status: alpha
+### Status
+* Stable as of 5.0.0
 
-### Notes:
+### Pattern Contains
+* Rich Text
+* Download Link
+* Decorative Link
 
-### Contains
-- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
-- [@molecules/download-link](/?p=molecules-download-link)
-- [@atoms/decorative-link](/?p=atoms-decorative-link)
+### Variant options
+* Displayed as an [accordion](./?p=molecules-action-step-as-accordion)
 
-### Used in:
-- [@organisms/by-author/steps-unordered](/?p=organisms-steps-unordered)
+
+### JavaScript Used
+* accordions (js/modules/accordions.js)
 
 ### Variables
 ~~~
@@ -23,18 +24,18 @@ actionStep: {
   isExpanded
     type: boolean
   accordionLabel: 
-    type: string/required if accordion is true
+    type: string / required if accordion is set to true
   icon: 
-    type: string/path/optional
+    type: string (path to icon) / optional
   title: 
-    type: string/required
+    type: string / required
   richText: 
-    type: object/required @organisms/by-author/rich-text.twig
-  downloadLinks: 
-    type: array/optional
+    type: richText /required
+  downloadLinks: (optional) [{ 
     downloadLink: 
-      type: object/required @molecules/download-link.twig
+      type: downloadLink / required
+  }]
   decorativeLink: 
-    type: object/optional @atoms/decorative-link.twig
+    type: decorativeLink / optional
 }
 ~~~
