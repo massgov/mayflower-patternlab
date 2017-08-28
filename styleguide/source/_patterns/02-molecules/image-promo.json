@@ -2,6 +2,7 @@
   "imagePromo": {
     "title": {
       "text": "Activity Title",
+      "level": 2,
       "href": "#",
       "info": ""
     },

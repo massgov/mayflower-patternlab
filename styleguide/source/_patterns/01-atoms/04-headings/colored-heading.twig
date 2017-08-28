@@ -1,3 +1,4 @@
 {% set class = coloredHeading.color ? "ma__colored-heading--" ~ coloredHeading.color : "" %}
 
-<h2 class="ma__colored-heading {{class}}">{{coloredHeading.text}}</h2>
+{% set level = coloredHeading.level ? : 2 %}
+<h{{ level }} class="ma__colored-heading {{class}}">{{coloredHeading.text}}</h{{ level }}>

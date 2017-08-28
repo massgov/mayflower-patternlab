@@ -5,6 +5,7 @@
     "accordionLabel": "Expand Generic steps on completing something",
     "icon": "@atoms/05-icons/svg-circle-chevron.twig",
     "title": "Generic",
+    "level": 4,
     "richText": {
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
