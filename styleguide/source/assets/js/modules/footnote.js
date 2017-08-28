@@ -6,8 +6,14 @@ export default function (window,document,$,undefined) {
     let $el = $(this),
         $link = $el.find(".js-footnote-link"),
         $messageLink = $link.clone(),
-        $rtelink = $($link.attr('href')),
+        $rtelink = null,
         isMobile = checkMobile($el);
+
+    if ($link.attr('href') === "#") {
+      return;
+    } else {
+      $rtelink = $($link.attr('href'));
+    }
 
     $messageLink.text('');
 

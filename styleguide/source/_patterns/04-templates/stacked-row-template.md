@@ -10,9 +10,11 @@ This template allows you to have rows of content that are either full width or w
 * Footer
 * Jump Links
 * Stacked Row Section
+* This template contains [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html) that can be used to populated the Header, Pre-Content, Post Content, and Footer sections with patterns found in Mayflower
 
 ### Usage Guidelines
 * Each Row used should ideally have a corresponding link to it in the Jump Links navigation.
+* The Stacked Row Sections are used to populate the Page Content and Right Rail areas shown.
 
 ### JavaScript Used
 * Jump Links (js/modules/scrollAnchors.js)

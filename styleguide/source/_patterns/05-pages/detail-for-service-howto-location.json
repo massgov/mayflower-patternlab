@@ -1,29 +1,6 @@
 {
   "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
 
-  "breadcrumbs":{
-    "light": "true",
-    "links": [{
-      "text": "Your Government",
-      "href": ""
-    },{
-      "text": "State Agencies",
-      "href": ""
-    },{
-      "text": "Energy and Environment Affairs",
-      "href": ""
-    },{
-      "text": "Key Resources & Info",
-      "href": ""
-    },{
-      "text": "Policies & Regulations",
-      "href": ""
-    },{
-      "text": "Building Energy Codes",
-      "href": "#"
-    }]
-  },
-
   "pageHeader": {
     "divider": false,
     "title": "Building Energy Codes",

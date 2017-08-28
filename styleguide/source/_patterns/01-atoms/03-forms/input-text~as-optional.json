@@ -1,15 +1,15 @@
 {
   "inputText": {
     "hiddenLabel": false,
-    "labelText": "Email Address",
+    "labelText": "Text Input",
     "required": false,
-    "id": "email-input",
-    "name": "email-input",
-    "type": "email",
+    "id": "optional-input",
+    "name": "optional-input",
+    "type": "text",
     "width": "",
     "maxlength": "",
     "pattern": "",
-    "placeholder": "you@email.com",
+    "placeholder": "Optional input",
     "errorMsg": ""
   }
 }

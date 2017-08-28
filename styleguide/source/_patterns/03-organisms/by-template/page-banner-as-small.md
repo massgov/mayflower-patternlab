@@ -1,5 +1,5 @@
-Description: This is a variant of the [Page Banner](./?p=organisms-page-banner) showing an example with size set to 'small'.
+Description: This is a variant of the [Page Banner](./?p=organisms-page-banner) showing an example with smaller text
 
-### Status
-* Stable as of 5.0.0
+### How to generate
+* set the `size` variable to 'small'
 
