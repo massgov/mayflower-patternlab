@@ -9,7 +9,7 @@ Thanks for contributing to Mayflower!  Please take a minute to review the proces
 1. [Feature Requests](#feature-requests)
 1. [Submitting Pull Requests](#submitting-pull-requests)
     1. [Getting started](#getting-started)
-        1. [Setting up your environment](#setting-up-your-environment)
+        1. [Get Set Up](#get-set-up)
         1. [Forking the repo](#forking-the-repo)
         1. [Cloning the repo](#cloning-the-repo)
         1. [Installing project dependencies](#installing-project-dependencies)
@@ -36,7 +36,7 @@ We use labels to help identify and organize issues.  Here's what they represent 
 - `examples` - Issues involving the example patterns (i.e. content or data) included on our site.
 - `feature` - Issues asking for a new feature to be added, or an existing one to be extended or modified.
 - `build` - Issues with our build system, which is used to run all our tests, concatenate and compile source files, and more.
-- `help wanted` - Issues we need or would love help from the community to resolve.
+- `PRs welcome` - Issues we need or would love help from the community to resolve.
 - `js` - Issues stemming from our compiled or source JavaScript files.
 - `meta` - Issues with the project itself or our GitHub repository.
 
@@ -174,7 +174,7 @@ Serve Mayflower locally and as you save your changes, it will update automatical
    - You can learn about patterns by clicking the top right COG icon, then selecting "Show Pattern Info" from the drop down.
 1. All work is done in the `/styleguide/source` directory.
     - Most patterns will have a `.twig` [markup file](https://twig.sensiolabs.org/), `.json` default [data file](http://patternlab.io/docs/data-pattern-specific.html), and `.md` [documentation file](http://patternlab.io/docs/pattern-documenting.html) in the `/styleguide/source/_patterns` directory.
-    - If a pattern has styles associated with it, the corresponding `.scss` files can be found in the `/styleguide/source/assets/scss` directory.  We use [SMACSS](https://smacss.com/book/categorizing) to organize and [BEM](http://getbem.com/introduction/) to structure our css.
+    - If a pattern has styles associated with it, the corresponding `.scss` files can be found in the `/styleguide/source/assets/scss` directory.  We use [SMACSS](https://smacss.com/book/categorizing) to organize and [BEM](http://getbem.com/introduction/) to structure our [scss](http://sass-lang.com/guide) which gets compiled to css during build and automatically with the `gulp` task running.
      - If a pattern has js functionality associated with it, the corresponding [ES6 module](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) `.js` file can be found in the `/styleguide/source/assets/js/modules` directory.
 1. These assets will automatically recompile and the browser will refresh as you save changes.
 
