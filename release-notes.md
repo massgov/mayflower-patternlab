@@ -15,11 +15,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Added
 
+- DP-4730 - Users will now notice there is now an option to render an [Event page with an end date](). ([PR #566](https://github.com/massgov/mayflower/pull/566)) 
+
 ### Changed
 
 ### Removed
 
 ### Migrate path
+
+- Update [`@molecules/event-teaser.twig`]() by adding the nl2br filter to the `eventTeaser.date.summary` variable.  See [PR #566 commit](https://github.com/massgov/mayflower/pull/566/commits/e7568e32d5f7005b82ca0c2eb980ee9a57d1b3b1).
 
 ## 5.6.1
 
