@@ -84,7 +84,7 @@ export default function (window,document,$,undefined) {
      *        page: the page that the listing, if active, will appear on, given the current sort order
      *        data: the data structure for the eventTeaser component
      *        markup: the compiled eventTeaser markup
-     *        start: the momentjs object for the start date
+     *        start: the momentjs object for the start timestamp
      *      ]
      *      pagination: the data structure necessary to render a pagination component,
      *      selectors: the necessary $selectors for rendering the listing
@@ -94,7 +94,7 @@ export default function (window,document,$,undefined) {
       // Populate master data structure
       let masterData = [];
 
-      // Ensure locationListing.imagePromos.items is an array (the twig template json_encode()'s a php array)
+      // Ensure eventListing.events.items is an array (the twig template json_encode()'s a php array)
       let listArray = [];
       $.map(listing.eventListing.events, function(val, index) {
         listArray[index] = val;
@@ -102,7 +102,7 @@ export default function (window,document,$,undefined) {
 
       listing.eventListing.events = listArray;
 
-      // Ensure locationListing.pagination.pages is an array (the twig template json_encode()'s a php array)
+      // Ensure eventListing.pagination.pages is an array (the twig template json_encode()'s a php array)
       let pages = [];
       $.map(listing.pagination.pages, function(val, index) { pages[index] = val; });
       listing.pagination.pages = pages;
@@ -115,13 +115,13 @@ export default function (window,document,$,undefined) {
         }
       });
 
-      // Get the listing imagePromos, generate markup for each
+      // Get the listing events, generate markup for each
       let masterListing = listing.eventListing.events,
 
       // Pass in listing and template name.
       masterListingMarkup = listings.transformListing(masterListing, 'eventListingRow');
 
-      // The max number of items per page, if designated in locationListing data structure, else all
+      // The max number of items per page, if designated in eventListing data structure, else all
       masterData.maxItems = listing.maxItems ? listing.maxItems : masterListing.length;
 
       // The initial results heading data structure
@@ -150,7 +150,7 @@ export default function (window,document,$,undefined) {
      * Creates the master data structure items array
      *
      * @param listing
-     *   The locationListing data structure
+     *   The eventListing data structure
      * @param markup
      *   The generated array of item markup
      * @param max
@@ -161,8 +161,8 @@ export default function (window,document,$,undefined) {
      *      isActive: whether or not the listing should be shown, given current filters state
      *      page: the page that the listing, if active, will appear on, given the current sort order
      *      data: the data structure for the eventListing component
-     *      markup: the compiled imagePromo markup
-     *      start: the start momentjs object for this item
+     *      markup: the compiled event markup
+     *      start: a momentjs object for this event's start timestamp
      *   ]
      */
     function getMasterListingWithMarkup(listing, markup, max) {
@@ -212,7 +212,7 @@ export default function (window,document,$,undefined) {
       }
       // If place argument was populated from event/locationFilter (zipcode text input) but not from Place autocomplete.
       else {
-        // Geocode the address, then sort the markers and instance of locationListing masterData.
+        // Geocode the address, then sort the markers and instance of eventListing masterData.
         ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
         // @todo limit geocode results to MA?
         sortedData = listings.geocodeAddressString(place, sortDataAroundPlace, filteredData);
