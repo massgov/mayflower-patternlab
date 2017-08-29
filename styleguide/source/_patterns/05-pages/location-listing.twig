@@ -1,14 +1,14 @@
-{% extends '@templates/stacked-row-template.twig' %} 
- 
-{% block preContent %} 
-  {% include "@organisms/by-template/page-header.twig" %} 
-{% endblock %} 
-{% block stackedRowContent %} 
-  {% for stackedRowSection in stackedRowSections %} 
-    {% set stackedRowSection = stackedRowSection|merge({'level': level}) %} 
-    {% include "@organisms/by-author/stacked-row-section.twig" %} 
-  {% endfor %} 
-{% endblock %} 
-{% block postContent %} 
- 
-{% endblock %} 
+{% extends '@templates/stacked-row-template.twig' %}
+
+{% block preContent %}
+  {% include "@organisms/by-template/page-header.twig" %}
+{% endblock %}
+{% block stackedRowContent %}
+  {% for stackedRowSection in stackedRowSections %}
+    {% set stackedRowSection = stackedRowSection|merge({'level': level}) %}
+    {% include "@organisms/by-author/stacked-row-section.twig" %}
+  {% endfor %}
+{% endblock %}
+{% block postContent %}
+
+{% endblock %}

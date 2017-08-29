@@ -1,24 +1,24 @@
-{ 
-  "stackedRowSection": { 
-    "title":"Title for the Row of Content", 
-    "level": 2, 
-    "id":"row-title-double-column", 
-    "pageContent": [{ 
-      "path": "@base/placeholder.twig", 
-      "data": { 
-        "placeholder": { 
-          "text": "Main Content" 
-        } 
-      } 
-    }], 
- 
-    "sideBar": [{ 
-      "path": "@base/placeholder.twig", 
-      "data": { 
-        "placeholder": { 
-          "text": "Right Rail Content" 
-        } 
-      } 
-    }] 
-  } 
-} 
+{
+  "stackedRowSection": {
+    "title":"Title for the Row of Content",
+    "level": 2,
+    "id":"row-title-double-column",
+    "pageContent": [{
+      "path": "@base/placeholder.twig",
+      "data": {
+        "placeholder": {
+          "text": "Main Content"
+        }
+      }
+    }],
+
+    "sideBar": [{
+      "path": "@base/placeholder.twig",
+      "data": {
+        "placeholder": {
+          "text": "Right Rail Content"
+        }
+      }
+    }]
+  }
+}

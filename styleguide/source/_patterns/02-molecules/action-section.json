@@ -1,21 +1,21 @@
-{ 
-  "actionSection": { 
-    "title":"Overview", 
-    "level": 3, 
-    "id":"overview:", 
-    "path":"organisms-rich-text", 
-    "data": { 
-      "richText": { 
-      "property": "description", 
-        "rteElements": [{ 
-          "path": "atoms-paragraph", 
-          "data": { 
-            "paragraph": { 
-              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare." 
-            } 
-          } 
-        }] 
-      } 
-    } 
-  } 
-} 
+{
+  "actionSection": {
+    "title":"Overview",
+    "level": 3,
+    "id":"overview:",
+    "path":"organisms-rich-text",
+    "data": {
+      "richText": {
+      "property": "description",
+        "rteElements": [{
+          "path": "atoms-paragraph",
+          "data": {
+            "paragraph": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla. Etiam sodales at nibh at convallis. Curabitur eleifend auctor eleifend. Donec condimentum justo in blandit ornare."
+            }
+          }
+        }]
+      }
+    }
+  }
+}

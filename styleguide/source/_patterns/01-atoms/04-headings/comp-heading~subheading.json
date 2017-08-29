@@ -1,10 +1,10 @@
-{ 
-  "compHeading": { 
-    "title": "Title text", 
-    "level": 2, 
-    "sub": true, 
-    "color": "", 
-    "id": "", 
-    "centered": "" 
-  } 
-} 
+{
+  "compHeading": {
+    "title": "Title text",
+    "level": 2,
+    "sub": true,
+    "color": "",
+    "id": "",
+    "centered": ""
+  }
+}

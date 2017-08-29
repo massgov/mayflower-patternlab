@@ -1,8 +1,8 @@
-{ 
-  "columnHeading" : { 
-    "text": "Heading for the start of a column", 
-    "level": 3, 
-    "href": "", 
-    "info": "" 
-  } 
-} 
+{
+  "columnHeading" : {
+    "text": "Heading for the start of a column",
+    "level": 3,
+    "href": "",
+    "info": ""
+  }
+}

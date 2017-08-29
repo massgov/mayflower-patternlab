@@ -1,177 +1,177 @@
-{ 
-  "level": 1, 
-  "pageHeader": { 
-    "category": "", 
-    "divider": false, 
-    "title": "Name of Form", 
-    "subTitle": "Lorem ipsum dolor sit amet,  consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet.", 
-    "headerTags": null, 
-    "socialLinks": null, 
-    "optionalContents": null, 
-    "widgets": null 
-  }, 
- 
-  "formRequirements": { 
-    "rteTitle": { 
-      "text": "You will need:", 
-      "level": 2, 
-      "href": "", 
-      "info": "" 
-    }, 
- 
-    "richText": { 
-      "rteElements": [{ 
-        "path": "@atoms/08-lists/unordered-list.twig", 
-        "data": { 
-          "unorderedList": [{ 
-            "text": "Vestibulum ornare feugiat sodales" 
-          }, { 
-            "text": "Suspendisse fermentum augue eget semper feugiat" 
-          }, { 
-            "text": "Ut risus nibh,  sodales sit amet mollis pharetra,  elementum vitae sapien" 
-          }, { 
-            "text":"Integer quis suscipit dui" 
-          }, { 
-            "text":"Lorem ipsum dolor sit amet,  consectetur adipisicing elit" 
-          }] 
-        } 
-      }] 
-    }, 
- 
-    "payment": { 
-      "title": { 
-        "text": "Payment accepted:", 
-        "href": "", 
-        "info": "" 
-      }, 
- 
-      "locationIcons": { 
-        "icons": [{ 
-          "path":"@atoms/05-icons/svg-credit.twig", 
-          "name":"credit card" 
-        }, { 
-          "path":"@atoms/05-icons/svg-check.twig", 
-          "name":"check" 
-        }, { 
-          "path":"@atoms/05-icons/svg-cash.twig", 
-          "name":"cash" 
-        }] 
-      } 
-    } 
-  }, 
- 
-  "sideContent": { 
-    "contactList": { 
-      "viewSpecific": false, 
-      "sidebarHeading":{ 
-        "title": "Contact", 
-        "level": 2 
-      }, 
-      "contacts":[{ 
-        "subTitle": { 
-          "href":"", 
-          "text": "Name of Agency or Organization", 
-          "level": 3 
-        }, 
-        "groups": [{ 
-          "level": 4, 
-          "icon": "@atoms/05-icons/svg-phone.twig", 
-          "name": "Phone", 
-          "items": [{ 
-            "type": "phone", 
-            "property": "", 
-            "label":"Main:", 
-            "link": { 
-              "href": "+17817401605", 
-              "text": "(781) 740-1605", 
-              "info": "", 
-              "property": "" 
-            }, 
-            "details":"" 
+{
+  "level": 1,
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "title": "Name of Form",
+    "subTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet.",
+    "headerTags": null,
+    "socialLinks": null,
+    "optionalContents": null,
+    "widgets": null
+  },
+
+  "formRequirements": {
+    "rteTitle": {
+      "text": "You will need:",
+      "level": 2,
+      "href": "",
+      "info": ""
+    },
+
+    "richText": {
+      "rteElements": [{
+        "path": "@atoms/08-lists/unordered-list.twig",
+        "data": {
+          "unorderedList": [{
+            "text": "Vestibulum ornare feugiat sodales"
+          },{
+            "text": "Suspendisse fermentum augue eget semper feugiat"
+          },{
+            "text": "Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien"
+          },{
+            "text":"Integer quis suscipit dui"
+          },{
+            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit"
           }]
-        }, { 
-          "level": 4, 
-          "icon": "@atoms/05-icons/svg-laptop.twig", 
-          "name": "Online", 
-          "hidden": "", 
-          "items": [{ 
-            "type": "online", 
-            "property": "", 
-            "label":"", 
-            "link": { 
-              "href":"#", 
-              "text": "email@state.ma.us", 
-              "info": "", 
-              "property": "" 
-            }, 
-            "details":"" 
-          }] 
-        }] 
-      }] 
-    } 
-  }, 
- 
-  "form": { 
-    "action": "#", 
- 
-    "errorList": { 
-      "title": "Sorry,  please correct the indicated errors", 
-      "level": 2, 
-      "labels": [{ 
-        "inputId": "your-name-23489", 
-        "text": "Please fill in the first field", 
-        "info": "" 
-      }] 
-    }, 
- 
-    "groups": [{ 
-      "compHeading": { 
-        "title": "Name of Section", 
-        "level": 3, 
-        "sub": "", 
-        "color": "", 
-        "id": "", 
-        "centered": "" 
-      }, 
-      "fieldsets": [{ 
-        "legend": "", 
-        "items": [{ 
-          "path": "@atoms/03-forms/input-text.twig", 
-          "data": { 
-            "inputText": { 
-              "labelText": "Label of field", 
-              "required": true, 
-              "id": "your-name-23489", 
-              "name": "first-text-input", 
-              "type": "text", 
-              "placeholder": "", 
-              "errorMsg": "you did not type something" 
-            } 
-          } 
-        }, { 
-          "path": "@atoms/03-forms/helper-text.twig", 
-          "data": { 
-            "helperText": { 
-              "inputId": "your-name-23489", 
-              "message": "helper text that includes instructions if needed." 
-            } 
-          } 
-        }] 
-      }, { 
-        "legend": "", 
-        "items": [{ 
-          "path": "@atoms/01-buttons/button.twig", 
-          "data": { 
-            "button": { 
-              "text": "Done", 
-              "type": "submit", 
-              "size": "small", 
-              "theme": "", 
-              "outline": false 
-            } 
-          } 
-        }] 
-      }] 
-    }] 
-  } 
-} 
+        }
+      }]
+    },
+
+    "payment": {
+      "title": {
+        "text": "Payment accepted:",
+        "href": "",
+        "info": ""
+      },
+
+      "locationIcons": {
+        "icons": [{
+          "path":"@atoms/05-icons/svg-credit.twig",
+          "name":"credit card"
+        },{
+          "path":"@atoms/05-icons/svg-check.twig",
+          "name":"check"
+        },{
+          "path":"@atoms/05-icons/svg-cash.twig",
+          "name":"cash"
+        }]
+      }
+    }
+  },
+
+  "sideContent": {
+    "contactList": {
+      "viewSpecific": false,
+      "sidebarHeading":{
+        "title": "Contact",
+        "level": 2
+      },
+      "contacts":[{
+        "subTitle": {
+          "href":"",
+          "text": "Name of Agency or Organization",
+          "level": 3
+        },
+        "groups": [{
+          "level": 4,
+          "icon": "@atoms/05-icons/svg-phone.twig",
+          "name": "Phone",
+          "items": [{
+            "type": "phone",
+            "property": "",
+            "label":"Main:",
+            "link": {
+              "href": "+17817401605",
+              "text": "(781) 740-1605",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        },{
+          "level": 4,
+          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "name": "Online",
+          "hidden": "",
+          "items": [{
+            "type": "online",
+            "property": "",
+            "label":"",
+            "link": {
+              "href":"#",
+              "text": "email@state.ma.us",
+              "info": "",
+              "property": ""
+            },
+            "details":""
+          }]
+        }]
+      }]
+    }
+  },
+
+  "form": {
+    "action": "#",
+
+    "errorList": {
+      "title": "Sorry, please correct the indicated errors",
+      "level": 2,
+      "labels": [{
+        "inputId": "your-name-23489",
+        "text": "Please fill in the first field",
+        "info": ""
+      }]
+    },
+
+    "groups": [{
+      "compHeading": {
+        "title": "Name of Section",
+        "level": 3,
+        "sub": "",
+        "color": "",
+        "id": "",
+        "centered": ""
+      },
+      "fieldsets": [{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/03-forms/input-text.twig",
+          "data": {
+            "inputText": {
+              "labelText": "Label of field",
+              "required": true,
+              "id": "your-name-23489",
+              "name": "first-text-input",
+              "type": "text",
+              "placeholder": "",
+              "errorMsg": "you did not type something"
+            }
+          }
+        },{
+          "path": "@atoms/03-forms/helper-text.twig",
+          "data": {
+            "helperText": {
+              "inputId": "your-name-23489",
+              "message": "helper text that includes instructions if needed."
+            }
+          }
+        }]
+      },{
+        "legend": "",
+        "items": [{
+          "path": "@atoms/01-buttons/button.twig",
+          "data": {
+            "button": {
+              "text": "Done",
+              "type": "submit",
+              "size": "small",
+              "theme": "",
+              "outline": false
+            }
+          }
+        }]
+      }]
+    }]
+  }
+}

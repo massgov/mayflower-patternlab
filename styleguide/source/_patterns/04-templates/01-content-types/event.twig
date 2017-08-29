@@ -1,94 +1,94 @@
-{# Set top heading level for the page. #} 
-{% set level = 1 %} 
- 
-{# site header #} 
-{% block header %}{% endblock %} 
- 
-<main id="main-content" tabindex="-1"{% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}> 
-  {# Increase heading number by 1 from the parent heading. #} 
-  {% set level = level + 1 %} 
-  {% set compHeadingLevel = level %} 
-  <div class="pre-content"> 
-    {% block preContent %} 
-      {% include "@organisms/by-template/page-header.twig" %} 
-    {% endblock %} 
-  </div> 
-  <div class="main-content main-content--two"> 
-    <div class="page-content"> 
-      {% block pageContent %} 
-        {% if sideContent.contactList %} 
-          {% set contactList = sideContent.contactList|merge({'compHeading': sideContent.contactList.sidebarHeading, 'sidebarHeading': null}) %} 
-          {% include "@organisms/by-author/contact-list.twig" %} 
-        {% endif %} 
-        {% if sideContent.mediaContact %} 
-          {% set contactList = sideContent.mediaContact|merge({'compHeading': sideContent.mediaContact.sidebarHeading, 'sidebarHeading': null}) %} 
-          {% include "@organisms/by-author/contact-list.twig" %} 
-        {% endif %} 
- 
-        {% if mainContent.pageOverview %} 
-          {% set pageOverview = mainContent.pageOverview %} 
-          {% set compHeading = pageOverview.compHeading|merge({'level': compHeadingLevel}) %} 
-          {% set pageOverview = pageOverview|merge({'compHeading': compHeading}) %} 
-          {% include "@organisms/by-author/page-overview.twig" %} 
-        {% endif %} 
- 
-        {% if mainContent.youWillNeed %} 
-          {% set richText = mainContent.youWillNeed %} 
-          {% set compHeading = richText.compHeading|merge({'level': compHeadingLevel}) %} 
-          {% set richText = richText|merge({'compHeading': compHeading}) %} 
-          {% include "@organisms/by-author/rich-text.twig" %} 
-        {% endif %} 
- 
-        {% if mainContent.formDownloads %} 
-          {% set formDownloads = mainContent.formDownloads %} 
-          {% set compHeading = formDownloads.compHeading|merge({'level': compHeadingLevel}) %} 
-          {% set formDownloads = formDownloads|merge({'compHeading': compHeading}) %} 
-          {% include "@organisms/by-author/form-downloads.twig" %} 
-        {% endif %} 
- 
-        {% if mainContent.contactList %} 
-          {% set contactList = mainContent.contactList %} 
-          {% set compHeading = contactList.compHeading|merge({'level': compHeadingLevel}) %} 
-          {% set contactList = contactList|merge({'compHeading': compHeading}) %} 
-          {% include "@organisms/by-author/contact-list.twig" %} 
-        {% endif %} 
- 
-        {% if mainContent.mediaContact %} 
-          {% set contactList = mainContent.mediaContact %} 
-          {% include "@organisms/by-author/contact-list.twig" %} 
-        {% endif %} 
- 
-        {% if mainContent.linkList %} 
-          {% set linkList = mainContent.linkList %} 
-          {% include "@organisms/by-author/link-list.twig" %} 
-        {% endif %} 
-      {% endblock %} 
-    </div> 
-    <aside class="sidebar"> 
-      {% block sidebar %} 
-        {% if sideContent.contactList %} 
-          {% set contactList = sideContent.contactList %} 
-          {% include "@organisms/by-author/contact-list.twig" %} 
-        {% endif %} 
-        {% if sideContent.mediaContact %} 
-          {% set contactList = sideContent.mediaContact %} 
-          {% include "@organisms/by-author/contact-list.twig" %} 
-        {% endif %} 
-      {% endblock %} 
-    </aside> 
-  </div> 
-  <div class="post-content"> 
-    {% block postContent %} 
-      {% if bottomContent.eventListing %} 
-        {% set eventListing = bottomContent.eventListing %} 
-        {% include "@organisms/by-author/event-listing.twig" %} 
-      {% endif %} 
-    {% endblock %} 
-  </div> 
- 
-  {# structured data #} 
-  {% block schemaContent %}{% endblock %} 
-</main> 
- 
-{# site footer #} 
-{% block footer %}{% endblock %} 
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
+{# site header #}
+{% block header %}{% endblock %}
+
+<main id="main-content" tabindex="-1"{% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
+  {% set compHeadingLevel = level %}
+  <div class="pre-content">
+    {% block preContent %}
+      {% include "@organisms/by-template/page-header.twig" %}
+    {% endblock %}
+  </div>
+  <div class="main-content main-content--two">
+    <div class="page-content">
+      {% block pageContent %}
+        {% if sideContent.contactList %}
+          {% set contactList = sideContent.contactList|merge({'compHeading': sideContent.contactList.sidebarHeading, 'sidebarHeading': null}) %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
+        {% if sideContent.mediaContact %}
+          {% set contactList = sideContent.mediaContact|merge({'compHeading': sideContent.mediaContact.sidebarHeading, 'sidebarHeading': null}) %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
+
+        {% if mainContent.pageOverview %}
+          {% set pageOverview = mainContent.pageOverview %}
+          {% set compHeading = pageOverview.compHeading|merge({'level': compHeadingLevel}) %}
+          {% set pageOverview = pageOverview|merge({'compHeading': compHeading}) %}
+          {% include "@organisms/by-author/page-overview.twig" %}
+        {% endif %}
+
+        {% if mainContent.youWillNeed %}
+          {% set richText = mainContent.youWillNeed %}
+          {% set compHeading = richText.compHeading|merge({'level': compHeadingLevel}) %}
+          {% set richText = richText|merge({'compHeading': compHeading}) %}
+          {% include "@organisms/by-author/rich-text.twig" %}
+        {% endif %}
+
+        {% if mainContent.formDownloads %}
+          {% set formDownloads = mainContent.formDownloads %}
+          {% set compHeading = formDownloads.compHeading|merge({'level': compHeadingLevel}) %}
+          {% set formDownloads = formDownloads|merge({'compHeading': compHeading}) %}
+          {% include "@organisms/by-author/form-downloads.twig" %}
+        {% endif %}
+
+        {% if mainContent.contactList %}
+          {% set contactList = mainContent.contactList %}
+          {% set compHeading = contactList.compHeading|merge({'level': compHeadingLevel}) %}
+          {% set contactList = contactList|merge({'compHeading': compHeading}) %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
+
+        {% if mainContent.mediaContact %}
+          {% set contactList = mainContent.mediaContact %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
+
+        {% if mainContent.linkList %}
+          {% set linkList = mainContent.linkList %}
+          {% include "@organisms/by-author/link-list.twig" %}
+        {% endif %}
+      {% endblock %}
+    </div>
+    <aside class="sidebar">
+      {% block sidebar %}
+        {% if sideContent.contactList %}
+          {% set contactList = sideContent.contactList %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
+        {% if sideContent.mediaContact %}
+          {% set contactList = sideContent.mediaContact %}
+          {% include "@organisms/by-author/contact-list.twig" %}
+        {% endif %}
+      {% endblock %}
+    </aside>
+  </div>
+  <div class="post-content">
+    {% block postContent %}
+      {% if bottomContent.eventListing %}
+        {% set eventListing = bottomContent.eventListing %}
+        {% include "@organisms/by-author/event-listing.twig" %}
+      {% endif %}
+    {% endblock %}
+  </div>
+
+  {# structured data #}
+  {% block schemaContent %}{% endblock %}
+</main>
+
+{# site footer #}
+{% block footer %}{% endblock %}

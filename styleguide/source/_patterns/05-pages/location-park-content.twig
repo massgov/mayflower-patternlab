@@ -1,48 +1,48 @@
-{% extends '@templates/01-content-types/location.twig' %} 
- 
-{% block header %} 
-  {% include "@organisms/by-template/header.twig" %} 
-{% endblock %} 
- 
-{% block pageContent %} 
-  {# Increase heading number by 1 from the parent heading. #} 
-  {% set level = level + 1 %} 
-  {% set compHeadingLevel = level %} 
-  {% set richText = mainContent.overview %} 
-  {% set compHeading = richText.compHeading|merge({'level': compHeadingLevel}) %} 
-  {% set richText = richText|merge({'compHeading': compHeading}) %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
-  {% set richText = mainContent.hours %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
-  {% set richText = mainContent.parking %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
-  {% set googleMap = mainContent.googleMap %} 
-  {% include "@molecules/google-map.twig" %} 
-  {% set imagePromos = mainContent.imagePromos %} 
-  {% set compHeading = imagePromos.compHeading|merge({'level': compHeadingLevel}) %} 
-  {% set imagePromos = imagePromos|merge({'compHeading': compHeading}) %} 
-  {% include "@organisms/by-author/image-promos.twig" %} 
-  {% set richText = mainContent.allActivities %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
-  {% set richText = mainContent.facilities %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
-  {% set richText = mainContent.acessibility %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
-  {% set richText = mainContent.restrictions %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
-{% endblock %} 
- 
-{% block sidebar %} 
-  {% if sidebar.eventListing %} 
-    {% set eventListing = sidebar.eventListing %} 
-    {% include "@organisms/by-author/event-listing.twig" %} 
-  {% endif %} 
-{% endblock %} 
- 
-{% block postContent %} 
-  {% include "@organisms/by-author/suggested-pages.twig" %} 
-{% endblock %} 
- 
-{% block footer %} 
-  {% include "@organisms/by-template/footer.twig" %} 
-{% endblock %} 
+{% extends '@templates/01-content-types/location.twig' %}
+
+{% block header %}
+  {% include "@organisms/by-template/header.twig" %}
+{% endblock %}
+
+{% block pageContent %}
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
+  {% set compHeadingLevel = level %}
+  {% set richText = mainContent.overview %}
+  {% set compHeading = richText.compHeading|merge({'level': compHeadingLevel}) %}
+  {% set richText = richText|merge({'compHeading': compHeading}) %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = mainContent.hours %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = mainContent.parking %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set googleMap = mainContent.googleMap %}
+  {% include "@molecules/google-map.twig" %}
+  {% set imagePromos = mainContent.imagePromos %}
+  {% set compHeading = imagePromos.compHeading|merge({'level': compHeadingLevel}) %}
+  {% set imagePromos = imagePromos|merge({'compHeading': compHeading}) %}
+  {% include "@organisms/by-author/image-promos.twig" %}
+  {% set richText = mainContent.allActivities %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = mainContent.facilities %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = mainContent.acessibility %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+  {% set richText = mainContent.restrictions %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+{% endblock %}
+
+{% block sidebar %}
+  {% if sidebar.eventListing %}
+    {% set eventListing = sidebar.eventListing %}
+    {% include "@organisms/by-author/event-listing.twig" %}
+  {% endif %}
+{% endblock %}
+
+{% block postContent %}
+  {% include "@organisms/by-author/suggested-pages.twig" %}
+{% endblock %}
+
+{% block footer %}
+  {% include "@organisms/by-template/footer.twig" %}
+{% endblock %}

@@ -1,19 +1,19 @@
-{# Set top heading level for the page. #} 
-{% set level = 1 %} 
- 
-{% extends '@templates/stacked-row-template.twig' %} 
- 
-{% block preContent %} 
-  {% include "@organisms/by-template/content-eyebrow.twig" %} 
-  {% include "@organisms/by-template/illustrated-header.twig" %} 
-{% endblock %} 
-{% block stackedRowContent %} 
-  {% include "@organisms/by-template/jump-links.twig" %} 
-  {% for stackedRowSection in stackedRowSections %} 
-    {% set stackedRowSection = stackedRowSection|merge({'level': level}) %} 
-    {% include "@organisms/by-author/stacked-row-section.twig" %} 
-  {% endfor %} 
-{% endblock %} 
-{% block postContent %} 
-  {% include "@organisms/by-author/suggested-pages.twig" %} 
-{% endblock %} 
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
+{% extends '@templates/stacked-row-template.twig' %}
+
+{% block preContent %}
+  {% include "@organisms/by-template/content-eyebrow.twig" %}
+  {% include "@organisms/by-template/illustrated-header.twig" %}
+{% endblock %}
+{% block stackedRowContent %}
+  {% include "@organisms/by-template/jump-links.twig" %}
+  {% for stackedRowSection in stackedRowSections %}
+    {% set stackedRowSection = stackedRowSection|merge({'level': level}) %}
+    {% include "@organisms/by-author/stacked-row-section.twig" %}
+  {% endfor %}
+{% endblock %}
+{% block postContent %}
+  {% include "@organisms/by-author/suggested-pages.twig" %}
+{% endblock %}

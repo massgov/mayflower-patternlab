@@ -1,57 +1,57 @@
-{ 
-  "pressListing": { 
-    "compHeading": { 
-      "title": "Press Listing", 
-      "level": 2, 
-      "sub": "", 
-      "color": "", 
-      "id": "", 
-      "centered": "" 
-    }, 
-    "items": [{ 
-      "image": null, 
-      "eyebrow": "Press Release", 
-      "title" : { 
-        "href":"#", 
-        "text":"MassParks", 
-        "level": 3, 
-        "info": "", 
-        "property": "" 
-      }, 
-      "date": "4/3/2017", 
-      "org": "Org Name", 
-      "description": { 
-        "rteElements": [{ 
-          "path": "@atoms/11-text/paragraph.twig", 
-          "data": { 
-            "paragraph" : { 
-              "text": "Optional description" 
-            } 
-          } 
-        }] 
-      } 
-    }, { 
-      "image": null, 
-      "eyebrow": "Press Release", 
-      "title" : { 
-        "href":"#", 
-        "text":"MassParks", 
-        "level": 3, 
-        "info": "", 
-        "property": "" 
-      }, 
-      "date": "4/3/2017", 
-      "org": "Org Name", 
-      "description": { 
-        "rteElements": [{ 
-          "path": "@atoms/11-text/paragraph.twig", 
-          "data": { 
-            "paragraph" : { 
-              "text": "Optional description" 
-            } 
-          } 
-        }] 
-      } 
-    }] 
-  } 
-} 
+{
+  "pressListing": {
+    "compHeading": {
+      "title": "Press Listing",
+      "level": 2,
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
+    "items": [{
+      "image": null,
+      "eyebrow": "Press Release",
+      "title" : {
+        "href":"#",
+        "text":"MassParks",
+        "level": 3,
+        "info": "",
+        "property": ""
+      },
+      "date": "4/3/2017",
+      "org": "Org Name",
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional description"
+            }
+          }
+        }]
+      }
+    },{
+      "image": null,
+      "eyebrow": "Press Release",
+      "title" : {
+        "href":"#",
+        "text":"MassParks",
+        "level": 3,
+        "info": "",
+        "property": ""
+      },
+      "date": "4/3/2017",
+      "org": "Org Name",
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Optional description"
+            }
+          }
+        }]
+      }
+    }]
+  }
+}

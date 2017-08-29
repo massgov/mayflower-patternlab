@@ -1,42 +1,42 @@
-{% set colored = compHeading.color ? "ma__comp-heading--" ~ compHeading.color : "" %} 
- 
-{# string value is backward compatible for v5.0.0 #} 
-{% if compHeading.centered == 'true' or compHeading.centered == 1 %} 
-  {% set compHeading = compHeading|merge({'centered': true}) %} 
-{% else %} 
-  {% set compHeading = compHeading|merge({'centered': false}) %} 
-{% endif %} 
- 
-{% if compHeading.centered %} 
-  {% set centered = "ma__comp-heading--centered" %} 
-{% endif %} 
- 
-{% set sidebar = compHeading.sidebar ? 'ma__comp-heading--sidebar' : '' %} 
- 
-{# Use level value if exists. #} 
-{% if level == '' %} 
-  {% set level = 2 %} 
-{% elseif compHeading.level %} 
-  {% set level = compHeading.level %} 
-{% elseif content.data.level %} 
-  {% set level = content.data.level %}{# From @organisms/by-author/stacked-row-section.twig. #} 
-{% endif %} 
-{% if compHeading.sub %} 
-  <h{{ level }} 
+{% set colored = compHeading.color ? "ma__comp-heading--" ~ compHeading.color : "" %}
+
+{# string value is backward compatible for v5.0.0 #}
+{% if compHeading.centered == 'true' or compHeading.centered == 1 %}
+  {% set compHeading = compHeading|merge({'centered': true}) %}
+{% else %}
+  {% set compHeading = compHeading|merge({'centered': false}) %}
+{% endif %}
+
+{% if compHeading.centered %}
+  {% set centered = "ma__comp-heading--centered" %}
+{% endif %}
+
+{% set sidebar = compHeading.sidebar ? 'ma__comp-heading--sidebar' : '' %}
+
+{# Use level value if exists. #}
+{% if level == '' %}
+  {% set level = 2 %}
+{% elseif compHeading.level %}
+  {% set level = compHeading.level %}
+{% elseif content.data.level %}
+  {% set level = content.data.level %}{# From @organisms/by-author/stacked-row-section.twig. #}
+{% endif %}
+{% if compHeading.sub %}
+  <h{{ level }}
     class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
-    {% if compHeading.id %} 
-      id="{{compHeading.id}}" 
+    {% if compHeading.id %}
+      id="{{compHeading.id}}"
     {% endif %} 
-    tabindex="-1"> 
-    {{ compHeading.title }} 
-  </h{{ level }}> 
-{% else %} 
-  <h{{ level }} 
+    tabindex="-1">
+    {{ compHeading.title }}
+  </h{{ level }}>
+{% else %}
+  <h{{ level }}
     class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
-    {% if compHeading.id %} 
-      id="{{compHeading.id}}" 
+    {% if compHeading.id %}
+      id="{{compHeading.id}}"
     {% endif %} 
-    tabindex="-1"> 
-    {{ compHeading.title }} 
-  </h{{ level }}> 
-{% endif %} 
+    tabindex="-1">
+    {{ compHeading.title }}
+  </h{{ level }}>
+{% endif %}

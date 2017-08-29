@@ -1,52 +1,52 @@
-{# Set top heading level for the page. #} 
-{% set level = 1 %} 
- 
-{% extends '@templates/two-column.twig' %} 
- 
-{% block preContent %} 
-  {% include "@organisms/by-template/page-header.twig" %} 
-{% endblock %} 
- 
-{# Increase heading number by 1 from the parent heading. #} 
-{% set level = level + 1 %} 
- 
-{% block pageContent %} 
-  {% set listingTable = mainContent.listingTable %} 
-  {% include "@molecules/listing-table.twig" %} 
- 
-  {% set compHeadingLevel = level %} 
- 
-  {% set contactList = sideContent.contactList %} 
-  {% include "@organisms/by-author/contact-list.twig" %} 
- 
-  {% set personalMessage = mainContent.personalMessage %} 
-  {% include "@organisms/by-author/personal-message.twig" %} 
- 
-  {% set richText = mainContent.richText %} 
-  {% include "@organisms/by-author/rich-text.twig" %} 
- 
-  {% set formDownloads = mainContent.formDownloads %} 
-  {% include "@organisms/by-author/form-downloads.twig" %} 
- 
-  {% set contactList = mainContent.contactList %} 
-  {% set compHeading = contactList.compHeading|merge({'level': compHeadingLevel}) %} 
-  {% set contactList = contactList|merge({'compHeading': compHeading}) %} 
-  {% include "@organisms/by-author/contact-list.twig" %} 
- 
- 
-{% endblock %} 
- 
-{% block sidebar %} 
-  {% set contactList = sideContent.contactList %} 
-  {% include "@organisms/by-author/contact-list.twig" %} 
- 
-  {% set pressListing = sideContent.pressListing %} 
-  {% include "@organisms/by-author/press-listing.twig" %} 
- 
-  {% set eventListing = sideContent.eventListing %} 
-  {% include "@organisms/by-author/event-listing.twig" %} 
-{% endblock %} 
-{% block postContent %} 
- 
-{% endblock %} 
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
+{% extends '@templates/two-column.twig' %}
+
+{% block preContent %}
+  {% include "@organisms/by-template/page-header.twig" %}
+{% endblock %}
+
+{# Increase heading number by 1 from the parent heading. #}
+{% set level = level + 1 %}
+
+{% block pageContent %}
+  {% set listingTable = mainContent.listingTable %}
+  {% include "@molecules/listing-table.twig" %}
+
+  {% set compHeadingLevel = level %}
+
+  {% set contactList = sideContent.contactList %}
+  {% include "@organisms/by-author/contact-list.twig" %}
+
+  {% set personalMessage = mainContent.personalMessage %}
+  {% include "@organisms/by-author/personal-message.twig" %}
+
+  {% set richText = mainContent.richText %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+
+  {% set formDownloads = mainContent.formDownloads %}
+  {% include "@organisms/by-author/form-downloads.twig" %}
+
+  {% set contactList = mainContent.contactList %}
+  {% set compHeading = contactList.compHeading|merge({'level': compHeadingLevel}) %}
+  {% set contactList = contactList|merge({'compHeading': compHeading}) %}
+  {% include "@organisms/by-author/contact-list.twig" %}
+
+
+{% endblock %}
+
+{% block sidebar %}
+  {% set contactList = sideContent.contactList %}
+  {% include "@organisms/by-author/contact-list.twig" %}
+
+  {% set pressListing = sideContent.pressListing %}
+  {% include "@organisms/by-author/press-listing.twig" %}
+
+  {% set eventListing = sideContent.eventListing %}
+  {% include "@organisms/by-author/event-listing.twig" %}
+{% endblock %}
+{% block postContent %}
+
+{% endblock %}
 
