@@ -1,21 +1,21 @@
-{% set level = actionSection.level ? : 3 %}
-{% if actionSection.title %}
-  {% set compHeading = {
-      "title": actionSection.title,
-      "level": level,
-      "sub": true,
-      "color": "",
-      "id": actionSection.id
-    }
-  %}
-  {% include "@atoms/04-headings/comp-heading.twig" %}
-{% endif %}
-{# Increase heading number by 1 from the parent heading. #}
-{% set level = level + 1 %}
-{# {% set actionSection.data.imagePromos.level %} #}
-{% if actionSection.id == "activities" %}
-  {% set imagePromos = actionSection.data.imagePromos|merge({"level": level}) %}
-  {% set data = actionSection.data|merge({"imagePromos": imagePromos}) %}
-  {% set actionSection = actionSection|merge({"data": data}) %}
-{% endif %}
-{% include actionSection.path with actionSection.data %}
+{% set level = actionSection.level ? : 3 %} 
+{% if actionSection.title %} 
+  {% set compHeading = { 
+      "title": actionSection.title, 
+      "level": level, 
+      "sub": true, 
+      "color": "", 
+      "id": actionSection.id 
+    } 
+  %} 
+  {% include "@atoms/04-headings/comp-heading.twig" %} 
+{% endif %} 
+{# Increase heading number by 1 from the parent heading. #} 
+{% set level = level + 1 %} 
+{# {% set actionSection.data.imagePromos.level %} #} 
+{% if actionSection.id == "activities" %} 
+  {% set imagePromos = actionSection.data.imagePromos|merge({"level": level}) %} 
+  {% set data = actionSection.data|merge({"imagePromos": imagePromos}) %} 
+  {% set actionSection = actionSection|merge({"data": data}) %} 
+{% endif %} 
+{% include actionSection.path with actionSection.data %} 

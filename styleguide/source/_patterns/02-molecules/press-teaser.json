@@ -1,25 +1,25 @@
-{
-  "pressTeaser" : {
-    "image": null,
-    "eyebrow": "Press Release",
-    "title" : {
-      "href":"#",
-      "text":"MassParks",
-      "info": "",
-      "property": ""
-    },
-    "level": 2,
-    "date": "4/3/2017",
-    "org": "Org Name",
-    "description": {
-      "rteElements": [{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph" : {
-            "text": "Optional description"
+{ 
+  "pressTeaser" : { 
+    "image": null, 
+    "eyebrow": "Press Release", 
+    "title" : { 
+      "href":"#", 
+      "text":"MassParks", 
+      "info": "", 
+      "property": "" 
+    }, 
+    "level": 2, 
+    "date": "4/3/2017", 
+    "org": "Org Name", 
+    "description": { 
+      "rteElements": [{ 
+        "path": "@atoms/11-text/paragraph.twig", 
+        "data": { 
+          "paragraph" : { 
+            "text": "Optional description" 
           }
         }
-      }]
-    }
-  }
-}
+      }] 
+    } 
+  } 
+} 

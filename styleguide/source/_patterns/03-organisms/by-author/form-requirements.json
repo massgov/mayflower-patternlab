@@ -1,50 +1,50 @@
-{
-  "formRequirements": {
-    "rteTitle": {
-      "text": "You will need:",
-      "level": 3,
-      "href": "",
-      "info": ""
-    },
-
-    "richText": {
-      "rteElements": [{
-        "path": "@atoms/08-lists/unordered-list.twig",
-        "data": {
-          "unorderedList": [{
-            "text": "Vestibulum ornare feugiat sodales"
-          },{
-            "text": "Suspendisse fermentum augue eget semper feugiat"
-          },{
-            "text": "Ut risus nibh, sodales sit amet mollis pharetra, elementum vitae sapien"
-          },{
-            "text":"Integer quis suscipit dui"
-          },{
-            "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-          }]
-        }
-      }]
-    },
-
-    "payment": {
-      "title": {
-        "text": "Payment accepted:",
-        "href": "",
-        "info": ""
-      },
-
-      "locationIcons": {
-        "icons": [{
-          "path":"@atoms/05-icons/svg-credit.twig",
-          "name":"credit card"
-        },{
-          "path":"@atoms/05-icons/svg-check.twig",
-          "name":"check"
-        },{
-          "path":"@atoms/05-icons/svg-cash.twig",
-          "name":"cash"
-        }]
-      }
-    }
-  }
-}
+{ 
+  "formRequirements": { 
+    "rteTitle": { 
+      "text": "You will need:", 
+      "level": 3, 
+      "href": "", 
+      "info": "" 
+    }, 
+ 
+    "richText": { 
+      "rteElements": [{ 
+        "path": "@atoms/08-lists/unordered-list.twig", 
+        "data": { 
+          "unorderedList": [{ 
+            "text": "Vestibulum ornare feugiat sodales" 
+          }, { 
+            "text": "Suspendisse fermentum augue eget semper feugiat" 
+          }, { 
+            "text": "Ut risus nibh,  sodales sit amet mollis pharetra,  elementum vitae sapien" 
+          }, { 
+            "text":"Integer quis suscipit dui" 
+          }, { 
+            "text":"Lorem ipsum dolor sit amet,  consectetur adipisicing elit" 
+          }] 
+        } 
+      }] 
+    }, 
+ 
+    "payment": { 
+      "title": { 
+        "text": "Payment accepted:", 
+        "href": "", 
+        "info": "" 
+      }, 
+ 
+      "locationIcons": { 
+        "icons": [{ 
+          "path":"@atoms/05-icons/svg-credit.twig", 
+          "name":"credit card" 
+        }, { 
+          "path":"@atoms/05-icons/svg-check.twig", 
+          "name":"check" 
+        }, { 
+          "path":"@atoms/05-icons/svg-cash.twig", 
+          "name":"cash" 
+        }] 
+      } 
+    } 
+  } 
+} 

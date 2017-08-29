@@ -1,11 +1,11 @@
-{
-  "relatedAction": {
-    "level": 4,
-    "link" : {
-      "type": "",
-      "href": "#",
-      "text": "Give a Park Pass as a Gift!"
-    },
-    "description":"Purchase a MassParks Pass as a gift for holidays, birthdays, and anniversaries, or just to a put a smile on someone's face."
-  }
-}
+{ 
+  "relatedAction": { 
+    "level": 4, 
+    "link" : { 
+      "type": "", 
+      "href": "#", 
+      "text": "Give a Park Pass as a Gift!" 
+    }, 
+    "description":"Purchase a MassParks Pass as a gift for holidays, birthdays, and anniversaries, or just to a put a smile on someone's face." 
+  } 
+} 

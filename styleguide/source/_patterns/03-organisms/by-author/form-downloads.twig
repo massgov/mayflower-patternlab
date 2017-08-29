@@ -1,25 +1,25 @@
-{% set level = stackedRowSection.level ? : 2 %}
-<section class="ma__form-downloads">
-  {% if formDownloads.compHeading %}
-    {% set compHeading = formDownloads.compHeading %}
-    {% include "@atoms/04-headings/comp-heading.twig" %}
-  {% endif %}
-  {% if formDownloads.sidebarHeading %}
-    {% set sidebarHeading = formDownloads.sidebarHeading %}
-    {% include "@atoms/04-headings/sidebar-heading.twig" %}
-  {% endif %}
-  {% if formDownloads.downloadLinks %}
-    <div class="ma__form-downloads__links">
-      {% for item in formDownloads.downloadLinks %}
-        {% set downloadLink = item.downloadLink %}
-        {% include "@molecules/download-link.twig" %}
-      {% endfor %}
-    </div>
-  {% endif %}
-  {% if formDownloads.more %}
-    <div class="ma__form-downloads__see-all">
-      {% set decorativeLink = formDownloads.more %}
-      {% include "@atoms/decorative-link.twig" %}
-    </div>
-  {% endif %}
-</section>
+{% set level = stackedRowSection.level ? : 2 %} 
+<section class="ma__form-downloads"> 
+  {% if formDownloads.compHeading %} 
+    {% set compHeading = formDownloads.compHeading %} 
+    {% include "@atoms/04-headings/comp-heading.twig" %} 
+  {% endif %} 
+  {% if formDownloads.sidebarHeading %} 
+    {% set sidebarHeading = formDownloads.sidebarHeading %} 
+    {% include "@atoms/04-headings/sidebar-heading.twig" %} 
+  {% endif %} 
+  {% if formDownloads.downloadLinks %} 
+    <div class="ma__form-downloads__links"> 
+      {% for item in formDownloads.downloadLinks %} 
+        {% set downloadLink = item.downloadLink %} 
+        {% include "@molecules/download-link.twig" %} 
+      {% endfor %} 
+    </div> 
+  {% endif %} 
+  {% if formDownloads.more %} 
+    <div class="ma__form-downloads__see-all"> 
+      {% set decorativeLink = formDownloads.more %} 
+      {% include "@atoms/decorative-link.twig" %} 
+    </div> 
+  {% endif %} 
+</section> 
