@@ -8,6 +8,8 @@ Description: Form with inputs used on Event listing page
 
 ### Notes
 
+- `zipcode.placeAutocomplete.bounds` sets default bounds for google maps api place autocomplete (see: [google maps api docs: LatLngBounds](https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds)) which will be used in `/assets/js/modules/eventFilters`.
+
 ### Used in:
 
 
@@ -21,7 +23,26 @@ Description: Form with inputs used on Event listing page
 {
   eventFilters: {
     zipcode: {    
-      type: object/inputText/required
+      inputText: {
+        type: object/inputText/required,
+      },
+      
+      placeAutoComplet: {
+        bounds: {
+          sw: {
+            lat: 
+              type: int, latitude
+            lng:
+              type: int, longitude
+          },
+          ne: {
+            lat: 
+              type: int, latitude
+            lng:
+              type: int, longitude
+          }
+        }
+      }
     },
     
     dateRange: {

@@ -8,6 +8,18 @@
         "name": "find-nearby",
         "type": "text",
         "placeholder": "City, town, or ZIP code"
+      },
+      "placeAutocomplete": {
+        "bounds": {
+          "sw": {
+            "lat": 40.727093,
+            "lng": -73.97864
+          },
+          "ne": {
+            "lat": 43.004778,
+            "lng": -69.845299
+          }
+        }
       }
     },
     "activity": {

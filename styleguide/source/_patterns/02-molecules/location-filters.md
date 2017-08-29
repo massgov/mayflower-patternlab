@@ -9,6 +9,8 @@ Description: Form with input used on location listing organism
 
 ### Notes
 
+- `zipcode.placeAutocomplete.bounds` sets default bounds for google maps api place autocomplete (see: [google maps api docs: LatLngBounds](https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds)) which will be used in `/assets/js/modules/locationFilters`.
+
 ### Used in:
 - [@organism/by-author/location-listing](?p=organism-location-listing)
 
@@ -20,17 +22,35 @@ Description: Form with input used on location listing organism
 
 ### Required Variables
 ~~~
-"locationFilters": {
-  "zipcode": {
-    type: inputText/required - see atoms/03-forms/input-text.md
+locationFilters: {
+  zipcode: {
+    inputText: {
+      type: inputText/required - see atoms/03-forms/input-text.md
+    },
+    placeAutoComplete: {
+      bounds: {
+        sw: {
+          lat: 
+            type: int, latitude
+          lng:
+            type: int, longitude
+        },
+        ne: {
+          lat: 
+            type: int, latitude
+          lng:
+            type: int, longitude
+        }
+      }
+    }
   },
-  "activity": {
+  activity: {
     type: selectBox/optional - see atoms/03-forms/select-box.md
   },
-  "keyword": {
+  keyword: {
     type: inputText/optional - see atoms/03-forms/input-text.md
   },
-  "tags": [{
+  tags: [{
     type: array of inputCheckbox/optional + icon property
     // see @atoms/forms/input-checkbox.md
     // see @molecules/image-promo.md
