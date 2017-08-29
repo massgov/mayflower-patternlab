@@ -1,60 +1,56 @@
+### Description
+Form with inputs used for sorting and filtering location listing organism.
 
+### Status 
+Stable as of 5.0.0
 
----
-title: Location Filters
----
-Description: Form with input used on location listing organism
+### Pattern Contains
+* Input Text
+* Select Box
+* Input Checkbox
 
-## State: Alpha
+### JavaScript Used
+* Location Filters (js/modules/locationFilters.js)
 
-### Notes
+### Usage Guidelines
 
-- `zipcode.placeAutocomplete.bounds` sets default bounds for google maps api place autocomplete (see: [google maps api docs: LatLngBounds](https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds)) which will be used in `/assets/js/modules/locationFilters`.
-
-### Used in:
-- [@organism/by-author/location-listing](?p=organism-location-listing)
-
-### contains:
-- [@atoms/03-forms/input-text](?p=atoms-input-text)
-- [@atoms/03-forms/select-box](?p=atoms-select-box)
-- [@atoms/03-forms/input-checkbox](?p=atoms-input-checkbox)
-
+- `zipcode.placeAutocomplete.bounds` sets default bounds for google maps api place autocomplete (see: [google maps api docs: LatLngBounds](https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds)) which will be used in `js/modules/locationFilters`.
 
 ### Required Variables
 ~~~
 locationFilters: {
   zipcode: {
     inputText: {
-      type: inputText/required - see atoms/03-forms/input-text.md
+      type: inputText/required
     },
     placeAutoComplete: {
       bounds: {
         sw: {
           lat: 
-            type: int, latitude
+            type: float, latitude
           lng:
-            type: int, longitude
+            type: float, longitude
         },
         ne: {
           lat: 
-            type: int, latitude
+            type: float, latitude
           lng:
-            type: int, longitude
+            type: float, longitude
         }
       }
     }
   },
   activity: {
-    type: selectBox/optional - see atoms/03-forms/select-box.md
+    type: selectBox / optional
   },
   keyword: {
-    type: inputText/optional - see atoms/03-forms/input-text.md
+    type: inputText / optional
   },
   tags: [{
-    type: array of inputCheckbox/optional + icon property
-    // see @atoms/forms/input-checkbox.md
-    // see @molecules/image-promo.md
-  }]   
+    type: inputCheckbox / optional + icon property
+  }],
+  submitButton:
+    type: string
 }
 ~~~
 

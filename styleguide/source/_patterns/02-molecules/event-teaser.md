@@ -11,8 +11,9 @@ A Pattern that displays the Name, Location, Time, Date and a brief description o
 * Can be shown with the Date as a [graphic](./?p=molecules-event-teaser-with-graphic)
 
 ### Usage Guidelines
-* The start and end month variables should always be a three letter month abreviation.
-* The `time` variable should be formated as '12 p.m.' (not 12:00 p.m.)
+* The start and end month variables should always be a three letter month abbreviation.
+* The `time` variable (and any times written in `date.summary`) should be formatted as '12 p.m.' (not 12:00 p.m.)
+* The `startTimestamp` and `endTimestamp` variables are used to sort and filter events by date in the Event Listing Interactive pattern.
 
 ### Variables
 ~~~
@@ -25,17 +26,17 @@ eventTeaser: {
     summary: 
       type: string (human readable date) / required
     startMonth: 
-      type: string (ie: Mar) / optional
+      type: string (format: Mar) / optional
     startDay:
       type: string (number) / optional
     startTimestamp:
-      type: string (MM/D/YYYY - HH:MM) / required only for event listing interactive
+      type: string (format: MM/D/YYYY - HH:MM) / required only for event listing interactive
     endMonth: 
-      type: string (ie: Apr) / optional
+      type: string (format: Apr) / optional
     endDay:
       type: string (number) / optional
     endTimestamp:
-      type: string (MM/D/YYYY - HH:MM) / required only for event listing interactive
+      type: string (format: MM/D/YYYY - HH:MM) / required only for event listing interactive
   }
   time: 
     type: string / optional
