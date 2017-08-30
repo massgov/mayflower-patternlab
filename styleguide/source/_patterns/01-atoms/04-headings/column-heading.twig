@@ -1,9 +1,8 @@
-{% set level = columnHeading.level ?: 3 %}
-<h{{ level }} class="ma__column-heading">
+<h4 class="ma__column-heading">
   {% if columnHeading.href %}
     {% set decorativeLink = columnHeading %}
     {% include "@atoms/decorative-link.twig" %}
   {% else %}
     {{columnHeading.text}}
   {% endif %}
-</h{{ level }}> 
+</h4>
