@@ -1,4 +1,4 @@
-{% set level = content.data.level ? : 2 %}
+{% set level = content.data.level ? : 2 %} 
 {# backward compatible for version 5.5 #}
 {% if keyActions.sidebarHeading %}
   {% set keyActions = keyActions|merge({"compHeading": { "title": keyActions.sidebarHeading.title, "sidebar" : true }}) %}

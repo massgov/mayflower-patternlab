@@ -8,7 +8,7 @@
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
   {# Increase heading number by 1 from the parent heading. #}
-  {% set level = compHeading.level + 1 %}
+  {% set level = compHeading.level + 1 %} 
   {% if stepsUnordered.richText %}
     {% set richText = stepsUnordered.richText %}
     {% include "@organisms/by-author/rich-text.twig" %}

@@ -19,7 +19,7 @@
       {% set columnHeading = contactUs.subTitle %}
       {# Check if the heading is for sidebar content. #}
       {% if outerAccordion != true %}
-        {% set level = level ? level + 1 : 4 %}
+        {% set level = level ? level + 1 : 4 %} 
         {% set columnHeading = columnHeading|merge({'level': level}) %}
       {% endif %}
       {% set level = columnHeading.level ?: 3 %}

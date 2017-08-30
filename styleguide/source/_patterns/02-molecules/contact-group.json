@@ -1,6 +1,6 @@
 {
   "contactGroup": {
-    "level": 4,
+    "level": 4, 
     "icon": "@atoms/05-icons/svg-phone.twig",
     "name": "Phone",
     "items": [{

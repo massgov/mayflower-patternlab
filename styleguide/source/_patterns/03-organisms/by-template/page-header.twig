@@ -2,7 +2,7 @@
 
 {% set prefix = pageHeader.category|default(pageHeader.prefix) %}
 
-{% set level = pageHeader.level ? : 1 %}
+{% set level = pageHeader.level ? : 1 %} 
 <section class="ma__page-header {{ widgetsClass }}">
   {% if pageHeader.headerTags.taxonomyTerms or pageHeader.socialLinks.items %}
     <div class="ma__page-header__tags">

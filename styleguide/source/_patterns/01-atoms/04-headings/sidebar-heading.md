@@ -10,6 +10,6 @@ sidebarHeading: {
     title:
         type: string / required
     level:
-        type: integer / required
+        type: integer / required 
   }
 ~~~
