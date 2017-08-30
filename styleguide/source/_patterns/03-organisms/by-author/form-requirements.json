@@ -29,6 +29,7 @@
     "payment": {
       "title": {
         "text": "Payment accepted:",
+        "level": 2,
         "href": "",
         "info": ""
       },
