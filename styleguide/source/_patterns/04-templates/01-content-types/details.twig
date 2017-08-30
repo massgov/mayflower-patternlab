@@ -1,9 +1,9 @@
 {# site header #}
 {% block header %}{% endblock %}
 
-<main
+<main 
   id="main-content"
-  class="ma__details"
+  class="ma__details" 
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -47,7 +47,7 @@
         {% endblock %}
       {% endif %}
     </aside>
-
+    
   </div>
   <div class="post-content">
     {% block postContent %}
@@ -61,4 +61,4 @@
 
 {# site footer #}
 {% block footer %}{% endblock %}
-
+  

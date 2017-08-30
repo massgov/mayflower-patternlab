@@ -871,7 +871,7 @@
         }]
       }]
     },
-    
+
     "eventListing": {
       "sidebarHeading":{
         "title": "Upcoming Events",
@@ -886,7 +886,7 @@
         },
         "location": "Walden Pond, Concord, MA",
         "date": {
-          "summary": "June 24, 2017"
+          "summary": "June 24, 2017" 
         },
         "time": "12 p.m.",
         "description":"This is a description of the event that will happen at a future date"
@@ -899,7 +899,7 @@
         },
         "location": "Concord, MA",
         "date": {
-          "summary": "June 24, 2017" 
+          "summary": "June 24, 2017"
         },
         "time": "9 p.m.",
         "description":"This is a description of the event that will happen at a future date"

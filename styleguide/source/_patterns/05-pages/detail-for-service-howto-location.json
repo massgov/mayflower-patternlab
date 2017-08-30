@@ -93,7 +93,7 @@
         "markers": [{
           "position": {
             "lat": 42.366565,
-            "lng": -71.058940
+            "lng": -71.058940 
           },
           "label": "A",
           "infoWindow": {
@@ -106,7 +106,7 @@
         },{
           "position": {
             "lat": 42.358795,
-            "lng": -71.063858
+            "lng": -71.063858 
           },
           "label": "B",
           "infoWindow": {
@@ -189,8 +189,8 @@
         "data": {
           "figure": {
             "align": "align-right",
-            "image": {
-              "alt": "alt text",
+            "image": { 
+              "alt": "alt text", 
               "src": "../../assets/images/placeholder/400x300.png",
               "height": "",
               "width": ""
