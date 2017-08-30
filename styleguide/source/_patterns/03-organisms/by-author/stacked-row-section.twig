@@ -1,5 +1,4 @@
 {% set stackRowRestriction = stackedRowSection.sideBar|length ? '' : 'ma__stacked-row-section--restricted' %}
-<h2>stackedRowSection.level {{ stackedRowSection.level }}</h2>
 {% set level = stackedRowSection.level ? : 2 %}
 <section class="ma__stacked-row-section {{ stackRowRestriction }}">
   {% if stackedRowSection.title %}
