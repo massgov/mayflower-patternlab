@@ -52,8 +52,8 @@
 
     "figure": {
       "align": "",
-      "image": { 
-        "alt": "alt text", 
+      "image": {
+        "alt": "alt text",
         "src": "../../assets/images/placeholder/820x460.png",
         "height": "",
         "width": ""
@@ -238,6 +238,7 @@
       "imagePromos": [{
         "title": {
           "text": "Office of the Governor",
+          "level": 2,
           "href": "#",
           "type": ""
         },
@@ -271,6 +272,7 @@
       },{
         "title": {
           "text": "Another Org",
+          "level": 2,
           "href": "#",
           "type": ""
         },
@@ -304,6 +306,7 @@
       },{
         "title": {
           "text": "A third party, non state organization",
+          "level": 2,
           "href": "#",
           "type": ""
         },

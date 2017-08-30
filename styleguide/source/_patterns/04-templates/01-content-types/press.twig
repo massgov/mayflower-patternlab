@@ -56,7 +56,8 @@
       {% if pageContent.personalMessage %}
         {% set personalMessage = pageContent.personalMessage %}
         {% set imagePromos = personalMessage.imagePromos|merge({'level': level}) %}
-        {% set personalMessage = personalMessage|merge({'imagePromos': imagePromos}) %}{% include "@organisms/by-author/personal-message.twig" %}
+        {% set personalMessage = personalMessage|merge({'imagePromos': imagePromos}) %}
+        {% include "@organisms/by-author/personal-message.twig" %}
       {% endif %}
 
     </div>
