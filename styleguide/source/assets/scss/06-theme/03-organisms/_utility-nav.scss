@@ -14,8 +14,7 @@
     }
   }
 
-  &__link,
-  &__translate {
+  &__link {
     color: $c-font-base;
 
     @media ($bp-header-toggle-min) {
@@ -44,40 +43,6 @@
     }
   }
 
-  &__translate {
-    .goog-te-gadget {
-      font-weight: 400;
-    }
-
-    .goog-te-gadget-simple {
-      background-color: transparent;
-      border: none;
-      font-weight: 500;
-
-      & > img {
-        opacity: .7;
-      }
-    }
-
-    .goog-te-gadget-simple .goog-te-menu-value {
-      color: $c-font-base;
-
-      @media ($bp-header-toggle-max) {
-        &:after {
-          border-right-color: $c-theme-secondary;
-          border-bottom-color: $c-theme-secondary;
-        }
-      }
-
-      @media ($bp-header-toggle-min) {
-        color: $c-font-inverse;
-
-        &:after {
-          opacity: .7;
-        }
-      }
-    }
-  }
 
   &__content {
     background-color: $c-bg-section;
@@ -136,4 +101,69 @@
       fill: $c-white;
     }
   }
+
+  // Backward compatible with v5.7 
+  // translate element moved to new Language Menu pattern
+  &__translate {
+    color: $c-font-base;
+
+    @media ($bp-header-toggle-min) {
+      //background-color: $c-theme-primary;
+      color: $c-font-inverse;
+    }
+
+    &:after {
+      border-right-color: $c-theme-secondary;
+      border-bottom-color: $c-theme-secondary;
+    }
+
+    svg {
+      fill: $c-theme-primary;
+
+      @media ($bp-header-toggle-min) {
+        fill: $c-font-inverse;
+        opacity: .7;
+        stroke: transparent;
+      }
+    }
+    
+    span {
+      font-family: "Texta", "Helvetica", "Arial", "sans-serif";
+      font-weight: 500;
+    }
+
+    .goog-te-gadget {
+      font-weight: 400;
+    }
+
+    .goog-te-gadget-simple {
+      background-color: transparent;
+      border: none;
+      font-weight: 500;
+
+      & > img {
+        opacity: .7;
+      }
+    }
+
+    .goog-te-gadget-simple .goog-te-menu-value {
+      color: $c-font-base;
+
+      @media ($bp-header-toggle-max) {
+        &:after {
+          border-right-color: $c-theme-secondary;
+          border-bottom-color: $c-theme-secondary;
+        }
+      }
+
+      @media ($bp-header-toggle-min) {
+        color: $c-font-inverse;
+
+        &:after {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
 }

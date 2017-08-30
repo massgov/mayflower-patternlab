@@ -33,11 +33,21 @@ $utility-nav-height: 43px;
     }
   }
 
-  &__link,
-  &__translate {
+  &__link {
     display: block;
     font-size: 1.25rem;
     line-height: 1.45;
+
+    @media ($bp-header-toggle-max) {
+      @include ma-chevron;
+      padding: 11px 20px 9px 45px;
+
+      &:after {
+        position: absolute;
+          right: 20px;
+          top: 18px;
+      }
+    }
 
     @media ($bp-header-toggle-min) {
       line-height: 2;
@@ -45,23 +55,6 @@ $utility-nav-height: 43px;
 
       &:hover {
         opacity: .7;
-      }
-    }
-  }
-
-  &__link {
-
-    @media ($bp-header-toggle-max) {
-      padding: 11px 20px 9px 45px;
-    }
-
-    @media ($bp-header-toggle-max) {
-      @include ma-chevron;
-
-      &:after {
-        position: absolute;
-          right: 20px;
-          top: 18px;
       }
     }
 
@@ -89,90 +82,6 @@ $utility-nav-height: 43px;
         display: block;
       }
     }
-  }
-
-  &__translate {
-    position: relative;
-
-    .goog-te-gadget {
-      font-size: 1.25rem;
-    }
-
-    .goog-te-gadget-simple {
-      font-size: 1.25rem;
-
-      @media ($bp-header-toggle-max) {
-        padding: 11px 0 9px 45px;
-        width: 100%;
-      }
-
-      & > img {
-        margin-right: 15px;
-        margin-bottom: 0;
-
-        @media ($bp-header-toggle-max) {
-          margin-right: 1px;
-          margin-bottom: 2px;
-        }
-      }
-
-      & > span {
-        display: inline-block;
-        width: calc(100% - 20px); // width of the image
-      }
-    }
-
-    .goog-te-gadget-simple .goog-te-menu-value {
-      @include ma-chevron;
-
-      @media ($bp-header-toggle-max) {
-        display: block;
-        width: 100%;
-      }
-
-      & > * {
-        display: none;
-      }
-
-      & > :first-child {
-        display: inline;
-      }
-
-      &:after {
-        margin-left: .25em;
-        transform: rotate(45deg) translateY(-45%); 
-
-        @media ($bp-header-toggle-max) {
-          position: absolute;
-            top: 45%;
-            right: 10px;
-        }     
-      }
-    }
-  }
-
-  &__translate-icon {
-    line-height: 1em;
-    opacity: 0;
-    position: absolute;
-      left: 30px;
-      top: 54%;
-    transform: translateY(-50%);
-    transition: opacity .001s;
-    transition-delay: .5s;
-
-    @media ($bp-header-toggle-max) {
-      left: 20px;    
-    }
-
-    & > svg {
-      height: 18px;
-      width: 20px;    
-    }
-  }
-
-  .has-rendered + &__translate-icon {
-    opacity: 1;
   }
 
   &__content {
@@ -307,5 +216,107 @@ $utility-nav-height: 43px;
     @media ($bp-header-toggle-min) {
       height: 88px;
     }
+  }
+
+  // Backward compatible with v5.7 
+  // translate element moved to new Language Menu pattern
+  &__translate {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1.45;
+    position: relative;
+
+    @media ($bp-header-toggle-min) {
+      line-height: 2;
+      transition: opacity .4s ease;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    .goog-te-gadget {
+      font-size: 1.25rem;
+    }
+
+    .goog-te-gadget-simple {
+      font-size: 1.25rem;
+
+      @media ($bp-header-toggle-max) {
+        padding: 11px 0 9px 45px;
+        width: 100%;
+      }
+
+      & > img {
+        margin-right: 15px;
+        margin-bottom: 0;
+
+        @media ($bp-header-toggle-max) {
+          margin-right: 1px;
+          margin-bottom: 2px;
+        }
+      }
+
+      & > span {
+        display: inline-block;
+        width: calc(100% - 20px); // width of the image
+      }
+    }
+
+    .goog-te-gadget-simple .goog-te-menu-value {
+      @include ma-chevron;
+
+      @media ($bp-header-toggle-max) {
+        display: block;
+        width: 100%;
+      }
+
+      & > * {
+        display: none;
+      }
+
+      & > :first-child {
+        display: inline;
+      }
+
+      &:after {
+        margin-left: .25em;
+        transform: rotate(45deg) translateY(-45%); 
+
+        @media ($bp-header-toggle-max) {
+          position: absolute;
+            top: 45%;
+            right: 10px;
+        }     
+      }
+    }
+  }
+
+  // Backward compatible with v5.7 
+  // translate icon moved to new Language Menu pattern
+  &__translate-icon {
+    line-height: 1em;
+    opacity: 0;
+    position: absolute;
+      left: 30px;
+      top: 54%;
+    transform: translateY(-50%);
+    transition: opacity .001s;
+    transition-delay: .5s;
+
+    @media ($bp-header-toggle-max) {
+      left: 20px;    
+    }
+
+    & > svg {
+      height: 18px;
+      width: 20px;    
+    }
+  }
+
+  // Backward compatible with v5.7 
+  // translate icon moved to new Language Menu pattern
+  .has-rendered + &__translate-icon {
+    opacity: 1;
   }
 }

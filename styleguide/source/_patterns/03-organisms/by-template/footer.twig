@@ -28,21 +28,3 @@
     </button>
   {% endif %}
 </footer>
-
-{% if googleLanguages %}
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: '{{ googleLanguages }}', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-
-      document.querySelector('#google_translate_element').classList.add('has-rendered');
-    }
-
-    (function() {
-      var script = document.createElement('script');
-      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      element = document.getElementsByTagName('head')[0];
-      element.appendChild(script);
-    })();
-  </script>
-{% endif %}
