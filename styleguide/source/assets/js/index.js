@@ -9,6 +9,7 @@ import footnote         from "./modules/footnote.js";
 import formValidation   from "./modules/formValidation.js";
 import hideAlert        from "./modules/hideAlert.js";
 import keywordSearch    from "./modules/keywordSearch.js";
+import languageMenu     from "./modules/languageMenu.js";
 import locationFilters  from "./modules/locationFilters.js";
 import locationListing  from "./modules/locationListing.js";
 import mainNav          from "./modules/mainNav.js";
