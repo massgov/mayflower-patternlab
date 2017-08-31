@@ -1,11 +1,12 @@
 {% set stackRowRestriction = stackedRowSection.sideBar|length ? '' : 'ma__stacked-row-section--restricted' %}
-
+{% set level = stackedRowSection.level ? : 2 %} 
 <section class="ma__stacked-row-section {{ stackRowRestriction }}">
   {% if stackedRowSection.title %}
     <div class="ma__stacked-row-section__container">
       <div class="ma__stacked-row-section__title">
         {% set compHeading = {
             "title": stackedRowSection.title,
+            "level": level,
             "sub": "",
             "color": "",
             "id": stackedRowSection.id
@@ -14,10 +15,14 @@
         {% include "@atoms/04-headings/comp-heading.twig" %}
       </div>
     </div>
-  {% endif %}    
+    {# Increase heading number by 1 from the parent heading. #}
+    {% set level = stackedRowSection.level + 1 %}
+  {% endif %}
   <div class="main-content {{ stackedRowSection.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
     <div class="page-content">
       {% for content in stackedRowSection.pageContent %}
+        {% set data = content.data|merge({'level': level}) %}
+        {% set content = content|merge({'data': data}) %}
         {% include content.path with content.data %}
       {% endfor %}
     </div>

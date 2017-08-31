@@ -1,14 +1,21 @@
+{% set contactListLevel = '' %} 
 <section class="ma__contact-list {{ contactList.viewSpecific ? 'ma__contact-list--view-specific' : '' }}">
   {% if contactList.compHeading %}
     {% set compHeading = contactList.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% set contactListLevel =  compHeading.level %}
   {% endif %}
   {% if contactList.sidebarHeading %}
     {% set sidebarHeading = contactList.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
+    {% set contactListLevel =  sidebarHeading.level %}
   {% endif %}
+  {# Increment the header level by 1. #}
+  {% set contactUsHeadingLevel = contactListLevel + 1 %}
 
   {% for contactUs in contactList.contacts %}
+    {% set subTitle = contactUs.subTitle|merge({'level': contactUsHeadingLevel}) %}
+    {% set contactUs = contactUs|merge({'subTitle': subTitle}) %}
     {% include "@molecules/contact-us.twig" %}
   {% endfor %}
 </section>

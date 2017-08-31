@@ -2,6 +2,7 @@
 
 {% set prefix = pageHeader.category|default(pageHeader.prefix) %}
 
+{% set level = pageHeader.level ? : 1 %} 
 <section class="ma__page-header {{ widgetsClass }}">
   {% if pageHeader.headerTags.taxonomyTerms or pageHeader.socialLinks.items %}
     <div class="ma__page-header__tags">
@@ -31,6 +32,9 @@
       {% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}
       {{pageHeader.title}}
     </h1>
+
+    {# Increase heading number by 1 from the parent heading. #}
+    {% set level = level + 1 %}
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>
     {% endif %}
@@ -39,6 +43,8 @@
         <div class="main-content main-content--two">
           <div class="page-content">
             {% for content in pageHeader.optionalContents %}
+              {% set data = content.data|merge({'level': level}) %}
+              {% set content = content|merge({'data': data}) %}
               {% include content.path with content.data %}
             {% endfor %}
           </div>

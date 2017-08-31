@@ -17,6 +17,8 @@ This pattern shows a group of related contact information (phone, fax, online, o
 ### Variables
 ~~~
 group: {
+  level: 
+    type: integer / required
   icon:
     type: string (path to icon) / optional
   name:

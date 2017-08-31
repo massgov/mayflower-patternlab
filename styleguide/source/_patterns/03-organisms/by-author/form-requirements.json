@@ -2,6 +2,7 @@
   "formRequirements": {
     "rteTitle": {
       "text": "You will need:",
+      "level": 3, 
       "href": "",
       "info": ""
     },
@@ -28,6 +29,7 @@
     "payment": {
       "title": {
         "text": "Payment accepted:",
+        "level": 2,
         "href": "",
         "info": ""
       },

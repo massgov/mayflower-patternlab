@@ -1,6 +1,7 @@
 {
   "stackedRowSection": {
     "title":"Title for the Row of Content",
+    "level": 2, 
     "id":"row-title-double-column",
     "pageContent": [{
       "path": "@base/placeholder.twig",

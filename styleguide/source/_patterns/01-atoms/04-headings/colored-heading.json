@@ -1,6 +1,7 @@
-{
-  "coloredHeading": {
-    "text": "Colored Heading",
-    "color": ""
-  }
-}
+{ 
+  "coloredHeading": { 
+    "text": "Colored Heading", 
+    "level": 2, 
+    "color": "" 
+  } 
+} 

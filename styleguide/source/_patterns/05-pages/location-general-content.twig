@@ -5,7 +5,12 @@
 {% endblock %}
 
 {% block pageContent %}
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
+  {% set compHeadingLevel = level %}
   {% set richText = mainContent.overview %}
+  {% set compHeading = richText.compHeading|merge({'level': compHeadingLevel}) %}
+  {% set richText = richText|merge({'compHeading': compHeading}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set richText = mainContent.hours %}
   {% include "@organisms/by-author/rich-text.twig" %}
@@ -14,6 +19,8 @@
   {% set googleMap = mainContent.googleMap %}
   {% include "@molecules/google-map.twig" %}
   {% set imagePromos = mainContent.imagePromos %}
+  {% set compHeading = imagePromos.compHeading|merge({'level': compHeadingLevel}) %}
+  {% set imagePromos = imagePromos|merge({'compHeading': compHeading}) %}
   {% include "@organisms/by-author/image-promos.twig" %}
   {% set richText = mainContent.allActivities %}
   {% include "@organisms/by-author/rich-text.twig" %}

@@ -1,4 +1,5 @@
 {% set imageClass = pressTeaser.image ? 'ma__press-teaser--image' : '' %}
+{% set level = pressTeaser.level ? : 2 %} 
 
 <section class="ma__press-teaser {{ imageClass }}">
   {% if pressTeaser.image %}
@@ -20,10 +21,10 @@
         <span>{{ pressTeaser.eyebrow }}</span>
       </div>
     {% endif %}
-    <h2 class="ma__press-teaser__title">
+    <h{{ level }} class="ma__press-teaser__title">
       {% set decorativeLink = pressTeaser.title %}
       {% include "@atoms/decorative-link.twig" %}
-    </h2>
+    </h{{ level }}>
     {% if pressTeaser.date or pressTeaser.org %}
       <div class="ma__press-teaser__details">
         {% if pressTeaser.date %}

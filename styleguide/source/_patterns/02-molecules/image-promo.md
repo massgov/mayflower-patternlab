@@ -22,6 +22,8 @@ imagePromo: {
   title: {
     text: 
       type: string / required,
+    level:
+      type: integer / required,
     href: 
       type: string(url) / optional
     info:

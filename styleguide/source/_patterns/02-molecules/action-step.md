@@ -29,6 +29,8 @@ actionStep: {
     type: string (path to icon) / optional
   title: 
     type: string / required
+  level:
+    type: integer / required
   richText: 
     type: richText /required
   downloadLinks: (optional) [{ 

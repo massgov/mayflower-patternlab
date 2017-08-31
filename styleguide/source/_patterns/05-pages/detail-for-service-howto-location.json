@@ -24,6 +24,7 @@
     }]
   },
 
+  "level": 1,
   "pageHeader": {
     "divider": false,
     "title": "Building Energy Codes",
@@ -124,7 +125,8 @@
         "path": "atoms-heading-2",
         "data": {
           "heading2" : {
-            "text":"Stretch Code Summary"
+            "text":"Stretch Code Summary",
+            "level": 2
           }
         }
       },{
@@ -154,6 +156,7 @@
     "formDownloads": {
       "compHeading": {
         "title": "Additional resources",
+        "level": 2,
         "sub": true
       },
       "downloadLinks": [{
@@ -177,7 +180,8 @@
         "path": "atoms-heading-2",
         "data": {
           "heading2" : {
-            "text":"Stretch code \"Residential Cash Flow Analysis\""
+            "text":"Stretch code \"Residential Cash Flow Analysis\"",
+            "level": 2
           }
         }
       },{
@@ -209,7 +213,8 @@
         "path": "atoms-heading-2",
         "data": {
           "heading2" : {
-            "text":"Stretch Code Adoption by Community"
+            "text":"Stretch Code Adoption by Community",
+            "level": 2
           }
         }
       },{
@@ -225,6 +230,7 @@
     "formDownloads": {
       "compHeading": {
         "title": "Additional resources",
+        "level": 2,
         "sub": true
       },
       "downloadLinks": [{
@@ -319,7 +325,8 @@
         "path": "atoms-heading-2",
         "data": {
           "heading2" : {
-            "text":"Massachusetts Energy Code Training"
+            "text":"Massachusetts Energy Code Training",
+            "level": 2
           }
         }
       },{
@@ -336,7 +343,8 @@
   "sidebar": {
     "linkList" : {
       "sidebarHeading": {
-        "title": "Related"
+        "title": "Related",
+        "level": 2
       },
       "stacked": true,
       "links" : [{
