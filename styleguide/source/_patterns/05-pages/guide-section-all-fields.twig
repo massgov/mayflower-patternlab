@@ -6,6 +6,7 @@
 {% block stackedRowContent %}
   {% include "@organisms/by-template/jump-links.twig" %}
   {% for stackedRowSection in stackedRowSections %}
+    {% set stackedRowSection = stackedRowSection|merge({'level': level}) %}
     {% include "@organisms/by-author/stacked-row-section.twig" %}
   {% endfor %}
 {% endblock %}

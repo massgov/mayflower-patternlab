@@ -2,6 +2,7 @@
   "imagePromos": {
     "compHeading": {
       "title": "Image Promos",
+      "level": 2,
       "sub": false,
       "color": "",
       "id": "",
@@ -10,6 +11,7 @@
     "items": [{
       "title": {
         "text": "Hiking & Walking",
+        "level": 3,
         "href": "#"
       },
       "image": {
@@ -37,6 +39,7 @@
     },{
       "title": {
         "text": "Camping",
+        "level": 3,
         "href": "#"
       },
       "image": {
@@ -64,6 +67,7 @@
     },{
       "title": {
         "text": "Winter Sports",
+        "level": 3,
         "href": "#"
       },
       "image": {
@@ -91,6 +95,7 @@
     },{
       "title": {
         "text": "Hunting",
+        "level": 3,
         "href": "#"
       },
       "image": {
@@ -118,6 +123,7 @@
     },{
       "title": {
         "text": "Bird Watching",
+        "level": 3,
         "href": "#"
       },
       "image": {
