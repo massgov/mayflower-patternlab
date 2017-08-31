@@ -4,7 +4,7 @@
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
-<section class="ma__action-finder {{ noBgClass }}" id="{{ actionFinder.id }}">
+<section class="ma__action-finder {{ noBgClass }} {{ filterClass }}" id="{{ actionFinder.id }}">
   {% if actionFinder.bgWide %}
     <style>
       #{{ actionFinder.id }} {
@@ -20,40 +20,30 @@
   {% endif %}
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
-      <h2 class="ma__action-finder__title">
-        {{ actionFinder.title }}
-      </h2>
+      {# Backward compatible with 5.7 - replaced h2 with compHeading #}
+      {% set compHeading = actionFinder.compHeading ? : {"title": actionFinder.title, "color":"yellow","id": ""} %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
     </header>
     {% if actionFinder.featuredLinks %}
-      {% if actionFinder.featuredHeading %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
-      {% endif %}
-      <div class="ma__action-finder__items">
-        {% for link in actionFinder.featuredLinks %}
-          {% if link.image %}
-            {% set illustratedLink = link %}
-            {% include "@molecules/illustrated-link.twig" %}
-          {% else %}
-            {% set calloutLink = link %}
-            {% include "@molecules/callout-link.twig" %}
-          {% endif %}
-        {% endfor %}
+      <div class="ma__action-finder__featured-items">
+        {% set keyActions = { "links": actionFinder.featuredLinks } %}
+        {% if actionFinder.featuredHeading %}
+          <h3 class="ma__action-finder__category" id="featured-{{ actionFinder.id }}">{{ actionFinder.featuredHeading }}</h3>
+          {% set keyActions = keyActions|merge({"id": "featured-" ~ actionFinder.id, }) %}
+        {% endif %}
+        {% include "@organisms/by-author/key-actions.twig" %}
       </div>
     {% endif %}
     {% if actionFinder.links %}
-      {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
-      {% endif %}
-      <div class="ma__action-finder__items ma__action-finder__items--all">
-        {% for link in actionFinder.links %}
-          {% if link.image %}
-            {% set illustratedLink = link %}
-            {% include "@molecules/illustrated-link.twig" %}
-          {% else %}
-            {% set calloutLink = link %}
-            {% include "@molecules/callout-link.twig" %}
-          {% endif %}
-        {% endfor %}
+      <div class="ma__action-finder__all-items">
+        {% set keyActions = { "links": actionFinder.links } %}
+        {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
+          <h3 class="ma__action-finder__category" id="all-{{ actionFinder.id }}">{{ actionFinder.generalHeading }}</h3>
+          {% set keyActions = keyActions|merge({"id": "all-" ~ actionFinder.id, }) %}
+        {% else %}
+          {% set keyActions = keyActions|merge({"id": actionFinder.id, }) %}
+        {% endif %}
+        {% include "@organisms/by-author/key-actions.twig" %}
       </div>
     {% endif %}
   </div>

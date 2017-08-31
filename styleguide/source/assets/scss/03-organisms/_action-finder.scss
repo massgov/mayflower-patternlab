@@ -55,6 +55,7 @@ $action-finder-bp: 900px;
     }
   }
 
+  // Backward compatible with v5.7 - replace title with compHeading
   &__title {
     @include ma-border-decorative;
     padding-bottom: 15px;
@@ -68,17 +69,26 @@ $action-finder-bp: 900px;
     }
   }
 
+  // Backward compatible with v5.7 - replace title with compHeading
   &--no-background &__title {
     margin-right: 0;
+    width: 100%;
+  }
+
+  &--no-background .ma__comp-heading {
     padding: 25px 20px 20px 0;
     transform: skew(30deg);
-    width: 100%;
+
+    &:after {
+      display: none;
+    }
   }
 
   &__category {
     @include ma-h5;
   }
 
+  // Backward compatible with v5.6 - removed search filter
   &__search {
 
     @media ($bp-large-min) {
@@ -103,41 +113,47 @@ $action-finder-bp: 900px;
     }
   }
 
+  // Backward compatible with v5.6 - replaced items with Key Actions
   &__items {
     @include ma-reset-list;
     display: flex;
       flex-wrap: wrap;
       justify-content: stretch;
+
+
+    .ma__illustrated-link,
+    .ma__callout-link {
+      display: flex;
+      margin-bottom: 20px;
+      height: auto;
+      width: 100%;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto;
+
+      @media screen and ($bp-small-min) and ($bp-large-max) {
+        @include span-columns(4 of 8);
+        @include omega(2n);
+        display: flex;
+      }
+
+      @media print, ($bp-large-min) {
+        @include span-columns(4 of 12);
+        @include omega(3n);
+        display: flex;
+      }
+    }
   }
 
+  // Backward compatible with v5.6 - replaced items with Key Actions
+  &__featured-items,
   &__items:not(&__items--all) {
     padding-bottom: 25px;
   }
 
-  .ma__illustrated-link,
-  .ma__callout-link {
-    display: flex;
-    margin-bottom: 20px;
-    height: auto;
-    width: 100%;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-
-    @media screen and ($bp-small-min) and ($bp-large-max) {
-      @include span-columns(4 of 8);
-      @include omega(2n);
-      display: flex;
-    }
-
-    @media print, ($bp-large-min) {
-      @include span-columns(4 of 12);
-      @include omega(3n);
-      display: flex;
-    }
-  }
-
-  &__items--all {
+  // Backward compatible with v5.6 - replaced items with Key Actions
+  &__items--all,
+  &__all-items {
 
     .ma__callout-link {
       border-width: 0;
@@ -148,7 +164,9 @@ $action-finder-bp: 900px;
     }
   }
 
-  &--no-background &__items--all {
+  // Backward compatible with v5.6 - replaced items with Key Actions
+  &--no-background &__items--all,
+  &--no-background &__all-items {
     .ma__callout-link {
       border-width: 3px;
     }

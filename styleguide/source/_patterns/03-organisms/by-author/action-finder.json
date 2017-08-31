@@ -3,9 +3,16 @@
     "id": "GUID831741781374893",
     "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
     "bgNarrow":"../../assets/images/placeholder/800x800.png",
-    "title": "What Would You Like to Do?",
     "featuredHeading":"Featured:",
     "generalHeading":"All Actions & Guides:",
+
+    "compHeading": {
+      "title": "What Would You Like to Do?",
+      "sub": false,
+      "color": "yellow",
+      "id": "",
+      "centered": false
+    },
 
     "seeAll": null,
 
@@ -19,24 +26,28 @@
       "image": "",
       "text": "Cancel or Transfer a Campsite Reservation",
       "type": "external",
-      "href": "#"
+      "href": "#",
+      "label": ""
     },{
       "image": "",
       "text": "Find Horseback Riding Trails",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": ""
     }],
 
     "links": [{
       "image": "",
       "text": "Find a State Park",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": ""
     },{
       "image": "",
       "text": "Get a State Park Pass",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": ""
     },{
       "image": "../../assets/images/placeholder/130x160.png",
       "text": "Fall Activity Planner",
@@ -47,17 +58,20 @@
       "image": "",
       "text": "Reserve a Campsite",
       "type": "external",
-      "href": "#"
+      "href": "#",
+      "label": ""
     },{
       "image": "",
       "text": "Find Scenic Viewing Areas",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": ""
     },{
       "image": "",
       "text": "Download a Trail Map",
       "type": "",
-      "href": "#"
+      "href": "#",
+      "label": ""
     }]
   }
 }
