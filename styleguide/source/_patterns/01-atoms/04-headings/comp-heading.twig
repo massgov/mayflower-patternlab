@@ -13,32 +13,22 @@
 
 {% set sidebar = compHeading.sidebar ? 'ma__comp-heading--sidebar' : '' %}
 
-{% if level %}
-  {% set level = level %}{# Use level value if exists. #}
-{% elseif compHeading.level %}
-  {% set level = compHeading.level %}
-{% elseif content.data.level %}
-  {% set level = content.data.level %}{# From @organisms/by-author/stacked-row-section.twig. #}
-{% else %}
-  {% set level = 2 %}
-{% endif %}
-
 {% if compHeading.sub %}
-  <h{{ level }}
+  <h3
     class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}"
     {% if compHeading.id %}
       id="{{compHeading.id}}"
     {% endif %}
     tabindex="-1">
     {{ compHeading.title }}
-  </h{{ level }}>
+  </h3>
 {% else %}
-  <h{{ level }}
+  <h2
     class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}"
     {% if compHeading.id %}
       id="{{compHeading.id}}"
     {% endif %}
     tabindex="-1">
     {{ compHeading.title }}
-  </h{{ level }}>
+  </h2>
 {% endif %}
