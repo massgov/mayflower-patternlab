@@ -112,13 +112,13 @@
         </if>
 
         <!-- Copy assets to deploy.dir -->
-        <copy todir="${deploy.dir}/assets" preservemode="true" overwrite="yes">
+        <copy todir="${deploy.dir}/assets" preservemode="true" overwrite="true">
             <fileset dir="${app.assets}">
                 <include name="**" />
             </fileset>
         </copy>
 
-        <copy todir="${deploy.dir}/twig" preservemode="true" overwrite="yes">
+        <copy todir="${deploy.dir}/twig" preservemode="true" overwrite="true">
             <fileset dir="${app.twig}">
                 <include name="**" />
             </fileset>
