@@ -7,6 +7,10 @@
     @include ma-container();
   }
 
+  &--hidden-heading .ma__comp-heading {
+    @include ma-visually-hidden;
+  }
+
   &__items {
 
     @media ($bp-medium-min) {

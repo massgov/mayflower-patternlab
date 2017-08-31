@@ -11,19 +11,19 @@ This pattern shows a grid containing a combination of Callout links and Illustra
 * Illustrated Link molecule (optional)
 
 ### Variant options
-* This pattern can also contain Illustrated Links in addition to just Callout Links.
-
+* Can be rendered with the title [visually hidden](./?p=organisms-key-actions-with-hidden-heading) to provide context for screen readers.
 
 ### Variables
 ~~~
-"keyActions": {
-  "compHeading": {
-    "type": compHeading / optional 
+keyActions: {
+  id: 
+    type: string (unique per page) / optional
+  hiddenHeading: 
+    type: boolean
+  compHeading: {
+    type: compHeading / optional 
   },
-  sidebarHeading: {
-    type: sidebarHeading / optional
-  },
-  "links":[{
+  links:[{
     type: array of Callout Links or Illustrated Links / required
   }]
 }

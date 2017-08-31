@@ -3,13 +3,26 @@
   {% set keyActions = keyActions|merge({"compHeading": { "title": keyActions.sidebarHeading.title, "sidebar" : true }}) %}
 {% endif %}
 
-<section class="ma__key-actions">
+{# fallback to compHeading Id value #}
+{% set keyActionId = keyActions.compHeading.id %}
+
+{% if keyActions.id %}
+  {% set keyActionId = keyActions.id %}
+{% endif %}
+
+{% set hiddenClass = keyActions.hiddenHeading ? 'ma__key-actions--hidden-heading' : '' %}
+  
+<section class="ma__key-actions {{ hiddenClass }}">
   <div class="ma__key-actions__container">
     {% if keyActions.compHeading %}
-      {% set compHeading = keyActions.compHeading %}
+      {% set compHeading = keyActions.compHeading|merge({"id": keyActionId}) %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
     {% endif %}
-    <div class="ma__key-actions__items" aria-labelledby="{{ keyActions.compHeading.id }}">
+    <div 
+      class="ma__key-actions__items" 
+      {% if keyActionId %}
+        aria-labelledby="{{ keyActionId }}"
+      {% endif %}>
       {% for link in keyActions.links %}
         {% if link.image %}
           {% set illustratedLink = link %}
