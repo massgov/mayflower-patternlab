@@ -66,4 +66,9 @@
       margin-right: calc(50vw - (#{$max-width}/2) + 40px);
     }
   }
+
+  .ma__content-link,
+  .ma__decorative-link {
+    margin-top: 12px;
+  }
 }
