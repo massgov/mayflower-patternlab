@@ -1,9 +1,9 @@
 {
   "compHeading": {
-    "title": "Title text",
-    "sub": "",
+    "title": "Comp Heading",
+    "sub": false,
     "color": "",
-    "id": "GUID9827924",
-    "centered": ""
+    "id": "GUID285724897",
+    "centered": false
   }
 }
