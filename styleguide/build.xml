@@ -78,6 +78,15 @@
 
         <echo>Using tag ${app.latestTag}</echo>
 
+        <!-- Remove all existing artifact contents to avoid accumulation from prior alpha tags-->
+        <echo>Removing all existing files</echo>
+        <!-- Delete using a fileset -->
+        <delete>
+            <fileset dir="${deploy.dir}">
+                <include name="*.*" />
+            </fileset>
+        </delete>
+
     </target>
 
     <target name="deploy" depends="pre-deploy,determine-git-tag">
