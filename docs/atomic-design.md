@@ -1,19 +1,16 @@
 # Atomic Design in Mayflower
 
 ## About Atomic Design
-Atomic Design is a way of viewing a web page as a collection of smaller re-usable parts.  It's very similar to building with LEGO bricks.  Each piece can be combinded with others making it quicker and easier to build web pages.
+The Mayflower style library is built using Atomic Design.  You can find an excellent description of Atomic Design on Brad Frost's [blog](http://atomicdesign.bradfrost.com/chapter-2/).  
 
-The easiest approach to get stated is to a take a complete web page and try breaking it down.  Viewing a web page, you would look for areas that would be consistent between each variant of that page to help determine your Template.  From that template, you would look for  logical groups (components) which might become Organisms or Molecules.  Even these patterns might be able to broken down into smaller parts so you start looking for common individual elements (buttons, headers, lists, ...) to find your Atoms.  Eventually your web page has been broken down into the smallest indivisible units giving you a re-usable palette of pieces to build new patterns and web pages.
-
-As defined by [Brad Frost](http://atomicdesign.bradfrost.com/chapter-2/).
-
+The way I tend to think of building a site using Atomic Design is to see it like a LEGO set where you combine a bunch of small pieces together to make a model.  Using those same piece, you can make a variety of other models as well.  Atomic Design is similar in nature, where you define a collection of small html parts called Atoms and then use those to build a variety of web pages.
 
 ### Atoms (an "indivisible unit")
-An Atom is the smallest logical stylized pattern in Atomic Design.  Dividing an Atom into smaller parts would result in an unstable pattern that would be dependent on another pattern.  As such Atoms would never include other patterns.
+An Atom is the smallest logically stylized pattern in Atomic Design.  Dividing an Atom into smaller parts would result in an unstable pattern that would be dependent on another pattern.  As such Atoms would never include other patterns.
 
 An Atom can be a single HTML element (`a`, `h1`, etc...) or a single complex HTML5 elment that has nested dependent children (`table`, `ul`, `figure`, etc...).  It could also be two elements that would never be used seperately like an input with a label.
 
-Since Atoms are so small they are rarely if ever used directly on a page.  Instead they are used as building blocks to create the more complex Patterns.
+Since Atoms are so small they are rarely if ever used directly on a page.  Instead they are used as building blocks to create more complex Patterns.
 
 #### Quick guide:
 * Contains a single simple or complex HTML element
