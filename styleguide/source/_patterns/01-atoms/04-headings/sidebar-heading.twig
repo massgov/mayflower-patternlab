@@ -1,1 +1,6 @@
-<h3 class="ma__sidebar-heading">{{sidebarHeading.title}}</h3>
+{% if sidebarHeading.level %}
+  {% set level = sidebarHeading.level %}
+{% elseif level == '' %}
+  {% set level = 2 %}
+{% endif %}
+<h{{ level }} class="ma__sidebar-heading">{{sidebarHeading.title}}</h{{ level }}>
