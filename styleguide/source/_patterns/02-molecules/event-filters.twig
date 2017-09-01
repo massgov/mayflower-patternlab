@@ -6,18 +6,24 @@
 
 <section class="ma__event-filters">
   <form class="js-event-location-filters" action="{{ eventFilters.form.action }}">
-    <div class="ma__event-filters__by-location js-event-filter-by-location" data-ma-place-bounds-sw-lat="{{ swLat }}" data-ma-place-bounds-sw-lng="{{ swLng }}" data-ma-place-bounds-ne-lat="{{ neLat }}" data-ma-place-bounds-ne-lng="{{ neLng }}">
-      {% set inputText = eventFilters.zipcode.inputText %}
-      {% include "@atoms/03-forms/input-text.twig" %}
-    </div>
-    <div class="ma__event-filters__date-range">
-      {% set dateRange = eventFilters.dateRange %}
-      {% include "@molecules/date-range.twig" %}
-    </div>
-    <div class="ma__event-filters__buttons">
-      <button class="ma__event-filters__submit" type="submit">
-        {{ eventFilters.submitButton }}
-      </button>
-    </div>
+    {% if eventFilters.zipcode %}
+      <div class="ma__event-filters__by-location js-event-filter-by-location" data-ma-place-bounds-sw-lat="{{ swLat }}" data-ma-place-bounds-sw-lng="{{ swLng }}" data-ma-place-bounds-ne-lat="{{ neLat }}" data-ma-place-bounds-ne-lng="{{ neLng }}">
+        {% set inputText = eventFilters.zipcode.inputText %}
+        {% include "@atoms/03-forms/input-text.twig" %}
+      </div>
+    {% endif %}
+    {% if eventFilters.dateRange %}
+      <div class="ma__event-filters__date-range">
+        {% set dateRange = eventFilters.dateRange %}
+        {% include "@molecules/date-range.twig" %}
+      </div>
+    {% endif %}
+    {% if eventFilters.submitButton %}
+      <div class="ma__event-filters__buttons">
+        <button class="ma__event-filters__submit" type="submit">
+          {{ eventFilters.submitButton }}
+        </button>
+      </div>
+    {% endif %}
   </form>
 </section>
