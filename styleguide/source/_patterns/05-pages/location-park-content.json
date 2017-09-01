@@ -35,6 +35,7 @@
               "details": ""
             }]
           },{
+            "level": 2,
             "icon": "@atoms/05-icons/svg-phone.twig",
             "name": "Phone",
             "items": [{
@@ -47,6 +48,7 @@
               "details":"This line is open from 9 a.m. - 5 p.m., M-F"
             }]
           },{
+            "level": 2,
             "icon": "@atoms/05-icons/svg-laptop.twig",
             "name": "Online",
             "items": [{
@@ -194,6 +196,7 @@
    "overview": {
      "compHeading": {
        "title": "Overview",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "overview",
@@ -213,6 +216,7 @@
    "hours": {
      "compHeading": {
        "title": "Hours",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "hours",
@@ -282,6 +286,7 @@
    "parking": {
      "compHeading": {
        "title": "Parking",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "parking",
@@ -348,6 +353,7 @@
    "imagePromos": {
      "compHeading": {
        "title": "Recommended Activities",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "recommended-activities",
@@ -356,6 +362,7 @@
      "items": [{
        "title": {
          "text": "Hiking & Walking",
+         "level": 4,
          "href": "#"
        },
        "image": {
@@ -379,6 +386,7 @@
      },{
        "title": {
          "text": "Camping",
+         "level": 4,
          "href": "#"
        },
        "image": {
@@ -402,6 +410,7 @@
      },{
        "title": {
          "text": "Winter Sports",
+         "level": 4,
          "href": "#"
        },
        "image": {
@@ -428,6 +437,7 @@
    "allActivities": {
      "compHeading": {
        "title": "All Activities",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "all-activities",
@@ -465,6 +475,7 @@
    "facilities": {
      "compHeading": {
        "title": "Facilities",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "facilities",
@@ -492,6 +503,7 @@
    "acessibility": {
      "compHeading": {
        "title": "Acessibility",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "acessibility",
@@ -527,6 +539,7 @@
    "restrictions": {
      "compHeading": {
        "title": "Restrictions",
+       "level": 3,
        "sub": true,
        "color": "",
        "id": "restrictions",
@@ -563,6 +576,7 @@
      "viewSpecific": false,
      "compHeading":{
        "title": "Contacts",
+       "level": 3,
        "sub": "true",
        "color": "",
        "id": "contacts",
@@ -573,9 +587,11 @@
        "isExpanded": false,
        "subTitle": {
          "href":"",
+         "level": 4,
          "text": "Bascom Lodge"
        },
        "groups": [{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-phone.twig",
          "name": "Phone",
          "hidden": "",
@@ -599,6 +615,7 @@
            "details":"For those who need accessible services"
          }]
        },{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-laptop.twig",
          "name": "Online",
          "hidden": "",
@@ -613,6 +630,7 @@
            "details":""
          }]
        },{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-fax-icon.twig",
          "name": "Fax",
          "hidden": "true",
@@ -627,6 +645,7 @@
            "details":"Please allow 24 hours for a response"
          }]
        },{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-marker.twig",
          "name": "Address",
          "hidden": "true",
@@ -650,9 +669,11 @@
        "subTitle": {
          "href":"",
          "text": "Museum",
+         "level": 4,
          "chevron":""
        },
        "groups": [{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-phone.twig",
          "name": "Phone",
          "hidden": "",
@@ -667,6 +688,7 @@
            "details":""
          }]
        },{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-laptop.twig",
          "name": "Online",
          "hidden": "",
@@ -681,6 +703,7 @@
            "details":""
          }]
        },{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-fax-icon.twig",
          "name": "Fax",
          "hidden": "true",
@@ -695,6 +718,7 @@
            "details":"Please allow 24 hours for a response"
          }]
        },{
+         "level": 5,
          "icon": "@atoms/05-icons/svg-marker.twig",
          "name": "Address",
          "hidden": "true",
@@ -712,6 +736,7 @@
  },
 
   "COMMENT":"****POSTCONTENT COMPONENTS****",
+
 
   "suggestedPages": {
     "title": "Related Locations",
@@ -763,16 +788,19 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "level": 2
       },
       "contacts":[{
         "accordion": false,
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Bascom Lodge"
+          "text": "Bascom Lodge",
+          "level": 3
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "hidden": "",
@@ -787,6 +815,7 @@
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -806,9 +835,11 @@
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Museum"
+          "text": "Museum",
+          "level": 3
         },
         "groups": [{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "hidden": "",
@@ -823,6 +854,7 @@
             "details":""
           }]
         },{
+          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -842,7 +874,8 @@
 
     "eventListing": {
       "sidebarHeading":{
-        "title": "Upcoming Events"
+        "title": "Upcoming Events",
+        "level": 2
       },
       "events":[{
         "title": {
