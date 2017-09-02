@@ -1,5 +1,6 @@
 import sticky from "../helpers/sticky.js";
 import getTemplate from "../helpers/getHandlebarTemplate.js";
+import getOuterHtml from "../helpers/getElementOuterHtml.js";
 
 export default function (window,document,$,undefined) {
   // Active state classes for location listing rows.
@@ -600,7 +601,10 @@ export default function (window,document,$,undefined) {
    */
   function getSvgFromTag(tag) {
     // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
-    return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+    // return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+    // Get outerHtml of svgElement shim for IE
+    // See: https://stackoverflow.com/questions/12592417/outerhtml-of-an-svg-element
+    return getOuterHtml($('.js-filter-by-tags').find("#" + tag).parent().siblings('svg')[0]);
   }
 
   /**
