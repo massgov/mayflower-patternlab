@@ -8,9 +8,8 @@
       window.initGoogleMaps = function() {
         // Set a flag that the library has loaded, in case google maps js misses event.
         window.googleMapsLoaded = true;
-        let mapsLibLoadEvent = new CustomEvent('ma:LibrariesLoaded:GoogleMaps');
         // Emit an event that the library has loaded.
-        document.dispatchEvent(mapsLibLoadEvent);
+        $(document).trigger('ma:LibrariesLoaded:GoogleMaps');
       }
     </script>
     <!-- @todo set up config for api keys -->
