@@ -738,7 +738,9 @@ export default function (window,document,$,undefined) {
   function doesPromoContainTags(haystack, needle) {
     return needle.every(function(v) {
       return Boolean(haystack.filter(function(item){
-        return Object.values(item).indexOf(v) !== -1;
+        // return Object.values(item).indexOf(v) !== -1;
+        // Object.values shim for IE11
+        return Object.keys(item).map(function(i) { return item[i]; }).indexOf(v) !== -1;
       }).length);
     });
   }
