@@ -3,7 +3,7 @@
 ## About Atomic Design
 The Mayflower style library is built using Atomic Design.  You can find an excellent description of Atomic Design on Brad Frost's [blog](http://atomicdesign.bradfrost.com/chapter-2/).  
 
-The way I tend to think of building a site using Atomic Design is to see it like a LEGO set where you combine a bunch of small pieces together to make a model.  Using those same piece, you can make a variety of other models as well.  Atomic Design is similar in nature, where you define a collection of small html parts called Atoms and then use those to build a variety of web pages.
+The way I tend to think of building a site using Atomic Design is to see it as a LEGO set where your combining a collection of small parts  to make a variety of different models.  Atomic Design is similar in nature, where you define a collection of small html parts called Atoms and then use those to build a variety of web pages.
 
 ### Atoms (an "indivisible unit")
 An Atom is the smallest logically stylized pattern in Atomic Design.  Dividing an Atom into smaller parts would result in an unstable pattern that would be dependent on another pattern.  As such Atoms would never include other patterns.
