@@ -2,7 +2,7 @@
   * Get outerHTML of elements, taking care
   * of SVG elements in IE as well.
   *
-  * @param {Element} jquery object el
+  * @param {Element} dom element el
   * @return {String}
   */
 
