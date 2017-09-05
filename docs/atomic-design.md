@@ -13,26 +13,34 @@ An Atom can be a single HTML element (`a`, `h1`, etc...) or a single complex HTM
 Since Atoms are so small they are rarely if ever used directly on a page.  Instead they are used as building blocks to create more complex Patterns.
 
 #### Quick guide:
-* Contains a single simple or complex HTML element
-* Contains multiple HTML elements that cannot be use seperately
-* Almost always contains a theme SCSS file
-* Can not be broken down into smaller logical elements
-* If possible, includes content data (ie: `hr` doesn't include content)
+* Could be a single simple (`a`) or complex (`table`) HTML element
+* Might contain multiple HTML elements, if one element cannot be rendered without the other
+* Almost always uses a theme SCSS file to style the element
+* Cannot be broken down into smaller logical elements
+* Usually contains content data
+* Sometimes includes an icon
 
+#### Examples
+1. http://mayflower.digital.mass.gov/?p=atoms-button
+    * This is an example of a single html element => `button` or `a` tag.
+2. http://mayflower.digital.mass.gov/?p=atoms-input-checkbox
+    * This is an example of an atom that can't be broken down any further.  The Mayflower style guide would never use the `input type=checkbox` element by itself so this atom requires the outer span tag and corresponding label. 
 
 ### Molecules - (stylized collections)
-Molecules are built by including Atoms or even Molecules to create a more complex stylized pattern.  Molecules can contain HTML elements as well to help layout the included patterns or to render content.
-
-Molecules have the greatest flexibility of all the patterns so you should use caution when using HTML elements to make sure they shouldn't be an included Atoms instead.
+A Molecules is a stylized collection of Atoms, Molecules, and or HTML elements.  Molecules have the greatest flexibility of all the patterns.
 
 #### Quick guide:
 * Includes other patterns or HTML elements
-* Includes content data
-* Usually has a theme SCSS file
- 
+* Usually contains content data
+* Almost always uses a theme SCSS file to style the element
 
-### Organisms
-Like Molecules, Organisms are built by including other patterns to create a more complex pattern.  The difference is that the only HTML5 elements and CSS styling used is for laying out this patterns and all content is passed on to these patterns.  The only styles used in an Organism would be to layout the patterns and include some theming css like background-colors and borders to help define the layout.
+#### Example
+1. http://mayflower.digital.mass.gov/?p=molecules-image-promo
+    * This is an example of a molecule that includes other patterns, renders content data and has some theme based css applied.
+
+
+### Organisms - (layout of patterns)
+An Organism is a layout of other patterns.  HTML5 elements and CSS styling used for an Organism are for laying out the included patterns.  All content to be rendered, is passed on to the included patterns.  The only styling done for an Organism would be to help define the layout the patterns, like background-colors and borders.
 
 #### Quick guide:
 * Includes other patterns.
@@ -40,6 +48,10 @@ Like Molecules, Organisms are built by including other patterns to create a more
 * CSS styles used are only for layout (flex box, float ...) or to visually define the layout (backgrounds, borders)
 * Often times it doesn't use a theme SCSS file
 * Data used by the Organism is used to control the layout
+
+#### Example
+1. http://mayflower.digital.mass.gov/?p=organisms-event-listing
+    * This is an example of an organism that includes other patterns, passes all content data to another pattern, has theme based css related to layout applied, and has a data variable to switch between a list and grid views.
 
 ### Templates
 * Template patterns serve the same purpose of an Organism, but they are used to represent a complete page.  Since we're working at the page level, templates should contain Twig Blocks as placeholders to allow pages to add patterns or to override default patterns contained within the Template pattern.
