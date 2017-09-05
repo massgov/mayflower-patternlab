@@ -1,11 +1,11 @@
 {% if emergencyAlerts.alerts %}
+  {% set buttonAlert = emergencyAlerts.buttonAlert|merge({ 'class': 'js-accordion-link' }) %}
   <section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="{{emergencyAlerts.id}}">
     <div class="ma__emergency-alerts__header">
       <div class="ma__emergency-alerts__container">
         {% set emergencyHeader = emergencyAlerts.emergencyHeader %}
         {% include "@molecules/emergency-header.twig" %}
-        <div class="ma__emergency-alerts__header-interface js-accordion-link">
-          {% set buttonAlert = emergencyAlerts.buttonAlert %}
+        <div class="ma__emergency-alerts__header-interface">
           {% include "@molecules/button-alert.twig" %}
         </div>
       </div>
@@ -17,8 +17,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="ma__emergency-alerts__interface js-accordion-link">
-      {% set buttonAlert = emergencyAlerts.buttonAlert %}
+    <div class="ma__emergency-alerts__interface">
       {% include "@molecules/button-alert.twig" %}
     </div>
   </section>
