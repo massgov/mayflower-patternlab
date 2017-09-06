@@ -43,10 +43,6 @@
 @import "06-theme/01-atoms/table";
 
 // Molecules - chunks of code that are used in Organisms/Components
-@import "06-theme/02-molecules/action-event";
-@import "06-theme/02-molecules/action-gallery";
-@import "06-theme/02-molecules/action-image";
-@import "06-theme/02-molecules/action-section";
 @import "06-theme/02-molecules/action-step";
 @import "06-theme/02-molecules/arrow-nav";
 @import "06-theme/02-molecules/back-button";
@@ -65,7 +61,6 @@
 @import "06-theme/02-molecules/event-teaser";
 @import "06-theme/02-molecules/footer-links";
 @import "06-theme/02-molecules/footnote";
-@import "06-theme/02-molecules/header-contact";
 @import "06-theme/02-molecules/header-search";
 @import "06-theme/02-molecules/header-tags";
 @import "06-theme/02-molecules/illustrated-link";
@@ -82,13 +77,11 @@
 @import "06-theme/02-molecules/pagination";
 @import "06-theme/02-molecules/press-status";
 @import "06-theme/02-molecules/press-teaser";
-@import "06-theme/02-molecules/related-action";
 @import "06-theme/02-molecules/results-heading";
 @import "06-theme/02-molecules/section-links";
 @import "06-theme/02-molecules/social-links";
 @import "06-theme/02-molecules/sticky-nav";
 @import "06-theme/02-molecules/tooltip";
-@import "06-theme/02-molecules/wait-time";
 
 // Organisms - components
 @import "06-theme/03-organisms/action-finder";

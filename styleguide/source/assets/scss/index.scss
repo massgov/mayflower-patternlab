@@ -53,9 +53,6 @@
 @import "01-atoms/video";
 
 // Molecules - chunks of code that are used in Organisms/Components
-@import "02-molecules/action-event";
-@import "02-molecules/action-gallery";
-@import "02-molecules/action-image";
 @import "02-molecules/action-step";
 @import "02-molecules/arrow-nav";
 @import "02-molecules/back-button";
@@ -73,12 +70,10 @@
 @import "02-molecules/error-list";
 @import "02-molecules/event-filters";
 @import "02-molecules/event-teaser";
-@import "02-molecules/field-submit";
 @import "02-molecules/floating-action";
 @import "02-molecules/footer-links";
 @import "02-molecules/footnote";
 @import "02-molecules/google-map";
-@import "02-molecules/header-contact";
 @import "02-molecules/header-search";
 @import "02-molecules/header-tags";
 @import "02-molecules/illustrated-link";
@@ -96,14 +91,12 @@
 @import "02-molecules/pagination";
 @import "02-molecules/press-status";
 @import "02-molecules/press-teaser";
-@import "02-molecules/related-action";
 @import "02-molecules/results-heading";
 @import "02-molecules/section-links";
 @import "02-molecules/sort-results";
 @import "02-molecules/social-links";
 @import "02-molecules/sticky-nav";
 @import "02-molecules/tooltip";
-@import "02-molecules/wait-time";
 
 // Organisms - components
 @import "03-organisms/action-finder";
