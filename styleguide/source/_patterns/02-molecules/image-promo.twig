@@ -1,6 +1,6 @@
-{% set level = imagePromos.level ? : 4 %} 
+{% set level = imagePromos.level ? : 4 %}
 <section class="ma__image-promo{{ imagePromo.location.map ? ' js-location-listing-link' : '' }}">
-  {% if imagePromo.image %}
+  {% if imagePromo.title and imagePromo.title.text %}
     <div class="ma__image-promo__image"
       {% if imagePromo.image.width %}
         style="flex-basis: {{ imagePromo.image.width }}px"
