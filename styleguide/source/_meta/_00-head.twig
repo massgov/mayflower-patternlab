@@ -8,12 +8,15 @@
 
     <link rel="stylesheet" href="{{ url.domain }}/{{ url.assetsPath }}/css/index-generated.css?{{ cacheBuster }}" media="all" />
     <link class="js-base-theme" rel="stylesheet" href="{{ url.domain }}/{{ url.assetsPath }}/css/base-theme-generated.css?{{ cacheBuster }}" media="all" />
+    <link rel="stylesheet" href="{{ url.domain }}/{{ url.assetsPath }}/css/archived-generated.css?{{ cacheBuster }}" media="all" />
+
+    <script src="{{ url.domain }}/{{ url.assetsPath }}/js/vendor/modernizr.js"></script>
+    
     <script>
       var baseThemeCss="{{ url.domain }}/{{ url.assetsPath }}/css/base-theme-generated.css";
       var govThemeCss="{{ url.domain }}/{{ url.assetsPath }}/css/gov-theme-generated.css?";
     </script>
 
-    <script src="{{ url.domain }}/{{ url.assetsPath }}/js/vendor/modernizr.js"></script>
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     {{ patternLabHead | raw }}
