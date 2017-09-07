@@ -62,11 +62,11 @@
           {% block pageContent %}
             {% if dofeaturedCallouts %}
               {% set featuredCallouts = dofeaturedCallouts.featuredCallouts %}
-              {% include "@organisms/by-author/action-finder.twig" %}
+              {% include "@organisms/by-author/featured-callouts.twig" %}
             {% endif %}
             {% if learnfeaturedCallouts %}
               {% set featuredCallouts = learnfeaturedCallouts.featuredCallouts %}
-              {% include "@organisms/by-author/action-finder.twig" %}
+              {% include "@organisms/by-author/featured-callouts.twig" %}
             {% endif %}
             {% if mappedLocations %}
               {% include "@organisms/by-author/mapped-locations.twig" %}

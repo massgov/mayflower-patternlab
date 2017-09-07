@@ -17,7 +17,7 @@ Description: a page pattern representing those patterns which could be used on a
            - [@molecules/icon-links](/?p=molecules-icon-links)
     - Stack Row:
          - Page Content: 
-            - [@organisms/by-author/action-finder](/?p=organisms-action-finder)
+            - [@organisms/by-author/featured-callouts](/?p=organisms-featured-callouts)
            - [@organisms/by-author/mapped-locations](/?p=organisms-mapped-locations)
            - [@organisms/by-author/sections-three-up](/?p=organisms-sections-three-up)
            - [@organisms/by-author/link-list](/?p=organisms-link-list)

@@ -10,9 +10,9 @@ A collection of featured and general links
 * Decorative Link
 
 ### Variant options
-* [Without a Background](./?p=organisms-action-finder-without-background)
-* [See All Link](./?p=organisms-action-finder-see-all)
-* [Search Filter](./?p=organisms-action-finder-filter)
+* [Without a Background](./?p=organisms-featured-callouts-without-background)
+* [See All Link](./?p=organisms-featured-callouts-see-all)
+* [Search Filter](./?p=organisms-featured-callouts-filter)
 
 
 ### Variables

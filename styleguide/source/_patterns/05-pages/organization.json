@@ -144,7 +144,7 @@
     "title":"",
     "id":"",
     "pageContent": [{
-      "path": "@organisms/by-author/action-finder.twig",
+      "path": "@organisms/by-author/featured-callouts.twig",
       "data": {
         "featuredCallouts": {
           "id": "GUID831741781374893",
