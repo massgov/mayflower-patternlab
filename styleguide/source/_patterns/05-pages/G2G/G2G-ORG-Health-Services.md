@@ -19,7 +19,7 @@ Description: a page pattern representing those patterns which could be used on a
          - Page Content: 
             - [@organisms/by-author/featured-callouts](/?p=organisms-featured-callouts)
            - [@organisms/by-author/mapped-locations](/?p=organisms-mapped-locations)
-           - [@organisms/by-author/sections-three-up](/?p=organisms-sections-three-up)
+           - [@organisms/by-author/three-up-cards](/?p=organisms-three-up-cards)
            - [@organisms/by-author/link-list](/?p=organisms-link-list)
 - [@meta/schema/government-organization](/?p=meta-government-organization)
  

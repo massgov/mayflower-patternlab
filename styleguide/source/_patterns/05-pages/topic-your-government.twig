@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block pageContent %}
-  {% set sectionThreeUp = mainContent.officers %}
-  {% include "@organisms/by-author/sections-three-up.twig" %}
-  {% set sectionThreeUp = mainContent.agencies %}
-  {% include "@organisms/by-author/sections-three-up.twig" %}
+  {% set threeUpCards = mainContent.officers %}
+  {% include "@organisms/by-author/three-up-cards.twig" %}
+  {% set threeUpCards = mainContent.agencies %}
+  {% include "@organisms/by-author/three-up-cards.twig" %}
   {% set linkList = mainContent.linkList %}
   {% include "@organisms/by-author/link-list.twig" %}
 {% endblock %}

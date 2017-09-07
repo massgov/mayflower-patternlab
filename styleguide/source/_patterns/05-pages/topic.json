@@ -8,7 +8,7 @@
     "description": "First line of this Topic that feeds description on cards.  This description can span multiple lines."
   },
 
-  "sectionThreeUp" : {
+  "threeUpCards" : {
     "compHeading": null,
     "sections": [{
       "id": "GUIDasjdhf1",

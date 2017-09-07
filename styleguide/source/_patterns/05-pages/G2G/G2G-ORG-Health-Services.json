@@ -434,9 +434,9 @@
         }
       }
     },{
-      "path": "@organisms/by-author/sections-three-up.twig",
+      "path": "@organisms/by-author/three-up-cards.twig",
       "data": {
-        "sectionThreeUp" : {
+        "threeUpCards" : {
           "compHeading": {
             "title": "Featured Topics",
             "sub": "",

@@ -15,7 +15,7 @@ This patten shows a grid of Section Link Patterns.
 
 ### Variables
 ~~~
-sectionThreeUp : {
+threeUpCards : {
   compHeading: {
     type: compHeading / optional
   },

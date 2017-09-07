@@ -133,12 +133,12 @@ schema += [
              ]
         ]
     },{
-         id = (done in future iteration when topic content type has structured data implmented: (page url) + "/#" + stackedRowSections[1].pageContent[2].data.sectionThreeUp.compHeading.text (sluggified?))
-         name = stackedRowSections[1].pageContent[2].data.sectionThreeUp.compHeading.text
+         id = (done in future iteration when topic content type has structured data implmented: (page url) + "/#" + stackedRowSections[1].pageContent[2].data.threeUpCards.compHeading.text (sluggified?))
+         name = stackedRowSections[1].pageContent[2].data.threeUpCards.compHeading.text
          itemListElement = [
              itemOffered = [
-                 id = stackedRowSections[1].pageContent[2].data.sectionThreeUp.sections[ key ].title.href
-                 name = stackedRowSections[1].pageContent[2].data.sectionThreeUp.sections[ key ].title.text
+                 id = stackedRowSections[1].pageContent[2].data.threeUpCards.sections[ key ].title.href
+                 name = stackedRowSections[1].pageContent[2].data.threeUpCards.sections[ key ].title.text
                  NEST Subtopics?
               ]
          ]
