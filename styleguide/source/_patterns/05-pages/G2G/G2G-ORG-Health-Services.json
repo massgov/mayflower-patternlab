@@ -146,7 +146,7 @@
     "pageContent": [{
       "path": "@organisms/by-author/action-finder.twig",
       "data": {
-        "actionFinder": {
+        "featuredCallouts": {
           "id": "GUID831741781374893",
           "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
           "bgNarrow":"../../assets/images/placeholder/800x800.png",

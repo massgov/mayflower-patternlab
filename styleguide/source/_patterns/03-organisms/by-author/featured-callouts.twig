@@ -1,45 +1,45 @@
 {% set noBgClass = "" %}
 {% set filterClass = "" %}
 
-{% if not actionFinder.bgWide %}
-  {% set noBgClass = "ma__action-finder--no-background" %}
+{% if not featuredCallouts.bgWide %}
+  {% set noBgClass = "ma__featured-callouts--no-background" %}
 {% endif %}
 
-{% if actionFinder.links|length <= 6 or hideFilter %}
-  {% set filterClass = "ma__action-finder--no-filter" %}
+{% if featuredCallouts.links|length <= 6 or hideFilter %}
+  {% set filterClass = "ma__featured-callouts--no-filter" %}
 {% endif %}
 
-<section class="ma__action-finder {{ noBgClass }} {{ filterClass }}" id="{{ actionFinder.id }}">
-  {% if actionFinder.bgWide %}
+<section class="ma__featured-callouts {{ noBgClass }} {{ filterClass }}" id="{{ featuredCallouts.id }}">
+  {% if featuredCallouts.bgWide %}
     <style>
-      #{{ actionFinder.id }} {
-        background-image: url('{{actionFinder.bgNarrow}}');
+      #{{ featuredCallouts.id }} {
+        background-image: url('{{featuredCallouts.bgNarrow}}');
       }
 
       @media (min-width: 801px) {
-        #{{ actionFinder.id }} {
-          background-image: url('{{actionFinder.bgWide}}');
+        #{{ featuredCallouts.id }} {
+          background-image: url('{{featuredCallouts.bgWide}}');
         }
       }
     </style>
   {% endif %}
-  <div class="ma__action-finder__container">
-    <header class="ma__action-finder__header">
-      <h2 class="ma__action-finder__title">
-        {{ actionFinder.title }}
+  <div class="ma__featured-callouts__container">
+    <header class="ma__featured-callouts__header">
+      <h2 class="ma__featured-callouts__title">
+        {{ featuredCallouts.title }}
       </h2>
-      {% if actionFinder.links|length > 6 and not hideFilter %}
-        <div class="ma__action-finder__search">
+      {% if featuredCallouts.links|length > 6 and not hideFilter %}
+        <div class="ma__featured-callouts__search">
           {% include "@molecules/keyword-search.twig" %}
         </div>
       {% endif %}
     </header>
-    {% if actionFinder.featuredLinks %}
-      {% if actionFinder.featuredHeading %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
+    {% if featuredCallouts.featuredLinks %}
+      {% if featuredCallouts.featuredHeading %}
+        <h3 class="ma__featured-callouts__category">{{ featuredCallouts.featuredHeading }}</h3>
       {% endif %}
-      <div class="ma__action-finder__items">
-        {% for link in actionFinder.featuredLinks %}
+      <div class="ma__featured-callouts__items">
+        {% for link in featuredCallouts.featuredLinks %}
           {% if link.image %}
             {% set illustratedLink = link %}
             {% include "@molecules/illustrated-link.twig" %}
@@ -50,12 +50,12 @@
         {% endfor %}
       </div>
     {% endif %}
-    {% if actionFinder.links %}
-      {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
+    {% if featuredCallouts.links %}
+      {% if featuredCallouts.generalHeading and featuredCallouts.featuredLinks %}
+        <h3 class="ma__featured-callouts__category">{{ featuredCallouts.generalHeading }}</h3>
       {% endif %}
-      <div class="ma__action-finder__items ma__action-finder__items--all">
-        {% for link in actionFinder.links %}
+      <div class="ma__featured-callouts__items ma__featured-callouts__items--all">
+        {% for link in featuredCallouts.links %}
           {% if link.image %}
             {% set illustratedLink = link %}
             {% include "@molecules/illustrated-link.twig" %}
@@ -67,10 +67,10 @@
       </div>
     {% endif %}
   </div>
-  {% if actionFinder.seeAll %}
-    <div class="ma__action-finder__see-all">
-      <div class="ma__action-finder__see-all-container">
-        {% set decorativeLink = actionFinder.seeAll %}
+  {% if featuredCallouts.seeAll %}
+    <div class="ma__featured-callouts__see-all">
+      <div class="ma__featured-callouts__see-all-container">
+        {% set decorativeLink = featuredCallouts.seeAll %}
         {% include "@atoms/decorative-link.twig" %}
       </div>
     </div>

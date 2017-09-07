@@ -17,7 +17,7 @@ A collection of featured and general links
 
 ### Variables
 ~~~
-actionFinder: {
+featuredCallouts: {
   id:
     type: string (unique per page) /required 
   bgWide:

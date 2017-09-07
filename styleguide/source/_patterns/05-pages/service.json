@@ -118,8 +118,8 @@
     }
   },
 
-  "doActionFinder": {
-    "actionFinder": {
+  "dofeaturedCallouts": {
+    "featuredCallouts": {
       "id": "GUID90357801731903501238",
       "bgWide":"",
       "bgNarrow":"",
@@ -161,8 +161,8 @@
     }
   },
 
-  "learnActionFinder": {
-    "actionFinder": {
+  "learnfeaturedCallouts": {
+    "featuredCallouts": {
       "id": "GUID7501974075817350750",
       "bgWide":"",
       "bgNarrow":"",

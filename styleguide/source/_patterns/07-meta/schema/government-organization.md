@@ -111,25 +111,25 @@ schema += [
     address = (TBD),
     contactPoint = (TBD)
     hasOfferCatalog = [{
-        id = (page url) + "/#" + stackedRowSections[1].pageContent[0].data.actionFinder.featuredHeading (sluggified?),
-        name = stackedRowSections[1].pageContent[0].data.actionFinder.featuredHeading,
+        id = (page url) + "/#" + stackedRowSections[1].pageContent[0].data.featuredCallouts.featuredHeading (sluggified?),
+        name = stackedRowSections[1].pageContent[0].data.featuredCallouts.featuredHeading,
         itemListElement = [
             itemOffered = [
                 type ="governmentService",
                 id = (add in future iteration, once service pages, how-tos, guides are created: 
-                stackedRowSections[1].pageContent[0].data.actionFinder.featuredLinks[ key ].href#/governmentService),
-                name = stackedRowSections[1].pageContent[0].data.actionFinder.featuredLinks[ key ].text,
+                stackedRowSections[1].pageContent[0].data.featuredCallouts.featuredLinks[ key ].href#/governmentService),
+                name = stackedRowSections[1].pageContent[0].data.featuredCallouts.featuredLinks[ key ].text,
              ]
         ]
     },{
-        id = (page url) + "/#" + stackedRowSections[1].pageContent[0].data.actionFinder.generalHeading (sluggified?),
-        name = stackedRowSections[1].pageContent[0].data.actionFinder.generalHeading,
+        id = (page url) + "/#" + stackedRowSections[1].pageContent[0].data.featuredCallouts.generalHeading (sluggified?),
+        name = stackedRowSections[1].pageContent[0].data.featuredCallouts.generalHeading,
         itemListElement = [
             itemOffered = [
                 type ="governmentService"
                 id = (add in future iteration, once service pages, how-tos, guides are created:  
-                stackedRowSections[1].pageContent[0].data.actionFinder.links[ key ].href + "/#governmentService"),
-                name = stackedRowSections[1].pageContent[0].data.actionFinder.links[ key ].text,
+                stackedRowSections[1].pageContent[0].data.featuredCallouts.links[ key ].href + "/#governmentService"),
+                name = stackedRowSections[1].pageContent[0].data.featuredCallouts.links[ key ].text,
              ]
         ]
     },{

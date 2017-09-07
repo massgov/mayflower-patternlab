@@ -61,15 +61,15 @@ Displays a collection of components to help describe an available Service on Mas
     }
   },
 
-  doActionFinder: {
-    actionFinder: {
-      type: actionFinder / optional
+  dofeaturedCallouts: {
+    featuredCallouts: {
+      type: featuredCallouts / optional
     }
   },
 
-  learnActionFinder: {
-    actionFinder: {
-      type: actionFinder / optional
+  learnfeaturedCallouts: {
+    featuredCallouts: {
+      type: featuredCallouts / optional
     }
   },
 

@@ -1,7 +1,7 @@
 $action-finder-bg-color: tint($c-theme-primary,89%);
 $action-finder-border-color: tint($c-theme-primary,50%);
 
-.ma__action-finder {
+.ma__featured-callouts {
   
   &--no-background &__header {
     background-color: $c-theme-secondary;
