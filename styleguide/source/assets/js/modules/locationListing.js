@@ -81,13 +81,11 @@ export default function (window,document,$,undefined) {
         // transformData() returns a jQuery deferred object which allows us to wait for any asynchronous js execution to return before executing the .done(callback).
         // @see: https://api.jquery.com/deferred.done/
         transformData(masterData, formValues).done(function (transformation) {
-          console.log(transformation);
           masterData = transformation.data; // preserve state
           // Update the results heading based on the current items state.
           transformation.data.resultsHeading = transformResultsHeading({data: transformation.data});
           // Update pagination data structure, reset to first page
           transformation.data.pagination = transformPaginationData({data: transformation.data});
-          console.log('transformation data: ', transformation.data);
           // Render the listing page.
           renderListingPage({data: transformation.data});
           // Get the associated markers based on the listing items.
@@ -110,7 +108,6 @@ export default function (window,document,$,undefined) {
           transformation.data.resultsHeading = transformResultsHeading({data: transformation.data});
           // Update pagination data structure, reset to first page
           transformation.data.pagination = transformPaginationData({data: transformation.data});
-          console.log('transformation data: ', transformation.data);
           // Render the listing page.
           renderListingPage({data: transformation.data});
           // Get the associated markers based on the listing items.
