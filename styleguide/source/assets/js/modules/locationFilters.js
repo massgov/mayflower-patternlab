@@ -26,15 +26,6 @@ export default function (window,document,$,undefined) {
       renderForm({clearedFilter: data.clearedFilter, $form: $el});
     });
 
-    // Don't submit the form when a user selects the autocomplete dropdown item with enter
-    $el.keydown(function(e) {
-      if (e.keyCode === 13) {
-        if  ($(e.target).is($('.js-filter-by-location', $el).find('input'))) {
-          e.preventDefault();
-        }
-      }
-    });
-
     // Handle global form submission.
     $el.submit(function(e){
       e.preventDefault();
