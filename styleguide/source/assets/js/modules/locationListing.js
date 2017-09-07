@@ -310,7 +310,7 @@ export default function (window,document,$,undefined) {
       if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('geometry')) {
         transformReturn.place = autocompletePlace;
         // Sort the markers and instance of locationListing masterData.
-        transformReturn.data = sortDataAroundPlace(place, filteredData);
+        transformReturn.data = sortDataAroundPlace(autocompletePlace, filteredData);
         // Return the data sorted by location and the autocomplete place object
         promise.resolve(transformReturn);
       }
