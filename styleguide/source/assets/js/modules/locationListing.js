@@ -78,6 +78,8 @@ export default function (window,document,$,undefined) {
 
       // Handle location listings form interaction (triggered by locationFilters.js).
       $locationFilter.on('ma:LocationFilter:FormSubmitted', function (e, formValues) {
+        // transformData() returns a jQuery deferred object which allows us to wait for any asynchronous js execution to return before executing the .done(callback).
+        // @see: https://api.jquery.com/deferred.done/
         transformData(masterData, formValues).done(function (transformation) {
           console.log(transformation);
           masterData = transformation.data; // preserve state
@@ -97,6 +99,8 @@ export default function (window,document,$,undefined) {
 
       // Handle active filter/tag button interactions (triggered by resultsHeading.js).
       $resultsHeading.on('ma:ResultsHeading:ActiveTagClicked', function (e, clearedFilter) {
+        // transformData() returns a jQuery deferred object which allows us to wait for any asynchronous js execution to return before executing the .done(callback).
+        // @see: https://api.jquery.com/deferred.done/
         transformData(masterData, clearedFilter).done(function (transformation) {
           masterData = transformation.data; // preserve state
           transformation.clearedFilter = clearedFilter;
