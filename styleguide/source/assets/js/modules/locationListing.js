@@ -290,6 +290,9 @@ export default function (window,document,$,undefined) {
    *  An object with the current state masterData instance and an array of their related sorted markers to send to map.
    */
   function transformData(data, transformation) {
+    // This data transformation potentially involves asynchronous google geocoding.
+    // This jQuery deferered object allows us to wait for a return before moving on inside of the parent function (which invokes this function).
+    // @see https://api.jquery.com/jquery.deferred/
     let promise = $.Deferred();
     let transformReturn = {};
 
@@ -307,6 +310,7 @@ export default function (window,document,$,undefined) {
         transformReturn.place = autocompletePlace;
         // Sort the markers and instance of locationListing masterData.
         transformReturn.data = sortDataAroundPlace(place, filteredData);
+        // Return the data sorted by location and the autocomplete place object
         promise.resolve(transformReturn);
       }
       // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
@@ -317,11 +321,13 @@ export default function (window,document,$,undefined) {
         geocodeAddressString(place, function(result) {
           transformReturn.data = sortDataAroundPlace(result, filteredData);
           transformReturn.place = result;
+          // Return the data sorted by location and the geocoded place object
           promise.resolve(transformReturn);
         });
       }
     }
     else {
+      // Return the data sorted by alphabet and the empty place object
       promise.resolve({data: sortedData, place: place});
     }
 
