@@ -16,8 +16,8 @@ img,
    page-break-inside: avoid;
 }
 
-.ma__sections-3up,
-.ma__sections-3up__container {
+.ma__three-up-cards,
+.ma__three-up-cards__container {
   page-break-inside: auto;
 }
 
@@ -164,11 +164,11 @@ h4 {
 }
 
 .main-content--two,
-.ma__sections-3up__container,
+.ma__three-up-cards__container,
 .ma__top-actions,
 .ma__image-credit__container,
 .ma__link-list__container,
-.ma__sections-3up__title {
+.ma__three-up-cards__title {
     padding-left: 0;
     padding-right: 0;
 }
@@ -468,7 +468,7 @@ h4 {
     padding: 0;
 }
 
-.ma__sections-3up__container > * {
+.ma__three-up-cards__container > * {
   margin-bottom: 40px;
   margin-right: 0;
   width: 100%;
@@ -499,7 +499,7 @@ h4 {
   display: none;
 }
 
-.ma__sections-3up {
+.ma__three-up-cards {
   padding-top: 20px;
   padding-bottom: 40px;
 }

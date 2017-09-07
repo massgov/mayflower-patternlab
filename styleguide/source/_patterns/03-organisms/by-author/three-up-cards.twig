@@ -1,14 +1,14 @@
 {% set subTitle = false %}
-<section class="ma__sections-3up">
+<section class="ma__three-up-cards">
   {% if threeUpCards.compHeading.title %}
     {# render sections links with an h3 if the title is present #}
     {% set subTitle = true %}
-    <div class="ma__sections-3up__title">
+    <div class="ma__three-up-cards__title">
       {% set compHeading = threeUpCards.compHeading %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
     </div>
   {% endif %}
-  <div class="ma__sections-3up__container">
+  <div class="ma__three-up-cards__container">
     {% for sectionLinks in threeUpCards.sections %}
       {% set sectionLinks = sectionLinks|merge({'subTitle': subTitle }) %}
       {% include "@molecules/section-links.twig" with sectionLinks %}
