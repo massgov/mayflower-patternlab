@@ -10,14 +10,14 @@ Displays a set of links in a card layout.
 * Cat Icon
 
 ### Variant options
-* Can be used with [Callout Links](./?p=molecules-section-links-with-callout-links)
+* Can be used with [Callout Links](./?p=molecules-topical-card-with-callout-links)
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions shown on narrow screens (js/modules/accordions.js)
 
 ### Variables
 ~~~
-sectionLinks: {
+topicalCard: {
   catIcon: { 
     type: catIcon / optional
   },

@@ -9,9 +9,9 @@
     </div>
   {% endif %}
   <div class="ma__three-up-cards__container">
-    {% for sectionLinks in threeUpCards.sections %}
-      {% set sectionLinks = sectionLinks|merge({'subTitle': subTitle }) %}
-      {% include "@molecules/section-links.twig" with sectionLinks %}
+    {% for topicalCard in threeUpCards.sections %}
+      {% set topicalCard = topicalCard|merge({'subTitle': subTitle }) %}
+      {% include "@molecules/topical-card.twig" with topicalCard %}
     {% endfor %}
   </div>
 </section>

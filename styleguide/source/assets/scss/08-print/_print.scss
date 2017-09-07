@@ -12,7 +12,7 @@ body {
 img,
 .ma__google-map,
 .ma__mapped-locations,
-.ma__section-links {
+.ma__topical-card {
    page-break-inside: avoid;
 }
 
@@ -463,8 +463,8 @@ h4 {
   padding: 10px 0 10px 20px;
 }
 
-.ma__section-links__content,
-.ma__section-links__toggle-content {
+.ma__topical-card__content,
+.ma__topical-card__toggle-content {
     padding: 0;
 }
 
@@ -474,7 +474,7 @@ h4 {
   width: 100%;
 }
 
-.ma__section-links {
+.ma__topical-card {
   background-color: transparent;
 }
 
@@ -483,13 +483,13 @@ h4 {
 }
 
 .ma__featured-callouts__title,
-.ma__section-links__title,
+.ma__topical-card__title,
 .ma__link-list__title {
   padding-bottom: 0;
 }
 
 .ma__comp-heading:after,
-.ma__section-links__title:after,
+.ma__topical-card__title:after,
 .ma__featured-callouts__title:after,
 .ma__top-actions__title:after,
 .ma__link-list__title:after,
@@ -526,7 +526,7 @@ h4 {
   text-align: left;
 }
 
-.ma__section-links__icon {
+.ma__topical-card__icon {
   margin-top: 0;
   text-align: left;
 }

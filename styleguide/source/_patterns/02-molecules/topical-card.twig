@@ -1,56 +1,56 @@
-{% set titleId = "section_titles_" ~ sectionLinks.id %}
+{% set titleId = "section_titles_" ~ topicalCard.id %}
 
-<section class="ma__section-links js-accordion">
-  <div class="ma__section-links__content">
-    {% if sectionLinks.catIcon %}
-      <div class="ma__section-links__icon">
-        {% set catIcon = sectionLinks.catIcon %}
+<section class="ma__topical-card js-accordion">
+  <div class="ma__topical-card__content">
+    {% if topicalCard.catIcon %}
+      <div class="ma__topical-card__icon">
+        {% set catIcon = topicalCard.catIcon %}
         {% include "@atoms/05-icons/cat-icon.twig" %}
       </div>
     {% endif %}
-    {% if sectionLinks.subTitle %}
-      <h3 class="ma__section-links__title js-accordion-link" id="{{ titleId }}">
-        {% set decorativeLink = sectionLinks.title %}
+    {% if topicalCard.subTitle %}
+      <h3 class="ma__topical-card__title js-accordion-link" id="{{ titleId }}">
+        {% set decorativeLink = topicalCard.title %}
         {% include "@atoms/decorative-link.twig" %}
       </h3>
     {% else %}
-      <h2 class="ma__section-links__title js-accordion-link" id="{{ titleId }}">
-        {% set decorativeLink = sectionLinks.title %}
+      <h2 class="ma__topical-card__title js-accordion-link" id="{{ titleId }}">
+        {% set decorativeLink = topicalCard.title %}
         {% include "@atoms/decorative-link.twig" %}
       </h2>
     {% endif %}
-    <nav class="ma__section-links__toggle-content js-accordion-body" aria-labelledby="{{ titleId }}">
-      {% if sectionLinks.description %}
-        <p class="ma__section-links__description">{{sectionLinks.description}}</p>
+    <nav class="ma__topical-card__toggle-content js-accordion-body" aria-labelledby="{{ titleId }}">
+      {% if topicalCard.description %}
+        <p class="ma__topical-card__description">{{topicalCard.description}}</p>
       {% endif %}
-      <div class="ma__section-links__mobile-title">
+      <div class="ma__topical-card__mobile-title">
         {% set decorativeLink = { 
           "type": "", 
-          "href": sectionLinks.title.href, 
+          "href": topicalCard.title.href, 
           "text": "Learn More", 
-          "info": "learn more about " ~ sectionLinks.title.text } 
+          "info": "learn more about " ~ topicalCard.title.text } 
         %}
         {% include "@atoms/decorative-link.twig" %}
       </div>
-      <ul class="ma__section-links__items">
-        {% if sectionLinks.type == "callout" %}
-          {% for calloutLink in sectionLinks.links %}
-            <li class="ma__section-links__item">
+      <ul class="ma__topical-card__items">
+        {% if topicalCard.type == "callout" %}
+          {% for calloutLink in topicalCard.links %}
+            <li class="ma__topical-card__item">
               {% include "@molecules/callout-link.twig" %}
             </li>
           {% endfor %}
         {% else %}
-          {% for decorativeLink in sectionLinks.links %}
-            <li class="ma__section-links__item">
+          {% for decorativeLink in topicalCard.links %}
+            <li class="ma__topical-card__item">
               {% include "@atoms/decorative-link.twig" %}
             </li>
           {% endfor %}
         {% endif %}
       </ul>
     </nav>
-    {% if sectionLinks.seeAll %}
-      <div class="ma__section-links__footer">
-        {% set decorativeLink = sectionLinks.seeAll %}
+    {% if topicalCard.seeAll %}
+      <div class="ma__topical-card__footer">
+        {% set decorativeLink = topicalCard.seeAll %}
         {% include "@atoms/decorative-link.twig" %}
       </div>
     {% endif %}

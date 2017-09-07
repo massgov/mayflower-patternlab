@@ -20,7 +20,7 @@ threeUpCards : {
     type: compHeading / optional
   },
   "sections": [{
-    type: array of sectionLinks / required
+    type: array of topicalCard / required
   }]
 }
 ~~~
