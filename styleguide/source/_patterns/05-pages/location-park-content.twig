@@ -5,36 +5,64 @@
 {% endblock %}
 
 {% block pageContent %}
-  {# Increase heading number by 1 from the parent heading. #}
-  {% set level = level + 1 %}
-  {% set compHeadingLevel = level %}
   {% set richText = mainContent.overview %}
-  {% set compHeading = richText.compHeading|merge({'level': compHeadingLevel}) %}
-  {% set richText = richText|merge({'compHeading': compHeading}) %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set richText = mainContent.hours %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set richText = mainContent.parking %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set googleMap = mainContent.googleMap %}
   {% include "@molecules/google-map.twig" %}
   {% set imagePromos = mainContent.imagePromos %}
-  {% set compHeading = imagePromos.compHeading|merge({'level': compHeadingLevel}) %}
-  {% set imagePromos = imagePromos|merge({'compHeading': compHeading}) %}
+  {% set imagePromos = imagePromos|merge({'compHeading': {
+                                      'title': imagePromos.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/image-promos.twig" %}
   {% set richText = mainContent.allActivities %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set richText = mainContent.facilities %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set richText = mainContent.acessibility %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set richText = mainContent.restrictions %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
 {% endblock %}
 
 {% block sidebar %}
   {% if sidebar.eventListing %}
     {% set eventListing = sidebar.eventListing %}
+    {% set eventListing = eventListing|merge({'sidebarHeading': {
+                                      'title': eventListing.sidebarHeading.title,
+                                      'level': level
+                                    }}) %}
     {% include "@organisms/by-author/event-listing.twig" %}
   {% endif %}
 {% endblock %}
