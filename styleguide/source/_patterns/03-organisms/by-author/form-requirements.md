@@ -10,7 +10,7 @@ This Pattern describes the requirements needed to complete a form page
 * Location Icons
 
 ### Variant options
-* When added to a [Two Column](./?p=organisms-form-requirements-in-two-column) template the background color bleeds out to the left.
+* When added to a [Right Rail](./?p=organisms-form-requirements-in-two-colmun) template the background color bleeds out to the left.
 
 ### Variables
 ~~~
