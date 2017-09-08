@@ -20,11 +20,11 @@ This pattern is designed to be used site wide to show important alert messages
 
 ### JavaScript Used
 * Accordions (js/modules/accordions.js)
-* Emergency Alerts (js/modules/emergencyAlerts.js)
+* Site Alerts (js/modules/siteAlerts.js)
 
 ### Variables
 ~~~
-emergencyAlerts: {
+siteAlerts: {
   id: 
     type: string (unique per page and consistent across the site) / required
   buttonAlert: {

@@ -5,7 +5,7 @@ This is a black button designed to show and hide content (text toggles as well)
 * Stable as of 5.0.0
 
 ### JavaScript Used
-* Emergency Alerts (js/modules/emergencyAlerts.js)
+* Site Alerts (js/modules/siteAlerts.js)
 
 ### Variables
 ~~~

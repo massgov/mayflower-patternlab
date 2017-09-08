@@ -1,16 +1,9 @@
-$emergency-alerts-half-max: $max-width / 2;
-
-/* parent class should be 0px tall
-if there are no alerts to show
-since the component will always
-be included at the top of the page */
-.ma__emergency-alerts {
+.ma__site-alerts {
   position: relative;
   z-index: $z-dropdown + 1;
 
   @media($bp-header-toggle-max) {
     top: 40px;
-    // z-index:1;
   }
 
   &__header {

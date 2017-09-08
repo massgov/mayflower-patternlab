@@ -1,7 +1,7 @@
 {
   "urlPath": "/?p=pages-GUIDE-section-example",
 
-  "emergencyAlerts": {
+  "siteAlerts": {
     "id":"GUID18378923w38789",
     "buttonAlert": {
       "hideText": "Hide",

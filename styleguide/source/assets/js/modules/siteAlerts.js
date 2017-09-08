@@ -10,11 +10,11 @@ export default function (window,document,$,undefined) {
     accordion.js component runing before it. 
   ********* */
 
-  $('.js-emergency-alerts').each(function(){
+  $('.js-site-alerts').each(function(){
     let $el = $(this),
         open = true,
         id = $el.data('id'),
-        cookieName = 'emergency-alerts' + id,
+        cookieName = 'site-alerts' + id,
         cookieValue = cookie.getCookie(cookieName),
         $button = $el.find('.js-accordion-link button');
 

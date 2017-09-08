@@ -5,7 +5,7 @@
 
   "backToTopButton": true,
 
-  "emergencyAlerts": {
+  "siteAlerts": {
     "id":"GUID18378923w38789",
     "buttonAlert": {
       "hideText": "Hide",
