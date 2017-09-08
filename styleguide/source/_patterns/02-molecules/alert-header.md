@@ -6,7 +6,7 @@ Content describing the overall emergency.
 
 ### Variables
 ~~~
-emergencyHeader: {
+alertHeader: {
   title:
     type: "string / required"
 }

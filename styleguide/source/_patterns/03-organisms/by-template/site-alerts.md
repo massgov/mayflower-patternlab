@@ -30,8 +30,8 @@ siteAlerts: {
   buttonAlert: {
     type: buttonAlert / required
   },
-  emergencyHeader: {
-    type: emergencyHeader / required
+  alertHeader: {
+    type: alertHeader / required
   },
   alerts (optional): [{
     type: array of emergencyAlert / required

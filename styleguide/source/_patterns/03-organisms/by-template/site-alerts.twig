@@ -1,12 +1,12 @@
 {% set alertsExist = siteAlerts.alerts ? true : false %}
 {% set accordionClass = alertsExist ? 'js-accordion js-site-alerts' : '' %}
 
-{% if siteAlerts.alerts or siteAlerts.emergencyHeader %}
+{% if siteAlerts.alerts or siteAlerts.alertHeader %}
   <section class="ma__site-alerts {{ accordionClass }}" data-id="{{siteAlerts.id}}">
     <div class="ma__site-alerts__header">
       <div class="ma__site-alerts__container">
-        {% set emergencyHeader = siteAlerts.emergencyHeader %}
-        {% include "@molecules/emergency-header.twig" %}
+        {% set alertHeader = siteAlerts.alertHeader %}
+        {% include "@molecules/alert-header.twig" %}
         {% if alertsExist %}
           <div class="ma__site-alerts__header-interface js-accordion-link">
             {% set buttonAlert = siteAlerts.buttonAlert %}

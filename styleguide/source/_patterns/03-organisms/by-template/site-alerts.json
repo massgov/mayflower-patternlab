@@ -6,7 +6,7 @@
       "showText": "Show",
       "text": "Updates"
     },
-    "emergencyHeader": {
+    "alertHeader": {
       "title": "The State is experiencing severe weather due to the winter storm Paula."
     },
     "alerts": [{
