@@ -7,9 +7,9 @@ This pattern is designed to be used site wide to show important alert messages
 
 
 ### Pattern Contains
-* Emergency Header
+* Alert Header
 * Button Alert
-* Emergency Alert
+* Alert Message
 
 ### Usage Guidelines 
   * This will only render if the alerts array is populated
@@ -34,7 +34,7 @@ siteAlerts: {
     type: alertHeader / required
   },
   alerts (optional): [{
-    type: array of emergencyAlert / required
+    type: array of alertMessage / required
   }]
 }
 ~~~

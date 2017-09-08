@@ -1,8 +1,8 @@
-<p class="ma__emergency-alert" tabindex="0">
-  <span class="ma__emergency-alert__message">{{ emergencyAlert.message }} <span class="ma__emergency-alert__time-stamp">{{ emergencyAlert.timeStamp }}</span></span>
-  {% if emergencyAlert.link %}
-  <span class="ma__emergency-alert__link">
-      {% set link = emergencyAlert.link %}
+<p class="ma__alert-message" tabindex="0">
+  <span class="ma__alert-message__message">{{ alertMessage.message }} <span class="ma__alert-message__time-stamp">{{ alertMessage.timeStamp }}</span></span>
+  {% if alertMessage.link %}
+  <span class="ma__alert-message__link">
+      {% set link = alertMessage.link %}
       {% include "@atoms/11-text/link.twig" %}
   </span>
   {% endif %}

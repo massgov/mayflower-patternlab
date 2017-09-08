@@ -1,5 +1,5 @@
 ### Description
-Emergency Alert message describing the event with a timestamp reflecting when this message was created.  An optional link is provided to take the user to page with more information
+Alert message describing the event with a timestamp reflecting when this message was created.  An optional link is provided to take the user to page with more information
 
 ### Status
 * Stable as of 5.0.0
@@ -12,7 +12,7 @@ Emergency Alert message describing the event with a timestamp reflecting when th
 
 ### Variables
 ~~~
-emergencyAlert: {
+alertMessage: {
   message:
     type: string / required,
   timeStamp:

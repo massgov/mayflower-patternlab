@@ -18,8 +18,8 @@
     {% if alertsExist %}
       <div class="ma__site-alerts__content js-accordion-content">
         <div class="ma__site-alerts__container">
-          {% for emergencyAlert in siteAlerts.alerts %}
-            {% include "@molecules/emergency-alert.twig" %}
+          {% for alertMessage in siteAlerts.alerts %}
+            {% include "@molecules/alert-message.twig" %}
           {% endfor %}
         </div>
       </div>
