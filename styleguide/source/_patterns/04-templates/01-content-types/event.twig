@@ -7,7 +7,6 @@
 <main id="main-content" tabindex="-1"{% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   {# Increase heading number by 1 from the parent heading. #}
   {% set level = level + 1 %}
-  {% set compHeadingLevel = level %}
   <div class="pre-content">
     {% block preContent %}
       {% include "@organisms/by-template/page-header.twig" %}
@@ -32,24 +31,35 @@
           {% include "@organisms/by-author/page-overview.twig" %}
         {% endif %}
 
+        {# Increase heading number by 1 from the parent heading. #}
+        {% set level = level + 1 %}
         {% if mainContent.youWillNeed %}
           {% set richText = mainContent.youWillNeed %}
-          {% set compHeading = richText.compHeading|merge({'level': compHeadingLevel}) %}
-          {% set richText = richText|merge({'compHeading': compHeading}) %}
+          {% set richText = richText|merge({
+            'compHeading': {
+              'title': richText.compHeading.title,
+              'level': level}
+          }) %}
           {% include "@organisms/by-author/rich-text.twig" %}
         {% endif %}
 
         {% if mainContent.formDownloads %}
           {% set formDownloads = mainContent.formDownloads %}
-          {% set compHeading = formDownloads.compHeading|merge({'level': compHeadingLevel}) %}
-          {% set formDownloads = formDownloads|merge({'compHeading': compHeading}) %}
+          {% set formDownloads = formDownloads|merge({
+            'compHeading': {
+            'title': formDownloads.compHeading.title,
+            'level': level}
+          }) %}
           {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}
 
         {% if mainContent.contactList %}
           {% set contactList = mainContent.contactList %}
-          {% set compHeading = contactList.compHeading|merge({'level': compHeadingLevel}) %}
-          {% set contactList = contactList|merge({'compHeading': compHeading}) %}
+          {% set contactList = contactList|merge({
+            'compHeading': {
+              'title': contactList.compHeading.title,
+              'level': level}
+          }) %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
 
