@@ -8,7 +8,7 @@ This is stylized textarea input
 * a [maxlength](./?p=atoms-textarea-set-characters) restriction can be applied
 
 ### JavaScript Used
-* This pattern uses JavaScript for the maxlength option (js/modules/formInputs.js)
+* This pattern uses JavaScript for the maxlength option to show the remaining character count (js/modules/formInputs.js)
 
 ### Variables
 ~~~
