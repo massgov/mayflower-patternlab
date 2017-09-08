@@ -1,22 +1,22 @@
-{# Set top heading level for the page. #}
-{% set level = 1 %}
-
 {% extends '@templates/two-column.twig' %}
 
 {% block preContent %}
   {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 
-{# Increase heading number by 1 from the parent heading. #}
-{% set level = level + 1 %}
-
 {% block pageContent %}
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   {% set listingTable = mainContent.listingTable %}
   {% include "@molecules/listing-table.twig" %}
 
-  {% set compHeadingLevel = level %}
 
   {% set contactList = sideContent.contactList %}
+  {% set contactList = sideContent|merge({'contactList': {
+                                            'compHeading': {
+                                              'title': contactList.compHeading.title,
+                                              'level': level
+                                            }}}) %}
   {% include "@organisms/by-author/contact-list.twig" %}
 
   {% set personalMessage = mainContent.personalMessage %}
@@ -26,24 +26,44 @@
   {% include "@organisms/by-author/rich-text.twig" %}
 
   {% set formDownloads = mainContent.formDownloads %}
+  {% set formDownloads = formDownloads|merge({'compHeading': {
+                                                'title': formDownloads.compHeading.title,
+                                                'level': level
+                                              }}) %}
   {% include "@organisms/by-author/form-downloads.twig" %}
 
   {% set contactList = mainContent.contactList %}
-  {% set compHeading = contactList.compHeading|merge({'level': compHeadingLevel}) %}
-  {% set contactList = contactList|merge({'compHeading': compHeading}) %}
+  {% set contactList = contactList|merge({'compHeading': {
+                                            'title': contactList.compHeading.title,
+                                            'level': level
+                                          }}) %}
   {% include "@organisms/by-author/contact-list.twig" %}
 
 
 {% endblock %}
 
 {% block sidebar %}
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   {% set contactList = sideContent.contactList %}
+  {% set contactList = contactList|merge({'compHeading': {
+                                            'title': contactList.compHeading.title,
+                                            'level': level
+                                          }}) %}
   {% include "@organisms/by-author/contact-list.twig" %}
-  
+
   {% set pressListing = sideContent.pressListing %}
+  {% set pressListing = pressListing|merge({'sidebarHeading': {
+                                              'title': pressListing.sidebarHeading.title,
+                                              'level': level
+                                          }}) %}
   {% include "@organisms/by-author/press-listing.twig" %}
 
   {% set eventListing = sideContent.eventListing %}
+  {% set eventListing = eventListing|merge({'sidebarHeading': {
+                                              'title': eventListing.sidebarHeading.title,
+                                              'level': level
+                                          }}) %}
   {% include "@organisms/by-author/event-listing.twig" %}
 {% endblock %}
 {% block postContent %}
