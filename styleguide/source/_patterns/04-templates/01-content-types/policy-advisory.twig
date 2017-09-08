@@ -25,10 +25,13 @@
     {% if jumpLinks %}
       {% include "@organisms/by-template/jump-links.twig" %}
     {% endif %}
-    {% set compHeadingLevel = level %}
     <div class="main-content main-content--two">
       <div class="page-content">
         {% for richText in mainContent.contents %}
+          {% set richText = richText|merge({'compHeading': {
+                                              'title': richText.compHeading.title,
+                                              'level': level
+                                            }}) %}
           {% include "@organisms/by-author/rich-text.twig" %}
         {% endfor %}
 
@@ -38,14 +41,19 @@
 
         {% if mainContent.formDownloads %}
           {% set formDownloads = mainContent.formDownloads %}
-
+          {% set formDownloads = formDownloads|merge({'compHeading': {
+                                                        'title': formDownloads.compHeading.title,
+                                                        'level': level
+                                                      }}) %}
           {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}
 
         {% if mainContent.contactList %}
           {% set contactList = mainContent.contactList %}
-          {% set compHeading = contactList.compHeading|merge({'level': compHeadingLevel}) %}
-          {% set contactList = contactList|merge({'compHeading': compHeading}) %}
+          {% set contactList = contactList|merge({'compHeading': {
+                                                    'title': contactList.compHeading.title,
+                                                    'level': level
+                                                  }}) %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
 
@@ -62,16 +70,28 @@
       <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
         {% if sideContent.contactList %}
           {% set contactList = sideContent.contactList %}
+          {% set contactList = contactList|merge({'compHeading': {
+                                                    'title': contactList.compHeading.title,
+                                                    'level': level
+                                                  }}) %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
-        
+
         {% if sideContent.pressListing %}
           {% set pressListing = sideContent.pressListing %}
+          {% set pressListing = pressListing|merge({'sidebarHeading': {
+                                                      'title': pressListing.sidebarHeading.title,
+                                                      'level': level
+                                                    }}) %}
           {% include "@organisms/by-author/press-listing.twig" %}
         {% endif %}
 
         {% if sideContent.eventListing %}
           {% set eventListing = sideContent.eventListing %}
+          {% set eventListing = eventListing|merge({'sidebarHeading': {
+                                                      'title': eventListing.sidebarHeading.title,
+                                                      'level': level
+                                                    }}) %}
           {% include "@organisms/by-author/event-listing.twig" %}
         {% endif %}
 
