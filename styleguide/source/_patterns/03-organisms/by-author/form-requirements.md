@@ -16,7 +16,7 @@ This Pattern describes the requirements needed to complete a form page
 ~~~
 formRequirements: {
   rteTitle: {
-    type: columnHeading / optional
+    type: contentHeading / optional
   },
 
   richText: {
@@ -25,7 +25,7 @@ formRequirements: {
 
   payment: (optional) {
     title: {
-      type: columnHeading / required
+      type: contentHeading / required
     },
 
     locationIcons: {

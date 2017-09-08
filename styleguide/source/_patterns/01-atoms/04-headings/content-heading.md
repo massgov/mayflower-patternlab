@@ -5,11 +5,11 @@ This pattern shows an `<h4>` heading that can also be rendered as a link
 * Stable as of 5.0.0
 
 ### Variant options
-* Can be rendered as a [link](./?p=atoms-column-heading-as-link)
+* Can be rendered as a [link](./?p=atoms-content-heading-as-link)
 
 ### Variables
 ~~~
-columnHeading {
+contentHeading {
   text: 
     type: string / required
   href: 

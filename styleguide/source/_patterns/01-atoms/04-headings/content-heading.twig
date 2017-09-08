@@ -1,8 +1,8 @@
-<h4 class="ma__column-heading">
-  {% if columnHeading.href %}
-    {% set decorativeLink = columnHeading %}
+<h4 class="ma__content-heading">
+  {% if contentHeading.href %}
+    {% set decorativeLink = contentHeading %}
     {% include "@atoms/decorative-link.twig" %}
   {% else %}
-    {{columnHeading.text}}
+    {{contentHeading.text}}
   {% endif %}
 </h4>

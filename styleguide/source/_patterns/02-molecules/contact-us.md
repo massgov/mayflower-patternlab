@@ -29,7 +29,7 @@ contactUs: {
   isExpanded:
     type: boolean
   subTitle: {
-    type: columnHeading / optional
+    type: contentHeading / optional
   }
   groups: [{
     type: array of contactGroup / required

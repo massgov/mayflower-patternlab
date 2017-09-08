@@ -765,9 +765,9 @@
         "splitColumns": {
           "columns": [{
             "items": [{
-              "path": "@atoms/04-headings/column-heading.twig",
+              "path": "@atoms/04-headings/content-heading.twig",
               "data": {
-                "columnHeading" : {
+                "contentHeading" : {
                   "text": "Subheading Section Name 1"
                 }
               }
@@ -788,9 +788,9 @@
             }]
           },{
             "items": [{
-              "path": "@atoms/04-headings/column-heading.twig",
+              "path": "@atoms/04-headings/content-heading.twig",
               "data": {
-                "columnHeading" : {
+                "contentHeading" : {
                   "text": "Subheading Section Name 2"
                 }
               }
@@ -822,9 +822,9 @@
             }]
           },{
             "items": [{
-              "path": "@atoms/04-headings/column-heading.twig",
+              "path": "@atoms/04-headings/content-heading.twig",
               "data": {
-                "columnHeading" : {
+                "contentHeading" : {
                   "text": "Subheading Section Name 3"
                 }
               }

@@ -12,8 +12,8 @@
       {% include "@organisms/by-author/rich-text.twig" %}
       {% if formRequirements.payment %}
         <div class="ma__form-requirements__payment">
-          {% set columnHeading = formRequirements.payment.title %}
-          {% include "@atoms/04-headings/column-heading.twig" %}
+          {% set contentHeading = formRequirements.payment.title %}
+          {% include "@atoms/04-headings/content-heading.twig" %}
           {% set locationIcons = formRequirements.payment.locationIcons %}
           {% include "@molecules/location-icons.twig" %}
         </div>
