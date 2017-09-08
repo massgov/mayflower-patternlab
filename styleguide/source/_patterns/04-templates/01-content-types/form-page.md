@@ -1,5 +1,5 @@
 ### Description
-This pattern is used as a template for Form Pages and is based off of the Two Column template
+This pattern is used as a template for Form Pages and is based off of the Right Rail template
 
 ### Status
 * Stable as of 5.0.0

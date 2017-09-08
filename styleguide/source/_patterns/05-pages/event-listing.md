@@ -5,7 +5,7 @@ This is a filter page used to search for events.
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Single Column (template)
+* Full Width (template)
 * Page Header
 * Event Filters
 * Results Heading

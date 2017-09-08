@@ -12,7 +12,7 @@ This is an example of an Organization page for Mass.gov using a stacked row temp
 * Page Banner - large
 * Rich Text
 * Icon Links
-* Action Finder
+* Featured Callouts
 * Mapped Locations
 * Section Three Up
 * Link List

@@ -1,5 +1,5 @@
 ### Description
-This is an example of a Video Transcript page [extending](https://twig.symfony.com/doc/2.x/tags/extends.html) the Two Column template
+This is an example of a Video Transcript page [extending](https://twig.symfony.com/doc/2.x/tags/extends.html) the Right Rail template
 
 ### Status
 * Stable as of 5.0.0
@@ -7,7 +7,7 @@ This is an example of a Video Transcript page [extending](https://twig.symfony.c
 ### Pattern Contains
 * Header
 * Footer
-* Two Column Reversed (template)
+* Right Rail (template)
 * Page Header
 * Back Button
 * Video

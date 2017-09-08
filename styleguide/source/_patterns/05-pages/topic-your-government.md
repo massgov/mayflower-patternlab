@@ -7,9 +7,9 @@ This is an example of a Topic page on Mass.gov for the Your Government section.
 ### Pattern Contains
 * Header
 * Footer
-* Single Column (template)
+* Full Width (template)
 * Page Banner - columns
-* Sections Three Up
+* Three Up Cards
 * Link List
 
 ### JavaScript Used

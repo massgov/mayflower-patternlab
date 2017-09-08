@@ -1,13 +1,12 @@
 ### Description
-This patten shows a grid of Section Link Patterns.
+This patten shows a grid of Topical Card Patterns.
 
 ### Status
 * Stable as of 5.0.0
 
 ### Pattern Contains
 * Comp Heading
-* Section Links
-
+* Topical Card
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions (js/modules/accordions.js)

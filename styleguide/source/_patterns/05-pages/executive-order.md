@@ -7,7 +7,7 @@ Example of an Executive Order page for Mass.gov
 ### Pattern Contains
 * Header
 * Footer
-* Two Column (template)
+* Right Rail (template)
 * Page Header
 * Listing Table
 * Contact List

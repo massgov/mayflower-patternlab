@@ -7,9 +7,9 @@ This is an example of a Section Landing page on Mass.gov
 ### Pattern Contains
 * Header
 * Footer
-* Single Column (template)
+* Full Width (template)
 * Page Banner - columns
-* Sections Three Up
+* Three up Cards
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions (js/modules/accordions.js)

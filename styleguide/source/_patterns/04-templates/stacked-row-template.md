@@ -5,7 +5,7 @@ This template allows you to have rows of content that are either full width or w
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Emergency Alerts
+* Site Alerts
 * Header
 * Footer
 * Jump Links
@@ -18,7 +18,7 @@ This template allows you to have rows of content that are either full width or w
 
 ### JavaScript Used
 * Jump Links (js/modules/scrollAnchors.js)
-* Emergency Alerts (js/modules/siteAlerts.js)
+* Site Alerts (js/modules/siteAlerts.js)
 
 ### Usage Guidelines
 * The ID value is used as an anchor tag when the Jump Links pattern is added as a table of contents (see guide pages)

@@ -5,7 +5,7 @@ This Pattern describes the requirements needed to complete a form page
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Column Heading
+* Content Heading
 * Rich Text
 * Location Icons
 

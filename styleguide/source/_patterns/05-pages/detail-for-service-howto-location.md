@@ -7,7 +7,7 @@ This is an example of a Detail page for the Service, HowTo, and Location content
 ### Pattern Contains
 * Header
 * Footer
-* Two Column (template)
+* Right Rail (template)
 * Rich Text
 * Mapped Locations
 * Video

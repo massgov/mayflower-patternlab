@@ -7,7 +7,7 @@ This is an example of a Press Listing page [extending](https://twig.symfony.com/
 ### Pattern Contains
 * Header
 * Footer
-* Two Column Reversed (template)
+* Left Rail (template)
 * Page Header
 * Press Filters
 * Results Heading

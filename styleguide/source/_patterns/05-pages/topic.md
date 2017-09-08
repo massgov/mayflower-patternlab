@@ -5,9 +5,9 @@ This is an example of a Topic page on Mass.gov.
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Single Column (template)
+* Full Width (template)
 * Page Banner - columns
-* Sections Three Up
+* Three Up Cards
 * Link List
 
 ### JavaScript Used
