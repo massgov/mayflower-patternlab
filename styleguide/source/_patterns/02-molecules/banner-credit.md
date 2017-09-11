@@ -11,5 +11,7 @@ bannerCredit: {
     type: string / required,
   imageAuthor: 
     type: string / required,
+  icon:
+    type: string (path to icon) / optional
 }
 ~~~
