@@ -10,7 +10,7 @@ arrowButton: {
   href: 
     type: string (url) / required
   info: 
-    type: string (adds more description to the link) / optional
+    type: string (adds more description to the link) / required
   direction: 
     type string ("left","right") / optional
 }
