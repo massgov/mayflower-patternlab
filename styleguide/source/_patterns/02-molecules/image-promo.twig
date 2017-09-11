@@ -51,7 +51,7 @@
         </a>
       </div>
     {% endif %}
-    {# backward compatible with v5.6 #}
+    {# backward compatible with v5.7 - description is now type richText vs 'imagePromo.description.richText' #}
     {% if imagePromo.description.rteElements or imagePromo.description.richText %}
       {% set richText = imagePromo.description %}
 
