@@ -71,8 +71,7 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading": {
-        "title": "Contact",
-        "level": 2
+        "title": "Contact"
       },
       "contacts":[{
         "accordion": false,
@@ -80,11 +79,9 @@
         "subTitle": {
           "href":"",
           "text": "Department name",
-          "level": 3,
           "chevron":""
         },
         "groups": [{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -100,7 +97,6 @@
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           }]
         },{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",

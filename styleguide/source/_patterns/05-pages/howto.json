@@ -1,5 +1,4 @@
 {
-  "level": 1,
   "details": {
     "contentTitle": "The Details"
   },
@@ -96,7 +95,6 @@
     "intro": {
       "compHeading": {
         "title": "What you need",
-        "level": 3,
         "sub": true,
         "color": "",
         "id": "what-you-need",
@@ -164,7 +162,6 @@
     "tabularData": {
       "compHeading": {
         "title": "Fees",
-        "level": 3,
         "sub": true,
         "color": "",
         "id": "fees",
@@ -233,7 +230,6 @@
     "stepsUnordered": {
       "compHeading": {
         "title": "How To Apply",
-        "level": 3,
         "sub": true,
         "color": "",
         "id": "how-to-apply",
@@ -303,7 +299,6 @@
     "stepsOrdered": {
       "compHeading": {
         "title": "Next Steps",
-        "level": 3,
         "sub": true,
         "color": "",
         "id": "next-steps",
@@ -385,7 +380,6 @@
     "moreInfo": {
       "compHeading": {
         "title": "More info",
-        "level": 3,
         "sub": true,
         "color": "",
         "id": "more-info",
@@ -404,7 +398,6 @@
     "formDownloads": {
       "compHeading": {
         "title": "Downloads",
-        "level": 3,
         "sub": true,
         "color": "",
         "id": "downloads",
@@ -429,7 +422,6 @@
     "contactList": {
       "compHeading": {
         "title": "Contact",
-        "level": 3,
         "sub": true,
         "color": "",
         "id": "contact",
@@ -442,11 +434,9 @@
         "subTitle": {
           "href":"",
           "text": "Department of Unemployment Assistance",
-          "level": 4,
           "info": ""
         },
         "groups": [{
-          "level": 5,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -462,7 +452,6 @@
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
-          "level": 5,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -479,7 +468,6 @@
             "details":""
           }]
         },{
-          "level": 5,
           "icon": "@atoms/05-icons/svg-fax-icon.twig",
           "name": "Fax",
           "items": [{
@@ -495,7 +483,6 @@
             "details":"Please allow 24 hours for a response"
           }]
         },{
-          "level": 5,
           "icon": "@atoms/05-icons/svg-marker.twig",
           "name": "Address",
           "items": [{
@@ -602,8 +589,7 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading": {
-        "title": "Contact",
-        "level": 2
+        "title": "Contact"
       },
       "contacts":[{
         "accordion": false,
@@ -611,11 +597,9 @@
         "subTitle": {
           "href":"#",
           "text": "Department of Unemployment Assistance",
-          "level": 3,
           "chevron":""
         },
         "groups": [{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -631,7 +615,6 @@
             "details":""
           }]
         },{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -653,8 +636,7 @@
 
     "linkList" : {
       "compHeading": {
-        "title": "Related",
-        "level": 2
+        "title": "Related"
       },
       "stacked": true,
       "links" : [{
