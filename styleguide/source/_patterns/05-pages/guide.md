@@ -5,7 +5,9 @@ Example of a Mass Gov Guide page using the stacked row template
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Stacked Row Template
+* Header
+* Footer
+* Stacked Row (template)
 * Illustrated Header
 * Jump Links
 * Stacked Row Section

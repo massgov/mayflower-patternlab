@@ -16,7 +16,7 @@ This pattern displays the contents of a rich text editor.
   * Check List
   * Icon List
   * Figure
-* Any pattern can be rendered in this pattern by setting the 'path' variable to the location of the pattern and setting the 'data' variable to container of the data object of that pattern.  
+* Any pattern can be rendered in this pattern by setting the `path` variable to the location of the pattern and setting the `data` variable to container of the data object of that pattern.  
   * {% include item.path with item.data %}
 
 
@@ -29,13 +29,13 @@ This pattern displays the contents of a rich text editor.
 
 ### Variables
 ~~~
-"richText": {
-  "property": 
+richText: {
+  property: 
     type: string,
-  "rteElements": [{
-    "path": 
+  rteElements: [{
+    path: 
       type: string / required,
-    "data": {
+    data: {
       type: object / required
     }
   }]
