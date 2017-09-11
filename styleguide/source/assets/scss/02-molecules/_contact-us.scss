@@ -19,7 +19,7 @@
     border-style: solid;
   }
 
-  &--accordion + &--accordion {
+  & + &--accordion {
     padding-top: 0;
   }
 
@@ -114,5 +114,9 @@
         display: none;
       }
     }
+  }
+
+  &__more-info {
+    margin-top: 2rem;
   }
 }

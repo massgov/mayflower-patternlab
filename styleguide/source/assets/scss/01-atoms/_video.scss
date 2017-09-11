@@ -1,8 +1,12 @@
 .ma__video {
-  padding: 13px;
+  @include clearfix;
+
+  &__container {
+    padding: 13px;
+  }
 
   @media ($bp-small-min) {
-  
+
     &--right {
       float: right;
       margin-left: 1em;
@@ -11,11 +15,26 @@
     }
   }
 
+  // Backward Compatible - had to add the --new as a variant for the new styling
+  .main-content--full .page-content > & {
+    @include ma-container;
+  }
+
+  &__link {
+    margin-top: 12px;
+  }
+}
+
+// Backward Compatible - had to add the --new as a variant for the new styling
+.ma__video:not(.ma__video--new) {
+  padding: 13px;
+
   .main-content--full .page-content > & {
     // @include ma-container();  // can't use this due to bg color apply to padding
     margin-left: 20px;
     margin-right: 20px;
     max-width: $max-width;
+    padding: 13px;
 
     @media ($bp-medium-min) {
       margin-left: 30px;
@@ -26,7 +45,7 @@
       margin-left: 40px;
       margin-right: 40px;
     }
-    
+
     @media ($bp-page-width-min) {
       margin-left: auto;
       margin-right: auto;
@@ -42,7 +61,7 @@
     @media ($bp-large-min) {
       max-width: 400px;
     }
-    
+
     @media ($bp-page-width-min) {
       margin-right: calc(50vw - (#{$max-width}/2) + 40px);
     }

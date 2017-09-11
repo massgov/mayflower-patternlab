@@ -1,0 +1,31 @@
+.ma__iframe {
+  @include clearfix;
+  
+  &__container {
+    font-size: 0;
+    padding: 13px;
+  }
+
+  @media ($bp-small-min) {
+  
+    &--right &__container {
+      float: right;
+      margin-left: 1em;
+      margin-bottom: 1em;
+      width: 50%;
+    }
+  }
+
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
+  
+  &__link {
+    margin-top: 12px;
+  }
+
+  iframe {
+    width: 100%;
+    border: none;
+  }
+}

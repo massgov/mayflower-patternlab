@@ -22,5 +22,7 @@ compHeading: {
     type: string (unique per page) / optional
   centered:
     type: boolean
+  sidebar: 
+    type: boolean
 }
 ~~~
