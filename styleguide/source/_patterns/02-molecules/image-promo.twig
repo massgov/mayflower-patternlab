@@ -1,6 +1,6 @@
-{% set level = imagePromos.level ? : 4 %}
+{% set level = imagePromo.level ? : 2 %}
 <section class="ma__image-promo{{ imagePromo.location.map ? ' js-location-listing-link' : '' }}">
-  {% if imagePromo.title and imagePromo.title.text %}
+  {% if imagePromo.image %}
     <div class="ma__image-promo__image"
       {% if imagePromo.image.width %}
         style="flex-basis: {{ imagePromo.image.width }}px"
@@ -16,7 +16,7 @@
     </div>
   {% endif %}
   <div class="ma__image-promo__details">
-    {% if imagePromo.title %}
+    {% if imagePromo.title and imagePromo.title.text %}
     <h{{ level }} class="ma__image-promo__title">
       {% if imagePromo.tags %}
         <div class="ma__image-promo__tags">

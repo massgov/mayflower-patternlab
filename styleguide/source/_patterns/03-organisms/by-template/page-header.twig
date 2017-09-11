@@ -1,8 +1,7 @@
 {% set widgetsClass = pageHeader.widgets ? "ma__page-header--has-widgets" : "" %}
 
 {% set prefix = pageHeader.category|default(pageHeader.prefix) %}
-
-{% set level = pageHeader.level ? : 1 %} 
+{% set level = pageHeader.level ? : 1 %}
 <section class="ma__page-header {{ widgetsClass }}">
   {% if pageHeader.headerTags.taxonomyTerms or pageHeader.socialLinks.items %}
     <div class="ma__page-header__tags">
@@ -43,8 +42,7 @@
         <div class="main-content main-content--two">
           <div class="page-content">
             {% for content in pageHeader.optionalContents %}
-              {% set data = content.data|merge({'level': level}) %}
-              {% set content = content|merge({'data': data}) %}
+              {% set content = content|merge({'data': {'level': level}}) %}
               {% include content.path with content.data %}
             {% endfor %}
           </div>
