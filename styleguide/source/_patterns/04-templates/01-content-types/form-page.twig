@@ -28,6 +28,10 @@
           {% endif %}
           {% for group in form.groups %}
             {% set compHeading = group.compHeading %}
+            {% set compHeading = {
+                    'title': compHeading.title,
+                    'level': level
+                   } %}
             {% include "@atoms/04-headings/comp-heading.twig" %}
             {% for fieldset in group.fieldsets %}
               <fieldset>
