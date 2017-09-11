@@ -1,5 +1,4 @@
 {
-  "level": 1,
   "pageHeader": {
     "category": "optional type of event",
     "divider": true,
@@ -52,7 +51,6 @@
       "data": {
         "contactUs": {
           "groups": [{
-            "level": 2,
             "icon": "",
             "name": "",
             "items": [{
@@ -94,8 +92,8 @@
         "id": "",
         "centered": ""
       },
-      "image": { 
-        "alt": "alt text", 
+      "image": {
+        "alt": "alt text",
         "src": "../../assets/images/placeholder/600x338.png",
         "width": "600",
         "height": "338"
@@ -134,19 +132,18 @@
     "youWillNeed": {
       "compHeading": {
         "title": "You will need",
-        "level": 2,
         "id": "",
         "sub": true
       },
       "rteElements": [{
         "path": "@atoms/08-lists/checklist.twig",
         "data": {
-          "checkList": [{ 
-            "text": "first item to bring" 
-          },{ 
-            "text": "second item to bring" 
-          },{ 
-            "text": "third item to bring" 
+          "checkList": [{
+            "text": "first item to bring"
+          },{
+            "text": "second item to bring"
+          },{
+            "text": "third item to bring"
           }]
         }
       }]
@@ -155,7 +152,6 @@
     "formDownloads": {
       "compHeading": {
         "title": "Additional resources",
-        "level": 2,
         "sub": true
       },
       "downloadLinks": [{
@@ -204,7 +200,6 @@
       "viewSpecific": false,
       "compHeading":{
         "title": "Contact",
-        "level": 2,
         "sub": true
       },
       "contacts":[{
@@ -212,11 +207,9 @@
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Person to Contact",
-          "level": 3
+          "text": "Person to Contact"
         },
         "groups": [{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -232,7 +225,6 @@
             "details":""
           }]
         },{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -256,14 +248,12 @@
       "viewSpecific": false,
       "compHeading":{
         "title": "Media Contact",
-        "level": 2,
         "sub": true
       },
       "contacts":[{
         "accordion": true,
         "isExpanded": false,
         "subTitle": {
-          "level": 3,
           "href":"",
           "text": "Media Person to Contact"
         },
@@ -305,7 +295,6 @@
     "linkList" : {
       "compHeading": {
         "title": "Other dates",
-        "level": 2,
         "sub": true
       },
       "description": {
@@ -343,17 +332,14 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Contact",
-        "level": 2
+        "title": "Contact"
       },
       "contacts":[{
         "subTitle": {
           "href":"",
-          "text": "Person to Contact",
-          "level": 3
+          "text": "Person to Contact"
         },
         "groups": [{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -369,7 +355,6 @@
             "details":""
           }]
         },{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -392,17 +377,14 @@
     "mediaContact": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Media Contact",
-        "level": 2
+        "title": "Media Contact"
       },
       "contacts":[{
         "subTitle": {
           "href":"",
-          "text": "Media Person to Contact",
-          "level": 3
+          "text": "Media Person to Contact"
         },
         "groups": [{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
@@ -418,7 +400,6 @@
             "details":""
           }]
         },{
-          "level": 4,
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
           "hidden": "",
@@ -443,7 +424,6 @@
     "eventListing": {
       "compHeading":{
         "title": "Related Events",
-        "level": 2,
         "centered": true
       },
       "events":[{
