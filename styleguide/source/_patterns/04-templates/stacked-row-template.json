@@ -29,7 +29,7 @@
       "path": "@base/placeholder.twig",
       "data": {
         "placeholder": {
-          "text":"Sidebar"
+          "text":"Right Rail"
         }
       }
     }]
@@ -62,7 +62,7 @@
       "path": "@base/placeholder.twig",
       "data": {
         "placeholder": {
-          "text":"Sidebar"
+          "text":"Right Rail"
         }
       }
     }]
