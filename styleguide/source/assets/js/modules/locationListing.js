@@ -1,5 +1,6 @@
 import sticky from "../helpers/sticky.js";
 import getTemplate from "../helpers/getHandlebarTemplate.js";
+import getOuterHtml from "../helpers/getElementOuterHtml.js";
 
 export default function (window,document,$,undefined) {
   // Active state classes for location listing rows.
@@ -77,20 +78,43 @@ export default function (window,document,$,undefined) {
 
       // Handle location listings form interaction (triggered by locationFilters.js).
       $locationFilter.on('ma:LocationFilter:FormSubmitted', function (e, formValues) {
-        let transformation = transformData(masterData, formValues);
-        masterData = transformation.data; // preserve state
-        // Trigger child components render with updated data
-        updateChildComponents(transformation);
+        // transformData() returns a jQuery deferred object which allows us to wait for any asynchronous js execution to return before executing the .done(callback).
+        // @see: https://api.jquery.com/deferred.done/
+        transformData(masterData, formValues).done(function (transformation) {
+          masterData = transformation.data; // preserve state
+          // Update the results heading based on the current items state.
+          transformation.data.resultsHeading = transformResultsHeading({data: transformation.data});
+          // Update pagination data structure, reset to first page
+          transformation.data.pagination = transformPaginationData({data: transformation.data});
+          // Render the listing page.
+          renderListingPage({data: transformation.data});
+          // Get the associated markers based on the listing items.
+          transformation.markers = getActiveMarkers({data: transformation.data});
+          // Trigger child components render with updated data
+          updateChildComponents(transformation);
+        });
       });
 
       // Handle active filter/tag button interactions (triggered by resultsHeading.js).
       $resultsHeading.on('ma:ResultsHeading:ActiveTagClicked', function (e, clearedFilter) {
-        let transformation = transformData(masterData, clearedFilter);
-        masterData = transformation.data; // preserve state
-        transformation.clearedFilter = clearedFilter;
+        // transformData() returns a jQuery deferred object which allows us to wait for any asynchronous js execution to return before executing the .done(callback).
+        // @see: https://api.jquery.com/deferred.done/
+        transformData(masterData, clearedFilter).done(function (transformation) {
+          masterData = transformation.data; // preserve state
+          transformation.clearedFilter = clearedFilter;
 
-        // Trigger child components render with updated data
-        updateChildComponents(transformation);
+          masterData = transformation.data; // preserve state
+          // Update the results heading based on the current items state.
+          transformation.data.resultsHeading = transformResultsHeading({data: transformation.data});
+          // Update pagination data structure, reset to first page
+          transformation.data.pagination = transformPaginationData({data: transformation.data});
+          // Render the listing page.
+          renderListingPage({data: transformation.data});
+          // Get the associated markers based on the listing items.
+          transformation.markers = getActiveMarkers({data: transformation.data});
+          // Trigger child components render with updated data
+          updateChildComponents(transformation);
+        });
       });
 
       // Handle pagination event (triggered by pagination.js), render targetPage.
@@ -267,6 +291,12 @@ export default function (window,document,$,undefined) {
    *  An object with the current state masterData instance and an array of their related sorted markers to send to map.
    */
   function transformData(data, transformation) {
+    // This data transformation potentially involves asynchronous google geocoding.
+    // This jQuery deferered object allows us to wait for a return before moving on inside of the parent function (which invokes this function).
+    // @see https://api.jquery.com/jquery.deferred/
+    let promise = $.Deferred();
+    let transformReturn = {};
+
     // First filter the data based on component state, then sort alphabetically by default.
     let filteredData = filterListingData(data, transformation),
       sortedData = sortDataAlphabetically(filteredData),
@@ -276,36 +306,33 @@ export default function (window,document,$,undefined) {
     if (hasFilter(filteredData.resultsHeading.tags, 'location')) {
       place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
-      if (ma.autocomplete.getPlace()) {
-        place = ma.autocomplete.getPlace();
+      let autocompletePlace = ma.autocomplete.getPlace();
+      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('geometry')) {
+        transformReturn.place = autocompletePlace;
         // Sort the markers and instance of locationListing masterData.
-        sortedData = sortDataAroundPlace(place, filteredData);
+        transformReturn.data = sortDataAroundPlace(autocompletePlace, filteredData);
+        // Return the data sorted by location and the autocomplete place object
+        promise.resolve(transformReturn);
       }
       // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
       else {
         // Geocode the address, then sort the markers and instance of locationListing masterData.
         ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
-        // @todo limit geocode results to MA?
-        sortedData = geocodeAddressString(place, sortDataAroundPlace, filteredData);
+        // This is an asynchronous function
+        geocodeAddressString(place, function(result) {
+          transformReturn.data = sortDataAroundPlace(result, filteredData);
+          transformReturn.place = result;
+          // Return the data sorted by location and the geocoded place object
+          promise.resolve(transformReturn);
+        });
       }
     }
+    else {
+      // Return the data sorted by alphabet and the empty place object
+      promise.resolve({data: sortedData, place: place});
+    }
 
-    // Update the results heading based on the current items state.
-    sortedData.resultsHeading = transformResultsHeading({data: sortedData});
-    // Update pagination data structure, reset to first page
-    sortedData.pagination = transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
-    // Render the listing page.
-    renderListingPage({data: sortedData});
-
-    // Get the associated markers based on the listing items.
-    let markers = getActiveMarkers({data: sortedData});
-
-    // Preserve state of current data.
-    return {
-      data: sortedData,
-      markers: markers,
-      place: place
-    };
+    return promise;
   }
 
   /**
@@ -600,7 +627,10 @@ export default function (window,document,$,undefined) {
    */
   function getSvgFromTag(tag) {
     // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
-    return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+    // return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+    // Get outerHtml of svgElement shim for IE
+    // See: https://stackoverflow.com/questions/12592417/outerhtml-of-an-svg-element
+    return getOuterHtml($('.js-filter-by-tags').find("#" + tag).parent().siblings('svg')[0]);
   }
 
   /**
@@ -652,6 +682,7 @@ export default function (window,document,$,undefined) {
     let paginated = paginateItems(data.items, data.maxItems);
     data.items = paginated.items;
     data.totalPages = paginated.totalPages;
+    data.place = place;
 
     // Return the newly sorted instance of location listing masterData.
     return data;
@@ -663,22 +694,22 @@ export default function (window,document,$,undefined) {
    * @param address
    *   Address string to be geocoded.
    * @param callback
-   *   Callback function to execute (with callbackArg).
-   * @param callbackArg
-   *   Argument to pass to callback.
+   *   Callback function to call upon successful geocode return.
    *
    * @returns {*}
    *   Upon success, the return value of the passed callback function.
    */
-  function geocodeAddressString(address, callback, callbackArg) {
+  function geocodeAddressString(address, callback) {
     // Only attempt to execute if google's geocode library is loaded.
     if (typeof ma.geocoder === "undefined") {
       return;
     }
+
     // Geocode address string, then execute callback with argument upon success.
-    return geocoder.geocode({address: address}, function (results, status) {
+    ma.geocoder.geocode({address: address}, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
-        return callback(results[0], callbackArg);
+        let place =  results[0];
+        return callback(place);
       }
       else {
         console.warn('Geocode was not successful for the following reason: ' + status);
@@ -738,7 +769,9 @@ export default function (window,document,$,undefined) {
   function doesPromoContainTags(haystack, needle) {
     return needle.every(function(v) {
       return Boolean(haystack.filter(function(item){
-        return Object.values(item).indexOf(v) !== -1;
+        // return Object.values(item).indexOf(v) !== -1;
+        // Object.values shim for IE11
+        return Object.keys(item).map(function(i) { return item[i]; }).indexOf(v) !== -1;
       }).length);
     });
   }
