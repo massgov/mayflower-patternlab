@@ -1,0 +1,40 @@
+{
+  "contentEyebrow": {
+    "hideBorder": false,
+    "headerTags": {
+      "label": "More about:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Term 1"
+      },{
+        "href": "#",
+        "text": "Term 2"
+      },{
+        "href": "#",
+        "text": "Term 3"
+      },{
+        "href": "#",
+        "text": "Term 4"
+      }]
+    },
+    "socialLinks": {
+      "label": "Share:",
+      "items": [{
+        "altText": "Follow us on Facebook",
+        "href": "#",
+        "icon": "@atoms/05-icons/svg-facebook.twig",
+        "linkType": "facebook"
+      },{
+        "altText": "Follow us on Twitter",
+        "href": "#",
+        "icon": "@atoms/05-icons/svg-twitter.twig",
+        "linkType": "twitter"
+      },{
+        "altText": "Follow us on LinkedIn",
+        "href": "#",
+        "icon": "@atoms/05-icons/svg-linkedin.twig",
+        "linkType": "linkedin"
+      }]
+    }
+  }
+}

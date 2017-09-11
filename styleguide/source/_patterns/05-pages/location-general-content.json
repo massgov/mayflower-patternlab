@@ -19,7 +19,13 @@
     "divider": false,
     "title": "Southbridge RMV",
     "subTitle": "",
-    "headerTags": null,
+    "headerTags": {
+      "label": "More about:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Massachusetts Registry of Motor Vehicle"
+      }]
+    },
     "optionalContents": [{
       "path": "@molecules/contact-us.twig",
       "data": {
