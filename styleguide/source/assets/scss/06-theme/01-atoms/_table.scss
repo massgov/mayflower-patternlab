@@ -1,3 +1,4 @@
+.ma__rich-text table,
 .rich-text table,
 .ma__table {
   thead {
@@ -18,7 +19,7 @@
 }
 
 .ma__table {
-  
+
   @media ($bp-small-max) {
     thead + tbody,
     tbody:first-child {
@@ -26,7 +27,7 @@
     }
 
     td {
-      
+
       &:before {
         color: $c-font-heading;
         font-weight: 500;
@@ -41,7 +42,7 @@
 }
 
 .ma__table--wide {
-  
+
   @media ($bp-medium-max) {
     thead + tbody,
     tbody:first-child {
@@ -49,7 +50,7 @@
     }
 
     td {
-      
+
       &:before {
         color: $c-font-heading;
         font-weight: 500;
