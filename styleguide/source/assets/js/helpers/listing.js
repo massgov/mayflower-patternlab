@@ -1,6 +1,7 @@
 import getTemplate from "../helpers/getHandlebarTemplate.js";
 import sticky from "../helpers/sticky.js";
 import moment from "../vendor/bower_components/moment/src/moment";
+import getOuterHtml from "../helpers/getElementOuterHtml.js";
 
 export default  function(window, document, undefined, $){
   "use strict";
@@ -203,7 +204,10 @@ export default  function(window, document, undefined, $){
    */
   function getSvgFromTag(tag) {
     // Get the existing corresponding icon markup so we don't have to worry about outdated markup.
-    return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+    // return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
+    // Get outerHtml of svgElement shim for IE
+    // See: https://stackoverflow.com/questions/12592417/outerhtml-of-an-svg-element
+    return getOuterHtml($('.js-filter-by-tags').find("#" + tag).parent().siblings('svg')[0]);
   }
 
   /**
@@ -430,7 +434,7 @@ export default  function(window, document, undefined, $){
       return;
     }
     // Geocode address string, then execute callback with argument upon success.
-    return geocoder.geocode({address: address}, function (results, status) {
+    return ma.geocoder.geocode({address: address}, function (results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
         return callback(results[0], callbackArg);
       }
@@ -497,7 +501,10 @@ export default  function(window, document, undefined, $){
   function doesItemContainTags(haystack, needle) {
     return needle.every(function(v) {
       return Boolean(haystack.filter(function(item){
-        return Object.values(item).indexOf(v) !== -1;
+        // return Object.values(item).indexOf(v) !== -1;
+        // return Object.values(item).indexOf(v) !== -1;
+        // Object.values shim for IE11
+        return Object.keys(item).map(function(i) { return item[i]; }).indexOf(v) !== -1;
       }).length);
     });
   }

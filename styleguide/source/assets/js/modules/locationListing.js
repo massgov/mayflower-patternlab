@@ -1,6 +1,5 @@
 import sticky from "../helpers/sticky.js";
 import listings from "../helpers/listing.js";
-import getOuterHtml from "../helpers/getElementOuterHtml.js";
 
 export default function (window,document,$,undefined) {
   // Active state classes for location listing rows.
@@ -83,11 +82,11 @@ export default function (window,document,$,undefined) {
         transformData(masterData, formValues).done(function (transformation) {
           masterData = transformation.data; // preserve state
           // Update the results heading based on the current items state.
-          transformation.data.resultsHeading = transformResultsHeading({data: transformation.data});
+          transformation.data.resultsHeading = listings.transformResultsHeading({data: transformation.data});
           // Update pagination data structure, reset to first page
-          transformation.data.pagination = transformPaginationData({data: transformation.data});
+          transformation.data.pagination = listings.transformPaginationData({data: transformation.data});
           // Render the listing page.
-          renderListingPage({data: transformation.data});
+          listings.renderListingPage({data: transformation.data});
           // Get the associated markers based on the listing items.
           transformation.markers = getActiveMarkers({data: transformation.data});
           // Trigger child components render with updated data
@@ -105,11 +104,11 @@ export default function (window,document,$,undefined) {
 
           masterData = transformation.data; // preserve state
           // Update the results heading based on the current items state.
-          transformation.data.resultsHeading = transformResultsHeading({data: transformation.data});
+          transformation.data.resultsHeading = listings.transformResultsHeading({data: transformation.data});
           // Update pagination data structure, reset to first page
-          transformation.data.pagination = transformPaginationData({data: transformation.data});
+          transformation.data.pagination = listings.transformPaginationData({data: transformation.data});
           // Render the listing page.
-          renderListingPage({data: transformation.data});
+          listings.renderListingPage({data: transformation.data});
           // Get the associated markers based on the listing items.
           transformation.markers = getActiveMarkers({data: transformation.data});
           // Trigger child components render with updated data
@@ -305,7 +304,7 @@ export default function (window,document,$,undefined) {
         // Geocode the address, then sort the markers and instance of locationListing masterData.
         ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
         // This is an asynchronous function
-        geocodeAddressString(place, function(result) {
+        listings.geocodeAddressString(place, function(result) {
           transformReturn.data = sortDataAroundPlace(result, filteredData);
           transformReturn.place = result;
           // Return the data sorted by location and the geocoded place object
