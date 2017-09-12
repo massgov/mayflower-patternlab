@@ -1,5 +1,5 @@
 {# use the level passed, the gloval level, or the default #}
-{% set headingLevel = columnHeading.level ? : (globalLevel ? : 4) %}
+{% set headingLevel = columnHeading.level ? : (globalLevel ? : 3) %}
 
 <h{{ headingLevel }} class="ma__column-heading">
   {% if columnHeading.href %}
