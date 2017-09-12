@@ -569,11 +569,11 @@ export default  function(window, document, undefined, $){
      */
     // Create moment.js object for start timestamp
     if (args.hasOwnProperty('type') && args.type === 'start') {
-      return moment(args.data.startTimestamp, 'M/D/YYYY - H:mm')
+      return moment(args.data.startTimestamp, 'M/DD/YYYY')
     }
     // Create a moment.js object for end timestamp
     if (args.hasOwnProperty('type') && args.type === 'end') {
-      return args.data.endTimestamp ? moment(args.data.endTimestamp, 'M/D/YYYY - H:mm') : "";
+      return args.data.endTimestamp ? moment(args.data.endTimestamp, 'M/DD/YYYY') : "";
     }
     return false;
   }
@@ -617,6 +617,63 @@ export default  function(window, document, undefined, $){
     return data;
   }
 
+  /**
+   * Returns data with necessary items flagged inactive according to date/date range.
+   *
+   * @param tags
+   *  The array of filters by which to filter.
+   *
+   * @param data
+   *   The current instance of master data being filtered.
+   *
+   * @returns {*}
+   *   The 'filtered' instance of data after checking date(s).
+   */
+  function filterDataByDateTags(tags, data) {
+    data.items = data.items.map(function(item) {
+      item.isActive = isEventInDateRange(item, tags);
+      return item;
+    });
+    let paginated = paginateItems(data.items, data.maxItems);
+    data.items = paginated.items;
+    data.totalPages = paginated.totalPages;
+    return data;
+  }
+
+  /**
+   * Returns an item's isActive value depending on the date range from date filters.
+   *
+   * @param item
+   *   The item.item[]{} being transformed.
+   *
+   * @param tags
+   *  The array of filters by which to filter.
+   *
+   * @returns
+   *   The updated item.
+   */
+  function isEventInDateRange(item, tags) {
+    let filterStart = '';
+    let filterEnd = '';
+
+    tags.map(function(tag) {
+      if (tag.type == 'start') { filterStart = moment(tag.value, 'M/DD/YYYY'); }
+      if (tag.type == 'end') { filterEnd = moment(tag.value, 'M/DD/YYYY'); }
+    });
+
+    // If we don't have a start date, lets use now.
+    if (!filterStart) {
+      filterStart = moment();
+    }
+
+    if (filterEnd && filterStart) {
+      return item.start.isSameOrAfter(filterStart, 'day') && item.start.isSameOrBefore(filterEnd, 'day') ? true : false;
+    }
+    else {
+      return item.start.isSame(filterStart, 'day') ? true : false;
+    }
+  }
+
   return {
     renderListingPage,
     transformPaginationData,
@@ -625,6 +682,7 @@ export default  function(window, document, undefined, $){
     hasFilter,
     getFilterValues,
     filterDataByTags,
+    filterDataByDateTags,
     transformActiveTagsData,
     paginateItems,
     clearListingPage,

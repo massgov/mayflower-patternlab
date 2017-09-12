@@ -199,12 +199,15 @@ export default function (window,document,$,undefined) {
   function transformData(data, transformation) {
     // First filter the data based on component state, then sort alphabetically by default.
     let filteredData = listings.filterListingData(data, transformation),
+        tags = filteredData.resultsHeading.tags,
         sortedData = listings.sortDataByDate(filteredData),
-        place = '';
+        place = '',
+        start = '',
+        end = '';
 
     // Sort data by location, if that filter is present.
-    if (listings.hasFilter(filteredData.resultsHeading.tags, 'location')) {
-      place = listings.getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
+    if (listings.hasFilter(tags, 'location')) {
+      place = listings.getFilterValues(tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       if (ma.autocomplete.getPlace()) {
         place = ma.autocomplete.getPlace();
@@ -217,6 +220,10 @@ export default function (window,document,$,undefined) {
         // @todo limit geocode results to MA?
         sortedData = listings.geocodeAddressString(place, sortDataAroundPlace, filteredData);
       }
+    }
+
+    if (listings.hasFilter(tags, 'end') || listings.hasFilter(tags, 'start')) {
+      sortedData = listings.filterDataByDateTags(tags, sortedData);
     }
 
     // Update the results heading based on the current items state.
