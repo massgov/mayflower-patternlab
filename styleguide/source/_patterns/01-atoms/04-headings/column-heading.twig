@@ -1,8 +1,11 @@
-<h4 class="ma__column-heading">
+{# use the level passed, the gloval level, or the default #}
+{% set headingLevel = columnHeading.level ? : (globalLevel ? : 4) %}
+
+<h{{ headingLevel }} class="ma__column-heading">
   {% if columnHeading.href %}
     {% set decorativeLink = columnHeading %}
     {% include "@atoms/decorative-link.twig" %}
   {% else %}
     {{columnHeading.text}}
   {% endif %}
-</h4>
+</h{{ headingLevel }}>
