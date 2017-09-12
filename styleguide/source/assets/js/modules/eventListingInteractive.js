@@ -20,20 +20,40 @@ export default function (window,document,$,undefined) {
 
     // Handle location listings form interaction (triggered by locationFilters.js).
     $eventFilter.on('ma:EventFilter:FormSubmitted', function (e, formValues) {
-      let transformation = transformData(masterData, formValues);
-      masterData = transformation.data; // preserve state
-      // Trigger child components render with updated data
-      updateChildComponents(transformation);
+      // transformData() returns a jQuery deferred object which allows us to wait for any asynchronous js execution to return before executing the .done(callback).
+      // @see: https://api.jquery.com/deferred.done/
+      transformData(masterData, formValues).done(function (transformation) {
+        masterData = transformation.data; // preserve state
+        // Update the results heading based on the current items state.
+        transformation.data.resultsHeading = listings.transformResultsHeading({data: transformation.data});
+        // Update pagination data structure, reset to first page
+        transformation.data.pagination = listings.transformPaginationData({data: transformation.data});
+        // Render the listing page.
+        listings.renderListingPage({data: transformation.data});
+        // Trigger child components render with updated data
+        updateChildComponents(transformation);
+      });
     });
 
 
     // Handle active filter/tag button interactions (triggered by resultsHeading.js).
     $resultsHeading.on('ma:ResultsHeading:ActiveTagClicked', function (e, clearedFilter) {
-      let transformation = transformData(masterData, clearedFilter);
-      masterData = transformation.data; // preserve state
-      transformation.clearedFilter = clearedFilter;
-      // Trigger child components render with updated data
-      updateChildComponents(transformation);
+      // transformData() returns a jQuery deferred object which allows us to wait for any asynchronous js execution to return before executing the .done(callback).
+      // @see: https://api.jquery.com/deferred.done/
+      transformData(masterData, clearedFilter).done(function (transformation) {
+        masterData = transformation.data; // preserve state
+        transformation.clearedFilter = clearedFilter;
+
+        masterData = transformation.data; // preserve state
+        // Update the results heading based on the current items state.
+        transformation.data.resultsHeading = listings.transformResultsHeading({data: transformation.data});
+        // Update pagination data structure, reset to first page
+        transformation.data.pagination = listings.transformPaginationData({data: transformation.data});
+        // Render the listing page.
+        listings.renderListingPage({data: transformation.data});
+        // Trigger child components render with updated data
+        updateChildComponents(transformation);
+      });
     });
 
     // Handle pagination click events -- winning!
@@ -197,6 +217,12 @@ export default function (window,document,$,undefined) {
    *  An object with the current state masterData instance and an array of their related sorted markers to send to map.
    */
   function transformData(data, transformation) {
+    // This data transformation potentially involves asynchronous google geocoding.
+    // This jQuery deferered object allows us to wait for a return before moving on inside of the parent function (which invokes this function).
+    // @see https://api.jquery.com/jquery.deferred/
+    let promise = $.Deferred();
+    let transformReturn = {};
+
     // First filter the data based on component state, then sort alphabetically by default.
     let filteredData = listings.filterListingData(data, transformation),
         sortedData = listings.sortDataByDate(filteredData),
@@ -206,31 +232,33 @@ export default function (window,document,$,undefined) {
     if (listings.hasFilter(filteredData.resultsHeading.tags, 'location')) {
       place = listings.getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
-      if (ma.autocomplete.getPlace()) {
-        place = ma.autocomplete.getPlace();
-        sortedData = sortDataAroundPlace(place, sortedData);
+      let autocompletePlace = ma.autocomplete.getPlace();
+      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('geometry')) {
+        transformReturn.place = autocompletePlace;
+        // Sort the markers and instance of locationListing masterData.
+        transformReturn.data = sortDataAroundPlace(autocompletePlace, filteredData);
+        // Return the data sorted by location and the autocomplete place object
+        promise.resolve(transformReturn);
       }
-      // If place argument was populated from event/locationFilter (zipcode text input) but not from Place autocomplete.
+      // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
       else {
-        // Geocode the address, then sort the markers and instance of eventListing masterData.
+        // Geocode the address, then sort the markers and instance of locationListing masterData.
         ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
-        // @todo limit geocode results to MA?
-        sortedData = listings.geocodeAddressString(place, sortDataAroundPlace, filteredData);
+        // This is an asynchronous function
+        listings.geocodeAddressString(place, function(result) {
+          transformReturn.data = sortDataAroundPlace(result, filteredData);
+          transformReturn.place = result;
+          // Return the data sorted by location and the geocoded place object
+          promise.resolve(transformReturn);
+        });
       }
     }
+    else {
+      // Return the data sorted by alphabet and the empty place object
+      promise.resolve({data: sortedData, place: place});
+    }
 
-    // Update the results heading based on the current items state.
-    sortedData.resultsHeading = listings.transformResultsHeading({data: sortedData});
-    // Update pagination data structure, reset to first page
-    sortedData.pagination = listings.transformPaginationData({data: sortedData}); // @todo this should probably go last so we know page #s
-    // Render the listing page.
-    listings.renderListingPage({data: sortedData});
-
-    // Preserve state of current data.
-    return {
-      data: sortedData,
-      place: place
-    };
+    return promise;
   }
 
   /**
