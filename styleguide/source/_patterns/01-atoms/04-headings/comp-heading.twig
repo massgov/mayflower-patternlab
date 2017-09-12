@@ -1,5 +1,14 @@
 {% set colored = compHeading.color ? "ma__comp-heading--" ~ compHeading.color : "" %}
 
+{# backward compatible with v 5.8 - `sub` was replaced by `level` #}
+{% if compHeading.sub %}
+  {% set compHeading = compHeading|merge({'level': 3}) %}
+{% endif %}
+
+{# use the level passed, the gloval level, or the default #}
+{% set headingLevel = compHeading.level ? : (globalLevel ? : 2) %}
+
+
 {# string value is backward compatible for v5.0.0 #}
 {% if compHeading.centered == 'true' or compHeading.centered == 1 %}
   {% set compHeading = compHeading|merge({'centered': true}) %}
@@ -13,22 +22,9 @@
 
 {% set sidebar = compHeading.sidebar ? 'ma__comp-heading--sidebar' : '' %}
 
-{% if compHeading.sub %}
-  <h3
-    class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
-    {% if compHeading.id %}
-      id="{{compHeading.id}}"
-    {% endif %} 
-    tabindex="-1">
-    {{ compHeading.title }}
-  </h3>
-{% else %}
-  <h2 
-    class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
-    {% if compHeading.id %}
-      id="{{compHeading.id}}"
-    {% endif %} 
-    tabindex="-1">
-    {{ compHeading.title }}
-  </h2>
-{% endif %}
+<h{{ headingLevel }}
+  class="ma__comp-heading {{ colored }} {{ centered }} {{sidebar }}" 
+  {% if compHeading.id %}
+    id="{{compHeading.id}}"
+  {% endif %} 
+  tabindex="-1">{{ compHeading.title }}</h{{ headingLevel }}>
