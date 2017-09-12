@@ -10,7 +10,7 @@
       "text": "Recreational Licenses & Permits",
       "info": ""
     },
-    "subTitle": false,
+    "level": "",
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
     "links" : [{
       "href": "#",
