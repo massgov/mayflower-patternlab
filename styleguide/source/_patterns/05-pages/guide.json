@@ -169,7 +169,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -270,7 +271,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -372,7 +374,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -520,7 +523,7 @@
         "keyActions": {
           "compHeading": {
             "title": "Key Actions",
-            "sub":true
+            "level": 3
           },
           "links":[{
             "text": "Related Action to important Page Name",
@@ -549,7 +552,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -631,7 +635,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -734,7 +739,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -873,7 +879,7 @@
         "keyActions": {
           "compHeading": {
             "title": "Key Actions",
-            "sub":true
+            "level": 3
           },
           "links":[{
             "text": "Related Action to important Page Name",
