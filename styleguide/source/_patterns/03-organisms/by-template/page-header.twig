@@ -1,4 +1,5 @@
 {% set widgetsClass = pageHeader.widgets ? "ma__page-header--has-widgets" : "" %}
+
 {% set prefix = pageHeader.category|default(pageHeader.prefix) %}
 
 <section class="ma__page-header {{ widgetsClass }}">
@@ -14,26 +15,19 @@
       {% endif %}
     </div>
   {% endif %}
-  <div 
-    class="ma__page-header__content"
-    {% if schemaPageType %} property="mainEntityOfPage"{% endif %}>
-      {% if pageHeader.publishState %}
-        <div class="ma__page-header__publish-state">
-          {% set publishState = pageHeader.publishState %}
-          {% include "@atoms/11-text/publish-state.twig" %}
-        </div>
-      {% endif %}
-      {% if pageHeader.category %}
-        <div class="ma__page-header__category" aria-hidden="true">
-          {{ pageHeader.category }}
-        </div>
-      {% endif %}
-      <h1 
-      class="ma__page-header__title"
-      {% if schemaPageType %} property="name"{% endif %}>
-        {% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}
-        {{pageHeader.title}}
-      </h1>
+  <div class="ma__page-header__content">
+    {% if pageHeader.publishState %}
+      <div class="ma__page-header__publish-state">
+        {% set publishState = pageHeader.publishState %}
+        {% include "@atoms/11-text/publish-state.twig" %}
+      </div>
+    {% endif %}
+    {% if pageHeader.category %}
+      <div class="ma__page-header__category">
+        {{ pageHeader.category }}
+      </div>
+    {% endif %}
+    <h1 class="ma__page-header__title">{% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}{{pageHeader.title}}</h1>
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>
     {% endif %}

@@ -9,7 +9,7 @@
     },
     "image": { 
       "alt": "alt text", 
-      "src": "/assets/images/placeholder/440x248.png",
+      "src": "../../assets/images/placeholder/440x248.png",
       "width": "440",
       "height": "248"
     },

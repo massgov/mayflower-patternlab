@@ -6,7 +6,7 @@
   "pageHeader": {
     "divider": false,
     "title": "Apply for unemployment benefits",
-    "subTitle": "Have you lost your job?  You may qualify for temporary income to support you while you look for a new one",
+    "subTitle": "Have you lost your job?  You may qualify for temporary income to support you while you look for a new one.",
     "headerTags": {
       "label": "More about:",
       "taxonomyTerms": [{
@@ -167,12 +167,13 @@
         "id": "fees",
         "centered": ""
       },
-      "richText": {
+      "description": {
+        "property": "",
         "rteElements": [{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "You must submit a form. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium."
+              "text": "This is an optional description. Lorem ipsum ..."
             }
           }
         }]

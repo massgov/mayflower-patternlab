@@ -1,7 +1,124 @@
 # Mayflower Release Notes
 
-## 5.5.1
-- DP-4297 - Adds conditional logic around footnote anchor in footnote molecule.
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+
+```
+<ticket/issue #>: Human-friendly description, with hyperlinked patterns (<Link to #PR>)
+```
+
+**For example**
+- DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493)) 
+
+## Upcoming (add in progress changes here)
+
+### Added
+
+### Changed
+
+### Removed
+
+### Migrate Path
+
+## 5.7.2
+
+### Added
+
+### Changed
+
+- DP-5466 - Users can now enter in a zip or town in the town/zip location listing filter and press enter (i.e. without selecting an item from the autocomplete dropdown) AND select an autocomplete item from teh drop down to sort locations.
+
+## 5.7.1
+
+### Added
+
+### Changed
+
+- DP-5466 - Users can now enter in a zip or town in the town/zip location listing filter and press enter (i.e. without selecting an item from the autocomplete dropdown) to sort locations.
+
+### Removed
+
+### Migration path
+
+## 5.7.0
+
+### Added
+
+- DP-4730 - Users will now notice there is now an option to render an [Event page with an end date](http://mayflower.digital.mass.gov/?p=pages-event-end-date). ([PR #566](https://github.com/massgov/mayflower/pull/566))
+- DP-4881 - The [Press release page](http://mayflower.digital.mass.gov/?p=pages-press-release) now renders with (optional) subtitle content. ([PR #556](https://github.com/massgov/mayflower/pull/556))
+- DP-3235 - Screen reader users are now informed of the [download link](http://mayflower.digital.mass.gov/?p=molecules-download-link) file size. ([PR #522](https://github.com/massgov/mayflower/pull/522))
+- DP-3234 - Screen reader users are now informed of a page's category (i.e. Decision, Regulation) in [the context of the page title](http://mayflower.digital.mass.gov/?p=organisms-page-header).  (See also [`@organisms/by-template/illustrated-header`](http://mayflower.digital.mass.gov/?p=organisms-illustrated-header), [PR #509](https://github.com/massgov/mayflower/pull/509))
+- DP-3232, 1369 - Screen reader users can now associate key actions link content with their respective heading content.  Also, there is now a [variant to the Comp heading](http://mayflower.digital.mass.gov/?p=atoms-comp-heading-as-sidebar-heading) which renders styled as a Sidebar Heading. ([PR #518](https://github.com/massgov/mayflower/pull/518))
+- DP-5175 - A "more" link will now render on different sections of [Service](http://mayflower.digital.mass.gov/?p=pages-service) and [Service Detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) pages. ([PRs #570](https://github.com/massgov/mayflower/pull/570), [#551](https://github.com/massgov/mayflower/pull/551))
+- DP-4591 - A "learn more" link has been added to the [contact us molecule](http://mayflower.digital.mass.gov/?p=molecules-contact-us-collapsed-with-more-link), as seen on [How-To pages](http://mayflower.digital.mass.gov/?p=pages-howto) which can provide a link to learn more about an organization referenced by a contact. ([PR #542](https://github.com/massgov/mayflower/pull/542))
+- DP-4508 - A new component ([content eyebrow](http://mayflower.digital.mass.gov/?p=organisms-content-eyebrow)) i.e. "relationship indicators") has been created and added to pages that use [illustrated header](http://mayflower.digital.mass.gov/?p=organisms-illustrated-header) (i.e. [guides](http://mayflower.digital.mass.gov/?p=pages-guide)) and [page banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner-as-columns) (i.e. [topic pages](http://mayflower.digital.mass.gov/?p=pages-topic) and [services](http://mayflower.digital.mass.gov/?p=pages-service)). ([PR #539](https://github.com/massgov/mayflower/pull/539))
+- DP-3909 - [Tabular data](http://mayflower.digital.mass.gov/?p=organisms-tabular-data) (i.e. Fees) can now have an optional text description, as seen on the [How-to page](http://mayflower.digital.mass.gov/?p=pages-howto). ([PR #538](https://github.com/massgov/mayflower/pull/538))
+- DP-4211 - We created a new [iframe](http://mayflower.digital.mass.gov/?p=atoms-iframe) pattern. (PRs [#510](https://github.com/massgov/mayflower/pull/510), [#574](https://github.com/massgov/mayflower/pull/574))
+
+### Changed
+
+- DP-1900 - Contact address "Directions" (i.e. in [page header organism as seen on Location Pages](http://mayflower.digital.mass.gov/?p=organisms-page-header-for-location) links now remain on one line; fixed for Firefox browser. ([PR #543](https://github.com/massgov/mayflower/pull/543))
+- DP-3189 - The details of a piece of contact information (i.e. the hours of operation for a phone number) are now easier to read (i.e. stronger, italics removed). ([PR #512](https://github.com/massgov/mayflower/pull/512))
+- DP-4311 - The content for the [Org. Landing Page](http://mayflower.digital.mass.gov/?p=pages-organization) "finder" subheadings in Mayflower are now service-oriented ([PR #540](https://github.com/massgov/mayflower/pull/540))
+- DP-4103 - Card titles on Topic page cards are now properly aligned when using the IE 11 browser. ([PR #526](https://github.com/massgov/mayflower/pull/526))
+- DP-3195 - Visitors navigating using a keyboard will have an easier time keeping track of their cursor focus through the [main navigation pattern](http://mayflower.digital.mass.gov/?p=molecules-main-nav). ([PR #495](https://github.com/massgov/mayflower/pull/495))
+- DP-4195 - When a visitor uses Google translator the [callout links](http://mayflower.digital.mass.gov/?p=molecules-callout-link) boxes will render correctly. ([PR #535](https://github.com/massgov/mayflower/pull/535))
+- Fix typos and adhere to style guide ([PRs #549](https://github.com/massgov/mayflower/pull/549), [#563](https://github.com/massgov/mayflower/pull/563), [#562](https://github.com/massgov/mayflower/pull/562), [#561](https://github.com/massgov/mayflower/pull/561), [#560](https://github.com/massgov/mayflower/pull/560)).
+- DP-4877 - Vertical spacing between multiple signees for press release has been increased. ([PR #555](https://github.com/massgov/mayflower/pull/555))
+- DP-3228 - Accordion functionality (as seen in [Emergency Alerts](http://mayflower.digital.mass.gov/?p=organisms-emergency-alerts) and mobile [Section Links](http://mayflower.digital.mass.gov/?p=organisms-section-links) now properly announce their open/closed state to screen reader users. ([PR #499](https://github.com/massgov/mayflower/pull/499))
+- DP-5394 - Location listings functionality works in IE11 ([PR #580](https://github.com/massgov/mayflower/pull/580))
+
+### Removed
+- DP-4480 - The filter for the [action finder](http://mayflower.digital.mass.gov/?p=organisms-action-finder) has been removed (as seen on [Service pages](http://mayflower.digital.mass.gov/?p=pages-service)).  Soon, when there are +6 links, "More" links will render to replace this functionality.  ([PR #536](https://github.com/massgov/mayflower/pull/536))
+
+### Migrate path
+
+- DP-4730 - To use this new end date feature, update [`@molecules/event-teaser.twig`](https://github.com/massgov/mayflower/blob/dev/styleguide/source/_patterns/02-molecules/event-teaser.twig) by adding the `raw|nl2br` filters to the `eventTeaser.date.summary` variable as seen in [PR #566](https://github.com/massgov/mayflower/pull/566/commits/e7568e32d5f7005b82ca0c2eb980ee9a57d1b3b1).
+- DP-3235 - To use this new accessibility feature, update `@molecules/download-links.twig` with the visually hidden span element as seen in [PR #522](https://github.com/massgov/mayflower/pull/522/files).
+- DP-3234 - To use this new accessibility feature, update `@organisms/by-tempate/page-header`, `@organisms/by-template/illustrated-header` with visually hidden span and aria-hidden attribute; and populate the `prefix` or `category` variable as seen in [PR #509](https://github.com/massgov/mayflower/pull/522/files).
+- DP-3232, 1369 - To use this new accessibility feature, populate the `keyActions.compHeading.id` variable and add the 'aria-labelledby' property to [`@organisms/by-author/key-actions`](http://mayflower.digital.mass.gov/?p=organisms-key-actions) as seen in [PR #518](https://github.com/massgov/mayflower/pull/518/files).  To use the new feature which renders a sidebar set `compHeading.sidebar` to `true` and add the conditional block to the top of [`@organisms/by-author/key-actions`](http://mayflower.digital.mass.gov/?p=organisms-key-actions) as seen in [PR #518](https://github.com/massgov/mayflower/pull/518/files).
+- DP-3195 - To use this new accessibility feature, add the tabindex to the [@molecules/main-nav](http://mayflower.digital.mass.gov/?p=molecules-main-nav) pattern as seen in [PR #495](https://github.com/massgov/mayflower/pull/495).
+- DP-4195 - To get this fix, update [`@molecules/callout-link`](http://mayflower.digital.mass.gov/?p=molecules-callout-link) as seen in [PR #535](https://github.com/massgov/mayflower/pull/535).
+- DP-5175 - To get this new "more" link functionality for link list and form downloads, populate the `linkList.more` and `formDownloads.more` variables and update the [`@organisms/by-author/link-list`](http://mayflower.digital.mass.gov/?p=organisms-link-list) and [`@organisms/by-author/form-downloads`](http://mayflower.digital.mass.gov/?p=organisms-form-downloads) templates as seen in [PR #551](https://github.com/massgov/mayflower/pull/551/files).
+- DP-4591 - To use this new contact us "learn more" link functionality, populate the `contactUs.decorativeLink` variable and update [`@molecules/contact-us`](http://mayflower.digital.mass.gov/?p=molecules-contact-us) as seen in [PR #542](https://github.com/massgov/mayflower/pull/542/files).
+- DP-4508 - To use this new component, populate the `contentEyebrow` variable and create [`@organisms/by-template/content-eyebrow`](http://mayflower.digital.mass.gov/?p=organisms-content-eyebrow) as seen in [PR #539](https://github.com/massgov/mayflower/pull/539/files).
+- DP-3909 - To use this new description feature, populate the `tabularData.description` variable and update [`@organisms/by-author/tabular-data`](http://mayflower.digital.mass.gov/?p=organisms-tabular-data) as seen in [PR #538](https://github.com/massgov/mayflower/pull/538/files).
+- DP-3228 - To use this accessibility fix, update the [`@molecules/button-alert`](http://mayflower.digital.mass.gov/?p=molecules-button-alert) [`@organisms/by-template/emergency-alerts`](http://mayflower.digital.mass.gov/?p=organisms-emergency-alerts) and [`@molecules/section-links`](http://mayflower.digital.mass.gov/?p=organisms-section-links) patterns as seen in [PR #499](https://github.com/massgov/mayflower/pull/499/files).
+
+## 5.6.1
+
+## Added
+
+## Changed
+- For developers - update the deploy script to not require an asset path by default for a prod or fork deploy and to not set the default to mayflower/assets for prod releases.
+
+## Removed
+
+## 5.6.0
+
+### Added
+- DP-4181 - Folks browsing through the repository will notice new documentation which explains how to get set up, develop, and make other contributions to Mayflower!  This documentation is linked from the [shiny new repo readme](https://github.com/massgov/mayflower). ([PR #532](https://github.com/massgov/mayflower/pull/532)) 
+- DP-4053 - Developers can now follow a documented build + deploy process to ship their code to their own GitHub Pages where their work can be seen and tested! This documentation is linked from the [shiny new repo readme](https://github.com/massgov/mayflower). ([PR #530](https://github.com/massgov/mayflower/pull/530))
+- DP-4046 - The change above is possible because we can now host Mayflower from a subdirectory (i.e. <myname>.github.io/mayflower)! ([PR #503](https://github.com/massgov/mayflower/pull/503))
+- DP-4080 - Developers, reviewers, and release managers can (and should!) now follow documentation on Semantic Versioning as it applies to Mayflower.  This means we have guidelines to help reviewers understand what kind of change the code they are reviewing is and to help release managers understand what kind of version of Mayflower they are releasing. This documentation is linked from the [shiny new repo readme](https://github.com/massgov/mayflower). ([PR #504](https://github.com/massgov/mayflower/pull/504))
+- We documented all the things!  Well, almost all. :)  Check out patterns used on [Service](http://mayflower.digital.mass.gov/?p=pages-service), [How-To's](http://mayflower.digital.mass.gov/?p=pages-howto), [Guides](http://mayflower.digital.mass.gov/?p=pages-guide), [Locations](http://mayflower.digital.mass.gov/?p=pages-location-park-content), [Topics](http://mayflower.digital.mass.gov/?p=pages-topic), and [Events](http://mayflower.digital.mass.gov/?p=pages-event) and prepare ready to be informed! (Remember you can navigate to child patterns by clicking links down in the "Lineage" section.)  More goodness coming soon. (PRs [#521](https://github.com/massgov/mayflower/pull/521), [#523](https://github.com/massgov/mayflower/pull/523), [#524](https://github.com/massgov/mayflower/pull/524), [#527](https://github.com/massgov/mayflower/pull/527), [#529](https://github.com/massgov/mayflower/pull/529), [#533](https://github.com/massgov/mayflower/pull/533))
+
+### Changed
+- Outside contribution from @sghoweri - Developers will notice that we now use a fork of Pattern Lab maintained by a Drupal Pattern Lab GitHub organization, with hopes of innovating, and iterating on Pattern Lab and merging changes back upstream to the main Pattern Lab fork.  
+
+  This also allows us to see pattern inheritance: browse to a pattern, click the cog icon in the top-right corner, click show pattern info, and see where else patterns are used and which child patterns a given pattern contains. (PRs [#488](https://github.com/massgov/mayflower/pull/488) and [#519](https://github.com/massgov/mayflower/pull/519))  Thanks Salem!
+ - Outside contribution from @evanlovely - Developers will notice an improvement to the automatic  build + browser reload during local development. ([PR #506](https://github.com/massgov/mayflower/pull/506)) Thanks Evan! 
+- Developers will notice standardization on a pattern for writing pattern modification classes, this accounts for nearly all of the backwards-compatible `.twig` changes in this release.
+- Developers and implementers will notice that [`@molecules/footnote`](http://mayflower.digital.mass.gov/?p=molecules-footnote) now has an option to render as plain text (as seen in Mass.gov Regulation pages, etc.) ([PR #541](https://github.com/massgov/mayflower/pull/541))
+- Contribution from our very own @meghandavis - See that typo on the [Press Listing page](http://mayflower.digital.mass.gov/?p=pages-press-listing)?  Nope.  That's because it's fixed!  Thanks Meghan!!
+
+### Removed
+- DP-4603 - For developers, the `phing deploy`  task which circle kicks off to deploy to `massgov/mayflower-artifacts` no longer writes to `env.js` (since it's been removed) to set a theme path for js.  ([PR #544](https://github.com/massgov/mayflower/pull/544))  Implementers should do this work in their site codebase.  See an example of this at [Mass.gov PR #1065](https://github.com/massgov/mass/pull/1065)
+
+### Migrate path
+
+- See note for DP-4603 above for steps to implement this change.
 
 ## 5.5.0
 

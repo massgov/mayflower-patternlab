@@ -1,16 +1,19 @@
   
     <!--DO NOT REMOVE-->
     {{ patternLabFoot | raw }}
-    <script src="/assets/js/env.js"></script>
-    <script src="/assets/js/vendor-generated.js"></script>
-    <script src="/assets/js/index-generated.js"></script>
+    <script>
+      var ma = ma || {};
+      // path to where the handlebar templates are being stored.
+      ma.themePath = "{{ url.domain }}/{{ url.assetsPath }}";
+    </script>
+    <script src="{{ url.domain }}/{{ url.assetsPath }}/js/vendor-generated.js"></script>
+    <script src="{{ url.domain }}/{{ url.assetsPath }}/js/index-generated.js"></script>
     <script type="text/javascript">
       window.initGoogleMaps = function() {
         // Set a flag that the library has loaded, in case google maps js misses event.
         window.googleMapsLoaded = true;
-        let mapsLibLoadEvent = new CustomEvent('ma:LibrariesLoaded:GoogleMaps');
         // Emit an event that the library has loaded.
-        document.dispatchEvent(mapsLibLoadEvent);
+        $(document).trigger('ma:LibrariesLoaded:GoogleMaps');
       }
     </script>
     <!-- @todo set up config for api keys -->

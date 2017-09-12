@@ -1,40 +1,42 @@
----
-title: Link List
----
-Description: List of links that can be rendered stack or two column
+### Description
+List of links that can be rendered stack or as two columns
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Notes
+### Pattern Contains
+* Comp Heading
+* Sidebar Heading
+* Rich Text
+* Decorative Link
+
+### Variant options
+* With a [Short List](./?p=organisms-link-list-with-short-list)
+* As a [Stacked](./?p=organisms-link-list-as-stacked) list
+* With a [short description](./?p=organisms-link-list-with-description)
+
+### Usage Guidelines
+* When this pattern is used in the Right Rail, the Comp Heading will render as a Sidebar Heading and the bullets will disappear.
 
 
-### Contains
-- [@atoms/04-headings/comp-heading](?p=atoms-comp-heading)
-- [@atoms/04-headings/sidebar-heading](?p=atoms-sidebar-heading)
-- [@organisms/by-author/rich-text](?p=organisms-rich-text)
-- [@atoms/decorative-link](?p=atoms-decorative-link)
-
-### Used in:
-
-
-### Required Variables
-
+### Variables
 ~~~
 linkList : {
   compHeading: {
-    type: object (compHeading)/ optional
+    type: compHeading / optional
   },
   sidebarHeading: { 
-    type: object (sidebarHeading)/ optional
+    type: sidebarHeading / optional
   },
   description: {
-    type: object (Rich text)/ optional
+    type: richText / optional
   },
   stacked: 
     type: boolean
   links : [{
-    type: array of object (decorative-link) / required
-  }]
+    type: array of decorativeLink / required
+  }],
+  more:
+    type: decorativeLink / optional
 }
-
 ~~~

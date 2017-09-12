@@ -1,35 +1,52 @@
-# Style Guide
-This living styleguide is built using PatternLab.
+# Mayflower [![GitHub version](https://badge.fury.io/gh/massgov%2Fmayflower.svg)](https://badge.fury.io/gh/massgov%2Fmayflower)
+Mayflower is the enterprise design system for the Commonwealth of Massachusetts.
 
-## Machine set up
-1. Install PHP
-2. Install NodeJS version 6.9.4 (https://nodejs.org/en/download/)
-3. Install GulpJS, via command line `npm install -g gulp-cli`
+## Getting Started
 
-## Set up instructions
-1. Clone Repo
-2. Move into the styleguide directory `cd mayflower/styleguide`
-3. Generate pattern lab default files `php core/console --generate`
-4. Install npm dependencies `npm install`
+### Setting up your environment
 
-## Generate a styleguide
-### For local development
-1. run `gulp`
-2. launch browser at http://localhost:3000/ or port shown in gulp output
-3. Browser will automatically refresh as you make changes
+In order to run Mayflower locally, you need to have some things installed and set up on your machine.  Follow the steps in [setting up your machine](docs/machine-setup.md).
 
-### For a dev environment
-1. run 'gulp build'
+#### Demo Install
+- Follow the steps in [Demo Install](docs/demo-install.md) to get a copy of the project up and running on your local machine for *demo* and *testing* purposes. 
 
-### For a production environment
-1. run 'gulp prod'
+## Contribute
 
-# Working with PatternLab
-* All work is done in the source folder.
-* Mark-up is in the source/_patterns directory.
-* Front end assets can be found in the source/assets directory
-* Gulp will handle the conversion of files from source to public
-* Pattern Lab specific files are in the /public/styleguide directory (the styleguide.html file is automatically generated when twig templates are updated)
+Please follow the steps in [Contributing docs](.github/CONTRIBUTING.md) to set up your fork and repo for *development* and *contribution* purposes.
 
-# Release Deployment
-Tagged releases are automatically (via CircleCI) deployed to the [Mayflower Artifacts](https://github.com/palantirnet/mayflower-artifacts) repo for consumption by the Palantir team. Tags should follow [semantic versioning](https://github.com/sindresorhus/semver-regex) conventions.
+## Deployment
+
+### Developer Deployment
+
+Please see [Deployment docs](docs/developer-deploy.md) for steps on deploying development work to a fork of Mayflower's Github Pages.
+ 
+### Production Deployment
+
+Mayflower release managers with the necessary repo permissions can see [Release docs](docs/release.md) for steps on deploying code to production (i.e. do a release).
+
+## Generating assets
+
+This project comes with gulp tasks to build Mayflower's static assets (html, css, js, + images) without serving them locally.  See the [gulp-readme](styleguide/tools/gulp/gulp-readme.md) for more information.
+
+### Mayflower Artifacts
+Some Mass Digital Services projects (i.e. [massgov/mass](https://github.com/massgov/mass)) use twig templates in addition to the static assets (html, css, js, image) from Mayflower.  To establish that dependency, those projects point their dependency manager (i.e. [composer](https://getcomposer.org/doc/00-intro.md)) to the [Mayflower Artifacts](https://github.com/massgov/mayflower-artifacts) repository, which is a collection of Mayflower build artifacts with both twig and static assets.  Learn more about Mayflower Artifacts in the [massgov/openmass docs](https://github.com/massgov/openmass/blob/master/docs/Mayflower.md#mayflower-artifacts).
+
+## Built With
+
+* [Pattern Lab 2 (PHP)](http://patternlab.io/docs/index.html) - The pattern framework / static site generator
+* [Twig](https://twig.sensiolabs.org/) - The templating language
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/massgov/mayflower/tags).
+
+**What SemVer means for Mayflower section coming soon...**
+
+## License
+
+This project is licensed under the is licensed under the GNU General Public License v2.0 - see the [LICENSE.txt](LICENSE.txt) file for details.
+
+## Acknowledgments
+
+* [Atomic Design](http://atomicdesign.bradfrost.com/chapter-2/) methodology by Brad Frost
+* This awesome [README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by [@PurpleBooth](https://gist.github.com/PurpleBooth)

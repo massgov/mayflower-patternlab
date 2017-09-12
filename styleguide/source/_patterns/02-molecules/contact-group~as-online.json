@@ -1,0 +1,27 @@
+{
+  "contactGroup": {
+    "icon": "@atoms/05-icons/svg-laptop.twig",
+    "name": "Online",
+    "items": [{
+      "type": "email",
+      "label":"Email:",
+      "address": "",
+      "link": {
+        "href":"email@email.com",
+        "text": "email@email.com",
+        "info": ""
+      },
+      "details":""
+    },{
+      "type": "online",
+      "label":"Web:",
+      "address": "",
+      "link": {
+        "href":"#",
+        "text": "Contact Form",
+        "info": ""
+      },
+      "details":""
+    }]
+  }
+}

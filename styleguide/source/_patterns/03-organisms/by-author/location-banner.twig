@@ -5,12 +5,6 @@
     #{{ locationBannerId }} {
       background-image: url('{{ locationBanner.bgNarrow }}');
     }
-    
-    @media (min-width: 801px) {
-      #{{ locationBannerId }} {
-        background-image: url('{{ locationBanner.bgWide }}');
-      }
-    }
   </style>
   <div class="ma__location-banner__map">
     {% set googleMap = locationBanner.actionMap ? locationBanner.actionMap : locationBanner.googleMap %}

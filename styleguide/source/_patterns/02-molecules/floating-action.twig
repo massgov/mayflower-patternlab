@@ -1,12 +1,6 @@
-{% set buttonClassAlignment = floatingAction.alignment ? "ma__floating-action--alignment-" ~ floatingAction.alignment : "ma__floating-action--alignment-right" %}
+{% set buttonClassAlignment = floatingAction.alignment ? "ma__floating-action--" ~ floatingAction.alignment : "" %}
 
 <div class="ma__floating-action {{buttonClassAlignment}}">
-  {% if floatingAction.type == "button" %}
-    {% set button = floatingAction.button %}
-    {% include "@atoms/01-buttons/button.twig" %}
-  {% endif %}
-  {% if floatingAction.type == "buttonLink" %}
-    {% set buttonLink = floatingAction.button %}
-    {% include "@atoms/01-buttons/button-link.twig" %}
-  {% endif %}
+  {% set button = floatingAction.button %}
+  {% include "@atoms/01-buttons/button.twig" %}
 </div>

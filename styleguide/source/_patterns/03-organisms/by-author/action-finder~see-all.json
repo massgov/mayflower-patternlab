@@ -1,8 +1,8 @@
 {
   "actionFinder": {
     "id": "GUID831741781374893",
-    "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
-    "bgNarrow":"/assets/images/placeholder/800x800.png",
+    "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+    "bgNarrow":"../../assets/images/placeholder/800x800.png",
     "title": "What Would You Like to Do?",
     "featuredHeading":"Featured:",
     "generalHeading":"All Actions & Guides:",
@@ -15,7 +15,7 @@
     },
 
     "featuredLinks": [{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "text": "Getting Outdoors",
       "type": "",
       "href": "#",
@@ -43,7 +43,7 @@
       "type": "",
       "href": "#"
     },{
-      "image": "/assets/images/placeholder/130x160.png",
+      "image": "../../assets/images/placeholder/130x160.png",
       "text": "Fall Activity Planner",
       "type": "",
       "href": "#",

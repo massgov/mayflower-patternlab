@@ -1,36 +1,38 @@
----
-title: Contact Us
----
-Description: Displays Contact information to the user.
+### Description
+This pattern displays a collection of Contact Groups
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Notes:
-- This component can be viewed as an accordion or in list view
-- in List view, the first two contact groups should be visible and the remainder are collapsed.
+### Pattern Contains
+* Column Heading
+* Contact Group
 
-### Used In:
-[@organism/by-template/action-header](?p=organism-action-header)
+### Variant options
+* With a [linked title](./?p=molecules-contact-us-with-linked-title)
+* As an [accordion](./?p=molecules-contact-us-as-accordion)
 
-### Contains
-[@molecules/contact-group](?p=molecules-contact-group)
-[@atoms/04-headings/comp-heading](?p=atoms-comp-heading)
-[@atoms/04-headings/column-heading](?p=atoms-column-heading)
 
-### Variables:
+### Usage Guidelines
+* This component can be viewed as an accordion or in list view
+* When in the Accordion view, all or no contact groups (depending on accordion state)
+* When in the List view, the first two contact groups or shown by default with the remainder collapsed.
+
+### JavaScript Used
+* This pattern uses JavaScript for the accordions (js/modules/accordions.js)
+
+### Variables
 ~~~
 contactUs: {
-    accordion: 
-        type: boolean
-    isExpanded:
-        type: boolean
-
-    subTitle: {
-        type: object/optional - see @atoms/04-headings/column-heading.md
-    }
-
-    groups: [{
-        type: array of objects/required see @molecules/contact-group.md
-    }]
+  accordion: 
+    type: boolean
+  isExpanded:
+    type: boolean
+  subTitle: {
+    type: columnHeading / optional
+  }
+  groups: [{
+    type: array of contactGroup / required
+  }]
 }
 ~~~
