@@ -8,24 +8,56 @@
 
 {% block pageContent %}
   {% set richText = pageContent.intro %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set tabularData = pageContent.tabularData %}
+  {% set tabularData = tabularData|merge({'compHeading': {
+                                      'title': tabularData.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/tabular-data.twig" %}
   {% set stepsUnordered = pageContent.stepsUnordered %}
+  {% set stepsUnordered = stepsUnordered|merge({'compHeading': {
+                                      'title': stepsUnordered.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/steps-unordered.twig" %}
   {% set stepsOrdered = pageContent.stepsOrdered %}
+  {% set stepsOrdered = stepsOrdered|merge({'compHeading': {
+                                      'title': stepsOrdered.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/steps-ordered.twig" %}
   {% set richText = pageContent.moreInfo %}
+  {% set richText = richText|merge({'compHeading': {
+                                      'title': richText.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set formDownloads = pageContent.formDownloads %}
+  {% set formDownloads = formDownloads|merge({'compHeading': {
+                                      'title': formDownloads.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/form-downloads.twig" %}
   {% set contactList = pageContent.contactList %}
+  {% set contactList = contactList|merge({'compHeading': {
+                                      'title': contactList.compHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/contact-list.twig" %}
 {% endblock %}
 
 
 {% block sidebar %}
   {% set linkList = sidebar.linkList %}
+  {% set linkList = linkList|merge({'compHeading': {
+                                                  'title': linkList.compHeading.title,
+                                                  'level': level
+                                                }}) %}
   {% include "@organisms/by-author/link-list.twig" %}
 {% endblock %}
 

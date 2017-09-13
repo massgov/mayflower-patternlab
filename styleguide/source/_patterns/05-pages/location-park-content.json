@@ -640,7 +640,7 @@
              "text": "directions",
              "info": "Directions to Bascom Lodge",
              "property": "url"
-           }, 
+           },
            "details":""
          }]
        }]
@@ -712,6 +712,7 @@
  },
 
   "COMMENT":"****POSTCONTENT COMPONENTS****",
+
 
   "suggestedPages": {
     "title": "Related Locations",
@@ -853,7 +854,7 @@
         },
         "location": "Walden Pond, Concord, MA",
         "date": {
-          "summary": "June 24, 2017" 
+          "summary": "June 24, 2017"
         },
         "time": "12 p.m.",
         "description":"This is a description of the event that will happen at a future date"

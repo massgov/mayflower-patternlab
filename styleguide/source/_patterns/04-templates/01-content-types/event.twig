@@ -1,8 +1,12 @@
+{# Set top heading level for the page. #}
+{% set level = 1 %}
 
 {# site header #}
 {% block header %}{% endblock %}
 
 <main id="main-content" tabindex="-1"{% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   <div class="pre-content">
     {% block preContent %}
       {% include "@organisms/by-template/page-header.twig" %}
@@ -22,21 +26,40 @@
 
         {% if mainContent.pageOverview %}
           {% set pageOverview = mainContent.pageOverview %}
+          {% set compHeading = pageOverview.compHeading|merge({'level': compHeadingLevel}) %}
+          {% set pageOverview = pageOverview|merge({'compHeading': compHeading}) %}
           {% include "@organisms/by-author/page-overview.twig" %}
         {% endif %}
 
+        {# Increase heading number by 1 from the parent heading. #}
+        {% set level = level + 1 %}
         {% if mainContent.youWillNeed %}
           {% set richText = mainContent.youWillNeed %}
+          {% set richText = richText|merge({
+            'compHeading': {
+              'title': richText.compHeading.title,
+              'level': level}
+          }) %}
           {% include "@organisms/by-author/rich-text.twig" %}
         {% endif %}
 
         {% if mainContent.formDownloads %}
           {% set formDownloads = mainContent.formDownloads %}
+          {% set formDownloads = formDownloads|merge({
+            'compHeading': {
+            'title': formDownloads.compHeading.title,
+            'level': level}
+          }) %}
           {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}
 
         {% if mainContent.contactList %}
           {% set contactList = mainContent.contactList %}
+          {% set contactList = contactList|merge({
+            'compHeading': {
+              'title': contactList.compHeading.title,
+              'level': level}
+          }) %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
 

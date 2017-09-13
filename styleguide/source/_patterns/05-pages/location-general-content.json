@@ -255,7 +255,7 @@
         }
       }]
     },
-    
+
     "googleMap": {
       "map": {
         "center": {
@@ -614,7 +614,7 @@
               "text": "directions",
               "info": "Directions to Bascom Lodge",
               "property": "url"
-            }, 
+            },
             "details":""
           }]
         }]
@@ -782,7 +782,7 @@
         },
         "location": "Lanesborough, MA",
         "date": {
-          "summary": "March 30, 2017" 
+          "summary": "March 30, 2017"
         },
         "time": "12 p.m. - 2 p.m.",
         "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."

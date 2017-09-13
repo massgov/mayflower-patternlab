@@ -68,10 +68,10 @@
         "placeholder": {
           "text": "Optional widgets"
         }
-      }      
+      }
     }]
   },
-  
+
   "locationBanner": {
     "bgTitle":"Mt Greylock State Park",
     "bgWide":"../../assets/images/placeholder/1600x400.png",

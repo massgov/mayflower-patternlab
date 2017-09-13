@@ -363,7 +363,7 @@
         },
         "location": "location",
         "date": {
-          "summary": "Date" 
+          "summary": "Date"
         },
         "time": "Time",
         "description":"This is a description of the event that will happen at a future date"

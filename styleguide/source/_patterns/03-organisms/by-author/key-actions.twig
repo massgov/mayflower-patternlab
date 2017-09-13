@@ -1,3 +1,4 @@
+{% set level = content.data.level ? : 2 %} 
 {# backward compatible for version 5.5 #}
 {% if keyActions.sidebarHeading %}
   {% set keyActions = keyActions|merge({"compHeading": { "title": keyActions.sidebarHeading.title, "sidebar" : true }}) %}
@@ -8,6 +9,10 @@
     {% if keyActions.compHeading %}
       {% set compHeading = keyActions.compHeading %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% endif %}
+    {% if keyActions.sidebarHeading %}
+      {% set sidebarHeading = keyActions.sidebarHeading %}
+      {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
     <div class="ma__key-actions__items" aria-labelledby="{{ keyActions.compHeading.id }}">
       {% for link in keyActions.links %}

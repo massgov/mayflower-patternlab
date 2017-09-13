@@ -4,11 +4,23 @@
   {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 {% block pageContent %}
+  {% if richText.compHeading %}
+    {# Increase heading number by 1 from the parent heading. #}
+    {% set level = level + 1 %}
+  {% else %}
+    {# Increase heading number for child heading of richText. #}
+    {% set level = level + 2 %}
+  {% endif %}
   {% for section in sections %}
     {% set richText = section.richText %}
     {% include "@organisms/by-author/rich-text.twig" %}
     {% if section.video %}
       {% set video = section.video %}
+      {% set video = video|merge({'compHeading': {
+                                    'title': video.compHeading.title,
+                                    'level': level
+                                  }}) %}
+      {% set video = video|merge({'compHeading': {'level': level}}) %}
       {% include "@atoms/09-media/video.twig" %}
     {% endif %}
     {% if section.mappedLocations %}
@@ -17,12 +29,22 @@
     {% endif %}
     {% if section.formDownloads %}
       {% set formDownloads = section.formDownloads %}
+      {% set formDownloads = formDownloads|merge({'compHeading': {
+                                                    'title': formDownloads.compHeading.title,
+                                                    'level': level
+                                                  }}) %}
       {% include "@organisms/by-author/form-downloads.twig" %}
     {% endif %}
   {% endfor %}
 {% endblock %}
 {% block sidebar %}
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   {% set linkList = sidebar.linkList %}
+  {% set linkList = linkList|merge({'sidebarHeading': {
+                                      'title': linkList.sidebarHeading.title,
+                                      'level': level
+                                    }}) %}
   {% include "@organisms/by-author/link-list.twig" %}
 {% endblock %}
 {% block postContent %}

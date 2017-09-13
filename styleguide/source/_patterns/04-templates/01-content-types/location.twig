@@ -1,9 +1,12 @@
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
 {# site header #}
 {% block header %}{% endblock %}
 
-<main 
+<main
   id="main-content"
-  class="ma__details ma__details--location" 
+  class="ma__details ma__details--location"
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -17,11 +20,14 @@
       {% endif %}
     {% endblock %}
   </div>
+  {# Increase heading number by 1 from the parent heading. #}
+  {% set level = level + 1 %}
   <div class="main-content main-content--two">
 
     <div class="page-content">
       {% set coloredHeading = {
         "text": location.contentTitle,
+        "level": 2,
         "color": "green"
       } %}
       {% include "@atoms/04-headings/colored-heading.twig" %}
@@ -29,20 +35,32 @@
         <div class="ma__details__stick-nav">
           {% include "@molecules/sticky-nav.twig" %}
         </div>
+        {# Increase heading number by 1 from the parent heading. #}
+        {% set level = level + 1 %}
         {% block pageContent %}
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
         {% endblock %}
         {% if mainContent.contactList %}
           {% set contactList = mainContent.contactList %}
+          {% set contactList = contactList|merge({'compHeading': {
+                                                    'title': contactList.compHeading.title,
+                                                    'level': level
+                                                  }}) %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
       </div>
     </div>
 
     <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
+    {# Decrease heading number by 1 from the main content heading for side content heading. #}
+    {% set level = level - 1 %}
       {% if sidebar %}
         {% if sidebar.contactList %}
           {% set contactList = sidebar.contactList %}
+          {% set contactList = contactList|merge({'sidebarHeading': {
+                                                    'title': contactList.sidebarHeading.title,
+                                                    'level': level
+                                                  }}) %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
         {% block sidebar %}
@@ -50,7 +68,7 @@
         {% endblock %}
       {% endif %}
     </aside>
-    
+
   </div>
   <div class="post-content">
     {% block postContent %}
@@ -64,4 +82,3 @@
 
 {# site footer #}
 {% block footer %}{% endblock %}
-  

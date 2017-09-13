@@ -1,1 +1,2 @@
-<h3 class="ma__sidebar-heading">{{sidebarHeading.title}}</h3>
+{% set level = sidebarHeading.level ? : 2 %}
+<h{{ level }} class="ma__sidebar-heading">{{sidebarHeading.title}}</h{{ level }}>

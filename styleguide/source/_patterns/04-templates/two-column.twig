@@ -1,3 +1,6 @@
+{# Set top heading level for the page. #}
+{% set level = 1 %}
+
 {% block header %}
   {% include "@organisms/by-template/emergency-alerts.twig" %}
   {% include "@organisms/by-template/header.twig" %}
@@ -11,11 +14,15 @@
   <div class="main-content main-content--two">
     <div class="page-content">
       {% block pageContent %}
+        {# Increase heading number by 1 from the parent heading. #}
+        {% set level = level + 1 %}
         {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page content'}} %}
       {% endblock %}
     </div>
     <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
       {% block sidebar %}
+        {# Increase heading number by 1 from the parent heading. #}
+        {% set level = level + 1 %}
         {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
       {% endblock %}
     </aside>
