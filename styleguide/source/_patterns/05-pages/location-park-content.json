@@ -194,7 +194,7 @@
    "overview": {
      "compHeading": {
        "title": "Overview",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "overview",
        "centered": ""
@@ -213,7 +213,7 @@
    "hours": {
      "compHeading": {
        "title": "Hours",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "hours",
        "centered": ""
@@ -282,7 +282,7 @@
    "parking": {
      "compHeading": {
        "title": "Parking",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "parking",
        "centered": ""
@@ -348,7 +348,7 @@
    "imagePromos": {
      "compHeading": {
        "title": "Recommended Activities",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "recommended-activities",
        "centered": ""
@@ -428,7 +428,7 @@
    "allActivities": {
      "compHeading": {
        "title": "All Activities",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "all-activities",
        "centered": ""
@@ -465,7 +465,7 @@
    "facilities": {
      "compHeading": {
        "title": "Facilities",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "facilities",
        "centered": ""
@@ -492,7 +492,7 @@
    "acessibility": {
      "compHeading": {
        "title": "Acessibility",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "acessibility",
        "centered": ""
@@ -527,7 +527,7 @@
    "restrictions": {
      "compHeading": {
        "title": "Restrictions",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "restrictions",
        "centered": ""
@@ -563,7 +563,7 @@
      "viewSpecific": false,
      "compHeading":{
        "title": "Contacts",
-       "sub": "true",
+       "level": 3,
        "color": "",
        "id": "contacts",
        "centered": ""
