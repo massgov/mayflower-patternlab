@@ -12,8 +12,8 @@
     {% if sectionLinks.subTitle %}
       {% set sectionLinks = sectionLinks|merge({"level": 3}) %}
     {% endif %}
-    {# use the level passed, the gloval level, or the default #}
-    {% set headingLevel = sectionLinks.level ? : (globalLevel ? : 2) %}
+    
+    {% set headingLevel = sectionLinks.level ? : 2 %}
     <h{{ headingLevel }} class="ma__section-links__title js-accordion-link" id="{{ titleId }}">
       {% set decorativeLink = sectionLinks.title %}
       {% include "@atoms/decorative-link.twig" %}
