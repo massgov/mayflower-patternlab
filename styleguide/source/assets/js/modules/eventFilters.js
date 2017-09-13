@@ -125,8 +125,8 @@ export default function (window,document,$,undefined) {
   function clearDeactivatedFilter(args) {
     let $form = $(args.$form),
       $place = $form.find('.js-event-filter-by-location'),
-      $dateStart = $('.js-filter-by-date-range__start', $form).find('input'),
-      $dateEnd = $('.js-filter-by-date-range__end', $form).find('input'),
+      $dateStart = $form.find('.js-filter-by-date-range__start'),
+      $dateEnd = $form.find('.js-filter-by-date-range__end'),
       $tags = $form.find('.js-filter-by-tags'),
       clearedFilter = args.clearedFilter;
 
@@ -136,11 +136,11 @@ export default function (window,document,$,undefined) {
       return;
     }
     // Clear dates text inputs.
-    if (clearedFilter.type === 'dateStart') {
+    if (clearedFilter.type === 'start') {
       $dateStart.find('input').val("");
       return;
     }
-    if (clearedFilter.type === 'dateEnd') {
+    if (clearedFilter.type === 'end') {
       $dateEnd.find('input').val("");
       return;
     }
