@@ -493,7 +493,7 @@
         }
       }
     },{
-      "path":"@organisms/by-author/key-actions.twig",
+      "path":"@organisms/by-author/callout-grid.twig",
       "data":{
         "keyActions": {
           "compHeading": {
@@ -847,7 +847,7 @@
         }
       }
     },{
-      "path":"@organisms/by-author/key-actions.twig",
+      "path":"@organisms/by-author/callout-grid.twig",
       "data":{
         "keyActions": {
           "compHeading": {

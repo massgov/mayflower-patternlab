@@ -6,6 +6,6 @@ This is a variant of the [Page Header](./?p=organisms-page-header) pattern showi
 * set the `category`, socialLinks`, and `publishState` to null
 * populate the `optionalContents` array with the following patterns:
   * @organisms/by-author/contact-us.twig
-  * @organisms/by-author/key-actions.twig
+  * @organisms/by-author/callout-grid.twig
 * populate the `widgets` array with the following pattern:
   * @molecules/labelled-icons.twig
