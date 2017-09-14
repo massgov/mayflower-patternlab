@@ -12,7 +12,7 @@
     "compHeading": null,
     "sections": [{
       "id": "GUIDasjdhf1",
-      "catIcon": "",
+      "categoryIcon": "",
       "title" : {
         "href" : "#",
         "text" : "Recreation Service"
@@ -35,7 +35,7 @@
     },
     {
       "id": "GUIDasjdhf2",
-      "catIcon": "",
+      "categoryIcon": "",
       "title" : {
         "href" : "#",
         "text" : "Active & Team Sports"
@@ -61,7 +61,7 @@
     }, 
     {
       "id": "GUIDasjdhf3",
-      "catIcon": "",
+      "categoryIcon": "",
       "title" : {
         "href" : "/patterns/05-pages-L2-nature-and-outdoor-activities/05-pages-L2-nature-and-outdoor-activities.html",
         "text" : "Nature & Outdoor Activities"
@@ -87,7 +87,7 @@
     },
     {
       "id": "GUIDasjdhf4",
-      "catIcon": "",
+      "categoryIcon": "",
       "title" : {
         "href" : "#",
         "text" : "Water Related Activities"

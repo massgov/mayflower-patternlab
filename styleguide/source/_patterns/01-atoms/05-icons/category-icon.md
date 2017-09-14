@@ -10,7 +10,7 @@ This Pattern shows a small category flag.
 
 ### Variables
 ~~~
-catIcon: {
+categoryIcon: {
   icon:
     type: string (path to icon) / required 
   small:

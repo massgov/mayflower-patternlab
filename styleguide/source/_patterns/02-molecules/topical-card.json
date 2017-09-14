@@ -1,7 +1,7 @@
 {
   "topicalCard": {
     "id": "GUIDasjdhf1",
-    "catIcon": {
+    "categoryIcon": {
       "icon":"@atoms/05-icons/svg-lg-fishing.twig",
       "small": true
     },

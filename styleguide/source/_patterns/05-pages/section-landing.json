@@ -9,7 +9,7 @@
     "title":"Visiting & Exploring"
   },
 
-  "catIcon": {
+  "categoryIcon": {
     "icon":"atoms-svg-camping"
   },
 
@@ -23,7 +23,7 @@
     },
     "sections": [{
       "id": "GUIDasjdhf1",
-      "catIcon": {
+      "categoryIcon": {
         "icon":"@atoms/05-icons/svg-lg-fishing.twig",
         "small": true
       },
@@ -52,7 +52,7 @@
     },
     {
       "id": "GUIDasjdhf2",
-      "catIcon": {
+      "categoryIcon": {
         "icon":"@atoms/05-icons/svg-lg-picnic-table.twig",
         "small": true
       },
@@ -85,7 +85,7 @@
     }, 
     {
       "id": "GUIDasjdhf3",
-      "catIcon": {
+      "categoryIcon": {
         "icon":"@atoms/05-icons/svg-lg-map-location.twig",
         "small": true
       },

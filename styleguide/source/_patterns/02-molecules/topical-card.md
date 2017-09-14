@@ -18,8 +18,8 @@ Displays a set of links in a card layout.
 ### Variables
 ~~~
 topicalCard: {
-  catIcon: { 
-    type: catIcon / optional
+  categoryIcon: { 
+    type: categoryIcon / optional
   },
   title: {
     type: decorativeLink / required

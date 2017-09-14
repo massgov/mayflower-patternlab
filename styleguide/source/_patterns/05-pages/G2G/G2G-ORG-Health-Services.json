@@ -446,7 +446,7 @@
           },
           "sections": [{
             "id": "GUIDasjdhf1",
-            "catIcon": null,
+            "categoryIcon": null,
             "title" : {
               "href" : "#",
               "text" : "Health & Social Services"
@@ -473,7 +473,7 @@
           },
           {
             "id": "GUIDasjdhf2",
-            "catIcon": null,
+            "categoryIcon": null,
             "title" : {
               "href" : "#",
               "text" : "Families & Children"
@@ -500,7 +500,7 @@
           },
           {
             "id": "GUIDasjdhf3",
-            "catIcon": null,
+            "categoryIcon": null,
             "title" : {
               "href" : "#",
               "text" : "Housing & Property"
