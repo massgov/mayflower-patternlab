@@ -128,6 +128,10 @@
       "text": "Restrictions",
       "info": ""
     },{
+      "href": "downloads",
+      "text": "Downloads",
+      "info": ""
+    },{
       "href": "contacts",
       "text": "Contacts",
       "info": ""
@@ -495,6 +499,30 @@
           },{
             "text":"Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           }]
+        }
+      }]
+    },
+
+    "formDownloads": {
+      "compHeading": {
+        "title": "Downloads",
+        "sub": true,
+        "color": "",
+        "id": "downloads",
+        "centered": ""
+      },
+      "downloadLinks": [{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "Southbridge RMV Map",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "1MB",
+          "format": "PDF"
         }
       }]
     },
