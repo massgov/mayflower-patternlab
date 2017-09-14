@@ -93,7 +93,8 @@
   &__title {
     @include ma-h3;
     margin-bottom: 15px;
-
+    align-self: stretch;
+    
     a {
       border: none;
     }

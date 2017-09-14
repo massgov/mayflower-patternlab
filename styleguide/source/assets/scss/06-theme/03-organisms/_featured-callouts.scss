@@ -91,4 +91,23 @@ $action-finder-border-color: tint($c-theme-primary,50%);
       }
     }
   }
+
+  &--no-background &__see-all {
+    background-color: $c-bg-section;;
+
+    .ma__decorative-link {
+
+      a {
+        color: $c-font-link;
+
+        &:hover {
+          border-color: rgba($c-font-link, .5);
+        }
+      }
+
+      svg {
+        fill: rgba($c-font-link, .5);
+      }
+    }
+  }
 }

@@ -23,6 +23,9 @@ This template allows you to have rows of content that are either full width or w
 ### Usage Guidelines
 * The ID value is used as an anchor tag when the Jump Links pattern is added as a table of contents (see guide pages)
 
+### Usage Guidelines
+* The ID value is used as an anchor tag when the Jump Links pattern is added as a table of contents (see guide pages)
+
 ### Variables
 ~~~
 stackedRows: [{

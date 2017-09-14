@@ -23,7 +23,7 @@ pressListing: {
     type: sidebarHeading / optional
   },
   items: [{
-    type: pressTeaser / optional
+    type: pressTeaser / required
   }],
   "secondaryItems": [{
     type: pressTeaser / optional

@@ -9,6 +9,7 @@ This Pattern is a stylized input text field.
 * It can be used as a [number](./?p=atoms-input-text-for-number), [file](./?p=atoms-input-text-for-file), or any other HTML5 text input type.
 * The label can also be visually [hidden](./?p=atoms-input-text-with-hidden-label)
 * Next to the label, the word [optional](./?p=atoms-input-text-as-optional) appears if the input isn't required
+* If the input is required and blank when submitted, it will display in an [error](./?p=atoms-input-text-as-error) state
 
 ### Usage Guidelines
 * use the Input Date Pattern instead of setting the type variable to date here.

@@ -4,8 +4,9 @@ This is a stylized selectbox.
 ### Status
 * Stable as of 5.0.0
 
+
 ### JavaScript Used
-* (js/modules/dropdown.js)
+* To keep the value displayed in sync with the current value of the select box (js/modules/dropdown.js)
 
 ### Variables
 ~~~

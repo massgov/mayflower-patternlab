@@ -1,5 +1,5 @@
 ### Description
-This is an example of a Press Listing page [extending](https://twig.symfony.com/doc/2.x/tags/extends.html) the Two Column Reversed template
+This is an example of a Press Listing page [extending](https://twig.symfony.com/doc/2.x/tags/extends.html) the Left Rail template
 
 ### Status
 * Stable as of 5.0.0

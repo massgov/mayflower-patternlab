@@ -45,4 +45,10 @@
       </ul>
     {% endif %}
   </div>
+  {% if linkList.more %}
+    <div class="ma__link-list__see-all">
+      {% set decorativeLink = linkList.more %}
+      {% include "@atoms/decorative-link.twig" %}
+    </div>
+  {% endif %}
 </section>

@@ -5,4 +5,8 @@
   .main-content--full .page-content > & {
     @include ma-container;
   }
+
+  &__see-all {
+    margin-top: 1rem;
+  }
 }

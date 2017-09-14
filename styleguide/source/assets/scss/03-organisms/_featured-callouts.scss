@@ -164,10 +164,20 @@ $action-finder-bp: 900px;
     z-index: 2;
   }
 
+  &--no-background &__see-all {
+    margin-top: -40px;
+  }
+
   &__see-all-container {
     @include ma-container;
     padding-top: 14px;
     padding-bottom: 14px;
     text-align: right;
+  }
+
+  &--no-background &__see-all-container {
+    padding-top: 0;
+    padding-bottom: 48px;
+    text-align: left;
   }
 }
