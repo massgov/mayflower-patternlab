@@ -1,4 +1,4 @@
-<section class="ma__event-filters">
+<section class="ma__event-filters js-event-filters">
   <form action="{{ eventFilters.form.action }}">
     <div class="ma__event-filters__by-location">
       {% set inputText = eventFilters.zipcode.inputText %}
@@ -8,10 +8,16 @@
       {% set dateRange = eventFilters.dateRange %}
       {% include "@molecules/date-range.twig" %}
     </div>
-    <div class="ma__event-filters__buttons">
-      <button class="ma__event-filters__submit" type="submit">
-        {{ eventFilters.submitButton }}
-      </button>
+    <div class="ma__event-filters__buttons js-event-filters-buttons">
+      {% for button in eventFilters.buttons %}
+        {% include "@atoms/01-buttons/button.twig" %}
+      {% endfor %}
+      {# backward compatible with v5.6 that uses submitButton #}
+      {% if eventFilters.submitButton %}
+        <button class="ma__event-filters__submit" type="submit">
+          {{ eventFilters.submitButton }}
+        </button>
+      {% endif %}
     </div>
   </form>
 </section>

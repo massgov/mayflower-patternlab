@@ -1,4 +1,12 @@
-<figure class="ma__category-icon {{catIcon.small == "true" ? 'ma__category-icon--small' : ''}}" aria-hidden>
+
+
+{% set smallClass = catIcon.small ? "ma__category-icon--small" : "" %}
+
+{# Backward compatible with Release5.7.0 where small was a string value #}
+{% if catIcon.small is same as ("false") %}
+  {% set smallClass = "" %}
+{% endif %}
+
+<figure class="ma__category-icon {{ smallClass }}" aria-hidden>
   {% include catIcon.icon %}
 </figure>
-
