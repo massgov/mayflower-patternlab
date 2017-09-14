@@ -5,5 +5,5 @@ This is a variant of the [Page Header](./?p=organisms-page-header) pattern showi
 * set the `divider` variable to false
 * set the `socialLinks`, `publishState`, and `widgets` to null
 * populate the 'optionalContents' array with the following patterns:
-  * @organisms/by-author/callout-time.twig
+  * @organisms/by-author/icon-callout.twig
   * @organisms/by-author/callout-grid.twig

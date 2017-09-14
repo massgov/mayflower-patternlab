@@ -676,7 +676,7 @@
     "title": "Converting Your Out-of-Country Driver’s License",
     "id": "converting-your-out-of-country-drivers-license",
     "pageContent": [{
-      "path": "@organisms/by-author/callout-time.twig",
+      "path": "@organisms/by-author/icon-callout.twig",
       "data": {
         "calloutTime": {
           "icon": "@atoms/05-icons/svg-wait-time.twig",
