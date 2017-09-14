@@ -86,7 +86,7 @@
         {
           "path": "@organisms/by-author/icon-callout.twig",
           "data": {
-            "calloutTime": {
+            "iconCallout": {
               "icon": "@atoms/05-icons/svg-wait-time.twig",
               "text": "This usually takes approximately 4 weeks"
             }

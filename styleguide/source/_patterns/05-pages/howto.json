@@ -36,7 +36,7 @@
     "optionalContents": [{
       "path": "@organisms/by-author/icon-callout.twig",
       "data": {
-        "calloutTime": {
+        "iconCallout": {
           "icon": "@atoms/05-icons/svg-wait-time.twig",
           "text": "Most applicants hear back within 4-6 weeks of applying"
         }
