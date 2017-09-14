@@ -228,19 +228,90 @@
         "sub": true
       },
       "downloadLinks": [{
+          "downloadLink": {
+            "iconSize": "",
+            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "decorativeLink": {
+              "text": "Stretch Code Adoption by Community",
+              "href": "http://www.mass.gov/eea/docs/doer/green-communities/grant-program/stretch-code-towns-adoption-by-community-map-and-list.pdf",
+              "info": "",
+              "property": ""
+            },
+            "size": "",
+            "format": "form"
+          }
+        },{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "icon": "@atoms/05-icons/svg-doc-docx.twig",
           "decorativeLink": {
-            "text": "Stretch Code Adoption by Community",
-            "href": "http://www.mass.gov/eea/docs/doer/green-communities/grant-program/stretch-code-towns-adoption-by-community-map-and-list.pdf",
+            "text": "Name of Doc",
+            "href": "#",
             "info": "",
             "property": ""
           },
           "size": "",
           "format": "form"
         }
-      }]
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "Work Search Activity Log",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "",
+          "format": "form"
+        }
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-docx.twig",
+          "decorativeLink": {
+            "text": "Name of another doc",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "",
+          "format": "form"
+        }
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "Another pdf",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "",
+          "format": "form"
+        }
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-docx.twig",
+          "decorativeLink": {
+            "text": "Helpful resource",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "",
+          "format": "form"
+        }
+      }],
+      "more": {
+        "href": "#",
+        "text": "See all 15 additional resources",
+        "chevron": true,
+        "label": "See all of the resources for Executive Office of Health and Human Services"
+      }
     }
   },{
     "richText": {
