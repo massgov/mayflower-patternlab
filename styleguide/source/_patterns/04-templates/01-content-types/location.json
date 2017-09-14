@@ -1,6 +1,7 @@
 {
   "location": {
-    "contentTitle": "The Details"
+    "contentTitle": "The Details",
+    "titleContext": ""
   },
 
   "headerAlerts": [{
@@ -116,6 +117,7 @@
   },
 
   "stickyNav": {
+    "titleContext": "Mt Greylock State Park",
     "anchorLinks":[{
       "href": "jump link",
       "text": "jump-link",
@@ -131,7 +133,8 @@
     "contactList": {
       "viewSpecific": false,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "titleContext": ""
       },
       "contacts":[{
         "accordion": true,
@@ -182,7 +185,8 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "titleContext": ""
       },
       "contacts":[{
         "accordion": false,
