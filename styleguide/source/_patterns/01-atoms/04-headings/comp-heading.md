@@ -14,6 +14,8 @@ An `<h2>` element with a styled underline color
 compHeading: {
   title:
     type: string / required
+  titleContex: 
+    type: string / optional
   sub:
     type: string ("true" || "" ) / optional
   color:

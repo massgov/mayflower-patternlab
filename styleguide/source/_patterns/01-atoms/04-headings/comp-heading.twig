@@ -21,6 +21,7 @@
     {% endif %} 
     tabindex="-1">
     {{ compHeading.title }}
+    {% if compHeading.titleContext %}<span class="visually-hidden"> {{ compHeading.titleContext }}{% endif %}
   </h3>
 {% else %}
   <h2 
@@ -30,5 +31,6 @@
     {% endif %} 
     tabindex="-1">
     {{ compHeading.title }}
+    {% if compHeading.titleContext %}<span class="visually-hidden"> {{ compHeading.titleContext }}{% endif %}</span>
   </h2>
 {% endif %}
