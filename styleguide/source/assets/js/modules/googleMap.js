@@ -319,8 +319,14 @@ export default function (window,document,$,undefined) {
         bounds.extend(marker.position);
       }
     });
-    // Make the map zoom to fit the bounds, showing all locations.
-    map.fitBounds(bounds);
+
+    // Google Maps default behavior with a single marker when calling
+    // fitBounds() is to maximize zoom. This can be undesirable behavior.
+    // If only a single marker, let mapData define center and zoom.
+    if (markers.length > 1) {
+      // Make the map zoom to fit the bounds, showing all locations.
+      map.fitBounds(bounds);
+    }
   }
 
 }(window,document,jQuery);
