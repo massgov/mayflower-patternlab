@@ -1,15 +1,15 @@
-<section class="ma__key-actions">
-  <div class="ma__key-actions__container">
-    {% if keyActions.compHeading %}
-      {% set compHeading = keyActions.compHeading %}
+<section class="ma__callout-grid">
+  <div class="ma__callout-grid__container">
+    {% if calloutGrid.compHeading %}
+      {% set compHeading = calloutGrid.compHeading %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
     {% endif %}
-    {% if keyActions.sidebarHeading %}
-      {% set sidebarHeading = keyActions.sidebarHeading %}
+    {% if calloutGrid.sidebarHeading %}
+      {% set sidebarHeading = calloutGrid.sidebarHeading %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
-    <div class="ma__key-actions__items">
-      {% for link in keyActions.links %}
+    <div class="ma__callout-grid__items">
+      {% for link in calloutGrid.links %}
         {% if link.image %}
           {% set illustratedLink = link %}
           {% include "@molecules/illustrated-link.twig" %}

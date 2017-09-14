@@ -44,7 +44,7 @@
       }]
     },
 
-    "keyActions": {
+    "calloutGrid": {
       "compHeading": {
         "title": "Optional but required for eligibility requirements",
         "sub": true

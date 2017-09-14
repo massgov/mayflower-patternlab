@@ -44,7 +44,7 @@
       }]
     },
 
-    "keyActions": {
+    "calloutGrid": {
       "compHeading": {
         "title": "First time?",
         "sub": true

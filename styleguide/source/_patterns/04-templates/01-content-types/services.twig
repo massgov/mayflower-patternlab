@@ -30,8 +30,8 @@
             {% set richText = introPageContent.intro %}
             {% include "@organisms/by-author/rich-text.twig" %}
 
-            {% if introPageContent.keyActions %}
-              {% set keyActions = introPageContent.keyActions %}
+            {% if introPageContent.calloutGrid %}
+              {% set calloutGrid = introPageContent.calloutGrid %}
               {% include "@organisms/by-author/callout-grid.twig" %}
             {% endif %}
           {% endblock %}

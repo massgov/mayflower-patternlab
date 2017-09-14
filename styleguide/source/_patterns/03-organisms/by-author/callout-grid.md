@@ -16,7 +16,7 @@ This pattern shows a grid containing a combination of Callout links and Illustra
 
 ### Variables
 ~~~
-"keyActions": {
+"calloutGrid": {
   "compHeading": {
     "type": compHeading / optional 
   },

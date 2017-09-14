@@ -40,8 +40,8 @@ Displays a collection of components to help describe an available Service on Mas
       type: richText / required
     },
 
-    keyActions: {
-      type: keyActions / optional
+    calloutGrid: {
+      type: calloutGrid / optional
     }
   },
 

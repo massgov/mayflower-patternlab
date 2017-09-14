@@ -25,7 +25,7 @@
     },{
       "path": "@organisms/by-author/callout-grid.twig",
       "data": {
-        "keyActions": {
+        "calloutGrid": {
           "links":[{
             "text": "Apply online",
             "type": "",

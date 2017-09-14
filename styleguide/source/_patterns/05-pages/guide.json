@@ -495,7 +495,7 @@
     },{
       "path":"@organisms/by-author/callout-grid.twig",
       "data":{
-        "keyActions": {
+        "calloutGrid": {
           "compHeading": {
             "title": "Key Actions",
             "sub":true
@@ -849,7 +849,7 @@
     },{
       "path":"@organisms/by-author/callout-grid.twig",
       "data":{
-        "keyActions": {
+        "calloutGrid": {
           "compHeading": {
             "title": "Key Actions",
             "sub":true

@@ -56,7 +56,7 @@
     },{
       "path": "@organisms/by-author/callout-grid.twig",
       "data": {
-        "keyActions": {
+        "calloutGrid": {
           "links":[{
             "text": "Reserve a Campsite",
             "type": "",
