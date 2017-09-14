@@ -7,7 +7,7 @@ Example of an Error page for Mass Gov [extending](https://twig.symfony.com/doc/2
 ### Pattern Contains
 * Error Page
 * Header Search
-* Helpful Links
+* Link List
 * Narrow Template (template)
 
 ### Variables

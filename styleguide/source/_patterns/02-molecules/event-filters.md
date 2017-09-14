@@ -7,6 +7,7 @@ This Filter input area with inputs for location and date range.
 ### Pattern Contains
 * Input Text
 * Date Range
+* Button
 
 ### Variables
 ~~~
@@ -19,7 +20,8 @@ eventFilters: {
     type: dateRange / required
   },
 
-  submitButton:
-    type: string / required   
+  buttons: [{
+    type: array of Button / required
+  }]
 }
 ~~~

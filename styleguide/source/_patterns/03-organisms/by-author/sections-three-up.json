@@ -11,7 +11,7 @@
       "id": "GUIDasjdhf1",
       "catIcon": {
         "icon":"@atoms/05-icons/svg-lg-fishing.twig",
-        "small":"true"
+        "small": true
       },
       "title" : {
         "href" : "#",
@@ -36,7 +36,7 @@
       "id": "GUIDasjdhf2",
       "catIcon": {
         "icon":"@atoms/05-icons/svg-lg-picnic-table.twig",
-        "small":"true"
+        "small": true
       },
       "title" : {
         "href" : "#",
@@ -64,7 +64,7 @@
       "id": "GUIDasjdhf3",
       "catIcon": {
         "icon":"@atoms/05-icons/svg-lg-map-location.twig",
-        "small":"true"
+        "small": true
       },
       "title" : {
         "href" : "#",

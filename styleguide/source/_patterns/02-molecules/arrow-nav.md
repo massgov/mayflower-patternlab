@@ -6,6 +6,7 @@ This pattern displays a link to the previous or next page.
 
 ### Pattern Contains
 * Arrow Button
+* Link
 
 ### Variant options
 * This can also be view as a [next](./?p=molecules-arrow-nav-as-next-page) page navigation
@@ -19,12 +20,7 @@ arrowNav: {
   title: 
     type: string / required
   link: {
-    href: 
-      type: string (url) / required
-    text: 
-      type: string / required
-    info: 
-      type: string (adds more description to the link) / optional
+    type: link / required
   }
 }
 ~~~

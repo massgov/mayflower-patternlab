@@ -13,7 +13,7 @@
     }]
   },
 
-  "stackedRowSections": [{
+  "stackedRows": [{
     "title": "Row with sidebar",
     "id": "row-with-sidebar",
     "pageContent": [{

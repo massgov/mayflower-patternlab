@@ -20,8 +20,9 @@ transitionPage: {
     type: string / required
   href: 
     type: string (url) / required
-  submit: 
-    type: string / required
+  submit: {
+    type: Button / required
+  } 
   back: 
     type: string / required
   inputCheckbox: {
