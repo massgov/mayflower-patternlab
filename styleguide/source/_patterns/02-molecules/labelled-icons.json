@@ -1,5 +1,5 @@
 {
-  "locationIcons": {
+  "labelledIcons": {
     "title": "Location Features",
     "icons": [{
       "path":"@atoms/05-icons/svg-transit.twig",

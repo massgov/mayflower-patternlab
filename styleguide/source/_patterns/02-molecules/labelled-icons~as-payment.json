@@ -1,5 +1,5 @@
 {
-  "locationIcons": {
+  "labelledIcons": {
     "title": "payment options",
     "icons": [{
       "path":"@atoms/05-icons/svg-credit.twig",

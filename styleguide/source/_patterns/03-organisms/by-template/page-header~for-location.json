@@ -76,7 +76,7 @@
     "widgets": [{
       "path": "@molecules/labelled-icons.twig",
       "data": {
-        "locationIcons": {
+        "labelledIcons": {
           "icons": [{
             "path":"@atoms/05-icons/svg-transit.twig",
             "name":"Transit Friendly"

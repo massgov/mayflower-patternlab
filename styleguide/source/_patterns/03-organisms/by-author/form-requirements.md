@@ -28,8 +28,8 @@ formRequirements: {
       type: contentHeading / required
     },
 
-    locationIcons: {
-      type: locationIcons / required
+    labelledIcons: {
+      type: labelledIcons / required
     }
   }
 }

@@ -1,14 +1,14 @@
-<section class="ma__location-icons">
-  {% if locationIcons.title %}
-    <h2 class="visually-hidden">{{ locationIcons.title }}</h2>
+<section class="ma__labelled-icons">
+  {% if labelledIcons.title %}
+    <span class="visually-hidden">{{ labelledIcons.title }}</span>
   {% endif %}
-  <div class="ma__location-icons__items">
-    {% for icon in locationIcons.icons %}
-      <div class="ma__location-icons__item">
-        <div class="ma__location-icons__icon">
+  <div class="ma__labelled-icons__items">
+    {% for icon in labelledIcons.icons %}
+      <div class="ma__labelled-icons__item">
+        <div class="ma__labelled-icons__icon">
           {% include icon.path %}
         </div>
-        <div class="ma__location-icons__name">{{icon.name}}</div>
+        <div class="ma__labelled-icons__name">{{ icon.name }}</div>
       </div>
     {% endfor %}
   </div>
