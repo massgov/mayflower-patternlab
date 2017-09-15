@@ -40,10 +40,6 @@
         {% if introSidebar %}
           <aside class="sidebar sidebar--intro">
             {% block sidebarIntro %}
-              {% if introSidebar.logo %}
-                {% set image = introSidebar.logo %}
-                {% include "@atoms/09-media/image.twig" %}
-              {% endif %}
               {% if introSidebar.social %}
                 {# Backward Compatible with v5.7 - added heading to iconLinks so this heading isn't needed #}
                 {% if introSidebar.social.sidebarHeading %}
