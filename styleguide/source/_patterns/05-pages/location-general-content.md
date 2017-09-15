@@ -13,7 +13,7 @@ This page [extends](https://twig.symfony.com/doc/2.x/tags/extends.html) the loca
 * Rich Text
 * Google Map
 * Image Promo
-* Event Listing
+* Event List
 
 ### Variables
 See Patterns above

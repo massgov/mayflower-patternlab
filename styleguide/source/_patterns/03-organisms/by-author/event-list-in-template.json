@@ -1,5 +1,5 @@
 {
-  "eventListing": {
+  "eventList": {
     "compHeading":{
       "title": "Page Content Events",
       "sub": "",
@@ -50,7 +50,7 @@
       "chevron": true
     }
   },
-  "eventListingRight": {
+  "eventListRight": {
     "compHeading":{
       "title": "Right Rail Events",
       "sub": "",
@@ -101,7 +101,7 @@
       "chevron": true
     }
   },
-  "eventListingPost": {
+  "eventListPost": {
     "compHeading":{
       "title": "Post Content Events",
       "sub": "",

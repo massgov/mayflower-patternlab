@@ -11,13 +11,13 @@ A list of events where each item displays the Name, Location, Time, Date and a b
 * Link
 
 ### Variant options
-* This pattern can also be used in the [Right Rail](./?p=organisms-event-listing-in-template) or as two columns with a background in [Post Content](./?p=organisms-event-listing-in-template)
-* This Pattern can also be rendered as a [Grid](./?p=organisms-event-listing-as-grid)
+* This pattern can also be used in the [Right Rail](./?p=organisms-event-list-in-template) or as two columns with a background in [Post Content](./?p=organisms-event-list-in-template)
+* This Pattern can also be rendered as a [Grid](./?p=organisms-event-list-as-grid)
 
 
 ### Variables
 ~~~
-eventListing: {
+eventList: {
   compHeading:{
     type: compHeading / optional
   },

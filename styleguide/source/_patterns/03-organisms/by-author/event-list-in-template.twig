@@ -3,15 +3,15 @@
 {% block header %}{% endblock %}
 
 {% block pageContent %}
-  {% include "@organisms/by-author/event-listing.twig" %}
+  {% include "@organisms/by-author/event-list.twig" %}
 {% endblock %}
 {% block sidebar %}
-  {% set eventListing = eventListingRight %}
-  {% include "@organisms/by-author/event-listing.twig" %}
+  {% set eventList = eventListRight %}
+  {% include "@organisms/by-author/event-list.twig" %}
 {% endblock %}
 {% block postContent %}
-  {% set eventListing = eventListingPost %}
-  {% include "@organisms/by-author/event-listing.twig" %}
+  {% set eventList = eventListPost %}
+  {% include "@organisms/by-author/event-list.twig" %}
 {% endblock %}
 
 {% block footer %}{% endblock %}

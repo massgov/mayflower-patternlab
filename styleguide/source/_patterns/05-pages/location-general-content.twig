@@ -28,9 +28,9 @@
 {% endblock %}
 
 {% block sidebar %}
-  {% if sidebar.eventListing %}
-    {% set eventListing = sidebar.eventListing %}
-    {% include "@organisms/by-author/event-listing.twig" %}
+  {% if sidebar.eventList %}
+    {% set eventList = sidebar.eventList %}
+    {% include "@organisms/by-author/event-list.twig" %}
   {% endif %}
 {% endblock %}
 

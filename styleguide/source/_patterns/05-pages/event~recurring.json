@@ -393,7 +393,7 @@
   },
 
   "bottomContent": {
-    "eventListing": {
+    "eventList": {
       "compHeading":{
         "title": "Related Events",
         "centered": true

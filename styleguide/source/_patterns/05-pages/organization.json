@@ -528,9 +528,9 @@
         }
       }
     },{
-      "path": "@organisms/by-author/event-listing.twig",
+      "path": "@organisms/by-author/event-list.twig",
       "data": {
-        "eventListing": {
+        "eventList": {
           "grid": true,
           "compHeading":{
             "title": "Upcoming Events",

@@ -268,7 +268,7 @@
     }
   },
 
-  "eventListing": {
+  "eventList": {
     "grid": true,
     "compHeading":{
       "title": "Upcoming Events",

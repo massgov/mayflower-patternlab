@@ -67,9 +67,9 @@
   </div>
   <div class="post-content">
     {% block postContent %}
-      {% if bottomContent.eventListing %}
-        {% set eventListing = bottomContent.eventListing %}
-        {% include "@organisms/by-author/event-listing.twig" %}
+      {% if bottomContent.eventList %}
+        {% set eventList = bottomContent.eventList %}
+        {% include "@organisms/by-author/event-list.twig" %}
       {% endif %}
     {% endblock %}
   </div>

@@ -15,7 +15,7 @@ Example of an Executive Order page for Mass.gov
 * Rich Text
 * Form Downloads
 * Press Listing
-* Event Listing
+* Event List
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions (js/modules/accordions.js)

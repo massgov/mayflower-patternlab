@@ -13,7 +13,7 @@ This pattern is used as a template for Policy Advisory type pages and is based o
 * Footnote list
 * Header Tags
 * Press Listing
-* Event Listing
+* Event List
 * This template contains [Twig Blocks](https://twig.symfony.com/doc/2.x/tags/extends.html) that can be used to populated the Page Content, Right Rail, or Post Content sections with patterns found in Mayflower
 
 ### JavaScript Used
@@ -62,8 +62,8 @@ sideContent: {
     type: pressListing / optional
   },
 
-  eventListing: {
-    type: eventListing / optional
+  eventList: {
+    type: eventList / optional
   }
 }
 ~~~

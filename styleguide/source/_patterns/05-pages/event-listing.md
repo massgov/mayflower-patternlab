@@ -9,7 +9,7 @@ This is a filter page used to search for events.
 * Page Header
 * Event Filters
 * Results Heading
-* Event Listing
+* Event List
 * Pagination
 
 
@@ -32,8 +32,8 @@ mainContent: {
     type: resultsHeading / required
   },
 
-  eventListing: {
-    type: eventListing / required
+  eventList: {
+    type: eventList / required
   },
 
   pagination: {
