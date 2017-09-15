@@ -2,6 +2,7 @@
   "quickActions":{
     "coloredHeading": {
       "text":"Quick Actions",
+      "titleContext": "",
       "color":"green"
     },
     "sidebarHeading": "",
