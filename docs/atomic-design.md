@@ -35,8 +35,8 @@ A Molecules is a stylized collection of Atoms, Molecules, and or HTML elements. 
 * Almost always uses a theme SCSS file to style the element
 
 #### Example
-1. http://mayflower.digital.mass.gov/?p=molecules-image-promo
-    * This is an example of a molecule that includes other patterns, renders content data and has some theme based css applied.
+http://mayflower.digital.mass.gov/?p=molecules-image-promo
+* This is an example of a molecule that includes other patterns, renders content data and has some theme based css applied.
 
 
 ### Organisms - (layout of patterns)
@@ -50,21 +50,39 @@ An Organism is a layout of other patterns.  HTML5 elements and CSS styling used 
 * Data used by the Organism is used to control the layout
 
 #### Example
-1. http://mayflower.digital.mass.gov/?p=organisms-event-listing
-    * This is an example of an organism that includes other patterns, passes all content data to another pattern, has theme based css related to layout applied, and has a data variable to switch between a list and grid views.
+http://mayflower.digital.mass.gov/?p=organisms-event-listing
+* This is an example of an organism that includes other patterns, passes all content data to another pattern, has theme based css related to layout applied, and has a data variable to switch between a list and grid views.
 
 ### Templates
 * Template patterns serve the same purpose of an Organism, but they are used to represent a complete page.  Since we're working at the page level, templates should contain Twig Blocks as placeholders to allow pages to add patterns or to override default patterns contained within the Template pattern.
 
-
 #### Quick guide:
 * Similar to Organisms, but at the page level
-* Provides the base structure for a page
+* Provides the basic layout for a page
 * Contains Twig Blocks to include optional patterns or to override default patterns
+* Might have some CSS or JavaScript associated with it.
+
+#### Example
+http://mayflower.digital.mass.gov/?p=templates-location
+* This is an example of a template for location type pages.
+* There are several patterns included
+* CSS is used to layout the basic structure of the page
+* Additional Patterns can be added to two Twig Blocks, pageContent and sidebar
+* The page header and the page footer are contained in Twig Blocks, pre-content and post-content, that can be overridden if needed. 
 
 ### Pages
-Pages are used as an example of what the final Page for the site should look like.  Pages always start by Extending an existing template.
+Pages are used to show an example of how a template can be used.  Pages should extend an existing template to determine the basic layout for the page, use real content in the JSON that might be used on the live site, and include any additional optional patterns added to the template's Twig Block to complete the page.  The final produce should closely matche what we expect a final page to look like on the live site.
 
 #### Quick guide:
-* Always extends a template
-* Only contains include statements used in Twig Blocks.
+* Extends a template
+* Might include other patterns within a template's Twig Blocks
+* Contains real content within the json data (when available)
+* Rarely has any CSS or JavaScript associated with it
+
+#### Example
+http://mayflower.digital.mass.gov/?p=pages-location-park-content
+* This is an example of a Location page
+* It extends the location template
+* Several patterns are included in the pageContent and sidebar Twig Blocks
+* Real Content is used for the future Mt Greylock State Park page
+* There is no CSS or JS directly associated with this page
