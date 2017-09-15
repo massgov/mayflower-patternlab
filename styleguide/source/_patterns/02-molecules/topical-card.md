@@ -7,7 +7,7 @@ Displays a set of links in a card layout.
 ### Pattern Contains
 * Decorative Link
 * Callout Link
-* Cat Icon
+* Category Icon
 
 ### Variant options
 * Can be used with [Callout Links](./?p=molecules-topical-card-with-callout-links)

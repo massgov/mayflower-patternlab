@@ -9,7 +9,7 @@ This page [extends](https://twig.symfony.com/doc/2.x/tags/extends.html) the loca
 * Footer
 * Location (template)
 * Contact List
-* Key Actions
+* Callout Grid
 * Rich Text
 * Google Map
 * Image Promo

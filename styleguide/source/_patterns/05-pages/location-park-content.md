@@ -8,9 +8,9 @@ This page [extends](https://twig.symfony.com/doc/2.x/tags/extends.html) the loca
 * Header
 * Footer
 * Location (template)
-* Location Icons
+* Labelled Icons
 * Contact List
-* Key Actions
+* Callout Grid
 * Rich Text
 * Google Map
 * Image Promo

@@ -7,7 +7,7 @@ This Pattern describes the requirements needed to complete a form page
 ### Pattern Contains
 * Content Heading
 * Rich Text
-* Location Icons
+* Labelled Icons
 
 ### Variant options
 * When added to a [Right Rail](./?p=organisms-form-requirements-in-two-colmun) template the background color bleeds out to the left.

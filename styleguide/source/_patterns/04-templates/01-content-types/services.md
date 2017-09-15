@@ -9,7 +9,7 @@ Displays a collection of components to help describe an available Service on Mas
 * Image 
 * Video 
 * Rich Text 
-* Key Actions 
+* Callout Grid 
 * Icon Links 
 * Link List 
 * Featured Callouts

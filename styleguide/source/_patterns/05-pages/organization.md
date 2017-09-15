@@ -14,7 +14,7 @@ This is an example of an Organization page for Mass.gov using a stacked row temp
 * Icon Links
 * Featured Callouts
 * Mapped Locations
-* Section Three Up
+* Three Up Cards
 * Link List
 
 
