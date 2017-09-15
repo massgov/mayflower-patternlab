@@ -2,6 +2,15 @@
   font-size: 16px;
   letter-spacing: .1em;
   text-transform: uppercase;
+  max-width: 820px;
+
+  > span {
+    white-space: nowrap;
+  }
+
+  @media ($bp-medium-min) {
+    display: inline-flex;
+  }
 
   &__terms {
     display: inline;
@@ -26,6 +35,58 @@
 
       &:last-child {
         margin-right: 0;
+      }
+
+      @media ($bp-x-small-max) {
+        // On small screens each tag is full width.
+        display: block;
+        // On small screens only display 3 at max.
+        &:nth-of-type(1n+4) {
+          display: none;
+        }
+      }
+    }
+
+    > button {
+      @include ma-button-reset;
+      @include ma-link-underline;
+      @include ma-chevron;
+      padding-left: 10px;
+      font-size: 19px;
+      font-weight: 500;
+      color: #14558f;
+
+      &:after {
+        opacity: .5;
+        margin-left: 0;
+        border-width: 3px;
+        height: 8px;
+        width: 8px;
+        transform: translateY(-45%) rotate(45deg);
+      }
+
+      &.is-open:after {
+        transform: translateY(-55%) rotate(-135deg);
+      }
+
+      span:first-child {
+        display: inline;
+      }
+
+      &.is-open span:first-child {
+        display: none;
+      }
+
+      span:nth-child(2) {
+        display: none;
+      }
+
+      &.is-open span:nth-child(2) {
+        display: inline;
+      }
+
+      @media ($bp-x-small-max) {
+        display: none;
       }
     }
   }

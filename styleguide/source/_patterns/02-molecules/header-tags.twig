@@ -2,9 +2,12 @@
   {% if headerTags.label %}
     <span>{{ headerTags.label }}</span>
   {% endif %}
-  <div class="ma__header-tags__terms">
+  <div id="terms" class="ma__header-tags__terms">
     {% for item in headerTags.taxonomyTerms %}
       <a href="{{ item.href }}">{{ item.text }}</a>
     {% endfor %}
+    <button type="button" class="js-accordion-link" aria-expanded="false" aria-controls="terms">
+      <span>more</span><span>less</span>
+    </button>
   </div>
 </div>
