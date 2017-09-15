@@ -40,7 +40,7 @@ http://mayflower.digital.mass.gov/?p=molecules-image-promo
 
 
 ### Organisms - (layout of patterns)
-An Organism is a layout of other patterns.  HTML5 elements and CSS styling used for an Organism are for laying out the included patterns.  All content to be rendered, is passed on to the included patterns.  The only styling done for an Organism would be to help define the layout the patterns, like background-colors and borders.
+An Organism is a layout of other patterns.  HTML5 elements and CSS styling used in an Organism are for laying out the included patterns.  All content to be rendered, is passed on to the included patterns.  The only styling done for an Organism would be to help define the layout the patterns, like background-colors and borders.
 
 #### Quick guide:
 * Includes other patterns.
@@ -54,7 +54,7 @@ http://mayflower.digital.mass.gov/?p=organisms-event-listing
 * This is an example of an organism that includes other patterns, passes all content data to another pattern, has theme based css related to layout applied, and has a data variable to switch between a list and grid views.
 
 ### Templates
-* Template patterns serve the same purpose of an Organism, but they are used to represent a complete page.  Since we're working at the page level, templates should contain Twig Blocks as placeholders to allow pages to add patterns or to override default patterns contained within the Template pattern.
+* Template patterns define the layout and basic patterns needed when constructing a page.  Like Organisms, templates contain html elements to determine the layout and can include other patterns.  The also use Twig Blocks to provide locations for including additional patterns or overridding default patterns.
 
 #### Quick guide:
 * Similar to Organisms, but at the page level
@@ -71,7 +71,7 @@ http://mayflower.digital.mass.gov/?p=templates-location
 * The page header and the page footer are contained in Twig Blocks, pre-content and post-content, that can be overridden if needed. 
 
 ### Pages
-Pages are used to show an example of how a template can be used.  Pages should extend an existing template to determine the basic layout for the page, use real content in the JSON that might be used on the live site, and include any additional optional patterns added to the template's Twig Block to complete the page.  The final produce should closely matche what we expect a final page to look like on the live site.
+Pages are used to show an example of how a template can be used.  Pages should extend an existing template to determine the basic layout for the page, use real content in the JSON similar to that used on the live site, and include any additional optional patterns to complete the page.  The page constructed should closely matche what we expect a final page to look like on the live site.
 
 #### Quick guide:
 * Extends a template
