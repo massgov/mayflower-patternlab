@@ -21,6 +21,26 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Migrate Path
 
+## 5.7.2
+
+### Added
+
+### Changed
+
+- DP-5466 - Users can now enter in a zip or town in the town/zip location listing filter and press enter (i.e. without selecting an item from the autocomplete dropdown) AND select an autocomplete item from teh drop down to sort locations.
+
+## 5.7.1
+
+### Added
+
+### Changed
+
+- DP-5466 - Users can now enter in a zip or town in the town/zip location listing filter and press enter (i.e. without selecting an item from the autocomplete dropdown) to sort locations.
+
+### Removed
+
+### Migration path
+
 ## 5.7.0
 
 ### Added
