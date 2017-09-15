@@ -2,6 +2,7 @@
   "inputCheckbox": {
     "value": "checkbox",
     "id": "checkbox-test",
+    "icon": "@atoms/05-icons/svg-wheelchair.twig",
     "label": "Checkbox",
     "checked": true
   }

@@ -5,7 +5,7 @@ This is a set of columns designed to contain other patterns.
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Any pattern can be rendered in these columns by setting the 'path' variable to the location of the pattern and setting the 'data' variable to container the data object of that pattern.  
+* Any pattern can be rendered in these columns by setting the `path` variable to the location of the pattern and setting the `data` variable to container the data object of that pattern.  
   * {% include item.path with item.data %}
 
 

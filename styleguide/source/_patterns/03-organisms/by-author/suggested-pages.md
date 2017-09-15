@@ -7,6 +7,7 @@ This Pattern shows a collection of images and links to other pages on the site.
 ### Pattern Contains
 * Illustrated link
 * Decorative Link
+* Image
 
 ### Variant options
 * The pattern can be shown with [Illustrated Links](./?p=organisms-suggested-pages-guide)
@@ -26,9 +27,7 @@ This Pattern shows a collection of images and links to other pages on the site.
     type: string ('', 'guide') / optional,
   "pages": [{
     "image": 
-      type: string (image path) / required,
-    "altTag": 
-      type: string / required,
+      type: image / required,
     "link": {
       type: decorativeLink / required
     }
