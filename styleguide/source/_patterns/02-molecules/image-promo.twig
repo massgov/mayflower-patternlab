@@ -51,9 +51,14 @@
         </a>
       </div>
     {% endif %}
-    {% if imagePromo.description.richText %}
-      <div class="ma__image-promo__description">
+    {# backward compatible with v5.6 #}
+    {% if imagePromo.description.rteElements or imagePromo.description.richText %}
+      {% set richText = imagePromo.description %}
+
+      {% if imagePromo.description.richText %}
         {% set richText = imagePromo.description.richText %}
+      {% endif %}
+      <div class="ma__image-promo__description">
         {% include "@organisms/by-author/rich-text.twig" %}
       </div>
     {% endif %}

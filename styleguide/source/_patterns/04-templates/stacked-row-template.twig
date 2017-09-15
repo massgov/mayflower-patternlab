@@ -1,18 +1,61 @@
-{% include "@organisms/by-template/emergency-alerts.twig" %}
-{% include "@organisms/by-template/header.twig" %}
+{% block header %}
+  {% include "@organisms/by-template/emergency-alerts.twig" %}
+  {% include "@organisms/by-template/header.twig" %}
+{% endblock %}
+
 <main id="main-content" tabindex="-1">
   <div class="pre-content">
     {% block preContent %}
       {% include "@base/placeholder.twig" with {'placeholder':{'text':'Pre Content'}} %}
     {% endblock %}
   </div>
-  <div class="stacked-row-content">
+  <div class="ma__stacked-row">
     {% block stackedRowContent %}
       {% if jumpLinks %}
-        {% include "@organisms/by-template/jump-links.twig" %}
+        <div class="ma__stacked-row__jump-links">
+          {% include "@organisms/by-template/jump-links.twig" %}
+        </div>
       {% endif %}
-      {% for stackedRowSection in stackedRowSections %}
-        {% include "@organisms/by-author/stacked-row-section.twig" %}
+      
+      {# backward compatible with v 5.6 - stackedRowSections becomes stackedRow #}
+      {% if stackedRowSections %}
+        {% set stackedRows = stackedRowSections %}
+      {% endif %}
+
+      {% for stackedRow in stackedRows %}
+        {% set stackedRowRestriction = stackedRow.sideBar|length ? '' : 'ma__stacked-row--restricted' %}
+
+        <section class="ma__stacked-row__section {{ stackedRowRestriction }}">
+          {% if stackedRow.title %}
+            <div class="ma__stacked-row__container">
+              <div class="ma__stacked-row__title">
+                {% set compHeading = {
+                    "title": stackedRow.title,
+                    "sub": "",
+                    "color": "",
+                    "id": stackedRow.id
+                  }
+                %}
+                {% include "@atoms/04-headings/comp-heading.twig" %}
+              </div>
+            </div>
+          {% endif %}    
+          <div class="main-content {{ stackedRow.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
+            <div class="page-content">
+              {% for content in stackedRow.pageContent %}
+                {% include content.path with content.data %}
+              {% endfor %}
+            </div>
+            {% if stackedRow.sideBar|length %}
+              <aside class="sidebar">
+                {% for sidebar in stackedRow.sideBar %}
+                  {% include sidebar.path with sidebar.data %}
+                {% endfor %}
+              </aside>
+            {% endif %}
+          </div>
+        </section>
+
       {% endfor %}
     {% endblock %}
   </div>
@@ -24,4 +67,7 @@
   {% block schemaContent %}
   {% endblock %}
 </main>
-{% include "@organisms/by-template/footer.twig" %}
+
+{% block footer %}
+  {% include "@organisms/by-template/footer.twig" %}
+{% endblock %}

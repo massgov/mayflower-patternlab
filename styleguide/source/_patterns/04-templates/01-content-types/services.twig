@@ -45,8 +45,6 @@
                 {% include "@atoms/09-media/image.twig" %}
               {% endif %}
               {% if introSidebar.social %}
-                {% set sidebarHeading = introSidebar.social.sidebarHeading %}
-                {% include "@atoms/04-headings/sidebar-heading.twig" %}
                 {% set iconLinks = introSidebar.social.iconLinks %}
                 {% include "@molecules/icon-links.twig" %}
               {% endif %}

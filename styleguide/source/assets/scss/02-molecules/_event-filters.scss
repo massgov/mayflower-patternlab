@@ -26,6 +26,7 @@
     }
   }
 
+  // backward compatible with v5.6
   &__submit {
     @include ma-button('small');
   }

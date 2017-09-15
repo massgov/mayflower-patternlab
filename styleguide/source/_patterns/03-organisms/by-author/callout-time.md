@@ -8,6 +8,8 @@ This Pattern is used to describe how long it will take to complete a task.
 ### Variables
 ~~~
 calloutTime: {
+  icon:
+    type: string (path to icon) / optional
   text:
     type: string / required
 }
