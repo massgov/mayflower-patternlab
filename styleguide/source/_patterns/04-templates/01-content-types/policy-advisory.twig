@@ -61,9 +61,9 @@
           {% include "@organisms/by-author/press-listing.twig" %}
         {% endif %}
 
-        {% if sideContent.eventListing %}
-          {% set eventListing = sideContent.eventListing %}
-          {% include "@organisms/by-author/event-listing.twig" %}
+        {% if sideContent.eventList %}
+          {% set eventList = sideContent.eventList %}
+          {% include "@organisms/by-author/event-list.twig" %}
         {% endif %}
 
         {% block sidebar %}

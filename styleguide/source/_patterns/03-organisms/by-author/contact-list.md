@@ -13,7 +13,7 @@ Displays one of more Contacts Us patterns as a stacked list of accordions.
 * [Right Rail](./?p=organisms-contact-list-without-accordion) version
 
 ### Usage Guidelines
-* The viewSpecific variable is used to hide the pattern in the Page Content area for wide screens and hide the pattern in the Sidebar area for narrow screens.  Typically this variable is used when you want to show the Contacts in the Right Rail of a two column template at the top of the Page Content when the columns stack.
+* The viewSpecific variable is used to hide the pattern in the Page Content area for wide screens and hide the pattern in the Sidebar area for narrow screens.  Typically this variable is used when you want to show the Contacts in the Right Rail of a Right Rail template at the top of the Page Content when the columns stack.
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions (js/modules/accordions.js)

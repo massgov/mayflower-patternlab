@@ -1,0 +1,15 @@
+<section class="ma__labelled-icons">
+  {% if labelledIcons.title %}
+    <span class="visually-hidden">{{ labelledIcons.title }}</span>
+  {% endif %}
+  <div class="ma__labelled-icons__items">
+    {% for icon in labelledIcons.icons %}
+      <div class="ma__labelled-icons__item">
+        <div class="ma__labelled-icons__icon">
+          {% include icon.path %}
+        </div>
+        <div class="ma__labelled-icons__name">{{ icon.name }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

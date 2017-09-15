@@ -19,7 +19,7 @@
       },
       "sections": [{
         "id": "GUIDasjdhf1",
-        "catIcon": "",
+        "categoryIcon": "",
         "title" : {
           "href" : "#",
           "text" : "Office of the Governor"
@@ -34,7 +34,7 @@
         }
       },{
         "id": "GUIDasjdhf2",
-        "catIcon": "",
+        "categoryIcon": "",
         "title" : {
           "href" : "#",
           "text" : "Secretary of State"
@@ -49,7 +49,7 @@
         }
       },{
         "id": "GUIDasjdhf3",
-        "catIcon": "",
+        "categoryIcon": "",
         "title" : {
           "href" : "#",
           "text" : "Attorney General"
@@ -64,7 +64,7 @@
         }
       },{
         "id": "GUIDasjdhf4",
-        "catIcon": "",
+        "categoryIcon": "",
         "title" : {
           "href" : "#",
           "text" : "Treasurer"
@@ -79,7 +79,7 @@
         }
       },{
         "id": "GUIDasjdhf5",
-        "catIcon": "",
+        "categoryIcon": "",
         "title" : {
           "href" : "#",
           "text" : "State Auditor"
@@ -105,7 +105,7 @@
       },
       "sections": [{
         "id": "GUID2934852390562",
-        "catIcon": "",
+        "categoryIcon": "",
         "title" : {
           "href" : "#",
           "text" : "Executive Agencies"
@@ -120,7 +120,7 @@
         }
       },{
         "id": "GUID285782497",
-        "catIcon": "",
+        "categoryIcon": "",
         "title" : {
           "href" : "#",
           "text" : "Independent Agencies"

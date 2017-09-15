@@ -5,7 +5,7 @@ This pattern displays a collection of Contact Groups
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Column Heading
+* Content Heading
 * Contact Group
 
 ### Variant options
@@ -29,7 +29,7 @@ contactUs: {
   isExpanded:
     type: boolean
   subTitle: {
-    type: columnHeading / optional
+    type: contentHeading / optional
   }
   groups: [{
     type: array of contactGroup / required

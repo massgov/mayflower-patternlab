@@ -389,7 +389,7 @@
       }]
     },
 
-    "eventListing": {
+    "eventList": {
       "sidebarHeading":{
         "title": "Upcoming Events"
       },

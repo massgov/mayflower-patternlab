@@ -54,9 +54,9 @@
         }
       }
     },{
-      "path": "@organisms/by-author/key-actions.twig",
+      "path": "@organisms/by-author/callout-grid.twig",
       "data": {
-        "keyActions": {
+        "calloutGrid": {
           "links":[{
             "text": "Reserve a Campsite",
             "type": "",
@@ -74,9 +74,9 @@
       }
     }],
     "widgets": [{
-      "path": "@molecules/location-icons.twig",
+      "path": "@molecules/labelled-icons.twig",
       "data": {
-        "locationIcons": {
+        "labelledIcons": {
           "icons": [{
             "path":"@atoms/05-icons/svg-transit.twig",
             "name":"Transit Friendly"

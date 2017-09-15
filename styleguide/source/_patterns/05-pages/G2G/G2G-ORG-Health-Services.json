@@ -71,7 +71,7 @@
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
-  "stackedRowSections": [{
+  "stackedRows": [{
     "title":"",
     "id":"",
     "pageContent": [{
@@ -105,16 +105,16 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
-      "data": {
-        "sidebarHeading": {
-          "title": "Social"
-        }
-      }
-    },{
       "path": "@molecules/icon-links.twig",
       "data": {
         "iconLinks": {
+          "compHeading": {
+            "title": "Social",
+            "sub": true,
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
           "items": [{
             "icon": "@atoms/05-icons/svg-twitter.twig",
             "link": {
@@ -144,9 +144,9 @@
     "title":"",
     "id":"",
     "pageContent": [{
-      "path": "@organisms/by-author/action-finder.twig",
+      "path": "@organisms/by-author/featured-callouts.twig",
       "data": {
-        "actionFinder": {
+        "featuredCallouts": {
           "id": "GUID831741781374893",
           "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
           "bgNarrow":"../../assets/images/placeholder/800x800.png",
@@ -194,6 +194,392 @@
             "text": "Early Intervention",
             "href": "#"
           }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/press-listing.twig",
+      "data": {
+        "pressListing": {
+          "compHeading": {
+            "title": "Recent news & announcements",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
+          "items": [{
+            "image": {
+              "src":"/assets/images/placeholder/statehouse.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Release",
+            "title" : {
+              "href":"#",
+              "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/4/2017",
+            "org": "Health & Human Services, Public Safety",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "News Article",
+            "title" : {
+              "href":"#",
+              "text":"Tree House Brweing Co. Expands Its Horizons",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Mass Development",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          }],
+          "secondaryItems": [{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Release",
+            "title" : {
+              "href":"#",
+              "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/4/2017",
+            "org": "Health & Human Services, Public Safety",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "News Article",
+            "title" : {
+              "href":"#",
+              "text":"Tree House Brewing Co. Expands Its Horizons",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Mass Development",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Statement",
+            "title" : {
+              "href":"#",
+              "text":"Governor Baker Statement on Supreme Court Marriage Equality Decision",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Office of the Governor",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Release",
+            "title" : {
+              "href":"#",
+              "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/4/2017",
+            "org": "Health & Human Services, Public Safety",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "News Article",
+            "title" : {
+              "href":"#",
+              "text":"Tree House Brweing Co. Expands Its Horizons",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Mass Development",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Statement",
+            "title" : {
+              "href":"#",
+              "text":"Governor Baker Statement on Supreme Court Marriage Equality Decision",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Office of the Governor",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          }],
+          "more":{
+            "href": "#",
+            "text": "See all news and announcements",
+            "chevron": true,
+            "label": "See all news and announcements for the Executive Office of Health and Human Services"
+          }
+        }
+      }
+    },{
+      "path": "@organisms/by-author/three-up-cards.twig",
+      "data": {
+        "threeUpCards" : {
+          "compHeading": {
+            "title": "Featured Topics",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
+          "sections": [{
+            "id": "GUIDasjdhf1",
+            "categoryIcon": null,
+            "title" : {
+              "href" : "#",
+              "text" : "Health & Social Services"
+            },
+            "description": "Massachusetts offers services and resources to keep you and your loved ones healthy, safe, and happy. Find out how we can support you.",
+            "links" : [{
+              "href" : "#",
+              "text" : "Housing Assistance"
+            },{
+              "href" : "#",
+              "text" : "MassHealth & Other Health Care"
+            },{
+              "href" : "#",
+              "text" : "Food & Cash Assistance"
+            },{
+              "href" : "#",
+              "text" : "Special Needs & Accessible Living"
+            }],
+            "seeAll": {
+              "href": "#",
+              "text": "more",
+              "info": "learn more about Health & Social Services"
+            }
+          },
+          {
+            "id": "GUIDasjdhf2",
+            "categoryIcon": null,
+            "title" : {
+              "href" : "#",
+              "text" : "Families & Children"
+            },
+            "description": "The Commonwealth is committed to supporting safe, healthy, happy families. Find information ranging from how to get a marriage certificate to tips on raising active children.",
+            "links" : [{
+              "href" : "#",
+              "text" : "Caring for Children"
+            },{
+              "href" : "#",
+              "text" : "Health, Nutrition & Safety"
+            },{
+              "href" : "#",
+              "text" : "Marriage & Divorce"
+            },{
+              "href" : "#",
+              "text" : "Housing Assistance"
+            }],
+            "seeAll": {
+              "href": "#",
+              "text": "more",
+              "info": "learn more about Families & Children"
+            }
+          },
+          {
+            "id": "GUIDasjdhf3",
+            "categoryIcon": null,
+            "title" : {
+              "href" : "#",
+              "text" : "Housing & Property"
+            },
+            "description": "Do you own or rent property in Massachusetts? Find resources for tenants and landlords, homeowners, developers, and more.",
+            "links" : [{
+              "href" : "#",
+              "text" : "Renters/Tenants"
+            },{
+              "href" : "#",
+              "text" : "Landlords"
+            },{
+              "href" : "#",
+              "text" : "Homeowners"
+            },{
+              "href" : "#",
+              "text" : "Safety & Inspections"
+            }],
+            "seeAll": {
+              "href": "#",
+              "text": "more",
+              "info": "learn more about Housing & Property"
+            }
+          }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/event-list.twig",
+      "data": {
+        "eventList": {
+          "grid": true,
+          "compHeading":{
+            "title": "Upcoming Events",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
+          "events":[{
+            "title": {
+              "href": "#",
+              "text": "Winter Birding Event",
+              "info": "",
+              "property": ""
+            },
+            "location": "Lanesborough, MA",
+            "date": {
+              "summary": "March 30, 2017",
+              "startMonth": "Mar",
+              "startDay": "30",
+              "endMonth": "",
+              "endDay": ""
+            },
+            "time": "12 p.m. - 2 p.m.",
+            "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+          },{
+            "title": {
+              "href": "#",
+              "text": "First Day Hike",
+              "info": "",
+              "property": ""
+            },
+            "location": "Lanesborough, MA",
+            "date": {
+              "summary": "March 30, 2017 - April 10, 2017",
+              "startMonth": "Mar",
+              "startDay": "30",
+              "endMonth": "Apr",
+              "endDay": "10"
+            },
+            "time": "12 p.m. - 2 p.m.",
+            "description": ""
+          }],
+          "more":{
+            "href": "#",
+            "text": "See all events",
+            "chevron": true,
+            "label": "See all events for Executive Office of Health and Human Services"
+          }
         }
       }
     },{
@@ -248,100 +634,6 @@
               }
             }]
           }
-        }
-      }
-    },{
-      "path": "@organisms/by-author/sections-three-up.twig",
-      "data": {
-        "sectionThreeUp" : {
-          "compHeading": {
-            "title": "Featured Topics",
-            "sub": "",
-            "color": "",
-            "id": "",
-            "centered": ""
-          },
-          "sections": [{
-            "id": "GUIDasjdhf1",
-            "catIcon": null,
-            "title" : {
-              "href" : "#",
-              "text" : "Health & Social Services"
-            },
-            "description": "Massachusetts offers services and resources to keep you and your loved ones healthy, safe, and happy. Find out how we can support you.",
-            "links" : [{
-              "href" : "#",
-              "text" : "Housing Assistance"
-            },{
-              "href" : "#",
-              "text" : "MassHealth & Other Health Care"
-            },{
-              "href" : "#",
-              "text" : "Food & Cash Assistance"
-            },{
-              "href" : "#",
-              "text" : "Special Needs & Accessible Living"
-            }],
-            "seeAll": {
-              "href": "#",
-              "text": "more",
-              "info": "learn more about Health & Social Services"
-            }
-          },
-          {
-            "id": "GUIDasjdhf2",
-            "catIcon": null,
-            "title" : {
-              "href" : "#",
-              "text" : "Families & Children"
-            },
-            "description": "The Commonwealth is committed to supporting safe, healthy, happy families. Find information ranging from how to get a marriage certificate to tips on raising active children.",
-            "links" : [{
-              "href" : "#",
-              "text" : "Caring for Children"
-            },{
-              "href" : "#",
-              "text" : "Health, Nutrition & Safety"
-            },{
-              "href" : "#",
-              "text" : "Marriage & Divorce"
-            },{
-              "href" : "#",
-              "text" : "Housing Assistance"
-            }],
-            "seeAll": {
-              "href": "#",
-              "text": "more",
-              "info": "learn more about Families & Children"
-            }
-          },
-          {
-            "id": "GUIDasjdhf3",
-            "catIcon": null,
-            "title" : {
-              "href" : "#",
-              "text" : "Housing & Property"
-            },
-            "description": "Do you own or rent property in Massachusetts? Find resources for tenants and landlords, homeowners, developers, and more.",
-            "links" : [{
-              "href" : "#",
-              "text" : "Renters/Tenants"
-            },{
-              "href" : "#",
-              "text" : "Landlords"
-            },{
-              "href" : "#",
-              "text" : "Homeowners"
-            },{
-              "href" : "#",
-              "text" : "Safety & Inspections"
-            }],
-            "seeAll": {
-              "href": "#",
-              "text": "more",
-              "info": "learn more about Housing & Property"
-            }
-          }]
         }
       }
     },{

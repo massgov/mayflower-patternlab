@@ -1,0 +1,9 @@
+<section class="ma__icon-callout">
+  <div class="ma__icon-callout__container">
+    <span class="ma__icon-callout__icon">
+      {% set iconPath = iconCallout.icon ? : "@atoms/05-icons/svg-wait-time.twig" %}
+      {% include iconPath %}
+    </span>
+    <h5 class="ma__icon-callout__text">{{ iconCallout.text }}</h5>
+  </div>
+</section>

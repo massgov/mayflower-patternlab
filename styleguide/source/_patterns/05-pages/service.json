@@ -54,7 +54,7 @@
       }]
     },
 
-    "keyActions": {
+    "calloutGrid": {
       "compHeading": {
         "title": "First time?",
         "sub": true
@@ -83,10 +83,14 @@
     },
 
     "social": {
-      "sidebarHeading": {
-        "title": "Social"
-      },
       "iconLinks": {
+        "compHeading": {
+          "title": "Social",
+          "sub": true,
+          "color": "",
+          "id": "",
+          "centered": ""
+        },
         "items": [{
           "icon": "@atoms/05-icons/svg-twitter.twig",
           "link": {
@@ -124,8 +128,8 @@
     }
   },
 
-  "doActionFinder": {
-    "actionFinder": {
+  "dofeaturedCallouts": {
+    "featuredCallouts": {
       "id": "GUID90357801731903501238",
       "bgWide":"",
       "bgNarrow":"",
@@ -176,8 +180,8 @@
     }
   },
 
-  "learnActionFinder": {
-    "actionFinder": {
+  "learnfeaturedCallouts": {
+    "featuredCallouts": {
       "id": "GUID7501974075817350750",
       "bgWide":"",
       "bgNarrow":"",
@@ -280,7 +284,7 @@
     }
   },
 
-  "eventListing": {
+  "eventList": {
     "grid": true,
     "compHeading":{
       "title": "Upcoming Events",

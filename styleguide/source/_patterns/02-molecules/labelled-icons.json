@@ -1,0 +1,18 @@
+{
+  "labelledIcons": {
+    "title": "Location Features",
+    "icons": [{
+      "path":"@atoms/05-icons/svg-transit.twig",
+      "name":"Transit Friendly"
+    },{
+      "path":"@atoms/05-icons/svg-castle.twig",
+      "name":"Historic Site"
+    },{
+      "path":"@atoms/05-icons/svg-wheelchair.twig",
+      "name":"Wheelchair Accessible"
+    },{
+      "path":"@atoms/05-icons/svg-dog.twig",
+      "name":"Dogs Allowed"
+    }]
+  }
+}

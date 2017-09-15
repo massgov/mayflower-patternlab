@@ -31,9 +31,9 @@
             {% set richText = introPageContent.intro %}
             {% include "@organisms/by-author/rich-text.twig" %}
 
-            {% if introPageContent.keyActions %}
-              {% set keyActions = introPageContent.keyActions %}
-              {% include "@organisms/by-author/key-actions.twig" %}
+            {% if introPageContent.calloutGrid %}
+              {% set calloutGrid = introPageContent.calloutGrid %}
+              {% include "@organisms/by-author/callout-grid.twig" %}
             {% endif %}
           {% endblock %}
         </div>
@@ -45,8 +45,11 @@
                 {% include "@atoms/09-media/image.twig" %}
               {% endif %}
               {% if introSidebar.social %}
-                {% set sidebarHeading = introSidebar.social.sidebarHeading %}
-                {% include "@atoms/04-headings/sidebar-heading.twig" %}
+                {# Backward Compatible with v5.7 - added heading to iconLinks so this heading isn't needed #}
+                {% if introSidebar.social.sidebarHeading %}
+                  {% set sidebarHeading = introSidebar.social.sidebarHeading %}
+                  {% include "@atoms/04-headings/sidebar-heading.twig" %}
+                {% endif %}
                 {% set iconLinks = introSidebar.social.iconLinks %}
                 {% include "@molecules/icon-links.twig" %}
               {% endif %}
@@ -63,19 +66,19 @@
       <div class="main-content main-content--full">
         <div class="page-content">
           {% block pageContent %}
-            {% if doActionFinder %}
-              {% set actionFinder = doActionFinder.actionFinder %}
-              {% include "@organisms/by-author/action-finder.twig" %}
+            {% if dofeaturedCallouts %}
+              {% set featuredCallouts = dofeaturedCallouts.featuredCallouts %}
+              {% include "@organisms/by-author/featured-callouts.twig" %}
             {% endif %}
-            {% if learnActionFinder %}
-              {% set actionFinder = learnActionFinder.actionFinder %}
-              {% include "@organisms/by-author/action-finder.twig" %}
+            {% if learnfeaturedCallouts %}
+              {% set featuredCallouts = learnfeaturedCallouts.featuredCallouts %}
+              {% include "@organisms/by-author/featured-callouts.twig" %}
             {% endif %}
             {% if mappedLocations %}
               {% include "@organisms/by-author/mapped-locations.twig" %}
             {% endif %}
-            {% if eventListing %}
-              {% include "@organisms/by-author/event-listing.twig" %}
+            {% if eventList %}
+              {% include "@organisms/by-author/event-list.twig" %}
             {% endif %}
             {% if splitColumns %}
               {% include "@organisms/by-author/split-columns.twig" %}

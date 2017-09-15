@@ -7,13 +7,13 @@ This page [extends](https://twig.symfony.com/doc/2.x/tags/extends.html) the loca
 ### Pattern Contains
 * Header
 * Footer
-* Location Template
+* Location (template)
 * Contact List
-* Key Actions
+* Callout Grid
 * Rich Text
 * Google Map
 * Image Promo
-* Event Listing
+* Event List
 
 ### Variables
 See Patterns above

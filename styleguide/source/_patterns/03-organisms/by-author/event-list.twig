@@ -1,0 +1,27 @@
+{% set gridClass = eventList.grid ? 'ma__event-list--grid' : '' %}
+
+<section class="ma__event-list {{ gridClass }}">
+  <div class="ma__event-list__container">
+    {% if eventList.compHeading %}
+      {% set compHeading = eventList.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% endif %}
+    {% if eventList.sidebarHeading %}
+      {% set sidebarHeading = eventList.sidebarHeading %}
+      {% include "@atoms/04-headings/sidebar-heading.twig" %}
+    {% endif %}
+    <ul class="ma__event-list__items">
+      {% for eventTeaser in eventList.events %}
+        <li class="ma__event-list__item">
+          {% include "@molecules/event-teaser.twig" %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% if eventList.more %}
+      <div class="ma__event-list__more">
+        {% set link = eventList.more %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+    {% endif %}
+  </div>
+</section>

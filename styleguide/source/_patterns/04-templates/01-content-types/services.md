@@ -5,17 +5,17 @@ Displays a collection of components to help describe an available Service on Mas
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Page Banner organism
-* Image atom
-* Video atom
-* Rich Text organisms
-* Key Actions organism
-* Icon Links organism
-* Link List organism
-* Action Finder organism
-* Mapped Locations organism
-* Split Columns organism
-* Form Downloads organism
+* Page Banner 
+* Image 
+* Video 
+* Rich Text 
+* Callout Grid 
+* Icon Links 
+* Link List 
+* Featured Callouts
+* Mapped Locations 
+* Split Columns 
+* Form Downloads 
 
 
 ### Variant options
@@ -24,7 +24,7 @@ Displays a collection of components to help describe an available Service on Mas
 
 ### Notes
 * This Pattern's Layout is based off of the Stack Row template
-* The 50/50 columns contain a Linked List and a Form Downloads organism.
+* The 50/50 columns contain a Linked List organism and a Form Downloads organism.
 
 ### Variables
 ~~~
@@ -40,8 +40,8 @@ Displays a collection of components to help describe an available Service on Mas
       type: richText / required
     },
 
-    keyActions: {
-      type: keyActions / optional
+    calloutGrid: {
+      type: calloutGrid / optional
     }
   },
 
@@ -51,9 +51,6 @@ Displays a collection of components to help describe an available Service on Mas
     },
 
     social: {
-      sidebarHeading: {
-        type: sidebarHeading / optional
-      },
       iconLinks: {
         type: iconLinks / optional
       }
@@ -64,15 +61,15 @@ Displays a collection of components to help describe an available Service on Mas
     }
   },
 
-  doActionFinder: {
-    actionFinder: {
-      type: actionFinder / optional
+  dofeaturedCallouts: {
+    featuredCallouts: {
+      type: featuredCallouts / optional
     }
   },
 
-  learnActionFinder: {
-    actionFinder: {
-      type: actionFinder / optional
+  learnfeaturedCallouts: {
+    featuredCallouts: {
+      type: featuredCallouts / optional
     }
   },
 

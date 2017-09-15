@@ -43,7 +43,7 @@
         "info": ""
       },
 
-      "locationIcons": {
+      "labelledIcons": {
         "icons": [{
           "path":"@atoms/05-icons/svg-credit.twig",
           "name":"credit card"

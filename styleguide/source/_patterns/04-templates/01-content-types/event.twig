@@ -10,21 +10,21 @@
   </div>
   <div class="main-content main-content--two">
     <div class="page-content">
+      {% if sideContent.contactList %}
+        {% set contactList = sideContent.contactList|merge({'compHeading': sideContent.contactList.sidebarHeading, 'sidebarHeading': null}) %}
+        {% include "@organisms/by-author/contact-list.twig" %}
+      {% endif %}
+      {% if sideContent.mediaContact %}
+        {% set contactList = sideContent.mediaContact|merge({'compHeading': sideContent.mediaContact.sidebarHeading, 'sidebarHeading': null}) %}
+        {% include "@organisms/by-author/contact-list.twig" %}
+      {% endif %}
+
+      {% if mainContent.pageOverview %}
+        {% set pageOverview = mainContent.pageOverview %}
+        {% include "@organisms/by-author/page-overview.twig" %}
+      {% endif %}
+
       {% block pageContent %}
-        {% if sideContent.contactList %}
-          {% set contactList = sideContent.contactList|merge({'compHeading': sideContent.contactList.sidebarHeading, 'sidebarHeading': null}) %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        {% endif %}
-        {% if sideContent.mediaContact %}
-          {% set contactList = sideContent.mediaContact|merge({'compHeading': sideContent.mediaContact.sidebarHeading, 'sidebarHeading': null}) %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        {% endif %}
-
-        {% if mainContent.pageOverview %}
-          {% set pageOverview = mainContent.pageOverview %}
-          {% include "@organisms/by-author/page-overview.twig" %}
-        {% endif %}
-
         {% if mainContent.youWillNeed %}
           {% set richText = mainContent.youWillNeed %}
           {% include "@organisms/by-author/rich-text.twig" %}
@@ -52,7 +52,6 @@
       {% endblock %}
     </div>
     <aside class="sidebar">
-      {% block sidebar %}
         {% if sideContent.contactList %}
           {% set contactList = sideContent.contactList %}
           {% include "@organisms/by-author/contact-list.twig" %}
@@ -61,14 +60,16 @@
           {% set contactList = sideContent.mediaContact %}
           {% include "@organisms/by-author/contact-list.twig" %}
         {% endif %}
+      {% block sidebar %}
+        {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
       {% endblock %}
     </aside>
   </div>
   <div class="post-content">
     {% block postContent %}
-      {% if bottomContent.eventListing %}
-        {% set eventListing = bottomContent.eventListing %}
-        {% include "@organisms/by-author/event-listing.twig" %}
+      {% if bottomContent.eventList %}
+        {% set eventList = bottomContent.eventList %}
+        {% include "@organisms/by-author/event-list.twig" %}
       {% endif %}
     {% endblock %}
   </div>

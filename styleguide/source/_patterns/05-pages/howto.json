@@ -34,16 +34,17 @@
       }]
     },
     "optionalContents": [{
-      "path": "@organisms/by-author/callout-time.twig",
+      "path": "@organisms/by-author/icon-callout.twig",
       "data": {
-        "calloutTime": {
+        "iconCallout": {
+          "icon": "@atoms/05-icons/svg-wait-time.twig",
           "text": "Most applicants hear back within 4-6 weeks of applying"
         }
       }
     },{
-      "path": "@organisms/by-author/key-actions.twig",
+      "path": "@organisms/by-author/callout-grid.twig",
       "data": {
-        "keyActions": {
+        "calloutGrid": {
           "links":[{
             "text": "Apply online",
             "type": "",

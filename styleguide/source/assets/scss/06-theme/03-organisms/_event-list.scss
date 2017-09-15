@@ -1,0 +1,29 @@
+.ma__event-list {
+
+  &--grid &__item {
+    border-color: $c-bd-divider;
+
+    &:after {
+      border-color: $c-bd-divider;
+    }
+  }
+
+  &__item + &__item {
+    border-color: $c-bd-divider;
+  }
+
+  .post-content > & {
+    background-color: $c-bg-subtle;
+  }
+
+  .post-content > & &__container {
+
+    & > *:last-child {
+      border-bottom-color: $c-bd-divider;
+    }
+  }
+
+  .post-content > & &__item {
+    border-left-color: $c-bd-divider;
+  }
+}

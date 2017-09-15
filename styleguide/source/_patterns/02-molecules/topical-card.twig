@@ -1,0 +1,58 @@
+{% set titleId = "section_titles_" ~ topicalCard.id %}
+
+<section class="ma__topical-card js-accordion">
+  <div class="ma__topical-card__content">
+    {% if topicalCard.categoryIcon %}
+      <div class="ma__topical-card__icon">
+        {% set categoryIcon = topicalCard.categoryIcon %}
+        {% include "@atoms/05-icons/category-icon.twig" %}
+      </div>
+    {% endif %}
+    {% if topicalCard.subTitle %}
+      <h3 class="ma__topical-card__title js-accordion-link" id="{{ titleId }}">
+        {% set decorativeLink = topicalCard.title %}
+        {% include "@atoms/decorative-link.twig" %}
+      </h3>
+    {% else %}
+      <h2 class="ma__topical-card__title js-accordion-link" id="{{ titleId }}">
+        {% set decorativeLink = topicalCard.title %}
+        {% include "@atoms/decorative-link.twig" %}
+      </h2>
+    {% endif %}
+    <nav class="ma__topical-card__toggle-content js-accordion-body" aria-labelledby="{{ titleId }}">
+      {% if topicalCard.description %}
+        <p class="ma__topical-card__description">{{topicalCard.description}}</p>
+      {% endif %}
+      <div class="ma__topical-card__mobile-title">
+        {% set decorativeLink = { 
+          "type": "", 
+          "href": topicalCard.title.href, 
+          "text": "Learn More", 
+          "info": "learn more about " ~ topicalCard.title.text } 
+        %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
+      <ul class="ma__topical-card__items">
+        {% if topicalCard.type == "callout" %}
+          {% for calloutLink in topicalCard.links %}
+            <li class="ma__topical-card__item">
+              {% include "@molecules/callout-link.twig" %}
+            </li>
+          {% endfor %}
+        {% else %}
+          {% for decorativeLink in topicalCard.links %}
+            <li class="ma__topical-card__item">
+              {% include "@atoms/decorative-link.twig" %}
+            </li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </nav>
+    {% if topicalCard.seeAll %}
+      <div class="ma__topical-card__footer">
+        {% set decorativeLink = topicalCard.seeAll %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
+    {% endif %}
+  </div>
+</section>

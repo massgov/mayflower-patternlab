@@ -69,9 +69,9 @@
         }
       }
     },{
-      "path": "@organisms/by-author/key-actions.twig",
+      "path": "@organisms/by-author/callout-grid.twig",
       "data": {
-        "keyActions": {
+        "calloutGrid": {
           "links":[{
             "text": "optional sign up",
             "type": "",
@@ -421,7 +421,7 @@
   },
 
   "bottomContent": {
-    "eventListing": {
+    "eventList": {
       "compHeading":{
         "title": "Related Events",
         "centered": true

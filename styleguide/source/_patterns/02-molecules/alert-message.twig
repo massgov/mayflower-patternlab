@@ -1,0 +1,9 @@
+<p class="ma__alert-message" tabindex="0">
+  <span class="ma__alert-message__message">{{ alertMessage.message }} <span class="ma__alert-message__time-stamp">{{ alertMessage.timeStamp }}</span></span>
+  {% if alertMessage.link %}
+  <span class="ma__alert-message__link">
+      {% set link = alertMessage.link %}
+      {% include "@atoms/11-text/link.twig" %}
+  </span>
+  {% endif %}
+</p>

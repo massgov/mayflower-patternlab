@@ -1,4 +1,4 @@
-{% extends '@templates/two-column.twig' %}
+{% extends '@templates/right-rail.twig' %}
 
 {% block preContent %}
   {% include "@organisms/by-template/page-header.twig" %}
@@ -33,8 +33,8 @@
   {% set pressListing = sideContent.pressListing %}
   {% include "@organisms/by-author/press-listing.twig" %}
 
-  {% set eventListing = sideContent.eventListing %}
-  {% include "@organisms/by-author/event-listing.twig" %}
+  {% set eventList = sideContent.eventList %}
+  {% include "@organisms/by-author/event-list.twig" %}
 {% endblock %}
 {% block postContent %}
 

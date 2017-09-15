@@ -1,0 +1,13 @@
+.ma__icon-callout {
+
+  &__icon {
+
+    & > svg {
+      fill: $c-theme-tertiary;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+  }
+}

@@ -1,5 +1,5 @@
 ### Description
-This pattern is based off of the Two Column template with an additional sticky left nav.
+This pattern is based off of the Right Rail template with an additional sticky left nav.
 
 ### Status
 * Stable as of 5.0.0

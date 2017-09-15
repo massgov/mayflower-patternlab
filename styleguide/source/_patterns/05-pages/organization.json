@@ -2,13 +2,6 @@
   "urlPath": "/?p=pages-ORG-Health-Services",
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Health and Human Services (EOHHS)",
-      "href": "#"
-    }]
-  },
 
   "pageBanner": {
     "bgWide":"../../assets/images/placeholder/1600x400.png",
@@ -78,7 +71,7 @@
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
-  "stackedRowSections": [{
+  "stackedRows": [{
     "title":"",
     "id":"",
     "pageContent": [{
@@ -112,16 +105,16 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
-      "data": {
-        "sidebarHeading": {
-          "title": "Social"
-        }
-      }
-    },{
       "path": "@molecules/icon-links.twig",
       "data": {
         "iconLinks": {
+          "compHeading": {
+            "title": "Social",
+            "sub": true,
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
           "items": [{
             "icon": "@atoms/05-icons/svg-twitter.twig",
             "link": {
@@ -151,9 +144,9 @@
     "title":"",
     "id":"",
     "pageContent": [{
-      "path": "@organisms/by-author/action-finder.twig",
+      "path": "@organisms/by-author/featured-callouts.twig",
       "data": {
-        "actionFinder": {
+        "featuredCallouts": {
           "id": "GUID831741781374893",
           "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
           "bgNarrow":"../../assets/images/placeholder/800x800.png",
@@ -441,9 +434,9 @@
         }
       }
     },{
-      "path": "@organisms/by-author/sections-three-up.twig",
+      "path": "@organisms/by-author/three-up-cards.twig",
       "data": {
-        "sectionThreeUp" : {
+        "threeUpCards" : {
           "compHeading": {
             "title": "Featured Topics",
             "sub": "",
@@ -453,7 +446,7 @@
           },
           "sections": [{
             "id": "GUIDasjdhf1",
-            "catIcon": null,
+            "categoryIcon": null,
             "title" : {
               "href" : "#",
               "text" : "Health & Social Services"
@@ -480,7 +473,7 @@
           },
           {
             "id": "GUIDasjdhf2",
-            "catIcon": null,
+            "categoryIcon": null,
             "title" : {
               "href" : "#",
               "text" : "Families & Children"
@@ -507,7 +500,7 @@
           },
           {
             "id": "GUIDasjdhf3",
-            "catIcon": null,
+            "categoryIcon": null,
             "title" : {
               "href" : "#",
               "text" : "Housing & Property"
@@ -535,9 +528,9 @@
         }
       }
     },{
-      "path": "@organisms/by-author/event-listing.twig",
+      "path": "@organisms/by-author/event-list.twig",
       "data": {
-        "eventListing": {
+        "eventList": {
           "grid": true,
           "compHeading":{
             "title": "Upcoming Events",

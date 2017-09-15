@@ -14,7 +14,7 @@ This is Event style content type.
 * Form Downloads
 * Contact List
 * Link List
-* Event Listing
+* Event List
 
 ### Variables
 ~~~
@@ -59,8 +59,8 @@ sideContent: {
 },
 
 bottomContent: {
-  eventListing: {
-    type: eventListing / optional
+  eventList: {
+    type: eventList / optional
   }
 }
 ~~~

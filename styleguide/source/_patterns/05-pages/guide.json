@@ -5,14 +5,14 @@
 
   "backToTopButton": true,
 
-  "emergencyAlerts": {
+  "siteAlerts": {
     "id":"GUID18378923w38789",
     "buttonAlert": {
       "hideText": "Hide",
       "showText": "Show",
       "text": "Updates"
     },
-    "emergencyHeader": {
+    "alertHeader": {
       "title": "The State is experiencing severe weather due to the winter storm Paula."
     },
     "alerts": [{
@@ -124,7 +124,7 @@
     }]
   },
 
-  "stackedRowSections": [{
+  "stackedRows": [{
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
     "pageContent": [{
@@ -488,10 +488,8 @@
       "path":"@organisms/by-author/callout-alert.twig",
       "data":{
         "calloutAlert": {
-          "decorativeLink": {
-            "href": "",
-            "text": "Massachusetts requires you to license your dog"
-          }
+          "href": "",
+          "text": "Massachusetts requires you to license your dog"
         }
       }
     }],
@@ -515,9 +513,9 @@
         }
       }
     },{
-      "path":"@organisms/by-author/key-actions.twig",
+      "path":"@organisms/by-author/callout-grid.twig",
       "data":{
-        "keyActions": {
+        "calloutGrid": {
           "compHeading": {
             "title": "Key Actions",
             "sub":true
@@ -678,9 +676,10 @@
     "title": "Converting Your Out-of-Country Driver’s License",
     "id": "converting-your-out-of-country-drivers-license",
     "pageContent": [{
-      "path": "@organisms/by-author/callout-time.twig",
+      "path": "@organisms/by-author/icon-callout.twig",
       "data": {
-        "calloutTime": {
+        "iconCallout": {
+          "icon": "@atoms/05-icons/svg-wait-time.twig",
           "text": "This usually takes approximately 4 weeks"
         }
       }
@@ -786,9 +785,9 @@
         "splitColumns": {
           "columns": [{
             "items": [{
-              "path": "@atoms/04-headings/column-heading.twig",
+              "path": "@atoms/04-headings/content-heading.twig",
               "data": {
-                "columnHeading" : {
+                "contentHeading" : {
                   "text": "Subheading Section Name 1"
                 }
               }
@@ -809,9 +808,9 @@
             }]
           },{
             "items": [{
-              "path": "@atoms/04-headings/column-heading.twig",
+              "path": "@atoms/04-headings/content-heading.twig",
               "data": {
-                "columnHeading" : {
+                "contentHeading" : {
                   "text": "Subheading Section Name 2"
                 }
               }
@@ -843,9 +842,9 @@
             }]
           },{
             "items": [{
-              "path": "@atoms/04-headings/column-heading.twig",
+              "path": "@atoms/04-headings/content-heading.twig",
               "data": {
-                "columnHeading" : {
+                "contentHeading" : {
                   "text": "Subheading Section Name 3"
                 }
               }
@@ -868,9 +867,9 @@
         }
       }
     },{
-      "path":"@organisms/by-author/key-actions.twig",
+      "path":"@organisms/by-author/callout-grid.twig",
       "data":{
-        "keyActions": {
+        "calloutGrid": {
           "compHeading": {
             "title": "Key Actions",
             "sub":true
@@ -898,8 +897,12 @@
       "text": "See All Guides"
     },
     "pages": [{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -907,8 +910,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -916,8 +923,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",

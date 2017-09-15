@@ -1,0 +1,14 @@
+.ma__labelled-icons {
+
+  &__icon {
+
+    svg {
+      fill: $c-theme-secondary;
+    }
+  }
+
+  &__name {
+    color: $c-font-medium;
+    font-weight: 700;
+  }
+}

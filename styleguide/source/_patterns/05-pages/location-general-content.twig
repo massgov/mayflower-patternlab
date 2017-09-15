@@ -23,12 +23,14 @@
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set richText = mainContent.restrictions %}
   {% include "@organisms/by-author/rich-text.twig" %}
+  {% set formDownloads = mainContent.formDownloads %}
+  {% include "@organisms/by-author/form-downloads.twig" %}
 {% endblock %}
 
 {% block sidebar %}
-  {% if sidebar.eventListing %}
-    {% set eventListing = sidebar.eventListing %}
-    {% include "@organisms/by-author/event-listing.twig" %}
+  {% if sidebar.eventList %}
+    {% set eventList = sidebar.eventList %}
+    {% include "@organisms/by-author/event-list.twig" %}
   {% endif %}
 {% endblock %}
 

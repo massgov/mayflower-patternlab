@@ -12,12 +12,12 @@ body {
 img,
 .ma__google-map,
 .ma__mapped-locations,
-.ma__section-links {
+.ma__topical-card {
    page-break-inside: avoid;
 }
 
-.ma__sections-3up,
-.ma__sections-3up__container {
+.ma__three-up-cards,
+.ma__three-up-cards__container {
   page-break-inside: auto;
 }
 
@@ -34,7 +34,7 @@ h1,
 .ma__footer,
 .ma__action-details__anchor-links,
 .ma__header-tags,
-.ma__emergency-alerts,
+.ma__site-alerts,
 .ma__illustrated-header__image,
 .ma__jump-links,
 .ma__suggested-pages,
@@ -42,7 +42,7 @@ h1,
 .ma__action-activities__image,
 .ma__action-activities__link,
 .ma__action-header__divider,
-.ma__action-finder__see-all-container,
+.ma__featured-callouts__see-all-container,
 .ma__page-banner__icon,
 .ma__page-banner--small .ma__page-banner__icon,
 .ma__location-banner__image,
@@ -164,11 +164,11 @@ h4 {
 }
 
 .main-content--two,
-.ma__sections-3up__container,
+.ma__three-up-cards__container,
 .ma__top-actions,
 .ma__image-credit__container,
 .ma__link-list__container,
-.ma__sections-3up__title {
+.ma__three-up-cards__title {
     padding-left: 0;
     padding-right: 0;
 }
@@ -246,7 +246,7 @@ h4 {
     margin-bottom: 25px;
 }
 
-.ma__split-columns__container, .ma__key-actions__container {
+.ma__split-columns__container, .ma__callout-grid__container {
   padding: 0;
 }
 
@@ -270,7 +270,7 @@ h4 {
   }
 }
 
-.ma__key-actions__items .ma__callout-link {
+.ma__callout-grid__items .ma__callout-link {
     width: 48.78049%;
 }
 
@@ -318,7 +318,7 @@ h4 {
   padding-top: 0;
 }
 
-.ma__location-icons__name {
+.ma__labelled-icons__name {
   font-size: 10px;
 }
 
@@ -404,8 +404,8 @@ h4 {
 }
 
 .ma__page-banner--large .ma__page-banner__title, .ma__page-banner--small .ma__page-banner__title,
-.ma__action-finder__title,
-.ma__action-finder__category,
+.ma__featured-callouts__title,
+.ma__featured-callouts__category,
 .ma__page-banner__title {
   color: $c-font-heading;
   font-weight: 700;
@@ -429,25 +429,25 @@ h4 {
   margin-bottom: 30px;
 }
 
-.ma__action-finder,
-.ma__action-finder:after {
+.ma__featured-callouts,
+.ma__featured-callouts:after {
   background: none !important;
 }
 
-.ma__action-finder__header {
+.ma__featured-callouts__header {
   padding-bottom: 30px;
 }
 
-.ma__action-finder__container {
+.ma__featured-callouts__container {
   margin-bottom: 30px;
   padding: 0;
 }
 
-.ma__action-finder__items--all .ma__callout-link {
+.ma__featured-callouts__items--all .ma__callout-link {
   border-color: $c-bd-divider;
 }
 
-.ma__action-finder__items--all .ma__illustrated-link {
+.ma__featured-callouts__items--all .ma__illustrated-link {
   border: 3px solid $c-bd-divider;
 }
 
@@ -463,34 +463,34 @@ h4 {
   padding: 10px 0 10px 20px;
 }
 
-.ma__section-links__content,
-.ma__section-links__toggle-content {
+.ma__topical-card__content,
+.ma__topical-card__toggle-content {
     padding: 0;
 }
 
-.ma__sections-3up__container > * {
+.ma__three-up-cards__container > * {
   margin-bottom: 40px;
   margin-right: 0;
   width: 100%;
 }
 
-.ma__section-links {
+.ma__topical-card {
   background-color: transparent;
 }
 
-.ma__action-finder__header {
+.ma__featured-callouts__header {
   padding-bottom: 0;
 }
 
-.ma__action-finder__title,
-.ma__section-links__title,
+.ma__featured-callouts__title,
+.ma__topical-card__title,
 .ma__link-list__title {
   padding-bottom: 0;
 }
 
 .ma__comp-heading:after,
-.ma__section-links__title:after,
-.ma__action-finder__title:after,
+.ma__topical-card__title:after,
+.ma__featured-callouts__title:after,
 .ma__top-actions__title:after,
 .ma__link-list__title:after,
 .ma__rich-text h2:after,
@@ -499,7 +499,7 @@ h4 {
   display: none;
 }
 
-.ma__sections-3up {
+.ma__three-up-cards {
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -508,7 +508,7 @@ h4 {
   padding: 0;
 }
 
-.ma__page-banner--large .ma__page-banner__title, .ma__page-banner--small .ma__page-banner__title, .ma__action-finder__title, .ma__action-finder__category {
+.ma__page-banner--large .ma__page-banner__title, .ma__page-banner--small .ma__page-banner__title, .ma__featured-callouts__title, .ma__featured-callouts__category {
   margin-bottom: 30px;
 }
 
@@ -526,7 +526,7 @@ h4 {
   text-align: left;
 }
 
-.ma__section-links__icon {
+.ma__topical-card__icon {
   margin-top: 0;
   text-align: left;
 }
