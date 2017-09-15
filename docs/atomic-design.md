@@ -1,9 +1,11 @@
 # Atomic Design in Mayflower
 
 ## About Atomic Design
-The Mayflower style library is built using Atomic Design.  You can find an excellent description of Atomic Design on Brad Frost's [blog](http://atomicdesign.bradfrost.com/chapter-2/).  
+The Mayflower style library is built using Atomic Design. The way I tend to think of building a site using Atomic Design is to see it as a LEGO set where your combining a collection of small parts  to make a variety of different models.  Atomic Design is similar in nature, where you define a collection of small html parts called Atoms and then use those to build a variety of web pages. 
 
-The way I tend to think of building a site using Atomic Design is to see it as a LEGO set where your combining a collection of small parts  to make a variety of different models.  Atomic Design is similar in nature, where you define a collection of small html parts called Atoms and then use those to build a variety of web pages.
+You can find an excellent description of Atomic Design on Brad Frost's [blog](http://atomicdesign.bradfrost.com/chapter-2/). 
+
+We are following his guide fairly closely, but I differ when it comes to Molecules and Organisms. He sees then as being defined based on their complexity, but I found in practice that it was difficult to make that distinction.  I like to think of Molecules as larger Atoms (components with custom styling or additional content) and Organisms as being smaller templates (component level)  
 
 ### Atoms (an "indivisible unit")
 An Atom is the smallest logically stylized pattern in Atomic Design.  Dividing an Atom into smaller parts would result in an unstable pattern that would be dependent on another pattern.  As such Atoms would never include other patterns.
