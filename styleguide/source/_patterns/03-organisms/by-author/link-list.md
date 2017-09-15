@@ -38,6 +38,8 @@ linkList : {
     type: boolean
   links : [{
     type: array of decorativeLink / required
-  }]
+  }],
+  more:
+    type: decorativeLink / optional
 }
 ~~~

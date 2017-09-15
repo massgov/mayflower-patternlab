@@ -3,15 +3,15 @@
 
 {% if emergencyAlerts.alerts or emergencyAlerts.emergencyHeader %}
   <section class="ma__emergency-alerts {{ accordionClass }}" data-id="{{emergencyAlerts.id}}">
+  {% set buttonAlert = emergencyAlerts.buttonAlert|merge({ 'class': 'js-accordion-link' }) %}
     <div class="ma__emergency-alerts__header">
       <div class="ma__emergency-alerts__container">
         {% set emergencyHeader = emergencyAlerts.emergencyHeader %}
         {% include "@molecules/emergency-header.twig" %}
         {% if alertsExist %}
-          <div class="ma__emergency-alerts__header-interface js-accordion-link">
-            {% set buttonAlert = emergencyAlerts.buttonAlert %}
-            {% include "@molecules/button-alert.twig" %}
-          </div>
+        <div class="ma__emergency-alerts__header-interface">
+          {% include "@molecules/button-alert.twig" %}
+        </div>
         {% endif %}
       </div>
     </div>
@@ -23,10 +23,9 @@
           {% endfor %}
         </div>
       </div>
-      <div class="ma__emergency-alerts__interface js-accordion-link">
-        {% set buttonAlert = emergencyAlerts.buttonAlert %}
-        {% include "@molecules/button-alert.twig" %}
-      </div>
+    <div class="ma__emergency-alerts__interface">
+      {% include "@molecules/button-alert.twig" %}
+    </div>
     {% endif %}
   </section>
 {% endif %}

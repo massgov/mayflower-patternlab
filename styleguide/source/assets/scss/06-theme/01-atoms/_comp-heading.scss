@@ -1,15 +1,16 @@
 .ma__comp-heading {
   @include ma-comp-heading($c-theme-secondary);
 
-  .sidebar & {
+  .sidebar &,
+  &--sidebar {
     @include ma-sidebar-heading($c-bd-divider,$c-font-base);
   }
 
   .sidebar--colored & {
     @include ma-heading-colored($c-bg-comp-title);
   }
-}
 
-.ma__comp-heading--yellow {
-  @include ma-border-decorative($c-theme-yellow, 1);
+  &--yellow {
+    @include ma-border-decorative($c-theme-yellow, 1);
+  }
 }

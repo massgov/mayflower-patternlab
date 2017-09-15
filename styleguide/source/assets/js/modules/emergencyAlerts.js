@@ -16,7 +16,7 @@ export default function (window,document,$,undefined) {
         id = $el.data('id'),
         cookieName = 'emergency-alerts' + id,
         cookieValue = cookie.getCookie(cookieName),
-        $button = $el.find('.js-accordion-link button');
+        $button = $el.find('.js-accordion-link');
 
     $button.on('click', function() {
       // clicking this link also triggers the accordion click
