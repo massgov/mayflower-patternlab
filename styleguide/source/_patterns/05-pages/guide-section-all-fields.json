@@ -79,7 +79,7 @@
     }]
   },
 
-  "stackedRowSections": [{
+  "stackedRows": [{
       "title": "Section with Everything",
       "id": "another-section-name6",
       "pageContent": [
@@ -87,6 +87,7 @@
           "path": "@organisms/by-author/callout-time.twig",
           "data": {
             "calloutTime": {
+              "icon": "@atoms/05-icons/svg-wait-time.twig",
               "text": "This usually takes approximately 4 weeks"
             }
           }
@@ -133,10 +134,8 @@
           "path":"@organisms/by-author/callout-alert.twig",
           "data":{
             "calloutAlert": {
-              "decorativeLink": {
-                "href": "",
-                "text": "Massachusetts requires you to license your dog"
-              }
+              "href": "",
+              "text": "Massachusetts requires you to license your dog"
             }
           }
         },
@@ -301,8 +300,12 @@
       "text": "See All Guides"
     },
     "pages": [{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -310,8 +313,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -319,8 +326,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",

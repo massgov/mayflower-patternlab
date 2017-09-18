@@ -1,5 +1,5 @@
 ### Description
-An `<h3>` element used as a subheading.  Typically used in the right rail or in a 50/50 column container.
+An `<h3>` element used as a subheading.  Typically used in the Right Rail or in a 50/50 column container.
 
 ### Status
 * Stable as of 3.0.0
@@ -9,7 +9,7 @@ An `<h3>` element used as a subheading.  Typically used in the right rail or in 
 sidebarHeading: {
     title:
         type: string / required
-    titleContext: 
-    type: string / optional
+    titleContext:
+        type: string / optional
   }
 ~~~

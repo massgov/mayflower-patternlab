@@ -2,7 +2,7 @@
   "footnoteList": {
     "items": [{
       "number": 1,
-      "target": "#",
+      "target": "#GUID8977u823s",
       "id": "footnotemsg1",
       "richText": {
         "property": "",
@@ -24,7 +24,7 @@
       }
     },{
       "number": 2,
-      "target": "#",
+      "target": "#GUID827359874sjdh",
       "id": "footnotemsg1",
       "richText": {
         "property": "",
