@@ -63,20 +63,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Migrate Path
 - Input Checkbox
-    - `inputCheckbox.checked` is now a boolean value
+    - `checked` is now a boolean value
 - Input Radio
-    - `inputRadio.checked` is now a boolean value
+    - `checked` is now a boolean value
 - Comp Heading 
     - `centered` is now a boolean value
 - Video
     - Updated Twig markup
 - Link 
     - `link.chevron` is now a boolean value
-    - `link.label` is now `link.info`
+    - `label` is now `info`
 - Key Actions / Callout Grid
     - `sidebarHeading` is now `compHeading` with `compHeading.sidebar` set to true
 - Header Alert
-    - `headerAlert.guid` is now `headerAlert.id`
+    - `guid` is now `id`
+- Illustrated Header
+    - `bgTitle` is now `bgInfo`
+- Location Banner
+    - `bgTitle` is now `bgInfo`
 
 ## 5.7.2
 

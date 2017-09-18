@@ -42,7 +42,7 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "illustratedHeader": {
-    "bgTitle": "Forest of the Berkshires",
+    "bgInfo": "Forest of the Berkshires",
     "bgImage": "../../assets/images/placeholder/800x450.png",
     "category": "Guide",
     "pageHeader": {
