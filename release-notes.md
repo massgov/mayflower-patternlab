@@ -70,6 +70,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
     - `centered` is now a boolean value
 - Video
     - Updated Twig markup
+- Link 
+    - `link.chevron` is now a boolean value
+    - `link.label` is now `link.info`
 
 ## 5.7.2
 

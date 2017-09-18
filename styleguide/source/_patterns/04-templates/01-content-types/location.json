@@ -137,9 +137,9 @@
         "accordion": true,
         "isExpanded": false,
         "subTitle": {
-          "href":"",
+          "href": "#",
           "text": "Department name",
-          "chevron":""
+          "chevron": false
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
@@ -188,9 +188,9 @@
         "accordion": false,
         "isExpanded": false,
         "subTitle": {
-          "href":"",
+          "href": "#",
           "text": "Department name",
-          "chevron":""
+          "chevron": false
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",

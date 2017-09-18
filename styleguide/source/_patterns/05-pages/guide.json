@@ -21,7 +21,7 @@
       "link": {
         "href": "#",
         "text":"Read full alert",
-        "chevron": "true"
+        "chevron": true
       }
     },{
       "message": "The MTBA is operating at a lighter service level, and experiencing delays.",
@@ -29,7 +29,7 @@
       "link": {
         "href": "#",
         "text":"Read full alert",
-        "chevron": "true"
+        "chevron": true
       }
     },{
       "message": "The Governor directs non-emergency executive branch state employees to not come in to work.",
@@ -37,7 +37,7 @@
       "link": {
         "href": "#",
         "text":"Read full alert",
-        "chevron": "true"
+        "chevron": true
       }
     }]
   },
@@ -175,9 +175,9 @@
             "accordion": false,
             "isExpanded": false,
             "subTitle": {
-              "href":"#",
+              "href": "#",
               "text": "Office of Consumer Affairs & Business Regulation (OCABR)",
-              "chevron":""
+              "info": ""
             },
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",
@@ -278,7 +278,7 @@
             "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-              "chevron":""
+              "info": ""
             },
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",
@@ -380,7 +380,7 @@
             "subTitle": {
               "href":"#",
               "text": "Executive Office of Energy and Environmental Affairs (EEA)",
-              "chevron":""
+              "info": ""
             },
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",
@@ -417,7 +417,7 @@
             "subTitle": {
               "href":"#",
               "text": "Massachusetts Department of Public Utilities (DPU)",
-              "chevron":""
+              "info": ""
             },
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",
@@ -557,7 +557,7 @@
             "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-              "chevron":""
+              "info": ""
             },
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",
@@ -639,7 +639,7 @@
             "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-              "chevron":""
+              "info": ""
             },
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",
@@ -742,7 +742,7 @@
             "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
-              "chevron":""
+              "info": ""
             },
             "groups": [{
               "icon": "@atoms/05-icons/svg-phone.twig",

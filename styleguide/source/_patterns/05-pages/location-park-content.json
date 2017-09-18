@@ -648,9 +648,9 @@
        "accordion": true,
        "isExpanded": false,
        "subTitle": {
-         "href":"",
+         "href": "#",
          "text": "Museum",
-         "chevron":""
+         "info": ""
        },
        "groups": [{
          "icon": "@atoms/05-icons/svg-phone.twig",

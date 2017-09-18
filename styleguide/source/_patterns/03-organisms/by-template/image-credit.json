@@ -11,7 +11,7 @@
         "href": "#",
         "target": "",
         "text":"Source Name",
-        "chevron": ""
+        "chevron": false
       },
       "source":"Source Name"
     },

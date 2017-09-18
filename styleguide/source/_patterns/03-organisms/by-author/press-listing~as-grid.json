@@ -202,7 +202,7 @@
       "href": "#",
       "text": "See all news and announcements",
       "chevron": true,
-      "label": "See all news and announcements for the blah blah location"
+      "info": "See all news and announcements for the blah blah location"
     }
   }
 }

@@ -42,23 +42,23 @@
             "items": [{
               "href": "#",
               "text":"Apply for Unemployment",
-              "chevron": "true"
+              "chevron": true
             },{
               "href": "#",
               "text":"Register my Vehicle",
-              "chevron": "true"
+              "chevron": true
             },{
               "href": "#",
               "text":"Find My Local Polling Station",
-              "chevron": "true"
+              "chevron": true
             },{
               "href": "#",
               "text":"Search for Unclaimed Property",
-              "chevron": "true"
+              "chevron": true
             },{
               "href": "#",
               "text":"Learn about Fishing and Hunting",
-              "chevron": "true"
+              "chevron": true
             }]
           }
         }

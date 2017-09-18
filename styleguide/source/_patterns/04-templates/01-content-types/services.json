@@ -79,7 +79,7 @@
         "text": "Check eligibility",
         "type": "",
         "href": "#",
-        "label": ":"
+        "label": ""
       }]
     }
   },
@@ -102,21 +102,24 @@
           "link": {
             "href": "#",
             "text": "@Twitter - optional",
-            "chevron": ""
+            "chevron": false,
+            "info": ""
           }
         },{
           "icon": "@atoms/05-icons/svg-flickr.twig",
           "link": {
             "href": "#",
             "text": "Flickr - optional",
-            "chevron": ""
+            "chevron": false,
+            "info": ""
           }
         },{
           "icon": "@atoms/05-icons/svg-blog.twig",
           "link": {
             "href": "#",
             "text": "Blog - optional",
-            "chevron": ""
+            "chevron": false,
+            "info": ""
           }
         }]
       }

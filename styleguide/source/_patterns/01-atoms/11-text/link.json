@@ -3,6 +3,6 @@
     "href": "#",
     "text":"This is a link",
     "info": "",
-    "chevron": ""
+    "chevron": false
   }
 }

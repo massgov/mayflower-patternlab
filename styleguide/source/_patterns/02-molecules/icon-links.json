@@ -5,21 +5,21 @@
       "link": {
         "href": "https://twitter.com/MassHHS",
         "text": "@MassHHS",
-        "chevron": ""
+        "chevron": false
       }
     },{
       "icon": "@atoms/05-icons/svg-flickr.twig",
       "link": {
         "href": "https://www.flickr.com/photos/mass_hhs/",
         "text": "Mass_HHS",
-        "chevron": ""
+        "chevron": false
       }
     },{
       "icon": "@atoms/05-icons/svg-blog.twig",
       "link": {
         "href": "https://blog.mass.gov/hhs",
         "text": "blog.mass.gov/hhs",
-        "chevron": ""
+        "chevron": false
       }
     }]
   }

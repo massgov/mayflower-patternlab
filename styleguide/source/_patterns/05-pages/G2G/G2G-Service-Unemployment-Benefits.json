@@ -98,21 +98,21 @@
           "link": {
             "href": "#",
             "text": "Optional Socia Media",
-            "chevron": ""
+            "chevron": false
           }
         },{
           "icon": "@atoms/05-icons/svg-flickr.twig",
           "link": {
             "href": "#",
             "text": "ScreenName",
-            "chevron": ""
+            "chevron": false
           }
         },{
           "icon": "@atoms/05-icons/svg-blog.twig",
           "link": {
             "href": "#",
             "text": "ScreenName",
-            "chevron": ""
+            "chevron": false
           }
         }]
       }

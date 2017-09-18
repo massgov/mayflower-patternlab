@@ -596,9 +596,9 @@
         "accordion": false,
         "isExpanded": false,
         "subTitle": {
-          "href":"#",
+          "href": "#",
           "text": "Department of Unemployment Assistance",
-          "chevron":""
+          "info": ""
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
