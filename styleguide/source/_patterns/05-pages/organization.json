@@ -212,7 +212,7 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "items": [{
             "image": {
@@ -449,7 +449,7 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "sections": [{
             "id": "GUIDasjdhf1",
@@ -544,7 +544,7 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "events":[{
             "title": {
@@ -598,7 +598,7 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "link": {
             "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
@@ -652,7 +652,7 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "links" : [{
             "href":"#",

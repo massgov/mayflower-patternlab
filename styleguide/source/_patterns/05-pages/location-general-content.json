@@ -143,7 +143,7 @@
         "sub": true,
         "color": "",
         "id": "overview",
-        "centered": ""
+        "centered": false
       },
       "property": "description",
       "rteElements": [{
@@ -162,7 +162,7 @@
         "sub": true,
         "color": "",
         "id": "hours",
-        "centered": ""
+        "centered": false
       },
       "property": "",
       "rteElements": [{
@@ -231,7 +231,7 @@
         "sub": true,
         "color": "",
         "id": "parking",
-        "centered": ""
+        "centered": false
       },
       "property": "",
       "rteElements": [{
@@ -297,7 +297,7 @@
         "sub": true,
         "color": "",
         "id": "recommended-activities",
-        "centered": ""
+        "centered": false
       },
       "items": [{
         "title": {
@@ -377,7 +377,7 @@
         "sub": true,
         "color": "",
         "id": "all-activities",
-        "centered": ""
+        "centered": false
       },
       "property": "",
       "rteElements": [{
@@ -414,7 +414,7 @@
         "sub": true,
         "color": "",
         "id": "facilities",
-        "centered": ""
+        "centered": false
       },
       "property": "",
       "rteElements": [{
@@ -441,7 +441,7 @@
         "sub": true,
         "color": "",
         "id": "acessibility",
-        "centered": ""
+        "centered": false
       },
       "property": "",
       "rteElements": [{
@@ -476,7 +476,7 @@
         "sub": true,
         "color": "",
         "id": "restrictions",
-        "centered": ""
+        "centered": false
       },
       "property": "",
       "rteElements": [{
@@ -512,7 +512,7 @@
         "sub": "true",
         "color": "",
         "id": "contacts",
-        "centered": ""
+        "centered": false
       },
       "contacts":[{
         "accordion": true,

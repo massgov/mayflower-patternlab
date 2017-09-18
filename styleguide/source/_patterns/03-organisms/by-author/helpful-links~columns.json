@@ -5,7 +5,7 @@
       "title": "Popular Searches",
       "sub": "true",
       "color": "yellow",
-      "centered": "true"
+      "centered": true
     },
     "items": [{
       "href": "#",

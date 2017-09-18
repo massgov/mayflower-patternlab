@@ -6,7 +6,7 @@
       "sub": "",
       "color": "",
       "id": "contacts",
-      "centered": ""
+      "centered": false
     },
 
     "contacts":[{

@@ -90,7 +90,7 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "image": { 
         "alt": "alt text", 

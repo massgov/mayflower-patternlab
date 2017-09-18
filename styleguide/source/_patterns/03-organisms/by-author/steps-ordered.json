@@ -5,7 +5,7 @@
       "sub": false,
       "color": "",
       "id": "next-steps",
-      "centered": ""
+      "centered": false
     },
     "steps": [{
       "accordion": false,

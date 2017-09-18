@@ -98,7 +98,7 @@
         "sub": true,
         "color": "",
         "id": "what-you-need",
-        "centered": ""
+        "centered": false
       },
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
@@ -165,7 +165,7 @@
         "sub": true,
         "color": "",
         "id": "fees",
-        "centered": ""
+        "centered": false
       },
       "description": {
         "property": "",
@@ -234,7 +234,7 @@
         "sub": true,
         "color": "",
         "id": "how-to-apply",
-        "centered": ""
+        "centered": false
       },
       "richText": {
         "rteElements": [{
@@ -303,7 +303,7 @@
         "sub": true,
         "color": "",
         "id": "next-steps",
-        "centered": ""
+        "centered": false
       },
       "steps": [{
         "accordion": false,
@@ -384,7 +384,7 @@
         "sub": true,
         "color": "",
         "id": "more-info",
-        "centered": ""
+        "centered": false
       },
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
@@ -402,7 +402,7 @@
         "sub": true,
         "color": "",
         "id": "downloads",
-        "centered": ""
+        "centered": false
       },
       "downloadLinks": [{
         "downloadLink": {
@@ -426,7 +426,7 @@
         "sub": true,
         "color": "",
         "id": "contact",
-        "centered": ""
+        "centered": false
       },
 
       "contacts":[{

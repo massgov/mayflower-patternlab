@@ -234,7 +234,7 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": false
     },
     "link": {
       "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
@@ -287,7 +287,7 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": false
     },
     "events":[{
       "title": {

@@ -21,6 +21,54 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Migrate Path
 
+## 6.0.0
+
+### Added
+
+### Changed
+
+- Patterns move to an Archived folder
+    - Blog Feed
+    - Action Cards
+    - Action Gallery
+    - Banner Carousel
+    - Change Log
+    - Feedback Form
+    - Test Feed
+    - Top Actions
+    - Collage Header
+    - Breadcrumbs
+    - Callout Links
+
+### Removed
+- Organisms
+    - Action Details
+    - Quick Actions
+    - Sidebar Contact
+    - Sidebar Promo
+    - Sidebar Widgets
+    - Rich Text Description
+    - Teaser Text
+    - Split50
+- Molecules
+    - Action Event
+    - Action Image
+    - Header Contact
+    - State Util
+    - Wait Time
+    - Field Submit
+    - Related Action
+- Atoms
+    - Button Link
+
+### Migrate Path
+- Input Checkbox
+    - `inputCheckbox.checked` is now a boolean value
+- Input Radio
+    - `inputRadio.checked` is now a boolean value
+- Comp Heading 
+    - `centered` is now a boolean value
+
 ## 5.7.2
 
 ### Added

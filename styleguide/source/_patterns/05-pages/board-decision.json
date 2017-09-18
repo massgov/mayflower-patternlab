@@ -214,7 +214,7 @@
         "sub": false,
         "color": "",
         "id": "downloads",
-        "centered": ""
+        "centered": false
       },
       "downloadLinks": [{
         "downloadLink": {
@@ -239,7 +239,7 @@
         "sub": false,
         "color": "",
         "id": "contact",
-        "centered": ""
+        "centered": false
       },
       "contacts":[{
         "accordion": true,
@@ -322,7 +322,7 @@
         "sub": false,
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "contacts":[{
         "subTitle": {

@@ -86,7 +86,7 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "image": null,
       "labelledList": {

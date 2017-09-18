@@ -15,7 +15,7 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "sections": [{
         "id": "GUIDasjdhf1",
@@ -101,7 +101,7 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "sections": [{
         "id": "GUID2934852390562",
@@ -142,7 +142,7 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "links" : [{
         "href":"#",
