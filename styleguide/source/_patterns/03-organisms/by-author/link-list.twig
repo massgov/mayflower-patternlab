@@ -17,7 +17,6 @@
   {% endif %}
 
   <div class="ma__link-list__container">
-    {# added for backward compatibilty with v3.5 #}
     {% if linkList.stacked or linkList.links|length < 4 %}
       <ul class="ma__link-list__items">
         {% for decorativeLink in linkList.links %}
@@ -27,7 +26,7 @@
         {% endfor %}
       </ul>
     {% else %}
-      {% set length = linkList.links|length/2 %}
+      {% set length = linkList.links|length / 2 %}
       {% set half = length|round(0,'ceil') %}
       <ul class="ma__link-list__items">
         {% for decorativeLink in linkList.links[start:half] %}
