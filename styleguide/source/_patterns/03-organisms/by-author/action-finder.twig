@@ -26,7 +26,7 @@
     </header>
     {% if actionFinder.featuredLinks %}
       {% if actionFinder.featuredHeading %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
+        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span></h3>
       {% endif %}
       <div class="ma__action-finder__items">
         {% for link in actionFinder.featuredLinks %}
@@ -42,7 +42,7 @@
     {% endif %}
     {% if actionFinder.links %}
       {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
+        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span></h3>
       {% endif %}
       <div class="ma__action-finder__items ma__action-finder__items--all">
         {% for link in actionFinder.links %}
