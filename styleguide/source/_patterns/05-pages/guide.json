@@ -330,9 +330,9 @@
               }
             }
           },{
-            "path": "@atoms/04-headings/heading-4.twig",
+            "path": "@atoms/04-headings/heading-3.twig",
             "data": {
-              "heading4": {
+              "heading3": {
                 "text": "Choose a Reputable Mover"
               }
             }
@@ -348,9 +348,9 @@
               }]
             }
           },{
-            "path": "@atoms/04-headings/heading-4.twig",
+            "path": "@atoms/04-headings/heading-3.twig",
             "data": {
-              "heading4": {
+              "heading3": {
                 "text": "Observe Parking Restrictions"
               }
             }
