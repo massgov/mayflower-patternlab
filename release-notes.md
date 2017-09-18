@@ -81,6 +81,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
     - `bgTitle` is now `bgInfo`
 - Location Banner
     - `bgTitle` is now `bgInfo`
+- Button 
+    - css classes have been updated to use modifier classes
 
 ## 5.7.2
 

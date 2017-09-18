@@ -7,18 +7,14 @@ button {
   @include ma-button("normal","solid",$c-theme-primary);
 }
 
-.ma__button-minor, // backward compatible prior to 5.5
 .ma__button--minor {
   @include ma-button("normal","outline",$c-theme-primary);
 }
 
-.ma__button--green, // backward compatible prior to 5.5
 .ma__button--secondary {
   @include ma-button("normal","solid",$c-theme-secondary);
 }
 
-.ma__button-minor-green, // backward compatible prior to 5.5
-.ma__button--minor.ma__button--green, // backward compatible prior to 5.5
 .ma__button--minor.ma__button--secondary {
   @include ma-button("normal","outline",$c-theme-secondary);
 }
@@ -31,13 +27,10 @@ button {
   @include ma-button("normal","outline",$c-theme-tertiary);
 }
 
-.ma__button--alt, // backward compatible prior to 5.5
-.ma__button-alt, // backward compatible prior to 5.5
 .ma__button--quaternary {
   @include ma-button("normal","solid",$c-theme-quaternary);
 }
 
-.ma__button-minor-alt // backward compatible prior to 5.5
 .ma__button--minor.ma__button--quaternary {
   @include ma-button("normal","outline",$c-theme-quaternary);
 }
