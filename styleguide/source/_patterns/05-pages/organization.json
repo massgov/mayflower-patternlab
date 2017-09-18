@@ -105,7 +105,6 @@
     }],
 
     "sideBar": [{
-          "titleContext": "links for Executive Office of Health and Human Services"
       "path": "@molecules/icon-links.twig",
       "data": {
         "iconLinks": {
@@ -114,7 +113,8 @@
             "sub": true,
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": "",
+            "titleContext": "links for Executive Office of Health and Human Services"
           },
           "items": [{
             "icon": "@atoms/05-icons/svg-twitter.twig",
