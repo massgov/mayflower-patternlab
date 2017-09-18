@@ -4,7 +4,7 @@
   },
 
   "headerAlerts": [{
-    "guid": "GUID09058070136",
+    "id": "GUID09058070136",
     "text": "Lots of Bears.",
     "href": "#",
     "target": ""

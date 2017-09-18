@@ -1,10 +1,5 @@
 {% set alertId = headerAlert.id ? headerAlert.id : '' %}
 
-{# backward compatible to v5.5 #}
-{% if headerAlert.guid %}
-  {% set alertId = headerAlert.guid %}
-{% endif %}
-
 <section 
   class="ma__header-alert js-header-alert" 
   data-id="{{ alertId }}"

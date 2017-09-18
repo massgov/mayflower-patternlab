@@ -74,7 +74,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
     - `link.chevron` is now a boolean value
     - `link.label` is now `link.info`
 - Key Actions / Callout Grid
-    - `sidebarHeading` is now `compHeading` with `compHeading.sidebar` set to true  
+    - `sidebarHeading` is now `compHeading` with `compHeading.sidebar` set to true
+- Header Alert
+    - `headerAlert.guid` is now `headerAlert.id`
 
 ## 5.7.2
 
