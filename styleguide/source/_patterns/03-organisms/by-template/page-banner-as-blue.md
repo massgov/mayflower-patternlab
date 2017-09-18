@@ -1,5 +1,6 @@
-Description: This is a variant of the [Page Banner](./?p=organisms-page-banner) showing an example with color set to 'blue'.
+Description: This is a variant of the [Page Banner](./?p=organisms-page-banner) showing an example with a blue overlay.
 
-### Status
-* Stable as of 5.0.0
+### How to generate
+* set the `color` variable to 'blue'
+
 

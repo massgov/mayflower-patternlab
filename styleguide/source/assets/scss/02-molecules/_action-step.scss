@@ -78,6 +78,10 @@
   }
 
   &__downloads {
-    margin-bottom: 1em;
+    margin-bottom: 1em; // for v5.6 and below
+  }
+
+  &__more {
+    margin-top: 1em;
   }
 }

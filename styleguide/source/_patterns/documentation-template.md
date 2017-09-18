@@ -25,4 +25,5 @@ contactList: {
   contacts:[{
     type: array of contactUs / required
   }]
+}
 ~~~

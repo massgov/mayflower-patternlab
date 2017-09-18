@@ -11,14 +11,17 @@
     "message": "The link you clicked may be broken or the page may have been removed"
   },
 
-  "helpfulLinks": {
+  "linkList": {
     "compHeading": {
       "title": "Helpful Links",
       "level": 3,
       "color": "yellow",
       "centered": true
     },
-    "items": [{
+    "description": null,
+    "stacked": false,
+    "hideBullets": true,
+    "links" : [{
       "href": "#",
       "text":"Helpful link",
       "chevron": "true"

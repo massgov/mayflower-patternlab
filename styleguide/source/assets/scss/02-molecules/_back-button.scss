@@ -6,7 +6,16 @@
     @include ma-container();
   }
 
-  a {
+  .ma__button {
+    @include ma-chevron("left");
+
+    &:before {
+      margin-top: 0;
+    }
+  }
+
+  // backward compatible with v5.6 - replaced link with button atom
+  a:not(.ma__button) {
     @include ma-button("small");
     @include ma-chevron("left");
 

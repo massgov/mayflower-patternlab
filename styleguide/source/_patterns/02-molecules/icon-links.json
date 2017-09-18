@@ -1,5 +1,12 @@
 {
   "iconLinks": {
+    "compHeading": {
+      "title": "Icon Links",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
     "items": [{
       "icon": "@atoms/05-icons/svg-twitter.twig",
       "link": {

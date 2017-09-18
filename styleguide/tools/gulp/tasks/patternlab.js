@@ -9,9 +9,14 @@ var gulp         = require("gulp"),
 module.exports = function patternLabTask(config, env){
 
     var bsPort = config.local.browserSyncPort || 3000;
-    
+    var command = "php " + config.patternLabRoot + "/core/console --generate --patternsonly";
+
+    if(config.browserSync) {
+        command = command + " && browser-sync reload --port " + bsPort;
+    }
+
     gulp.task("patternlab", function() {
-        run("php " + config.patternLabRoot + "/core/console --generate --patternsonly && browser-sync reload --port " + bsPort).exec();
+        run(command).exec();
     });
 
     // register the watch

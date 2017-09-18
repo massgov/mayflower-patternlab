@@ -3,7 +3,7 @@
     "id": "GUIDasjdhf1",
     "catIcon": {
       "icon":"@atoms/05-icons/svg-lg-fishing.twig",
-      "small":"true"
+      "small": true
     },
     "title" : {
       "href" : "#",

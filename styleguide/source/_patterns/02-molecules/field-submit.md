@@ -1,6 +1,5 @@
----
-title: Field Submit
----
+### Status
+* Obsolete as of 5.0.0
 
 Description: Labelled input with inline submit button
 

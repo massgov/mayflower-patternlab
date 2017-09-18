@@ -1,8 +1,7 @@
 {
   "narrowTemplate": {
     "side": "right",
-    "color": "yellow",
-    "centered": true
+    "color": "yellow"
   },
   
   "errorPage": {
@@ -12,13 +11,17 @@
     "message": "Sorry, you don't have access to this page"
   },
 
-  "helpfulLinks": {
+  "linkList": {
     "compHeading": {
       "title": "Helpful Links",
       "level": 3,
-      "color": "yellow"
+      "color": "yellow",
+      "centered": true
     },
-    "items": [{
+    "description": null,
+    "stacked": false,
+    "hideBullets": true,
+    "links" : [{
       "href": "#",
       "text":"Helpful link",
       "chevron": "true"
