@@ -16,7 +16,11 @@
     line-height: 1em;
     margin-bottom: 0;
     padding-top: .25em;
+  }
+
+  &__location-dateline {
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   &__sidebar {
