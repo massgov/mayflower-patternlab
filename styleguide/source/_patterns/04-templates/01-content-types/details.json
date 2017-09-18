@@ -1,6 +1,7 @@
 {
   "details": {
-    "contentTitle": "The Details"
+    "contentTitle": "The Details",
+    "titleContext": ""
   },
 
   "pageHeader": {
@@ -50,6 +51,7 @@
   },
 
   "stickyNav": {
+    "titleContext": "",
     "anchorLinks":[{
       "href": "jump link",
       "text": "jump-link",
@@ -71,7 +73,8 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading": {
-        "title": "Contact"
+        "title": "Contact",
+        "titleContext": ""
       },
       "contacts":[{
         "accordion": false,
