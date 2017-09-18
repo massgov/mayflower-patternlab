@@ -68,6 +68,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
     - `inputRadio.checked` is now a boolean value
 - Comp Heading 
     - `centered` is now a boolean value
+- Video
+    - Updated Twig markup
 
 ## 5.7.2
 
