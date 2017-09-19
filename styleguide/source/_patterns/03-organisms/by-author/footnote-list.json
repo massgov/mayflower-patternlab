@@ -5,7 +5,6 @@
       "target": "#",
       "id": "footnotemsg1",
       "richText": {
-        "property": "",
         "rteElements": [{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
@@ -27,7 +26,6 @@
       "target": "#",
       "id": "footnotemsg1",
       "richText": {
-        "property": "",
         "rteElements": [{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {

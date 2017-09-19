@@ -97,15 +97,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Figure
     - Updated Twig markup
     - align variable should be `left` and `right`
-
+- Site Logo
+    - Updated Twig markup
+- Video
+    - Updated Twig markup
 - Table
     - Variable `Table.rows.cells.heading` is now boolean
 
-- Video
-    - Updated Twig markup
 - Link 
     - Variable `link.chevron` is now a boolean value
     - Variable `label` is now `info`
+    - Variable `property` has been removed
 
 - Helpful Links
     - Variable `columns` is now a boolean value

@@ -5,7 +5,6 @@
       "id": "rich-text-editor",
       "sub": false
     },
-    "property": "",
     "rteElements": [{
       "path": "@atoms/09-media/figure.twig",
       "data": {

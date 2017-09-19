@@ -5,7 +5,6 @@
     "path":"organisms-rich-text",
     "data": {
       "richText": {
-      "property": "description",
         "rteElements": [{
           "path": "atoms-paragraph",
           "data": {

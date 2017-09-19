@@ -11,8 +11,7 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Fishing Clinic",
-            "property": ""
+            "text": "Fishing Clinic"
           },
           "date":"June 24, 2017, 12:00pm",
           "description":"This is a description of the event that will happen at a future date"
@@ -25,8 +24,7 @@
           "name": {
             "type": "",
             "href": "#",
-            "text": "Full Moon Hike",
-            "property": ""
+            "text": "Full Moon Hike"
           },
           "date":"June 24, 2017, 9:00pm",
           "description":"This is a description of the event that will happen at a future date"

@@ -8,7 +8,6 @@
       "centered": false
     },
     "description": {
-      "property": "",
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {

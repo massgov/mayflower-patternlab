@@ -103,13 +103,11 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+16176245293",
               "text": "(617) 624-5293",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details": ""
           }]
@@ -119,13 +117,11 @@
           "hidden": "",
           "items": [{
             "type": "email",
-            "property": "",
             "label":"Email:",
             "link": {
               "href":"Tom.Lyons@State.MA.US",
               "text": "Tom.Lyons@State.MA.US",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -134,13 +130,11 @@
           "name": "Fax",
           "items": [{
             "type": "fax",
-            "property": "",
             "label":"Main:",
             "link": {
               "href":"+14134994262",
               "text": "(413) 499-4262",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":"Please allow 24 hours for a response"
           }]
@@ -149,14 +143,12 @@
           "name": "Address",
           "items": [{
             "type": "address",
-            "property": "",
             "label": "",
             "address": "555 Park Drive\nBoston, MA 02231",
             "link": {
               "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "text": "directions",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details": ""
           }]
@@ -173,29 +165,24 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+14134994262",
               "text": "(413) 499-4262",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "email",
-            "property": "",
             "label":"Email:",
             "link": {
               "href":"email@state.ma.us",
               "text": "email@state.ma.us",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -204,13 +191,11 @@
           "name": "Fax",
           "items": [{
             "type": "fax",
-            "property": "",
             "label":"Main:",
             "link": {
               "href":"+14134994262",
               "text": "(413) 499-4262",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":"Please allow 24 hours for a response"
           }]
@@ -219,14 +204,12 @@
           "name": "Address",
           "items": [{
             "type": "address",
-            "property": "",
             "label": "",
             "address": "555 Park Drive\nBoston, MA 02231",
             "link": {
               "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
               "text": "directions",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details": ""
           }]
@@ -350,29 +333,24 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+16176245293",
               "text": "(617) 624-5293",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details": ""
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "email",
-            "property": "",
             "label":"Email:",
             "link": {
               "href":"Tom.Lyons@State.MA.US",
               "text": "Tom.Lyons@State.MA.US",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -389,8 +367,7 @@
         "title" : {
           "href":"#",
           "text":"Admin Releases Unprecendented Report on Opiod Epidemic",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "date": "4/3/2017",
         "org": "",
@@ -400,8 +377,7 @@
         "title" : {
           "href":"#",
           "text":"Dispensing procedures for pharmacists (105 CMR 722)",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "date": "",
         "org": "",
@@ -411,8 +387,7 @@
         "title" : {
           "href":"#",
           "text":"Related Non News, Annoucement, Reg, or Law Here",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "date": "",
         "org": "",

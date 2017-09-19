@@ -1,7 +1,6 @@
 {
   "richText": {
     "compHeading": null,
-    "property": "",
     "rteElements": [{
       "path": "@atoms/04-headings/heading-2.twig",
       "data": {

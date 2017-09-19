@@ -9,28 +9,23 @@
     "links" : [{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet, consectetur.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet",
-      "info": "",
-      "property": ""
+      "info": ""
     }],
     "more": {
       "href": "#",

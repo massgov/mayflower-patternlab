@@ -1,7 +1,6 @@
 {
   "teaserText": {
     "richText": {
-      "property": "",
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
@@ -15,8 +14,7 @@
     "decorativeLink": {
       "href": "#",
       "text": "Learn More",
-      "info": "Learn More about unemployment Benefits",
-      "property": ""
+      "info": "Learn More about unemployment Benefits"
     }
   }
 }

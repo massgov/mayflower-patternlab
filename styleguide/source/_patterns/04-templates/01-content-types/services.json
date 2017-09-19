@@ -40,13 +40,11 @@
       "link": {
         "href": "/patterns/05-pages-GEN-Building-Energy-Codes/05-pages-GEN-Building-Energy-Codes.html",
         "text": "View transcript",
-        "info": "View transcript of Using a gas grill safely",
-        "property": ""
+        "info": "View transcript of Using a gas grill safely"
       }
     },
 
     "intro": {
-      "property": "",
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
@@ -226,8 +224,7 @@
     "link": {
       "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
       "text":"Location Details",
-      "info": "See more locations for this Generic Service",
-      "property": ""
+      "info": "See more locations for this Generic Service"
     },
     "googleMap":{
       "map": {
@@ -280,8 +277,7 @@
       "title": {
         "href": "#",
         "text": "Winter Birding Event",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -297,8 +293,7 @@
       "title": {
         "href": "#",
         "text": "First Day Hike",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -357,8 +352,7 @@
                 "decorativeLink": {
                   "text": "Work Search Activity Log",
                   "href": "#",
-                  "info": "",
-                  "property": ""
+                  "info": ""
                 },
                 "size": "1MB",
                 "format": "PDF"
@@ -370,8 +364,7 @@
                 "decorativeLink": {
                   "text": "Name of Doc",
                   "href": "#",
-                  "info": "",
-                  "property": ""
+                  "info": ""
                 },
                 "size": "107KB",
                 "format": "DOCX"

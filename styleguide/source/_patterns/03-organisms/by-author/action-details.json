@@ -7,7 +7,6 @@
       "path": "organisms-rich-text",
       "data": {
         "richText": {
-          "property": "description",
           "rteElements": [{
             "path": "molecules-callout-stats",
             "data": {
@@ -50,7 +49,6 @@
       "id":"fees",
       "path": "organisms-rich-text",
       "data": {
-        "property": "",
         "richText":{
           "rteElements": [{
             "path": "atoms-paragraph",
@@ -76,7 +74,6 @@
       "id":"fees",
       "path": "organisms-rich-text",
       "data": {
-        "property": "",
         "richText": {
           "rteElements": [{
             "path": "atoms-paragraph",
@@ -169,8 +166,7 @@
               "decorativeLink": {
                 "text": "Park Pass Application",
                 "href": "#",
-                "info": "",
-                "property": ""
+                "info": ""
               },
               "size": "305kb",
               "format": "PDF"
@@ -182,8 +178,7 @@
               "decorativeLink": {
                 "text": "Park Pass Application",
                 "href": "#",
-                "info": "",
-                "property": ""
+                "info": ""
               },
               "size": "280kb",
               "format": "DOCX"
@@ -195,8 +190,7 @@
               "decorativeLink": {
                 "text": "Calculate your personal return on investment with a seasonal pass.",
                 "href": "#",
-                "info": "",
-                "property": ""
+                "info": ""
               },
               "size": "220kb",
               "format": "XLSX"
@@ -211,7 +205,6 @@
       "id":"additional-info",
       "path": "organisms-rich-text",
       "data": {
-        "property": "",
         "richText": {
           "rteElements": [{
             "path": "atoms-paragraph",

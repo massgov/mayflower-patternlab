@@ -30,8 +30,7 @@
           "decorativeLink": {
             "text": "PDF download item",
             "href": "#",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "size": "30kb",
           "format": "PDF"
@@ -40,8 +39,7 @@
       "decorativeLink": {
         "href": "#",
         "text": "Learn more",
-        "info": "Learn more about this generic step",
-        "property": ""
+        "info": "Learn more about this generic step"
       }
     }]
   }

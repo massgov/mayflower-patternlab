@@ -29,8 +29,7 @@
               "link": {
                 "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
                 "text": "directions",
-                "info": "directions to Mt Greylock State Park Vistor's Center",
-                "property": "url"
+                "info": "directions to Mt Greylock State Park Vistor's Center"
               },
               "details": ""
             }]
@@ -146,29 +145,24 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+14134994262",
               "text": "(413) 499-4262",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"Web:",
             "link": {
               "href":"#",
               "text": "Contact Form",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -197,29 +191,24 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+14134994262",
               "text": "(413) 499-4262",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"Web:",
             "link": {
               "href":"#",
               "text": "Contact Form",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
