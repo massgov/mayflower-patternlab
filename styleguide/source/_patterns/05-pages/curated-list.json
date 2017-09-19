@@ -10,13 +10,13 @@
   "pageHeader": {
     "category": "",
     "divider": false,
-    "title": "Tax Forms",
+    "title": "Curated List Page",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
       "taxonomyTerms": [{
         "href": "#",
-        "text": "Office of the Governor"
+        "text": "An Org Name"
       },{
         "href": "#",
         "text": "A Service Name"
@@ -51,11 +51,11 @@
       "text": "Law Library Content",
       "href": "law-library-content"
     },{
-      "text": "Documents and Forms (using Form Downloads)",
+      "text": "Documents and Forms (using Form Downloads only)",
       "href": "documents-and-forms-using-form-downloads"
     },{
-      "text": "Documents and Forms (using Image Promos - hack)",
-      "href": "documents-and-forms-using-image-promos"
+      "text": "Documents and Forms (with Subsectins)",
+      "href": "documents-and-forms-with-subsections"
     },{
       "text": "Another Section Name",
       "href": "another-section-name2"
@@ -75,7 +75,7 @@
           "compHeading": null,
           "items": [{
             "title": {
-              "text": "Hiking & Walking",
+              "text": "Link to an Advisory",
               "href": "#"
             },
             "image": null,
@@ -94,7 +94,7 @@
             "link": null
           },{
             "title": {
-              "text": "Camping",
+              "text": "Link to a Regulation",
               "href": "#"
             },
             "image": null,
@@ -113,7 +113,7 @@
             "link": null
           },{
             "title": {
-              "text": "Winter Sports",
+              "text": "Link to an Executive Order",
               "href": "#"
             },
             "image": null,
@@ -132,26 +132,7 @@
             "link": null
           },{
             "title": {
-              "text": "Hunting",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
-            "title": {
-              "text": "Bird Watching",
+              "text": "Link to a Board Decision",
               "href": "#"
             },
             "image": null,
@@ -237,9 +218,9 @@
           },{
             "downloadLink": {
               "iconSize": "",
-              "icon": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
               "decorativeLink": {
-                "text": "Link to another page",
+                "text": "Link to another online form",
                 "href": "#",
                 "info": "",
                 "property": ""
@@ -252,16 +233,20 @@
       }
     }]
   },{
-    "title": "Documents and Forms (using Image Promos - hack)",
-    "id": "documents-and-forms-using-image-promos",
+    "title": "Documents and Forms (with subsections)",
+    "id": "documents-and-forms-with-subsections",
     "pageContent": [{
       "path": "@organisms/by-author/image-promos.twig",
       "data": {
         "imagePromos": {
-          "compHeading": null,
+          "compHeading": {
+            "title": "Online Resources",
+            "sub": true,
+            "color": "yellow"
+          },
           "items": [{
             "title": {
-              "text": "Hiking & Walking",
+              "text": "Link to an online form",
               "href": "#"
             },
             "image": null,
@@ -279,40 +264,8 @@
             },
             "link": null
           },{
-            "title": null,
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@molecules/download-link.twig",
-                  "data": {
-                    "downloadLink": {
-                      "iconSize": "",
-                      "icon": "@atoms/05-icons/svg-laptop.twig",
-                      "decorativeLink": {
-                        "text": "Link to an online form",
-                        "href": "#",
-                        "info": "",
-                        "property": ""
-                      },
-                      "size": "",
-                      "format": "form"
-                    }
-                  }
-                },{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "A paragraph (from the Greek paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
             "title": {
-              "text": "Winter Sports",
+              "text": "Link to another online form",
               "href": "#"
             },
             "image": null,
@@ -330,40 +283,8 @@
             },
             "link": null
           },{
-            "title": null,
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@molecules/download-link.twig",
-                  "data": {
-                    "downloadLink": {
-                      "iconSize": "",
-                      "icon": "@atoms/05-icons/svg-doc-docx.twig",
-                      "decorativeLink": {
-                        "text": "Word download item",
-                        "href": "#",
-                        "info": "",
-                        "property": ""
-                      },
-                      "size": "40kb",
-                      "format": "DOCX"
-                    }
-                  }
-                },{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "A paragraph (from the Greek paragraphos, \"to write beside\" or \"written beside\") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
             "title": {
-              "text": "Bird Watching",
+              "text": "Link to yet another online form",
               "href": "#"
             },
             "image": null,
@@ -381,6 +302,58 @@
             },
             "link": null
           }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/form-downloads.twig",
+      "data": {
+        "formDownloads": {
+          "compHeading": {
+            "title": "Forms",
+            "sub": true,
+            "color": "yellow"
+          },
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "PDF download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "30kb",
+              "format": "PDF"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "decorativeLink": {
+                "text": "Word download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "DOCX"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-generic.twig",
+              "decorativeLink": {
+                "text": "Generic type of download",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "???"
+            }
+          }],
+          "more": null
         }
       }
     }]
