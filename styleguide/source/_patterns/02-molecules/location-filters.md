@@ -1,5 +1,5 @@
 ### Description
-This pattern shows a Form with inputs tailored to filtering locations
+This pattern shows a Form with inputs to filter location and various taxonomies.
 
 ### Status
 * Stable as of 5.0.0
@@ -22,8 +22,9 @@ This pattern shows a Form with inputs tailored to filtering locations
 locationFilters: {
   zipcode: {
     inputText: {
-    type: inputText / required
+      type: inputText / required
     },
+    
     placeAutoComplete: {
       bounds: {
         sw: {
@@ -41,16 +42,23 @@ locationFilters: {
       }
     }
   },
+  
   activity: {
     type: selectBox / optional
   },
+  
   keyword: {
     type: inputText / optional
   },
+  
   tags (optional): [{
     type: array of inputCheckbox / required
     icon: 
       type: string (icon path) / required
-  }]   
+  }], 
+  
+  buttons: [{
+    type: array of Button / required
+  }]
 }
 ~~~
