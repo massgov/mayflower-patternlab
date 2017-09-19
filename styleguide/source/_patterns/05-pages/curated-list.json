@@ -2,11 +2,8 @@
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
-  "pageHeader": {
-    "category": "",
-    "divider": false,
-    "title": "Curated List Page",
-    "subTitle": "",
+  "contentEyebrow": {
+    "hideBorder": false,
     "headerTags": {
       "label": "Related to:",
       "taxonomyTerms": [{
@@ -16,7 +13,15 @@
         "href": "#",
         "text": "A Service Name"
       }]
-    },
+    }
+  },
+
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "title": "Curated List Page",
+    "subTitle": "",
+    "headerTags": null,
 
     "socialLinks": null,
     "optionalContents": [{
