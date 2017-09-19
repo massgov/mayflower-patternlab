@@ -22,7 +22,7 @@
         <tr class="{{ row.rowSpanOffset ? 'is-offset' : '' }}">
           {% set tableIndexOffset = row.rowSpanOffset ? 0 : 1 %}
           {% for cell in row.cells %}
-            {% if cell.heading == "true" %}
+            {% if cell.heading %}
               <th 
                 data-label="{{ tableHeaderRow.cells[loop.index - tableIndexOffset].text }}" 
                 scope="row" 
