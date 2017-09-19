@@ -410,43 +410,6 @@
   }
   ],
 
-  "COMMENT":"****POSTCONTENT COMPONENTS****",
-
-  "suggestedPages": {
-    "title": "Related Guides",
-    "view":"guide",
-    "buttonMinor" : {
-      "href": "#",
-      "text": "See All Guides"
-    },
-    "pages": [{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
-      "link": {
-        "type": "",
-        "href": "#",
-        "text": "Buying Your First Home",
-        "label": "Guide:"
-      }
-    },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
-      "link": {
-        "type": "",
-        "href": "#",
-        "text": "Shopping for Auto Insurance",
-        "label": "Guide:"
-      }
-    },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
-      "link": {
-        "type": "",
-        "href": "#",
-        "text": "Education in Massachusetts",
-        "label": "Guide:"
-      }
-    }]
-  }
+  "COMMENT":"****POSTCONTENT COMPONENTS****"
 
 }
