@@ -48,122 +48,39 @@
   "jumpLinks": {
     "title": "In This List",
     "links": [{
-      "text": "Law Library Content",
-      "href": "law-library-content"
+      "text": "List Section 1",
+      "href": "list-section-1"
     },{
-      "text": "Documents and Forms (using Form Downloads only)",
-      "href": "documents-and-forms-using-form-downloads"
+      "text": "List Section 2",
+      "href": "list-section-2"
     },{
-      "text": "Documents and Forms (with Subsectins)",
-      "href": "documents-and-forms-with-subsections"
-    },{
-      "text": "Another Section Name",
-      "href": "another-section-name2"
-    },{
-      "text": "Another Section Name",
-      "href": "another-section-name5"
+      "text": "List Section 3",
+      "href": "list-section-3"
     }]
   },
 
   "stackedRowSections": [{
-    "title":"Law Library Content",
-    "id":"law-library-content",
-    "pageContent": [{
-      "path": "@organisms/by-author/image-promos.twig",
-      "data": {
-        "imagePromos": {
-          "compHeading": null,
-          "items": [{
-            "title": {
-              "text": "Link to an Advisory",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
-            "title": {
-              "text": "Link to a Regulation",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
-            "title": {
-              "text": "Link to an Executive Order",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
-            "title": {
-              "text": "Link to a Board Decision",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          }]
-        }
-      }
-    }],
-
-    "sideBar": []
-  },{
-    "title": "Documents and Forms (using Form Downloads)",
-    "id": "documents-and-forms-using-form-downloads",
+    "title": "List Section 1",
+    "id": "list-section-1",
     "pageContent": [{
       "path": "@organisms/by-author/form-downloads.twig",
       "data": {
         "formDownloads": {
           "compHeading": null,
           "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to a page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
             "downloadLink": {
               "iconSize": "",
               "icon": "@atoms/05-icons/svg-doc-pdf.twig",
@@ -175,6 +92,32 @@
               },
               "size": "30kb",
               "format": "PDF"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
             }
           },{
             "downloadLink": {
@@ -192,6 +135,19 @@
           },{
             "downloadLink": {
               "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to yet another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
               "icon": "@atoms/05-icons/svg-doc-generic.twig",
               "decorativeLink": {
                 "text": "Generic type of download",
@@ -201,19 +157,6 @@
               },
               "size": "40kb",
               "format": "???"
-            }
-          },{
-            "downloadLink": {
-              "iconSize": "",
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "decorativeLink": {
-                "text": "Link to an online form",
-                "href": "#",
-                "info": "",
-                "property": ""
-              },
-              "size": "",
-              "format": "form"
             }
           },{
             "downloadLink": {
@@ -233,87 +176,27 @@
       }
     }]
   },{
-    "title": "Documents and Forms (with subsections)",
-    "id": "documents-and-forms-with-subsections",
+    "title": "List Section 2",
+    "id": "list-section-2",
     "pageContent": [{
-      "path": "@organisms/by-author/image-promos.twig",
-      "data": {
-        "imagePromos": {
-          "compHeading": {
-            "title": "Online Resources",
-            "sub": true,
-            "color": "yellow"
-          },
-          "items": [{
-            "title": {
-              "text": "Link to an online form",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
-            "title": {
-              "text": "Link to another online form",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          },{
-            "title": {
-              "text": "Link to yet another online form",
-              "href": "#"
-            },
-            "image": null,
-            "description": {
-              "richText":{
-                "rteElements": [{
-                  "path": "@atoms/11-text/paragraph.twig",
-                  "data": {
-                    "paragraph" : {
-                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                    }
-                  }
-                }]
-              }
-            },
-            "link": null
-          }]
-        }
-      }
-    },{
       "path": "@organisms/by-author/form-downloads.twig",
       "data": {
         "formDownloads": {
-          "compHeading": {
-            "title": "Forms",
-            "sub": true,
-            "color": "yellow"
-          },
+          "compHeading": null,
           "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to a page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
             "downloadLink": {
               "iconSize": "",
               "icon": "@atoms/05-icons/svg-doc-pdf.twig",
@@ -325,6 +208,32 @@
               },
               "size": "30kb",
               "format": "PDF"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
             }
           },{
             "downloadLink": {
@@ -342,6 +251,19 @@
           },{
             "downloadLink": {
               "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to yet another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
               "icon": "@atoms/05-icons/svg-doc-generic.twig",
               "decorativeLink": {
                 "text": "Generic type of download",
@@ -352,8 +274,136 @@
               "size": "40kb",
               "format": "???"
             }
-          }],
-          "more": null
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to another online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "List Section 3",
+    "id": "list-section-3",
+    "pageContent": [{
+      "path": "@organisms/by-author/form-downloads.twig",
+      "data": {
+        "formDownloads": {
+          "compHeading": null,
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to a page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "PDF download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "30kb",
+              "format": "PDF"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "decorativeLink": {
+                "text": "Word download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "DOCX"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to yet another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-generic.twig",
+              "decorativeLink": {
+                "text": "Generic type of download",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "???"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to another online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          }]
         }
       }
     }]
