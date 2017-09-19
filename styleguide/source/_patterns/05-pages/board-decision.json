@@ -15,6 +15,7 @@
       }]
     },
     "socialLinks": null,
+    "publishState": null,
     "optionalContents": [{
       "path": "@molecules/listing-table.twig",
       "data": {
