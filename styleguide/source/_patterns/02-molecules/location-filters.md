@@ -1,8 +1,8 @@
 ### Description
-Form with inputs used for sorting and filtering location listing organism.
+This pattern shows a Form with inputs to filter location and various taxonomies.
 
-### Status 
-Stable as of 5.0.0
+### Status
+* Stable as of 5.0.0
 
 ### Pattern Contains
 * Input Text
@@ -10,19 +10,21 @@ Stable as of 5.0.0
 * Input Checkbox
 
 ### JavaScript Used
-* Location Filters (js/modules/locationFilters.js)
+* Select Box (js/modules/dropdown.js)
+* When included as part of the Location Listing page (js/modules/locationFilters.js)
 
 ### Usage Guidelines
 
 - `zipcode.placeAutocomplete.bounds` sets default bounds for google maps api place autocomplete (see: [google maps api docs: LatLngBounds](https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds)) which will be used in `js/modules/locationFilters`.
 
-### Required Variables
+### Variables
 ~~~
 locationFilters: {
   zipcode: {
     inputText: {
-      type: inputText/required
+      type: inputText / required
     },
+    
     placeAutoComplete: {
       bounds: {
         sw: {
@@ -40,17 +42,23 @@ locationFilters: {
       }
     }
   },
+  
   activity: {
     type: selectBox / optional
   },
+  
   keyword: {
     type: inputText / optional
   },
-  tags: [{
-    type: inputCheckbox / optional + icon property
-  }],
-  submitButton:
-    type: string
+  
+  tags (optional): [{
+    type: array of inputCheckbox / required
+    icon: 
+      type: string (icon path) / required
+  }], 
+  
+  buttons: [{
+    type: array of Button / required
+  }]
 }
 ~~~
-

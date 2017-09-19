@@ -1,5 +1,5 @@
 export default function (window,document,$,undefined) {
-  $('.js-event-location-filters').each(function(){
+  $('.js-event-filters').each(function(){
     let $el = $(this);
 
     // When google map libraries are loaded, initialize places.autocomplete on the location input, if it exists.
@@ -30,15 +30,6 @@ export default function (window,document,$,undefined) {
     // Listen for new data from another component interaction (i.e. results heading), update form.
     $el.on('ma:FormFilter:DataUpdated', function(e, data){
       renderForm({clearedFilter: data.clearedFilter, $form: $el});
-    });
-
-    // Don't submit the form when a user selects the autocomplete dropdown item with enter
-    $el.keydown(function(e) {
-      if (e.keyCode === 13) {
-        if  ($(e.target).is($('.js-event-filter-by-location', $el).find('input'))) {
-          e.preventDefault();
-        }
-      }
     });
 
     // Handle global form submission.

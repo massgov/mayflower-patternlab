@@ -37,6 +37,7 @@
       "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
+          "icon": "@atoms/05-icons/svg-wait-time.twig",
           "text": "Most applicants hear back within 4-6 weeks of applying"
         }
       }
@@ -167,12 +168,13 @@
         "id": "fees",
         "centered": ""
       },
-      "richText": {
+      "description": {
+        "property": "",
         "rteElements": [{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "You must submit a form. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium."
+              "text": "This is an optional description. Lorem ipsum ..."
             }
           }
         }]

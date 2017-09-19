@@ -1,69 +1,34 @@
----
-title: Search Banner
----
-Description: Banner component with large Search Input as the focus.
-## State: ALPHA
+### Description
+This pattern shows an image banner with large search input as the focus followed by some helpful links.
 
-###  Notes
-The form is setup to accept a fully rendered variable or to use the search-banner-form molecule if the system that is implementing the form can provide individual fofm parts.
+### Status
+* Stable as of 5.8.0
 
-### Used in: 
-[@pages/homepage.twig](/?p=pages-Homepage)
+### Pattern Contains
+* Page Intro
+* Search Banner Form
+* Link List
 
-### Contains
-* [@atoms/03-forms/input-text.twig](/?p=atoms-input-text)
-* [@atoms/05-icons/svg-search.twig](/?p=atoms-svg-search)
-* [@molecules/search-banner-form.twig](/?p=molecules-search-banner-form)
-* [@organisms/by-author/helpful-links.twig](/?p=organisms-helpful-links)
-
-### Variables 
-~~~ 
+### Variables
+~~~
 searchBanner: {
   bgWide: 
-    type: string/path/required
+    type: string (image path) / required
   bgNarrow: 
-    type: string/path/required
+    type: string (image path) / required
+  id:
+    type: string (unique per page) / required
   imageName: 
-    type: string/optional
+    type: string / optional
   imageAuthor: 
-    type: string/optional
-  title: 
-    type: string/required
-  intro: 
-    type: string/required
-  form: {
-    path:
-      type: string
-    content: {
-      action:
-        type: string / required
-      buttonText:
-        type: string / required
-      inputText: {
-        type: object / inputText / required
-      }
-    }
+    type: string / optional
+  pageIntro: 
+    type: pageIntro / required
+  searchBannerForm: {
+    type: searchBannerForm / required
   }
-  helpfulLinks: {
-    columns: 
-      type: string/optional ('true','')
-    compHeading: {
-      title: 
-        type: string/required
-      sub: 
-        type: string/optional ('true',''),
-      color: 
-        type: string/optional ('yellow',''),
-      centered: true
-    },
-    items: [{
-      href:
-        type: string/url/required
-      text:
-        type: string/required
-      chevron: 
-        type: string/optional ('true':'')
-    }]
+  linkList: {
+    type: linkList / required
   }
 }
 ~~~

@@ -1,8 +1,8 @@
 ### Description
-Form with inputs used on Event listing page
+This pattern shows a Form with inputs to filter location and date range.
 
 ### Status 
-Stable as of 5.0.0
+* Stable as of 5.0.0
 
 ### Pattern Contains
 * Input Text
@@ -20,7 +20,7 @@ Stable as of 5.0.0
   eventFilters: {
     zipcode: {    
       inputText: {
-        type: object/inputText/required,
+        type: inputText / required
       },
       
       placeAutoComplet: {
@@ -45,10 +45,8 @@ Stable as of 5.0.0
       type: dateRange / optional
     },
 
-    submitButton:
-      type: string / required   
-  }
-
+  buttons: [{
+    type: array of Button / required
+  }]
 }
 ~~~
-
