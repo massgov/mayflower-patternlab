@@ -9,7 +9,7 @@ export default function (window,document,$,undefined) {
     let $el = $(this),
         $resultsHeading = $el.find('.js-results-heading'),
         $pagination = $el.find('.js-pagination'),
-        $eventFilter = $el.find('.js-event-location-filters');
+        $eventFilter = $el.find('.js-event-filters');
 
     // Get the location listing component data (this could be replaced with an api)
     const rawData = ma.eventListingInteractive[i]; // Data object created in @organisms/by-author/event-listing-interactive.twig

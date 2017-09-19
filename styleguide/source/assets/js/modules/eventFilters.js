@@ -1,5 +1,5 @@
 export default function (window,document,$,undefined) {
-  $('.js-event-location-filters').each(function(){
+  $('.js-event-filters').each(function(){
     let $el = $(this);
 
     // When google map libraries are loaded, initialize places.autocomplete on the location input, if it exists.
