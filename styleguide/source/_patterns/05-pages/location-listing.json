@@ -4,7 +4,7 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "breadcrumbs":{
-    "light": "true",
+    "light": true,
     "links": [{
       "text": "Your Government",
       "href": ""

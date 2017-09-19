@@ -32,10 +32,10 @@
             }
           },
           "helpfulLinks": {
-            "columns": "true",
+            "columns": true,
             "compHeading": {
               "title": "Popular Searches",
-              "sub": "true",
+              "sub": true,
               "color": "yellow",
               "centered": true
             },

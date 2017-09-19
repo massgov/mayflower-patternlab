@@ -22,10 +22,10 @@
     "title": "Welcome to Massachusetts",
     "intro": "What would you like to do?",
     "helpfulLinks": {
-      "columns": "true",
+      "columns": true,
       "compHeading": {
         "title": "Popular Searches",
-        "sub": "true",
+        "sub": true,
         "color": "yellow",
         "centered": true
       },
