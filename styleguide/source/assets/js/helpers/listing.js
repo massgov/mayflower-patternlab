@@ -387,6 +387,12 @@ export default  function(window, document, undefined, $){
       return filterDataByTags(tags, data);
     }
 
+    // If a date filter is present, filter based on the date filter values.
+    if (hasFilter(filters, 'end') || hasFilter(filters, 'start')) {
+      return filterDataByDateTags(filters, data);
+    }
+
+
     // Either there are no filters or the only active filter is location, make all items active
     return makeAllActive(data);
   }
