@@ -1,6 +1,6 @@
 {% set gridClass = eventListing.grid ? 'ma__event-listing--grid' : '' %}
 
-<section class="ma__event-listing {{ gridClass }}">
+<section class="ma__event-listing {{ gridClass }} js-event-listing">
   <div class="ma__event-listing__container">
     {% if eventListing.compHeading %}
       {% set compHeading = eventListing.compHeading %}
@@ -10,9 +10,9 @@
       {% set sidebarHeading = eventListing.sidebarHeading %}
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
     {% endif %}
-    <ul class="ma__event-listing__items">
+    <ul class="ma__event-listing__items js-event-listing-items">
       {% for eventTeaser in eventListing.events %}
-        <li class="ma__event-listing__item">
+        <li class="ma__event-listing__item js-event-listing-item">
           {% include "@molecules/event-teaser.twig" %}
         </li>
       {% endfor %}
@@ -25,3 +25,6 @@
     {% endif %}
   </div>
 </section>
+
+
+

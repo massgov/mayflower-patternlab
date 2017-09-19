@@ -1,10 +1,10 @@
 export default function (window,document,$,undefined) {
-  $('.js-location-filters').each(function(){
+  $('.js-event-filters').each(function(){
     let $el = $(this);
 
     // When google map libraries are loaded, initialize places.autocomplete on the location input, if it exists.
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function() {
-      let $locationFilterParent = $('.js-filter-by-location', $el);
+      let $locationFilterParent = $('.js-event-filter-by-location', $el);
       let $locationFilter = $locationFilterParent.find('input');
       if ($locationFilter.length) {
         // Create the google places autocomplete object and associate it with the zip code text input.
@@ -39,7 +39,7 @@ export default function (window,document,$,undefined) {
       let formData = getFormData({$form: $(this)});
 
       // Trigger location listing filter event with current filter values.
-      $el.trigger('ma:LocationFilter:FormSubmitted', [{formData: formData}]);
+      $el.trigger('ma:EventFilter:FormSubmitted', [{formData: formData}]);
     });
 
   });
@@ -58,7 +58,7 @@ export default function (window,document,$,undefined) {
 
   function getFormData(args) {
     let $form = $(args.$form),
-      $location = $form.find('.js-filter-by-location'),
+      $location = $form.find('.js-event-filter-by-location'),
       $tags = $form.find('.js-filter-by-tags'),
       formData = [];
 
@@ -83,7 +83,7 @@ export default function (window,document,$,undefined) {
 
   function clearDeactivatedFilter(args) {
     let $form = $(args.$form),
-      $place = $form.find('.js-filter-by-location'),
+      $place = $form.find('.js-event-filter-by-location'),
       $tags = $form.find('.js-filter-by-tags'),
       clearedFilter = args.clearedFilter;
 
@@ -92,7 +92,6 @@ export default function (window,document,$,undefined) {
       $place.find('input').val("");
       return;
     }
-
     // If the cleared filter button was for a tag filter.
     if (clearedFilter.type === 'tag') {
       $tags.find('input[type=checkbox][value=' + clearedFilter.value + ']').prop('checked', false);
@@ -101,15 +100,16 @@ export default function (window,document,$,undefined) {
 
   function clearForm(args) {
     let $form = $(args.$form),
-      $tags = $('.js-filter-by-tags', $form),
-      $place = $('.js-filter-by-location', $form).find('input');
+      $place = $('.js-event-filter-by-location', $form).find('input');
 
     // Clear location text input.
     if ($place.length) {
       $place.val("");
     }
-    // Uncheck all checked tags inputs.
-    $tags.find('input:checked').prop('checked', false);
+    // Check for tags and uncheck all checked tags inputs.
+    if (typeof $tags != "undefined") {
+      $tags.find('input:checked').prop('checked', false);
+    }
   }
 
 }(window,document,jQuery);
