@@ -6,7 +6,7 @@ Displays details about how to complete a step.
 
 ### Pattern Contains
 * Rich Text
-* Download Link
+* Form Downloads
 * Decorative Link
 
 ### Variant options

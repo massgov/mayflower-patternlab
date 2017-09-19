@@ -1,20 +1,17 @@
----
-title: Listing table
----
-Description: shows a two column list of data
+### Description
+This pattern shows a two column list of data rendered in a table.
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-
-### Required Variables
+### Variables
 ~~~
-"listingTable": {
-  "rows": [{
-    type: array/required
-    "label": 
-      type: string/required
-    "text":  
-      type: string/required
+listingTable: {
+  rows: [{
+    label: 
+      type: string / required
+    text:  
+      type: string / required
   }]
 }
-~~~~
+~~~

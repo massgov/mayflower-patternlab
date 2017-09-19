@@ -66,6 +66,14 @@
         "submitButton": "Submit"
       },
 
+      "buttons": [{
+        "text": "Submit",
+        "type": "submit",
+        "size": "small",
+        "theme": "",
+        "outline": false
+      }]
+    },
       "resultsHeading": {
         "numResults": "1-10",
         "totalResults": "11",
