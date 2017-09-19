@@ -88,6 +88,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
     - Updated Twig markup and Data Layer
 - Category Icon
     - Variable `small` is now boolean
+- Check List
+    - Updated Twig markup
+- Ordered List
+    - Updated Twig markup
+- Unordered List
+    - Updated Twig markup
+- Figure
+    - Updated Twig markup
+    - align variable should be `left` and `right`
 
 - Table
     - Variable `Table.rows.cells.heading` is now boolean
