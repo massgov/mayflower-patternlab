@@ -26,6 +26,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Added
 
 ### Changed
+- Upgraded Pattern Lab to the Drupal Twig version
+
 
 - Patterns move to an Archived folder
     - Blog Feed
@@ -60,29 +62,54 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
     - Related Action
 - Atoms
     - Button Link
+    - Input Textarea
 
 ### Migrate Path
+- Button 
+    - css classes have been updated to use modifier classes
+- Arrow Button
+    - Attribure `aria-label` is now `title`
 - Input Checkbox
-    - `checked` is now a boolean value
+    - Variable `checked` is now a boolean value
+    - Includes an optional icon
 - Input Radio
-    - `checked` is now a boolean value
+    - Variable `checked` is now a boolean value
+- input Text
+    - Updated Twig and Data Layer
+- Select box
+    - Updated Twig and Data Object for new `required` variable
+- Textarea 
+    - New pattern to replace 'input-textarea'
+- Colored Heading 
+    - Updated Twig markup
+- Column Heading
+    - Updated Twig markup
 - Comp Heading 
-    - `centered` is now a boolean value
+    - Updated Twig markup and Data Layer
+- Category Icon
+    - Variable `small` is now boolean
+
+- Table
+    - Variable `Table.rows.cells.heading` is now boolean
+
 - Video
     - Updated Twig markup
 - Link 
-    - `link.chevron` is now a boolean value
-    - `label` is now `info`
+    - Variable `link.chevron` is now a boolean value
+    - Variable `label` is now `info`
+
+- Helpful Links
+    - Variable `columns` is now a boolean value
+
 - Key Actions / Callout Grid
-    - `sidebarHeading` is now `compHeading` with `compHeading.sidebar` set to true
+    - Variable `sidebarHeading` is now `compHeading` with `compHeading.sidebar` set to true
 - Header Alert
-    - `guid` is now `id`
+    - Variable `guid` is now `id`
 - Illustrated Header
-    - `bgTitle` is now `bgInfo`
+    - Variable `bgTitle` is now `bgInfo`
 - Location Banner
-    - `bgTitle` is now `bgInfo`
-- Button 
-    - css classes have been updated to use modifier classes
+    - Variable `bgTitle` is now `bgInfo`
+
 
 ## 5.7.2
 
