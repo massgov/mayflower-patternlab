@@ -15,7 +15,7 @@ compHeading: {
   title:
     type: string / required
   sub:
-    type: string ("true" || "" ) / optional
+    type: boolean
   color:
     type: string ("yellow") / optional
   id:
