@@ -73,7 +73,6 @@
   }
 
   &__link {
-    @include ma-link-underline;
 
     @media ($bp-small-max) {
       @include ma-visually-hidden;
