@@ -1,0 +1,415 @@
+{
+  "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
+
+  "floatingAction": null,
+
+  "backToTopButton": true,
+
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "title": "Tax Forms",
+    "subTitle": "",
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Office of the Governor"
+      },{
+        "href": "#",
+        "text": "A Service Name"
+      }]
+    },
+
+    "socialLinks": null,
+    "optionalContents": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "I am an optional description for this page.  I am an optional description for this page.  I am an optional description for this page.  I am an optional description for this page."
+              }
+            }
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  },
+
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+
+  "jumpLinks": {
+    "title": "In This List",
+    "links": [{
+      "text": "Law Library Content",
+      "href": "law-library-content"
+    },{
+      "text": "Documents and Forms",
+      "href": "documents-and-forms"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name1"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name2"
+    },{
+      "text": "Another Section Name",
+      "href": "another-section-name5"
+    }]
+  },
+
+  "stackedRowSections": [{
+    "title":"Law Library Content",
+    "id":"law-library-content",
+    "pageContent": [{
+      "path": "@organisms/by-author/image-promos.twig",
+      "data": {
+        "imagePromos": {
+          "compHeading": null,
+          "items": [{
+            "title": {
+              "text": "Hiking & Walking",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": {
+              "text": "Camping",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": {
+              "text": "Winter Sports",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": {
+              "text": "Hunting",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": {
+              "text": "Bird Watching",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          }]
+        }
+      }
+    }],
+
+    "sideBar": []
+  },{
+    "title": "Documents and Forms",
+    "id": "documents-and-forms",
+    "pageContent": [{
+      "path": "@organisms/by-author/form-downloads.twig",
+      "data": {
+        "formDownloads": {
+          "compHeading": null,
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "PDF download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "30kb",
+              "format": "PDF"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "decorativeLink": {
+                "text": "Word download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "DOCX"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-generic.twig",
+              "decorativeLink": {
+                "text": "Generic type of download",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "???"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          }]
+        }
+      }
+    }]
+  },{
+    "title": "Another Section Name",
+    "id": "another-section-name",
+    "pageContent": [{
+      "path": "@organisms/by-author/image-promos.twig",
+      "data": {
+        "imagePromos": {
+          "compHeading": null,
+          "items": [{
+            "title": {
+              "text": "Hiking & Walking",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": null,
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@molecules/download-link.twig",
+                  "data": {
+                    "downloadLink": {
+                      "iconSize": "",
+                      "icon": "@atoms/05-icons/svg-laptop.twig",
+                      "decorativeLink": {
+                        "text": "Link to an online form",
+                        "href": "#",
+                        "info": "",
+                        "property": ""
+                      },
+                      "size": "",
+                      "format": "form"
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": {
+              "text": "Winter Sports",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": null,
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@molecules/download-link.twig",
+                  "data": {
+                    "downloadLink": {
+                      "iconSize": "",
+                      "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                      "decorativeLink": {
+                        "text": "Word download item",
+                        "href": "#",
+                        "info": "",
+                        "property": ""
+                      },
+                      "size": "40kb",
+                      "format": "DOCX"
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          },{
+            "title": {
+              "text": "Bird Watching",
+              "href": "#"
+            },
+            "image": null,
+            "description": {
+              "richText":{
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
+                    }
+                  }
+                }]
+              }
+            },
+            "link": null
+          }]
+        }
+      }
+    }]
+  }
+  ],
+
+  "COMMENT":"****POSTCONTENT COMPONENTS****",
+
+  "suggestedPages": {
+    "title": "Related Guides",
+    "view":"guide",
+    "buttonMinor" : {
+      "href": "#",
+      "text": "See All Guides"
+    },
+    "pages": [{
+      "image": "../../assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Buying Your First Home",
+        "label": "Guide:"
+      }
+    },{
+      "image": "../../assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Shopping for Auto Insurance",
+        "label": "Guide:"
+      }
+    },{
+      "image": "../../assets/images/placeholder/130x160.png",
+      "altTag": "Place Holder Image",
+      "link": {
+        "type": "",
+        "href": "#",
+        "text": "Education in Massachusetts",
+        "label": "Guide:"
+      }
+    }]
+  }
+
+}
