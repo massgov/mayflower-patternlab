@@ -31,6 +31,12 @@
       }
     },
 
-    "submitButton": "Submit"   
+    "buttons": [{
+      "text": "Submit",
+      "type": "submit",
+      "size": "small",
+      "theme": "",
+      "outline": false
+    }]
   }
 }

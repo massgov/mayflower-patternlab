@@ -2,13 +2,6 @@
   "urlPath": "/?p=pages-ORG-Health-Services",
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Health and Human Services (EOHHS)",
-      "href": "#"
-    }]
-  },
 
   "pageBanner": {
     "bgWide":"../../assets/images/placeholder/1600x400.png",
@@ -78,7 +71,7 @@
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
-  "stackedRowSections": [{
+  "stackedRows": [{
     "title":"",
     "id":"",
     "pageContent": [{
@@ -112,16 +105,16 @@
     }],
 
     "sideBar": [{
-      "path": "@atoms/04-headings/sidebar-heading.twig",
-      "data": {
-        "sidebarHeading": {
-          "title": "Social"
-        }
-      }
-    },{
       "path": "@molecules/icon-links.twig",
       "data": {
         "iconLinks": {
+          "compHeading": {
+            "title": "Social",
+            "sub": true,
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
           "items": [{
             "icon": "@atoms/05-icons/svg-twitter.twig",
             "link": {

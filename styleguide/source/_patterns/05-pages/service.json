@@ -83,10 +83,14 @@
     },
 
     "social": {
-      "sidebarHeading": {
-        "title": "Social"
-      },
       "iconLinks": {
+        "compHeading": {
+          "title": "Social",
+          "sub": true,
+          "color": "",
+          "id": "",
+          "centered": ""
+        },
         "items": [{
           "icon": "@atoms/05-icons/svg-twitter.twig",
           "link": {
