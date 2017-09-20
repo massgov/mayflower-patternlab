@@ -2,4 +2,4 @@
 This is a variant of the [Download Link](./?p=molecules-download-link) pattern showing an example link with a generic icon.
 
 ### How to generate
-* set the "icon" variable to "@atoms/05-icons/svg-doc-generic.twig"
+* set the `icon` variable to "@atoms/05-icons/svg-doc-generic.twig"

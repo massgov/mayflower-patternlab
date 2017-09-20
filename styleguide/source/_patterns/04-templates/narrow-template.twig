@@ -1,12 +1,8 @@
-{% if narrowTemplate.side %}
-  {% set side = "ma__narrow-template--" ~ narrowTemplate.side %}
-{% endif %}
+{% set sideClass = narrowTemplate.side ? "ma__narrow-template--" ~ narrowTemplate.side : "" %}
 
-{% if narrowTemplate.color %}
-  {% set color = "ma__narrow-template--" ~ narrowTemplate.color %}
-{% endif %}
+{% set colorClass = narrowTemplate.color ? "ma__narrow-template--" ~ narrowTemplate.color : "" %}
 
-<main id="main-content" class="ma__narrow-template {{side}} {{color}}" tabindex="-1">
+<main id="main-content" class="ma__narrow-template {{ sideClass }} {{ colorClass }}" tabindex="-1">
   <header class="ma__narrow-template__header">
     {% include "@atoms/09-media/site-logo.twig" %}
   </header>
@@ -14,10 +10,10 @@
   <div class="ma__narrow-template__container">
     <div class="ma__narrow-template__content">
       {% block narrowContent %}
-        {% include "@base/placeholder.twig" with {'placeholder':{'text':'Narrow Page content'}} %}
+        {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
       {% endblock %}
     </div>
   </div>
-  {% block schemaContent %}
-  {% endblock %}
+
+  {% block schemaContent %}{% endblock %}
 </main>

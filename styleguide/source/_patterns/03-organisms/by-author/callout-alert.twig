@@ -1,4 +1,7 @@
-{% set calloutAlert = calloutAlert.decorativeLink %}
+{# Backward Compatible with v 5.7 - calloutAlert is now type decorativeLink instead of 'calloutAlert.decorativeLink' #}
+{% if calloutAlert.decorativeLink %}
+  {% set calloutAlert = calloutAlert.decorativeLink %}
+{% endif %}
 
 <section class="ma__callout-alert">
   {% if calloutAlert.href %}

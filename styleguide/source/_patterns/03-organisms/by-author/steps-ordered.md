@@ -9,6 +9,9 @@ An ordered list of steps.
 * sidebar Heading
 * Action Step
 
+### Variant options
+* If there is [only one option](./?p=organisms-steps-ordered-just-one) they number icon is not rendered
+
 
 ### Variables
 ~~~

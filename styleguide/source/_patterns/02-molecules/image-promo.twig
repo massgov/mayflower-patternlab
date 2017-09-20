@@ -15,8 +15,9 @@
     </div>
   {% endif %}
   <div class="ma__image-promo__details">
-    {% if imagePromo.title %}
-    <h2 class="ma__image-promo__title">
+    {% if imagePromo.title.text %}
+      {% set headingLevel = imagePromo.level ? : 2 %}
+      <h{{ headingLevel }} class="ma__image-promo__title">
       {% if imagePromo.tags %}
         <div class="ma__image-promo__tags">
           {% for tag in imagePromo.tags %}
@@ -30,7 +31,7 @@
       {% else %}
         {{ imagePromo.title.text }}
       {% endif %}
-    </h2>
+    </h{{ headingLevel }}>
     {% endif %}
     {% if imagePromo.location.text %}
       <div class="ma__image-promo__location">
@@ -51,9 +52,14 @@
         </a>
       </div>
     {% endif %}
-    {% if imagePromo.description.richText %}
-      <div class="ma__image-promo__description">
+    {# backward compatible with v5.7 - description is now type richText vs 'imagePromo.description.richText' #}
+    {% if imagePromo.description.rteElements or imagePromo.description.richText %}
+      {% set richText = imagePromo.description %}
+
+      {% if imagePromo.description.richText %}
         {% set richText = imagePromo.description.richText %}
+      {% endif %}
+      <div class="ma__image-promo__description">
         {% include "@organisms/by-author/rich-text.twig" %}
       </div>
     {% endif %}

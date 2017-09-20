@@ -37,6 +37,7 @@
       "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
+          "icon": "@atoms/05-icons/svg-wait-time.twig",
           "text": "Most applicants hear back within 4-6 weeks of applying"
         }
       }
@@ -95,7 +96,7 @@
     "intro": {
       "compHeading": {
         "title": "What you need",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "what-you-need",
         "centered": ""
@@ -162,17 +163,18 @@
     "tabularData": {
       "compHeading": {
         "title": "Fees",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "fees",
         "centered": ""
       },
-      "richText": {
+      "description": {
+        "property": "",
         "rteElements": [{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "You must submit a form. Morbi euismod enim eget neque. Donec sagittis massa. Vestibulum quis augue sit amet ipsum laoreet pretium."
+              "text": "This is an optional description. Lorem ipsum ..."
             }
           }
         }]
@@ -230,7 +232,7 @@
     "stepsUnordered": {
       "compHeading": {
         "title": "How To Apply",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "how-to-apply",
         "centered": ""
@@ -299,7 +301,7 @@
     "stepsOrdered": {
       "compHeading": {
         "title": "Next Steps",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "next-steps",
         "centered": ""
@@ -380,7 +382,7 @@
     "moreInfo": {
       "compHeading": {
         "title": "More info",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "more-info",
         "centered": ""
@@ -398,7 +400,7 @@
     "formDownloads": {
       "compHeading": {
         "title": "Downloads",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "downloads",
         "centered": ""
@@ -422,7 +424,7 @@
     "contactList": {
       "compHeading": {
         "title": "Contact",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "contact",
         "centered": ""

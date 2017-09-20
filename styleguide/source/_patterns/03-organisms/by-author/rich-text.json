@@ -1,16 +1,17 @@
 {
   "richText": {
-    "compHeading": null,
-    "property": "",
-    "rteElements": [{
-      "path": "@atoms/04-headings/heading-2.twig",
-      "data": {
-        "heading2" : {
-          "text": "This is an Heading-2 atom (H2)"
-        }
-      }
+    "compHeading": {
+      "title": "Rich Text Editor with a Comp Heading",
+      "id": "rich-text-editor",
+      "sub": false
     },
-    {
+    "sidebarHeading": null,
+    "decorativeLink": {
+      "href": "#",
+      "text": "Optional Learn More Link",
+      "info": "Learn More about this information"
+    },
+    "rteElements": [{
       "path": "@atoms/09-media/figure.twig",
       "data": {
         "figure": {
@@ -24,24 +25,21 @@
           "caption": "This is a Figure floated right with a caption"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
           "text": "<b>This is a paragraph atom</b>. Lorem ipsum dolor sit amet, consectetur adipisicing elit.  <a href=\"#\">This is a link within a paragraph</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, nemo? Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias."
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
           "text": "<i>This is another paragraph atom</i>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quis doloribus expedita facilis illum aperiam?  <a href=\"#\">This is a link within a paragraph</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, nemo? Explicabo itaque possimus dignissimos?"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/09-media/figure.twig",
       "data": {
         "figure": {
@@ -55,8 +53,7 @@
           "caption": "This is a full width Figure atom with a caption"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/09-media/figure.twig",
       "data": {
         "figure": {
@@ -70,32 +67,28 @@
           "caption": "This is a Figure floated left with an optional caption"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
           "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit amet sint quia  est porro aperiam soluta reiciendis labore a maiores architecto illo aspernatur ad nihil laudantium magni dolor, ea nulla."
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
           "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
         }
       }
-    },
-    {
-      "path": "@atoms/04-headings/heading-3.twig",
+    },{
+      "path": "@atoms/04-headings/heading-2.twig",
       "data": {
-        "heading3" : {
-          "text": "This is a Heading-3 atom (H3)"
+        "heading2" : {
+          "text": "This is an Heading-2 atom (H2)"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/08-lists/unordered-list.twig",
       "data": {
         "unorderedList": [
@@ -111,16 +104,14 @@
           {"text":"This is the last list item"}
         ]
       }
-    },
-    {
+    },{
       "path": "@atoms/04-headings/heading-4.twig",
       "data": {
         "heading4" : {
           "text": "This is a Heading-4 atom (H4)"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/08-lists/ordered-list.twig",
       "data": {
         "orderedList": [
@@ -136,8 +127,7 @@
           {"text":"This is the last list item"}
         ]
       }
-    },
-    {
+    },{
       "path": "@atoms/04-headings/heading-4.twig",
       "data": {
         "heading4" : {
@@ -153,8 +143,7 @@
             { "text": "This is the last list item"}
         ]
       }
-    },
-    {
+    },{
       "path": "@atoms/04-headings/heading-4.twig",
       "data": {
         "heading4" : {
@@ -179,32 +168,28 @@
           "text":"This is the last list item"
         }]
       }
-    },
-    {
+    },{
       "path": "@atoms/04-headings/heading-5.twig",
       "data": {
         "heading5" : {
           "text": "This is a Heading 5 - H5"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/04-headings/heading-6.twig",
       "data": {
         "heading6" : {
           "text": "This is a Heading 6 - H6"
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/11-text/paragraph.twig",
       "data": {
         "paragraph" : {
           "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
         }
       }
-    },
-    {
+    },{
       "path": "@atoms/10-table/table.twig",
       "data": {
         "table": {
