@@ -14,7 +14,7 @@
   "linkList": {
     "compHeading": {
       "title": "Helpful Links",
-      "sub": "true",
+      "level": 3,
       "color": "yellow",
       "centered": true
     },

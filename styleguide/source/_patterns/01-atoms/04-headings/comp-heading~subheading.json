@@ -1,7 +1,7 @@
 {
   "compHeading": {
     "title": "Title text",
-    "sub": true,
+    "level": 3,
     "color": "",
     "id": "",
     "centered": ""

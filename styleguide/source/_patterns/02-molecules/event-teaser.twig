@@ -16,10 +16,11 @@
   {% endif %}
   <div class="ma__event-teaser__content">
     {% if eventTeaser.title %}
-      <h3 class="ma__event-teaser__title">
+      {% set headingLevel = eventTeaser.level ? : 2 %}
+      <h{{ headingLevel }} class="ma__event-teaser__title">
         {% set decorativeLink = eventTeaser.title %}
         {% include "@atoms/decorative-link.twig" %}
-      </h3>
+      </h{{ headingLevel }}>
     {% endif %}
     {% if eventTeaser.location %}
       <div class="ma__event-teaser__location">

@@ -25,7 +25,8 @@
           aria-labelledby="{{ tooltip.controlId }}"
           aria-hidden="true">{{ tooltip.closeText }}</label>
         {% if tooltip.title %}
-          <h2 class="ma__tooltip__title">{{ tooltip.title }}</h2>
+          {% set headingLevel = tooltip.level ? : 2 %}
+          <h{{ headingLevel }} class="ma__tooltip__title">{{ tooltip.title }}</h{{ headingLevel }}>
         {% endif %}
         <div class="ma__tooltip__message">
           {{ tooltip.message|raw }}

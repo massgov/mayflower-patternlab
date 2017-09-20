@@ -1,8 +1,7 @@
 {
   "narrowTemplate": {
     "side": "right",
-    "color": "yellow",
-    "centered": true
+    "color": "yellow"
   },
   
   "errorPage": {
@@ -15,7 +14,7 @@
   "linkList": {
     "compHeading": {
       "title": "Helpful Links",
-      "sub": "true",
+      "level": 3,
       "color": "yellow",
       "centered": true
     },

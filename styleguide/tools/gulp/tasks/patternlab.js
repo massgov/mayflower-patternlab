@@ -19,10 +19,6 @@ module.exports = function patternLabTask(config, env){
         run(command).exec();
     });
 
-    // gulp.task('patternlab', function(next) {
-    //     return run('php ' + config.patternLabRoot + '/core/console --generate --patternsonly').exec("", next);
-    // });
-
     // register the watch
     quench.registerWatcher("patternlab", [
         config.patternLabRoot + "/source/**/*.{twig,mustache,json,md}"
