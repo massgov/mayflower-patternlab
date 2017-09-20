@@ -6,7 +6,7 @@
       "sub": "",
       "color": "",
       "id": "contacts",
-      "centered": ""
+      "centered": false
     },
 
     "contacts":[{
@@ -21,73 +21,60 @@
         "name": "Phone",
         "items": [{
           "type": "phone",
-          "property": "",
           "label":"Main:",
           "link": {
             "href": "+14134994262",
             "text": "(413) 499-4262",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
         },{
           "type": "phone",
-          "property": "",
           "label":"Toll Free:",
           "link":{
             "href": "+18004324321",
             "text": "(800) 432-4321",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
         },{
           "type": "phone",
-          "property": "",
           "label":"TTY:",
           "link": {
             "href":"+16175557777",
             "text": "(617) 555-7777",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"For those who need accessible services"
         },{
           "type": "phone",
-          "property": "",
           "label":"Voice Relay:",
           "link":{
             "href":"16175555255",
             "text": "(617) 555-5255",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":""
         }]
       },{
         "icon": "@atoms/05-icons/svg-laptop.twig",
         "name": "Online",
-        "hidden": "",
         "items": [{
           "type": "email",
-          "property": "",
           "label":"Email:",
           "link": {
             "href":"email@email.com",
             "text": "email@email.com",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":""
         },{
           "type": "online",
-          "property": "",
           "label":"Web:",
           "link": {
             "href":"#",
             "text": "Contact Form",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":""
         }]
@@ -96,13 +83,11 @@
         "name": "Fax",
         "items": [{
           "type": "fax",
-          "property": "",
           "label":"Main:",
           "link": {
             "href":"+14134994262",
             "text": "(413) 499-4262",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"Please allow 24 hours for a response"
         }]
@@ -111,14 +96,12 @@
         "name": "Address",
         "items": [{
           "type": "address",
-          "property": "",
           "label": "",
           "address": "555 Park Drive\nBoston, MA 02231",
           "link": {
             "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
             "text": "directions",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details": ""
         }]
@@ -135,73 +118,60 @@
         "name": "Phone",
         "items": [{
           "type": "phone",
-          "property": "",
           "label":"Main:",
           "link": {
             "href": "+14134994262",
             "text": "(413) 499-4262",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
         },{
           "type": "phone",
-          "property": "",
           "label":"Toll Free:",
           "link":{
             "href": "+18004324321",
             "text": "(800) 432-4321",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
         },{
           "type": "phone",
-          "property": "",
           "label":"TTY:",
           "link": {
             "href":"+16175557777",
             "text": "(617) 555-7777",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"For those who need accessible services"
         },{
           "type": "phone",
-          "property": "",
           "label":"Voice Relay:",
           "link":{
             "href":"16175555255",
             "text": "(617) 555-5255",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":""
         }]
       },{
         "icon": "@atoms/05-icons/svg-laptop.twig",
         "name": "Online",
-        "hidden": "",
         "items": [{
           "type": "email",
-          "property": "",
           "label":"Email:",
           "link": {
             "href":"email@email.com",
             "text": "email@email.com",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":""
         },{
           "type": "online",
-          "property": "",
           "label":"Web:",
           "link": {
             "href":"#",
             "text": "Contact Form",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":""
         }]
@@ -210,13 +180,11 @@
         "name": "Fax",
         "items": [{
           "type": "fax",
-          "property": "",
           "label":"Main:",
           "link": {
             "href":"+14134994262",
             "text": "(413) 499-4262",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details":"Please allow 24 hours for a response"
         }]
@@ -225,14 +193,12 @@
         "name": "Address",
         "items": [{
           "type": "address",
-          "property": "",
           "label": "",
           "address": "555 Park Drive\nBoston, MA 02231",
           "link": {
             "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
             "text": "directions",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "details": ""
         }]

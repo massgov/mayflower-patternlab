@@ -2,7 +2,7 @@
   "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
 
   "breadcrumbs":{
-    "light": "true",
+    "light": true,
     "links": [{
       "text": "Your Government",
       "href": ""

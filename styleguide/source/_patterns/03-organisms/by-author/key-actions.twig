@@ -1,8 +1,3 @@
-{# backward compatible for version 5.5 #}
-{% if keyActions.sidebarHeading %}
-  {% set keyActions = keyActions|merge({"compHeading": { "title": keyActions.sidebarHeading.title, "sidebar" : true }}) %}
-{% endif %}
-
 <section class="ma__key-actions">
   <div class="ma__key-actions__container">
     {% if keyActions.compHeading %}

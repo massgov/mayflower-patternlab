@@ -14,22 +14,22 @@
   "helpfulLinks": {
     "compHeading": {
       "title": "Helpful Links",
-      "sub": "true",
+      "sub": true,
       "color": "yellow",
       "centered": true
     },
     "items": [{
       "href": "#",
       "text":"Helpful link",
-      "chevron": "true"
+      "chevron": true
     },{
       "href": "#",
       "text":"Another helpful link",
-      "chevron": "true"
+      "chevron": true
     },{
       "href": "#",
       "text":"Yet another helpful link",
-      "chevron": "true"
+      "chevron": true
     }]
   }
 }

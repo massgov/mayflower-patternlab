@@ -98,21 +98,21 @@
           "link": {
             "href": "#",
             "text": "Optional Socia Media",
-            "chevron": ""
+            "chevron": false
           }
         },{
           "icon": "@atoms/05-icons/svg-flickr.twig",
           "link": {
             "href": "#",
             "text": "ScreenName",
-            "chevron": ""
+            "chevron": false
           }
         },{
           "icon": "@atoms/05-icons/svg-blog.twig",
           "link": {
             "href": "#",
             "text": "ScreenName",
-            "chevron": ""
+            "chevron": false
           }
         }]
       }
@@ -211,7 +211,7 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": false
     },
     "link": {
       "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",

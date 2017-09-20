@@ -60,8 +60,7 @@
               "link": {
                 "href": "https://www.google.com/maps/place/Halibut+Point+State+Park",
                 "text": "directions",
-                "info": "directions to Halibut Point State Park",
-                "property": "url"
+                "info": "directions to Halibut Point State Park"
               },
               "details": ""
             }]
@@ -72,6 +71,7 @@
       "path": "@organisms/by-author/key-actions.twig",
       "data": {
         "keyActions": {
+          "compHeading": null,
           "links":[{
             "text": "optional sign up",
             "type": "",
@@ -90,7 +90,7 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "image": { 
         "alt": "alt text", 
@@ -161,8 +161,7 @@
           "decorativeLink": {
             "text": "PDF download item",
             "href": "#",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "size": "30kb",
           "format": "PDF"
@@ -174,8 +173,7 @@
           "decorativeLink": {
             "text": "Word download item",
             "href": "#",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "size": "40kb",
           "format": "DOCX"
@@ -187,8 +185,7 @@
           "decorativeLink": {
             "text": "Online form or information page",
             "href": "#",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "size": "",
           "format": "form"
@@ -214,29 +211,24 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+17817401605",
               "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"",
             "link": {
               "href":"#",
               "text": "person@email.com",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -262,29 +254,24 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+17817401605",
               "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"",
             "link": {
               "href":"#",
               "text": "person@email.com",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -312,18 +299,15 @@
       "links" : [{
         "href":"#",
         "text":"first date",
-        "info": "",
-        "property": ""
+        "info": ""
       },{
         "href":"#",
         "text":"second date",
-        "info": "",
-        "property": ""
+        "info": ""
       },{
         "href":"#",
         "text":"thrid date",
-        "info": "",
-        "property": ""
+        "info": ""
       }]
     }
   },
@@ -344,13 +328,11 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+17817401605",
               "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -360,13 +342,11 @@
           "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"",
             "link": {
               "href":"#",
               "text": "person@email.com",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -389,13 +369,11 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+17817401605",
               "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -405,13 +383,11 @@
           "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"",
             "link": {
               "href":"#",
               "text": "person@email.com",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -430,8 +406,7 @@
         "title": {
           "href": "#",
           "text": "Winter Birding Event",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "location": "Lanesborough, MA",
         "date": {
@@ -447,8 +422,7 @@
         "title": {
           "href": "#",
           "text": "First Day Hike",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "location": "Lanesborough, MA",
         "date": {

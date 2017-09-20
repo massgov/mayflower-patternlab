@@ -38,13 +38,13 @@
       "value": "handicapped",
       "id": "handicapped",
       "label": "Wheelchair accessible",
-      "checked": "false",
+      "checked": false,
       "icon": "@atoms/05-icons/svg-wheelchair.twig"
     },{
       "value": "open",
       "id": "open",
       "label": "Open now",
-      "checked": "false",
+      "checked": false,
       "icon": "@atoms/05-icons/svg-open-now.twig"
     }],
     "submitButton": "Submit"   

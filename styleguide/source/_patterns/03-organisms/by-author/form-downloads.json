@@ -11,8 +11,7 @@
         "decorativeLink": {
           "text": "PDF download item",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "30kb",
         "format": "PDF"
@@ -24,8 +23,7 @@
         "decorativeLink": {
           "text": "Word download item",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "40kb",
         "format": "DOCX"
@@ -37,8 +35,7 @@
         "decorativeLink": {
           "text": "Generic type of download",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "40kb",
         "format": "???"
@@ -50,8 +47,7 @@
         "decorativeLink": {
           "text": "Link to an online form",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "",
         "format": "form"
@@ -63,8 +59,7 @@
         "decorativeLink": {
           "text": "Link to another page",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "",
         "format": "form"
@@ -74,7 +69,7 @@
       "href": "#",
       "text": "See all 10 additional resources",
       "chevron": true,
-      "label": "See all of the resources for Executive Office of Health and Human Services"
+      "info": "See all of the resources for Executive Office of Health and Human Services"
     }
   }
 }

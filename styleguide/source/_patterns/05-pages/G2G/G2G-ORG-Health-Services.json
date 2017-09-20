@@ -120,21 +120,21 @@
             "link": {
               "href": "https://twitter.com/MassHHS",
               "text": "@MassHHS",
-              "chevron": ""
+              "chevron": false
             }
           },{
             "icon": "@atoms/05-icons/svg-flickr.twig",
             "link": {
               "href": "https://www.flickr.com/photos/mass_hhs/",
               "text": "Mass_HHS",
-              "chevron": ""
+              "chevron": false
             }
           },{
             "icon": "@atoms/05-icons/svg-blog.twig",
             "link": {
               "href": "https://blog.mass.gov/hhs",
               "text": "blog.mass.gov/hhs",
-              "chevron": ""
+              "chevron": false
             }
           }]
         }
@@ -205,12 +205,12 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "link": {
             "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
             "text":"Location Details",
-            "chevron": "true"
+            "chevron": true
           },
           "googleMap":{
             "map": {
@@ -259,7 +259,7 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "sections": [{
             "id": "GUIDasjdhf1",
@@ -353,7 +353,7 @@
             "sub": "",
             "color": "",
             "id": "",
-            "centered": ""
+            "centered": false
           },
           "links" : [{
             "href":"#",

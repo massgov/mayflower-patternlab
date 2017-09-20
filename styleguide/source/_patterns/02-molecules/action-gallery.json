@@ -4,7 +4,7 @@
       "href": "#",
       "target": "",
       "text":"view gallery",
-      "chevron": "true"
+      "chevron": true
     },
     "items": [{
       "src":"../../assets/images/placeholder/80x80.png",

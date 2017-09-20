@@ -5,29 +5,25 @@
       "calloutLink": {
         "type": "",
         "href": "#",
-        "text": "Get a State Park Pass",
-        "quickaction": "false"
+        "text": "Get a State Park Pass"
       }
     },{
       "calloutLink": {
         "type": "",
         "href": "#",
-        "text": "Reserve an Athletic Field",
-        "quickaction": "false"
+        "text": "Reserve an Athletic Field"
       }
     },{
       "calloutLink": {
         "type": "",
         "href": "#",
-        "text": "Download a Trail Map",
-        "quickaction": "false"
+        "text": "Download a Trail Map"
       }
     },{
       "calloutLink": {
         "type": "",
         "href": "#",
-        "text": "Find a Campground",
-        "quickaction": "false"
+        "text": "Find a Campground"
       }
     }]
   }

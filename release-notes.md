@@ -21,6 +21,297 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Migrate Path
 
+## 6.0.0
+
+### Added
+- Atoms
+    - Button Sort
+    - Button (replaces Button Link)
+    - Helper Text
+    - Input Date
+    - Input Group
+    - Textarea (replaces Input Textarea)
+    - Page Title
+    - Iframe
+
+- Molecules
+    - Banner Credit
+    - Date Range
+    - Error List
+    - Event Filters
+    - Event Teaser
+    - Float Action
+    - Footnote
+    - Dvided Inputs
+    - Labelled List
+    - Org Selector
+    - Page Intro
+    - Press Teaser
+    - Sort Results
+    - Tooltip
+
+- Organisms
+    - Event List
+    - Footnote List
+    - Form Requirements
+    - Page Overview
+    - Press Filters
+    - Press Listing
+    - Content Eyebrow
+
+- Templates
+    - Events
+    - Form Page
+    - Location
+    - Policy Advisory
+    - Left Rail
+
+- Pages
+    - Board Decision
+    - Event Listing
+    - Event
+    - Executive Order
+    - Form Page Example
+    - Policy Advisory
+    - Press Listing
+    - Press Release
+    - Topic Your Government
+    - Video Transcript
+
+### Changed
+- Upgraded Pattern Lab to the Drupal Twig version
+
+- Atoms
+    - Arrow Button
+    - Input Checkbox
+    - Input Radio
+    - Input Text
+    - Select box (new `required` variable)
+    - Colored Heading 
+    - Content Heading
+    - Comp Heading 
+    - Category Icon
+    - Check List
+    - Ordered List
+    - Unordered List
+    - Figure
+    - Site Logo
+    - Video
+    - Table
+    - Link
+    - Publish State
+    - Decorative Link
+
+- Molecules
+    - Action Step
+    - Arrow Nav
+    - Back Button
+    - Button Alert
+    - Callout Link
+    - Callout Stat
+    - Contact Group
+    - Contact Us
+    - Download Link
+    - Emergency Header
+    - Google Map
+    - Header Search (bug fix)
+    - Header Tags
+    - Icon Links
+    - Image Promo
+    - Listing Table
+    - Location Filters
+    - Location Icons
+    - Main Nav
+    - Pagination
+    - Results Heading
+    - Search Banner Form
+    - Section Links
+    - Social Links
+
+- Organisms
+    - Action Finder
+    - Callout Time
+    - Contact List
+    - Feedback Form
+    - Form Downloads
+    - Helpful Links
+    - Image Promos
+    - Key Actions / Callout Grid
+    - Link List
+    - Location Banner
+    - Location Listing
+    - Mapped Locations
+    - Personal Message
+    - Rich Text
+    - Search Banner
+    - Sections Three Up
+    - Search Banner
+    - Stacked Row Section
+    - Suggested Pages
+    - Collage Header
+    - Emergency Alerts
+    - Footer
+    - Header Alert
+    - Header
+    - Illustrated Header
+    - Jump Links
+    - Page Banner
+    - Page Header
+    - Transition Page
+
+- Templates
+    - Details
+    - Press
+    - Services
+    - Narrrow Template
+    - Full Width
+    - Stacked Row Template
+    - Right Rail
+
+- Pages
+    - Error 403
+    - Error 404
+    - Homepage
+    - Detail for Service Howto Location
+    - Guide Section all Fields
+    - Guide
+    - Location General Content
+    - Location Listing
+    - Location Park Content
+    - Regulation
+    - Section Landing
+    - Topic
+
+- Patterns that were move to an Archived folder
+    - Blog Feed
+    - Action Cards
+    - Action Gallery
+    - Banner Carousel
+    - Change Log
+    - Feedback Form
+    - Test Feed
+    - Top Actions
+    - Collage Header
+    - Breadcrumbs
+    - Callout Links
+
+### Removed
+- Atoms
+    - Button Link
+    - Input Textarea
+- Molecules
+    - Action Event
+    - Action Image
+    - Header Contact
+    - State Util
+    - Wait Time
+    - Field Submit
+    - Related Action
+- Organisms
+    - Action Details
+    - Quick Actions
+    - Sidebar Contact
+    - Sidebar Promo
+    - Sidebar Widgets
+    - Rich Text Description
+    - Teaser Text
+    - Split50
+- Templates
+    - Announcement (replace by Press)
+
+    
+### Migrate Path (breaking changes)
+#### Atoms
+- Arrow Button
+    - Attribure `aria-label` is now `title`
+- Button (Button Link) 
+    - css classes have been updated to use modifier classes
+- Input Checkbox
+    - Variable `checked` is now a boolean value
+    - Includes an optional icon
+- Input Radio
+    - Variable `checked` is now a boolean value
+- Comp Heading 
+    - Variable `centered` is now a boolean value
+    - Variable `sub` is now a boolean value
+- Category Icon
+    - Variable `small` is now boolean
+- Figure
+    - align variable should be `left` and `right`
+- Video
+    - Updated Twig markup to work with new CSS
+- Table
+    - Variable `Table.rows.cells.heading` is now boolean
+- Link 
+    - Variable `link.chevron` is now a boolean value
+    - Variable `label` is now `info`
+
+#### Molecules
+- Action Step
+    - Updated Twig Markup to inlcude the `formDownloads` pattern
+_ Arrow Nav
+    - Updated Twig Markup to include the `link` pattern
+- Back Button
+    - Variable 'link' was replaced by `button`
+- Callout Link
+    - Updated Twig Markup to work with new CSS
+- Google Map
+    - Updated Twig Markup to work with new JS
+    - Variable `directions` was added
+- Image Promo
+    - Updated Twig Markup and Data Layer
+- Location Filters
+    - Updated Twig Markup and Data Layer to work with new JS
+- Main Nav
+    - Updated Twig Markup to work with new JS
+- Pagination
+    - Updated Twig Markup to work with new JS
+- Results Heading
+    - Updated Twig Markup and Data Layer to work with new JS
+- Search Banner Form
+    - Updated Twig Markup and Data Layer
+- Sticky Nav
+    - Updated Twig Markup
+
+
+#### Organisms
+- Callout Alert
+    - Updated Twig Markup and Data Layer
+- Feedback Form
+    - Updated Twig Markup and Data Layer
+- Helpful Links
+    - Variable `columns` is now a boolean value
+- Key Actions / Callout Grid
+    - Updated Twig Markup
+    - Variable `sidebarHeading` is now `compHeading` with `compHeading.sidebar` set to true
+- Link List
+    - Updated Twig Markup and Data Layer
+- Location Banner
+    - Updated Twig Markup and Data Layer
+- Location Listing
+    - Updated Twig Markup and Data Layer to work with new JS
+- Personal Message
+    - Updated Twig Markup and Data Layer
+    - Variable `imagePromo` changed to an array called `imagePromos`
+- Search Banner
+    - Updated Twig Markup and Data Layer
+- Header Alert
+    - Variable `guid` is now `id`
+- Illustrated Header
+    - Variable `bgTitle` is now `bgInfo`
+- Transition Page
+    - Variable `submit` replace with `submitButton`
+    - Updated Twig Markup
+
+#### Templates
+- Press
+    - Twig Markup updated to work with new CSS class names
+- Services
+    - Updated Twig Markup and Data Layer
+- Stacked Row Template
+    - Updated Twig Markup and Data Layer
+
+
 ## 5.7.2
 
 ### Added

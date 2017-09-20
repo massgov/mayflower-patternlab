@@ -8,8 +8,7 @@
       "title": {
         "href": "#",
         "text": "Winter Birding Event",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -25,8 +24,7 @@
       "title": {
         "href": "#",
         "text": "First Day Hike",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -42,8 +40,7 @@
       "title": {
         "href": "#",
         "text": "First Day Hike",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -60,7 +57,7 @@
       "href": "#",
       "text": "view all events at this location",
       "chevron": true,
-      "label": ""
+      "info": ""
     }
   }
 }

@@ -9,7 +9,7 @@
       "value": "hide-transition-page",
       "id": "hide-transition-page",
       "label": "Got it, don't show me this page again",
-      "checked": ""
+      "checked": false
     }
   }
 }

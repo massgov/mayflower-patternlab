@@ -4,7 +4,7 @@
   },
 
   "headerAlerts": [{
-    "guid": "GUID09058070136",
+    "id": "GUID09058070136",
     "text": "Lots of Bears.",
     "href": "#",
     "target": ""
@@ -65,6 +65,7 @@
       "path": "@organisms/by-author/key-actions.twig",
       "data": {
         "keyActions": {
+          "compHeading": null,
           "links":[{
             "text": "Reserve a Campsite",
             "type": "",
@@ -104,7 +105,7 @@
   },
 
   "locationBanner": {
-    "bgTitle":"Mt Greylock State Park",
+    "bgInfo":"Mt Greylock State Park",
     "bgWide":"../../assets/images/placeholder/1600x400.png",
     "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "id": "GUID24872901570",
@@ -197,7 +198,7 @@
        "sub": true,
        "color": "",
        "id": "overview",
-       "centered": ""
+       "centered": false
      },
      "property": "description",
      "rteElements": [{
@@ -216,7 +217,7 @@
        "sub": true,
        "color": "",
        "id": "hours",
-       "centered": ""
+       "centered": false
      },
      "property": "",
      "rteElements": [{
@@ -285,7 +286,7 @@
        "sub": true,
        "color": "",
        "id": "parking",
-       "centered": ""
+       "centered": false
      },
      "property": "",
      "rteElements": [{
@@ -351,7 +352,7 @@
        "sub": true,
        "color": "",
        "id": "recommended-activities",
-       "centered": ""
+       "centered": false
      },
      "items": [{
        "title": {
@@ -431,7 +432,7 @@
        "sub": true,
        "color": "",
        "id": "all-activities",
-       "centered": ""
+       "centered": false
      },
      "property": "",
      "rteElements": [{
@@ -468,7 +469,7 @@
        "sub": true,
        "color": "",
        "id": "facilities",
-       "centered": ""
+       "centered": false
      },
      "property": "",
      "rteElements": [{
@@ -495,7 +496,7 @@
        "sub": true,
        "color": "",
        "id": "acessibility",
-       "centered": ""
+       "centered": false
      },
      "property": "",
      "rteElements": [{
@@ -530,7 +531,7 @@
        "sub": true,
        "color": "",
        "id": "restrictions",
-       "centered": ""
+       "centered": false
      },
      "property": "",
      "rteElements": [{
@@ -563,10 +564,10 @@
      "viewSpecific": false,
      "compHeading":{
        "title": "Contacts",
-       "sub": "true",
+       "sub": true,
        "color": "",
        "id": "contacts",
-       "centered": ""
+       "centered": false
      },
      "contacts":[{
        "accordion": true,
@@ -578,7 +579,6 @@
        "groups": [{
          "icon": "@atoms/05-icons/svg-phone.twig",
          "name": "Phone",
-         "hidden": "",
          "items": [{
            "type": "phone",
            "property": "telephone",
@@ -601,7 +601,6 @@
        },{
          "icon": "@atoms/05-icons/svg-laptop.twig",
          "name": "Online",
-         "hidden": "",
          "items": [{
            "type": "email",
            "property": "",
@@ -615,7 +614,6 @@
        },{
          "icon": "@atoms/05-icons/svg-fax-icon.twig",
          "name": "Fax",
-         "hidden": "true",
          "items": [{
            "type": "fax",
            "property": "faxNumber",
@@ -629,7 +627,6 @@
        },{
          "icon": "@atoms/05-icons/svg-marker.twig",
          "name": "Address",
-         "hidden": "true",
          "items": [{
            "type": "address",
            "property": "address",
@@ -648,14 +645,13 @@
        "accordion": true,
        "isExpanded": false,
        "subTitle": {
-         "href":"",
+         "href": "#",
          "text": "Museum",
-         "chevron":""
+         "info": ""
        },
        "groups": [{
          "icon": "@atoms/05-icons/svg-phone.twig",
          "name": "Phone",
-         "hidden": "",
          "items": [{
            "type": "phone",
            "property": "telephone",
@@ -669,7 +665,6 @@
        },{
          "icon": "@atoms/05-icons/svg-laptop.twig",
          "name": "Online",
-         "hidden": "",
          "items": [{
            "type": "email",
            "property": "",
@@ -683,7 +678,6 @@
        },{
          "icon": "@atoms/05-icons/svg-fax-icon.twig",
          "name": "Fax",
-         "hidden": "true",
          "items": [{
            "type": "fax",
            "property": "faxNumber",
@@ -697,7 +691,6 @@
        },{
          "icon": "@atoms/05-icons/svg-marker.twig",
          "name": "Address",
-         "hidden": "true",
          "items": [{
            "type": "address",
            "property": "address",

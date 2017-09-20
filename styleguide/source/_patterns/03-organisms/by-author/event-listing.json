@@ -6,15 +6,14 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": false
     },
     "sidebarHeading": null,
     "events":[{
       "title": {
         "href": "#",
         "text": "Winter Birding Event",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -30,8 +29,7 @@
       "title": {
         "href": "#",
         "text": "First Day Hike",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {

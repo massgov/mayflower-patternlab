@@ -38,7 +38,6 @@
       "path": "@organisms/by-author/rich-text.twig",
       "data": {
         "richText": {
-          "property": "",
           "rteElements": [{
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
@@ -81,7 +80,7 @@
         "sub": false,
         "color": "",
         "id": "rich-text",
-        "centered": ""
+        "centered": false
       },
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
@@ -120,7 +119,7 @@
         "sub": false,
         "color": "",
         "id": "downloads",
-        "centered": ""
+        "centered": false
       },
       "downloadLinks": [{
         "downloadLink": {
@@ -129,8 +128,7 @@
           "decorativeLink": {
             "text": "PDF download item",
             "href": "#",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "size": "30kb",
           "format": "PDF"
@@ -142,8 +140,7 @@
           "decorativeLink": {
             "text": "Word download item",
             "href": "#",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "size": "40kb",
           "format": "DOCX"
@@ -155,8 +152,7 @@
           "decorativeLink": {
             "text": "Online form or information page",
             "href": "#",
-            "info": "",
-            "property": ""
+            "info": ""
           },
           "size": "",
           "format": "form"
@@ -171,7 +167,7 @@
         "sub": false,
         "color": "",
         "id": "contact",
-        "centered": ""
+        "centered": false
       },
       "contacts":[{
         "accordion": true,
@@ -185,29 +181,24 @@
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+17817401605",
               "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"Email:",
             "link": {
               "href":"#",
               "text": "person@email.com",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -221,7 +212,6 @@
         "target": "#footnoteref1",
         "id": "footnotemsg1",
         "richText": {
-          "property": "",
           "rteElements": [{
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
@@ -243,7 +233,6 @@
         "target": "#footnoteref2",
         "id": "footnotemsg2",
         "richText": {
-          "property": "",
           "rteElements": [{
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
@@ -283,7 +272,7 @@
         "sub": false,
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "contacts":[{
         "subTitle": {
@@ -293,16 +282,13 @@
         "groups": [{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"Email:",
             "link": {
               "href":"#",
               "text": "person@email.com",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -319,8 +305,7 @@
         "title" : {
           "href":"#",
           "text":"Link to Ruling",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "date": "4/3/2017",
         "org": "",
@@ -330,8 +315,7 @@
         "title" : {
           "href":"#",
           "text":"Link to Regulation",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "date": "4/3/2017",
         "org": "",
@@ -341,8 +325,7 @@
         "title" : {
           "href":"#",
           "text":"Link to Regulation",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "date": "",
         "org": "",
@@ -358,8 +341,7 @@
         "title": {
           "href": "#",
           "text": "Name of Event",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "location": "location",
         "date": {

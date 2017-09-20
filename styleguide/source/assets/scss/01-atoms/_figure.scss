@@ -6,18 +6,14 @@
   }
 
   @media ($bp-small-min) {
-    &--left,
-    &--align-left,
-    &.align-left {
+    &--left {
       float: left;
       margin-right: .5em;
       margin-bottom: 1em;
       width: 50%;
     }
 
-    &--right,
-    &--align-right,
-    &.align-right {
+    &--right {
       float: right;
       margin-left: .5em;
       margin-bottom: 1em;

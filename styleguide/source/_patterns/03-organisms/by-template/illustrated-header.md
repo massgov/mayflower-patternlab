@@ -14,7 +14,7 @@ This is displays a Page Header pattern with an optional image off to the right
 ### Variables
 ~~~
 illustratedHeader: {
-  bgTitle: 
+  bgInfo: 
     type: string / optional (required with image)
   bgImage: 
     type: string (image path) / optional

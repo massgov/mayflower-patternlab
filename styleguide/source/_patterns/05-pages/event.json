@@ -69,6 +69,7 @@
       "path": "@organisms/by-author/key-actions.twig",
       "data": {
         "keyActions": {
+          "compHeading": null,
           "links":[{
             "text": "Sign up",
             "type": "",
@@ -87,7 +88,7 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": false
       },
       "image": { 
         "alt": "alt text", 

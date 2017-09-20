@@ -5,7 +5,7 @@
       "sub": "",
       "color": "",
       "id": "employment",
-      "centered": ""
+      "centered": false
     },
     "image": { 
       "alt": "alt text", 

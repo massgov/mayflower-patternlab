@@ -4,7 +4,7 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "breadcrumbs":{
-    "light": "true",
+    "light": true,
     "links": [{
       "text": "Your Government",
       "href": ""
@@ -95,13 +95,13 @@
               "label": "Wheelchair accessible",
               "icon": "@atoms/05-icons/svg-wheelchair.twig",
               "value": "wheelchair-accessible",
-              "checked": "false"
+              "checked": false
             },{
               "id": "open",
               "label": "Open now",
               "icon": "@atoms/05-icons/svg-open-now.twig",
               "value": "open",
-              "checked": "false"
+              "checked": false
             }],
             "submitButton": "Submit"
           },

@@ -4,7 +4,7 @@
   },
 
   "headerAlerts": [{
-    "guid": "GUID09058070136",
+    "id": "GUID09058070136",
     "text": "Alert Message",
     "href": "#",
     "target": ""
@@ -29,8 +29,7 @@
               "link": {
                 "href": "https://www.google.com/maps/place/30+Rockwell+Rd,+Cheshire,+MA+01225",
                 "text": "directions",
-                "info": "directions to Mt Greylock State Park Vistor's Center",
-                "property": "url"
+                "info": "directions to Mt Greylock State Park Vistor's Center"
               },
               "details": ""
             }]
@@ -73,7 +72,7 @@
   },
   
   "locationBanner": {
-    "bgTitle":"Mt Greylock State Park",
+    "bgInfo":"Mt Greylock State Park",
     "bgWide":"../../assets/images/placeholder/1600x400.png",
     "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "id": "GUID24872901570",
@@ -137,38 +136,33 @@
         "accordion": true,
         "isExpanded": false,
         "subTitle": {
-          "href":"",
+          "href": "#",
           "text": "Department name",
-          "chevron":""
+          "chevron": false
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+14134994262",
               "text": "(413) 499-4262",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"Web:",
             "link": {
               "href":"#",
               "text": "Contact Form",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]
@@ -188,38 +182,33 @@
         "accordion": false,
         "isExpanded": false,
         "subTitle": {
-          "href":"",
+          "href": "#",
           "text": "Department name",
-          "chevron":""
+          "chevron": false
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
           "name": "Phone",
           "items": [{
             "type": "phone",
-            "property": "",
             "label":"Main:",
             "link": {
               "href": "+14134994262",
               "text": "(413) 499-4262",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":"This line is open from 9 a.m. - 5 p.m., M-F"
           }]
         },{
           "icon": "@atoms/05-icons/svg-laptop.twig",
           "name": "Online",
-          "hidden": "",
           "items": [{
             "type": "online",
-            "property": "",
             "label":"Web:",
             "link": {
               "href":"#",
               "text": "Contact Form",
-              "info": "",
-              "property": ""
+              "info": ""
             },
             "details":""
           }]

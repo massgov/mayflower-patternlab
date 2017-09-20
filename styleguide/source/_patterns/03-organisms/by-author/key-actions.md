@@ -20,9 +20,6 @@ This pattern shows a grid containing a combination of Callout links and Illustra
   "compHeading": {
     "type": compHeading / optional 
   },
-  sidebarHeading: {
-    type: sidebarHeading / optional
-  },
   "links":[{
     type: array of Callout Links or Illustrated Links / required
   }]

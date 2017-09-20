@@ -134,7 +134,7 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": false
     },
     "links" : [{
       "href":"#",

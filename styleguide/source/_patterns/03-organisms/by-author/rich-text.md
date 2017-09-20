@@ -30,8 +30,6 @@ This pattern displays the contents of a rich text editor.
 ### Variables
 ~~~
 "richText": {
-  "property": 
-    type: string,
   "rteElements": [{
     "path": 
       type: string / required,

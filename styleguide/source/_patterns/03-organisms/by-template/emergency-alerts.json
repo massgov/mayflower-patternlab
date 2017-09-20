@@ -15,7 +15,7 @@
       "link": {
         "href": "#",
         "text":"Read full alert",
-        "chevron": "true"
+        "chevron": true
       }
     },{
       "message": "The MTBA is operating at a lighter service level, and experiencing delays.",
@@ -23,7 +23,7 @@
       "link": {
         "href": "#",
         "text":"Read full alert",
-        "chevron": "true"
+        "chevron": true
       }
     },{
       "message": "The Governor directs non-emergency executive branch state employees to not come in to work.",
@@ -31,7 +31,7 @@
       "link": {
         "href": "#",
         "text":"Read full alert",
-        "chevron": "true"
+        "chevron": true
       }
     }]
   }

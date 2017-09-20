@@ -40,13 +40,11 @@
       "link": {
         "href": "/patterns/05-pages-GEN-Building-Energy-Codes/05-pages-GEN-Building-Energy-Codes.html",
         "text": "View transcript",
-        "info": "View transcript of Using a gas grill safely",
-        "property": ""
+        "info": "View transcript of Using a gas grill safely"
       }
     },
 
     "intro": {
-      "property": "",
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
@@ -79,7 +77,7 @@
         "text": "Check eligibility",
         "type": "",
         "href": "#",
-        "label": ":"
+        "label": ""
       }]
     }
   },
@@ -102,21 +100,24 @@
           "link": {
             "href": "#",
             "text": "@Twitter - optional",
-            "chevron": ""
+            "chevron": false,
+            "info": ""
           }
         },{
           "icon": "@atoms/05-icons/svg-flickr.twig",
           "link": {
             "href": "#",
             "text": "Flickr - optional",
-            "chevron": ""
+            "chevron": false,
+            "info": ""
           }
         },{
           "icon": "@atoms/05-icons/svg-blog.twig",
           "link": {
             "href": "#",
             "text": "Blog - optional",
-            "chevron": ""
+            "chevron": false,
+            "info": ""
           }
         }]
       }
@@ -218,13 +219,12 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": false
     },
     "link": {
       "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
       "text":"Location Details",
-      "info": "See more locations for this Generic Service",
-      "property": ""
+      "info": "See more locations for this Generic Service"
     },
     "googleMap":{
       "map": {
@@ -271,14 +271,13 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": false
     },
     "events":[{
       "title": {
         "href": "#",
         "text": "Winter Birding Event",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -294,8 +293,7 @@
       "title": {
         "href": "#",
         "text": "First Day Hike",
-        "info": "",
-        "property": ""
+        "info": ""
       },
       "location": "Lanesborough, MA",
       "date": {
@@ -354,8 +352,7 @@
                 "decorativeLink": {
                   "text": "Work Search Activity Log",
                   "href": "#",
-                  "info": "",
-                  "property": ""
+                  "info": ""
                 },
                 "size": "1MB",
                 "format": "PDF"
@@ -367,8 +364,7 @@
                 "decorativeLink": {
                   "text": "Name of Doc",
                   "href": "#",
-                  "info": "",
-                  "property": ""
+                  "info": ""
                 },
                 "size": "107KB",
                 "format": "DOCX"

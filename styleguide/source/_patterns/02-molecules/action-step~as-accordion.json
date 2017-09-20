@@ -22,8 +22,7 @@
         "decorativeLink": {
           "text": "PDF download item",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "30kb",
         "format": "PDF"
@@ -35,8 +34,7 @@
         "decorativeLink": {
           "text": "Word download item",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "40kb",
         "format": "DOCX"
@@ -48,8 +46,7 @@
         "decorativeLink": {
           "text": "Online Form: Out-of-Country Driver's License Conversion",
           "href": "#",
-          "info": "",
-          "property": ""
+          "info": ""
         },
         "size": "",
         "format": "form"
@@ -58,8 +55,7 @@
     "decorativeLink": {
       "href": "#",
       "text": "Learn more",
-      "info": "Learn more about this generic step",
-      "property": ""
+      "info": "Learn more about this generic step"
     }
   }
 }

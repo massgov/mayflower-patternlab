@@ -14,7 +14,7 @@ This is an banner pattern that combines an image an a google map.
 ### Variables
 ~~~
 locationBanner: {
-  bgTitle:
+  bgInfo:
     type: string / required (describes the images)
   bgWide:
     type: string (image path) / required,
