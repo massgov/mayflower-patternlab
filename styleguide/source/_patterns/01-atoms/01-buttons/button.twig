@@ -8,9 +8,7 @@
   <a 
     href="{{ button.href }}" 
     class="ma__button {{ buttonSize }} {{buttonTheme}} {{buttonStyle}}"
-    title="{{ button.info }}">
-    {{ button.text }}
-  </a>
+    title="{{ button.info }}">{{ button.text }}</a>
 {% else %}
   <button type="{{ button.type }}" class="ma__button {{ buttonSize }} {{buttonTheme}} {{buttonStyle}}" aria-label="{{ button.info }}">{{ button.text }}</button>
 {% endif %}

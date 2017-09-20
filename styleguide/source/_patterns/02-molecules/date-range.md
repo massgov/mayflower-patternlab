@@ -1,23 +1,22 @@
----
-title: Date Range
----
-Description: fieldset with legend including two date inputs
+### Description
+This pattern shows two date inputs with a label
 
-## Status: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Used in:
+### Pattern Contains
+* Input Date
 
-
-### Required Variables
+### Variables
 ~~~
-calloutLink: {
-  href:
-    type: string/required
-  text:
-    type: string/required
-  type:
-    type: string/optional ("external")
-  info:
-    type: string/optional
+dateRange: {
+  label: 
+    type: string / required,
+  startDate: {
+    type: inputDate / required
+  },
+  endDate: {
+    type: inputDate / required
+  }
 }
 ~~~

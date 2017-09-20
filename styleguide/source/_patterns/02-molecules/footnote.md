@@ -1,26 +1,25 @@
----
-title: Footnote
----
-Description: A Footnote containing Rich Text that is linked to from a Rich Text footnote.
+### Description
+This pattern shows a Footnote that contains a two way link with a Rich Text footnote link else where on the page.
 
-## Status: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Used in:
+### Pattern Contains
+* Rich Text
 
-### Contains:
-- [@organisms/by-author/rich-text](?p=organisms-rich-text)
+### JavaScript Used
+* Links (js/modules/footnote.js)
 
-
-### Required Variables
+### Variables
 ~~~
 footnote: {
   number: 
-    type: number/required
+    type: number / required
   target:
-    type: string/required
+    type: string (id of rich text footnote) / required
   id:
-    type: string/required
+    type: string (unique per page) / required
   richText: 
-    type: richText/required 
+    type: richText / required 
 }
 ~~~

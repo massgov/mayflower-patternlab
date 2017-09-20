@@ -58,25 +58,6 @@ input {
   }
 }
 
-.ma__input-number {
-
-  &__plus,
-  &__minus {
-    border-color: $c-bd-input;
-
-    &:after {
-      border-color: $c-font-dark;
-      border-left-color: transparent;
-      border-right-color: transparent;
-    }
-  }
-
-  input.has-error ~ &__plus,
-  input.has-error ~ &__minus {
-    border-color: $c-bd-error;
-  }
-}
-
 textarea {
   background-color: $c-white;
   border-color: $c-bd-input;
@@ -96,91 +77,8 @@ textarea {
   }
 }
 
-.ma__textarea__wrapper {
-  font-weight: 500;
-}
-
 legend,
 label {
   font-weight: 500;
 }
 
-.ma__input-radio {
-
-  label {
-    font-weight: 400;
-
-    &:before {
-      background-color: $c-white;
-      border-color: $c-bd-input-dark;
-      color: transparent;
-
-      .ma__form--light & {
-        background-color: rgba($c-white, 0.1);
-        border-color: rgba($c-bd-input,.5);
-      }
-    }
-  }
-
-  input.has-error ~ label:before {
-    border-color: $c-bd-error;
-  }
-
-  input:checked ~ label {
-
-    &:before {
-      color: $c-font-base;
-
-      .ma__form--light & {
-        color: $c-font-inverse;
-      }
-    }
-  }
-
-  input:focus ~ label:before {
-    border-color: Highlight !important;
-
-    /* WebKit gets its native focus styles.
-     */
-    @media (-webkit-min-device-pixel-ratio:0) {
-      outline: -webkit-focus-ring-color auto 5px;
-    }
-  }
-}
-
-.ma__input-checkbox {
-
-  label {
-    font-weight: 400;
-
-    &:before {
-      background-color: $c-white;
-      border-color: $c-bd-input-dark;
-
-      .ma__form--light & {
-        background-color: rgba($c-white, 0.1);
-        border-color: rgba($c-bd-input,.5);
-      }
-    }
-  }
-
-  input.has-error ~ label:before {
-    border-color: $c-bd-error;
-  }
-
-  input:focus ~ label:before {
-    border-color: Highlight !important;
-
-    /* WebKit gets its native focus styles.
-     */
-    @media (-webkit-min-device-pixel-ratio:0) {
-      outline: -webkit-focus-ring-color auto 5px;
-    }
-  }
-}
-
-// error message
-.ma__error-msg {
-  color: $c-font-error;
-  font-weight: 500;
-}

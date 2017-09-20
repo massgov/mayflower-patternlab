@@ -7,14 +7,12 @@ Designed to Alert the reader to imporant information and can also be a link to a
 ### Variables
 ~~~
 calloutAlert {
-  decorativeLink: {
-    href:
-      type: string / optional
-    text:
-      type: string / required
-    info:
-      type: string / optional
-    }
+  href:
+    type: string / optional
+  text:
+    type: string / required
+  info:
+    type: string / optional
   }
 }
 ~~~

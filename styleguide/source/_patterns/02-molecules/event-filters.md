@@ -1,37 +1,27 @@
----
-title: Event Filters
----
+### Description
+This Filter input area with inputs for location and date range.
 
-Description: Form with inputs used on Event listing page
+### Status
+* Stable as of 5.0.0
 
-## State: Alpha
+### Pattern Contains
+* Input Text
+* Date Range
+* Button
 
-### Notes
-
-### Used in:
-
-
-### contains:
-- [@atoms/03-forms/input-text](?p=atoms-input-text)
-- [@molecules/date-range](?p=molecules-date-range)
-
-
-### Required Variables
+### Variables
 ~~~
-{
-  eventFilters: {
-    zipcode: {    
-      type: object/inputText/required
-    },
-    
-    dateRange: {
-      type: object/dateRange/required
-    },
+eventFilters: {
+  zipcode: {    
+    type: inputText / required
+  },
+  
+  dateRange: {
+    type: dateRange / required
+  },
 
-    submitButton:
-      type: string/required   
-  }
-
+  buttons: [{
+    type: array of Button / required
+  }]
 }
 ~~~
-

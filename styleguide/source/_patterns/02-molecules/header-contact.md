@@ -1,6 +1,6 @@
----
-title: Depreciated - Header contact
----
+### Status
+* Obsolete as of 5.0.0
+
 Description: Displays a set of contact information in the header.
 
 ## State: Depreciated.

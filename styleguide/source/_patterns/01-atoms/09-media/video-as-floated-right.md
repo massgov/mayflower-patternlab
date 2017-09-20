@@ -1,5 +1,5 @@
-Description: This is a variant of the [video](./?p=atoms-video) pattern showing an example with position set to 'right'.
+Description: This is a variant of the [video](./?p=atoms-video) pattern showing an example floated to the right.
 
-### Status
-* Stable as of 5.0.0
+### How to generate
+* set the `position` variable to 'right'
 
