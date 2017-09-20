@@ -14,7 +14,8 @@
     "rteTitle": {
       "text": "You will need:",
       "href": "",
-      "info": ""
+      "info": "",
+      "level": 2
     },
 
     "richText": {
@@ -40,7 +41,8 @@
       "title": {
         "text": "Payment accepted:",
         "href": "",
-        "info": ""
+        "info": "",
+        "level": 2
       },
 
       "locationIcons": {

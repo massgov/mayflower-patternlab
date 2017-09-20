@@ -2,6 +2,7 @@
   "contactGroup": {
     "icon": "@atoms/05-icons/svg-phone.twig",
     "name": "Phone",
+    "level": "",
     "items": [{
       "type": "phone",
       "label": "Main:",

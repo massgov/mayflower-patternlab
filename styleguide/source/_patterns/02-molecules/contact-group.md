@@ -21,6 +21,8 @@ group: {
     type: string (path to icon) / optional
   name:
     type: string ("Phone", "Online", "Fax", or "Address") / optional
+  level:
+    type: number / optional
   items: [{
     type: 
       type: string ("phone", "online", "email", "address" ) / required,
