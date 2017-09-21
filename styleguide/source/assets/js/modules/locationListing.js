@@ -307,21 +307,24 @@ export default function (window,document,$,undefined) {
       place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       let autocompletePlace = ma.autocomplete.getPlace();
-      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('geometry')) {
-        transformReturn.place = autocompletePlace;
-        // Sort the markers and instance of locationListing masterData.
-        transformReturn.data = sortDataAroundPlace(autocompletePlace, filteredData);
-        // Return the data sorted by location and the autocomplete place object
-        promise.resolve(transformReturn);
+      console.log(autocompletePlace.place_id);
+      // Geocode the address, then sort the markers and instance of locationListing masterData.
+      ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
+      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('place_id')) {
+        // This is an asynchronous function
+        geocodePlaceId(autocompletePlace.place_id, function(result) {
+          transformReturn.data = sortDataAroundPlace(result, filteredData);
+          transformReturn.geocode = result;
+          // Return the data sorted by location and the geocoded place object
+          promise.resolve(transformReturn);
+        });
       }
       // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
       else {
-        // Geocode the address, then sort the markers and instance of locationListing masterData.
-        ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
         // This is an asynchronous function
         geocodeAddressString(place, function(result) {
           transformReturn.data = sortDataAroundPlace(result, filteredData);
-          transformReturn.place = result;
+          transformReturn.geocode = result;
           // Return the data sorted by location and the geocoded place object
           promise.resolve(transformReturn);
         });
@@ -665,11 +668,12 @@ export default function (window,document,$,undefined) {
    * @returns {*}
    *   Sorted instance of location listing masterData.
    */
-  function sortDataAroundPlace(place, data) {
+  function sortDataAroundPlace(geocode, data) {
+    console.log(geocode);
     // Get all existing marker distance from place, assign as marker property.
     for (let key in data.items) {
       if (data.items.hasOwnProperty(key)) {
-        data.items[key].marker.distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, data.items[key].marker.getPosition());
+        data.items[key].marker.distance = google.maps.geometry.spherical.computeDistanceBetween(geocode.geometry.location, data.items[key].marker.getPosition());
       }
     }
 
@@ -682,7 +686,7 @@ export default function (window,document,$,undefined) {
     let paginated = paginateItems(data.items, data.maxItems);
     data.items = paginated.items;
     data.totalPages = paginated.totalPages;
-    data.place = place;
+    data.place = geocode;
 
     // Return the newly sorted instance of location listing masterData.
     return data;
@@ -707,6 +711,35 @@ export default function (window,document,$,undefined) {
 
     // Geocode address string, then execute callback with argument upon success.
     ma.geocoder.geocode({address: address}, function (results, status) {
+      if (status === google.maps.GeocoderStatus.OK) {
+        let place =  results[0];
+        return callback(place);
+      }
+      else {
+        console.warn('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
+
+  /**
+   * Geocodes an address string arg and executes callback upon successful return.
+   *
+   * @param address
+   *   Address string to be geocoded.
+   * @param callback
+   *   Callback function to call upon successful geocode return.
+   *
+   * @returns {*}
+   *   Upon success, the return value of the passed callback function.
+   */
+  function geocodePlaceId(place_id, callback) {
+    // Only attempt to execute if google's geocode library is loaded.
+    if (typeof ma.geocoder === "undefined") {
+      return;
+    }
+
+    // Geocode address string, then execute callback with argument upon success.
+    ma.geocoder.geocode({ 'placeId': place_id}, function(results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
         let place =  results[0];
         return callback(place);
