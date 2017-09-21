@@ -307,7 +307,6 @@ export default function (window,document,$,undefined) {
       place = getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       let autocompletePlace = ma.autocomplete.getPlace();
-      console.log(autocompletePlace.place_id);
       // Geocode the address, then sort the markers and instance of locationListing masterData.
       ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
       if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('place_id')) {
@@ -669,7 +668,6 @@ export default function (window,document,$,undefined) {
    *   Sorted instance of location listing masterData.
    */
   function sortDataAroundPlace(geocode, data) {
-    console.log(geocode);
     // Get all existing marker distance from place, assign as marker property.
     for (let key in data.items) {
       if (data.items.hasOwnProperty(key)) {
