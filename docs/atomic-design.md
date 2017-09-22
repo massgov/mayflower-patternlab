@@ -8,19 +8,18 @@ You can find an excellent description of Atomic Design on Brad Frost's [blog](ht
 We are following his guide fairly closely, but I differ when it comes to Molecules and Organisms. He sees then as being defined based on their complexity, but I found in practice that it was difficult to make that distinction.  I like to think of Molecules as larger Atoms (components with custom styling or additional content) and Organisms as being smaller templates (component level)  
 
 ### Atoms (an "indivisible unit")
-An Atom is the smallest logically stylized pattern in Atomic Design.  Dividing an Atom into smaller parts would result in an unstable pattern that would be dependent on another pattern.  As such Atoms would never include other patterns.
+An Atom is the smallest possible pattern in Atomic Design.  They are the building blocks to create more complex Patterns.  In most cases, a simple html element (`a`, `h1`, `button`, etc...) is considered an Atom.  More complex html elements (`table`, `ul`, `figure`, etc...) are also considered Atoms, because the individual parts (`li`,`td`,`figcaption`) cannot be used on there own.
 
-An Atom can be a single HTML element (`a`, `h1`, etc...) or a single complex HTML5 elment that has nested dependent children (`table`, `ul`, `figure`, etc...).  It could also be two elements that would never be used seperately like an input with a label.
+There can be cases where a simple html element is too small to be considered an Atom.  If your design creates a dependency between two elements, then they should be combined into a single Atom.  For example, an `input` is always supposed to be paired with a `label` for accesibiltiy.  In this case, the `input` element alone would be too small to be an Atom.  Instead, you would pair the `input` with a `label` to create the Input Atom.
 
-Since Atoms are so small they are rarely if ever used directly on a page.  Instead they are used as building blocks to create more complex Patterns.
 
 #### Quick guide:
-* Could be a single simple (`a`) or complex (`table`) HTML element
-* Might contain multiple HTML elements, if one element cannot be rendered without the other
+* A simple html element (`a`, `h1`, `button`, etc...) or complex (`table`, `ul`, `figure`, etc...) HTML element
+* Might pair html elements if there is a dependency
 * Almost always uses a theme SCSS file to style the element
-* Cannot be broken down into smaller logical elements
-* Usually contains content data
-* Sometimes includes an icon
+* Contains the smallest set of elements possible
+* Almost always renders content data
+* Can contain `include` statements to add an icon or another dependent Atom.
 
 #### Examples
 1. http://mayflower.digital.mass.gov/?p=atoms-button
@@ -28,12 +27,14 @@ Since Atoms are so small they are rarely if ever used directly on a page.  Inste
 2. http://mayflower.digital.mass.gov/?p=atoms-input-checkbox
     * This is an example of an atom that can't be broken down any further.  The Mayflower style guide would never use the `input type=checkbox` element by itself so this atom requires the outer span tag and corresponding label. 
 
-### Molecules - (stylized collections)
-A Molecules is a stylized collection of Atoms, Molecules, and or HTML elements.  Molecules have the greatest flexibility of all the patterns.
+
+### Molecules - (stylized collection)
+A Molecule is a stylized collection of Atoms, HTML elements and even other Molecules that are combined to create a new pattern for a simple task.  These patterns usually accomplishs a single goal like a stylized link (ie: Callout Link) or a menu of links (ie: Footer Links).  Molecules have the greatest flexibility of all the patterns so please make sure you're not building an Atom or Organism.
 
 #### Quick guide:
-* Includes other patterns or HTML elements
-* Usually contains content data
+* Includes other patterns (Atoms or Molecules) or HTML elements
+  * Currently, some patterns are incorrectly categorized so including an Organism is acceptable. (ie: Rich Text organism)
+* Can render content data or pass it on to other patterns
 * Almost always uses a theme SCSS file to style the element
 
 #### Example
@@ -45,7 +46,7 @@ http://mayflower.digital.mass.gov/?p=molecules-image-promo
 An Organism is a layout of other patterns.  HTML5 elements and CSS styling used in an Organism are for laying out the included patterns.  All content to be rendered, is passed on to the included patterns.  The only styling done for an Organism would be to help define the layout the patterns, like background-colors and borders.
 
 #### Quick guide:
-* Includes other patterns.
+* Includes other patterns (Atoms, Molecules, or Organisms).
 * All content data is rendered by included patterns.
 * CSS styles used are only for layout (flex box, float ...) or to visually define the layout (backgrounds, borders)
 * Often times it doesn't use a theme SCSS file
