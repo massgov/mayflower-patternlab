@@ -1,0 +1,177 @@
+{
+
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+
+  "contentEyebrow": {
+    "hideBorder": false,
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "A Service Name"
+      }]
+    }
+  },
+
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "title": "Additional Resources",
+    "subTitle": "For a service name",
+    "headerTags": null,
+
+    "socialLinks": null,
+    "optionalContents": [],
+    "widgets": null
+  },
+
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+
+  "stackedRowSections": [{
+    "pageContent": [{
+      "path": "@molecules/results-heading.twig",
+      "data": {
+        "resultsHeading": {
+          "numResults": "1-8",
+          "totalResults": "12"
+        }
+      }
+    },{
+      "path": "@organisms/by-author/form-downloads.twig",
+      "data": {
+        "formDownloads": {
+          "compHeading": null,
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to a page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "PDF download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "30kb",
+              "format": "PDF"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "decorativeLink": {
+                "text": "Word download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "DOCX"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to yet another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-generic.twig",
+              "decorativeLink": {
+                "text": "Generic type of download",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "???"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to another online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          }]
+        }
+      }
+    },{
+      "path": "@molecules/pagination.twig",
+      "data": {
+        "pagination": {
+          "next": {
+            "disabled": false,
+            "text": "Next"
+          },
+          "prev": {
+            "disabled": true,
+            "text": "Previous"
+          },
+          "pages": [{
+            "active": true,
+            "text": "1"
+          },{
+            "active": false,
+            "text": "2"
+          }]
+        }
+      }
+    }]
+  }],
+
+  "COMMENT":"****POSTCONTENT COMPONENTS****"
+
+}
