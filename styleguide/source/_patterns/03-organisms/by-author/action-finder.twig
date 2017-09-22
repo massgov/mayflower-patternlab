@@ -3,7 +3,6 @@
 {% if not actionFinder.bgWide %}
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
-
 <section class="ma__action-finder {{ noBgClass }}" id="{{ actionFinder.id }}">
   {% if actionFinder.bgWide %}
     <style>
@@ -21,12 +20,13 @@
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
       <h2 class="ma__action-finder__title">
-        {{ actionFinder.title }} <span class="visually-hidden"> {{ actionFinder.titleContext }}</span>
+        {{ actionFinder.title }}
+        {% if actionFinder.contextPositionTop and actionFinder.titleContext %}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span>{% endif %}
       </h2>
     </header>
     {% if actionFinder.featuredLinks %}
       {% if actionFinder.featuredHeading %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
+        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}{% if actionFinder.contextPositionTop == false and actionFinder.titleContext %}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span>{% endif %}</h3>
       {% endif %}
       <div class="ma__action-finder__items">
         {% for link in actionFinder.featuredLinks %}
@@ -42,7 +42,7 @@
     {% endif %}
     {% if actionFinder.links %}
       {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
+        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}{% if actionFinder.contextPositionTop == false and actionFinder.titleContext %}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span>{% endif %}</h3>
       {% endif %}
       <div class="ma__action-finder__items ma__action-finder__items--all">
         {% for link in actionFinder.links %}
