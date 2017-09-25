@@ -1,44 +1,33 @@
 export default function (window,document,$,undefined) {
+  "use strict";
+  $('.js-header-tag-link').each(function() {
 
-  var showHideButton = $('.ma__header-tags__terms .js-accordion-link');
-  var relatedItems = $('.ma__header-tags__terms a');
-  var moreThanThreeRelatedItems = relatedItems.length > 2 ? true : false;
+    let $showHideButton = $('.js-header-tag-link .js-header-tag-button'),
+        $relatedItems = $('.js-header-tag-link a:nth-child(n+4)');
 
-  if (!moreThanThreeRelatedItems) {
-    showHideButton.hide();
-  }
+      $showHideButton.hide();
 
-  // If we have related items, inspect them.
-  if (moreThanThreeRelatedItems) {
-    var showThreeRelatedItems = function() {
-      for (var i = 3; i < relatedItems.length; i++) {
-        $(relatedItems[i]).hide();
+      // Hide items after 3 items.
+      if ($relatedItems.length) {
+        // Hide items if more than three.
+        $relatedItems.hide();
+        // Show our see button if we have more than three items.
+        $showHideButton.show();
       }
-    };
 
-    var showAllRelatedItems = function() {
-      for (var i = 0; i < relatedItems.length; i++) {
-        $(relatedItems[i]).show();
-      }
-    };
+      $showHideButton.on('click', function(e) {
+        e.preventDefault();
+        $showHideButton.toggleClass('is-open');
 
-    // Init just show 3.
-    showThreeRelatedItems();
+        if ($showHideButton.hasClass('is-open')) {
+          $showHideButton.attr('aria-expanded', 'true');
+          $relatedItems.show();
+        }
+        else {
+          $showHideButton.attr('aria-expanded', 'false');
+          $relatedItems.hide();
+        }
+      });
 
-    showHideButton.on('click', function(e) {
-      "use strict";
-      e.preventDefault();
-      showHideButton.toggleClass('is-open');
-
-      if (showHideButton.hasClass('is-open')) {
-        showAllRelatedItems();
-        showHideButton.attr('aria-expanded', 'true');
-      }
-      else {
-        showThreeRelatedItems();
-        showHideButton.attr('aria-expanded', 'false');
-      }
-    });
-  }
-
+  });
 }(window,document,jQuery);

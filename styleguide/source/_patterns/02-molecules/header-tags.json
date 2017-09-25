@@ -1,5 +1,8 @@
 {
   "headerTags": {
+    "id": "terms",
+    "moreLabel": "more",
+    "lessLabel": "less",
     "label": "More about:",
     "taxonomyTerms": [{
       "href": "#",

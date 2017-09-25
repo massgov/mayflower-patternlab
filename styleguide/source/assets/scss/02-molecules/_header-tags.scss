@@ -2,7 +2,7 @@
   font-size: 16px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  max-width: 820px;
+  max-width: $l-max-content-width;
 
   > span {
     white-space: nowrap;
@@ -54,7 +54,7 @@
       padding-left: 10px;
       font-size: 19px;
       font-weight: 500;
-      color: #14558f;
+      color: $c-theme-primary;
 
       &:after {
         opacity: .5;
