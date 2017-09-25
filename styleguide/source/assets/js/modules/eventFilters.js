@@ -76,28 +76,44 @@ export default function (window,document,$,undefined) {
       }
     }
 
+    let dateRange = '',
+        startDate = '',
+        endDate = '',
+        useToday = false;
+
     // Get start date.
     if ($dateStart.find('input').length) {
-      let startDate = $dateStart.find('input').val();
+      startDate = $dateStart.find('input').val();
       if (startDate) {
-        formData.push({
-          type: 'start',
-          text: startDate,
-          value: startDate
-        });
+        dateRange += startDate;
+      }
+      else {
+        startDate = moment().format('M/DD/YYYY');
+        useToday = true;
       }
     }
 
     // Get end date.
     if ($dateEnd.find('input').length) {
-      let endDate = $dateEnd.find('input').val();
+      endDate = $dateEnd.find('input').val();
       if (endDate) {
-        formData.push({
-          type: 'end',
-          text: endDate,
-          value: endDate
-        });
+        if (startDate && !useToday) {
+          dateRange += ' - ' + endDate;
+        }
+        else {
+          dateRange = 'Today - ' + endDate;
+        }
       }
+    }
+
+    if (dateRange) {
+      formData.push({
+        type: 'dateRange',
+        text: dateRange,
+        value: dateRange,
+        start: startDate,
+        end: endDate,
+      });
     }
 
     // Get checkboxes/tags.
@@ -127,11 +143,8 @@ export default function (window,document,$,undefined) {
       return;
     }
     // Clear dates text inputs.
-    if (clearedFilter.type === 'start') {
+    if (clearedFilter.type === 'dateRange') {
       $dateStart.find('input').val("");
-      return;
-    }
-    if (clearedFilter.type === 'end') {
       $dateEnd.find('input').val("");
       return;
     }

@@ -227,9 +227,7 @@ export default function (window,document,$,undefined) {
     let filteredData = listings.filterListingData(data, transformation),
         tags = filteredData.resultsHeading.tags,
         sortedData = listings.sortDataByDate(filteredData),
-        place = '',
-        start = '',
-        end = '';
+        place = '';
 
     // Sort data by location, if that filter is present.
     if (listings.hasFilter(tags, 'location')) {

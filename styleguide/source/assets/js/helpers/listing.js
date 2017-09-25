@@ -388,7 +388,7 @@ export default  function(window, document, undefined, $){
     }
 
     // If a date filter is present, filter based on the date filter values.
-    if (hasFilter(filters, 'end') || hasFilter(filters, 'start')) {
+    if (hasFilter(filters, 'dateRange')) {
       return filterDataByDateTags(filters, data);
     }
 
@@ -670,14 +670,9 @@ export default  function(window, document, undefined, $){
     let filterEnd = '';
 
     tags.map(function(tag) {
-      if (tag.type == 'start') { filterStart = moment(tag.value, 'M/DD/YYYY'); }
-      if (tag.type == 'end') { filterEnd = moment(tag.value, 'M/DD/YYYY'); }
+      if (tag.type == 'dateRange') { filterStart = moment(tag.start, 'M/DD/YYYY'); }
+      if (tag.type == 'dateRange') { filterEnd = moment(tag.end, 'M/DD/YYYY'); }
     });
-
-    // If we don't have a start date, lets use now.
-    if (!filterStart) {
-      filterStart = moment();
-    }
 
     if (filterEnd && filterStart) {
       return item.start.isSameOrAfter(filterStart, 'day') && item.start.isSameOrBefore(filterEnd, 'day') ? true : false;
