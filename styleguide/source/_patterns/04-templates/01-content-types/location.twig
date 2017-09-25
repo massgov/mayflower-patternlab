@@ -18,11 +18,11 @@
     {% endblock %}
   </div>
   <div class="main-content main-content--two">
-
     <div class="page-content">
       {% set coloredHeading = {
         "text": location.contentTitle,
-        "color": "green"
+        "color": "green",
+        "level": 2
       } %}
       {% include "@atoms/04-headings/colored-heading.twig" %}
       <div class="ma__details__content">
