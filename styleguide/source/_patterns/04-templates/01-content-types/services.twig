@@ -40,7 +40,7 @@
         {% if introSidebar %}
           <aside class="sidebar sidebar--intro">
             {% block sidebarIntro %}
-              {% if introSidebar.logo %}
+              {% if introSidebar.logo.src %}
                 {% set image = introSidebar.logo %}
                 {% include "@atoms/09-media/image.twig" %}
               {% endif %}
