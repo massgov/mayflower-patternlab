@@ -197,7 +197,7 @@
      "compHeading": {
        "title": "Overview",
        "titleContext": "of Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "overview",
        "centered": ""
@@ -217,7 +217,7 @@
      "compHeading": {
        "title": "Hours",
        "titleContext": "of Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "hours",
        "centered": ""
@@ -287,7 +287,7 @@
      "compHeading": {
        "title": "Parking",
        "titleContext": "for Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "parking",
        "centered": ""
@@ -354,7 +354,7 @@
      "compHeading": {
        "title": "Recommended Activities",
        "titleContext": "at Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "recommended-activities",
        "centered": ""
@@ -429,7 +429,7 @@
      "compHeading": {
        "title": "All Activities",
        "titleContext": "at Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "all-activities",
        "centered": ""
@@ -467,7 +467,7 @@
      "compHeading": {
        "title": "Facilities",
        "titleContext": "at Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "facilities",
        "centered": ""
@@ -495,7 +495,7 @@
      "compHeading": {
        "title": "Acessibility",
        "titleContext": "at Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "acessibility",
        "centered": ""
@@ -531,7 +531,7 @@
      "compHeading": {
        "title": "Restrictions",
        "titleContext": "at Mt Greylock State Park",
-       "sub": true,
+       "level": 3,
        "color": "",
        "id": "restrictions",
        "centered": ""
@@ -568,7 +568,7 @@
      "compHeading":{
        "title": "Contacts",
        "titleContext": "for Mt Greylock State Park",
-       "sub": "true",
+       "level": 3,
        "color": "",
        "id": "contacts",
        "centered": ""

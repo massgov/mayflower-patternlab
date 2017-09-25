@@ -99,7 +99,7 @@
       "compHeading": {
         "title": "What you need",
         "titleContext": "to Apply for unemployment benefits",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "what-you-need",
         "centered": ""
@@ -167,7 +167,7 @@
       "compHeading": {
         "title": "Fees",
         "titleContext": "to Apply for unemployment benefits",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "fees",
         "centered": ""
@@ -236,7 +236,7 @@
     "stepsUnordered": {
       "compHeading": {
         "title": "How To Apply",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "how-to-apply",
         "centered": ""
@@ -306,7 +306,7 @@
       "compHeading": {
         "title": "Next Steps",
         "titleContext": "to Apply for unemployment benefits",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "next-steps",
         "centered": ""
@@ -388,7 +388,7 @@
       "compHeading": {
         "title": "More info",
         "titleContext": "to Apply for unemployment benefits",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "more-info",
         "centered": ""
@@ -407,7 +407,7 @@
       "compHeading": {
         "title": "Downloads",
         "titleContext": "to Apply for unemployment benefits",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "downloads",
         "centered": ""
@@ -432,7 +432,7 @@
       "compHeading": {
         "title": "Contact",
         "titleContext": "to Apply for unemployment benefits",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "contact",
         "centered": ""
