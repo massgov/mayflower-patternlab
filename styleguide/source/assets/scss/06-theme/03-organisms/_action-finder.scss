@@ -80,10 +80,6 @@ $action-finder-border-color: tint($c-theme-primary,50%);
 
       a {
         color: $c-font-inverse;
-
-        &:hover {
-          border-color: rgba($c-font-inverse, .5);
-        }
       }
 
       svg {
