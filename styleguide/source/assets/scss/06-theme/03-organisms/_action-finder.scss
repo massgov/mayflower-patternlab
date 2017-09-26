@@ -69,25 +69,6 @@ $action-finder-border-color: tint($c-theme-primary,50%);
     }
   }
 
-  &__see-all {
-    background-color: $c-theme-primary;
-
-    .ma__decorative-link {
-
-      a {
-        color: $c-font-inverse;
-
-        &:hover {
-          border-color: rgba($c-font-inverse, .5);
-        }
-      }
-
-      svg {
-        fill: rgba($c-font-inverse, .5);
-      }
-    }
-  }
-
   &--no-background &__see-all {
     background-color: $c-bg-section;;
 
