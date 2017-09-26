@@ -25,10 +25,6 @@ $action-finder-border-color: tint($c-theme-primary,50%);
     }
   }
 
-  &__title {
-    color: $c-font-inverse;
-  }
-
   &:not(&--no-background) &__title {
     @include ma-border-decorative($c-theme-tertiary,1);
   }
@@ -73,21 +69,6 @@ $action-finder-border-color: tint($c-theme-primary,50%);
     }
   }
 
-  &__see-all {
-    background-color: $c-theme-primary;
-
-    .ma__decorative-link {
-
-      a {
-        color: $c-font-inverse;
-      }
-
-      svg {
-        fill: rgba($c-font-inverse, .5);
-      }
-    }
-  }
-
   &--no-background &__see-all {
     background-color: $c-bg-section;;
 
@@ -95,6 +76,10 @@ $action-finder-border-color: tint($c-theme-primary,50%);
 
       a {
         color: $c-font-link;
+
+        &:hover {
+          border-color: rgba($c-font-link, .5);
+        }
       }
 
       svg {
