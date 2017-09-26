@@ -29,15 +29,15 @@ locationFilters: {
       bounds: {
         sw: {
           lat: 
-            type: float, latitude
+            type: int, latitude
           lng:
-            type: float, longitude
+            type: int, longitude
         },
         ne: {
           lat: 
-            type: float, latitude
+            type: int, latitude
           lng:
-            type: float, longitude
+            type: int, longitude
         }
       }
     }
