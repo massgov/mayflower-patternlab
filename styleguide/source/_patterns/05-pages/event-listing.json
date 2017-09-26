@@ -78,14 +78,14 @@
         "events":[{
           "title": {
             "href": "#",
-            "text": "Indianapolis Hike",
+            "text": "Attleboro Hike",
             "info": "",
             "property": ""
           },
-          "location": "Indianapolis, IN",
+          "location": "Attleboro, MA",
           "position": {
-            "lat": 39.768403,
-            "lng": -86.158068
+            "lat": 41.70035,
+            "lng": -70.3062102
           },
           "date": {
             "summary": "December 2, 2017",
@@ -101,14 +101,14 @@
         },{
           "title": {
             "href": "#",
-            "text": "Albuquerque Hike",
+            "text": "Barnstable Hike",
             "info": "",
             "property": ""
           },
-          "location": "Albuquerque, New Mexico",
+          "location": "Barnstable, MA",
           "position": {
-            "lat": 35.085334,
-            "lng": -106.605553
+            "lat": 42.4475416,
+            "lng": -73.2546978
           },
           "date": {
             "summary": "March 2, 2018 - April 25, 2017",
@@ -174,10 +174,10 @@
             "info": "",
             "property": ""
           },
-          "location": "Chicago, IL",
+          "location": "Brookline, MA",
           "position": {
-            "lat": 41.878114,
-            "lng": -87.629798
+            "lat": 42.4048224,
+            "lng": -71.0894367
           },
           "date": {
             "summary": "August 26, 2018 - August 30, 2018",
@@ -193,14 +193,14 @@
         },{
           "title": {
             "href": "#",
-            "text": "Indianapolis Hike",
+            "text": "Concord Hike",
             "info": "",
             "property": ""
           },
-          "location": "Indianapolis, IN",
+          "location": "Concord, MA",
           "position": {
-            "lat": 39.768403,
-            "lng": -86.158068
+            "lat": 41.3903691,
+            "lng": -70.5168911
           },
           "date": {
             "summary": "January 12, 2018 - April 25, 2018",
@@ -216,14 +216,14 @@
         },{
           "title": {
             "href": "#",
-            "text": "Indianapolis Hike",
+            "text": "Edgartown Hike",
             "info": "",
             "property": ""
           },
-          "location": "Indianapolis, IN",
+          "location": "Edgartown, MA",
           "position": {
-            "lat": 39.768403,
-            "lng": -86.158068
+            "lat": 42.6426951,
+            "lng": -71.3097237
           },
           "date": {
             "summary": "October 16, 2017 - October 18, 2017",
