@@ -12,7 +12,7 @@
       }
 
       @media (min-width: 801px) {
-        #GUID12349 {
+        #GUID12345 {
           background-image: url('{{actionFinder.bgWide}}');
         }
       }
@@ -20,9 +20,8 @@
   {% endif %}
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
-      <h2 class="ma__action-finder__title">
-        {{ actionFinder.title }}
-      </h2>
+      {% set compHeading = actionFinder.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}    
     </header>
     {% if actionFinder.featuredLinks %}
       {% if actionFinder.featuredHeading %}
@@ -40,7 +39,7 @@
         {% endfor %}
       </div>
     {% endif %}
-    {% if actionFinder.items %}
+    {% if actionFinder.links %}
       {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
         <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
       {% endif %}

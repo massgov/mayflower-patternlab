@@ -2,7 +2,15 @@
   "actionFinder": {
     "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
     "bgNarrow":"../../assets/images/placeholder/800x800.png",
-    "title": "What Would You Like to Do?",
+
+    "compHeading": {
+      "title": "Title text",
+      "level": "",
+      "color": "",
+      "id": "GUID9827924",
+      "centered": ""
+    },
+
     "featuredHeading":"Featured:",
     "generalHeading":"All Actions & Guides:",
 
