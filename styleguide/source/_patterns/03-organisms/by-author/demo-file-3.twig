@@ -4,15 +4,15 @@
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
-<section class="ma__action-finder {{ noBgClass }}" id="{{ actionFinder.id }}">
+<section class="ma__action-finder {{ noBgClass }}" id="#GUID12345">
   {% if actionFinder.bgWide %}
     <style>
-      #{{ actionFinder.id }} {
+      #GUID12345 {
         background-image: url('{{actionFinder.bgNarrow}}');
       }
 
       @media (min-width: 801px) {
-        #{{ actionFinder.id }} {
+        #GUID12345 {
           background-image: url('{{actionFinder.bgWide}}');
         }
       }
