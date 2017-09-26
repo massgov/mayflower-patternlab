@@ -76,10 +76,6 @@ $action-finder-border-color: tint($c-theme-primary,50%);
 
       a {
         color: $c-font-link;
-
-        &:hover {
-          border-color: rgba($c-font-link, .5);
-        }
       }
 
       svg {
