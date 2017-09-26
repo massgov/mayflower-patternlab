@@ -207,7 +207,7 @@ export default  function(window, document, undefined, $){
     // return $('.js-filter-by-tags').find("#" + tag).parent().siblings('svg').prop('outerHTML');
     // Get outerHtml of svgElement shim for IE
     // See: https://stackoverflow.com/questions/12592417/outerhtml-of-an-svg-element
-    return getOuterHtml($('.js-filter-by-tags').find("#" + tag).parent().siblings('svg')[0]);
+    return getOuterHtml($('.js-filter-by-tags').find("#" + tag).siblings('svg')[0]);
   }
 
   /**
