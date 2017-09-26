@@ -4,6 +4,7 @@
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
+{# Backward compatible with 5.7 - replaced Id with variable #}
 {% set actionFinderId = actionFinder.id ? : "GUID847017" %}
 
 <section class="ma__action-finder {{ noBgClass }}" id="{{ actionFinderId }}">
