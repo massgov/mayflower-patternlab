@@ -5,15 +5,11 @@
         <span class="ma__event-teaser__month">{{ eventTeaser.date.startMonth }}</span>
         <span class="ma__event-teaser__day">{{ eventTeaser.date.startDay }}</span>
       </div>
-      {% if eventTeaser.date.endMonth or eventTeaser.date.endDay %}
+      {% if eventTeaser.date.endMonth and eventTeaser.date.endDay %}
         <div class="ma__event-teaser__spacer"></div>
         <div class="ma__event-teaser__end-date">
-          {% if eventTeaser.date.endMonth %}
-            <span class="ma__event-teaser__month">{{ eventTeaser.date.endMonth }}</span>
-          {% endif %}
-          {% if eventTeaser.date.endDay %}
-            <span class="ma__event-teaser__day">{{ eventTeaser.date.endDay }}</span>
-          {% endif %}
+          <span class="ma__event-teaser__month">{{ eventTeaser.date.endMonth }}</span>
+          <span class="ma__event-teaser__day">{{ eventTeaser.date.endDay }}</span>
         </div>
       {% endif %}
     </div>
