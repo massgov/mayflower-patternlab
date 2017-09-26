@@ -1,25 +1,13 @@
 {
   "actionFinder": {
+    "id": "GUID831741781374893",
     "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
     "bgNarrow":"../../assets/images/placeholder/800x800.png",
-
-    "compHeading": {
-      "title": "Title text",
-      "level": "",
-      "color": "",
-      "id": "GUID9827924",
-      "centered": ""
-    },
-
+    "title": "What Would You Like to Do?",
     "featuredHeading":"Featured:",
-    "generalHeading":"All Services",
+    "generalHeading":"All Actions & Guides:",
 
-    "seeAll": {
-      "type": "external",
-      "href": "http://www.google.com",
-      "text": "See all related Actions",
-      "info": ""
-    },
+    "seeAll": null,
 
     "featuredLinks": [{
       "image": "../../assets/images/placeholder/130x160.png",
