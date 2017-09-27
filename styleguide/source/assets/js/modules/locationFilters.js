@@ -75,7 +75,7 @@ export default function (window,document,$,undefined) {
     }
 
     $tags.find('input:checked').each(function() {
-      formData.push({'type': 'tag', 'value': $(this).val(), 'text': $(this).next("label").text()});
+      formData.push({'type': 'tag', 'value': $(this).val(), 'text': $(this).siblings("label").text()});
     });
 
     return formData;
