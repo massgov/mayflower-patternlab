@@ -7,7 +7,7 @@ This page [extends](https://twig.symfony.com/doc/2.x/tags/extends.html) the loca
 ### Pattern Contains
 * Header
 * Footer
-* Location Template
+* Location (template)
 * Contact List
 * Key Actions
 * Rich Text

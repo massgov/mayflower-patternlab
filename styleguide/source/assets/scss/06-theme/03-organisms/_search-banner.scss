@@ -11,11 +11,26 @@
     @include ma-container;
   }
 
+  .ma__page-intro {
+
+    h1 {
+      color: $c-font-inverse;
+      font-weight: 300;
+    }
+
+    &__sub-title {
+      color: $c-font-inverse;
+      font-weight: 400;
+    }
+  }
+
+  // backward compatible with v5.6 - title was replaced with Page Intro
   &__title {
     color: $c-font-inverse;
     font-weight: 300;
   }
 
+  // backward compatible with v5.6 - intro was replaced with Page Intro
   &__intro {
     color: $c-font-inverse;
     font-weight: 400;
@@ -93,6 +108,25 @@
     }
   }
 
+  .ma__banner-credit {
+    
+    &__icon {
+
+      & > svg {
+        fill: $c-font-inverse;
+      }
+    }
+
+    &__image-name {
+      color: rgba($c-font-inverse,.9);
+    }
+
+    &__image-author {
+      color: rgba($c-font-inverse, .5);
+    }
+  }
+
+  // Start backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
   &__image-credit {
 
   }
@@ -117,4 +151,5 @@
     color: rgba($c-font-inverse, .5);
     font-weight: 400;
   }
+  // End backward compatible with v5.7 - converted image-credit to new Banner Credit molecule
 }

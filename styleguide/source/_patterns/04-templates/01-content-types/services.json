@@ -86,17 +86,21 @@
 
   "introSidebar": {
     "logo": {
-      "alt": "alt text", 
-      "src": "../../assets/images/placeholder/230x130.png",
-      "height": "130",
-      "width": "230"
+      "alt": "",
+      "src": "",
+      "height": "",
+      "width": ""
     },
 
     "social": {
-      "sidebarHeading": {
-        "title": "Social"
-      },
       "iconLinks": {
+        "compHeading": {
+          "title": "Social",
+          "sub": true,
+          "color": "",
+          "id": "",
+          "centered": ""
+        },
         "items": [{
           "icon": "@atoms/05-icons/svg-twitter.twig",
           "link": {

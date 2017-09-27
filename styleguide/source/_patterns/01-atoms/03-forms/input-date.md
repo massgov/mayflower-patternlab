@@ -1,30 +1,29 @@
----
-title: Input Date
----
-Description: An `<input> [type='date']`  element with its corresponding `<label>` element.
+### Description
+This is a Date Input field with a calendar interface.
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Notes:
-- restrict controls whether the user can pick any date (''), today and prior ('max') or today and future ('min')
+### Usage Guidelines:
+* The 'restrict' variable controls whether the user can pick any date (''), today and prior ('max') or today and future ('min')
 
-### Used In:
+### JavaScript Used
+* This pattern uses JavaScript for the Calendar interface (js/modules/pickaday.js)
 
-
-### Variables:
+### Variables
 ~~~
-  inputDate: {
-    labelText:
-      type: string\required,
-    required: 
-      type: boolean,
-    id: 
-      type: string\unique\required
-    name: 
-      type: string\required
-    placeholder:
-      type: string
-    restrict:
-      type: string ('','max','min')
-  }
+inputDate: {
+  labelText:
+    type: string / required,
+  required: 
+    type: boolean,
+  id: 
+    type: string (unique per page) / required
+  name: 
+    type: string / required
+  placeholder:
+    type: string / optional
+  restrict:
+    type: string ('','max','min') / optional
+}
 ~~~
