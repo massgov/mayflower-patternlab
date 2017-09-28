@@ -726,6 +726,7 @@ export default  function(window, document, undefined, $){
     sortDataAlphabetically,
     sortDataByDate,
     geocodeAddressString,
+    geocodePlaceId,
     makeAllActive,
     calculateDistance,
     transformListing,
