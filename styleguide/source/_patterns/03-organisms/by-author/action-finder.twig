@@ -4,6 +4,8 @@
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
+{% set titleId = compHeading.id ? : "finder-title-" ~ actionFinder.id %}
+
 <section class="ma__action-finder {{ noBgClass }}" id="{{ actionFinder.id }}">
   {% if actionFinder.bgWide %}
     <style>
@@ -21,12 +23,13 @@
   <div class="ma__action-finder__container">
     <header class="ma__action-finder__header">
       {# Backward compatible with 5.7 - replaced h2 with compHeading #}
-      {% set compHeading = actionFinder.compHeading ? : {"title": actionFinder.title, "color":"yellow","id": ""} %}
+      {% set compHeading = actionFinder.compHeading ? : {"title": actionFinder.title, "color":"yellow" } %}
+      {% set compHeading = compHeading|merge({"id": titleId }) %}
       {% include "@atoms/04-headings/comp-heading.twig" %}
     </header>
     {% if actionFinder.featuredLinks %}
       <div class="ma__action-finder__featured-items">
-        {% set keyActions = { "links": actionFinder.featuredLinks } %}
+        {% set keyActions = { "links": actionFinder.featuredLinks, "id": titleId } %}
         {% if actionFinder.featuredHeading %}
           <h3 class="ma__action-finder__category" id="featured-{{ actionFinder.id }}">{{ actionFinder.featuredHeading }}</h3>
           {% set keyActions = keyActions|merge({"id": "featured-" ~ actionFinder.id, }) %}
@@ -36,12 +39,10 @@
     {% endif %}
     {% if actionFinder.links %}
       <div class="ma__action-finder__all-items">
-        {% set keyActions = { "links": actionFinder.links } %}
+        {% set keyActions = { "links": actionFinder.links, "id": titleId } %}
         {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
           <h3 class="ma__action-finder__category" id="all-{{ actionFinder.id }}">{{ actionFinder.generalHeading }}</h3>
           {% set keyActions = keyActions|merge({"id": "all-" ~ actionFinder.id, }) %}
-        {% else %}
-          {% set keyActions = keyActions|merge({"id": actionFinder.id, }) %}
         {% endif %}
         {% include "@organisms/by-author/key-actions.twig" %}
       </div>
