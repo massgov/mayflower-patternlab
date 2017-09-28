@@ -4,11 +4,7 @@
 {% endif %}
 
 {# fallback to compHeading Id value #}
-{% set keyActionId = keyActions.compHeading.id %}
-
-{% if keyActions.id %}
-  {% set keyActionId = keyActions.id %}
-{% endif %}
+{% set keyActionId = keyActions.id ? : keyActions.compHeading.id %}
 
 {% set hiddenClass = keyActions.hiddenHeading ? 'ma__key-actions--hidden-heading' : '' %}
   
