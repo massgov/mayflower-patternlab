@@ -2,6 +2,7 @@
   "actionSection": {
     "title":"Overview",
     "id":"overview:",
+    "level": "",
     "path":"organisms-rich-text",
     "data": {
       "richText": {

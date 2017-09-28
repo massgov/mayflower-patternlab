@@ -3,9 +3,16 @@
       "title": actionSection.title,
       "sub": true,
       "color": "",
-      "id": actionSection.id
+      "id": actionSection.id,
+      "level": actionSection.level,
     }
   %}
   {% include "@atoms/04-headings/comp-heading.twig" %}
+{% endif %}
+{% if actionSection.id == 'activities' %}
+  {% set level = actionSection.level + 1 %}
+  {% set imagePromos = actionSection.data.imagePromos|merge({'level': level }) %}
+  {% set data = actionSection.data|merge({'imagePromos': imagePromos }) %}
+  {% set actionSection = actionSection|merge({'data': data }) %}
 {% endif %}
 {% include actionSection.path with actionSection.data %}

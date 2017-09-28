@@ -1,3 +1,6 @@
+{% if imagePromos.level %}{# for action details in location page #}
+  {% set imagePromo = imagePromo|merge({'level': imagePromos.level}) %}
+{% endif %}
 <section class="ma__image-promo{{ imagePromo.location.map ? ' js-location-listing-link' : '' }}">
   {% if imagePromo.image %}
     <div class="ma__image-promo__image"
