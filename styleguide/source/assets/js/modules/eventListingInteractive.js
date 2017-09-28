@@ -234,21 +234,23 @@ export default function (window,document,$,undefined) {
       place = listings.getFilterValues(tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       let autocompletePlace = ma.autocomplete.getPlace();
-      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('geometry')) {
-        transformReturn.place = autocompletePlace;
-        // Sort the markers and instance of locationListing masterData.
-        transformReturn.data = sortDataAroundPlace(autocompletePlace, filteredData);
-        // Return the data sorted by location and the autocomplete place object
-        promise.resolve(transformReturn);
+      // Geocode the address, then sort the markers and instance of locationListing masterData.
+      ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
+      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('place_id')) {
+        // This is an asynchronous function
+        listings.geocodePlaceId(autocompletePlace.place_id, function(result) {
+          transformReturn.data = sortDataAroundPlace(result, filteredData);
+          transformReturn.geocode = result;
+          // Return the data sorted by location and the geocoded place object
+          promise.resolve(transformReturn);
+        });
       }
       // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
       else {
-        // Geocode the address, then sort the markers and instance of locationListing masterData.
-        ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
         // This is an asynchronous function
         listings.geocodeAddressString(place, function(result) {
           transformReturn.data = sortDataAroundPlace(result, filteredData);
-          transformReturn.place = result;
+          transformReturn.geocode = result;
           // Return the data sorted by location and the geocoded place object
           promise.resolve(transformReturn);
         });

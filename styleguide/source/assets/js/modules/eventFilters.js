@@ -21,7 +21,8 @@ export default function (window,document,$,undefined) {
           bounds: defaultBounds,
           strictBounds: true,
           types: ['geocode'],
-          componentRestrictions: {country: 'us'}
+          componentRestrictions: {country: 'us'},
+          placeIdOnly: true
         };
         ma.autocomplete = new google.maps.places.Autocomplete(locationInput, options);
       }
