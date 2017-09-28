@@ -8,26 +8,40 @@
             "title": stackedRowSection.title,
             "sub": "",
             "color": "",
-            "id": stackedRowSection.id
+            "id": stackedRowSection.id,
+            "level": stackedRowSection.level
           }
         %}
         {% include "@atoms/04-headings/comp-heading.twig" %}
       </div>
     </div>
-  {% endif %}    
+  {% endif %}
   <div class="main-content {{ stackedRowSection.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
     <div class="page-content">
       {% for content in stackedRowSection.pageContent %}
+        {% if content.data.formDownloads %}
+          {% set formDownloads = content.data.formDownloads|merge({'level': level}) %}
+          {% set data = content.data|merge({'formDownloads': formDownloads}) %}
+          {% set content = content|merge({'data': data}) %}
+        {% endif %}
         {% include content.path with content.data %}
       {% endfor %}
     </div>
     {% if stackedRowSection.sideBar|length %}
       <aside class="sidebar">
         {% for sidebar in stackedRowSection.sideBar %}
+          {% if sidebar.data.sidebarHeading %}
+            {% set sidebarHeading = sidebar.data.sidebarHeading|merge({'level': stackedRowSection.level + 1}) %}
+            {% set data = sidebar.data|merge({'sidebarHeading': sidebarHeading}) %}
+            {% set sidebar = sidebar|merge({'data': data}) %}
+          {% elseif sidebar.data.contactUs %}
+            {% set contactUs = sidebar.data.contactUs|merge({'level': stackedRowSection.level + 2}) %}
+            {% set data = sidebar.data|merge({'contactUs': contactUs}) %}
+            {% set sidebar = sidebar|merge({'data': data}) %}
+          {% endif %}
           {% include sidebar.path with sidebar.data %}
         {% endfor %}
       </aside>
     {% endif %}
   </div>
 </section>
-
