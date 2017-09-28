@@ -3,14 +3,14 @@
     "id": "GUIDasjdhf1",
     "catIcon": {
       "icon":"@atoms/05-icons/svg-lg-fishing.twig",
-      "small": "true"
+      "small": true
     },
     "title": {
       "href": "#",
       "text": "Recreational Licenses & Permits",
       "info": ""
     },
-    "subTitle": false,
+    "level": "",
     "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum mauris quam, et imperdiet purus pellentesque vel.",
     "links" : [{
       "href": "#",

@@ -1,26 +1,14 @@
----
-title: Tooltip
----
+### Description
+This pattern show a modal with helpful information.
 
-Description: special text that includes a modal with more information about the text.
+### Status
+* Stable as of 5.0.0
 
-## State: Alpha
-
-### Notes
-
-
-### Contains
-
-
-### Used in:
-
-
-### Required Variables
-
+### Variables
 ~~~
 tooltip: {
   controlId: 
-    type: string / unique ID / required GUID1272384732,
+    type: string (unique per page) / required,
   location: 
     type: string / optional ('' or above')
   info: 
@@ -32,9 +20,10 @@ tooltip: {
   closeText: 
     type: string / required,
   title: 
-    type: string / optional
+    type: string / optional,
+  level
+    type: number / optional
   message: 
     type rich text / required. 
 }
-
 ~~~

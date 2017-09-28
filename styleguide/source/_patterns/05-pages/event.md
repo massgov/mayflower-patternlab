@@ -7,7 +7,7 @@ Example of an Event Page for Mass Gov
 ### Pattern Contains
 * Header
 * Footer
-* Event Template
+* Event (template)
 
 ### JavaScript Used
 * This pattern uses JavaScript for the accordions (js/modules/accordions.js)

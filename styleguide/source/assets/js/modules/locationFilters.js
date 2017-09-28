@@ -4,11 +4,17 @@ export default function (window,document,$,undefined) {
 
     // When google map libraries are loaded, initialize places.autocomplete on the location input, if it exists.
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function() {
-      let $locationFilter = $('.js-filter-by-location', $el).find('input');
+      let $locationFilterParent = $('.js-filter-by-location', $el);
+      let $locationFilter = $locationFilterParent.find('input');
       if ($locationFilter.length) {
         // Create the google places autocomplete object and associate it with the zip code text input.
         let locationInput = document.getElementById($locationFilter.attr('id'));
-        let defaultBounds = new google.maps.LatLngBounds(new google.maps.LatLng(40.727093,-73.97864), new google.maps.LatLng(43.004778, -69.845299));
+        let swLat = $locationFilterParent.data('maPlaceBoundsSwLat');
+        let swLng = $locationFilterParent.data('maPlaceBoundsSwLng');
+        let neLat = $locationFilterParent.data('maPlaceBoundsNeLat');
+        let neLng = $locationFilterParent.data('maPlaceBoundsNeLng');
+
+        let defaultBounds = new google.maps.LatLngBounds(new google.maps.LatLng(swLat,swLng), new google.maps.LatLng(neLat,neLng));
 
         // See options: https://developers.google.com/maps/documentation/javascript/places-autocomplete#add_autocomplete
         let options = {
@@ -70,7 +76,7 @@ export default function (window,document,$,undefined) {
     }
 
     $tags.find('input:checked').each(function() {
-      formData.push({'type': 'tag', 'value': $(this).val(), 'text': $(this).next("label").text()});
+      formData.push({'type': 'tag', 'value': $(this).val(), 'text': $(this).siblings("label").text()});
     });
 
     return formData;

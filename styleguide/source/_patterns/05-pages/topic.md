@@ -5,8 +5,8 @@ This is an example of a Topic page on Mass.gov.
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Single Column Template
-* Page Banner (columns)
+* Single Column (template)
+* Page Banner - columns
 * Sections Three Up
 * Link List
 

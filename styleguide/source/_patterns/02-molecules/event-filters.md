@@ -1,37 +1,52 @@
----
-title: Event Filters
----
+### Description
+This pattern shows a Form with inputs to filter location and date range.
 
-Description: Form with inputs used on Event listing page
+### Status 
+* Stable as of 5.0.0
 
-## State: Alpha
+### Pattern Contains
+* Input Text
+* Date Range
 
-### Notes
+### JavaScript Used
+* Location Filters (js/modules/locationFilters.js)
 
-### Used in:
-
-
-### contains:
-- [@atoms/03-forms/input-text](?p=atoms-input-text)
-- [@molecules/date-range](?p=molecules-date-range)
-
+### Usage Guidelines
+* `zipcode.placeAutocomplete.bounds` sets default bounds for google maps api place autocomplete (see: [google maps api docs: LatLngBounds](https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds)) which will be used in `/assets/js/modules/eventFilters`.
 
 ### Required Variables
 ~~~
 {
   eventFilters: {
     zipcode: {    
-      type: object/inputText/required
+      inputText: {
+        type: inputText / required
+      },
+      
+      placeAutoComplet: {
+        bounds: {
+          sw: {
+            lat: 
+              type: int, latitude
+            lng:
+              type: int, longitude
+          },
+          ne: {
+            lat: 
+              type: int, latitude
+            lng:
+              type: int, longitude
+          }
+        }
+      }
     },
     
     dateRange: {
-      type: object/dateRange/required
+      type: dateRange / optional
     },
 
-    submitButton:
-      type: string/required   
-  }
-
+  buttons: [{
+    type: array of Button / required
+  }]
 }
 ~~~
-

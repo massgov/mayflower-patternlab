@@ -1,32 +1,27 @@
----
-title: Select Box
----
-Description: A `<select>`  element with its corresponding `<label>` element and `<option>` elements, wrapped in a containing `<section>` element with additional `<div>` elements with progressive enhancement to achieve a themed drop down list via javascript functionality.
+### Description
+This is a stylized selectbox.
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Notes:
-_No limit to number of objects in options array_
 
-### Used In:
-- [@organisms/by-author/feedback-form](/?p=organisms-feedback-form)
+### JavaScript Used
+* To keep the value displayed in sync with the current value of the select box (js/modules/dropdown.js)
 
-### Variables:
+### Variables
 ~~~
 selectBox {
-    label:
-        type: string / required
-    required:
-        type: boolean
-    id:
-        type: string / required
-    options: [
-        {
-            value:
-                type: string / required
-            text: 
-                type: string / required
-        }, / required (multiple)
-    ]
+  label:
+    type: string / required
+  required:
+    type: boolean
+  id:
+    type: string (unique per page) / required
+  options: [{
+    value:
+      type: string / required
+    text: 
+      type: string / required
+  }]
 }
 ~~~
