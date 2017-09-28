@@ -28,10 +28,6 @@
         {% set video = pageContent.video %}
         {% include "@atoms/09-media/video.twig" %}
       {% endif %}
-      
-      {% if pageContent.location %}
-        <p class="ma__press__location-label"><span class="ma__press__location-dateline">{{ pageContent.location }}</span>&nbsp;&mdash;&nbsp;</p>
-      {% endif %}
 
       {% set richText = pageContent.richText %}
       {% include "@organisms/by-author/rich-text.twig" %}
