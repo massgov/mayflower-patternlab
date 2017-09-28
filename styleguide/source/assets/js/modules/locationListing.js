@@ -292,21 +292,23 @@ export default function (window,document,$,undefined) {
       place = listings.getFilterValues(filteredData.resultsHeading.tags, 'location')[0]; // returns array
       // If place argument was selected from the locationFilter autocomplete (initiated on the zipcode text input).
       let autocompletePlace = ma.autocomplete.getPlace();
-      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('geometry')) {
-        transformReturn.place = autocompletePlace;
-        // Sort the markers and instance of locationListing masterData.
-        transformReturn.data = sortDataAroundPlace(autocompletePlace, filteredData);
-        // Return the data sorted by location and the autocomplete place object
-        promise.resolve(transformReturn);
+      // Geocode the address, then sort the markers and instance of locationListing masterData.
+      ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
+      if (typeof autocompletePlace !== "undefined" && autocompletePlace.hasOwnProperty('place_id')) {
+        // This is an asynchronous function
+        listings.geocodePlaceId(autocompletePlace.place_id, function(result) {
+          transformReturn.data = sortDataAroundPlace(result, filteredData);
+          transformReturn.geocode = result;
+          // Return the data sorted by location and the geocoded place object
+          promise.resolve(transformReturn);
+        });
       }
       // If place argument was populated from locationFilter (zipcode text input) but not from Place autocomplete.
       else {
-        // Geocode the address, then sort the markers and instance of locationListing masterData.
-        ma.geocoder = ma.geocoder ? ma.geocoder : new google.maps.Geocoder();
         // This is an asynchronous function
         listings.geocodeAddressString(place, function(result) {
           transformReturn.data = sortDataAroundPlace(result, filteredData);
-          transformReturn.place = result;
+          transformReturn.geocode = result;
           // Return the data sorted by location and the geocoded place object
           promise.resolve(transformReturn);
         });
@@ -348,18 +350,18 @@ export default function (window,document,$,undefined) {
   /**
    * Returns instance of location listing masterData, sorted proximity to place.
    *
-   * @param place
+   * @param geocode
    *   The geocode information by which to sort.
    * @param data
    *   The instance of location listing masterData.
    * @returns {*}
    *   Sorted instance of location listing masterData.
    */
-  function sortDataAroundPlace(place, data) {
+  function sortDataAroundPlace(geocode, data) {
     // Get all existing marker distance from place, assign as marker property.
     for (let key in data.items) {
       if (data.items.hasOwnProperty(key)) {
-        data.items[key].marker.distance = google.maps.geometry.spherical.computeDistanceBetween(place.geometry.location, data.items[key].marker.getPosition());
+        data.items[key].marker.distance = google.maps.geometry.spherical.computeDistanceBetween(geocode.geometry.location, data.items[key].marker.getPosition());
       }
     }
 
@@ -372,10 +374,9 @@ export default function (window,document,$,undefined) {
     let paginated = listings.paginateItems(data.items, data.maxItems);
     data.items = paginated.items;
     data.totalPages = paginated.totalPages;
-    data.place = place;
+    data.place = geocode;
 
     // Return the newly sorted instance of location listing masterData.
     return data;
   }
-
 }(window,document,jQuery);

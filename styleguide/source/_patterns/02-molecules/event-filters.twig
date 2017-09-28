@@ -1,3 +1,6 @@
+{# Set default google maps api place autocomplete result bounds, defaults to Mass. #}
+{% set swLat = eventFilters.zipcode.placeAutocomplete.bounds.sw.lat ? eventFilters.zipcode.placeAutocomplete.bounds.sw.lat : 40.727093 %}
+{% set swLng = eventFilters.zipcode.placeAutocomplete.bounds.sw.lng ? eventFilters.zipcode.placeAutocomplete.bounds.sw.lng : -73.9786 %}
 {% set neLat = eventFilters.zipcode.placeAutocomplete.bounds.ne.lat ? eventFilters.zipcode.placeAutocomplete.bounds.ne.lat : 43.004778 %}
 {% set neLng = eventFilters.zipcode.placeAutocomplete.bounds.ne.lng ? eventFilters.zipcode.placeAutocomplete.bounds.ne.lng : -69.845299 %}
 
