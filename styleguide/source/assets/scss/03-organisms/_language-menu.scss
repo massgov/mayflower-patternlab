@@ -1,0 +1,104 @@
+.ma__language-menu {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  position: relative;
+
+  @media ($bp-header-toggle-max) {
+    display: none;
+  }
+
+  @media ($bp-header-toggle-min) {
+    line-height: 2;
+    transition: opacity .4s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .ma__header__utility-nav--narrow & {
+    display: none;
+  }
+
+  .goog-te-gadget {
+    font-size: 1.25rem;
+  }
+
+  .goog-te-gadget-simple {
+    font-size: 1.25rem;
+
+    @media ($bp-header-toggle-max) {
+      padding: 11px 0 9px 45px;
+      width: 100%;
+    }
+
+    & > img {
+      margin-right: 30px;
+      margin-bottom: 0;
+
+      @media ($bp-header-toggle-max) {
+        margin-right: 1px;
+        margin-bottom: 2px;
+      }
+    }
+
+    & > span {
+      display: inline-block;
+    }
+  }
+
+  .goog-te-gadget-simple .goog-te-menu-value {
+    @include ma-chevron;
+
+    @media ($bp-header-toggle-max) {
+      display: block;
+      width: 100%;
+    }
+
+    & > * {
+      display: none;
+    }
+
+    & > :first-child {
+      display: inline;
+    }
+
+    &:after {
+      margin-left: .25em;
+      transform: rotate(45deg) translateY(-45%); 
+
+      @media ($bp-header-toggle-max) {
+        position: absolute;
+          top: 45%;
+          right: 10px;
+      }     
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    line-height: 1em;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+      left: 30px;
+      top: 54%;
+    transform: translateY(-50%);
+    transition: opacity .001s;
+    transition-delay: .5s;
+
+    @media ($bp-header-toggle-max) {
+      left: 20px;    
+    }
+
+    & > svg {
+      height: 18px;
+      width: 20px;    
+    }
+  }
+
+  .has-rendered + &__icon {
+    opacity: 1;
+  }
+}

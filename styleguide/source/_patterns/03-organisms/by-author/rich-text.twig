@@ -1,6 +1,4 @@
-<section 
-  class="ma__rich-text js-ma-rich-text"
-  {% if richText.property %} property="{{ richText.property }}"{% endif %}>
+<section class="ma__rich-text js-ma-rich-text">
   {% if richText.compHeading %}
     {% set compHeading = richText.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
@@ -12,4 +10,10 @@
   {% for element in richText.rteElements %}
     {% include element.path with element.data %}  
   {% endfor %}
+  {% if richText.decorativeLink %}
+    <div class="ma__rich-text__more">
+      {% set decorativeLink = richText.decorativeLink %}
+      {% include "@atoms/decorative-link.twig" %}
+    </div>
+  {% endif %}
 </section>

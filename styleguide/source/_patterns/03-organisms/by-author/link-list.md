@@ -11,9 +11,11 @@ List of links that can be rendered stack or as two columns
 * Decorative Link
 
 ### Variant options
-* With a [Short List](./?p=organisms-link-list-with-short-list)
-* As a [Stacked](./?p=organisms-link-list-as-stacked) list
-* With a [short description](./?p=organisms-link-list-with-description)
+* When a [Short List](./?p=organisms-link-list-with-short-list) is passed it renders as a single column
+* Can be rendered a [Stacked](./?p=organisms-link-list-as-stacked) list instead of two columns
+* A [short description](./?p=organisms-link-list-with-description) can be added to explain the contents of the list
+* You can hide the [Bullets](./?p=organisms-link-list-as-helpful-links)
+* Here's an example of how this pattern can be used to render as [Helpful Links](./?p=organisms-link-list-as-helpful-links)
 
 ### Usage Guidelines
 * When this pattern is used in the Right Rail, the Comp Heading will render as a Sidebar Heading and the bullets will disappear.
@@ -32,6 +34,8 @@ linkList : {
     type: richText / optional
   },
   stacked: 
+    type: boolean
+  hideBullets: 
     type: boolean
   links : [{
     type: array of decorativeLink / required

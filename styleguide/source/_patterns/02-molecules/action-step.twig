@@ -14,7 +14,8 @@
         {% include actionStep.icon %}
       </div> 
     {% endif %} 
-    <h2 class="ma__action-step__title">{{ actionStep.title }}</h2>
+    {% set headingLevel = actionStep.level ? : 2 %}
+    <h{{ headingLevel }} class="ma__action-step__title">{{ actionStep.title }}</h{{ headingLevel }}>
   {% if accordion %}
     </button>
   {% else %}
@@ -24,15 +25,13 @@
   {% set richText = actionStep.richText %}
   {% include "@organisms/by-author/rich-text.twig" %}
   {% if actionStep.downloadLinks %}
-    <div class="ma__action-step__downloads">
-      {% for item in actionStep.downloadLinks %}
-        {% set downloadLink = item.downloadLink %}
-        {% include "@molecules/download-link.twig" %}
-      {% endfor %}
-    </div>
+    {% set formDownloads = { "downloadLinks": actionStep.downloadLinks } %}
+    {% include "@organisms/by-author/form-downloads.twig" %}
   {% endif %}
   {% if actionStep.decorativeLink %}
-    {% set decorativeLink = actionStep.decorativeLink %}
-    {% include "@atoms/decorative-link.twig" %}
+    <div class="ma__action-step__more">
+      {% set decorativeLink = actionStep.decorativeLink %}
+      {% include "@atoms/decorative-link.twig" %}
+    </div>
   {% endif %}
 </section>

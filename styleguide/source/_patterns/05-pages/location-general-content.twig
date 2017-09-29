@@ -23,6 +23,8 @@
   {% include "@organisms/by-author/rich-text.twig" %}
   {% set richText = mainContent.restrictions %}
   {% include "@organisms/by-author/rich-text.twig" %}
+  {% set formDownloads = mainContent.formDownloads %}
+  {% include "@organisms/by-author/form-downloads.twig" %}
 {% endblock %}
 
 {% block sidebar %}

@@ -1,0 +1,11 @@
+{# Note this Pattern can only be used once per page #}
+{% if googleLanguages %}
+  <div class="ma__language-menu">
+    <div 
+      class="ma__language-menu__drop-down js-language-menu" 
+      data-languages="{{ googleLanguages }}"></div>
+    <div class="ma__language-menu__icon">
+      {% include "@atoms/05-icons/svg-lat-lon-globe.twig" %}
+    </div>
+  </div>
+{% endif %}

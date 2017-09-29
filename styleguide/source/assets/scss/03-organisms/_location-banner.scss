@@ -1,4 +1,5 @@
 .ma__location-banner {
+  @include ma-container;
   @include clearfix;
   margin-bottom: 70px;
 
