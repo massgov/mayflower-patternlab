@@ -16,5 +16,7 @@ columnHeading {
     type: string (url) / optional,
   info:
     type: string (content for screen readers) / optional
+  level:
+    type: number / optional
 }
 ~~~

@@ -40,13 +40,16 @@
         {% if introSidebar %}
           <aside class="sidebar sidebar--intro">
             {% block sidebarIntro %}
-              {% if introSidebar.logo %}
+              {% if introSidebar.logo.src %}
                 {% set image = introSidebar.logo %}
                 {% include "@atoms/09-media/image.twig" %}
               {% endif %}
               {% if introSidebar.social %}
-                {% set sidebarHeading = introSidebar.social.sidebarHeading %}
-                {% include "@atoms/04-headings/sidebar-heading.twig" %}
+                {# Backward Compatible with v5.7 - added heading to iconLinks so this heading isn't needed #}
+                {% if introSidebar.social.sidebarHeading %}
+                  {% set sidebarHeading = introSidebar.social.sidebarHeading %}
+                  {% include "@atoms/04-headings/sidebar-heading.twig" %}
+                {% endif %}
                 {% set iconLinks = introSidebar.social.iconLinks %}
                 {% include "@molecules/icon-links.twig" %}
               {% endif %}

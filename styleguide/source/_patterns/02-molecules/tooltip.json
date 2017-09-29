@@ -7,6 +7,7 @@
     "openIcon": "@atoms/05-icons/svg-question-mark.twig",
     "closeText": "Close",
     "title": "What does this term mean?",
+    "level": "",
     "message": "This term is defined as Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fugiat voluptatibus, magnam, facilis error corporis beatae non minus eius unde."
   }
 }

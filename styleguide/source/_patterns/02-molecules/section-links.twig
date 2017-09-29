@@ -8,17 +8,16 @@
         {% include "@atoms/05-icons/cat-icon.twig" %}
       </div>
     {% endif %}
+    {# Backward Compatible with v5.8 - subTitle replaced by level #}
     {% if sectionLinks.subTitle %}
-      <h3 class="ma__section-links__title js-accordion-link" id="{{ titleId }}">
-        {% set decorativeLink = sectionLinks.title %}
-        {% include "@atoms/decorative-link.twig" %}
-      </h3>
-    {% else %}
-      <h2 class="ma__section-links__title js-accordion-link" id="{{ titleId }}">
-        {% set decorativeLink = sectionLinks.title %}
-        {% include "@atoms/decorative-link.twig" %}
-      </h2>
+      {% set sectionLinks = sectionLinks|merge({"level": 3}) %}
     {% endif %}
+    
+    {% set headingLevel = sectionLinks.level ? : 2 %}
+    <h{{ headingLevel }} class="ma__section-links__title js-accordion-link" id="{{ titleId }}">
+      {% set decorativeLink = sectionLinks.title %}
+      {% include "@atoms/decorative-link.twig" %}
+    </h{{ headingLevel}}>
     <nav class="ma__section-links__toggle-content js-accordion-content" aria-labelledby="{{ titleId }}">
       {% if sectionLinks.description %}
         <p class="ma__section-links__description">{{sectionLinks.description}}</p>

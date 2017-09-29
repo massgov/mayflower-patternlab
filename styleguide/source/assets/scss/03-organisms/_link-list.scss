@@ -3,7 +3,7 @@
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
-    @include ma-container();
+    @include ma-container;
   }
 
   &__description {
@@ -29,6 +29,11 @@
         @include span-columns(6);
       }
     }
+
+    &--no-bullets {
+      list-style: none;
+      padding-left: 0;
+    }
   }
 
   &__item {
@@ -40,16 +45,17 @@
   }
 
   .sidebar &__item + &__item {
-    border-top-width: 1px;
     border-top-style: solid;
+    border-top-width: 1px;
     margin-top: 25px;
-    padding-top: 25px;
     padding-bottom: 0;
+    padding-top: 25px;
   }
 
   .sidebar &__item {
+
     .ma__decorative-link {
-      font-size: 1.625rem;
+      font-size: 1.25rem;
       line-height: 1.2;
     }
   }

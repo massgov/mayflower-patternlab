@@ -7,7 +7,7 @@ This page [extends](https://twig.symfony.com/doc/2.x/tags/extends.html) the deta
 ### Pattern Contains
 * Header
 * Footer
-* Details Template
+* Details (template)
 * Rich Text
 * Tabular Data
 * Steps Unordered

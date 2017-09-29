@@ -17,6 +17,7 @@
     @include ma-container();
   }
 
+  // reduce the width of the title and border
   &--restricted + &--restricted &__container {
     @include ma-container('restricted');
   }
