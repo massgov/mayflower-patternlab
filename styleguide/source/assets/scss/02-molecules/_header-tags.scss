@@ -40,10 +40,6 @@
       @media ($bp-x-small-max) {
         // On small screens each tag is full width.
         display: block;
-        // On small screens only display 3 at max.
-        &:nth-of-type(1n+4) {
-          display: none;
-        }
       }
     }
 
@@ -85,7 +81,7 @@
       }
 
       @media ($bp-x-small-max) {
-        display: none;
+        display: block;
       }
     }
   }
