@@ -144,7 +144,7 @@
     "overview": {
       "compHeading": {
         "title": "Overview",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "overview",
         "centered": ""
@@ -163,7 +163,7 @@
     "hours": {
       "compHeading": {
         "title": "Hours",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "hours",
         "centered": ""
@@ -232,7 +232,7 @@
     "parking": {
       "compHeading": {
         "title": "Parking",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "parking",
         "centered": ""
@@ -298,7 +298,7 @@
     "imagePromos": {
       "compHeading": {
         "title": "Recommended Activities",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "recommended-activities",
         "centered": ""
@@ -314,16 +314,14 @@
           "href": "#"
         },
         "description": {
-          "richText":{
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph" : {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                }
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
               }
-            }]
-          }
+            }
+          }]
         },
         "link": null
       },{
@@ -337,16 +335,14 @@
           "href": "#"
         },
         "description": {
-          "richText":{
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph" : {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                }
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
               }
-            }]
-          }
+            }
+          }]
         },
         "link": null
       },{
@@ -360,16 +356,14 @@
           "href": "#"
         },
         "description": {
-          "richText":{
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph" : {
-                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-                }
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
               }
-            }]
-          }
+            }
+          }]
         },
         "link": null
       }]
@@ -378,7 +372,7 @@
     "allActivities": {
       "compHeading": {
         "title": "All Activities",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "all-activities",
         "centered": ""
@@ -415,7 +409,7 @@
     "facilities": {
       "compHeading": {
         "title": "Facilities",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "facilities",
         "centered": ""
@@ -442,7 +436,7 @@
     "acessibility": {
       "compHeading": {
         "title": "Acessibility",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "acessibility",
         "centered": ""
@@ -477,7 +471,7 @@
     "restrictions": {
       "compHeading": {
         "title": "Restrictions",
-        "sub": true,
+        "level": 3,
         "color": "",
         "id": "restrictions",
         "centered": ""
@@ -537,7 +531,7 @@
       "viewSpecific": false,
       "compHeading":{
         "title": "Contacts",
-        "sub": "true",
+        "level": 3,
         "color": "",
         "id": "contacts",
         "centered": ""

@@ -127,7 +127,7 @@
     }]
   },
 
-  "stackedRowSections": [{
+  "stackedRows": [{
     "title":"Buying or Renting a Home",
     "id":"buying-or-renting-a-home",
     "pageContent": [{
@@ -172,7 +172,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -273,7 +274,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -331,9 +333,9 @@
               }
             }
           },{
-            "path": "@atoms/04-headings/heading-4.twig",
+            "path": "@atoms/04-headings/heading-3.twig",
             "data": {
-              "heading4": {
+              "heading3": {
                 "text": "Choose a Reputable Mover"
               }
             }
@@ -349,9 +351,9 @@
               }]
             }
           },{
-            "path": "@atoms/04-headings/heading-4.twig",
+            "path": "@atoms/04-headings/heading-3.twig",
             "data": {
-              "heading4": {
+              "heading3": {
                 "text": "Observe Parking Restrictions"
               }
             }
@@ -375,7 +377,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -491,10 +494,8 @@
       "path":"@organisms/by-author/callout-alert.twig",
       "data":{
         "calloutAlert": {
-          "decorativeLink": {
-            "href": "",
-            "text": "Massachusetts requires you to license your dog"
-          }
+          "href": "",
+          "text": "Massachusetts requires you to license your dog"
         }
       }
     }],
@@ -523,7 +524,7 @@
         "keyActions": {
           "compHeading": {
             "title": "Key Actions",
-            "sub":true
+            "level": 3
           },
           "links":[{
             "text": "Related Action to important Page Name",
@@ -552,7 +553,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -634,7 +636,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -684,6 +687,7 @@
       "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
+          "icon": "@atoms/05-icons/svg-wait-time.twig",
           "text": "This usually takes approximately 4 weeks"
         }
       }
@@ -737,7 +741,8 @@
         "contactList": {
           "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
+            "title": "Key Agencies",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -876,7 +881,7 @@
         "keyActions": {
           "compHeading": {
             "title": "Key Actions",
-            "sub":true
+            "level": 3
           },
           "links":[{
             "text": "Related Action to important Page Name",
@@ -901,8 +906,12 @@
       "text": "See All Guides"
     },
     "pages": [{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -910,8 +919,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -919,8 +932,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "../../assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image", 
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",

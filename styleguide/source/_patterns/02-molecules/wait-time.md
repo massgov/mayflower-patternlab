@@ -1,6 +1,6 @@
----
-title: Wait time
----
+### Status
+* Obsolete as of 5.0.0
+
 Description: Widget to display a wait time at a given location.
 ## Status: Alpha
 ### Notes:

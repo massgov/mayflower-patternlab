@@ -4,13 +4,7 @@
   {% include "@organisms/by-template/page-header.twig" %}
 {% endblock %}
 {% block pageContent %}
-  {% set eventFilters = mainContent.eventFilters %}
-  {% include "@molecules/event-filters.twig" %}
-  {% set resultsHeading = mainContent.resultsHeading %}
-  {% include "@molecules/results-heading.twig" %}
-  {% set eventListing = mainContent.eventListing %}
-  {% include "@organisms/by-author/event-listing.twig" %}
-  {% set pagination = mainContent.pagination %}
-  {% include "@molecules/pagination.twig" %}
+  {% set eventListingInteractive = mainContent.eventListingInteractive %}
+  {% include "@organisms/by-author/event-listing-interactive.twig" %}
 {% endblock %}
 {% block postContent %}{% endblock %}

@@ -1,5 +1,5 @@
 ### Description
-This pattern is used to add a `<h1>` page title to a page that helps define its content.
+This pattern is adds an `<h1>` page title and other helpful bit of content that helps define the page's purpose.
 
 ### Status
 * Stable as of 5.0.0
