@@ -13,15 +13,26 @@
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
       {% set teaserHeading = (sidebarHeading.level ? : teaserHeading) + 1 %}
     {% endif %}
-    <ul class="ma__event-listing__items js-event-listing-items">
-      {% for eventTeaser in eventListing.events %}
-        {% set eventTeaser = eventTeaser|merge({"level":teaserHeading}) %}
-        <li class="ma__event-listing__item js-event-listing-item">
-          {% include "@molecules/event-teaser.twig" %}
-        </li>
-      {% endfor %}
-    </ul>
-    {% if eventListing.more %}
+    {% if eventListing.events %}
+      <ul class="ma__event-listing__items js-event-listing-items">
+        {% for eventTeaser in eventListing.events %}
+          {% set eventTeaser = eventTeaser|merge({"level":teaserHeading}) %}
+          <li class="ma__event-listing__item js-event-listing-item">
+            {% include "@molecules/event-teaser.twig" %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="ma__event-listing__empty">
+        {{ eventListing.emptyText }}
+      </div>
+    {% endif %}
+    {% if eventListing.pastMore and eventListing.pastEvents == true %}
+        <div class="ma__event-listing__past">
+          {% set link = eventListing.pastMore %}
+          {% include "@atoms/11-text/link.twig" %}
+        </div>
+    {% elseif eventListing.more and eventListing.events %}
       <div class="ma__event-listing__more">
         {% set link = eventListing.more %}
         {% include "@atoms/11-text/link.twig" %}

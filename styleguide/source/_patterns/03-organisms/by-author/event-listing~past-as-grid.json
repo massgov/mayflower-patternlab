@@ -1,0 +1,24 @@
+{
+  "eventListing": {
+    "grid": true,
+    "compHeading":{
+      "title": "Upcoming Events"
+    },
+    "emptyText": "No upcoming events scheduled",
+    "pastEvents": true,
+    "events": null,
+    "more":{
+      "href": "#",
+      "text": "view all events at this location",
+      "chevron": true,
+      "label": ""
+    },
+    "pastMore":{
+      "href": "#",
+      "text": "See past events",
+      "info": "view all past events for this location",
+      "chevron": true
+    }
+  }
+}
+ 
