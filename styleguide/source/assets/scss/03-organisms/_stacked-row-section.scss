@@ -4,7 +4,9 @@
     box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(1, 1, 1, 0.25);
     padding-bottom: 45px;
 
-    &:last-child {
+    // Removes box-shadow on homepage and last item.
+    &:last-child,
+    .is-front & {
       box-shadow: none;
     }
   }
@@ -38,7 +40,7 @@
   &--restricted &__title {
     max-width: 820px;
   }
-  
+
   .main-content {
 
     @media ($bp-large-max) {
