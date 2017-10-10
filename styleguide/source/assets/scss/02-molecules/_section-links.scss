@@ -177,7 +177,6 @@
 
   // Make child content callout links full width
   &__item > .ma__callout-link {
-    @include ma-container();
     display: block;
     width: 100%;
   }
