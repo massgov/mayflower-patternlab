@@ -137,12 +137,15 @@ $page-banner-icon-width: $column + $gutter;
     max-width: 640px;
     position: relative;
       top: 200px;
+      display: table-cell;
+      vertical-align: middle;
 
     @media ($bp-medium-min) {
       height: 100%;
       position: relative;
-        top: 50px;
+      top: 50px;
       transform: skew(-30deg);
+      display: block;
     }
   }
 
