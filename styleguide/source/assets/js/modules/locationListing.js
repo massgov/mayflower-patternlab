@@ -2,6 +2,15 @@ import sticky from "../helpers/sticky.js";
 import listings from "../helpers/listing.js";
 
 export default function (window,document,$,undefined) {
+  const removeJs = () => {$('.ma__location-listing').removeClass('js-location-listing')};
+  const addJs = () => {$('.ma__location-listing').addClass('js-location-listing')};
+  let w = $(window).width()+15;
+    w > 910 ? addJs() : removeJs();
+    $(window).resize(()=>{
+      w = $(window).width()+15;
+      w > 910 ? addJs() : removeJs();
+            console.log($('.ma__location-listing'));
+    })
   // Active state classes for location listing rows.
   let activeClass = 'is-active',
     markerActiveClass = 'is-marker-bounce',
