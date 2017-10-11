@@ -28,7 +28,7 @@ $page-banner-icon-width: $column + $gutter;
 
   &--columns {
     height: auto;
-    min-height: 450px;
+    min-height: 300px;
 
     @media ($bp-medium-min) {
       padding-top: 45px;
@@ -133,10 +133,11 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__content {
-    height: 400px;
+    height: 300px;
     max-width: 640px;
     position: relative;
-      top: 200px;
+    top: 150px;
+    left: 20px;
       display: table-cell;
       vertical-align: middle;
 
@@ -313,7 +314,7 @@ $page-banner-icon-width: $column + $gutter;
   &--columns &__image {
     background-position: 50% 50%;
     background-size: cover;
-    height: 400px;
+    height: 300px;
     position: absolute;
       right: 0;
       top: 0;
