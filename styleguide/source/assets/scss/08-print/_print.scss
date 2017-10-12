@@ -50,7 +50,6 @@ h1,
 .ma__quick-actions,
 .ma__wait-time,
 .fluid-width-video-wrapper,
-.ma__stacked-row-section,
 #feedback,
 .ma__floating-action {
   display: none !important;
@@ -556,7 +555,8 @@ h4 {
 }
 
   // Opens accordions when printing.
-  .ma__action-step--accordion .ma__action-step__content {
+  .ma__action-step--accordion .ma__action-step__content,
+  .ma__contact-us--accordion .ma__contact-us__content  {
     display: block !important;
   }
 }
