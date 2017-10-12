@@ -15,9 +15,8 @@
     font-size: 0;
     height: 30px;
     position: absolute;
-      top: 50%;
+      top: 0;
       left: 0;
-    transform: translateY(-50%);
     width: 30px;
 
     & > svg {
@@ -29,6 +28,7 @@
   &__text {
     font-size: 1.438rem;
     font-style: italic;
+    display: inline-block;
     padding-left: 42px; // width of icon and margin
   }
 }
