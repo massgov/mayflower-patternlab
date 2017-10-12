@@ -40,7 +40,7 @@ Some Mass Digital Services projects (i.e. [massgov/mass](https://github.com/mass
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/massgov/mayflower/tags).
 
-**What SemVer means for Mayflower section coming soon...**
+Learn about how Mayflower versions work in our [Semantic Versioning](docs/versioning.md) docs.
 
 ## License
 
