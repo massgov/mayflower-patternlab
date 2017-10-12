@@ -15,9 +15,13 @@
     font-size: 0;
     height: 30px;
     position: absolute;
-      top: 0;
+      top: 16%;
       left: 0;
     width: 30px;
+
+    @media ($bp-medium-min) {
+      top: 10%;
+    }
 
     & > svg {
       height: 30px;
