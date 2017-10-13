@@ -92,7 +92,10 @@
 
   &__title {
     @include ma-h3;
-    margin-bottom: 15px;
+    margin-bottom: .5em;
+    @media ($bp-small-min){
+      margin-bottom: .5em;
+    }
     align-self: stretch;
     
     a {
