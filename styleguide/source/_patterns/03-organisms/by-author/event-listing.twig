@@ -22,17 +22,19 @@
           </li>
         {% endfor %}
       </ul>
-    {% else %}
+    {% endif %}
+    {% if eventListing.emptyText %}
       <div class="ma__event-listing__empty">
         {{ eventListing.emptyText }}
       </div>
     {% endif %}
-    {% if eventListing.pastMore and eventListing.pastEvents == true %}
-        <div class="ma__event-listing__past">
-          {% set link = eventListing.pastMore %}
-          {% include "@atoms/11-text/link.twig" %}
-        </div>
-    {% elseif eventListing.more and eventListing.events %}
+    {% if eventListing.pastMore %}
+      <div class="ma__event-listing__past">
+        {% set link = eventListing.pastMore %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+    {% endif %}
+    {% if eventListing.more %}
       <div class="ma__event-listing__more">
         {% set link = eventListing.more %}
         {% include "@atoms/11-text/link.twig" %}

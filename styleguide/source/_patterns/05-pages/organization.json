@@ -533,7 +533,6 @@
         "eventListing": {
           "grid": true,
           "emptyText": "No upcoming events scheduled",
-          "pastEvents": true,
           "compHeading":{
             "title": "Upcoming Events",
             "sub": "",
@@ -542,12 +541,6 @@
             "centered": ""
           },
           "events": null,
-          "more":{
-            "href": "#",
-            "text": "See all events",
-            "chevron": true,
-            "label": "See all events for Executive Office of Health and Human Services"
-          },
           "pastMore":{
             "href": "#",
             "text": "See past events",
