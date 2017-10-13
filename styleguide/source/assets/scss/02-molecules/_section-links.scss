@@ -169,10 +169,9 @@
     @include ma-reset-list;
   }
 
-
   // skip the first item
   &__item + &__item {
-    margin-top: .75em;
+    margin-top: 1em;
   }
 
   // Make child content callout links full width
@@ -183,5 +182,6 @@
 
   &__item > .ma__decorative-link {
     font-size: 1.625rem;
+    line-height: 1.3;
   }
 }
