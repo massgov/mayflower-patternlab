@@ -14,6 +14,8 @@ Thanks for contributing to Mayflower!  Please take a minute to review the proces
         1. [Cloning the repo](#cloning-the-repo)
         1. [Installing project dependencies](#installing-project-dependencies)
         1. [Keeping in sync](#keeping-in-sync)
+    1. [Creating or Editing a Pattern](#creating-or-editing-a-pattern)
+    1. [Coding Guildelines](#coding-guidelines)
     1. [Submitting your work](#submitting-your-work)
         1. [Spinning up a branch](#spinning-up-a-branch)
         1. [Working with Pattern Lab](#working-with-pattern-lab)
@@ -131,6 +133,140 @@ git remote add upstream git@github.com:massgov/mayflower.git
 ```
 
 If you check your remotes (`git remote -v`), you can now see that you have two "remotes" that your local repo is pointed towards: `origin`, which points to *your* Mayflower fork, and `upstream`, which points to `massgov/mayflower`.
+
+### Creating or Editing a Pattern
+When creating a new pattern for Mayflower, you should always check to see if the pattern you want to create already exist or could be built by adding a new variant to an existing pattern.  If you can't find a good pattern, then you will need to figure out what type of pattern you need to make (Atom, Molecule, Organism, etc...).  See Mayflower's Atomic Design [documentation](../docs/atomic-design.md) as a reference.
+
+When creating a variant of an existing pattern, you need to make sure you aren't actually creating a new pattern.  It's mosty a gut feeling, but you can usually tell if you find yourself adding a lot of extra code to make the variant.  Most variants are built by adding or hiding optional content or adding a modifier CSS class to switch styles.
+
+Your new or modified pattern should follow Mayflowers coding guidelines below.
+
+### Coding Guidelines
+
+#### General Standards
+- Two space indentation (not tabs)
+- Unix line endings for new patterns
+- Keep existing line ending types for existing patterns (mix of windows and unix)
+- File names, CSS classes, and Data Objects are consistent for each pattern.
+    - Example below for the Action Finder pattern
+    - Markup => `action-finder.twig`
+    - Data => `action-finder.json`
+    - Data Object => `{ "actionFinder": { ... } }`
+    - Sass => `\_action-finder.scss`
+    - CSS class => `.ma__action-finder: { ... }`
+    - JavaScript => `actionFinder.js`
+    - JS Selector Class => `$('.js-action-finder');`
+    - Documentation => `action-finder.md`
+- All files (expect JavaScript) are saved in their appropriate category (Atoms, Molecules, Organisms, etc...)
+
+#### Twig standards
+- File name must be unique across all categories, accept pages which can use any name
+- The pattern's name will be the file name so use short, but descriptive file names (ie: action-finder, button, decorative-link)
+- Follow the guide for [Atomic Design](../docs/atomic-design) to determine what Markup is valid for your category
+- CSS class names:
+    - Follow the [BEM](http://getbem.com/naming/) methodology
+    - Start with the 'ma__' namespace
+    - At the block level, matches the file name (ie: action-finder.twig => ma__action-finder)
+    - [Modifier](http://getbem.com/naming/) level classes are always pair with the corresponding [Block](http://getbem.com/naming/) or [Element](http://getbem.com/naming/) level class (ie class="ma\_\_action-finder ma\_\_action-finder--no-bg")
+- Background images by content editors
+    - Background images are usually added inline (ie: style="background-image: ...") to the html element that shows the image
+    - For very images greater than 800px wide, we normally swap them for smaller images on narrow screens
+        - Use a unique ID on the html element that shows the image
+        - Use that same unique ID in a style block that sets the background images using CSS media queries
+        - See the Page Banner organism as an example.
+- Variables:
+    - Use camelCase
+    - Are always set to a value
+       - If a variable is expecting an object (i.e. `{...}`) which is not being used, set it to `null` in the `.json` file
+       - If a variable is expecting a value (i.e. a string or integer) which is not being used, set it to `""` in the `.json` file
+    - Declared at the top of the file if used multiple times or just above where it is going to be used
+    - Do not use or create global variables
+    - Use the Twig `|merge` option if you need to pass custom data to a included pattern
+- Including patterns
+    - Set the variable used by the pattern before including it. (ie: `{% set actionFinder = foo.af %}{% include "action-finder.twig" %}`)
+    - Blocks are used in Templates to allow Pages to include new or override existing patterns
+    - When including an unknown pattern we use the `{% include item.path with item.data %}` method where `path` is a string value pointing to the pattern (ie: "path": "@atoms/01-buttons/button.twig") and `data` is the corresponding data object used by that pattern (ie: "data": { button": { ... }})
+    - Sometimes it's better to create a variant of an existing pattern and include that verses creating a new pattern.
+- Scope
+    - Do not be afraid to break your Pattern into smaller patterns
+    - Look for Atoms or Molecules within your code
+    - [BEM](http://getbem.com/naming/) methodology can be used as a guide to help break your pattern into smaller patterns
+        - If you find yourself wanting to add an Element CSS class to another Element CSS class, you probably have a separate pattern to break out. (ie: .ma__action-finder\_\_featured-item\_\_text, .ma__action-finder\_\_feature-item\_\_link => Feature Item should be a sepearate pattern)
+
+#### JSON data standards
+- File name matches the corresponding Twig file
+    - Use `filename~variant.json` to create pattern variants
+- Is located in the same folder as the corresponding Twig file
+- If this content of the file is consistent for every page, the file can be saved in the 'source/\_data' folder
+- Variables
+    - All variables are name spaced (ie: { "actionFinder": { "your-variables": "here" }} )
+    - Name space should match the file name (ie: action-finder.json => actionFinder: { ... })
+    - Use camel case for variable names
+    - Set to `""` for empty strings or numbers and `null` for an empty object
+    - Dummy content (ie: lorem ipsum) can be used for all Patterns except Pages
+    - For Pages, use real content whenever possible
+
+#### MD (documentation) standards
+- Name of the file matches the corresponding Twig file
+- For variants, the file name matches the corresponding json file with the `~` replaced by a `-`
+- Is located in the same folder as the corresponding Twig file
+- Documentation Templates exist for a [base](../docs/documentation-template.md) and [variants](../docs/documentation-template-variant.md)
+
+#### SCSS standards
+- Name of the file matches the CSS [Block](http://getbem.com/naming/) level name (ie: ma\_\_action-finder => \_action-finder.scss)
+- Will be saved in the appropriate category folder (ie: source/assets/scss/01-atoms) or theme category folder (ie: source/assets/scss/06-theme/01-atoms)
+- Code
+    - [Element](http://getbem.com/naming/) and [Modifier](http://getbem.com/naming/) level selectors are written using a short hand SASS method => `&__element` or `&--modifier`
+    - All selectors are nested within the block level class (`.ma\_\_action-finder { a { ... } &\_\_element { ... } }`)
+    - Properties are sorted Alphabetically with one exception
+        - If a `position` is used then it's sub properties (bottom, left, right, top) are placed after the position property.
+    - Media queries are nested within the selector they target (ie: `&\_\_item { padding: 40px; @media($bp-small-max) { padding: 20px; }}`)
+- Variables are used for all colors ($c-...) and breakpoints ($bp-...)
+- local variables, if namespaced (ie: `$action-finder-min-height: 40px;` is namespaced to `action-finder`), can be added to the top of the file (ie: `\_action-finder.scss`)
+- Mixins
+    - Each mixin has it's own file which is bundled into a main mixin.scss file.
+    - Should be used over generic CSS classes
+- Theme Files (`scss/06-theme`)
+    - These files contain all of the branding for your pattern
+    - Properties used in these files primarily include:
+        - Background-color
+        - Background-image (if not used inline in the twig file)
+        - Border-color
+        - Color
+        - Fill
+        - Font-style
+        - Font-weight
+        - Outline-color
+        - Stroke
+    - Note avoid using shorthand properties that include theme properties (ie: `border: 2px solid;`) since many of them set a default color, making them harder to override in the theme file.  Use specific properties instead (ie: `border-width: 2px;`)
+
+#### Javascript standards
+- Check for generic code first since we may already have the code you need in a generic file (ie: accordion.js)
+- Check for helper files (ie: cookies.js) that can be imported into your specific file instead of recreating code
+- New files should match the name of the pattern (ie: main-nav.twig => mainNav.js) they apply to or have a generic name (ie: accordion.js)
+- File names are camelCase
+- Files follow a basic [starter](../docs/javascript-template.md) template that uses Node Modules and jQuery.
+- Variables
+    - if pointing to a jQuery object, start with '$' (ie: `const $el = $('.js-action-finder');`)
+    - `const` should be used for variables that aren't supposed to be changed.
+- Including your file
+    - Added the file to the list of imports in 'js/index.js'
+    - List is in alphabetical order
+    - Maintain alignment of the 'from' values
+    - Node's import / export modules are used to bundle files
+- JS classes
+    - Never target CSS classes used for styling in your code
+    - Use CSS classes that start with `js-` to target html elements (ie: `.js-accordion`)
+    - Name your JS classes to be generic (ie: `.js-accordion`) or use the patterns name (ie: `.js-action-finder`)
+- Code
+    - Your code should start with a jQuery each statement to determine if the component exists and to allow it to work with multiple versions on the page
+    - ES6 code is allowed and polyfilled to work with IE11
+- Vendor files should always be loaded asychronously to avoid blocking the page from loading (ie: google APIs js files)
+
+#### SVG icons
+- SVG files are converted into twig files using the gulp svg2twig task
+- Inline fill or stroke colors should be removed from the .svg file whenever possible
+
 
 ### Submitting your work
 
