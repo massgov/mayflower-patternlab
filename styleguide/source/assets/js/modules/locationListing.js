@@ -2,15 +2,7 @@ import sticky from "../helpers/sticky.js";
 import listings from "../helpers/listing.js";
 
 export default function (window,document,$,undefined) {
-  const removeJs = () => {$('.ma__location-listing').removeClass('js-location-listing')};
-  const addJs = () => {$('.ma__location-listing').addClass('js-location-listing')};
-  let w = $(window).width()+15;
-    w > 910 ? addJs() : removeJs();
-    $(window).resize(()=>{
-      w = $(window).width()+15;
-      w > 910 ? addJs() : removeJs();
-            console.log($('.ma__location-listing'));
-    })
+
   // Active state classes for location listing rows.
   let activeClass = 'is-active',
     markerActiveClass = 'is-marker-bounce',
@@ -45,44 +37,53 @@ export default function (window,document,$,undefined) {
     // Listen for Google Map api library load completion, with geocode, geometry, and places libraries
     $(document).on('ma:LibrariesLoaded:GoogleMaps', function(){
       // Set up click handler for location listing rows.
-      $el.on('click', row, function (e) {
-        let index = $(e.currentTarget).index();
-        // trigger map to recenter on this item based on it's index.
-        $map.trigger('ma:GoogleMap:MapRecenter', index);
-        // mark this link as active
-        $el.find(activeLocationListingRow).removeClass(activeClass);
-        $(e.currentTarget).addClass(activeClass); // in case the event is triggered on a child element.
-        // focus on the map - mainly for mobile when it is stacked
-        let position = $map.offset().top;
-        $("html,body").stop(true, true).animate({scrollTop: position}, '750');
-      });
+      const onLocationListingAction = () = > {
+        $el.on('click', row, function (e) {
+          let index = $(e.currentTarget).index();
+          // trigger map to recenter on this item based on it's index.
+          $map.trigger('ma:GoogleMap:MapRecenter', index);
+          // mark this link as active
+          $el.find(activeLocationListingRow).removeClass(activeClass);
+          $(e.currentTarget).addClass(activeClass); // in case the event is triggered on a child element.
+          // focus on the map - mainly for mobile when it is stacked
+          let position = $map.offset().top;
+          $("html,body").stop(true, true).animate({scrollTop: position}, '750');
+        });
 
-      // Set up hover / focus event for listing rows.
-      $el.on('mouseenter focusin', row, function (e) {
-        // remove active state from previously selected list item
-        $el.find(activeLocationListingRow).removeClass(activeClass);
+        // Set up hover / focus event for listing rows.
+        $el.on('mouseenter focusin', row, function (e) {
+          // remove active state from previously selected list item
+          $el.find(activeLocationListingRow).removeClass(activeClass);
 
-        // Don't bounce the marker again if focus moves within the same listing.
-        if ($(e.currentTarget).hasClass(markerActiveClass)) {
-          return false;
-        }
+          // Don't bounce the marker again if focus moves within the same listing.
+          if ($(e.currentTarget).hasClass(markerActiveClass)) {
+            return false;
+          }
+
+          // Remove "focus" class from any "focused" location listing row.
+          // ("focus" vs focus because hover doesn't bring focus to element.)
+          $el.find(markerActiveLocationListingRow).removeClass(markerActiveClass);
+
+          // Focus moved into listing for first time, so flag with class, recenter + bounce marker.
+          $(e.currentTarget).addClass(markerActiveClass);
+          let index = $(e.currentTarget).index();
+
+          // Trigger map to recenter on this item and make the marker bounce
+          $map.trigger('ma:GoogleMap:MarkerBounce', index);
+        });
 
         // Remove "focus" class from any "focused" location listing row.
-        // ("focus" vs focus because hover doesn't bring focus to element.)
-        $el.find(markerActiveLocationListingRow).removeClass(markerActiveClass);
+        $el.on('mouseleave', row, function (e) {
+          $el.find(markerActiveLocationListingRow).removeClass(markerActiveClass);
+        });
+      }
 
-        // Focus moved into listing for first time, so flag with class, recenter + bounce marker.
-        $(e.currentTarget).addClass(markerActiveClass);
-        let index = $(e.currentTarget).index();
-
-        // Trigger map to recenter on this item and make the marker bounce
-        $map.trigger('ma:GoogleMap:MarkerBounce', index);
-      });
-
-      // Remove "focus" class from any "focused" location listing row.
-      $el.on('mouseleave', row, function (e) {
-        $el.find(markerActiveLocationListingRow).removeClass(markerActiveClass);
-      });
+      let w = $(window).width()+15;
+        if(w > 910) onLocationListingAction();
+        $(window).resize(()=>{
+          w = $(window).width()+15;
+          if(w > 910) onLocationListingAction();
+        })
 
       // Handle location listings form interaction (triggered by locationFilters.js).
       $locationFilter.on('ma:LocationFilter:FormSubmitted', function (e, formValues) {
