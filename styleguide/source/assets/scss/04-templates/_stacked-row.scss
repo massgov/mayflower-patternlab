@@ -6,6 +6,11 @@
     @media ($bp-large-max) {
       box-shadow: none;
       padding-bottom: 45px;
+
+      & + & {
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
     }
 
     @media print {
@@ -26,11 +31,10 @@
     content: "";
     display: block;
     padding-top: 45px;
-    border-top-width: 1px;
-    border-top-style: solid;
-    padding-top: 90px;
 
     @media print, ($bp-large-min) {
+      border-top-width: 1px;
+      border-top-style: solid;
       padding-top: 90px;
     }
   }

@@ -4,8 +4,9 @@
     box-shadow: none;
     padding-bottom: 45px;
 
-    &:last-child {
-      box-shadow: none;
+    & + & {
+      border-top-width: 1px;
+      border-top-style: solid;
     }
   }
 
