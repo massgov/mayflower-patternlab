@@ -16,11 +16,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Added
 
 ### Changed
-- DP-6145 Fix icon overlap bug in time callout organism
 
 ### Removed
 
 ### Migrate Path
+
+
+## 5.8.1
+
+#### Added
+- DP-4717 - Devs can use the new technical docs which describe the process for [working with patterns](https://github.com/massgov/mayflower/blob/dev/.github/CONTRIBUTING.md#creating-or-editing-a-pattern) and [atomic design](https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md).
+
+#### Fixed
+- DP-6145 Fix icon overlap bug in time callout organism
+- DP-5915 Fix section links component by updating line height and increasing margin top on list items (except first one).
+- DP-4517 - The [@molecules/header-tags](http://mayflower.digital.mass.gov/?p=molecules-header-tags) pattern no longer forces Title/Upper case for its contents.  (This will fix the case of the relationship indicators on Mass.gov).
+
 
 ## 5.8.0
 
