@@ -7,9 +7,11 @@ An `<h3>` element used as a subheading.  Typically used in the Right Rail or in 
 ### Variables
 ~~~
 sidebarHeading: {
-    title:
-        type: string / required
-    titleContext:
-        type: string / optional
-  }
+  title:
+    type: string / required
+  level:
+    type: number / optional
+  titleContext:
+    type: string / optional
+}
 ~~~

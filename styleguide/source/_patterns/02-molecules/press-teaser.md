@@ -23,6 +23,8 @@ pressTeaser : {
   title : {
     type: decorativeLink / required
   },
+  level:
+    type: number / optional
   date: 
     type: string / optional,
   org: 

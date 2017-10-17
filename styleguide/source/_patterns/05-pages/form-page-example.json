@@ -15,7 +15,8 @@
       "text": "You will need:",
       "href": "",
       "info": "",
-      "titleContext": "for Name of Form"
+      "titleContext": "for Name of Form",
+      "level": 2
     },
 
     "richText": {
@@ -41,7 +42,8 @@
       "title": {
         "text": "Payment accepted:",
         "href": "",
-        "info": ""
+        "info": "",
+        "level": 2
       },
 
       "locationIcons": {

@@ -16,8 +16,8 @@ compHeading: {
     type: string / required
   titleContex: 
     type: string / optional
-  sub:
-    type: string ("true" || "" ) / optional
+  level:
+    type: number / optional
   color:
     type: string ("yellow") / optional
   id:

@@ -170,7 +170,8 @@
           "viewSpecific": false,
           "sidebarHeading": {
             "title": "Key Agencies",
-            "titleContext": "for Buying or Renting a Home"
+            "titleContext": "for Buying or Renting a Home",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -273,7 +274,8 @@
           "viewSpecific": false,
           "sidebarHeading": {
             "title": "Key Agencies",
-            "titleContext": "for Bringing Leased Vehicles to MA"
+            "titleContext": "for Bringing Leased Vehicles to MA",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -331,9 +333,9 @@
               }
             }
           },{
-            "path": "@atoms/04-headings/heading-4.twig",
+            "path": "@atoms/04-headings/heading-3.twig",
             "data": {
-              "heading4": {
+              "heading3": {
                 "text": "Choose a Reputable Mover"
               }
             }
@@ -349,9 +351,9 @@
               }]
             }
           },{
-            "path": "@atoms/04-headings/heading-4.twig",
+            "path": "@atoms/04-headings/heading-3.twig",
             "data": {
-              "heading4": {
+              "heading3": {
                 "text": "Observe Parking Restrictions"
               }
             }
@@ -376,7 +378,8 @@
           "viewSpecific": false,
           "sidebarHeading": {
             "title": "Key Agencies",
-            "titleContext": "for Moving Day"
+            "titleContext": "for Moving Day",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -522,8 +525,8 @@
         "keyActions": {
           "compHeading": {
             "title": "Key Actions",
-            "sub":true,
-            "titleContext": "for Another Section Name"
+            "titleContext": "for Another Section Name",
+            "level": 3
           },
           "links":[{
             "text": "Related Action to important Page Name",
@@ -553,7 +556,8 @@
           "viewSpecific": false,
           "sidebarHeading": {
             "title": "Key Agencies",
-            "titleContext": "for Another Section Name"
+            "titleContext": "for Another Section Name",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -636,7 +640,8 @@
           "viewSpecific": false,
           "sidebarHeading": {
             "title": "Key Agencies",
-            "titleContext": "for Another Section Name"
+            "titleContext": "for Another Section Name",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -741,7 +746,8 @@
           "viewSpecific": false,
           "sidebarHeading": {
             "title": "Key Agencies",
-            "titleContext": "for Converting Your Out-of-Country Driver’s License"
+            "titleContext": "for Converting Your Out-of-Country Driver’s License",
+            "level": 3
           },
           "contacts": [{
             "accordion": false,
@@ -880,8 +886,8 @@
         "keyActions": {
           "compHeading": {
             "title": "Key Actions",
-            "sub":true,
-            "titleContext": "for Another Section Name"
+            "titleContext": "for Another Section Name",
+            "level": 3
           },
           "links":[{
             "text": "Related Action to important Page Name",

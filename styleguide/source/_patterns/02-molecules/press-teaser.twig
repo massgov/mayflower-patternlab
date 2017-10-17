@@ -20,10 +20,11 @@
         <span>{{ pressTeaser.eyebrow }}</span>
       </div>
     {% endif %}
-    <h2 class="ma__press-teaser__title">
+    {% set headingLevel = pressTeaser.level ? : 2 %}
+    <h{{ headingLevel }} class="ma__press-teaser__title">
       {% set decorativeLink = pressTeaser.title %}
       {% include "@atoms/decorative-link.twig" %}
-    </h2>
+    </h{{ headingLevel }}>
     {% if pressTeaser.date or pressTeaser.org %}
       <div class="ma__press-teaser__details">
         {% if pressTeaser.date %}
