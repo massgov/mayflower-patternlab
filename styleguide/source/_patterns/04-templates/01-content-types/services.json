@@ -86,10 +86,10 @@
 
   "introSidebar": {
     "logo": {
-      "alt": "alt text",
-      "src": "../../assets/images/placeholder/230x130.png",
-      "height": "130",
-      "width": "230"
+      "alt": "",
+      "src": "",
+      "height": "",
+      "width": ""
     },
 
     "social": {
