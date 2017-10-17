@@ -18,6 +18,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Changed
 
 ### Removed
+- DP-5636 - On mobile, remove dropshadow between rows on stacked row section.
 
 ### Migrate Path
 
