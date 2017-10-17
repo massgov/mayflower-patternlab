@@ -7,6 +7,7 @@
     display: inline;
     letter-spacing: 0;
     margin-left: .5em;
+    text-transform: none;
 
     @media ($bp-x-small-max) {
       display: block;
@@ -22,7 +23,6 @@
       margin-bottom: .5em;
       margin-right: .3em;
       padding: 3px 8px;
-      text-transform: capitalize;
 
       &:last-child {
         margin-right: 0;
