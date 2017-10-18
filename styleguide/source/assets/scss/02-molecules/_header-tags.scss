@@ -49,9 +49,20 @@
 
     &.is-open {
       a {
+        display: inline-block;
+
         @media ($bp-x-small-max) {
           // On small screens each tag is full width.
           display: block;
+        }
+      }
+
+      > button {
+        span:first-child {
+          display: none;
+        }
+        span:nth-child(2) {
+          display: inline;
         }
       }
     }
@@ -81,16 +92,8 @@
         display: inline;
       }
 
-      &.is-open span:first-child {
-        display: none;
-      }
-
       span:nth-child(2) {
         display: none;
-      }
-
-      &.is-open span:nth-child(2) {
-        display: inline;
       }
 
       @media ($bp-x-small-max) {
