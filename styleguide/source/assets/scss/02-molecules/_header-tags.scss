@@ -37,9 +37,22 @@
         margin-right: 0;
       }
 
+      &:nth-child(n+4) {
+        display: none;
+      }
+
       @media ($bp-x-small-max) {
         // On small screens each tag is full width.
         display: block;
+      }
+    }
+
+    &.is-open {
+      a {
+        @media ($bp-x-small-max) {
+          // On small screens each tag is full width.
+          display: block;
+        }
       }
     }
 
@@ -49,7 +62,7 @@
       @include ma-chevron;
       padding-left: 10px;
       font-size: 19px;
-      font-weight: 500;
+      display: none;
 
       &:after {
         opacity: .5;

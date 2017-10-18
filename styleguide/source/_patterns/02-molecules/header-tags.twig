@@ -1,3 +1,6 @@
+{% set moreLabel = headerTags.moreLabel ?: "show more" %}
+{% set lessLabel = headerTags.lessLabel ?: "show less" %}
+
 <div class="ma__header-tags">
   {% if headerTags.label %}
     <span>{{ headerTags.label }}</span>
