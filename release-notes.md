@@ -32,7 +32,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - DP-5515 - Keep Mayflower content up to date with practical usage in Mass.gov
 
 ### Removed
-- DP-5636 - On mobile, remove dropshadow between rows on stacked row section.
 - DP-5914 - Remove extra padding on callout links
 
 ## 5.8.1
