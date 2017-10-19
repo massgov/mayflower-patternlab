@@ -50,6 +50,7 @@ $page-banner-height: 330px;
     @include clearfix;
     height: auto;
     min-height: 450px;
+    padding-right: 0px; //fix gap on mobile
   }
 
   &--overlay &__container {
@@ -138,8 +139,6 @@ $page-banner-height: 330px;
     max-width: 640px;
     position: relative;
       top: calc(#{$page-banner-height}/2);
-      left: 20px;
-      margin-left: -20px;
 
     @media ($bp-medium-min) {
       height: 100%;
