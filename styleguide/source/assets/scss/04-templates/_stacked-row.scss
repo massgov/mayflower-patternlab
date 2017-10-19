@@ -6,6 +6,9 @@
     @media ($bp-large-max) {
       padding-bottom: 45px;
 
+      & ~ & {
+        border-top-width: 1px;
+        border-top-style: solid;
       }
     }
 
