@@ -138,6 +138,8 @@ $page-banner-height: 330px;
     max-width: 640px;
     position: relative;
       top: calc(#{$page-banner-height}/2);
+      left: 20px;
+      margin-left: -20px;
 
     @media ($bp-medium-min) {
       height: 100%;
