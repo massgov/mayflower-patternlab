@@ -22,6 +22,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Migrate Path
 
 
+## 5.8.2
+
+### Added
+
+### Changed
+- DP-5858 - Better print styles for accordion components and hiding floating buttons
+- DP-5518 - Fix layout bug on feedback form
+- DP-5515 - Keep Mayflower content up to date with practical usage in Mass.gov
+
+### Removed
+- DP-5914 - Remove extra padding on callout links
+
 ## 5.8.1
 
 #### Added
