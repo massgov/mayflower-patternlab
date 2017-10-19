@@ -4,7 +4,6 @@
   &__section {
 
     @media ($bp-large-max) {
-      box-shadow: none;
       padding-bottom: 45px;
 
       & + & {
