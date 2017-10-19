@@ -1,11 +1,8 @@
 .ma__stacked-row-section {
 
   @media ($bp-large-max) {
-    box-shadow: 0 0.5rem 0.5rem -0.25rem rgba(1, 1, 1, 0.25);
     padding-bottom: 45px;
 
-    &:last-child {
-      box-shadow: none;
     }
   }
 
