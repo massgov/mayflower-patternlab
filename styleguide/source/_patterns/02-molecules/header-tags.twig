@@ -9,7 +9,7 @@
     {% for item in headerTags.taxonomyTerms %}
       <a href="{{ item.href }}">{{ item.text }}</a>
     {% endfor %}
-    <button type="button" class="js-header-tag-button" aria-expanded="false" aria-controls="terms">
+    <button type="button" class="js-header-tag-button" aria-expanded="false" aria-controls="{{ headerTags.id }}">
       <span>{{ headerTags.moreLabel }}</span><span>{{ headerTags.lessLabel }}</span>
     </button>
   </div>
