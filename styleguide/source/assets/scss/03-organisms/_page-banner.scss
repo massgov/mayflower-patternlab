@@ -165,9 +165,11 @@ $page-banner-icon-width: $column + $gutter;
     & > svg {
       height: 2.75em;
       width: 100%;
+      display: none;
 
       @media ($bp-medium-min){
         height: 3.75em;
+        display: inline-block;
       }
 
       @media ($bp-large-min){
