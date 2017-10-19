@@ -149,6 +149,7 @@ $page-banner-icon-width: $column + $gutter;
   &__icon {
     padding-right: 30px;
     width: 75px;
+    display: none;
 
     @media ($bp-x-small-min) {
       transform: skew(30deg);
@@ -156,6 +157,7 @@ $page-banner-icon-width: $column + $gutter;
 
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
+      display: inline-block;
     }
 
     & > svg {
