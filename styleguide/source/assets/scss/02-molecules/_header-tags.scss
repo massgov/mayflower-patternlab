@@ -58,6 +58,9 @@
       }
 
       > button {
+        &:after {
+          transform: translateY(-55%) rotate(-135deg);
+        }
         span:first-child {
           display: none;
         }
@@ -82,10 +85,6 @@
         height: 8px;
         width: 8px;
         transform: translateY(-45%) rotate(45deg);
-      }
-
-      &.is-open:after {
-        transform: translateY(-55%) rotate(-135deg);
       }
 
       span:first-child {
