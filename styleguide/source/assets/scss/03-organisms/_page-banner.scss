@@ -1,9 +1,10 @@
 $page-banner-icon-width: $column + $gutter;
+$page-banner-height: 330px;
 
 .ma__page-banner {
   background-size: cover;
   background-position: center center;
-  height: 400px;
+  height: $page-banner-height;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -133,10 +134,10 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__content {
-    height: 400px;
+    height: $page-banner-height;
     max-width: 640px;
     position: relative;
-      top: 200px;
+      top: calc(#{$page-banner-height}/2);
 
     @media ($bp-medium-min) {
       height: 100%;
@@ -312,7 +313,7 @@ $page-banner-icon-width: $column + $gutter;
   &--columns &__image {
     background-position: 50% 50%;
     background-size: cover;
-    height: 400px;
+    height: $page-banner-height;
     position: absolute;
       right: 0;
       top: 0;
