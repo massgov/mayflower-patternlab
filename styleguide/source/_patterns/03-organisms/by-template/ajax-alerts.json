@@ -1,0 +1,5 @@
+{
+  "ajaxAlerts": {
+    "endpoint":"data/emergency-alerts.json"
+  }
+}

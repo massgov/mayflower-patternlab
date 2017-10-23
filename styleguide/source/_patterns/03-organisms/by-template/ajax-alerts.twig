@@ -1,0 +1,6 @@
+{% set endpoint = ajaxAlerts.endpoint ?: '' %}
+{% if endpoint %}
+<div class="ma__ajax-alerts js-ajax-alerts" data-js-alerts-endpoint="{{ endpoint }}">
+  {% include "@organisms/by-template/emergency-alerts.twig" %}
+</div>
+{% endif %}
