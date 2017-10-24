@@ -1,6 +1,17 @@
 {% set endpoint = ajaxAlerts.endpoint ?: '' %}
 {% if endpoint %}
-<div class="ma__ajax-alerts js-ajax-alerts" data-js-alerts-endpoint="{{ endpoint }}">
-  {% include "@organisms/by-template/emergency-alerts.twig" %}
+<div class="ma__ajax-alerts ma__ajax-alerts--no-alerts js-ajax-alerts" data-js-alerts-endpoint="{{ endpoint }}">
+  <section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="{{emergencyAlerts.id}}">
+    <div class="ma__emergency-alerts__header">
+      <div class="ma__emergency-alerts__container">
+        <div class="js-ajax-alerts-header-content"></div>
+        <div class="ma__emergency-alerts__header-interface js-accordion-link"></div>
+      </div>
+    </div>
+    <div class="ma__emergency-alerts__content js-accordion-content">
+      <div class="ma__emergency-alerts__container js-ajax-alerts-content"></div>
+    </div>
+    <div class="ma__emergency-alerts__interface js-accordion-link"></div>
+  </section>
 </div>
 {% endif %}
