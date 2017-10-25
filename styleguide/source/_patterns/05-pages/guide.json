@@ -6,7 +6,7 @@
   "backToTopButton": true,
 
   "ajaxAlerts": {
-    "endpoint": "data/emergency-alerts.json"
+    "endpoint":"/assets/data/emergency-alerts.json"
   },
 
   "emergencyAlerts": {

@@ -8,9 +8,11 @@ import getTemplate from "../helpers/getHandlebarTemplate.js";
 export default function (window,document,$,undefined) {
 
   $('.js-ajax-alerts').each(function(){
-    let alertsEndpoint = '/assets/data/emergency-alerts.json';
-    updateAlerts.apply(this, [alertsEndpoint]);
-    $(this).removeClass('ma__ajax-alerts--no-alerts');
+    let alertsEndpoint = $(this).data('js-alerts-endpoint');
+    if (alertsEndpoint) {
+      updateAlerts.apply(this, [alertsEndpoint]);
+      $(this).removeClass('ma__ajax-alerts--no-alerts');
+    }
   });
 
   function renderAlerts(alertsData) {
