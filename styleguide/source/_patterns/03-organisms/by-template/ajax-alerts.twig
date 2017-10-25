@@ -1,7 +1,7 @@
 {% set endpoint = ajaxAlerts.endpoint ?: '' %}
 {% if endpoint %}
 <div class="ma__ajax-alerts ma__ajax-alerts--no-alerts js-ajax-alerts" data-js-alerts-endpoint="{{ endpoint }}">
-  <section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="{{emergencyAlerts.id}}">
+  <section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="">
     <div class="ma__emergency-alerts__header">
       <div class="ma__emergency-alerts__container">
         <div class="js-ajax-alerts-header-content"></div>

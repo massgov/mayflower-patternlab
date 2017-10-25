@@ -1,10 +1,10 @@
 {
   "emergencyAlerts": {
-    "id":"GUID18378923w38789",
+    "id":"GUID198767819323444",
     "buttonAlert": {
       "hideText": "Hide",
       "showText": "Show",
-      "text": "Updates"
+      "text": "Alerts"
     },
     "emergencyHeader": {
       "title": "The State is experiencing severe weather due to the winter storm Paula."

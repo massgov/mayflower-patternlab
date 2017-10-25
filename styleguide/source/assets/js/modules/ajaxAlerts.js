@@ -72,6 +72,11 @@ export default function (window,document,$,undefined) {
   function updateAlerts(endpoint) {
     getAlertsData.apply(this, [endpoint])
     .done(function(alertsData, that){
+      // Id
+      let id = alertsData.emergencyAlerts.id;
+      $(that).find('.js-emergency-alerts').first().data('id', id);
+      $(that).trigger('ma:AjaxAlerts:DataIdAdded', [{'id':id}]);
+
       renderAlerts.apply(that, [alertsData]);
     })
     .fail(function(){
