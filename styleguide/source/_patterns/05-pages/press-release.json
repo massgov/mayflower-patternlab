@@ -58,7 +58,7 @@
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "Today, Governor Charlie Baker delivers his first State of the Commonwealth address from the House Chamber of the Massachusetts State House. Remarks as prepared for delivery:"
+            "text": "<span class=\"ma__rich-text__flame\">Boston</span> &mdash; Today, Governor Charlie Baker delivers his first State of the Commonwealth address from the House Chamber of the Massachusetts State House. Remarks as prepared for delivery:"
           }
         }
       },{
