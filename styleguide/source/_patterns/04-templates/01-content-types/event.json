@@ -92,8 +92,8 @@
         "id": "",
         "centered": ""
       },
-      "image": { 
-        "alt": "alt text", 
+      "image": {
+        "alt": "alt text",
         "src": "../../assets/images/placeholder/600x338.png",
         "width": "600",
         "height": "338"
@@ -129,6 +129,27 @@
       }
     },
 
+    "meetingMinutes": {
+      "compHeading": {
+        "title": "Meeting Minutes",
+        "sub": true
+      },
+      "downloadLinks": [{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "PDF download item",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "30kb",
+          "format": "PDF"
+        }
+      }]
+    },
+
     "youWillNeed": {
       "compHeading": {
         "title": "You will need",
@@ -138,12 +159,12 @@
       "rteElements": [{
         "path": "@atoms/08-lists/checklist.twig",
         "data": {
-          "checkList": [{ 
-            "text": "first item to bring" 
-          },{ 
-            "text": "second item to bring" 
-          },{ 
-            "text": "third item to bring" 
+          "checkList": [{
+            "text": "first item to bring"
+          },{
+            "text": "second item to bring"
+          },{
+            "text": "third item to bring"
           }]
         }
       }]
@@ -321,7 +342,7 @@
         "property": ""
       },{
         "href":"#",
-        "text":"thrid date",
+        "text":"third date",
         "info": "",
         "property": ""
       }]
@@ -329,6 +350,26 @@
   },
 
   "sideContent": {
+    "linkList": {
+     "viewSpecific": true,
+      "sidebarHeading":{
+        "title":  "Participating Organizations"
+      },
+
+      "stacked": true,
+      "links" : [{
+        "href":"#",
+        "text":"Organization One",
+        "info": "",
+        "property": ""
+      },{
+        "href":"#",
+        "text":"Organization Two",
+        "info": "",
+        "property": ""
+      }]
+    },
+
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
