@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ```
 
 **For example**
-- DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493)) 
+- DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
 ## Upcoming (add in progress changes here)
 
@@ -17,7 +17,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
-### Removed
+### Removed DP-5525 - Disable location listing scrolling for mobile
 
 ### Migrate Path
 
@@ -98,7 +98,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## 5.6.0
 
 ### Added
-- DP-4181 - Folks browsing through the repository will notice new documentation which explains how to get set up, develop, and make other contributions to Mayflower!  This documentation is linked from the [shiny new repo readme](https://github.com/massgov/mayflower). ([PR #532](https://github.com/massgov/mayflower/pull/532)) 
+- DP-4181 - Folks browsing through the repository will notice new documentation which explains how to get set up, develop, and make other contributions to Mayflower!  This documentation is linked from the [shiny new repo readme](https://github.com/massgov/mayflower). ([PR #532](https://github.com/massgov/mayflower/pull/532))
 - DP-4053 - Developers can now follow a documented build + deploy process to ship their code to their own GitHub Pages where their work can be seen and tested! This documentation is linked from the [shiny new repo readme](https://github.com/massgov/mayflower). ([PR #530](https://github.com/massgov/mayflower/pull/530))
 - DP-4046 - The change above is possible because we can now host Mayflower from a subdirectory (i.e. <myname>.github.io/mayflower)! ([PR #503](https://github.com/massgov/mayflower/pull/503))
 - DP-4080 - Developers, reviewers, and release managers can (and should!) now follow documentation on Semantic Versioning as it applies to Mayflower.  This means we have guidelines to help reviewers understand what kind of change the code they are reviewing is and to help release managers understand what kind of version of Mayflower they are releasing. This documentation is linked from the [shiny new repo readme](https://github.com/massgov/mayflower). ([PR #504](https://github.com/massgov/mayflower/pull/504))
@@ -108,7 +108,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - Outside contribution from @sghoweri - Developers will notice that we now use a fork of Pattern Lab maintained by a Drupal Pattern Lab GitHub organization, with hopes of innovating, and iterating on Pattern Lab and merging changes back upstream to the main Pattern Lab fork.  
 
   This also allows us to see pattern inheritance: browse to a pattern, click the cog icon in the top-right corner, click show pattern info, and see where else patterns are used and which child patterns a given pattern contains. (PRs [#488](https://github.com/massgov/mayflower/pull/488) and [#519](https://github.com/massgov/mayflower/pull/519))  Thanks Salem!
- - Outside contribution from @evanlovely - Developers will notice an improvement to the automatic  build + browser reload during local development. ([PR #506](https://github.com/massgov/mayflower/pull/506)) Thanks Evan! 
+ - Outside contribution from @evanlovely - Developers will notice an improvement to the automatic  build + browser reload during local development. ([PR #506](https://github.com/massgov/mayflower/pull/506)) Thanks Evan!
 - Developers will notice standardization on a pattern for writing pattern modification classes, this accounts for nearly all of the backwards-compatible `.twig` changes in this release.
 - Developers and implementers will notice that [`@molecules/footnote`](http://mayflower.digital.mass.gov/?p=molecules-footnote) now has an option to render as plain text (as seen in Mass.gov Regulation pages, etc.) ([PR #541](https://github.com/massgov/mayflower/pull/541))
 - Contribution from our very own @meghandavis - See that typo on the [Press Listing page](http://mayflower.digital.mass.gov/?p=pages-press-listing)?  Nope.  That's because it's fixed!  Thanks Meghan!!
@@ -123,10 +123,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## 5.5.0
 
 Here comes another Mayflower release, hot off the summertime presses!  We've got 2 new page types and lots of little improvements and fixes coming your way.
- 
+
  **JIRA fans can check out the [release tickets](https://jira.state.ma.us/projects/DP/versions/14642) for more information.*
  **Mayflower project consumers can take a look at PR's below to confirm, make, and test any markup changes introduced by this release prior to updating in production.*
- 
+
 ### New Features
 - New page type: [Board Decisions](http://mayflower.digital.mass.gov/?p=pages-board-decision), which is used for rulings, decisions and opinions issued by agency boards or individuals given the authority to decide specific matters. ([@pages/board-decision](http://mayflower.digital.mass.gov/?p=pages-board-decision), See [PR #494](https://github.com/massgov/mayflower/pull/494))
 - We've also added an example [Form Page](http://mayflower.digital.mass.gov/?p=pages-form-page-example) to highlight form styles (projects likely implement forms using other services) (See [PR #490](https://github.com/massgov/mayflower/pull/490) - Markup)
@@ -140,7 +140,7 @@ Here comes another Mayflower release, hot off the summertime presses!  We've got
 - The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should render (See [PR #493](https://github.com/massgov/mayflower/pull/493))
 - Assistive tech like screenreaders will now read callout stats ([@molecules/callout-stats](http://mayflower.digital.mass.gov/?p=molecules-callout-stats)) more naturally (See [PR #500](https://github.com/massgov/mayflower/pull/500) - Markup + CSS)
 - Semantic search form ([@molecules/header-search]()) label and placeholder text are more understandable (See [PR #485](https://github.com/massgov/mayflower/pull/485) - Markup + demo content)
- 
+
 ## 5.4.0
 In this new minor release, we've introduced two new Law pages: Policy Advisory and Executive Order, along with several improvements and fixes.
 
@@ -168,7 +168,7 @@ In this new minor release, we've introduced two new Law pages: Policy Advisory a
 - Page banner images (`@organisms/page_banner.scss`) will scale as large as possible (be zoomed out) to cover the page banner. (DP-4310)
 
 ## 5.3.0
-We've added some functionality to the location listings organism ([@organisms/by-author/location-listing](http://mayflower.digital.mass.gov/?p=organisms-location-listing))!  You can sort, filter, and paginate listing results! 
+We've added some functionality to the location listings organism ([@organisms/by-author/location-listing](http://mayflower.digital.mass.gov/?p=organisms-location-listing))!  You can sort, filter, and paginate listing results!
 
 Note: The location listing organism is made up of lots of other patterns:
   - [@molecules/location-filters](http://mayflower.digital.mass.gov/?p=molecules-location-filters)
@@ -176,7 +176,7 @@ Note: The location listing organism is made up of lots of other patterns:
   - [@molecules/google-map](http://mayflower.digital.mass.gov/?p=molecules-google-map)
   - [@molecules/pagination](http://mayflower.digital.mass.gov/?p=molecules-pagination)
   - [@organisms/by-author/image-promos](http://mayflower.digital.mass.gov/?p=organisms-image-promos)
-  
+
   And of course, you can still use those patterns in other components!
 
 ## 5.2.0
