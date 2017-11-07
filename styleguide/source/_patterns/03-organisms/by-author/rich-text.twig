@@ -3,12 +3,21 @@
     {% set compHeading = richText.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
   {% endif %}
+
+  {% if richText.heading %}
+    {#We need a dynamic variable name beause the headings are namespaced.#}
+    {% set headingLevel = "heading" ~ level %}
+    {% set headingFile = "heading-" ~ level %}
+    {% set headingPath = "@atoms/04-headings/" ~ headingFile ~ ".twig" %}
+    {% include headingPath with {(headingLevel): {"text": text}} %}
+  {% endif %}
+
   {% if richText.sidebarHeading %}
     {% set sidebarHeading = richText.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
   {% for element in richText.rteElements %}
-    {% include element.path with element.data %}  
+    {% include element.path with element.data %}
   {% endfor %}
   {% if richText.decorativeLink %}
     <div class="ma__rich-text__more">

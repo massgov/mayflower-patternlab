@@ -25,10 +25,25 @@
       {% endif %}
 
       {% block pageContent %}
+
         {% if mainContent.meetingMinutes %}
           {% set formDownloads = mainContent.meetingMinutes %}
           {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}
+
+        {% if mainContent.agenda %}
+
+          {% set compHeading = mainContent.agenda.compHeading %}
+          {% include "@atoms/04-headings/comp-heading.twig" %}
+
+
+          {% for section in mainContent.agenda.sections %}
+            {% set richText = section %}
+            {% include "@organisms/by-author/rich-text.twig" %}
+          {% endfor %}
+
+        {% endif %}
+
 
         {% if mainContent.youWillNeed %}
           {% set richText = mainContent.youWillNeed %}
