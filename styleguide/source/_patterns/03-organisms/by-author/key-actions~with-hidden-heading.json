@@ -1,24 +1,20 @@
 {
   "keyActions": {
     "id": "GUID0828340",
-    "hiddenHeading": false,
+    "hiddenHeading": true,
     "compHeading": {
       "title": "Key Actions",
       "sub": false,
       "id": ""
     },
     "links":[{
-      "image": "",
       "text": "Register to Vote",
       "type": "",
-      "href": "#",
-      "label": ""
+      "href": "#"
     },{
-      "image": "",
       "text": "Find a Job",
       "type": "",
-      "href": "#",
-      "label": ""
+      "href": "#"
     },{
       "image": "../../assets/images/placeholder/130x160.png",
       "text": "File for unemployment",
@@ -26,17 +22,13 @@
       "href": "#",
       "label": "Guide:"
     },{
-      "image": "",
       "text": "Learn more about the tax code",
       "type": "",
-      "href": "#",
-      "label": ""
+      "href": "#"
     },{
-      "image": "",
       "text": "Learn more about the tax code",
       "type": "",
-      "href": "#",
-      "label": ""
+      "href": "#"
     }]
   }
 }

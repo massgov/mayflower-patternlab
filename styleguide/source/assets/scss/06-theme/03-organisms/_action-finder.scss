@@ -25,7 +25,8 @@ $action-finder-border-color: tint($c-theme-primary,50%);
     }
   }
 
-  &__title {
+  &__title, // Backward compatible with v5.7 - replace title with compHeading
+  .ma__comp-heading {
     color: $c-font-inverse;
   }
 
@@ -42,6 +43,7 @@ $action-finder-border-color: tint($c-theme-primary,50%);
     color: $c-font-base;
   }
 
+  // Backward compatible with v5.6 - removed search filter
   &__search {
 
     button {
@@ -53,7 +55,9 @@ $action-finder-border-color: tint($c-theme-primary,50%);
     }
   }
 
-  &__items--all {
+  // Backward compatible with v5.6 - replaced items with Key Actions
+  &__items--all,
+  &__all-items {
     
     .ma__callout-link {
       background-color: $c-white;
