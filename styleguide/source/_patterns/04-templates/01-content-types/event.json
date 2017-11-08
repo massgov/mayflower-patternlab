@@ -155,50 +155,50 @@
         "title": "Agenda",
         "sub": true
       },
-      "sections": [{
-        "level": 4,
-        "heading": {
-          "text": "This is a section heading",
-          "id": "",
-          "level": 4
-        },
+      "sections": [
+        {
+          "openingRemarks": [{
+            "heading": {
+              "text": "This is a section heading",
+              "id": "",
+              "level": 6
+            },
 
-        "rteElements": [{
-          "path": "@atoms/04-headings/heading-6.twig",
-          "data": {
-            "heading6": {
-              "text": "Opening Remarks"
-            }
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph": {
-              "text": "Optional Description Paragraph"
-            }
-          }
-        },{
-          "path": "@atoms/08-lists/checklist.twig",
-          "data": {
-            "checkList": [{
-              "text": "Project Proposal 1"
-            },{
-              "text": "Project Proposal 2"
-            },{
-              "text": "Project Proposal 3"
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Optional Description Paragraph"
+                }
+              }
             }]
-          }
-        },{
-          "path": "@atoms/decorative-link.twig",
-          "data": {
-            "decorativeLink": {
-              "href": "#",
-              "text": "See full agenda",
-              "info": ""
-            }
-          }
+
+          }]
+        }, {
+          "discussion": [{
+            "heading": {
+              "text": "This is a section heading",
+              "id": "",
+              "level": 6
+            },
+
+            "rteElements": [{
+              "path": "@atoms/08-lists/checklist.twig",
+              "data": {
+                "checkList": [{
+                  "text": "Project Proposal 1"
+                },{
+                  "text": "Project Proposal 2"
+                },{
+                  "text": "Project Proposal 3"
+                }]
+              }
+            }]
+
+          }]
+
+
         }]
-      }]
     },
 
     "youWillNeed": {

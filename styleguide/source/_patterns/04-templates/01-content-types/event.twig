@@ -36,12 +36,17 @@
           {% set compHeading = mainContent.agenda.compHeading %}
           {% include "@atoms/04-headings/comp-heading.twig" %}
 
+        {% endif %}
 
-          {% for section in mainContent.agenda.sections %}
-            {% set richText = section %}
-            {% include "@organisms/by-author/rich-text.twig" %}
+        {% if mainContent.agenda.sections %}
+          {% for subSections in mainContent.agenda.sections %}
+            {% for subSection in subSections %}
+              {% for component in subSection %}
+                  {% set richText = component %}
+                  {% include "@organisms/by-author/rich-text.twig"  %}
+              {% endfor %}
+            {% endfor %}
           {% endfor %}
-
         {% endif %}
 
 

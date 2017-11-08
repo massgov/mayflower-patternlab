@@ -5,11 +5,9 @@
   {% endif %}
 
   {% if richText.heading %}
-    {#We need a dynamic variable name beause the headings are namespaced.#}
-    {% set headingLevel = "heading" ~ level %}
-    {% set headingFile = "heading-" ~ level %}
-    {% set headingPath = "@atoms/04-headings/" ~ headingFile ~ ".twig" %}
-    {% include headingPath with {(headingLevel): {"text": text}} %}
+    {% set level = richText.heading.level ? richText.heading.level : 3 %}
+    {% set heading = 'heading'~level %}
+    {% include "@atoms/04-headings/heading-"~level~".twig" with {(heading): {"text": richText.heading.text}} %}
   {% endif %}
 
   {% if richText.sidebarHeading %}
