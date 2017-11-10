@@ -130,81 +130,81 @@
     },
 
     "meetingMinutes": {
-      "compHeading": {
-        "title": "Meeting Minutes",
-        "sub": true
-      },
-      "downloadLinks": [{
-        "downloadLink": {
-          "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-          "decorativeLink": {
-            "text": "PDF download item",
-            "href": "#",
-            "info": "",
-            "property": ""
-          },
-          "size": "30kb",
-          "format": "PDF"
-        }
-      }]
+      "richText": null,
+      "formDownloads": {
+        "compHeading": {
+          "title": "Meeting Minutes",
+          "sub": false
+        },
+        "downloadLinks": [{
+          "downloadLink": {
+            "iconSize": "",
+            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "decorativeLink": {
+              "text": "PDF download item",
+              "href": "#",
+              "info": "",
+              "property": ""
+            },
+            "size": "30kb",
+            "format": "PDF"
+          }
+        }]
+      }
     },
 
     "agenda": {
-      "compHeading": {
-        "title": "Agenda",
-        "sub": true
-      },
-      "sections": [
-        {
-          "openingRemarks": [{
-            "heading": {
-              "text": "This is a section heading",
-              "id": "",
-              "level": 6
-            },
+      "richText": {
+        "compHeading": {
+          "title": "Agenda",
+          "sub": true
+        },
+        "rteElements": [{
 
-            "rteElements": [{
-              "path": "@atoms/11-text/paragraph.twig",
-              "data": {
-                "paragraph": {
-                  "text": "Optional Description Paragraph"
-                }
-              }
-            }]
-          }]
-        }, {
-          "discussion": [{
-            "heading": {
-              "text": "This is a section heading",
-              "id": "",
-              "level": 6
-            },
-
-            "rteElements": [{
-              "path": "@atoms/08-lists/checklist.twig",
-              "data": {
-                "checkList": [{
-                  "text": "Project Proposal 1"
-                },{
-                  "text": "Project Proposal 2"
-                },{
-                  "text": "Project Proposal 3"
-                }]
-              }
-            }]
-
-          }]
-        },{
-          "readMore": [{
-            "decorativeLink": {
-              "href": "#",
-              "text": "Lorem ipsum dolor sit amet.",
-              "info": ""
+          "path": "@atoms/04-headings/heading-6.twig",
+          "data": {
+            "heading6": {
+              "text": "Opening Remarks"
             }
-          }]
+          }
+          }, {
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Optional Description Paragraph"
+            }
+          }
+          },{
+          "path": "@atoms/04-headings/heading-6.twig",
+          "data": {
+            "heading6": {
+              "text": "Discussion: Strategic Planning"
+            }
+          }
+        },
+          {
+            "path": "@atoms/08-lists/checklist.twig",
+            "data": {
+              "checkList": [
+                {
+                  "text": "Project Proposal 1"
+                },
+                {
+                  "text": "Project Proposal 2"
+                },
+                {
+                  "text": "Project Proposal 3"
+                }
+              ]
+            }
+        }],
+        "decorativeLink": {
+          "href": "#",
+          "text": "Optional Learn More Link",
+          "info": "Learn More about this information"
         }
-      ]
+      },
+      "formDownloads": null
     },
 
     "youWillNeed": {

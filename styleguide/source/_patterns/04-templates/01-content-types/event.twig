@@ -27,28 +27,19 @@
       {% block pageContent %}
 
         {% if mainContent.meetingMinutes %}
-          {% set formDownloads = mainContent.meetingMinutes %}
+          {% set formDownloads = mainContent.meetingMinutes.formDownloads %}
           {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}
 
-        {% if mainContent.agenda %}
-
-          {% set compHeading = mainContent.agenda.compHeading %}
-          {% include "@atoms/04-headings/comp-heading.twig" %}
-
+        {% if mainContent.agenda.richText %}
+          {% set richText = mainContent.agenda.richText %}
+          {% include "@organisms/by-author/rich-text.twig" %}
         {% endif %}
 
-        {% if mainContent.agenda.sections %}
-          {% for subSections in mainContent.agenda.sections %}
-            {% for subSection in subSections %}
-              {% for component in subSection %}
-                  {% set richText = component %}
-                  {% include "@organisms/by-author/rich-text.twig"  %}
-              {% endfor %}
-            {% endfor %}
-          {% endfor %}
+        {% if mainContent.agenda.formDownloads %}
+          {% set formDownloads = mainContent.agenda.formDownloads %}
+          {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}
-
 
         {% if mainContent.youWillNeed %}
           {% set richText = mainContent.youWillNeed %}

@@ -4,19 +4,17 @@
     {% include "@atoms/04-headings/comp-heading.twig" %}
   {% endif %}
 
-  {% if richText.heading %}
-    {% set level = richText.heading.level ? richText.heading.level : 3 %}
-    {% set heading = 'heading'~level %}
-    {% include "@atoms/04-headings/heading-"~level~".twig" with {(heading): {"text": richText.heading.text}} %}
-  {% endif %}
-
   {% if richText.sidebarHeading %}
     {% set sidebarHeading = richText.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
-  {% for element in richText.rteElements %}
-    {% include element.path with element.data %}
-  {% endfor %}
+  {% block rteElements %}
+
+    {% for element in richText.rteElements %}
+      {% include element.path with element.data %}
+    {% endfor %}
+  {% endblock %}
+
   {% if richText.decorativeLink %}
     <div class="ma__rich-text__more">
       {% set decorativeLink = richText.decorativeLink %}
