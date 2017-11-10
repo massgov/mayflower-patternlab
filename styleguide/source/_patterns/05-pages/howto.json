@@ -8,10 +8,25 @@
     "title": "Apply for unemployment benefits",
     "subTitle": "Have you lost your job?  You may qualify for temporary income to support you while you look for a new one.",
     "headerTags": {
+      "id": "how-to-tags",
       "label": "More about:",
+      "moreLabel": "show more",
+      "lessLabel": "show less",
       "taxonomyTerms": [{
         "href": "#",
-        "text": "Unemployment Benefits"
+        "text": "Header tag 1"
+      },{
+        "href": "#",
+        "text": "Header tag 2"
+      },{
+        "href": "#",
+        "text": "Header tag 3"
+      },{
+        "href": "#",
+        "text": "Header tag 4"
+      },{
+        "href": "#",
+        "text": "Header tag 5"
       }]
     },
     "socialLinks": {
