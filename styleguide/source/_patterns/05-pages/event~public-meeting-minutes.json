@@ -1,8 +1,8 @@
 {
   "pageHeader": {
-    "category": "Public Meeting Notice",
+    "category": "",
     "divider": true,
-    "title": "Fisheries and Wildlife Board Meeting",
+    "title": "Minutes for Fisheries and Wildlife Board Meeting",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
@@ -44,115 +44,18 @@
           "description": ""
         }
       }
-    },{
-      "path": "@molecules/labelled-list.twig",
-      "data": {
-        "labelledList": {
-          "items": [{
-            "label": "Posted:",
-            "text": "November 2, 2017 6:46 p.m."
-          },{
-            "label": "Last Updated:",
-            "text": "November 2, 2017 6:46 p.m."
-          }]
-        }
-      }
-    },{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "groups": [{
-            "icon": "",
-            "name": "",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "address": "Division of Fisheries and Wildlife Field Headquarters, Richard Cronin Building,\n1 Rabbit Hill Road, Westborough, MA 01966",
-              "link": {
-                "href": "https://www.google.com/maps/place/Massachusetts+Division+of+Fisheries+and+Wildlife+(MassWildlife)",
-                "text": "directions",
-                "info": "directions to Division of Fisheries and Wildlife Field Headquarters",
-                "property": "url"
-              },
-              "details": ""
-            }]
-          }]
-        }
-      }
-    },{
-      "path": "@organisms/by-author/callout-time.twig",
-      "data": {
-        "calloutTime": {
-          "icon": "@atoms/05-icons/svg-alert.twig",
-          "text": "Public testimony begins at 10:30 a.m."
-        }
-      }
-    },{
-      "path": "@organisms/by-author/key-actions.twig",
-      "data": {
-        "keyActions": {
-          "compHeading": "",
-          "links":[{
-            "text": "Sign Up",
-            "type": "",
-            "href": "#"
-          }]
-        }
-      }
     }],
-    "widgets": [{
-      "path": "@atoms/09-media/image.twig",
-      "data": {
-        "image": {
-          "alt": "Mass Wildlife",
-          "src": "../../assets/images/placeholder/190x220.png",
-          "height": "220",
-          "width": "190"
-        }
-      }
-    }]
+    "widgets": null
   },
 
   "mainContent": {
     "pageOverview": {
-      "compHeading": {
-        "title": "Overview",
-        "sub": "",
-        "color": "",
-        "id": "",
-        "centered": ""
-      },
-      "image": {
-        "alt": "alt text",
-        "src": "../../assets/images/placeholder/600x338.png",
-        "width": "600",
-        "height": "338"
-      },
-      "labelledList": {
-        "items": [{
-          "label": "Rain date:",
-          "text": "This event is rain or shine"
-        },{
-          "label": "Fees:",
-          "text": "free"
-        },{
-          "label": "Capacity:",
-          "text": "unlimited"
-        }]
-      },
       "richText": {
         "rteElements": [{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt deleniti fuga consequuntur laudantium qui repellendus eveniet, culpa ipsum ullam libero quibusdam dolore, sit. Quasi alias sed atque saepe, tempora dolore dolor quod amet. Quaerat omnis illo, totam eligendi at."
-            }
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consectetur eligendi recusandae, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt deleniti fuga consequuntur laudantium qui repellendus eveniet, culpa ipsum ullam libero quibusdam dolore, sit."
             }
           }
         }]
@@ -347,25 +250,6 @@
   },
 
   "sideContent": {
-    "linkList": {
-      "viewSpecific": true,
-      "sidebarHeading":{
-        "title":  "Participating Organizations"
-      },
-
-      "stacked": true,
-      "links" : [{
-        "href":"#",
-        "text":"Division of Fisheries and Wildlife",
-        "info": "",
-        "property": ""
-      },{
-        "href":"#",
-        "text":"Department of Fish and Game",
-        "info": "",
-        "property": ""
-      }]
-    },
 
     "contactList": {
       "viewSpecific": true,

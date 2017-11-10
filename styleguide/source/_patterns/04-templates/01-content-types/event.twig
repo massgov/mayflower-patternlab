@@ -25,8 +25,12 @@
       {% endif %}
 
       {% block pageContent %}
+        {% if mainContent.meetingMinutes.richText %}
+          {% set richText = mainContent.meetingMinutes.richText %}
+          {% include "@organisms/by-author/rich-text.twig" %}
+        {% endif %}
 
-        {% if mainContent.meetingMinutes %}
+        {% if mainContent.meetingMinutes.formDownloads %}
           {% set formDownloads = mainContent.meetingMinutes.formDownloads %}
           {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}

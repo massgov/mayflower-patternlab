@@ -144,7 +144,7 @@
       "formDownloads": {
         "compHeading": {
           "title": "Meeting Minutes",
-          "sub": false
+          "sub": true
         },
         "downloadLinks": [{
           "downloadLink": {
