@@ -80,7 +80,17 @@
         }
       }
     }],
-    "widgets": null
+    "widgets": [{
+      "path": "@atoms/09-media/image.twig",
+      "data": {
+        "image": {
+          "alt": "Mass Wildlife",
+          "src": "../../assets/images/placeholder/190x220.png",
+          "height": "220",
+          "width": "190"
+        }
+      }
+    }]
   },
 
   "mainContent": {

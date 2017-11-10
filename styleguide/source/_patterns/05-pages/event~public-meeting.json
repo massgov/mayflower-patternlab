@@ -1,17 +1,14 @@
 {
   "pageHeader": {
-    "category": "optional type of event",
+    "category": "Public Meeting Notice",
     "divider": true,
-    "title": "Event Title",
+    "title": "Fisheries and Wildlife Board Meeting",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
       "taxonomyTerms": [{
         "href": "#",
-        "text": "Parent Page"
-      },{
-        "href": "#",
-        "text": "Another Parent Page"
+        "text": "Department of Fish and Game"
       }]
     },
     "socialLinks": {
@@ -33,6 +30,7 @@
         "linkType": "linkedin"
       }]
     },
+    "publishState": null,
     "optionalContents": [{
       "path": "@molecules/event-teaser.twig",
       "data": {
@@ -40,10 +38,23 @@
           "title": null,
           "location": "",
           "date": {
-            "summary": "Sunday, November 20, 2017"
+            "summary": "Sunday, November 5, 2017"
           },
-          "time": "8:00 a.m. - 10:00 a.m.",
+          "time": "10:00 a.m. - 11:00 a.m.",
           "description": ""
+        }
+      }
+    },{
+      "path": "@molecules/labelled-list.twig",
+      "data": {
+        "labelledList": {
+          "items": [{
+            "label": "Posted:",
+            "text": "November 2, 2017 6:46 p.m."
+          },{
+            "label": "Last Updated:",
+            "text": "November 2, 2017 6:46 p.m."
+          }]
         }
       }
     },{
@@ -56,11 +67,11 @@
             "items": [{
               "type": "address",
               "label": "",
-              "address": "Halibut Point State Park, Gott Avenue, Rockport, MA 01966",
+              "address": "Division of Fisheries and Wildlife Field Headquarters, Richard Cronin Building,\n1 Rabbit Hill Road, Westborough, MA 01966",
               "link": {
-                "href": "https://www.google.com/maps/place/Halibut+Point+State+Park",
+                "href": "https://www.google.com/maps/place/Massachusetts+Division+of+Fisheries+and+Wildlife+(MassWildlife)",
                 "text": "directions",
-                "info": "directions to Halibut Point State Park",
+                "info": "directions to Division of Fisheries and Wildlife Field Headquarters",
                 "property": "url"
               },
               "details": ""
@@ -69,18 +80,37 @@
         }
       }
     },{
+      "path": "@organisms/by-author/callout-time.twig",
+      "data": {
+        "calloutTime": {
+          "icon": "@atoms/05-icons/svg-alert.twig",
+          "text": "Public testimony begins at 10:30 a.m."
+        }
+      }
+    },{
       "path": "@organisms/by-author/key-actions.twig",
       "data": {
         "keyActions": {
+          "compHeading": "",
           "links":[{
-            "text": "optional sign up",
+            "text": "Sign Up",
             "type": "",
             "href": "#"
           }]
         }
       }
     }],
-    "widgets": null
+    "widgets": [{
+      "path": "@atoms/09-media/image.twig",
+      "data": {
+        "image": {
+          "alt": "Mass Wildlife",
+          "src": "../../assets/images/placeholder/190x220.png",
+          "height": "220",
+          "width": "190"
+        }
+      }
+    }]
   },
 
   "mainContent": {
@@ -130,87 +160,84 @@
     },
 
     "meetingMinutes": {
-      "compHeading": {
-        "title": "Meeting Minutes",
-        "sub": true
-      },
-      "downloadLinks": [{
-        "downloadLink": {
-          "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-          "decorativeLink": {
-            "text": "PDF download item",
-            "href": "#",
-            "info": "",
-            "property": ""
-          },
-          "size": "30kb",
-          "format": "PDF"
-        }
-      }]
+      "richText": null,
+      "formDownloads": {
+        "compHeading": {
+          "title": "Meeting Minutes",
+          "sub": false
+        },
+        "downloadLinks": [{
+          "downloadLink": {
+            "iconSize": "",
+            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "decorativeLink": {
+              "text": "March 2017 Meeting Minutes - Fisheries and Wildlife Board Meeting",
+              "href": "#",
+              "info": "",
+              "property": ""
+            },
+            "size": "1MB",
+            "format": "PDF"
+          }
+        }]
+      }
     },
 
     "agenda": {
-      "compHeading": {
-        "title": "Agenda",
-        "sub": true
+      "richText": {
+        "compHeading": {
+          "title": "Agenda",
+          "sub": true
+        },
+        "rteElements": [{
+
+          "path": "@atoms/04-headings/heading-6.twig",
+          "data": {
+            "heading6": {
+              "text": "Opening Remarks"
+            }
+          }
+        }, {
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Optional Description Paragraph"
+            }
+          }
+        },{
+          "path": "@atoms/04-headings/heading-6.twig",
+          "data": {
+            "heading6": {
+              "text": "Discussion: Strategic Planning Recap (2017-2018 term)"
+            }
+          }
+        },
+          {
+            "path": "@atoms/08-lists/checklist.twig",
+            "data": {
+              "checkList": [
+                {
+                  "text": "Project Proposal 1"
+                },
+                {
+                  "text": "Project Proposal 2"
+                },
+                {
+                  "text": "Project Proposal 3"
+                }
+              ]
+            }
+          }],
+        "decorativeLink": {
+          "href": "#",
+          "text": "See full agenda",
+          "info": "See full agenda"
+        }
       },
-      "rteElements": [{
-        "path": "@atoms/04-headings/heading-6.twig",
-        "data": {
-          "heading6": {
-            "text": "Opening Remarks"
-          }
-        }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
-        "data": {
-          "paragraph": {
-            "text": "Optional Description"
-          }
-        }
-      },{
-        "path": "@atoms/08-lists/checklist.twig",
-        "data": {
-          "checkList": [{
-            "text": "Project Proposal 1"
-          },{
-            "text": "Project Proposal 2"
-          },{
-            "text": "Project Proposal 3"
-          }]
-        }
-      },{
-        "path": "@atoms/decorative-link.twig",
-        "data": {
-          "decorativeLink": {
-            "href": "#",
-            "text": "See full agenda",
-            "info": ""
-          }
-        }
-      }]
+      "formDownloads": null
     },
 
-    "youWillNeed": {
-      "compHeading": {
-        "title": "You will need",
-        "id": "",
-        "sub": true
-      },
-      "rteElements": [{
-        "path": "@atoms/08-lists/checklist.twig",
-        "data": {
-          "checkList": [{
-            "text": "first item to bring"
-          },{
-            "text": "second item to bring"
-          },{
-            "text": "third item to bring"
-          }]
-        }
-      }]
-    },
+    "youWillNeed": null,
 
     "formDownloads": {
       "compHeading": {
@@ -222,39 +249,13 @@
           "iconSize": "",
           "icon": "@atoms/05-icons/svg-doc-pdf.twig",
           "decorativeLink": {
-            "text": "PDF download item",
+            "text": "Project Proposal 1",
             "href": "#",
             "info": "",
             "property": ""
           },
-          "size": "30kb",
+          "size": "1MB",
           "format": "PDF"
-        }
-      },{
-        "downloadLink": {
-          "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-docx.twig",
-          "decorativeLink": {
-            "text": "Word download item",
-            "href": "#",
-            "info": "",
-            "property": ""
-          },
-          "size": "40kb",
-          "format": "DOCX"
-        }
-      },{
-        "downloadLink": {
-          "iconSize": "",
-          "icon": "@atoms/05-icons/svg-laptop.twig",
-          "decorativeLink": {
-            "text": "Online form or information page",
-            "href": "#",
-            "info": "",
-            "property": ""
-          },
-          "size": "",
-          "format": "form"
         }
       }]
     },
@@ -270,7 +271,7 @@
         "isExpanded": false,
         "subTitle": {
           "href":"",
-          "text": "Person to Contact"
+          "text": "Susan Sacco"
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
@@ -297,7 +298,7 @@
             "label":"",
             "link": {
               "href":"#",
-              "text": "person@email.com",
+              "text": "susan.sacco@state.ma.us",
               "info": "",
               "property": ""
             },
@@ -307,53 +308,7 @@
       }]
     },
 
-    "mediaContact": {
-      "viewSpecific": false,
-      "compHeading":{
-        "title": "Media Contact",
-        "sub": true
-      },
-      "contacts":[{
-        "accordion": true,
-        "isExpanded": false,
-        "subTitle": {
-          "href":"",
-          "text": "Media Person to Contact"
-        },
-        "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
-          "name": "Phone",
-          "items": [{
-            "type": "phone",
-            "property": "",
-            "label":"Main:",
-            "link": {
-              "href": "+17817401605",
-              "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
-            },
-            "details":""
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
-          "name": "Online",
-          "hidden": "",
-          "items": [{
-            "type": "online",
-            "property": "",
-            "label":"",
-            "link": {
-              "href":"#",
-              "text": "person@email.com",
-              "info": "",
-              "property": ""
-            },
-            "details":""
-          }]
-        }]
-      }]
-    },
+    "mediaContact": null,
 
     "linkList" : {
       "compHeading": {
@@ -365,7 +320,7 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "Description about other available dates"
+              "text": "This event occurs monthly. The next three dates are listed below."
             }
           }
         }]
@@ -373,18 +328,18 @@
 
       "stacked": true,
       "links" : [{
-        "href":"#",
-        "text":"first date",
+        "href": "#",
+        "text": "Sunday, November 12, 2017, 10:00 a.m. - 11:00 a.m.",
         "info": "",
         "property": ""
       },{
         "href":"#",
-        "text":"second date",
+        "text": "Sunday, November 19, 2017, 10:00 a.m. - 11:00 a.m.",
         "info": "",
         "property": ""
       },{
-        "href":"#",
-        "text":"third date",
+        "href": "#",
+        "text": "Sunday, November 26, 2017, 10:00 a.m. - 11:00 a.m.",
         "info": "",
         "property": ""
       }]
@@ -401,12 +356,12 @@
       "stacked": true,
       "links" : [{
         "href":"#",
-        "text":"Organization One",
+        "text":"Division of Fisheries and Wildlife",
         "info": "",
         "property": ""
       },{
         "href":"#",
-        "text":"Organization Two",
+        "text":"Department of Fish and Game",
         "info": "",
         "property": ""
       }]
@@ -420,7 +375,7 @@
       "contacts":[{
         "subTitle": {
           "href":"",
-          "text": "Person to Contact"
+          "text": "Susan Sacco"
         },
         "groups": [{
           "icon": "@atoms/05-icons/svg-phone.twig",
@@ -447,7 +402,7 @@
             "label":"",
             "link": {
               "href":"#",
-              "text": "person@email.com",
+              "text": "susan.sacco@state.ma.us",
               "info": "",
               "property": ""
             },
@@ -457,50 +412,7 @@
       }]
     },
 
-    "mediaContact": {
-      "viewSpecific": true,
-      "sidebarHeading":{
-        "title": "Media Contact"
-      },
-      "contacts":[{
-        "subTitle": {
-          "href":"",
-          "text": "Media Person to Contact"
-        },
-        "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
-          "name": "Phone",
-          "items": [{
-            "type": "phone",
-            "property": "",
-            "label":"Main:",
-            "link": {
-              "href": "+17817401605",
-              "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
-            },
-            "details":""
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
-          "name": "Online",
-          "hidden": "",
-          "items": [{
-            "type": "online",
-            "property": "",
-            "label":"",
-            "link": {
-              "href":"#",
-              "text": "person@email.com",
-              "info": "",
-              "property": ""
-            },
-            "details":""
-          }]
-        }]
-      }]
-    }
+    "mediaContact": null
   },
 
   "bottomContent": {
