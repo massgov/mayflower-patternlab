@@ -347,7 +347,7 @@
   },
 
   "sideContent": {
-    "linkList": {
+    "participants": {
       "viewSpecific": true,
       "sidebarHeading":{
         "title":  "Participating Organizations"

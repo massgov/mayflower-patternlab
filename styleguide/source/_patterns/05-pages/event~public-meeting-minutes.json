@@ -1,7 +1,7 @@
 {
   "pageHeader": {
     "category": "",
-    "divider": true,
+    "divider": false,
     "title": "Minutes for Fisheries and Wildlife Board Meeting",
     "subTitle": "",
     "headerTags": {
@@ -63,80 +63,89 @@
     },
 
     "meetingMinutes": {
-      "richText": null,
-      "formDownloads": {
-        "compHeading": {
-          "title": "Meeting Minutes",
-          "sub": true
-        },
-        "downloadLinks": [{
-          "downloadLink": {
-            "iconSize": "",
-            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
-            "decorativeLink": {
-              "text": "March 2017 Meeting Minutes - Fisheries and Wildlife Board Meeting",
-              "href": "#",
-              "info": "",
-              "property": ""
-            },
-            "size": "1MB",
-            "format": "PDF"
-          }
-        }]
-      }
-    },
-
-    "agenda": {
       "richText": {
-        "compHeading": {
-          "title": "Agenda",
-          "sub": true
-        },
+        "compHeading": null,
         "rteElements": [{
 
-          "path": "@atoms/04-headings/heading-6.twig",
+          "path": "@atoms/04-headings/heading-3.twig",
           "data": {
-            "heading6": {
-              "text": "Opening Remarks"
+            "heading3": {
+              "text": "Attendance"
             }
           }
         }, {
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph": {
-              "text": "Optional Description Paragraph"
+              "text": "Placeholder text for what will need to be a two lists. One of attendee, and one of abscent invitees."
             }
           }
         },{
-          "path": "@atoms/04-headings/heading-6.twig",
+          "path": "@atoms/04-headings/heading-3.twig",
           "data": {
-            "heading6": {
-              "text": "Discussion: Strategic Planning Recap (2017-2018 term)"
+            "heading3": {
+              "text": "Call to Order"
             }
           }
-        },
-          {
-            "path": "@atoms/08-lists/checklist.twig",
-            "data": {
-              "checkList": [
-                {
-                  "text": "Project Proposal 1"
-                },
-                {
-                  "text": "Project Proposal 2"
-                },
-                {
-                  "text": "Project Proposal 3"
-                }
-              ]
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Chairman Chris Gabrieli called the meeting of the Board of Higher Education (BHE) to order at 10:15 a.m."
             }
-          }],
-        "decorativeLink": {
-          "href": "#",
-          "text": "See full agenda",
-          "info": "See full agenda"
-        }
+          }
+
+        }, {
+          "path": "@atoms/04-headings/heading-3.twig",
+          "data": {
+            "heading3": {
+              "text": "Welcome"
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+            }
+          }
+        }]
+
       },
+
+      "formDownloads": null
+    },
+
+    "agenda": {
+      "richText": null,
       "formDownloads": null
     },
 
@@ -152,104 +161,27 @@
           "iconSize": "",
           "icon": "@atoms/05-icons/svg-doc-pdf.twig",
           "decorativeLink": {
-            "text": "Project Proposal 1",
+            "text": "PDF download item",
             "href": "#",
             "info": "",
             "property": ""
           },
-          "size": "1MB",
+          "size": "30kb",
           "format": "PDF"
         }
       }]
     },
 
-    "contactList": {
-      "viewSpecific": false,
-      "compHeading":{
-        "title": "Contact",
-        "sub": true
-      },
-      "contacts":[{
-        "accordion": true,
-        "isExpanded": false,
-        "subTitle": {
-          "href":"",
-          "text": "Susan Sacco"
-        },
-        "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
-          "name": "Phone",
-          "items": [{
-            "type": "phone",
-            "property": "",
-            "label":"Main:",
-            "link": {
-              "href": "+17817401605",
-              "text": "(781) 740-1605",
-              "info": "",
-              "property": ""
-            },
-            "details":""
-          }]
-        },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
-          "name": "Online",
-          "hidden": "",
-          "items": [{
-            "type": "online",
-            "property": "",
-            "label":"",
-            "link": {
-              "href":"#",
-              "text": "susan.sacco@state.ma.us",
-              "info": "",
-              "property": ""
-            },
-            "details":""
-          }]
-        }]
-      }]
-    },
+    "contactList": null,
 
     "mediaContact": null,
 
-    "linkList" : {
-      "compHeading": {
-        "title": "Other dates",
-        "sub": true
-      },
-      "description": {
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "This event occurs monthly. The next three dates are listed below."
-            }
-          }
-        }]
-      },
-
-      "stacked": true,
-      "links" : [{
-        "href": "#",
-        "text": "Sunday, November 12, 2017, 10:00 a.m. - 11:00 a.m.",
-        "info": "",
-        "property": ""
-      },{
-        "href":"#",
-        "text": "Sunday, November 19, 2017, 10:00 a.m. - 11:00 a.m.",
-        "info": "",
-        "property": ""
-      },{
-        "href": "#",
-        "text": "Sunday, November 26, 2017, 10:00 a.m. - 11:00 a.m.",
-        "info": "",
-        "property": ""
-      }]
-    }
+    "linkList" : null
   },
 
   "sideContent": {
+
+    "participants": null,
 
     "contactList": {
       "viewSpecific": true,
@@ -296,51 +228,30 @@
       }]
     },
 
-    "mediaContact": null
+    "mediaContact": null,
+
+    "relatedEvent": null,
+
+    "related": {
+      "viewSpecific": true,
+      "sidebarHeading":{
+        "title":  "Related"
+      },
+
+      "stacked": true,
+      "links" : [{
+        "href":"#",
+        "text":"Fishing and Wildlife Board Meeting Minutes",
+        "info": "",
+        "property": ""
+      },{
+        "href":"#",
+        "text":"Another Optional Link",
+        "info": "",
+        "property": ""
+      }]
+    }
   },
 
-  "bottomContent": {
-    "eventListing": {
-      "compHeading":{
-        "title": "Related Events",
-        "centered": true
-      },
-      "events":[{
-        "title": {
-          "href": "#",
-          "text": "Winter Birding Event",
-          "info": "",
-          "property": ""
-        },
-        "location": "Lanesborough, MA",
-        "date": {
-          "summary": "March 30, 2017",
-          "startMonth": "Mar",
-          "startDay": "30",
-          "endMonth": "",
-          "endDay": ""
-        },
-        "time": "12:00 p.m. - 2:00 p.m.",
-        "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
-      },{
-        "title": {
-          "href": "#",
-          "text": "First Day Hike",
-          "info": "",
-          "property": ""
-        },
-        "location": "Lanesborough, MA",
-        "date": {
-          "summary": "March 30, 2017 - April 10, 2017",
-          "startMonth": "Mar",
-          "startDay": "30",
-          "endMonth": "Apr",
-          "endDay": "10"
-        },
-        "time": "12:00 p.m. - 2:00 p.m.",
-        "description": ""
-      }],
-      "more": null
-    }
-  }
+  "bottomContent": null
 }

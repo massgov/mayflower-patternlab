@@ -1,0 +1,233 @@
+{
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "title": "Agenda for Fisheries and Wildlife Board Meeting",
+    "subTitle": "",
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [
+        {
+          "href": "#",
+          "text": "Department of Fish and Game"
+        }
+      ]
+    },
+    "socialLinks": {
+      "label": "Share:",
+      "items": [
+        {
+          "altText": "Follow us on Facebook",
+          "href": "#",
+          "icon": "@atoms/05-icons/svg-facebook.twig",
+          "linkType": "facebook"
+        },
+        {
+          "altText": "Follow us on Twitter",
+          "href": "#",
+          "icon": "@atoms/05-icons/svg-twitter.twig",
+          "linkType": "twitter"
+        },
+        {
+          "altText": "Follow us on LinkedIn",
+          "href": "#",
+          "icon": "@atoms/05-icons/svg-linkedin.twig",
+          "linkType": "linkedin"
+        }
+      ]
+    },
+    "publishState": null,
+    "optionalContents": [
+      {
+        "path": "@molecules/event-teaser.twig",
+        "data": {
+          "eventTeaser": {
+            "title": null,
+            "location": "",
+            "date": {
+              "summary": "Sunday, November 5, 2017"
+            },
+            "time": "10:00 a.m. - 11:00 a.m.",
+            "description": ""
+          }
+        }
+      }
+    ],
+    "widgets": null
+  },
+  "mainContent": {
+    "pageOverview": {
+      "richText": {
+        "rteElements": [
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt deleniti fuga consequuntur laudantium qui repellendus eveniet, culpa ipsum ullam libero quibusdam dolore, sit."
+              }
+            }
+          }
+        ]
+      }
+    },
+    "meetingMinutes": {
+      "richText": null,
+      "formDownloads": null
+    },
+    "agenda": {
+      "richText": {
+        "compHeading": null,
+        "rteElements": [
+          {
+            "path": "@atoms/04-headings/heading-3.twig",
+            "data": {
+              "heading3": {
+                "text": "Agenda"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Placeholder paragraph for what will need to be an outline. richText doesn't have what we need to make it right now."
+              }
+            }
+          }
+        ]
+      },
+      "formDownloads": null
+    },
+    "youWillNeed": null,
+    "formDownloads": {
+      "compHeading": {
+        "title": "Additional resources",
+        "sub": true
+      },
+      "downloadLinks": [{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "PDF download item",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "30kb",
+          "format": "PDF"
+        }
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "PDF download item",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "30kb",
+          "format": "PDF"
+        }
+      },{
+        "downloadLink": {
+          "iconSize": "",
+          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "decorativeLink": {
+            "text": "PDF download item",
+            "href": "#",
+            "info": "",
+            "property": ""
+          },
+          "size": "30kb",
+          "format": "PDF"
+        }
+      }]
+    },
+
+    "contactList": null,
+    "mediaContact": null,
+    "linkList": null
+  },
+  "sideContent": {
+    "participants": null,
+    "contactList": {
+      "viewSpecific": true,
+      "sidebarHeading": {
+        "title": "Contact"
+      },
+      "contacts": [
+        {
+          "subTitle": {
+            "href": "",
+            "text": "Susan Sacco"
+          },
+          "groups": [
+            {
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [
+                {
+                  "type": "phone",
+                  "property": "",
+                  "label": "Main:",
+                  "link": {
+                    "href": "+17817401605",
+                    "text": "(781) 740-1605",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                }
+              ]
+            },
+            {
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "hidden": "",
+              "items": [
+                {
+                  "type": "online",
+                  "property": "",
+                  "label": "",
+                  "link": {
+                    "href": "#",
+                    "text": "susan.sacco@state.ma.us",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "mediaContact": null,
+    "relatedEvent": null,
+    "related": {
+      "viewSpecific": true,
+      "sidebarHeading": {
+        "title": "Related"
+      },
+      "stacked": true,
+      "links": [
+        {
+          "href": "#",
+          "text": "Fishing and Wildlife Board Meeting Minutes",
+          "info": "",
+          "property": ""
+        },
+        {
+          "href": "#",
+          "text": "Another Optional Link",
+          "info": "",
+          "property": ""
+        }
+      ]
+    }
+  },
+  "bottomContent": null
+}

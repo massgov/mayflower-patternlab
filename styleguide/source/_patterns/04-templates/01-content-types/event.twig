@@ -72,8 +72,8 @@
       {% endblock %}
     </div>
     <aside class="sidebar">
-      {% if sideContent.linkList %}
-        {% set linkList = sideContent.linkList %}
+      {% if sideContent.participants %}
+        {% set linkList = sideContent.participants %}
         {% include "@organisms/by-author/link-list.twig" %}
       {% endif %}
 
@@ -85,6 +85,16 @@
       {% if sideContent.mediaContact %}
         {% set contactList = sideContent.mediaContact %}
         {% include "@organisms/by-author/contact-list.twig" %}
+      {% endif %}
+
+      {% if sideContent.relatedEvent %}
+        {% set richText = sideContent.relatedEvent %}
+        {% include "@organisms/by-author/rich-text.twig" %}
+      {% endif %}
+
+      {% if sideContent.related %}
+        {% set linkList = sideContent.related %}
+        {% include "@organisms/by-author/link-list.twig" %}
       {% endif %}
 
       {% block sidebar %}
