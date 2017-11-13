@@ -6,7 +6,8 @@
   "backToTopButton": true,
 
   "ajaxAlerts": {
-    "endpoint":"../../assets/data/emergency-alerts.json"
+    "endpoint":"../../assets/data/emergency-alerts-override.json",
+    "customSelector": "js-ajax-alerts-override"
   },
 
   "emergencyAlerts": {
