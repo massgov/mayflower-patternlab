@@ -87,9 +87,9 @@
         {% include "@organisms/by-author/contact-list.twig" %}
       {% endif %}
 
-      {% if sideContent.relatedEvent %}
-        {% set richText = sideContent.relatedEvent %}
-        {% include "@organisms/by-author/rich-text.twig" %}
+      {% if sideContent.eventListing %}
+        {% set eventListing = sideContent.eventListing %}
+        {% include "@organisms/by-author/event-listing.twig" %}
       {% endif %}
 
       {% if sideContent.related %}
