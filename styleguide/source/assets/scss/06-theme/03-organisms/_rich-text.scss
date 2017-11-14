@@ -1,4 +1,8 @@
 .ma__rich-text {
+
+  &__flame {
+    font-weight: bold;
+  }
   
   &__footnote {
     border-color: rgba($c-font-link,.5);

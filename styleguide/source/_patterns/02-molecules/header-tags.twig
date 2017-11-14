@@ -1,10 +1,16 @@
+{% set moreLabel = headerTags.moreLabel ?: "show more" %}
+{% set lessLabel = headerTags.lessLabel ?: "show less" %}
+
 <div class="ma__header-tags">
   {% if headerTags.label %}
     <span>{{ headerTags.label }}</span>
   {% endif %}
-  <div class="ma__header-tags__terms">
+  <div id="{{ headerTags.id }}" class="ma__header-tags__terms js-header-tag-link">
     {% for item in headerTags.taxonomyTerms %}
       <a href="{{ item.href }}">{{ item.text }}</a>
     {% endfor %}
+    <button type="button" class="js-header-tag-button" aria-expanded="false" aria-controls="{{ headerTags.id }}">
+      <span>{{ headerTags.moreLabel }}</span><span>{{ headerTags.lessLabel }}</span>
+    </button>
   </div>
 </div>

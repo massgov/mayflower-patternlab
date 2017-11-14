@@ -1,5 +1,8 @@
 {
   "headerTags": {
+    "id": "terms",
+    "moreLabel": "show more",
+    "lessLabel": "show less",
     "label": "More about:",
     "taxonomyTerms": [{
       "href": "#",
@@ -13,6 +16,12 @@
     },{
       "href": "#",
       "text": "Term 4"
+    },{
+      "href": "#",
+      "text": "Term 5"
+    },{
+      "href": "#",
+      "text": "Term 6"
     }]
   }
 }

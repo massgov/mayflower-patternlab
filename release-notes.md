@@ -17,9 +17,67 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 
-### Removed DP-5525 - Disable location listing scrolling for mobile
+
+### Removed
+- DP-5914 - Remove extra padding on callout links
+- DP-5525 - Disable location listing scrolling for mobile
 
 ### Migrate Path
+
+
+## 5.8.1
+
+#### Added
+- DP-4717 - Devs can use the new technical docs which describe the process for [working with patterns](https://github.com/massgov/mayflower/blob/dev/.github/CONTRIBUTING.md#creating-or-editing-a-pattern) and [atomic design](https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md).
+
+#### Fixed
+- DP-6145 Fix icon overlap bug in time callout organism
+- DP-5915 Fix section links component by updating line height and increasing margin top on list items (except first one).
+- DP-4517 - The [@molecules/header-tags](http://mayflower.digital.mass.gov/?p=molecules-header-tags) pattern no longer forces Title/Upper case for its contents.  (This will fix the case of the relationship indicators on Mass.gov).
+
+
+## 5.8.0
+
+### Thanks!
+
+We want to give a quick shout out and thanks to all of our friends who have helped to get Mayflower to where it is today through there contributions over the last year: @jasonstanbery, @reenybeeny, @iansholtys, @labbydev, @nstriedinger, @lukewertz, @gleroux02, and @plusjeff.
+
+And a special warm thanks to our largest contributor by far, @legostud, for all of the thoughtfulness, care, and ingenuity with which you've crafted this project!
+
+We hope to see you all around in code. :)
+
+### Added
+
+- DP-4968 - The [Location page](http://mayflower.digital.mass.gov/?p=pages-location-general-content) now supports a "Downloads" section which could be helpful for adding a pdf map, for example.
+- DP-4581 / 5023 - We've added sort and filter functionality to the [Event Listing](http://mayflower.digital.mass.gov/?p=pages-event-listing) page! Now you can enter a town or zip to sort events by proximity and you can filter events by a future date time frame.  (Also, developers will notice that the Event and Location listing js is shared, since the functionality is so similar.) ([PR #589](https://github.com/massgov/mayflower/pull/589))
+- DP-5341 - We've created a new pattern called [Collapsible Content](http://mayflower.digital.mass.gov/?p=organisms-collapsible-content)!  Eventually this pattern could be used for functionality like [Contact Us as accordion](https://mayflower.digital.mass.gov/?p=molecules-contact-us-collapsed-with-more-link) where it will accept child patterns using the `path / data` construct similar to Rich Text, sidebar widgets, etc. ([PR #581](https://github.com/massgov/mayflower/pull/581))
+- DP-4323 / 4325 - We've finished documenting all the patterns! (PRs [#545](https://github.com/massgov/mayflower/pull/545), [#546](https://github.com/massgov/mayflower/pull/546)).
+
+### Changed
+
+- DP-5307 - In response to some Mass.gov content author feedback, Users will notice that the [image + map banner (i.e. the Location Banner)](http://mayflower.digital.mass.gov/?p=organisms-location-banner) on the [Location page](http://mayflower.digital.mass.gov/?p=pages-location-general-content) has been made more narrow and fits within the page content width constraints.  This allows for a more convenient image size (of 800x400) to be used. ([PR #576](https://github.com/massgov/mayflower/pull/576))
+- DP-3222 / 3914 - Several Mayflower patterns now support optional configuration for their included heading element levels.  (Technical note: This work compensates for the fact that many assistive technologies are not quite up to date with the HTML spec which we have been following all along) ([PR #590](https://github.com/massgov/mayflower/pull/590))
+- DP-4318 - Users will notice that the font size for links in the sidebar are more consistent.  (See example on the ["Social" and "Offered By" on the Service page](http://mayflower.digital.mass.gov/?p=pages-service)). ([PR #588](https://github.com/massgov/mayflower/pull/588))
+- DP-5653 - Our [Location listing](http://mayflower.digital.mass.gov/?p=pages-location-listing) and [Event listing](http://mayflower.digital.mass.gov/?p=pages-event-listing) page geosort functionality is now 8 times more cost effective (from 2 api credits down to .25 api credits!) ([PR #602](https://github.com/massgov/mayflower/pull/602))
+- DP-3763 - Users will notice that the zoom level has been set to a more appropriate level on maps which have only 1 marker (i.e. on the [Location page (general content)](http://mayflower.digital.mass.gov/?p=pages-location-general-content)). ([PR #604](https://github.com/massgov/mayflower/pull/604))
+- DP-5234 / 5177 - We've made some backwards-compatible updates to several patterns.  See [PR #571](https://github.com/massgov/mayflower/pull/571) for details.
+- Github #565 - Devs will notice that we've updated some npm packages. ([PR #565](https://github.com/massgov/mayflower/pull/565))
+
+### Removed
+
+- DP-4313 - Users will notice that the logo image has been removed from the [Service page](http://mayflower.digital.mass.gov/?p=pages-service). ([PR #596](https://github.com/massgov/mayflower/pull/596))
+- DP-4858 - Users will notice that the "DRAFT" status indication has been removed from the front end of the [Decision page](http://mayflower.digital.mass.gov/?p=pages-service). ([PR #597](https://github.com/massgov/mayflower/pull/597))
+
+### Migrate Path
+
+- DP-4968 - To use this new "Downloads" section feature on the Location page, populate `mainContent.formDownloads`, include the respective jumplink" in `stickyNav.anchorLinks` wherever you build the Location page data structure, and update your Location page level templating to `include @organisms/by-author/form-downloads.twig`! (See [PR #587 files](https://github.com/massgov/mayflower/pull/587/files))
+- DP-5307 - Ensure that the images being used for `locationBanner.bgNarrow` are 800x400 as this is now the only image which will render.  (See work tracked in massgov/mass [PR #1188](https://github.com/massgov/mass/pull/1188))
+- DP-3222/3914 - To use this new heading level config feature, set the optional heading levels for page patterns where you implement page level templating. (See work tracked in massgov/mass [PR #1157](https://github.com/massgov/mass/pull/1157))
+- DP-4313 - To remove the logo from your Service page implementation, simply do not send data in `introSidebar.logo` wherever you do your page level data structuring for this page type. (See [PR #596 files](https://github.com/massgov/mayflower/pull/596/files))
+- DP-4858 - To remove the visual DRAFT status from your Decision page implementation, simply do not send data in `pageHeader.publishState` wherever you do your page level data structuring for this page type. (See [PR #597 files](https://github.com/massgov/mayflower/pull/597/files))
+- DP-5234/DP-5177 - We did our best to make these updates backwards compatible, which should mean that you don't need change anything.  You can check [PR #571](https://github.com/massgov/mayflower/pull/571/files) for details and also track tests for Mass.gov in [PR# 1386](https://github.com/massgov/mass/pull/1386)
+- Github [#565](https://github.com/massgov/mayflower/pull/565) - Delete `styleguide/npm_modules` and run `npm install`
+
 
 ## 5.7.2
 
@@ -105,7 +163,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - We documented all the things!  Well, almost all. :)  Check out patterns used on [Service](http://mayflower.digital.mass.gov/?p=pages-service), [How-To's](http://mayflower.digital.mass.gov/?p=pages-howto), [Guides](http://mayflower.digital.mass.gov/?p=pages-guide), [Locations](http://mayflower.digital.mass.gov/?p=pages-location-park-content), [Topics](http://mayflower.digital.mass.gov/?p=pages-topic), and [Events](http://mayflower.digital.mass.gov/?p=pages-event) and prepare ready to be informed! (Remember you can navigate to child patterns by clicking links down in the "Lineage" section.)  More goodness coming soon. (PRs [#521](https://github.com/massgov/mayflower/pull/521), [#523](https://github.com/massgov/mayflower/pull/523), [#524](https://github.com/massgov/mayflower/pull/524), [#527](https://github.com/massgov/mayflower/pull/527), [#529](https://github.com/massgov/mayflower/pull/529), [#533](https://github.com/massgov/mayflower/pull/533))
 
 ### Changed
-- Outside contribution from @sghoweri - Developers will notice that we now use a fork of Pattern Lab maintained by a Drupal Pattern Lab GitHub organization, with hopes of innovating, and iterating on Pattern Lab and merging changes back upstream to the main Pattern Lab fork.  
+- Outside contribution from @sghoweri - Developers will notice that we now use a fork of Pattern Lab maintained by a Drupal Pattern Lab GitHub organization, with hopes of innovating, and iterating on Pattern Lab and merging changes back upstream to the main Pattern Lab fork.
 
   This also allows us to see pattern inheritance: browse to a pattern, click the cog icon in the top-right corner, click show pattern info, and see where else patterns are used and which child patterns a given pattern contains. (PRs [#488](https://github.com/massgov/mayflower/pull/488) and [#519](https://github.com/massgov/mayflower/pull/519))  Thanks Salem!
  - Outside contribution from @evanlovely - Developers will notice an improvement to the automatic  build + browser reload during local development. ([PR #506](https://github.com/massgov/mayflower/pull/506)) Thanks Evan!
@@ -302,7 +360,7 @@ If you'd like to read about these changes in JIRA:
 1. We've revisited how we named our Sass color variables.  Instead of using $c-theme-blue for example we are now using $c-theme-primary.  This update will make it easy for others to create new color schemes for the Mayflower Patterns.
 2. The Location Listing page (Pages > Map listing human services) has been updated from the MVP version to the final version.  The Filters area was expanded to include additonal choices.  The Results area was updated to include tags to show which filters are currently being applied along with pagination.  The Results are also using a newer design that highlights the active or hovered location and makes the corresponding map marker bounce.
 3. For the Image Promo pattern, we've changed the description from being a required field to being an optional field.
-4. After testing the transition page with low to no vision users, we identified that changing the message from a paragraph to an H1 tag was an added benefit.    
+4. After testing the transition page with low to no vision users, we identified that changing the message from a paragraph to an H1 tag was an added benefit.
 
 ### FIXED
 
@@ -369,7 +427,7 @@ If you'd like to read about this changes in JIRA:
     * The new header layout includes a a spot for a description and a nifty new image size.
     * We've introduced some new variations to the card component (Molecules > Section Links) on the Topic Page:
         * You can now choose between regular links (by default) or callout links (Molecules > Section Links Callout Links).  This will help to call out How-To's and tasks associated with a service on a given topic page.
-        * For those times when we don't want to fill the card up with too many links but we want people to know there are more goodies, we've add an optional more link to the bottom of the card.   
+        * For those times when we don't want to fill the card up with too many links but we want people to know there are more goodies, we've add an optional more link to the bottom of the card.
 
 ## 3.6.0
 
@@ -385,7 +443,7 @@ If you'd like to read about these changes in JIRA:
 ### NEW FEATURES
 - Ahem... introducing the latest page type to our family: Services! (Pages > Service Unemployment Benefits).  This is a great page type to use to help surface tons of information related to services, including: branding information, instructional videos, links to how-to's, location information listings, etc.
 - We're making Org Landing Pages (Pages > Org Landing Page) more machine and search friendly by adding a Government Organization structured data pattern (Meta > Schema > Government Organization) to the bottom of the page markup.
-- For Mayflower implementers, we've created an example Guide page which shows all of the possible elements that can go into a Guide section (Pages > Guide Section Example)  
+- For Mayflower implementers, we've created an example Guide page which shows all of the possible elements that can go into a Guide section (Pages > Guide Section Example)
 
 ### IMPROVEMENTS
 - We've revisited the guide page with some updates.  We've consolidated the formerly 3 guide pages into one shiny new guide page with just those components that our content friends have identified as being pertinent:
