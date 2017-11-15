@@ -3,6 +3,22 @@ import checkActive from "../helpers/cssControlCode.js";
 export default function (window,document,$,undefined) {
 
   $('.js-accordion').each(function(index){
+    init.apply(this, [index]);
+  });
+
+  $(document).on('ma:AjaxPattern:Render', function(e,data){
+    let $context = data.el;
+    if ($context.find('.js-accordion').length) {
+      $context.find('.js-accordion').each(function(index){
+        // Try to ensure we don't collide with the index values from DOM load.
+        let offset = 100;
+        let offsetIndex = offset + index;
+        init.apply(this, [offsetIndex]);
+      })
+    }
+  });
+
+  function init(index) {
     let $el = $(this),
         $link = $el.find('.js-accordion-link'),
         $content = $el.find('.js-accordion-content'),
@@ -30,7 +46,7 @@ export default function (window,document,$,undefined) {
         $link.attr('aria-expanded',!open);
         $el.toggleClass('is-open');
       }
-    })
+    });
 
     $(window).resize(function () {
       let temp = checkActive($el);
@@ -43,6 +59,6 @@ export default function (window,document,$,undefined) {
 
       active = temp;
     }).resize();
-  });
+  }
 
 }(window,document,jQuery);
