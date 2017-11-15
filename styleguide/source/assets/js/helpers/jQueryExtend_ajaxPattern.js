@@ -16,35 +16,19 @@ export default function (window,document,$,undefined) {
     self.updatePattern = function() {
       self.getPatternData()
         .then(function (patternData) {
-          // If we don't have the parent data structure we need, exit.
-          // if (!patternData.hasOwnProperty('emergencyAlerts')) {
-          //   console.error('MA::AjaxAlerts::Endpoint data missing emergencyAlerts object: ', patternData);
-          //   return false;
-          // }
-
-          // Get the passed Id, set a default value if none passed.
-          // let id = patternData.emergencyAlerts.id ? patternData.emergencyAlerts.id : 'noId';
-          // // Populate the emergency alerts container data attribute with the passed id.
-          // $element.find('.js-emergency-alerts').first().data('id', id);
-          // // Trigger an event exposing the new id for emergency alerts js.
-
+          // If a custom transform function was passed in, invoke it.
           if (patternTransform && typeof patternTransform === "function") {
             patternData = patternTransform(patternData);
           }
 
-            // Only render data if there are either alerts or an emergency Header.
-            // if ((patternData.emergencyAlerts.hasOwnProperty('alerts') && patternData.emergencyAlerts.alerts.length) || (patternData.emergencyAlerts.hasOwnProperty('emergencyHeader') && Object.keys(patternData.emergencyAlerts.emergencyHeader).length)) {
-              // Render the pattern with the data.
-              try {
-                self.renderPattern(pattern,patternData);
-              }
-              catch (e) {
-                console.error(e);
-              }
-            // }
-            // else {
-            //   console.error('MA::AjaxAlerts::No alerts or emergencyHeader data passed in data: ', patternData);
-            // }
+          //@todo validate the data against a schema
+          // Render the pattern with the data.
+          try {
+            self.renderPattern(pattern,patternData);
+          }
+          catch (e) {
+            console.error(e);
+          }
         })
         .fail(function () {
           console.error('MA::AjaxAlerts::Could not get alert data at endpoint.');
