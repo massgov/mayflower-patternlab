@@ -30,6 +30,7 @@ export default function (window,document,$,undefined) {
           // Example of some custom data transformation being done to the data according to implementation needs.  This will often include restructuring of data.
           data = ajaxData;
           data.emergencyAlerts.emergencyHeader.title = "This alert title was overridden by a custom transform function.";
+          data.emergencyAlerts.emergencyHeader.prefix = "Informational Alerts";
           return data;
         }
       });
