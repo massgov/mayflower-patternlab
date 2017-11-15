@@ -5,9 +5,10 @@
 
   "backToTopButton": true,
 
-  "ajaxAlerts": {
-    "endpoint":"../../assets/data/emergency-alerts-override.json",
-    "customSelector": "js-ajax-alerts-override"
+  "ajaxEmergencyAlerts": {
+    "endpoint":"../../assets/data/emergency-alerts.json",
+    "renderPattern":"@organisms/by-template/emergency-alerts.twig",
+    "customSelector": "js-ajax-pattern-override"
   },
 
   "emergencyAlerts": {

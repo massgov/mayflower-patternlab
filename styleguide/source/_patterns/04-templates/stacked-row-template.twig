@@ -1,5 +1,6 @@
 {% block header %}
-  {% include "@organisms/by-template/ajax-alerts.twig" %}
+  {% set ajaxPattern = ajaxEmergencyAlerts %}
+  {% include "@organisms/by-template/ajax-pattern.twig" %}
   {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
 
