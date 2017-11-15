@@ -20,6 +20,10 @@ export default function (window,document,$,undefined) {
           }
 
           //@todo validate the data against a schema
+          // Only attempt to render a pattern if there is data.
+          if ($.isEmptyObject(patternData)) {
+            return;
+          }
           // Render the pattern with the data.
           try {
             self.renderPattern(pattern,patternData);
