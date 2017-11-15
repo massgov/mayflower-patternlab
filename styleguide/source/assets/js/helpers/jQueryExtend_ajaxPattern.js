@@ -39,15 +39,15 @@ export default function (window,document,$,undefined) {
         id: pattern,
         async: false,
         allowInlineIncludes: true,
-        // Set ma.patternsPath in your implementation's env.js file (see /source/_meta/_00-foot.twig)
+        // Set ma.patternPaths in your implementation's env.js file (see /source/_meta/_00-foot.twig)
         namespaces: {
-          'base': ma.patternsPath + "/00-base",
-          'atoms': ma.patternsPath + "/01-atoms",
-          'molecules': ma.patternsPath + "/02-molecules",
-          'organisms': ma.patternsPath + "/03-organisms",
-          'templates': ma.patternsPath + "/04-templates",
-          'pages': ma.patternsPath + "/05-pages",
-          'meta': ma.patternsPath + "/07-meta",
+          'base': ma.patternPaths['@base'],
+          'atoms': ma.patternPaths['@atoms'],
+          'molecules': ma.patternPaths['@molecules'],
+          'organisms': ma.patternPaths['@organisms'],
+          'templates': ma.patternPaths['@templates'],
+          'pages': ma.patternPaths['@pages'],
+          'meta': ma.patternPaths['@meta']
         }
       });
 
@@ -65,18 +65,8 @@ export default function (window,document,$,undefined) {
       let pathParts = pattern.split("/");
       let namespace = pathParts.shift();
       let patternPath = pathParts.join("/");
-      // Set ma.patternsPath in your implementation's env.js file (see /source/_meta/_00-foot.twig)
-      let paths = {
-        '@base': ma.patternsPath + "/00-base/",
-        '@atoms': ma.patternsPath + "/01-atoms/",
-        '@molecules': ma.patternsPath + "/02-molecules/",
-        '@organisms': ma.patternsPath + "/03-organisms/",
-        '@templates': ma.patternsPath + "/04-templates/",
-        '@pages': ma.patternsPath + "/05-pages/",
-        '@meta': ma.patternsPath + "/07-meta/"
-      };
-
-      return paths[namespace] + patternPath;
+      // Set ma.patternPaths in your implementation's env.js file (see /source/_meta/_00-foot.twig)
+      return ma.patternPaths[namespace] + patternPath;
     };
 
     /**
