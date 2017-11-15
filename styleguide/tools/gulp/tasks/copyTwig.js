@@ -7,7 +7,7 @@ module.exports = function copyTwigTask(config, env){
     // copy files settings
     var twig = {
         src: [
-            config.patternLabRoot + "/source/_patterns/**/*.*"
+            config.patternLabRoot + "/source/_patterns/**/*.twig"
         ],
         dest: config.dest + "/assets"
     };
