@@ -5,6 +5,8 @@
       var ma = ma || {};
       // path to where the handlebar templates are being stored.
       ma.themePath = "{{ url.domain }}/{{ url.assetsPath }}";
+      // path to where twig templates are being stored (for twigJS).
+      ma.patternsPath = ma.themePath + "/_patterns";
     </script>
     <script src="{{ url.domain }}/{{ url.assetsPath }}/js/vendor-generated.js"></script>
     <script src="{{ url.domain }}/{{ url.assetsPath }}/js/index-generated.js"></script>
