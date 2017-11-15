@@ -1,15 +1,15 @@
 export default function (window,document,$,undefined) {
   // Object-orientated approach to jQuery plugin building, so as to not
   // pollute global namespace or a complicated switch based on passed params.
-  var ajaxPattern = function(element, options) {
-    var endpoint = options.endpoint;
-    var self = this;
-    var patternTransform = options.transform;
-    var pattern = options.renderPattern;
-    var $element = $(element);
+  let ajaxPattern = function(element, options) {
+    let endpoint = options.endpoint;
+    const pattern = options.renderPattern;
+    let patternTransform = options.transform;
+    let self = this;
+    let $element = $(element);
 
     /**
-     * Wrapper function to get and render alert data.
+     * Wrapper function to get and render data for a given pattern.
      */
     self.updatePattern = function() {
       self.getPatternData()
@@ -19,7 +19,8 @@ export default function (window,document,$,undefined) {
             patternData = patternTransform(patternData);
           }
 
-          //@todo validate the data against a schema
+          //@todo validate the data against a schema: https://github.com/tdegrunt/jsonschema
+
           // Only attempt to render a pattern if there is data.
           if ($.isEmptyObject(patternData)) {
             return;
@@ -33,11 +34,20 @@ export default function (window,document,$,undefined) {
           }
         })
         .fail(function () {
-          console.error('MA::AjaxAlerts::Could not get alert data at endpoint.');
+          console.error('MA::AjaxPattern::Could not get data at endpoint:', endpoint);
         });
     };
 
+    /**
+     * Use TwigJS to render the pattern with its data from the twig template.
+     *
+     * @param pattern
+     *  A namespaced path to a twig template for the pattern we want to render (i.e. @atoms/decorative-link.twig)
+     * @param data
+     *  The data structure which the pattern expects in order to render.
+     */
     self.renderPattern = function(pattern,data) {
+      // @todo use async: https://github.com/twigjs/twig.js/wiki#ajax-templates
       let template = Twig.twig({
         href: self.getPatternPath(pattern),
         id: pattern,
@@ -65,6 +75,15 @@ export default function (window,document,$,undefined) {
       $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
     };
 
+    /**
+     * Returns the gettable path to a pattern based on its namespaced path.
+     *
+     * @param pattern
+     *   The namespaced path to a pattern (i.e. @atoms/decorative-link.twig)
+     *
+     * @returns {string}
+     *   The path to a pattern which can be used in a get request (i.e. /assets/patterns/atoms/decorative-link.twig )
+     */
     self.getPatternPath = function(pattern) {
       let pathParts = pattern.split("/");
       let namespace = pathParts.shift();
@@ -118,12 +137,12 @@ export default function (window,document,$,undefined) {
   $.fn.MassAjaxPattern = function(options) {
 
     return this.each(function(i, el) {
-      var $element = $(el);
+      let $element = $(el);
       // Returns early if plugin is already there.
       if ($element.data('mass-ajax-data')) {
         return;
       }
-      var data = new ajaxPattern(this, options);
+      let data = new ajaxPattern(this, options);
       $element.data('mass-ajax-data', data);
     });
 
