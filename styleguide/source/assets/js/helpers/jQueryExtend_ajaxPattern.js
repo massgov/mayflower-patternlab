@@ -71,7 +71,7 @@ export default function (window,document,$,undefined) {
 
       $element.html(markup);
 
-      // Trigger an event exposing the new id for emergency alerts js.
+      // Trigger an event exposing the context for any listening pattern js module initialization.
       $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
     };
 
