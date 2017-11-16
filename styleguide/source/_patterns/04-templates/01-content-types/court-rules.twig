@@ -27,7 +27,7 @@
         {% endfor %}
 
         {% block pageContent %}
-          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
+          {#{% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}#}
         {% endblock %}
 
         {% if mainContent.formDownloads %}
@@ -67,7 +67,7 @@
         {% endif %}
 
         {% block sidebar %}
-          {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
+          {#{% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}#}
         {% endblock %}
       </aside>
     </div>
