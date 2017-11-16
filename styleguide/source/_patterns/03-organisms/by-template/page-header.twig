@@ -27,6 +27,12 @@
         {{ pageHeader.category }}
       </div>
     {% endif %}
+
+    {% if pageHeader.subCategory %}
+      {% set compHeading = pageHeader.subCategory.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+    {% endif %}
+
     <h1 class="ma__page-header__title">{% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}{{pageHeader.title}}</h1>
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>
