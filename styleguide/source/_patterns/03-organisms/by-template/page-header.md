@@ -23,6 +23,8 @@ This pattern is adds an `<h1>` page title and other helpful bit of content that 
 pageHeader: {
   category: 
     type: string / optional,
+    subcategory:
+    type: string / optional,
   divider: 
     type: boolean
   prefix:

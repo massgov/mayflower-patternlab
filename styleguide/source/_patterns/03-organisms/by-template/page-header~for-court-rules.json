@@ -32,7 +32,47 @@
     },
     "socialLinks": null,
     "publishState": null,
-    "optionalContents": null,
+    "optionalContents": [
+      {
+        "path": "@molecules/listing-table.twig",
+        "data": {
+          "listingTable": {
+            "rows": [
+              {
+                "label": "Courts:",
+                "text": "This whole list is Optional"
+              },
+              {
+                "label": "Adopted Date:",
+                "text": "November 11, 2011"
+              },
+              {
+                "label": "Effective Date:",
+                "text":  "November 11, 2011"
+              },
+              {
+                "label": "Referenced Sources:",
+                "text": "760 CMR 4.00: M.G.L. c. 121B, §§ 26, 29, 31 and 34; M.G.L. c. 23B; E.O. 227, 390, 246, and 253"
+              },
+              {
+                "label": "Updates:",
+                "text": "Amended November 16, 2017"
+              },
+              {
+                "label": "See more",
+                "text": "Placeholder. I'm not sure how to do this yet."
+              }
+            ]
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is a court rules page, and this is an optional description field. For shorter content, authors may choose to use only the overview field. For longer content, this may be a place to summarize findings or to provide a short introduction."
+          }
+        }
+      }],
     "widgets": null
   }
 }
