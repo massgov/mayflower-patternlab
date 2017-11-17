@@ -322,7 +322,7 @@
       ]
     },
     "references": {
-      "label": "Referenced Legislation:",
+      "label": "Referenced Sources:",
       "taxonomyTerms": [
         {
           "href": "#",
@@ -333,7 +333,25 @@
           "text": "Reference 2"
         }
       ]
-    }
+    },
+    "optionalContents": [
+      {
+        "path": "@molecules/listing-table.twig",
+        "data": {
+          "listingTable": {
+            "rows": [
+              {
+                "label": "Updates:",
+                "text": "Amended November 16, 2017"
+              },
+              {
+                "label": "See more",
+                "text": "Placeholder. I'm not sure how to do this yet."
+              }
+            ]
+          }
+        }
+      }]
   },
   "sideContent": {
     "contactList": {
@@ -420,7 +438,7 @@
     },
     "eventListing": {
       "sidebarHeading": {
-        "title": "Upcoming Events"
+        "title": "Events"
       },
       "events": [
         {
@@ -435,7 +453,7 @@
             "summary": "Date"
           },
           "time": "Time",
-          "description": "This is a description of the event that will happen at a future date"
+          "description": "Description of the event"
         }
       ],
       "more": null

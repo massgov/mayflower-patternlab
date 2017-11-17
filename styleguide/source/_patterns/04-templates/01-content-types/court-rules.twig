@@ -49,6 +49,13 @@
           {% set headerTags = mainContent.references %}
           {% include "@molecules/header-tags.twig" %}
         {% endif %}
+
+        {% if mainContent.optionalContents %}
+          {% for content in mainContent.optionalContents %}
+            {% include content.path with content.data %}
+          {% endfor %}
+        {% endif %}
+
       </div>
       <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
         {% if sideContent.contactList %}
