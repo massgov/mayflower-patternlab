@@ -47,11 +47,9 @@ export default function (window,document,$,undefined) {
      *  The data structure which the pattern expects in order to render.
      */
     self.renderPattern = function(pattern,data) {
-      // @todo use async: https://github.com/twigjs/twig.js/wiki#ajax-templates
       let template = Twig.twig({
         href: self.getPatternPath(pattern),
         id: pattern,
-        async: false,
         allowInlineIncludes: true,
         // Set ma.patternPaths in your implementation's env.js file (see /source/_meta/_00-foot.twig)
         namespaces: {
@@ -62,17 +60,17 @@ export default function (window,document,$,undefined) {
           'templates': ma.patternPaths['@templates'],
           'pages': ma.patternPaths['@pages'],
           'meta': ma.patternPaths['@meta']
+        },
+        async: true,
+        load: function(template) {
+          // Get compiled template with data.
+          let markup = template.render(data);
+          // Render markup in parent ajax-pattern component.
+          $element.html(markup);
+          // Trigger an event exposing the context for any listening pattern js module initialization.
+          $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
         }
       });
-
-      let markup = Twig.twig({
-        ref: pattern
-      }).render(data);
-
-      $element.html(markup);
-
-      // Trigger an event exposing the context for any listening pattern js module initialization.
-      $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
     };
 
     /**
