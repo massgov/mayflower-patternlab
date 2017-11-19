@@ -11,7 +11,6 @@ dependencies:
   override:
     - php core/console --generate
     - npm install
-    - npm rebuild node-sass --force
 
 test:
   override:
