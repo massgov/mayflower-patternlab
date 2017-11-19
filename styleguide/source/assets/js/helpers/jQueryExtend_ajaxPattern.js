@@ -120,6 +120,7 @@ export default function (window,document,$,undefined) {
         promise.reject()
       });
 
+
       return promise;
     };
 
