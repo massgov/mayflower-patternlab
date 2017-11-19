@@ -61,7 +61,7 @@ export default function (window,document,$,undefined) {
           'pages': ma.patternPaths['@pages'],
           'meta': ma.patternPaths['@meta']
         },
-        async: true,
+        async: true, // Included/extended patterns loaded synchronously: https://github.com/twigjs/twig.js/issues/426
         load: function(template) {
           // Get compiled template with data.
           let markup = template.render(data);
