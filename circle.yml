@@ -1,6 +1,8 @@
 machine:
   php:
     version: 5.5.36
+  node:
+    version: 8.2.0
 
 general:
   artifacts:
