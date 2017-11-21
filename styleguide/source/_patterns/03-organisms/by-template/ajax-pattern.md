@@ -15,7 +15,7 @@ This example implementation (see the data `ajaxPattern.json` file) includes Emer
   * The intended pattern will render as is, if:
        - the endpoint is valid
        - data matching the structure for `ajaxPattenr.renderPattern` is received
-  * If the endpoint will not provide data matching the structure, a custom selector can be passed into the component which will provide a hook for a custom transform function to create the necessary data structure. In this case, the implementation should include JavaScript that uses the `MassAjaxPattern jQuery plugin`, passing in a function that transforms the data from the endpoint into the structure needed to render `ajaxPattern.renderPattern`.
+  * If the endpoint will not provide data matching the structure, a custom selector can be passed into the component which will provide a hook for a custom transform function to create the necessary data structure. In this case, the implementation should include JavaScript that uses the `MassAjaxPattern jQuery plugin`, passing in a function that transforms the data from the endpoint into the structure needed to render `ajaxPattern.renderPattern`.  If there is no data and the pattern should not be rendered, then the transform function should return an empty object javascript `{}`.
   * See usage guidelines for the child pattern (i.e. the value of `ajaxPattern.renderPattern`)
 
 ### JavaScript Used
@@ -42,7 +42,7 @@ ajaxAlerts: {
 ~~~
 
 ### Sample use of MassAjaxPattern
-
+See live example in `js/modules/ajaxPatternOverride.js` which is used on (@pages/guide)[/?pages-guide]
 ```javascript
 $('.js-ajax-pattern-override').each(function(){
     // Get the endpoint which is passed in as ajaxAlerts.endpoint to organism data attribute.
