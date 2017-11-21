@@ -1,0 +1,16 @@
+{% set endpoint = ajaxAlerts.endpoint ?: '' %}
+{% set selector = ajaxAlerts.customSelector ?: 'js-ajax-alerts' %}
+<div class="ma__ajax-alerts ma__ajax-alerts--no-alerts {{ selector }}" data-js-alerts-endpoint="{{ endpoint }}">
+  <section class="ma__emergency-alerts js-accordion js-emergency-alerts" data-id="">
+    <div class="ma__emergency-alerts__header">
+      <div class="ma__emergency-alerts__container">
+        <div class="js-ajax-alerts-header-content"></div>
+        <div class="ma__emergency-alerts__header-interface js-accordion-link"></div>
+      </div>
+    </div>
+    <div class="ma__emergency-alerts__content js-accordion-content">
+      <div class="ma__emergency-alerts__container js-ajax-alerts-content"></div>
+    </div>
+    <div class="ma__emergency-alerts__interface js-accordion-link"></div>
+  </section>
+</div>
