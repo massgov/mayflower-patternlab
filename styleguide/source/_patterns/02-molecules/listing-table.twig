@@ -4,7 +4,19 @@
       {% for row in listingTable.rows %}
         <tr>
           <th scope="row">{{ row.label }}</th>
-          <td class="ma__rich-text">{{ row.text|raw }}</td>
+          {# Backwards compatible with 5.8.x where listingTable.rows array item object expects a label and text string instead of a label and an array of strings. #}
+          {% if row.text %}
+            {% set row = row|merge({'items': [{
+              "text": row.text
+            }]}) %}
+          {% endif %}
+          {% if row.items %}
+            <td class="ma__rich-text">
+              {% for item in row.items %}
+                <span class="ma__listing-table__data-item">{{ item.text|raw }}</span>
+              {% endfor %}
+            </td>
+          {% endif %}
         </tr>
       {% endfor %}
     </table>
