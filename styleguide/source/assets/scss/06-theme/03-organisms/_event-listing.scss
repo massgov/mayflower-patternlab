@@ -1,5 +1,10 @@
 .ma__event-listing {
 
+  &__empty {
+    font-style: italic;
+    font-weight: 500;
+  }
+
   &--grid &__item {
     border-color: $c-bd-divider;
 
