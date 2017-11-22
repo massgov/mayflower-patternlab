@@ -50,10 +50,9 @@
           {% include "@molecules/header-tags.twig" %}
         {% endif %}
 
-        {% if mainContent.optionalContents %}
-          {% for content in mainContent.optionalContents %}
-            {% include content.path with content.data %}
-          {% endfor %}
+        {% if mainContent.updates %}
+          {% set listingTable = mainContent.updates %}
+          {% include "@molecules/listing-table.twig" %}
         {% endif %}
 
       </div>

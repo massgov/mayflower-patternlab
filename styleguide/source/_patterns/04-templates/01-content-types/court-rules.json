@@ -349,24 +349,23 @@
         }
       ]
     },
-    "optionalContents": [
-      {
-        "path": "@molecules/listing-table.twig",
-        "data": {
-          "listingTable": {
-            "rows": [
-              {
-                "label": "Updates:",
-                "text": "Amended November 16, 2017"
-              },
-              {
-                "label": "See more",
-                "text": "Placeholder. I'm not sure how to do this yet."
-              }
-            ]
-          }
+    "updates": {
+      "rows": [
+        {
+          "label": "Updates:",
+          "visibleItems": 2,
+          "moreLabel": "show more updates",
+          "lessLabel": "show less updates",
+          "items": [{
+            "text": "<a href=\"#\">Amended September 24, 2015, effective January 1, 2016</a>"
+          },{
+            "text": "Amended July 17, 2007 effective October 1, 2007"
+          },{
+            "text": "Amended June 2, 2003 effective October 18, 2003"
+          }]
         }
-      }]
+      ]
+    }
   },
   "sideContent": {
     "contactList": {
