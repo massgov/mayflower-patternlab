@@ -60,25 +60,19 @@
     }
   }
 
-  &__data-item {
-    display: block;
-
-    &--dynamic {
-      transition: height .75s ease, opacity 0.5s ease;
-      opacity: 0;
-      height: 0;
-      overflow: hidden;
-
-      td.is-open & {
-        opacity: 1;
-        height: auto;
-      }
-    }
-  }
-
   td {
     font-size: 20px;
+  }
 
+  &__data-item {
+    display: block;
+  }
+
+  &__extra {
+    display: none;
+  }
+
+  &__expand {
     > button {
       @include ma-button-reset;
       @include ma-link-underline;
@@ -105,10 +99,8 @@
       @media ($bp-x-small-max) {
         display: block;
       }
-    }
 
-    &.is-open {
-      > button {
+      td.is-open & {
         &:after {
           transform: translateY(-55%) rotate(-135deg);
         }

@@ -4,7 +4,7 @@
     border-top-color: $c-bd-divider;
   }
 
-  td {
+  &__expand {
     > button {
       color: $c-theme-primary;
       font-weight: 500;
