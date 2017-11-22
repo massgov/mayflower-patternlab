@@ -8,6 +8,9 @@
       "text": "The Massachusetts State Ethics Commission"
     },{
       "label": "Regulatory authority:",
+      "visibleItems": 2,
+      "moreLabel": "show more updates",
+      "lessLabel": "show less updates",
       "items": [{
         "text": "760 CMR 4.00: M.G.L. c. 121B §§ 26, 29, 31 and 34;"
       },{

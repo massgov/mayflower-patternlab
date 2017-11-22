@@ -60,11 +60,65 @@
     }
   }
 
-  td {
-    font-size: 20px;
-  }
-
   &__data-item {
     display: block;
+
+    &--dynamic {
+      transition: height .75s ease, opacity 0.5s ease;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+
+      td.is-open & {
+        opacity: 1;
+        height: auto;
+      }
+    }
+  }
+
+  td {
+    font-size: 20px;
+
+    > button {
+      @include ma-button-reset;
+      @include ma-link-underline;
+      @include ma-chevron;
+      font-size: 19px;
+
+      &:after {
+        opacity: .5;
+        margin-left: 0;
+        border-width: 3px;
+        height: 8px;
+        width: 8px;
+        transform: translateY(-45%) rotate(45deg);
+      }
+
+      span:first-child {
+        display: inline;
+      }
+
+      span:nth-child(2) {
+        display: none;
+      }
+
+      @media ($bp-x-small-max) {
+        display: block;
+      }
+    }
+
+    &.is-open {
+      > button {
+        &:after {
+          transform: translateY(-55%) rotate(-135deg);
+        }
+        span:first-child {
+          display: none;
+        }
+        span:nth-child(2) {
+          display: inline;
+        }
+      }
+    }
   }
 }

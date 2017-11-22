@@ -3,4 +3,11 @@
   tr + tr {
     border-top-color: $c-bd-divider;
   }
+
+  td {
+    > button {
+      color: $c-theme-primary;
+      font-weight: 500;
+    }
+  }
 }

@@ -11,10 +11,22 @@
             }]}) %}
           {% endif %}
           {% if row.items %}
-            <td class="ma__rich-text">
-              {% for item in row.items %}
+            {% set visibleItems = row.visibleItems ?: 2 %}
+            {% set moreLabel = row.moreLabel ?: "show more updates" %}
+            {% set lessLabel = row.lessLabel ?: "show less updates" %}
+            {% set id = row.label|lower|trim(':')|replace({' ': '-'}) ~ "-data" %}
+            <td id="{{ id }}" class="ma__rich-text js-listing-table-data-container" data-ma-listing-table-visible-items="{{ visibleItems }}">
+              {% for item in row.items[:visibleItems] %}
                 <span class="ma__listing-table__data-item">{{ item.text|raw }}</span>
               {% endfor %}
+              {% for item in row.items[visibleItems:last] %}
+                <span class="ma__listing-table__data-item ma__listing-table__data-item--dynamic">{{ item.text|raw }}</span>
+              {% endfor %}
+              {% if row.items|length > visibleItems %}
+                <button type="button" class="js-listing-table-button" aria-expanded="false" aria-controls="{{ id }}">
+                  <span>{{ moreLabel }}</span><span>{{ lessLabel }}</span>
+                </button>
+              {% endif %}
             </td>
           {% endif %}
         </tr>

@@ -14,6 +14,7 @@ import hideAlert                  from "./modules/hideAlert.js";
 import keywordSearch              from "./modules/keywordSearch.js";
 import locationFilters            from "./modules/locationFilters.js";
 import locationListing            from "./modules/locationListing.js";
+import listingTable               from "./modules/listingTable.js";
 import mainNav                    from "./modules/mainNav.js";
 import mobileNav                  from "./modules/mobileNav.js";
 import orgSelector                from "./modules/orgSelector.js";
