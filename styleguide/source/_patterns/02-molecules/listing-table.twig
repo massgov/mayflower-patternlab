@@ -14,20 +14,18 @@
           {% if row.items %}
             {# Get configured number of visible items. #}
             {% set visibleItems = row.visibleItems ?: 2 %}
-
             {# Determine if we need an accordion. #}
             {% if row.items|length > visibleItems %}
-              {% set accordionClass = "js-accordion" %}
               {% set inlineAccordion = true %}
+              {% set accordionClass = " js-accordion" %}
+              {# Get the value of the show/hide button text. #}
+              {% set moreLabel = row.moreLabel ?: "show more" %}
+              {% set lessLabel = row.lessLabel ?: "show less" %}
             {% endif %}
 
-            {# Get the value of the show/hide button text. #}
-            {% set moreLabel = row.moreLabel ?: "show more" %}
-            {% set lessLabel = row.lessLabel ?: "show less" %}
-
-            <td class="ma__rich-text {{ accordionClass }}">
+            <td class="ma__rich-text{{ accordionClass }}">
               {% if inlineAccordion %}
-                {# Separate items into visible + extra. #}
+                {# Separate items into visible + extra for accordion. #}
                 {% for item in row.items[:visibleItems] %}
                   <span class="ma__listing-table__data-item">{{ item.text|raw }}</span>
                 {% endfor %}
