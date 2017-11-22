@@ -113,4 +113,9 @@
       }
     }
   }
+
+  .main-content .ma__header-tags + & {
+    border-top: 1px solid;
+    margin-top: .5em;
+  }
 }

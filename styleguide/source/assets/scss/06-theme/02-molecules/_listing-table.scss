@@ -10,4 +10,8 @@
       font-weight: 500;
     }
   }
+
+  .main-content .ma__header-tags + & {
+    border-color: $c-bd-divider;
+  }
 }
