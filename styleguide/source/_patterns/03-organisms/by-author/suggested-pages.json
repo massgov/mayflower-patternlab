@@ -54,6 +54,12 @@
         "text": "Title Link IV",
         "info": ""
       }
-    }]
+    }],
+    "more":{
+      "href": "#",
+      "text": "See all related locations",
+      "info": "",
+      "chevron": true
+    }
   }
 }

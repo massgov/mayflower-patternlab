@@ -8,6 +8,7 @@ This Pattern shows a collection of images and links to other pages on the site.
 * Illustrated link
 * Decorative Link
 * Image
+* Link
 
 ### Variant options
 * The pattern can be shown with [Illustrated Links](./?p=organisms-suggested-pages-guide)
@@ -30,5 +31,8 @@ This Pattern shows a collection of images and links to other pages on the site.
       type: decorativeLink / required
     }
   }]
+  "more": {
+    type: link / optional
+  }
 }
 ~~~
