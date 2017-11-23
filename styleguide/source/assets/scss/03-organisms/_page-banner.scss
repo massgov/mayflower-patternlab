@@ -1,9 +1,10 @@
 $page-banner-icon-width: $column + $gutter;
+$page-banner-height: 330px;
 
 .ma__page-banner {
   background-size: cover;
   background-position: center center;
-  height: 400px;
+  height: $page-banner-height;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -49,6 +50,7 @@ $page-banner-icon-width: $column + $gutter;
     @include clearfix;
     height: auto;
     min-height: 450px;
+    padding-right: 0px; //fix gap on mobile
   }
 
   &--overlay &__container {
@@ -64,6 +66,9 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &__content {
+    display: flex;
+      align-items: center;
+      flex-wrap: wrap;
     font-size: 1rem;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
@@ -73,9 +78,6 @@ $page-banner-icon-width: $column + $gutter;
     z-index: 1;
 
     @media ($bp-x-small-min) {
-      display: flex;
-        align-items: center;
-        flex-wrap: wrap;
       margin-right: 70px;
       padding-top: 50px;
       padding-right: 80px;
@@ -133,10 +135,10 @@ $page-banner-icon-width: $column + $gutter;
   }
 
   &--columns &__content {
-    height: 400px;
+    height: $page-banner-height;
     max-width: 640px;
     position: relative;
-      top: 200px;
+      top: calc(#{$page-banner-height}/2);
 
     @media ($bp-medium-min) {
       height: 100%;
@@ -149,6 +151,7 @@ $page-banner-icon-width: $column + $gutter;
   &__icon {
     padding-right: 30px;
     width: 75px;
+    display: none;
 
     @media ($bp-x-small-min) {
       transform: skew(30deg);
@@ -156,6 +159,7 @@ $page-banner-icon-width: $column + $gutter;
 
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
+      display: inline-block;
     }
 
     & > svg {
@@ -310,7 +314,7 @@ $page-banner-icon-width: $column + $gutter;
   &--columns &__image {
     background-position: 50% 50%;
     background-size: cover;
-    height: 400px;
+    height: $page-banner-height;
     position: absolute;
       right: 0;
       top: 0;
