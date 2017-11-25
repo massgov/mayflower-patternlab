@@ -1,4 +1,5 @@
 var gulp   = require("gulp"),
+    copy   = require("gulp-copy"),
     quench = require("../quench.js"),
     debug  = require("gulp-debug");
 
@@ -9,7 +10,7 @@ module.exports = function copyTwigTask(config, env){
         src: [
             config.patternLabRoot + "/source/_patterns/**/*.twig"
         ],
-        dest: config.dest + "/assets"
+        dest: "public/assets/patterns"
     };
 
     // register the watch
@@ -21,7 +22,8 @@ module.exports = function copyTwigTask(config, env){
 
         return gulp.src(twig.src, { base: config.root })
             .pipe(quench.drano())
-            .pipe(gulp.dest(twig.dest))
+            .pipe(copy(twig.dest,{prefix: 2}))
+            .pipe(gulp.dest(config.dest))
             .pipe(debug({title: "copyTwig:"}));
     });
 };
