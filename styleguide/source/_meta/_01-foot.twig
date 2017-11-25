@@ -1,4 +1,4 @@
-  
+
     <!--DO NOT REMOVE-->
     {{ patternLabFoot | raw }}
     <script>
@@ -6,7 +6,7 @@
       // path to where the handlebar templates are being stored.
       ma.themePath = "{{ url.domain }}/{{ url.assetsPath }}";
       // path to where twig templates are being stored (for twigJS).
-      ma.twigPath = ma.themePath + "/_patterns";
+      ma.twigPath = ma.themePath + "/patterns";
       ma.patternPaths = {
         '@base': ma.twigPath + "/00-base/",
         '@atoms': ma.twigPath + "/01-atoms/",
@@ -36,11 +36,11 @@
 
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&v=3.28&libraries={{ mapLibraries }}&callback=initGoogleMaps"></script>
 
-    <script> 
+    <script>
       try {
         if($('.main-content').length === 0){
           var json = JSON.parse($("#sg-pattern-data-footer").html()),
-          
+
           data = json.patternBreadcrumb.patternType;
 
           if(data !== 'templates' && data !== 'pages') {

@@ -1,4 +1,5 @@
 export default function (window,document,$,undefined) {
+  'use strict';
   // Object-orientated approach to jQuery plugin building, so as to not
   // pollute global namespace or a complicated switch based on passed params.
   let ajaxPattern = function(element, options) {
