@@ -178,36 +178,42 @@ $rich-text-spacing-mobile: 1.5rem;
     margin-bottom: 0 !important;
   }
 
+  // Indent courts types rich text content as outline
   .ma__policy-advisory__content & {
+
+    &__indent[data-ma-heading-parent='H2'] {
+      margin-left: 20px;
+    }
+
     h3 {
       margin-left: 20px;
+    }
+
+    &__indent[data-ma-heading-parent='H3'] {
+      margin-left: 40px;
     }
 
     h4 {
       margin-left: 40px;
     }
 
+    &__indent[data-ma-heading-parent='H4'] {
+      margin-left: 60px;
+    }
+
     h5 {
       margin-left: 60px;
+    }
+
+    &__indent[data-ma-heading-parent='H5'] {
+      margin-left: 80px;
     }
 
     h6 {
       margin-left: 80px;
     }
 
-    &__indent20 {
-      margin-left: 20px;
-    }
-    &__indent40 {
-      margin-left: 40px;
-    }
-    &__indent60 {
-      margin-left: 60px;
-    }
-    &__indent80 {
-      margin-left: 80px;
-    }
-    &__indent100 {
+    &__indent[data-ma-heading-parent='H6'] {
       margin-left: 100px;
     }
   }
