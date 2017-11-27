@@ -25,18 +25,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## 5.8.2
 
 ### Added
-- DP-4534 - Add a button to toggle showing more/less "Related To:" items in [@molecules/header-tags](http://mayflower.digital.mass.gov/?p=molecules-header-tags). [PR #594](https://github.com/massgov/mayflower/pull/594)
-- DP-6111 - Add empty state for [event listings](http://mayflower.digital.mass.gov/?p=organisms-event-listing). [PR #617](https://github.com/massgov/mayflower/pull/617)
-- DP-5385 - Add optional more link to [suggested pages](http://mayflower.digital.mass.gov/?p=organisms-suggested-pages). [PR #647](https://github.com/massgov/mayflower/pull/647)
+- DP-4534 - Add a generalized button to toggle showing more/less "Related To:" items in [@molecules/header-tags](http://mayflower.digital.mass.gov/?p=molecules-header-tags). [PR #594](https://github.com/massgov/mayflower/pull/594)
+- DP-6111 - Add empty state for [event listings](http://mayflower.digital.mass.gov/?p=organisms-event-listing) to show when there are no upcoming events. [PR #617](https://github.com/massgov/mayflower/pull/617)
+- DP-5385 - Add optional "see more" link to [suggested pages](http://mayflower.digital.mass.gov/?p=organisms-suggested-pages). [PR #647](https://github.com/massgov/mayflower/pull/647)
 
 ### Changed
-- DP-5858 - Updated print styles to hide feedback and floating button and show expanded accordions content. [PR #625](https://github.com/massgov/mayflower/pull/625)
-- DP-5518 - Fix feedback form wrapper layout at bottom of page to have child content flow properly. [PR #608](https://github.com/massgov/mayflower/pull/608)
+- DP-5858 - Updated print styles to hide feedback and floating button and show expanded content from normally collapsed accordion sections. [PR #625](https://github.com/massgov/mayflower/pull/625)
+- DP-5518 - Fix feedback form wrapper layout at bottom of page to have child content flow properly (i.e textarea is full width). [PR #608](https://github.com/massgov/mayflower/pull/608)
 - DP-5515 - Make service page title & organization title sentence case. [PR #615](https://github.com/massgov/mayflower/pull/615)
-- DP-4572 - Change composition of [Press Release](http://mayflower.digital.mass.gov/?p=pages-press-release) location to be now inline the rich text area. [PPR #599](https://github.com/massgov/mayflower/pull/599)
+- DP-4572 - Change [Press Release](http://mayflower.digital.mass.gov/?p=pages-press-release) location to be inline the rich text area and upper case. [PPR #599](https://github.com/massgov/mayflower/pull/599)
 - DP-5388 - Expand [page banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner) height to provide more ample room for longer titles. [PR #641](https://github.com/massgov/mayflower/pull/641)
-- DP-5523 - Fix action finder background where it is used multiple times like on [service pages](http://mayflower.digital.mass.gov//?p=pages-service). [PR #639](https://github.com/massgov/mayflower/pull/639)
-- DP-3060 - Remove unecessary outline on non-interactive elements. [PR #614](https://github.com/massgov/mayflower/pull/614)
+- DP-5523 - Fix action finder background color overlays where it is used multiple times, like on [service pages](http://mayflower.digital.mass.gov//?p=pages-service). [PR #639](https://github.com/massgov/mayflower/pull/639)
+- DP-3060 - Remove unecessary outline on non-interactive elements when users use the side-navigation on [how-to pages](http://mayflower.digital.mass.gov/?p=pages-howto). [PR #614](https://github.com/massgov/mayflower/pull/614)
 - DP-5636 - On mobile, remove dropshadow between rows on [@organisms/stacked-rows](http://mayflower.digital.mass.gov/?p=organisms-stacked-row-section). [PR #637](https://github.com/massgov/mayflower/pull/637)
 - DP-6106 - Fix [@organisms/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner) padding & margins on mobile. [PR #636](https://github.com/massgov/mayflower/pull/636)
 
