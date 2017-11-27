@@ -27,5 +27,11 @@
         {% endfor %}
       {% endif %}
     </div>
+    {% if suggestedPages.more %}
+      <div class="ma__suggested-pages__more">
+        {% set link = suggestedPages.more %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+    {% endif %}
   </div>
 </section>
