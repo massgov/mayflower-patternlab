@@ -1,14 +1,19 @@
 export default function (window,document,$,undefined) {
   "use strict";
-  $('.js-header-tag-link').each(function() {
+  $('.js-header-tag-link').each(function(index) {
 
     let $showHideButton = $('.js-header-tag-link .js-header-tag-button'),
-        $relatedItems = $('.js-header-tag-link a:nth-child(n+4)'),
-        $parent = $showHideButton.parent();
+        $dynamicItems = $('.js-header-tag-link a:nth-child(n+4)'),
+        $parent = $showHideButton.parent(),
+        id = $parent.attr('id') || 'headerTags' + (index + 1),
+        open = $parent.hasClass('is-open');
 
-      // Hide items after 3 items.
-      if ($relatedItems.length) {
+      // Set the id attribute (respects default if set).
+      $parent.attr('id', id);
+
+      if ($dynamicItems.length) {
         // Show our see button if we have more than three items.
+        $showHideButton.attr('aria-expanded',open).attr('aria-controls', id);
         $showHideButton.show();
       }
 
@@ -18,11 +23,11 @@ export default function (window,document,$,undefined) {
 
         if ($parent.hasClass('is-open')) {
           $showHideButton.attr('aria-expanded', 'true');
-          $relatedItems.show();
+          $dynamicItems.show();
         }
         else {
           $showHideButton.attr('aria-expanded', 'false');
-          $relatedItems.hide();
+          $dynamicItems.hide();
         }
       });
 
