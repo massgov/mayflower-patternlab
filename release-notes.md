@@ -18,10 +18,30 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Changed
 
 ### Removed
-- DP-5914 - Remove extra padding on callout links
-- DP-5636 - On mobile, remove dropshadow between rows on stacked row section.
+
 
 ### Migrate Path
+
+## 5.8.2
+
+### Added
+- DP-4534 - Add a button to toggle showing more/less "Related To:" items. [PR #594](https://github.com/massgov/mayflower/pull/594)
+- DP-6111 - Add empty state for event listings. [PR #617](https://github.com/massgov/mayflower/pull/617)
+- DP-5385 - Add optional more link to suggested pages. [PR #647](https://github.com/massgov/mayflower/pull/647)
+
+### Changed
+- DP-5858 - Updated print styles to hide feedback and floating button and show expanded accordions content. [PR #625](https://github.com/massgov/mayflower/pull/625)
+- DP-5518 - Fix feedback form wrapper layout at bottom of page to have child content flow properly. [PR #608](https://github.com/massgov/mayflower/pull/608)
+- DP-5515 - Make service page section & update organization title sentence case. [PR #615](https://github.com/massgov/mayflower/pull/615)
+- DP-4572 - Change composition of Press Release location to be now inline the rich text area. [PPR #599](https://github.com/massgov/mayflower/pull/599)
+- DP-5388 - Expand service page banner height to provide more ample room for longer titles. [PR #641](https://github.com/massgov/mayflower/pull/641)
+- DP-5523 - Fix action finder background. [PR #639](https://github.com/massgov/mayflower/pull/639)
+- DP-3060 - Remove unecessary outline on non-interactive elements. [PR #614](https://github.com/massgov/mayflower/pull/614)
+- DP-5636 - On mobile, remove dropshadow between rows on stacked row section. [PR #637](https://github.com/massgov/mayflower/pull/637)
+- DP-6106 - Fix topic page banner padding & margins on mobile. [PR #636](https://github.com/massgov/mayflower/pull/636)
+
+### Removed
+- DP-5914 - Remove extra padding on callout links. [PR #626](https://github.com/massgov/mayflower/pull/626)
 
 
 ## 5.8.1
