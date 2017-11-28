@@ -14,15 +14,29 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## 5.9.0 (11/27/2017)
 
 ### Added
+- DP-5385 - The [Suggested Pages](http://mayflower.digital.mass.gov/?p=organisms-suggested-pages) pattern (i.e. Related Locations) now includes an optional more link so that it can be implemented to only render 3 entries and link to the rest.
+- DP-5858 - Styles have been added which hide the "Tell us what you think" button and ensure that contact accordions are expanded when a page is printed.
+- DP-6111 - Event teaser listings now have a ["no event" state](http://mayflower.digital.mass.gov/?p=organisms-event-listing-past-as-grid) which will render when the pattern is included on a page but no future events are provided.
 
 ### Changed
+- DP-4534 - The [header tags](http://mayflower.digital.mass.gov/?p=molecules-header-tags) molecule (i.e. relationship indicators) has been updated to support 3+ tags by adding a show/hide button to collapse and expand the tags.
+- DP-4572 - The dateline (i.e. BOSTON -) style on a press release page has been updated to be bold with an emdash appended.
+- DP-5388 - The page banner on a Service Page will now fit longer text content (i.e. up to 400px in height).
+- DP-5515 - [Service](http://mayflower.digital.mass.gov/?p=pages-service) and [Org](http://mayflower.digital.mass.gov/?p=pages-organization) page "action finder" titles (i.e. What would you like to do?) have been updated to sentence case.
+- DP-5518 - The style for the feedback form (i.e. Did you find what you're looking for) textarea is more consistent when a user clicks yes / no.
+- DP-5523 - When appearing consecutively (i.e. on a [Service Page](http://mayflower.digital.mass.gov/?p=pages-service) the grey background of the second "action finder" (i.e. What you need to know) will line up more consistently with the first.
+- DP-5914 - The spacing has been fixed on [Topic page Section links](http://mayflower.digital.mass.gov/?p=pages-topic) (i.e. Topic cards) which display Callout links (i.e. links to Services).
+- DP-6106 - The mobile styling for the banner on [Topic pages](http://mayflower.digital.mass.gov/?p=pages-topic&w=350px) has been made more consistent to other page banners: the height is flexible, the content is vertically centered, the icon removed, and the colored background fills the width of the screen.
 
 ### Removed
+- DP-3060 - The outline has been removed from the Heading which appeared when a [How-To](http://mayflower.digital.mass.gov/?p=pages-howto) subnav anchor link (i.e. "Next Steps") is clicked.
 - DP-5914 - Remove extra padding on callout links
-- DP-5636 - On mobile, remove dropshadow between rows on stacked row section.
 
 ### Migrate Path
-
+- DP-5385 - To use the new more link for Suggested Pages, populate the optional `suggestPages.more` property with the data for a Link pattern. 
+- DP-4572 - To apply this style fix, wrap your press release dateline (i.e. BOSTON) text in `span.ma__rich-text__flame`. (See [massgov/mass PR #1304](https://github.com/massgov/mass/pull/1304/files))
+- DP-5515 - The title text for "action finders" (i.e. What you need to know) are configurable, so just update your implementation to use sentence case to meet our styleguide standards!
+- DP-6111 - To use the new "no events" state for a listing of Event Teasers (i.e. on Org pages), populate the `eventListing.emptyText` and `eventListing.pastMore` properties and leave `eventListing.events` array empty. (See [massgov/mass PR #1443](https://github.com/massgov/mass/pull/1443/files)) 
 
 ## 5.8.1
 
