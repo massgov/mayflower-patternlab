@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
-## 5.9.0 (11/27/2017)
+## 5.9.1 (11/28/2017)
 
 ### Added
 - DP-5385 - The [Suggested Pages](http://mayflower.digital.mass.gov/?p=organisms-suggested-pages) pattern (i.e. Related Locations) now includes an optional more link so that it can be implemented to only render 3 entries and link to the rest.
