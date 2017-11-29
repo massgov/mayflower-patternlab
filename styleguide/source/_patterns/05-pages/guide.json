@@ -6,7 +6,7 @@
   "backToTopButton": true,
 
   "ajaxEmergencyAlerts": {
-    "endpoint":"../../assets/data/emergency-alerts.json",
+    "endpoint":"../../assets/data/ajax-alerts.json",
     "renderPattern":"@organisms/by-template/emergency-alerts.twig",
     "customSelector": "js-ajax-pattern-override"
   },
