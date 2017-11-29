@@ -4,6 +4,10 @@ $rich-text-spacing-mobile: 1.5rem;
 .ma__rich-text {
   @include clearfix;
 
+  &__flame {
+    text-transform: uppercase;
+  }
+
   &--description {
     margin-bottom: 1rem;
   }
