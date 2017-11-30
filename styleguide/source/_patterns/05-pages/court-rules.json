@@ -1,0 +1,620 @@
+{
+  "pageHeader": {
+    "category": "Rule of Court Category",
+    "subCategory": {
+      "compHeading": {
+        "title": "Rule of Court Optional Sub-category",
+        "level": 3,
+        "color": "",
+        "id": "",
+        "centered": ""
+      }
+    },
+    "divider": false,
+    "prefix": "",
+    "title": "The Name of a Court Rule",
+    "subTitle": "",
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Term 1"
+      },{
+        "href": "#",
+        "text": "Term 2"
+      },{
+        "href": "#",
+        "text": "Term 3"
+      },{
+        "href": "#",
+        "text": "Term 4"
+      }]
+    },
+    "socialLinks": null,
+    "publishState": null,
+    "optionalContents": [
+      {
+        "path": "@molecules/listing-table.twig",
+        "data": {
+          "listingTable": {
+            "rows": [
+              {
+                "label": "Courts:",
+                "text": "This whole list is Optional"
+              },
+              {
+                "label": "Adopted Date:",
+                "text": "November 11, 2011"
+              },
+              {
+                "label": "Effective Date:",
+                "text":  "November 11, 2011"
+              },
+              {
+                "label": "Referenced Sources:",
+                "text": "760 CMR 4.00: M.G.L. c. 121B, §§ 26, 29, 31 and 34; M.G.L. c. 23B; E.O. 227, 390, 246, and 253"
+              },
+              {
+                "label": "Updates:",
+                "accordionContent": {
+                  "accordion": false,
+                  "isExpanded": false,
+                  "subTitle": null,
+                  "level": "",
+                  "visibleItems": 2,
+                  "items": [{
+                    "path": "@atoms/11-text/link.twig",
+                    "data": {
+                      "link": {
+                        "href": "#",
+                        "text":"Amended September 24, 2015, effective January 1, 2016;",
+                        "info": "",
+                        "chevron": ""
+                      }
+                    }
+                  },{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text" : "Amended July 17, 2007 effective October 1, 2007;"
+                      }
+                    }
+                  },{
+                    "path": "@atoms/11-text/link.twig",
+                    "data": {
+                      "link": {
+                        "href": "#",
+                        "text":"Amended September 24, 2015, effective January 1, 2016;",
+                        "info": "",
+                        "chevron": ""
+                      }
+                    }
+                  }],
+                  "decorativeLink": {
+                    "href": "#",
+                    "text": "Learn more about this ",
+                    "info": "Learn more about this generic"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is a court rules page, and this is an optional description field. For shorter content, authors may choose to use only the overview field. For longer content, this may be a place to summarize findings or to provide a short introduction."
+          }
+        }
+      }],
+    "widgets": null
+  },
+  "jumpLinks": {
+    "title": "In this Section",
+    "links": [
+      {
+        "text": "(a) Civil Cases",
+        "href": "civil-cases"
+      },{
+        "text": "(b) Criminal Cases",
+        "href": "criminal-cases"
+      },{
+        "text": "(c) General",
+        "href": "general"
+      },
+      {
+        "text": "Downloads",
+        "href": "downloads"
+      },
+      {
+        "text": "Contact",
+        "href": "contact"
+      }
+    ]
+  },
+  "mainContent": {
+    "contents": [
+      {
+        "compHeading": {
+          "title": "(a) Civil Cases",
+          "sub": false,
+          "color": "",
+          "id": "civil-cases",
+          "centered": ""
+        },
+        "rteElements": [
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Magistrates may hear and rule on the following motions in civil actions provided that such motions are uncontested or assented to in writing and provided further that neither parry is proceeding pro se:"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(1) For Entry of Default"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(2) For Entry of Default Judgment under Mass. R. Civ. P. 55(b)(1) or Dist./Mun. Cts. R. Civ. P., 55(b)(1)"
+              }
+            }
+          }, {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(3) To Amend any Pleading"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(4) To File a Responsive Pleading Late"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(5) For Order of Notice"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(6) To Strike Out and Answer Over Interrogatories"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(7) To Compel Answers to Interrogatories"
+              }
+            }
+
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(8) For Consolidation of Cases Pending in One Court"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(9) To Remove Default Entered by a Magistrate"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(10) To Permit Marriage Without Delay (Probate and Family Court Department)"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(11) To Waive the Thirty-Days Living Apart Requirement (Probate and Family Court Department)"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "(12) To Extend or Shorten Time or Continue a Hearing on a Motion"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Within a Department of the Trial Court, the Administrative Justice of the Department may delete or make additions to the motions enumerated in this section."
+              }
+            }
+          }
+        ]
+      },
+      {
+        "compHeading": {
+          "title": "(b) Criminal Cases",
+          "sub": false,
+          "color": "",
+          "id": "criminal-cases",
+          "centered": ""
+        },
+        "rteElements": [
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consectetur eligendi recusandae, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
+              }
+            }
+          }
+        ]
+      },{
+        "compHeading": {
+          "title": "(c) General",
+          "sub": false,
+          "color": "",
+          "id": "general",
+          "centered": ""
+        },
+        "rteElements": [
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt deleniti fuga consequuntur laudantium qui repellendus eveniet, culpa ipsum ullam libero quibusdam dolore, sit. Quasi alias sed atque saepe, tempora dolore dolor quod amet. Quaerat omnis illo, totam eligendi at."
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consectetur eligendi recusandae<a class=\"ma__rich-text__footnote js-rich-text-footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Lorem ipsum dolor sit amet, consectetur<a class=\"ma__rich-text__footnote js-rich-text-footnote\" id=\"footnoteref2\" title=\"source for this information\" href=\"#footnotemsg2\">2</a> adipisicing elit. Tenetur consectetur eligendi recusandae, blanditiis nisi quibusdam, dolor voluptas dolore unde eius, eos esse doloremque enim? Culpa delectus excepturi beatae eos quod distinctio, ipsam ratione ad architecto doloremque modi eius consectetur at facere. Nobis, laboriosam, officia. Itaque maiores porro voluptates, sint sed dolore! Omnis, iusto sed est!"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "formDownloads": {
+      "compHeading": {
+        "title": "Downloads",
+        "sub": false,
+        "color": "",
+        "id": "downloads",
+        "centered": ""
+      },
+      "downloadLinks": [
+        {
+          "downloadLink": {
+            "iconSize": "",
+            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "decorativeLink": {
+              "text": "PDF download item",
+              "href": "#",
+              "info": "",
+              "property": ""
+            },
+            "size": "30kb",
+            "format": "PDF"
+          }
+        }
+      ]
+    },
+    "contactList": {
+      "viewSpecific": false,
+      "compHeading": {
+        "title": "Contact",
+        "sub": false,
+        "color": "",
+        "id": "contact",
+        "centered": ""
+      },
+      "contacts": [
+        {
+          "accordion": true,
+          "isExpanded": false,
+          "subTitle": {
+            "href": "",
+            "text": "Person to Contact"
+          },
+          "groups": [
+            {
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [
+                {
+                  "type": "phone",
+                  "property": "",
+                  "label": "Main:",
+                  "link": {
+                    "href": "+17817401605",
+                    "text": "(781) 740-1605",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                }
+              ]
+            },
+            {
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "hidden": "",
+              "items": [
+                {
+                  "type": "online",
+                  "property": "",
+                  "label": "Email:",
+                  "link": {
+                    "href": "#",
+                    "text": "person@email.com",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "footnoteList": {
+      "items": [
+        {
+          "number": 1,
+          "target": "#footnoteref1",
+          "id": "footnotemsg1",
+          "richText": {
+            "property": "",
+            "rteElements": [
+              {
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "<b><i>Optional Description of this policy</i></b>"
+                  }
+                }
+              },
+              {
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "number": 2,
+          "target": "#footnoteref2",
+          "id": "footnotemsg2",
+          "richText": {
+            "property": "",
+            "rteElements": [
+              {
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "<b><i>Optional Description of this policy</i></b>"
+                  }
+                }
+              },
+              {
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph": {
+                    "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "references": {
+      "label": "Referenced Sources:",
+      "taxonomyTerms": [
+        {
+          "href": "#",
+          "text": "Reference 1"
+        },
+        {
+          "href": "#",
+          "text": "Reference 2"
+        }
+      ]
+    },
+    "updates": {
+      "rows": [{
+        "label": "Updates:",
+        "accordionContent": {
+          "accordion": false,
+          "isExpanded": false,
+          "subTitle": null,
+          "level": "",
+          "visibleItems": 2,
+          "items": [{
+            "path": "@atoms/11-text/link.twig",
+            "data": {
+              "link": {
+                "href": "#",
+                "text":"Amended September 24, 2015, effective January 1, 2016;",
+                "info": "",
+                "chevron": ""
+              }
+            }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text" : "Amended July 17, 2007 effective October 1, 2007;"
+              }
+            }
+          },{
+            "path": "@atoms/11-text/link.twig",
+            "data": {
+              "link": {
+                "href": "#",
+                "text":"Amended September 24, 2015, effective January 1, 2016;",
+                "info": "",
+                "chevron": ""
+              }
+            }
+          }],
+          "decorativeLink": {
+            "href": "#",
+            "text": "Learn more about this ",
+            "info": "Learn more about this generic"
+          }
+        }
+      }]
+    }
+  },
+  "sideContent": {
+    "contactList": {
+      "viewSpecific": true,
+      "compHeading": {
+        "title": "Contact",
+        "sub": false,
+        "color": "",
+        "id": "",
+        "centered": ""
+      },
+      "contacts": [
+        {
+          "subTitle": {
+            "href": "",
+            "text": "Person to Contact"
+          },
+          "groups": [
+            {
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "hidden": "",
+              "items": [
+                {
+                  "type": "online",
+                  "property": "",
+                  "label": "Email:",
+                  "link": {
+                    "href": "#",
+                    "text": "person@email.com",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pressListing": {
+      "sidebarHeading": {
+        "title": "Related"
+      },
+      "items": [
+        {
+          "eyebrow": "Letter Ruling",
+          "title": {
+            "href": "#",
+            "text": "Link to Ruling",
+            "info": "",
+            "property": ""
+          },
+          "date": "4/3/2017",
+          "org": "",
+          "description": null
+        },
+        {
+          "eyebrow": "Regulation",
+          "title": {
+            "href": "#",
+            "text": "Link to Regulation",
+            "info": "",
+            "property": ""
+          },
+          "date": "4/3/2017",
+          "org": "",
+          "description": null
+        },
+        {
+          "eyebrow": "Regulation",
+          "title": {
+            "href": "#",
+            "text": "Link to Regulation",
+            "info": "",
+            "property": ""
+          },
+          "date": "",
+          "org": "",
+          "description": null
+        }
+      ]
+    },
+    "eventListing": {
+      "sidebarHeading": {
+        "title": "Events"
+      },
+      "events": [
+        {
+          "title": {
+            "href": "#",
+            "text": "Name of Event",
+            "info": "",
+            "property": ""
+          },
+          "location": "location",
+          "date": {
+            "summary": "Date"
+          },
+          "time": "Time",
+          "description": "Description of the event"
+        }
+      ],
+      "more": null
+    }
+  }
+}
