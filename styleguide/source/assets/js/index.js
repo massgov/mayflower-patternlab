@@ -1,6 +1,5 @@
 import                            "./helpers/jQueryExtend.js";
 import                            "./helpers/jQueryExtend_ajaxPattern.js";
-import                            "./helpers/handlebarsHelpers.js";
 import ajaxPattern                from "./modules/ajaxPattern.js";
 import ajaxPatternOverride        from "./modules/ajaxPatternOverride.js";
 import accordions                 from "./modules/accordions.js";
