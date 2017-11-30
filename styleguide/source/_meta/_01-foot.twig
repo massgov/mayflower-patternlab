@@ -1,10 +1,21 @@
-  
+
     <!--DO NOT REMOVE-->
     {{ patternLabFoot | raw }}
     <script>
       var ma = ma || {};
       // path to where the handlebar templates are being stored.
       ma.themePath = "{{ url.domain }}/{{ url.assetsPath }}";
+      // path to where twig templates are being stored (for twigJS).
+      ma.twigPath = ma.themePath + "/patterns";
+      ma.patternPaths = {
+        '@base': ma.twigPath + "/00-base/",
+        '@atoms': ma.twigPath + "/01-atoms/",
+        '@molecules': ma.twigPath + "/02-molecules/",
+        '@organisms': ma.twigPath + "/03-organisms/",
+        '@templates': ma.twigPath + "/04-templates/",
+        '@pages': ma.twigPath + "/05-pages/",
+        '@meta': ma.twigPath + "/07-meta/"
+      };
     </script>
     <script src="{{ url.domain }}/{{ url.assetsPath }}/js/vendor-generated.js"></script>
     <script src="{{ url.domain }}/{{ url.assetsPath }}/js/index-generated.js"></script>
@@ -25,11 +36,11 @@
 
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyD5HXUVAA4VyRXVX50taVe2hDY8hy2JSdA&v=3.28&libraries={{ mapLibraries }}&callback=initGoogleMaps"></script>
 
-    <script> 
+    <script>
       try {
         if($('.main-content').length === 0){
           var json = JSON.parse($("#sg-pattern-data-footer").html()),
-          
+
           data = json.patternBreadcrumb.patternType;
 
           if(data !== 'templates' && data !== 'pages') {
