@@ -1,9 +1,9 @@
 {
   "pageHeader": {
-    "category": "Rule of Court Category",
+    "category": "Rule of Court Sample Page",
     "subCategory": {
       "compHeading": {
-        "title": "with Indentation",
+        "title": "Demonstrates rich text indentation ",
         "level": 3,
         "color": "",
         "id": "",
@@ -12,28 +12,23 @@
     },
     "divider": false,
     "prefix": "",
-    "title": "Example of a Rule of Court page with Indentation",
+    "title": "The Name of a Court Rule",
     "subTitle": "",
     "headerTags": {
       "label": "Related to:",
-      "taxonomyTerms": [
-        {
-          "href": "#",
-          "text": "Term 1"
-        },
-        {
-          "href": "#",
-          "text": "Term 2"
-        },
-        {
-          "href": "#",
-          "text": "Term 3"
-        },
-        {
-          "href": "#",
-          "text": "Term 4"
-        }
-      ]
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Term 1"
+      },{
+        "href": "#",
+        "text": "Term 2"
+      },{
+        "href": "#",
+        "text": "Term 3"
+      },{
+        "href": "#",
+        "text": "Term 4"
+      }]
     },
     "socialLinks": null,
     "publishState": null,
@@ -45,80 +40,54 @@
             "rows": [
               {
                 "label": "Courts:",
-                "text": "This whole list is Optional"
+                "items": [{
+                  "text": "This whole list is Optional"
+                }]
               },
               {
                 "label": "Adopted Date:",
-                "text": "November 11, 2011"
+                "items": [{
+                  "text": "November 11, 2011"
+                }]
               },
               {
                 "label": "Effective Date:",
-                "text": "November 11, 2011"
+                "items": [{
+                  "text":  "November 11, 2011"
+                }]
               },
               {
                 "label": "Referenced Sources:",
-                "text": "760 CMR 4.00: M.G.L. c. 121B, §§ 26, 29, 31 and 34; M.G.L. c. 23B; E.O. 227, 390, 246, and 253"
-              },
-              {
+                "visibleItems": 2,
+                "items": [{
+                  "text": "760 CMR 4.00: M.G.L. c. 121B, §§ 26, 29, 31 and 34;"
+                },{
+                  "text": "M.G.L. c. 23B; E.O. 227, 390, 246, and 253"
+                }]
+              },{
                 "label": "Updates:",
-                "accordionContent": {
-                  "accordion": false,
-                  "isExpanded": false,
-                  "subTitle": null,
-                  "level": "",
-                  "visibleItems": 2,
-                  "items": [
-                    {
-                      "path": "@atoms/11-text/link.twig",
-                      "data": {
-                        "link": {
-                          "href": "#",
-                          "text": "Amended September 24, 2015, effective January 1, 2016;",
-                          "info": "",
-                          "chevron": ""
-                        }
-                      }
-                    },
-                    {
-                      "path": "@atoms/11-text/paragraph.twig",
-                      "data": {
-                        "paragraph": {
-                          "text": "Amended July 17, 2007 effective October 1, 2007;"
-                        }
-                      }
-                    },
-                    {
-                      "path": "@atoms/11-text/link.twig",
-                      "data": {
-                        "link": {
-                          "href": "#",
-                          "text": "Amended September 24, 2015, effective January 1, 2016;",
-                          "info": "",
-                          "chevron": ""
-                        }
-                      }
-                    }
-                  ],
-                  "decorativeLink": {
-                    "href": "#",
-                    "text": "Learn more about this ",
-                    "info": "Learn more about this generic"
-                  }
-                }
+                "visibleItems": 2,
+                "moreLabel": "show more updates",
+                "lessLabel": "show less updates",
+                "items": [{
+                  "text": "<a href=\"#\">Amended September 24, 2015, effective January 1, 2016</a>"
+                },{
+                  "text": "Amended July 17, 2007 effective October 1, 2007"
+                },{
+                  "text": "Amended June 2, 2003 effective October 18, 2003"
+                }]
               }
             ]
           }
         }
-      },
-      {
+      },{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
-          "paragraph": {
+          "paragraph" : {
             "text": "This is a court rules page, and this is an optional description field. For shorter content, authors may choose to use only the overview field. For longer content, this may be a place to summarize findings or to provide a short introduction."
           }
         }
-      }
-    ],
+      }],
     "widgets": null
   },
   "jumpLinks": {
@@ -633,49 +602,21 @@
       ]
     },
     "updates": {
-      "rows": [{
-        "label": "Updates:",
-        "accordionContent": {
-          "accordion": false,
-          "isExpanded": false,
-          "subTitle": null,
-          "level": "",
+      "rows": [
+        {
+          "label": "Updates:",
           "visibleItems": 2,
+          "moreLabel": "show more updates",
+          "lessLabel": "show less updates",
           "items": [{
-            "path": "@atoms/11-text/link.twig",
-            "data": {
-              "link": {
-                "href": "#",
-                "text":"Amended September 24, 2015, effective January 1, 2016;",
-                "info": "",
-                "chevron": ""
-              }
-            }
+            "text": "<a href=\"#\">Amended September 24, 2015, effective January 1, 2016</a>"
           },{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph": {
-                "text" : "Amended July 17, 2007 effective October 1, 2007;"
-              }
-            }
+            "text": "Amended July 17, 2007 effective October 1, 2007"
           },{
-            "path": "@atoms/11-text/link.twig",
-            "data": {
-              "link": {
-                "href": "#",
-                "text":"Amended September 24, 2015, effective January 1, 2016;",
-                "info": "",
-                "chevron": ""
-              }
-            }
-          }],
-          "decorativeLink": {
-            "href": "#",
-            "text": "Learn more about this ",
-            "info": "Learn more about this generic"
-          }
+            "text": "Amended June 2, 2003 effective October 18, 2003"
+          }]
         }
-      }]
+      ]
     }
   },
   "sideContent": {
