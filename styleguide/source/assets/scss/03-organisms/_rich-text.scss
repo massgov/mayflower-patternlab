@@ -21,7 +21,7 @@ $rich-text-spacing-mobile: 1.5rem;
   .main-content--full .page-content > & {
     @include ma-container('restricted');
   }
-  
+
   .ma__split-columns__column > & {
     margin-bottom: 1em;
     max-width: 100%;
@@ -37,7 +37,7 @@ $rich-text-spacing-mobile: 1.5rem;
     line-height: 1;
     padding: 0 .3em;
     position: relative;
-      top: .25em;
+    top: .25em;
     vertical-align: top;
     transition: all ease .4s;
 
@@ -57,7 +57,7 @@ $rich-text-spacing-mobile: 1.5rem;
 
   h2 {
     padding-top: .75em;
-  
+
     &:first-child {
       padding-top: 0;
     }
@@ -101,7 +101,7 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
 
-// List styles
+  // List styles
   ul {
     list-style-type: disc;
     margin-bottom: $rich-text-spacing-mobile;
@@ -138,9 +138,9 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
 
-// end list styles
+  // end list styles
 
-// link styles
+  // link styles
   a {
     @include ma-link-underline;
     border-bottom-width: 1px;
@@ -150,9 +150,9 @@ $rich-text-spacing-mobile: 1.5rem;
     word-break: break-word;
   }
 
-// end link styles
+  // end link styles
 
-// TABLE styles
+  // TABLE styles
   table {
     margin-bottom: $rich-text-spacing-mobile;
     min-width: 450px;
@@ -171,10 +171,44 @@ $rich-text-spacing-mobile: 1.5rem;
       margin-bottom: 0;
     }
   }
-// end Table styles
+  // end Table styles
 
-// last element in the rich text content
+  // last element in the rich text content
   & > :last-child {
     margin-bottom: 0 !important;
+  }
+
+  .ma__policy-advisory__content & {
+    h3 {
+      margin-left: 20px;
+    }
+
+    h4 {
+      margin-left: 40px;
+    }
+
+    h5 {
+      margin-left: 60px;
+    }
+
+    h6 {
+      margin-left: 80px;
+    }
+
+    &__indent20 {
+      margin-left: 20px;
+    }
+    &__indent40 {
+      margin-left: 40px;
+    }
+    &__indent60 {
+      margin-left: 60px;
+    }
+    &__indent80 {
+      margin-left: 80px;
+    }
+    &__indent100 {
+      margin-left: 100px;
+    }
   }
 }
