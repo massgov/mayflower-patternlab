@@ -14,4 +14,5 @@ export default function (window,document,$,undefined) {
       });
     }
   });
-}(window,document,jQuery);
+}
+(window,document,jQuery);
