@@ -3,6 +3,18 @@
     "contentTitle": "The Details"
   },
 
+  "headerAlerts": [{
+    "guid": "GUID09058070137",
+    "text": "There's a hole in front of the door. Beware!",
+    "href": "#",
+    "target": ""
+  },{
+    "guid": "GUID09058070138",
+    "text": "Free cookies while you wait.",
+    "href": "#",
+    "target": ""
+  }],
+
   "pageHeader": {
     "divider": false,
     "title": "Southbridge RMV",

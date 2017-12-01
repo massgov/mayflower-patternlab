@@ -30,7 +30,7 @@ var defaults = {
     dest: path.resolve(__dirname, "../../public/assets"),
     patternLabRoot: path.resolve(__dirname, "../../"),
     rootSite: path.resolve(__dirname, "../../public"),
-    tasks: ["copy", "copyTwig", "js", "css", "bower", "patternlab"],
+    tasks: ["copy", "js", "css", "bower", "patternlab"],
     env: "development", // "development", "production", "local"
     watch: false,
     browserSync: false

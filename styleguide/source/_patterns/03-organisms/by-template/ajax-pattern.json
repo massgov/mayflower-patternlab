@@ -1,6 +1,0 @@
-{
-  "ajaxPattern": {
-    "endpoint":"../../assets/data/emergency-alerts.json",
-    "renderPattern":"@organisms/by-template/emergency-alerts.twig"
-  }
-}

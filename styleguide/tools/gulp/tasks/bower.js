@@ -15,10 +15,7 @@ module.exports = function bowerTask(config, env){
         root: config.root + "/js/vendor",
         filename: "vendor.js",
         dest: config.dest + "/js",
-        uglify: {
-          'keep_names': true,
-          'mangle': false
-        }
+        uglify: {}
     };
 
 
