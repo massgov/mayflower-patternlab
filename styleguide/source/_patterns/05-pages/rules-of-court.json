@@ -116,6 +116,7 @@
     ]
   },
   "mainContent": {
+    "headerIndent": true,
     "contents": [
       {
         "compHeading": {
