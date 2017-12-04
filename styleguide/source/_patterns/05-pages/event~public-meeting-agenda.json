@@ -63,7 +63,7 @@
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
               "paragraph": {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt deleniti fuga consequuntur laudantium qui repellendus eveniet, culpa ipsum ullam libero quibusdam dolore, sit."
+                "text": "For Auto Damage Appraiser Licensing Board (“Board or ADALB”) Meeting Scheduled for October 3, 2017, 9:30 AM at 1000 Washington Street, Boston, Massachusetts"
               }
             }
           }
@@ -90,7 +90,63 @@
             "path": "@atoms/11-text/paragraph.twig",
             "data": {
               "paragraph": {
-                "text": "Placeholder paragraph for what will need to be an outline. richText doesn't have what we need to make it right now."
+                "text": " I. Call to order."
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "II. Approval of the Board minutes for the Board meetings held on July 25, 2017, and September 6, 2017."
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "III. Report on the next Part-II examination for motor vehicle damage appraiser."
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "IV. Review of a draft letter notifying examinees who fail the Part-II examination for motor vehicle damage appraiser license that under the ADALB’s Enabling Act, M.G.L. c. 26, § 8G “[A]n applicant failing to pass an examination satisfactory to the board, shall, after payment of a further fee of fifty dollars, be entitled to a reexamination after the expiration of six months from the date of the last examination….”, they are precluded from re-taking the examination for six months."
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "V. Review of a proposed Advisory Ruling, submitted by Board Member Richard Starbard, advising licensed motor vehicle damage appraisers in relevant part, “[t]hat partial panel refinishing is considered to be a modification of a published manual and may not be included on an appraisal without prior notification.\""
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "VI. Other business – reserved for matters the Chair did not reasonably anticipate at the time of the posting of the meeting and agenda."
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "VII. Executive session. At the time for preparing the Board’s agenda there were no matters that would require the Board entering the executive session."
+              }
+            }
+          },
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "VIII. Motion to adjourn."
               }
             }
           }
