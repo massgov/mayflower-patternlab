@@ -116,9 +116,9 @@
     ]
   },
   "mainContent": {
-    "headerIndent": true,
     "contents": [
       {
+        "headerIndent": true,
         "compHeading": {
           "title": "(a) Discovery Methods",
           "sub": false,
@@ -138,6 +138,7 @@
         ]
       },
       {
+        "headerIndent": true,
         "compHeading": {
           "title": "(b) Scope of Discovery",
           "sub": false,
