@@ -27,7 +27,7 @@
         {% endfor %}
 
         {% block pageContent %}
-          {#{% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}#}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
         {% endblock %}
 
         {% if mainContent.formDownloads %}
@@ -73,14 +73,14 @@
         {% endif %}
 
         {% block sidebar %}
-          {#{% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}#}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
         {% endblock %}
       </aside>
     </div>
   </div>
   <div class="post-content">
     {% block postContent %}
-      {#{% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}#}
+      {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
     {% endblock %}
   </div>
   {% block schemaContent %}{% endblock %}
