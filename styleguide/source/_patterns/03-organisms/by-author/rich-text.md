@@ -5,6 +5,8 @@ This pattern displays the contents of a rich text editor with an optional title 
 * Stable as of 5.0.0
 
 ### Pattern Contains
+* headerIndent
+* anchorLinks
 * Comp Heading
 * Sidebar Heading
 * Decorative Link
@@ -26,6 +28,13 @@ This pattern displays the contents of a rich text editor with an optional title 
 ### Variables
 ~~~
 richText: {
+
+  headerIndent: {
+    type: headerIndent / optional
+  },
+  anchorLinks: {
+    type: anchorLinks / optional
+  },
   compHeading: {
     type: compHeading / optional
   },
