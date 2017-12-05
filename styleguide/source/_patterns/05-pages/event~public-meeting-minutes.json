@@ -55,7 +55,7 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph" : {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sunt deleniti fuga consequuntur laudantium qui repellendus eveniet, culpa ipsum ullam libero quibusdam dolore, sit."
+              "text": "For Auto Damage Appraiser Licensing Board (“Board or ADALB”) Meeting Scheduled for October 3, 2017, 9:30 AM at 1000 Washington Street, Boston, Massachusetts."
             }
           }
         }]
@@ -106,35 +106,28 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+              "text": "Chair Gabrieli welcomed everyone in attendance and invited Salem State University (SSU) President Patricia Meservey to offer remarks."
             }
           }
         },{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+              "text": "President Meservey welcomed everyone and acknowledged her recent announcement that she will be retiring, but remaining as President until her Board identifies her successor. She remarked that her approaching retirement brings an opportunity to reflect on her ten years of service at SSU and what the university has accomplished in that time. She continued by acknowledging and thanking the BHE and the entire team at the DHE for their support of SSU and the State University segment as a whole; she also thanked Secretary Peyser, her colleagues within the State University and Community College systems, as well as her own team at SSU including faculty, staff, students and alumni. She remarked that she is immensely proud of the success of her students and highlighted their achievements, including an increase in their six year graduation rate from 37% to 52% over the last ten years. Their entering class has increased in diversity, and 40% of those students are Pell eligible, meaning they’re providing an opportunity for social mobility."
             }
           }
         },{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+              "text": "President Meservey continued highlighting additional accomplishments during her tenure, including the fact that SSU became a university in 2010 which speaks to the accomplishments and identity of their students and faculty. She added that she has always viewed public higher education as a public good, and stressed her belief that the university has a responsibility to give back the community. She said that they have done so through economic development and civic engagement, citing the North Shore alliance for economic development, which was founded by SSU. She additionally cited the 400,000 hours of community service the faculty and students have given back to the region. Further, the campus has grown and is beautiful, and she cited the many facilities the university was able to open or renovate thanks to the Massachusetts State College Building Authority (MSCBA), partnerships, and donors, including the new library, fitness center, theater, and garage. Finally, she highlighted SSU’s recent fundraising campaign in which they exceeded their goal by $26 million. This was a major step forward with over 12,000 donors, including 94% of full time employees who contributed. President Meservey concluded her remarks by stating that she came to her decision to retire when she believed it was the right time for her personally and for the university; she is confident that SSU is in a strong position and she’s looking forward to passing the baton, and with the support of the BHE, SSU will be able to continue their mission and path forward towards success."
             }
           }
         },{
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
-            }
-          }
-        },{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph": {
-              "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+              "text": "Chair Gabrieli thanked President Meservey for her for her leadership, congratulated her on the many accomplishments achieved under her tenure and read an official resolution into the record formally acknowledging her retirement and many accomplishments. He then acknowledged BHE member Robert Johnson and congratulated him on his recent appointment as Chancellor of UMASS Dartmouth, which will be effective later this summer. He additionally noted that BHE member Sheila Harrity has recused herself from today’s meeting because she is under consideration for a presidential appointment at Quinsigamond Community College."
             }
           }
         }]
