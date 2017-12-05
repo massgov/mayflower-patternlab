@@ -1,4 +1,4 @@
-module.exports = function(window, document, $, undefined){
+module.exports = function(window, document, undefined){
   "use strict";
 
   function slugify(text) {
@@ -10,8 +10,6 @@ module.exports = function(window, document, $, undefined){
       .replace(/-+$/, '');            // Trim - from end of text
   }
 
-  return {
-    slugify
-  };
-};
-(window,document,jQuery);
+  return slugify;
+
+}(window, document);
