@@ -16,9 +16,6 @@
   "contentEyebrow": {
     "hideBorder": true,
     "headerTags": {
-      "id": "terms",
-      "moreLabel": "more",
-      "lessLabel": "less",
       "label": "More about:",
       "taxonomyTerms": [{
         "href": "#",
@@ -32,6 +29,12 @@
       },{
         "href": "#",
         "text": "Term 4"
+      },{
+        "href": "#",
+        "text": "Term 5"
+      },{
+        "href": "#",
+        "text": "Term 6"
       }]
     }
   },
