@@ -80,11 +80,20 @@
             ]
           }
         }
-      },{
-        "path": "@atoms/11-text/paragraph.twig",
+      },
+      {
+        "path": "@organisms/by-author/rich-text.twig",
         "data": {
-          "paragraph" : {
-            "text": "This is a court rules page, and this is an optional description field. For shorter content, authors may choose to use only the overview field. For longer content, this may be a place to summarize findings or to provide a short introduction."
+          "richText": {
+            "property": "",
+            "rteElements": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph" : {
+                  "text": "Explicabo itaque possimus dignissimos? Repudiandae tempore, fugit illum? Iure error omnis eveniet eius iste molestias. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
+                }
+              }
+            }]
           }
         }
       }],
