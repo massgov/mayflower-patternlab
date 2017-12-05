@@ -30,10 +30,10 @@ This pattern displays the contents of a rich text editor with an optional title 
 richText: {
 
   headerIndent: {
-    type: headerIndent / optional
+    type: boolean / optional
   },
   anchorLinks: {
-    type: anchorLinks / optional
+    type:boolean / optional
   },
   compHeading: {
     type: compHeading / optional
