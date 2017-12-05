@@ -4,5 +4,5 @@ This is a variant of the [Page Header](./?p=organisms-page-header) pattern showi
 ### How to generate
 * Set the `publishState` variable to null (if it's not already)
 * Replace the `category` text with the text you want
-* Set subCategory to null if no subCategory is desired, otherwise set the compHeading title.
+* Set the subCategory variable to null (if no sub category is needed) or populate it with the variables for a `compHeading`.
 
