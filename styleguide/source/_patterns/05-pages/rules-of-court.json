@@ -119,6 +119,7 @@
     "contents": [
       {
         "headerIndent": true,
+        "anchorLinks": true,
         "compHeading": {
           "title": "(a) Discovery Methods",
           "sub": false,
@@ -139,6 +140,7 @@
       },
       {
         "headerIndent": true,
+        "anchorLinks": true,
         "compHeading": {
           "title": "(b) Scope of Discovery",
           "sub": false,
