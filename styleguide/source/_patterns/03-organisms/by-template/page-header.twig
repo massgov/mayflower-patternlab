@@ -29,8 +29,11 @@
     {% endif %}
 
     {% if pageHeader.subCategory %}
-      {% set compHeading = pageHeader.subCategory %}
-      {% include "@atoms/04-headings/comp-heading.twig" %}
+      <div class="ma__page-header__subCategory">
+        {% set subCategoryLevel = pageHeader.subCategory.level ?: 3 %}
+        {% set compHeading = pageHeader.subCategory|merge({'level':(subCategoryLevel)}) %}
+        {% include "@atoms/04-headings/comp-heading.twig" %}
+      </div>
     {% endif %}
 
     <h1 class="ma__page-header__title">{% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}{{pageHeader.title}}</h1>
