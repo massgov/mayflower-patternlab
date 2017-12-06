@@ -13,15 +13,16 @@ listingTable: {
   rows: [{
     label: 
       type: string / required
+    visibleItems:
+      type: int / optional (default: 2)
+    moreLabel: 
+      type: string / optional (default: "show more")
+    lessLabel: 
+      type: string / optional (default: "show less")
     items: [{  
-      visibleItems:
-        type: int / optional (default: 2)
-      moreLabel: 
-        type: string / optional (default: "show more")
-      lessLabel: 
-        type: string / optional (default: "show less")
       text: 
         type: string / required
+    }]
   }]
 }
 ~~~
