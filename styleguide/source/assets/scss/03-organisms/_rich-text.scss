@@ -64,6 +64,26 @@ $heading-indent: $gutter;
     }
   }
 
+  /**
+   * Rich text content can be styled like an outline when a modifier class is added by rich-text.js
+   * 1. Headings will be indented
+   * 2. Content nested under each heading will be further indented
+   */
+
+  &__indent[data-ma-heading-parent='H2'] {
+    margin-left: $heading-indent; // 2.
+  }
+
+  h3 {
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H3'] {
+    margin-left: $heading-indent * 2; // 2.
+  }
+
   h4 {
     margin-bottom: .6em;
     padding-bottom: .45em;
@@ -71,15 +91,39 @@ $heading-indent: $gutter;
     &:after {
       width: 1.5em;
     }
+
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent * 2; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H4'] {
+    margin-left: $heading-indent * 3; // 2.
   }
 
   h5 {
     display: block;
     margin-bottom: 0;
+
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent * 3; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H5'] {
+    margin-left: $heading-indent * 4; // 2.
   }
 
   h6 {
     display: block;
+
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent * 4; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H6'] {
+    margin-left: $heading-indent * 5; // 2.
   }
 
   p {
@@ -177,43 +221,5 @@ $heading-indent: $gutter;
   // last element in the rich text content
   & > :last-child {
     margin-bottom: 0 !important;
-  }
-
-  // Indent all Headings and child content like an outline
-  // Class and data attribute added in rich-text.js
-  &__indent[data-ma-heading-parent='H2'] {
-    margin-left: $heading-indent;
-  }
-
-  h3.&__indent {
-    margin-left: $heading-indent;
-  }
-
-  &__indent[data-ma-heading-parent='H3'] {
-    margin-left: $heading-indent * 2;
-  }
-
-  h4.&__indent {
-    margin-left: $heading-indent * 2;
-  }
-
-  &__indent[data-ma-heading-parent='H4'] {
-    margin-left: $heading-indent * 3;
-  }
-
-  h5.&__indent {
-    margin-left: $heading-indent * 3;
-  }
-
-  &__indent[data-ma-heading-parent='H5'] {
-    margin-left: $heading-indent * 4;
-  }
-
-  h6.&__indent {
-    margin-left: $heading-indent * 4;
-  }
-
-  &__indent[data-ma-heading-parent='H6'] {
-    margin-left: $heading-indent * 5;
   }
 }
