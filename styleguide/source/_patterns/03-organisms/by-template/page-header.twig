@@ -1,8 +1,8 @@
-{% set widgetsClass = pageHeader.widgets ? "ma__page-header--has-widgets" : "" %}
+{% set widgetsClass = pageHeader.widgets ? " ma__page-header--has-widgets" : "" %}
 
 {% set prefix = pageHeader.category|default(pageHeader.prefix) %}
 
-<section class="ma__page-header {{ widgetsClass }}">
+<section class="ma__page-header{{ widgetsClass }}">
   {% if pageHeader.headerTags.taxonomyTerms or pageHeader.socialLinks.items %}
     <div class="ma__page-header__tags">
       {% if pageHeader.headerTags.taxonomyTerms %}
