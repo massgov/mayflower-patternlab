@@ -77,7 +77,14 @@
           "path": "@atoms/11-text/paragraph.twig",
           "data": {
             "paragraph": {
-              "text": "Placeholder text for what will need to be a two lists. One of attendee, and one of abscent invitees."
+              "text": "<b>The following Board Members were present:</b><br>Chris Gabrieli, Chairman<br>Nancy Hoffman<br>Tom Hopcroft<br>Robert Johnson<br>J.D. LaRock<br>Paul Mattera<br>Jim Peyser, Secretary of Education<br>Henry Thomas<br>Paul Toner<br>Carlos Santiago, Commissioner and Secretary to the Board"
+            }
+          }
+        },{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph": {
+              "text": "<b>The following Board members were absent:</b><br>Jasson Alvarado-Gomez<br>Sheila Harrity<br>Fernando Reimers<br>Dani Monroe"
             }
           }
         },{
