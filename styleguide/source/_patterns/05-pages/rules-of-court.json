@@ -2,13 +2,11 @@
   "pageHeader": {
     "category": "Rule of Court Sample Page",
     "subCategory": {
-      "compHeading": {
-        "title": "Demonstrates rich text indentation ",
-        "level": 3,
-        "color": "",
-        "id": "",
-        "centered": ""
-      }
+      "title": "Rule of Court Optional Sub-category",
+      "level": "",
+      "color": "",
+      "id": "",
+      "centered": ""
     },
     "divider": false,
     "prefix": "",
