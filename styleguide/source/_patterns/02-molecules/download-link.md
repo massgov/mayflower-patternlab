@@ -6,6 +6,7 @@ This pattern is a link to a file or online form.
 
 ### Pattern Contains
 * Decorative Link
+* Rich Text
 
 ### Variant options
 * You can use [small](./?p=molecules-download-link-with-small-icon) icons
@@ -27,5 +28,7 @@ downloadLink: {
     type: string (filesize) / optional
   format:  
     type: string (fileformat or 'form') / optional
+  description:
+    type: rich text / optional
 }
 ~~~
