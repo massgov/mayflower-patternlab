@@ -21,7 +21,7 @@ This pattern is used as a template for Court Laws type pages and is based off of
 * Footnote List (js/modules/footnote.js)
 * Jump Links (js/modules/scrollAnchors.js)
 * Anchor tags for headings within rich text (js/modules/richText.js)
-* Heading indentation (js/modules/richText.js)
+* Indentation for headings + child content within rich text (js/modules/richText.js)
 
 ### Variables
 ~~~
