@@ -16,6 +16,7 @@ This pattern is adds an `<h1>` page title and other helpful bit of content that 
 * As used on the [How To](./?p=organisms-page-header-for-howto) page 
 * As used on the [Location](./?p=organisms-page-header-for-location) page 
 * As used on the [Recurring Events](./?p=organisms-page-header-for-event) page 
+* As used on the [Court Rules](./?p=organisms-page-header-for-court-rules) page
 
 
 ### Variables
