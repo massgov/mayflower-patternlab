@@ -8,7 +8,7 @@ export default function (window,document,$,undefined) {
     $el.find('table').wrap( "<div class='ma__rich-text__table-wrapper'></div>" );
 
     // Provide css hooks to indent each child heading and its nested contents if js hook is present.
-    if ($el.hasClass('js-outline-indent')) {
+    if ($el.hasClass('js-ma-outline-indent')) {
       $el.find(':header').each(function(index,heading){
         if ($(heading).prop("tagName") !== 'H2') {
           $(heading).addClass("ma__rich-text__indent");
@@ -20,7 +20,7 @@ export default function (window,document,$,undefined) {
     }
 
     // Insert anchor tags prior to all child headings if js hook is present.
-    if ($el.hasClass('js-insert-heading-anchors')) {
+    if ($el.hasClass('js-ma-insert-heading-anchors')) {
       // Get all of the content headings.
       let $headings = $el.find(":header");
       $headings.each(function (index, heading) {
