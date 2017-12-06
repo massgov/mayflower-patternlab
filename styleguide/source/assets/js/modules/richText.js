@@ -9,10 +9,13 @@ export default function (window,document,$,undefined) {
 
     // Provide css hooks to indent each child heading and its nested contents if js hook is present.
     if ($el.hasClass('js-outline-indent')) {
-      $el.find(':header').each(function(index,header){
-        $(header).nextUntil(':header')
+      $el.find(':header').each(function(index,heading){
+        if ($(heading).prop("tagName") !== 'H2') {
+          $(heading).addClass("ma__rich-text__indent");
+        }
+        $(heading).nextUntil(':header')
           .addClass("ma__rich-text__indent")
-          .attr('data-ma-heading-parent', $(header).prop('tagName'));
+          .attr('data-ma-heading-parent', $(heading).prop('tagName'));
       });
     }
 

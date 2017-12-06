@@ -179,43 +179,41 @@ $heading-indent: $gutter;
     margin-bottom: 0 !important;
   }
 
-  // Indent courts types rich text content as outline
-  .ma__court-rules__content & {
+  // Indent all Headings and child content like an outline
+  // Class and data attribute added in rich-text.js
+  &__indent[data-ma-heading-parent='H2'] {
+    margin-left: $heading-indent;
+  }
 
-    &__indent[data-ma-heading-parent='H2'] {
-      margin-left: $heading-indent;
-    }
+  h3.&__indent {
+    margin-left: $heading-indent;
+  }
 
-    h3 {
-      margin-left: $heading-indent;
-    }
+  &__indent[data-ma-heading-parent='H3'] {
+    margin-left: $heading-indent * 2;
+  }
 
-    &__indent[data-ma-heading-parent='H3'] {
-      margin-left: $heading-indent * 2;
-    }
+  h4.&__indent {
+    margin-left: $heading-indent * 2;
+  }
 
-    h4 {
-      margin-left: $heading-indent * 2;
-    }
+  &__indent[data-ma-heading-parent='H4'] {
+    margin-left: $heading-indent * 3;
+  }
 
-    &__indent[data-ma-heading-parent='H4'] {
-      margin-left: $heading-indent * 3;
-    }
+  h5.&__indent {
+    margin-left: $heading-indent * 3;
+  }
 
-    h5 {
-      margin-left: $heading-indent * 3;
-    }
+  &__indent[data-ma-heading-parent='H5'] {
+    margin-left: $heading-indent * 4;
+  }
 
-    &__indent[data-ma-heading-parent='H5'] {
-      margin-left: $heading-indent * 4;
-    }
+  h6.&__indent {
+    margin-left: $heading-indent * 4;
+  }
 
-    h6 {
-      margin-left: $heading-indent * 4;
-    }
-
-    &__indent[data-ma-heading-parent='H6'] {
-      margin-left: $heading-indent * 5;
-    }
+  &__indent[data-ma-heading-parent='H6'] {
+    margin-left: $heading-indent * 5;
   }
 }
