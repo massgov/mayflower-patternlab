@@ -35,6 +35,7 @@ Some Mass Digital Services projects (i.e. [massgov/mass](https://github.com/mass
 
 * [Pattern Lab 2 (PHP)](http://patternlab.io/docs/index.html) - The pattern framework / static site generator
 * [Twig](https://twig.sensiolabs.org/) - The templating language
+* [TwigJS](https://github.com/twigjs/twig.js/wiki) - For clientside rendering of twig templates (see [ajaxPattern](styleguide/source/_patterns/03-organisms/by-template/ajax-pattern.md))
 
 ## Versioning
 
