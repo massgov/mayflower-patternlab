@@ -1,0 +1,745 @@
+{
+  "urlPath": "/?p=pages-ORG-Health-Services",
+  "COMMENT": "****PRECONTENT COMPONENTS****",
+  "pageBanner": {
+    "bgWide": "../../assets/images/placeholder/1600x400.png",
+    "bgNarrow": "../../assets/images/placeholder/800x400.png",
+    "size": "large",
+    "icon": null,
+    "title": "Forester Licensing Board",
+    "titleSubText": "(FLB)"
+  },
+  "pageHeader": {
+    "divider": true,
+    "title": "Forester Licensing Board",
+    "titleNote": "(FLB)",
+    "subTitle": "The Forester Licensing Board licenses people who offer professional services requiring the application of forestry principles and techniques.",
+    "headerTags": null,
+    "optionalContents": [
+      {
+        "path": "@molecules/contact-us.twig",
+        "data": {
+          "contactUs": {
+            "groups": [
+              {
+                "icon": "@atoms/05-icons/svg-marker.twig",
+                "name": "Address",
+                "items": [
+                  {
+                    "type": "address",
+                    "label": "",
+                    "value": "180 Beaman St., West Boylston, MA 01583",
+                    "link": "https://www.google.com/maps/place/180+Beaman+St,+West+Boylston,+MA+01583",
+                    "details": ""
+                  }
+                ]
+              },
+              {
+                "icon": "@atoms/05-icons/svg-phone.twig",
+                "name": "Phone",
+                "items": [
+                  {
+                    "type": "phone",
+                    "label": "Main:",
+                    "value": "508-792-7806 x318",
+                    "link": "5087927806",
+                    "details": "This line is open during certain hours"
+                  }
+                ]
+              },
+              {
+                "icon": "@atoms/05-icons/svg-laptop.twig",
+                "name": "Online",
+                "items": [
+                  {
+                    "type": "email",
+                    "label": "Email:",
+                    "value": "russell.wilmot@state.ma.us",
+                    "link": "russell.wilmot@state.ma.us",
+                    "details": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "widgets": [
+      {
+        "path": "@atoms/09-media/image.twig",
+        "data": {
+          "image": {
+            "alt": "eohhs logo",
+            "src": "../../assets/images/placeholder/230x130.png",
+            "height": "130",
+            "width": "230"
+          }
+        }
+      }
+    ]
+  },
+  "COMMENT": "****PAGE CONTENT COMPONENTS****",
+  "stackedRows": [
+    {
+      "title": "",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@organisms/by-author/rich-text.twig",
+          "data": {
+            "richText": {
+              "rteElements": [
+                {
+                  "path": "@atoms/04-headings/heading-2.twig",
+                  "data": {
+                    "heading2": {
+                      "text": "About Us"
+                    }
+                  }
+                },
+                {
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph": {
+                      "text": "We do things related to forestry, including investigations, consultations, development of forest management plans, supervision of forest management, forest utilization, forest economics or other forestry activity carried out in connection with public or private lands."
+                    }
+                  }
+                },
+                {
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph": {
+                      "text": "<a href=\"http://www.google.com\">Additional Information</a>"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "sideBar": null
+    },{
+      "title": "",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@organisms/by-author/rich-text.twig",
+          "data": {
+            "richText": {
+              "rteElements": [
+                {
+                  "path": "@atoms/04-headings/heading-2.twig",
+                  "data": {
+                    "heading2": {
+                      "text": "Board Members"
+                    }
+                  }
+                },
+                {
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph": {
+                      "text": "UNDER CONSTRUCTION: Future home of Board Members section."
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "sideBar": null
+    },{
+      "title": "",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@organisms/by-author/event-listing.twig",
+          "data": {
+            "eventListing": {
+              "grid": true,
+              "compHeading":{
+                "title": "Upcoming Events"
+              },
+              "events":[{
+                "title": {
+                  "href": "#",
+                  "text": "Forester Licensing Board monthly meeting",
+                  "info": "",
+                  "property": ""
+                },
+                "location": "",
+                "date": {
+                  "summary": "March 30, 2018",
+                  "startMonth": "Mar",
+                  "startDay": "30",
+                  "endMonth": "",
+                  "endDay": ""
+                },
+                "time": "",
+                "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              },{
+                "title": {
+                  "href": "#",
+                  "text": "Forester Licensing Board monthly meeting",
+                  "info": "",
+                  "property": ""
+                },
+                "location": "",
+                "date": {
+                  "summary": "April 30, 2018",
+                  "startMonth": "Apr",
+                  "startDay": "30",
+                  "endMonth": "",
+                  "endDay": ""
+                },
+                "time": "",
+                "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              }],
+              "more":{
+                "href": "#",
+                "text": "See all events",
+                "chevron": true,
+                "label": ""
+              }
+            }
+          }
+        }
+      ],
+      "sidebar": null
+
+    },
+    {
+      "title": "",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@organisms/by-author/action-finder.twig",
+          "data": {
+            "actionFinder": {
+              "id": "GUID831741781374893",
+              "bgWide": "../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+              "bgNarrow": "../../assets/images/placeholder/800x800.png",
+              "title": "What would you like to do?",
+              "featuredHeading": "Featured Services",
+              "generalHeading": "More Services",
+              "seeAll": {
+                "type": "external",
+                "href": "#",
+                "text": "See all  services",
+                "info": ""
+              },
+              "featuredLinks": [
+                {
+                  "image": "",
+                  "text": "Request Public Records",
+                  "type": "external",
+                  "href": "#"
+                },{
+                "image": "",
+                "text": "Top Action/Service",
+                "type": "external",
+                "href": "#"
+                },{
+                "image": "",
+                "text": "Top Action/Service",
+                "type": "external",
+                "href": "#"
+                },{
+                "image": "",
+                "text": "Top Action/Service",
+                "type": "external",
+                "href": "#"
+                }, {
+                  "image": "",
+                  "text": "Top Action/Service",
+                  "type": "external",
+                  "href": "#"
+                }, {
+                  "image": "",
+                  "text": "Top Action/Service",
+                  "type": "external",
+                  "href": "#"
+                }
+              ],
+              "links": [
+                {
+                  "image": "",
+                  "text": "Service 1",
+                  "href": "#"
+                },
+                {
+                  "image": "",
+                  "text": "Service 2",
+                  "href": "#"
+                },
+                {
+                  "image": "",
+                  "text": "Service 3",
+                  "href": "#",
+                  "label": ""
+                },
+                {
+                  "image": "",
+                  "text": "Service 4",
+                  "href": "#"
+                },
+                {
+                  "image": "",
+                  "text": "Service 5",
+                  "href": "#"
+                },
+                {
+                  "image": "",
+                  "text": "Service 6",
+                  "href": "#"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "path": "@organisms/by-author/press-listing.twig",
+          "data": {
+            "pressListing": {
+              "compHeading": {
+                "title": "Recent news & announcements",
+                "sub": "",
+                "color": "",
+                "id": "",
+                "centered": ""
+              },
+              "items": [
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/statehouse.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "Press Release",
+                  "title": {
+                    "href": "#",
+                    "text": "Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/4/2017",
+                  "org": "Health & Human Services, Public Safety",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/400x225.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "News Article",
+                  "title": {
+                    "href": "#",
+                    "text": "Tree House Brweing Co. Expands Its Horizons",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/3/2017",
+                  "org": "Mass Development",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "secondaryItems": [
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/400x225.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "Press Release",
+                  "title": {
+                    "href": "#",
+                    "text": "Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/4/2017",
+                  "org": "Health & Human Services, Public Safety",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/400x225.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "News Article",
+                  "title": {
+                    "href": "#",
+                    "text": "Tree House Brewing Co. Expands Its Horizons",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/3/2017",
+                  "org": "Mass Development",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/400x225.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "Press Statement",
+                  "title": {
+                    "href": "#",
+                    "text": "Governor Baker Statement on Supreme Court Marriage Equality Decision",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/3/2017",
+                  "org": "Office of the Governor",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/400x225.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "Press Release",
+                  "title": {
+                    "href": "#",
+                    "text": "Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/4/2017",
+                  "org": "Health & Human Services, Public Safety",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/400x225.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "News Article",
+                  "title": {
+                    "href": "#",
+                    "text": "Tree House Brweing Co. Expands Its Horizons",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/3/2017",
+                  "org": "Mass Development",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/400x225.png",
+                    "alt": "placeholder image",
+                    "width": "400",
+                    "height": "225",
+                    "href": "#"
+                  },
+                  "eyebrow": "Press Statement",
+                  "title": {
+                    "href": "#",
+                    "text": "Governor Baker Statement on Supreme Court Marriage Equality Decision",
+                    "info": "",
+                    "property": ""
+                  },
+                  "date": "4/3/2017",
+                  "org": "Office of the Governor",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "more": {
+                "href": "#",
+                "text": "See all news and announcements",
+                "chevron": true,
+                "label": "See all news and announcements for the Executive Office of Health and Human Services"
+              }
+            }
+          }
+        },
+        {
+          "path": "@organisms/by-author/sections-three-up.twig",
+          "data": {
+            "sectionThreeUp": {
+              "compHeading": {
+                "title": "Featured Topics",
+                "sub": "",
+                "color": "",
+                "id": "",
+                "centered": ""
+              },
+              "sections": [
+                {
+                  "id": "GUIDasjdhf1",
+                  "catIcon": null,
+                  "title": {
+                    "href": "#",
+                    "text": "Health & Social Services"
+                  },
+                  "description": "Massachusetts offers services and resources to keep you and your loved ones healthy, safe, and happy. Find out how we can support you.",
+                  "links": [
+                    {
+                      "href": "#",
+                      "text": "Housing Assistance"
+                    },
+                    {
+                      "href": "#",
+                      "text": "MassHealth & Other Health Care"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Food & Cash Assistance"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Special Needs & Accessible Living"
+                    }
+                  ],
+                  "seeAll": {
+                    "href": "#",
+                    "text": "more",
+                    "info": "learn more about Health & Social Services"
+                  }
+                },
+                {
+                  "id": "GUIDasjdhf2",
+                  "catIcon": null,
+                  "title": {
+                    "href": "#",
+                    "text": "Families & Children"
+                  },
+                  "description": "The Commonwealth is committed to supporting safe, healthy, happy families. Find information ranging from how to get a marriage certificate to tips on raising active children.",
+                  "links": [
+                    {
+                      "href": "#",
+                      "text": "Caring for Children"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Health, Nutrition & Safety"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Marriage & Divorce"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Housing Assistance"
+                    }
+                  ],
+                  "seeAll": {
+                    "href": "#",
+                    "text": "more",
+                    "info": "learn more about Families & Children"
+                  }
+                },
+                {
+                  "id": "GUIDasjdhf3",
+                  "catIcon": null,
+                  "title": {
+                    "href": "#",
+                    "text": "Housing & Property"
+                  },
+                  "description": "Do you own or rent property in Massachusetts? Find resources for tenants and landlords, homeowners, developers, and more.",
+                  "links": [
+                    {
+                      "href": "#",
+                      "text": "Renters/Tenants"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Landlords"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Homeowners"
+                    },
+                    {
+                      "href": "#",
+                      "text": "Safety & Inspections"
+                    }
+                  ],
+                  "seeAll": {
+                    "href": "#",
+                    "text": "more",
+                    "info": "learn more about Housing & Property"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "path": "@organisms/by-author/link-list.twig",
+          "data": {
+            "linkList": {
+              "compHeading": {
+                "title": "Related Organizations",
+                "sub": "",
+                "color": "",
+                "id": "",
+                "centered": ""
+              },
+              "links": [
+                {
+                  "href": "#",
+                  "text": "Related Organization 1"
+                },
+                {
+                  "href": "#",
+                  "text": "Related Organization 2"
+                },
+                {
+                  "href": "#",
+                  "text": "Related Organization 3"
+                },
+                {
+                  "href": "#",
+                  "text": "Related Board 1"
+                },
+                {
+                  "href": "#",
+                  "text": "Related Board 2"
+                },{
+                  "href": "#",
+                  "text": "Related Board 3"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "schema": {
+    "governmentOrganization": {
+      "name": "Executive Office of Health and Human Services",
+      "alternateName": "EOHHS",
+      "memberOf": {
+        "id": "http://mayflower.digital.mass.gov/#organization"
+      },
+      "disambiguatingDescription": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
+      "description": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered.",
+      "logo": "https://mayflower.digital.mass.gov/assets/images/images/placeholder/230x130.png",
+      "url": "https://mayflower.digital.mass.gov/?p=templates-org-landing-page",
+      "contactInfo": {
+        "address": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+        "telephone": "+14134994262",
+        "faxNumber": "+14134994266",
+        "email": "email@email.com"
+      },
+      "sameAs": [
+        "https://twitter.com/MassHHS",
+        "https://www.flickr.com/photos/mass_hhs/",
+        "https://blog.mass.gov/hhs"
+      ]
+    }
+  }
+}
