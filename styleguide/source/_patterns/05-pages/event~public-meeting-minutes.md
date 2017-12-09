@@ -2,7 +2,7 @@
 Example of a Public Meeting Minutes Page for Mass Gov
 
 ### Status
-* Stable as of TBA
+* Stable as of 5.0.0
 
 ### Pattern Contains
 * Header

@@ -49,18 +49,7 @@
   },
 
   "mainContent": {
-    "pageOverview": {
-      "richText": {
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "For Auto Damage Appraiser Licensing Board (“Board or ADALB”) Meeting Scheduled for October 3, 2017, 9:30 AM at 1000 Washington Street, Boston, Massachusetts."
-            }
-          }
-        }]
-      }
-    },
+    "pageOverview": null,
 
     "meetingMinutes": {
       "richText": {
