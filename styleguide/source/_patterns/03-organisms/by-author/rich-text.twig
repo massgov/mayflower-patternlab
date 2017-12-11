@@ -8,6 +8,7 @@
     {% set sidebarHeading = richText.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
+  {#allows implementers to iterate through their own loop to render molecule content.#}
   {% block rteElements %}
 
     {% for element in richText.rteElements %}
