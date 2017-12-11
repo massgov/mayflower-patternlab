@@ -1,6 +1,8 @@
 {% set teaserHeading = 2 %}
+{% set gridTwoColumns = pressListing.contained ? 'ma__press-listing__2-col-grid' : 'ma__press-listing__3-col-grid' %}
 
-<section class="ma__press-listing">
+
+<section class="ma__press-listing {{ gridTwoColumns }}">
   <div class="ma__press-listing__container">
     {% if pressListing.compHeading %}
       {% set compHeading = pressListing.compHeading %}
