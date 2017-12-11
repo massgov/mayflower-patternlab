@@ -1,8 +1,9 @@
 {% set teaserHeading = 2 %}
+{% set stackedTop = not:pressListing.stackedTop ? 'side-by-side' : 'stacked' %}
 {% set gridTwoColumns = pressListing.contained and pressListing.gridTwoColumns ? 'ma__press-listing__2-col-grid' : 'ma__press-listing__3-col-grid' %}
 
 
-<section class="ma__press-listing {{ gridTwoColumns }}">
+<section class="ma__press-listing">
   <div class="ma__press-listing__container">
     {% if pressListing.compHeading %}
       {% set compHeading = pressListing.compHeading %}
@@ -15,7 +16,7 @@
       {% set teaserHeading = (sidebarHeading.level ? : teaserHeading) + 1 %}
     {% endif %}
     {% if pressListing.items %}
-      <div class="ma__press-listing__items">
+      <div class="ma__press-listing__items {{ gridTwoColumns }}">
         {% for pressTeaser in pressListing.items %}
           {% set pressTeaser = pressTeaser|merge({"level":teaserHeading}) %}
           {% include "@molecules/press-teaser.twig" %}
@@ -23,7 +24,7 @@
       </div>
     {% endif %}
     {% if pressListing.secondaryItems %}
-      <ul class="ma__press-listing__secondary-items">
+      <ul class="ma__press-listing__secondary-items {{ gridTwoColumns }}">
         {% for pressTeaser in pressListing.secondaryItems %}
           <li class="ma__press-listing__secondary-item">
             {% set pressTeaser = pressTeaser|merge({"level":teaserHeading}) %}
