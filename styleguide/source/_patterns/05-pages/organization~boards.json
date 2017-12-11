@@ -128,6 +128,7 @@
           "path": "@organisms/by-author/press-listing.twig",
           "data": {
             "pressListing": {
+              "stacked": false,
               "contained": true,
               "gridTwoColumns": true,
               "compHeading": {
