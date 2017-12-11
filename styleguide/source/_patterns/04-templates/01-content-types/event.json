@@ -171,9 +171,9 @@
         },
         "rteElements": [{
 
-          "path": "@atoms/04-headings/heading-6.twig",
+          "path": "@atoms/04-headings/heading-3.twig",
           "data": {
-            "heading6": {
+            "heading3": {
               "text": "Opening Remarks"
             }
           }
@@ -185,9 +185,9 @@
             }
           }
           },{
-          "path": "@atoms/04-headings/heading-6.twig",
+          "path": "@atoms/04-headings/heading-3.twig",
           "data": {
-            "heading6": {
+            "heading3": {
               "text": "Discussion: Strategic Planning"
             }
           }
