@@ -12,6 +12,8 @@ This pattern shows a list of links to downloadable files and online forms.  You 
 ### Variables
 ~~~
 formDownloads: {
+  listing: 
+    type: boolean / optional (defaults to false)
   compHeading: {
     type: compHeading / optional
   },

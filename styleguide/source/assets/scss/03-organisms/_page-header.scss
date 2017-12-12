@@ -13,6 +13,9 @@ $page-header-widget-width: 350px;
     overflow: hidden;
     margin-bottom: -20px;
     padding-top: 18px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: 20px;
 
     .ma__header-tags,
     .ma__social-links {
@@ -21,11 +24,17 @@ $page-header-widget-width: 350px;
       min-height: 48px;
       position: relative;
         top: 1px;
+      @media ($bp-medium-min) {
+        border: 0;
+      }
     }
 
     .ma__header-tags {
       flex-grow: 1;
       margin-bottom: 30px;
+      @media ($bp-medium-min) {
+        margin-bottom: 10px;
+      }
     }
 
     .ma__social-links {
@@ -34,6 +43,9 @@ $page-header-widget-width: 350px;
       @media ($bp-small-max) {
         width: 100%;
       }
+    }
+    @media ($bp-medium-max) {
+      border: 0;
     }
   }
 

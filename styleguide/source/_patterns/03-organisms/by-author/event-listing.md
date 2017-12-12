@@ -24,10 +24,16 @@ eventListing: {
   sidebarHeading:{
     type: compHeading / optional
   },
+  emptyText: {
+    type: string / optional
+  }
   events:[{
     type: eventTeaser / required
   }],
   more:{
+    type: link / optional
+  }
+  pastMore:{
     type: link / optional
   }
 }

@@ -26,6 +26,8 @@ This template allows you to have rows of content that are either full width or w
 ### Variables
 ~~~
 stackedRows: [{
+  borderless:
+    type: boolean / optional (defaults to false),
   title:
     type: string / optional,
   id: 

@@ -1,8 +1,8 @@
-{% set widgetsClass = pageHeader.widgets ? "ma__page-header--has-widgets" : "" %}
+{% set widgetsClass = pageHeader.widgets ? " ma__page-header--has-widgets" : "" %}
 
 {% set prefix = pageHeader.category|default(pageHeader.prefix) %}
 
-<section class="ma__page-header {{ widgetsClass }}">
+<section class="ma__page-header{{ widgetsClass }}">
   {% if pageHeader.headerTags.taxonomyTerms or pageHeader.socialLinks.items %}
     <div class="ma__page-header__tags">
       {% if pageHeader.headerTags.taxonomyTerms %}
@@ -27,6 +27,15 @@
         {{ pageHeader.category }}
       </div>
     {% endif %}
+
+    {% if pageHeader.subCategory %}
+      <div class="ma__page-header__subCategory">
+        {% set subCategoryLevel = pageHeader.subCategory.level ?: 3 %}
+        {% set compHeading = pageHeader.subCategory|merge({'level':(subCategoryLevel)}) %}
+        {% include "@atoms/04-headings/comp-heading.twig" %}
+      </div>
+    {% endif %}
+
     <h1 class="ma__page-header__title">{% if prefix %}<span class="visually-hidden">{{ prefix }}&nbsp;</span>{% endif %}{{pageHeader.title}}</h1>
     {% if pageHeader.subTitle %}
       <div class="ma__page-header__sub-title">{{pageHeader.subTitle}}</div>

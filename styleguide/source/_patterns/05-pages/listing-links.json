@@ -1,0 +1,354 @@
+{
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "title": "Link listing page",
+    "subTitle": "",
+    "headerTags": {
+      "label": "Related to:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Parent Page"
+      },{
+        "href": "#",
+        "text": "Another Parent Page"
+      }]
+    },
+    "optionalContents": [{
+      "path": "@organisms/by-author/rich-text.twig",
+      "data": {
+        "richText": {
+          "property": "",
+          "rteElements": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "This is a page which implements the stacked row template.  It can be used to create a curated list of links to other pages, web forms, and various document downloads."
+              }
+            }
+          }]
+        }
+      }
+    }],
+    "widgets": null
+  },
+
+  "jumpLinks": {
+    "title": "In this List",
+    "links": [{
+      "text": "List One",
+      "href": "list-one"
+    },{
+      "text": "List Two",
+      "href": "list-two"
+    },{
+      "text": "List Three",
+      "href": "list-three"
+    }]
+  },
+
+  "stackedRows": [{
+    "borderless": true,
+    "title": "List One",
+    "id": "list-one",
+    "pageContent": [{
+      "path": "@organisms/by-author/form-downloads.twig",
+      "data": {
+        "formDownloads": {
+          "listing": true,
+          "compHeading": null,
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "PDF download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "30kb",
+              "format": "PDF",
+              "description": {
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters."
+                    }
+                  }
+                }]
+              }
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "decorativeLink": {
+                "text": "Word download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "DOCX"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-generic.twig",
+              "decorativeLink": {
+                "text": "Generic type of download",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "???"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form",
+              "description": {
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters."
+                    }
+                  }
+                }]
+              }
+            }
+          }]
+        }
+      }
+    }],
+
+    "sideBar": []
+  },{
+    "borderless": true,
+    "title": "List Two",
+    "id": "list-two",
+    "pageContent": [{
+      "path": "@organisms/by-author/form-downloads.twig",
+      "data": {
+        "formDownloads": {
+          "listing": true,
+          "compHeading": null,
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "PDF download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "30kb",
+              "format": "PDF",
+              "description": {
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters."
+                    }
+                  }
+                }]
+              }
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "decorativeLink": {
+                "text": "Word download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "DOCX"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-generic.twig",
+              "decorativeLink": {
+                "text": "Generic type of download",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "???"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form",
+              "description": {
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters."
+                    }
+                  }
+                }]
+              }
+            }
+          }]
+        }
+      }
+    }],
+
+    "sideBar": []
+  },{
+    "borderless": true,
+    "title": "List Three",
+    "id": "list-three",
+    "pageContent": [{
+      "path": "@organisms/by-author/form-downloads.twig",
+      "data": {
+        "formDownloads": {
+          "listing": true,
+          "compHeading": null,
+          "downloadLinks": [{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "decorativeLink": {
+                "text": "PDF download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "30kb",
+              "format": "PDF",
+              "description": {
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters."
+                    }
+                  }
+                }]
+              }
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "decorativeLink": {
+                "text": "Word download item",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "DOCX"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-doc-generic.twig",
+              "decorativeLink": {
+                "text": "Generic type of download",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "40kb",
+              "format": "???"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "decorativeLink": {
+                "text": "Link to an online form",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form"
+            }
+          },{
+            "downloadLink": {
+              "iconSize": "",
+              "icon": "",
+              "decorativeLink": {
+                "text": "Link to another page",
+                "href": "#",
+                "info": "",
+                "property": ""
+              },
+              "size": "",
+              "format": "form",
+              "description": {
+                "rteElements": [{
+                  "path": "@atoms/11-text/paragraph.twig",
+                  "data": {
+                    "paragraph" : {
+                      "text": "I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters. I am a description. I am limited to 155 characters."
+                    }
+                  }
+                }]
+              }
+            }
+          }]
+        }
+      }
+    }],
+
+    "sideBar": []
+  }]
+}

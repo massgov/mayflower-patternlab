@@ -3593,6 +3593,12 @@
         }
       }
     },
+    "gulp-copy": {
+      "version": "1.0.1",
+      "from": "gulp-copy@latest",
+      "resolved": "https://registry.npmjs.org/gulp-copy/-/gulp-copy-1.0.1.tgz",
+      "dev": true
+    },
     "gulp-debug": {
       "version": "2.1.2",
       "resolved": "https://registry.npmjs.org/gulp-debug/-/gulp-debug-2.1.2.tgz",

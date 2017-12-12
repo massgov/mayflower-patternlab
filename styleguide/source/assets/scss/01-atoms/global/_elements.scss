@@ -89,3 +89,14 @@ h6 {
   @include ma-visually-hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+main,
+div {
+  &[tabindex="-1"]:focus {
+    outline: none;
+  }
+}

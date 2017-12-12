@@ -16,10 +16,13 @@ This is a row of content used in the Stacked Row Template
 
 ### Usage Guidelines
 * The ID value is used as an anchor tag when the Jump Links pattern is added as a table of contents (see guide pages)
+* Set `borderless` to true to remove the top border when there are multiple stacked rows.
 
 ### Variables
 ~~~
 stackedRowSection: {
+  borderless: 
+    type: boolean / optional (defaults to false),
   title:
     type: string / optional,
   id: 
