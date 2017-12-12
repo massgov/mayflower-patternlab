@@ -15,6 +15,15 @@ $event-listing-bp-show-grid: $bp-medium-min;
     @include ma-component-spacing;
   }
 
+  &__empty {
+    font-size: 1.5rem;
+    margin-bottom: .25em;
+
+    .ma__page-header & {
+      font-size: 1.813rem;
+    }
+  }
+
   &--grid &__container {
     
     @media ($event-listing-bp-show-grid) {
@@ -135,11 +144,20 @@ $event-listing-bp-show-grid: $bp-medium-min;
   }
 
 
-  &__more {
-    margin-top: 30px;
+  &__more,
+  &__past {
+    margin-top: 20px;
 
     @media ($bp-large-min) {
-      margin-top: 45px;
+      margin-top: 35px;
+    }
+
+    .sidebar & {
+      margin-top: 15px;
+
+      @media ($bp-large-min) {
+        margin-top: 25px;
+      }
     }
   }
 

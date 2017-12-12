@@ -2,7 +2,7 @@ $action-finder-bg-color: tint($c-theme-primary,89%);
 $action-finder-border-color: tint($c-theme-primary,50%);
 
 .ma__action-finder {
-  
+
   &:after {
     background-image: linear-gradient(180deg, rgba(#000,.6), transparent 90%, transparent);
   }
@@ -10,12 +10,6 @@ $action-finder-border-color: tint($c-theme-primary,50%);
   &--no-background {
     background-image: linear-gradient(180deg, $c-white 50px, $c-bg-section 51px);
   }
-
-  &--no-background + &--no-background {
-    background-image: none;
-    background-color: $c-bg-section;
-  }
-
 
   &--no-background &__header {
     background-color: $c-theme-primary;
@@ -54,7 +48,7 @@ $action-finder-border-color: tint($c-theme-primary,50%);
   }
 
   &__items--all {
-    
+
     .ma__callout-link {
       background-color: $c-white;
       box-shadow: none;

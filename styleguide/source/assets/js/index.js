@@ -9,6 +9,7 @@ import eventFilters               from "./modules/eventFilters";
 import eventListingInteractive    from "./modules/eventListingInteractive";
 import footnote                   from "./modules/footnote.js";
 import formValidation             from "./modules/formValidation.js";
+import headerTags                 from "./modules/headerTags.js";
 import hideAlert                  from "./modules/hideAlert.js";
 import keywordSearch              from "./modules/keywordSearch.js";
 import locationFilters            from "./modules/locationFilters.js";
