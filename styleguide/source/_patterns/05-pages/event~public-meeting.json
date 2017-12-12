@@ -412,7 +412,50 @@
       }]
     },
 
-    "mediaContact": null
+    "mediaContact": null,
+
+    "eventListing": {
+      "sidebarHeading":{
+        "title": "Related Event"
+      },
+      "events":[{
+        "title": {
+          "href": "#",
+          "text": "Fisheries and Wildlife Board Meeting",
+          "info": "",
+          "property": ""
+        },
+        "location": "251 Causeway St., Suite 900, Boston, MA 02114",
+        "date": {
+          "summary": "Sunday, August 12, 2018 9:10 a.m. - Monday, August 13, 2018 9:35 a.m. "
+        },
+        "time": null,
+        "description": "Listing description."
+      }],
+      "more": null
+    },
+
+    "related": {
+      "viewSpecific": true,
+      "sidebarHeading": {
+        "title": "Related"
+      },
+      "stacked": true,
+      "links": [
+        {
+          "href": "#",
+          "text": "Fishing and Wildlife Board Meeting Minutes",
+          "info": "",
+          "property": ""
+        },
+        {
+          "href": "#",
+          "text": "Another Optional Link",
+          "info": "",
+          "property": ""
+        }
+      ]
+    }
   },
 
   "bottomContent": {
