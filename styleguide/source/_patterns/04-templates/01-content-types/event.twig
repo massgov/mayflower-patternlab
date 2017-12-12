@@ -25,6 +25,26 @@
       {% endif %}
 
       {% block pageContent %}
+        {% if mainContent.meetingMinutes.richText %}
+          {% set richText = mainContent.meetingMinutes.richText %}
+          {% include "@organisms/by-author/rich-text.twig" %}
+        {% endif %}
+
+        {% if mainContent.meetingMinutes.formDownloads %}
+          {% set formDownloads = mainContent.meetingMinutes.formDownloads %}
+          {% include "@organisms/by-author/form-downloads.twig" %}
+        {% endif %}
+
+        {% if mainContent.agenda.richText %}
+          {% set richText = mainContent.agenda.richText %}
+          {% include "@organisms/by-author/rich-text.twig" %}
+        {% endif %}
+
+        {% if mainContent.agenda.formDownloads %}
+          {% set formDownloads = mainContent.agenda.formDownloads %}
+          {% include "@organisms/by-author/form-downloads.twig" %}
+        {% endif %}
+
         {% if mainContent.youWillNeed %}
           {% set richText = mainContent.youWillNeed %}
           {% include "@organisms/by-author/rich-text.twig" %}
@@ -52,14 +72,31 @@
       {% endblock %}
     </div>
     <aside class="sidebar">
-        {% if sideContent.contactList %}
-          {% set contactList = sideContent.contactList %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        {% endif %}
-        {% if sideContent.mediaContact %}
-          {% set contactList = sideContent.mediaContact %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        {% endif %}
+      {% if sideContent.participants %}
+        {% set linkList = sideContent.participants %}
+        {% include "@organisms/by-author/link-list.twig" %}
+      {% endif %}
+
+      {% if sideContent.contactList %}
+        {% set contactList = sideContent.contactList %}
+        {% include "@organisms/by-author/contact-list.twig" %}
+      {% endif %}
+
+      {% if sideContent.mediaContact %}
+        {% set contactList = sideContent.mediaContact %}
+        {% include "@organisms/by-author/contact-list.twig" %}
+      {% endif %}
+
+      {% if sideContent.eventListing %}
+        {% set eventListing = sideContent.eventListing %}
+        {% include "@organisms/by-author/event-listing.twig" %}
+      {% endif %}
+
+      {% if sideContent.related %}
+        {% set linkList = sideContent.related %}
+        {% include "@organisms/by-author/link-list.twig" %}
+      {% endif %}
+
       {% block sidebar %}
         {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
       {% endblock %}
