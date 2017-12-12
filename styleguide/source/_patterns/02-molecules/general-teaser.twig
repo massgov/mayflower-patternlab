@@ -1,0 +1,49 @@
+{% set imageClass = generalTeaser.image ? 'ma__general-teaser--image' : '' %}
+
+<section class="ma__general-teaser {{ imageClass }}">
+  {% if generalTeaser.image %}
+    <a
+      class="ma__general-teaser__image"
+      href="{{ generalTeaser.title.href }}"
+      title="{{ generalTeaser.title.text }}">
+      {% set image = generalTeaser.image %}
+      <span
+        aria-label="{{ image.alt }}"
+        role="img"
+        style="background-image: url('{{ image.src }}')">
+      </span>
+    </a>
+  {% endif %}
+  <div class="ma__general-teaser__details">
+    {% if generalTeaser.eyebrow %}
+      <div class="ma__general-teaser__eyebrow">
+        <span>{{ generalTeaser.eyebrow }}</span>
+      </div>
+    {% endif %}
+    {% set headingLevel = generalTeaser.level ? : 2 %}
+    <h{{ headingLevel }} class="ma__general-teaser__title">
+      {% set decorativeLink = generalTeaser.title %}
+      {% include "@atoms/decorative-link.twig" %}
+    </h{{ headingLevel }}>
+    {% if generalTeaser.date or generalTeaser.org %}
+      <div class="ma__general-teaser__details">
+        {% if generalTeaser.date %}
+          <span class="ma__general-teaser__date">
+            {{ generalTeaser.date }}
+          </span>
+        {% endif %}
+        {% if generalTeaser.org %}
+          <span class="ma__general-teaser__org">
+            {{ generalTeaser.org }}
+          </span>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if generalTeaser.description %}
+      <div class="ma__general-teaser__description">
+        {% set richText = generalTeaser.description %}
+        {% include "@organisms/by-author/rich-text.twig" %}
+      </div>
+    {% endif %}
+  </div>
+</section>

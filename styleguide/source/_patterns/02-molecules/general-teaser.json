@@ -1,0 +1,31 @@
+{
+  "generalTeaser" : {
+    "image": {
+      "src":"/assets/images/placeholder/400x225.png",
+      "alt": "placeholder image",
+      "width": "400",
+      "height": "225",
+      "href": "#"
+    },
+    "eyebrow": "Eyebrow",
+    "title" : {
+      "href":"#",
+      "text":"Text field",
+      "info": "",
+      "property": ""
+    },
+    "level": "",
+    "date": "Date field. Do we want to leave this specific or generalize it?",
+    "org": "Org Name. Do we want to leave this specific or generalize it?",
+    "description": {
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Optional description"
+          }
+        }
+      }]
+    }
+  }
+}
