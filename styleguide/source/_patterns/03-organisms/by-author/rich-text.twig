@@ -6,13 +6,19 @@
     {% set compHeading = richText.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
   {% endif %}
+
   {% if richText.sidebarHeading %}
     {% set sidebarHeading = richText.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
-  {% for element in richText.rteElements %}
-    {% include element.path with element.data %}  
-  {% endfor %}
+
+  {# use this block to render your own content (see pattern docs) #}
+  {% block rteElements %}
+    {% for element in richText.rteElements %}
+      {% include element.path with element.data %}
+    {% endfor %}
+  {% endblock %}
+
   {% if richText.decorativeLink %}
     <div class="ma__rich-text__more">
       {% set decorativeLink = richText.decorativeLink %}
