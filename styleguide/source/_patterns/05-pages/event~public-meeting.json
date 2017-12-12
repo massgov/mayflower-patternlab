@@ -414,21 +414,7 @@
 
     "mediaContact": null,
 
-    "related": {
-      "viewSpecific": true,
-      "sidebarHeading": {
-        "title": "Related"
-      },
-      "stacked": true,
-      "links": [
-        {
-          "href": "#",
-          "text": "Fishing and Wildlife Board Meeting Minutes",
-          "info": "",
-          "property": ""
-        }
-      ]
-    }
+    "related": null
   },
 
   "bottomContent": {
