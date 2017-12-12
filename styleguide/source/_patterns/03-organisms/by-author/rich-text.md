@@ -19,8 +19,8 @@ This pattern displays the contents of a rich text editor with an optional title 
   * Figure
 * Any pattern can be rendered in this pattern by setting the `path` variable to the location of the pattern and setting the `data` variable to container of the data object of that pattern.  
   * {% include item.path with item.data %}
-* RTE Elements Block
-    * allows implementers to iterate through their own loop to render molecule content.
+* rteElements [Twig block](https://twig.symfony.com/doc/2.x/tags/block.html)
+    * allows implementers to iterate through their own loop to render child content.
 
 ### JavaScript Used
 * This pattern uses JavaScript to wrap tables in a div with scrollbars (js/modules/richText.js)
