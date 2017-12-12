@@ -1,4 +1,5 @@
 {% set alertId = headerAlert.id ? headerAlert.id : '' %}
+{% set alertPrefix = headerAlert.prefix ?: 'alert!' %}
 
 {# backward compatible to v5.5 #}
 {% if headerAlert.guid %}
@@ -10,7 +11,7 @@
   data-id="{{ alertId }}"
   role="alert">
   <div class="ma__header-alert__container">
-    <span class="ma__header-alert__label">alert!</span>
+    <span class="ma__header-alert__label">{{ alertPrefix }}</span>
     <span class="ma__header-alert__message">
       {% if headerAlert.href %}
         {% set decorativeLink = headerAlert %}

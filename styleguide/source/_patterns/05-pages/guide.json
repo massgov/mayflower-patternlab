@@ -5,43 +5,11 @@
 
   "backToTopButton": true,
 
-  "emergencyAlerts": {
-    "id":"GUID18378923w38789",
-    "buttonAlert": {
-      "hideText": "Hide",
-      "showText": "Show",
-      "text": "Updates"
-    },
-    "emergencyHeader": {
-      "title": "The State is experiencing severe weather due to the winter storm Paula."
-    },
-    "alerts": [{
-      "message": "MassPort is operating with limited flights due to road closures.",
-      "timeStamp": "02.15.16, 5:00 p.m.",
-      "link": {
-        "href": "#",
-        "text":"Read full alert",
-        "chevron": "true"
-      }
-    },{
-      "message": "The MTBA is operating at a lighter service level, and experiencing delays.",
-      "timeStamp": "02.15.16, 3:00 p.m.",
-      "link": {
-        "href": "#",
-        "text":"Read full alert",
-        "chevron": "true"
-      }
-    },{
-      "message": "The Governor directs non-emergency executive branch state employees to not come in to work.",
-      "timeStamp": "02.13.16, 10:00 a.m.",
-      "link": {
-        "href": "#",
-        "text":"Read full alert",
-        "chevron": "true"
-      }
-    }]
+  "ajaxEmergencyAlerts": {
+    "endpoint":"../../assets/data/ajax-alerts.json",
+    "renderPattern":"@organisms/by-template/emergency-alerts.twig",
+    "customSelector": "js-ajax-pattern-override"
   },
-
 
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
@@ -98,9 +66,9 @@
       "widgets": null
     }
   },
-  
+
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
-  
+
   "jumpLinks": {
     "title": "In this guide",
     "links": [{
@@ -147,14 +115,14 @@
           },{
             "path": "@atoms/08-lists/unordered-list.twig",
             "data": {
-              "unorderedList": [{ 
-                "text": "Protection from unlawful discrimination" 
-              },{ 
-                "text": "Rental agreements for leases and tenancy-at-will" 
-              },{ 
-                "text": "Rent withholding and deductions for repairs" 
-              },{ 
-                "text": "Lease termination, eviction, and moving out" 
+              "unorderedList": [{
+                "text": "Protection from unlawful discrimination"
+              },{
+                "text": "Rental agreements for leases and tenancy-at-will"
+              },{
+                "text": "Rent withholding and deductions for repairs"
+              },{
+                "text": "Lease termination, eviction, and moving out"
               }]
             }
           },{
@@ -345,11 +313,11 @@
           },{
             "path": "@atoms/06-rich-text/icon-list.twig",
             "data": {
-              "iconList": [{ 
+              "iconList": [{
                 "text": "The <a href=\"#\">Executive Office of Energy and Environmental Affairs (EEA)</a> recommends <a href=\"#\">selecting a reputable mover</a>."
-              },{ 
+              },{
                 "text": "Make sure that any in-state moving company you use is properly licensed with the <a href=\"http://www.mass.gov\">Massachusetts Department of Public Utilities (DPU)</a>."
-              },{ 
+              },{
                 "text": "Follow the <a href=\"#\">Federal Motor Carrier Safety Administration (FMCSA)</a> guidelines to protect yourself from moving fraud."
               }]
             }
@@ -363,9 +331,9 @@
           },{
             "path": "@atoms/06-rich-text/icon-list.twig",
             "data": {
-              "iconList": [{ 
+              "iconList": [{
                 "text": "Research <a href=\"#\">parking restrictions</a> before moving to find out where you are allowed to unload vehicles."
-              },{ 
+              },{
                 "text": "<a href=\"http://www.mass.gov\">Contact your city or town</a> for information on obtaining a moving permit, or talk to your landlord or property owner."
               }]
             }
@@ -478,15 +446,15 @@
           },{
             "path": "@atoms/06-rich-text/icon-list.twig",
             "data": {
-              "iconList": [{ 
+              "iconList": [{
                 "text": "<a href=\"#\">Contact your town or city</a> for information on local protocols, such as pet licensing. <a href=\"http://www.mass.gov\">Dog licenses are required by state law</a>."
-              },{ 
+              },{
                 "text": "<a href=\"#\">Observe Centers for Disease Control and Prevention (CDC)</a> restrictions when <a href=\"http://www.mass.gov\">moving pets to the United States from a different country</a>."
-              },{ 
+              },{
                 "text": "Make sure your pet is comfortable during the move, and that you use the right size kennel or crate."
-              },{ 
+              },{
                 "text": "Ensure your pet’s vaccines are up to date. <a href=\"#\">Dogs, cats, and ferrets must be vaccinated against rabies in Massachusetts.</a>"
-              },{ 
+              },{
                 "text": "Dogs should have secure identification tags or a microchip installed - <a href=\"http://www.mass.gov\">contact a local veterinarian’s office for more information</a>."
               }]
             }
@@ -619,8 +587,8 @@
             "data": {
               "figure": {
                 "align": "",
-                "image": { 
-                  "alt": "alt text", 
+                "image": {
+                  "alt": "alt text",
                   "src": "../../assets/images/placeholder/800x400.png",
                   "height": "",
                   "width": ""
@@ -710,8 +678,8 @@
             "data": {
               "figure": {
                 "align": "align-right",
-                "image": { 
-                  "alt": "alt text", 
+                "image": {
+                  "alt": "alt text",
                   "src": "../../assets/images/placeholder/400x300.png",
                   "height": "",
                   "width": ""
@@ -840,12 +808,12 @@
                   },{
                     "path": "@atoms/08-lists/unordered-list.twig",
                     "data": {
-                      "unorderedList": [{ 
-                        "text": "Bulleted item" 
-                      },{ 
-                        "text": "Bulleted item" 
-                      },{ 
-                        "text": "Bulleted item" 
+                      "unorderedList": [{
+                        "text": "Bulleted item"
+                      },{
+                        "text": "Bulleted item"
+                      },{
+                        "text": "Bulleted item"
                       }]
                     }
                   }]
@@ -910,7 +878,7 @@
     },
     "pages": [{
       "image": {
-        "alt": "Place Holder Image", 
+        "alt": "Place Holder Image",
         "src": "../../assets/images/placeholder/130x160.png",
         "height": "160",
         "width": "130"
@@ -923,7 +891,7 @@
       }
     },{
       "image": {
-        "alt": "Place Holder Image", 
+        "alt": "Place Holder Image",
         "src": "../../assets/images/placeholder/130x160.png",
         "height": "160",
         "width": "130"
@@ -936,7 +904,7 @@
       }
     },{
       "image": {
-        "alt": "Place Holder Image", 
+        "alt": "Place Holder Image",
         "src": "../../assets/images/placeholder/130x160.png",
         "height": "160",
         "width": "130"

@@ -8,6 +8,8 @@ Content describing the overall emergency.
 ~~~
 emergencyHeader: {
   title:
-    type: "string / required"
+    type: string / required,
+  prefix:
+    type: string / optional (default "Emergency Alerts")
 }
 ~~~
