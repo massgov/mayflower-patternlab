@@ -108,6 +108,7 @@
 @import "02-molecules/wait-time";
 
 // Organisms - components
+@import "03-organisms/ajax-pattern";
 @import "03-organisms/action-card";
 @import "03-organisms/action-details";
 @import "03-organisms/action-finder";
@@ -173,6 +174,7 @@
 @import "03-organisms/utility-panel";
 
 // Templates - page content types
+@import "04-templates/court-rules";
 @import "04-templates/details";
 @import "04-templates/form-page";
 @import "04-templates/general";

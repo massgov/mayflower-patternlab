@@ -1,5 +1,8 @@
 {% block header %}
-  {% include "@organisms/by-template/emergency-alerts.twig" %}
+  {% if ajaxEmergencyAlerts %}
+    {% set ajaxPattern = ajaxEmergencyAlerts %}
+    {% include "@organisms/by-template/ajax-pattern.twig" %}
+  {% endif %}
   {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
 
@@ -16,16 +19,16 @@
           {% include "@organisms/by-template/jump-links.twig" %}
         </div>
       {% endif %}
-      
+
       {# backward compatible with v 5.6 - stackedRowSections becomes stackedRows #}
       {% if stackedRowSections %}
         {% set stackedRows = stackedRowSections %}
       {% endif %}
 
       {% for stackedRow in stackedRows %}
-        {% set stackedRowRestriction = stackedRow.sideBar|length ? '' : 'ma__stacked-row--restricted' %}
-
-        <section class="ma__stacked-row__section {{ stackedRowRestriction }}">
+        {% set stackedRowRestriction = stackedRow.sideBar|length ? '' : ' ma__stacked-row--restricted' %}
+        {% set stackRowBorderless = stackedRow.borderless ? ' ma__stacked-row__section--borderless' : ''  %}
+        <section class="ma__stacked-row__section{{ stackRowBorderless }}{{ stackedRowRestriction }}">
           {% if stackedRow.title %}
             <div class="ma__stacked-row__container">
               <div class="ma__stacked-row__title">
@@ -39,7 +42,7 @@
                 {% include "@atoms/04-headings/comp-heading.twig" %}
               </div>
             </div>
-          {% endif %}    
+          {% endif %}
           <div class="main-content {{ stackedRow.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
             <div class="page-content">
               {% for content in stackedRow.pageContent %}

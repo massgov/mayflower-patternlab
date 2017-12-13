@@ -6,7 +6,7 @@
     @media ($bp-large-max) {
       padding-bottom: 45px;
 
-      & ~ & {
+      & ~ &:not(&__section--borderless) {
         border-top-width: 1px;
         border-top-style: solid;
       }
@@ -26,7 +26,7 @@
     @include ma-container('restricted');
   }
 
-  &__section ~ &__section &__container:before {
+  &__section ~ &__section:not(&__section--borderless) &__container:before {
     content: "";
     display: block;
     padding-top: 45px;
