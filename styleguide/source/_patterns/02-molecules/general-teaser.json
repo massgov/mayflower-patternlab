@@ -1,28 +1,28 @@
 {
   "generalTeaser" : {
     "image": {
-      "src":"/assets/images/placeholder/400x225.png",
+      "src":"/assets/images/placeholder/300x300.png",
       "alt": "placeholder image",
-      "width": "400",
-      "height": "225",
+      "width": "300",
+      "height": "300",
       "href": "#"
     },
     "eyebrow": "Eyebrow",
     "title" : {
       "href":"#",
-      "text":"Text field",
+      "text":" Link field for a title or name",
       "info": "",
       "property": ""
     },
     "level": "",
-    "date": "Date field. Do we want to leave this specific or generalize it?",
-    "org": "Org Name. Do we want to leave this specific or generalize it?",
+    "date": "A date field.",
+    "org": "A field for the Org Name",
     "description": {
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
         "data": {
           "paragraph" : {
-            "text": "Optional description"
+            "text": "Optional description. Do we want to leave the above org and date fields specifically for what they are or rename them so that their generalizabilty is more obvious?"
           }
         }
       }]

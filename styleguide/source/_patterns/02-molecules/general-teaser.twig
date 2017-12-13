@@ -1,5 +1,6 @@
 {% set imageClass = generalTeaser.image ? 'ma__general-teaser--image' : '' %}
 
+
 <section class="ma__general-teaser {{ imageClass }}">
   {% if generalTeaser.image %}
     <a
@@ -7,11 +8,12 @@
       href="{{ generalTeaser.title.href }}"
       title="{{ generalTeaser.title.text }}">
       {% set image = generalTeaser.image %}
-      <span
+      <img
+        src="{{ image.src }}"
         aria-label="{{ image.alt }}"
         role="img"
-        style="background-image: url('{{ image.src }}')">
-      </span>
+        >
+      </img>
     </a>
   {% endif %}
   <div class="ma__general-teaser__details">
