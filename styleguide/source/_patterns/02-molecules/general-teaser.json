@@ -1,7 +1,7 @@
 {
   "generalTeaser" : {
     "image": {
-      "src":"assets/images/placeholder/400x225.png",
+      "src":"/assets/images/placeholder/400x225.png",
       "alt": "placeholder image",
       "width": "400",
       "height": "225",
