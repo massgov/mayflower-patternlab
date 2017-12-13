@@ -15,8 +15,6 @@ This is a page level alert message that can be dismissed.
 headerAlert: {
   id: 
     type: string (unique per page) / required
-  prefix:
-    type: string / optional (default "alert!")
   text: 
     type: string / required
   href:

@@ -3,15 +3,12 @@
     "contentTitle": "The Details"
   },
 
-  "ajaxEmergencyAlerts": {
-    "endpoint":"../../assets/data/emergency-alerts.json",
-    "renderPattern":"@organisms/by-template/emergency-alerts.twig"
-  },
-
-  "ajaxHeaderAlerts": {
-    "endpoint":"../../assets/data/header-alerts.json",
-    "renderPattern":"@organisms/by-template/header-alerts.twig"
-  },
+  "headerAlerts": [{
+    "guid": "GUID09058070136",
+    "text": "Lots of Bears.",
+    "href": "#",
+    "target": ""
+  }],
 
   "pageHeader": {
     "divider": false,
