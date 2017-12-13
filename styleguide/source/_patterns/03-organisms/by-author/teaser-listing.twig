@@ -1,0 +1,43 @@
+{% set teaserHeading = 2 %}
+{% set stacked = not teaserListing.stacked ? 'stacked': 'side-by-side' %}
+{% set gridTwoColumns = teaserListing.contained and teaserListing.gridTwoColumns ? 'ma__teaser-listing__2-col-grid' : 'ma__teaser-listing__3-col-grid' %}
+
+
+<section class="ma__teaser-listing">
+  <div class="ma__teaser-listing__container">
+    {% if teaserListing.compHeading %}
+      {% set compHeading = teaserListing.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+      {% set teaserHeading = (compHeading.level ? : teaserHeading) + 1 %}
+    {% endif %}
+    {% if teaserListing.sidebarHeading %}
+      {% set sidebarHeading = teaserListing.sidebarHeading %}
+      {% include "@atoms/04-headings/sidebar-heading.twig" %}
+      {% set teaserHeading = (sidebarHeading.level ? : teaserHeading) + 1 %}
+    {% endif %}
+    {% if teaserListing.items %}
+      <div class="ma__teaser-listing__items {{ stacked }}">
+        {% for pressTeaser in teaserListing.items %}
+          {% set pressTeaser = pressTeaser|merge({"level":teaserHeading}) %}
+          {% include "@molecules/press-teaser.twig" %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if teaserListing.secondaryItems %}
+      <ul class="ma__teaser-listing__secondary-items {{ gridTwoColumns }}">
+        {% for pressTeaser in teaserListing.secondaryItems %}
+          <li class="ma__teaser-listing__secondary-item">
+            {% set pressTeaser = pressTeaser|merge({"level":teaserHeading}) %}
+            {% include "@molecules/press-teaser.twig" %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if teaserListing.more %}
+      <div class="ma__teaser-listing__more">
+        {% set link = teaserListing.more %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+    {% endif %}
+  </div>
+</section>
