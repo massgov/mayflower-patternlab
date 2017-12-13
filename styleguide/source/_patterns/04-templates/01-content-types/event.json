@@ -144,7 +144,7 @@
       "formDownloads": {
         "compHeading": {
           "title": "Meeting Minutes",
-          "sub": true
+          "level": 3
         },
         "downloadLinks": [{
           "downloadLink": {
@@ -167,13 +167,13 @@
       "richText": {
         "compHeading": {
           "title": "Agenda",
-          "sub": true
+          "level": 3
         },
         "rteElements": [{
 
-          "path": "@atoms/04-headings/heading-3.twig",
+          "path": "@atoms/04-headings/heading-4.twig",
           "data": {
-            "heading3": {
+            "heading4": {
               "text": "Opening Remarks"
             }
           }
@@ -185,9 +185,9 @@
             }
           }
           },{
-          "path": "@atoms/04-headings/heading-3.twig",
+          "path": "@atoms/04-headings/heading-4.twig",
           "data": {
-            "heading3": {
+            "heading4": {
               "text": "Discussion: Strategic Planning"
             }
           }
