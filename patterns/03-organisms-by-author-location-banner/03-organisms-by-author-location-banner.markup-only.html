@@ -1,0 +1,69 @@
+
+<section class="ma__location-banner">
+  <style>
+    #GUID24872901570 {
+      background-image: url('../../assets/images/placeholder/800x400.png');
+    }
+  </style>
+  <div class="ma__location-banner__map">
+        <div
+  class="ma__google-map" 
+  aria-hidden="true" 
+  role="presentation">
+  <div class="ma__google-map__map js-google-map"></div>
+    <script>
+    // Make googleMap data object available in google map module js.
+    var ma = ma || {};
+    ma.googleMapData = ma.googleMapData || [];
+    ma.googleMapData.push({
+      map: {
+        center: {
+          lat: 42.594129,
+          lng: -73.183715
+        },
+        zoom: 12
+      },
+      maxItems: 2,
+      markers: [
+              {
+          position: {
+            lat: 42.554129,
+            lng: -73.213715 
+          },
+          label: "", // single character only
+          infoWindow: {
+            name: "Visitor\x27s\x20Center", // raw was needed to prevent rendering ascii characters
+            phone: "14134994262",
+            fax: "",
+            email: "mass.parks\x40state.ma.us",
+            address: "30\x20Rockwell\x20Road\x3Cbr\x3ELanesborough,\x20MA\x2001237",
+            directions: ""
+          }
+        },
+              {
+          position: {
+            lat: 42.636875,
+            lng: -73.166921 
+          },
+          label: "", // single character only
+          infoWindow: {
+            name: "Bascom\x20Lodge", // raw was needed to prevent rendering ascii characters
+            phone: "14137431591",
+            fax: "",
+            email: "mail\x40bascomlodge.net",
+            address: "30\x20Rockwell\x20Road\x3Cbr\x3ELanesborough,\x20MA\x2001237",
+            directions: ""
+          }
+        }
+            ]
+    });
+  </script>
+</div>
+  </div>
+  <div 
+    class="ma__location-banner__image" 
+    id="GUID24872901570"
+    role="image"
+    title="Mt Greylock State Park">
+  </div>
+</section>

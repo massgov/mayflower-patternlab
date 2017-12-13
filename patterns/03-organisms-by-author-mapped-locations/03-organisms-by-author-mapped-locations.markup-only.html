@@ -1,0 +1,78 @@
+<section class="ma__mapped-locations ">
+      <div class="ma__mapped-locations__header">
+                    
+
+
+
+  
+
+
+<h2
+  class="ma__comp-heading   " 
+   
+  tabindex="-1">All Locations</h2>
+                    <div class="ma__mapped-locations__link">
+                    <span class="ma__decorative-link">
+  <a 
+    href="#" 
+    class="js-clickable-link"
+    title="">See a list of all locations&nbsp;<svg aria-hidden="true" id="SvgjsSvg1000" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="16" height="18" viewBox="0 0 16 18"><defs id="SvgjsDefs1001"></defs><path id="SvgjsPath1007" d="M983.721 1887.28L983.721 1887.28L986.423 1890L986.423 1890L986.423 1890L983.721 1892.72L983.721 1892.72L978.318 1898.17L975.617 1895.45L979.115 1891.92L971.443 1891.92L971.443 1888.0700000000002L979.103 1888.0700000000002L975.617 1884.5500000000002L978.318 1881.8300000000002Z " transform="matrix(1,0,0,1,-971,-1881)"></path></svg></a>
+</span>
+        </div>
+          </div>
+    <div class="ma__mapped-locations__map">
+            <div
+  class="ma__google-map" 
+  aria-hidden="true" 
+  role="presentation">
+  <div class="ma__google-map__map js-google-map"></div>
+    <script>
+    // Make googleMap data object available in google map module js.
+    var ma = ma || {};
+    ma.googleMapData = ma.googleMapData || [];
+    ma.googleMapData.push({
+      map: {
+        center: {
+          lat: 42.366565,
+          lng: -71.05894
+        },
+        zoom: 16
+      },
+      maxItems: 2,
+      markers: [
+              {
+          position: {
+            lat: 42.366565,
+            lng: -71.05894 
+          },
+          label: "A", // single character only
+          infoWindow: {
+            name: "Department\x20of\x20Conservation\x20and\x20Recreation", // raw was needed to prevent rendering ascii characters
+            phone: "16176261250",
+            fax: "16176261351",
+            email: "mass.parks\x40state.ma.us",
+            address: "251\x20Causeway\x20Street,\x20Suite\x20900\x3Cbr\x3EBoston,\x20MA\x2002114\x2D2104",
+            directions: ""
+          }
+        },
+              {
+          position: {
+            lat: 42.358795,
+            lng: -71.063858 
+          },
+          label: "B", // single character only
+          infoWindow: {
+            name: "Department\x20of\x20Recreation\x20and\x20Fun", // raw was needed to prevent rendering ascii characters
+            phone: "16176261250",
+            fax: "",
+            email: "mass.parks\x40state.ma.us",
+            address: "24\x20Beacon\x20St\x3Cbr\x3EBoston,\x20MA\x2002133",
+            directions: ""
+          }
+        }
+            ]
+    });
+  </script>
+</div>
+  </div>
+</section>

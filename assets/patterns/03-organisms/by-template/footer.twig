@@ -1,0 +1,48 @@
+{% if floatingAction %}
+  {% include "@molecules/floating-action.twig" %}
+{% endif %}
+<footer class="ma__footer js-footer" id="footer">
+  <div class="ma__footer__container">
+    <div class="ma__footer__nav">
+      {% include "@molecules/footer-links.twig" %}
+    </div>
+    <section class="ma__footer__info">
+      <div class="ma__footer__logo">
+        <img src="{{ url.domain }}/{{ url.assetsPath }}/images/stateseal.png" alt="Massachusetts State Seal" width="120" height="120" />
+      </div>
+      <div class="ma__footer__social">
+        {% set socialLinks = footerSocialLinks %}
+        {% include "@molecules/social-links.twig" %}
+      </div>
+      <div class="ma__footer__copyright">
+        <p><b>&copy; 2016 Commonwealth of Massachusetts.</b></p>
+        <p>Mass.Gov&#x00AE; is a registered service mark of the Commonwealth of Massachusetts.</p>
+      </div>
+    </section>
+  </div>
+  {% if backToTopButton %}
+    <button class="ma__footer__back2top js-back2top is-hidden">
+      {% include "@atoms/05-icons/svg-arrow.twig" %}
+      <span aria-hidden="true">Top</span>
+      <span class="visually-hidden">Go to the top of the page</span>
+    </button>
+  {% endif %}
+</footer>
+
+{% if googleLanguages %}
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: '{{ googleLanguages }}', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+
+      document.querySelector('#google_translate_element').classList.add('has-rendered');
+    }
+
+    (function() {
+      var script = document.createElement('script');
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      element = document.getElementsByTagName('head')[0];
+      element.appendChild(script);
+    })();
+  </script>
+{% endif %}

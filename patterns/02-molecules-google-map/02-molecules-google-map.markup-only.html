@@ -1,0 +1,53 @@
+<div
+  class="ma__google-map" 
+  aria-hidden="true" 
+  role="presentation">
+  <div class="ma__google-map__map js-google-map"></div>
+    <script>
+    // Make googleMap data object available in google map module js.
+    var ma = ma || {};
+    ma.googleMapData = ma.googleMapData || [];
+    ma.googleMapData.push({
+      map: {
+        center: {
+          lat: 42.366565,
+          lng: -71.05894
+        },
+        zoom: 16
+      },
+      maxItems: 2,
+      markers: [
+              {
+          position: {
+            lat: 42.366565,
+            lng: -71.05894 
+          },
+          label: "A", // single character only
+          infoWindow: {
+            name: "Department\x20of\x20Conservation\x20and\x20Recreation", // raw was needed to prevent rendering ascii characters
+            phone: "16176261250",
+            fax: "16176261351",
+            email: "mass.parks\x40state.ma.us",
+            address: "251\x20Causeway\x20Street,\x20Suite\x20900\x3Cbr\x3EBoston,\x20MA\x2002114\x2D2104",
+            directions: "https\x3A\x2F\x2Fwww.google.com\x2Fmaps\x2Fplace\x2F251\x2BCauseway\x2BSt\x2BBoston\x2BMA\x2B02114"
+          }
+        },
+              {
+          position: {
+            lat: 42.358795,
+            lng: -71.063858 
+          },
+          label: "B", // single character only
+          infoWindow: {
+            name: "Department\x20of\x20Recreation\x20and\x20Fun", // raw was needed to prevent rendering ascii characters
+            phone: "16176261250",
+            fax: "",
+            email: "mass.parks\x40state.ma.us",
+            address: "24\x20Beacon\x20St\x3Cbr\x3EBoston,\x20MA\x2002133",
+            directions: ""
+          }
+        }
+            ]
+    });
+  </script>
+</div>

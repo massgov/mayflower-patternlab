@@ -1,0 +1,160 @@
+<section class="ma__press-filters">
+  <div class="ma__press-filters__container">
+    <header class="ma__press-filters__heading">
+            
+  
+<h2 class="ma__colored-heading ">Filter Results</h2>
+    </header>
+    <form class="ma__press-filters__form js-press-filters" action="#">
+      <div class="ma__press-filters__organizations">
+                <section class="ma__org-selector js-org-selector">
+    <section class="ma__select-box js-dropdown ma__select-box--optional">
+  <label
+    for="color-select" 
+    class="ma__select-box__label">State organization</label>
+  <div class="ma__select-box__field">
+    <select
+      name="color-select"
+      id="color-select" 
+      class="ma__select-box__select js-dropdown-select ">
+              <option value="">All Organizations</option>
+              <option value="attorney-general-office">Attorney General&#039;s Office</option>
+              <option value="governors-office">Governor&#039;s Office</option>
+          </select>
+    <div class="ma__select-box__link">
+      <span class="js-dropdown-link">All Organizations</span>
+      <span class="ma__select-box__icon"></span></div>
+  </div>
+</section>  <div class="ma__org-selector__org-info js-org-info"></div>
+  <script>
+    var orgSelector = orgSelector || [];
+    var organizations = {};
+          organizations["attorney-general-office"] = {
+        "image": {
+          "href": "\x23",
+          "alt": "Maura\x20Healey",
+          "src": "..\x2F..\x2Fassets\x2Fimages\x2Fplaceholder\x2F100x100.png",
+          "height": "100",
+          "width": "100"
+        },
+        "name": {
+          "text": "Maura\x20Healey",
+          "href": "\x23"
+        },
+        "jobTitle": "Attorney\x20General",
+        "message": "The\x20Attorney\x20General\x20is\x20the\x20chief\x20lawyer\x20and\x20law\x20enforcement\x20officer\x20of\x20the\x20Commonwealth\x20of\x20Massachusetts.\x20In\x20addition,\x20her\x20office\x20is\x20an\x20advocate\x20and\x20resource\x20for\x20the\x20Commonwealth\x20and\x20its\x20residents.",
+        "moreLink": {
+          "text": "more\x20information",
+          "href": "\x23",
+          "info": "learn\x20more\x20about\x20Organization"
+        }      
+      };
+          organizations["governors-office"] = {
+        "image": {
+          "href": "\x23",
+          "alt": "Charles\x20Baker",
+          "src": "..\x2F..\x2Fassets\x2Fimages\x2Fplaceholder\x2F100x100.png",
+          "height": "100",
+          "width": "100"
+        },
+        "name": {
+          "text": "Charles\x20Baker",
+          "href": "\x23"
+        },
+        "jobTitle": "Governor",
+        "message": "The\x20Governor\x20is\x20the\x20chief\x20lawyer\x20and\x20law\x20enforcement\x20officer\x20of\x20the\x20Commonwealth\x20of\x20Massachusetts.\x20In\x20addition,\x20her\x20office\x20is\x20an\x20advocate\x20and\x20resource\x20for\x20the\x20Commonwealth\x20and\x20its\x20residents.",
+        "moreLink": {
+          "text": "more\x20information",
+          "href": "\x23",
+          "info": "learn\x20more\x20about\x20Organization"
+        }      
+      };
+        orgSelector.push({ "organizations": organizations });
+  </script>
+</section>
+      </div>
+      <div class="ma__press-filters__topic">
+                <section class="ma__select-box js-dropdown ma__select-box--optional">
+  <label
+    for="topic" 
+    class="ma__select-box__label">Topic</label>
+  <div class="ma__select-box__field">
+    <select
+      name="topic"
+      id="topic" 
+      class="ma__select-box__select js-dropdown-select ">
+              <option value="">Select</option>
+              <option value="topic1">Topic 1</option>
+              <option value="topic2">Topic 2</option>
+              <option value="topic2">Topic 2</option>
+          </select>
+    <div class="ma__select-box__link">
+      <span class="js-dropdown-link">Select</span>
+      <span class="ma__select-box__icon"></span></div>
+  </div>
+</section>      </div>
+      <div class="ma__press-filters__type">    
+                <section class="ma__select-box js-dropdown ma__select-box--optional">
+  <label
+    for="announcement-type" 
+    class="ma__select-box__label">Announcement type</label>
+  <div class="ma__select-box__field">
+    <select
+      name="announcement-type"
+      id="announcement-type" 
+      class="ma__select-box__select js-dropdown-select ">
+              <option value="">Select</option>
+              <option value="press-release">Press release</option>
+              <option value="press-statement">Press statement</option>
+              <option value="news-article">News article</option>
+              <option value="blog-post">Blog post</option>
+              <option value="speech">Speech</option>
+          </select>
+    <div class="ma__select-box__link">
+      <span class="js-dropdown-link">Select</span>
+      <span class="ma__select-box__icon"></span></div>
+  </div>
+</section>      </div>
+      <div class="ma__press-filters__date">
+                <div class="ma__date-range">
+  <fieldset>
+    <legend class="ma__date-range__label">
+      Date range
+    </legend>
+    <div class="ma__date-range__start js-filter-by-date-range__start">
+            <label for="start-date">Select a start date</label>
+<input 
+  class="ma__input-date js-input-date " 
+  name="start-date" 
+  id="start-date" 
+  type="date" 
+  placeholder="mm/dd/yyyy" 
+  data-type="date"
+  data-restrict="max" 
+   />
+    </div>
+    <div class="ma__date-range__divider">to</div>
+    <div class="ma__date-range__end js-filter-by-date-range__end">
+            <label for="end-date">Select an end date</label>
+<input 
+  class="ma__input-date js-input-date " 
+  name="end-date" 
+  id="end-date" 
+  type="date" 
+  placeholder="today" 
+  data-type="date"
+  data-restrict="max" 
+   />
+    </div>
+  </fieldset>
+</div>
+      </div>
+      <div class="ma__press-filters__button">
+                
+
+
+  <button type="submit" class="ma__button ma__button--small  " aria-label="">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>

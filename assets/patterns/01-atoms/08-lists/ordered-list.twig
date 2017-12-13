@@ -1,0 +1,12 @@
+<ol>
+	{% for list in orderedList %}
+		<li>{{ list.text|raw }}</li>
+		{% if list.sublist %}
+			<ol>
+				{% for sublist in list.sublist %}
+					<li>{{ sublist.text|raw }}</li>
+				{% endfor %}
+			</ol>
+		{% endif %}
+	{% endfor %}
+</ol>

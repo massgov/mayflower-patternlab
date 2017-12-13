@@ -1,0 +1,4 @@
+{# use the level passed, the gloval level, or the default #}
+{% set headingLevel = sidebarHeading.level ? : 2 %}
+
+<h{{ headingLevel }} class="ma__sidebar-heading">{{sidebarHeading.title}}</h{{ headingLevel }}>

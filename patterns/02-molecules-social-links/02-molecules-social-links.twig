@@ -1,0 +1,16 @@
+{% if socialLinks.items|length %}
+  <section class="ma__social-links">
+    {% if socialLinks.label %}
+      <span class="ma__social-links__label">{{ socialLinks.label }}</span>
+    {% endif %}
+    <ul class="ma__social-links__items">
+      {% for item in socialLinks.items %}
+        <li class="ma__social-links__item">
+          <a href="{{ item.href }}" class="ma__social-links__link js-social-share" data-social-share="{{ item.linkType }}" title="{{ item.altText }}">
+            {% include item.icon %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

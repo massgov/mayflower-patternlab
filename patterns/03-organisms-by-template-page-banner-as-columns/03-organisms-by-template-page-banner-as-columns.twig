@@ -1,0 +1,59 @@
+{% set sizeClass = pageBanner.size ? "ma__page-banner--" ~ pageBanner.size : '' %}
+
+{% set colorClass = pageBanner.color ? "ma__page-banner--" ~ pageBanner.color : '' %}
+
+<section class="ma__page-banner {{ sizeClass }} {{ colorClass }}">
+  {% if pageBanner.size == "columns" %}
+    <style>
+      .ma__page-banner__image {
+        background-image: url('{{ pageBanner.bgNarrow }}');
+      }
+
+      @media (min-width: 801px) {
+        .ma__page-banner__image {
+          background-image: url('{{ pageBanner.bgWide }}');
+        }
+      }
+    </style>
+  {% else %}
+    <style>
+      .ma__page-banner {
+        background-image: url('{{ pageBanner.bgNarrow }}');
+      }
+
+      @media (min-width: 801px) {
+        .ma__page-banner {
+          background-image: url('{{ pageBanner.bgWide }}');
+        }
+      }
+    </style>
+  {% endif %}
+  <div class="ma__page-banner__container">
+    {% if pageBanner.size and pageBanner.size == "columns" %}
+      <div class="ma__page-banner__image"></div>
+    {% endif %}
+    <div class="ma__page-banner__content" property="mainEntityOfPage">
+      {% if pageBanner.icon %}
+        <div class="ma__page-banner__icon">
+          {% include pageBanner.icon %}
+        </div>
+      {% endif %}
+      <h1 class="ma__page-banner__title">
+        {{ pageBanner.title }}
+        {% if pageBanner.titleSubText %}
+          <span> {{ pageBanner.titleSubText }}</span>
+        {% endif %}
+      </h1>
+      {% if pageBanner.description and not (pageBanner.size == "columns") %}
+        <p class="ma__page-banner__description">
+          {{ pageBanner.description }}
+        </p>
+      {% endif %}
+    </div>
+    {% if pageBanner.description and pageBanner.size == "columns" %}
+      <p class="ma__page-banner__description">
+        {{ pageBanner.description }}
+      </p>
+    {% endif %}
+  </div>
+</section>
