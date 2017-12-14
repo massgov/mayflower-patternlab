@@ -17,18 +17,18 @@
     {% endif %}
     {% if teaserListing.items %}
       <div class="ma__teaser-listing__items {{ stacked }}">
-        {% for pressTeaser in teaserListing.items %}
-          {% set pressTeaser = pressTeaser|merge({"level":teaserHeading}) %}
-          {% include "@molecules/press-teaser.twig" %}
+        {% for generalTeaser in teaserListing.items %}
+          {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
+          {% include "@molecules/general-teaser.twig" %}
         {% endfor %}
       </div>
     {% endif %}
     {% if teaserListing.secondaryItems %}
       <ul class="ma__teaser-listing__secondary-items {{ gridTwoColumns }}">
-        {% for pressTeaser in teaserListing.secondaryItems %}
+        {% for generalTeaser in teaserListing.secondaryItems %}
           <li class="ma__teaser-listing__secondary-item">
-            {% set pressTeaser = pressTeaser|merge({"level":teaserHeading}) %}
-            {% include "@molecules/press-teaser.twig" %}
+            {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
+            {% include "@molecules/general-teaser.twig" %}
           </li>
         {% endfor %}
       </ul>

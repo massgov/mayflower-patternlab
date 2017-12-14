@@ -125,9 +125,9 @@
       "id": "",
       "pageContent": [
         {
-          "path": "@organisms/by-author/press-listing.twig",
+          "path": "@organisms/by-author/teaser-listing.twig",
           "data": {
-            "pressListing": {
+            "teaserListing": {
               "stacked": false,
               "contained": true,
               "gridTwoColumns": true,
