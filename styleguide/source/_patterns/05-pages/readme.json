@@ -1,0 +1,390 @@
+{
+  "pageHeader": {
+    "category": "",
+    "divider": false,
+    "publishState": {
+      "text": "5.10.0"
+    },
+    "title": "Welcome to Mayflower",
+    "subTitle": "The enterprise design system for the Commonwealth of Massachusetts",
+    "headerTags": null,
+    "socialLinks": null,
+    "optionalContents": [{
+      "path": "@atoms/decorative-link.twig",
+      "data": {
+        "decorativeLink": {
+          "text": "View the project on GitHub",
+          "type": "external",
+          "href": "https://www.github.com/massgov/mayflower",
+          "target": "_blank"
+        }
+      }
+    }],
+    "widgets": [{
+      "path": "@atoms/09-media/image.twig",
+      "data": {
+        "image": {
+          "alt": "state seal",
+          "src": "../../assets/images/stateseal.png",
+          "height": "150",
+          "width": "150"
+        }
+      }
+    }]
+  },
+  "stickyNav": {
+    "anchorLinks":[{
+      "href": "overview",
+      "text": "Overview",
+      "info": ""
+    },{
+      "href": "getting-started",
+      "text": "Getting Started",
+      "info": ""
+    }]
+  },
+  "details": {
+    "contentTitle": "About Mayflower"
+  },
+  "pageContent": {
+    "overview": {
+      "compHeading": {
+        "title": "Overview",
+        "sub": "",
+        "color": "",
+        "id": "overview",
+        "centered": ""
+      },
+      "description": {
+        "rteElements": [
+          {
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Mayflower is a library of user interface (UI) patterns which can be assembled in layout templates to create pages.  These patterns are organized in groups as defined by Brad Frost's <a href='http://atomicdesign.bradfrost.com/chapter-2/' target='_blank'>Atomic Design</a> methodology:"
+              }
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "expanded": true,
+          "collapsibleHeader": {
+            "info": "Click here to expand this thing",
+            "title": "Atoms",
+            "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+          },
+          "more": {
+            "href": "https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md#atoms-an-indivisible-unit",
+            "text": "Learn more about Atoms",
+            "target": "_blank"
+          },
+          "includes": [
+            {
+              "path": "@atoms/11-text/raw-html.twig",
+              "data": {
+                "rawHtml": {
+                  "content": "<p>Atoms are the smallest possible pattern in Atomic Design. They are the building blocks to create more complex Patterns. In most cases, a simple html element (<code class=\"language-markup\">a</code>, <code class=\"language-markup\">h1</code>, <code class=\"language-markup\">button</code>, etc...) is considered an Atom. More complex html elements (<code class=\"language-markup\">table</code>, <code class=\"language-markup\">ul</code>, <code class=\"language-markup\">figure</code>, etc...) are also considered Atoms, because the individual parts (<code class=\"language-markup\">li</code>,<code class=\"language-markup\">td</code>,<code class=\"language-markup\">figcaption</code>) cannot be used on there own.</p>"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "expanded": false,
+          "collapsibleHeader": {
+            "info": "Click here to expand this thing",
+            "title": "Molecules - (stylized collection)",
+            "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+          },
+          "more": {
+            "href": "https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md#molecules---stylized-collection",
+            "text": "Learn more about Molecules",
+            "target": "_blank"
+          },
+          "includes": [{
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "A Molecule is a stylized collection of Atoms, HTML elements and even other Molecules that are combined to create a new pattern for a simple task. These patterns usually accomplishes a single goal like a stylized link (ie: Callout Link) or a menu of links (ie: Footer Links). Molecules have the greatest flexibility of all the patterns so please make sure you're not building an Atom or Organism."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "expanded": false,
+          "collapsibleHeader": {
+            "info": "Click here to expand this thing",
+            "title": "Organisms - (layout of patterns)",
+            "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+          },
+          "more": {
+            "href": "https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md#organisms---layout-of-patterns",
+            "text": "Learn more about Organisms",
+            "target": "_blank"
+          },
+          "includes": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "An Organism is a layout of other patterns. HTML5 elements and CSS styling used in an Organism are for laying out the included patterns. All content to be rendered, is passed on to the included patterns. The only styling done for an Organism would be to help define the layout the patterns, like background-colors and borders."
+              }
+            }
+          }
+          ]
+        },
+        {
+          "expanded": false,
+          "collapsibleHeader": {
+            "info": "Click here to expand this thing",
+            "title": "Templates (page layout and content guide)",
+            "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+          },
+          "more": {
+            "href": "https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md#templates",
+            "text": "Learn more about Templates",
+            "target": "_blank"
+          },
+          "includes": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text":"Template patterns define the layout and basic patterns needed when constructing a page. Like Organisms, templates contain html elements to determine the layout and can include other patterns. The also use Twig Blocks to provide locations for including additional patterns or overriding default patterns."
+              }
+            }
+          }]
+        },
+        {
+          "expanded": false,
+          "collapsibleHeader": {
+            "info": "Click here to expand this thing",
+            "title": "Pages (example content)",
+            "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+          },
+          "more": {
+            "href": "https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md#pages",
+            "text": "Learn more about Pages",
+            "target": "_blank"
+          },
+          "includes": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "Pages are used to show an example of how a template can be used. Pages should extend an existing template to determine the basic layout for the page, use real content in the JSON similar to that used on the live site, and include any additional optional patterns to complete the page. The page constructed should closely matche what we expect a final page to look like on the live site."
+              }
+            }
+          }
+          ]
+        }
+      ]
+    },
+    "gettingStarted": {
+      "compHeading": {
+        "title": "Getting Started",
+        "sub": "",
+        "color": "",
+        "id": "getting-started",
+        "centered": ""
+      },
+      "description": {
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Mayflower provides design guidelines and code to help you quickly create trustworthy, accessible, and consistent digital government services."
+            }
+          }
+          },{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph" : {
+                "text": "There are two ways to work with Mayflower in your project:"
+              }
+            }
+          }
+        ]
+      },
+      "items": [
+        {
+          "expanded": true,
+          "collapsibleHeader": {
+            "info": "Click here to expand this thing",
+            "title": "Link to our assets",
+            "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+          },
+          "more": null,
+          "includes": [
+            {
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "The easiest way to get Mayflower designs into your digital project is to link to our static assets (our CSS styles, JS functionality, fonts, and images).  Then you can browse the Mayflower patterns and copy the html required for your UI structure."
+                }
+              }
+            },
+            {
+              "path": "@atoms/04-headings/heading-4.twig",
+              "data": {
+                "heading4": {
+                  "text": "Link to the latest"
+                }
+              }
+            },
+            {
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "If you want to get our style updates without having to update links in your codebase, you can use our <b>latest minor</b> urls.  <a href=\"https://github.com/massgov/mayflower/blob/dev/docs/versioning.md\" target=\"_blank\">Learn more about our approach to semantic versioning</a>."
+                }
+              }
+            },
+            {
+              "path": "@atoms/04-headings/heading-5.twig",
+              "data": {
+                "heading5": {
+                  "text": "CSS (styles)"
+                }
+              }
+            },
+            {
+              "path": "@atoms/11-text/raw-html.twig",
+              "data": {
+                "rawHtml": {
+                  "content": "Copy-paste the stylesheet <code class=\"language-markup\">&lt;link&gt;</code> into your <code class=\"language-markup\">&lt;head&gt;</code> before all other stylesheets to load our CSS.<pre><code class=\"language-html\">&lt;link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css\" integrity=\"sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb\" crossorigin=\"anonymous\"&gt;</code></pre>"
+                }
+              }
+            },
+            {
+              "path": "@atoms/04-headings/heading-5.twig",
+              "data": {
+                "heading5": {
+                  "text": "Javascript (functionality)"
+                }
+              }
+            },
+            {
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Many of our patterns require the use of JavaScript to function. Specifically, they require jQuery and our own JavaScript plugins.  Some patterns also require the use of other Javascript libraries. All of the external Javascript dependencies (including jQuery 3.1.0) have been packaged up for you in <code class=\"language-markup\">vendor-generated.js</code>.  All of our custom Javascript plugins have been packaged up for you in <code class=\"language-markup\">index-generated.js</code>."
+                }
+              }
+            },
+            {
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "Place the following <code class=\"language-html\">&lt;script&gt;</code>s near the end of your pages, right before the closing  <code class=\"language-html\">&lt;/body&gt;</code> tag, to enable them. <code class=\"language-html\">vendor-generated.js</code> must come first, then our JavaScript plugins <code class=\"language-html\">index-generated.js</code>."
+                }
+              }
+            },
+            {
+              "path": "@atoms/11-text/raw-html.twig",
+              "data": {
+                "rawHtml": {
+                  "content": "<pre><code class=\"language-html\">&lt;script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"&gt;&lt;/script&gt\n&lt;script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js\" integrity=\"sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh\" crossorigin=\"anonymous\"&gt;&lt;/script&gt;\n&lt;script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js\" integrity=\"sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ\" crossorigin=\"anonymous\"&gt;&lt;/script&gt;</code></pre>"
+                }
+              }
+            },
+            {
+              "path": "@atoms/11-text/paragraph.twig",
+              "data": {
+                "paragraph": {
+                  "text": "If you are curious about which of our patterns require Javascript, <a href=\"https://mayflower.digital.mass.gov\" target=\"_blank\">browse Mayflower</a> and click the Pattern Lab tools cog icon in the top right corner, then select \"Show Pattern Info\".  When the information panel pops up on the bottom half of the screen, you will be able to see documentation related to the pattern, including notes about Javascript functionality."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "expanded": false,
+          "collapsibleHeader": {
+            "info": "Click here to expand this thing",
+            "title": "Download",
+            "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+          },
+          "more": {
+            "href": "https://github.com/massgov/mayflower/blob/dev/docs/atomic-design.md#molecules---stylized-collection",
+            "text": "Learn more about Molecules",
+            "target": "_blank"
+          },
+          "includes": [{
+            "path": "@atoms/11-text/paragraph.twig",
+            "data": {
+              "paragraph": {
+                "text": "A Molecule is a stylized collection of Atoms, HTML elements and even other Molecules that are combined to create a new pattern for a simple task. These patterns usually accomplishes a single goal like a stylized link (ie: Callout Link) or a menu of links (ie: Footer Links). Molecules have the greatest flexibility of all the patterns so please make sure you're not building an Atom or Organism."
+              }
+            }
+          }
+          ]
+        }
+      ]
+    }
+  },
+  "sidebar": {
+    "coloredHeadings": true,
+    "versions": {
+      "compHeading": {
+        "title": "Mayflower Releases",
+        "sub": "",
+        "color": "green",
+        "id": "",
+        "centered": false
+      },
+      "description": null,
+      "stacked": true,
+      "hideBullets": true,
+      "links" : [{
+        "href":"https://mayflower.digital.mass.gov/5.10./index.html0",
+        "text":"5.10.0",
+        "info": "",
+        "property": "",
+        "target": "_blank"
+      },{
+        "href":"https://mayflower.digital.mass.gov/5.9.0/index.html",
+        "text":"5.9.0",
+        "info": "",
+        "property": "",
+        "target": "_blank"
+      },{
+        "href":"https://mayflower.digital.mass.gov/5.8.1/index.html",
+        "text":"5.8.1",
+        "info": "",
+        "property": "",
+        "target": "_blank"
+      },{
+        "href":"https://mayflower.digital.mass.gov/5.8.0/index.html",
+        "text":"5.8.0",
+        "info": "",
+        "property": "",
+        "target": "_blank"
+      },{
+        "href":"https://mayflower.digital.mass.gov/5.7.2/index.html",
+        "text":"5.7.2",
+        "info": "",
+        "property": "",
+        "target": "_blank"
+      },{
+        "href":"https://mayflower.digital.mass.gov/5.7.1/index.html",
+        "text":"5.7.1",
+        "info": "",
+        "property": "",
+        "target": "_blank"
+      },{
+        "href":"https://mayflower.digital.mass.gov/5.7.0/index.html",
+        "text":"5.7.0",
+        "info": "",
+        "property": "",
+        "target": "_blank"
+      }],
+      "more": {
+        "href": "https://github.com/massgov/mayflower/releases",
+        "text": "See all releases",
+        "chevron": true,
+        "target": "_blank"
+      }
+    }
+  }
+}
