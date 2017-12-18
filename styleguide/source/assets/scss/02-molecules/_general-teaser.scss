@@ -1,9 +1,14 @@
 .ma__general-teaser {
   @include clearfix();
 
-  &--image {
+  &--image-link {
     display: flex;
-    flex-wrap: wrap;
+    &.stacked {
+      flex-direction: column;
+    }
+    &.side-by-side {
+      flex-direction: row;
+    }
   }
 
   & + & {
@@ -29,7 +34,7 @@
     @include ma-container('restricted');
   }
 
-  &__image {
+  &__image-link {
     flex-shrink: 1;
     flex-grow: 0;
     flex-basis: auto;
@@ -45,7 +50,7 @@
     //}
   }
 
-  &__image + &__details {
+  &__image-link + &__details {
     flex-basis: 300px;
     flex-shrink: 1;
     flex-grow: 1;

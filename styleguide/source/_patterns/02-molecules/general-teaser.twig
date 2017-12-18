@@ -1,10 +1,11 @@
-{% set imageClass = generalTeaser.image ? 'ma__general-teaser--image' : '' %}
+{% set imageClass = generalTeaser.image ? 'ma__general-teaser--image-link' : '' %}
+{% set stacked = generalTeaser.image and generalTeaser.stacked ? 'stacked' : 'side-by-side' %}
 
 
-<section class="ma__general-teaser {{ imageClass }}">
+<section class="ma__general-teaser {{ imageClass }} {{ stacked }}">
   {% if generalTeaser.image %}
     <a
-      class="ma__general-teaser__image"
+      class="ma__general-teaser__image-link"
       href="{{ generalTeaser.title.href }}"
       title="{{ generalTeaser.title.text }}">
       {% set image = generalTeaser.image %}

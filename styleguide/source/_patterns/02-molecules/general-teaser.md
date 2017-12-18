@@ -1,5 +1,6 @@
 ### Description
-Short multi-use teaser with an optional image
+Short multi-use teaser with an optional image. This pattern can display the photo and details either stacked, with the 
+image on top, or side by side with the image to the left of the details.
 
 ### Status
 * Stable as of TBA
@@ -10,10 +11,11 @@ Short multi-use teaser with an optional image
 
 
 ### Variables
-####These need to be updated! 
 ~~~
 
-pressTeaser : {
+generalTeaser : {
+  stacked:
+     type: boolean / optional
   image: (optional) {
     src:
       type: string (image path) / required

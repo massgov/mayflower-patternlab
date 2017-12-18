@@ -140,6 +140,7 @@
               },
               "items": [
                 {
+                  "stacked": true,
                   "image": {
                     "src": "/assets/images/placeholder/130x160.png",
                     "alt": "placeholder image",
@@ -170,6 +171,7 @@
                   }
                 },
                 {
+                  "stacked": true,
                   "image": {
                     "src": "/assets/images/placeholder/130x160.png",
                     "alt": "placeholder image",
