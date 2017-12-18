@@ -12,5 +12,7 @@ decorativeLink {
     type: string / required
   info: 
     type: string (adds more description to the link) / optional
+  target:
+    type: string ("_self", "_blank", "_parent", "_top") (context for where to display the linked URL) / optional
 }
 ~~~

@@ -1,6 +1,3 @@
 <span class="ma__decorative-link">
-  <a 
-    href="{{decorativeLink.href}}" 
-    class="js-clickable-link"
-    title="{{ decorativeLink.info }}">{{decorativeLink.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+  <a href="{{decorativeLink.href}}" class="js-clickable-link" title="{{ decorativeLink.info }}"{% if decorativeLink.target %} target="{{ decorativeLink.target }}"{% endif %}>{{decorativeLink.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
 </span>
