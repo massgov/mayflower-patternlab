@@ -33,16 +33,16 @@ The following commands depends on if you are uploading to the Root or a Subfolde
 
 Root folder
 
-`aws s3 cp ./root2/ s3://mayflower.digital.mass.gov/ --recursive`   
+`aws s3 cp ./root/ s3://mayflower.digital.mass.gov/ --recursive`   
 
 Root folder with AWS profile name 
 
-`aws --profile <name> s3 cp ./root2/ s3://mayflower.digital.mass.gov/ --recursive`
+`aws --profile <name> s3 cp ./root/ s3://mayflower.digital.mass.gov/ --recursive`
 
 Subfolder 
 
-`aws s3 cp ./foldername/ s3://mayflower.digital.mass.gov/<folder> --recursive` 
+`aws s3 cp ./folder/ s3://mayflower.digital.mass.gov/<folder> --recursive` 
 
 Subfolder with AWS profile name 
 
-`aws --profile <name> s3 cp ./root2/ s3://mayflower.digital.mass.gov/<folder> --recursive`
+`aws --profile <name> s3 cp ./folder/ s3://mayflower.digital.mass.gov/<folder> --recursive`
