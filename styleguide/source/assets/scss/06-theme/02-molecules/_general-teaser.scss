@@ -9,14 +9,14 @@
     font-weight: 700;
   }
 
-  &__date,
-  &__org {
+  &__emph-prefix,
+  &__emph-text {
     color: $c-font-dark;
     font-style: italic;
     font-weight: 700;
   }
 
-  &__org {
+  &__emph-text {
     border-left-color: $c-bd-divider;
   }
 }

@@ -71,8 +71,8 @@
         "data": {
           "image": {
             "alt": "eohhs logo",
-            "src": "../../assets/images/placeholder/230x130.png",
-            "height": "130",
+            "src": "../../assets/images/placeholder/230x72.png",
+            "height": "72",
             "width": "230"
           }
         }
@@ -142,10 +142,10 @@
                 {
                   "stacked": true,
                   "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
+                    "src": "/assets/images/placeholder/172x228.png",
                     "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
+                    "width": "172",
+                    "height": "228",
                     "href": "#"
                   },
                   "eyebrow": "Featured Board Member",
@@ -155,8 +155,8 @@
                     "info": "",
                     "property": ""
                   },
-                  "date": "",
-                  "org": "Featured Board Member's Title",
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Featured Board Member's Title",
                   "description": {
                     "rteElements": [
                       {
@@ -173,10 +173,10 @@
                 {
                   "stacked": true,
                   "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
+                    "src": "/assets/images/placeholder/172x228.png",
                     "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
+                    "width": "172",
+                    "height": "228",
                     "href": "#"
                   },
                   "eyebrow": "Featured Board Member",
@@ -186,8 +186,8 @@
                     "info": "",
                     "property": ""
                   },
-                  "date": "",
-                  "org": "Featured Board Member's title",
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Featured Board Member's title",
                   "description": {
                     "rteElements": [
                       {
@@ -199,27 +199,69 @@
                         }
                       }
                     ]
+                  },
+                  "more": {
+                    "href": "#",
+                    "text": "More",
+                    "chevron": true,
+                    "label": ""
                   }
                 }
               ],
               "secondaryItems": [
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
+                    "src": "/assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
+                    "width": "72",
+                    "height": "96",
                     "href": "#"
                   },
                   "eyebrow": "Board member",
                   "title": {
                     "href": "#",
+                    "text": "Sally Testperson",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Awesome board member",
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "more": {
+                    "href": "#",
+                    "text": "More",
+                    "chevron": true,
+                    "label": ""
+                  }
+                },
+                {
+                  "image": {
+                    "src": "/assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96",
+                    "href": "#"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "href": "#",
                     "text": "Board Member's Name",
                     "info": "",
                     "property": ""
                   },
-                  "date": "4/4/2017",
-                  "org": "Health & Human Services, Public Safety",
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Member's title",
                   "description": {
                     "rteElements": [
                       {
@@ -235,10 +277,10 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
+                    "src": "/assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
+                    "width": "72",
+                    "height": "96",
                     "href": "#"
                   },
                   "eyebrow": "Board Member",
@@ -248,8 +290,8 @@
                     "info": "",
                     "property": ""
                   },
-                  "date": "",
-                  "org": "Member's title",
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Board Member's Title",
                   "description": {
                     "rteElements": [
                       {
@@ -265,10 +307,10 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
+                    "src": "/assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
+                    "width": "72",
+                    "height": "96",
                     "href": "#"
                   },
                   "eyebrow": "Board Member",
@@ -278,8 +320,8 @@
                     "info": "",
                     "property": ""
                   },
-                  "date": "",
-                  "org": "Board Member's Title",
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Board Member's Title",
                   "description": {
                     "rteElements": [
                       {
@@ -295,10 +337,10 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
+                    "src": "/assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
+                    "width": "72",
+                    "height": "96",
                     "href": "#"
                   },
                   "eyebrow": "Board Member",
@@ -308,8 +350,8 @@
                     "info": "",
                     "property": ""
                   },
-                  "date": "",
-                  "org": "Board Member's Title",
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Board Member's Title",
                   "description": {
                     "rteElements": [
                       {
@@ -325,10 +367,10 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
+                    "src": "/assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
+                    "width": "72",
+                    "height": "96",
                     "href": "#"
                   },
                   "eyebrow": "Board Member",
@@ -338,38 +380,8 @@
                     "info": "",
                     "property": ""
                   },
-                  "date": "",
-                  "org": "Board Member's Title",
-                  "description": {
-                    "rteElements": [
-                      {
-                        "path": "@atoms/11-text/paragraph.twig",
-                        "data": {
-                          "paragraph": {
-                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
-                          }
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "image": {
-                    "src": "/assets/images/placeholder/130x160.png",
-                    "alt": "placeholder image",
-                    "width": "130",
-                    "height": "160",
-                    "href": "#"
-                  },
-                  "eyebrow": "Board Member",
-                  "title": {
-                    "href": "#",
-                    "text": "Board Member's Name",
-                    "info": "",
-                    "property": ""
-                  },
-                  "date": "",
-                  "org": "Board Member's Title",
+                  "emphasizedPrefix": "",
+                  "emphasizedText": "Board Member's Title",
                   "description": {
                     "rteElements": [
                       {
@@ -971,7 +983,7 @@
       },
       "disambiguatingDescription": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
       "description": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered.",
-      "logo": "https://mayflower.digital.mass.gov/assets/images/images/placeholder/230x130.png",
+      "logo": "https://mayflower.digital.mass.gov/assets/images/images/placeholder/230x72.png",
       "url": "https://mayflower.digital.mass.gov/?p=templates-org-landing-page",
       "contactInfo": {
         "address": "One Ashburton Place, 11th Floor, Boston, MA 02108",

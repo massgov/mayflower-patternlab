@@ -13,7 +13,7 @@
         src="{{ image.src }}"
         aria-label="{{ image.alt }}"
         role="img"
-        >
+      >
       </img>
     </a>
   {% endif %}
@@ -28,25 +28,36 @@
       {% set decorativeLink = generalTeaser.title %}
       {% include "@atoms/decorative-link.twig" %}
     </h{{ headingLevel }}>
-    {% if generalTeaser.date or generalTeaser.org %}
+    {% if generalTeaser.emphasizedPrefix or generalTeaser.emphasizedText %}
       <div class="ma__general-teaser__details">
-        {% if generalTeaser.date %}
-          <span class="ma__general-teaser__date">
-            {{ generalTeaser.date }}
+        {% if generalTeaser.emphasizedPrefix %}
+          <span class="ma__general-teaser__emph-prefix">
+            {{ generalTeaser.emphasizedPrefix }}
           </span>
         {% endif %}
-        {% if generalTeaser.org %}
-          <span class="ma__general-teaser__org">
-            {{ generalTeaser.org }}
+        {% if generalTeaser.emphasizedText %}
+          <span class="ma__general-teaser__emph-text">
+            {{ generalTeaser.emphasizedText }}
           </span>
         {% endif %}
       </div>
     {% endif %}
+  </div>
+  {% if generalTeaser.description or generalTeaser.more %}
+  <div class="ma__general-teaser__body">
     {% if generalTeaser.description %}
       <div class="ma__general-teaser__description">
         {% set richText = generalTeaser.description %}
         {% include "@organisms/by-author/rich-text.twig" %}
       </div>
     {% endif %}
+    {% if generalTeaser.more %}
+      <div class="ma__general-teaser__more">
+        {% set decorativeLink = generalTeaser.more %}
+        {% include "@atoms/decorative-link.twig" %}
+      </div>
+    {% endif %}
   </div>
+  {% endif %}
+
 </section>
