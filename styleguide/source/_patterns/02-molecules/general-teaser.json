@@ -1,10 +1,10 @@
 {
   "generalTeaser" : {
     "image": {
-      "src":"/assets/images/placeholder/300x300.png",
+      "src":"/assets/images/placeholder/172x228.png",
       "alt": "placeholder image",
-      "width": "300",
-      "height": "300",
+      "width": "172",
+      "height": "228",
       "href": "#"
     },
     "eyebrow": "Eyebrow",
@@ -15,8 +15,8 @@
       "property": ""
     },
     "level": "",
-    "date": "A date field.",
-    "org": "A field for the Org Name",
+    "emphasizedPrefix": "An emphasized prefix text field.",
+    "emphasizedText": "An emphasized text field",
     "description": {
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",

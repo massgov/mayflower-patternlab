@@ -71,8 +71,8 @@
         "data": {
           "image": {
             "alt": "eohhs logo",
-            "src": "../../assets/images/placeholder/230x72.png",
-            "height": "72",
+            "src": "../../assets/images/placeholder/230x130.png",
+            "height": "130",
             "width": "230"
           }
         }
@@ -142,7 +142,7 @@
                 {
                   "stacked": true,
                   "image": {
-                    "src": "/assets/images/placeholder/172x228.png",
+                    "src": "../../assets/images/placeholder/172x228.png",
                     "alt": "placeholder image",
                     "width": "172",
                     "height": "228",
@@ -173,7 +173,7 @@
                 {
                   "stacked": true,
                   "image": {
-                    "src": "/assets/images/placeholder/172x228.png",
+                    "src": "../../assets/images/placeholder/172x228.png",
                     "alt": "placeholder image",
                     "width": "172",
                     "height": "228",
@@ -211,7 +211,7 @@
               "secondaryItems": [
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/72x96.png",
+                    "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
                     "height": "96",
@@ -247,7 +247,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/72x96.png",
+                    "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
                     "height": "96",
@@ -277,7 +277,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/72x96.png",
+                    "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
                     "height": "96",
@@ -307,7 +307,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/72x96.png",
+                    "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
                     "height": "96",
@@ -337,7 +337,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/72x96.png",
+                    "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
                     "height": "96",
@@ -367,7 +367,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/72x96.png",
+                    "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
                     "height": "96",
@@ -570,7 +570,7 @@
               "items": [
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/statehouse.png",
+                    "src": "../../assets/images/placeholder/statehouse.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
@@ -600,7 +600,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/400x225.png",
+                    "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
@@ -632,7 +632,7 @@
               "secondaryItems": [
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/400x225.png",
+                    "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
@@ -662,7 +662,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/400x225.png",
+                    "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
@@ -692,7 +692,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/400x225.png",
+                    "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
@@ -722,7 +722,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/400x225.png",
+                    "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
@@ -752,7 +752,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/400x225.png",
+                    "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
@@ -782,7 +782,7 @@
                 },
                 {
                   "image": {
-                    "src": "/assets/images/placeholder/400x225.png",
+                    "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
                     "height": "225",
