@@ -1,5 +1,5 @@
 {% set teaserHeading = 2 %}
-{% set stacked = not teaserListing.stacked ? 'stacked': 'side-by-side' %}
+{% set stacked = teaserListing.stacked ? 'stacked': 'side-by-side' %}
 {% set gridTwoColumns = teaserListing.contained and teaserListing.gridTwoColumns ? 'ma__teaser-listing__2-col-grid' : 'ma__teaser-listing__3-col-grid' %}
 
 

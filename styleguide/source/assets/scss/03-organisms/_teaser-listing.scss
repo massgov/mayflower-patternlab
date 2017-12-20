@@ -27,6 +27,28 @@
     }
   }
 
+  &__items {
+    &.side-by-side {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+      .ma__general-teaser {
+        flex-wrap: nowrap;
+        margin-top: 0;
+        padding-top: 0;
+
+      }
+      .ma__general-teaser + .ma__general-teaser {
+        border-top: none;
+        border-left: 1px solid #dcdcdc;
+        margin-left: 45px;
+        padding-left: 45px;
+
+
+      }
+    }
+  }
+
   &__secondary-items {
     @include ma-reset-list;
 
