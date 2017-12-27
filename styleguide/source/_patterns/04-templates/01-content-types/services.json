@@ -147,6 +147,7 @@
       "featuredHeading":"Featured:",
       "generalHeading":"All How-Tos:",
       "hideFilter": true,
+      "titleContext": "",
 
       "seeAll": null,
 
@@ -194,6 +195,7 @@
       "featuredHeading":"",
       "generalHeading":"",
       "hideFilter": true,
+      "titleContext": "",
 
       "seeAll": null,
 
@@ -222,7 +224,8 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": "",
+      "titleContext": ""
     },
     "link": {
       "href": "/patterns/05-pages-Map-listing-human-services/05-pages-Map-listing-human-services.html",
@@ -241,7 +244,7 @@
       "markers": [{
         "position": {
           "lat": 42.366565,
-          "lng": -71.058940 
+          "lng": -71.058940
         },
         "label": "A",
         "infoWindow": {
@@ -254,7 +257,7 @@
       },{
         "position": {
           "lat": 42.358795,
-          "lng": -71.063858 
+          "lng": -71.063858
         },
         "label": "B",
         "infoWindow": {
@@ -275,7 +278,8 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": ""
+      "centered": "",
+      "titleContext": ""
     },
     "events":[{
       "title": {
@@ -327,7 +331,8 @@
         "data": {
           "linkList" : {
             "sidebarHeading": {
-              "title": "Related Services"
+              "title": "Related Services",
+              "titleContext": ""
             },
             "stacked": true,
             "links" : [{
@@ -349,7 +354,8 @@
         "data": {
           "formDownloads": {
             "sidebarHeading": {
-              "title": "Additional Resources"
+              "title": "Additional Resources",
+              "titleContext": ""
             },
             "downloadLinks": [{
               "downloadLink": {

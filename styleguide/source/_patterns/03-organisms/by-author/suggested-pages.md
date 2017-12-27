@@ -22,6 +22,8 @@ This Pattern shows a collection of images and links to other pages on the site.
 "suggestedPages": {
   "title": 
     type: string / required,
+  "titleContext": 
+    type: string / optional,
   "view": 
     type: string ('', 'guide') / optional,
   "pages": [{

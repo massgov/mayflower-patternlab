@@ -75,7 +75,7 @@
     }],
     "widgets": null
   },
-   
+
   "jumpLinks": {
     "title": "In this Section",
     "links": [{
@@ -103,7 +103,8 @@
         "sub": false,
         "color": "",
         "id": "decision",
-        "centered": false
+        "centered": false,
+        "titleContext": "on PH-07-539 Department of Public Health v. Deli Market"
       },
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
@@ -138,18 +139,18 @@
       },{
         "path": "@atoms/08-lists/ordered-list.twig",
         "data": {
-          "orderedList": [{ 
-            "text": "The DPH is responsible for administering the Massachusetts WIC Program and enforcing the laws, rules and regulations pertaining to said program. (Testimony)." 
-          },{ 
-            "text": "The WIC Program is a nutrition and education program, whose purpose is to provide food supplements and nutrition information to eligible low-income pregnant women, breastfeeding mothers, infants and children up to five (5) years of age. The WIC Program was created by the Federal Child Nutrition Act of 1996, and is found at 42 U.S.C. s. 1771 et. seq. Regulations governing the WIC Program are found at 7 CFR 246 et. seq. The program is administered on a federal level by the United States Department of Agriculture, and on the state level, by the DPH. (Id.)." 
-          },{ 
-            "text": "Vendors participating in the WIC Program are required to stock mandatory minimum inventory of approved WIC products. (Exhibits 1 and 1A)." 
-          },{ 
-            "text": "Persons eligible for participation in the WIC program are issued WIC checks [vouchers/prescriptions] which can be used to purchase prescribed WIC products at stores authorized to redeem them. (Id.)." 
-          },{ 
-            "text": "These checks can be redeemed only at authorized WIC vendors' stores. A store seeking to become an authorized WIC vendor must apply to the DPH to participate. (Exhibit 6). <a class=\"ma__rich-text__footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>" 
+          "orderedList": [{
+            "text": "The DPH is responsible for administering the Massachusetts WIC Program and enforcing the laws, rules and regulations pertaining to said program. (Testimony)."
           },{
-            "text": "The WIC Vendor Application is a written document that specifically states that the store owner will be \"bound by the WIC Program regulations and policies\" including: <br/>…accepting responsibility on behalf of the store and its owner(s), manager(s), and employees including new, part-time, paid or unpaid employees for violations of WIC procedures committed." 
+            "text": "The WIC Program is a nutrition and education program, whose purpose is to provide food supplements and nutrition information to eligible low-income pregnant women, breastfeeding mothers, infants and children up to five (5) years of age. The WIC Program was created by the Federal Child Nutrition Act of 1996, and is found at 42 U.S.C. s. 1771 et. seq. Regulations governing the WIC Program are found at 7 CFR 246 et. seq. The program is administered on a federal level by the United States Department of Agriculture, and on the state level, by the DPH. (Id.)."
+          },{
+            "text": "Vendors participating in the WIC Program are required to stock mandatory minimum inventory of approved WIC products. (Exhibits 1 and 1A)."
+          },{
+            "text": "Persons eligible for participation in the WIC program are issued WIC checks [vouchers/prescriptions] which can be used to purchase prescribed WIC products at stores authorized to redeem them. (Id.)."
+          },{
+            "text": "These checks can be redeemed only at authorized WIC vendors' stores. A store seeking to become an authorized WIC vendor must apply to the DPH to participate. (Exhibit 6). <a class=\"ma__rich-text__footnote\" id=\"footnoteref1\" title=\"source for this information\" href=\"#footnotemsg1\">1</a>"
+          },{
+            "text": "The WIC Vendor Application is a written document that specifically states that the store owner will be \"bound by the WIC Program regulations and policies\" including: <br/>…accepting responsibility on behalf of the store and its owner(s), manager(s), and employees including new, part-time, paid or unpaid employees for violations of WIC procedures committed."
           }]
         }
       }]
@@ -159,7 +160,8 @@
         "sub": false,
         "color": "",
         "id": "conclusion",
-        "centered": false
+        "centered": false,
+        "titleContext": "of PH-07-539 Department of Public Health v. Deli Market"
       },
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",
@@ -212,7 +214,8 @@
         "sub": false,
         "color": "",
         "id": "downloads",
-        "centered": ""
+        "centered": "",
+        "titleContext": "for PH-07-539 Department of Public Health v. Deli Market"
       },
       "downloadLinks": [{
         "downloadLink": {
@@ -237,7 +240,8 @@
         "sub": false,
         "color": "",
         "id": "contact",
-        "centered": ""
+        "centered": "",
+        "titleContext": "for PH-07-539 Department of Public Health v. Deli Market"
       },
       "contacts":[{
         "accordion": true,
@@ -320,7 +324,8 @@
         "sub": false,
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": "",
+        "titleContext": "for PH-07-539 Department of Public Health v. Deli Market"
       },
       "contacts":[{
         "subTitle": {
@@ -349,7 +354,8 @@
 
     "pressListing": {
       "sidebarHeading": {
-        "title": "Related"
+        "title": "Related",
+        "titleContext": "to PH-07-539 Department of Public Health v. Deli Market"
       },
       "items": [{
         "eyebrow": "Letter Ruling",
@@ -389,7 +395,8 @@
 
     "eventListing": {
       "sidebarHeading":{
-        "title": "Upcoming Events"
+        "title": "Upcoming Events",
+        "titleContext": "for PH-07-539 Department of Public Health v. Deli Market"
       },
       "events":[{
         "title": {
@@ -400,7 +407,7 @@
         },
         "location": "Boston, MA",
         "date": {
-          "summary": "May 20, 2017" 
+          "summary": "May 20, 2017"
         },
         "time": "12 p.m. - 2 p.m.",
         "description": "Event description. Ut nulla. Vivamus bibendum, nulla ut congue fringilla, lorem ipsum ultricies risus, ut rutrum velit tortor vel purus."

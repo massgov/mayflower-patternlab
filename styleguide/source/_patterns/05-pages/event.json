@@ -87,10 +87,11 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": "",
+        "titleContext": "of Winter Birding Event"
       },
-      "image": { 
-        "alt": "alt text", 
+      "image": {
+        "alt": "alt text",
         "src": "../../assets/images/placeholder/600x338.png",
         "width": "600",
         "height": "338"
@@ -130,17 +131,18 @@
       "compHeading": {
         "title": "You will need",
         "id": "",
-        "sub": true
+        "sub": true,
+        "titleContext": "for Winter Birding Event"
       },
       "rteElements": [{
         "path": "@atoms/08-lists/checklist.twig",
         "data": {
-          "checkList": [{ 
-            "text": "Sports clothes and shoes" 
-          },{ 
-            "text": "To ensure all children are accompanied by an adult" 
-          },{ 
-            "text": "Your binoculars, if you have any!" 
+          "checkList": [{
+            "text": "Sports clothes and shoes"
+          },{
+            "text": "To ensure all children are accompanied by an adult"
+          },{
+            "text": "Your binoculars, if you have any!"
           }]
         }
       }]
@@ -150,7 +152,8 @@
       "viewSpecific": false,
       "compHeading":{
         "title": "Contact",
-        "sub": true
+        "sub": true,
+        "titleContext": "for Winter Birding Event"
       },
       "contacts":[{
         "accordion": true,
@@ -197,7 +200,8 @@
     "linkList" : {
       "compHeading": {
         "title": "Other Dates",
-        "sub": true
+        "sub": true,
+        "titleContext": "of Winter Birding Event"
       },
       "description": {
         "rteElements": [{
@@ -234,7 +238,8 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "titleContext": "for Winter Birding Event"
       },
       "contacts":[{
         "subTitle": {
@@ -281,7 +286,8 @@
     "eventListing": {
       "compHeading":{
         "title": "Related Events",
-        "centered": true
+        "centered": true,
+        "titleContext": "to Winter Birding Event"
       },
       "events":[{
         "title": {
