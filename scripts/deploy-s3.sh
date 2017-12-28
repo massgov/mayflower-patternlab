@@ -202,13 +202,13 @@ log "log" "$line";
 cp -r public/. ~/tmp/mayflower/${subDir} >/dev/null
 
 # 7. Run gulp task to deploy to s3 bucket
-#line="Uploading contents of ~/tmp/mayflower/$subDir to Mayflower s3 bucket..."
-#log "log" "$line";
-#if ! gulp s3; then
-#    line="gulp s3 task failed"
-#    log "error" "$line";
-#    exit 1;
-#fi
+line="Uploading contents of ~/tmp/mayflower/$subDir to Mayflower s3 bucket..."
+log "log" "$line";
+if ! gulp s3; then
+    line="gulp s3 task failed"
+    log "error" "$line";
+    exit 1;
+fi
 
 # 8. Clean up tmp directory and get back to where we want to be.
-#cleanup
+cleanup
