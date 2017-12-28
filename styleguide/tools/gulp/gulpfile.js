@@ -85,7 +85,7 @@ gulp.task("build", function(){
 /** Deploy to s3 bucket **/
 gulp.task("s3",function(){
   var config = Object.assign({}, defaults, {
-    env   : "prod",
+    env   : "production",
     watch : false,
     browserSync: false,
     tasks : ["s3"]
