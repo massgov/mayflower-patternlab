@@ -119,7 +119,12 @@ fi
 line="Checking out the build source: ${buildSrc}"
 log "log" "$line";
 
-git checkout ${buildSrc}
+if ! git checkout ${buildSrc};
+then
+    line="Could not check out $buildSrc, make sure your working directory is clean."
+    log "error" "$line";
+    exit 1;
+fi
 
 # 3. Get to styleguide directory
 # Get to styleguide directory (inside of repo root), does not assume repo root is "mayflower"
