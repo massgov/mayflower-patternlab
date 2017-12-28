@@ -184,9 +184,11 @@ log "log" "$line";
 dir="~/tmp/mayflower/$subDir"
 if [ -d "~/tmp" ];
 then
+    mkdir ~/tmp/mayflower
     mkdir ${dir}
 else
     mkdir ~/tmp
+    mkdir ~/tmp/mayflower
     mkdir ${dir}
 fi
 
