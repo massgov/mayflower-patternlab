@@ -7,6 +7,10 @@
       border-top-width: 1px;
       border-top-style: solid;
     }
+
+    & ~ &--borderless {
+      border-top-width: 0;
+    }
   }
 
   @media print {
@@ -32,6 +36,12 @@
       border-top-width: 1px;
       border-top-style: solid;
       padding-top: 90px;
+    }
+  }
+
+  & ~ &--borderless &__container:before {
+    @media print, ($bp-large-min) {
+      border-top-width: 0;
     }
   }
 
