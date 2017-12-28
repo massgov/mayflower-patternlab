@@ -21,8 +21,8 @@ export default function (window,document,$,undefined) {
 
       // hide other content
       hide($openContent);
-      
-      if(open) { 
+
+      if(open) {
         return;
       }
       // add open class to this item
@@ -44,7 +44,7 @@ export default function (window,document,$,undefined) {
       hide( $(this).closest('.js-util-nav-content') );
     });
 
-    $('.js-close-sub-nav').on('click', function(){
+    $('.js-header-menu-button, .js-close-sub-nav').on('click', function(){
       let $openContent = $parent.find('.js-util-nav-content.' + openClass);
       hide($openContent);
     });
