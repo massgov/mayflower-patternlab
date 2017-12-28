@@ -198,9 +198,9 @@ else
 fi
 
 # Copy
-line="Copying Pattern Lab build output to ~/tmp/mayflower/$subDir directory..."
-log "log" "$line";
-cp -r public/. ${dir} >/dev/null
+#line="Copying Pattern Lab build output to ~/tmp/mayflower/$subDir directory..."
+#log "log" "$line";
+#cp -r public/. ${dir} >/dev/null
 
 # 7. Run gulp task to deploy to s3 bucket
 #line="Uploading contents of ~/tmp/mayflower/$dir to Mayflower s3 bucket..."
