@@ -186,24 +186,23 @@ rm source/_data/url.json
 # Make temp directory to copy public assets
 line="Making ~/tmp/mayflower/$subDir directory..."
 log "log" "$line";
-dir="~/tmp/mayflower/$subDir"
 if [ -d "~/tmp" ];
 then
     mkdir ~/tmp/mayflower
-    mkdir ${dir}
+    mkdir ~/tmp/mayflower/${subDir}
 else
     mkdir ~/tmp
     mkdir ~/tmp/mayflower
-    mkdir ${dir}
+    mkdir ~/tmp/mayflower/${subDir}
 fi
 
 # Copy
 #line="Copying Pattern Lab build output to ~/tmp/mayflower/$subDir directory..."
 #log "log" "$line";
-#cp -r public/. ${dir} >/dev/null
+#cp -r public/. ~/tmp/mayflower/${subDir} >/dev/null
 
 # 7. Run gulp task to deploy to s3 bucket
-#line="Uploading contents of ~/tmp/mayflower/$dir to Mayflower s3 bucket..."
+#line="Uploading contents of ~/tmp/mayflower/$subDir to Mayflower s3 bucket..."
 #log "log" "$line";
 #if ! gulp s3; then
 #    line="gulp s3 task failed"
