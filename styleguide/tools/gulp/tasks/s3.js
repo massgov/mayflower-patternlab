@@ -19,7 +19,6 @@ module.exports = function s3Task(config){
             ACL:    'public-read'       //  Needs to be user-defined
           }, {
             maxRetries: 5
-          }))
-          .pipe(debug({title: "s3: "}));
+          }));
     });
 };
