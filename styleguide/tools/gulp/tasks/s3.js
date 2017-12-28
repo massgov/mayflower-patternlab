@@ -8,7 +8,7 @@ module.exports = function s3Task(config){
         src: "~/tmp/mayflower/**"
     };
 
-    var s3 = require('gulp-s3-upload')(s3config);
+    var s3 = require('gulp-s3-upload')(s3Config);
 
     /* compile application javascript */
     gulp.task("s3", function(){
