@@ -153,7 +153,7 @@ fi
 cp ./source/_data/url.json.example ./source/_data/url.json
 
 # Determine the value of url.domain, url.assetsPath based arguments passed
-domain="https://s3.amazonaws.com/mayflower.digital.mass.gov"
+domain="https://mayflower.digital.mass.gov"
 
 if [ "$minor" = true ];
 then
