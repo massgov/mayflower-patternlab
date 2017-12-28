@@ -24,6 +24,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.7.1",
+    "gulp-s3-upload": "^1.6.6",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.12.0",
     "gulp-svgmin": "^1.2.4",
