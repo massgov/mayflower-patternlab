@@ -1,11 +1,12 @@
-var gulp        = require("gulp");
+var gulp        = require("gulp"),
+    userHome    = require('user-home');
 
 module.exports = function s3Task(config){
 
     s3Config = {
         accessKeyId: config.local.s3_accessKeyId,
         secretAccessKey: config.local.s3_secretAccessKey,
-        src: "~/tmp/mayflower/**"
+        src: userHome + "/tmp/mayflower/**"
     };
 
     var s3 = require('gulp-s3-upload')(s3Config);
