@@ -40,6 +40,7 @@
     "run-sequence": "^1.2.2",
     "shrinkwrap": "^0.4.0",
     "through2": "^2.0.3",
+    "user-home": "https://registry.npmjs.org/user-home/-/user-home-1.1.1.tgz",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^4.8.1"
