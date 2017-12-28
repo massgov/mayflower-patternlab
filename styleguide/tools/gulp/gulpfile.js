@@ -82,6 +82,18 @@ gulp.task("build", function(){
 
 });
 
+/** Deploy to s3 bucket **/
+gulp.task("s3",function(){
+  var config = Object.assign({}, defaults, {
+    env   : "prod",
+    watch : false,
+    browserSync: false,
+    tasks : ["s3"]
+  });
+
+  quench.build(config);
+});
+
 /**
  * Quick tool for converting svg icons into patternLab twig files
 **/
