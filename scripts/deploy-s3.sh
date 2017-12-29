@@ -192,10 +192,13 @@ domain="https://mayflower.digital.mass.gov"
 if [ "$minor" = true ];
 # Determine the major version of a tag (i.e. 5.1.0 -> 5) and set as subdirectory.
 then
-    majorVersion = $(getMajorVersion "$buildSrc");
-    subDir="$majorVersion"
-    # Set assets path accordingly.
-    assetsPath="$subDir/assets"
+    majorVersion=$(getMajorVersion "$buildSrc")
+    if [ ${majorVersion} ];
+    then
+        subDir="$majorVersion"
+        # Set assets path accordingly.
+        assetsPath="$subDir/assets"
+    fi
 fi
 
 if [ ! "$prod" = true ] && [ ! "$minor" = true ];
