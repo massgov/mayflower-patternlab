@@ -132,7 +132,7 @@ fi
 # Confirm a deploy to prod if -p passed.
 if [ "$prod" = true ];
 then
-    read -p "You've indicated a deploy to production (by passing [-p]), are you sure? [y/n] " -n 1 -r
+    read -p "You've indicated a deploy to production, which will update the content at mayflower.digital.mass.gov, by passing [-p].  Are you sure you want to proceed? [y/n] " -n 1 -r
     echo    # move to a new line
     if [[ ! $REPLY =~ ^[Yy]$ ]];
     then
@@ -142,10 +142,17 @@ then
     fi
 
     # Validate that we have a production tag (i.e. 5.10.0)
+    line="Validating that ${buildSrc} is a prod tag..."
+    log "log" "$line";
+
     if [[ $(isProdTag "$buildSrc") == "true" ]];
     then
         line="Nice! ${buildSrc} appears to be a prod tag."
         log "success" "$line";
+    else
+        line="Your build source doesn't appear to be a prod tag.  Please run the script again and pass the -b argument your desired production tag (i.e. 5.10.0)"
+        log "error" "$line";
+        exit 1;
     fi
 fi
 
@@ -194,6 +201,20 @@ domain="https://mayflower.digital.mass.gov"
 if [ "$minor" = true ];
 # Determine the major version of a tag (i.e. 5.1.0 -> 5) and set as subdirectory.
 then
+    # Require confirmation that this is the deploy we want.
+    read -p "You've indicated a deploy to the latest minor (i.e. mayflower.digital.mass.gov/<latest-major-#>/) by passing [-m].  This will affect any projects which use our latest minor asset links.  Are you sure? [y/n] " -n 1 -r
+    echo    # move to a new line
+    if [[ ! $REPLY =~ ^[Yy]$ ]];
+    then
+        line="Aborting deploy.  Execute the script again without passing [-p]."
+        log "error" "$line";
+        exit 1;
+    fi
+
+    # Validate that we have a production tag (i.e. 5.10.0)
+    line="Validating that ${buildSrc} is a prod tag..."
+    log "log" "$line";
+
     majorVersion=$(getMajorVersion "$buildSrc")
     if [[ ${majorVersion} == "false" ]];
     then
@@ -201,7 +222,7 @@ then
         log "error" "$line";
         exit 1;
     else
-        line="Nice! ${buildSrc} appears to be a prod tag."
+        line="Nice! ${buildSrc} appears to be a prod tag (within major version ${majorVersion})."
         log "success" "$line";
         # Set assets path accordingly.
         subDir="$majorVersion"
