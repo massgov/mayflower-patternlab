@@ -58,15 +58,41 @@ function log {
     fi
 }
 
+# Determines if a build source is a prod tag (i.e. 5.10.0 with no letters)
+function isProdTag {
+    local theTag=$1
+
+    if [[ ${theTag} =~ ^[0-9]+\.+[0-9]+\.+[0-9]+$ ]];
+    then
+        line="Nice! ${theTag} appears to be a prod tag."
+        log "success" "$line";
+    else
+        line="Your build source doesn't appear to be a prod tag.  Please run the script again and pass the -b argument your desired production tag (i.e. 5.10.0)"
+        log "error" "$line";
+        exit 1;
+    fi
+}
+
+# Determines major version from a passed parameter (i.e. 5.10.0 -> 5)
+function getMajorVersion {
+    local theTag=$1
+
+    if [ isProdTag "$theTag" ];
+    then
+        # Split the buildSrc by '.' and put into an array.
+        IFS='.' read -ra VERSION <<< "$theTag";
+        echo ${VERSION[0]}
+    fi
+}
+
 # Default arguments
 prod=false
 minor=false
 buildSrc=false
 
-# Local variables
-assetsPath=''
-subDir=''
-majorVersion=''
+# Variables
+assetsPath='assets' # Default value for production / root deploy
+subDir='' # Default value for production / root deploy
 
 # Get passed arguments
 while getopts :b:mp option
@@ -115,6 +141,9 @@ then
         log "error" "$line";
         exit 1;
     fi
+
+    # Validate that we have a production tag (i.e. 5.10.0)
+    isProdTag "$buildSrc"
 fi
 
 # 2. Checkout the build source
@@ -123,7 +152,7 @@ log "log" "$line";
 
 if ! git checkout ${buildSrc};
 then
-    line="Could not check out $buildSrc, make sure your working directory is clean."
+    line="Could not check out $buildSrc, please make sure your working directory is clean."
     log "error" "$line";
     exit 1;
 fi
@@ -136,8 +165,6 @@ log "log" "$line";
 cd $(git rev-parse --show-toplevel)/styleguide
 
 # 4. Set the domain and asset path config
-# When there is a cname: url.domain = cname, url.assetsPath = assets
-# When there is no cname: url.domain = <githug-username>.github.io, url.assetsPath = mayflower/assets
 line="Setting the domain and asset path config..."
 log "log" "$line";
 
@@ -154,18 +181,29 @@ fi
 # Create url.json from the .example and set the appropriate domain and assetsPath values
 cp ./source/_data/url.json.example ./source/_data/url.json
 
-# Determine the value of url.domain, url.assetsPath based arguments passed
 domain="https://mayflower.digital.mass.gov"
 
+# Determine the url.assetsPath based arguments passed
+# For root deploy (passed in -p):  url.assetsPath = assets (already set by default)
+# For latest minor deploy (passed in -m): = url.assetsPath = <latest minor determined by build source tag>/assets
+# For all other deploys: url.assetsPath = <build source branch or tag name>/assets
+
 if [ "$minor" = true ];
+# Determine the major version of a tag (i.e. 5.1.0 -> 5) and set as subdirectory.
 then
-    IFS='.' read -ra VERSION <<< "$buildSrc";
-    majorVersion=${VERSION[0]}
+    majorVersion = $(getMajorVersion "$buildSrc");
     subDir="$majorVersion"
-else
-    subDir="$buildSrc"
+    # Set assets path accordingly.
+    assetsPath="$subDir/assets"
 fi
-assetsPath="$subDir/assets"
+
+if [ ! "$prod" = true ] && [ ! "$minor" = true ];
+# Neither a production nor latest minor release so use the branch or tag name as the subdirectory.
+then
+    subDir="$buildSrc"
+    # Set assets path accordingly.
+    assetsPath="$subDir/assets"
+fi
 
 # Set url.domain and url.assetsPath
 find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost:3000!${domain}!g" {} \;
