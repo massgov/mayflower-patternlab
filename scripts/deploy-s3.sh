@@ -64,13 +64,9 @@ function isProdTag {
 
     if [[ ${theTag} =~ ^[0-9]+\.+[0-9]+\.+[0-9]+$ ]];
     then
-        line="Nice! ${theTag} appears to be a prod tag."
-        log "success" "$line";
         echo "true"
     else
-        line="Your build source doesn't appear to be a prod tag.  Please run the script again and pass the -b argument your desired production tag (i.e. 5.10.0)"
-        log "error" "$line";
-        exit 1;
+        echo "false"
     fi
 }
 
@@ -83,6 +79,8 @@ function getMajorVersion {
         # Split the buildSrc by '.' and put into an array.
         IFS='.' read -ra VERSION <<< "$theTag";
         echo ${VERSION[0]}
+    else
+        echo "false";
     fi
 }
 
@@ -144,7 +142,11 @@ then
     fi
 
     # Validate that we have a production tag (i.e. 5.10.0)
-    isProdTag "$buildSrc"
+    if [[ $(isProdTag "$buildSrc") == "true" ]];
+    then
+        line="Nice! ${buildSrc} appears to be a prod tag."
+        log "success" "$line";
+    fi
 fi
 
 # 2. Checkout the build source
@@ -193,10 +195,16 @@ if [ "$minor" = true ];
 # Determine the major version of a tag (i.e. 5.1.0 -> 5) and set as subdirectory.
 then
     majorVersion=$(getMajorVersion "$buildSrc")
-    if [ ${majorVersion} ];
+    if [[ ${majorVersion} == "false" ]];
     then
-        subDir="$majorVersion"
+        line="Your build source doesn't appear to be a prod tag.  Please run the script again and pass the -b argument your desired production tag (i.e. 5.10.0)"
+        log "error" "$line";
+        exit 1;
+    else
+        line="Nice! ${buildSrc} appears to be a prod tag."
+        log "success" "$line";
         # Set assets path accordingly.
+        subDir="$majorVersion"
         assetsPath="$subDir/assets"
     fi
 fi
