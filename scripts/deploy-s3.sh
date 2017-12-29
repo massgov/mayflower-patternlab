@@ -233,10 +233,16 @@ fi
 if [ ! "$prod" = true ] && [ ! "$minor" = true ];
 # Neither a production nor latest minor release so use the branch or tag name as the subdirectory.
 then
+    line="You've indicated a standard deploy to mayflower.digital.mass.gov/${buildSrc}"
+    log "log" "$line";
+
     subDir="$buildSrc"
     # Set assets path accordingly.
     assetsPath="$subDir/assets"
 fi
+
+line="Writing domain: ${domain} and assetsPath: ${assetsPath} to the build config."
+log "log" "$line";
 
 # Set url.domain and url.assetsPath
 find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost:3000!${domain}!g" {} \;
@@ -281,6 +287,14 @@ if ! gulp s3; then
     line="gulp s3 task failed"
     log "error" "$line";
     exit 1;
+else
+    if [ ${subDir} == '' ];
+    then
+        line="Woo-hoo! The deploy completed successfully.  You should be able to browse to your deployed code at mayflower.digital.mass.gov/"
+    else
+        line="Woo-hoo! The deploy completed successfully.  You should be able to browse to your deployed code at mayflower.digital.mass.gov/${subDir}/index.html"
+    fi
+    log "success" "$line";
 fi
 
 # 8. Clean up tmp directory and get back to where we want to be.
