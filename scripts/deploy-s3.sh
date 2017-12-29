@@ -66,6 +66,7 @@ function isProdTag {
     then
         line="Nice! ${theTag} appears to be a prod tag."
         log "success" "$line";
+        echo "true"
     else
         line="Your build source doesn't appear to be a prod tag.  Please run the script again and pass the -b argument your desired production tag (i.e. 5.10.0)"
         log "error" "$line";
@@ -77,7 +78,7 @@ function isProdTag {
 function getMajorVersion {
     local theTag=$1
 
-    if [ isProdTag "$theTag" ];
+    if [ $(isProdTag "$theTag") = "true" ];
     then
         # Split the buildSrc by '.' and put into an array.
         IFS='.' read -ra VERSION <<< "$theTag";
