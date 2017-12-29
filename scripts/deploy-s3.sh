@@ -7,9 +7,11 @@
 #
 # Usage:
 # ./scripts/deploy-s3.sh [-b (git-branch-or-tag)] [-m] [-p]
-#   -b Build source: the git branch or tag to build from (required)
-#   -m Indicates a deploy to the latest minor version (optional)
-#   -p Indicates a deploy to production (optional)
+#   -b Build source: the git branch or tag from which to build (deploys to subdirectory named by that branch or tag unless -m or -p passed) (required)
+#   -m Indicates a latest minor deploy to the current major version subdirectory (optional)
+#      -b must be a production tag (i.e. 5.10.0)
+#   -p Indicates a production deploy to root (optional)
+#      -b must be a production tag (i.e. 5.10.0)
 #
 # Description:
 # 1. Validate the passed arguments: build source and target repo
