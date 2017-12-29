@@ -78,7 +78,7 @@ function isProdTag {
 function getMajorVersion {
     local theTag=$1
 
-    if [ $(isProdTag "$theTag") = "true" ];
+    if [ $(isProdTag "$theTag") ];
     then
         # Split the buildSrc by '.' and put into an array.
         IFS='.' read -ra VERSION <<< "$theTag";
