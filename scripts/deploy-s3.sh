@@ -202,11 +202,11 @@ if [ "$minor" = true ];
 # Determine the major version of a tag (i.e. 5.1.0 -> 5) and set as subdirectory.
 then
     # Require confirmation that this is the deploy we want.
-    read -p "You've indicated a deploy to the latest minor (i.e. mayflower.digital.mass.gov/<latest-major-#>/) by passing [-m].  This will affect any projects which use our latest minor asset links.  Are you sure? [y/n] " -n 1 -r
+    read -p "You've indicated a deploy to the latest minor directory (i.e. mayflower.digital.mass.gov/<latest-major-#>/) by passing [-m].  This will affect any projects which use our latest minor asset links.  Are you sure? [y/n] " -n 1 -r
     echo    # move to a new line
     if [[ ! $REPLY =~ ^[Yy]$ ]];
     then
-        line="Aborting deploy.  Execute the script again without passing [-p]."
+        line="Aborting deploy.  Execute the script again without passing [-m]."
         log "error" "$line";
         exit 1;
     fi
