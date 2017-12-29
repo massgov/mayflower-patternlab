@@ -103,7 +103,7 @@ do
         : ) line="Missing argument for parameter [-${OPTARG}]";
               log "error" "$line";
               exit 1;;
-        \? ) line="Whoops, this script only accepts arguments for: git build branch/tag [-b] and if it is a production release [-p]";
+        \? ) line="Whoops, this script only accepts arguments for: git build branch/tag [-b], if it is a production release [-p], if it is a latest minor release [-m]";
              log "error" "$line";
              exit 1;;
     esac
@@ -132,7 +132,7 @@ fi
 # Confirm a deploy to prod if -p passed.
 if [ "$prod" = true ];
 then
-    read -p "You've indicated a deploy to production, which will update the content at mayflower.digital.mass.gov, by passing [-p].  Are you sure you want to proceed? [y/n] " -n 1 -r
+    read -p "You've indicated a deploy to production, which will update the content at mayflower.digital.mass.gov, by passing [-p].\n\nAre you sure you want to proceed? [y/n] " -n 1 -r
     echo    # move to a new line
     if [[ ! $REPLY =~ ^[Yy]$ ]];
     then
@@ -202,7 +202,7 @@ if [ "$minor" = true ];
 # Determine the major version of a tag (i.e. 5.1.0 -> 5) and set as subdirectory.
 then
     # Require confirmation that this is the deploy we want.
-    read -p "You've indicated a deploy to the latest minor directory (i.e. mayflower.digital.mass.gov/<latest-major-#>/) by passing [-m].  This will affect any projects which use our latest minor asset links.  Are you sure? [y/n] " -n 1 -r
+    read -p "You've indicated a deploy to the latest minor directory (i.e. mayflower.digital.mass.gov/<latest-major-#>/) by passing [-m].\n\nThis will affect any projects which use our latest minor asset links.\n\nAre you sure you want to proceed? [y/n] " -n 1 -r
     echo    # move to a new line
     if [[ ! $REPLY =~ ^[Yy]$ ]];
     then
@@ -233,7 +233,7 @@ fi
 if [ ! "$prod" = true ] && [ ! "$minor" = true ];
 # Neither a production nor latest minor release so use the branch or tag name as the subdirectory.
 then
-    line="You've indicated a standard deploy to mayflower.digital.mass.gov/${buildSrc}"
+    line="You've indicated a deploy to mayflower.digital.mass.gov/${buildSrc}"
     log "log" "$line";
 
     subDir="$buildSrc"
@@ -290,9 +290,9 @@ if ! gulp s3; then
 else
     if [ ${subDir} == '' ];
     then
-        line="Woo-hoo! The deploy completed successfully.  You should be able to browse to your deployed code at https://mayflower.digital.mass.gov/"
+        line="Woo-hoo! The deploy completed successfully.\n\nYou should be able to browse to your deployed code at:\n\n https://mayflower.digital.mass.gov/"
     else
-        line="Woo-hoo! The deploy completed successfully.  You should be able to browse to your deployed code at https://mayflower.digital.mass.gov/${subDir}/index.html"
+        line="Woo-hoo! The deploy completed successfully.\n\nYou should be able to browse to your deployed code at:\n\n https://mayflower.digital.mass.gov/${subDir}/index.html"
     fi
     log "success" "$line";
 fi
