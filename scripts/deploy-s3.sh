@@ -290,9 +290,9 @@ if ! gulp s3; then
 else
     if [ ${subDir} == '' ];
     then
-        line="Woo-hoo! The deploy completed successfully.\n\nYou should be able to browse to your deployed code at:\n\n https://mayflower.digital.mass.gov/"
+        line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your deployed code at:\n\n    https://mayflower.digital.mass.gov/"
     else
-        line="Woo-hoo! The deploy completed successfully.\n\nYou should be able to browse to your deployed code at:\n\n https://mayflower.digital.mass.gov/${subDir}/index.html"
+        line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your deployed code at:\n\n     https://mayflower.digital.mass.gov/${subDir}/index.html"
     fi
     log "success" "$line";
 fi
