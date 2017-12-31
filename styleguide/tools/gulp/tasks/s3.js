@@ -4,8 +4,8 @@ var gulp        = require("gulp"),
 module.exports = function s3Task(config){
 
     s3Config = {
-        accessKeyId: config.local.s3_accessKeyId,
-        secretAccessKey: config.local.s3_secretAccessKey,
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID ? process.env.AWS_ACCESS_KEY_ID : config.local.s3_accessKeyId,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY ? process.env.AWS_SECRET_ACCESS_KEY : config.local.s3_secretAccessKey,
         src: userHome + "/tmp/mayflower/**"
     };
 
