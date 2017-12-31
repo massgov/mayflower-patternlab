@@ -14,7 +14,7 @@
 #      -b must be a production tag (i.e. 5.10.0)
 #
 # Description:
-# 1. Validate the passed arguments: build source and target repo
+# 1. Validate the passed arguments: build source
 # 2. Attempt to checkout passed build source
 # 3. Get to mayflower/styleguide directory
 # 4. Write config to support hosting from subdirectory, if necessary
@@ -127,6 +127,14 @@ then
 else
     line="Validated git build source: ${buildSrc}..."
     log "success" "$line";
+fi
+
+# Protect against indication of both production and latest minor arguments passed.
+if [ "$prod" = true ] && [ "$minor" = true ];
+then
+    line="A deploy can not be both a production [-p] and latest minor [-m] release.  Please execute the script again and pass either [-p] for production or [-m] for latest minor."
+    log "error" "$line";
+    exit 1;
 fi
 
 # Confirm a deploy to prod if -p passed.
