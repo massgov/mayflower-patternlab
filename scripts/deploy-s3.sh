@@ -271,22 +271,44 @@ rm source/_data/url.json
 # 6. Copy built assets in /public into new tmp directory
 
 # Make temp directory to copy public assets
-line="Making ~/tmp/mayflower/$subDir directory..."
-log "log" "$line";
-if [ -d "~/tmp" ];
+if [ ! ${subDir} = '' ];
+# Non-prod (i.e. non-root) deploy so work in named subfolder within mayflower tmp directory.
 then
-    mkdir ~/tmp/mayflower
-    mkdir ~/tmp/mayflower/${subDir}
-else
-    mkdir ~/tmp
-    mkdir ~/tmp/mayflower
-    mkdir ~/tmp/mayflower/${subDir}
-fi
+    line="Making ~/tmp/mayflower/$subDir directory..."
+    log "log" "$line";
 
-# Copy
-line="Copying Pattern Lab build output to ~/tmp/mayflower/$subDir directory..."
-log "log" "$line";
-cp -r public/. ~/tmp/mayflower/${subDir} >/dev/null
+    if [ -d "~/tmp" ];
+    then
+        mkdir ~/tmp/mayflower
+        mkdir ~/tmp/mayflower/${subDir}
+    else
+        mkdir ~/tmp
+        mkdir ~/tmp/mayflower
+        mkdir ~/tmp/mayflower/${subDir}
+    fi
+
+    # Copy
+    line="Copying Pattern Lab build output to ~/tmp/mayflower/$subDir directory..."
+    log "log" "$line";
+    cp -r public/. ~/tmp/mayflower/${subDir} >/dev/null
+else
+# Prod (i.e. root) deploy so work directly in mayflower tmp directory.
+    line="Making ~/tmp/mayflower directory..."
+    log "log" "$line";
+
+    if [ -d "~/tmp" ];
+    then
+        mkdir ~/tmp/mayflower
+    else
+        mkdir ~/tmp
+        mkdir ~/tmp/mayflower
+    fi
+
+    # Copy
+    line="Copying Pattern Lab build output to ~/tmp/mayflower directory..."
+    log "log" "$line";
+    cp -r public/. ~/tmp/mayflower >/dev/null
+fi
 
 # 7. Run gulp task to deploy to s3 bucket
 line="Uploading contents of ~/tmp/mayflower/$subDir to Mayflower s3 bucket..."
