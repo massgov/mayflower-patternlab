@@ -26,7 +26,7 @@
 # 9. Check out the previous branch
 
 # Default variables
-buildSrc=false # Set to true in parseArgs
+buildSrc=false
 
 # Get passed arguments
 while getopts :b: option
