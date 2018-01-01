@@ -17,15 +17,22 @@ test:
     - npm run gulp prod
 
 deployment:
-  release:
+  artifacts:
     tag: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
     owner: massgov
     commands:
       - git config --global user.email "devops@palantir.net"
       - git config --global user.name "palantirnet-temp1"
       - vendor/bin/phing deploy
-  dev:
-    branch: [dev]
+  cd:
+    branch: /^(?!master).*$/
     owner: massgov
     commands:
-      - ../scripts/deploy-s3.sh -b dev
+      - ../scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}
+  production:
+    tag: /^[0-9]+\.+[0-9]+\.+[0-9]+$/
+    owner: massgov
+    commands:
+      - ../scripts/deploy-s3.sh -b ${CIRCLE_TAG}
+      - ../scripts/deploy-prod-s3.sh -b ${CIRCLE_TAG}
+      - ../scripts/deploy-latest-minor-s3.sh -b ${CIRCLE_TAG}
