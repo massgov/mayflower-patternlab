@@ -71,9 +71,6 @@ then
 else
     line="Nice! ${buildSrc} appears to be a prod tag (within major version ${majorVersion})."
     log "success" "$line";
-
-    # Set up the config value for assetsPath
-    subDir="$majorVersion"
 fi
 
 # 2. Checkout the build source
@@ -92,7 +89,8 @@ createUrlJson
 # For all other deploys: url.assetsPath = <build source branch or tag name>/assets
 
 domain="https://mayflower.digital.mass.gov"
-# $subDir is set to $majorVersion above when we validate the tag and get the current major version
+# Set up the config value for assetsPath
+subDir="$majorVersion" #$majorVersion is set above when we validate the prod tag
 assetsPath="$subDir/assets"
 
 # Set url.domain and url.assetsPath
