@@ -24,3 +24,8 @@ deployment:
       - git config --global user.email "devops@palantir.net"
       - git config --global user.name "palantirnet-temp1"
       - vendor/bin/phing deploy
+  dev:
+    branch: [dev]
+    owner: massgov
+    commands:
+      - ../scripts/deploy-s3.sh -b dev
