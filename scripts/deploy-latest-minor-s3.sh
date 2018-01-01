@@ -8,10 +8,10 @@
 #
 # Note: this script updates the latest minor asset URLs which Mayflower consumers may use in their implementations.  Make sure you are not deploying any breaking changes!  See: https://github.com/massgov/mayflower/blob/dev/docs/versioning.md for help determining
 #
-# Run from the repo root, must have a clean working directory.
+# Run from /styleguide, must have a clean working directory.
 #
 # Usage:
-# ./scripts/deploy-latest-minor-s3.sh [-b (git-branch-or-tag)]
+# ../scripts/deploy-latest-minor-s3.sh [-b (git-branch-or-tag)]
 #   -b Build source: the git branch or tag from which to build (required)
 #
 # Description:

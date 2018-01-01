@@ -6,10 +6,10 @@
 #   mayflower.digital.mass.gov/git-branch-or-tag-name
 # -----------------------------------------------------
 #
-# Run from the repo root, must have a clean working directory.
+# Run from /styleguide, must have a clean working directory.
 #
 # Usage:
-# ./scripts/deploy-s3.sh [-b (git-branch-or-tag)]
+# ../scripts/deploy-s3.sh [-b (git-branch-or-tag)]
 #   -b Build source: the git branch or tag from which to build (deploys to subdirectory named by that branch or tag) (required)
 #
 # Description:

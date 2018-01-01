@@ -6,10 +6,10 @@
 #   mayflower.digital.mass.gov
 # --------------------------------------------------------------
 #
-# Run from the ./styleguide, must have a clean working directory.
+# Run from /styleguide, must have a clean working directory.
 #
 # Usage:
-# ./scripts/deploy-prod-s3.sh [-b (git-branch-or-tag)]
+# ../scripts/deploy-prod-s3.sh [-b (git-branch-or-tag)]
 #   -b Build source: the git branch or tag from which to build (required)
 #
 # Description:
