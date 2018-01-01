@@ -1,6 +1,6 @@
 #!/bin/bash
 # include shared functions
-. ./deploy-s3-functions.sh
+. ../scripts/deploy-s3-functions.sh
 
 # Deploying a latest minor version of Mayflower to Amazon S3:
 #   mayflower.digital.mass.gov/<current-major-#>
