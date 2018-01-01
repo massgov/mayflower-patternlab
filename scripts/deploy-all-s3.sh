@@ -137,19 +137,35 @@ then
     exit 1;
 fi
 
-# Confirm a deploy to prod if -p passed.
-if [ "$prod" = true ];
+# Confirm latest minor and production deploys if a human is executing this script.
+if [ ! ${CIRCLECI} ];
 then
-    read -p "You've indicated a deploy to production, which will update the content at mayflower.digital.mass.gov, by passing [-p].\n\nAre you sure you want to proceed? [y/n] " -n 1 -r
-    echo    # move to a new line
-    if [[ ! $REPLY =~ ^[Yy]$ ]];
+    # Confirm a deploy to prod if -p passed.
+    if [ "$prod" = true ];
     then
-        line="Aborting deploy.  Execute the script again without passing [-p]."
-        log "error" "$line";
-        exit 1;
+        read -p "You've indicated a deploy to production, which will update the content at mayflower.digital.mass.gov, by passing [-p].\n\nAre you sure you want to proceed? [y/n] " -n 1 -r
+        echo    # move to a new line
+        if [[ ! $REPLY =~ ^[Yy]$ ]];
+        then
+            line="Aborting deploy.  Execute the script again without passing [-p]."
+            log "error" "$line";
+            exit 1;
+        fi
+    # Confirm latest minor deploy.
+    elif [ "$minor" = true ];
+    then
+        read -p "You've indicated a deploy to the latest minor directory (i.e. mayflower.digital.mass.gov/<latest-major-#>/) by passing [-m].\n\nThis will affect any projects which use our latest minor asset links.\n\nAre you sure you want to proceed? [y/n] " -n 1 -r
+        echo    # move to a new line
+        if [[ ! $REPLY =~ ^[Yy]$ ]];
+        then
+            line="Aborting deploy.  Execute the script again without passing [-m]."
+            log "error" "$line";
+            exit 1;
+        fi
     fi
+fi
 
-    # Validate that we have a production tag (i.e. 5.10.0)
+# Validate that we have a production tag (i.e. 5.10.0)
     line="Validating that ${buildSrc} is a prod tag..."
     log "log" "$line";
 
@@ -162,7 +178,6 @@ then
         log "error" "$line";
         exit 1;
     fi
-fi
 
 # 2. Checkout the build source
 line="Checking out the build source: ${buildSrc}"
@@ -209,16 +224,6 @@ domain="https://mayflower.digital.mass.gov"
 if [ "$minor" = true ];
 # Determine the major version of a tag (i.e. 5.1.0 -> 5) and set as subdirectory.
 then
-    # Require confirmation that this is the deploy we want.
-    read -p "You've indicated a deploy to the latest minor directory (i.e. mayflower.digital.mass.gov/<latest-major-#>/) by passing [-m].\n\nThis will affect any projects which use our latest minor asset links.\n\nAre you sure you want to proceed? [y/n] " -n 1 -r
-    echo    # move to a new line
-    if [[ ! $REPLY =~ ^[Yy]$ ]];
-    then
-        line="Aborting deploy.  Execute the script again without passing [-m]."
-        log "error" "$line";
-        exit 1;
-    fi
-
     # Validate that we have a production tag (i.e. 5.10.0)
     line="Validating that ${buildSrc} is a prod tag..."
     log "log" "$line";
