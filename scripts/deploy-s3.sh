@@ -46,19 +46,19 @@ validateBuildSource
 # 2. Checkout the build source
 checkoutBuildSource
 
-# 3. Get to styleguide directory
-cdStyleguide
-
 line="You've indicated a deploy to mayflower.digital.mass.gov/${buildSrc}"
 log "log" "$line";
+
+# 3. Get to styleguide directory
+cdStyleguide
 
 # 4. Set the domain and asset path config
 # If we're deploying something that doesn't have the url.json.example file, create it first
 createUrlJson
 
 # Determine the url.assetsPath based arguments passed
-# For root deploy (passed in -p):  url.assetsPath = assets (already set by default)
-# For latest minor deploy (passed in -m): = url.assetsPath = <latest minor determined by build source tag>/assets
+# For root deploy (production):  url.assetsPath = assets (already set by default)
+# For latest minor deploy: = url.assetsPath = <latest minor determined by build source tag>/assets
 # For all other deploys: url.assetsPath = <build source branch or tag name>/assets
 
 domain="https://mayflower.digital.mass.gov"

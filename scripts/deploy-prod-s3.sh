@@ -84,6 +84,7 @@ createUrlJson
 # For root deploy (production):  url.assetsPath = assets
 # For latest minor deploy: = url.assetsPath = <latest minor determined by build source tag>/assets
 # For all other deploys: url.assetsPath = <build source branch or tag name>/assets
+
 domain="https://mayflower.digital.mass.gov"
 assetsPath='assets'
 
