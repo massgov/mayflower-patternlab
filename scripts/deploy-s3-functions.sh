@@ -60,24 +60,6 @@ function getMajorVersion {
     fi
 }
 
-# Ensure proper arguments (and only those) are passed to script
-function parseArgs {
-
-    # Get passed arguments
-    while getopts :b: option
-    do
-        case "${option}" in
-            b) buildSrc=${OPTARG};;
-            : ) line="Missing argument for parameter [-${OPTARG}]";
-                  log "error" "$line";
-                  exit 1;;
-            \? ) line="Whoops, this script only accepts arguments for: git build branch/tag [-b]";
-                 log "error" "$line";
-                 exit 1;;
-        esac
-    done
-}
-
 # Validate the -b argument is an actual git branch or tag
 function validateBuildSource {
     # Validate build source environment argument exists

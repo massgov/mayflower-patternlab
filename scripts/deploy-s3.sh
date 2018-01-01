@@ -27,7 +27,18 @@
 buildSrc=false # Set to true in parseArgs
 
 # Get passed arguments
-parseArgs
+while getopts :b: option
+do
+    case "${option}" in
+        b) buildSrc=${OPTARG};;
+        : ) line="Missing argument for parameter [-${OPTARG}]";
+              log "error" "$line";
+              exit 1;;
+        \? ) line="Whoops, this script only accepts arguments for: git build branch/tag [-b]";
+             log "error" "$line";
+             exit 1;;
+    esac
+done
 
 # 1. Validate build source environment argument exists and is valid git branch or tag name
 validateBuildSource
