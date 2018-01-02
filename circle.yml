@@ -1,6 +1,8 @@
 machine:
   php:
     version: 5.5.36
+  node:
+    version: 6.11.4
 
 general:
   artifacts:
@@ -8,6 +10,8 @@ general:
   build_dir: styleguide
 
 dependencies:
+  pre:
+    - npm install -g npm
   override:
     - php core/console --generate
     - npm install
