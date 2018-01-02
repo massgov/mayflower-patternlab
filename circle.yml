@@ -34,7 +34,6 @@ deployment:
     owner: massgov
     commands:
       - ../scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}
-      - ../scripts/prune-s3.sh
 #  production:
 #    tag: /^[0-9]+\.+[0-9]+\.+[0-9]+$/
 #    owner: massgov
