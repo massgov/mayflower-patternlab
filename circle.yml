@@ -12,6 +12,7 @@ general:
 dependencies:
   pre:
     - npm install -g npm
+    - npm install -g gulp
   override:
     - php core/console --generate
     - npm install
