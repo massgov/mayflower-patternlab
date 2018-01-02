@@ -113,6 +113,9 @@ function createUrlJson {
     # If we're deploying something that doesn't have the url.json.example file, create it first
     if [ ! -f ./source/_data/url.json.example ];
         then
+            echo $PWD
+            line="Could not find url.json.example so creating it now..."
+            log "log" "$line";
             urljson='{\n\t"url": {\n\t\t"comment": "Save this file as url.json and enter your domain and the path to the assets folder",\n\t\t"domain": "http://localhost:3000",\n\t\t"assetsPath": "assets"\n\t}\n}'
             echo -e ${urljson} > ./source/_data/url.json.example
 
@@ -121,6 +124,9 @@ function createUrlJson {
     fi
 
     # Create url.json from the .example and set the appropriate domain and assetsPath values
+    line="Copying url.json.example into url.json for assets path config..."
+    log "log" "$line";
+    echo $PWD
     cp ./source/_data/url.json.example ./source/_data/url.json
 }
 
