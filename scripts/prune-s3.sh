@@ -1,4 +1,6 @@
 #!/bin/bash
+# include shared functions
+. ../scripts/deploy-s3-functions.sh
 
 # Remove Mayflower S3 subdirectory/object for git branch whose PR has been closed/merged
 # --------------------------------------------------------------------------------------
