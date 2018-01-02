@@ -135,9 +135,20 @@ function writeAssetsPathConfig {
     line="Writing domain: ${domain} and assetsPath: ${assetsPath} to the build config."
     log "log" "$line";
 
-    # Set url.domain and url.assetsPath
-    find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost:3000!${domain}!g" {} \;
-    find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${assetsPath}\"!g" {} \;
+    if [ ${CIRCLECI} ];
+    then # Use GNU sed syntax
+         # See: https://stackoverflow.com/questions/43171648/sed-gives-sed-cant-read-no-such-file-or-directory
+        # Set url.domain and url.assetsPath
+        find ./source/_data -type f -name "url.json" -exec sed -i "s!http://localhost:3000!${domain}!g" {} \;
+        find ./source/_data -type f -name "url.json" -exec sed -i "s!assets\"!${assetsPath}\"!g" {} \;
+    else # Assume MacOS sed syntax
+         # See: https://stackoverflow.com/questions/11287564/getting-sed-error-illegal-byte-sequence-in-bash
+        # Set url.domain and url.assetsPath
+        find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost:3000!${domain}!g" {} \;
+        find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${assetsPath}\"!g" {} \;
+    fi
+
+
 }
 
 
