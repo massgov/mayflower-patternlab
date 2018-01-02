@@ -29,6 +29,9 @@ then
     exit 1
 fi
 
+echo CI_PULL_REQUEST
+echo CI_PULL_REQUESTS
+
 # Set pull request environment variable in local variable.
 prEndpoint=CI_PULL_REQUEST
 
