@@ -135,7 +135,7 @@ function writeAssetsPathConfig {
     line="Writing domain: ${domain} and assetsPath: ${assetsPath} to the build config."
     log "log" "$line";
 
-    if [ ${CIRCLECI} ];
+    if [ CIRCLECI ];
     then # Use GNU sed syntax
          # See: https://stackoverflow.com/questions/43171648/sed-gives-sed-cant-read-no-such-file-or-directory
         # Set url.domain and url.assetsPath
