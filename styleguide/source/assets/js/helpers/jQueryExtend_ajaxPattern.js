@@ -110,7 +110,7 @@ export default function (window,document,$,undefined) {
       $.ajax({
         type: 'GET',
         url: endpoint,
-        cache: false,
+        cache: true,
         dataType: 'json'
       }).done(function(data){
         // @todo validate data against schema
