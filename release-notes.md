@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ## 5.10.1 (1/3/2018)
 
 ### Changed
-- We've made the ajax pattern respect cache (i.e. the get request no longer appends a cache busting querystring "_=<timestamp> parameter).
+- DP-7252 - We've made the ajax pattern respect cache (i.e. the get request no longer appends a cache busting querystring "_=<timestamp> parameter).
 
 ## 5.10.0 (12/13/2017)
 
