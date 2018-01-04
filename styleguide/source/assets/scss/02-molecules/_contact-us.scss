@@ -63,18 +63,54 @@
     transform: rotate(135deg);
   }
 
-  &--accordion &__content {
-    padding: 0 20px 30px;
-    padding-right: 30px;
-
-    @media ($bp-medium-min) {
-      padding: 0 30px 30px;
-      padding-right: 40px;
-    }
-  }
-
   .js &--accordion &__content {
     display: none;
+  }
+
+  // Flexible contact group layout
+  // Max 4 column layout, items are no narrower than 18rem & then wrap
+  &__content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-basis: 25%;
+
+    // width overlaps parent's 1px borders
+    // This is so we can have divider borders (left border) and since we have a wrapping
+    // flexbox grid, the first item on each show needs its left border hidden.
+    width: calc(100% + 2px);
+    position: relative;
+      left: -1px;
+  }
+  &__content-wrap .ma__contact-group {
+    max-width: 25%;
+    min-width: 18rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-left: 1px solid #dcdcdc;
+
+    // Reset if we aren't in an accordion
+    .ma__contact-list--view-specific &,
+    .sidebar & {
+      border-left: 0;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    @media ($bp-small-max){
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 0px;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+
   }
 
   &__extra {
@@ -119,4 +155,5 @@
   &__more-info {
     margin-top: 2rem;
   }
+
 }
