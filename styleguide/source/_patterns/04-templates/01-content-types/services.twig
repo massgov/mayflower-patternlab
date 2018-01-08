@@ -3,9 +3,9 @@
 {% block header %}
 
 {% endblock %}
-<main 
-  id="main-content" 
-  class="ma__services" 
+<main
+  id="main-content"
+  class="ma__services"
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -73,6 +73,9 @@
             {% if learnActionFinder %}
               {% set actionFinder = learnActionFinder.actionFinder %}
               {% include "@organisms/by-author/action-finder.twig" %}
+            {% endif %}
+            {% if contactList %}
+              {% include "@organisms/by-author/contact-list.twig" %}
             {% endif %}
             {% if mappedLocations %}
               {% include "@organisms/by-author/mapped-locations.twig" %}

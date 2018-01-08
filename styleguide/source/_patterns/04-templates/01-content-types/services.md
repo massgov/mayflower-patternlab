@@ -13,6 +13,7 @@ Displays a collection of components to help describe an available Service on Mas
 * Icon Links organism
 * Link List organism
 * Action Finder organism
+* Contact List organism
 * Mapped Locations organism
 * Split Columns organism
 * Form Downloads organism
@@ -29,7 +30,7 @@ Displays a collection of components to help describe an available Service on Mas
 ### Variables
 ~~~
 {
-  pageBanner: 
+  pageBanner:
     type: pageBanner / required
 
   introPageContent: {
