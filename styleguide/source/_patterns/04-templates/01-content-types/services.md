@@ -74,6 +74,10 @@ Displays a collection of components to help describe an available Service on Mas
     }
   },
 
+  contactList: {
+    type: contactList / required
+  },
+
   mappedLocations: {
     type: mappedLocations / required
   },
