@@ -1,0 +1,42 @@
+.ma__featured-item {
+  @include ma-aspect-ratio(4, 3);
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    // position absolutely in the center
+    position: absolute;
+      left: 50%;
+      top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+.ma__featured-item--tall {
+
+  @media ($bp-small-min) {
+    @include ma-aspect-ratio(3, 5);
+    img {
+      max-width: none;
+      width: auto;
+      height: 100%;
+    }
+  }
+
+}
+
+.ma__featured-item__title {
+  padding: 10px 15px;
+  position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+  svg {
+    vertical-align: middle;
+  }
+}
+

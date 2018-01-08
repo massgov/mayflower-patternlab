@@ -1,0 +1,47 @@
+.ma__featured-item-mosaic {
+    @include ma-container();
+}
+.ma__featured-item-mosaic__container {
+    margin-left: -10px;
+    margin-right: -10px;
+    @media ($bp-small-min) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+}
+
+.ma__featured-item-mosaic__column {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .ma__featured-item + .ma__featured-item {
+        margin-top: 20px;
+    }
+
+    @media ($bp-small-min) {
+      flex-basis: 50%;
+      flex-direction: row;
+    }
+    @media ($bp-large-min) {
+      flex-basis: 33%;
+    }
+
+
+    @media ($bp-small-min) and ($bp-large-max) {
+    //       last odd child gets flowed
+      &:last-child:nth-child(odd) {
+        flex-basis: 100%;
+        justify-content: space-between;
+
+        .ma__featured-item {
+          margin-top: 0;
+          width: calc(50% - 10px);
+        }
+      }
+    }
+
+}

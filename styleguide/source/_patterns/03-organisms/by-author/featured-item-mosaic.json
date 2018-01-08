@@ -1,0 +1,75 @@
+{
+  "featuredItemMosaic": {
+    "compHeading":{
+      "title": "Featured Items",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
+    "columns":[
+      [
+        {
+          "href": "#",
+          "text": "First action",
+          "image": {
+            "alt": "alt text",
+            "src": "../../assets/images/placeholder/800x800.png",
+            "height": "",
+            "width": ""
+          }
+        }
+      ],
+      [
+        {
+          "href": "#",
+          "text": "Second action",
+          "image": {
+            "alt": "alt text",
+            "src": "../../assets/images/placeholder/800x800.png",
+            "height": "",
+            "width": ""
+          }
+        },
+        {
+          "href": "#",
+          "text": "Third action",
+          "image": {
+            "alt": "alt text",
+            "src": "../../assets/images/placeholder/800x800.png",
+            "height": "",
+            "width": ""
+          }
+        }
+      ],
+      [
+        {
+          "href": "#",
+          "text": "Fourth action",
+          "image": {
+            "alt": "alt text",
+            "src": "../../assets/images/placeholder/800x800.png",
+            "height": "",
+            "width": ""
+          }
+        },
+        {
+          "href": "#",
+          "text": "Fifth action",
+          "image": {
+            "alt": "alt text",
+            "src": "../../assets/images/placeholder/800x800.png",
+            "height": "",
+            "width": ""
+          }
+        }
+      ]
+    ],
+    "more":{
+      "href": "#",
+      "text": "view all events at this location",
+      "info": "",
+      "chevron": true
+    }
+  }
+}
