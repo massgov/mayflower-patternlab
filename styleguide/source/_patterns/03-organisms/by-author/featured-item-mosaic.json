@@ -14,6 +14,12 @@
           "text": "First action",
           "image": {
             "alt": "alt text",
+            "src": "../../assets/images/placeholder/500x500.png",
+            "height": "",
+            "width": ""
+          },
+          "featuredImage": {
+            "alt": "alt text",
             "src": "../../assets/images/placeholder/800x800.png",
             "height": "",
             "width": ""
@@ -23,10 +29,10 @@
       [
         {
           "href": "#",
-          "text": "Second action",
+          "text": "Second action which has a very long title",
           "image": {
             "alt": "alt text",
-            "src": "../../assets/images/placeholder/800x800.png",
+            "src": "../../assets/images/placeholder/500x500.png",
             "height": "",
             "width": ""
           }
@@ -36,7 +42,7 @@
           "text": "Third action",
           "image": {
             "alt": "alt text",
-            "src": "../../assets/images/placeholder/800x800.png",
+            "src": "../../assets/images/placeholder/500x500.png",
             "height": "",
             "width": ""
           }
@@ -48,17 +54,17 @@
           "text": "Fourth action",
           "image": {
             "alt": "alt text",
-            "src": "../../assets/images/placeholder/800x800.png",
+            "src": "../../assets/images/placeholder/500x500.png",
             "height": "",
             "width": ""
           }
         },
         {
           "href": "#",
-          "text": "Fifth action",
+          "text": "Fifth action is truncated because it's over 60 characters ...",
           "image": {
             "alt": "alt text",
-            "src": "../../assets/images/placeholder/800x800.png",
+            "src": "../../assets/images/placeholder/500x500.png",
             "height": "",
             "width": ""
           }

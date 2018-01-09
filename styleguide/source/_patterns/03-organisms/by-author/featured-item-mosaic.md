@@ -7,8 +7,7 @@ A 'mosaic' grid of featured items.
 ### Pattern Contains
 * Comp Heading
 * Featured Item
-
-### Variant options
+* Divider
 
 
 ### Variables

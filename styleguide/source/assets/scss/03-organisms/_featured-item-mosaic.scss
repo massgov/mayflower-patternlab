@@ -1,13 +1,59 @@
 .ma__featured-item-mosaic {
     @include ma-container();
+
+    // Accordion behavior
+    .ma__featured-item-mosaic__toggle {
+      @include ma-button-reset;
+      @include ma-link-underline;
+      @include ma-chevron;
+      font-size: 1.375rem;
+      padding-right: 10px;
+
+      .less {
+        display: none;
+      }
+      &[aria-expanded="true"] {
+        .more {
+          display: none;
+        }
+        .less {
+          display: initial;
+        }
+      }
+
+      &:after {
+        margin-left: 0;
+        transform: translateY(-45%) rotate(45deg);
+
+      }
+      &[aria-expanded="true"]:after {
+          transform: translateY(-55%) rotate(-135deg);
+        }
+
+      @media ($bp-small-min) {
+        display: none;
+      }
+
+
+    }
 }
 .ma__featured-item-mosaic__container {
     margin-left: -10px;
     margin-right: -10px;
+    margin-bottom: 10px;
+
     @media ($bp-small-min) {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+    }
+
+    .ma__divider {
+      margin-top: 20px;
+      @media ($bp-small-min) {
+        margin-top: 50px;
+      }
+
     }
 
 }
@@ -23,6 +69,7 @@
     }
 
     @media ($bp-small-min) {
+      display: flex !important; // override JS-hidden accordion behavior on non-mobile
       flex-basis: 50%;
       flex-direction: row;
     }
