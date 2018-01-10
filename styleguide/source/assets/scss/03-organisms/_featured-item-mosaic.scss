@@ -2,6 +2,7 @@
     @include ma-container();
 
     // Accordion behavior
+
     .ma__featured-item-mosaic__toggle {
       @include ma-button-reset;
       @include ma-link-underline;
@@ -33,8 +34,17 @@
       @media ($bp-small-min) {
         display: none;
       }
+    }
 
-
+    @media ($bp-small-max) {
+      &.is-open {
+        .js-accordion-content {
+          display: initial;
+        }
+      }
+      .js-accordion-content {
+        display: none;
+      }
     }
 }
 .ma__featured-item-mosaic__container {

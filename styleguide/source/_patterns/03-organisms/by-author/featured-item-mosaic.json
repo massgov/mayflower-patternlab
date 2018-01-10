@@ -61,7 +61,7 @@
         },
         {
           "href": "#",
-          "text": "Fifth action is truncated because it's over 60 characters ...",
+          "text": "Fifth action is truncated because it's over 60 characters...",
           "image": {
             "alt": "alt text",
             "src": "../../assets/images/placeholder/500x500.png",
