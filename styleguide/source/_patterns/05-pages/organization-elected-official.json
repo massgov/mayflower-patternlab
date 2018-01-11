@@ -1,0 +1,733 @@
+{
+  "urlPath": "/?p=pages-ORG-Elected-Official",
+
+  "COMMENT":"****PRECONTENT COMPONENTS****",
+
+  "pageBanner": {
+    "bgWide":"../../assets/images/placeholder/1600x400.png",
+    "bgNarrow":"../../assets/images/placeholder/800x400.png",
+    "size": "large",
+    "icon": null,
+    "title": "Office of the Treasurer & Receiver General",
+    "titleSubText": "(TRE)"
+  },
+
+  "COMMENT":"****PAGE CONTENT COMPONENTS****",
+
+  "stackedRows": [
+  {
+    "title":"",
+    "id":"",
+    "pageContent": [{
+      "path": "@organisms/by-author/featured-item-mosaic.twig",
+      "data": {
+          "featuredItemMosaic": {
+            "compHeading":{
+              "title": "Featured Items",
+              "sub": "",
+              "color": "",
+              "id": "",
+              "centered": ""
+            },
+            "columns":[
+              [
+                {
+                  "href": "#",
+                  "text": "First action",
+                  "image": {
+                    "alt": "alt text",
+                    "src": "../../assets/images/placeholder/400x300.png",
+                    "height": "",
+                    "width": ""
+                  },
+                  "featuredImage": {
+                    "alt": "alt text",
+                    "src": "../../assets/images/placeholder/300x500.png",
+                    "height": "",
+                    "width": ""
+                  }
+                }
+              ],
+              [
+                {
+                  "href": "#",
+                  "text": "Second action which has a very long title",
+                  "image": {
+                    "alt": "alt text",
+                    "src": "../../assets/images/placeholder/400x300.png",
+                    "height": "",
+                    "width": ""
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Third action",
+                  "image": {
+                    "alt": "alt text",
+                    "src": "../../assets/images/placeholder/400x300.png",
+                    "height": "",
+                    "width": ""
+                  }
+                }
+              ],
+              [
+                {
+                  "href": "#",
+                  "text": "Fourth action",
+                  "image": {
+                    "alt": "alt text",
+                    "src": "../../assets/images/placeholder/400x300.png",
+                    "height": "",
+                    "width": ""
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Fifth action is truncated because it's over 60 characters...",
+                  "image": {
+                    "alt": "alt text",
+                    "src": "../../assets/images/placeholder/400x300.png",
+                    "height": "",
+                    "width": ""
+                  }
+                }
+              ]
+            ],
+            "more":{
+              "href": "#",
+              "text": "view all events at this location",
+              "info": "",
+              "chevron": true
+            }
+          }
+      }
+    },{
+      "path": "@organisms/by-author/action-finder.twig",
+      "data": {
+        "actionFinder": {
+          "id": "GUID831741781374893",
+          "bgWide": null,
+          "bgNarrow": null,
+          "title": "What would you like to do?",
+          "featuredHeading":"Top actions and services",
+          "generalHeading":"Other actions and services",
+          "titleContext": "from Office of the Treasurer & Receiver General",
+
+          "seeAll": {
+            "type": "external",
+            "href": "http://www.google.com",
+            "text": "See all actions and services",
+            "info": ""
+          },
+
+          "featuredLinks": [{
+            "image": "",
+            "text": "Request Public Records",
+            "type": "external",
+            "href": "#"
+          }],
+
+          "links": [{
+            "image": "",
+            "text": "Service 1",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Service 2",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Service 3",
+            "href": "#",
+            "label": ""
+          },{
+            "image": "",
+            "text": "Service 4",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Service 5",
+            "href": "#"
+          },{
+            "image": "",
+            "text": "Service 6",
+            "href": "#"
+          }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/link-list.twig",
+      "data": {
+        "linkList" : {
+          "compHeading": {
+            "title": "Reports & Information",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
+          "links" : [{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          },{
+            "href":"#",
+            "text":"Document Name"
+          }]
+        }
+      }
+    },{
+      "path": "@organisms/by-author/press-listing.twig",
+      "data": {
+        "pressListing": {
+          "compHeading": {
+            "title": "Recent news & announcements",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": ""
+          },
+          "items": [{
+            "image": {
+              "src":"/assets/images/placeholder/statehouse.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Release",
+            "title" : {
+              "href":"#",
+              "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/4/2017",
+            "org": "Health & Human Services, Public Safety",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "News Article",
+            "title" : {
+              "href":"#",
+              "text":"Tree House Brweing Co. Expands Its Horizons",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Mass Development",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          }],
+          "secondaryItems": [{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Release",
+            "title" : {
+              "href":"#",
+              "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/4/2017",
+            "org": "Health & Human Services, Public Safety",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "News Article",
+            "title" : {
+              "href":"#",
+              "text":"Tree House Brewing Co. Expands Its Horizons",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Mass Development",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Statement",
+            "title" : {
+              "href":"#",
+              "text":"Governor Baker Statement on Supreme Court Marriage Equality Decision",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Office of the Governor",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Release",
+            "title" : {
+              "href":"#",
+              "text":"Massachusetts Health Officials Release Quarterly Report on Opioid OD Deaths",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/4/2017",
+            "org": "Health & Human Services, Public Safety",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "News Article",
+            "title" : {
+              "href":"#",
+              "text":"Tree House Brweing Co. Expands Its Horizons",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Mass Development",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          },{
+            "image": {
+              "src":"/assets/images/placeholder/400x225.png",
+              "alt": "placeholder image",
+              "width": "400",
+              "height": "225",
+              "href": "#"
+            },
+            "eyebrow": "Press Statement",
+            "title" : {
+              "href":"#",
+              "text":"Governor Baker Statement on Supreme Court Marriage Equality Decision",
+              "info": "",
+              "property": ""
+            },
+            "date": "4/3/2017",
+            "org": "Office of the Governor",
+            "description": {
+              "rteElements": [{
+                "path": "@atoms/11-text/paragraph.twig",
+                "data": {
+                  "paragraph" : {
+                    "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  }
+                }
+              }]
+            }
+          }],
+          "more":{
+            "href": "#",
+            "text": "See all news and announcements",
+            "chevron": true,
+            "label": "See all news and announcements for the Executive Office of Health and Human Services"
+          }
+        }
+      }
+    },{
+      "path": "@organisms/by-author/event-listing.twig",
+      "data": {
+        "eventListing": {
+          "grid": true,
+          "emptyText": "No upcoming events scheduled",
+          "compHeading":{
+            "title": "Upcoming Meetings & Events",
+            "sub": "",
+            "color": "",
+            "id": "",
+            "centered": "",
+            "titleContext": "from the Office of the Treasurer & Receiver General"
+          },
+          "events": null,
+          "pastMore":{
+            "href": "#",
+            "text": "See all events, agendas, and meeting minutes",
+            "info": "view all past events for Office of the Treasurer & Receiver General",
+            "chevron": true
+          }
+        }
+      }
+    },{
+      "path":"@organisms/by-author/contact-list.twig",
+      "data": {
+        "contactList": {
+          "viewSpecific": false,
+          "compHeading": {
+            "title": "Get in touch",
+            "sub": "",
+            "color": "",
+            "id": "contacts",
+            "centered": ""
+          },
+
+          "contacts":[{
+            "accordion": true,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"",
+              "text": "Department of Conservation and Recreation"
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "property": "",
+                "label":"Main:",
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"Toll Free:",
+                "link":{
+                  "href": "+18004324321",
+                  "text": "(800) 432-4321",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"TTY:",
+                "link": {
+                  "href":"+16175557777",
+                  "text": "(617) 555-7777",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"For those who need accessible services"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"Voice Relay:",
+                "link":{
+                  "href":"16175555255",
+                  "text": "(617) 555-5255",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "hidden": "",
+              "items": [{
+                "type": "email",
+                "property": "",
+                "label":"Email:",
+                "link": {
+                  "href":"email@email.com",
+                  "text": "email@email.com",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              },{
+                "type": "online",
+                "property": "",
+                "label":"Web:",
+                "link": {
+                  "href":"#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-fax-icon.twig",
+              "name": "Fax",
+              "items": [{
+                "type": "fax",
+                "property": "",
+                "label":"Main:",
+                "link": {
+                  "href":"+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"Please allow 24 hours for a response"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-marker.twig",
+              "name": "Address",
+              "items": [{
+                "type": "address",
+                "property": "",
+                "label": "",
+                "address": "555 Park Drive\nBoston, MA 02231",
+                "link": {
+                  "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+                  "text": "directions",
+                  "info": "",
+                  "property": ""
+                },
+                "details": ""
+              }]
+            }]
+          },{
+            "accordion": true,
+            "isExpanded": false,
+            "subTitle": {
+              "href":"",
+              "text": "Department of Conservation and Recreation"
+            },
+            "groups": [{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "property": "",
+                "label":"Main:",
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"Toll Free:",
+                "link":{
+                  "href": "+18004324321",
+                  "text": "(800) 432-4321",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"TTY:",
+                "link": {
+                  "href":"+16175557777",
+                  "text": "(617) 555-7777",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"For those who need accessible services"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"Voice Relay:",
+                "link":{
+                  "href":"16175555255",
+                  "text": "(617) 555-5255",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "hidden": "",
+              "items": [{
+                "type": "email",
+                "property": "",
+                "label":"Email:",
+                "link": {
+                  "href":"email@email.com",
+                  "text": "email@email.com",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              },{
+                "type": "online",
+                "property": "",
+                "label":"Web:",
+                "link": {
+                  "href":"#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-fax-icon.twig",
+              "name": "Fax",
+              "items": [{
+                "type": "fax",
+                "property": "",
+                "label":"Main:",
+                "link": {
+                  "href":"+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"Please allow 24 hours for a response"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-marker.twig",
+              "name": "Address",
+              "items": [{
+                "type": "address",
+                "property": "",
+                "label": "",
+                "address": "555 Park Drive\nBoston, MA 02231",
+                "link": {
+                  "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+                  "text": "directions",
+                  "info": "",
+                  "property": ""
+                },
+                "details": ""
+              }]
+            }]
+          }]
+        }
+      }
+    }]
+  }],
+
+  "schema": {
+    "governmentOrganization": {
+      "name": "Executive Office of Health and Human Services",
+      "alternateName": "EOHHS",
+      "memberOf": {
+        "id": "http://mayflower.digital.mass.gov/#organization"
+      },
+      "disambiguatingDescription": "EOHHS oversees health and general support services to help people in Massacheusetts - from young children to seniors - meet basic needs.",
+      "description": "The Executive Office of Health and Human Services is responsible through its member agencies for the delivery of a wide range of services to people with financial, health, social, protective, rehabilitation, and correctional needs. Online information is available for consumers, providers, researchers, and social workers to find out what types of assistance are offered.",
+      "logo": "https://mayflower.digital.mass.gov/assets/images/images/placeholder/230x130.png",
+      "url": "https://mayflower.digital.mass.gov/?p=templates-org-landing-page",
+      "contactInfo": {
+        "address": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+        "telephone": "+14134994262",
+        "faxNumber": "+14134994266",
+        "email": "email@email.com"
+      },
+      "sameAs": [
+        "https://twitter.com/MassHHS",
+        "https://www.flickr.com/photos/mass_hhs/",
+        "https://blog.mass.gov/hhs"
+      ]
+    }
+  }
+}
