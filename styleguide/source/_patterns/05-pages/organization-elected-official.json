@@ -212,7 +212,7 @@
           },
           "items": [{
             "image": {
-              "src":"/assets/images/placeholder/statehouse.png",
+              "src":"../../assets/images/placeholder/statehouse.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
@@ -239,7 +239,7 @@
             }
           },{
             "image": {
-              "src":"/assets/images/placeholder/400x225.png",
+              "src":"../../assets/images/placeholder/400x225.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
@@ -267,7 +267,7 @@
           }],
           "secondaryItems": [{
             "image": {
-              "src":"/assets/images/placeholder/400x225.png",
+              "src":"../../assets/images/placeholder/400x225.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
@@ -294,7 +294,7 @@
             }
           },{
             "image": {
-              "src":"/assets/images/placeholder/400x225.png",
+              "src":"../../assets/images/placeholder/400x225.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
@@ -321,7 +321,7 @@
             }
           },{
             "image": {
-              "src":"/assets/images/placeholder/400x225.png",
+              "src":"../../assets/images/placeholder/400x225.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
@@ -348,7 +348,7 @@
             }
           },{
             "image": {
-              "src":"/assets/images/placeholder/400x225.png",
+              "src":"../../assets/images/placeholder/400x225.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
@@ -375,7 +375,7 @@
             }
           },{
             "image": {
-              "src":"/assets/images/placeholder/400x225.png",
+              "src":"../../assets/images/placeholder/400x225.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
@@ -402,7 +402,7 @@
             }
           },{
             "image": {
-              "src":"/assets/images/placeholder/400x225.png",
+              "src":"../../assets/images/placeholder/400x225.png",
               "alt": "placeholder image",
               "width": "400",
               "height": "225",
