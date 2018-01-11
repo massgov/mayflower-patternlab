@@ -1,13 +1,12 @@
 .ma__teaser-listing {
 
-  &__secondary-items {
+  &__optional-content, &__secondary-items {
     border-color: $c-bd-divider;
   }
 
   &__secondary-item {
-    border-color: $c-bd-divider;
 
-    &:after {
+    &, &:after {
       border-color: $c-bd-divider;
     }
   }

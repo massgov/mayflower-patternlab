@@ -10,6 +10,22 @@
     overflow: hidden;
   }
 
+  &__optional-content {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+
+    @media ($bp-large-min){
+      margin-bottom: 45px;
+      padding-bottom: 45px;
+
+      .ma__rich-text {
+        max-width: $l-max-content-width - 80px;
+      }
+    }
+  }
+
   &__items + &__secondary-items {
     border-top-width: 1px;
     border-top-style: solid;

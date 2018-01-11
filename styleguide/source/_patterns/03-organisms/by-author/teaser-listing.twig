@@ -15,6 +15,13 @@
       {% include "@atoms/04-headings/sidebar-heading.twig" %}
       {% set teaserHeading = (sidebarHeading.level ? : teaserHeading) + 1 %}
     {% endif %}
+    {% if teaserListing.optionalContents %}
+      <div class="ma__teaser-listing__optional-content">
+      {% for content in teaserListing.optionalContents %}
+        {% include content.path with content.data %}
+      {% endfor %}
+      </div>
+    {% endif %}
     {% if teaserListing.items %}
       <div class="ma__teaser-listing__items {{ stacked }}">
         {% for generalTeaser in teaserListing.items %}
