@@ -18,11 +18,13 @@
 
   <div class="ma__link-list__container">
       <ul class="ma__link-list__items ma__link-list__items--no-bullets">
+        {% block logoListBlock %}
         {% for logoLink in logoLinkList.links %}
           <li class="ma__link-list__item">
             {% include "@molecules/logo-link.twig" %}
           </li>
         {% endfor %}
+        {% endblock %}
       </ul>
   </div>
 </section>
