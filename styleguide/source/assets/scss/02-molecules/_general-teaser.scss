@@ -15,10 +15,13 @@
   & + & {
     border-top-width: 1px;
     border-top-style: solid;
-    margin-top: 30px;
-    padding-top: 30px;
 
-    @media ($bp-large-min){
+    @media ($bp-large-max) {
+      margin-top: 30px;
+      padding-top: 30px;
+    }
+
+    @media ($bp-large-min) {
       margin-top: 45px;
       padding-top: 45px;
     }
@@ -93,9 +96,5 @@
 
   &__description {
     font-size: 1.25rem;
-
-    @media ($bp-x-small-max) {
-      display: none;
-    }
   }
 }
