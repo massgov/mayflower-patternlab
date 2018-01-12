@@ -1,7 +1,7 @@
 .ma__general-teaser {
   @include clearfix();
 
-  &--image-link {
+  &--image {
     display: flex;
     flex-wrap: wrap;
     &.stacked {
@@ -35,7 +35,7 @@
     @include ma-container('restricted');
   }
 
-  &__image-link {
+  &__image-wrapper {
     flex-shrink: 0;
     flex-grow: 0;
     flex-basis: auto;
@@ -44,7 +44,7 @@
     margin-bottom: 10px;
   }
 
-  &__image-link + &__details + &__body {
+  &__image-wrapper + &__details + &__body {
     flex-basis: auto;
     flex-shrink: 1;
     flex-grow: 1;

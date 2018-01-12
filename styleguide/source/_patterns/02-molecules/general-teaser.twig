@@ -1,21 +1,24 @@
-{% set imageClass = generalTeaser.image ? 'ma__general-teaser--image-link' : '' %}
+{% set imageClass = generalTeaser.image ? 'ma__general-teaser--image' : '' %}
 {% set stacked = generalTeaser.image and generalTeaser.stacked ? 'stacked' : 'side-by-side' %}
 
 
 <section class="ma__general-teaser {{ imageClass }} {{ stacked }}">
   {% if generalTeaser.image %}
-    <a
-      class="ma__general-teaser__image-link"
-      href="{{ generalTeaser.title.href }}"
-      title="{{ generalTeaser.title.text }}">
-      {% set image = generalTeaser.image %}
-      <img
-        src="{{ image.src }}"
-        aria-label="{{ image.alt }}"
-        role="img"
-      >
-      </img>
-    </a>
+    {% if generalTeaser.title.href %}
+      <a
+        class="ma__general-teaser__image-wrapper"
+        href="{{ generalTeaser.title.href }}"
+        title="{{ generalTeaser.title.text }}">
+    {% else %}
+      <span class="ma__general-teaser__image-wrapper">
+    {% endif %}
+    {% set image = generalTeaser.image %}
+    {% include "@atoms/09-media/image.twig" %}
+    {% if generalTeaser.title.href %}
+      </a>
+    {% else %}
+      </span>
+    {% endif %}
   {% endif %}
   <div class="ma__general-teaser__details">
     {% if generalTeaser.eyebrow %}
@@ -23,11 +26,17 @@
         <span>{{ generalTeaser.eyebrow }}</span>
       </div>
     {% endif %}
-    {% set headingLevel = generalTeaser.level ? : 2 %}
-    <h{{ headingLevel }} class="ma__general-teaser__title">
-      {% set decorativeLink = generalTeaser.title %}
-      {% include "@atoms/decorative-link.twig" %}
-    </h{{ headingLevel }}>
+    {% if generalTeaser.title.text %}
+      {% set headingLevel = generalTeaser.level ? : 2 %}
+      <h{{ headingLevel }} class="ma__general-teaser__title">
+        {% if generalTeaser.title.href %}
+          {% set decorativeLink = generalTeaser.title %}
+          {% include "@atoms/decorative-link.twig" %}
+        {% else %}
+          {{ generalTeaser.title.text }}
+        {% endif %}
+      </h{{ headingLevel }}>
+    {% endif %}
     {% if generalTeaser.emphasizedPrefix or generalTeaser.emphasizedText %}
       <div class="ma__general-teaser__details">
         {% if generalTeaser.emphasizedPrefix %}

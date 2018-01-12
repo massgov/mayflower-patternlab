@@ -28,8 +28,7 @@
         "src":"../../assets/images/placeholder/172x228.png",
         "alt": "placeholder image",
         "width": "172",
-        "height": "228",
-        "href": "#"
+        "height": "228"
       },
       "eyebrow": "Eyebrow",
       "title" : {
@@ -55,12 +54,10 @@
         "src":"../../assets/images/placeholder/172x228.png",
         "alt": "placeholder image",
         "width": "172",
-        "height": "228",
-        "href": "#"
+        "height": "228"
       },
       "eyebrow": "Eyebrow",
       "title" : {
-        "href":"#",
         "text":"MassParks",
         "info": "",
         "property": ""
@@ -84,8 +81,7 @@
           "src": "../../assets/images/placeholder/72x96.png",
           "alt": "placeholder image",
           "width": "72",
-          "height": "96",
-          "href": "#"
+          "height": "96"
         },
         "eyebrow": "Board member",
         "title": {
@@ -120,12 +116,10 @@
           "src": "../../assets/images/placeholder/72x96.png",
           "alt": "placeholder image",
           "width": "72",
-          "height": "96",
-          "href": "#"
+          "height": "96"
         },
         "eyebrow": "Board Member",
         "title": {
-          "href": "#",
           "text": "Board Member's Name",
           "info": "",
           "property": ""
@@ -150,12 +144,10 @@
           "src": "../../assets/images/placeholder/72x96.png",
           "alt": "placeholder image",
           "width": "72",
-          "height": "96",
-          "href": "#"
+          "height": "96"
         },
         "eyebrow": "Board Member",
         "title": {
-          "href": "#",
           "text": "Board Member's Name",
           "info": "",
           "property": ""
@@ -180,12 +172,10 @@
           "src": "../../assets/images/placeholder/72x96.png",
           "alt": "placeholder image",
           "width": "72",
-          "height": "96",
-          "href": "#"
+          "height": "96"
         },
         "eyebrow": "Board Member",
         "title": {
-          "href": "#",
           "text": "Board Member's Name",
           "info": "",
           "property": ""
@@ -210,12 +200,10 @@
           "src": "../../assets/images/placeholder/72x96.png",
           "alt": "placeholder image",
           "width": "72",
-          "height": "96",
-          "href": "#"
+          "height": "96"
         },
         "eyebrow": "Board Member",
         "title": {
-          "href": "#",
           "text": "Board Member's Name",
           "info": "",
           "property": ""
@@ -240,12 +228,10 @@
           "src": "../../assets/images/placeholder/72x96.png",
           "alt": "placeholder image",
           "width": "72",
-          "height": "96",
-          "href": "#"
+          "height": "96"
         },
         "eyebrow": "Board Member",
         "title": {
-          "href": "#",
           "text": "Board Member's Name",
           "info": "",
           "property": ""

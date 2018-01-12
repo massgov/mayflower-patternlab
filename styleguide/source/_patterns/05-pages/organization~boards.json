@@ -145,12 +145,10 @@
                     "src": "../../assets/images/placeholder/172x228.png",
                     "alt": "placeholder image",
                     "width": "172",
-                    "height": "228",
-                    "href": "#"
+                    "height": "228"
                   },
                   "eyebrow": "Featured Board Member",
                   "title": {
-                    "href": "#",
                     "text": "Featured Board Member's Name",
                     "info": "",
                     "property": ""
@@ -176,8 +174,7 @@
                     "src": "../../assets/images/placeholder/172x228.png",
                     "alt": "placeholder image",
                     "width": "172",
-                    "height": "228",
-                    "href": "#"
+                    "height": "228"
                   },
                   "eyebrow": "Featured Board Member",
                   "title": {
@@ -214,8 +211,7 @@
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
-                    "height": "96",
-                    "href": "#"
+                    "height": "96"
                   },
                   "eyebrow": "Board member",
                   "title": {
@@ -250,12 +246,10 @@
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
-                    "height": "96",
-                    "href": "#"
+                    "height": "96"
                   },
                   "eyebrow": "Board Member",
                   "title": {
-                    "href": "#",
                     "text": "Board Member's Name",
                     "info": "",
                     "property": ""
@@ -280,12 +274,10 @@
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
-                    "height": "96",
-                    "href": "#"
+                    "height": "96"
                   },
                   "eyebrow": "Board Member",
                   "title": {
-                    "href": "#",
                     "text": "Board Member's Name",
                     "info": "",
                     "property": ""
@@ -310,12 +302,10 @@
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
-                    "height": "96",
-                    "href": "#"
+                    "height": "96"
                   },
                   "eyebrow": "Board Member",
                   "title": {
-                    "href": "#",
                     "text": "Board Member's Name",
                     "info": "",
                     "property": ""
@@ -340,12 +330,10 @@
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
-                    "height": "96",
-                    "href": "#"
+                    "height": "96"
                   },
                   "eyebrow": "Board Member",
                   "title": {
-                    "href": "#",
                     "text": "Board Member's Name",
                     "info": "",
                     "property": ""
@@ -370,12 +358,10 @@
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
                     "width": "72",
-                    "height": "96",
-                    "href": "#"
+                    "height": "96"
                   },
                   "eyebrow": "Board Member",
                   "title": {
-                    "href": "#",
                     "text": "Board Member's Name",
                     "info": "",
                     "property": ""
@@ -479,12 +465,12 @@
               "bgWide": "../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
               "bgNarrow": "../../assets/images/placeholder/800x800.png",
               "title": "What would you like to do?",
-              "featuredHeading": "Featured Services",
-              "generalHeading": "More Services",
+              "featuredHeading": "Featured services",
+              "generalHeading": "More services",
               "seeAll": {
                 "type": "external",
                 "href": "#",
-                "text": "See all  services",
+                "text": "See all services",
                 "info": ""
               },
               "featuredLinks": [
@@ -494,26 +480,26 @@
                   "type": "external",
                   "href": "#"
                 },{
-                "image": "",
-                "text": "Top Action/Service",
-                "type": "external",
-                "href": "#"
-                },{
-                "image": "",
-                "text": "Top Action/Service",
-                "type": "external",
-                "href": "#"
-                },{
-                "image": "",
-                "text": "Top Action/Service",
-                "type": "external",
-                "href": "#"
-                }, {
                   "image": "",
                   "text": "Top Action/Service",
                   "type": "external",
                   "href": "#"
-                }, {
+                },{
+                  "image": "",
+                  "text": "Top Action/Service",
+                  "type": "external",
+                  "href": "#"
+                },{
+                  "image": "",
+                  "text": "Top Action/Service",
+                  "type": "external",
+                  "href": "#"
+                },{
+                  "image": "",
+                  "text": "Top Action/Service",
+                  "type": "external",
+                  "href": "#"
+                },{
                   "image": "",
                   "text": "Top Action/Service",
                   "type": "external",
@@ -573,8 +559,7 @@
                     "src": "../../assets/images/placeholder/statehouse.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "Press Release",
                   "title": {
@@ -603,8 +588,7 @@
                     "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "News Article",
                   "title": {
@@ -635,8 +619,7 @@
                     "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "Press Release",
                   "title": {
@@ -665,8 +648,7 @@
                     "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "News Article",
                   "title": {
@@ -695,8 +677,7 @@
                     "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "Press Statement",
                   "title": {
@@ -725,8 +706,7 @@
                     "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "Press Release",
                   "title": {
@@ -755,8 +735,7 @@
                     "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "News Article",
                   "title": {
@@ -785,8 +764,7 @@
                     "src": "../../assets/images/placeholder/400x225.png",
                     "alt": "placeholder image",
                     "width": "400",
-                    "height": "225",
-                    "href": "#"
+                    "height": "225"
                   },
                   "eyebrow": "Press Statement",
                   "title": {
@@ -937,7 +915,7 @@
           "data": {
             "linkList": {
               "compHeading": {
-                "title": "Related Organizations",
+                "title": "Related organizations",
                 "sub": "",
                 "color": "",
                 "id": "",
