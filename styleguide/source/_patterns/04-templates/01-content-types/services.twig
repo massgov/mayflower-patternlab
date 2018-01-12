@@ -3,9 +3,9 @@
 {% block header %}
 
 {% endblock %}
-<main 
-  id="main-content" 
-  class="ma__services" 
+<main
+  id="main-content"
+  class="ma__services"
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -53,9 +53,9 @@
                 {% set iconLinks = introSidebar.social.iconLinks %}
                 {% include "@molecules/icon-links.twig" %}
               {% endif %}
-              {% if introSidebar.linkList %}
-                {% set linkList = introSidebar.linkList %}
-                {% include "@organisms/by-author/link-list.twig" %}
+              {% if introSidebar.logoLinkList %}
+                {% set logoLinkList = introSidebar.logoLinkList %}
+                {% include "@organisms/by-author/logo-link-list.twig" %}
               {% endif %}
             {% endblock %}
           </aside>

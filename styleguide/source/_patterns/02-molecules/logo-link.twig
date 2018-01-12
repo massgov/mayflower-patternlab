@@ -1,0 +1,9 @@
+<div class="ma__logo-link">
+    <div class="ma__logo-link__image">
+        {% if logoLink.image %}
+            <img  src="{{logoLink.image.src}}" alt="{{logoLink.image.alt}}">
+        {% endif %}
+    </div>
+    {% set decorativeLink = logoLink %}
+    {% include "@atoms/decorative-link.twig" %}
+</div>

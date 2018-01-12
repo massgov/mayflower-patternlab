@@ -1,0 +1,28 @@
+<section class="ma__link-list--logo">
+  {% if logoLinkList.compHeading %}
+    {% set compHeading = logoLinkList.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+
+  {% if logoLinkList.sidebarHeading %}
+    {% set sidebarHeading = logoLinkList.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+
+  {% if logoLinkList.description %}
+    <div class="ma__link-list__description">
+      {% set richText = logoLinkList.description %}
+      {% include "@organisms/by-author/rich-text.twig" %}
+    </div>
+  {% endif %}
+
+  <div class="ma__link-list__container">
+      <ul class="ma__link-list__items ma__link-list__items--no-bullets">
+        {% for logoLink in logoLinkList.links %}
+          <li class="ma__link-list__item">
+            {% include "@molecules/logo-link.twig" %}
+          </li>
+        {% endfor %}
+      </ul>
+  </div>
+</section>
