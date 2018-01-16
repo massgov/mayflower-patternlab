@@ -2,7 +2,7 @@
 This is an example of a Mass.gov Organization page variant that demonstrates an additional "Board Members" section. The page uses a stacked row template.
 
 ### Status
-* Stable as of 5.0.0
+* Stable as of TBA
 
 ### Pattern Contains
 * Header
@@ -11,7 +11,8 @@ This is an example of a Mass.gov Organization page variant that demonstrates an 
 * Page Header - location
 * Page Banner - large
 * Rich Text
-* Board Members (variant of press-listing-as-grid organism)
+* Teaser Listing
+* General Teaser
 * Icon Links
 * Action Finder
 * Mapped Locations
@@ -30,7 +31,7 @@ pageHeader: {
   type: pageHeader / required
 },
 
-stackedRowSections: [{
-  type: array of stackedRowSections / required
+stackedRows: [{
+  type: array of stackedRows / required
 }]
 ~~~
