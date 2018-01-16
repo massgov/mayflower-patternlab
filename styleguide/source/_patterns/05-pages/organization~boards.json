@@ -130,7 +130,7 @@
             "teaserListing": {
               "stacked": false,
               "contained": true,
-              "gridTwoColumns": true,
+              "gridTwoColumns": false,
               "compHeading": {
                 "title": "Board Members",
                 "sub": "",
