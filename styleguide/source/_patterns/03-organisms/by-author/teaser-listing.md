@@ -1,23 +1,35 @@
 ### Description
-This is an example of a Teaser Listing page [extending](https://twig.symfony.com/doc/2.x/tags/extends.html) the Two Column Reversed template
+This Pattern shows a list of General Teaser patterns.
 
 ### Status
 * Stable as of TBD
 
 ### Pattern Contains
-* Header
-* Footer
-* Two Column Reversed (template)
-* Page Header
-* Press Filters
-* Results Heading
-* Press Listing (organism)
-* Pagination
-
-### JavaScript Used
-* Page level is still to be determined
-* Select Boxes (js/modules/dropdown.js)
-* Date Range (js/modules/pickaday.js)
+* Comp heading
+* Sidebar heading
+* Paragraph
+* General Teaser
+* Link
 
 ### Variables
-See Patterns above
+~~~
+teaserListing: {
+  compHeading: {
+    type: compHeading / optional
+  },
+  sidebarHeading: {
+    type: sidebarHeading / optional
+  },
+  stacked:
+    type: boolean / optional,
+  items: [{
+    type: pressTeaser / required
+  }],
+  secondaryItems: [{
+    type: pressTeaser / optional
+  }],
+  more: {
+    type: link / optional
+  }
+}
+~~~

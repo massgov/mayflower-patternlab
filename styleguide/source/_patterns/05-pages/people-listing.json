@@ -44,21 +44,9 @@
           "stacked": false,
           "contained": true,
           "gridTwoColumns": true,
-          "optionalContents": [{
-            "path": "@organisms/by-author/rich-text.twig",
-            "data": {
-              "richText": {
-                "rteElements": [{
-                  "path": "atoms-paragraph",
-                  "data": {
-                    "paragraph" : {
-                      "text": "This is an optional descriptive paragraph field, explaining the listing of people below. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
-                    }
-                  }
-                }]
-              }
-            }
-          }],
+          "description": {
+            "text": "This is an optional descriptive paragraph field, explaining the listing of people below. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
+          },
           "items": [
             {
               "stacked": true,
@@ -314,7 +302,6 @@
           "stacked": false,
           "contained": true,
           "gridTwoColumns": true,
-          "optionalContents": [],
           "items": [],
           "secondaryItems": [
             {

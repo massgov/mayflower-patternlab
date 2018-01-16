@@ -10,15 +10,15 @@
     overflow: hidden;
   }
 
-  &__optional-content {
-    .ma__rich-text {
+  &__description {
+    p {
       @media ($bp-large-min) {
         max-width: $l-max-content-width - 80px;
       }
     }
   }
 
-  &__optional-content + *, &__items + &__secondary-items {
+  &__description + *, &__items + &__secondary-items {
     border-top-width: 1px;
     border-top-style: solid;
     margin-top: 0;
