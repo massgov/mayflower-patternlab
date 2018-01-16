@@ -47,8 +47,8 @@
     margin-bottom: 10px;
   }
 
-  &__image-wrapper + &__details + &__body {
-    flex-basis: auto;
+  &__image-wrapper + &__details {
+    flex-basis: 60%;
     flex-shrink: 1;
     flex-grow: 1;
   }
@@ -76,7 +76,6 @@
   }
 
   &__details {
-    flex-basis: 70%;
     padding: 2px 0 4px;
   }
 

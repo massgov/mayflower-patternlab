@@ -51,22 +51,21 @@
         {% endif %}
       </div>
     {% endif %}
-  </div>
-  {% if generalTeaser.description or generalTeaser.more %}
-  <div class="ma__general-teaser__body">
-    {% if generalTeaser.description %}
-      <div class="ma__general-teaser__description">
-        {% set richText = generalTeaser.description %}
-        {% include "@organisms/by-author/rich-text.twig" %}
+    {% if generalTeaser.description or generalTeaser.more %}
+      <div class="ma__general-teaser__body">
+        {% if generalTeaser.description %}
+          <div class="ma__general-teaser__description">
+            {% set richText = generalTeaser.description %}
+            {% include "@organisms/by-author/rich-text.twig" %}
+          </div>
+        {% endif %}
+        {% if generalTeaser.more %}
+          <div class="ma__general-teaser__more">
+            {% set decorativeLink = generalTeaser.more %}
+            {% include "@atoms/decorative-link.twig" %}
+          </div>
+        {% endif %}
       </div>
     {% endif %}
-    {% if generalTeaser.more %}
-      <div class="ma__general-teaser__more">
-        {% set decorativeLink = generalTeaser.more %}
-        {% include "@atoms/decorative-link.twig" %}
-      </div>
-    {% endif %}
   </div>
-  {% endif %}
-
 </section>
