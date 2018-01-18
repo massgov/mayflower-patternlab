@@ -22,7 +22,11 @@
       <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links %}
           <li class="ma__link-list__item">
-            {% include "@atoms/decorative-link.twig" %}
+            {% if decorativeLink.href %}
+              {% include "@atoms/decorative-link.twig" %}
+            {% else %}
+              {{ decorativeLink.text }}
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
@@ -32,14 +36,22 @@
       <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links[start:half] %}
           <li class="ma__link-list__item">
-            {% include "@atoms/decorative-link.twig" %}
+            {% if decorativeLink.href %}
+              {% include "@atoms/decorative-link.twig" %}
+            {% else %}
+              {{ decorativeLink.text }}
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
       <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links[half:length] %}
           <li class="ma__link-list__item">
-            {% include "@atoms/decorative-link.twig" %}
+            {% if decorativeLink.href %}
+              {% include "@atoms/decorative-link.twig" %}
+            {% else %}
+              {{ decorativeLink.text }}
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
