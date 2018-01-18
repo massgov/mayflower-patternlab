@@ -63,6 +63,10 @@
     transform: rotate(135deg);
   }
 
+  &--accordion &__content {
+    padding: 0 20px 30px;
+  }
+
   .js &--accordion &__content {
     display: none;
   }
@@ -75,20 +79,20 @@
     justify-content: flex-start;
     flex-basis: 25%;
 
-    // width overlaps parent's 1px borders
+    // width overlaps parent's 1px borders & negates parent padding
     // This is so we can have divider borders (left border) and since we have a wrapping
     // flexbox grid, the first item on each show needs its left border hidden.
-    width: calc(100% + 2px);
+    width: calc(100% + 42px);
     position: relative;
-      left: -1px;
+      left: -21px;
   }
+
   &__content-wrap .ma__contact-group {
     max-width: 25%;
     min-width: 18rem;
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 20px;
-    margin-bottom: 40px;
     border-left: 1px solid #dcdcdc;
 
     // Reset if we aren't in an accordion
@@ -111,6 +115,11 @@
     }
 
 
+  }
+
+  &__content-wrap .ma__contact-us__more-info {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   &__extra {
