@@ -44,6 +44,8 @@
     }
   }
 
+
+
   .sidebar &__item + &__item {
     border-top-style: solid;
     border-top-width: 1px;
@@ -62,5 +64,13 @@
 
   &__see-all {
     margin-top: 1rem;
+  }
+
+  &--logo {
+    .sidebar & .ma__link-list__item + .ma__link-list__item {
+      border-top: none;
+      margin-top: 0px;
+      padding-top: 10px;
+    }
   }
 }
