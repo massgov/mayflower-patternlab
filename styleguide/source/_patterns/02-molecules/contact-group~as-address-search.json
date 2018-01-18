@@ -1,0 +1,17 @@
+{
+  "contactGroup": {
+    "icon": "@atoms/05-icons/svg-marker.twig",
+    "name": "",
+    "items": [{
+      "type": "address",
+      "label": "",
+      "address": "",
+      "link": {
+        "href": "#",
+        "text": "See locations",
+        "info": ""
+      },
+      "details": ""
+    }]
+  }
+}
