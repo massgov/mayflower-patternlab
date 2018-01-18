@@ -12,6 +12,13 @@
     }
   }
 
+  &__icon {
+
+    svg {
+      fill: $c-theme-secondary;
+    }
+  }
+
   &__label {
     font-weight: 500;
   }

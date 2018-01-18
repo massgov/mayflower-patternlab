@@ -25,6 +25,22 @@
     }
   }
 
+  &__icon--inline {
+    display: inline-block;
+
+    & > svg {
+      display: inline-block;
+      height: 20px;
+      margin-right: .25em;
+      vertical-align: middle;
+      width: 20px;
+    }
+  }
+
+  &__icon--inline + &__item {
+    display: inline-block;
+  }
+
   &__label {
     display: inline-block;
 

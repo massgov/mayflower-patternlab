@@ -6,6 +6,11 @@
       <span>{{contactGroup.name}}</span>
     </h{{ headingLevel }}>
   {% endif %}
+  {% if contactGroup.icon and not contactGroup.name %}
+    <span class="ma__contact-group__icon ma__contact-group__icon--inline">
+      {% include contactGroup.icon %}
+    </span>
+  {% endif %}
   {% for item in contactGroup.items %}
     {# if using the older 3.4.1 data model #}
     {% if item.link and item.link is not iterable %}
