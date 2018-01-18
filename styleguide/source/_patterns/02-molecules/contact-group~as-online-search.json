@@ -1,0 +1,17 @@
+{
+  "contactGroup": {
+    "icon": "@atoms/05-icons/svg-laptop.twig",
+    "name": "",
+    "items": [{
+      "type": "online",
+      "label":"",
+      "address": "",
+      "link": {
+        "href":"#",
+        "text": "Online Contact Form",
+        "info": "for this organization"
+      },
+      "details":""
+    }]
+  }
+}
