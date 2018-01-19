@@ -138,7 +138,7 @@
                 "id": "",
                 "centered": ""
               },
-              "items": [
+              "featuredItems": [
                 {
                   "stacked": true,
                   "image": {
@@ -212,7 +212,7 @@
                   }]
                 }
               ],
-              "secondaryItems": [
+              "items": [
                 {
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
@@ -571,7 +571,7 @@
                 "id": "",
                 "centered": ""
               },
-              "items": [
+              "featuredItems": [
                 {
                   "image": {
                     "src": "../../assets/images/placeholder/statehouse.png",
@@ -631,7 +631,7 @@
                   }
                 }
               ],
-              "secondaryItems": [
+              "items": [
                 {
                   "image": {
                     "src": "../../assets/images/placeholder/400x225.png",

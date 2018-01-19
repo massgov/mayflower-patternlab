@@ -11,7 +11,7 @@
     "description" : {
       "text": "This is an optional descriptive paragraph field, explaining the listings below. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget."
     },
-    "items": [{
+    "featuredItems": [{
       "image": {
         "src":"../../assets/images/placeholder/172x228.png",
         "alt": "placeholder image",
@@ -67,7 +67,7 @@
         }]
       }
     }],
-    "secondaryItems": [
+    "items": [
       {
         "image": {
           "src": "../../assets/images/placeholder/72x96.png",

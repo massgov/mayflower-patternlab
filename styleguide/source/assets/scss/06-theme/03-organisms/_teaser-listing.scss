@@ -1,10 +1,10 @@
 .ma__teaser-listing {
 
-  &__optional-content, &__items, &__secondary-items {
+  &__optional-content, &__featured-items, &__items {
     border-color: $c-bd-divider;
   }
 
-  &__items .ma__general-teaser, &__secondary-item {
+  &__featured-items .ma__general-teaser, &__item {
     &, &:after {
       border-color: $c-bd-divider;
     }

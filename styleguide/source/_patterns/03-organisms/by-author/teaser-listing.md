@@ -22,11 +22,11 @@ teaserListing: {
   },
   stacked:
     type: boolean / optional,
-  items: [{
-    type: pressTeaser / required
+  featuredItems: [{
+    type: generalTeaser / optional
   }],
-  secondaryItems: [{
-    type: pressTeaser / optional
+  items: [{
+    type: generalTeaser / optional
   }],
   more: {
     type: link / optional

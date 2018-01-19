@@ -47,7 +47,7 @@
           "description": {
             "text": "Area Description (optional). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
           },
-          "items": [
+          "featuredItems": [
             {
               "stacked": true,
               "image": {
@@ -121,7 +121,7 @@
               }]
             }
           ],
-          "secondaryItems": [
+          "items": [
             {
               "image": {
                 "src": "../../assets/images/placeholder/183x244.png",
@@ -323,8 +323,8 @@
           "description": {
             "text": "Area Description (optional). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo."
           },
-          "items": [],
-          "secondaryItems": [
+          "featuredItems": [],
+          "items": [
             {
               "image": {
                 "src": "../../assets/images/placeholder/183x244.png",
