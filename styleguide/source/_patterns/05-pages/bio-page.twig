@@ -1,0 +1,50 @@
+{% extends '@templates/two-column.twig' %}
+
+{% block preContent %}
+  {% include "@organisms/by-template/page-header.twig" %}
+{% endblock %}
+
+{% block pageContent %}
+  {% if mainContent.richText %}
+    {% set richText = mainContent.richText %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+  {% endif %}
+
+  {% if mainContent.roles %}
+    {% set linkList = mainContent.roles %}
+    {% include "@organisms/by-author/link-list.twig" %}
+  {% endif %}
+
+  {% if mainContent.personalMessage %}
+    {% set personalMessage = mainContent.personalMessage %}
+    {% include "@organisms/by-author/personal-message.twig" %}
+  {% endif %}
+{% endblock %}
+
+{% block sidebar %}
+  {% if sideContent.headshot.image or sideContent.headshot.downloadLink %}
+  <div>
+    {% if sideContent.headshot.image %}
+      {% set image = sideContent.headshot.image %}
+      {% include "@atoms/09-media/image.twig" %}
+    {% endif %}
+    {% if sideContent.headshot.downloadLink %}
+      {% set decorativeLink = sideContent.headshot.downloadLink %}
+      {% include "@atoms/decorative-link.twig" %}
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if sideContent.contactList %}
+    {% set contactList = sideContent.contactList %}
+    {% include "@organisms/by-author/contact-list.twig" %}
+  {% endif %}
+
+  {% if sideContent.social %}
+    {% set iconLinks = sideContent.social %}
+    {% include "@molecules/icon-links.twig" %}
+  {% endif %}
+{% endblock %}
+
+{% block postContent %}
+{% endblock %}
