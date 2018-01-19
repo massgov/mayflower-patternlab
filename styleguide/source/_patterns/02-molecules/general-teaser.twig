@@ -1,8 +1,7 @@
 {% set imageClass = generalTeaser.image ? 'ma__general-teaser--image' : '' %}
-{% set stacked = generalTeaser.image and generalTeaser.stacked ? 'stacked' : 'side-by-side' %}
+{% set layout = generalTeaser.layout ?: 'side-by-side' %}
 
-
-<section class="ma__general-teaser {{ imageClass }} {{ stacked }}">
+<section class="ma__general-teaser {{ imageClass }} {{ layout }}">
   {% if generalTeaser.image %}
     {% if generalTeaser.title.href %}
       <a
@@ -38,7 +37,7 @@
       </h{{ headingLevel }}>
     {% endif %}
     {% if generalTeaser.emphasizedText %}
-      <div class="ma__general-teaser__details">
+      <div class="ma__general-teaser__emph-text-wrapper">
         {% for emphasizedText in generalTeaser.emphasizedText %}
           <span class="ma__general-teaser__emph-text">
             {{ emphasizedText }}
@@ -46,22 +45,19 @@
         {% endfor %}
       </div>
     {% endif %}
-    {% if generalTeaser.description or generalTeaser.more %}
-      <div class="ma__general-teaser__body">
-        {% if generalTeaser.description %}
-          <div class="ma__general-teaser__description">
-            {% set richText = generalTeaser.description %}
-            {% include "@organisms/by-author/rich-text.twig" %}
-          </div>
-        {% endif %}
-        {% if generalTeaser.more %}
-          <div class="ma__general-teaser__more">
-            {% for content in generalTeaser.more %}
-              {% include content.path with content.data %}
-            {% endfor %}
-          </div>
-        {% endif %}
+    {% if generalTeaser.contents and layout != 'contents-stacked' %}
+      <div class="ma__general-teaser__contents">
+        {% for content in generalTeaser.contents %}
+          {% include content.path with content.data %}
+        {% endfor %}
       </div>
     {% endif %}
   </div>
+  {% if generalTeaser.contents and layout == 'contents-stacked' %}
+    <div class="ma__general-teaser__contents">
+      {% for content in generalTeaser.contents %}
+        {% include content.path with content.data %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </section>

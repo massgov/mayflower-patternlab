@@ -7,7 +7,7 @@
     &.stacked {
       flex-direction: column;
     }
-    &.side-by-side {
+    &.side-by-side, &.contents-stacked {
       flex-direction: row;
     }
   }
@@ -75,7 +75,7 @@
     }
   }
 
-  &__details {
+  &__emph-text-wrapper {
     padding: 2px 0 4px;
   }
 
@@ -92,7 +92,7 @@
     }
   }
 
-  &__description {
+  &__contents {
     font-size: 1.25rem;
   }
 }

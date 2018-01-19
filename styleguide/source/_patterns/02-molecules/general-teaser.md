@@ -1,9 +1,10 @@
 ### Description
-Short multi-use teaser with an optional image. This pattern can display the photo and details either stacked, with the 
-image on top, or side by side with the image to the left of the details. Note that image size still matters here, and if 
-the image is large the details section will wrap and it will appear as a column, even if stacked is set to false. 
+Short multi-use teaser with an optional image. This pattern can display the photo and details with one of three layouts:
+stacked (with the contents in a single column), side-by-side (with the text content alongside the image) or
+contents-stacked (contents under the image, eyebrow/title/emphasized text displayed next to the image). If the provided
+image is too large, the content will wrap and appear in a single column, regardless of the specified layout.
 
-If the title's href is omitted, neither the title nor teaser image will link to the content.
+If a teaser image is provided, it will link to the title's href, if set.
 
 ### Status
 * Stable as of TBA
@@ -16,8 +17,8 @@ If the title's href is omitted, neither the title nor teaser image will link to 
 ### Variables
 ~~~
 generalTeaser : {
-  stacked:
-    type: boolean / optional
+  layout:
+    type: string / optional
   image:
     type: image / optional
   eyebrow: 
@@ -30,10 +31,7 @@ generalTeaser : {
   emphasizedText: [
     type: array of string / optional,
   ],
-  description: {
-    type: richText / optional
-  },
-  more: (optional) [{
+  contents: (optional) [{
     path:
       type: string (path to pattern) / required
     data: {
