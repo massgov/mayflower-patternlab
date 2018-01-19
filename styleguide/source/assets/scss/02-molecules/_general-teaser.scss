@@ -79,18 +79,17 @@
     padding: 2px 0 4px;
   }
 
-  &__emph-prefix,
   &__emph-text {
     font-size: 18px;
     line-height: 1;
     margin-bottom: 1em;
-  }
 
-  &__emph-prefix + &__emph-text {
-    border-left-style: solid;
-    border-left-width: 1px;
-    margin-left: .75em;
-    padding-left: .75em;
+    & + & {
+      border-left-style: solid;
+      border-left-width: 1px;
+      margin-left: .75em;
+      padding-left: .75em;
+    }
   }
 
   &__description {

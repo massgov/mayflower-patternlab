@@ -1,21 +1,23 @@
 {
   "generalTeaser" : {
     "image": {
-      "src":"../../assets/images/placeholder/172x228.png",
+      "src": "../../assets/images/placeholder/172x228.png",
       "alt": "placeholder image",
       "width": "172",
       "height": "228"
     },
     "eyebrow": "Eyebrow",
     "title" : {
-      "href":"#",
-      "text":" Link field for a title or name",
+      "href": "#",
+      "text": "Link field for a title or name",
       "info": "",
       "property": ""
     },
     "level": "",
-    "emphasizedPrefix": "An emphasized prefix text field.",
-    "emphasizedText": "An emphasized text field",
+    "emphasizedText": [
+      "An emphasized text field",
+      "Another emphasized text field"
+    ],
     "description": {
       "rteElements": [{
         "path": "@atoms/11-text/paragraph.twig",

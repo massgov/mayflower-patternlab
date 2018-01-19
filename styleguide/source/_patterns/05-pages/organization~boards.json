@@ -153,8 +153,9 @@
                     "info": "",
                     "property": ""
                   },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Featured Board Member's Title",
+                  "emphasizedText": [
+                    "Featured Board Member's Title"
+                  ],
                   "description": {
                     "rteElements": [
                       {
@@ -183,8 +184,9 @@
                     "info": "",
                     "property": ""
                   },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Featured Board Member's title",
+                  "emphasizedText": [
+                    "Featured Board Member's title"
+                  ],
                   "description": {
                     "rteElements": [
                       {
@@ -197,12 +199,17 @@
                       }
                     ]
                   },
-                  "more": {
-                    "href": "#",
-                    "text": "More",
-                    "chevron": true,
-                    "label": ""
-                  }
+                  "more": [{
+                    "path": "@atoms/decorative-link.twig",
+                    "data": {
+                      "decorativeLink": {
+                        "href": "#",
+                        "text": "More",
+                        "chevron": true,
+                        "label": ""
+                      }
+                    }
+                  }]
                 }
               ],
               "secondaryItems": [
@@ -220,8 +227,9 @@
                     "info": "",
                     "property": ""
                   },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Awesome board member",
+                  "emphasizedText": [
+                    "Awesome board member"
+                  ],
                   "description": {
                     "rteElements": [
                       {
@@ -234,12 +242,17 @@
                       }
                     ]
                   },
-                  "more": {
-                    "href": "#",
-                    "text": "More",
-                    "chevron": true,
-                    "label": ""
-                  }
+                  "more": [{
+                    "path": "@atoms/decorative-link.twig",
+                    "data": {
+                      "decorativeLink": {
+                        "href": "#",
+                        "text": "More",
+                        "chevron": true,
+                        "label": ""
+                      }
+                    }
+                  }]
                 },
                 {
                   "image": {
@@ -254,36 +267,9 @@
                     "info": "",
                     "property": ""
                   },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Member's title",
-                  "description": {
-                    "rteElements": [
-                      {
-                        "path": "@atoms/11-text/paragraph.twig",
-                        "data": {
-                          "paragraph": {
-                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
-                          }
-                        }
-                      }
-                    ]
-                  }
-                },
-                {
-                  "image": {
-                    "src": "../../assets/images/placeholder/72x96.png",
-                    "alt": "placeholder image",
-                    "width": "72",
-                    "height": "96"
-                  },
-                  "eyebrow": "Board Member",
-                  "title": {
-                    "text": "Board Member's Name",
-                    "info": "",
-                    "property": ""
-                  },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Board Member's Title",
+                  "emphasizedText": [
+                    "Member's title"
+                  ],
                   "description": {
                     "rteElements": [
                       {
@@ -310,8 +296,9 @@
                     "info": "",
                     "property": ""
                   },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Board Member's Title",
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
                   "description": {
                     "rteElements": [
                       {
@@ -338,8 +325,9 @@
                     "info": "",
                     "property": ""
                   },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Board Member's Title",
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
                   "description": {
                     "rteElements": [
                       {
@@ -366,8 +354,38 @@
                     "info": "",
                     "property": ""
                   },
-                  "emphasizedPrefix": "",
-                  "emphasizedText": "Board Member's Title",
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
+                  "description": {
+                    "rteElements": [
+                      {
+                        "path": "@atoms/11-text/paragraph.twig",
+                        "data": {
+                          "paragraph": {
+                            "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "text": "Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
                   "description": {
                     "rteElements": [
                       {

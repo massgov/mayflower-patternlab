@@ -13,15 +13,13 @@ If the title's href is omitted, neither the title nor teaser image will link to 
 * Image
 * Rich Text
 
-
 ### Variables
 ~~~
-
 generalTeaser : {
   stacked:
-     type: boolean / optional
+    type: boolean / optional
   image:
-     type: image / optional
+    type: image / optional
   eyebrow: 
     type: string / optional
   title : {
@@ -29,12 +27,18 @@ generalTeaser : {
   },
   level:
     type: number / optional
-  date: 
-    type: string / optional,
-  org: 
-    type: string / optional,
+  emphasizedText: [
+    type: array of string / optional,
+  ],
   description: {
     type: richText / optional
-  }
+  },
+  more: (optional) [{
+    path:
+      type: string (path to pattern) / required
+    data: {
+      type: object / contains data object of pattern to include
+    }
+  }]
 }
 ~~~

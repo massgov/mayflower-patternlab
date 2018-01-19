@@ -37,18 +37,13 @@
         {% endif %}
       </h{{ headingLevel }}>
     {% endif %}
-    {% if generalTeaser.emphasizedPrefix or generalTeaser.emphasizedText %}
+    {% if generalTeaser.emphasizedText %}
       <div class="ma__general-teaser__details">
-        {% if generalTeaser.emphasizedPrefix %}
-          <span class="ma__general-teaser__emph-prefix">
-            {{ generalTeaser.emphasizedPrefix }}
-          </span>
-        {% endif %}
-        {% if generalTeaser.emphasizedText %}
+        {% for emphasizedText in generalTeaser.emphasizedText %}
           <span class="ma__general-teaser__emph-text">
-            {{ generalTeaser.emphasizedText }}
+            {{ emphasizedText }}
           </span>
-        {% endif %}
+        {% endfor %}
       </div>
     {% endif %}
     {% if generalTeaser.description or generalTeaser.more %}
@@ -61,8 +56,9 @@
         {% endif %}
         {% if generalTeaser.more %}
           <div class="ma__general-teaser__more">
-            {% set decorativeLink = generalTeaser.more %}
-            {% include "@atoms/decorative-link.twig" %}
+            {% for content in generalTeaser.more %}
+              {% include content.path with content.data %}
+            {% endfor %}
           </div>
         {% endif %}
       </div>

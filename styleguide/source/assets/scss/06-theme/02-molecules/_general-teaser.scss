@@ -9,14 +9,10 @@
     font-weight: 700;
   }
 
-  &__emph-prefix,
   &__emph-text {
     color: $c-font-dark;
     font-style: italic;
     font-weight: 700;
-  }
-
-  &__emph-text {
     border-left-color: $c-bd-divider;
   }
 }
