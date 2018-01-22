@@ -91,7 +91,7 @@ cd ~/tmp/mayflower
 line="Publishing contents of ~/tmp/mayflower to Mayflower npm package..."
 log "log" "$line";
 
-if ! npm publish; then
+if ! npm publish --access=public; then
     line="npm publish failed"
     log "error" "$line";
     exit 1;
