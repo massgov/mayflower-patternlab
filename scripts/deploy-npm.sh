@@ -74,8 +74,8 @@ log "log" "$line";
 cp -r public/assets/. ~/tmp/mayflower >/dev/null
 cp package.json ~/tmp/mayflower
 cp npm-shrinkwrap.json ~/tmp/mayflower
-cp README.md ~/tmp/mayflower
-cp LICENSE ~/tmp/mayflower
+cp ../README.md ~/tmp/mayflower
+cp ../LICENSE.txt ~/tmp/mayflower
 cp -a ./.npmignore ~/tmp/mayflower
 cp -a ./.npmrc ~/tmp/mayflower
 
