@@ -10,3 +10,4 @@ js/modules
 js/templates
 js/vendor
 patterns
+.npmrc
