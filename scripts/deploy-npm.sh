@@ -85,9 +85,20 @@ log "log" "$line";
 cd ~/tmp/mayflower
 
 # 7. Run npm pack to test
-npm pack
+# npm pack
 
 # 7. Package and deploy NPM
+line="Publishing contents of ~/tmp/mayflower to Mayflower npm package..."
+log "log" "$line";
+
+if ! npm publish; then
+    line="npm publish failed"
+    log "error" "$line";
+    exit 1;
+else
+    line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your npm package at:\n\n     https://www.npmjs.com/package/mayflower"
+    log "success" "$line";
+fi
 
 # 8. Clean up tmp directory + #9 get back to where we want to be.
-#cleanup
+cleanup
