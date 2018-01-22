@@ -63,17 +63,15 @@ log "log" "$line";
 if [ -d "~/tmp" ];
 then
     mkdir ~/tmp/mayflower
-    mkdir ~/tmp/mayflower/npm
 else
     mkdir ~/tmp
     mkdir ~/tmp/mayflower
-    mkdir ~/tmp/mayflower/npm
 fi
 
 # Copy
 line="Copying Pattern Lab build output to ~/tmp/mayflower/npm directory..."
 log "log" "$line";
-cp -r public/assets. ~/tmp/mayflower >/dev/null
+cp -r public/assets/. ~/tmp/mayflower >/dev/null
 cp package.json ~/tmp/mayflower
 cp npm-shrinkwrap.json ~/tmp/mayflower
 cp README.md ~/tmp/mayflower
