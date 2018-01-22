@@ -1,7 +1,24 @@
 {
-  "name": "MayflowerPatternLibrary",
-  "author": "Jonathan Dallas / Mike Lambert",
-  "version": "3.2.2",
+  "name": "Mayflower",
+  "description": "Open source UI components and visual style guide for Massachusetts government websites",
+  "version": "5.10.1",
+  "author": "Massachusetts Digital Services (MDS)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/massgov/mayflower.git"
+  },
+  "contributors": [
+    "Jes Constantine <jesconstantine@gmail.com>",
+    "Isaac Chansky <ichansky@gmail.com>",
+    "Jonathan Dallas <jonathan.dallas@velir.com>",
+    "Sarena Douglass <sarena.douglass@velir.com>",
+    "Greg LeRoux <leroux@palantir.net>"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/massgov/mayflower/issues"
+  },
+  "homepage": "https://github.com/massgov/mayflower#readme",
   "devDependencies": {
     "babelify": "^6.4.0",
     "browser-sync": "^2.18.13",
