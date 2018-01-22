@@ -1,13 +1,12 @@
-## Ensure that src and dist are published
-!assets
+## We package from within a deploy script, essentially within /public/assets/
 
-assets/css/pattern-scaffolding*
-assets/css/pilot*
-assets/css/gov-theme*
-assets/data
-assets/js/helpers
-assets/js/index.js
-assets/js/modules
-assets/js/templates
-assets/js/vendor
-assets/patterns
+css/pattern-scaffolding*
+css/pilot*
+css/gov-theme*
+data
+js/helpers
+js/index.js
+js/modules
+js/templates
+js/vendor
+patterns

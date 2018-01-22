@@ -69,7 +69,7 @@ else
 fi
 
 # Copy
-line="Copying Pattern Lab build output to ~/tmp/mayflower/npm directory..."
+line="Copying Pattern Lab build output to ~/tmp/mayflower directory..."
 log "log" "$line";
 cp -r public/assets/. ~/tmp/mayflower >/dev/null
 cp package.json ~/tmp/mayflower
