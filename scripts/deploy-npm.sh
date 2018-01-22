@@ -90,4 +90,4 @@ npm pack
 # 7. Package and deploy NPM
 
 # 8. Clean up tmp directory + #9 get back to where we want to be.
-cleanup
+#cleanup
