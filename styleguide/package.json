@@ -1,5 +1,5 @@
 {
-  "name": "mayflower",
+  "name": "@massds/mayflower",
   "description": "Open source UI components and visual style guide for Massachusetts government websites",
   "version": "5.10.1",
   "author": "Massachusetts Digital Services (MDS)",
