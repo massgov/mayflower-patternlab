@@ -26,12 +26,6 @@
 # Default variables
 buildSrc=false
 
-# Test for npm environment variables
-: "${MASSDS_NPM_USERNAME:?You need to have an environment variable MASSDS_NPM_USERNAME set}"
-: "${MASSDS_NPM_PW:?You need to have an environment variable MASSDS_NPM_PW set}"
-: "${MASSDS_NPM_EMAIL:?You need to have an environment variable MASSDS_NPM_EMAIL set}"
-
-
 # Get passed arguments
 while getopts :b: option
 do
@@ -83,6 +77,7 @@ cp npm-shrinkwrap.json ~/tmp/mayflower
 cp README.md ~/tmp/mayflower
 cp LICENSE ~/tmp/mayflower
 cp -a ./.npmignore ~/tmp/mayflower
+cp -a ./.npmrc ~/tmp/mayflower
 
 # Get to tmp directory
 line="Moving into ~/tmp/mayflower directory..."
@@ -90,7 +85,7 @@ log "log" "$line";
 cd ~/tmp/mayflower
 
 # 7. Run npm pack to test
-#npm pack
+npm pack
 
 # 7. Package and deploy NPM
 
