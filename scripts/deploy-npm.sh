@@ -76,7 +76,7 @@ cp package.json ~/tmp/mayflower
 cp npm-shrinkwrap.json ~/tmp/mayflower
 cp README.md ~/tmp/mayflower
 cp LICENSE ~/tmp/mayflower
-cp ./.npmignore ~/tmp/mayflower
+cp -a ./.npmignore ~/tmp/mayflower
 
 # Get to tmp directory
 cd ~/tmp/mayflower
