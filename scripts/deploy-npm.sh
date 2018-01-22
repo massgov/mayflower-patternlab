@@ -10,21 +10,27 @@
 #
 # Usage:
 # ../scripts/deploy-npm.sh [-b (git-branch-or-tag)]
-#   -b Build source: the git branch or tag from which to build (deploys to subdirectory named by that branch or tag) (required)
+#   -b Build source: the git branch or tag from which to build (required)
 #
 # Description:
 # 1. Validate the passed arguments: build source
 # 2. Attempt to checkout passed build source
 # 3. Get to mayflower/styleguide directory
-# 4. Write config to support hosting from subdirectory, if necessary
-# 5. Build pattern lab static assets
-# 6. Copy static assets (build output: styleguide/public/) into a new temp directory
-# 7. Execute gulp command to deploy to s3
+# 4. Build pattern lab static assets
+# 5. Copy static assets (build output: styleguide/public/assets) into tmp/mayflower directory
+# 6. Copy other NPM goodies (README, npmignore, etc.) to tmp/mayflower directory
+# 7. Package assets and deploy NPM package
 # 8. Remove the temp directory
 # 9. Check out the previous branch
 
 # Default variables
 buildSrc=false
+
+# Test for npm environment variables
+: "${MASSDS_NPM_USERNAME:?You need to have an environment variable MASSDS_NPM_USERNAME set}"
+: "${MASSDS_NPM_PW:?You need to have an environment variable MASSDS_NPM_PW set}"
+: "${MASSDS_NPM_EMAIL:?You need to have an environment variable MASSDS_NPM_EMAIL set}"
+
 
 # Get passed arguments
 while getopts :b: option
@@ -68,8 +74,8 @@ else
     mkdir ~/tmp/mayflower
 fi
 
-# Copy
-line="Copying Pattern Lab build output to ~/tmp/mayflower directory..."
+# 6. Copy package assets to temp directory
+line="Copying compiled Mayflower npm package assets to ~/tmp/mayflower directory..."
 log "log" "$line";
 cp -r public/assets/. ~/tmp/mayflower >/dev/null
 cp package.json ~/tmp/mayflower
@@ -79,10 +85,14 @@ cp LICENSE ~/tmp/mayflower
 cp -a ./.npmignore ~/tmp/mayflower
 
 # Get to tmp directory
+line="Moving into ~/tmp/mayflower directory..."
+log "log" "$line";
 cd ~/tmp/mayflower
 
-# run npm pack to test
-npm pack
+# 7. Run npm pack to test
+#npm pack
+
+# 7. Package and deploy NPM
 
 # 8. Clean up tmp directory + #9 get back to where we want to be.
-#cleanup
+cleanup
