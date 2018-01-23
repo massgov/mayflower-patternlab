@@ -17,7 +17,7 @@
   }
 
   .main-content--full .page-content > & {
-    @include ma-container();
+    @include ma-container('restricted');
   }
 
   &__link {
