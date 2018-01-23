@@ -17,7 +17,7 @@
 
   // Backward Compatible - had to add the --new as a variant for the new styling
   .main-content--full .page-content > & {
-    @include ma-container;
+    @include ma-container('restricted');
   }
 
   &__link {
