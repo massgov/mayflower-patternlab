@@ -96,7 +96,7 @@ if ! npm publish --access=public; then
     log "error" "$line";
     exit 1;
 else
-    line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your npm package at:\n\n     https://www.npmjs.com/package/mayflower"
+    line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your npm package at:\n\n     https://www.npmjs.com/package/@massds/mayflower"
     log "success" "$line";
 fi
 
