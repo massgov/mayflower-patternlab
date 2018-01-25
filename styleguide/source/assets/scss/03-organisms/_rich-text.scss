@@ -192,7 +192,7 @@ $heading-indent: $gutter;
     overflow-wrap: break-word;
     transition: border .3s;
     word-wrap: break-word;
-    word-break: break-word;
+    word-break: normal;
   }
 
   // end link styles
