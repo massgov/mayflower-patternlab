@@ -24,14 +24,14 @@
   <div class="ma__link-list__container">
       <ul class="ma__link-list__items ma__link-list__items--no-bullets">
         {% block imageListBlock %}
-        {% for imageLink in imageLinkList.links %}
-          {% if imageLinkList.blocks %}
-            {% set imageLink = imageLink|merge({"block": true}) %}
-          {% endif %}
-          <li class="ma__link-list__item">
-            {% include "@molecules/image-link.twig" %}
-          </li>
-        {% endfor %}
+          {% for imageLink in imageLinkList.links %}
+            {% if imageLinkList.blocks %}
+              {% set imageLink = imageLink|merge({"block": true}) %}
+            {% endif %}
+            <li class="ma__link-list__item">
+              {% include "@molecules/image-link.twig" %}
+            </li>
+          {% endfor %}
         {% endblock %}
       </ul>
   </div>
