@@ -13,6 +13,7 @@ Displays a collection of components to help describe an available Service on Mas
 * Icon Links organism
 * Logo Link List organism
 * Action Finder organism
+* Contact List organism
 * Mapped Locations organism
 * Split Columns organism
 * Form Downloads organism
@@ -71,6 +72,10 @@ Displays a collection of components to help describe an available Service on Mas
     actionFinder: {
       type: actionFinder / optional
     }
+  },
+
+  contactList: {
+    type: contactList / required
   },
 
   mappedLocations: {
