@@ -1,5 +1,5 @@
 ### Description
-List of links with optional logo images
+List of links with optional images
 
 ### Status
 * Stable as of 5.0.0
@@ -7,7 +7,7 @@ List of links with optional logo images
 ### Pattern Contains
 * Comp Heading
 * Sidebar Heading
-* Logo Link
+* Image Link
 
 ### Variant options
 
@@ -17,7 +17,10 @@ List of links with optional logo images
 
 ### Variables
 ~~~
-logoLinkList : {
+imageLinkList : {
+  blocks: {
+    type: boolean / option (defaults to false)
+  },
   compHeading: {
     type: compHeading / optional
   },
@@ -25,7 +28,7 @@ logoLinkList : {
     type: sidebarHeading / optional
   }
   links : [{
-    type: array of logoLink / required
+    type: array of imageLink / required
   }]
 }
 ~~~

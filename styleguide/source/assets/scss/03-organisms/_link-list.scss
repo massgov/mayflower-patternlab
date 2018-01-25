@@ -66,11 +66,32 @@
     margin-top: 1rem;
   }
 
-  &--logo {
+  &--image-links {
     .sidebar & .ma__link-list__item + .ma__link-list__item {
       border-top: none;
       margin-top: 0px;
       padding-top: 10px;
     }
   }
+
+  &--image-blocks {
+    // grid stuff
+    .ma__link-list__items {
+      @media($bp-medium-min) {
+        column-count: 2;
+      }
+      @media($bp-large-min) {
+        column-count: 3;
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
+
+

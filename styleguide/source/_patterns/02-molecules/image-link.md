@@ -1,4 +1,4 @@
-Description: This pattern shows a link with an optional logo image
+Description: This pattern shows a link with an optional image
 
 ### Status
 * Stable as of 6.0.0
@@ -9,7 +9,9 @@ Description: This pattern shows a link with an optional logo image
 
 ### Variables
 ~~~
-logoLink: {
+imageLink: {
+  block:
+    type: boolean / optional (defaults to false)
   href:
     type: string / required
   text:
