@@ -46,6 +46,19 @@ validateBuildSource
 # 2. Checkout the build source
 checkoutBuildSource
 
+# Confirm authentication if a human is executing this script.
+if [ ! CIRCLECI ];
+then
+    read -p "In order to push the mayflower package to NPM, you need to be authenticated on NPM, either by: \n\n1) Having an .npmrc file with credentials for the @massds account (or your own NPM account if you're added to the Mayflower package as an owner) in your Mayflower repo root (this file is not and should not be versioned -- ask a team member for credentials)\nSee: https://docs.npmjs.com/files/npmrc#per-project-config-file\n\n2) Having an NPM_TOKEN having environment variable for @massds\nSee: http://blog.npmjs.org/post/118393368555/deploying-with-npm-private-modules \n\n3) Authenticating from the npm CLI (Note: you must be added to the Mayflower NPM package project as an owner -- ask a team member for help)\n See: https://docs.npmjs.com/getting-started/publishing-npm-packages#preparation \n\n\nAre you sure you want to proceed? [y/n] " -n 1 -r
+    echo    # move to a new line
+    if [[ ! $REPLY =~ ^[Yy]$ ]];
+    then
+        line="No sweat! Just let a MassDS know that you need help pushing the latest Mayflower up to NPM."
+        log "error" "$line";
+        exit 1;
+    fi
+fi
+
 line="You've indicated a deploy to npm @${buildSrc}"
 log "log" "$line";
 
