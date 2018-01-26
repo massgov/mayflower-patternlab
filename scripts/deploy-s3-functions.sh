@@ -90,7 +90,7 @@ function checkoutBuildSource {
 
     if ! git checkout ${buildSrc};
     then
-        line="Could not check out $buildSrc, please make sure your working directory is clean."
+        line="Could not check out $buildSrc, please make sure your working directory is clean and that you have fetched the latest from your remote."
         log "error" "$line";
         exit 1;
     fi
