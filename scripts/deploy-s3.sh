@@ -3,7 +3,7 @@
 . ../scripts/deploy-s3-functions.sh
 
 # Deploying a branch or tag Mayflower to Amazon S3:
-#   mayflower.digital.mass.gov/git-branch-or-tag-name
+#   mayflower.digital.mass.gov/git-branch-or-tag-name/
 # -----------------------------------------------------
 #
 # Run from /styleguide, must have a clean working directory.
@@ -100,7 +100,7 @@ if ! gulp s3; then
     log "error" "$line";
     exit 1;
 else
-    line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your deployed code at:\n\n     https://mayflower.digital.mass.gov/${subDir}/index.html"
+    line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your deployed code at:\n\n     https://mayflower.digital.mass.gov/${subDir}/"
     log "success" "$line";
 fi
 

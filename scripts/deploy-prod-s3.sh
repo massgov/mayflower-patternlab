@@ -3,7 +3,7 @@
 . ../scripts/deploy-s3-functions.sh
 
 # Deploying the latest production release of Mayflower to Amazon S3:
-#   mayflower.digital.mass.gov
+#   mayflower.digital.mass.gov/
 # --------------------------------------------------------------
 #
 # Run from /styleguide, must have a clean working directory.

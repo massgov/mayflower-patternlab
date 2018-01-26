@@ -3,7 +3,7 @@
 . ../scripts/deploy-s3-functions.sh
 
 # Deploying a latest minor version of Mayflower to Amazon S3:
-#   mayflower.digital.mass.gov/<current-major-#>
+#   mayflower.digital.mass.gov/<current-major-#>/
 # ----------------------------------------------------------------------------
 #
 # Note: this script updates the latest minor asset URLs which Mayflower consumers may use in their implementations.  Make sure you are not deploying any breaking changes!  See: https://github.com/massgov/mayflower/blob/dev/docs/versioning.md for help determining
@@ -128,7 +128,7 @@ if ! gulp s3; then
     log "error" "$line";
     exit 1;
 else
-    line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your deployed code at:\n\n     https://mayflower.digital.mass.gov/${subDir}/index.html"
+    line="Woo-hoo! The deploy completed successfully.\n\n    You should be able to browse to your deployed code at:\n\n     https://mayflower.digital.mass.gov/${subDir}/"
     log "success" "$line";
 fi
 
