@@ -42,7 +42,7 @@
           href="tel:{{ link.href }}"
           class="ma__content-link ma__content-link--phone">
           {% if contactGroup.name == "Phone" %}<span class="visually-hidden">Call {{ contactName }}{% if item.label %}, {{item.label}} {% endif %}at </span>
-          {% elseif contactGroup.name == "Fax" %}<span class="visually-hidden">FAX {{ contactName }} {% if item.label %}, {{item.label}} {% endif %}at </span>{% endif %}
+          {% elseif contactGroup.name == "Fax" %}<span class="visually-hidden">Send a fax to {{ contactName }} {% if item.label %}, {{item.label}} {% endif %}at </span>{% endif %}
           {{ link.text }}</a>
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
