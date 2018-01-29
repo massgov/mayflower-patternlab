@@ -1,12 +1,13 @@
 {
   "imageLinkList" : {
     "sidebarHeading": {
-      "title": "Link List",
+      "title": "Image Link List",
       "sub": "",
       "color": "",
       "id": "",
       "centered": false
     },
+    "itemPluralName": "Organizations",
     "links" : [{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet.",

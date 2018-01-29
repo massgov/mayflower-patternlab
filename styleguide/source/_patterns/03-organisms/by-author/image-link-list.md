@@ -21,6 +21,9 @@ imageLinkList : {
   blocks: {
     type: boolean / option (defaults to false)
   },
+  itemPluralName: {
+    type: string / optional
+  }
   compHeading: {
     type: compHeading / optional
   },

@@ -73,16 +73,4 @@
       padding-top: 10px;
     }
   }
-
-  &--image-blocks {
-    // grid stuff
-    .ma__link-list__items {
-      @media($bp-medium-min) {
-        column-count: 2;
-      }
-      @media($bp-large-min) {
-        column-count: 3;
-      }
-    }
-  }
 }
