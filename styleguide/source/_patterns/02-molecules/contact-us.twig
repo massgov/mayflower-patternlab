@@ -26,6 +26,7 @@
     {% set groupHeading = groupHeading + 1 %}
   {% endif %}
 
+  {% set contactName = contactUs.subTitle.text %}
   {% if inlineAccordion %}
     {# Show first 2 contact groups outside of accordion #}
     {% for group in contactUs.groups[:2] %}
@@ -36,7 +37,9 @@
     {# Show 3rd+ contact groups inside of accordion (if they exist) #}
     <div class="ma__contact-us__extra js-accordion-content">
       {% for group in contactUs.groups[2:last] %}
-        {% set contactGroup = group|merge({"level": groupHeading}) %}
+         {% set contactGroup = group|merge({
+                              "level": groupHeading,
+                              "contactName": contactName})  %}
         {% include "@molecules/contact-group.twig" %}
       {% endfor %}
     </div>
@@ -49,7 +52,9 @@
     <div class="ma__contact-us__content js-accordion-content">
       <div class="ma__contact-us__content-wrap">
         {% for group in contactUs.groups %}
-          {% set contactGroup = group|merge({"level": groupHeading}) %}
+          {% set contactGroup = group|merge({
+                              "level": groupHeading,
+                              "contactName": contactName})  %}
           {% include "@molecules/contact-group.twig" %}
         {% endfor %}
         {% if contactUs.decorativeLink %}

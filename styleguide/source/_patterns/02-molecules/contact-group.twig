@@ -38,15 +38,17 @@
         {% include "@atoms/decorative-link.twig" %}
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
-        <a 
-          href="tel:{{ link.href }}" 
-          class="ma__content-link ma__content-link--phone">{{ link.text }}</a>
-        
+        <a
+          href="tel:{{ link.href }}"
+          class="ma__content-link ma__content-link--phone">
+          {% if contactGroup.name == "Phone" %}<span class="visually-hidden">Call {{ contactName }}{% if item.label %}, {{item.label}} {% endif %}at </span>
+          {% elseif contactGroup.name == "Fax" %}<span class="visually-hidden">FAX {{ contactName }} {% if item.label %}, {{item.label}} {% endif %}at </span>{% endif %}
+          {{ link.text }}</a>
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
-        <a 
-          href="mailto:{{ link.href }}" 
-          class="ma__content-link">{{ link.text }}</a>
+        <a
+          href="mailto:{{ link.href }}"
+          class="ma__content-link"><span class="visually-hidden">Email {{ contactName }} at </span>{{ link.text }}</a>
 
       {# Address - RTE version of value and look for directions link #}
       {% elseif item.type == "address" %}
