@@ -113,6 +113,7 @@
             "id": "",
             "centered": false
           },
+          "itemPluralName": "organizations",
           "description": {
             "rteElements": [{
               "path": "@atoms/11-text/paragraph.twig",
@@ -124,6 +125,30 @@
             }]
           },
           "links" : [{
+            "href":"#",
+            "text":"Lorem ipsum dolor sit amet.",
+            "info": "",
+            "image": {
+              "src": "../../assets/images/placeholder/250x250.png",
+              "alt": "logo"
+            }
+          },{
+            "href":"#",
+            "text":"Lorem ipsum dolor sit amet.",
+            "info": "",
+            "image": {
+              "src": "../../assets/images/placeholder/250x250.png",
+              "alt": "logo"
+            }
+          },{
+            "href":"#",
+            "text":"Lorem ipsum dolor sit amet.",
+            "info": "",
+            "image": {
+              "src": "../../assets/images/placeholder/250x250.png",
+              "alt": "logo"
+            }
+          },{
             "href":"#",
             "text":"Lorem ipsum dolor sit amet.",
             "info": "",

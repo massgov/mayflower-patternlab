@@ -55,7 +55,14 @@
       {% endblock %}
     </ul>
   </div>
-  <button type="button" class="ma__link-list__toggle js-accordion-link" aria-expanded="false">
+  {% set toggleClass = "ma__link-list__toggle js-accordion-link" %}
+  {% if imageLinkList.links|length > 3 %}
+    {% set toggleClass = "ma__link-list__toggle has-secondary js-accordion-link" %}
+  {% endif %}
+  {% if imageLinkList.links|length > 6 %}
+    {% set toggleClass = "ma__link-list__toggle has-tertiary js-accordion-link" %}
+  {% endif %}
+  <button type="button" class="{{toggleClass}}" aria-expanded="false">
     Show <span>more</span><span>less</span> {{imageLinkList.itemPluralName}}
   </button>
 </section>

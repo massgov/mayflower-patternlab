@@ -37,11 +37,39 @@
       display: none;
     }
   }
+  .ma__link-list__item .ma__image-link {
+    padding: 10px 0;
+  }
+  .ma__link-list__toggle {
+    margin-top: 20px;
+  }
 }
 
-.ma__link-list--image-blocks .ma__link-list__toggle {
-  @media($bp-x-large-min) {
+.ma__link-list--image-blocks {
+  .ma__link-list__toggle {
     display: none;
+    // show on small if has secondary or tertiary links
+    &.has-secondary,
+    &.has-tertiary {
+      display: initial;
+    }
+    // if has tertiary links, show on mid
+    @media($bp-medium-min) {
+      &.has-secondary {
+        display: none;
+      }
+      &.has-tertiary {
+        display: initial;
+      }
+    }
+    // Never show on full width
+    @media($bp-x-large-min) {
+      display: none;
+      &.has-secondary,
+      &.has-tertiary {
+        display: none;
+      }
+    }
   }
 }
 
