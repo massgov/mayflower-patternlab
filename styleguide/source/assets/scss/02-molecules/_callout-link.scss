@@ -1,7 +1,9 @@
 .ma__callout-link {
   border: 3px solid;
   display: inline-flex;
-    align-items: stretch;
+        align-items: stretch;
+        flex-direction: column;
+        flex-wrap: wrap;
 
   // .pre-content > &,
   // .post-content > &,
@@ -54,5 +56,19 @@
       margin-right: -.8em;
       width: .6em;
     }
+  }
+
+  &__description {
+    display: flex;
+      align-items: center;
+    padding: 0px 20px 15px 20px;
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 400;
+    color: #14558F;
+        @media ($bp-small-min) {
+            padding: 0px 30px 20px 30px;
+        }
   }
 }

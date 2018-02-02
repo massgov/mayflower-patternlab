@@ -1,11 +1,8 @@
-Description: This pattern shows a link styled as a card
+### Description
+This is a variant of the [CalloutLink](./?p=molecules-callout-link) pattern showing an example styles with description text.
 
-### Status
-* Stable as of 6.0.0
-
-### Pattern Contains
-* SVG Arrow atom
-
+### How to generate
+* assign text content to the `description` variable to true
 
 ### Variables
 ~~~
