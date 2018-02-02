@@ -4,7 +4,9 @@ $page-banner-height: 330px;
 .ma__page-banner {
   background-size: cover;
   background-position: center center;
-  height: $page-banner-height;
+  height: auto;
+  max-height: 540px;
+
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -72,28 +74,27 @@ $page-banner-height: 330px;
     font-size: 1rem;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
-    position: absolute;
-      top: 50%;
-    transform: translateY(-50%);
     z-index: 1;
 
     @media ($bp-x-small-min) {
       margin-right: 70px;
       padding-top: 50px;
       padding-right: 80px;
+      position: absolute;
+        top: 50%;
       transform: translateY(-50%) skew(-30deg);
     }
 
     &:before {
       content: "";
       height: 100%;
-      position: absolute;
         top: 0;
         right: 100%;
       width: 50vw;
 
       @media ($bp-x-small-min) {
         right: 99%; // weird gap when skewed is shown
+        position: absolute;
       }
     }
   }
@@ -201,6 +202,7 @@ $page-banner-height: 330px;
     line-height: 1.05;
     margin-bottom: 0;
     vertical-align: middle;
+    z-index: 1;
 
     @media ($bp-x-small-min) {
       transform: skew(30deg);
