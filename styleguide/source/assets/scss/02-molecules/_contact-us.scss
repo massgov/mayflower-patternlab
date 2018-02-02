@@ -42,9 +42,9 @@
       padding: 20px 30px;
     }
 
-    &:after {
+    span {
+      display: block;
       font-size: 2.5rem;
-      content: "+";
       line-height: .65em;
       overflow: hidden;
       position: absolute;
@@ -59,7 +59,7 @@
     }
   }
 
-  &--accordion.is-open &__header:after {
+  &--accordion.is-open &__header span {
     transform: rotate(135deg);
   }
 
@@ -141,7 +141,7 @@
       font-size: 1.375rem;
       padding-right: 10px;
 
-      &:after {
+      span {
         margin-left: 0;
         transform: translateY(-45%) rotate(45deg);
 

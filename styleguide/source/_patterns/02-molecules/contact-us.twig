@@ -20,6 +20,8 @@
     {% endif %}
       {% set columnHeading = contactUs.subTitle|merge({"level": contactUs.level}) %}
       {% include "@atoms/04-headings/column-heading.twig" %}
+
+      <span aria-label="click to open">+</span>
     {% if outerAccordion %}
       </button>
     {% endif %}

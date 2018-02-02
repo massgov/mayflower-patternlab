@@ -16,7 +16,8 @@
     background-color: transparent;
   }
 
-  &--accordion &__header:after {
+  &--accordion &__header:after,
+  &--accordion &__header span {
     color: $c-theme-secondary;
   }
 
