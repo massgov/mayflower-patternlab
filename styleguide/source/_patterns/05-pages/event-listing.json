@@ -27,7 +27,7 @@
             "id": "find-nearby",
             "name": "find-nearby",
             "type": "text",
-            "placeholder": "City, town, or ZIP code"
+            "placeholder": "Search by city or zip code (optional)"
           },
           "placeAutocomplete": {
             "bounds": {
