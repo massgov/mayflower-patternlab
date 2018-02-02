@@ -31,9 +31,9 @@
     }],
     "widgets": null
   },
-  
+
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
-  
+
   "stackedRows": [{
     "title":"",
     "id":"",
@@ -45,7 +45,7 @@
           "locationFilters": {
             "zipcode": {
               "inputText": {
-                "labelText": "Show closest",
+                "labelText": "Search by city or zip code",
                 "required": false,
                 "id": "find-nearby",
                 "name": "find-nearby",
