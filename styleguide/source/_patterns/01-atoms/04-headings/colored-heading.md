@@ -13,7 +13,7 @@ An Heading element with a background color
 * Green color would only be used at the top of the Page Content
 * Gray color would be used in the Right Rail
 * When used in the Right Rail the diagonal will automatically appear on the left
-* Bluw color is only used for filter in the search application
+* Blue color is only used for filter in the search application
 
 
 ### Variables
