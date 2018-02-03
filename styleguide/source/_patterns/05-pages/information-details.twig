@@ -1,0 +1,55 @@
+{% extends '@templates/01-content-types/details.twig' %}
+
+
+{% block header %}
+  {% include "@organisms/by-template/header.twig" %}
+{% endblock %}
+
+
+{% block pageContent %}
+  {% set richText = pageContent.moreInfo %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+
+  {% set richText = pageContent.history %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+
+  {% set contactList = pageContent.contactList %}
+  {% include "@organisms/by-author/contact-list.twig" %}
+
+  {% if pageContent.footnoteList %}
+    {% set footnoteList = pageContent.footnoteList %}
+    {% include "@organisms/by-author/footnote-list.twig" %}
+  {% endif %}
+
+  {% if pageContent.listingTable %}
+    {% set listingTable = pageContent.listingTable %}
+    {% include "@molecules/listing-table.twig" %}
+  {% endif %}
+
+  {% if pageContent.linkList %}
+    {% set linkList = pageContent.linkList %}
+    {% include "@organisms/by-author/link-list.twig" %}
+  {% endif %}
+
+  {% if pageContent.imageCredit %}
+    {% set imageCredit = pageContent.imageCredit %}
+    {% include "@organisms/by-template/image-credit.twig" %}
+  {% endif %}
+
+{% endblock %}
+
+
+{% block sidebar %}
+  {% set linkList = sidebar.linkList %}
+  {% include "@organisms/by-author/link-list.twig" %}
+{% endblock %}
+
+
+{% block postContent %}{% endblock %}
+
+
+{% block footer %}
+  {% include "@organisms/by-template/footer.twig" %}
+{% endblock %}
+
+
