@@ -17,7 +17,7 @@
   }
 
   &--accordion &__header:after,
-  &--accordion &__header span {
+  &--accordion &__header &--accordion__status {
     color: $c-theme-secondary;
   }
 

@@ -21,7 +21,7 @@
       {% set columnHeading = contactUs.subTitle|merge({"level": contactUs.level}) %}
       {% include "@atoms/04-headings/column-heading.twig" %}
 
-      <span aria-label="click to open">+</span>
+      <span class="ma__contact-us--accordion__status js-accordion-status" aria-label="click to show info">+</span>
     {% if outerAccordion %}
       </button>
     {% endif %}

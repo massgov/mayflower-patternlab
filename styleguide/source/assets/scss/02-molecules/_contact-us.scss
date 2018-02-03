@@ -42,24 +42,24 @@
       padding: 20px 30px;
     }
 
-    span {
-      display: block;
-      font-size: 2.5rem;
-      line-height: .65em;
-      overflow: hidden;
-      position: absolute;
-        right: 15px;
-        top: 25px;
-      transform-origin: center center;
-      transition: transform .2s ease;
-    }
-
     .ma__column-heading {
       margin-bottom: 0;
     }
   }
 
-  &--accordion.is-open &__header span {
+  &--accordion__status {
+    display: block;
+    font-size: 2.5rem;
+    line-height: .65em;
+    overflow: hidden;
+    position: absolute;
+      right: 15px;
+      top: 25px;
+    transform-origin: center center;
+    transition: transform .2s ease;
+  }
+
+  &--accordion.is-open &__header &--accordion__status {
     transform: rotate(135deg);
   }
 
@@ -141,7 +141,7 @@
       font-size: 1.375rem;
       padding-right: 10px;
 
-      span {
+      &--accordion__status {
         margin-left: 0;
         transform: translateY(-45%) rotate(45deg);
 
