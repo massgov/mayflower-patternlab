@@ -25,11 +25,15 @@
     }
   }
 
+  &--full {
+    transition: width 0.2s;
+  }
+
   .rich-text & {
     margin-bottom: 1.75em;
   }
 
-  img {    
+  img {
     width: 100%;
   }
 

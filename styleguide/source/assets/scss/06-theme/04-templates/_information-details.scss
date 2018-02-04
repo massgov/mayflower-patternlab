@@ -6,4 +6,12 @@
       @include ma-component-spacing;
     }
   }
+
+  .ma__figure__caption {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-style: normal;
+    padding: 1rem 0;
+    border-bottom: 1px solid $c-black;
+  }
 }

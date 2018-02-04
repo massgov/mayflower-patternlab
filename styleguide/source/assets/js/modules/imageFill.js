@@ -1,15 +1,39 @@
 export default function (window,document,$,undefined) {
 
-  var sidebarHeight = $('.sidebar').height();
-  var wrapperWidth = $('.main-content').width();
+  const sidebarHeight = $('.sidebar').outerHeight( true );
+  let debounceTimer;
 
-  $('.ma__figure--full').each(function() {
-    var $thisImage = $(this);
-    var thisPosition = $thisImage.offset().top;
+  function imgWidth() {
+    // Define wrapper width for use.
+    var wrapperWidth = $('.main-content').width();
 
-    if (thisPosition > sidebarHeight) {
-      $thisImage.css('width', wrapperWidth);
-    }
+    $('.ma__figure--full').each(function() {
+      var $thisImage = $(this);
+
+      // Get position of image relative to container.
+      var thisPosition = $thisImage.position().top;
+
+      // If this image is below the sidebar.
+      if (thisPosition > sidebarHeight) {
+
+        // Make the image the full width of the wrapper.
+        $thisImage.css('width', wrapperWidth);
+      }
+    });
+  }
+
+  $(window).on('load', function() {
+    imgWidth();
   });
+
+  $(window).resize(function() {
+    if(typeof debounceTimer === "number") {
+      window.clearTimeout(debounceTimer);
+    }
+    debounceTimer = window.setTimeout(function(){
+      imgWidth();
+    },250);
+  });
+
 }
 (window,document,jQuery);

@@ -45,14 +45,14 @@
           "path": "@atoms/09-media/figure.twig",
           "data": {
             "figure": {
-              "align": "",
+              "align": "full",
               "image": {
                 "alt": "alt text",
                 "src": "../../assets/images/placeholder/800x400.png",
                 "height": "",
                 "width": ""
               },
-              "caption": "Images have optional custom captions."
+              "caption": "Images have optional custom captions. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
             }
           }
         }
@@ -151,7 +151,7 @@
                 "height": "",
                 "width": ""
               },
-              "caption": ""
+              "caption": " Both images on this page are of class 'full'. Only this image extends the full width because only this image is below the sidebar."
             }
           }
         },
