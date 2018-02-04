@@ -40,6 +40,21 @@
               "text": "Human infrastructure and development have substantially restricted certain natural disturbance processes that historically provided diverse open habitats for wildlife. In particular, flooding and fire are greatly constrained across the landscape today. While control of flooding and fire is essential to protect human life and property, it also creates an obligation on our part to provide the dynamic habitats for wildlife that these natural processes formerly did."
             }
           }
+        },
+        {
+          "path": "@atoms/09-media/figure.twig",
+          "data": {
+            "figure": {
+              "align": "",
+              "image": {
+                "alt": "alt text",
+                "src": "../../assets/images/placeholder/800x400.png",
+                "height": "",
+                "width": ""
+              },
+              "caption": "Images have optional custom captions."
+            }
+          }
         }
       ]
     },
@@ -122,6 +137,21 @@
           "data": {
             "paragraph": {
               "text": "Human activity has also reduced the impact of wind storms across the landscape. Today’s forests are relatively young (75-90 year-old) compared to the old growth that once existed, which means that trees are more pliant and resistant to wind disturbance than original old growth forests. Forests are also fragmented by development in many portions of the landscape, which means that when wind disturbance does occur on forested lands, it is typically interrupted by adjacent development."
+            }
+          }
+        },
+        {
+          "path": "@atoms/09-media/figure.twig",
+          "data": {
+            "figure": {
+              "align": "full",
+              "image": {
+                "alt": "alt text",
+                "src": "../../assets/images/placeholder/800x400.png",
+                "height": "",
+                "width": ""
+              },
+              "caption": ""
             }
           }
         },

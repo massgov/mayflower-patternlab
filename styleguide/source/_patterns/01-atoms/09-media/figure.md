@@ -7,12 +7,13 @@ This shows an Image using a `<figure>` elements with an optional caption
 ### Variant options
 * [Floated Left](/?p=atoms-figure-left)
 * [Floated Right](/?p=atoms-figure-right)
+* [Full Container Width](/?p=atoms-figure-full)
 
 
 ### Variables
 ~~~
 figure: {
-  align: 
+  align:
     type: string ('left', 'right') / optional
   image: {
     alt:
@@ -24,7 +25,7 @@ figure: {
     width:
       type: string
   }
-  caption: 
+  caption:
     type: string
 }
 ~~~
