@@ -1,0 +1,28 @@
+.ma__pullquote {
+  position: relative;
+  margin-left: 6%;
+
+  &__content {
+    display: block;
+    padding-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $c-theme-gray;
+
+    &::after {
+      content: '';
+      width: 75px;
+      height: 20px;
+      background-color: $c-theme-green;
+      background: linear-gradient(120deg, $c-theme-green 65px, #fff 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media ($bp-small-min) {
+      font-size: 2.5rem;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-{% extends '@templates/01-content-types/details.twig' %}
+{% extends '@templates/information-details.twig' %}
 
 
 {% block header %}
@@ -12,6 +12,11 @@
 
   {% set richText = pageContent.history %}
   {% include "@organisms/by-author/rich-text.twig" %}
+
+  {% if pageContent.pullquoteCallout %}
+    {% set pullquoteCallout = pageContent.pullquoteCallout %}
+    {% include "@organisms/by-author/pullquote.twig" %}
+  {% endif %}
 
   {% set contactList = pageContent.contactList %}
   {% include "@organisms/by-author/contact-list.twig" %}
