@@ -35,16 +35,13 @@
   
   &__description {
     display: none;
-    padding: 0px 20px 15px 20px;
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #14558F;
+    padding: 0px 20px 15px;
         @media ($bp-x-small-min) {
           display: flex;
               align-items: center;
         }
         @media ($bp-small-min) {
-          padding: 0px 30px 20px 30px;
+          padding: 0px 30px 20px;
         }     
   }
 
