@@ -9,6 +9,7 @@
   <div class="pre-content">
     {% block preContent %}
       {% include "@organisms/by-template/page-header.twig" %}
+      {% include "@base/placeholder.twig" with {'placeholder':{'text':'TOC Content'}} %}
     {% endblock %}
   </div>
   <div class="main-content main-content--two">
@@ -21,6 +22,12 @@
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
         {% endblock %}
       </div>
+
+      <div class="ma__information-details__post-content">
+      {% block postContent %}
+        {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
+      {% endblock %}
+    </div>
     </div>
 
     <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
@@ -35,11 +42,6 @@
       {% endif %}
     </aside>
 
-  </div>
-  <div class="post-content">
-    {% block postContent %}
-      {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
-    {% endblock %}
   </div>
 
   {# structured content #}
