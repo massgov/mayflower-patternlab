@@ -1,9 +1,9 @@
 {# site header #}
 {% block header %}{% endblock %}
 
-<main 
+<main
   id="main-content"
-  class="ma__details" 
+  class="ma__details"
   tabindex="-1"
   {% if schemaPageType %} typeof="{{schemaPageType}}"{% endif %}>
   <div class="pre-content">
@@ -20,6 +20,7 @@
       {% endif %}
       {% set coloredHeading = {
         "text": details.contentTitle,
+        "titleContext": details.titleContext,
         "color": "green",
         "level": 2
       } %}
@@ -45,7 +46,7 @@
         {% endblock %}
       {% endif %}
     </aside>
-    
+
   </div>
   <div class="post-content">
     {% block postContent %}
@@ -59,4 +60,4 @@
 
 {# site footer #}
 {% block footer %}{% endblock %}
-  
+

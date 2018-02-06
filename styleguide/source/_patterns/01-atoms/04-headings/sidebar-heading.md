@@ -11,5 +11,7 @@ sidebarHeading: {
     type: string / required
   level:
     type: number / optional
+  titleContext:
+    type: string / optional
 }
 ~~~

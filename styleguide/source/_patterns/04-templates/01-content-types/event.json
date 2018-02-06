@@ -100,7 +100,8 @@
         "sub": "",
         "color": "",
         "id": "",
-        "centered": ""
+        "centered": "",
+        "titleContext": ""
       },
       "image": {
         "alt": "alt text",
@@ -221,7 +222,8 @@
       "compHeading": {
         "title": "You will need",
         "id": "",
-        "sub": true
+        "sub": true,
+        "titleContext": ""
       },
       "rteElements": [{
         "path": "@atoms/08-lists/checklist.twig",
@@ -240,7 +242,8 @@
     "formDownloads": {
       "compHeading": {
         "title": "Additional resources",
-        "sub": true
+        "sub": true,
+        "titleContext": ""
       },
       "downloadLinks": [{
         "downloadLink": {
@@ -288,7 +291,8 @@
       "viewSpecific": false,
       "compHeading":{
         "title": "Contact",
-        "sub": true
+        "sub": true,
+        "titleContext": ""
       },
       "contacts":[{
         "accordion": true,
@@ -336,7 +340,8 @@
       "viewSpecific": false,
       "compHeading":{
         "title": "Media Contact",
-        "sub": true
+        "sub": true,
+        "titleContext": ""
       },
       "contacts":[{
         "accordion": true,
@@ -383,7 +388,8 @@
     "linkList" : {
       "compHeading": {
         "title": "Other dates",
-        "sub": true
+        "sub": true,
+        "titleContext": ""
       },
       "description": {
         "rteElements": [{
@@ -440,7 +446,8 @@
     "contactList": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Contact"
+        "title": "Contact",
+        "titleContext": ""
       },
       "contacts":[{
         "subTitle": {
@@ -485,7 +492,8 @@
     "mediaContact": {
       "viewSpecific": true,
       "sidebarHeading":{
-        "title": "Media Contact"
+        "title": "Media Contact",
+        "titleContext": ""
       },
       "contacts":[{
         "subTitle": {
@@ -532,7 +540,8 @@
     "eventListing": {
       "compHeading":{
         "title": "Related Events",
-        "centered": true
+        "centered": true,
+        "titleContext": ""
       },
       "events":[{
         "title": {

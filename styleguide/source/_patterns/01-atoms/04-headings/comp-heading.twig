@@ -26,4 +26,6 @@
   {% if compHeading.id %}
     id="{{compHeading.id}}"
   {% endif %} 
-  tabindex="-1">{{ compHeading.title }}</h{{ headingLevel }}>
+  tabindex="-1">{{ compHeading.title }}
+  {% if compHeading.titleContext %}<span class="visually-hidden"> {{ compHeading.titleContext }}{% endif %}
+</h{{ headingLevel }}>

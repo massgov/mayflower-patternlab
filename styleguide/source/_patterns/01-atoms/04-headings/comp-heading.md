@@ -14,6 +14,8 @@ This Pattern shows a title with a styled underline color
 compHeading: {
   title:
     type: string / required
+  titleContex: 
+    type: string / optional
   level:
     type: number / optional
   color:

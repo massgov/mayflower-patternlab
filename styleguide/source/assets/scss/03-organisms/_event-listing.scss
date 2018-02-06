@@ -25,7 +25,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
   }
 
   &--grid &__container {
-    
+
     @media ($event-listing-bp-show-grid) {
       overflow: hidden;
     }
@@ -36,7 +36,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
   }
 
   &--grid &__items {
-    
+
     @media ($event-listing-bp-show-grid) {
       display: flex;
         flex-wrap: wrap;
@@ -66,7 +66,7 @@ $event-listing-bp-show-grid: $bp-medium-min;
       &:first-child,
       &:nth-child(2) {
         margin-top: 0;
-        
+
         &:before {
           display: none;
         }
@@ -74,16 +74,11 @@ $event-listing-bp-show-grid: $bp-medium-min;
 
       &:last-child,
       &:nth-last-child(2):nth-child(odd) {
-        
+
         &:after {
           display: none;
         }
       }
-    }
-
-    &:only-of-type {
-      margin: 0 auto;
-      max-width: 780px;
     }
 
     &:not(:only-of-type) {

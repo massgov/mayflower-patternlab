@@ -69,7 +69,7 @@
         "markers": [{
           "position": {
             "lat": 42.366565,
-            "lng": -71.058940 
+            "lng": -71.058940
           },
           "label": "A",
           "infoWindow": {
@@ -82,7 +82,7 @@
         },{
           "position": {
             "lat": 42.358795,
-            "lng": -71.063858 
+            "lng": -71.063858
           },
           "label": "B",
           "infoWindow": {
@@ -131,7 +131,8 @@
     "formDownloads": {
       "compHeading": {
         "title": "Additional resources",
-        "sub": true
+        "sub": true,
+        "titleContext": "for Stretch Code Summary"
       },
       "downloadLinks": [{
         "downloadLink": {
@@ -162,8 +163,8 @@
         "data": {
           "figure": {
             "align": "align-right",
-            "image": { 
-              "alt": "alt text", 
+            "image": {
+              "alt": "alt text",
               "src": "../../assets/images/placeholder/400x300.png",
               "height": "",
               "width": ""
@@ -202,7 +203,8 @@
     "formDownloads": {
       "compHeading": {
         "title": "Additional resources",
-        "sub": true
+        "sub": true,
+        "titleContext": "for Stretch Code Adoption by Community"
       },
       "downloadLinks": [{
           "downloadLink": {
@@ -313,7 +315,8 @@
   "sidebar": {
     "linkList" : {
       "sidebarHeading": {
-        "title": "Related"
+        "title": "Related",
+        "titleContext": "to Building Energy Codes"
       },
       "stacked": true,
       "links" : [{

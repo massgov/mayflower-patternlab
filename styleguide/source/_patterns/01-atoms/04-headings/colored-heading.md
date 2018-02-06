@@ -19,6 +19,8 @@ An Heading element with a background color
 coloredHeading {
   text: 
     type: string / required
+  titleContext: 
+    type: string / optional
   color:
     type: string ('','green') / optional
   level:
