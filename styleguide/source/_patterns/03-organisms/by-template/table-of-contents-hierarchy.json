@@ -1,0 +1,28 @@
+{
+  "tableOfContentsHierarchy": {
+    "coloredHeading": {
+      "text": "Table of Contents",
+      "color": "green"
+    },
+    "sections": [
+      {
+        "text": "Executive Summary",
+        "href": "#"
+      },
+      {
+        "text": "1. Scope of Rules",
+        "linkItems": [
+          {
+            "text": "Thing One",
+            "href": "#"
+          },
+          {
+            "text": "Thing Two",
+            "href": "#"
+          }
+        ]
+      }
+    ]
+
+  }
+}

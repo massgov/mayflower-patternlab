@@ -1,0 +1,24 @@
+<nav class="ma__toc--hierarchy">
+  {% set coloredHeading = tableOfContentsHierarchy.coloredHeading %}
+  {% include "@atoms/04-headings/colored-heading.twig" %}
+  <div class="ma__toc--hierarchy__container">
+      {% for section in tableOfContentsHierarchy.sections %}
+        {% if section.linkItems|length > 0 %}
+          <div class="ma__toc--hierarchy__accordion js-accordion">
+            <button class="ma__toc--hierarchy__title js-accordion-link" type="button">
+              {{section.text}}
+            </button>
+            <div class="ma__toc--hierarchy__accordion-content js-accordion-content">
+              {% for link in section.linkItems %}
+                {% set decorativeLink = link %}
+                {% include "@atoms/decorative-link.twig" %}
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          {% set decorativeLink = section %}
+          {% include "@atoms/decorative-link.twig" %}
+        {% endif %}
+      {% endfor %}
+  </div>
+</nav>
