@@ -404,8 +404,78 @@
                   "details": ""
                 }
               ]
+            },
+            {
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "hidden": "",
+              "items": [
+                {
+                  "type": "email",
+                  "property": "",
+                  "label": "",
+                  "link": {
+                    "href": "email@email.com",
+                    "text": "Mass.Wildlife@state.ma.us",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                },
+                {
+                  "type": "online",
+                  "property": "",
+                  "label": "Websites",
+                  "link": {
+                    "href": "#",
+                    "text": "MassWildlife Facebook",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                },
+                {
+                  "type": "online",
+                  "property": "",
+                  "label": "",
+                  "link": {
+                    "href": "#",
+                    "text": "MassWildlife Instagram",
+                    "info": "",
+                    "property": ""
+                  },
+                  "details": ""
+                }
+              ]
             }
           ]
+        }
+      ]
+    },
+    "linkList": {
+      "sidebarHeading": {
+        "title": "Related",
+        "titleContext": ""
+      },
+      "stacked": true,
+      "links": [
+        {
+          "href": "#",
+          "text": "MassWildlife's Habitat Programs",
+          "info": "",
+          "property": ""
+        },
+        {
+          "href": "#",
+          "text": "Habitat management tools",
+          "info": "",
+          "property": ""
+        },
+        {
+          "href": "#",
+          "text": "Featured habitat projects",
+          "info": "",
+          "property": ""
         }
       ]
     }
