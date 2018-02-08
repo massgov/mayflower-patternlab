@@ -4,7 +4,7 @@ Mayflower release managers with the necessary repo permissions can follow these 
 *Note: the following steps assume that your local machine and repository is already set up and functioning according to our [Getting Started docs](../.github/CONTRIBUTING.md#getting-started).*
 
 1. If there is new code to be delivered, notify the team at least two hours ahead of time that a release is coming. Follow the [Communicate Releases](https://wiki.state.ma.us/display/massgovredesign/Communicating+Releases) instructions for Upcoming Deployments.
-1. Check out the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev): `git checkout dev` and pull the latest from upstream `git pull upstream dev`. (This assumes that your massgov/mass remote repo is named `upstream`)
+1. Check out the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev): `git checkout dev` and pull the latest from upstream `git pull upstream dev`. (This assumes that your massgov/mayflower remote repo is named `upstream`)
 1. Create a release branch `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about [Mayflower and semantic versioning](docs/versioning.md) to ensure that your are creating the right type of version.
 1. Document the new release based on the "Upcoming" queue at the top of [release-notes.md](/release-notes.md), and then commit.
 1. Move into the `stylguide` directory `cd styleguide`
