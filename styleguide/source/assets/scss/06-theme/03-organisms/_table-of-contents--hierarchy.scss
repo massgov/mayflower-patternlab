@@ -8,6 +8,11 @@
     }
   }
 
+  .ma__toc--hierarchy__accordion-content  {
+    background: $c-white;
+    border-top: 2px solid $c-gray-dcdcdc;
+  }
+
   .ma__toc--hierarchy__title {
     color: $c-theme-blue;
   }

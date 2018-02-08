@@ -15,6 +15,9 @@
               {% endfor %}
             </div>
           </div>
+        {% elseif section.icon %}
+          {% set downloadLink = section %}
+          {% include "@molecules/download-link.twig" %}
         {% else %}
           {% set decorativeLink = section %}
           {% include "@atoms/decorative-link.twig" %}

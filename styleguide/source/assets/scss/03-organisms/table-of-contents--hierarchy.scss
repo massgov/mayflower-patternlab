@@ -27,25 +27,18 @@
     top: -20px;
     padding-top: 20px;
 
-    .ma__decorative-link {
+    .ma__decorative-link,
+    .ma__download-link {
       padding: 20px;
     }
   }
 
-  // @media ($bp-medium-min) {
-  //   .ma__decorative-link {
-  //     padding: 20px 40px;
-  //   }
-  //   .ma__toc--hierarchy__title {
-  //     padding-left: 40px;
-  //     padding-right: 40px;
-  //   }
-  // }
 }
 
 .ma__toc--hierarchy__accordion {
   .ma__toc--hierarchy__accordion-content {
     display: none;
+    padding-left: 21px;
   }
 
   .ma__toc--hierarchy__title {
