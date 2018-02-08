@@ -41,10 +41,10 @@ do
 done
 
 # 1. Validate build source environment argument exists and is valid git branch or tag name
-validateBuildSource
+validateBuildSource "$buildSrc"
 
 # 2. Checkout the build source
-checkoutBuildSource
+checkoutBuildSource "$buildSrc"
 
 line="You've indicated a deploy to mayflower.digital.mass.gov/${buildSrc}"
 log "log" "$line";
@@ -67,7 +67,7 @@ subDir="$buildSrc"
 assetsPath="$subDir/assets"
 
 # Set url.domain and url.assetsPath
-writeAssetsPathConfig
+writeAssetsPathConfig "$domain" "$assetsPath"
 
 # 5. Build pattern to generate prod static assets
 buildMayflower

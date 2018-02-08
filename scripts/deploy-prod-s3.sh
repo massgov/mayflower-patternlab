@@ -41,7 +41,7 @@ do
 done
 
 # 1. Validate build source environment argument exists and is valid git branch or tag
-validateBuildSource
+validateBuildSource "$buildSrc"
 
 # Confirm production deploy if a human is executing this script.
 if [ ! CIRCLECI ];
@@ -71,7 +71,7 @@ else
 fi
 
 # 2. Checkout the build source
-checkoutBuildSource
+checkoutBuildSource "$buildSrc"
 
 # 3. Get to styleguide directory
 cdStyleguide
@@ -89,7 +89,7 @@ domain="https://mayflower.digital.mass.gov"
 assetsPath='assets'
 
 # Set url.domain and url.assetsPath
-writeAssetsPathConfig
+writeAssetsPathConfig "$domain" "$assetsPath"
 
 # 5. Build pattern to generate prod static assets
 buildMayflower
