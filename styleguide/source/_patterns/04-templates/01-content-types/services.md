@@ -11,7 +11,7 @@ Displays a collection of components to help describe an available Service on Mas
 * Rich Text organisms
 * Key Actions organism
 * Icon Links organism
-* Link List organism
+* Image Link List organism
 * Action Finder organism
 * Contact List organism
 * Mapped Locations organism
@@ -57,8 +57,8 @@ Displays a collection of components to help describe an available Service on Mas
       }
     },
 
-    linkList : {
-      type: linkList / optional
+    imageLinkList : {
+      type: imageLinkList / optional
     }
   },
 
