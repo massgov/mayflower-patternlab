@@ -1,6 +1,7 @@
 .ma__information-details {
 
-  &__content {
+  &__content,
+  &__post-content {
 
     & > * {
       @include ma-component-spacing;
@@ -13,5 +14,9 @@
     font-style: normal;
     padding: 1rem 0;
     border-bottom: 1px solid $c-black;
+  }
+
+  .ma__image-credit__container {
+    padding-left: 0;
   }
 }

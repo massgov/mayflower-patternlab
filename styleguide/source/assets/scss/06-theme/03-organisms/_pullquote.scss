@@ -5,9 +5,9 @@
   &__content {
     display: block;
     padding-top: 50px;
-    font-size: 1.5rem;
+    font-size: 1.875rem;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.5;
     color: $c-theme-gray;
 
     &::after {
@@ -22,7 +22,7 @@
     }
 
     @media ($bp-small-min) {
-      font-size: 2.5rem;
+      font-size: 2.375rem;
     }
   }
 }

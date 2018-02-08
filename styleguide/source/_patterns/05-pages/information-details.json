@@ -48,7 +48,7 @@
               "align": "full",
               "image": {
                 "alt": "alt text",
-                "src": "../../assets/images/placeholder/800x400.png",
+                "src": "../../assets/images/placeholder/1600x600.png",
                 "height": "",
                 "width": ""
               },
@@ -147,7 +147,7 @@
               "align": "full",
               "image": {
                 "alt": "alt text",
-                "src": "../../assets/images/placeholder/800x400.png",
+                "src": "../../assets/images/placeholder/820x460.png",
                 "height": "",
                 "width": ""
               },
@@ -319,10 +319,6 @@
         {
           "label": "Last Updated:",
           "text": "January 16, 2018"
-        },
-        {
-          "label": "Sed ut perspiciatis:",
-          "text": "Nemo enim ipsam voluptatem quia <a href='#'>voluptas sit</a> aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos."
         }
       ]
     },
