@@ -17,7 +17,7 @@ Mayflower release managers with the necessary repo permissions can follow these 
 1. Smoke test Mayflower (a quick way to do this is to browse around to some of the different pages in the "pages" menu and do a quick gut check)
 1. Open a Github Pull Request to merge (no squash!) the release branch into the `master` branch.
     1. Add the relevant release notes to the PR notes.
-    1. This is a great time to verify one more time that your release [is following semantic versioning](../docs/versioning.md) properly (i.e. not pushing out breaking changes in a minor release).
+    1. This is a great time to verify one more time that your release [is following semantic versioning](versioning.md) properly (i.e. not pushing out breaking changes in a minor release).
 1. [Create a production release](https://help.github.com/articles/creating-releases/) off the `master` branch in GitHub, remember to add the release notes!
 1. Wait for [the circle builds](https://circleci.com/gh/massgov/mayflower) to pass
 1. Pull down your tag `git pull tags`
