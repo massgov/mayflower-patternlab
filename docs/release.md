@@ -7,7 +7,7 @@ Mayflower release managers with the necessary repo permissions can follow these 
 1. Check out the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev): `git checkout dev` and pull the latest from upstream `git pull upstream dev`. (This assumes that your massgov/mayflower remote repo is named `upstream`)
 1. Create a release branch `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about [Mayflower and semantic versioning](docs/versioning.md) to ensure that your are creating the right type of version.
 1. Document the new release based on the "Upcoming" queue at the top of [release-notes.md](/release-notes.md), and then commit.
-1. Move into the `stylguide` directory `cd styleguide`
+1. Move into the `stylguide` directory `cd styleguide` (may be a good idea to run `npm install` in case the release includes new packages).
 1. Bump the version on the homepage - `@pages/readme2.json` - by updating the version and date text in `errorPage.type`
 1. Bump the version of the npm package by running `gulp bump -v=#.#.#` where `#.#.#` is the version you are releasing.
 1. Commit your version bump file updates.
