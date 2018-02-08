@@ -62,6 +62,9 @@ function getMajorVersion {
 
 # Validate the -b argument is an actual git branch or tag
 function validateBuildSource {
+    # parameters
+    local buildSrc=$1
+
     # Validate build source environment argument exists
     if [ "$buildSrc" = false ];
     then
@@ -85,6 +88,9 @@ function validateBuildSource {
 
 # Check out the build source
 function checkoutBuildSource {
+    # parameters
+    local buildSrc=$1
+
     line="Checking out the build source: ${buildSrc}"
     log "log" "$line";
 
@@ -130,6 +136,10 @@ function createUrlJson {
 
 # Write the asset path config values to url.json
 function writeAssetsPathConfig {
+    # parameters
+    local domain=$1
+    local assetsPath=$2
+
     line="Writing domain: ${domain} and assetsPath: ${assetsPath} to the build config."
     log "log" "$line";
 
@@ -142,8 +152,8 @@ function writeAssetsPathConfig {
     else # Assume MacOS sed syntax
          # See: https://stackoverflow.com/questions/11287564/getting-sed-error-illegal-byte-sequence-in-bash
         # Set url.domain and url.assetsPath
-        find ./source/_data -type f -name "url.json" -exec sed -i "" "s!http://localhost:3000!${domain}!g" {} \;
-        find ./source/_data -type f -name "url.json" -exec sed -i "" "s!assets\"!${assetsPath}\"!g" {} \;
+        find ./source/_data -type f -name "url.json" -exec sed -i "" 's!http://localhost:3000!'"${domain}"'!g' {} \;
+        find ./source/_data -type f -name "url.json" -exec sed -i "" 's!assets\"!'"${assetsPath}"'\"!g' {} \;
     fi
 
 
