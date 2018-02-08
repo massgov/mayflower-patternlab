@@ -24,6 +24,8 @@ Mayflower release managers with the necessary repo permissions can follow these 
     1. Release title: `#.#.#` (your release number)
     1. Describe the release: paste your release notes markdown here, after the release version/date line, add a link to the release PR (protip: type `#` and you'll get an autocomplete dropdown to get to your pr)
 1. Wait for [the circle builds](https://circleci.com/gh/massgov/mayflower) to pass
+1. Pull down master `git pull upstream master`
+1. Check out master `git checkout master`
 1. Pull down your tag `git fetch --tags`
 1. Make sure you are in `styleguide` (cd into `styleguide` if you're not)
 1. Make sure you are have the necessary credentials for the s3 bucket and npm:
