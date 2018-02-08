@@ -1,3 +1,6 @@
 <div class="ma__callout-link" title={{ calloutLink.info }}>
   <a href="{{ calloutLink.href }}"><span class="ma__callout-link__container"><span class="ma__callout-link__text" >{{ calloutLink.text }}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</span></span></a>
+  {% if calloutLink.description %}
+    <p class="ma__callout-link__description">{{ calloutLink.description }}</p>
+  {% endif %}
 </div>

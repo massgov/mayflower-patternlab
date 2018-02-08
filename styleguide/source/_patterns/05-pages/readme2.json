@@ -5,9 +5,9 @@
   },
 
   "errorPage": {
-    "type": "v5.11.0 (2/2/2018)",
+    "type": "v5.12.0 (2/8/2018)",
     "title": "Welcome to Mayflower, the Commonwealth's Design System",
-    "message": "Use the navigation menu above to browse our patterns."
+    "message": "Use the navigation menu above to browse our pattern library."
   },
 
   "linkList": {

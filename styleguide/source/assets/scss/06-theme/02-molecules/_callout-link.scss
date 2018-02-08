@@ -12,4 +12,10 @@
       fill: rgba($c-font-link,.5);
     }
   }
+
+  &__description {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgba($c-font-link,1);
+  }
 }

@@ -1,7 +1,8 @@
 .ma__callout-link {
   border: 3px solid;
   display: inline-flex;
-    align-items: stretch;
+        align-items: stretch;
+        flex-wrap: wrap;
 
   // .pre-content > &,
   // .post-content > &,
@@ -31,6 +32,18 @@
       padding: 20px 30px;
     }
   }
+  
+  &__description {
+    display: none;
+    padding: 0px 20px 15px;
+        @media ($bp-x-small-min) {
+          display: flex;
+              align-items: center;
+        }
+        @media ($bp-small-min) {
+          padding: 0px 30px 20px;
+        }     
+  }
 
   &__container { // .ma__decorative-link 
     display: inline-block;
@@ -55,4 +68,6 @@
       width: .6em;
     }
   }
+
+  
 }

@@ -6,6 +6,8 @@ Description: This pattern shows a link styled as a card
 ### Pattern Contains
 * SVG Arrow atom
 
+### Variant options
+* With [description](./?p=molecules-callout-link-as-description) text.
 
 ### Variables
 ~~~
@@ -16,5 +18,7 @@ calloutLink: {
     type: string / required
   info:
     type: string (adds more description about the link) / optional
+   description:
+    type: string (adds a short description under the title text) / optional
 }
 ~~~
