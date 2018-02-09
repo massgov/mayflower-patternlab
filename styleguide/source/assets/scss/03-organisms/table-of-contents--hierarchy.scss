@@ -1,15 +1,17 @@
 .ma__toc--hierarchy {
 
   .ma__colored-heading {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     margin-right: 50px;
     overflow: visible;
     z-index: 1;
-    max-width: 30em;
+    max-width: 28em;
+    width: calc(100% - 50px);
 
     &:after {
-      content: none;
+      display: none;
     }
+
     &:before {
       content: "";
       position: absolute;

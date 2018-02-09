@@ -101,6 +101,9 @@ $bp-illustrated-header-image-width: 360px;
   .ma__illustrated-header__content::after {
     content: none;
   }
+  .ma__page-header {
+    width: 100%;
+  }
   .ma__illustrated-header__content {
     display: flex;
       flex-direction: column;
