@@ -7,20 +7,29 @@ This Pattern shows an expantable table of contents which can contain simple link
 ### Pattern Contains
 * Decorated Link
 * Download Link
-* Accordion
 
 ### Usage Guidelines
-*
+* This is meant to be used to contain a mix of links, download links, or section titles with child links/download links within accordions.
 
 ### Variables
 ~~~
 tableOfContentsHierarchy: {
   coloredHeading: {
-
+    type: coloredHeading / required
   },
-  sections: {
-
-  }
+  sections: [{
+    type: mixedTypes...
+        downloadLink
+        or
+        decorativeLink
+        or
+        {
+            text: string / required,
+            linkItems: [{
+                type: decorativeLink or downloadLink
+            }]
+        }
+  }]
 
 }
 ~~~

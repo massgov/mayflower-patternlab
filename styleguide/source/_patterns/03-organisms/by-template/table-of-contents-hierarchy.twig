@@ -10,8 +10,13 @@
             </button>
             <div class="ma__toc--hierarchy__accordion-content js-accordion-content">
               {% for link in section.linkItems %}
-                {% set decorativeLink = link %}
-                {% include "@atoms/decorative-link.twig" %}
+                {% if link.icon %}
+                  {% set downloadLink = link %}
+                  {% include "@molecules/download-link.twig" %}
+                {% else %}
+                  {% set decorativeLink = link %}
+                  {% include "@atoms/decorative-link.twig" %}
+                {% endif %}
               {% endfor %}
             </div>
           </div>

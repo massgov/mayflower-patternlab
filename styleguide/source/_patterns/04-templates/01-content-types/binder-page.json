@@ -25,16 +25,42 @@
     }
   },
 
+  "contentEyebrow": {
+    "hideBorder": false,
+    "headerTags": {
+      "label": "More about:",
+      "taxonomyTerms": [{
+        "href": "#",
+        "text": "Related Service"
+      },{
+        "href": "#",
+        "text": "Related Organization"
+      },{
+        "href": "#",
+        "text": "Third Thing"
+      },{
+        "href": "#",
+        "text": "Fourth Thing"
+      }]
+    }
+  },
+
   "listingTable": {
     "rows": [{
-        "label": "Date:",
-        "text": "3/2/2017"
+        "label": "Organization:",
+        "text": "Massachusetts Trial Court Libraries"
       },{
-        "label": "Issuer:",
-        "text": "Mark E. Nunnelly, Commissioner of Revenue"
+        "label": "Date Published:",
+        "text": "9/1/2017"
       },{
-        "label": "Referenced Legistration:",
-        "text": "<a href=\"#\">M.G.L. c.51, S47C</a><br/><a href=\"#\">G.L. c.64H, S6</a>"
+        "label": "Last Updated:",
+        "text": "10/1/2017"
+      },{
+        "label": "Volume:",
+        "text": "Fall 2017"
+      },{
+        "label": "Serial Number:",
+        "text": "2018-0324S"
       }]
   },
 
