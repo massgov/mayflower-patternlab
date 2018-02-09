@@ -14,15 +14,19 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 5rem;
+    padding: 20px;
+    height: 100%;
     .ma__image-link__image {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
         margin: 0;
     }
     .ma__image-link__text {
-        padding: 1rem 1rem 1rem 2rem;
+        padding: 1rem 1rem 1rem 1.5rem;
         width: 100%;
         line-height: 1.2;
+    }
+    svg {
+        vertical-align: middle;
     }
 }
