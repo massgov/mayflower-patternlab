@@ -64,20 +64,6 @@
       }]
   },
 
-  "jumpLinks": {
-    "title": "In this Section",
-    "links": [{
-      "text": "Rich Text",
-      "href": "rich-text"
-    },{
-      "text": "Downloads",
-      "href": "downloads"
-    },{
-      "text": "Contact",
-      "href": "contact"
-    }]
-  },
-
   "mainContent": {
     "contents": [{
       "compHeading": {
