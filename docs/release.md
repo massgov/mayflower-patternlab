@@ -32,13 +32,13 @@ Mayflower release managers with the necessary repo permissions can follow these 
     1. In order to push to the mayflower s3 bucket, you need to have credentials set up in `<mayflower>/styleguide/tools/gulp/local.js` (you can copy `local.js.example` as a model).  Ask a team member for help with credentials.
     1. In order to push the Mayflower package to [NPM](https://npmjs.com/@massds/mayflower), you need to be authenticated on NPM, by one of the following:
         1. Having an `.npmrc` file with credentials for the `@massds` account (or your own NPM account if you're added to the Mayflower package as an owner) in the styleguide directory of your Mayflower repo (this file is not and should not be versioned -- ask a team member for credentials)
-            - See [npmjs docs re: .npmrc](https://docs.npmjs.com/files/npmrc#per-project-config-file\n\n2) 
+            - See [npmjs docs re: .npmrc](https://docs.npmjs.com/files/npmrc#per-project-config-file\n\n2)
         1. Having an `NPM_TOKEN` environment variable for `@massds`
             - See [npmjs docs re: NPM_TOKEN](http://blog.npmjs.org/post/118393368555/deploying-with-npm-private-modules)
         1. Authenticating from the npm CLI (Note: you must be added to the Mayflower NPM package project as an owner -- ask a team member for help)
             - See [npmjs docs](https://docs.npmjs.com/getting-started/publishing-npm-packages#preparation)
-1. Deploy the release (to its three locations: prod `/`, current version `/<your-tag-name>/`, and latest minor `/<current-major-version>/`) and publish the [@massds/mayflower package on NPM](https://www.npmjs.com/package/@massds/mayflower) by running `../scripts/deploy-mayflower.s3 -b <your-tag-name>` and follow the prompts.
-1. Smoke test [Prod](http://mayflower.digital.mass.gov) 
+1. Deploy the release (to its three locations: prod `/`, current version `/<your-tag-name>/`, and latest minor `/<current-major-version>/`) and publish the [@massds/mayflower package on NPM](https://www.npmjs.com/package/@massds/mayflower) by running `../scripts/deploy-mayflower.sh -b <your-tag-name>` and follow the prompts.
+1. Smoke test [Prod](http://mayflower.digital.mass.gov)
     - Make sure the home page reflects the date and version
 1. Open a GitHub Pull Request to merge `master` into `develop` (this should only bring an updated `release-notes.md`, `@pages/readme2.json`). If a feature was reverted on the release branch, have a peer do the merge after a review.
 1. In JIRA Go to the [DP project](https://jira.state.ma.us/projects/DP/).
@@ -60,4 +60,3 @@ In the event that a release needs to be rolled back from production, follow thes
     1. Latest minor by running `../scripts/deploy-latest-minor-s3.sh -b <prior-release-tag>`
         1. When prompted, confirm your latest minor deployment by typing: `y`
 1. Validate rollback by browsing to [Prod](http://mayflower.digital.mass.gov) as well as `https://mayflower.digital.mass.gov/<current-major>/` and verifying that the home page reflects the correct version
-
