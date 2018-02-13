@@ -25,6 +25,8 @@ figure: {
     width:
       type: string
   }
+  title:
+    type: string
   caption:
     type: string
 }
