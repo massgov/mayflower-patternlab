@@ -1,7 +1,7 @@
 {
   "name": "@massds/mayflower",
   "description": "Open source UI components and visual style guide for Massachusetts government websites",
-  "version": "5.12.3",
+  "version": "5.12.4",
   "author": "Massachusetts Digital Services (MDS)",
   "repository": {
     "type": "git",

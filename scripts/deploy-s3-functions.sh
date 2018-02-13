@@ -152,8 +152,8 @@ function writeAssetsPathConfig {
     else # Assume MacOS sed syntax
          # See: https://stackoverflow.com/questions/11287564/getting-sed-error-illegal-byte-sequence-in-bash
         # Set url.domain and url.assetsPath
-        find ./source/_data -type f -name "url.json" -exec sed -i "" -e  's!http://localhost:3000!'"${domain}"'!g' {} \;
-        find ./source/_data -type f -name "url.json" -exec sed -i "" -e 's!assets\"!'"${assetsPath}"'\"!g' {} \;
+        find ./source/_data -type f -name "url.json" -exec sed -i " " -e  's!http://localhost:3000!'"${domain}"'!g' {} \;
+        find ./source/_data -type f -name "url.json" -exec sed -i " " -e 's!assets\"!'"${assetsPath}"'\"!g' {} \;
     fi
 
 
