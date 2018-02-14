@@ -1,7 +1,21 @@
 <nav class="ma__toc--hierarchy">
-  {% set coloredHeading = tableOfContentsHierarchy.coloredHeading %}
-  {% include "@atoms/04-headings/colored-heading.twig" %}
-  <ul class="ma__toc--hierarchy__container">
+  {% if tableOfContentsHierarchy.collapsable %}
+    <button type="button" class="ma__toc--hierarchy__toggle">
+      <span class="ma__toc--hierarchy__toggle-title">
+	{{ tableOfContentsHierarchy.collapsable.title}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}
+      </span>
+      <span class="ma__toc--hierarchy__toggle-title__icon"></span>
+    </button>
+  {% endif %}
+
+  {% if tableOfContentsHierarchy.title.colored %}
+    {% set coloredHeading = { "text": tableOfContentsHierarchy.title.text, "color": "green" } %}
+    {% include "@atoms/04-headings/colored-heading.twig" %}
+  {% else %}
+    {% set sidebarHeading = { "title": tableOfContentsHierarchy.title.text } %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+  <div class="ma__toc--hierarchy__container">
       {% for section in tableOfContentsHierarchy.sections %}
         {% if section.linkItems|length > 0 %}
           <li class="ma__toc--hierarchy__accordion js-accordion">
