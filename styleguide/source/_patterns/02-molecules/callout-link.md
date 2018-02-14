@@ -8,6 +8,7 @@ Description: This pattern shows a link styled as a card
 
 ### Variant options
 * With [description](./?p=molecules-callout-link-as-description) text.
+* As [card](./?p=molecules-callout-link-as-card) with the theme set to `card`, and a string supplied to eyebrow, details, and source.
 
 ### Variables
 ~~~
@@ -21,7 +22,7 @@ calloutLink: {
   description:
     type: string (adds a short description under the title text) / optional
   theme:
-    type: string / optional
+    type: string ("null" or "card") / optional
   eyebrow:
   	type: string / optional
   source:
