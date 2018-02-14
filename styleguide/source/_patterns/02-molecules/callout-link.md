@@ -23,7 +23,7 @@ calloutLink: {
   description:
     type: string (adds a short description under the title text) / optional
   theme:
-    type: string ("null" or "card") / optional
+    type: string ("null" or "white") / optional
   eyebrow:
   	type: string / optional
   source:
