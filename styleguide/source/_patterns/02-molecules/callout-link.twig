@@ -16,8 +16,8 @@
   		<span class="ma__callout-link__text" >{{ calloutLink.text }}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</span>
   	</span>
   </a>
-  {% if calloutLink.source %}
-    <span class="ma__callout-link__source">{{ calloutLink.source }}</span>
+  {% if calloutLink.emphasized %}
+    <span class="ma__callout-link__emphasized">{{ calloutLink.emphasized }}</span>
   {% endif %}
   {% if calloutLink.description %}
     <p class="ma__callout-link__description">{{ calloutLink.description }}</p>
