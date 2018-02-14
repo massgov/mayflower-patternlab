@@ -5,7 +5,7 @@
     "info": "Find out more about this thing on our blah page",
     "eyebrow": "Press Release",
     "source": "Office of the Attorney General",
-    "details": "30 Mins Ago",
-    "theme": "card"
+    "time": "30 Mins Ago",
+    "theme": "white"
   }
 }
