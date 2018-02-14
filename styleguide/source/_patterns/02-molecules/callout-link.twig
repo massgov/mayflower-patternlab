@@ -1,5 +1,24 @@
-<div class="ma__callout-link" title={{ calloutLink.info }}>
-  <a href="{{ calloutLink.href }}"><span class="ma__callout-link__container"><span class="ma__callout-link__text" >{{ calloutLink.text }}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</span></span></a>
+{% set calloutLinkTheme = calloutLink.theme ? "ma__callout-link--" ~ calloutLink.theme : "" %}
+
+<div class="ma__callout-link {{calloutLinkTheme}}" title={{ calloutLink.info }}>
+  {% if calloutLink.eyebrow or calloutLink.details %}
+  <div class="ma__callout-link__header">
+    {% if calloutLink.eyebrow %}
+      <span class="ma__callout-link__eyebrow">{{ calloutLink.eyebrow }}</span>
+    {% endif %}
+    {% if calloutLink.details %}
+      <span class="ma__callout-link__details">{{ calloutLink.details }}</span>
+    {% endif %}
+  </div>
+ {% endif %}
+  <a href="{{ calloutLink.href }}">
+  	<span class="ma__callout-link__container">
+  		<span class="ma__callout-link__text" >{{ calloutLink.text }}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</span>
+  	</span>
+  </a>
+  {% if calloutLink.source %}
+    <span class="ma__callout-link__source">{{ calloutLink.source }}</span>
+  {% endif %}
   {% if calloutLink.description %}
     <p class="ma__callout-link__description">{{ calloutLink.description }}</p>
   {% endif %}

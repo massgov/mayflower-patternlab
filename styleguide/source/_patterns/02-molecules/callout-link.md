@@ -18,7 +18,15 @@ calloutLink: {
     type: string / required
   info:
     type: string (adds more description about the link) / optional
-   description:
+  description:
     type: string (adds a short description under the title text) / optional
+  theme:
+    type: string / optional
+  eyebrow:
+  	type: string / optional
+  source:
+  	type: string / optional
+  details:
+  	type: string / optional
 }
 ~~~
