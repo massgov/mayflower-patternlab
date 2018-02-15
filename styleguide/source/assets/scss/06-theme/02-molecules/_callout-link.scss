@@ -24,6 +24,10 @@
     font-weight: 700;
   }
 
+  &__header {
+    color: $c-theme-gray;
+  }
+
   &__emphasized{
     color: $c-font-dark;
     font-weight: 700;
