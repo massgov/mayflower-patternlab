@@ -104,6 +104,10 @@
               {
                 "text": "Thing Two",
                 "href": "#"
+              },
+              {
+                "text": "Thing Three",
+                "href": "#"
               }
             ]
           },
