@@ -18,4 +18,15 @@
   .ma__image-credit__container {
     padding-left: 0;
   }
+
+  .sidebar {
+
+    .ma__link-list {
+      display: none;
+
+      @include breakpoint ($bp-l) {
+        display: block;
+      }
+    }
+  }
 }
