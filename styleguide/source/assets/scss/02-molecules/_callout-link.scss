@@ -18,8 +18,9 @@
   }
 
   a {
+  width: 100%;
   display:flex;
-  flex-flow: column wrap;
+      flex-flow: column wrap;
       justify-content: center;
     padding: 15px 20px;
     @media ($bp-small-min) {
@@ -51,20 +52,20 @@
     padding-top: 10px;
         @media ($bp-x-small-min) {
           display: flex;
-          align-content: stretch;
+            align-content: stretch;
               align-items: center;
         }   
   }
 
   &__header{
-      align-content: stretch;
-      width: 100%;
-      display: inline-flex;
+    align-content: stretch;
+    width: 100%;
+    display: inline-flex;
       justify-content: space-between;
       margin-bottom: 10px;
-      @media ($bp-small-min) {
-          margin-bottom: 15px;
-      }
+        @media ($bp-small-min) {
+            margin-bottom: 15px;
+        }
   }
   &__eyebrow, &__time {
       font-size: 0.813rem;
