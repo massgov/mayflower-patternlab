@@ -13,10 +13,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 
 ## 5.13.0 (2/16/2018)
-#703
 
 ## Changed
-- DP-7907: Adds support for details to [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-with-details&view=c) (e.g calls to action on a location page header). This includes adding an eyebrow, white theme variant, time note, and emphasized text to the callout link molecule.
+- DP-7907: Adds support for details to  [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-with-details&view=c) (e.g calls to action on a location page header). This includes adding an eyebrow, white theme variant, time note, and emphasized text to the callout link molecule. #703
+
+## Added
+
+- DP-7307 & DP-7483: organization image links #670
+    - Add logo link molecule & logo list organism for use on service page
+    - Add block
+    - Adding accordion behaivor to image link lists
+
+## Fixed
+
+- DP-7307 & DP-7483: organization image links #670
+    - relative pathing so things work everywhere
+    - remove borders when logo list is in sidebar, align left text & images when no image present for some links
+    - rename logoLink to imageLink, add variant for block treatment
+    - fix indentation, spacing
+    - adjust accordion toggle for various length of items
 
 ## 5.12.4 (2/13/2018)
 
