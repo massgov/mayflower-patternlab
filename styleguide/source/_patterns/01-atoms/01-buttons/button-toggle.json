@@ -1,0 +1,16 @@
+{
+  "buttonToggle":{
+    "options":[{
+      "value":"",
+      "text":"Option 1"
+    },{
+      "value":"",
+      "text":"Option 2"
+    }],
+    "href":"#",
+    "info": "",
+    "size": "",
+    "theme": "",
+    "outline": false
+  }
+}

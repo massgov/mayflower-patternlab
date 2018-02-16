@@ -1,0 +1,24 @@
+{% set buttonClassSize = "" %}
+{% set buttonClass = "" %}
+
+{% if buttonToggle.outline %}
+  {% set buttonClass = buttonClass ~ "-minor" %}
+{% endif %}
+
+{% if buttonToggle.theme %}
+  {% set buttonClass = buttonClass ~ "-" ~ buttonToggle.theme %}
+{% endif %}
+
+<a
+  href="{{ buttonToggle.href }}"
+  class="{{ buttonClass }} {{ buttonClassSize }}"
+  title="{{ buttonToggle.info }}">
+	{{ buttonToggle.options[0].text }}
+</a>
+|
+<a
+  href="{{ buttonToggle.href }}"
+  class="{{ buttonClass }} {{ buttonClassSize }}"
+  title="{{ buttonToggle.info }}">
+	{{ buttonToggle.options[1].text }}
+</a>
