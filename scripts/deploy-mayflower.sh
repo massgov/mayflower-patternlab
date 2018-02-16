@@ -43,7 +43,7 @@ cdStyleguide
 
 # 2. Deploy tag to mayflower.digital.mass.gov/#.#.#/ where #.#.# is your tag version
 # Execute shell script in a different process (see: http://www.lostsaloon.com/technology/how-to-call-shell-script-sh-file-from-another-shell-script/)
-if ! ../scripts/deploy-s3.sh -b buildSrc; then
+if ! ../scripts/deploy-s3.sh -b ${buildSrc}; then
 line="Hmmm looks like the deploy to mayflower.digital.mass.gov/<your-tag-name>/ failed.  Hopefully you got a helpful error message from the script execution output."
     log "error" "$line";
     exit 1;
@@ -58,7 +58,7 @@ cdStyleguide
 # 3. Deploy tag to mayflower.digital.mass.gov/#/ where # is the current major version
 # Execute shell script in a different process (see: http://www.lostsaloon.com/technology/how-to-call-shell-script-sh-file-from-another-shell-script/)
 
-if ! ../scripts/deploy-latest-minor.sh -b buildSrc; then
+if ! ../scripts/deploy-latest-minor.sh -b ${buildSrc}; then
 line="Hmmm looks like the deploy to mayflower.digital.mass.gov/<current-major>/ failed.  Hopefully you got a helpful error message from the script execution output."
     log "error" "$line";
     exit 1;
@@ -73,7 +73,7 @@ cdStyleguide
 # 4. Deploy tag to mayflower.digital.mass.gov
 # Execute shell script in a different process (see: http://www.lostsaloon.com/technology/how-to-call-shell-script-sh-file-from-another-shell-script/)
 
-if ! ../scripts/deploy-prod-s3.sh -b buildSrc; then
+if ! ../scripts/deploy-prod-s3.sh -b ${buildSrc}; then
 line="Hmmm looks like the deploy to mayflower.digital.mass.gov failed.  Hopefully you got a helpful error message from the script execution output."
     log "error" "$line";
     exit 1;
@@ -88,4 +88,4 @@ cdStyleguide
 # 5. Package contents and push to NPM
 # Execute shell script in a different process (see: http://www.lostsaloon.com/technology/how-to-call-shell-script-sh-file-from-another-shell-script/)
 
-../scripts/deploy-npm.sh -b buildSrc
+../scripts/deploy-npm.sh -b ${buildSrc}

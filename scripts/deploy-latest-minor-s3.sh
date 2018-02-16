@@ -43,7 +43,7 @@ do
 done
 
 # 1. Validate build source environment argument exists and is valid git branch or tag
-validateBuildSource
+validateBuildSource "$buildSrc"
 
 # Confirm latest minor and production deploys if a human is executing this script.
 if [ ! CIRCLECI ];
@@ -74,7 +74,7 @@ else
 fi
 
 # 2. Checkout the build source
-checkoutBuildSource
+checkoutBuildSource "$buildSrc"
 
 # 3. Get to styleguide directory
 cdStyleguide
@@ -94,7 +94,7 @@ subDir="$majorVersion" #$majorVersion is set above when we validate the prod tag
 assetsPath="$subDir/assets"
 
 # Set url.domain and url.assetsPath
-writeAssetsPathConfig
+writeAssetsPathConfig "$domain" "$assetsPath"
 
 # 5. Build pattern to generate prod static assets
 buildMayflower
