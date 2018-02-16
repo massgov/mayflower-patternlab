@@ -120,14 +120,31 @@
       }
     },
 
-    "linkList" : {
+    "imageLinkList" : {
       "sidebarHeading": {
         "title": "Offered By"
       },
+      "itemPluralName": "organizations",
       "stacked": true,
       "links" : [{
         "href":"#",
-        "text":"Department of Unemployment Assistance (DUA)"
+        "text":"Link to organization page with logo",
+        "image": {
+          "src": "../../assets/images/placeholder/250x250.png",
+          "alt": "logo"
+        }
+      },{
+        "href":"#",
+        "text":"Link to organization page"
+      },{
+        "href":"#",
+        "text":"Link to organization page"
+      },{
+        "href":"#",
+        "text":"Link to organization page"
+      },{
+        "href":"#",
+        "text":"Link to organization page"
       }]
     }
   },
