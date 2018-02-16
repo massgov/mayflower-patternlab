@@ -11,11 +11,32 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+
 ## 5.13.0 (2/16/2018)
 #703
 
 ## Changed
 - DP-7907: Adds support for details to [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-with-details&view=c) (e.g calls to action on a location page header). This includes adding an eyebrow, white theme variant, time note, and emphasized text to the callout link molecule.
+
+## 5.12.4 (2/13/2018)
+
+### Fixed
+- (For release masters:) `sed` from bash script on macos is not being very kind.  Iterating on the release script again.
+
+## 5.12.3 (2/13/2018)
+
+### Fixed
+- (For release masters:) Touch up release docs and iterate on s3 deploy scripts for smoother release.
+
+## 5.12.2 (2/8/2018)
+
+### Fixed
+- (For release masters:) Touch up release docs and iterate on s3 deploy scripts for smoother release.
+
+## 5.12.1 (2/8/2018)
+
+### Fixed
+- (For devs) Iterate on the release process to make it more smooth.
 
 ## 5.12.0 (2/7/2018)
 
