@@ -5,6 +5,11 @@
   {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
 
+{% block preContentMedia %}
+  {% set richText = preContentMedia.moreInfo %}
+  {% include "@organisms/by-author/rich-text.twig" %}
+{% endblock %}
+
 {% block pageContent %}
 
   {% set richText = pageContent.moreInfo %}
