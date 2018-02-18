@@ -5,27 +5,27 @@ export default function (window,document,$,undefined) {
   let debounceTimer;
   console.log(sidebarHeight);
 
-  function imgWidth() {
+  function mediaWidth() {
     // Define wrapper width for use.
     var wrapperWidth = $('.main-content').width();
 
     $('.ma__figure--full, .ma__iframe--full').each(function() {
-      var $thisImage = $(this);
+      var $thisMedia = $(this);
 
       // Get position of image relative to container.
-      var thisPosition = $thisImage.position().top;
+      var thisPosition = $thisMedia.position().top;
 
       // If this image is below the sidebar.
       if (thisPosition > sidebarHeight) {
 
         // Make the image the full width of the wrapper.
-        $thisImage.css('width', wrapperWidth);
+        $thisMedia.css('width', wrapperWidth);
       }
     });
   }
 
   $(window).on('load', function() {
-    imgWidth();
+    mediaWidth();
   });
 
   $(window).resize(function() {
@@ -33,7 +33,7 @@ export default function (window,document,$,undefined) {
       window.clearTimeout(debounceTimer);
     }
     debounceTimer = window.setTimeout(function(){
-      imgWidth();
+      mediaWidth();
     },250);
   });
 
