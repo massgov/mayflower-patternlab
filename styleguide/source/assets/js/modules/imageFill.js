@@ -9,7 +9,7 @@ export default function (window,document,$,undefined) {
     // Define wrapper width for use.
     var wrapperWidth = $('.main-content').width();
 
-    $('.ma__figure--full').each(function() {
+    $('.ma__figure--full, .ma__iframe--full').each(function() {
       var $thisImage = $(this);
 
       // Get position of image relative to container.

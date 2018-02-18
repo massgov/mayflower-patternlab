@@ -23,7 +23,7 @@
     "widgets": null
   },
   "preContentMedia": {
-   "moreInfo": {
+   "post_header_media": {
      "rteElements": [
       {
         "path": "@atoms/09-media/iframe.twig",

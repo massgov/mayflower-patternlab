@@ -193,18 +193,13 @@
           }
         },
         {
-          "path": "@atoms/09-media/figure.twig",
+        "path": "@atoms/09-media/iframe.twig",
           "data": {
-            "figure": {
-              "align": "full",
-              "image": {
-                "alt": "alt text",
-                "src": "../../assets/images/placeholder/1600x600.png",
-                "height": "",
-                "width": ""
-              },
-              "title": "The chestnut-sided warbler",
-              "caption": " Both images on this page are of class 'full'. Only this image extends the full width because only this image is below the sidebar."
+           "iframe": {
+              "src": "https://massgov.github.io",
+              "title": "Embed page title for accessibility",
+              "position": "full",
+              "caption": "This is an optional caption for an iframe. This iframe also has the 'full' class to fill the container."
             }
           }
         },
