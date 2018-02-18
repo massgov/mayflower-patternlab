@@ -14,6 +14,14 @@
   </div>
   <div class="main-content main-content--two">
 
+
+      <div class="pre-content--media">
+        {% block preContentMedia %}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Pre Content Media: Optional header image/iframe'}} %}
+        {% endblock %}
+      </div>
+
+
     <div class="page-content">
 
       <div class="ma__information-details__content">
@@ -24,10 +32,10 @@
       </div>
 
       <div class="ma__information-details__post-content">
-      {% block postContent %}
-        {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
-      {% endblock %}
-    </div>
+        {% block postContent %}
+          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
+        {% endblock %}
+      </div>
     </div>
 
     <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">

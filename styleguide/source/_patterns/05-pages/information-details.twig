@@ -5,27 +5,47 @@
   {% include "@organisms/by-template/header.twig" %}
 {% endblock %}
 
-
 {% block pageContent %}
+
   {% set richText = pageContent.moreInfo %}
   {% include "@organisms/by-author/rich-text.twig" %}
+
   {% set richText = pageContent.history %}
   {% include "@organisms/by-author/rich-text.twig" %}
-  {% set pullquoteCallout = pageContent.pullquoteCallout %}
-  {% include "@organisms/by-author/pullquote.twig" %}
+
+  {% if pageContent.pullquoteCallout %}
+    {% set pullquoteCallout = pageContent.pullquoteCallout %}
+    {% include "@organisms/by-author/pullquote.twig" %}
+  {% endif %}
+
 {% endblock %}
 
 {% block postContent %}
-  {% set contactList = pageContent.contactList %}
-  {% include "@organisms/by-author/contact-list.twig" %}
-  {% set footnoteList = pageContent.footnoteList %}
-  {% include "@organisms/by-author/footnote-list.twig" %}
-  {% set listingTable = pageContent.listingTable %}
-  {% include "@molecules/listing-table.twig" %}
-  {% set linkList = pageContent.linkList %}
-  {% include "@organisms/by-author/link-list.twig" %}
-  {% set imageCredit = pageContent.imageCredit %}
-  {% include "@organisms/by-template/image-credit.twig" %}
+  {% if postContent.contactList %}
+    {% set contactList = postContent.contactList %}
+    {% include "@organisms/by-author/contact-list.twig" %}
+  {% endif %}
+
+  {% if postContent.footnoteList %}
+    {% set footnoteList = postContent.footnoteList %}
+    {% include "@organisms/by-author/footnote-list.twig" %}
+  {% endif %}
+
+  {% if postContent.postDateslistingTable %}
+    {% set listingTable = postContent.postDateslistingTable %}
+    {% include "@molecules/listing-table.twig" %}
+  {% endif %}
+
+  {% if postContent.relatedLinkList %}
+    {% set linkList = postContent.relatedLinkList %}
+    {% include "@organisms/by-author/link-list.twig" %}
+  {% endif %}
+
+  {% if postContent.imageCredit %}
+    {% set imageCredit = postContent.imageCredit %}
+    {% include "@organisms/by-template/image-credit.twig" %}
+  {% endif %}
+
 {% endblock %}
 
 {% block sidebar %}
