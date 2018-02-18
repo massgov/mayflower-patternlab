@@ -55,6 +55,58 @@
               "caption": "Images have optional custom captions. Veritatis provident hic voluptate voluptatibus ullam accusantium, obcaecati tempora soluta praesentium accusamus sed dicta sapiente."
             }
           }
+        },
+        {
+          "path": "@organisms/by-author/form-downloads.twig",
+          "data": {
+            "formDownloads": {
+              "compHeading": {
+                "title": "Additional resources",
+                "sub": false,
+                "titleContext": ""
+              },
+              "downloadLinks": [{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "decorativeLink": {
+                    "text": "PDF resource item",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "30kb",
+                  "format": "PDF"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "decorativeLink": {
+                    "text": "Link to an online form",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "",
+                  "format": "form"
+                }
+              },{
+                "downloadLink": {
+                  "iconSize": "",
+                  "icon": "",
+                  "decorativeLink": {
+                    "text": "Link to another page",
+                    "href": "#",
+                    "info": "",
+                    "property": ""
+                  },
+                  "size": "",
+                  "format": "form"
+                }
+              }]
+            }
+          }
         }
       ]
     },
