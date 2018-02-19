@@ -2,12 +2,13 @@
   "buttonToggle":{
     "options":[{
       "value":"",
-      "text":"Option 1"
+      "text":"Date"
     },{
       "value":"",
-      "text":"Option 2"
+      "text":"Relevance"
     }],
-    "href":"#",
+    "id": "sort",
+    "labelText":"Sort by:",
     "info": "",
     "size": "",
     "theme": "",

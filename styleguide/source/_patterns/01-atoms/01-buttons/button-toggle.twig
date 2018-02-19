@@ -9,16 +9,8 @@
   {% set buttonClass = buttonClass ~ "-" ~ buttonToggle.theme %}
 {% endif %}
 
-<a
-  href="{{ buttonToggle.href }}"
-  class="{{ buttonClass }} {{ buttonClassSize }}"
-  title="{{ buttonToggle.info }}">
-	{{ buttonToggle.options[0].text }}
-</a>
-|
-<a
-  href="{{ buttonToggle.href }}"
-  class="{{ buttonClass }} {{ buttonClassSize }}"
-  title="{{ buttonToggle.info }}">
-	{{ buttonToggle.options[1].text }}
-</a>
+<span>
+  <label for="{{ buttonToggle.id }}" class="ma__label--inline ma__label--small">{{buttonToggle.labelText}}</label>
+  <button type="button" class="ma__button-toggle {{ buttonClass }}">{{ buttonToggle.options[0].text }}</button> |
+  <button type="button" class="ma__button-toggle ma__button-toggle--selected {{ buttonClass }}">{{ buttonToggle.options[1].text }}</button>
+</span>
