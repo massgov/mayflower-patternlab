@@ -1,4 +1,4 @@
-{% set promoHeading = 2 %}
+{% set promoHeading = (imagePromos.promoHeading + 1) ? : 2 %}
 
 <section class="ma__image-promos js-image-promos">
   {% if imagePromos.compHeading %}
