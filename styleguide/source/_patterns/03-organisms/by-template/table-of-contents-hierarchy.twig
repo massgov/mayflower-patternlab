@@ -1,13 +1,4 @@
 <nav class="ma__toc--hierarchy">
-  {% if tableOfContentsHierarchy.collapsable %}
-    <button type="button" class="ma__toc--hierarchy__toggle">
-      <span class="ma__toc--hierarchy__toggle-title">
-	{{ tableOfContentsHierarchy.collapsable.title}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}
-      </span>
-      <span class="ma__toc--hierarchy__toggle-title__icon"></span>
-    </button>
-  {% endif %}
-
   {% if tableOfContentsHierarchy.title.colored %}
     {% set coloredHeading = { "text": tableOfContentsHierarchy.title.text, "color": "green" } %}
     {% include "@atoms/04-headings/colored-heading.twig" %}

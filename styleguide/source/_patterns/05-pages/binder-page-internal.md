@@ -1,5 +1,5 @@
 ### Description
-This pattern is used as a template for Policy Advisory type pages and is based off of the Two Column template
+This pattern is used as a template for Internal Binder Page type pages and is based off of the Two Column template
 
 ### Status
 * Stable as of 5.11.0
@@ -19,6 +19,7 @@ This pattern is used as a template for Policy Advisory type pages and is based o
 * Contact List (js/modules/accordions.js)
 * Footnote List (js/modules/footnote.js)
 * Jump Links (js/modules/scrollAnchors.js)
+* Inline Overlay (js/modules/inlineOverlay.js)
 
 ### Variables
 ~~~
@@ -29,6 +30,20 @@ contentEyebrow: {
 pageHeader: {
   type: pageHeader / required
 },
+
+binderNavigationSections: [
+  {
+    id: {
+      type: string / required
+    },
+    tableOfContents: {
+      type: tableOfContentsOverlay / required
+    },
+    pageFlipper: {
+      type: pageFlipper / required
+    }
+  }
+],
 
 jumpLinks: {
   type: jumpLinks / optional
@@ -41,10 +56,6 @@ listingTable: {
 mainContent: {
   contents: [{
     type: array of richText / required
-  }],
-
-  tableOfContentsSections: [{
-    type: array of tableOfContentsHeirarchy / optional
   }],
 
   formDownloads: {

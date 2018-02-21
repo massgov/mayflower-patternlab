@@ -3,8 +3,8 @@
 {% block header %}
   {% include "@organisms/by-template/header.twig" %}
   {% for navSection in binderNavigationSections %}
-    {% set tableOfContentsHierarchy = navSection.tableOfContents %}
-    {% include "@organisms/by-template/table-of-contents-hierarchy.twig" %}
+    {% set tableOfContentsOverlay = navSection.tableOfContents %}
+    {% include "@organisms/by-template/table-of-contents-overlay.twig" %}
   {% endfor %}
 {% endblock %}
 
