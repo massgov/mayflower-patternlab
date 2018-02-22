@@ -12,6 +12,7 @@
     {% set promoHeading = (sidebarHeading.level ? : promoHeading) + 1 %}
   {% endif %}
 
+  {% set promoHeading = compHeading.level ? (compHeading.level + 1) : promoHeading %}
   <div>
     {% for imagePromo in imagePromos.items %}
       {% set imagePromo = imagePromo|merge({"level": promoHeading}) %}
