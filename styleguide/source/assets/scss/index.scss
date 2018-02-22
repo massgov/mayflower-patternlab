@@ -169,6 +169,7 @@
 @import "03-organisms/suggested-pages";
 @import "03-organisms/steps-ordered";
 @import "03-organisms/steps-unordered";
+@import "03-organisms/table-of-contents--hierarchy";
 @import "03-organisms/tabular-data";
 @import "03-organisms/teaser-text";
 @import "03-organisms/test-feed";
@@ -178,6 +179,7 @@
 @import "03-organisms/utility-panel";
 
 // Templates - page content types
+@import "04-templates/binder-page";
 @import "04-templates/court-rules";
 @import "04-templates/details";
 @import "04-templates/form-page";
