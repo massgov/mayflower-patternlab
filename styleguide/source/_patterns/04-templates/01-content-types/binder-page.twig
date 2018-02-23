@@ -23,7 +23,7 @@
           {% for richText in mainContent.contents %}
             {% include "@organisms/by-author/rich-text.twig" %}
           {% endfor %}
-        {% endBlock %}
+        {% endblock %}
 
         {% block pageContent %}
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
