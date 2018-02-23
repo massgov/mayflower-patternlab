@@ -19,9 +19,11 @@
           {% include "@molecules/listing-table.twig" %}
         {% endblock %}
 
-        {% for richText in mainContent.contents %}
-          {% include "@organisms/by-author/rich-text.twig" %}
-        {% endfor %}
+        {% block mainContent %}
+          {% for richText in mainContent.contents %}
+            {% include "@organisms/by-author/rich-text.twig" %}
+          {% endfor %}
+        {% endBlock %}
 
         {% block pageContent %}
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
