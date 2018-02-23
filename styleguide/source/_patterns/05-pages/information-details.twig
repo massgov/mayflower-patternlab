@@ -12,10 +12,10 @@
 
 {% block pageContent %}
 
-  {% set richText = pageContent.moreInfo %}
+  {% set richText = pageContent.section1 %}
   {% include "@organisms/by-author/rich-text.twig" %}
 
-  {% set richText = pageContent.history %}
+  {% set richText = pageContent.section2 %}
   {% include "@organisms/by-author/rich-text.twig" %}
 
   {% if pageContent.pullquoteCallout %}

@@ -44,6 +44,10 @@
 
   .sidebar {
 
+    @include breakpoint ($bp-m) {
+      padding-top: 10px;
+    }
+
     .ma__link-list {
       display: none;
 
