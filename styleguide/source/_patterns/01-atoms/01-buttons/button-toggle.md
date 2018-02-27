@@ -1,7 +1,7 @@
 ---
 title: Button Toggle
 ---
-Description: Two link `<a>` elements which toggle between two values.
+Description: Two link `button` elements which toggle between two values.
 
 ## State: New as of 5.14.0
 
@@ -13,16 +13,15 @@ buttonToggle {
       type: string / required
     text:
       type: string / required
+  },{
+    value:
+      type: string / required
+    text:
+      type: string / required
   }]
-  href:
+  id:
     type: string (url) / required
-  info:
-    type: string / optional
-  size:
-    type: string / optional ("" or "small")
-  theme:
-    type: string / optional ("" or "alt")
-  outline:
-    type: boolean
+  labelText:
+    type: string / required
 }
 ~~~
