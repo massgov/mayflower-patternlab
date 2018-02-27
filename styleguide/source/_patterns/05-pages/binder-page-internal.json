@@ -124,7 +124,8 @@
 		  "href": "#"
 		},{
 		  "text": "Rule 41. Dismissal of Actions",
-		  "href": "#"
+		  "href": "#",
+      "isCurrentPage": true
 		},{
 		  "text": "Rule 42. Consolidation: Separate Trials",
 		  "href": "#"

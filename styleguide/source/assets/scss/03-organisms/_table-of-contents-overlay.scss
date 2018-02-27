@@ -18,8 +18,8 @@
       line-height: .65em;
       overflow: hidden;
       position: absolute;
-	right: 15px;
-	top: calc(50% - 1rem);
+        right: 15px;
+        top: calc(50% - 1rem);
       transform-origin: center center;
       transition: transform .2s ease;
     }
@@ -27,16 +27,16 @@
     &:before {
       content: "";
       position: absolute;
-	right: 10px;
-	top: calc(50% - 1rem - 2px);
+        right: 10px;
+        top: calc(50% - 1rem - 2px);
       width: 28px;
       height: 28px;
       opacity: 0;
       transition: opacity .2s ease;
 
       @media ($bp-small-min) {
-	width: 30px;
-	height: 30px;
+        width: 30px;
+        height: 30px;
       }
     }
 
@@ -54,7 +54,7 @@
       padding-right: 10px;
 
       @media ($bp-small-max) {
-	display: block;
+        display: block;
       }
     }
   }
@@ -66,7 +66,7 @@
   .ma__toc--hierarchy__accordion {
     .ma__toc--hierarchy__title {
       padding-left: 16px;
-	border-left: 10px solid transparent;
+      border-left: 10px solid transparent;
     }
   }
 
@@ -97,10 +97,10 @@
 
     .ma__toc--toc__toggle {
       &:after {
-	transform: rotate(45deg);
+        transform: rotate(45deg);
       }
       &:before {
-	opacity: 1;
+        opacity: 1;
       }
     }
 
@@ -108,6 +108,24 @@
       max-height: calc(100% - (1rem + 40px));
       overflow-y: scroll;
       padding-bottom: 4rem;
+    }
+  }
+
+  // current page indicator
+  .ma__toc--hierarchy__container li {
+    position: relative;
+
+    &.is-current-page:before {
+      content: "";
+      position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        height:100%;
+    }
+    .ma__toc--hierarchy__accordion-content .is-current-page:before {
+      left: -20px;
     }
   }
 }

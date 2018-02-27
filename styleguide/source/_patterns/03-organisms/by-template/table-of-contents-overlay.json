@@ -17,10 +17,11 @@
 	    {
 	      "text": "Thing One",
 	      "href": "#"
-	    },
-	    {
-	      "text": "Thing Two",
-	      "href": "#"
+        },
+        {
+          "text": "Thing Two",
+          "href": "#",
+          "isCurrentPage": true
 	    }
 	  ]
 	},{
