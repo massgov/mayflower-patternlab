@@ -7,10 +7,10 @@ ___SEMANTIC VERSION (see below)___
 
 
 ___POST DEPLOY STEPS___
-1. replace button sort with button toggle in molecules/results-heading
+- None
 
 ___CHANGE TYPES___
-- Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label
+- Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label. This will be used in the search spa.
 
 Note: See http://keepachangelog.com/ for more info about changelogs.
 
