@@ -1,6 +1,6 @@
 {
   "pageHeader": {
-    "category": "Rule of Court Category",
+    "category": "Rule of court sample page",
     "subCategory": {
       "title": "Rule of Court Optional Sub-category",
       "level": "",
@@ -17,27 +17,43 @@
     "publishState": null,
     "optionalContents": [
       {
-    "path": "@molecules/listing-table.twig",
-    "data": {
-      "listingTable": {
-	"rows": [{
-	  "label": "Organization:",
-	  "text": "Massachusetts Trial Court Libraries"
-	},{
-	  "label": "Date Published:",
-	  "text": "9/1/2017"
-	},{
-	  "label": "Last Updated:",
-	  "text": "10/1/2017"
-	},{
-	  "label": "Volume:",
-	  "text": "Fall 2017"
-	},{
-	  "label": "Serial Number:",
-	  "text": "2018-0324S"
-	}]
+      "path": "@molecules/listing-table.twig",
+      "data": {
+	"listingTable": {
+	  "rows": [{
+	    "label": "Courts:",
+	    "text": "This whole list is optional"
+	  },{
+	    "label": "Adopted Date:",
+	    "text": "November 11, 2011"
+	  },{
+	    "label": "Effective Date:",
+	    "text": "November 11, 2011"
+	  },{
+	    "label": "Referenced Sources:",
+	    "text": "760 CMR 4.00 M.G.L c. 121B ..."
+	  },{
+	    "label": "Updates:",
+	    "visibleItems": 2,
+	    "moreLabel": "show more updates",
+	    "lessLabel": "show less updates",
+	    "items": [{
+	      "text": "<a href=\"#\">Amended September 24, 2015, effective January 1, 2016</a>"
+	    },{
+	      "text": "Amended July 17, 2007 effective October 1, 2007"
+	    },{
+	      "text": "Amended June 2, 2003 effective October 18, 2003"
+	    }]
+	  }]
+	}
       }
-    }
+      },{
+	"path": "@atoms/11-text/paragraph.twig",
+	"data": {
+	  "paragraph" : {
+	    "text": "this is a court rules page, and this is an optional description field. For shorter content, authors may choose to use only the overview field. For longer content, this may be a place to summarize findings or to provide a short introduction."
+	  }
+	}
       }]
   },
 
@@ -45,7 +61,7 @@
     {
       "id": "first-binder-nav",
       "tableOfContents": {
-	"title": "The Title of the Table of Contents",
+	"title": "The Rules of Criminal Procedure",
 	"tocSections": [{
 	  "title": {
 	    "text": "Table of Contents"
@@ -56,7 +72,7 @@
 	      "href": "#"
 	    },
 	    {
-	      "text": "1. Scope of Rules",
+	      "text": "I. Scope of Rules--One Form of Action",
 	      "linkItems": [
 		{
 		  "text": "Thing One",
@@ -68,7 +84,7 @@
 		}
 	      ]
 	    },{
-	      "text": "2. Scope of Something Else",
+	      "text": "II. Commencement of Action; Service of Process, Pleadings, otions and Orders",
 	      "linkItems": [
 		{
 		  "text": "Thing One",
@@ -80,7 +96,10 @@
 		}
 	      ]
 	    },{
-	      "text": "3. Some Other Thing",
+	      "text": "III. I am a link with no section",
+	      "href": "#"
+	    },{
+	      "text": "V. Depositions and Discovery",
 	      "linkItems": [
 		{
 		  "text": "Thing One",
@@ -88,6 +107,44 @@
 		},
 		{
 		  "text": "Thing Two",
+		  "href": "#"
+		}
+	      ]
+	    },{
+	      "text": "VI. Trials",
+	      "linkItems": [
+		{
+		  "text": "Rule 38. Jury Trial of Right",
+		  "href": "#"
+		},{
+		  "text": "Rule 39. Trial by Jury or by the Court",
+		  "href": "#"
+		},{
+		  "text": "Rule 40. Assignment of Cases for Trial: Continuances",
+		  "href": "#"
+		},{
+		  "text": "Rule 41. Dismissal of Actions",
+		  "href": "#"
+		},{
+		  "text": "Rule 42. Consolidation: Separate Trials",
+		  "href": "#"
+		},{
+		  "text": "Rule 43. Evidence",
+		  "href": "#"
+		},{
+		  "text": "Rule 44. Proof of Official Records",
+		  "href": "#"
+		},{
+		  "text": "Rule 44.1. Determination of Foreign Law",
+		  "href": "#"
+		},{
+		  "text": "Rule 38. Jury Trial of Right",
+		  "href": "#"
+		},{
+		  "text": "Rule 38. Jury Trial of Right",
+		  "href": "#"
+		},{
+		  "text": "Rule 38. Jury Trial of Right",
 		  "href": "#"
 		}
 	      ]
@@ -100,19 +157,19 @@
 	  },
 	  "sections": [
 	    {
-	      "text": "Executive Summary",
+	      "text": "Appendix as a link to a page",
 	      "href": "#"
 	    },
 	    {
 	      "iconSize": "",
 	      "icon": "@atoms/05-icons/svg-doc-docx.twig",
 	      "decorativeLink": {
-		"text": "Link to a file for download",
+		"text": "Appendix item as a download",
 		"href": "#",
 		"info": ""
 	      },
-	      "size": "40kb",
-	      "format": "DOCX"
+	      "size": "1mb",
+	      "format": "PDF"
 	    }
 	  ]
 	}]
@@ -124,11 +181,11 @@
 	    "info": "",
 	    "direction": "left"
 	  },
-	  "label": "Previous Section",
-	  "title": "previous page's title",
+	  "label": "Previous",
+	  "title": "",
 	  "link": {
 	    "href": "#",
-	    "text": "Page description from the previous page to this one",
+	    "text": "Rule 99: A Rule About Something",
 	    "info": ""
 	  }
 	},
@@ -138,11 +195,11 @@
 	    "info": "",
 	    "direction": "right"
 	  },
-	  "label": "Next Section",
-	  "title": "next page's title",
+	  "label": "Next",
+	  "title": "",
 	  "link": {
 	    "href": "#",
-	    "text": "Page description from the next page to this one",
+	    "text": "Rule 101: A Rule About Something",
 	    "info": ""
 	  }
 	}
@@ -173,17 +230,14 @@
   "jumpLinks": {
     "title": "In this section",
     "links": [{
-      "text": "6.01: Statutory Authority to Promulgate Exemptions",
+      "text": "(a) Civil Cases",
       "href": "link1"
     },{
-      "text": "6.02: Exemptions to Encourage Volunteer Public Service, and to Promote Education, Training, and Professional Development",
+      "text": "(b) Criminal Cases",
       "href": "link2"
     },{
-      "text": "6.03: Exemption to Permit Public Employees Who Are Parents to Advocate for Their Children",
+      "text": "(c) General",
       "href": "link3"
-    },{
-      "text": "6.04: Exemption for the National Guard and Volunteer Medical or Rescue Organizations in Exigent Circumstances",
-      "href": "link4"
     },{
       "text": "Downloads",
       "href": "downloads"

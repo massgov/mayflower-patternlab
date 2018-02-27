@@ -14,6 +14,7 @@ export default function (window,document,$,undefined) {
       // cache offset
       $toggleEl.data('staticoffset', $toggleEl.offset().top);
     }
+    $('body').toggleClass('scroll-disabled', !isOpen);
     $('html, body').animate({
       // if already open, use the static offset to return to
       scrollTop: isOpen ? $toggleEl.data('staticoffset') : $toggleEl.offset().top

@@ -5,7 +5,7 @@
 
   .ma__toc--toc__toggle {
     border: 0;
-    padding: 20px;
+    padding: 20px  60px 20px 20px;
     display: block;
     width: 100%;
     text-align: left;
@@ -19,7 +19,7 @@
       overflow: hidden;
       position: absolute;
 	right: 15px;
-	top: 20px;
+	top: calc(50% - 1rem);
       transform-origin: center center;
       transition: transform .2s ease;
     }
@@ -28,7 +28,7 @@
       content: "";
       position: absolute;
 	right: 10px;
-	top: 18px;
+	top: calc(50% - 1rem - 2px);
       width: 28px;
       height: 28px;
       opacity: 0;
@@ -51,6 +51,7 @@
     .ma__toc__subtitle {
       text-transform: uppercase;
       font-size: 1rem;
+      padding-right: 10px;
 
       @media ($bp-small-max) {
 	display: block;
@@ -92,7 +93,7 @@
       right: 0;
       bottom: 0;
     margin-top: 0 !important;
-    z-index: 90;
+    z-index: 100;
 
     .ma__toc--toc__toggle {
       &:after {
