@@ -1,9 +1,10 @@
 ---
 title: Button Toggle
 ---
-Description: Two link `button` elements which toggle between two values.
+Description: Two linked `button` elements which toggle between two values.
 
-## State: New as of 5.14.0
+### Status: 
+* New as of 5.14.0
 
 ### Variables:
 ~~~
