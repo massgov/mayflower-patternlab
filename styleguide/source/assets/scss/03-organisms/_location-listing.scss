@@ -23,7 +23,7 @@
     @media ($bp-large-min){
       min-height: 100vh;
       order: 2;
-      width: 40%;    
+      width: 40%;
     }
   }
 
@@ -92,8 +92,10 @@
 
       &.is-active,
       &:hover {
+        @media ($bp-large-min) {
         border-top-width: 3px;
         padding-top: 28px;
+        }
       }
 
       &__link {

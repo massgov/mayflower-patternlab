@@ -119,9 +119,11 @@ Bump version to appease the automation Gods.
 - DP-5914 - The spacing has been fixed on [Topic page Section links](http://mayflower.digital.mass.gov/?p=pages-topic) (i.e. Topic cards) which display Callout links (i.e. links to Services).
 - DP-6106 - The mobile styling for the banner on [Topic pages](http://mayflower.digital.mass.gov/?p=pages-topic&w=350px) has been made more consistent to other page banners: the height is flexible, the content is vertically centered, the icon removed, and the colored background fills the width of the screen.
 
+
 ### Removed
 - DP-3060 - The outline has been removed from the Heading which appeared when a [How-To](http://mayflower.digital.mass.gov/?p=pages-howto) subnav anchor link (i.e. "Next Steps") is clicked.
 - DP-5914 - Remove extra padding on callout links
+- DP-5525 - Disable location listing scrolling for mobile
 
 ### Migrate Path
 - DP-5385 - To use the new more link for Suggested Pages, populate the optional `suggestPages.more` property with the data for a Link pattern.
