@@ -8,10 +8,6 @@
       "text":"Relevance"
     }],
     "id": "sort",
-    "labelText":"Sort by:",
-    "info": "",
-    "size": "",
-    "theme": "",
-    "outline": false
+    "labelText":"Sort by:"
   }
 }
