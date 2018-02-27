@@ -25,5 +25,4 @@ ___CHANGE IMPACT___
 - Major
 - Patch
 
-___SEMANTIC VERSION___
-This should be done by the developer who is merging this PR into dev branch. 
+Note: Refer to `docs/versioning.md` for more info about change impact according to semantic versioning.
