@@ -228,8 +228,10 @@ $page-banner-height: 330px;
       font-size: 5.125rem;
     }
 
-    & > span {
+    & > abbr {
       font-size: .4em;
+      border: none;
+      text-decoration: none;
     }
   }
 
