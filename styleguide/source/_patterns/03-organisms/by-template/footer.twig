@@ -1,6 +1,3 @@
-{% if floatingAction %}
-  {% include "@molecules/floating-action.twig" %}
-{% endif %}
 <footer class="ma__footer js-footer" id="footer">
   <div class="ma__footer__container">
     <div class="ma__footer__nav">
@@ -28,6 +25,9 @@
     </button>
   {% endif %}
 </footer>
+{% if floatingAction %}
+  {% include "@molecules/floating-action.twig" %}
+{% endif %}
 
 {% if googleLanguages %}
   <script>
