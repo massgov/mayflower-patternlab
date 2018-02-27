@@ -27,7 +27,9 @@
   .ma__toc--hierarchy__container {
     position: relative;
     top: -20px;
+    padding: 0;
     padding-top: 20px;
+    list-style: none;
 
     .ma__decorative-link {
       padding: 10px 20px;
@@ -41,6 +43,7 @@
 
 .ma__toc--hierarchy__accordion {
   .ma__toc--hierarchy__accordion-content {
+    list-style: none;
     display: none;
     padding: 10px 0 10px 20px;
   }
