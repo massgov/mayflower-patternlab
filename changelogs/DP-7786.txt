@@ -1,0 +1,20 @@
+___DESCRIPTION___
+Change_type (see below)
+Change_impact (see below)
+- DP-7786: create sort by variant
+
+___SEMANTIC VERSION (see below)___
+
+
+___POST DEPLOY STEPS___
+1. replace button sort with button toggle in molecules/results-heading
+
+___CHANGE TYPES___
+- Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label
+
+Note: See http://keepachangelog.com/ for more info about changelogs.
+
+___CHANGE IMPACT___
+- Minor
+
+Note: Refer to `docs/versioning.md` for more info about change impact according to semantic versioning.
