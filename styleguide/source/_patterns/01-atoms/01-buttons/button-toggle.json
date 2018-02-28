@@ -2,10 +2,12 @@
   "buttonToggle":{
     "options":[{
       "value":"",
-      "text":"Date"
+      "text":"Date",
+      "selected": false
     },{
       "value":"",
-      "text":"Relevance"
+      "text":"Relevance",
+      "selected": true
     }],
     "id": "sort",
     "labelText":"Sort by:"
