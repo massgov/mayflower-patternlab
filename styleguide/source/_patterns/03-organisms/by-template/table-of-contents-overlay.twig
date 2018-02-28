@@ -1,10 +1,19 @@
 <div class="ma__toc--overlay js-inline-overlay" id="{{tableOfContentsOverlay.id}}">
-  <button type="button" class="ma__toc--toc__toggle js-inline-overlay-toggle" aria-expanded="false" aria-controls="toc-overlay">
-    <span class="ma__toc--toc__toggle-title">
-      <span class="ma__toc__subtitle">This is a part of:</span>
-      {{ tableOfContentsOverlay.title}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}
-    </span>
-  </button>
+  <div class="ma__toc--toc__title">
+    <span class="ma__toc__subtitle">This is a part of:</span>
+    {% set decorativeLink = tableOfContentsOverlay.title %}
+    {% include "@atoms/decorative-link.twig" %}
+    <button type="button" class="ma__toc--toc__toggle js-inline-overlay-toggle" aria-expanded="false" aria-controls="toc-overlay">
+      <span class="show">
+        +
+        <span class="ma__visually-hidden">Show table of contents</span>
+      </span>
+      <span class="hide">
+        &times;
+        <span class="ma__visually-hidden">Hide table of contents</span>
+      </span>
+    </button>
+  </div>
   <div class="ma__toc--overlay__container js-inline-overlay-content" id="toc-overlay">
     {% for tocSection in tableOfContentsOverlay.tocSections %}
       {% set tableOfContentsHierarchy = tocSection %}

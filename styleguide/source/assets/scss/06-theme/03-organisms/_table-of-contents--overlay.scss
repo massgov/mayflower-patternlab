@@ -1,20 +1,20 @@
 .ma__toc--overlay {
   background: transparent;
 
-  .ma__toc--toc__toggle {
+  .ma__toc--toc__title {
     background: $c-gray-f2f2f2;
     color: $c-theme-blue;
-    font-weight: bold;
-    vertical-align: middle;
-    svg {
-      fill: $c-theme-blue;
-    }
-    &:before {
-      background-color: $c-theme-blue;
-    }
   }
   .ma__toc--hierarchy {
     border-bottom: 2px solid $c-gray-dcdcdc;
+  }
+
+  .ma__toc--toc__toggle[aria-expanded="false"] {
+    color: $c-theme-blue;
+  }
+  .ma__toc--toc__toggle[aria-expanded="true"] {
+    color: $c-white;
+    background: $c-theme-blue;
   }
 
   .ma__toc__subtitle {
@@ -24,20 +24,16 @@
     .ma__toc--hierarchy__title {
       border-left-color: transparent;
     }
-    &.is-open .ma__toc--hierarchy__title,
-    &.is-open .ma__toc--hierarchy__title:focus {
+    .ma__toc--hierarchy__title.is-current {
       border-left-color: rgba($c-theme-green, 0.5) !important;
     }
   }
 
   &.is-open {
     background: $c-white;
-    .ma__toc--toc__toggle:after {
-      color: $c-white;
-    }
   }
 
-  li.is-current-page:before {
+  li.is-current:before {
     background: $c-theme-green;
   }
 }

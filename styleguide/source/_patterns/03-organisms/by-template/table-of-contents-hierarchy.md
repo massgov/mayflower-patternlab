@@ -10,6 +10,7 @@ This Pattern shows an expantable table of contents which can contain simple link
 
 ### Usage Guidelines
 * This is meant to be used to contain a mix of links, download links, or section titles with child links/download links within accordions.
+* `isCurrent` flags are only applied when this organism is used within the table-of-contents-overlay organism. Additionally, `isCurrent` should be applied to both the top level of an item containing `linkItems`, as well as the item within `linkItems`.
 
 ### Variables
 ~~~
@@ -24,11 +25,12 @@ tableOfContentsHierarchy: {
         {
           text: string / required,
           href: string / required,
-          isCurrentPage: boolean / optional
+          isCurrent: boolean / optional
         }
         or
         {
             text: string / required,
+            isCurrent: boolean / optional
             linkItems: [{
                 type: mixed...
                   downloadLink
@@ -36,7 +38,7 @@ tableOfContentsHierarchy: {
                   {
                     text: string / required,
                     href: string / required,
-                    isCurrentPage: boolean / optional
+                    isCurrent: boolean / optional
                   }
             }]
         }

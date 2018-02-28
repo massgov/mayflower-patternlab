@@ -3,7 +3,7 @@
   margin-top: 20px;
   transition: background .2s ease;
 
-  .ma__toc--toc__toggle {
+  .ma__toc--toc__title {
     border: 0;
     padding: 20px  60px 20px 20px;
     display: block;
@@ -11,55 +11,21 @@
     text-align: left;
     position: relative;
 
-    &:after {
-      font-size: 2.5rem;
-      font-weight: normal;
-      content: "+";
-      line-height: .65em;
-      overflow: hidden;
-      position: absolute;
-        right: 15px;
-        top: calc(50% - 1rem);
-      transform-origin: center center;
-      transition: transform .2s ease;
-      @media ($bp-small-min) {
-        right: 25px;
-      }
+    .ma__decorative-link {
+      width: auto;
     }
 
-    &:before {
-      content: "";
-      position: absolute;
-        right: 10px;
-        top: calc(50% - 1rem - 2px);
-      width: 28px;
-      height: 28px;
-      opacity: 0;
-      transition: opacity .2s ease;
+  }
+  .ma__toc__subtitle {
+    text-transform: uppercase;
+    font-size: 1rem;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 10px;
+    font-weight: bold;
 
-      @media ($bp-small-min) {
-        right: 20px;
-        width: 30px;
-        height: 30px;
-      }
-    }
-
-    svg {
-      display: inline-block;
-      height: .6em;
-      margin-right: -.8em;
-      width: .6em;
-      opacity: 0.5;
-    }
-
-    .ma__toc__subtitle {
-      text-transform: uppercase;
-      font-size: 1rem;
-      padding-right: 10px;
-
-      @media ($bp-small-max) {
-        display: block;
-      }
+    @media ($bp-small-max) {
+      display: block;
     }
   }
 
@@ -71,6 +37,9 @@
     .ma__toc--hierarchy__title {
       padding-left: 16px;
       border-left: 10px solid transparent;
+      &:focus {
+        border-left-color: transparent !important;
+      }
     }
   }
 
@@ -90,6 +59,35 @@
     overflow: hidden;
     transition: max-height .2s ease;
   }
+
+  .ma__toc--toc__toggle {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    font-size: 2.5rem;
+    line-height: 0.95;
+    border: none;
+    background: transparent;
+    transition: all 0.2s ease;
+    > * {
+      transition: transform 1s ease;
+      display: inline-block;
+    }
+  }
+
+  .ma__toc--toc__toggle[aria-expanded="false"] {
+    .hide {
+      display: none;
+    }
+  }
+  .ma__toc--toc__toggle[aria-expanded="true"] {
+    .show {
+      display: none;
+    }
+  }
+
 
   &.is-open {
     position: fixed;
@@ -111,15 +109,6 @@
       background-color: #fff;
     }
 
-    .ma__toc--toc__toggle {
-      &:after {
-        transform: rotate(45deg);
-      }
-      &:before {
-        opacity: 1;
-      }
-    }
-
     .ma__toc--overlay__container {
       max-height: calc(100% - (1rem + 40px));
       overflow-y: scroll;
@@ -131,7 +120,7 @@
   .ma__toc--hierarchy__container li {
     position: relative;
 
-    &.is-current-page:before {
+    &.is-current:before {
       content: "";
       position: absolute;
         left: 0;
@@ -140,7 +129,7 @@
         width: 10px;
         height:100%;
     }
-    .ma__toc--hierarchy__accordion-content .is-current-page:before {
+    .ma__toc--hierarchy__accordion-content .is-current:before {
       left: -20px;
     }
   }

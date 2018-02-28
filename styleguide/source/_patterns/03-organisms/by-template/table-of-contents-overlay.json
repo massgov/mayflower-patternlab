@@ -1,7 +1,11 @@
 {
   "tableOfContentsOverlay" : {
     "id": "overlay-toc",
-    "title": "The Title of the Table of Contents",
+    "title": {
+        "text": "The Title of the Table of Contents",
+        "href": "#",
+        "info": ""
+    },
     "tocSections": [{
       "title": {
 	"text": "Table of Contents"
@@ -13,6 +17,7 @@
 	},
 	{
 	  "text": "1. Scope of Rules",
+      "isCurrent": true,
 	  "linkItems": [
 	    {
 	      "text": "Thing One",
@@ -21,7 +26,7 @@
         {
           "text": "Thing Two",
           "href": "#",
-          "isCurrentPage": true
+          "isCurrent": true
 	    }
 	  ]
 	},{
