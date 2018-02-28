@@ -18,15 +18,26 @@ tableOfContentsHierarchy: {
     type: coloredHeading / required
   },
   sections: [{
-    type: mixedTypes...
+    type: mixed...
         downloadLink
         or
-        decorativeLink
+        {
+          text: string / required,
+          href: string / required,
+          isCurrentPage: boolean / optional
+        }
         or
         {
             text: string / required,
             linkItems: [{
-                type: decorativeLink or downloadLink
+                type: mixed...
+                  downloadLink
+                  or
+                  {
+                    text: string / required,
+                    href: string / required,
+                    isCurrentPage: boolean / optional
+                  }
             }]
         }
   }]
