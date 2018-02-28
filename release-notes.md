@@ -13,6 +13,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.13.1 (2/28/2018)
+
+
+## Added
+
+- DP-7786: Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label.
+
+- DP-7063: Added SVG Chat icon
 
 ## 5.13.0 (2/16/2018)
 
