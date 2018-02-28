@@ -1,0 +1,13 @@
+{
+  "buttonToggle":{
+    "options":[{
+      "value":"",
+      "text":"Date"
+    },{
+      "value":"",
+      "text":"Relevance"
+    }],
+    "id": "sort",
+    "labelText":"Sort by:"
+  }
+}
