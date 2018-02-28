@@ -100,6 +100,17 @@
     margin-top: 0 !important;
     z-index: 100;
 
+    &:before {
+      content: "";
+      position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      z-index: -1;
+      background-color: #fff;
+    }
+
     .ma__toc--toc__toggle {
       &:after {
         transform: rotate(45deg);
