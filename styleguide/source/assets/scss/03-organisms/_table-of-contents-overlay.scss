@@ -22,6 +22,9 @@
         top: calc(50% - 1rem);
       transform-origin: center center;
       transition: transform .2s ease;
+      @media ($bp-small-min) {
+        right: 25px;
+      }
     }
 
     &:before {
@@ -35,6 +38,7 @@
       transition: opacity .2s ease;
 
       @media ($bp-small-min) {
+        right: 20px;
         width: 30px;
         height: 30px;
       }
@@ -75,6 +79,7 @@
     top: 0;
     background-color: transparent;
     border: 0;
+    margin-bottom: 0;
   }
   .ma__toc--hierarchy {
     margin-top: 4rem;

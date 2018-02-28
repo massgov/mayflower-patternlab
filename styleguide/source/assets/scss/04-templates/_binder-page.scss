@@ -1,9 +1,15 @@
 .ma__binder-page {
     .ma__header-tags {
-        border: none;
+        max-width: 100%;
     }
 
     .ma__content-eyebrow + .ma__illustrated-header {
         margin-top: 0;
+    }
+
+    .ma__page-header__content {
+        @media ($bp-medium-min) {
+            padding-top: 40px;
+        }
     }
 }
