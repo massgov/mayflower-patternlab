@@ -1,4 +1,6 @@
 <!-- Please use TICKET Description of ticket as PR title (i.e. DP-1234 Add back-to link on Announcement template)  -->
+Any PRs being created needs a changelog.txt file before being merged into dev. See: [Change Log Instructions](/docs/change-log-instructions.md)
+
 
 ## Description
 <!-- A few sentences describing the overall goals of the pull request's commits.-->

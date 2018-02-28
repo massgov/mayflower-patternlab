@@ -5,7 +5,12 @@
   {% set imageAlt = illustratedHeader.bgTitle %}
 {% endif %}
 
-<section class="ma__illustrated-header">
+{% set illustratedHeaderClass = "ma__illustrated-header" %}
+{% if illustratedHeader.inverted %}
+  {% set illustratedHeaderClass = "ma__illustrated-header ma__illustrated-header--inverted" %}
+{% endif %}
+
+<section class="{{illustratedHeaderClass}}">
   <div class="ma__illustrated-header__container">
     <div class="ma__illustrated-header__content">
       <div class="ma__illustrated-header__category" aria-hidden="true">
