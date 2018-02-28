@@ -1,5 +1,5 @@
 <!-- Please use TICKET Description of ticket as PR title (i.e. DP-1234 Add back-to link on Announcement template)  -->
-Any PRs being created needs a changelog.txt file before being merged into dev. See: [Change Log Instructions](/docs/change-log-instructions.md)
+Any PRs being created needs a changelog.txt file before being merged into dev. See: [Change Log Instructions](https://github.com/massgov/mayflower/blob/dev/docs/changelog-log-instructions.md)
 
 
 ## Description
