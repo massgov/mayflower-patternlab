@@ -1,8 +1,17 @@
 {% extends '@templates/01-content-types/information-details.twig' %}
 
-
 {% block header %}
   {% include "@organisms/by-template/header.twig" %}
+{% endblock %}
+
+{% block preContent %}
+  {% set pageHeader = preContent.pageHeader %}
+  {% include "@organisms/by-template/page-header.twig" %}
+
+  {% if preContent.stickyTOC %}
+    {% set stickyTOC = preContent.stickyTOC %}
+    {% include "@organisms/by-template/sticky-toc.twig" %}
+  {% endif %}
 {% endblock %}
 
 {% block preContentMedia %}
