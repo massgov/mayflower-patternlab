@@ -1,5 +1,5 @@
 .ma__sticky-toc {
-
+  display: none;
   &__inner {
 
     @media ($bp-small-min) {
@@ -75,14 +75,10 @@
   }
 
   &__footer {
+    display: none;
     border-top: 1px solid $c-bd-divider;
-    display: block;
     font-size: 1.25rem;
     padding: 0 20px 20px 0;
     width: 100%;
-
-    @media ($bp-x-small-max) {
-      display: none;
-    }
   }
 }
