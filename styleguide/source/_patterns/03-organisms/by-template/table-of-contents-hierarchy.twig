@@ -2,6 +2,7 @@
   {% set coloredHeading = tableOfContentsHierarchy.coloredHeading %}
   {% include "@atoms/04-headings/colored-heading.twig" %}
   <ul class="ma__toc--hierarchy__container">
+      {% block binderSection %}
       {% for section in tableOfContentsHierarchy.sections %}
         {% if section.linkItems|length > 0 %}
           <li class="ma__toc--hierarchy__accordion js-accordion">
@@ -22,6 +23,7 @@
               {% endfor %}
             </ul>
           </li>
+        {% endblock %}
         {% elseif section.icon %}
           <li>
             {% set downloadLink = section %}
