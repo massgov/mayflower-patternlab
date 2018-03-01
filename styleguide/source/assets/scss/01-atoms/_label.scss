@@ -18,4 +18,12 @@
       margin-top: inherit;
     }
   }
+
+  &--inline {
+    display: inline;
+  }
+
+  &--small {
+    font-size: 18px;
+  }
 }

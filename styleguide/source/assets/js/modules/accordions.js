@@ -22,6 +22,7 @@ export default function (window,document,$,undefined) {
     let $el = $(this),
         $link = $el.find('.js-accordion-link'),
         $content = $el.find('.js-accordion-content'),
+        $status = $el.find('.js-accordion-status'),
         id = $content.attr('id') || 'accordion' + (index + 1),
         active = checkActive($el),
         open = $el.hasClass('is-open');
@@ -40,8 +41,10 @@ export default function (window,document,$,undefined) {
         open = $el.hasClass('is-open');
         if(open){
           $content.stop(true,true).slideUp();
+          $status.attr('aria-label', 'click to show info');
         } else {
           $content.stop(true,true).slideDown();
+          $status.attr('aria-label', 'click to hide info');
         }
         $link.attr('aria-expanded',!open);
         $el.toggleClass('is-open');
