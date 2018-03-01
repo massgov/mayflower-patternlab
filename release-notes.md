@@ -11,6 +11,70 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+
+## 5.13.0 (2/16/2018)
+
+## Changed
+- DP-7907: Adds support for details to  [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-with-details&view=c) (e.g calls to action on a location page header). This includes adding an eyebrow, white theme variant, time note, and emphasized text to the callout link molecule. #703
+
+## Added
+
+- DP-7307 & DP-7483: organization image links #670
+    - Add logo link molecule & logo list organism for use on service page
+    - Add block
+    - Adding accordion behaivor to image link lists
+
+## Fixed
+
+- DP-7307 & DP-7483: organization image links #670
+    - relative pathing so things work everywhere
+    - remove borders when logo list is in sidebar, align left text & images when no image present for some links
+    - rename logoLink to imageLink, add variant for block treatment
+    - fix indentation, spacing
+    - adjust accordion toggle for various length of items
+
+## 5.12.4 (2/13/2018)
+
+### Fixed
+- (For release masters:) `sed` from bash script on macos is not being very kind.  Iterating on the release script again.
+
+## 5.12.3 (2/13/2018)
+
+### Fixed
+- (For release masters:) Touch up release docs and iterate on s3 deploy scripts for smoother release.
+
+## 5.12.2 (2/8/2018)
+
+### Fixed
+- (For release masters:) Touch up release docs and iterate on s3 deploy scripts for smoother release.
+
+## 5.12.1 (2/8/2018)
+
+### Fixed
+- (For devs) Iterate on the release process to make it more smooth.
+
+## 5.12.0 (2/7/2018)
+
+### Changed
+- DP-7718: Adds support for Description text to [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-as-description&view=c) (e.g calls to action on a location page header).
+- D-7725: Adds Support for Blue Variant of [@atoms/colored-heading](https://mayflower.digital.mass.gov/?p=atoms-colored-heading-blue&view=c) (e.g. header in the press filter organism)
+
+## Fixed
+- DP-7359: Make line breaks on word in [richtext](https://mayflower.digital.mass.gov/?p=organisms-rich-text) links compatible with non-chrome browsers.
+- DP-7490: Adjust the [page banner](https://mayflower.digital.mass.gov/?p=organisms-page-banner-as-overlay) and its children for flexble height.
+
+## Added
+- (For Devs): Adds shell scripts and circle config to deploy feature branches and production tags to mayflower.digital.mass.gov [s3 bucket|https://github.com/massgov/mayflower/blob/dev/docs/s3-architecture.md] AND to publish static assets on [NPM|https://www.npmjs.com/package/@massds/mayflower]. See new [release process|https://github.com/massgov/mayflower/blob/dev/docs/release.md]
+
+## 5.11.0 (2/5/2018)
+
+### Changed
+- DP-7478 - Page based alerts can now span multiple rows as needed.
+- DP-7193 - Contact Accordians now have a more flexible layout for better experience on wider widths.
+
+### Added
+- DP-7265 - Add new 'Mosaic Grid' organism with 'Featured Item' molecules for use on ['Organization Elected Official' pages](https://mayflower.digital.mass.gov/?p=pages-organization-elected-official).
+
 ## 5.10.1 (1/3/2018)
 
 ### Changed
@@ -25,10 +89,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Changed
 - DP-5916 - We've increased the vertical spacing between the phone number and description on the [Image Promo](http://mayflower.digital.mass.gov/?p=molecules-image-promo-with-map-link&view=c) pattern as it appears on [location listing pages](http://mayflower.digital.mass.gov/?p=pages-location-listing).
-- DP-6916 - We've fixed the bug where long sidebar contact "learn more" links (i.e. on [How To pages](http://mayflower.digital.mass.gov/?p=pages-howto) were being hyphenated. 
+- DP-6916 - We've fixed the bug where long sidebar contact "learn more" links (i.e. on [How To pages](http://mayflower.digital.mass.gov/?p=pages-howto) were being hyphenated.
 
 ### Migrate Path
-- DP-5817 - To implement this new page type, follow the [content type template pattern](https://mayflower.digital.mass.gov/?p=templates-court-rules&view=c).  Note the [backwards compatible extension of the listing table molecule](https://github.com/massgov/mayflower/pull/651/files#diff-831775c0ca12ca6116f93daaa9958ee0R7) to provide accordion function using the existing accordion js module and the [extension of the rich text organism](https://github.com/massgov/mayflower/pull/651/files#diff-085d4a2070c5f2bff38e4817c382b3beR4) (and new [JS](https://github.com/massgov/mayflower/pull/651/files#diff-e8d7776e501f946139bb194df89bef71R10)) to add "outline" indentation and heading anchor links. 
+- DP-5817 - To implement this new page type, follow the [content type template pattern](https://mayflower.digital.mass.gov/?p=templates-court-rules&view=c).  Note the [backwards compatible extension of the listing table molecule](https://github.com/massgov/mayflower/pull/651/files#diff-831775c0ca12ca6116f93daaa9958ee0R7) to provide accordion function using the existing accordion js module and the [extension of the rich text organism](https://github.com/massgov/mayflower/pull/651/files#diff-085d4a2070c5f2bff38e4817c382b3beR4) (and new [JS](https://github.com/massgov/mayflower/pull/651/files#diff-e8d7776e501f946139bb194df89bef71R10)) to add "outline" indentation and heading anchor links.
 - DP-5916 - You'll get [this style patch (from PR#645)](https://github.com/massgov/mayflower/pull/645/files) just by updating your css files!
 - DP-5991 - See the [event content template](http://mayflower.digital.mass.gov/?p=templates-event&view=c) for instructions on implementing this new pattern variation.
 - DP-6517 - Follow the [usage guidelines in the pattern docs](https://mayflower.digital.mass.gov/?p=organisms-ajax-pattern&view=c) to implement this new client side rendering feature.  See [an example implementation](https://github.com/massgov/mayflower/pull/644/files#diff-6619abb22969d972a21c93eb45ce97beR3) with a data transform function.
@@ -36,7 +100,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 5.9.1 (11/29/2017)
 
-Bump version to appease the automation Gods. 
+Bump version to appease the automation Gods.
 
 ## 5.9.0 (11/28/2017)
 
@@ -60,10 +124,10 @@ Bump version to appease the automation Gods.
 - DP-5914 - Remove extra padding on callout links
 
 ### Migrate Path
-- DP-5385 - To use the new more link for Suggested Pages, populate the optional `suggestPages.more` property with the data for a Link pattern. 
+- DP-5385 - To use the new more link for Suggested Pages, populate the optional `suggestPages.more` property with the data for a Link pattern.
 - DP-4572 - To apply this style fix, wrap your press release dateline (i.e. BOSTON) text in `span.ma__rich-text__flame`. (See [massgov/mass PR #1304](https://github.com/massgov/mass/pull/1304/files))
 - DP-5515 - The title text for "action finders" (i.e. What you need to know) are configurable, so just update your implementation to use sentence case to meet our styleguide standards!
-- DP-6111 - To use the new "no events" state for a listing of Event Teasers (i.e. on Org pages), populate the `eventListing.emptyText` and `eventListing.pastMore` properties and leave `eventListing.events` array empty. (See [massgov/mass PR #1443](https://github.com/massgov/mass/pull/1443/files)) 
+- DP-6111 - To use the new "no events" state for a listing of Event Teasers (i.e. on Org pages), populate the `eventListing.emptyText` and `eventListing.pastMore` properties and leave `eventListing.events` array empty. (See [massgov/mass PR #1443](https://github.com/massgov/mass/pull/1443/files))
 
 ## 5.8.1
 
