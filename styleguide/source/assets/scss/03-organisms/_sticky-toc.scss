@@ -1,19 +1,16 @@
 .ma__sticky-toc {
-  margin-bottom: 30px;
   //position: relative // can't have position relative here or the links won't stick for the height of page-content
-
-  @media ($bp-small-min) {
-    margin-bottom: 60px;
-    padding-top: 30px;
-  }
 
   @media print {
     display: none;
   }
 
   &__inner {
+    margin-bottom: 30px;
 
     @media ($bp-small-min) {
+      margin-bottom: 60px;
+      padding-top: 30px;
       padding-bottom: 35px;
     }
   }
