@@ -5,13 +5,13 @@ export default function (window,document,$,undefined) {
   var $tocSections = $('.ma__information-details__content').find('h2');
   var tocSectionCount = $tocSections.length;
 
-  if (tocSectionCount > 3) {
-    $toc.show();
+  if (tocSectionCount < 3) {
+    $toc.remove();
   }
 
-  if (tocSectionCount > 10) {
+  if (tocSectionCount <= 10) {
     if ($(window).width() > 558 ) {
-      $('.ma__sticky-toc__footer').show();
+      $('.ma__sticky-toc__footer').toggle();
     }
   }
 
@@ -30,13 +30,14 @@ export default function (window,document,$,undefined) {
 
   $('.ma__sticky-toc__footer').on('click', function() {
     // show the hidden links
-    $('.ma__sticky-toc__link:gt(10)').toggle();
+    $tocContent.toggleClass('open');
     // hide the button
     $(this).toggle();
   });
 
   $(window).resize(function () {
     $('.ma__sticky-toc__link').removeAttr('style');
+    $tocContent.removeClass('open');
   }).resize();
 }
 (window,document,jQuery);
