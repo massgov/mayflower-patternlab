@@ -17,12 +17,34 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 
 ## Added
+- DP-7786: Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label. #711 #712
+- DP-2082: [a11y] Add intuitive info to the + symbols for accordion buttons  #687
+  - make screen readers not announce the + button in contact accordion
+  -  add accordion status announcement with aria-label
+- DP-7063: Added SVG Chat icon #664
+- (For dev and release masters:) Added change log for the PR process #708 #715
+- DP-7624: binder cover page components #698
+  - New Organism variation "illustrated-header~inverted"
+  - New Organism "table-of-contents-hierarchy"
+  - New Content Type "binder-page"
 
-- DP-7786: Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label.
+### Changed
+- DP-6352: [a11y] change tell us what you think button on all pages to be last item to get keyboard focus #678
+- DP-3222-3914: [a11y] heading levels adjustment for imagePromo items #682
+- DP-6351: [a11y] Change pagination on location listing to be heading #679
+- DP-6350: [a11y] Change search query field place holder text in location #683
+- DP-2405: Change the container for an abbreviation in a page banner title to <abbr> from <span> #688
 
-- DP-7063: Added SVG Chat icon
+## Fixed
+- DP-6712: Fix the Video Dimensions on the Service Detail Page #674
+- DP-1553: [a11y] Correct aria role value #699
+- DP-2403: [a11y] Text info for the social media icons in the footer #691
 
-- (For dev and release masters:) Added change log for the PR process 
+
+### Removed
+- DP-3198: a11y Keyboard focus indicator usability for main menus #676
+  - Removed the poor supported aria-controles from the main navigation tabs to remove the non-functional keyboard instruction in JAWS with Firefox.
+- DP-3252: [a11y] Remove IDs from svg icons #681
 
 ## 5.13.0 (2/16/2018)
 
