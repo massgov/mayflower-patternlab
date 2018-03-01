@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-See [Change Log Instructions](https://github.com/massgov/mayflower/blob/dev/docs/change-log-instructions.md) for directions on updating this file.
+See [Change Log Instructions](docs/changelog-log-instructions.md) for directions on updating this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
@@ -21,6 +21,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - DP-7786: Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label.
 
 - DP-7063: Added SVG Chat icon
+
+- (For dev and release masters:) Added change log for the PR process 
 
 ## 5.13.0 (2/16/2018)
 
