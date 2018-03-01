@@ -1,5 +1,5 @@
 .ma__sticky-toc {
-  display: none;
+
   &__inner {
 
     @media ($bp-small-min) {
@@ -32,6 +32,18 @@
 
     &:hover a {
       border-bottom-color: rgba($c-font-link,.5);
+    }
+
+    &:nth-child(n+12) {
+      display:  none;
+
+      .open & {
+        display: block;
+      }
+
+      .is-open & {
+        display: block;
+      }
     }
 
     @media ($bp-small-max) {
@@ -75,10 +87,13 @@
   }
 
   &__footer {
-    display: none;
     border-top: 1px solid $c-bd-divider;
     font-size: 1.25rem;
     padding: 0 20px 20px 0;
     width: 100%;
+
+    @media ($bp-small-max) {
+      display: none;
+    }
   }
 }
