@@ -21,15 +21,29 @@
 
 {% block pageContent %}
 
+  {% if pageContent.section1 %}
   {% set richText = pageContent.section1 %}
   {% include "@organisms/by-author/rich-text.twig" %}
+  {% endif %}
 
-  {% set richText = pageContent.section2 %}
-  {% include "@organisms/by-author/rich-text.twig" %}
+  {% if pageContent.section2 %}
+    {% set richText = pageContent.section2 %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+  {% endif %}
 
-  {% if pageContent.pullquoteCallout %}
-    {% set pullquoteCallout = pageContent.pullquoteCallout %}
-    {% include "@organisms/by-author/pullquote.twig" %}
+  {% if pageContent.section3 %}
+    {% set richText = pageContent.section3 %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+  {% endif %}
+
+  {% if pageContent.section4 %}
+    {% set richText = pageContent.section4 %}
+    {% include "@organisms/by-author/rich-text.twig" %}
+  {% endif %}
+
+  {% if pageContent.section5 %}
+    {% set richText = pageContent.section5 %}
+    {% include "@organisms/by-author/rich-text.twig" %}
   {% endif %}
 
 {% endblock %}
