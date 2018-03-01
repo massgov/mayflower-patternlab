@@ -82,7 +82,7 @@
   "COMMENT": "****PAGE CONTENT COMPONENTS****",
   "stackedRows": [
     {
-      "title": "",
+      "title": "About Us",
       "id": "",
       "pageContent": [
         {
@@ -90,14 +90,7 @@
           "data": {
             "richText": {
               "rteElements": [
-                {
-                  "path": "@atoms/04-headings/heading-2.twig",
-                  "data": {
-                    "heading2": {
-                      "text": "About Us"
-                    }
-                  }
-                },
+
                 {
                   "path": "@atoms/11-text/paragraph.twig",
                   "data": {
@@ -121,7 +114,7 @@
       ],
       "sideBar": null
     },{
-      "title": "",
+      "title": "Board Members",
       "id": "",
       "pageContent": [
         {
@@ -130,14 +123,7 @@
             "teaserListing": {
               "stacked": false,
               "contained": true,
-              "gridTwoColumns": false,
-              "compHeading": {
-                "title": "Board Members",
-                "sub": "",
-                "color": "",
-                "id": "",
-                "centered": ""
-              },
+              "gridTwoColumns": true,
               "featuredItems": [
                 {
                   "layout": "stacked",
@@ -207,6 +193,7 @@
               ],
               "items": [
                 {
+                  "layout": "stacked",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -245,6 +232,7 @@
                   ]
                 },
                 {
+                  "layout": "stacked",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -270,6 +258,7 @@
                   }]
                 },
                 {
+                  "layout": "stacked",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -295,6 +284,7 @@
                   }]
                 },
                 {
+                  "layout": "stacked",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -320,6 +310,7 @@
                   }]
                 },
                 {
+                  "layout": "stacked",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -345,6 +336,7 @@
                   }]
                 },
                 {
+                  "layout": "stacked",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
