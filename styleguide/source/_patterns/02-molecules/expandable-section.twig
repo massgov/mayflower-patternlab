@@ -1,9 +1,9 @@
 <li class="ma__toc--hierarchy__accordion js-accordion">
   <button class="ma__toc--hierarchy__title js-accordion-link" type="button">
-    {{parentChild.text}}
+    {{expandableSection.text}}
   </button>
   <ul class="ma__toc--hierarchy__accordion-content js-accordion-content">
-    {% for link in parentChild.linkItems %}
+    {% for link in expandableSection.linkItems %}
       <li>
         {% if link.icon %}
           {% set downloadLink = link %}
