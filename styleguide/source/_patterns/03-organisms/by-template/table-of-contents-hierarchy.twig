@@ -5,9 +5,9 @@
       {% block binderSection %}
         {% for section in tableOfContentsHierarchy.sections %}
           {% if section.linkItems|length > 0 %}
-            {% block tocParentWithChildren%}
-              {% set parentChild = section %}
-              {% include "@molecules/toc-parent-with-children.twig" %}
+            {% block tocExpandableSection%}
+              {% set expandableSection = section %}
+              {% include "@molecules/expandable-section.twig" %}
             {% endblock %}
           {% elseif section.icon %}
             <li>
