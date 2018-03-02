@@ -10,17 +10,23 @@ export default function (window,document,$,undefined) {
     let $containerEl = $toggleEl.parents(containerClass);
     let $contentEl = $toggleEl.parents(containerClass).find(contentClass);
     let isOpen = $containerEl.hasClass('is-open');
-    if (!isOpen) {
-      // cache offset
-      $toggleEl.data('staticoffset', $toggleEl.offset().top);
-    }
     $('body').toggleClass('scroll-disabled', !isOpen);
-    $('html, body').animate({
-      // if already open, use the static offset to return to
-      scrollTop: isOpen ? $toggleEl.data('staticoffset') : $toggleEl.offset().top
-    }, 250, function() {
+    // if on mobile & we're closing the overlay, scroll title back into view
+    if (document.documentElement.clientWidth < 840 && isOpen) {
       $containerEl.toggleClass('is-open', !isOpen);
-    });
+      setTimeout(function() {
+        $('html, body').animate({
+          scrollTop: $containerEl.offset().top - 80
+          });
+      }, 250);
+
+    } else {
+      $('html, body').animate({
+        scrollTop: $containerEl.offset().top
+      }, 250, function() {
+        $containerEl.toggleClass('is-open', !isOpen);
+      });
+    }
 
     // Add random ID if no ID present.
     let contentID = $contentEl.attr('id');

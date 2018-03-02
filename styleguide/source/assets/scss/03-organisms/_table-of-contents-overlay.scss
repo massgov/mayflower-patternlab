@@ -56,8 +56,9 @@
 
   .ma__toc--overlay__container {
     max-height: 0;
-    overflow: hidden;
-    transition: max-height .2s ease;
+    opacity: 0;
+    overflow-y: scroll;
+    transition: all .2s ease;
   }
 
   .ma__toc--toc__toggle {
@@ -82,10 +83,24 @@
       display: none;
     }
   }
+
   .ma__toc--toc__toggle[aria-expanded="true"] {
     .show {
       display: none;
     }
+  }
+
+  &:before {
+    content: "";
+    position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    z-index: -1;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
   }
 
 
@@ -99,19 +114,14 @@
     z-index: 100;
 
     &:before {
-      content: "";
-      position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      z-index: -1;
-      background-color: #fff;
+      opacity: 1;
     }
+
 
     .ma__toc--overlay__container {
       max-height: calc(100% - (1rem + 40px));
       overflow-y: scroll;
+      opacity: 1;
       padding-bottom: 4rem;
     }
   }
