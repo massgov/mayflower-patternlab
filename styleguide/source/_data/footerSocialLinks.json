@@ -3,27 +3,27 @@
     "items": [{
       "altText": "Follow us on Facebook",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-facebook.twig"
+      "icon": "facebook"
     },{
       "altText": "Follow us on Twitter",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-twitter.twig"
+      "icon": "twitter"
     },{
       "altText": "Follow us on LinkedIn",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-linkedin.twig"
+      "icon": "linkedin"
     },{
       "altText": "Follow us on Youtube",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-youtube.twig"
+      "icon": "youtube"
     },{
       "altText": "Read our blog",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-blog.twig"
+      "icon": "blog"
     },{
       "altText": "Follow us on Instagram",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-instagram.twig"
+      "icon": "instagram"
     }]
   }
 }
