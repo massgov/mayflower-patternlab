@@ -17,22 +17,25 @@ OPTIMIZED:
 - This approach gets rid of the individual twig templates for icons.
 - Use one twig template to generate any SVGs.
 Requirement:
-- svg file and id need to match. --- in this case no splite.
+- svg file and id need to match. --- in this case no sprite.
 
 Mayflower: /assets/
 Drupal: /themes/custom/mass_theme/
 
 #}
+
+{#
+NOTE: If what this template does is calls the function, it would be better to call the function in parent templates.
+
+{{ icon(icon) }}
+#}
+
+
 {% set assetsPath = url.assetsPath %}
 {% set iconPath = '/' ~ assetsPath ~ '/images/icon-' ~ icon ~ '.svg#icon-' ~ icon %}
 
 <svg aria-hidden="true">
-{# FINAL MARKUP:
-  <use xlink:href="{{ icon('blog') }}"></use>
-
-  TO GENERATE:
-  <use xlink:href="{{ assetsPathImage }}icon-ID.svg#icon-ID"></use>
-#}
   <use xlink:href="{{ iconPath }}"></use>
-{#   <use xlink:href="/{{ url.assetsPath }}/images/icon-{{ icon }}.svg#icon-{{ icon }}"></use> #}
 </svg>
+
+
