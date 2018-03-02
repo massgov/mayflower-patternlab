@@ -1,0 +1,38 @@
+{#
+ORIGINAL:
+<svg aria-hidden="true">
+  <use xlink:href="{{ url.domain }}/{{ url.assetsPath }}/images/icon-social-media.svg#icon-{{ id }}"></use>
+</svg>
+
+PATH DEFINITIONS IN MAYFLOWER:
+  /source/_data/data.json:
+    "url": {
+        "comment": "These are the defaults that get override by the data in url.json",
+        "domain": "", - BLANK
+        "assetsPath": "assets"
+      }
+#}
+{#
+OPTIMIZED:
+- This approach gets rid of the individual twig templates for icons.
+- Use one twig template to generate any SVGs.
+Requirement:
+- svg file and id need to match. --- in this case no splite.
+
+Mayflower: /assets/
+Drupal: /themes/custom/mass_theme/
+
+#}
+{% set assetsPath = url.assetsPath %}
+{% set iconPath = '/' ~ assetsPath ~ '/images/icon-' ~ icon ~ '.svg#icon-' ~ icon %}
+
+<svg aria-hidden="true">
+{# FINAL MARKUP:
+  <use xlink:href="{{ icon('blog') }}"></use>
+
+  TO GENERATE:
+  <use xlink:href="{{ assetsPathImage }}icon-ID.svg#icon-ID"></use>
+#}
+  <use xlink:href="{{ iconPath }}"></use>
+{#   <use xlink:href="/{{ url.assetsPath }}/images/icon-{{ icon }}.svg#icon-{{ icon }}"></use> #}
+</svg>
