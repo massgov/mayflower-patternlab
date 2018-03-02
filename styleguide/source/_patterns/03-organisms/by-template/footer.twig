@@ -7,10 +7,16 @@
       <div class="ma__footer__logo">
         <img src="{{ url.domain }}/{{ url.assetsPath }}/images/stateseal.png" alt="Massachusetts State Seal" width="120" height="120" />
       </div>
+
+
+
       <div class="ma__footer__social">
         {% set socialLinks = footerSocialLinks %}
-        {% include "@molecules/social-links.twig" %}
+        {% include "@molecules/social-links-opt.twig" %}
       </div>
+
+
+
       <div class="ma__footer__copyright">
         <p><b>&copy; 2016 Commonwealth of Massachusetts.</b></p>
         <p>Mass.Gov&#x00AE; is a registered service mark of the Commonwealth of Massachusetts.</p>
