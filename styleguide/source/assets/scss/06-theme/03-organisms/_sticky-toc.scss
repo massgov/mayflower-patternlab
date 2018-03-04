@@ -68,7 +68,7 @@
     }
   }
 
-  &__mobile-label {
+  &__secondary-label {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.2;
@@ -79,6 +79,21 @@
 
     @media ($bp-x-small-min) {
       display: none;
+    }
+  }
+
+  .secondary-label-close {
+    display: none;
+    width: 25px;
+    height: 25px;
+    background-color: $c-theme-primary;
+    color: $c-white;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    &::after {
+      content: '\00d7';
     }
   }
 
@@ -147,7 +162,7 @@
     height: 75px;
     padding-top: 15px;
     background-color: $c-bg-subtle;
-    z-index: 9999;
+    z-index: 79;
 
     @media ($bp-x-small-min) {
       height: 70px;
@@ -224,6 +239,10 @@
     }
   }
 
+  .secondary-label-close {
+    display: block;
+  }
+
   .ma__sticky-toc__current-section {
     @include ma-h6;
     width: calc(100% - 300px);
@@ -239,4 +258,35 @@
       display: block;
     }
   }
+
+  .ma__sticky-toc__column {
+    position: fixed;
+    right: -600px;
+    width: 100%;
+    max-width: 530px;
+    top: 40px;
+    z-index: 99;
+    background-color: $c-white;
+
+    @media ($bp-header-toggle-min) {
+      top: 0;
+    }
+
+    .ma__sticky-toc__secondary-label {
+      display: block;
+    }
+
+    .ma__sticky-toc__link {
+      display: block;
+    }
+
+    &.sticky-nav-open {
+      right: 0;
+      box-shadow: 0 0 10px 2000px rgba(0,0,0,0.3);
+    }
+  }
+}
+
+body.stuck {
+  overflow: hidden;
 }
