@@ -77,7 +77,15 @@ export default function (window,document,$,undefined) {
     return false;
   });
 
+  $('.stickyTOC-open').on('click', function() {
+    $('body').addClass('stuck');
+    $('.ma__sticky-toc__column').addClass('sticky-nav-open');
+  });
 
+  $('.secondary-label-close').on('click', function() {
+    $('body').removeClass('stuck');
+    $('.ma__sticky-toc__column').removeClass('sticky-nav-open');
+  });
 
 }
 (window,document,jQuery);
