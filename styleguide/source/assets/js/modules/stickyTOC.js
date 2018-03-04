@@ -28,11 +28,16 @@ export default function (window,document,$,undefined) {
     $tocContent.toggleClass('is-open');
   });
 
+
+
   $('.ma__sticky-toc__footer').on('click', function() {
-    // show the hidden links
+    var $button = $(this).find('button');
+    var $buttonText = $button.text();
+
     $tocContent.toggleClass('open');
-    // hide the button
-    $(this).toggle();
+    $button.toggleClass('open');
+
+    $button.text($buttonText == "show more" ? "show more" : "show less");
   });
 
   $(window).resize(function () {

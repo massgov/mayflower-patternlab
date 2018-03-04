@@ -18,8 +18,8 @@
         </nav>
         {% if stickyTOC.seeAll %}
           <div class="ma__sticky-toc__footer">
-            {% set decorativeLink = stickyTOC.seeAll %}
-            {% include "@atoms/decorative-link.twig" %}
+            <button type="button" class="js-sticky-toc__toggle-items">Show More</span>
+            </button>
           </div>
         {% endif %}
       </div>
