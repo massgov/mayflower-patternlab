@@ -28,8 +28,6 @@ export default function (window,document,$,undefined) {
     $tocContent.toggleClass('is-open');
   });
 
-
-
   $('.ma__sticky-toc__footer').on('click', function() {
     var $button = $(this).find('button');
     var $buttonText = $button.text();
@@ -54,24 +52,32 @@ export default function (window,document,$,undefined) {
     } else {
       $toc.addClass('stuck');
     }
-  });
 
-  $(".stickyTOC-top").each(function() {
-    let $el = $(this);
+    $tocSections.each(function() {
+      var $thisSectionTitle = $(this).text();
+      var sectionPosition = $(this).offset().top;
 
-    $el.on('click',function(e) {
-      e.preventDefault();
-      try {
-        $("html, body").stop(true,true).animate({scrollTop:0}, '750');
+      if (sectionPosition < windowTop) {
+        $('.ma__sticky-toc__current-section').text($thisSectionTitle);
       }
-      catch(e) {
-        $('body').scrollTop(0);
-      }
-      // Bring keyboard focus back to top as well.
-      $("#main-content").focus();
-      return false;
     });
   });
+
+
+  $(".stickyTOC-top").on('click',function(e) {
+    e.preventDefault();
+    try {
+      $("html, body").stop(true,true).animate({scrollTop:0}, '750');
+    }
+    catch(e) {
+      $('body').scrollTop(0);
+    }
+    // Bring keyboard focus back to top as well.
+    $("#main-content").focus();
+    return false;
+  });
+
+
 
 }
 (window,document,jQuery);

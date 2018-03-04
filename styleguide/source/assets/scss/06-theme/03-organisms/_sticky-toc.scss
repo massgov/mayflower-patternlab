@@ -160,6 +160,7 @@
     @include ma-container;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .ma__sticky-toc__tools {
@@ -220,6 +221,22 @@
         padding: 10px 20px;
         float: right;
       }
+    }
+  }
+
+  .ma__sticky-toc__current-section {
+    @include ma-h6;
+    width: calc(100% - 300px);
+    overflow: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 700;
+    color: $c-black;
+    margin-bottom: 0;
+    display: none;
+
+    @media ($bp-medium-min) {
+      display: block;
     }
   }
 }
