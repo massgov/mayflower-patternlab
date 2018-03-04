@@ -10,7 +10,7 @@ export default function (window,document,$,undefined) {
   }
 
   if (tocSectionCount <= 10) {
-    if ($(window).width() > 558 ) {
+    if ($(window).width() > 480 ) {
       $('.ma__sticky-toc__footer').toggle();
     }
   }
@@ -43,6 +43,35 @@ export default function (window,document,$,undefined) {
   $(window).resize(function () {
     $('.ma__sticky-toc__link').removeAttr('style');
     $tocContent.removeClass('open');
-  }).resize();
+  });
+
+  $(window).scroll(function () {
+    var windowTop = $(window).scrollTop();
+    var stickyNavActive  = $toc.offset().top + $toc.outerHeight();
+
+    if (stickyNavActive > windowTop) {
+      $toc.removeClass('stuck');
+    } else {
+      $toc.addClass('stuck');
+    }
+  });
+
+  $(".stickyTOC-top").each(function() {
+    let $el = $(this);
+
+    $el.on('click',function(e) {
+      e.preventDefault();
+      try {
+        $("html, body").stop(true,true).animate({scrollTop:0}, '750');
+      }
+      catch(e) {
+        $('body').scrollTop(0);
+      }
+      // Bring keyboard focus back to top as well.
+      $("#main-content").focus();
+      return false;
+    });
+  });
+
 }
 (window,document,jQuery);
