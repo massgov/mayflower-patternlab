@@ -32,18 +32,13 @@
       display: none;
     }
 
-    @media ($bp-small-max) {
+    @media ($bp-x-small-max) {
       display: none;
     }
 
-    @media ($bp-small-min) {
+    @media ($bp-x-small-min) {
       margin-bottom: 15px;
     }
-  }
-
-  &__column {
-
-
   }
 
   &__links {
@@ -59,7 +54,7 @@
       display: none;
     }
 
-    @media ($bp-small-max) {
+    @media ($bp-x-small-max) {
       left: 0;
       padding-left: 0;
 
@@ -101,7 +96,7 @@
       transform: rotate(135deg);
     }
 
-    @media ($bp-small-min) {
+    @media ($bp-x-small-min) {
       display: none;
     }
   }
@@ -115,8 +110,8 @@
     & > svg {
       height: 22px;
       position: absolute;
-        left: 0;
-        top: 4px;
+      left: 0;
+      top: 4px;
       transform: rotate(90deg);
       width: 22px;
     }
@@ -124,12 +119,12 @@
     a {
       @include ma-link-underline;
 
-      @media ($bp-small-min) {
+      @media ($bp-x-small-min) {
         line-height: 1.5;
       }
     }
 
-    @media ($bp-small-max) {
+    @media ($bp-x-small-max) {
       display: none;
       font-size: 20px;
       line-height: 1.2;
