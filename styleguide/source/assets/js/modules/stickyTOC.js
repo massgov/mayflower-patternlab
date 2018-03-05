@@ -55,7 +55,7 @@ export default function (window,document,$,undefined) {
 
     $tocSections.each(function() {
       var $thisSectionTitle = $(this).text();
-      var sectionPosition = $(this).offset().top;
+      var sectionPosition = $(this).offset().top - 50;
 
       if (sectionPosition < windowTop) {
         $('.ma__sticky-toc__current-section').text($thisSectionTitle);
@@ -83,6 +83,11 @@ export default function (window,document,$,undefined) {
   });
 
   $('.secondary-label-close').on('click', function() {
+    $('body').removeClass('stuck');
+    $('.ma__sticky-toc__column').removeClass('sticky-nav-open');
+  });
+
+  $('.ma__sticky-toc__link').on('click', function() {
     $('body').removeClass('stuck');
     $('.ma__sticky-toc__column').removeClass('sticky-nav-open');
   });
