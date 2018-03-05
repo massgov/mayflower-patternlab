@@ -10,7 +10,7 @@
     "name": {
       "title": "Deborah B. Goldberg",
       "level": "2",
-      "sub": false,
+      "color": "transparent",
       "centered": true
     },
     "title" : {
@@ -19,7 +19,7 @@
     },
     "bio": {
       "href": "#",
-      "text":"Learn more about Tresurer Goldberg"
+      "text":"Learn more about Treasurer Goldberg"
     }
   }
 }
