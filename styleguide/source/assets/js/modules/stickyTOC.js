@@ -1,96 +1,103 @@
 export default function (window,document,$,undefined) {
 
-  var $toc = $('.ma__sticky-toc');
-  var $tocContent = $('.ma__sticky-toc__links');
-  var $tocSections = $('.ma__information-details__content').find('h2');
-  var tocSectionCount = $tocSections.length;
+  $('.ma__sticky-toc').each(function() {
+    const $toc = $('.ma__sticky-toc'),
+          $tocContent = $('.ma__sticky-toc__links'),
+          $tocSections = $('.main-content .page-content').find('section h2'),
+          tocSectionCount = $tocSections.length,
+          $tocColumn = $('.ma__sticky-toc__column'),
+          $mobileToggle = $('.ma__sticky-toc__toggle-link'),
+          $tocFooter = $('.ma__sticky-toc__footer');
 
-  if (tocSectionCount < 3) {
-    $toc.remove();
-  }
-
-  if (tocSectionCount <= 10) {
-    if ($(window).width() > 480 ) {
-      $('.ma__sticky-toc__footer').toggle();
+    // Remove wrapper if not enough links.
+    if (tocSectionCount < 3) {
+      $toc.remove();
     }
-  }
-
-  $tocSections.each(function() {
-    var $section = $(this);
-    var sectionId = $section.attr('id');
-    var sectionTitle = $section.text();
-    var $tocLink = '<div class="ma__sticky-toc__link"><svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" width=\"35\" height=\"35\" viewBox=\"0 0 35 35\"><path class=\"st0\" d=\"M17.5 35C7.8 35 0 27.2 0 17.5 0 7.8 7.8 0 17.5 0 27.2 0 35 7.8 35 17.5 35 27.2 27.2 35 17.5 35zM16 9l-3 2.9 5.1 5.1L13 22.1l3 2.9 8-8L16 9z\"/></svg><a href="#'+sectionId+'" >'+sectionTitle+'</a></div>'
-
-    $('.ma__sticky-toc__column').append($tocLink);
-  });
-
-  $('.ma__sticky-toc__toggle-link').on('click', function() {
-    $tocContent.toggleClass('is-open');
-  });
-
-  $('.ma__sticky-toc__footer').on('click', function() {
-    var $button = $(this).find('button');
-    var $buttonText = $button.text();
-
-    $tocContent.toggleClass('open');
-    $button.toggleClass('open');
-
-    $button.text($buttonText === "show more" ? "show more" : "show less");
-  });
-
-  $(window).resize(function () {
-    $('.ma__sticky-toc__link').removeAttr('style');
-    $tocContent.removeClass('open');
-  });
-
-  $(window).scroll(function () {
-    var windowTop = $(window).scrollTop();
-    var stickyNavActive  = $toc.offset().top + $toc.outerHeight();
-
-    if (stickyNavActive > windowTop) {
-      $toc.removeClass('stuck');
-    } else {
-      $toc.addClass('stuck');
-    }
-
-    $tocSections.each(function() {
-      var $thisSectionTitle = $(this).text();
-      var sectionPosition = $(this).offset().top - 50;
-
-      if (sectionPosition < windowTop) {
-        $('.ma__sticky-toc__current-section').text($thisSectionTitle);
+    // Show expander when more than 10 links.
+    if (tocSectionCount <= 10) {
+      if ($(window).width() > 480 ) {
+        $('.ma__sticky-toc__footer').toggle();
       }
+    }
+
+    // Use headers to fill TOC.
+    $tocSections.each(function() {
+      let $section = $(this);
+      let sectionId = $section.attr('id');
+      let sectionTitle = $section.text();
+      let $tocLink = '<div class="ma__sticky-toc__link"><svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" width=\"35\" height=\"35\" viewBox=\"0 0 35 35\"><path class=\"st0\" d=\"M17.5 35C7.8 35 0 27.2 0 17.5 0 7.8 7.8 0 17.5 0 27.2 0 35 7.8 35 17.5 35 27.2 27.2 35 17.5 35zM16 9l-3 2.9 5.1 5.1L13 22.1l3 2.9 8-8L16 9z\"/></svg><a href="#'+sectionId+'" >'+sectionTitle+'</a></div>'
+
+      $('.ma__sticky-toc__column').append($tocLink);
+    });
+
+    // Toggle mobile TOC open.
+    $mobileToggle.on('click', function() {
+      $tocContent.toggleClass('is-open');
+    });
+
+    $tocFooter.on('click', function() {
+      let $button = $(this).find('button');
+      let $buttonText = $button.text();
+
+      // Toggle hidden links open.
+      $tocContent.toggleClass('open');
+      $button.toggleClass('open');
+
+      // Toggle button text.
+      $button.text($buttonText === "show less" ? "show more" : "show less");
+    });
+
+    $(window).resize(function () {
+      // Reset menu for each form factor on resize.
+      $('.ma__sticky-toc__link').removeAttr('style');
+      $tocContent.removeClass('open');
+    });
+
+    $(window).scroll(function () {
+      var windowTop = $(window).scrollTop();
+      var stickyNavActive  = $toc.offset().top + $toc.outerHeight();
+
+      // Active Sticky TOC when on page TOC scrolls past.
+      if (stickyNavActive > windowTop) {
+        $toc.removeClass('stuck');
+      } else {
+        $toc.addClass('stuck');
+      }
+
+      $tocSections.each(function() {
+        let $thisSectionTitle = $(this).text();
+        let sectionPosition = $(this).offset().top - 50;
+
+        // Switch title in sticky TOC on scroll.
+        if (sectionPosition < windowTop) {
+          $('.ma__sticky-toc__current-section').text($thisSectionTitle);
+        }
+      });
+    });
+
+    // Back to top button
+    $(".stickyTOC-top").on('click',function(e) {
+      e.preventDefault();
+      try {
+        $("html, body").stop(true,true).animate({scrollTop:0}, '750');
+      }
+      catch(e) {
+        $('body').scrollTop(0);
+      }
+      // Bring keyboard focus back to top as well.
+      $("#main-content").focus();
+      return false;
+    });
+
+    function toggleStickyMenu() {
+      $('body').toggleClass('stuck');
+      $tocColumn.toggleClass('sticky-nav-open');
+    }
+
+    // Toggle sticky menu open and closed.
+    $('.secondary-label-close, .ma__sticky-toc__link, .stickyTOC-open').on('click', function() {
+      toggleStickyMenu();
     });
   });
-
-
-  $(".stickyTOC-top").on('click',function(e) {
-    e.preventDefault();
-    try {
-      $("html, body").stop(true,true).animate({scrollTop:0}, '750');
-    }
-    catch(e) {
-      $('body').scrollTop(0);
-    }
-    // Bring keyboard focus back to top as well.
-    $("#main-content").focus();
-    return false;
-  });
-
-  $('.stickyTOC-open').on('click', function() {
-    $('body').addClass('stuck');
-    $('.ma__sticky-toc__column').addClass('sticky-nav-open');
-  });
-
-  $('.secondary-label-close').on('click', function() {
-    $('body').removeClass('stuck');
-    $('.ma__sticky-toc__column').removeClass('sticky-nav-open');
-  });
-
-  $('.ma__sticky-toc__link').on('click', function() {
-    $('body').removeClass('stuck');
-    $('.ma__sticky-toc__column').removeClass('sticky-nav-open');
-  });
-
 }
 (window,document,jQuery);
