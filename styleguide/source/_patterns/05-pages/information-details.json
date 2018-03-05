@@ -23,7 +23,7 @@
     "widgets": null
   },
   "pageContent": {
-    "moreInfo": {
+    "section1": {
       "compHeading": {
         "title": "Human infrastructure and wildlife",
         "titleContext": "",
@@ -48,7 +48,7 @@
               "align": "full",
               "image": {
                 "alt": "alt text",
-                "src": "../../assets/images/placeholder/820x460.png",
+                "src": "../../assets/images/placeholder/1600x600.png",
                 "height": "",
                 "width": ""
               },
@@ -63,7 +63,8 @@
               "compHeading": {
                 "title": "Additional resources",
                 "sub": false,
-                "titleContext": ""
+                "titleContext": "",
+                "level": 3
               },
               "downloadLinks": [{
                 "downloadLink": {
@@ -110,7 +111,7 @@
         }
       ]
     },
-    "history": {
+    "section2": {
       "compHeading": {
         "title": "History of the Massachusetts landscape",
         "titleContext": "",

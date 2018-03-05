@@ -3,7 +3,6 @@ export default function (window,document,$,undefined) {
   const sidebarHeight = $('.sidebar').outerHeight( true ) + 100;
   // Set height of sidebar with some bottom space.
   let debounceTimer;
-  console.log(sidebarHeight);
 
   function mediaWidth() {
     // Define wrapper width for use.
