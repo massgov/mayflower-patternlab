@@ -13,9 +13,11 @@ PATH DEFINITIONS IN MAYFLOWER:
       }
 #}
 {#
-OPTIMIZED:
+OPTIMIZED VERSION:
 - This approach gets rid of the individual twig templates for icons.
 - Use one twig template to generate any SVGs.
+- Not necessary to use {% include TEMPLATE with id %} approach since property "icon" already exists to pass a specific icon template.  This could be utilized to pass icon ID instead of a template as seen in the current sample.
+
 Requirement:
 - svg file and id need to match. --- in this case no sprite.
 
@@ -25,17 +27,12 @@ Drupal: /themes/custom/mass_theme/
 #}
 
 {#
-NOTE: If what this template does is calls the function, it would be better to call the function in parent templates.
+NOTE: If what this template does is calls the function, it would be better to call the function in parent templates and get rid of this template.
 
 {{ icon(icon) }}
 #}
-
-
 {% set assetsPath = url.assetsPath %}
 {% set iconPath = '/' ~ assetsPath ~ '/images/icon-' ~ icon ~ '.svg#icon-' ~ icon %}
-
 <svg aria-hidden="true">
   <use xlink:href="{{ iconPath }}"></use>
 </svg>
-
-
