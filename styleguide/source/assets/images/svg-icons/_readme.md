@@ -12,5 +12,5 @@
 
 ###See Example:
 ```html
-<svg aria-hidden="true" id="SvgjsSvg1029" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="14" height="16" viewBox="0 0 14 16">
+<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="14" height="16" viewBox="0 0 14 16">
 ```

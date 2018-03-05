@@ -18,6 +18,10 @@ For the tags:
 ### Variables
 ~~~
 resultsHeading: {
+  level:
+    type: number / optional
+  subject:
+    type: string / optional
   numResults:
     type: string (number range '1-12') / optional 
   totalResults:
