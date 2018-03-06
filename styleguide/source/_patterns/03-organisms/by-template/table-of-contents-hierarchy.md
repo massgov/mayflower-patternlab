@@ -1,5 +1,5 @@
 ### Description
-This Pattern shows an expantable table of contents which can contain simple links, download links, or expandable sections.
+This Pattern shows an expandable table of contents which can contain simple links, download links, or expandable sections.
 
 ### Status
 * Stable as of 5.11.0
@@ -7,6 +7,7 @@ This Pattern shows an expantable table of contents which can contain simple link
 ### Pattern Contains
 * Decorated Link
 * Download Link
+* Expandable Section
 
 ### Usage Guidelines
 * This is meant to be used to contain a mix of links, download links, or section titles with child links/download links within accordions.

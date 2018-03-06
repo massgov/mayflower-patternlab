@@ -2,6 +2,11 @@
 
 <figure class="ma__figure {{ figureClass }}">
   {% set image = figure.image %}
+  {% if figure.title %}
+  <span class="ma__figure__title">
+    {{ figure.title }}
+  </span>
+  {% endif %}
   {% include "@atoms/09-media/image.twig" %}
   {% if figure.caption %}
     <figcaption class="ma__figure__caption">
