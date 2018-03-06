@@ -1,0 +1,51 @@
+.ma__person-card {
+  padding: 0 20px;
+  text-align: center;
+
+  @media ($bp-x-large-min) {
+    max-width: 400px;
+  }
+
+  .ma__person-card--wrapper {
+    max-width: 375px;
+    margin: 2rem auto;
+  }
+
+  &__image {
+    margin: 0 auto 2rem;
+    max-width: 250px;
+  }
+
+  &__person-info {
+
+    .ma__person-card--name {
+
+      h2 {
+        margin-bottom: 0;
+      }
+
+      h2::after {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 1rem 1rem 0;
+
+    a {
+      display: block;
+      padding-top: 1rem;
+      font-weight: 500;
+      font-size: 1.25rem;
+    }
+
+    .ma__divider::after {
+      width: 100px;
+      height: 7px;
+      margin: 0 auto;
+    }
+  }
+}
