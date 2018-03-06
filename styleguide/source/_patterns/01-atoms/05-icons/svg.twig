@@ -1,38 +1,34 @@
 {#
-ORIGINAL:
-<svg aria-hidden="true">
-  <use xlink:href="{{ url.domain }}/{{ url.assetsPath }}/images/icon-social-media.svg#icon-{{ id }}"></use>
-</svg>
-
-PATH DEFINITIONS IN MAYFLOWER:
-  /source/_data/data.json:
-    "url": {
-        "comment": "These are the defaults that get override by the data in url.json",
-        "domain": "", - BLANK
-        "assetsPath": "assets"
-      }
-#}
-{#
 OPTIMIZED VERSION:
 - This approach gets rid of the individual twig templates for icons.
 - Use one twig template to generate any SVGs.
 - Not necessary to use {% include TEMPLATE with id %} approach since property "icon" already exists to pass a specific icon template.  This could be utilized to pass icon ID instead of a template as seen in the current sample.
 
 Requirement:
-- svg file and id need to match. --- in this case no sprite.
+- svg file and id need to match for the simple version. --- in this case no
+sprite.
+- sprite can be setup with conditions.  --- Is it worth it?
 
 Mayflower: /assets/
 Drupal: /themes/custom/mass_theme/
 
 #}
-
 {#
 NOTE: If what this template does is calls the function, it would be better to call the function in parent templates and get rid of this template.
 
 {{ icon(icon) }}
+As the final version, the function takes "icon" value, geneartes the whole icon
+HTML, and prints it.
+- A specific assets path for each Mayflower and Drupal is set in its unique
+function.
 #}
-{% set assetsPath = url.assetsPath %}
-{% set iconPath = '/' ~ assetsPath ~ '/images/icon-' ~ icon ~ '.svg#icon-' ~ icon %}
 <svg aria-hidden="true">
-  <use xlink:href="{{ iconPath }}"></use>
+{# switch statement with multiple values for one case doesn't work in Twig. #}
+{% if icon == 'blog' or icon == 'facebook' or icon == 'instagram' or icon ==
+ 'linkedin' or icon == 'twitter' or icon == 'youtube' %}
+    <use xlink:href="/{{ directory }}/images/icon-social-media.svg#icon-{{ icon
+    }}"></use>
+{% else %}
+    <use xlink:href="/{{ directory }}/images/icon-{{ icon }}.svg#icon-{{ icon }}"></use>
+{% endif %}
 </svg>
