@@ -2,6 +2,7 @@ ___DESCRIPTION___
 Change_type (see below)
 Change_impact (see below)
 - DP-6883: Set up external sources for svg.
+           Set up a generic template for svg icon.
 
 ___SEMANTIC VERSION (see below)___
 
