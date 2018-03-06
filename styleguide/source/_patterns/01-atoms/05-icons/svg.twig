@@ -1,33 +1,11 @@
-{#
-OPTIMIZED VERSION:
-- This approach gets rid of the individual twig templates for icons.
-- Use one twig template to generate any SVGs.
-- Not necessary to use {% include TEMPLATE with id %} approach since property "icon" already exists to pass a specific icon template.  This could be utilized to pass icon ID instead of a template as seen in the current sample.
-
-Requirement:
-- svg file and id need to match for the simple version. --- in this case no
-sprite.
-- sprite can be setup with conditions.  --- Is it worth it?
-
-Mayflower: /assets/
-Drupal: /themes/custom/mass_theme/
-
-#}
-{#
-NOTE: If what this template does is calls the function, it would be better to call the function in parent templates and get rid of this template.
-
-{{ icon(icon) }}
-As the final version, the function takes "icon" value, geneartes the whole icon
-HTML, and prints it.
-- A specific assets path for each Mayflower and Drupal is set in its unique
-function.
-#}
 <svg aria-hidden="true">
 {# switch statement with multiple values for one case doesn't work in Twig. #}
 {% if icon == 'blog' or icon == 'facebook' or icon == 'instagram' or icon ==
  'linkedin' or icon == 'twitter' or icon == 'youtube' %}
     <use xlink:href="/{{ directory }}/images/icon-social-media.svg#icon-{{ icon
     }}"></use>
+{% elseif icon == 'doc-doc' or icon == 'doc-xls' or icon == 'doc-ppt' or icon == 'doc-rtf' or icon == 'doc-pptx' %}
+    <use xlink:href="/{{ directory }}/images/icon-doc-generic.svg#icon-doc-generic"></use>
 {% else %}
     <use xlink:href="/{{ directory }}/images/icon-{{ icon }}.svg#icon-{{ icon }}"></use>
 {% endif %}
