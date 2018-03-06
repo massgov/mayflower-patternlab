@@ -69,6 +69,10 @@
     line-height: 1.2em;
     margin-bottom: .25em;
 
+    .inline-image & {
+      margin-bottom: 0;
+    }
+
     .ma__decorative-link {
       font-size: 1.625rem;
       line-height: 1.2;
@@ -95,4 +99,5 @@
   &__contents {
     font-size: 1.25rem;
   }
+
 }

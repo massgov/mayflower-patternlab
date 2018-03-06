@@ -19,7 +19,12 @@
       </span>
     {% endif %}
   {% endif %}
-  <div class="ma__general-teaser__details">
+
+  {% if layout == 'inline-image' %}
+    <div class="ma__general-teaser__header">
+  {% else %}
+    <div class="ma__general-teaser__details">
+  {% endif %}
     {% if generalTeaser.eyebrow %}
       <div class="ma__general-teaser__eyebrow">
         <span>{{ generalTeaser.eyebrow }}</span>
@@ -44,6 +49,10 @@
           </span>
         {% endfor %}
       </div>
+    {% endif %}
+    {% if layout == 'inline-image' %}
+      </div><!-- end ma__general-teaser__header -->
+      <div class="ma__general-teaser__details">
     {% endif %}
     {% if generalTeaser.contents and layout != 'contents-stacked' %}
       <div class="ma__general-teaser__contents">

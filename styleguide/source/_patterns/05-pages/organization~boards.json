@@ -193,7 +193,7 @@
               ],
               "items": [
                 {
-                  "layout": "stacked",
+                  "layout": "inline-image",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -232,7 +232,7 @@
                   ]
                 },
                 {
-                  "layout": "stacked",
+                  "layout": "inline-image",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -258,7 +258,7 @@
                   }]
                 },
                 {
-                  "layout": "stacked",
+                  "layout": "inline-image",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -284,7 +284,7 @@
                   }]
                 },
                 {
-                  "layout": "stacked",
+                  "layout": "inline-image",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -310,7 +310,7 @@
                   }]
                 },
                 {
-                  "layout": "stacked",
+                  "layout": "inline-image",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
@@ -336,7 +336,7 @@
                   }]
                 },
                 {
-                  "layout": "stacked",
+                  "layout": "inline-image",
                   "image": {
                     "src": "../../assets/images/placeholder/72x96.png",
                     "alt": "placeholder image",
