@@ -2,7 +2,7 @@
   {% if contactGroup.name and contactGroup.icon %}
     {% set headingLevel = contactGroup.level ? : 2 %}
     <h{{ headingLevel }} class="ma__contact-group__name">
-      {% include contactGroup.icon %}
+      {% include "@atoms/05-icons/svg.twig" with { 'icon': contactGroup.icon } %}
       <span>{{contactGroup.name}}</span>
     </h{{ headingLevel }}>
   {% endif %}
@@ -38,14 +38,14 @@
         {% include "@atoms/decorative-link.twig" %}
       {# Phone - add tel: to href #}
       {% elseif item.type == "phone" %}
-        <a 
-          href="tel:{{ link.href }}" 
+        <a
+          href="tel:{{ link.href }}"
           class="ma__content-link ma__content-link--phone">{{ link.text }}</a>
-        
+
       {# Email - add mailto: to href #}
       {% elseif item.type == "email" %}
-        <a 
-          href="mailto:{{ link.href }}" 
+        <a
+          href="mailto:{{ link.href }}"
           class="ma__content-link">{{ link.text }}</a>
 
       {# Address - RTE version of value and look for directions link #}
