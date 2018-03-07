@@ -234,7 +234,7 @@
 
   .ma__sticky-toc__current-section {
     @include ma-h6;
-    width: calc(100% - 300px);
+    width: calc(100% - 365px);
     overflow: auto;
     text-overflow: ellipsis;
     white-space: nowrap;
