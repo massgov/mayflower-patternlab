@@ -23,7 +23,7 @@
       "collapsibleHeader": {
         "info": "Click here to expand this thing",
         "title": "Collapsible Header",
-        "icon": "@atoms/05-icons/svg-circle-chevron.twig"
+        "icon": "circle-chevron"
       },
       "more": {
         "href": "#",
@@ -37,13 +37,13 @@
             "text" : "Collapsible Body Content"
           }
         }
-      }]    
+      }]
     },{
       "expanded": false,
       "collapsibleHeader": {
         "info": "Click here to expand this thing",
         "title": "Collapsible Header",
-        "icon": "@atoms/05-icons/svg-laptop.twig"
+        "icon": "laptop"
       },
       "more": {
         "href": "#",
@@ -57,7 +57,7 @@
             "text" : "Collapsible Body Content"
           }
         }
-      }]    
+      }]
     }]
   }
 }

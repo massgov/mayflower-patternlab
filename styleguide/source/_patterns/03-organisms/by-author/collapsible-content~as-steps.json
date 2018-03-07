@@ -23,7 +23,7 @@
       "collapsibleHeader": {
         "info": "Expand step for doing this in person",
         "title": "In Person at State Parks",
-        "icon": "@atoms/05-icons/svg-profile.twig"
+        "icon": "profile"
       },
       "more": null,
       "includes": [{
@@ -40,7 +40,7 @@
             }]
           }
         }
-      }]    
+      }]
     },{
       "expanded": false,
       "collapsibleHeader": {
@@ -63,7 +63,7 @@
             }]
           }
         }
-      }]    
+      }]
     },{
       "expanded": false,
       "collapsibleHeader": {
@@ -86,7 +86,7 @@
             }]
           }
         }
-      }]    
+      }]
     },{
       "expanded": false,
       "collapsibleHeader": {
@@ -109,7 +109,7 @@
             }]
           }
         }
-      }]    
+      }]
     },{
       "expanded": false,
       "collapsibleHeader": {
@@ -132,7 +132,7 @@
             }]
           }
         }
-      }]    
+      }]
     },{
       "expanded": false,
       "collapsibleHeader": {
@@ -155,7 +155,7 @@
             }]
           }
         }
-      }]    
+      }]
     }]
   }
 }
