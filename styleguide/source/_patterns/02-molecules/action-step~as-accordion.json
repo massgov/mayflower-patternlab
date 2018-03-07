@@ -3,7 +3,7 @@
     "accordion": true,
     "isExpanded": false,
     "accordionLabel": "Expand Generic steps on completing something",
-    "icon": "@atoms/05-icons/svg-circle-chevron.twig",
+    "icon": "circle-chevron",
     "title": "Generic",
     "richText": {
       "rteElements": [{
@@ -18,7 +18,7 @@
     "downloadLinks": [{
       "downloadLink": {
         "iconSize": "small",
-        "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+        "icon": "doc-pdf",
         "decorativeLink": {
           "text": "PDF download item",
           "href": "#",
@@ -31,7 +31,7 @@
     },{
       "downloadLink": {
         "iconSize": "small",
-        "icon": "@atoms/05-icons/svg-doc-docx.twig",
+        "icon": "doc-docx",
         "decorativeLink": {
           "text": "Word download item",
           "href": "#",
@@ -44,7 +44,7 @@
     },{
       "downloadLink": {
         "iconSize": "small",
-        "icon": "@atoms/05-icons/svg-laptop.twig",
+        "icon": "laptop",
         "decorativeLink": {
           "text": "Online Form: Out-of-Country Driver's License Conversion",
           "href": "#",
