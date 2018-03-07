@@ -8,7 +8,8 @@ This pattern is used as a template for Bio type pages and is based off of the Tw
 * Header
 * Footer
 * Two Column (template)
-* Page Header
+* Header Tags
+* Page Intro
 * Rich Text
 * Link List
 * Personal Message

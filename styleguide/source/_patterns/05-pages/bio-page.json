@@ -1,21 +1,19 @@
 {
-  "pageHeader": {
-    "divider": false,
-    "title": "Example Person",
-    "subTitle": "Example job title",
-    "headerTags": {
-      "label": "More about:",
-      "taxonomyTerms": [{
-        "href": "#",
-        "text": "Example Office"
-      },{
-        "href": "#",
-        "text": "Example Office 2"
-      }]
+  "headerTags": {
+    "label": "More about:",
+    "taxonomyTerms": [{
+      "href": "#",
+      "text": "Example Office"
+    },{
+      "href": "#",
+      "text": "Example Office 2"
+    }]
+  },
+  "pageIntro": {
+    "pageTitle": {
+      "text": "Example Person"
     },
-    "socialLinks": null,
-    "optionalContents": null,
-    "widgets": null
+    "subTitle": "Example job title"
   },
   "mainContent": {
     "richText": {
