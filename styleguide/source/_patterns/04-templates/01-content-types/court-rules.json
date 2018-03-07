@@ -215,7 +215,7 @@
         {
           "downloadLink": {
             "iconSize": "",
-            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "icon": "doc-pdf",
             "decorativeLink": {
               "text": "PDF download item",
               "href": "#",
@@ -247,7 +247,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [
                 {
@@ -265,7 +265,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [
@@ -376,7 +376,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [
