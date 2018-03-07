@@ -181,7 +181,7 @@
           "downloadLinks": [{
             "downloadLink": {
               "iconSize": "",
-              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "icon": "doc-pdf",
               "decorativeLink": {
                 "text": "Park Pass Application",
                 "href": "#",
@@ -194,7 +194,7 @@
           },{
             "downloadLink": {
               "iconSize": "",
-              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "icon": "doc-docx",
               "decorativeLink": {
                 "text": "Park Pass Application",
                 "href": "#",
@@ -207,7 +207,7 @@
           },{
             "downloadLink": {
               "iconSize": "",
-              "icon": "@atoms/05-icons/svg-doc-xlsx.twig",
+              "icon": "doc-xlsx",
               "decorativeLink": {
                 "text": "Calculate your personal return on investment with a seasonal pass.",
                 "href": "#",
