@@ -4,18 +4,23 @@
     {% include "@atoms/04-headings/comp-heading.twig" %}
   </div>
   <div class="ma__about-section__content">
-    {% set richText = about.content %}
-    {% include "@organisms/by-author/rich-text.twig" %}
+    <div class="ma__about-section__content-container">
+      <div class="ma__about-section__content-text">
+        {% set richText = about.content %}
+        {% include "@organisms/by-author/rich-text.twig" %}
 
-    {% set link = about.link %}
-    {% include "@atoms/11-text/link.twig" %}
-  </div>
-  <div class="ma_about-section__person">
-    {% set person = about.person %}
-    {% include "@organisms/by-author/person-card.twig" %}
+        {% set link = about.link %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+
+      <div class="ma_about-section__person">
+        {% set person = about.person %}
+        {% include "@organisms/by-author/person-card.twig" %}
+      </div>
+    </div>
   </div>
   <div class="ma__about-section__social">
-    {% set socialLinks = about.socialLinks %}
-    {% include "@molecules/social-links.twig" %}
+    {% set iconLinks = about.social %}
+    {% include "@molecules/icon-links.twig" %}
   </div>
 </div>

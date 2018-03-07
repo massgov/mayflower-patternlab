@@ -1,6 +1,7 @@
 .ma__person-card {
   position: relative;
   color: $c-font-base;
+  background-color: $c-white;
 
   @media ($bp-x-large-min) {
     border: 1px solid $c-theme-green;

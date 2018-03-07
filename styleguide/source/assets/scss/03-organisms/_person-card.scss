@@ -1,9 +1,9 @@
 .ma__person-card {
-  padding: 0 20px;
   text-align: center;
 
   @media ($bp-x-large-min) {
     max-width: 400px;
+    padding: 0 20px;
   }
 
   .ma__person-card--wrapper {
