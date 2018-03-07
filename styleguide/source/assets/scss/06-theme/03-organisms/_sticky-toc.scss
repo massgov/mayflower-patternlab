@@ -302,4 +302,8 @@
 
 body.stuck {
   overflow: hidden;
+
+  .ma__floating-action {
+    display: none;
+  }
 }
