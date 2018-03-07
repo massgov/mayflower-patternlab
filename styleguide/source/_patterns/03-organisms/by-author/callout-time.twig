@@ -1,8 +1,8 @@
 <section class="ma__callout-time">
   <div class="ma__callout-time__container">
     <span class="ma__callout-time__icon">
-      {% set iconPath = calloutTime.icon ? : "@atoms/05-icons/svg-wait-time.twig" %}
-      {% include iconPath %}
+      {% set iconPath = calloutTime.icon ? : "wait-time" %}
+      {% include "@atoms/05-icons/svg.twig" with { 'icon': iconPath } %}
     </span>
     <span class="ma__callout-time__text">{{ calloutTime.text }}</span>
   </div>
