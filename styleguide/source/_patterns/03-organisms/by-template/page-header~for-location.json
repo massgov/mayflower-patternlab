@@ -27,7 +27,7 @@
               "details": ""
             }]
           },{
-            "icon": "@atoms/05-icons/svg-phone.twig",
+            "icon": "phone",
             "name": "Phone",
             "items": [{
               "type": "phone",
@@ -39,7 +39,7 @@
               "details":"This line is open from 9 a.m. - 5 p.m., M-F"
             }]
           },{
-            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "icon": "laptop",
             "name": "Online",
             "items": [{
               "type": "email",
