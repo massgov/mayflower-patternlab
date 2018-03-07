@@ -66,7 +66,8 @@ export default function (window,document,$,undefined) {
 
       $tocSections.each(function() {
         let $thisSectionTitle = $(this).text();
-        let sectionPosition = $(this).offset().top - 50;
+        // Height of title bar + section padding: 70 + 45 = 115
+        let sectionPosition = $(this).offset().top - 115;
 
         // Switch title in sticky TOC on scroll.
         if (sectionPosition < windowTop) {
