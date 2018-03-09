@@ -66,7 +66,7 @@
 
   "introSidebar": {
     "logo": {
-      "alt": "alt text", 
+      "alt": "alt text",
       "src": "../../assets/images/placeholder/230x130.png",
       "height": "130",
       "width": "230"
@@ -82,21 +82,21 @@
           "centered": ""
         },
         "items": [{
-          "icon": "@atoms/05-icons/svg-twitter.twig",
+          "icon": "twitter",
           "link": {
             "href": "#",
             "text": "Optional Socia Media",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-flickr.twig",
+          "icon": "flickr",
           "link": {
             "href": "#",
             "text": "ScreenName",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-blog.twig",
+          "icon": "blog",
           "link": {
             "href": "#",
             "text": "ScreenName",
@@ -218,7 +218,7 @@
       "markers": [{
         "position": {
           "lat": 42.366565,
-          "lng": -71.058940 
+          "lng": -71.058940
         },
         "label": "A",
         "infoWindow": {
@@ -231,7 +231,7 @@
       },{
         "position": {
           "lat": 42.358795,
-          "lng": -71.063858 
+          "lng": -71.063858
         },
         "label": "B",
         "infoWindow": {
@@ -331,7 +331,7 @@
             "downloadLinks": [{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "icon": "doc-pdf",
                 "decorativeLink": {
                   "text": "Work Search Activity Log",
                   "href": "#",
@@ -344,7 +344,7 @@
             },{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "icon": "doc-docx",
                 "decorativeLink": {
                   "text": "Name of Doc",
                   "href": "#",
