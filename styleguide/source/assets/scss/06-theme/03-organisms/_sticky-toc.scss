@@ -213,11 +213,16 @@
   }
 
   .secondary-label-close {
+    display: none;
     position: relative;
     width: 35px;
     height: 35px;
     background-color: $c-theme-primary;
     color: $c-white;
+
+    .sticky-nav-open & {
+      display: block;
+    }
 
     &::after {
       content: '\00d7';
@@ -296,6 +301,23 @@
   &.sticky-nav-open {
     right: 0;
     box-shadow: 0 0 10px 2000px rgba(0,0,0,0.3);
+  }
+}
+
+.sticky-toc-jump-target {
+
+  &::before {
+    display: block;
+    content: '';
+    margin-top: -120px;
+    height: 120px;
+    visibility: hidden;
+    pointer-events: none;
+
+    @media ($bp-header-toggle-min) {
+      margin-top: -70px;
+      height: 70px;
+    }
   }
 }
 
