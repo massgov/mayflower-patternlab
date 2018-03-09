@@ -1,6 +1,6 @@
 export default function (window,document,$,undefined) {
 
-  $('.ma__sticky-toc').each(function() {
+  $('.pre-content .ma__sticky-toc').each(function() {
     const $toc = $('.ma__sticky-toc'),
           $tocContent = $('.ma__sticky-toc__links'),
           $tocSections = $('.main-content .page-content').find('section h2'),
@@ -10,8 +10,8 @@ export default function (window,document,$,undefined) {
           $tocToggle = $('.stickyTOC-open'),
           $tocFooter = $('.ma__sticky-toc__footer');
 
-    // Remove wrapper if not enough links.
-    if (tocSectionCount < 3) {
+    // // Remove wrapper if not enough links.
+    if (tocSectionCount < 3 ) {
       $toc.remove();
     }
     // Show expander when more than 10 links.
