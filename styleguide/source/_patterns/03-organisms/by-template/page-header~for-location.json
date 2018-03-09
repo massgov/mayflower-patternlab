@@ -78,16 +78,16 @@
       "data": {
         "locationIcons": {
           "icons": [{
-            "path":"@atoms/05-icons/svg-transit.twig",
+            "path":"transit",
             "name":"Transit Friendly"
           },{
-            "path":"@atoms/05-icons/svg-castle.twig",
+            "path":"castle",
             "name":"Historic Site"
           },{
-            "path":"@atoms/05-icons/svg-wheelchair.twig",
+            "path":"wheelchair",
             "name":"Wheelchair Accessible"
           },{
-            "path":"@atoms/05-icons/svg-dog.twig",
+            "path":"dog",
             "name":"Dogs Allowed"
           }]
         }

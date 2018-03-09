@@ -90,16 +90,16 @@
       "data": {
         "locationIcons": {
           "icons": [{
-            "path":"@atoms/05-icons/svg-transit.twig",
+            "icon":"transit",
             "name":"Transit Friendly"
           },{
-            "path":"@atoms/05-icons/svg-castle.twig",
+            "icon":"castle",
             "name":"Historic Site"
           },{
-            "path":"@atoms/05-icons/svg-wheelchair.twig",
+            "icon":"wheelchair",
             "name":"Wheelchair Accessible"
           },{
-            "path":"@atoms/05-icons/svg-dog.twig",
+            "icon":"dog",
             "name":"Dogs Allowed"
           }]
         }
