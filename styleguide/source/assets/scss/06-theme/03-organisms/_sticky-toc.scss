@@ -68,40 +68,6 @@
     }
   }
 
-  &__secondary-label {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: $c-font-dark;
-    padding: 10px 35px 10px 15px;
-    border: 1px solid $c-bd-divider;
-    border-width: 1px 0 1px 0;
-
-    @media ($bp-x-small-min) {
-      display: none;
-    }
-  }
-
-  .secondary-label-close {
-    display: none;
-    position: relative;
-    width: 35px;
-    height: 35px;
-    background-color: $c-theme-primary;
-    color: $c-white;
-
-    &::after {
-      content: '\00d7';
-      font-size: 2.1rem;
-      font-weight: 200;
-      line-height: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
   &__toggle-link {
     color: $c-theme-secondary;
   }
@@ -158,13 +124,11 @@
     left: 0;
     transition: height 0.3s ease-out;
     width: 100%;
-    padding-top: 15px;
     background-color: $c-bg-subtle;
     z-index: 79;
 
     @media ($bp-header-toggle-min) {
       top: 0;
-      padding-top: 10px;
     }
   }
 }
@@ -172,64 +136,15 @@
 .ma__sticky-toc.stuck {
 
   .ma__sticky-toc__stuck {
+    padding-top: 15px;
     height: 75px;
     transition: height 0.2s ease-in;
 
     @media ($bp-header-toggle-min) {
       height: 70px;
+      padding-top: 10px;
     }
   }
-
-  // .ma__sticky-toc__column {
-  //   position: fixed;
-  //   right: -600px;
-  //   width: 100%;
-  //   height: 100%;
-  //   max-width: 530px;
-  //   top: 40px;
-  //   z-index: 99;
-  //   background-color: $c-white;
-  //   transition: right 0.3s ease-out;
-
-  //   @media ($bp-header-toggle-min) {
-  //     top: 0;
-  //   }
-
-  //   .ma__sticky-toc__secondary-label {
-  //     display: flex;
-  //     align-items: center;
-  //     justify-content: space-between;
-  //     border-top: 0;
-  //     font-size: 1.375rem;
-  //     font-weight: 500;
-  //     letter-spacing: 0.1rem;
-  //     text-transform: uppercase;
-  //     color: $c-theme-gray;
-  //     height: 65px;
-  //     padding:0;
-  //     margin: 10px 20px;
-  //   }
-
-  //   .ma__sticky-toc__link {
-  //     display: block;
-  //     padding-left: 40px;
-  //     margin: 0 20px;
-
-  //     a {
-  //       font-weight: 700;
-  //       font-size: 1.375rem;
-  //     }
-
-  //     &> svg {
-  //       display: block;
-  //     }
-  //   }
-
-  //   &.sticky-nav-open {
-  //     right: 0;
-  //     box-shadow: 0 0 10px 2000px rgba(0,0,0,0.3);
-  //   }
-  // }
 }
 
 .ma__sticky-toc__stuck--inner-wrapper {
@@ -284,8 +199,37 @@
   }
 }
 
-.secondary-label-close {
-  display: block;
+.ma__sticky-toc__secondary-label {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $c-font-dark;
+  padding: 10px 35px 10px 15px;
+  border: 1px solid $c-bd-divider;
+  border-width: 1px 0 1px 0;
+
+  @media ($bp-x-small-min) {
+    display: none;
+  }
+
+  .secondary-label-close {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background-color: $c-theme-primary;
+    color: $c-white;
+
+    &::after {
+      content: '\00d7';
+      font-size: 2.1rem;
+      font-weight: 200;
+      line-height: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
 .ma__sticky-toc__current-section {
@@ -301,6 +245,57 @@
 
   @media ($bp-medium-min) {
     display: block;
+  }
+}
+
+.ma__sticky-toc__stuck-menu {
+  position: fixed;
+  right: -600px;
+  width: 100%;
+  height: 100%;
+  max-width: 530px;
+  top: 40px;
+  z-index: 99;
+  background-color: $c-white;
+  transition: right 0.3s ease-out;
+
+  @media ($bp-header-toggle-min) {
+    top: 0;
+  }
+
+  .ma__sticky-toc__secondary-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0;
+    font-size: 1.375rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: $c-theme-gray;
+    height: 65px;
+    padding:0;
+    margin: 10px 20px;
+  }
+
+  .ma__sticky-toc__link {
+    display: block;
+    padding-left: 40px;
+    margin: 0 20px;
+
+    a {
+      font-weight: 700;
+      font-size: 1.375rem;
+    }
+
+    &> svg {
+      display: block;
+    }
+  }
+
+  &.sticky-nav-open {
+    right: 0;
+    box-shadow: 0 0 10px 2000px rgba(0,0,0,0.3);
   }
 }
 

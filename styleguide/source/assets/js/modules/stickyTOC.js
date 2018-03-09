@@ -7,6 +7,7 @@ export default function (window,document,$,undefined) {
           tocSectionCount = $tocSections.length,
           $tocColumn = $('.ma__sticky-toc__column'),
           $mobileToggle = $('.ma__sticky-toc__toggle-link'),
+          $tocToggle = $('.stickyTOC-open'),
           $tocFooter = $('.ma__sticky-toc__footer');
 
     // Remove wrapper if not enough links.
@@ -90,14 +91,15 @@ export default function (window,document,$,undefined) {
       return false;
     });
 
-    function toggleStickyMenu() {
-      $('body').toggleClass('stuck');
-      $tocColumn.toggleClass('sticky-nav-open');
-    }
+    $tocToggle.on('click', function() {
+      if ($('#main-content').not(':has(.ma__sticky-toc__stuck-menu)')) {
+        $tocColumn.clone(true).addClass('ma__sticky-toc__stuck-menu').appendTo('#main-content');
+      }
+      $('.ma__sticky-toc__stuck-menu').toggleClass('sticky-nav-open');
+    });
 
-    // Toggle sticky menu open and closed.
-    $('.secondary-label-close, .ma__sticky-toc__link, .stickyTOC-open').on('click', function() {
-      toggleStickyMenu();
+    $('.secondary-label-close').on('click', function() {
+      $('.ma__sticky-toc__stuck-menu').toggleClass('sticky-nav-open');
     });
   });
 }
