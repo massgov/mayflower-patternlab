@@ -12,10 +12,13 @@
       {% include "@organisms/by-template/page-banner.twig" %}
     {% endblock %}
   </div>
-  <div class="ma__organization-detail">
+  <div class="ma__organization-detail--sections">
     {% block organizationDetailContent %}
       {% for stackedRow in stackedRows %}
-        <section class="ma__organization-detail">
+        <section class="ma__organization-detail--section">
+          {% if loop.first != true %}
+            {% include "@atoms/divider.twig" %}
+          {% endif %}
           <div class="main-content main-content--two">
             <div class="ma__organization-detail__title">
               {% set compHeading = {
