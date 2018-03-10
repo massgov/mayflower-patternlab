@@ -47,6 +47,11 @@
       {% if pageBanner.description and not (pageBanner.size == "columns") %}
         <p class="ma__page-banner__description">
           {{ pageBanner.description }}
+          {% if pageBanner.descriptionSubText %}
+            <span class="ma__page-banner__descriptionSubText">
+              {{ pageBanner.descriptionSubText }}
+            </span>
+          {% endif %}
         </p>
       {% endif %}
     </div>
