@@ -8,11 +8,11 @@
 
   .ma__person-card--wrapper {
     max-width: 375px;
-    margin: 2rem auto;
+    margin: 2rem auto 1.5rem;
   }
 
   &__image {
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.3rem;
     max-width: 250px;
   }
 
@@ -22,10 +22,27 @@
 
       h2 {
         margin-bottom: 0;
+        padding-bottom: 5px;
+        font-weight: 500;
+
+        @media ($bp-small-min) {
+          font-size: 2.25rem;
+        }
       }
 
       h2::after {
         display: none;
+      }
+    }
+
+    .ma__person-card--title {
+
+      h3 {
+        margin-bottom: 0;
+
+        @media ($bp-small-min) {
+          font-size: 1.35rem;
+        }
       }
     }
   }
@@ -35,11 +52,20 @@
     margin: 0 auto;
     padding: 1rem 1rem 0;
 
-    a {
-      display: block;
+    @include breakpoint ($bp-small-min) {
+      padding-top: 1.5rem;
+    }
+
+    .ma__content-link  {
       padding-top: 1rem;
-      font-weight: 500;
-      font-size: 1.25rem;
+      margin: 0;
+
+      span {
+        display: block;
+        line-height: 1;
+        font-weight: 500;
+        font-size: 1.25rem;
+      }
     }
 
     .ma__divider::after {

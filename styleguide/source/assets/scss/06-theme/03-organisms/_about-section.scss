@@ -1,34 +1,36 @@
 .ma__about-section {
   @include ma-container();
 
-  @media ($bp-large-min) {
+  @media ($bp-x-large-min) {
     max-width: none;
+    min-height: 620px;
   }
 
   &__title {
 
-    @media ($bp-large-min) {
+    @media ($bp-x-large-min) {
       @include ma-container();
     }
   }
 
   &__content {
 
-    @media ($bp-large-min) {
+    @media ($bp-x-large-min) {
       background-color: $c-bg-section;
     }
 
     .ma__about-section__content-container {
       position: relative;
 
-      @media ($bp-large-min) {
+      @media ($bp-x-large-min) {
         @include ma-container();
+        padding-top: 3rem;
       }
     }
 
     .ma__about-section__content-text {
 
-      @media ($bp-large-min) {
+      @media ($bp-x-large-min) {
         max-width: 60%;
       }
     }
@@ -37,21 +39,25 @@
       display: inline-block;
       margin: 5px 0 2.5rem;
     }
+
+    .ma__person-card__links .ma__content-link {
+      margin: 0;
+    }
   }
 
   .ma__person-card {
 
-    @media ($bp-large-min) {
+    @media ($bp-x-large-min) {
       position: absolute;
       right: 0;
-      top: -110px;
+      top: -130px;
     }
   }
 
   &__social {
     margin-top: 20px;
 
-    @media ($bp-large-min) {
+    @media ($bp-x-large-min) {
       @include ma-container();
     }
 
