@@ -1,0 +1,88 @@
+{
+  "pageBanner": {
+    "bgWide": "../../assets/images/placeholder/1600x400.png",
+    "bgNarrow": "../../assets/images/placeholder/800x400.png",
+    "size": "large",
+    "icon": null,
+    "title": "Office if the Treasurer & Receiver General",
+    "titleSubText": "(TRE)"
+  },
+  "stackedRows": [
+    {
+      "title": "About the Treasury",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@atoms/11-text/raw-html.twig",
+          "data": {
+            "rawHtml": {
+              "content": "stuff"
+            }
+          }
+        }
+      ],
+      "sideBar": [
+        {
+          "path": "@atoms/09-media/image.twig",
+          "data": {
+            "image": {
+              "alt": "eohhs logo",
+              "src": "../../assets/images/placeholder/250x250.png",
+              "height": "250",
+              "width": "250"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "Middle Section with no image",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@atoms/11-text/raw-html.twig",
+          "data": {
+            "rawHtml": {
+              "content": "stuff"
+            }
+          }
+        }
+      ],
+      "sideBar": [
+        {
+          "path": "@atoms/09-media/image.twig",
+          "data": {
+
+          }
+        }
+      ]
+    },
+    {
+      "title": "About Deborah Goldberg",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@atoms/11-text/raw-html.twig",
+          "data": {
+            "rawHtml": {
+              "content": "stuff"
+            }
+          }
+        }
+      ],
+      "sideBar": [
+        {
+          "path": "@atoms/09-media/image.twig",
+          "data": {
+            "image": {
+              "alt": "alt text",
+              "src": "../../assets/images/placeholder/300x500.png",
+              "height": "500",
+              "width": "300"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
