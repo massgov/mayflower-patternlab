@@ -52,7 +52,7 @@
     margin: 0 auto;
     padding: 1rem 1rem 0;
 
-    @include breakpoint ($bp-small-min) {
+    @media ($bp-small-min) {
       padding-top: 1.5rem;
     }
 

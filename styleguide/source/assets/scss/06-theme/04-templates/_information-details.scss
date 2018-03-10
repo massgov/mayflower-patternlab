@@ -44,14 +44,14 @@
 
   .sidebar {
 
-    @include breakpoint ($bp-m) {
+    @media ($bp-m) {
       padding-top: 10px;
     }
 
     .ma__link-list {
       display: none;
 
-      @include breakpoint ($bp-l) {
+      @media ($bp-l) {
         display: block;
       }
     }
