@@ -49,14 +49,6 @@
             }
           }
         }
-      ],
-      "sideBar": [
-        {
-          "path": "@atoms/09-media/image.twig",
-          "data": {
-
-          }
-        }
       ]
     },
     {
