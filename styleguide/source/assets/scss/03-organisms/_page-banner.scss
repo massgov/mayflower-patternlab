@@ -332,3 +332,31 @@ $page-banner-height: 330px;
     }
   }
 }
+
+.ma__page-banner:not(.ma__page-banner--overlay) {
+
+.ma__page-banner__content-wrapper {
+
+  @media ($bp-x-small-min) {
+  transform: skew(30deg);
+  width: 55vw;
+  display: flex;
+  flex-wrap: wrap;
+
+  .ma__page-banner__icon {
+    transform: none;
+  }
+
+  .ma__page-banner__title {
+    flex:1;
+    transform: none;
+  }
+
+  .ma__page-banner__description {
+    width: 100%;
+    transform: none;
+  }
+
+}
+}
+}
