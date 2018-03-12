@@ -12,7 +12,7 @@ export default function (window,document,$,undefined) {
         // launch new tab/window
         window.open(dest);
       } else {
-        // otherwise redirect to a new page 
+        // otherwise redirect to a new page
         window.location = dest;
       }
     });

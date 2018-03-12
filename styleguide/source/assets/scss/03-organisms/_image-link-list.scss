@@ -16,14 +16,14 @@
       @media($bp-medium-min) {
         flex-basis: calc(50% - 0.5rem);
         &.ma__link-list__item--secondary {
-          display: initial !important;
+          display: block !important;
         }
       }
       @media($bp-x-large-min) {
         flex-basis: calc(33% - 1rem);
         &.ma__link-list__item--secondary,
         &.ma__link-list__item--tertiary {
-          display: initial !important;
+          display: block !important;
         }
       }
     }
@@ -51,7 +51,7 @@
     // show on small if has secondary or tertiary links
     &.has-secondary,
     &.has-tertiary {
-      display: initial;
+      display: inline-block;
     }
     // if has tertiary links, show on mid
     @media($bp-medium-min) {
@@ -59,7 +59,7 @@
         display: none;
       }
       &.has-tertiary {
-        display: initial;
+        display: inline-block;
       }
     }
     // Never show on full width

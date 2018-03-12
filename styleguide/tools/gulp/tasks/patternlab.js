@@ -16,7 +16,7 @@ module.exports = function patternLabTask(config, env){
     }
 
     gulp.task("patternlab", function() {
-        run(command).exec();
+        run(command, {verbosity: 3}).exec();
     });
 
     // register the watch

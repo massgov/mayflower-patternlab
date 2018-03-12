@@ -1,0 +1,49 @@
+{% set teaserHeading = 2 %}
+{% set stacked = teaserListing.stacked ? 'stacked': 'side-by-side' %}
+{% set gridTwoColumns = teaserListing.contained and teaserListing.gridTwoColumns ? 'ma__teaser-listing__2-col-grid' : 'ma__teaser-listing__3-col-grid' %}
+
+
+<section class="ma__teaser-listing">
+  <div class="ma__teaser-listing__container">
+    {% if teaserListing.compHeading %}
+      {% set compHeading = teaserListing.compHeading %}
+      {% include "@atoms/04-headings/comp-heading.twig" %}
+      {% set teaserHeading = (compHeading.level ? : teaserHeading) + 1 %}
+    {% endif %}
+    {% if teaserListing.sidebarHeading %}
+      {% set sidebarHeading = teaserListing.sidebarHeading %}
+      {% include "@atoms/04-headings/sidebar-heading.twig" %}
+      {% set teaserHeading = (sidebarHeading.level ? : teaserHeading) + 1 %}
+    {% endif %}
+    {% if teaserListing.description %}
+      <div class="ma__teaser-listing__description">
+      {% set paragraph = teaserListing.description %}
+      {% include "@atoms/11-text/paragraph.twig" %}
+      </div>
+    {% endif %}
+    {% if teaserListing.featuredItems %}
+      <div class="ma__teaser-listing__featured-items {{ stacked }}">
+        {% for generalTeaser in teaserListing.featuredItems %}
+          {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
+          {% include "@molecules/general-teaser.twig" %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if teaserListing.items %}
+      <ul class="ma__teaser-listing__items {{ gridTwoColumns }}">
+        {% for generalTeaser in teaserListing.items %}
+          <li class="ma__teaser-listing__item">
+            {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
+            {% include "@molecules/general-teaser.twig" %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if teaserListing.more %}
+      <div class="ma__teaser-listing__more">
+        {% set link = teaserListing.more %}
+        {% include "@atoms/11-text/link.twig" %}
+      </div>
+    {% endif %}
+  </div>
+</section>

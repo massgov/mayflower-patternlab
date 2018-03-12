@@ -56,6 +56,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: space-between;
     }
 
     .ma__divider {
@@ -81,10 +82,12 @@
     @media ($bp-small-min) {
       display: flex !important; // override JS-hidden accordion behavior on non-mobile
       flex-basis: 50%;
+      max-width: 50%;
       flex-direction: row;
     }
     @media ($bp-large-min) {
       flex-basis: 33%;
+      max-width: 33%;
     }
 
 
@@ -92,6 +95,7 @@
     //       last odd child gets flowed
       &:last-child:nth-child(odd) {
         flex-basis: 100%;
+        max-width: 100%;
         justify-content: space-between;
 
         .ma__featured-item {
