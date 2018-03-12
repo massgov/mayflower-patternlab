@@ -18,9 +18,11 @@
   {% endif %}
   <div class="main-content {{ stackedRowSection.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
     <div class="page-content">
-      {% for content in stackedRowSection.pageContent %}
-        {% include content.path with content.data %}
-      {% endfor %}
+      {% block stackedRowContentOverride %}
+        {% for content in stackedRowSection.pageContent %}
+          {% include content.path with content.data %}
+        {% endfor %}
+      {% endblock %}
     </div>
     {% if stackedRowSection.sideBar|length %}
       <aside class="sidebar">

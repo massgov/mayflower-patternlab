@@ -30,10 +30,12 @@ var defaults = {
     dest: path.resolve(__dirname, "../../public/assets"),
     patternLabRoot: path.resolve(__dirname, "../../"),
     rootSite: path.resolve(__dirname, "../../public"),
+    rootSource: path.resolve(__dirname, "../../source"),
     tasks: ["copy", "copyTwig", "js", "css", "bower", "patternlab"],
     env: "development", // "development", "production", "local"
     watch: false,
-    browserSync: false
+    browserSync: false,
+    version: "0.0.0"
 };
 
 /**
@@ -82,6 +84,18 @@ gulp.task("build", function(){
 
 });
 
+/** Deploy to s3 bucket **/
+gulp.task("s3",function(){
+  var config = Object.assign({}, defaults, {
+    env   : "production",
+    watch : false,
+    browserSync: false,
+    tasks : ["s3"]
+  });
+
+  quench.build(config);
+});
+
 /**
  * Quick tool for converting svg icons into patternLab twig files
 **/
@@ -96,6 +110,18 @@ gulp.task("svg2twig",function(){
 
     quench.build(config);
 
+});
+
+/** Bump package version **/
+gulp.task("bump",function(){
+  var config = Object.assign({}, defaults, {
+    env   : "production",
+    watch : false,
+    browserSync: false,
+    tasks : ["bump"]
+  });
+
+  quench.build(config);
 });
 
 // watch for single tasks on the command line, eg "gulp js"

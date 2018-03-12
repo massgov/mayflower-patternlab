@@ -11,8 +11,9 @@ Displays a collection of components to help describe an available Service on Mas
 * Rich Text organisms
 * Key Actions organism
 * Icon Links organism
-* Link List organism
+* Image Link List organism
 * Action Finder organism
+* Contact List organism
 * Mapped Locations organism
 * Split Columns organism
 * Form Downloads organism
@@ -29,7 +30,7 @@ Displays a collection of components to help describe an available Service on Mas
 ### Variables
 ~~~
 {
-  pageBanner: 
+  pageBanner:
     type: pageBanner / required
 
   introPageContent: {
@@ -56,8 +57,8 @@ Displays a collection of components to help describe an available Service on Mas
       }
     },
 
-    linkList : {
-      type: linkList / optional
+    imageLinkList : {
+      type: imageLinkList / optional
     }
   },
 
@@ -71,6 +72,10 @@ Displays a collection of components to help describe an available Service on Mas
     actionFinder: {
       type: actionFinder / optional
     }
+  },
+
+  contactList: {
+    type: contactList / required
   },
 
   mappedLocations: {

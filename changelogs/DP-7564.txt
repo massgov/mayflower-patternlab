@@ -1,0 +1,8 @@
+Changed
+Minor
+- DP-7564: Changed Mayflower templates used for the Featured Items Mosaic
+  component on Organization Landing Pages. This change should not impact any
+  existing functionality, since the related component is not yet in use.
+
+___POST DEPLOY STEPS___
+N/A

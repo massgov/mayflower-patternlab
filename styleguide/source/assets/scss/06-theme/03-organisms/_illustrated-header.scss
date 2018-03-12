@@ -22,3 +22,12 @@
     }
   }
 }
+
+.ma__illustrated-header--inverted {
+  &, .ma__page-header__title {
+    color: $c-white;
+  }
+  &, .ma__illustrated-header__content {
+    background: $c-theme-blue;
+  }
+}
