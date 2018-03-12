@@ -20,15 +20,17 @@
     {% set bulletClass = linkList.hideBullets ? "ma__link-list__items--no-bullets": "" %}
     {% if linkList.stacked or linkList.links|length < 4 %}
       <ul class="ma__link-list__items {{ bulletClass }}">
-        {% for decorativeLink in linkList.links %}
-          <li class="ma__link-list__item">
-            {% if decorativeLink.href %}
-              {% include "@atoms/decorative-link.twig" %}
-            {% else %}
-              {{ decorativeLink.text }}
-            {% endif %}
-          </li>
-        {% endfor %}
+        {% block linkListDecorativeLink %}
+          {% for decorativeLink in linkList.links %}
+            <li class="ma__link-list__item">
+              {% if decorativeLink.href %}
+                {% include "@atoms/decorative-link.twig" %}
+              {% else %}
+                {{ decorativeLink.text }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        {% endblock %}
       </ul>
     {% else %}
       {% set length = linkList.links|length/2 %}
