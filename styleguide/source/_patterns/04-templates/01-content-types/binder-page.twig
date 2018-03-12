@@ -1,4 +1,3 @@
-
 {# site header #}
 {% block header %}{% endblock %}
 
@@ -6,12 +5,7 @@
   <div class="pre-content">
     {% block preContent %}
       {% include "@organisms/by-template/content-eyebrow.twig" %}
-      {% if illustratedHeader %}
-        {% include "@organisms/by-template/illustrated-header.twig" %}
-      {% endif %}
-      {% if pageHeader %}
-        {% include "@organisms/by-template/page-header.twig" %}
-      {% endif %}
+      {% include "@organisms/by-template/illustrated-header.twig" %}
     {% endblock %}
   </div>
   <div class="ma__binder-page__content">
@@ -45,10 +39,12 @@
           {% include "@organisms/by-author/form-downloads.twig" %}
         {% endif %}
 
-        {% if mainContent.contactList %}
-          {% set contactList = mainContent.contactList %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        {% endif %}
+        {% block contactList %}
+          {% if mainContent.contactList %}
+            {% set contactList = mainContent.contactList %}
+            {% include "@organisms/by-author/contact-list.twig" %}
+          {% endif %}
+        {% endblock %}
 
       </div>
       <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
