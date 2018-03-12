@@ -6,27 +6,14 @@
     {% set sidebarHeading = { "title": tableOfContentsHierarchy.title.text } %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
-    <ul class="ma__toc--hierarchy__container">
+  <ul class="ma__toc--hierarchy__container">
+    {% block binderSection %}
       {% for section in tableOfContentsHierarchy.sections %}
         {% if section.linkItems|length > 0 %}
-          <li class="ma__toc--hierarchy__accordion js-accordion">
-            <button class="ma__toc--hierarchy__title js-accordion-link {{ section.isCurrent ? 'is-current': ''}}" type="button">
-              {{section.text}}
-            </button>
-            <ul class="ma__toc--hierarchy__accordion-content js-accordion-content">
-              {% for link in section.linkItems %}
-                <li class="{{ link.isCurrent ? 'is-current': ''}}">
-                  {% if link.icon %}
-                    {% set downloadLink = link %}
-                    {% include "@molecules/download-link.twig" %}
-                  {% else %}
-                    {% set decorativeLink = link %}
-                    {% include "@atoms/decorative-link.twig" %}
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
+          {% block tocExpandableSection %}
+            {% set expandableSection = section %}
+            {% include "@molecules/expandable-section.twig" %}
+          {% endblock %}
         {% elseif section.icon %}
           <li>
             {% set downloadLink = section %}
@@ -39,5 +26,6 @@
           </li>
         {% endif %}
       {% endfor %}
+    {% endblock %}
   </ul>
 </nav>

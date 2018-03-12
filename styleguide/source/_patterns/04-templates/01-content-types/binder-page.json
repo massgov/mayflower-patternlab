@@ -85,9 +85,9 @@
 
     "tableOfContentsSections": [
       {
-	"title": {
+        "title": {
           "text": "Table of Contents",
-	  "colored": true
+          "colored": true
         },
         "sections": [
           {
@@ -125,9 +125,9 @@
         ]
       },
       {
-	"title": {
+        "title": {
           "text": "Appendix",
-	  "colored": true
+          "colored": true
         },
         "sections": [
           {

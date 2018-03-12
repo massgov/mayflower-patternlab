@@ -18,8 +18,9 @@
       <div class="ma__location-listing__results js-location-listing-results">
         {% set resultsHeading = locationListing.resultsHeading %}
         {% include "@molecules/results-heading.twig" %}
+        {% set promoHeading = locationListing.imagePromos.promoHeading %}
         {% set items = locationListing.imagePromos.items[:maxItems] %}
-        {% set imagePromos = { items: items } %}
+        {% set imagePromos = { promoHeading: promoHeading, items: items } %}
         {% include "@organisms/by-author/image-promos.twig" %}
         {% set pagination = locationListing.pagination %}
         {% include "@molecules/pagination.twig" %}

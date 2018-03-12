@@ -6,7 +6,8 @@
     <ul class="ma__social-links__items">
       {% for item in socialLinks.items %}
         <li class="ma__social-links__item">
-          <a href="{{ item.href }}" class="ma__social-links__link js-social-share" data-social-share="{{ item.linkType }}" title="{{ item.altText }}">
+          <a href="{{ item.href }}" class="ma__social-links__link js-social-share" data-social-share="{{ item.linkType }}">
+            <span class="visually-hidden">{{ item.altText }}</span>
             {% include item.icon %}
           </a>
         </li>

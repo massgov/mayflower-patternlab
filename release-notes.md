@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+See [Change Log Instructions](docs/changelog-log-instructions.md) for directions on updating this file.
+
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ```
@@ -11,7 +13,94 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
-## 5.10.2 (2/2/2018)
+## 5.13.1 (2/28/2018)
+
+
+## Added
+- DP-7786: Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label. #711 #712
+- DP-2082: [a11y] Add intuitive info to the + symbols for accordion buttons  #687
+  - make screen readers not announce the + button in contact accordion
+  -  add accordion status announcement with aria-label
+- DP-7063: Added SVG Chat icon #664
+- (For dev and release masters:) Added change log for the PR process #708 #715
+- DP-7624: binder cover page components #698
+  - New Organism variation "illustrated-header~inverted"
+  - New Organism "table-of-contents-hierarchy"
+  - New Content Type "binder-page"
+
+### Changed
+- DP-6352: [a11y] change tell us what you think button on all pages to be last item to get keyboard focus #678
+- DP-3222-3914: [a11y] heading levels adjustment for imagePromo items #682
+- DP-6351: [a11y] Change pagination on location listing to be heading #679
+- DP-6350: [a11y] Change search query field place holder text in location #683
+- DP-2405: Change the container for an abbreviation in a page banner title to <abbr> from <span> #688
+
+## Fixed
+- DP-6712: Fix the Video Dimensions on the Service Detail Page #674
+- DP-1553: [a11y] Correct aria role value #699
+- DP-2403: [a11y] Text info for the social media icons in the footer #691
+
+
+### Removed
+- DP-3198: a11y Keyboard focus indicator usability for main menus #676
+  - Removed the poor supported aria-controles from the main navigation tabs to remove the non-functional keyboard instruction in JAWS with Firefox.
+- DP-3252: [a11y] Remove IDs from svg icons #681
+
+## 5.13.0 (2/16/2018)
+
+## Changed
+- DP-7907: Adds support for details to  [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-with-details&view=c) (e.g calls to action on a location page header). This includes adding an eyebrow, white theme variant, time note, and emphasized text to the callout link molecule. #703
+
+## Added
+
+- DP-7307 & DP-7483: organization image links #670
+    - Add logo link molecule & logo list organism for use on service page
+    - Add block
+    - Adding accordion behaivor to image link lists
+
+## Fixed
+
+- DP-7307 & DP-7483: organization image links #670
+    - relative pathing so things work everywhere
+    - remove borders when logo list is in sidebar, align left text & images when no image present for some links
+    - rename logoLink to imageLink, add variant for block treatment
+    - fix indentation, spacing
+    - adjust accordion toggle for various length of items
+
+## 5.12.4 (2/13/2018)
+
+### Fixed
+- (For release masters:) `sed` from bash script on macos is not being very kind.  Iterating on the release script again.
+
+## 5.12.3 (2/13/2018)
+
+### Fixed
+- (For release masters:) Touch up release docs and iterate on s3 deploy scripts for smoother release.
+
+## 5.12.2 (2/8/2018)
+
+### Fixed
+- (For release masters:) Touch up release docs and iterate on s3 deploy scripts for smoother release.
+
+## 5.12.1 (2/8/2018)
+
+### Fixed
+- (For devs) Iterate on the release process to make it more smooth.
+
+## 5.12.0 (2/7/2018)
+
+### Changed
+- DP-7718: Adds support for Description text to [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-as-description&view=c) (e.g calls to action on a location page header).
+- D-7725: Adds Support for Blue Variant of [@atoms/colored-heading](https://mayflower.digital.mass.gov/?p=atoms-colored-heading-blue&view=c) (e.g. header in the press filter organism)
+
+## Fixed
+- DP-7359: Make line breaks on word in [richtext](https://mayflower.digital.mass.gov/?p=organisms-rich-text) links compatible with non-chrome browsers.
+- DP-7490: Adjust the [page banner](https://mayflower.digital.mass.gov/?p=organisms-page-banner-as-overlay) and its children for flexble height.
+
+## Added
+- (For Devs): Adds shell scripts and circle config to deploy feature branches and production tags to mayflower.digital.mass.gov [s3 bucket|https://github.com/massgov/mayflower/blob/dev/docs/s3-architecture.md] AND to publish static assets on [NPM|https://www.npmjs.com/package/@massds/mayflower]. See new [release process|https://github.com/massgov/mayflower/blob/dev/docs/release.md]
+
+## 5.11.0 (2/5/2018)
 
 ### Changed
 - DP-7478 - Page based alerts can now span multiple rows as needed.
@@ -19,7 +108,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ### Added
 - DP-7265 - Add new 'Mosaic Grid' organism with 'Featured Item' molecules for use on ['Organization Elected Official' pages](https://mayflower.digital.mass.gov/?p=pages-organization-elected-official).
-
 
 ## 5.10.1 (1/3/2018)
 
