@@ -69,8 +69,7 @@ export default function (window,document,$,undefined) {
 
       $tocSections.each(function() {
         let $thisSectionTitle = $(this).text();
-        // Height of title bar + section padding: 70 + 45 = 115
-        let sectionPosition = $(this).offset().top - 115;
+        let sectionPosition = $(this).offset().top - 20;
 
         // Switch title in sticky TOC on scroll.
         if (sectionPosition < windowTop) {
@@ -96,10 +95,11 @@ export default function (window,document,$,undefined) {
     function menuToggle() {
       $('.ma__sticky-toc__stuck-menu').toggleClass('sticky-nav-open');
       $('body').toggleClass('stuck');
+      $('.ma__sticky-toc__overlay').toggle();
     }
 
     $tocToggle.on('click', function() {
-      if ($('#main-content').not(':has(.ma__sticky-toc__stuck-menu)')) {
+      if ($('.ma__sticky-toc__stuck-menu').length == 0) {
         $tocColumn.clone(true).addClass('ma__sticky-toc__stuck-menu').appendTo('#main-content');
       }
       menuToggle();
