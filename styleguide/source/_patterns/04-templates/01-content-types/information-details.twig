@@ -43,11 +43,9 @@
         {% set contactList = sidebar.contactList %}
         {% include "@organisms/by-author/contact-list.twig" %}
       {% endif %}
-      {% if sidebar %}
-        {% block sidebar %}
-          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Right Rail'}} %}
-        {% endblock %}
-      {% endif %}
+      {% block sidebar %}
+        {% include "@base/placeholder.twig" with {'placeholder':{'text':'Right Rail'}} %}
+      {% endblock %}
     </aside>
 
   </div>

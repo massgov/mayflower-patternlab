@@ -1,15 +1,17 @@
 ### Description
-This pattern shows a group of related contact information (phone, fax, online, or address).
+This pattern shows an item of related contact information (phone, fax, online, or address).
+
+### To do
+This pattern currently depends on a wrapper to display properly. In the future, it should be updated to exist correctly on its own.
 
 ### Status
 * Stable as of 5.0.0
 
 ### Pattern Contains
-* Contact Item
 * Decorative Link
 
 ### Variant options
-* Phone is currently shown
+* Phone is currently shown. The variants are shown for the group wrapper.
 * [Online](./?p=molecules-contact-group-as-online)
 * [Fax](./?p=molecules-contact-group-as-fax)
 * [Address](./?p=molecules-contact-group-as-address)
@@ -17,14 +19,7 @@ This pattern shows a group of related contact information (phone, fax, online, o
 
 ### Variables
 ~~~
-group: {
-  icon:
-    type: string (path to icon) / optional
-  name:
-    type: string ("Phone", "Online", "Fax", or "Address") / optional
-  level:
-    type: number / optional
-  items: [{
+  item: {
     type: 
       type: string ("phone", "online", "email", "address" ) / required,
     label:
@@ -36,6 +31,6 @@ group: {
     }
     details: 
       type: string / optional
-  }]
+  }
 }
 ~~~
