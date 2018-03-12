@@ -1,7 +1,6 @@
 .ma__toc--overlay {
-  background: transparent;
 
-  .ma__toc--toc__title {
+  .ma__toc__toc__title {
     background: $c-gray-f2f2f2;
     color: $c-theme-blue;
   }
@@ -9,10 +8,10 @@
     border-bottom: 1px solid $c-gray-dcdcdc;
   }
 
-  .ma__toc--toc__toggle[aria-expanded="false"] {
+  .ma__toc__toc__toggle[aria-expanded="false"] {
     color: $c-theme-blue;
   }
-  .ma__toc--toc__toggle[aria-expanded="true"] {
+  .ma__toc__toc__toggle[aria-expanded="true"] {
     color: $c-white;
     background: $c-theme-blue;
   }
@@ -29,7 +28,7 @@
     }
   }
 
-  &.is-open {
+  .ma__toc--overlay__container {
     background: $c-white;
   }
 

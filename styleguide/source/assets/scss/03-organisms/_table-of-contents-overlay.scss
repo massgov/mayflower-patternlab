@@ -3,11 +3,10 @@
   margin-top: 20px;
   transition: background .2s ease;
 
-  .ma__toc--toc__title {
+  .ma__toc__toc__title {
     border: 0;
     padding: 20px  60px 20px 20px;
     display: block;
-    width: 100%;
     text-align: left;
     position: relative;
 
@@ -55,13 +54,31 @@
   }
 
   .ma__toc--overlay__container {
-    max-height: 0;
+    position: fixed;
+      top: -100vh;
+      left: 0;
+      right: 0;
+    height: 100vh;
     opacity: 0;
-    overflow-y: scroll;
-    transition: all .2s ease;
+    overflow: scroll;
+    transition: all .5s ease;
+    z-index: 100;
+    > * {
+      @include ma-container();
+      display: none;
+    }
+
+    &:before {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      background-color: #fff;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
   }
 
-  .ma__toc--toc__toggle {
+  .ma__toc__toc__toggle {
     position: absolute;
     right: 20px;
     top: calc(50% - 20px);
@@ -78,42 +95,31 @@
     }
   }
 
-  .ma__toc--toc__toggle[aria-expanded="false"] {
+  .ma__toc__toc__toggle[aria-expanded="false"] {
     .hide {
       display: none;
     }
   }
 
-  .ma__toc--toc__toggle[aria-expanded="true"] {
+  .ma__toc__toc__toggle[aria-expanded="true"] {
     .show {
       display: none;
     }
   }
 
-  &:before {
-    content: "";
-    position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    z-index: -1;
-    background-color: #fff;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
+  .ma__toc--overlay__container.is-open {
+    top: 0;
+    opacity: 1;
 
-
-  &.is-open {
-    position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    margin-top: 0 !important;
-    z-index: 100;
+    > * {
+      display: block;
+    }
 
     &:before {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       opacity: 1;
     }
 
