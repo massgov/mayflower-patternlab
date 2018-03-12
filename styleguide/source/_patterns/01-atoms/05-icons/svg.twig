@@ -4,6 +4,8 @@
  'linkedin' or icon == 'twitter' or icon == 'youtube' %}
     <use xlink:href="/{{ directory }}/images/icon-social-media.svg#icon-{{ icon
     }}"></use>
+{% elseif icon == 'cash' or icon == 'check' or icon == 'credit' %}
+    <use xlink:href="/{{ directory }}/images/icon-payment-methods.svg#icon-{{ icon }}"></use>
 {% elseif icon == 'doc-doc' or icon == 'doc-xls' or icon == 'doc-ppt' or icon == 'doc-rtf' or icon == 'doc-pptx' %}
     <use xlink:href="/{{ directory }}/images/icon-doc-generic.svg#icon-doc-generic"></use>
 {% else %}

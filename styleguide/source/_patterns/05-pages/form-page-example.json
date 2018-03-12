@@ -48,13 +48,13 @@
 
       "locationIcons": {
         "icons": [{
-          "path":"@atoms/05-icons/svg-credit.twig",
+          "icon":"credit",
           "name":"credit card"
         },{
-          "path":"@atoms/05-icons/svg-check.twig",
+          "icon":"check",
           "name":"check"
         },{
-          "path":"@atoms/05-icons/svg-cash.twig",
+          "icon":"cash",
           "name":"cash"
         }]
       }
