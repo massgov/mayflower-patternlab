@@ -267,7 +267,7 @@
         "accordion": true,
         "isExpanded": false,
         "accordionLabel": "Expand step for doing this online",
-        "icon":"@atoms/05-icons/svg-laptop.twig",
+        "icon":"laptop",
         "title":"Online",
         "richText": {
           "rteElements": [{
@@ -299,7 +299,7 @@
         "accordion": true,
         "isExpanded": false,
         "accordionLabel": "By Phone",
-        "icon":"@atoms/05-icons/svg-phone.twig",
+        "icon":"phone",
         "title":"By Phone",
         "richText": {
           "rteElements": [{
