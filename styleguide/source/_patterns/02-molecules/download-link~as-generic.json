@@ -1,7 +1,7 @@
 {
   "downloadLink": {
     "iconSize": "",
-    "icon": "@atoms/05-icons/svg-doc-generic.twig",
+    "icon": "doc-generic",
     "decorativeLink": {
       "text": "Link with a generic icon",
       "href": "#",
