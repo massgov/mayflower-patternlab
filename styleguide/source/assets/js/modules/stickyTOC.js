@@ -30,11 +30,9 @@ export default function (window,document,$,undefined) {
         sectionId = sectionTitle.replace(/\s+/g, '-').toLowerCase();
         $section.attr('id', sectionId);
       }
-
       let $tocLink = '<div class="ma__sticky-toc__link"><svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" width=\"35\" height=\"35\" viewBox=\"0 0 35 35\"><path class=\"st0\" d=\"M17.5 35C7.8 35 0 27.2 0 17.5 0 7.8 7.8 0 17.5 0 27.2 0 35 7.8 35 17.5 35 27.2 27.2 35 17.5 35zM16 9l-3 2.9 5.1 5.1L13 22.1l3 2.9 8-8L16 9z\"/></svg><a href="#'+sectionId+'" >'+sectionTitle+'</a></div>';
 
       $section.addClass('sticky-toc-jump-target');
-
       $('.ma__sticky-toc__column').append($tocLink);
     });
 
@@ -55,15 +53,16 @@ export default function (window,document,$,undefined) {
       $button.text($buttonText === "show less" ? "show more" : "show less");
     });
 
-    $('body').on('click', '.ma__sticky-toc__link a[href="#related"]', function() {
-      $('.ma__sticky-toc__current-section').text("Related Links");
-    });
-
     $(window).resize(function () {
       // Reset menu for each form factor on resize.
       $('.ma__sticky-toc__link').removeAttr('style');
       $tocContent.removeClass('open');
       $tocFooter.find('button').removeClass('open').text('Show More');
+    });
+
+    // Set title bar to 'Related since the scroll never makes it that far'
+    $('body').on('click', '.ma__sticky-toc__link a[href="#related"]', function() {
+      $('.ma__sticky-toc__current-section').text("Related Links");
     });
 
     $(window).scroll(function () {
@@ -112,8 +111,8 @@ export default function (window,document,$,undefined) {
 
     function menuToggle() {
       $('.ma__sticky-toc__stuck-menu').toggleClass('sticky-nav-open');
-      $('body').toggleClass('stuck');
       $('.ma__sticky-toc__overlay').toggle();
+      $('.ma__floating-action').toggle();
     }
 
     $tocToggle.on('click', function() {
