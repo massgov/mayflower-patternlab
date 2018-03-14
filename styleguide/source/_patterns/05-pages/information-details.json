@@ -69,7 +69,7 @@
               "downloadLinks": [{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "icon": "doc-pdf",
                   "decorativeLink": {
                     "text": "PDF resource item",
                     "href": "#",
@@ -82,7 +82,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "icon": "laptop",
                   "decorativeLink": {
                     "text": "Link to an online form",
                     "href": "#",
