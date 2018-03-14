@@ -1,5 +1,5 @@
 ### Description
-This template is for the Organization Detail contnet type rail.
+This template is for the Organization Detail content type based on the stacked row template
 
 ### Status
 * Stable as of 5.0.0
@@ -20,12 +20,8 @@ This template is for the Organization Detail contnet type rail.
 ### Variables
 ~~~
 stackedRows: [{
-  borderless:
-    type: boolean / optional (defaults to false),
   title:
     type: string / optional,
-  id:
-    type: string (unique per page) / optional
   pageContent: [{
     path:
       type: string / required,

@@ -1,5 +1,5 @@
 ### Description
-This is an example of an Organization Detail page for Mass.gov using a stacked row template
+This is an example of an Organization Detail page for Mass.gov using the organization details template
 
 ### Status
 * Stable as of 5.0.0
@@ -7,7 +7,7 @@ This is an example of an Organization Detail page for Mass.gov using a stacked r
 ### Pattern Contains
 * Header
 * Footer
-* Stacked Row (template)
+* Stacked Row
 * Page Banner - large
 * Raw HTML
 * Image
