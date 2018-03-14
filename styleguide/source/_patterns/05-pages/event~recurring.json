@@ -69,8 +69,8 @@
     "widgets": [{
       "path": "@atoms/09-media/image.twig",
       "data": {
-        "image": { 
-          "alt": "Mass Wildlife", 
+        "image": {
+          "alt": "Mass Wildlife",
           "src": "../../assets/images/placeholder/190x220.png",
           "height": "220",
           "width": "190"
@@ -130,7 +130,7 @@
       "downloadLinks": [{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "icon": "doc-pdf",
           "decorativeLink": {
             "text": "Agenda for Upcoming Fisheries and Wildlife Board Meeting",
             "href": "#",
