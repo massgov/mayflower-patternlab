@@ -14,6 +14,10 @@ export default function (window,document,$,undefined) {
     if (tocSectionCount < 3 ) {
       $toc.remove();
     }
+    else {
+      // To set an overflow rule for jumpy IE wrapping
+      $('html').addClass('stickyTOC');
+    }
     // Show expander when more than 10 links.
     if (tocSectionCount <= 10) {
       if ($(window).width() > 480 ) {

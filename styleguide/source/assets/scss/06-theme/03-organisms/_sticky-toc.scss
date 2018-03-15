@@ -363,3 +363,7 @@ body.stuck {
     display: none;
   }
 }
+
+html.stickyTOC {
+ overflow-y: scroll;
+}
