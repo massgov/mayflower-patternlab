@@ -69,12 +69,8 @@
 }
 
 .ma__featured-item__title.truncated {
-
-  span {
+  span::after {
+    content: ' . . . ';
     white-space: nowrap;
-
-    &::after {
-      content: ' . . . ';
-    }
   }
 }
