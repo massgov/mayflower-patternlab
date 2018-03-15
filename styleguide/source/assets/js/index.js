@@ -27,5 +27,6 @@ import responsiveVideo            from "./modules/responsiveVideo.js";
 import resultsHeading             from "./modules/resultsHeading.js";
 import richText                   from "./modules/richText.js";
 import scrollAnchors              from "./modules/scrollAnchors.js";
+import truncateTitle              from "./modules/truncateTitle.js";
 import formInputs                 from "./modules/formInputs.js";
 import utilNav                    from "./modules/utilNav.js";
