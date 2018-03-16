@@ -14,30 +14,34 @@ This pattern shows a Form with inputs tailored to filtering Press Articles
 
 ### Variables
 ~~~
-"pressFilters": {
-  "action": 
+pressFilters: {
+  action:
     type: string (form's action url) / optional,
-  "coloredHeading": {
+  coloredHeading: {
     type: coloredHeading
   },
+  clearButton: {
+    text :
+      type: string / optional
+  },
 
-  "orgSelector": {
+  orgSelector: {
     type: orgSelector / required
   },
 
-  "topic":{
+  topic:{
     type: selectBox / required
   },
 
-  "pressType":{
+  pressType:{
     type: selectBox / required
   },
 
-  "dateRange": {
+  dateRange: {
     type: dateRange / required
   },
 
-  "submitButton": {
+  submitButton: {
     type: button / required
   }
 }
