@@ -5,7 +5,8 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": false
+      "centered": false,
+      "sidebar": false
     },
     "description": null,
     "stacked": false,
