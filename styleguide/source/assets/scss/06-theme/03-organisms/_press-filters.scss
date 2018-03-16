@@ -7,4 +7,10 @@
   &__organizations {
     border-bottom-color: $c-bd-divider;
   }
+
+  &__clear {
+    color: $c-font-base;
+    font-weight: 700;
+    border-bottom-color: $c-font-base;
+  }
 }
