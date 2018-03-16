@@ -31,13 +31,14 @@
   {% elseif item.type == "phone" %}
     <a
       href="tel:{{ link.href }}"
-      class="ma__content-link ma__content-link--phone">{{ link.text }}</a>
+      class="ma__content-link ma__content-link--phone">
+      {% if item.contactName %}<span class="visually-hidden">Call {{ item.contactName }}{% if item.label %}, {{item.label}} {% endif %}at </span>{% endif %}{{ link.text }}</a>
 
     {# Email - add mailto: to href #}
   {% elseif item.type == "email" %}
     <a
       href="mailto:{{ link.href }}"
-      class="ma__content-link">{{ link.text }}</a>
+      class="ma__content-link">{% if item.contactName %}<span class="visually-hidden">Email {{ contactName }} at </span>{% endif %}{{ link.text }}</a>
 
     {# Address - RTE version of value and look for directions link #}
   {% elseif item.type == "address" %}
