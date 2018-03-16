@@ -67,10 +67,23 @@ $page-banner-inner-width: 612px;
       display: block;
       font-weight: 300;
     }
+
+    a {
+      color: $c-font-inverse;
+      svg {
+        fill: $c-font-inverse;
+      }
+    }
   }
 
   &--columns &__description {
     color: $c-font-base;
     font-weight: 400;
   }
+}
+
+
+
+.ma__page-banner__solid-background .ma__page-banner__content {
+  background-color: $c-theme-secondary;
 }

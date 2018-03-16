@@ -2,7 +2,10 @@
 
 {% set colorClass = pageBanner.color ? "ma__page-banner--" ~ pageBanner.color : '' %}
 
-<section class="ma__page-banner {{ sizeClass }} {{ colorClass }}">
+{% set backgroundClass = pageBanner.solidBackground ? "ma__page-banner__solid-background" : '' %}
+
+
+<section class="ma__page-banner {{ sizeClass }} {{ colorClass }} {{backgroundClass}}">
   {% if pageBanner.size == "columns" %}
     <style>
       .ma__page-banner__image {
@@ -45,9 +48,14 @@
             <abbr title="{{ pageBanner.title }}"> {{ pageBanner.titleSubText }}</abbr>
           {% endif %}
         </h1>
-        {% if pageBanner.description and not (pageBanner.size == "columns") %}
+        {% if (pageBanner.description or pageBanner.descriptionLink) and not (pageBanner.size == "columns") %}
           <p class="ma__page-banner__description">
-            {{ pageBanner.description }}
+            {% if pageBanner.descriptionLink %}
+              <a href="{{pageBanner.descriptionLink.href}}">{{ pageBanner.descriptionLink.text }}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+            {% endif %}
+            {% if pageBanner.description %}
+              {{ pageBanner.description }}
+            {% endif %}
             {% if pageBanner.descriptionSubText %}
               <span class="ma__page-banner__descriptionSubText">
                 {{ pageBanner.descriptionSubText }}
