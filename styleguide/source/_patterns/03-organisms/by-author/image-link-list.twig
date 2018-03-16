@@ -1,0 +1,68 @@
+{% if imageLinkList.blocks %}
+  {% set linkListClass = "ma__link-list ma__link-list--image-blocks js-accordion" %}
+{% else %}
+  {% set linkListClass = "ma__link-list ma__link-list--image-links js-accordion" %}
+{% endif %}
+<section class="{{linkListClass}}">
+  {% if imageLinkList.compHeading %}
+    {% set compHeading = imageLinkList.compHeading %}
+    {% include "@atoms/04-headings/comp-heading.twig" %}
+  {% endif %}
+
+  {% if imageLinkList.sidebarHeading %}
+    {% set sidebarHeading = imageLinkList.sidebarHeading %}
+    {% include "@atoms/04-headings/sidebar-heading.twig" %}
+  {% endif %}
+
+  {% if imageLinkList.description %}
+    <div class="ma__link-list__description">
+      {% set richText = imageLinkList.description %}
+      {% include "@organisms/by-author/rich-text.twig" %}
+    </div>
+  {% endif %}
+
+  <div class="ma__link-list__container">
+    <ul class="ma__link-list__items ma__link-list__items--no-bullets">
+      {% block imageListBlock %}
+
+        {% for imageLink in imageLinkList.links|slice(0,3) %}
+          {% if imageLinkList.blocks %}
+            {% set imageLink = imageLink|merge({"block": true}) %}
+          {% endif %}
+          <li class="ma__link-list__item">
+            {% include "@molecules/image-link.twig" %}
+          </li>
+        {% endfor %}
+        {% for imageLink in imageLinkList.links|slice(3,3) %}
+          {% if imageLinkList.blocks %}
+            {% set imageLink = imageLink|merge({"block": true}) %}
+          {% endif %}
+          <li class="ma__link-list__item ma__link-list__item--secondary js-accordion-content">
+            {% include "@molecules/image-link.twig" %}
+          </li>
+        {% endfor %}
+        {% for imageLink in imageLinkList.links|slice(6) %}
+          {% if imageLinkList.blocks %}
+            {% set imageLink = imageLink|merge({"block": true}) %}
+          {% endif %}
+          <li class="ma__link-list__item ma__link-list__item--tertiary js-accordion-content">
+            {% include "@molecules/image-link.twig" %}
+          </li>
+        {% endfor %}
+
+
+
+      {% endblock %}
+    </ul>
+  </div>
+  {% set toggleClass = "ma__link-list__toggle js-accordion-link" %}
+  {% if imageLinkList.links|length > 3 %}
+    {% set toggleClass = "ma__link-list__toggle has-secondary js-accordion-link" %}
+  {% endif %}
+  {% if imageLinkList.links|length > 6 %}
+    {% set toggleClass = "ma__link-list__toggle has-tertiary js-accordion-link" %}
+  {% endif %}
+  <button type="button" class="{{toggleClass}}" aria-expanded="false">
+    Show <span>more</span><span>less</span> {{imageLinkList.itemPluralName}}
+  </button>
+</section>

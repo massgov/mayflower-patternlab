@@ -9,16 +9,17 @@ This is displays a Page Header pattern with an optional image off to the right
 
 ### Variant options
 * If the image isn't used a [green](./?p=organisms-illustrated-header-colored) background is shown in it's place.
+* There is an inverted variation which uses a [blue](./?p=organisms-illustrated-header-inverted) background in place of the white in the standard variant.
 
 
 ### Variables
 ~~~
 illustratedHeader: {
-  bgTitle: 
+  bgTitle:
     type: string / optional (required with image)
-  bgImage: 
+  bgImage:
     type: string (image path) / optional
-  category: 
+  category:
     type: string / required,
   pageHeader: {
     type: pageHeader / required
