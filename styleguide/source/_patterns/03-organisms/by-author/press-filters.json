@@ -5,6 +5,9 @@
       "text": "Filter Results",
       "color": ""
     },
+    "clearButton": {
+      "text": "Clear all filters"
+    },
 
     "orgSelector": {
       "selectBox":{
