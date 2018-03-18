@@ -47,15 +47,6 @@
         },
         "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
       },{
-        "type": "phone",
-        "label":"Toll Free:",
-        "link":{
-          "href": "+18004324321",
-          "text": "(800) 432-4321",
-          "info": ""
-        },
-        "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-      },{
         "type": "fax",
         "label":"Fax:",
         "link": {
