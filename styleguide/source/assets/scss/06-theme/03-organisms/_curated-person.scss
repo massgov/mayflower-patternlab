@@ -1,0 +1,17 @@
+.ma__curated-person {
+
+  &--meta-wrapper {
+    display: flex;
+    font-style: italic;
+    color: $c-theme-gray;
+
+    .curated-person--title {
+      padding-right: 1rem;
+    }
+
+    .curated-person--org {
+      padding-left: 1rem;
+      border-left: 1px solid $c-bd-divider;
+    }
+  }
+}
