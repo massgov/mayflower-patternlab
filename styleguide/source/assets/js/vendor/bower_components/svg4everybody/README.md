@@ -18,7 +18,7 @@ To support Internet Explorer 6-8, include the legacy script instead.
 <script>svg4everybody(); // run it now or whenever you are ready</script>
 ```
 
-_As of v2.0.0, you must the manually call `svg4everybody()`. If you are using an AMD/CommonJS dependency loader then you may call it within the callback closure._
+_As of v2.0.0, you must manually call `svg4everybody()`. If you are using an AMD/CommonJS dependency loader then you may call it within the callback closure._
 
 IE 6-8 require you to put the script in the `<head>` in order to shiv `<svg>` and `<use>` elements. For best results in IE, set [X-UA-Compatible] to `ie=edge`. This can be done with a response header from the server or the following HTML in the `<head>`.
 
@@ -94,11 +94,11 @@ svg4everybody({
 });
 ```
 
-All `<use>` elements that are children of an `<svg>` are checked for external content. If you want to change this behavior, you can define your own validator.
+All `<use>` elements that are descendants of an `<svg>` are checked for external content. If you want to change this behavior, you can define your own validator.
 
 ```js
 svg4everybody({
-	validator: function (src, svg, use) {
+	validate: function (src, svg, use) {
 		// src: current xlink:href String 
 		// svg: current SVG Element 
 		// use: current USE Element 

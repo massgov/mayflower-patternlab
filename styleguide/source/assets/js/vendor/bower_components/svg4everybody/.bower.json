@@ -26,18 +26,16 @@
     "url": "git@github.com:jonathantneal/svg4everybody.git"
   },
   "main": [
-    "dist/svg4everybody.js",
-    "dist/svg4everybody.legacy.js"
+    "dist/svg4everybody.js"
   ],
-  "version": "2.0.3",
-  "_release": "2.0.3",
+  "version": "2.1.9",
+  "_release": "2.1.9",
   "_resolution": {
     "type": "version",
-    "tag": "v2.0.3",
-    "commit": "054809711663475bc4e986057b8ca3ff64e3c1a9"
+    "tag": "v2.1.9",
+    "commit": "b0bd6af45ce8c655178ac9d0fa846dcde5709dbc"
   },
-  "_source": "git://github.com/jonathantneal/svg4everybody.git",
-  "_target": "~2.0.3",
-  "_originalSource": "svg4everybody",
-  "_direct": true
+  "_source": "https://github.com/jonathantneal/svg4everybody.git",
+  "_target": "~2.1.9",
+  "_originalSource": "svg4everybody"
 }
