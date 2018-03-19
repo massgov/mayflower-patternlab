@@ -38,7 +38,7 @@
   {% elseif item.type == "email" %}
     <a
       href="mailto:{{ link.href }}"
-      class="ma__content-link">{% if item.contactName %}<span class="visually-hidden">Email {{ contactName }} at </span>{% endif %}{{ link.text }}</a>
+      class="ma__content-link">{% if item.contactName %}<span class="visually-hidden">Email {{ item.contactName }} at </span>{% endif %}{{ link.text }}</a>
 
     {# Address - RTE version of value and look for directions link #}
   {% elseif item.type == "address" %}
