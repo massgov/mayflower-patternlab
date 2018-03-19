@@ -14,7 +14,7 @@ locationIcons: {
   title:
     type: string / optional (for screen readers)
   icons: [{
-    path:
+    icon:
       type: string (path to icon) / required
     name:
       type: string / required

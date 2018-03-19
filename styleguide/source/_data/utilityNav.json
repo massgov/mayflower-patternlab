@@ -3,7 +3,7 @@
     "items": [{
       "text": "State Organizations",
       "ariaLabelText": "",
-      "icon": "@atoms/05-icons/svg-building.twig",
+      "icon": "building",
       "closeText": "Close",
       "panel": {
         "description": {
@@ -23,7 +23,7 @@
     },{
       "text": "Log in to...",
       "ariaLabelText": "Log in to the most requested services",
-      "icon": "@atoms/05-icons/svg-login.twig",
+      "icon": "login",
       "closeText": "Close",
       "panel": {
         "description": {

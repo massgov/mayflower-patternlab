@@ -4,22 +4,22 @@
     "items": [{
       "altText": "Follow us on Facebook",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-facebook.twig",
+      "icon": "facebook",
       "linkType": "facebook"
     },{
       "altText": "Follow us on Twitter",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-twitter.twig",
+      "icon": "facebook",
       "linkType": "twitter"
     },{
       "altText": "Follow us on LinkedIn",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-linkedin.twig",
+      "icon": "facebook",
       "linkType": "linkedin"
     },{
       "altText": "Follow us on Youtube",
       "href": "#",
-      "icon": "@atoms/05-icons/svg-youtube.twig",
+      "icon": "facebook",
       "linkType": "youtube"
     }]
   }

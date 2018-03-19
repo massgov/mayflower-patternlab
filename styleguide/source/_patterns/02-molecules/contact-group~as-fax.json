@@ -1,6 +1,6 @@
 {
   "contactGroup": {
-    "icon": "@atoms/05-icons/svg-fax-icon.twig",
+    "icon": "fax",
     "name": "Fax",
     "items": [{
       "type": "phone",

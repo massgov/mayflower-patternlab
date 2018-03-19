@@ -1,0 +1,14 @@
+<svg aria-hidden="true">
+{# switch statement with multiple values for one case doesn't work in Twig. #}
+{% if icon == 'blog' or icon == 'facebook' or icon == 'instagram' or icon == 'flickr' or icon ==
+ 'linkedin' or icon == 'twitter' or icon == 'youtube' %}
+    <use xlink:href="/{{ directory }}/images/icon-social-media.svg#icon-{{ icon
+    }}"></use>
+{% elseif icon == 'cash' or icon == 'check' or icon == 'credit' %}
+    <use xlink:href="/{{ directory }}/images/icon-payment-methods.svg#icon-{{ icon }}"></use>
+{% elseif icon == 'doc-doc' or icon == 'doc-xls' or icon == 'doc-ppt' or icon == 'doc-rtf' or icon == 'doc-pptx' %}
+    <use xlink:href="/{{ directory }}/images/icon-doc-generic.svg#icon-doc-generic"></use>
+{% else %}
+    <use xlink:href="/{{ directory }}/images/icon-{{ icon }}.svg#icon-{{ icon }}"></use>
+{% endif %}
+</svg>

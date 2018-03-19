@@ -26,17 +26,17 @@
       "items": [{
         "altText": "Follow us on Facebook",
         "href": "#",
-        "icon": "@atoms/05-icons/svg-facebook.twig",
+        "icon": "facebook",
         "linkType": "facebook"
       },{
         "altText": "Follow us on Twitter",
         "href": "#",
-        "icon": "@atoms/05-icons/svg-twitter.twig",
+        "icon": "twitter",
         "linkType": "twitter"
       },{
         "altText": "Follow us on LinkedIn",
         "href": "#",
-        "icon": "@atoms/05-icons/svg-linkedin.twig",
+        "icon": "linkedin",
         "linkType": "linkedin"
       }]
     },
@@ -49,7 +49,7 @@
         "placeholder": {
           "text": "Optional Content"
         }
-      }      
+      }
     }],
     "widgets": [{
       "path": "@base/placeholder.twig",
@@ -57,7 +57,7 @@
         "placeholder": {
           "text": "Optional widgets"
         }
-      }      
+      }
     }]
   }
 }

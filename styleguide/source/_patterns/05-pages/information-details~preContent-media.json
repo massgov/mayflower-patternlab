@@ -99,7 +99,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [
                 {
@@ -117,7 +117,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [
@@ -136,7 +136,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
+              "icon": "fax",
               "name": "Fax",
               "items": [
                 {
@@ -154,7 +154,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-marker.twig",
+              "icon": "marker",
               "name": "Address",
               "items": [
                 {
@@ -281,7 +281,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [
                 {
@@ -299,7 +299,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [
