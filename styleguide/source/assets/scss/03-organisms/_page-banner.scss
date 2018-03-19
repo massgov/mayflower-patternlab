@@ -16,6 +16,14 @@ $page-banner-height: 330px;
     margin-bottom: 40px;
   }
 
+  &.ma__page-banner__solid-background {
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 400px;
+    max-height: 460px;
+  }
+
   &--small,
   &--large {
     @media ($bp-small-min) {
