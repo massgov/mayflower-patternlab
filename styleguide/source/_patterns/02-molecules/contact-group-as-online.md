@@ -4,6 +4,8 @@ This is a variant of the [Contact Group](./?p=molecules-contact-group) pattern s
 ### How to generate
 * set the `icon` variable to "@atoms/05-icons/svg-laptop.twig"
 * set the `name` variable to "Online"
+* populate the `level` variable
+* populate the `contactName` variable
 * set the `items.type` variable to "email" or "online"
 * populate the `link` variable
 

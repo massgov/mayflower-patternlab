@@ -3,6 +3,7 @@
     "icon": "@atoms/05-icons/svg-phone.twig",
     "name": "Phone",
     "level": "",
+    "contactName": "",
     "items": [{
       "type": "phone",
       "label": "Main:",
