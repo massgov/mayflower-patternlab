@@ -1,6 +1,7 @@
 import throttle from "../helpers/throttle.js";
 
 export default function (window,document,$,undefined) {
+  let tocContainerClass = '.js-toc-container';
   let containerClass = '.js-inline-overlay';
   let contentClass = '.js-inline-overlay-content';
   let toggleClass = '.js-inline-overlay-toggle';
@@ -17,8 +18,7 @@ export default function (window,document,$,undefined) {
   }
 
   function toggleOverlay() {
-    let $containerEl = $(containerClass);
-    let $contentEl = $(contentClass);
+    let $containerEl = $(this).closest(tocContainerClass).find(containerClass);
     let isOpen = $containerEl.hasClass('is-open');
     $('body').toggleClass('scroll-disabled', !isOpen);
     $containerEl.toggleClass('is-open', !isOpen);
