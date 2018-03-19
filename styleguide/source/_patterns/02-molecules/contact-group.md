@@ -25,7 +25,7 @@ group: {
   level:
     type: number / optional
   contactName:
-    type: string / required
+    type: string / optional
   items: [{
     type: 
       type: string ("phone", "online", "email", "address" ) / required,
