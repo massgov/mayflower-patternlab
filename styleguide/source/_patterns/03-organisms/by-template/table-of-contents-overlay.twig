@@ -1,4 +1,4 @@
-<div class="ma__toc--overlay" id="{{tableOfContentsOverlay.id}}">
+<div class="ma__toc--overlay js-toc-container" id="{{tableOfContentsOverlay.id}}">
   <div class="ma__toc__toc__title js-inline-overlay-title" tab-index="-1">
     <span class="ma__toc__subtitle">This is a part of:</span>
     {% set decorativeLink = tableOfContentsOverlay.title %}
@@ -23,10 +23,12 @@
       </button>
     </div>
     <div class="ma__toc--overlay__content">
-      {% for tocSection in tableOfContentsOverlay.tocSections %}
-        {% set tableOfContentsHierarchy = tocSection %}
-        {% include "@organisms/by-template/table-of-contents-hierarchy.twig" %}
-      {% endfor %}
+      {% block tableOfContentsOverlaySections %}
+        {% for tocSection in tableOfContentsOverlay.tocSections %}
+          {% set tableOfContentsHierarchy = tocSection %}
+          {% include "@organisms/by-template/table-of-contents-hierarchy.twig" %}
+        {% endfor %}
+      {% endblock %}
     </div>
   </div>
 </div>
