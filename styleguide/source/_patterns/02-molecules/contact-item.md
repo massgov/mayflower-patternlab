@@ -20,6 +20,8 @@ This pattern currently depends on a wrapper to display properly. In the future, 
 ### Variables
 ~~~
   item: {
+    contactName:
+      type: string / required,
     type: 
       type: string ("phone", "online", "email", "address" ) / required,
     label:

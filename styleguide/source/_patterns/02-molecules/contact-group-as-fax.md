@@ -3,7 +3,9 @@ This is a variant of the [Contact Group](./?p=molecules-contact-group) pattern s
 
 ### How to generate
 * set the `icon` variable to "@atoms/05-icons/svg-fax-icon.twig"
-* set the `name` variable to "Fax"
+* populate the `name` variable to "Fax"
+* populate the `level` variable
+* populate the `contactName` variable
 * set the `items.type` variable to "phone"
 * populate the `link` variable
 
