@@ -26,7 +26,7 @@
         {% include "@atoms/01-buttons/button.twig" %}
       </div>
       {% if pressFilters.clearButton %}
-        <button type="button" class="ma__press-filters__clear js-press-filters-clear">{{pressFilters.clearButton.text}}</button>
+        <button type="button" aria-label="{{ pressFilters.clearButton.info }}" class="ma__press-filters__clear js-press-filters-clear">{{pressFilters.clearButton.text}}</button>
       {% endif %}
     </form>
   </div>

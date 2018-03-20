@@ -6,7 +6,8 @@
       "color": ""
     },
     "clearButton": {
-      "text": "Clear all filters"
+      "text": "Clear all filters",
+      "info": "clear all filters"
     },
 
     "orgSelector": {

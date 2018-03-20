@@ -23,6 +23,8 @@ pressFilters: {
   clearButton: {
     text :
       type: string / optional
+    info :
+      type: string / optional
   },
 
   orgSelector: {
