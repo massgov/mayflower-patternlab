@@ -89,6 +89,12 @@ h6 {
   @include ma-visually-hidden;
 }
 
+// To disabled scrolling (for use when another scrollable container is in the foreground)
+.scroll-disabled {
+  height: 100vh;
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,

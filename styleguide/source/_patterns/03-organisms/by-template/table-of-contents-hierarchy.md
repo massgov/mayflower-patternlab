@@ -1,5 +1,6 @@
 ### Description
-This Pattern shows an expandable table of contents which can contain simple links, download links, or expandable sections.
+This Pattern shows an expantable table of contents which can contain simple links, download links, or expandable sections.
+
 
 ### Status
 * Stable as of 5.11.0
@@ -7,10 +8,10 @@ This Pattern shows an expandable table of contents which can contain simple link
 ### Pattern Contains
 * Decorated Link
 * Download Link
-* Expandable Section
 
 ### Usage Guidelines
 * This is meant to be used to contain a mix of links, download links, or section titles with child links/download links within accordions.
+* `isCurrent` flags are only applied when this organism is used within the table-of-contents-overlay organism. Additionally, `isCurrent` should be applied to both the top level of an item containing `linkItems`, as well as the item within `linkItems`.
 
 ### Variables
 ~~~
@@ -19,15 +20,27 @@ tableOfContentsHierarchy: {
     type: coloredHeading / required
   },
   sections: [{
-    type: mixedTypes...
+    type: mixed...
         downloadLink
         or
-        decorativeLink
+        {
+          text: string / required,
+          href: string / required,
+          isCurrent: boolean / optional
+        }
         or
         {
             text: string / required,
+            isCurrent: boolean / optional
             linkItems: [{
-                type: decorativeLink or downloadLink
+                type: mixed...
+                  downloadLink
+                  or
+                  {
+                    text: string / required,
+                    href: string / required,
+                    isCurrent: boolean / optional
+                  }
             }]
         }
   }]

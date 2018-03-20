@@ -85,9 +85,9 @@
 
     "tableOfContentsSections": [
       {
-        "coloredHeading": {
+        "title": {
           "text": "Table of Contents",
-          "color": "green"
+          "colored": true
         },
         "sections": [
           {
@@ -125,9 +125,9 @@
         ]
       },
       {
-        "coloredHeading": {
+        "title": {
           "text": "Appendix",
-          "color": "green"
+          "colored": true
         },
         "sections": [
           {
