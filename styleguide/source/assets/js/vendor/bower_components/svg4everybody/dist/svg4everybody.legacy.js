@@ -2,14 +2,17 @@
     "function" == typeof define && define.amd ? // AMD. Register as an anonymous module unless amdModuleId is set
     define([], function() {
         return root.svg4everybody = factory();
-    }) : "object" == typeof exports ? module.exports = factory() : root.svg4everybody = factory();
+    }) : "object" == typeof module && module.exports ? // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory() : root.svg4everybody = factory();
 }(this, function() {
-    /*! svg4everybody v2.0.3 | github.com/jonathantneal/svg4everybody */
-    function embed(svg, target) {
+    /*! svg4everybody v2.1.9 | github.com/jonathantneal/svg4everybody */
+    function embed(parent, svg, target) {
         // if the target exists
         if (target) {
             // create a document fragment to hold the contents of the target
-            var fragment = document.createDocumentFragment(), viewBox = !svg.getAttribute("viewBox") && target.getAttribute("viewBox");
+            var fragment = document.createDocumentFragment(), viewBox = !svg.hasAttribute("viewBox") && target.getAttribute("viewBox");
             // conditionally set the viewBox on the svg
             viewBox && svg.setAttribute("viewBox", viewBox);
             // copy the contents of the clone into the fragment
@@ -18,7 +21,7 @@
                 fragment.appendChild(clone.firstChild);
             }
             // append the fragment into the svg
-            svg.appendChild(fragment);
+            parent.appendChild(fragment);
         }
     }
     function loadreadystatechange(xhr) {
@@ -37,7 +40,7 @@
                     // ensure the cached target
                     target || (target = xhr._cachedTarget[item.id] = cachedDocument.getElementById(item.id)), 
                     // embed the target into the svg
-                    embed(item.svg, target);
+                    embed(item.parent, item.svg, target);
                 });
             }
         }, // test the ready state change immediately
@@ -49,9 +52,9 @@
             for (// get the cached <use> index
             var index = 0; index < uses.length; ) {
                 // get the current <use>
-                var use = uses[index], svg = use.parentNode;
-                if (svg && /svg/i.test(svg.nodeName)) {
-                    var src = use.getAttribute("xlink:href");
+                var use = uses[index], parent = use.parentNode, svg = getSVGAncestor(parent), src = use.getAttribute("xlink:href") || use.getAttribute("href");
+                if (!src && opts.attributeName && (src = use.getAttribute(opts.attributeName)), 
+                svg && src) {
                     // if running with legacy support
                     if (nosvg) {
                         // create a new fallback image
@@ -61,28 +64,34 @@
                         img.setAttribute("width", svg.getAttribute("width") || svg.clientWidth), img.setAttribute("height", svg.getAttribute("height") || svg.clientHeight), 
                         // set the fallback src
                         img.src = fallback(src, svg, use), // replace the <use> with the fallback image
-                        svg.replaceChild(img, use);
+                        parent.replaceChild(img, use);
                     } else {
-                        if (polyfill && (!opts.validate || opts.validate(src, svg, use))) {
-                            // remove the <use> element
-                            svg.removeChild(use);
-                            // parse the src and get the url and id
-                            var srcSplit = src.split("#"), url = srcSplit.shift(), id = srcSplit.join("#");
-                            // if the link is external
-                            if (url.length) {
-                                // get the cached xhr request
-                                var xhr = requests[url];
-                                // ensure the xhr request exists
-                                xhr || (xhr = requests[url] = new XMLHttpRequest(), xhr.open("GET", url), xhr.send(), 
-                                xhr._embeds = []), // add the svg and id as an item to the xhr embeds list
-                                xhr._embeds.push({
-                                    svg: svg,
-                                    id: id
-                                }), // prepare the xhr ready state change event
-                                loadreadystatechange(xhr);
+                        if (polyfill) {
+                            if (!opts.validate || opts.validate(src, svg, use)) {
+                                // remove the <use> element
+                                parent.removeChild(use);
+                                // parse the src and get the url and id
+                                var srcSplit = src.split("#"), url = srcSplit.shift(), id = srcSplit.join("#");
+                                // if the link is external
+                                if (url.length) {
+                                    // get the cached xhr request
+                                    var xhr = requests[url];
+                                    // ensure the xhr request exists
+                                    xhr || (xhr = requests[url] = new XMLHttpRequest(), xhr.open("GET", url), xhr.send(), 
+                                    xhr._embeds = []), // add the svg and id as an item to the xhr embeds list
+                                    xhr._embeds.push({
+                                        parent: parent,
+                                        svg: svg,
+                                        id: id
+                                    }), // prepare the xhr ready state change event
+                                    loadreadystatechange(xhr);
+                                } else {
+                                    // embed the local id into the svg
+                                    embed(parent, svg, document.getElementById(id));
+                                }
                             } else {
-                                // embed the local id into the svg
-                                embed(svg, document.getElementById(id));
+                                // increase the index when the previous value was not "valid"
+                                ++index, ++numberOfSvgUseElementsToBypass;
                             }
                         }
                     }
@@ -92,20 +101,27 @@
                 }
             }
             // continue the interval
-            requestAnimationFrame(oninterval, 67);
+            (!uses.length || uses.length - numberOfSvgUseElementsToBypass > 0) && requestAnimationFrame(oninterval, 67);
         }
         var nosvg, fallback, opts = Object(rawopts);
+        // configure the fallback method
         fallback = opts.fallback || function(src) {
             return src.replace(/\?[^#]+/, "").replace("#", ".").replace(/^\./, "") + ".png" + (/\?[^#]+/.exec(src) || [ "" ])[0];
-        }, nosvg = "nosvg" in opts ? opts.nosvg : /\bMSIE [1-8]\b/.test(navigator.userAgent), 
+        }, // set whether to shiv <svg> and <use> elements and use image fallbacks
+        nosvg = "nosvg" in opts ? opts.nosvg : /\bMSIE [1-8]\b/.test(navigator.userAgent), 
+        // conditionally shiv <svg> and <use>
         nosvg && (document.createElement("svg"), document.createElement("use"));
         // set whether the polyfill will be activated or not
-        var polyfill, olderIEUA = /\bMSIE [1-8]\.0\b/, newerIEUA = /\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/, webkitUA = /\bAppleWebKit\/(\d+)\b/, olderEdgeUA = /\bEdge\/12\.(\d+)\b/;
-        polyfill = "polyfill" in opts ? opts.polyfill : olderIEUA.test(navigator.userAgent) || newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537;
+        var polyfill, olderIEUA = /\bMSIE [1-8]\.0\b/, newerIEUA = /\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/, webkitUA = /\bAppleWebKit\/(\d+)\b/, olderEdgeUA = /\bEdge\/12\.(\d+)\b/, edgeUA = /\bEdge\/.(\d+)\b/, inIframe = window.top !== window.self;
+        polyfill = "polyfill" in opts ? opts.polyfill : olderIEUA.test(navigator.userAgent) || newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537 || edgeUA.test(navigator.userAgent) && inIframe;
         // create xhr requests object
-        var requests = {}, requestAnimationFrame = window.requestAnimationFrame || setTimeout, uses = document.getElementsByTagName("use");
+        var requests = {}, requestAnimationFrame = window.requestAnimationFrame || setTimeout, uses = document.getElementsByTagName("use"), numberOfSvgUseElementsToBypass = 0;
         // conditionally start the interval if the polyfill is active
         polyfill && oninterval();
+    }
+    function getSVGAncestor(node) {
+        for (var svg = node; "svg" !== svg.nodeName.toLowerCase() && (svg = svg.parentNode); ) {}
+        return svg;
     }
     return svg4everybody;
 });
