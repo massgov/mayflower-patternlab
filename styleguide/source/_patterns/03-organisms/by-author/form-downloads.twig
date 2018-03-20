@@ -8,14 +8,14 @@
     {% set sidebarHeading = formDownloads.sidebarHeading %}
     {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
-  {% if formDownloads.downloadLinks %}
-    <div class="ma__form-downloads__links">
+  <div class="ma__form-downloads__links">
+    {% block formDownloadLinks %}
       {% for item in formDownloads.downloadLinks %}
         {% set downloadLink = item.downloadLink %}
         {% include "@molecules/download-link.twig" %}
       {% endfor %}
-    </div>
-  {% endif %}
+    {% endblock %}
+  </div>
   {% if formDownloads.more %}
     <div class="ma__form-downloads__see-all">
       {% set decorativeLink = formDownloads.more %}
