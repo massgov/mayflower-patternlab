@@ -1,0 +1,35 @@
+
+version: 2
+
+# YAML anchors/aliases. See;
+# - https://circleci.com/blog/circleci-hacks-reuse-yaml-in-your-circleci-config-with-yaml/
+# - https://github.com/circleci/frontend/blob/master/.circleci/config.yml
+references:
+  container_config: &container_config
+    working_directory: /var/www/code
+    docker:
+      # @see https://github.com/massgov/Drupal-Container
+      - image: massgov/drupal-container:1.0.1-ci
+
+  # Dynamic hosts mean constantly checking interactively that we mean to connect to an unknown host. We ignore those here.
+  no_host_check: &no_host_check
+    run: {name: 'Disable StrictHostKeyChecking', command: 'mkdir -p $HOME/.ssh && echo "StrictHostKeyChecking no" > ~/.ssh/config'}
+
+jobs:
+  build:
+    working_directory: /var/www/code
+    docker:
+      - image: massgov/drupal-container:1.0.1-ci
+    steps:
+      - restore_cache:
+          name: Restore NPM Cache
+          keys:
+            - site-npm-v1-{{ checksum "styleguide/package.json" }}
+            - site-npm-v1-
+      - run: { name: 'NPM Install', command: 'cd styleguide && yarn' }
+      - save_cache:
+          name: Save NPM cache
+          key: site-npm-v1-{{ checksum "styleguide/package.json" }}
+          paths: [ styleguide/node_modules ]
+      - run: { name: 'Generate style guide', command: 'php styleguide/core/console --generate' }
+      - run: { name: 'Build assets', command: 'cd styleguide && node_modules/.bin/gulp prod' }
