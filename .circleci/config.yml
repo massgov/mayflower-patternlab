@@ -1,11 +1,19 @@
 
 version: 2
 
-jobs:
-  build:
+# YAML anchors/aliases. See;
+# - https://circleci.com/blog/circleci-hacks-reuse-yaml-in-your-circleci-config-with-yaml/
+# - https://github.com/circleci/frontend/blob/master/.circleci/config.yml
+references:
+  common_config: &common_config
     working_directory: /var/www/code
     docker:
+      # @see https://github.com/massgov/Drupal-Container
       - image: massgov/drupal-container:1.0.1-ci
+
+jobs:
+  build:
+    <<: *common_config
     steps:
       - checkout
       - restore_cache:
@@ -20,6 +28,26 @@ jobs:
           paths: [ styleguide/node_modules ]
       - run: { name: 'Generate style guide', command: 'php styleguide/core/console --generate' }
       - run: { name: 'Build assets', command: 'cd styleguide && node_modules/.bin/gulp prod' }
+      - persist_to_workspace:
+          root: /var/www
+          paths: [code]
       - store_artifacts:
           path: /var/www/code/styleguide/public/assets
 
+
+  deploy_artifacts:
+    <<: *common_config
+    steps:
+      - attach_workspace: {at: /var/www}
+      - run:
+          name: "Prepare Git"
+          command: |
+            git config --global user.email "devops@palantir.net"
+            git config --global user.name "palantirnet-temp1"
+      - run: { name: 'Deploy', command: 'cd styleguide && vendor/bin/phing deploy' }
+
+  deploy_cd:
+    <<: *common_config
+    steps:
+      - attach_workspace: {at: /var/www}
+      - run: { name: 'S3 Deployment', command: 'scripts/deploy-s3.sh ${CIRCLE_BRANCH}' }
