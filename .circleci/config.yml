@@ -50,4 +50,18 @@ jobs:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
-      - run: { name: 'S3 Deployment', command: 'scripts/deploy-s3.sh ${CIRCLE_BRANCH}' }
+      - run: { name: 'S3 Deployment', command: 'scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}' }
+
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - build
+      - deploy_artifacts:
+          filters:
+            tags:
+              only: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
+      - deploy_cd:
+          filters:
+            branches:
+              ignore: master
