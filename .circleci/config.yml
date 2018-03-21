@@ -22,6 +22,7 @@ jobs:
             - site-npm-v1-{{ checksum "styleguide/package.json" }}
             - site-npm-v1-
       - run: { name: 'NPM Install', command: 'cd styleguide && yarn' }
+      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
       - save_cache:
           name: Save NPM cache
           key: site-npm-v1-{{ checksum "styleguide/package.json" }}
