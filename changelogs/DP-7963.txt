@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Minor
-- DP-7963: Breaks out a contact item from a contact group and provides binder and info details related twig blocks to be overridden in implementation.

@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Added new features
-Minor
-- DP-6522: Adds new components and modifies existing ones to enable generalized listings of content, and specifically allows lists of user bios. Adds support for individual user bio pages.

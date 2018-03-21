@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Added
-Minor
-- DP-6181: Add contact name to email and phone number links in contacts to be announced by screen readers along with the email address and phone number within the links. So, AT device users could have more clarity for what the email address or phone number is for.
