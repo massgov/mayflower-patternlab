@@ -64,12 +64,18 @@
       right: 0;
     height: 100vh;
     opacity: 0;
-    overflow-y: scroll;
     transition: all .5s ease;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
     > * {
       @include ma-container();
       display: none;
+      width: 100%;
+    }
+
+    .ma__toc--overlay__content {
+      overflow-y: scroll;
     }
 
     &:before {
