@@ -1,12 +1,12 @@
+{# backward compatible for version 5.5 #}
+{% if linkList.sidebarHeading %}
+  {% set linkList = linkList|merge({"compHeading": { "title": linkList.sidebarHeading.title, "sidebar" : true }}) %}
+{% endif %}
+
 <section class="ma__link-list">
   {% if linkList.compHeading %}
     {% set compHeading = linkList.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
-  {% endif %}
-
-  {% if linkList.sidebarHeading %}
-    {% set sidebarHeading = linkList.sidebarHeading %}
-    {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
 
   {% if linkList.description %}
