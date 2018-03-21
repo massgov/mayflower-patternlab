@@ -21,6 +21,7 @@ jobs:
     docker:
       - image: massgov/drupal-container:1.0.1-ci
     steps:
+      - checkout
       - restore_cache:
           name: Restore NPM Cache
           keys:
