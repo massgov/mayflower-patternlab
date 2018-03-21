@@ -59,7 +59,7 @@
     }],
     "widgets": null
   },
-   
+
   "jumpLinks": {
     "title": "In this Section",
     "links": [{
@@ -145,19 +145,19 @@
       },{
         "path": "@atoms/08-lists/unordered-list.twig",
         "data": {
-          "unorderedList": [{ 
+          "unorderedList": [{
             "text": "A contract or written agreement provides for a transfer by license, sale, subscription, lease, or other means, of prewritten software for consideration."
-          },{ 
+          },{
             "text": "A customer can access a seller’s prewritten software on its own or the seller’s or a third party server, and can enter its own information, manipulate that information, and/or run reports.  (Mere search queries in a seller’s database are not considered \"entering information.\")"
-          },{ 
+          },{
             "text": "The seller provides the customer with the use of software that functions with little or no personal intervention by the seller or seller’s employees other than “help desk” assistance for customers having difficulty using the software."
           },{
             "text": "The seller refers to itself as an Application Service Provider (ASP) or its product as Software as a Service (SaaS) or in a similar manner, although the seller’s characterization of a product is not ultimately determinative of its treatment for tax purposes."
-          },{ 
+          },{
             "text": "The seller provides access to software, including operating system software or application software, even if no software is transferred to the customer; this may be referred to as \"cloud computing.\""
           },{
             "text": "The software provides an organizational tool or function that is used by customer, e.g., screen sharing."
-          },{ 
+          },{
             "text": "Pre-written software is bundled with a non-taxable service and sold for a single price, but only where the software constitutes the predominant value of the sale."
           },{
             "text": "The seller provides an application that is downloaded to any device, including but not limited to a Smart-phone, PC or Tablet, and there is a charge for the application."
@@ -193,7 +193,7 @@
       "downloadLinks": [{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "icon": "doc-pdf",
           "decorativeLink": {
             "text": "Signed, official copy of this document",
             "href": "#",
@@ -376,7 +376,7 @@
         },
         "location": "Boston, MA",
         "date": {
-          "summary": "May 20, 2017" 
+          "summary": "May 20, 2017"
         },
         "time": "12 p.m. - 2 p.m.",
         "description": "Event description. Ut nulla. Vivamus bibendum, nulla ut congue fringilla, lorem ipsum ultricies risus, ut rutrum velit tortor vel purus."

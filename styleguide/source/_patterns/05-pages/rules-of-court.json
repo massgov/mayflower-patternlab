@@ -442,7 +442,7 @@
         {
           "downloadLink": {
             "iconSize": "",
-            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "icon": "doc-pdf",
             "decorativeLink": {
               "text": "PDF download item",
               "href": "#",
@@ -456,7 +456,7 @@
         {
           "downloadLink": {
             "iconSize": "",
-            "icon": "@atoms/05-icons/svg-doc-docx.twig",
+            "icon": "doc-docx",
             "decorativeLink": {
               "text": "Word download item",
               "href": "#",
@@ -470,7 +470,7 @@
         {
           "downloadLink": {
             "iconSize": "",
-            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "icon": "laptop",
             "decorativeLink": {
               "text": "Online form or information page",
               "href": "#",

@@ -5,6 +5,7 @@ This pattern shows a group of related contact information (phone, fax, online, o
 * Stable as of 5.0.0
 
 ### Pattern Contains
+* Contact Item
 * Decorative Link
 
 ### Variant options
@@ -23,6 +24,8 @@ group: {
     type: string ("Phone", "Online", "Fax", or "Address") / optional
   level:
     type: number / optional
+  contactName:
+    type: string / optional
   items: [{
     type: 
       type: string ("phone", "online", "email", "address" ) / required,

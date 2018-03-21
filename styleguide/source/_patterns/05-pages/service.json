@@ -653,7 +653,7 @@
             "downloadLinks": [{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "icon": "doc-pdf",
                 "decorativeLink": {
                   "text": "Work Search Activity Log",
                   "href": "#",
@@ -666,7 +666,7 @@
             },{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "icon": "doc-docx",
                 "decorativeLink": {
                   "text": "Name of Doc",
                   "href": "#",
@@ -679,7 +679,7 @@
             },{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "icon": "doc-pdf",
                 "decorativeLink": {
                   "text": "Work Search Activity Log",
                   "href": "#",
@@ -692,7 +692,7 @@
             },{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "icon": "doc-docx",
                 "decorativeLink": {
                   "text": "Name of another doc",
                   "href": "#",
@@ -705,7 +705,7 @@
             },{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "icon": "doc-pdf",
                 "decorativeLink": {
                   "text": "Another pdf",
                   "href": "#",
@@ -718,7 +718,7 @@
             },{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "icon": "doc-docx",
                 "decorativeLink": {
                   "text": "Helpful resource",
                   "href": "#",

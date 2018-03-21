@@ -1,5 +1,5 @@
 .ma__press-filters {
-  
+
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
@@ -10,7 +10,7 @@
     margin-left: -20px;
     margin-right: -20px
   }
-  
+
   &__heading {
 
     .ma__colored-heading {
@@ -65,5 +65,20 @@
   .ma__select-box {
     max-width: 500px;
     width: 100%;
+  }
+
+  &__clear {
+    @include ma-button-reset;
+    font-size: 1.125rem;
+    display: inline-block;
+    line-height: 1em;
+    margin: 40px 0 0;
+    border-bottom: 3px solid transparent;
+    border-bottom-width: 1px;
+    transition: border 0.2s;
+
+    &:hover {
+      border-bottom-width: 3px;
+    }
   }
 }

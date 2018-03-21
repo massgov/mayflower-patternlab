@@ -13,8 +13,10 @@
     {% set contactHeading = (sidebarHeading.level ? : contactHeading) + 1 %}
   {% endif %}
 
-  {% for contact in contactList.contacts %}
-    {% set contactUs = contact|merge({"level": contactHeading}) %}
-    {% include "@molecules/contact-us.twig" %}
-  {% endfor %}
+  {% block contactListContacts %}
+    {% for contact in contactList.contacts %}
+      {% set contactUs = contact|merge({"level": contactHeading}) %}
+      {% include "@molecules/contact-us.twig" %}
+    {% endfor %}
+  {% endblock %}
 </section>

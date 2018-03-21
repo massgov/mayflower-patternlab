@@ -33,6 +33,8 @@ contactUs: {
   }
   level:
     type: number / optional
+  contactName:
+    type: string / required
   groups: [{
     type: array of contactGroup / required
   }]
