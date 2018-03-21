@@ -22,7 +22,6 @@ jobs:
             - site-npm-v1-{{ checksum "styleguide/package.json" }}
             - site-npm-v1-
       - run: { name: 'NPM Install', command: 'cd styleguide && yarn' }
-      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
       - save_cache:
           name: Save NPM cache
           key: site-npm-v1-{{ checksum "styleguide/package.json" }}
@@ -45,12 +44,16 @@ jobs:
           command: |
             git config --global user.email "devops@palantir.net"
             git config --global user.name "palantirnet-temp1"
+      # @todo: We shouldn't need global gulp from the build scripts.
+      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
       - run: { name: 'Deploy', command: 'cd styleguide && vendor/bin/phing deploy' }
 
   deploy_cd:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
+      # @todo: We shouldn't need global gulp from the build scripts.
+      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
       - run: { name: 'S3 Deployment', command: 'cd styleguide && ../scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}' }
 
 workflows:
