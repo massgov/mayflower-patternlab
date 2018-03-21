@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Fixed
+Minor
+- DP-8023: Block and conditional logic updates for info details
