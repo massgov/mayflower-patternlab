@@ -50,7 +50,7 @@ jobs:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
-      - run: { name: 'S3 Deployment', command: 'scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}' }
+      - run: { name: 'S3 Deployment', command: 'cd styleguide && ../scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}' }
 
 workflows:
   version: 2
