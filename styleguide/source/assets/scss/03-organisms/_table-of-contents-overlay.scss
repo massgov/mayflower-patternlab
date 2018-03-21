@@ -16,6 +16,7 @@
 
     .ma__decorative-link {
       width: auto;
+      min-width: 60vw; // fix for windows firefox which wraps early. 60 is a reasonable width to ensure
     }
 
   }
