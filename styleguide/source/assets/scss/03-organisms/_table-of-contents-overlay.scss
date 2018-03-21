@@ -64,7 +64,7 @@
       right: 0;
     height: 100vh;
     opacity: 0;
-    overflow: scroll;
+    overflow-y: scroll;
     transition: all .5s ease;
     z-index: 100;
     > * {
@@ -117,6 +117,7 @@
 
   .ma__toc--overlay__container.is-open {
     top: 0;
+    bottom: 0;
     opacity: 1;
 
     > * {
@@ -131,13 +132,6 @@
       opacity: 1;
     }
 
-
-    .ma__toc--overlay__container {
-      max-height: calc(100% - (1rem + 40px));
-      overflow-y: scroll;
-      opacity: 1;
-      padding-bottom: 4rem;
-    }
   }
 
   // current page indicator
