@@ -1,7 +1,0 @@
-___DESCRIPTION___
-Added:
-Minor:
-- DP-6883: Add icon.function.php to pull svg icon source from /assets/svg-icons/ instead of the twig templates in @atoms/05-icons/.
-Changed:
-Major:
-- DP-6883: Replace a call for svg icon templates with the new icon function for document download. The other icons continue to be rendered with the existing twig templates in @atoms/05-icons/.

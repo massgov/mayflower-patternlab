@@ -1,5 +1,0 @@
-___CHANGE IMPACT___
-Removed
-- Minor
-  - Removes unused data for decorative links in link list pattern, and sets the title for see all link.
-  - Removes sidebarHeading block renders sidebarHeading as an option of compHeading (back port mayflower-react)

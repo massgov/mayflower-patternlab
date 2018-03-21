@@ -1,5 +1,0 @@
-___DESCRIPTION___
-Fixed
-Minor
-- DP-8203: Fix header alert to be displayed in its given space
-- DP-8203: Remove accordion button in side column contact

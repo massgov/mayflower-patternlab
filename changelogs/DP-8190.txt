@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Removed
-Minor
-- DP-8190: Remove the background color from the iframe container
