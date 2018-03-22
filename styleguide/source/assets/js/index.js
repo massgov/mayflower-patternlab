@@ -14,6 +14,7 @@ import footnote                   from "./modules/footnote.js";
 import formValidation             from "./modules/formValidation.js";
 import headerTags                 from "./modules/headerTags.js";
 import hideAlert                  from "./modules/hideAlert.js";
+import inlineOverlay              from "./modules/inlineOverlay.js";
 import imageFill                  from "./modules/imageFill.js";
 import keywordSearch              from "./modules/keywordSearch.js";
 import locationFilters            from "./modules/locationFilters.js";
