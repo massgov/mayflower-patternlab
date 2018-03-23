@@ -4,8 +4,14 @@ $page-banner-height: 330px;
 .ma__page-banner {
   background-size: cover;
   background-position: center center;
-  height: auto;
-  max-height: 540px;
+
+
+
+height: $page-banner-height; // auto;
+
+
+
+//  max-height: 540px;
 
   margin-bottom: 20px;
   overflow: hidden;
@@ -74,14 +80,30 @@ $page-banner-height: 330px;
     font-size: 1rem;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
+
+
+
+position: abosolute; // 5.11.0
+top: 50%;
+transform: trasnlateY(-50%);
+
+
+
     z-index: 1;
 
     @media ($bp-x-small-min) {
       margin-right: 70px;
       padding-top: 50px;
       padding-right: 80px;
-      position: absolute;
-        top: 50%;
+
+
+
+//      position: absolute;
+//       top: 50%;
+
+
+
+
       transform: translateY(-50%) skew(-30deg);
     }
 
@@ -94,7 +116,10 @@ $page-banner-height: 330px;
 
       @media ($bp-x-small-min) {
         right: 99%; // weird gap when skewed is shown
-        position: absolute;
+
+
+
+//        position: absolute;
       }
     }
   }
