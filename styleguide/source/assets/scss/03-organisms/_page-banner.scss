@@ -89,14 +89,13 @@ $page-banner-height: 330px;
     &:before {
       content: "";
       height: 100%;
+      position: absolute;
         top: 0;
         right: 100%;
       width: 50vw;
-      position: absolute;
 
       @media ($bp-x-small-min) {
         right: 99%; // weird gap when skewed is shown
-
       }
     }
   }
@@ -143,10 +142,20 @@ $page-banner-height: 330px;
     position: absolute;
       top: 0;
 
-    @media ($bp-medium-min) {
-      height: 100%;
+    @media ($bp-x-small-min) {
       position: relative;
-        top: calc(#{$page-banner-height}/2+50); //top: 50px;
+     transform: skew(-30deg);
+    }
+
+    @media ($bp-small-min) {
+      position: relative;
+      transform: skew(-30deg);
+    }
+
+    @media ($bp-medium-min) {
+      position: relative;
+//        top: calc(#{$page-banner-height}/2); //50px;
+// top: $page-banner-height;
       transform: skew(-30deg);
     }
   }
