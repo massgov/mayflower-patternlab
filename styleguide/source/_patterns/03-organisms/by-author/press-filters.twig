@@ -13,7 +13,7 @@
         {% set selectBox = pressFilters.topic %}
         {% include "@atoms/03-forms/select-box.twig" %}
       </div>
-      <div class="ma__press-filters__type">    
+      <div class="ma__press-filters__type">
         {% set selectBox = pressFilters.pressType %}
         {% include "@atoms/03-forms/select-box.twig" %}
       </div>
@@ -25,6 +25,9 @@
         {% set button = pressFilters.submitButton %}
         {% include "@atoms/01-buttons/button.twig" %}
       </div>
+      {% if pressFilters.clearButton %}
+        <button type="button" aria-label="{{ pressFilters.clearButton.info }}" class="ma__press-filters__clear js-press-filters-clear">{{pressFilters.clearButton.text}}</button>
+      {% endif %}
     </form>
   </div>
 </section>

@@ -2,6 +2,8 @@
   "contactGroup": {
     "icon": "@atoms/05-icons/svg-fax-icon.twig",
     "name": "Fax",
+    "level": "",
+    "contactName": "",
     "items": [{
       "type": "phone",
       "label": "Main:",

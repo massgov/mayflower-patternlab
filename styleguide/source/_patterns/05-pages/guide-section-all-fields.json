@@ -168,7 +168,7 @@
               "downloadLinks": [{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "icon": "laptop",
                   "decorativeLink": {
                     "text": "Online Form: Out-of-Country Driver's License Conversion",
                     "href": "#",
@@ -181,7 +181,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "icon": "laptop",
                   "decorativeLink": {
                     "text": "Online Form: External link",
                     "href": "#",
@@ -194,7 +194,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                  "icon": "doc-docx",
                   "decorativeLink": {
                     "text": "Word download item",
                     "href": "#",
@@ -207,7 +207,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-generic.twig",
+                  "icon": "doc-generic",
                   "decorativeLink": {
                     "text": "Generic download item",
                     "href": "#",
@@ -220,7 +220,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "icon": "doc-pdf",
                   "decorativeLink": {
                     "text": "RMV-1 Form",
                     "href": "#",
@@ -301,7 +301,7 @@
     },
     "pages": [{
       "image": {
-        "alt": "Place Holder Image", 
+        "alt": "Place Holder Image",
         "src": "../../assets/images/placeholder/130x160.png",
         "height": "160",
         "width": "130"
@@ -314,7 +314,7 @@
       }
     },{
       "image": {
-        "alt": "Place Holder Image", 
+        "alt": "Place Holder Image",
         "src": "../../assets/images/placeholder/130x160.png",
         "height": "160",
         "width": "130"
@@ -327,7 +327,7 @@
       }
     },{
       "image": {
-        "alt": "Place Holder Image", 
+        "alt": "Place Holder Image",
         "src": "../../assets/images/placeholder/130x160.png",
         "height": "160",
         "width": "130"

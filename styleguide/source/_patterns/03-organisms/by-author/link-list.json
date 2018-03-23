@@ -5,7 +5,8 @@
       "sub": "",
       "color": "",
       "id": "",
-      "centered": false
+      "centered": false,
+      "sidebar": false
     },
     "description": null,
     "stacked": false,
@@ -13,49 +14,40 @@
     "links" : [{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet, consectetur.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit amet, consectetur.",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor",
-      "info": "",
-      "property": ""
+      "info": ""
     },{
       "href":"#",
       "text":"Lorem ipsum dolor sit ",
-      "info": "",
-      "property": ""
+      "info": ""
     }],
     "more": {
       "href": "#",
       "text": "See all 10 related services",
-      "chevron": true,
-      "label": "See all of the resources for Executive Office of Health and Human Services"
+      "info": "See all of the resources for Executive Office of Health and Human Services"
     }
   }
 }

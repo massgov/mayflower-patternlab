@@ -1,12 +1,12 @@
+{# backward compatible for version 5.5 #}
+{% if linkList.sidebarHeading %}
+  {% set linkList = linkList|merge({"compHeading": { "title": linkList.sidebarHeading.title, "sidebar" : true }}) %}
+{% endif %}
+
 <section class="ma__link-list">
   {% if linkList.compHeading %}
     {% set compHeading = linkList.compHeading %}
     {% include "@atoms/04-headings/comp-heading.twig" %}
-  {% endif %}
-
-  {% if linkList.sidebarHeading %}
-    {% set sidebarHeading = linkList.sidebarHeading %}
-    {% include "@atoms/04-headings/sidebar-heading.twig" %}
   {% endif %}
 
   {% if linkList.description %}
@@ -20,11 +20,17 @@
     {% set bulletClass = linkList.hideBullets ? "ma__link-list__items--no-bullets": "" %}
     {% if linkList.stacked or linkList.links|length < 4 %}
       <ul class="ma__link-list__items {{ bulletClass }}">
-        {% for decorativeLink in linkList.links %}
-          <li class="ma__link-list__item">
-            {% include "@atoms/decorative-link.twig" %}
-          </li>
-        {% endfor %}
+        {% block linkListDecorativeLink %}
+          {% for decorativeLink in linkList.links %}
+            <li class="ma__link-list__item">
+              {% if decorativeLink.href %}
+                {% include "@atoms/decorative-link.twig" %}
+              {% else %}
+                {{ decorativeLink.text }}
+              {% endif %}
+            </li>
+          {% endfor %}
+        {% endblock %}
       </ul>
     {% else %}
       {% set length = linkList.links|length/2 %}
@@ -32,14 +38,22 @@
       <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links[start:half] %}
           <li class="ma__link-list__item">
-            {% include "@atoms/decorative-link.twig" %}
+            {% if decorativeLink.href %}
+              {% include "@atoms/decorative-link.twig" %}
+            {% else %}
+              {{ decorativeLink.text }}
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
       <ul class="ma__link-list__items {{ bulletClass }}">
         {% for decorativeLink in linkList.links[half:length] %}
           <li class="ma__link-list__item">
-            {% include "@atoms/decorative-link.twig" %}
+            {% if decorativeLink.href %}
+              {% include "@atoms/decorative-link.twig" %}
+            {% else %}
+              {{ decorativeLink.text }}
+            {% endif %}
           </li>
         {% endfor %}
       </ul>

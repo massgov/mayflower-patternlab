@@ -14,6 +14,17 @@
     }
   }
 
+  &__context-label {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .1em;
+    font-weight: bold;
+  }
+
+  &__context-label + .ma__decorative-link {
+    margin-bottom: 20px;
+  }
+
   &__container {
     border-top-style: solid;
     border-top-width: 2px;
@@ -39,7 +50,7 @@
   &__blank {
     margin-top: 0;
   }
-  
+
   .ma__arrow-nav:first-child {
     border-right-style: solid;
     border-right-width: 1px;

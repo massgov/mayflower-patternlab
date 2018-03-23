@@ -17,7 +17,7 @@
     "fetch": "~0.10.1",
     "es6-promise": "~3.0.2",
     "es6-polyfill": "./es6-polyfill.js",
-    "svg4everybody": "~2.0.3",
+    "svg4everybody": "~2.1.9",
     "polyfill-init": "./polyfill-init.js",
     "picturefill": "./picturefill.min.js",
     "jquery.fitvids": "fitvids#^1.1.0",

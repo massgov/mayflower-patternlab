@@ -4,6 +4,9 @@ Displays an image using the image HTML element
 ### Status
 * Stable as of 4.0.0
 
+### Variant options
+* [circular image](?p=atoms-image-circular)
+
 ### Variables
 ~~~
 image {
@@ -15,6 +18,8 @@ image {
     type: string / required
   width:
     type: string / required
+  shape:
+    type: string / optional
 }
 ~~~
 

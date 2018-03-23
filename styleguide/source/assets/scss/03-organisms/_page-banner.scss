@@ -27,6 +27,10 @@ $page-banner-height: 330px;
     @media ($bp-large-min) {
       height: 400px;
     }
+
+    .ma__page-banner__content-wrapper {
+      transform: none;
+    }
   }
 
   &--columns {
@@ -69,8 +73,8 @@ $page-banner-height: 330px;
 
   &__content {
     display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
     font-size: 1rem;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
@@ -82,7 +86,7 @@ $page-banner-height: 330px;
       padding-top: 50px;
       padding-right: 80px;
       position: absolute;
-        top: 50%;
+      top: 50%;
       transform: translateY(-50%) skew(-30deg);
     }
 
@@ -100,6 +104,16 @@ $page-banner-height: 330px;
     }
   }
 
+  &__content-wrapper {
+
+     @media ($bp-x-small-min) {
+      transform: skew(30deg);
+      width: 55vw;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
   &--small &__content {
     font-size: .8rem;
     padding: 25px 25px 40px 0;
@@ -112,7 +126,7 @@ $page-banner-height: 330px;
 
   &--large &__content {
     display: flex;
-      align-items: center;
+    align-items: center;
     height: 100%;
     max-width: 640px;
     position: relative;
@@ -165,10 +179,6 @@ $page-banner-height: 330px;
     width: 75px;
     display: none;
 
-    @media ($bp-x-small-min) {
-      transform: skew(30deg);
-    }
-
     @media ($bp-medium-min) {
       width: $page-banner-icon-width;
       display: inline-block;
@@ -203,10 +213,6 @@ $page-banner-height: 330px;
     }
   }
 
-  &--overlay &__icon {
-    transform: skew(0);
-  }
-
   &__title {
     flex-grow: 1;
     font-size: 3rem;
@@ -214,10 +220,6 @@ $page-banner-height: 330px;
     margin-bottom: 0;
     vertical-align: middle;
     z-index: 1;
-
-    @media ($bp-x-small-min) {
-      transform: skew(30deg);
-    }
 
     @media ($bp-x-small-min) {
       font-size: 3.25rem;
@@ -265,7 +267,6 @@ $page-banner-height: 330px;
 
   &--overlay &__title {
     @media ($bp-x-small-min) {
-      transform: skew(0);
       width: calc(100% - 75px);
     }
   }
@@ -306,10 +307,6 @@ $page-banner-height: 330px;
     }
   }
 
-  &--overlay &__description {
-    transform: skew(0);
-  }
-
   &--columns &__description {
     font-size: 1.5rem;
     margin-top: 0;
@@ -339,8 +336,8 @@ $page-banner-height: 330px;
     background-size: cover;
     height: $page-banner-height;
     position: absolute;
-      right: 0;
-      top: 0;
+    right: 0;
+    top: 0;
     width: 100%;
 
     @media ($bp-medium-min) {

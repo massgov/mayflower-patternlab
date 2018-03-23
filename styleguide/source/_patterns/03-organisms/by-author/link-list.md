@@ -19,6 +19,7 @@ List of links that can be rendered stack or as two columns
 
 ### Usage Guidelines
 * When this pattern is used in the Right Rail, the Comp Heading will render as a Sidebar Heading and the bullets will disappear.
+* If a link has no href, it will be displayed as plain text.
 
 
 ### Variables
