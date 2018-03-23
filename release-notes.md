@@ -13,6 +13,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.16.0 (3/23/2018)
+
+### Added:
+- DP-7758: Adds Organization Detail content-type template.
+- DP-7766: Adds Sticky Table of Contents organism pattern for use in Information Details content-type.
+- DP-7767: Adds Overlay Table of Contents organism pattern, Adds Interal Binder Page example.
+- DP-7341: Adds Person Card organism and About Section organism for use on Elected Official pages.
+
+## Changed:
+- DP-7767: Changes to the `section` objects and `title` property of the Table of Contents Hierarchy organism data object to better support extensions.
+
+
 ## 5.15.0 (3/21/2018)
 
 ### Added
