@@ -4,14 +4,8 @@ $page-banner-height: 330px;
 .ma__page-banner {
   background-size: cover;
   background-position: center center;
-
-
-
-height: $page-banner-height; // auto;
-
-
-
-//  max-height: 540px;
+  height: auto;
+  max-height: 540px;
 
   margin-bottom: 20px;
   overflow: hidden;
@@ -80,30 +74,15 @@ height: $page-banner-height; // auto;
     font-size: 1rem;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
-
-
-
-position: abosolute; // 5.11.0
-top: 50%;
-transform: trasnlateY(-50%);
-
-
-
     z-index: 1;
+    top: -50%;
 
     @media ($bp-x-small-min) {
       margin-right: 70px;
       padding-top: 50px;
       padding-right: 80px;
-
-
-
-//      position: absolute;
-//       top: 50%;
-
-
-
-
+      position: absolute;
+        top: 50%;
       transform: translateY(-50%) skew(-30deg);
     }
 
@@ -113,13 +92,11 @@ transform: trasnlateY(-50%);
         top: 0;
         right: 100%;
       width: 50vw;
+      position: absolute;
 
       @media ($bp-x-small-min) {
         right: 99%; // weird gap when skewed is shown
 
-
-
-//        position: absolute;
       }
     }
   }
@@ -163,13 +140,13 @@ transform: trasnlateY(-50%);
   &--columns &__content {
     height: $page-banner-height;
     max-width: 640px;
-    position: relative;
-      top: calc(#{$page-banner-height}/2);
+    position: absolute;
+      top: 0;
 
     @media ($bp-medium-min) {
       height: 100%;
       position: relative;
-        top: 50px;
+        top: calc(#{$page-banner-height}/2+50); //top: 50px;
       transform: skew(-30deg);
     }
   }
@@ -308,6 +285,8 @@ transform: trasnlateY(-50%);
     line-height: 2.188rem;
     margin-bottom: 0;
     margin-top: .8em;
+    position: absolute;
+    top: 330px;
 
     @media ($bp-x-small-min) {
       transform: skew(30deg);
@@ -327,7 +306,7 @@ transform: trasnlateY(-50%);
     margin-top: 0;
     padding: 25px 0 20px;
     transform: skew(0);
-    width: 100%;
+    width: 99%;
     z-index: 1;
 
     @media ($bp-medium-min){
