@@ -33,22 +33,29 @@
       <div class="ma__page-banner__image"></div>
     {% endif %}
     <div class="ma__page-banner__content" property="mainEntityOfPage">
-      {% if pageBanner.icon %}
-        <div class="ma__page-banner__icon">
-          {% include pageBanner.icon %}
-        </div>
-      {% endif %}
-      <h1 class="ma__page-banner__title">
-        {{ pageBanner.title }}
-        {% if pageBanner.titleSubText %}
-          <abbr title="{{ pageBanner.title }}"> {{ pageBanner.titleSubText }}</abbr>
+      <div class="ma__page-banner__content-wrapper">
+        {% if pageBanner.icon %}
+          <div class="ma__page-banner__icon">
+            {% include pageBanner.icon %}
+          </div>
         {% endif %}
-      </h1>
-      {% if pageBanner.description and not (pageBanner.size == "columns") %}
-        <p class="ma__page-banner__description">
-          {{ pageBanner.description }}
-        </p>
-      {% endif %}
+        <h1 class="ma__page-banner__title">
+          {{ pageBanner.title }}
+          {% if pageBanner.titleSubText %}
+            <abbr title="{{ pageBanner.title }}"> {{ pageBanner.titleSubText }}</abbr>
+          {% endif %}
+        </h1>
+        {% if pageBanner.description and not (pageBanner.size == "columns") %}
+          <p class="ma__page-banner__description">
+            {{ pageBanner.description }}
+            {% if pageBanner.descriptionSubText %}
+              <span class="ma__page-banner__descriptionSubText">
+                {{ pageBanner.descriptionSubText }}
+              </span>
+            {% endif %}
+          </p>
+        {% endif %}
+      </div>
     </div>
     {% if pageBanner.description and pageBanner.size == "columns" %}
       <p class="ma__page-banner__description">

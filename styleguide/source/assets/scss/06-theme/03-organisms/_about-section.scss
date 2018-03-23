@@ -1,0 +1,103 @@
+.ma__about-section {
+  @include ma-container();
+
+  @media ($bp-x-large-min) {
+    max-width: none;
+    min-height: 620px;
+  }
+
+  &__title {
+
+    @media ($bp-x-large-min) {
+      @include ma-container();
+    }
+  }
+
+  &__content {
+
+    @media ($bp-x-large-min) {
+      background-color: $c-bg-section;
+    }
+
+    .ma__content-link  {
+      display: inline-block;
+      margin: 5px 0 40px;
+    }
+
+    .ma__person-card__links .ma__content-link {
+      margin: 0;
+    }
+  }
+
+  &__content-container {
+    position: relative;
+
+    @media ($bp-x-large-min) {
+      @include ma-container();
+      padding-top: 3rem;
+    }
+  }
+
+  &__content-text {
+
+    @media ($bp-x-large-min) {
+      max-width: 60%;
+    }
+  }
+
+  .ma__person-card {
+
+    @media ($bp-x-large-min) {
+      position: absolute;
+      right: 0;
+      top: -130px;
+    }
+  }
+
+  &__social {
+    margin-top: 20px;
+
+    @media ($bp-x-large-min) {
+      @include ma-container();
+    }
+
+    .ma__icon-links {
+
+      @media ($bp-small-min) {
+        display: flex;
+      }
+
+      .ma__icon-links__items {
+
+        @media ($bp-small-min) {
+          display: flex;
+        }
+      }
+
+      .ma__icon-links__item {
+        margin-right: 1rem;
+      }
+    }
+
+    .ma__comp-heading {
+      @include ma-h5;
+      text-transform: uppercase;
+      color: $c-theme-green;
+      font-weight: 700;
+      margin-bottom: 0;
+
+      @media ($bp-small-min) {
+        margin-bottom: 0;
+        margin-right: 1rem;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .ma__icon-links__item {
+      margin-bottom: 10px;
+    }
+  }
+}
