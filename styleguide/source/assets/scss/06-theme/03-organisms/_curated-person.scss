@@ -35,33 +35,27 @@
       min-width: unset;
       position: relative;
 
-      &:nth-child(2n+2)::before {
+      &:first-child::after {
         content: '';
         width: 1px;
         height: 100%;
         position: absolute;
-        left: -20px ;
+        right: 20px;
         top: 0;
         background-color: $c-bd-divider;
       }
     }
 
     @media ($bp-large-min) {
-      width: 30%;
+      flex: 1;
 
-      &:last-child {
-        position: relative;
-        padding-left: 25px;
+      &:first-child::after {
+        display: none;
+      }
 
-        &::before {
-          content: '';
-          width: 1px;
-          height: 100%;
-          position: absolute;
-          left: -20px ;
-          top: 0;
-          background-color: $c-bd-divider;
-        }
+      &:not(:first-child) {
+        padding: 0 10px;
+        border-left: 1px solid $c-bd-divider;
       }
     }
   }
