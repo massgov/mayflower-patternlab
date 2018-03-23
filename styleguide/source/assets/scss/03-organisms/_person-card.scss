@@ -16,33 +16,30 @@
     max-width: 250px;
   }
 
-  &__person-info {
+  &__name {
 
-    .ma__person-card__name {
+    h2 {
+      margin-bottom: 0;
+      padding-bottom: 5px;
+      font-weight: 500;
 
-      h2 {
-        margin-bottom: 0;
-        padding-bottom: 5px;
-        font-weight: 500;
-
-        @media ($bp-small-min) {
-          font-size: 2.25rem;
-        }
-      }
-
-      h2::after {
-        display: none;
+      @media ($bp-small-min) {
+        font-size: 2.25rem;
       }
     }
 
-    .ma__person-card__title {
+    h2::after {
+      display: none;
+    }
+  }
 
-      h3 {
-        margin-bottom: 0;
+  &__title {
 
-        @media ($bp-small-min) {
-          font-size: 1.35rem;
-        }
+    h3 {
+      margin-bottom: 0;
+
+      @media ($bp-small-min) {
+        font-size: 1.35rem;
       }
     }
   }
