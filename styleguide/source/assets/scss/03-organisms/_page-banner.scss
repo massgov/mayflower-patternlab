@@ -115,6 +115,7 @@ $page-banner-height: 330px;
       align-items: center;
     height: 100%;
     max-width: 640px;
+    position: relative;
 
     @media ($bp-x-small-min) {
       margin-right: 105px;
