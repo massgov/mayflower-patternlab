@@ -19,29 +19,29 @@
       background-color: $c-bg-section;
     }
 
-    .ma__about-section__content-container {
-      position: relative;
-
-      @media ($bp-x-large-min) {
-        @include ma-container();
-        padding-top: 3rem;
-      }
-    }
-
-    .ma__about-section__content-text {
-
-      @media ($bp-x-large-min) {
-        max-width: 60%;
-      }
-    }
-
     .ma__content-link  {
       display: inline-block;
-      margin: 5px 0 2.5rem;
+      margin: 5px 0 40px;
     }
 
     .ma__person-card__links .ma__content-link {
       margin: 0;
+    }
+  }
+
+  &__content-container {
+    position: relative;
+
+    @media ($bp-x-large-min) {
+      @include ma-container();
+      padding-top: 3rem;
+    }
+  }
+
+  &__content-text {
+
+    @media ($bp-x-large-min) {
+      max-width: 60%;
     }
   }
 

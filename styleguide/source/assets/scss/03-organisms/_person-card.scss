@@ -6,7 +6,7 @@
     padding: 0 20px;
   }
 
-  .ma__person-card--wrapper {
+  &__wrapper {
     max-width: 375px;
     margin: 2rem auto 1.5rem;
   }
@@ -18,7 +18,7 @@
 
   &__person-info {
 
-    .ma__person-card--name {
+    .ma__person-card__name {
 
       h2 {
         margin-bottom: 0;
@@ -35,7 +35,7 @@
       }
     }
 
-    .ma__person-card--title {
+    .ma__person-card__title {
 
       h3 {
         margin-bottom: 0;
