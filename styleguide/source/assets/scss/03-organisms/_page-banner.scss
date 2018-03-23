@@ -153,9 +153,8 @@ $page-banner-height: 330px;
     }
 
     @media ($bp-medium-min) {
-      position: relative;
-//        top: calc(#{$page-banner-height}/2); //50px;
-// top: $page-banner-height;
+      height: 100%;
+      top: 50px;
       transform: skew(-30deg);
     }
   }
@@ -325,6 +324,12 @@ $page-banner-height: 330px;
       line-height: 2.188rem;
       padding-top: 100px;
       padding-right: 20px;
+      position: relative;
+      top: 0;
+    }
+
+    @media ($bp-medium-max) {
+      width: 100%;
     }
   }
 
