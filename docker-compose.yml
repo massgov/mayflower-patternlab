@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  node:
+    image: node:8
+    working_dir: /mnt
+    volumes:
+      - ./:/mnt
+    expose:
+      - 4567
+    ports:
+      - 4567:4567 # Exposed static file server.
+    environment:
+      SELENIUM_HOST: selenium
+
+  selenium:
+    image: "selenium/standalone-chrome"
+    ports:
+      - 4444:4444 # Exposed selenium control.
+
