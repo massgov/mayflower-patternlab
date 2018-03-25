@@ -1,0 +1,18 @@
+{
+    "pageBanner": {
+      "bgWide": "../../assets/images/placeholder/1600x400.png",
+      "bgNarrow": "../../assets/images/placeholder/800x400.png",
+      "size": "large",
+      "icon": "",
+      "title": "Office of the Treasurer & Receiver General",
+      "link": {
+        "text": "Deborah B. Goldberg",
+        "href": "#",
+        "info": ""
+      },
+      "titleSubText": " (TRE)",
+      "description": "Treasurer & Receiver General",
+      "color": "green"
+    }
+  }
+  
