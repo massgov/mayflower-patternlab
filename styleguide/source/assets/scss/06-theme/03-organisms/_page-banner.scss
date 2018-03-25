@@ -46,10 +46,17 @@ $page-banner-inner-width: 612px;
     }
   }
 
-  &--linked &__content{
+  &--linked &__container {
+    @media ($bp-small-max) {
+      background-color: $c-theme-secondary; 
+    }
+  }
+  &--linked &__content {
     background-color: $c-theme-secondary; 
     background-image: none;
   }
+
+
 
   &__icon {
 

@@ -45,6 +45,57 @@ $page-banner-height: 330px;
     }
   }
 
+  &--linked {
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    
+
+    @media ($bp-x-large-min) {
+      background-size: 55% auto;
+    }
+
+    @media ($bp-small-max) {
+      overflow: visible;
+      height: auto;
+      max-height: none;
+      background-position: center bottom;
+      background-size: 100%;
+
+      // making space to display background image
+      &:after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 100%;
+        padding-top: 50%;
+      }
+
+      // this is a specificity hack... resetting the skew is annoying.
+      .ma__page-banner__content.ma__page-banner__content,
+      .ma__page-banner__content-wrapper.ma__page-banner__content-wrapper { 
+        transform: none; 
+      }
+      .ma__page-banner__content {
+        width: 100%;
+        margin: 0;
+
+      }
+    }
+  }
+
+  &--linked &__container {
+    @media ($bp-small-max) {
+      height: auto;
+    }
+  }
+
+  &--linked &__content {
+    @media ($bp-small-max) {
+      position: static;
+    }
+  }
+
   &__container {
     @include ma-container;
     height: 100%;
