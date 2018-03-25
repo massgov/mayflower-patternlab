@@ -291,7 +291,8 @@ position: relative;
     }
   }
 
-  &__description {
+  &__description,
+  .ma__decorative-link {
     display: block;
     font-size: 1.813rem;
     letter-spacing: .02em;
@@ -303,6 +304,15 @@ position: relative;
     @media ($bp-large-min){
       max-width: 820px;
     }
+  }
+  
+  .ma__decorative-link a {
+    font-weight: 500;
+  }
+  
+  .ma__decorative-link + &__description {
+    margin-top: 0;
+    font-weight: normal;
   }
 
   &__content-wrapper &__description {
