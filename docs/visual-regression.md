@@ -1,33 +1,28 @@
 Visual Regression Testing
 =========================
 
-This repository has visual regression testing!  While this isn't yet automated, you can run the tests locally to check the impact of your changes.
-
-## BackstopJS
-
-The tool we are using for visual regression testing is [BackstopJS](https://garris.github.io/BackstopJS/). BackstopJS works by collecting *reference* images of certain URLs.  Reference images are later compared to updated images after you make changes. BackstopJS is set up to capture and compare all template and page patterns.
+This repository uses [BackstopJS](https://garris.github.io/BackstopJS/) for visual regression testing! BackstopJS works by collecting *reference* images of Template and Page patterns.  Reference images are later compared to to the current state after you make changes.
 
 ### Prerequisites:
 
 * [Docker and Docker Compose](https://www.docker.com/community-edition#/download) must be installed.
 
-### Checking your changes:
+### Workflow:
 
-Before you can check changes, you have to have reference images to compare to.  Let's begin by capturing those from the `dev` branch:
+To check how your current work compares with the reference screenshots that are committed to the repository, run the following:
 
 ```bash
-git checkout dev
-cd styleguide && gulp prod && cd ..
-docker-compose run backstop reference
-```
-
-Next, check out your branch and do your work.  When you're ready for a comparison, run these commands:
-```bash
-cd styleguide && gulp prod && cd ..
 docker-compose run backstop test
 open backstopjs/reports/html/index.html
 ```
-The HTML report should display in your browser, allowing you to review the changed patterns.  If you're satisfied with your changes, you can update your reference images by running:
+
+When you are ready to commit your work, you will want to update the reference screenshots with the new ones that reflect your changes.  To do that, run:
+
 ```bash
-docker-compose run backstop accept
+docker-compose run backstop test # Capture screenshots of the current state
+docker-compose run backstop accept # Accept these screenshots as the new references.
+git add backstopjs/references
+git commit -m "Updating reference screenshots"
 ```
+
+Backstop also runs in CircleCI, so your build may fail if you do not update the reference screenshots when you make changes.
