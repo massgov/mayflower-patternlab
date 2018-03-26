@@ -292,17 +292,17 @@ $page-banner-height: 330px;
     line-height: 2.188rem;
     margin-bottom: 0;
     margin-top: .8em;
-//    width: 100%;
-position: absolute;
-top: $page-banner-height;
-
-    @media ($bp-x-small-min){
-      transform: skew(30deg);
-    }
+    position: absolute;
+    top: $page-banner-height;
 
     @media ($bp-large-min){
       max-width: 820px;
     }
+  }
+
+  &__content-wrapper &__description {
+    position: relative;
+    top: 0;
   }
 
   &--columns &__description {
@@ -325,7 +325,7 @@ top: $page-banner-height;
     }
 
     @media ($bp-medium-max) {
-      width: 100%;
+      width: 97%;
     }
   }
 
