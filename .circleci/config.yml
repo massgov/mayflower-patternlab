@@ -47,8 +47,8 @@ jobs:
       - run: |
           cd code
           docker-compose up --no-start web backstop
-          docker cp ./ $(docker-compose ps -q backstop):/mnt
-          docker cp ./styleguide/public "$(docker-compose ps -q web):/usr/share/nginx/html"
+          docker cp ./ $(docker-compose -f docker-compose.ci.yml ps -q backstop):/src/
+          docker cp ./styleguide/public $(docker-compose -f docker-compose.ci.yml ps -q web):/usr/share/nginx/html
           docker-compose run backstop test
 
   deploy_artifacts:
