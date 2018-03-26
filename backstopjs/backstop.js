@@ -2,7 +2,7 @@
 var walk = require('./walk-dir');
 var path = require('path');
 
-var patternPath = __dirname + '/../styleguide/public/patterns/';
+var patternPath = `${__dirname}/../styleguide/public/patterns/`;
 
 /**
  * Scan for page and template patterns.
@@ -53,13 +53,13 @@ module.exports = {
   "onReadyScript": "onReady.js",
   "scenarios": scenarios,
   "paths": {
-    "bitmaps_reference": "reference",
-    "bitmaps_test": "runs",
-    "engine_scripts": "scripts",
-    "html_report": "reports/html",
-    "ci_report": "reports/ci",
+    "bitmaps_reference": `${__dirname}/reference`,
+    "bitmaps_test": `${__dirname}/runs`,
+    "engine_scripts": `${__dirname}/scripts`,
+    "html_report": `${__dirname}/reports/html`,
+    "ci_report": `${__dirname}/reports/ci`,
   },
-  "report": ["browser"],
+  "report": ["browser", "CI"],
   "engine": "chrome",
   "engineFlags": [],
   "asyncCaptureLimit": 3,
