@@ -52,8 +52,8 @@ jobs:
       - run:
           command: |
             cd code
-            docker-compose run --entrypoint=/bin/bash backstop ls /src/backstop
-            docker-compose run --entrypoint=/bin/bash backstop ls /src/backstop/reports
+            docker-compose run --entrypoint=/bin/ls backstop /src/backstop
+            docker-compose run --entrypoint=/bin/ls backstop /src/backstop/reports
             docker cp $(docker-compose ps -q backstop):/src/backstopjs/ ./backstopjs/
           when: always
       - store_artifacts:
