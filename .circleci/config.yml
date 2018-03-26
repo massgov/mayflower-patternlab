@@ -47,7 +47,7 @@ jobs:
       - run: |
           cd code
           docker cp ./ $(docker-compose ps -q backstop):/src/
-          docker cp ./styleguide/public $(docker-compose -f docker-compose.ci.yml ps -q web):/usr/share/nginx/html
+          docker cp ./styleguide/public/. $(docker-compose ps -q web):/usr/share/nginx/html
       - run: cd code && docker-compose run backstop test
       - run:
           command: cd code && docker cp $(docker-compose ps -q backstop):/src/backstopjs/ ./backstopjs/
