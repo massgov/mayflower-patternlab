@@ -19,12 +19,12 @@ jobs:
       - restore_cache:
           name: Restore NPM Cache
           keys:
-            - site-npm-v1-{{ checksum "styleguide/package.json" }}
+            - site-npm-v1-{{ checksum "styleguide/yarn.lock" }}
             - site-npm-v1-
       - run: { name: 'NPM Install', command: 'cd styleguide && yarn' }
       - save_cache:
           name: Save NPM cache
-          key: site-npm-v1-{{ checksum "styleguide/package.json" }}
+          key: site-npm-v1-{{ checksum "styleguide/yarn.lock" }}
           paths: [ styleguide/node_modules ]
       - run: { name: 'Generate style guide', command: 'php styleguide/core/console --generate' }
       - run: { name: 'Build assets', command: 'cd styleguide && node_modules/.bin/gulp prod' }
