@@ -50,7 +50,8 @@ jobs:
           docker cp ./ $(docker-compose ps -q backstop):/src/
           docker cp ./styleguide/public $(docker-compose -f docker-compose.ci.yml ps -q web):/usr/share/nginx/html
       - run: cd code && docker-compose run backstop test
-      - run: docker cp $(docker-compose ps -q backstop):/src/backstopjs/ ./backstopjs/
+      - run:
+          command: docker cp $(docker-compose ps -q backstop):/src/backstopjs/ ./backstopjs/
           when: always
       - store_artifacts:
           path: /src/code/backstopjs
