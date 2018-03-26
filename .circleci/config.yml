@@ -42,8 +42,8 @@ jobs:
       - run:
           name: "Prepare Git"
           command: |
-            git config --global user.email "devops@palantir.net"
-            git config --global user.name "palantirnet-temp1"
+            git config --global user.email "ci.bot@mass.gov"
+            git config --global user.name "MassGov Bot"
       # @todo: We shouldn't need global gulp from the build scripts.
       - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
       - run: { name: 'Deploy', command: 'cd styleguide && vendor/bin/phing deploy' }
