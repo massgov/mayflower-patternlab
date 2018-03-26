@@ -4,8 +4,6 @@ services:
   # BackstopJS.
   backstop:
     image: backstopjs/backstopjs
-    volumes:
-      - "./:/mnt"
     working_dir: /mnt/backstopjs
     depends_on:
       - web

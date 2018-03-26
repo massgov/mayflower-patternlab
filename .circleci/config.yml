@@ -43,9 +43,13 @@ jobs:
     steps:
       - attach_workspace: {at: /home/circleci}
       - setup_remote_docker
-      - run: cd code && docker-compose up -d web
-      - run: cd code && docker cp /home/circleci/code/styleguide/public "$(docker-compose ps -q web):/usr/share/nginx/html"
-      - run: cd code && docker-compose run backstop test
+      - run: cd code && docker-compose up --no-start web backstop
+      - run: |
+          cd code
+          docker-compose up --no-start web backstop
+          docker cp ./ $(docker-compose ps -q backstop):/mnt
+          docker cp ./styleguide/public "$(docker-compose ps -q web):/usr/share/nginx/html"
+          docker-compose run backstop test
 
   deploy_artifacts:
     <<: *common_config
