@@ -49,7 +49,7 @@ jobs:
           docker cp ./styleguide/public/. $(docker-compose ps -q web):/usr/share/nginx/html
       - run: docker-compose run backstop test
       - run:
-          command: docker cp $(docker-compose ps -q backstop):/src/backstopjs/ ./backstopjs/
+          command: docker cp $(docker-compose ps -q backstop):/src/backstopjs/. ./backstopjs/
           when: always
       - store_artifacts:
           path: ./backstopjs
