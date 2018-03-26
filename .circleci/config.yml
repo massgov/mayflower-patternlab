@@ -35,14 +35,14 @@ jobs:
           path: /var/www/code/styleguide/public/assets
 
   test:
-    working_directory: /var/www/code
+    working_directory: /home/circleci
     docker:
       - image: circleci/python:2.7.14
     steps:
-      - attach_workspace: {at: /var/www}
+      - attach_workspace: {at: /home/circleci}
       - setup_remote_docker
       - run: docker-compose up -d web
-      - run: docker cp /var/www/code/styleguide/public "$(docker-compose ps -q web):/usr/share/nginx/html"
+      - run: docker cp /home/circleci/code/styleguide/public "$(docker-compose ps -q web):/usr/share/nginx/html"
       - run: docker-compose run backstop test
 
   deploy_artifacts:
