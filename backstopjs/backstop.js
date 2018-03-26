@@ -59,7 +59,7 @@ module.exports = {
     "html_report": `${__dirname}/reports/html`,
     "ci_report": `${__dirname}/reports/ci`,
   },
-  "report": ["browser"],
+  "report": ["browser", "CI"],
   "engine": "chrome",
   "engineFlags": [],
   "asyncCaptureLimit": 3,

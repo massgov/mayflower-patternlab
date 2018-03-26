@@ -51,6 +51,8 @@ jobs:
           when: always
       - store_artifacts:
           path: ./backstopjs
+      - store_test_results:
+          path: backstopjs/reports/ci
 
   deploy_artifacts:
     <<: *common_config
