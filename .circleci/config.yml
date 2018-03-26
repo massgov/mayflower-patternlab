@@ -35,13 +35,14 @@ jobs:
           path: /var/www/code/styleguide/public/assets
 
   test:
-    working_directory: /src/code
+    working_directory: /home/circleci
     docker:
-      - image: backstopjs/backstopjs
+      - image: circleci/python:2.7.14
     environment:
       COMPOSE_FILE: docker-compose.ci.yml
     steps:
-      - attach_workspace: {at: /src}
+      - attach_workspace: {at: /home/circleci}
+      - setup_remote_docker
       - run: cd code && docker-compose up --no-start web backstop
       - run: |
           cd code
