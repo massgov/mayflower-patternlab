@@ -50,18 +50,18 @@ $page-banner-height: 330px;
     background-position: right center;
     background-repeat: no-repeat;
     background-size: auto 100%;
-    
+    overflow: visible;
+    height: auto;
+    min-height: 240px;
 
     @media ($bp-x-large-min) {
       background-size: 55% auto;
     }
 
     @media ($bp-small-max) {
-      overflow: visible;
-      height: auto;
-      max-height: none;
       background-position: center bottom;
       background-size: 100%;
+      max-height: none;
 
       // making space to display background image
       &:after {
@@ -80,7 +80,6 @@ $page-banner-height: 330px;
       .ma__page-banner__content {
         width: 100%;
         margin: 0;
-
       }
     }
   }
@@ -91,10 +90,16 @@ $page-banner-height: 330px;
     }
   }
 
-  &--linked &__content {
-    @media ($bp-small-max) {
-      position: static;
+  &--linked &__content-wrapper {
+    @media ($bp-medium-max) {
+      width: auto;
     }
+  }
+
+  &--linked &__content {
+    position: static;
+    height: auto;
+
   }
 
   &__container {
