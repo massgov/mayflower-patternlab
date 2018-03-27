@@ -3,13 +3,6 @@
     "side": "left",
     "color": "green"
   },
-
-  "errorPage": {
-    "type": "v5.16.0 (3/23/2018)",
-    "title": "Welcome to Mayflower, the Commonwealth's Design System",
-    "message": "Use the navigation menu above to browse our pattern library."
-  },
-
   "linkList": {
     "compHeading": {
       "title": "Helpful Links",
