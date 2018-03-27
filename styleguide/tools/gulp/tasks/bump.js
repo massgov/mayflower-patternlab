@@ -11,7 +11,6 @@ module.exports = function bumpTask(config){
     // copy files settings
     var cfg = {
         src: [
-          config.rootSource + "/_data/data.json",
           config.patternLabRoot + "/package.json"
         ]
     };
