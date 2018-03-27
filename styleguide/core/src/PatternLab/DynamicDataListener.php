@@ -13,8 +13,13 @@ use Symfony\Component\Process\Process;
 class DynamicDataListener extends Listener {
 
   public function __construct() {
-    $this->addListener('data.gatherStart', 'setDomain');
-    $this->addListener('data.gatherStart', 'setMayflowerRelease');
+    // Note: There can only be one listener per event.
+    $this->addListener('data.gatherStart', 'gatherData');
+  }
+
+  public function gatherData() {
+    $this->setDomain();
+    $this->setMayflowerRelease();
   }
 
   /**
