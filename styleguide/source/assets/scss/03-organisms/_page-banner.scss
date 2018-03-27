@@ -79,6 +79,7 @@ $page-banner-height: 330px;
     max-width: 1050px;
     padding: 30px 25px 45px 0;
     z-index: 1;
+    top: -50%;
 
     @media ($bp-x-small-min) {
       margin-right: 70px;
@@ -92,13 +93,13 @@ $page-banner-height: 330px;
     &:before {
       content: "";
       height: 100%;
-      top: 0;
-      right: 100%;
+      position: absolute;
+        top: 0;
+        right: 100%;
       width: 50vw;
 
       @media ($bp-x-small-min) {
         right: 99%; // weird gap when skewed is shown
-        position: absolute;
       }
     }
   }
@@ -128,6 +129,7 @@ $page-banner-height: 330px;
     align-items: center;
     height: 100%;
     max-width: 640px;
+    position: relative;
 
     @media ($bp-x-small-min) {
       margin-right: 105px;
@@ -152,13 +154,22 @@ $page-banner-height: 330px;
   &--columns &__content {
     height: $page-banner-height;
     max-width: 640px;
-    position: relative;
-    top: calc(#{$page-banner-height}/2);
+    position: absolute;
+      top: 0;
+
+    @media ($bp-x-small-min) {
+      position: relative;
+     transform: skew(-30deg);
+    }
+
+    @media ($bp-small-min) {
+      position: relative;
+      transform: skew(-30deg);
+    }
 
     @media ($bp-medium-min) {
       height: 100%;
-      position: relative;
-        top: 50px;
+      top: 50px;
       transform: skew(-30deg);
     }
   }
@@ -284,7 +295,12 @@ $page-banner-height: 330px;
     line-height: 2.188rem;
     margin-bottom: 0;
     margin-top: .8em;
-    width: 100%;
+    position: absolute;
+    top: 330px;
+
+    @media ($bp-x-small-min) {
+      transform: skew(30deg);
+    }
 
     @media ($bp-large-min){
       max-width: 820px;
@@ -295,7 +311,8 @@ $page-banner-height: 330px;
     font-size: 1.5rem;
     margin-top: 0;
     padding: 25px 0 20px;
-    width: 100%;
+    transform: skew(0);
+    width: 99%;
     z-index: 1;
 
     @media ($bp-medium-min){
@@ -305,6 +322,12 @@ $page-banner-height: 330px;
       line-height: 2.188rem;
       padding-top: 100px;
       padding-right: 20px;
+      position: relative;
+      top: 0;
+    }
+
+    @media ($bp-medium-max) {
+      width: 100%;
     }
   }
 
