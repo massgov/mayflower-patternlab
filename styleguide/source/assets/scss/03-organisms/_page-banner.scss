@@ -49,6 +49,7 @@ $page-banner-height: 330px;
     @include ma-container;
     height: 100%;
     position: relative;
+    padding-right: 0;
   }
 
   &--columns &__container {
@@ -297,7 +298,6 @@ position: relative;
     line-height: 2.188rem;
     margin-bottom: 0;
     margin-top: .8em;
-//    position: absolute;
     top: $page-banner-height;
 
     @media ($bp-large-min){
