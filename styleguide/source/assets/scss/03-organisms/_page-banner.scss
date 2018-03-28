@@ -5,7 +5,6 @@ $page-banner-height: 330px;
   background-size: cover;
   background-position: center center;
   height: auto;
-  max-height: 540px;
 
   margin-bottom: 20px;
   overflow: hidden;
@@ -55,8 +54,14 @@ $page-banner-height: 330px;
   &--columns &__container {
     @include clearfix;
     height: auto;
-    min-height: 450px;
+    min-height: 500px;
     padding-right: 0px; //fix gap on mobile
+
+    &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
   }
 
   &--overlay &__container {
@@ -155,7 +160,7 @@ $page-banner-height: 330px;
   &--columns &__content {
     height: $page-banner-height;
     max-width: 640px;
-    position: absolute;
+position: relative;
     top: 0;
 
     @media ($bp-x-small-min) {
@@ -292,7 +297,7 @@ $page-banner-height: 330px;
     line-height: 2.188rem;
     margin-bottom: 0;
     margin-top: .8em;
-    position: absolute;
+//    position: absolute;
     top: $page-banner-height;
 
     @media ($bp-large-min){
@@ -309,8 +314,9 @@ $page-banner-height: 330px;
     font-size: 1.5rem;
     margin-top: 0;
     padding: 25px 0 20px;
-    width: 99%;
+    width: 95%;
     transform: skew(0);
+    float: left;
     z-index: 1;
 
     @media ($bp-medium-min){
@@ -322,10 +328,6 @@ $page-banner-height: 330px;
       padding-right: 20px;
       position: relative;
       top: 0;
-    }
-
-    @media ($bp-medium-max) {
-      width: 97%;
     }
   }
 
