@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Fixed
+Minor
+- DP-8378: Fix the page banner display issue in mobile for Topic, Organizaion and Service pages.
