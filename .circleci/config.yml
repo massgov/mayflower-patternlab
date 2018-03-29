@@ -89,7 +89,7 @@ workflows:
             branches:
               ignore: /.*/
             tags:
-              only: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
+              only: /.*/
       - deploy_cd:
           requires: [build]
           filters:
