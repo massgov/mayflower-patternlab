@@ -39,7 +39,6 @@ export default function (window,document,$,undefined) {
       let dest = '<span class="sticky-toc-jump-target" id="' + sectionId + '"></span>';
 
       $section.removeAttr('id');
-      // $section.addClass('sticky-toc-jump-target');
       $section.parent().prepend(dest);
       $('.ma__sticky-toc__column').append($tocLink);
     });
