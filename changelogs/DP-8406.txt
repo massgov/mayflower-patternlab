@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Fixed
-Patch
-- DP-8406: Corrects sticky TOC selector and positioning. Corrects drupal integration styling of page flipper on binder navigation.

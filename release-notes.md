@@ -13,6 +13,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.17.0 (3/29/2018)
+
+### Added
+- DP-8341: Added visual regression testing for all templates and pages.
+
+### Fixed
+- DP-8378: Fix the page banner display issue in mobile for Topic, Organizaion and Service pages.
+- DP-8406: Corrects sticky TOC selector and positioning. Corrects drupal integration styling of page flipper on binder navigation.
+
+### Changed
+- DP-8332: Update build process for Mayflower to Circle 2.0
+
 ## 5.16.0 (3/23/2018)
 
 ### Added:

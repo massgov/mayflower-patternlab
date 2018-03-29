@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Added:
-Minor
-- DP-8341: Added visual regression testing for all templates and pages.
