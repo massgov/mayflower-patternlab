@@ -3,7 +3,8 @@ export default function (window,document,$,undefined) {
   $('.pre-content .ma__sticky-toc').each(function() {
     const $toc = $('.ma__sticky-toc'),
           $tocContent = $('.ma__sticky-toc__links'),
-          $tocSections = $('.ma__information-details__content, .ma__link-list').find('h2'),
+          $tocSections = $('.ma__information-details .page-content').find('h2'),
+          lastHeading = $tocSections.last().text(),
           tocSectionCount = $tocSections.length,
           $tocColumn = $('.ma__sticky-toc__column'),
           $mobileToggle = $('.ma__sticky-toc__toggle-link'),
@@ -35,8 +36,10 @@ export default function (window,document,$,undefined) {
         $section.attr('id', sectionId);
       }
       let $tocLink = '<div class="ma__sticky-toc__link"><svg xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\" width=\"35\" height=\"35\" viewBox=\"0 0 35 35\"><path class=\"st0\" d=\"M17.5 35C7.8 35 0 27.2 0 17.5 0 7.8 7.8 0 17.5 0 27.2 0 35 7.8 35 17.5 35 27.2 27.2 35 17.5 35zM16 9l-3 2.9 5.1 5.1L13 22.1l3 2.9 8-8L16 9z\"/></svg><a href="#'+sectionId+'" >'+sectionTitle+'</a></div>';
+      let dest = '<span class="sticky-toc-jump-target" id="' + sectionId + '"></span>';
 
-      $section.addClass('sticky-toc-jump-target');
+      $section.removeAttr('id');
+      $section.parent().prepend(dest);
       $('.ma__sticky-toc__column').append($tocLink);
     });
 
@@ -65,8 +68,8 @@ export default function (window,document,$,undefined) {
     });
 
     // Set title bar to 'Related since the scroll never makes it that far'
-    $('body').on('click', '.ma__sticky-toc__link a[href="#related"]', function() {
-      $('.ma__sticky-toc__current-section').text("Related Links");
+    $('body').on('click', '.ma__sticky-toc__link a[text="' + lastHeading + '"]', function() {
+      $('.ma__sticky-toc__current-section').text(lastHeading);
     });
 
     $(window).scroll(function () {
@@ -94,7 +97,7 @@ export default function (window,document,$,undefined) {
         if(windowTop + windowBottom == docHeight) {
           // Because the related section never makes it to the scroll stop on desktop,
           // we catch the bottom of the window
-          $('.ma__sticky-toc__current-section').text("Related Links");
+          $('.ma__sticky-toc__current-section').text(lastHeading);
         }
       });
     });
