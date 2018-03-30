@@ -35,7 +35,8 @@ class DynamicDataListener extends Listener {
     $domain = sprintf('%s://%s', $parts['scheme'], $parts['host']);
     Data::setOption('url', [
       'domain' => $domain,
-      'assetsPath' => rtrim($parts['path'], '/') . '/assets',
+      // Many places expect this path with no leading or trailing slashes.
+      'assetsPath' => trim(trim($parts['path'], '/') . '/assets', '/'),
     ]);
     Data::setOption('urlDomain', $domain);
     Data::setOption('urlPath', $parts['path']);

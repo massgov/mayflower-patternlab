@@ -57,7 +57,6 @@ jobs:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
-      # @todo: We shouldn't need global gulp from the build scripts.
       - run:
           name: "Prepare Git"
           command: |
@@ -89,3 +88,8 @@ workflows:
           requires: [build]
       - deploy_branch:
           requires: [build]
+  build_tag:
+    jobs:
+      - build:
+          filters:
+            branch: {}
