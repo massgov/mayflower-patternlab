@@ -1,3 +1,4 @@
+
 version: 2
 
 # YAML anchors/aliases. See;
@@ -33,7 +34,6 @@ jobs:
       - store_artifacts:
           path: /var/www/code/styleguide/public/assets
 
-
   test:
     working_directory: /home/circleci/code
     docker:
@@ -55,7 +55,7 @@ jobs:
       - store_test_results:
           path: backstopjs/reports/ci
 
-  deploy_branch:
+  deploy_artifacts:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
@@ -64,20 +64,37 @@ jobs:
           command: |
             git config --global user.email "ci.bot@mass.gov"
             git config --global user.name "MassGov Bot"
-      - run: { name: 'Deploy artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:publish" }
-      - run: { name: 'Deploy S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:publish" }
+      # @todo: We shouldn't need global gulp from the build scripts.
+      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
+      - run: { name: 'Deploy', command: 'cd styleguide && vendor/bin/phing deploy' }
 
-  deploy_tag:
+  deploy_cd:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
+      # @todo: We shouldn't need global gulp from the build scripts.
+      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
+      - run: { name: 'S3 Deployment', command: 'cd styleguide && ../scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}' }
 
 workflows:
   version: 2
-  build_Deploy:
+  build_deploy:
     jobs:
       - build:
+          filters:
+            tags:
+              only: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
       - test:
           requires: [build]
-      - deploy_branch:
+      - deploy_artifacts:
           requires: [build]
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
+      - deploy_cd:
+          requires: [build]
+          filters:
+            branches:
+              ignore: /^master$/
