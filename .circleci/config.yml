@@ -88,8 +88,3 @@ workflows:
           requires: [build]
       - deploy_branch:
           requires: [build]
-  build_tag:
-    jobs:
-      - build:
-          filters:
-            branch: {}
