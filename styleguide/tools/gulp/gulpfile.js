@@ -19,7 +19,7 @@ const defaults = {
     baseDomain: "https://mayflower.digital.mass.gov/",
     // Determines where we git push and pull the artifact from
     artifactUrl: "git@github.com:massgov/mayflower-artifacts.git",
-    s3Bucket: process.env.S3_BUCKET,
+    s3Bucket: process.env.AWS_BUCKET,
     dest: {
         // The path the artifact is built to.
         artifact: path.resolve(root, "artifact"),
