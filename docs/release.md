@@ -8,9 +8,8 @@ Mayflower release managers with the necessary repo permissions can follow these 
 1. Create a release branch `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about [Mayflower and semantic versioning](docs/versioning.md) to ensure that your are creating the right type of version.
 1. Add [release notes](https://github.com/massgov/mayflower/blob/dev/docs/change-log-instructions.md) to the top of [release notes](/release-notes.md) based on the "changelog.txt" files, remove all the "changelog.txt" files and then commit.
 1. Move into the `stylguide` directory `cd styleguide` (may be a good idea to run `npm install` in case the release includes new packages).
-1. Bump the version on the homepage - `@pages/readme2.json` - by updating the version and date text in `errorPage.type`
 1. Bump the version of the npm package by running `gulp bump -v=#.#.#` where `#.#.#` is the version you are releasing.
-1. Commit your version bump file updates.
+1. Commit your version bump file update.
 1. Push release branch to `massgov/mayflower` (i.e. `git push upstream release-#.#.#`).
 1. Wait for [the circle build](https://circleci.com/gh/massgov/mayflower) to pass, which will deploy your release branch to staging automagically :).
 1. Verify release notes against the site rendered at: `https://mayflower.digital.mass.gov/<your-release-branch>/index.html`.
