@@ -32,7 +32,12 @@ class DynamicDataListener extends Listener {
       'host' => 'mayflower.digital.mass.gov',
       'path' => '/'
     ];
-    Data::setOption('urlDomain', sprintf('%s://%s', $parts['scheme'], $parts['host']));
+    $domain = sprintf('%s://%s', $parts['scheme'], $parts['host']);
+    Data::setOption('url', [
+      'domain' => $domain,
+      'assetsPath' => rtrim($parts['path'], '/') . '/assets',
+    ]);
+    Data::setOption('urlDomain', $domain);
     Data::setOption('urlPath', $parts['path']);
   }
 
