@@ -73,9 +73,9 @@ jobs:
     steps:
       - attach_workspace: {at: /var/www}
       # @todo: We shouldn't need global gulp from the build scripts.
-      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
-      - run: { name: 'S3 Deployment', command: 'cd styleguide && ../scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}' }
-
+      - run: { name: 'Deploy artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:publish" }
+      - run: { name: 'Deploy S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:publish" }
+      
 workflows:
   version: 2
   build_deploy:
