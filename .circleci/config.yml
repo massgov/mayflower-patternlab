@@ -73,9 +73,14 @@ jobs:
     steps:
       - attach_workspace: {at: /var/www}
       # @todo: We shouldn't need global gulp from the build scripts.
+      - run:
+          name: "Prepare Git"
+          command: |
+            git config --global user.email "ci.bot@mass.gov"
+            git config --global user.name "MassGov Bot"
       - run: { name: 'Deploy artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:publish" }
       - run: { name: 'Deploy S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:publish" }
-      
+
 workflows:
   version: 2
   build_deploy:
