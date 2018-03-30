@@ -1,4 +1,3 @@
-
 version: 2
 
 # YAML anchors/aliases. See;
@@ -64,8 +63,8 @@ jobs:
           command: |
             git config --global user.email "ci.bot@mass.gov"
             git config --global user.name "MassGov Bot"
-      - run: { name: 'Deploy artifacts', command: cd styleguide && node_modules/.bin/gulp artifacts:publish }
-      - run: { name: 'Deploy S3', command: cd styleguide && node_modules/.bin/gulp patternlab:publish }
+      - run: { name: 'Deploy artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:publish" }
+      - run: { name: 'Deploy S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:publish" }
 
   deploy_tag:
     <<: *common_config
