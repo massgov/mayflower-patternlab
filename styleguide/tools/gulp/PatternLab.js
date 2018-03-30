@@ -72,11 +72,6 @@ class PatternLabRegistry extends MayflowerRegistry {
 
         // Perform a release to S3.
         taker.task("patternlab:release", taker.series(
-            taker.series(
-                this.buildPatternlabTask("%domain%/b/%branch%"),
-                taker.parallel(doCss, doJs, doCopy),
-                this.buildS3Task(self.resolveDest("**"), "b/%branch%", "patternlab:s3-branch")
-            ),
             maybe(isStableRelease,
                 taker.series(
                     this.buildPatternlabTask("%domain%/v/%%major%"),

@@ -75,9 +75,9 @@ jobs:
             git config --global user.email "ci.bot@mass.gov"
             git config --global user.name "MassGov Bot"
       - run: { name: 'Configure NPM', command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'}
-      - run: { name: 'Release Artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:publish" }
-      - run: { name: 'Release S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:publish" }
-      - run: { name: 'Release NPM', command: "cd styleguide && node_modules/.bin/gulp npm:publish" }
+      - run: { name: 'Release Artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:release" }
+      - run: { name: 'Release S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:release" }
+      - run: { name: 'Release NPM', command: "cd styleguide && node_modules/.bin/gulp npm:release" }
 
 workflows:
   version: 2
