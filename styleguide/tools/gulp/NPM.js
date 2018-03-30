@@ -36,7 +36,7 @@ class NPMRegistry extends MayflowerRegistry {
             this.buildCopyAssetsTask(this.resolveDest(), "npm:copy-assets")
         );
         const doPublish = function() {
-            return exec("npm publish", {cwd: this.resolveDest()});
+            return exec("npm publish", {cwd: self.resolveDest()});
         };
         doPublish.displayName = "npm:release-tag";
 
