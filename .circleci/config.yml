@@ -93,9 +93,9 @@ workflows:
     jobs:
       - build:
           filters:
-            branch: {ignore: /.*/}
+            branches: {ignore: /.*/}
             tags: {only: /.*/}
       - deploy_tag:
           filters:
-            branch: {ignore: /.*/}
+            branches: {ignore: /.*/}
             tags: {only: /.*/}
