@@ -86,4 +86,5 @@ workflows:
       - build
       - test:
           requires: [build]
-      - deploy_branch
+      - deploy_branch:
+          requires: [build]
