@@ -88,3 +88,14 @@ workflows:
           requires: [build]
       - deploy_branch:
           requires: [build]
+
+  build_tag:
+    jobs:
+      - build:
+          filters:
+            branch: {ignore: /.*/}
+            tags: {only: /.*/}
+      - deploy_tag:
+          filters:
+            branch: {ignore: /.*/}
+            tags: {only: /.*/}
