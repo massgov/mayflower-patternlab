@@ -33,6 +33,7 @@ jobs:
       - store_artifacts:
           path: /var/www/code/styleguide/public/assets
 
+
   test:
     working_directory: /home/circleci/code
     docker:
