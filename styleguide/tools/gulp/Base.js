@@ -37,9 +37,9 @@ class MayflowerTaskRegistry extends DefaultRegistry {
         }
         return subPath ? path.resolve(this.config.source, subPath) : this.config.source;
     }
-    getBranch() {
+    getBranch(allowMissing) {
         let branch = this.branch = this.branch || this.opts.branch || git.currentBranch();
-        if(!branch) {
+        if(!branch && !allowMissing) {
             throw new Error("No branch could be determined");
         }
         return branch;

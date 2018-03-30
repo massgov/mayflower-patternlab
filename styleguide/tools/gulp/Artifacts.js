@@ -26,7 +26,9 @@ class ArtifactRegistry extends MayflowerRegistry {
             this.buildCopyPatternsTask(self.resolveDest("twig"), "artifacts:copy-patterns")
         );
         const clone = function() {
-            return exec(`git clone -b ${e(self.getBranch())} ${e(config.artifactUrl)} ${e(self.resolveDest())}`)
+            // Branch will be empty for tag pushes.  Cut from master.
+            const branch = self.getBranch(true) || 'master';
+            return exec(`git clone -b ${e(branch)} ${e(config.artifactUrl)} ${e(self.resolveDest())}`)
                 .catch(function(err) {
                     if(err.message.match(/not found in upstream origin/)) {
                         // If we failed to clone because the branch doesn't exist yet,
