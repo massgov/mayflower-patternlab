@@ -55,7 +55,7 @@ class ArtifactRegistry extends MayflowerRegistry {
 
         taker.task("artifacts:build", taker.series(clean, clone, cloneClean, taker.parallel(doCopy, doCss, doJs)));
         taker.task("artifacts:publish", taker.series("artifacts:build", commit, pushBranch));
-        taker.task("artifacts:release", taker.series("artifacts:build", commit, pushBranch, pushTag));
+        taker.task("artifacts:release", taker.series("artifacts:build", commit, pushTag));
     }
     resolveDest(subPath) {
         if(!this.config.dest.artifact) {
