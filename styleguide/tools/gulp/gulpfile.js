@@ -1,128 +1,65 @@
-/**
- *  Usage:
- *      Once per computer:
- *         $ npm install -g gulp-cli
- *
- *      Once per project, in gulp folder:
- *         $ npm install
- *
- *
- *      Running clumped tasks (defined in this file) --
- *      see quench.js build function
- *         $ gulp dev
- *
- *      Running single task (task defined in /tasks.  eg. /tasks/css.js)
- *         $ gulp css                  // will use the development environment
- *         $ gulp css --env production // will use the production environment
- *
- *      For details on build config, see "user supplied keys" in quench.js
-**/
+var argv = require("optimist").argv;
+const path = require("path");
+const gulp = require("gulp");
+const rename = require("gulp-rename");
 
-// Include gulp and plugins
-var gulp    = require("gulp"),
-    quench  = require("./quench.js"),
-    path    = require("path");
+const PatternLabRegistry = require("./PatternLab");
+const ArtifactsRegistry = require("./Artifacts");
+const NPMRegistry = require("./NPM");
 
+const root = path.resolve(__dirname, "../../");
+const source = path.resolve(root, "source");
 
-// default configuration
-var defaults = {
-    root: path.resolve(__dirname, "../../source/assets"),
-    dest: path.resolve(__dirname, "../../public/assets"),
-    patternLabRoot: path.resolve(__dirname, "../../"),
-    rootSite: path.resolve(__dirname, "../../public"),
-    rootSource: path.resolve(__dirname, "../../source"),
-    tasks: ["copy", "copyTwig", "js", "css", "bower", "patternlab"],
-    env: "development", // "development", "production", "local"
-    watch: false,
-    browserSync: false,
-    version: "0.0.0"
+const defaults = {
+    root: root,
+    source: source,
+    production: process.env.NODE_ENV === "production",
+
+    // Determines the base domain used when building Pattern Lab.
+    baseDomain: "http://mayflower-test.s3-website-us-east-1.amazonaws.com/",
+    // Determines where we git push and pull the artifact from
+    artifactUrl: "git@github.com:rbayliss/mayflower-test.git",
+    dest: {
+        // The path the artifact is built to.
+        artifact: path.resolve(root, "artifact"),
+        // The path the NPM package is built to.
+        npm: path.resolve(root, "npm"),
+        // The path of the Pattern Lab public directory.
+        patternlab: path.resolve(root, "public")
+    },
+    sources: {
+        // The following files are considered pattern templates and will
+        // be copied to the artifact, etc.
+        patterns: path.resolve(source, "_patterns/**"),
+        // The following assets will be copied to asset directories.
+        assets: [
+            path.resolve(source, "assets/fonts/**"),
+            path.resolve(source, "assets/images/**"),
+            path.resolve(source, "assets/js/templates/**"),
+            path.resolve(source, "assets/data/**"),
+            path.resolve(source, "assets/js/vendor/modernizr.js")
+        ],
+        // The following directory will be scanned for Bower packages, and
+        // compiled into vendor-generated.js.
+        bower: path.resolve(source, "assets/js/vendor"),
+        // The following paths will be run through browserify/babelify.
+        js: path.resolve(source, "assets/js/*.js"),
+        // The following paths will be run through SASS.
+        scss: path.resolve(source, "assets/scss/**/*.scss")
+    },
+    // Show verbose output in tasks.
+    verbose: false,
+    // Toggle minification of CSS and JS.
+    minify: true
 };
 
-/**
- * development task
- * Default Task (run when you run 'gulp').
- */
-gulp.task("default", function(){
+gulp.registry(new PatternLabRegistry(defaults, argv));
+gulp.registry(new NPMRegistry(defaults, argv));
+gulp.registry(new ArtifactsRegistry(defaults, argv));
 
-    var config = Object.assign({}, defaults, {
-        env   : "development",
-        watch : true,
-        browserSync : true
-    });
+// @todo: Do we need svg2twig?
+// @todo: Do we need the svg-sprite task?
 
-    quench.build(config);
 
-});
-
-/**
- * production task
- */
-gulp.task("prod", function(){
-
-    var config = Object.assign({}, defaults, {
-        env   : "production",
-        watch : false,
-        browserSync: false
-    });
-
-    quench.build(config);
-
-});
-
-/**
- * build for development without a watcher
- */
-gulp.task("build", function(){
-
-    var config = Object.assign({}, defaults, {
-        env   : "development",
-        watch : false,
-        browserSync: false
-    });
-
-    quench.build(config);
-
-});
-
-/** Deploy to s3 bucket **/
-gulp.task("s3",function(){
-  var config = Object.assign({}, defaults, {
-    env   : "production",
-    watch : false,
-    browserSync: false,
-    tasks : ["s3"]
-  });
-
-  quench.build(config);
-});
-
-/**
- * Quick tool for converting svg icons into patternLab twig files
-**/
-gulp.task("svg2twig",function(){
-
-    var config = Object.assign({}, defaults, {
-        env   : "development",
-        watch : false,
-        browserSync: false,
-        tasks : ["svg2twig"]
-    });
-
-    quench.build(config);
-
-});
-
-/** Bump package version **/
-gulp.task("bump",function(){
-  var config = Object.assign({}, defaults, {
-    env   : "production",
-    watch : false,
-    browserSync: false,
-    tasks : ["bump"]
-  });
-
-  quench.build(config);
-});
-
-// watch for single tasks on the command line, eg "gulp js"
-quench.singleTasks(defaults);
+gulp.task("default", gulp.series("patternlab:watch"));
+gulp.task("prod", gulp.series("patternlab:build"));
