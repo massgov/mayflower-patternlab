@@ -6,8 +6,6 @@ const path = require("path");
 var MayflowerRegistry = require("./Base");
 const e = require('./helpers/escape');
 
-const gulpIf = require('gulp-if');
-
 /**
  * This is a Gulp Task Registry.
  *
@@ -38,8 +36,8 @@ class PatternLabRegistry extends MayflowerRegistry {
         }
         const doCss = this.buildCssTask(self.resolveDest("assets/css"), "patternlab:css");
         const doJs = taker.parallel(
-            this.buildJSVendorTask(self.resolveDest("js"), "patternlab:js-vendor"),
-            this.buildJSCustomTask(self.resolveDest("js"), "patternlab:js-custom")
+            this.buildJSVendorTask(self.resolveDest("assets/js"), "patternlab:js-vendor"),
+            this.buildJSCustomTask(self.resolveDest("assets/js"), "patternlab:js-custom")
         );
         const doCopy = taker.parallel(
             this.buildCopyAssetsTask(self.resolveDest("assets"), "patternlab:assets"),

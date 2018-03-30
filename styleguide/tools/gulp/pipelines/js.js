@@ -25,7 +25,7 @@ module.exports = {
     },
     custom: function(minify) {
         var browserifyOptions = {
-            debug: !minify
+            debug: true
         };
         return lazypipe()
             .pipe(browserifyNoExternals, browserifyOptions)
@@ -45,13 +45,12 @@ function browserifyNoExternals(options) {
         // https://github.com/substack/node-browserify/issues/1044#issuecomment-72384131
         var b = browserify(options || {}) // pass options
             .add(file.path) // this file
-            .transform("babelify", {presets: ["env"]});
+            .transform("babelify");
 
         b.on("file", function(file) {
             // Exclude vendor files from node_modules and bower_components.
             if(minimatch(file, "**/node_modules/**") || minimatch(file, "**/bower_components/**")) {
                 b.external(file);
-                return;
             }
         });
 

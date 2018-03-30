@@ -20,9 +20,7 @@
   },
   "homepage": "https://github.com/massgov/mayflower#readme",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
+    "babelify": "^6.4.0",
     "browser-sync": "^2.18.13",
     "browserify": "^16.1.1",
     "child-process-promise": "^2.2.1",
