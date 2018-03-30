@@ -16,9 +16,10 @@ const defaults = {
     production: process.env.NODE_ENV === "production",
 
     // Determines the base domain used when building Pattern Lab.
-    baseDomain: "http://mayflower-test.s3-website-us-east-1.amazonaws.com/",
+    baseDomain: "https://mayflower.digital.mass.gov/",
     // Determines where we git push and pull the artifact from
-    artifactUrl: "git@github.com:rbayliss/mayflower-test.git",
+    artifactUrl: "git@github.com:massgov/mayflower-artifacts.git",
+    s3Bucket: process.env.S3_BUCKET,
     dest: {
         // The path the artifact is built to.
         artifact: path.resolve(root, "artifact"),

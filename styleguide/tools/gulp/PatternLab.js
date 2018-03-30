@@ -107,11 +107,12 @@ class PatternLabRegistry extends MayflowerRegistry {
             .replace(/%major%/, () => this.getMajorVersion())
     }
     buildS3Task(src, subDirTemplate, name) {
+        const config = this.config;
         let task = () => {
             let subDir = this.replaceRefs(subDirTemplate);
             return gulp.src(src)
                 .pipe(s3({
-                    Bucket: "mayflower-test",
+                    Bucket: config.s3Bucket,
                     ACL: "public-read",
                     keyTransform: function(filename) {
                         return subDir ? `${subDir}/${filename}` : filename;
