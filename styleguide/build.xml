@@ -139,8 +139,8 @@
         <gittag repository="${deploy.dir}" name="${app.latestTag}" />
 
         <!-- Push the current branch -->
-        <!--<gitpush repository="${deploy.dir}" refspec="${deploy.refspec}" all="true" force="true" />-->
-        <!--&lt;!&ndash; We have to push tags separately &ndash;&gt;-->
+        <gitpush repository="${deploy.dir}" refspec="${deploy.refspec}" all="true" force="true" />
+        <!-- We have to push tags separately -->
         <gitpush repository="${deploy.dir}" tags="true" force="true" />
     </target>
 
