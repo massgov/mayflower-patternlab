@@ -83,7 +83,7 @@ class PatternLabRegistry extends MayflowerRegistry {
                 taker.series(
                     this.buildPatternlabTask("%domain%"),
                     taker.parallel(doCss, doJs, doCopy),
-                    this.buildS3Task(self.resolveDest("**"), "/", "patternlab:s3-root")
+                    this.buildS3Task(self.resolveDest("**"), null, "patternlab:s3-root")
                 )
             )
 
