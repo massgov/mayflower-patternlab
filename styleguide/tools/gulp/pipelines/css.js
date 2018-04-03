@@ -10,7 +10,14 @@ var sass          = require("gulp-sass"),
     gulpIf        = require("gulp-if"),
     lazypipe      = require("lazypipe");
 
-
+/**
+ * Contains pipeline definitions for transforming CSS.
+ *
+ * This function returns a lazypipe, which is not initialized
+ * until data is sent to it. This allows us to separate the source and
+ * destination specification from the specification of the pipeline, and
+ * reuse the pipeline as many times as we want.
+ */
 module.exports = function(minify) {
     var sassOptions = {
         outputStyle: minify ? "compressed" : "nested",

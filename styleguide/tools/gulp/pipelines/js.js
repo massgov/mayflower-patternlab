@@ -10,7 +10,14 @@ var uglify         = require("gulp-uglify"),
     through        = require("through2");
 
 
-
+/**
+ * Contains pipeline definitions for transforming JS.
+ *
+ * Both vendor and custom return a lazypipe, which is not initialized
+ * until data is sent to it. This allows us to separate the source and
+ * destination specification from the specification of the pipeline, and
+ * reuse the pipeline as many times as we want.
+ */
 module.exports = {
     vendor: function(minify) {
         return lazypipe()

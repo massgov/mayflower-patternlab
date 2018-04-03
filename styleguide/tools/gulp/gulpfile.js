@@ -1,7 +1,6 @@
 var argv = require("optimist").argv;
 const path = require("path");
 const gulp = require("gulp");
-const rename = require("gulp-rename");
 
 const PatternLabRegistry = require("./PatternLab");
 const ArtifactsRegistry = require("./Artifacts");

@@ -4,7 +4,7 @@ const browserSync    = require("browser-sync");
 const exec = require("child-process-promise").exec;
 const path = require("path");
 var MayflowerRegistry = require("./Base");
-const e = require('./helpers/escape');
+const e = require("./helpers/escape");
 
 /**
  * This is a Gulp Task Registry.
@@ -46,8 +46,8 @@ class PatternLabRegistry extends MayflowerRegistry {
 
         const noop = (done) => done();
         const maybe = (condition, task) => condition() ? task : noop;
-        const isTagged = () => self.getTag(true)
-        const isStableRelease = () => isTagged() && self.getTag().match(/^\d+.\d+.\d+$/)
+        const isTagged = () => self.getTag(true);
+        const isStableRelease = () => isTagged() && self.getTag().match(/^\d+.\d+.\d+$/);
 
         const watch = function() {
             taker.watch(self.resolveSource("**"), taker.series("patternlab:build", reloadBrowserSync));
@@ -97,7 +97,7 @@ class PatternLabRegistry extends MayflowerRegistry {
             .replace(/%domain%/, () => this.config.baseDomain)
             .replace(/%branch%/, () => this.getBranch())
             .replace(/%tag%/, () => this.getTag())
-            .replace(/%major%/, () => this.getMajorVersion())
+            .replace(/%major%/, () => this.getMajorVersion());
     }
     buildS3Task(src, subDirTemplate, name) {
         const config = this.config;
@@ -125,7 +125,7 @@ class PatternLabRegistry extends MayflowerRegistry {
             }
             return exec(`php ${e(self.resolve("core/console"))} --generate --patternsonly`, opts);
         };
-        task.displayName = 'patternlab:patterns';
+        task.displayName = "patternlab:patterns";
         return task;
     }
     resolveDest(subPath) {

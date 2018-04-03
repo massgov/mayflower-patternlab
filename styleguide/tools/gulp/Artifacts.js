@@ -27,7 +27,7 @@ class ArtifactRegistry extends MayflowerRegistry {
         );
         const clone = function() {
             // Branch will be empty for tag pushes.  Cut from master.
-            const branch = self.getBranch(true) || 'master';
+            const branch = self.getBranch(true) || "master";
             return exec(`git clone -b ${e(branch)} ${e(config.artifactUrl)} ${e(self.resolveDest())}`)
                 .catch(function(err) {
                     if(err.message.match(/not found in upstream origin/)) {

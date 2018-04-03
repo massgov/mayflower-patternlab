@@ -17,7 +17,7 @@ module.exports = function bumpTask(config){
 
     /* bump semver version in files */
     // Set a specific version
-    gulp.task('bump', function(){
+    gulp.task("bump", function(){
         return gulp.src(cfg.src, {base: "./"})
             .pipe(bump({version: version}))
             .pipe(gulp.dest("."));
