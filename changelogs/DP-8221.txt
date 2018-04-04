@@ -1,4 +1,4 @@
 ___DESCRIPTION___
-Change_type (Changed)
-Change_impact (Minor)
+Changed
+Patch
 - DP-8221: Truncates featured item titles past character limit.
