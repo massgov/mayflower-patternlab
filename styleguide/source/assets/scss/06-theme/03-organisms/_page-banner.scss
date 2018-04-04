@@ -47,12 +47,12 @@ $page-banner-inner-width: 612px;
   }
 
   &--linked &__container {
-    @media ($bp-small-max) {
-      background-color: $c-theme-secondary; 
+    @media ($bp-large-extended) {
+      background-color: $c-theme-secondary;
     }
   }
   &--linked &__content {
-    background-color: $c-theme-secondary; 
+    background-color: $c-theme-secondary;
     background-image: none;
   }
 
