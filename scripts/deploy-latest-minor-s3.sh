@@ -18,12 +18,11 @@
 # 1. Validate the passed arguments: build source
 # 2. Attempt to checkout passed build source
 # 3. Get to mayflower/styleguide directory
-# 4. Write config to support hosting from subdirectory, if necessary
-# 5. Build pattern lab static assets
-# 6. Copy static assets (build output: styleguide/public/) into a new temp directory
-# 7. Execute gulp command to deploy to s3
-# 8. Remove the temp directory
-# 9. Check out the previous branch
+# 4. Build pattern lab static assets
+# 5. Copy static assets (build output: styleguide/public/) into a new temp directory
+# 6. Execute gulp command to deploy to s3
+# 7. Remove the temp directory
+# 8. Check out the previous branch
 
 # Default variables
 buildSrc=false
@@ -79,27 +78,10 @@ checkoutBuildSource "$buildSrc"
 # 3. Get to styleguide directory
 cdStyleguide
 
-# 4. Set the domain and asset path config
-# If we're deploying something that doesn't have the url.json.example file, create it first
-createUrlJson
+# 4. Build pattern to generate prod static assets
+buildMayflower "https://mayflower.digital.mass.gov/$majorVersion"
 
-# Determine the url.assetsPath based arguments passed
-# For root deploy (production):  url.assetsPath = assets (already set by default)
-# For latest minor deploy: = url.assetsPath = <latest minor determined by build source tag>/assets
-# For all other deploys: url.assetsPath = <build source branch or tag name>/assets
-
-domain="https://mayflower.digital.mass.gov"
-# Set up the config value for assetsPath
-subDir="$majorVersion" #$majorVersion is set above when we validate the prod tag
-assetsPath="$subDir/assets"
-
-# Set url.domain and url.assetsPath
-writeAssetsPathConfig "$domain" "$assetsPath"
-
-# 5. Build pattern to generate prod static assets
-buildMayflower
-
-# 6. Copy built assets in /public into new tmp directory
+# 5. Copy built assets in /public into new tmp directory
 
 # Make temp directory to copy public assets
 line="Making ~/tmp/mayflower/$subDir directory..."

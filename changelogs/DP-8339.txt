@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Changed:
+Patch:
+- DP-8339: Automate the release process for Mayflower.
