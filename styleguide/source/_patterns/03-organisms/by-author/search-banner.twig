@@ -2,15 +2,19 @@
 
 <section class="ma__search-banner" id="{{ patternId }}">
   <style>
+    {# Allow empty banner images to support setting randomized image with JS. #}
+    {% if searchBanner.bgNarrow %}
     #{{ patternId }} {
       background-image: url('{{ searchBanner.bgNarrow }}');
     }
-
+    {% endif %}
+    {% if searchBanner.bgWide %}
     @media (min-width: 801px) {
       #{{ patternId }} {
         background-image: url('{{ searchBanner.bgWide }}');
       }
     }
+    {% endif %}
   </style>
   <div class="ma__search-banner__container">
     {# backward compatible with v5.7 - pageIntro replaced title and intro #}

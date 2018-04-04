@@ -31,8 +31,6 @@ jobs:
       - persist_to_workspace:
           root: /var/www
           paths: [code]
-      - store_artifacts:
-          path: /var/www/code/styleguide/public/assets
 
   test:
     working_directory: /home/circleci/code
@@ -55,7 +53,7 @@ jobs:
       - store_test_results:
           path: backstopjs/reports/ci
 
-  deploy_artifacts:
+  deploy_branch:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
@@ -64,37 +62,41 @@ jobs:
           command: |
             git config --global user.email "ci.bot@mass.gov"
             git config --global user.name "MassGov Bot"
-      # @todo: We shouldn't need global gulp from the build scripts.
-      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
-      - run: { name: 'Deploy', command: 'cd styleguide && vendor/bin/phing deploy' }
+      - run: { name: 'Deploy artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:publish" }
+      - run: { name: 'Deploy S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:publish" }
 
-  deploy_cd:
+  deploy_tag:
     <<: *common_config
     steps:
       - attach_workspace: {at: /var/www}
-      # @todo: We shouldn't need global gulp from the build scripts.
-      - run: { name: 'Gulp Install', command: 'yarn global add gulp' }
-      - run: { name: 'S3 Deployment', command: 'cd styleguide && ../scripts/deploy-s3.sh -b ${CIRCLE_BRANCH}' }
+      - run:
+          name: "Prepare Git"
+          command: |
+            git config --global user.email "ci.bot@mass.gov"
+            git config --global user.name "MassGov Bot"
+      - run: { name: 'Configure NPM', command: 'echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc'}
+      - run: { name: 'Release Artifacts', command: "cd styleguide && node_modules/.bin/gulp artifacts:release" }
+      - run: { name: 'Release S3', command: "cd styleguide && node_modules/.bin/gulp patternlab:release" }
+      - run: { name: 'Release NPM', command: "cd styleguide && node_modules/.bin/gulp npm:release" }
 
 workflows:
   version: 2
-  build_deploy:
+  build_branch:
+    jobs:
+      - build
+      - test:
+          requires: [build]
+      - deploy_branch:
+          requires: [build]
+
+  build_tag:
     jobs:
       - build:
           filters:
-            tags:
-              only: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
-      - test:
-          requires: [build]
-      - deploy_artifacts:
+            branches: { ignore: /.*/ }
+            tags: { only: /.*/ }
+      - deploy_tag:
           requires: [build]
           filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /\bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z\-]+(?:\.[\da-z\-]+)*)?(?:\+[\da-z\-]+(?:\.[\da-z\-]+)*)?\b/
-      - deploy_cd:
-          requires: [build]
-          filters:
-            branches:
-              ignore: /^master$/
+            branches: { ignore: /.*/ }
+            tags: { only: /.*/ }
