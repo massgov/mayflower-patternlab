@@ -37,10 +37,12 @@
   </div>
 
   <div class="ma__contact-us__content-wrap">
+    {% block curatedPersonGroups %}
       {% for group in curatedPerson.groups %}
         {% set contactGroup = group|merge({"level": groupHeading}) %}
         {% include "@molecules/contact-group.twig" %}
       {% endfor %}
+    {% endblock %}
   </div>
 
 </section>
