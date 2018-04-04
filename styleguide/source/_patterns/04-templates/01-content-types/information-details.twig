@@ -38,11 +38,6 @@
         {% endblock %}
       </div>
 
-      <div class="ma__information-details__post-content">
-        {% block postContent %}
-          {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
-        {% endblock %}
-      </div>
     </div>
 
     <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
@@ -57,6 +52,12 @@
       {% endblock %}
     </aside>
 
+  </div>
+
+  <div class="post-content">
+    {% block postContent %}
+      {% include "@base/placeholder.twig" with {'placeholder':{'text':'Post Content'}} %}
+    {% endblock %}
   </div>
 
   {# structured content #}
