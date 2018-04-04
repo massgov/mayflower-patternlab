@@ -1,4 +1,4 @@
-var uglify         = require("gulp-uglify"),
+const uglify         = require("gulp-uglify"),
     rename         = require("gulp-rename"),
     sourcemaps     = require("gulp-sourcemaps"),
     browserify     = require("browserify"),
@@ -31,7 +31,7 @@ module.exports = {
             .pipe(sourcemaps.write, "./")();
     },
     custom: function(minify) {
-        var browserifyOptions = {
+        const browserifyOptions = {
             debug: true
         };
         return lazypipe()
@@ -50,7 +50,7 @@ function browserifyNoExternals(options) {
     return through.obj(function (file, enc, callback){
 
         // https://github.com/substack/node-browserify/issues/1044#issuecomment-72384131
-        var b = browserify(options || {}) // pass options
+        const b = browserify(options || {}) // pass options
             .add(file.path) // this file
             .transform("babelify");
 

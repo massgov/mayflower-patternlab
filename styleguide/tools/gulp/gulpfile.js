@@ -1,4 +1,4 @@
-var argv = require("optimist").argv;
+const argv = require("optimist").argv;
 const path = require("path");
 const gulp = require("gulp");
 
