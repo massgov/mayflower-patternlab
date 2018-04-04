@@ -1,4 +1,4 @@
 ___DESCRIPTION___
 Added
 Minor
-- DP-8176: people in curated lists
+- DP-8176: People in curated lists
