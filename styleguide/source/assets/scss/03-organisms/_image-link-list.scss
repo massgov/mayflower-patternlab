@@ -28,24 +28,6 @@
       }
     }
   }
-}
-
-.ma__link-list--image-links {
-  .ma__link-list__item {
-    &.ma__link-list__item--secondary,
-    &.ma__link-list__item--tertiary {
-      display: none;
-    }
-  }
-  .ma__link-list__item .ma__image-link {
-    padding: 10px 0;
-  }
-  .ma__link-list__toggle {
-    margin-top: 20px;
-  }
-}
-
-.ma__link-list--image-blocks {
   .ma__link-list__toggle {
     display: none;
     // show on small if has secondary or tertiary links
@@ -72,6 +54,22 @@
     }
   }
 }
+
+.ma__link-list--image-links {
+  .ma__link-list__item {
+    &.ma__link-list__item--secondary,
+    &.ma__link-list__item--tertiary {
+      display: none;
+    }
+  }
+  .ma__link-list__item .ma__image-link {
+    padding: 10px 0;
+  }
+  .ma__link-list__toggle {
+    margin-top: 20px;
+  }
+}
+
 
 .ma__link-list--image-links,
 .ma__link-list--image-blocks {

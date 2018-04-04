@@ -38,7 +38,7 @@
           }
         },
         {
-          "href": "#",
+          "href": "",
           "text": "Third action",
           "image": {
             "alt": "alt text",
@@ -61,7 +61,7 @@
         },
         {
           "href": "#",
-          "text": "Fifth action is truncated because it's over 60 characters...",
+          "text": "The 60th character in this title is in a word past this point",
           "image": {
             "alt": "alt text",
             "src": "../../assets/images/placeholder/400x300.png",
