@@ -1,4 +1,9 @@
 .ma__binder-page {
+
+    &__content {
+        position: relative;
+    }
+
     .ma__header-tags {
         max-width: 100%;
     }
