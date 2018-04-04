@@ -37,6 +37,7 @@
 @import "01-atoms/helper-text";
 @import "01-atoms/icon-list";
 @import "01-atoms/iframe";
+@import "01-atoms/image";
 @import "01-atoms/input-checkbox";
 @import "01-atoms/input-date";
 @import "01-atoms/input-group";
@@ -112,6 +113,7 @@
 @import "02-molecules/wait-time";
 
 // Organisms - components
+@import "03-organisms/about-section";
 @import "03-organisms/ajax-pattern";
 @import "03-organisms/action-card";
 @import "03-organisms/action-details";
@@ -157,6 +159,7 @@
 @import "03-organisms/page-flipper";
 @import "03-organisms/page-header";
 @import "03-organisms/personal-message";
+@import "03-organisms/person-card";
 @import "03-organisms/press-filters";
 @import "03-organisms/press-listing";
 @import "03-organisms/quick-actions";
@@ -167,11 +170,13 @@
 @import "03-organisms/sidebar-widget";
 @import "03-organisms/split50";
 @import "03-organisms/split-columns";
+@import "03-organisms/sticky-toc";
 @import "03-organisms/stacked-row-section";
 @import "03-organisms/suggested-pages";
 @import "03-organisms/steps-ordered";
 @import "03-organisms/steps-unordered";
 @import "03-organisms/table-of-contents-hierarchy";
+@import "03-organisms/table-of-contents-overlay";
 @import "03-organisms/tabular-data";
 @import "03-organisms/teaser-listing";
 @import "03-organisms/teaser-text";

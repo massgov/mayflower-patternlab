@@ -10,6 +10,14 @@ This pattern shows Left and Right arrows page links along with a blurb about the
 ### Variables
 ~~~
 pageFlipper: {
+  context : { /optional
+    label: {
+      type: string / required
+    },
+    link: {
+      decorativeLink / required
+    }
+  },
   prev: {
     type: arrowNav / optional
   },

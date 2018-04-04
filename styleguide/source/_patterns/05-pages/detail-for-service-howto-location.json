@@ -137,7 +137,7 @@
       "downloadLinks": [{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "icon": "doc-pdf",
           "decorativeLink": {
             "text": "Stretch Code Summary",
             "href": "http://www.mass.gov/eopss/docs/dps/buildingcode/inf4/bbrs-780-cmr-appendix115aa-aug16.pdf",

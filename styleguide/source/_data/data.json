@@ -1,15 +1,9 @@
 {
   "title" : "Mass Gov",
-  "version": "5.14.0",
+  "version": "5.17.0",
   "htmlClass": "pl",
   "bodyClass": "",
   "directory": "assets",
-  "urlDomain": "http://mayflower.digital.mass.gov",
-  "urlPath": "/",
   "googleLanguages": "ar,es,fr,pt,ht,it,km,ko,ru,vi,zh-CN",
-  "url": {
-    "comment": "These are the defaults that get override by the data in url.json",
-    "domain": "",
-    "assetsPath": "assets"
-  }
+  "comment": "See \\PatternLab\\DynamicDataListener for further dynamic properties."
 }

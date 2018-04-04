@@ -12,7 +12,6 @@ This pattern is based off of the Two Column template.
 ### JavaScript Used
 * Image Fill (js/modules/imageFill.js)
 
-
 ### Variables
 ~~~
 details: {

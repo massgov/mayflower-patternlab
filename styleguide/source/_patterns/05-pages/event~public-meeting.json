@@ -169,7 +169,7 @@
         "downloadLinks": [{
           "downloadLink": {
             "iconSize": "",
-            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "icon": "doc-pdf",
             "decorativeLink": {
               "text": "March 2017 Meeting Minutes - Fisheries and Wildlife Board Meeting",
               "href": "#",
@@ -247,7 +247,7 @@
       "downloadLinks": [{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "icon": "doc-pdf",
           "decorativeLink": {
             "text": "Project Proposal 1",
             "href": "#",

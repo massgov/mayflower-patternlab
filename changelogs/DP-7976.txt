@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Minor
-DP-7976: Adds block to twig so we can override how link list decorative link is rendered.

@@ -1,6 +1,0 @@
-___DESCRIPTION___
-Added
-Minor
-- DP-8000: Adds new blocks to table-of-contents.twig and created new molecule twig expandable-sections.twig.
-
-___SEMANTIC VERSION (see below)___

@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Fixed
+Patch
+- DP-8436: Moves post content for information details and fixes handling text in sticky header after toc jump link is clicked.

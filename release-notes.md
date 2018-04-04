@@ -13,10 +13,60 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
-## 5.13.1 (2/28/2018)
+## 5.17.0 (3/29/2018)
+
+### Added
+- DP-8341: Added visual regression testing for all templates and pages.
+
+### Fixed
+- DP-8378: Fix the page banner display issue in mobile for Topic, Organizaion and Service pages.
+- DP-8406: Corrects sticky TOC selector and positioning. Corrects drupal integration styling of page flipper on binder navigation.
+
+### Changed
+- DP-8332: Update build process for Mayflower to Circle 2.0
+
+## 5.16.0 (3/23/2018)
+
+### Added:
+- DP-7758: Adds Organization Detail content-type template.
+- DP-7766: Adds Sticky Table of Contents organism pattern for use in Information Details content-type.
+- DP-7767: Adds Overlay Table of Contents organism pattern, Adds Interal Binder Page example.
+- DP-7341: Adds Person Card organism and About Section organism for use on Elected Official pages.
+
+## Changed:
+- DP-7767: Changes to the `section` objects and `title` property of the Table of Contents Hierarchy organism data object to better support extensions.
 
 
-## Added
+## 5.15.0 (3/21/2018)
+
+### Added
+- DP-6181: Add contact name to email and phone number links in contacts to be announced by screen readers along with the email address and phone number within the links. So, AT device users could have more clarity for what the email address or phone number is for.
+- DP-6522: Adds new components and modifies existing ones to enable generalized listings of content, and specifically allows lists of user bios. Adds support for individual user bio pages.
+- DP-6883: Add icon.function.php to pull svg icon source from /assets/svg-icons/ instead of the twig templates in @atoms/05-icons/.
+- DP-8000: Adds new blocks to table-of-contents.twig and created new molecule twig expandable-sections.twig.
+- DP-8290: Adds optional clearAll button to PressFilters for mayflower-react
+
+
+### Changed
+- DP-6883: Replace a call for svg icon templates with the new icon function for document download. The other icons continue to be rendered with the existing twig templates in @atoms/05-icons/.
+- DP-7564: Changed Mayflower templates used for the Featured Items Mosaic component on Organization Landing Pages. This change should not impact any existing functionality, since the related component is not yet in use.
+- DP-7963: Breaks out a contact item from a contact group and provides binder and info details related twig blocks to be overridden in implementation.
+- DP-7976: Adds block to twig so we can override how link list decorative link is rendered.
+
+### Fixed
+- DP-8023: Block and conditional logic updates for info details
+- DP-8203: Fix header alert to be displayed in its given space
+- DP-8203: Remove accordion button in side column contact
+
+### Removed
+- DP-8190: Remove the background color from the iframe container
+- Remove unused data for decorative links in link list pattern, and set the title for see all link.
+- Remove sidebarHeading block renders sidebarHeading as an option of compHeading (back port mayflower-react)
+
+## 5.14.0 (2/28/2018)
+
+
+### Added
 - DP-7786: Added: atoms/buttons/button-toggle as a new pattern, and inline, small modifiers for label. #711 #712
 - DP-2082: [a11y] Add intuitive info to the + symbols for accordion buttons  #687
   - make screen readers not announce the + button in contact accordion
@@ -35,7 +85,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - DP-6350: [a11y] Change search query field place holder text in location #683
 - DP-2405: Change the container for an abbreviation in a page banner title to <abbr> from <span> #688
 
-## Fixed
+### Fixed
 - DP-6712: Fix the Video Dimensions on the Service Detail Page #674
 - DP-1553: [a11y] Correct aria role value #699
 - DP-2403: [a11y] Text info for the social media icons in the footer #691
@@ -48,17 +98,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 5.13.0 (2/16/2018)
 
-## Changed
+### Changed
 - DP-7907: Adds support for details to  [@molecules/callout-link](https://mayflower.digital.mass.gov/?p=molecules-callout-link-with-details&view=c) (e.g calls to action on a location page header). This includes adding an eyebrow, white theme variant, time note, and emphasized text to the callout link molecule. #703
 
-## Added
+### Added
 
 - DP-7307 & DP-7483: organization image links #670
     - Add logo link molecule & logo list organism for use on service page
     - Add block
     - Adding accordion behaivor to image link lists
 
-## Fixed
+### Fixed
 
 - DP-7307 & DP-7483: organization image links #670
     - relative pathing so things work everywhere
