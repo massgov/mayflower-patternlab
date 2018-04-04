@@ -4,7 +4,7 @@
     <script>
       var ma = ma || {};
       // path to where the handlebar templates are being stored.
-      ma.themePath = "{{ url.domain }}/{{ url.assetsPath }}";
+      ma.themePath = "../../assets";
       // path to where twig templates are being stored (for twigJS).
       ma.twigPath = ma.themePath + "/patterns";
       ma.patternPaths = {
@@ -17,8 +17,8 @@
         '@meta': ma.twigPath + "/07-meta/"
       };
     </script>
-    <script src="{{ url.domain }}/{{ url.assetsPath }}/js/vendor-generated.js"></script>
-    <script src="{{ url.domain }}/{{ url.assetsPath }}/js/index-generated.js"></script>
+    <script src="../../assets/js/vendor-generated.js"></script>
+    <script src="../../assets/js/index-generated.js"></script>
     <script type="text/javascript">
       window.initGoogleMaps = function() {
         // Set a flag that the library has loaded, in case google maps js misses event.

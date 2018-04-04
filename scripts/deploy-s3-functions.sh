@@ -111,65 +111,14 @@ function cdStyleguide {
     cd $(git rev-parse --show-toplevel)/styleguide
 }
 
-# Creates a url.json file
-function createUrlJson {
-    line="Setting the domain and asset path config..."
-    log "log" "$line";
-
-    # If we're deploying something that doesn't have the url.json.example file, create it first
-    if [ ! -f ./source/_data/url.json.example ];
-        then
-            line="Could not find url.json.example so creating it now..."
-            log "log" "$line";
-            urljson='{\n\t"url": {\n\t\t"comment": "Save this file as url.json and enter your domain and the path to the assets folder",\n\t\t"domain": "http://localhost:3000",\n\t\t"assetsPath": "assets"\n\t}\n}'
-            echo -e ${urljson} > ./source/_data/url.json.example
-
-            # Set flag to undo these changes in the working directory before leaving script.
-            cleanup=true
-    fi
-
-    # Create url.json from the .example and set the appropriate domain and assetsPath values
-    line="Copying url.json.example into url.json for assets path config..."
-    log "log" "$line";
-    cp ./source/_data/url.json.example ./source/_data/url.json
-}
-
-# Write the asset path config values to url.json
-function writeAssetsPathConfig {
-    # parameters
-    local domain=$1
-    local assetsPath=$2
-
-    line="Writing domain: ${domain} and assetsPath: ${assetsPath} to the build config."
-    log "log" "$line";
-
-    if [ CIRCLECI ];
-    then # Use GNU sed syntax
-         # See: https://stackoverflow.com/questions/43171648/sed-gives-sed-cant-read-no-such-file-or-directory
-        # Set url.domain and url.assetsPath
-        find ./source/_data -type f -name "url.json" -exec sed -i "s!http://localhost:3000!${domain}!g" {} \;
-        find ./source/_data -type f -name "url.json" -exec sed -i "s!assets\"!${assetsPath}\"!g" {} \;
-    else # Assume MacOS sed syntax
-         # See: https://stackoverflow.com/questions/11287564/getting-sed-error-illegal-byte-sequence-in-bash
-        # Set url.domain and url.assetsPath
-        find ./source/_data -type f -name "url.json" -exec sed -i " " -e  's!http://localhost:3000!'"${domain}"'!g' {} \;
-        find ./source/_data -type f -name "url.json" -exec sed -i " " -e 's!assets\"!'"${assetsPath}"'\"!g' {} \;
-    fi
-
-
-}
-
-
 # Build patterns to generate prod static assets
 function buildMayflower {
     line="Generating mayflower patterns..."
     log "log" "$line";
+    export BASE_URL="$1"
     php core/console --generate >/dev/null
 
     line="Building mayflower static assets..."
     log "log" "$line";
     gulp prod >/dev/null
-
-    # Remove url.json to keep repo clean
-    rm source/_data/url.json
 }

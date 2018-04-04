@@ -1,9 +1,8 @@
 import getTemplate from "../helpers/getHandlebarTemplate.js";
 import sticky from "../helpers/sticky.js";
-import moment from "../vendor/bower_components/moment/src/moment";
 import getOuterHtml from "../helpers/getElementOuterHtml.js";
 
-export default  function(window, document, undefined, $){
+export default  function(window, document, undefined, $, moment){
   "use strict";
 
   /**
@@ -733,4 +732,4 @@ export default  function(window, document, undefined, $){
     makeMoment
   };
 
-}(window, document, undefined, jQuery);
+}(window, document, undefined, jQuery, moment);

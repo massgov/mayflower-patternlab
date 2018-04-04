@@ -9,3 +9,5 @@ source/_data/url.json
 !public/index.html
 .npmrc
 /deploy
+/npm
+/artifact

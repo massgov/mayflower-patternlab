@@ -1,17 +1,29 @@
 ## README IN PROGRESS
 
 ### Gulp
-See [gulp-readme.md](./gulp-advanced/tools/gulp/gulp-readme.md) for setup.
 
-The entry `gulpfile.js` is located in `tools/gulp` and all gulp commands need to be run from this directory. There is also a proxy `gulpfile.js` at the project root, which can run all the same commands.
+Available Commands:
 
-Available commands are
- * `gulp` or `gulp dev`- will run dev build with watchers
- * `gulp build` - will run dev _without_ watchers.
- * `gulp prod` - will run production build without watchers
- * `gulp [task]` - where task is loaded in `gulpfile.js`.  eg. `css`, `svg-sprite`
+#### Pattern Lab
+* `patternlab:build` - Compile Pattern Lab into `styleguide/public`
+* `patternlab:watch` - Compile and start a live development server.
+* `patternlab:publish` - Compile and deploy to the S3 bucket at /b/${BRANCH}.
+* `patternlab:release` - Compile and deploy to the S3 bucket at /b/${BRANCH}.  If tagged, and tag is not a pre-release tag, also deploys to /v/${MAJOR_VERSION}, and /.
 
-The watcher will also start a [browserSync](https://browsersync.io/) server.  The console will tell you the exact port, but it usually runs on [http://localhost:3000/](http://localhost:3000/).  
+#### Artifacts
+* `artifacts:build` - Clones artifact repo, cleans it, and builds assets into `styleguide/artifacts`
+* `artifacts:publish` - Runs `artifacts:build`, then pushes to `$BRANCH` on the artifacts repository.
+* `artifacts:release` - Runs `artifacts:build`, then pushes to `$BRANCH` and `$TAG` on the artifacts repository.
+
+#### NPM
+* `npm:build` - Builds the NPM package to `styleguide/npm`.
+* `npm:release` - Runs `npm:build` and then publishes to the NPM registry.
+
+### Generic:
+* `default` - Alias for `patternlab:watch`
+* `prod` - Alias for `patternlab:build`
+
+During the `default` or `watch` tasks, the watcher will also start a [browserSync](https://browsersync.io/) server.  The console will tell you the exact port, but it usually runs on [http://localhost:3000/](http://localhost:3000/).
 
 ### CSS
 All css source files are located in `/assets/scss/`.  Gulp will compile all scss files in this directory and concat them into a single file `/assets/build/css/index-generated.css`.
