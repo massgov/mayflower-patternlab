@@ -9,15 +9,16 @@
     {% for action in actionCard.actions %}
       <div class="ma__action-card__item js-clickable {{action.theme ? 'ma__action-card__item--' ~ action.theme : ''}}">
         <div class="ma__action-card__icon">
-          {% include action.icon %}
+          {# {% include action.icon %} #}
+          {{ icon('action.icon') }}
         </div>
         <div class="ma__action-card__content">
           <span class="ma__action-card__category">{{action.category}}</span>
           <h3 class="ma__action-card__link">
-            <a class="js-clickable-link" href="{{action.linkHref}}" title="{{action.linkText}}">{{action.linkText}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+            <a class="js-clickable-link" href="{{action.linkHref}}" title="{{action.linkText}}">{{action.linkText}}&nbsp;{{ icon('@atoms/05-icons/svg-arrow.twig') }}</a>
           </h3>
         </div>
-      </div> 
+      </div>
     {% endfor %}
   </div>
 </section>

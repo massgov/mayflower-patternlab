@@ -36,7 +36,7 @@
       <div class="ma__page-banner__content-wrapper">
         {% if pageBanner.icon %}
           <div class="ma__page-banner__icon">
-            {% include pageBanner.icon %}
+            {{ icon(pageBanner.icon) }}
           </div>
         {% endif %}
         <h1 class="ma__page-banner__title">

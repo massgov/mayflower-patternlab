@@ -1,6 +1,6 @@
 <section class="ma__transition-page">
   <div class="ma__transition-page__icon">
-    {% include transitionPage.icon %}
+    {{ icon(transitionPage.icon) }}
   </div>
   <h1 class="ma__transition-page__message">{{ transitionPage.message }}</h1>
   <form class="ma__form ma__transition-page__form" action="{{ transitionPage.href}}">
