@@ -54,9 +54,9 @@
   display: flex;
   align-items: center;
   position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2; // above the dimmer (:before)
   height: 4rem;
   padding: 5px 15px;
@@ -68,3 +68,9 @@
   }
 }
 
+.ma__featured-item__title.truncated {
+  span::after {
+    content: ' . . . ';
+    white-space: nowrap;
+  }
+}
