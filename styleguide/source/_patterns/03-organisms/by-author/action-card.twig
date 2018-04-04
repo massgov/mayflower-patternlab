@@ -9,7 +9,6 @@
     {% for action in actionCard.actions %}
       <div class="ma__action-card__item js-clickable {{action.theme ? 'ma__action-card__item--' ~ action.theme : ''}}">
         <div class="ma__action-card__icon">
-          {# {% include action.icon %} #}
           {{ icon('action.icon') }}
         </div>
         <div class="ma__action-card__content">
