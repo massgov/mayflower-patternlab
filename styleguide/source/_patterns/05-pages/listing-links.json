@@ -39,8 +39,14 @@
       "text": "List One",
       "href": "list-one"
     },{
+      "text": "Curated Person 1",
+      "href": "contact-1"
+    },{
       "text": "List Two",
       "href": "list-two"
+    },{
+      "text": "Curated Person 2",
+      "href": "contact-2"
     },{
       "text": "List Three",
       "href": "list-three"
@@ -150,6 +156,98 @@
     "sideBar": []
   },{
     "borderless": true,
+    "title": "Curated Contact List",
+    "id": "contact-1",
+    "pageContent": [{
+      "path": "@organisms/by-author/curated-person.twig",
+      "data": {
+        "curatedPerson": {
+          "name" : {
+            "text": "Curated Contact Name as Link",
+            "href": "#",
+            "info": "",
+            "level": ""
+          },
+          "title" : {
+            "text": "Title"
+          },
+          "org": {
+            "text": "Organization"
+          },
+          "desc" : {
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+          },
+          "org_link": {
+            "href": "#",
+            "text": "Optional Custom Learn More Link",
+            "info": ""
+          },
+          "groups": [{
+            "icon": "@atoms/05-icons/svg-marker.twig",
+            "name": "Address",
+            "items": [{
+              "type": "address",
+              "label": "",
+              "address": "555 Park Drive\nBoston, MA 02231",
+              "link": {
+                "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
+                "text": "directions",
+                "info": ""
+              },
+              "details": ""
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main:",
+              "link": {
+                "href": "+14134994262",
+                "text": "(413) 499-4262",
+                "info": ""
+              },
+              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+            },{
+              "type": "fax",
+              "label":"Fax:",
+              "link": {
+                "href":"+14134994262",
+                "text": "(413) 499-4262",
+                "info": ""
+              },
+              "details":"Please allow 24 hours for a response"
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "email",
+              "label":"Email:",
+              "link": {
+                "href":"email@email.com",
+                "text": "email@email.com",
+                "info": ""
+              },
+              "details":""
+            },{
+              "type": "online",
+              "label":"Web:",
+              "link": {
+                "href":"#",
+                "text": "Contact Form",
+                "info": ""
+              },
+              "details":""
+            }]
+          }]
+        }
+      }
+    }],
+
+    "sideBar": []
+  },{
+    "borderless": true,
     "title": "List Two",
     "id": "list-two",
     "pageContent": [{
@@ -243,6 +341,64 @@
                 }]
               }
             }
+          }]
+        }
+      }
+    }],
+
+    "sideBar": []
+  },{
+    "borderless": true,
+    "title": "Second Curated Contact List",
+    "id": "contact-2",
+    "pageContent": [{
+      "path": "@organisms/by-author/curated-person.twig",
+      "data": {
+        "curatedPerson": {
+          "name" : {
+            "text": "Curated Contact Name",
+            "href": "",
+            "info": "",
+            "level": ""
+          },
+          "title" : {
+            "text": "Title"
+          },
+          "groups": [{
+            "icon": "@atoms/05-icons/svg-phone.twig",
+            "name": "Phone",
+            "items": [{
+              "type": "phone",
+              "label":"Main:",
+              "link": {
+                "href": "+14134994262",
+                "text": "(413) 499-4262",
+                "info": ""
+              },
+              "details":""
+            }]
+          },{
+            "icon": "@atoms/05-icons/svg-laptop.twig",
+            "name": "Online",
+            "items": [{
+              "type": "email",
+              "label":"Email:",
+              "link": {
+                "href":"email@email.com",
+                "text": "email@email.com",
+                "info": ""
+              },
+              "details":""
+            },{
+              "type": "online",
+              "label":"Web:",
+              "link": {
+                "href":"#",
+                "text": "Contact Form",
+                "info": ""
+              },
+              "details":""
+            }]
           }]
         }
       }
