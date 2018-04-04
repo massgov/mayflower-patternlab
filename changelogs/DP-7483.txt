@@ -1,0 +1,5 @@
+___DESCRIPTION___
+Change_type (Changed)
+Change_impact (Minor)
+- DP-7483: organization block list fix
+
