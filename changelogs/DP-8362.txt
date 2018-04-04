@@ -1,0 +1,14 @@
+___DESCRIPTION___
+Changed
+Change_impact (see below)
+- DP-8362: Replace svg templates and template calls with icon() function.
+
+___SEMANTIC VERSION (see below)___
+
+
+___CHANGE IMPACT___
+- Minor
+- Major
+- Patch
+
+Note: Refer to `docs/versioning.md` for more info about change impact according to semantic versioning.
