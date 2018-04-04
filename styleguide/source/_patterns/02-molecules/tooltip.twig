@@ -13,8 +13,7 @@
       aria-hidden="true">
       {{ tooltip.openText }}
       {% if tooltip.openIcon %}
-        {% include tooltip.openIcon %}
-        {{ icon('tooltip.openIcon') }}
+        {{ icon(tooltip.openIcon) }}
       {% endif %}
     </label>
     <section class="ma__tooltip__modal {{ tooltip.location == 'above'? ma__tooltip__modal--above : 'ma__tooltip__modal--below' }}">
