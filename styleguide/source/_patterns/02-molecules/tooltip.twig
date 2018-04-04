@@ -1,12 +1,12 @@
 <div class="ma__tooltip">
   <div class="ma__tooltip__inner">
-    <input 
-      id="{{ tooltip.controlId }}" 
-      type="checkbox" 
+    <input
+      id="{{ tooltip.controlId }}"
+      type="checkbox"
       class="ma__tooltip__control"
       aria-label="{{ tooltip.info }}"
       aria-hidden="true" />
-    <label 
+    <label
       for="{{ tooltip.controlId }}"
       class="ma__tooltip__open"
       aria-labelledby="{{ tooltip.controlId }}"
@@ -14,12 +14,13 @@
       {{ tooltip.openText }}
       {% if tooltip.openIcon %}
         {% include tooltip.openIcon %}
+        {{ icon('tooltip.openIcon') }}
       {% endif %}
     </label>
     <section class="ma__tooltip__modal {{ tooltip.location == 'above'? ma__tooltip__modal--above : 'ma__tooltip__modal--below' }}">
       <div class="ma__tooltip__container">
-        <label 
-          for="{{ tooltip.controlId }}" 
+        <label
+          for="{{ tooltip.controlId }}"
           class="ma__tooltip__close"
           tabindex="-1"
           aria-labelledby="{{ tooltip.controlId }}"
