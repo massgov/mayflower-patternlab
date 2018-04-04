@@ -57,7 +57,7 @@ $page-banner-height: 330px;
       background-size: 55% auto;
     }
 
-    @media ($bp-small-max) {
+    @media ($bp-large-extended) {
       background-position: center bottom;
       background-size: 100%;
       max-height: none;
@@ -73,8 +73,8 @@ $page-banner-height: 330px;
 
       // this is a specificity hack... resetting the skew is annoying.
       .ma__page-banner__content.ma__page-banner__content,
-      .ma__page-banner__content-wrapper.ma__page-banner__content-wrapper { 
-        transform: none; 
+      .ma__page-banner__content-wrapper.ma__page-banner__content-wrapper {
+        transform: none;
       }
       .ma__page-banner__content {
         width: 100%;
@@ -84,13 +84,13 @@ $page-banner-height: 330px;
   }
 
   &--linked &__container {
-    @media ($bp-small-max) {
+    @media ($bp-large-extended) {
       height: auto;
     }
   }
 
   &--linked &__content-wrapper {
-    @media ($bp-medium-max) {
+    @media ($bp-large-extended) {
       width: auto;
     }
   }
@@ -98,7 +98,6 @@ $page-banner-height: 330px;
   &--linked &__content {
     position: static;
     height: auto;
-
   }
 
   &__container {
@@ -361,11 +360,11 @@ position: relative;
       max-width: 820px;
     }
   }
-  
+
   .ma__decorative-link a {
     font-weight: 500;
   }
-  
+
   .ma__decorative-link + &__description {
     margin-top: 0;
     font-weight: normal;
