@@ -46,6 +46,18 @@ $page-banner-inner-width: 612px;
     }
   }
 
+  &--linked &__container {
+    @media ($bp-large-extended) {
+      background-color: $c-theme-secondary;
+    }
+  }
+  &--linked &__content {
+    background-color: $c-theme-secondary;
+    background-image: none;
+  }
+
+
+
   &__icon {
 
     svg,
@@ -67,6 +79,20 @@ $page-banner-inner-width: 612px;
       display: block;
       font-weight: 300;
     }
+  }
+
+  .ma__decorative-link {
+    a {
+      color: $c-font-inverse;
+      &:hover {
+        border-bottom-color: rgba($c-font-inverse, 0.5);
+      }
+    }
+
+    svg {
+      fill: rgba($c-font-inverse, 0.5);
+    }
+
   }
 
   &--columns &__description {
