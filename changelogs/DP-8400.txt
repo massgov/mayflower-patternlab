@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Fixed
-Patch
-- DP-8400: Add fix for binder page jumplinks
