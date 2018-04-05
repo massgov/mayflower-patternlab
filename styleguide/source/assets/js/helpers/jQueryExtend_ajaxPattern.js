@@ -1,5 +1,11 @@
 export default function (window,document,$,undefined) {
   'use strict';
+
+  // Plain old javascript object to hold cached alert data.
+  // This prevents duplicate calls to endpoints on pages that
+  // display alerts in both the header and the body.
+  let ajaxCache = {};
+
   // Object-orientated approach to jQuery plugin building, so as to not
   // pollute global namespace or a complicated switch based on passed params.
   let ajaxPattern = function(element, options) {
@@ -103,26 +109,20 @@ export default function (window,document,$,undefined) {
         throw new Error('MA::AjaxPattern::An endpoint argument is required.');
       }
 
-      // Keep .js-ajax-alerts object.
-      let promise = $.Deferred();
+      // Check if we have a request already made or in-flight for this endpoint.
+      if (ajaxCache[endpoint]) {
+        return ajaxCache[endpoint];
+      }
 
-      // Make ajax request to endpoint
-      $.ajax({
-        type: 'GET',
-        url: endpoint,
-        cache: true,
-        dataType: 'json'
-      }).done(function(data){
-        // @todo validate data against schema
-        // Resolve the promise, pass the .js-ajax-alerts object for rendering.
-        promise.resolve(data);
+      // Make ajax request to endpoint (returns promise)
+      return ajaxCache[endpoint] = $.ajax({
+          type: 'GET',
+          url: endpoint,
+          cache: true,
+          dataType: 'json'
       }).fail(function(jqXHR, textStatus, errorThrown) {
-        console.error('MA::AjaxPattern::Ajax Error: ', textStatus);
-        promise.reject()
+          console.error('MA::AjaxPattern::Ajax Error: ', errorThrown);
       });
-
-
-      return promise;
     };
 
     self.updatePattern();

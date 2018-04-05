@@ -13,9 +13,9 @@ This pattern shows an image banner with large search input as the focus followed
 ~~~
 searchBanner: {
   bgWide: 
-    type: string (image path) / required
+    type: string (image path) / optional
   bgNarrow: 
-    type: string (image path) / required
+    type: string (image path) / optional
   id:
     type: string (unique per page) / required
   imageName: 

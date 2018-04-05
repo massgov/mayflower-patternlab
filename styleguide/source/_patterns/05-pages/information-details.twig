@@ -76,9 +76,6 @@
     {% include "@organisms/by-author/rich-text.twig" %}
   {% endif %}
 
-{% endblock %}
-
-{% block postContent %}
   {% if postContent.contactList %}
     {% set contactList = postContent.contactList %}
     {% include "@organisms/by-author/contact-list.twig" %}
@@ -103,7 +100,9 @@
     {% set imageCredit = postContent.imageCredit %}
     {% include "@organisms/by-template/image-credit.twig" %}
   {% endif %}
+{% endblock %}
 
+{% block postContent %}
 {% endblock %}
 
 {% block sidebar %}

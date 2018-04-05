@@ -9,7 +9,8 @@ export default function (window,document,$,undefined) {
           $tocColumn = $('.ma__sticky-toc__column'),
           $mobileToggle = $('.ma__sticky-toc__toggle-link'),
           $tocToggle = $('.stickyTOC-open'),
-          $tocFooter = $('.ma__sticky-toc__footer');
+          $tocFooter = $('.ma__sticky-toc__footer'),
+          $stickyToc = $('.ma__sticky-toc__current-section');
 
     // // Remove wrapper if not enough links.
     if (tocSectionCount < 3 ) {
@@ -73,33 +74,28 @@ export default function (window,document,$,undefined) {
     });
 
     $(window).scroll(function () {
-      var windowTop = $(window).scrollTop();
-      var windowBottom = window.innerHeight;
-      var docHeight = $(document).height();
-      var stickyNavActive  = $toc.offset().top + $toc.outerHeight() - 20;
-      var scrollBottomStop = $('.ma__information-details__content').offset().top + $('.ma__information-details__content').outerHeight();
+      const windowTop = $(window).scrollTop();
+      const windowBottom = window.innerHeight;
+      const docHeight = $(document).height();
+      const stickyNavActive  = $toc.offset().top + $toc.outerHeight() - 20;
 
       // Active Sticky TOC when on page TOC scrolls past.
       if (stickyNavActive > windowTop) {
         $toc.removeClass('stuck');
       } else {
         $toc.addClass('stuck');
+
+        if (windowTop + windowBottom === docHeight) {
+          $stickyToc.text(lastHeading);
+        }
+        else {
+          // Identify the section to show for the heading.
+          const active = $tocSections.filter((index, section) => {
+            return $(section).siblings('.sticky-toc-jump-target').offset().top < 20;
+          });
+          $stickyToc.text($(active.last()).text());
+        }
       }
-
-      $tocSections.each(function() {
-        let $thisSectionTitle = $(this).text();
-        let sectionPosition = $(this).offset().top - 20;
-
-        // Switch title in sticky TOC on scroll.
-        if (sectionPosition < windowTop) {
-          $('.ma__sticky-toc__current-section').text($thisSectionTitle);
-        }
-        if(windowTop + windowBottom == docHeight) {
-          // Because the related section never makes it to the scroll stop on desktop,
-          // we catch the bottom of the window
-          $('.ma__sticky-toc__current-section').text(lastHeading);
-        }
-      });
     });
 
     // Back to top button
