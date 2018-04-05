@@ -1,4 +1,0 @@
-Added:
-Minor
-- DP-7564: Fixes issue with black line over Who we serve stacked row on Elected org page.
-- DP-7564: Fixes issue with media queries on Elected org page.

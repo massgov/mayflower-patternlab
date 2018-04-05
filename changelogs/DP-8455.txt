@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Minor
-- DP-8455: Make image URLs optional on search banner to allow setting randomized image in javascript.

@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Fixed
-Patch
-- DP-7624: Adds cover page example of binder
