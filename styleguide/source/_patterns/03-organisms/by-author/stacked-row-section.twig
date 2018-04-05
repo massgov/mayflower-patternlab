@@ -1,7 +1,7 @@
 {% set stackRowRestriction = stackedRowSection.sideBar|length ? '' : ' ma__stacked-row-section--restricted' %}
 {% set stackRowBorderless = stackedRow.borderless ? ' ma__stacked-row__section--borderless' : ''  %}
 
-<section class="ma__stacked-row-section{{ stackRowBorderless }}{{ stackRowRestriction }}">
+<section class="ma__stacked-row__section{{ stackRowBorderless }}{{ stackRowRestriction }}">
   {% if stackedRowSection.title %}
     <div class="ma__stacked-row-section__container">
       <div class="ma__stacked-row-section__title">

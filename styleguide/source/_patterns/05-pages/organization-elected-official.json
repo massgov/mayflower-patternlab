@@ -4,12 +4,18 @@
   "COMMENT":"****PRECONTENT COMPONENTS****",
 
   "pageBanner": {
-    "bgWide":"../../assets/images/placeholder/1600x400.png",
+    "bgWide":"../../assets/images/placeholder/800x400.png",
     "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "size": "large",
     "icon": null,
     "title": "Office of the Treasurer & Receiver General",
-    "titleSubText": "(TRE)"
+    "titleSubText": "(TRE)",
+    "description": "Treasurer & Receiver General",
+    "link": {
+      "text": "Deborah B. Goldberg",
+      "href": "#",
+      "info": ""
+    }
   },
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",

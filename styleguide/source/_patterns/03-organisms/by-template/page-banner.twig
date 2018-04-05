@@ -2,7 +2,9 @@
 
 {% set colorClass = pageBanner.color ? "ma__page-banner--" ~ pageBanner.color : '' %}
 
-<section class="ma__page-banner {{ sizeClass }} {{ colorClass }}">
+{% set linkedClass = pageBanner.link ? "ma__page-banner--linked" : '' %}
+
+<section class="ma__page-banner {{ sizeClass }} {{ colorClass }} {{ linkedClass }}">
   {% if pageBanner.size == "columns" %}
     <style>
       .ma__page-banner__image {
@@ -45,6 +47,10 @@
             <abbr title="{{ pageBanner.title }}"> {{ pageBanner.titleSubText }}</abbr>
           {% endif %}
         </h1>
+        {% if pageBanner.link and not (pageBanner.size == "columns") %}
+          {% set decorativeLink = pageBanner.link %}
+          {% include "@atoms/decorative-link.twig" %}
+        {% endif %}
         {% if pageBanner.description and not (pageBanner.size == "columns") %}
           <p class="ma__page-banner__description">
             {{ pageBanner.description }}
