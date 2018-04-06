@@ -14,13 +14,8 @@
     <span class="ma__header-alert__label">{{ alertPrefix }}</span>
     <span class="ma__header-alert__message">
       {% if headerAlert.href %}
-{#         {% set decorativeLink = headerAlert %}
-        {% include "@atoms/decorative-link.twig" %} #}
-<span class="ma__decorative-link">
-  <a
-    href="{{headerAlert.href}}"
-    class="js-clickable-link">{{headerAlert.text}}&nbsp;{% include '@atoms/05-icons/svg-arrow.twig' %}</a>
-</span>
+        {% set decorativeLink = headerAlert %}
+        {% include "@atoms/decorative-link.twig" %}
       {% else %}
         {{ headerAlert.text }}
       {% endif %}
