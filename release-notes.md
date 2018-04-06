@@ -13,6 +13,32 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.18.1 (4/5/2018)
+
+### Changed
+- Bumped the version up to 5.18.1 in the package.json.
+
+## 5.18.0 (4/5/2018)
+
+### Added 
+- DP-7564: Fixes issue with black line over "Who we serve" stacked row on Elected org page. Fixes issue with media queries on Elected org page.
+- DP-8051: Adds page banner variation for use in elected and org detail pages.
+- DP-8176: People in curated lists
+
+### Changed
+- DP-7483: Organization block list fix.
+- DP-8221: Truncates featured item titles past character limit.
+- DP-8339: Automate the release process for Mayflower.
+- DP-8402: Use dynamic Pattern Lab variables to reduce the amount of files that need to change during the release workflow.
+- DP-8455: Make image URLs optional on search banner to allow setting randomized image in javascript.
+
+### Fixed 
+- DP-7624: Adds cover page example of binder
+- DP-8126: Avoid making two ajax calls to the same endpoint when there are two ajax patterns on the same page.
+- DP-8378: Fix the page banner display issue in mobile for Topic, Organizaion and Service pages.
+- DP-8400: Add fix for binder page jumplinks.
+- DP-8436: Moves post content for information details and fixes handling text in sticky header after toc jump link is clicked.
+
 ## 5.17.0 (3/29/2018)
 
 ### Added
