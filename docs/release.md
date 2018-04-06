@@ -8,17 +8,17 @@ Mayflower release managers with the necessary repo permissions can follow these 
 
 ## Creating the release
 1. Check out the [massgov/mayflower `dev` branch](https://github.com/massgov/mayflower/commits/dev):
-  1. `cd mayflower`
-  1. `git checkout dev`
-  1. Pull the latest from upstream `git pull upstream dev`. (This assumes that your massgov/mayflower remote repo is named `upstream`)
-  1. `npm install`
+    1. `cd mayflower`
+    1. `git checkout dev`
+    1. Pull the latest from upstream `git pull upstream dev`. (This assumes that your massgov/mayflower remote repo is named `upstream`)
+    1. `npm install`
 1. Create a release branch
-  1. `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about [Mayflower and semantic versioning](docs/versioning.md) to ensure that your are creating the right type of version.
-  1. Add [release notes](https://github.com/massgov/mayflower/blob/dev/docs/change-log-instructions.md) to the top of [release notes](/release-notes.md) based on the "changelog.txt" files, remove all the "changelog.txt" files and then commit these changes.
-  1. Move into the `styleguide` directory `cd styleguide` and run `npm install` in case the release includes new packages.
-  1. Update the version of the npm package by editing the `version` field in the `package.json` with `#.#.#` for the release.
-  1. Commit your version change from `package.json`.
-  1. Push release branch to `massgov/mayflower` (i.e. `git push upstream release-#.#.#`). *Note the deployment to production will happen automagically once this release branch is pushed to GitHub*
+    1. `git checkout -b release-#.#.#` where `#.#.#` is the next version (i.e. `5.0.0`).  Read more about [Mayflower and semantic versioning](docs/versioning.md) to ensure that your are creating the right type of version.
+    1. Add [release notes](https://github.com/massgov/mayflower/blob/dev/docs/change-log-instructions.md) to the top of [release notes](/release-notes.md) based on the "changelog.txt" files, remove all the "changelog.txt" files and then commit these changes.
+    1. Move into the `styleguide` directory `cd styleguide` and run `npm install` in case the release includes new packages.
+    1. Update the version of the npm package by editing the `version` field in the `package.json` with `#.#.#` for the release.
+    1. Commit your version change from `package.json`.
+    1. Push release branch to `massgov/mayflower` (i.e. `git push upstream release-#.#.#`). *Note the deployment to production will happen automagically once this release branch is pushed to GitHub*
 
 ## Deployment  
 1. Wait for [the circle build](https://circleci.com/gh/massgov/mayflower) to pass, which will deploy your release branch to staging automagically :).
