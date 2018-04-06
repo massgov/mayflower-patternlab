@@ -274,14 +274,6 @@
               "src": "../../assets/images/placeholder/250x250.png",
               "alt": "logo"
             }
-          },{
-            "href":"#",
-            "text":"Lorem ipsum dolor sit amet, consectetur.",
-            "info": "",
-            "image": {
-              "src": "../../assets/images/placeholder/250x250.png",
-              "alt": "logo"
-            }
           }]
         }
       }

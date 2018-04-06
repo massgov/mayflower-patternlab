@@ -5,6 +5,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media ($bp-x-large-min) {
+      justify-content: flex-start;
+    }
+
     .ma__link-list__item {
       flex-basis: 100%;
       padding: 0;
@@ -24,6 +28,10 @@
         &.ma__link-list__item--secondary,
         &.ma__link-list__item--tertiary {
           display: block !important;
+        }
+
+        &:nth-child(3n+2) {
+          margin: 0 1.8rem 1rem;
         }
       }
     }
