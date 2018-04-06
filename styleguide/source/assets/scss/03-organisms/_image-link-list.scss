@@ -95,6 +95,16 @@
       }
     }
   }
+
+  .ma__image-link__image {
+    order: 2;
+    margin-left: 1rem;
+  }
+
+  .ma__image-link__text {
+    padding: 0;
+  }
+
   .ma__link-list__toggle {
     @include ma-button-reset;
     @include ma-link-underline;
