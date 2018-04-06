@@ -44,22 +44,23 @@ $page-header-widget-width: 350px;
         width: 100%;
       }
 
-      .ma__social-links__link[data-social-share="facebook"] > svg path {
+      &__link[data-social-share="facebook"] > svg path {
         fill: #395999;
       }
 
-      .ma__social-links__link[data-social-share="twitter"] {
+      &__link[data-social-share="twitter"] > svg path {
         fill: #16a2f3;
       }
 
-      .ma__social-links__link[data-social-share="linkedin"] {
+      &__link[data-social-share="linkedin"] > svg path {
         fill: #0078b6;
       }
 
-      .ma__social-links__link[data-social-share="youtube"] {
+      &__link[data-social-share="youtube"] > svg path {
         fill: #CC181E;
       }
     }
+
     @media ($bp-medium-max) {
       border: 0;
     }
