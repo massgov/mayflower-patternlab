@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Fixed
-Patch
-- DP-8126: Avoid making two ajax calls to the same endpoint when there are two ajax patterns on the same page.

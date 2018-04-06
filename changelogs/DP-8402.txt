@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Patch
-- DP-8402: Use dynamic Pattern Lab variables to reduce the amount of files that need to change during the release workflow.
