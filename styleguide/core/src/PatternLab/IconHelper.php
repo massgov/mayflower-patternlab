@@ -47,9 +47,15 @@ class IconHelper {
    * @return \DOMElement
    */
   public function load($path) {
+    if(!file_exists($path)) {
+      throw new \Exception('Invalid icon path: ' . $path);
+    }
     $svg = file_get_contents($path);
     $doc = new \DOMDocument('1.0', 'UTF-8');
     $doc->loadXML($svg);
+    if(!$doc->firstChild) {
+      throw new \Exception('Malformed SVG found at ' . $path);
+    }
     return $doc->firstChild;
   }
 
