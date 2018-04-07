@@ -1,4 +1,4 @@
-import twiggy from '../helpers/twig';
+import twiggy from '../helpers/twiggy';
 
 export default function (window,document,$,undefined) {
   // Set up global component config

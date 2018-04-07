@@ -1,4 +1,4 @@
-import twiggy from './twig';
+import twiggy from './twiggy';
 
 export default function (window,document,$,undefined) {
   'use strict';
