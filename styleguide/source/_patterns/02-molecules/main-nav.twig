@@ -14,7 +14,7 @@
               {% endfor %}
               <li role="menuitem" class="ma__main-nav__subitem">
                 <a href="{{ nav.href }}" class="ma__main-nav__link" tabindex="-1">
-                  {% include "@atoms/05-icons/svg-arrow-bent.twig" %}
+                  {{ icon('@atoms/05-icons/svg-arrow-bent.twig') }}
                   <span>{{ nav.text }}</span>
                 </a>
               </li>

@@ -6,22 +6,29 @@
   {% set alertId = headerAlert.guid %}
 {% endif %}
 
-<section 
-  class="ma__header-alert js-header-alert" 
+<section
+  class="ma__header-alert js-header-alert"
   data-id="{{ alertId }}"
   role="alert">
   <div class="ma__header-alert__container">
     <span class="ma__header-alert__label">{{ alertPrefix }}</span>
     <span class="ma__header-alert__message">
       {% if headerAlert.href %}
+<span class="ma__decorative-link">
+  <a
+    href="{{headerAlert.href}}"
+    class="js-clickable-link">{{headerAlert.text}}&nbsp;{{ icon('@atoms/05-icons/svg-arrow.twig') }}</a>
+</span>
+{#
         {% set decorativeLink = headerAlert %}
         {% include "@atoms/decorative-link.twig" %}
+ #}
       {% else %}
         {{ headerAlert.text }}
       {% endif %}
     </span>
   </div>
-  <button 
-    class="ma__header-alert__hide js-header-alert-link" 
+  <button
+    class="ma__header-alert__hide js-header-alert-link"
     title="hide alert">+</button>
 </section>
