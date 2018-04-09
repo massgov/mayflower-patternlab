@@ -13,22 +13,23 @@
       flex-basis: 100%;
       padding: 0;
       margin-bottom: 1rem;
-      &.ma__link-list__item--secondary,
-      &.ma__link-list__item--tertiary {
-        display: none;
+      display: none;
+
+      &:nth-child(-n+3) {
+        display: block;
       }
+
       @media($bp-medium-min) {
         flex-basis: calc(50% - 0.5rem);
-        &.ma__link-list__item--secondary {
-          display: block !important;
+
+        &:nth-child(-n+6) {
+          display: block;
         }
       }
+
       @media($bp-x-large-min) {
         flex-basis: calc(33% - 1rem);
-        &.ma__link-list__item--secondary,
-        &.ma__link-list__item--tertiary {
-          display: block !important;
-        }
+        display: block;
 
         &:nth-child(3n+2) {
           margin: 0 1.8rem 1rem;
@@ -38,28 +39,6 @@
   }
   .ma__link-list__toggle {
     display: none;
-    // show on small if has secondary or tertiary links
-    &.has-secondary,
-    &.has-tertiary {
-      display: inline-block;
-    }
-    // if has tertiary links, show on mid
-    @media($bp-medium-min) {
-      &.has-secondary {
-        display: none;
-      }
-      &.has-tertiary {
-        display: inline-block;
-      }
-    }
-    // Never show on full width
-    @media($bp-x-large-min) {
-      display: none;
-      &.has-secondary,
-      &.has-tertiary {
-        display: none;
-      }
-    }
   }
 }
 
