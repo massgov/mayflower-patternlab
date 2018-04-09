@@ -1,4 +1,4 @@
-# Release to Production
+# Release to production
 Mayflower release managers with the necessary repo permissions can follow these steps to deploy code to production (i.e. do a release).
 
 *Note: the following steps assume that your local machine and repository is already set up and functioning according to our [Getting Started docs](../.github/CONTRIBUTING.md#getting-started).*
