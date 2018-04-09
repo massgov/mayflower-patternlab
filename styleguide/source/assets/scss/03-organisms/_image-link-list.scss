@@ -15,6 +15,12 @@
       margin-bottom: 1rem;
       display: none;
 
+      &.toggle-open {
+        // Show all when clicked open so they don't hide on screen resize.
+        display: block;
+      }
+
+      // Show first three on mobile
       &:nth-child(-n+3) {
         display: block;
       }
@@ -22,14 +28,16 @@
       @media($bp-medium-min) {
         flex-basis: calc(50% - 0.5rem);
 
+        // Show first 6 on tablet
         &:nth-child(-n+6) {
           display: block;
         }
       }
 
       @media($bp-x-large-min) {
-        flex-basis: calc(33% - 1rem);
+        // Show all on desktop
         display: block;
+        flex-basis: calc(33% - 1rem);
 
         &:nth-child(3n+2) {
           margin: 0 1.8rem 1rem;
@@ -37,21 +45,39 @@
       }
     }
   }
+
+  .ma__image-link__image {
+    order: 2;
+    margin-left: 1rem;
+  }
+
+  .ma__image-link__text {
+    padding: 0;
+  }
+
   .ma__link-list__toggle {
     display: none;
+
+    &.show-toggle {
+      display: block;
+
+      @media($bp-x-large-min) {
+        display: none;
+      }
+    }
   }
 }
 
 .ma__link-list--image-links {
-  .ma__link-list__item {
-    &.ma__link-list__item--secondary,
-    &.ma__link-list__item--tertiary {
-      display: none;
-    }
+
+  .ma__image-link__text {
+    padding: 1rem 1rem 1rem 1.5rem;
   }
+
   .ma__link-list__item .ma__image-link {
     padding: 10px 0;
   }
+
   .ma__link-list__toggle {
     margin-top: 20px;
   }
@@ -75,15 +101,6 @@
     }
   }
 
-  .ma__image-link__image {
-    order: 2;
-    margin-left: 1rem;
-  }
-
-  .ma__image-link__text {
-    padding: 0;
-  }
-
   .ma__link-list__toggle {
     @include ma-button-reset;
     @include ma-link-underline;
@@ -94,6 +111,10 @@
     &:after {
       margin-left: 0;
       transform: translateY(-45%) rotate(45deg);
+
+      .toggle-open & {
+        transform: translteY(-40%) roate(225deg);
+      }
     }
 
     span:nth-child(2) {
