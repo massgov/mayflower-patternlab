@@ -102,7 +102,7 @@
       "data": {
         "stepsUnordered": {
           "steps": [{
-            "icon":"atoms-svg-profile",
+            "icon":"@atoms/05-icons/svg-profile.twig",
             "title":"In Person at State Parks",
             "richText": {
               "rteElements": [{
@@ -116,7 +116,7 @@
             }
           },
           {
-            "icon":"atoms-svg-laptop",
+            "icon":"@atoms/05-icons/svg-laptop.twig",
             "title":"Online",
             "richText":{
               "rteElements": [{
@@ -140,7 +140,7 @@
             }
           },
           {
-            "icon":"atoms-svg-phone",
+            "icon":"@atoms/05-icons/svg-phone.twig",
             "title":"By Phone",
             "richText":{
               "rteElements": [{
@@ -154,7 +154,7 @@
             }
           },
           {
-            "icon":"atoms-svg-mail",
+            "icon":"@atoms/05-icons/svg-mail.twig",
             "title":"By Mail",
             "richText": {
               "rteElements": [{
