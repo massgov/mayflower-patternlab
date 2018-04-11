@@ -1,6 +1,8 @@
 .ma__pullquote {
   position: relative;
-
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
   @media ($bp-small-min) {
     margin-left: 6%;
   }
