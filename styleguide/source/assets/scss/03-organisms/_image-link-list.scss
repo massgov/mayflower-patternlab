@@ -16,26 +16,26 @@
       display: none;
 
       &.toggle-open {
-        // Show all when clicked open so they don't hide on screen resize.
-        display: block;
+        // Always show all when clicked open so they don't hide on screen resize.
+        display: block !important;
       }
 
-      // Show first three on mobile
+      // Always show first three on mobile
       &:nth-child(-n+3) {
-        display: block;
+        display: block !important;
       }
 
       @media($bp-medium-min) {
         flex-basis: calc(50% - 0.5rem);
 
-        // Show first 6 on tablet
+        // Always show first 6 on tablet
         &:nth-child(-n+6) {
-          display: block;
+          display: block !important;
         }
       }
 
       @media($bp-x-large-min) {
-        // Show all on desktop
+        // Always show all on desktop
         display: block;
         flex-basis: calc(33% - 1rem);
 

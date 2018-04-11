@@ -16,27 +16,26 @@ export default function (window,document,$,undefined) {
       if ((listItems > 3) && (width < 780) || (listItems > 6) && (width < 1201)) {
         // Show More button only when there are enough to toggle.
         $thisToggle.addClass('show-toggle');
-        console.log("toggle");
       }
     }
-
     showToggle();
 
     $thisToggle.on('click', function() {
-      let thisToggleText = $thisToggleLabel.text();
 
+      let thisToggleText = $thisToggleLabel.text();
       $thisToggle.toggleClass('toggle-open');
       $thisToggleLabel.text(thisToggleText === "less" ? "more" : "less");
 
-      // Because the heights are dynamic a css transition would be buggy.
-      // Toggle all after first 3 on mobile.
-      if (width < 780) {
-        $listItem.eq(3).nextAll().slideToggle().toggleClass('toggle-open');
-      }
-      // Toggle all after first 6 on tablet.
-      else {
-        $listItem.eq(6).nextAll().slideToggle().toggleClass('toggle-open');
-      }
+      $listItem.each(function() {
+        let $item = $(this);
+
+        if ($item.is(':hidden')) {
+          $item.slideDown().addClass('toggle-open');
+        }
+        else if ($item.is(':visible') && $item.hasClass('toggle-open')) {
+          $item.slideUp().removeClass('toggle-open');
+        }
+      });
     });
 
     $(window).resize(function () {
@@ -53,7 +52,6 @@ export default function (window,document,$,undefined) {
           $listItem.removeAttr('style');
         }
       },250);
-
     });
   });
 

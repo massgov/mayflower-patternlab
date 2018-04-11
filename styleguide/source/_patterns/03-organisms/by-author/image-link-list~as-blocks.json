@@ -11,7 +11,7 @@
     "itemPluralName": "organizations",
     "links" : [{
       "href":"#",
-      "text":"Lorem ipsum dolor sit amet.",
+      "text":"1 Lorem ipsum dolor sit amet.",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -19,7 +19,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor sit amet, consectetur.",
+      "text":"2 Lorem ipsum dolor sit amet, consectetur.",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -27,7 +27,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor sit.",
+      "text":"3 Lorem ipsum dolor sit.",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -35,7 +35,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor",
+      "text":"4 Lorem ipsum dolor",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -43,7 +43,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor sit amet",
+      "text":"5 Lorem ipsum dolor sit amet",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -51,7 +51,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor sit amet, consectetur.",
+      "text":"6 Lorem ipsum dolor sit amet, consectetur.",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -59,7 +59,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor sit amet, consectetur.",
+      "text":"7 Lorem ipsum dolor sit amet, consectetur.",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -67,7 +67,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor sit amet, but also a very very long title with also an acronym (LIDSABAVVLTWAA).",
+      "text":"8 Lorem ipsum dolor sit amet, but also a very very long title with also an acronym (LIDSABAVVLTWAA).",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
@@ -75,15 +75,7 @@
       }
     },{
       "href":"#",
-      "text":"Lorem ipsum dolor sit amet, consectetur.",
-      "info": "",
-      "image": {
-        "src": "../../assets/images/placeholder/250x250.png",
-        "alt": "logo"
-      }
-    },{
-      "href":"#",
-      "text":"Lorem ipsum dolor sit amet, but also a very very long title with also an acronym (LIDSABAVVLTWAA).",
+      "text":"9 Lorem ipsum dolor sit amet, consectetur.",
       "info": "",
       "image": {
         "src": "../../assets/images/placeholder/250x250.png",
