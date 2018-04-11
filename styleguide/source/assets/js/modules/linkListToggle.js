@@ -8,12 +8,19 @@ export default function (window,document,$,undefined) {
     $listItem = $thisList.children(),
     listItems = $listItem.length;
 
+    let debounceTimer;
     let width = $(window).width();
 
-    if ((listItems > 3) && (width < 1201)) {
-      // Show More button only when there are enough to toggle.
-      $thisToggle.addClass('show-toggle');
+    function showToggle() {
+
+      if ((listItems > 3) && (width < 780) || (listItems > 6) && (width < 1201)) {
+        // Show More button only when there are enough to toggle.
+        $thisToggle.addClass('show-toggle');
+        console.log("toggle");
+      }
     }
+
+    showToggle();
 
     $thisToggle.on('click', function() {
       let thisToggleText = $thisToggleLabel.text();
@@ -33,11 +40,20 @@ export default function (window,document,$,undefined) {
     });
 
     $(window).resize(function () {
-      // Remove added attributes at desktop width.
-      if (width < 1201) {
-        $thisToggle.removeAttr('style');
-        $listItem.removeAttr('style');
+
+      if(typeof debounceTimer === "number") {
+        window.clearTimeout(debounceTimer);
       }
+      debounceTimer = window.setTimeout(function(){
+        showToggle();
+
+        // Remove added attributes at desktop width.
+        if (width < 1201) {
+          $thisToggle.removeAttr('style');
+          $listItem.removeAttr('style');
+        }
+      },250);
+
     });
   });
 
