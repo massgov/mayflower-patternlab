@@ -87,20 +87,6 @@
 .ma__link-list--image-links,
 .ma__link-list--image-blocks {
 
-  &.is-open {
-    .ma__link-list__toggle:after {
-      transform: translateY(-55%) rotate(-135deg);
-    }
-    .ma__link-list__toggle span{
-      &:first-child {
-        display: none;
-      }
-      &:nth-child(2) {
-        display: inline;
-      }
-    }
-  }
-
   .ma__link-list__toggle {
     @include ma-button-reset;
     @include ma-link-underline;
@@ -108,13 +94,13 @@
     font-size: 1.375rem;
     padding-right: 10px;
 
-    &:after {
+    &::after {
       margin-left: 0;
       transform: translateY(-45%) rotate(45deg);
+    }
 
-      .toggle-open & {
-        transform: translteY(-40%) roate(225deg);
-      }
+    &.toggle-open::after  {
+      transform: translateY(-65%) rotate(225deg);
     }
 
     span:nth-child(2) {
