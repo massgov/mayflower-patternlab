@@ -1,9 +1,8 @@
-import getTemplate from "../helpers/getHandlebarTemplate.js";
+import twiggy from '../helpers/twiggy';
 
 export default function (window,document,$,undefined) {
   // Set up global component config
-  let compiledTemplate = getTemplate('resultsHeading'),
-    clearAllButton = '.js-results-heading-clear', // events triggered on parent
+  let  clearAllButton = '.js-results-heading-clear', // events triggered on parent
     filterButton = '.js-results-heading-tag'; // events triggered on parent
 
   $(".js-results-heading").each(function() {
@@ -44,9 +43,11 @@ export default function (window,document,$,undefined) {
     if (!args.data) {
       return;
     }
-    // Create new markup using handlebars template, helper.
-    let markup = compiledTemplate(args.data);
-    args.$el.html(markup);
+    // Asynchronously render via TwigJS.
+    twiggy('@molecules/results-heading.twig')
+        .then(t => t.renderAsync({resultsHeading: args.data}))
+        .then(markup => args.$el.html(markup))
+
   }
 
 }(window,document,jQuery);
