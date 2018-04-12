@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rbayliss
- * Date: 4/6/18
- * Time: 2:21 PM
- */
 
 namespace PatternLab;
 
