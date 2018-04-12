@@ -56,10 +56,10 @@
     </ul>
   </div>
   {% set toggleClass = "ma__link-list__toggle js-accordion-link" %}
-  {% if imageLinkList.links|length > 3 %}
+  {% if imageLinkList.links|length > 3 or imageLinkList.totalLinks > 3 %}
     {% set toggleClass = "ma__link-list__toggle has-secondary js-accordion-link" %}
   {% endif %}
-  {% if imageLinkList.links|length > 6 %}
+  {% if imageLinkList.links|length > 6 or imageLinkList.totalLinks > 6 %}
     {% set toggleClass = "ma__link-list__toggle has-tertiary js-accordion-link" %}
   {% endif %}
   <button type="button" class="{{toggleClass}}" aria-expanded="false">
