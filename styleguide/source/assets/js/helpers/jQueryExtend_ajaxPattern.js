@@ -56,39 +56,12 @@ export default function (window,document,$,undefined) {
      *  The data structure which the pattern expects in order to render.
      */
     self.renderPattern = function(pattern,data) {
-      Twig.extendFunction('icon', function(name) {
-        // Just use Twig to fetch the SVG and render it like a template.
-        var svg = Twig.twig({
-            href: self.getIconPath(name),
-            async: false,
-        });
-        // Don't choke here if we aren't able to load the SVG.
-        return svg ? svg.render() : '';
-      });
-      let template = Twig.twig({
-        href: self.getPatternPath(pattern),
-        id: pattern,
-        allowInlineIncludes: true,
-        // Set ma.patternPaths in your implementation's env.js file (see /source/_meta/_00-foot.twig)
-        namespaces: {
-          'base': ma.patternPaths['@base'],
-          'atoms': ma.patternPaths['@atoms'],
-          'molecules': ma.patternPaths['@molecules'],
-          'organisms': ma.patternPaths['@organisms'],
-          'templates': ma.patternPaths['@templates'],
-          'pages': ma.patternPaths['@pages'],
-          'meta': ma.patternPaths['@meta']
-        },
-        async: true, // Included/extended patterns loaded synchronously: https://github.com/twigjs/twig.js/issues/426
-        load: function(template) {
-          // Get compiled template with data.
-          let markup = template.render(data);
-          // Render markup in parent ajax-pattern component.
-          $element.html(markup);
-          // Trigger an event exposing the context for any listening pattern js module initialization.
-          $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
-        }
-      });
+      return twiggy(pattern)
+          .then(template => template.renderAsync(data))
+          .then(markup => {
+            $element.html(markup)
+              $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
+          });
     };
 
     /**
@@ -106,19 +79,6 @@ export default function (window,document,$,undefined) {
       let patternPath = pathParts.join("/");
       // Set ma.patternPaths in your implementation's env.js file (see /source/_meta/_00-foot.twig)
       return ma.patternPaths[namespace] + patternPath;
-    };
-
-    /**
-     * Returns the gettable path to an icon based on its name.
-     *
-     * @param name
-     *   The name of an icon (i.e. arrow)
-     *
-     * @returns {string}
-     *   The path to an icon SVG file which can be used in a get request (i.e. /images/svg-icons/arrow.svg )
-     */
-    self.getIconPath = function(name) {
-      return ma.iconPath + '/' + name + '.svg';
     };
 
     /**
