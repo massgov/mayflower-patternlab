@@ -11,16 +11,16 @@
         title="{{ calloutAlert.info }}"
       {% endif %}>
       <div class="ma__callout-alert__icon">
-        {{ icon('@atoms/05-icons/svg-alert.twig') }}
+        {{ icon('alert') }}
       </div>
       <div class="ma__callout-alert__link">
-        <span>{{ calloutAlert.text }}&nbsp;{{ icon('@atoms/05-icons/svg-arrow.twig') }}</span>
+        <span>{{ calloutAlert.text }}&nbsp;{{ icon('arrow') }}</span>
       </div>
     </a>
   {% else %}
     <div class="ma__callout-alert__content">
       <div class="ma__callout-alert__icon">
-        {{ icon('@atoms/05-icons/svg-alert.twig') }}
+        {{ icon('alert') }}
       </div>
       <div class="ma__callout-alert__link">
         {{ calloutAlert.text }}

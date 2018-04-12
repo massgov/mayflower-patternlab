@@ -14,7 +14,7 @@
     "bgWide": "../../assets/images/placeholder/820x460.png",
     "bgNarrow": "../../assets/images/placeholder/800x400.png",
     "size": "columns",
-    "icon": "@atoms/05-icons/svg-lg-picnic-table.twig",
+    "icon": "lg-picnic-table",
     "title": "State Parks & Recreation",
     "description": "First line of this Topic that feeds description on cards.  This description can span multiple lines."
   },
