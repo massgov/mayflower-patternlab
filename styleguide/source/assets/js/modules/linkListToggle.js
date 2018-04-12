@@ -9,9 +9,9 @@ export default function (window,document,$,undefined) {
     listItems = $listItem.length;
 
     let debounceTimer;
-    let width = $(window).width();
 
     function showToggle() {
+      let width = $(window).width();
 
       if ((listItems > 3) && (width < 780) || (listItems > 6) && (width < 1201)) {
         // Show More button only when there are enough to toggle.
@@ -47,11 +47,11 @@ export default function (window,document,$,undefined) {
         showToggle();
 
         // Remove added attributes at desktop width.
-        if (width < 1201) {
+        if ($(window).width() < 1201) {
           $thisToggle.removeAttr('style');
           $listItem.removeAttr('style');
         }
-      },250);
+      },150);
     });
   });
 
