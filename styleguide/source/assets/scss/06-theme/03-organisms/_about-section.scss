@@ -72,6 +72,10 @@
         @media ($bp-small-min) {
           display: flex;
         }
+
+        @media ($bp-x-large-min) {
+          padding-right: 325px;
+        }
       }
 
       .ma__icon-links__item {

@@ -166,7 +166,7 @@
               "icon": "@atoms/05-icons/svg-facebook.twig",
               "link": {
                 "href": "#",
-                "text": "Facebook",
+                "text": "Facebook ",
                 "chevron": ""
               }
             },{
@@ -181,6 +181,13 @@
               "link": {
                 "href": "#",
                 "text": "Instagram",
+                "chevron": ""
+              }
+            },{
+              "icon": "@atoms/05-icons/svg-linkedin.twig",
+              "link": {
+                "href": "#",
+                "text": "LinkedIn",
                 "chevron": ""
               }
             }]
