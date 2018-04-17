@@ -27,12 +27,19 @@ class DynamicDataListener extends Listener {
    */
   public function setDomain() {
     $baseUrl = getenv('BASE_URL');
-    $parts = parse_url($baseUrl) + [
-      'scheme' => 'https',
-      'host' => 'mayflower.digital.mass.gov',
-      'path' => '/'
-    ];
-    $domain = sprintf('%s://%s', $parts['scheme'], $parts['host']);
+    if($baseUrl) {
+      $parts = parse_url($baseUrl) + [
+        'scheme' => 'https',
+        'host' => 'mayflower.digital.mass.gov',
+        'path' => '/'
+      ];
+      $domain = sprintf('%s://%s', $parts['scheme'], $parts['host']);
+    }
+    else {
+      $domain = '';
+    }
+
+
     Data::setOption('url', [
       'domain' => $domain,
       // Many places expect this path with no leading or trailing slashes.
