@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Changed
+Minor
+- DP-8516: Moved inline style to SCSS file.
