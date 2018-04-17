@@ -1,0 +1,5 @@
+___DESCRIPTION___
+Changed
+Patch
+- DP-8522: modify image link grid layout
+

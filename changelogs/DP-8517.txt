@@ -1,0 +1,5 @@
+___DESCRIPTION___
+Changed
+Patch
+- DP-8517: updates image link rows layout
+
