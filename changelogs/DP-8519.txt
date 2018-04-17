@@ -1,5 +1,5 @@
 ___DESCRIPTION___
 Changed
 Patch
-- DP-8519: updates rough transition on expansion
+- DP-8519: Updates rough transition on expansion.
 
