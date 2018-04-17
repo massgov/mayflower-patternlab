@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Changed
+Minor
+- DP-8586: Reduce minimum spacing for about section.

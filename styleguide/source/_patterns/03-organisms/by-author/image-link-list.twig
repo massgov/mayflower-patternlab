@@ -1,7 +1,7 @@
 {% if imageLinkList.blocks %}
-  {% set linkListClass = "ma__link-list ma__link-list--image-blocks js-accordion" %}
+  {% set linkListClass = "ma__link-list ma__link-list--image-blocks" %}
 {% else %}
-  {% set linkListClass = "ma__link-list ma__link-list--image-links js-accordion" %}
+  {% set linkListClass = "ma__link-list ma__link-list--image-links" %}
 {% endif %}
 <section class="{{linkListClass}}">
   {% if imageLinkList.compHeading %}
@@ -25,7 +25,7 @@
     <ul class="ma__link-list__items ma__link-list__items--no-bullets">
       {% block imageListBlock %}
 
-        {% for imageLink in imageLinkList.links|slice(0,3) %}
+        {% for imageLink in imageLinkList.links %}
           {% if imageLinkList.blocks %}
             {% set imageLink = imageLink|merge({"block": true}) %}
           {% endif %}
@@ -33,36 +33,12 @@
             {% include "@molecules/image-link.twig" %}
           </li>
         {% endfor %}
-        {% for imageLink in imageLinkList.links|slice(3,3) %}
-          {% if imageLinkList.blocks %}
-            {% set imageLink = imageLink|merge({"block": true}) %}
-          {% endif %}
-          <li class="ma__link-list__item ma__link-list__item--secondary js-accordion-content">
-            {% include "@molecules/image-link.twig" %}
-          </li>
-        {% endfor %}
-        {% for imageLink in imageLinkList.links|slice(6) %}
-          {% if imageLinkList.blocks %}
-            {% set imageLink = imageLink|merge({"block": true}) %}
-          {% endif %}
-          <li class="ma__link-list__item ma__link-list__item--tertiary js-accordion-content">
-            {% include "@molecules/image-link.twig" %}
-          </li>
-        {% endfor %}
-
-
 
       {% endblock %}
     </ul>
   </div>
-  {% set toggleClass = "ma__link-list__toggle js-accordion-link" %}
-  {% if imageLinkList.links|length > 3 or imageLinkList.totalLinks > 3 %}
-    {% set toggleClass = "ma__link-list__toggle has-secondary js-accordion-link" %}
-  {% endif %}
-  {% if imageLinkList.links|length > 6 or imageLinkList.totalLinks > 6 %}
-    {% set toggleClass = "ma__link-list__toggle has-tertiary js-accordion-link" %}
-  {% endif %}
-  <button type="button" class="{{toggleClass}}" aria-expanded="false">
-    Show <span>more</span><span>less</span> {{imageLinkList.itemPluralName}}
+
+  <button type="button" class="ma__link-list__toggle" aria-expanded="false">
+    Show <span>more</span> {{imageLinkList.itemPluralName}}
   </button>
 </section>
