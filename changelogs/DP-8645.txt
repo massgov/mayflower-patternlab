@@ -1,0 +1,3 @@
+Changed
+Patch
+- DP-8645: Remove non-breaking space from decorative link markup
