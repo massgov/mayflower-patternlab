@@ -8,7 +8,7 @@ This is a variant of the [Page Header](./?p=organisms-page-header) pattern showi
   * @molecules/labelled-list.twig
    * @organisms/by-author/contact-us.twig
   * @organisms/by-author/callout-time.twig
-    * @atoms/05-icons/svg-alert.twig
+    * alert
   * @organisms/by-author/key-actions.twig
 * populate the `widgets` array with the following pattern:
   * @atoms/09-media/image.twig

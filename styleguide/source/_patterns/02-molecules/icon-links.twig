@@ -7,7 +7,7 @@
     {% for item in iconLinks.items %}
       <li class="ma__icon-links__item">
         <span class="ma__icon-links__icon">
-          {% include item.icon %}
+          {{ icon(item.icon) }}
         </span>
         <span class="ma__icon-links__link">
           {% set decorativeLink = item.link %}

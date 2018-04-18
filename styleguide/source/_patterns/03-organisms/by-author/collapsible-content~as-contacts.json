@@ -25,7 +25,7 @@
             "isExpanded": false,
             "subTitle": null,
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -65,7 +65,7 @@
                 "details":""
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "email",
@@ -87,7 +87,7 @@
                 "details":""
               }]
             },{
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
+              "icon": "fax-icon",
               "name": "Fax",
               "items": [{
                 "type": "fax",
@@ -100,7 +100,7 @@
                 "details":"Please allow 24 hours for a response"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-marker.twig",
+              "icon": "marker",
               "name": "Address",
               "items": [{
                 "type": "address",

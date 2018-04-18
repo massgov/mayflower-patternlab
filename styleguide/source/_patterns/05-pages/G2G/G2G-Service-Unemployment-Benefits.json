@@ -82,21 +82,21 @@
           "centered": ""
         },
         "items": [{
-          "icon": "@atoms/05-icons/svg-twitter.twig",
+          "icon": "twitter",
           "link": {
             "href": "#",
             "text": "Optional Socia Media",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-flickr.twig",
+          "icon": "flickr",
           "link": {
             "href": "#",
             "text": "ScreenName",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-blog.twig",
+          "icon": "blog",
           "link": {
             "href": "#",
             "text": "ScreenName",

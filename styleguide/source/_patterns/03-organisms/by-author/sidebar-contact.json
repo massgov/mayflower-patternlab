@@ -12,7 +12,7 @@
           "chevron":""
         },
         "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
+          "icon": "phone",
           "name": "Phone",
           "hidden": "",
           "items": [{
@@ -31,7 +31,7 @@
             "details":"For those who need accessible services"
           }]
         },{
-          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "icon": "fax-icon",
           "name": "Fax",
           "hidden": "",
           "items": [{
@@ -43,7 +43,7 @@
             "details":"Please allow 24 hours for a response"
           }]
         },{
-          "icon": "@atoms/05-icons/svg-marker.twig",
+          "icon": "marker",
           "name": "Address",
           "hidden": "true",
           "items": [{
@@ -64,7 +64,7 @@
           "chevron":""
         },
         "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
+          "icon": "phone",
           "name": "Phone",
           "hidden": "",
           "items": [{
@@ -76,7 +76,7 @@
             "details":""
           }]
         },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "icon": "laptop",
           "name": "Online",
           "hidden": "",
           "items": [{
@@ -88,7 +88,7 @@
             "details":""
           }]
         },{
-          "icon": "@atoms/05-icons/svg-fax-icon.twig",
+          "icon": "fax-icon",
           "name": "Fax",
           "hidden": "true",
           "items": [{
@@ -100,7 +100,7 @@
             "details":"Please allow 24 hours for a response"
           }]
         },{
-          "icon": "@atoms/05-icons/svg-marker.twig",
+          "icon": "marker",
           "name": "Address",
           "hidden": "true",
           "items": [{

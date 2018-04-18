@@ -91,13 +91,13 @@
             "tags": [{
               "id": "wheelchair-accessible",
               "label": "Wheelchair accessible",
-              "icon": "@atoms/05-icons/svg-wheelchair.twig",
+              "icon": "wheelchair",
               "value": "wheelchair-accessible",
               "checked": "false"
             },{
               "id": "open",
               "label": "Open now",
-              "icon": "@atoms/05-icons/svg-open-now.twig",
+              "icon": "open-now",
               "value": "open",
               "checked": "false"
             }],
@@ -284,7 +284,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -322,7 +322,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -360,7 +360,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -398,7 +398,7 @@
               },
               "tags": [{
                 "label": "open now",
-                "icon": "@atoms/05-icons/svg-open-now.twig",
+                "icon": "open-now",
                 "id": "open"
               }],
               "image": {
@@ -436,11 +436,11 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               },{
                 "label": "open now",
-                "icon": "@atoms/05-icons/svg-open-now.twig",
+                "icon": "open-now",
                 "id": "open"
               }],
               "image": {
@@ -478,7 +478,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -516,7 +516,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -554,7 +554,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -592,7 +592,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -630,7 +630,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -668,7 +668,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
@@ -706,7 +706,7 @@
               },
               "tags": [{
                 "label": "wheelchair accessible",
-                "icon": "@atoms/05-icons/svg-wheelchair.twig",
+                "icon": "wheelchair",
                 "id": "wheelchair-accessible"
               }],
               "image": {
