@@ -8,6 +8,10 @@
     @media ($bp-x-large-min) {
       justify-content: flex-start;
     }
+
+    .ma__link-list__item {
+      margin-bottom: 1rem;
+    }
   }
 
   .ma__image-link__image {
@@ -64,7 +68,6 @@
 .ma__link-list__item {
   flex-basis: 100%;
   padding: 0;
-  margin-bottom: 1rem;
   display: none;
 
   &.toggle-open {
