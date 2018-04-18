@@ -17,6 +17,7 @@ import hideAlert                  from "./modules/hideAlert.js";
 import inlineOverlay              from "./modules/inlineOverlay.js";
 import imageFill                  from "./modules/imageFill.js";
 import keywordSearch              from "./modules/keywordSearch.js";
+import linkListToggle            from "./modules/linkListToggle.js";
 import locationFilters            from "./modules/locationFilters.js";
 import locationListing            from "./modules/locationListing.js";
 import mainNav                    from "./modules/mainNav.js";

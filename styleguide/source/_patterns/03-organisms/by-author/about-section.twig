@@ -14,13 +14,17 @@
       </div>
 
       <div class="ma_about-section__person">
-        {% set person = about.person %}
-        {% include "@organisms/by-author/person-card.twig" %}
+        {% block personCard %}
+          {% set person = about.person %}
+          {% include "@organisms/by-author/person-card.twig" %}
+        {% endblock %}
       </div>
     </div>
   </div>
   <div class="ma__about-section__social">
-    {% set iconLinks = about.social %}
-    {% include "@molecules/icon-links.twig" %}
+    {% block socialLinks %}
+      {% set iconLinks = about.social %}
+      {% include "@molecules/icon-links.twig" %}
+    {% endblock %}
   </div>
 </div>
