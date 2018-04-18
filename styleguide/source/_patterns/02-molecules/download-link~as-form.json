@@ -1,7 +1,7 @@
 {
   "downloadLink": {
     "iconSize": "",
-    "icon": "@atoms/05-icons/svg-laptop.twig",
+    "icon": "laptop",
     "decorativeLink": {
       "text": "Online form: Link to an online form",
       "href": "#",
