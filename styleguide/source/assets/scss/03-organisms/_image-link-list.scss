@@ -72,12 +72,12 @@
 
   &.toggle-open {
     // Always show all when clicked open so they don't hide on screen resize.
-    display: block !important;
+    display: list-item !important;
   }
 
   // Always show first three on mobile
   &:nth-child(-n+3) {
-    display: block !important;
+    display: list-item !important;
   }
 
   @media($bp-medium-min) {
@@ -85,13 +85,13 @@
 
     // Always show first 6 on tablet
     &:nth-child(-n+6) {
-      display: block !important;
+      display: list-item !important;
     }
   }
 
   @media($bp-x-large-min) {
     // Always show all on desktop
-    display: block;
+    display: list-item;
     flex-basis: calc(33% - 1rem);
 
     &:nth-child(3n+2) {
