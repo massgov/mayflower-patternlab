@@ -62,23 +62,27 @@
         {% endif %}
       </div>
       <aside class="sidebar {{ sidebar.coloredHeadings ? 'sidebar--colored' : '' }}">
-        {% if sideContent.headshot.image or sideContent.headshot.downloadLink %}
-          <div class="ma__bio__headshot">
-            {% if sideContent.headshot.image %}
-              {% set image = sideContent.headshot.image %}
-              {% include "@atoms/09-media/image.twig" %}
-            {% endif %}
-            {% if sideContent.headshot.downloadLink %}
-              {% set decorativeLink = sideContent.headshot.downloadLink %}
-              {% include "@atoms/decorative-link.twig" %}
-            {% endif %}
-          </div>
-        {% endif %}
+        {% block personImage %}
+          {% if sideContent.headshot.image or sideContent.headshot.downloadLink %}
+            <div class="ma__bio__headshot">
+              {% if sideContent.headshot.image %}
+                {% set image = sideContent.headshot.image %}
+                {% include "@atoms/09-media/image.twig" %}
+              {% endif %}
+              {% if sideContent.headshot.downloadLink %}
+                {% set decorativeLink = sideContent.headshot.downloadLink %}
+                {% include "@atoms/decorative-link.twig" %}
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endblock %}
 
-        {% if sideContent.contactList %}
-          {% set contactList = sideContent.contactList %}
-          {% include "@organisms/by-author/contact-list.twig" %}
-        {% endif %}
+        {% block personContactList %}
+          {% if sideContent.contactList %}
+            {% set contactList = sideContent.contactList %}
+            {% include "@organisms/by-author/contact-list.twig" %}
+          {% endif %}
+        {% endblock %}
 
         {% if sideContent.social %}
           {% set iconLinks = sideContent.social %}
