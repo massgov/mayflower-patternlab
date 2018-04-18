@@ -31,9 +31,6 @@ jobs:
       - persist_to_workspace:
           root: /var/www
           paths: [code]
-      - store_artifacts:
-          path: ./styleguide/public
-          destination: build
 
   test:
     working_directory: /home/circleci/code
