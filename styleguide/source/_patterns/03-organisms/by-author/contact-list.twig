@@ -1,4 +1,12 @@
-<section class="ma__contact-list {{ contactList.viewSpecific ? 'ma__contact-list--view-specific' : '' }}">
+{% set contactUsClass = "" %}
+{% if contactList.viewSpecific %}
+  {% set contactUsClass = contactUsClass ~ 'ma__contact-list--view-specific' %}
+{% endif %}
+{% if contactList.columns %}
+  {% set contactUsClass = contactUsClass ~ 'ma__contact-list--columns' %}
+{% endif %}
+
+<section class="ma__contact-list {{ contactUsClass }}">
   {% set contactHeading = 2 %}
 
   {% if contactList.compHeading %}
