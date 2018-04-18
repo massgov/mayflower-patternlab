@@ -84,10 +84,12 @@
           {% endif %}
         {% endblock %}
 
-        {% if sideContent.social %}
-          {% set iconLinks = sideContent.social %}
-          {% include "@molecules/icon-links.twig" %}
-        {% endif %}
+        {% block personSocial %}
+          {% if sideContent.social %}
+            {% set iconLinks = sideContent.social %}
+            {% include "@molecules/icon-links.twig" %}
+          {% endif %}
+        {% endblock %}
 
         {% block sidebar %}
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'sidebar'}} %}
