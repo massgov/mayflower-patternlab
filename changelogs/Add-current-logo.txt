@@ -1,0 +1,24 @@
+___DESCRIPTION___
+Change_type (see below)
+Change_impact (see below)
+- Adds the current mass.gov site logo for the header of the website to mayflower's image assets and allow hiding back-to button in header
+
+
+___SEMANTIC VERSION (see below)___
+
+
+___POST DEPLOY STEPS___
+- None
+
+___CHANGE TYPES___
+- add current logo into image assets
+  - change Atoms/Media/Site Logo to the current logo
+  - add option to hide back-to button in header conditionally
+  - hide back-to button on homepage
+
+Note: See http://keepachangelog.com/ for more info about changelogs.
+
+___CHANGE IMPACT___
+- Minor
+
+Note: Refer to `docs/versioning.md` for more info about change impact according to semantic versioning.
