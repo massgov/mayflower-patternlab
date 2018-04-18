@@ -1,3 +1,0 @@
-Changed
-Minor
-- DP-8524: Clean up the release to production documentation in Mayflower.

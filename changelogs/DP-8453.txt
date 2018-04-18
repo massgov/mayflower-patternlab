@@ -1,9 +1,0 @@
-___DESCRIPTION___
-Fixed
-Minor
-- DP-8453: Prevent loading of result heading template until it is required.
-
-Changed
-Minor
-- DP-8454: Switch to TwigJS for rendering result-headings in javascript.
-- DP-8454: Switch to TwigJS for rendering pagination in javascript.
