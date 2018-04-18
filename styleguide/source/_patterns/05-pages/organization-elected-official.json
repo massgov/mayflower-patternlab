@@ -183,6 +183,13 @@
                 "text": "Instagram",
                 "chevron": ""
               }
+            },{
+              "icon": "@atoms/05-icons/svg-linkedin.twig",
+              "link": {
+                "href": "#",
+                "text": "LinkedIn",
+                "chevron": ""
+              }
             }]
           }
         }

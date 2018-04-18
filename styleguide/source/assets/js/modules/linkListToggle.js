@@ -17,6 +17,9 @@ export default function (window,document,$,undefined) {
         // Show More button only when there are enough to toggle.
         $thisToggle.addClass('show-toggle');
       }
+      else {
+        $thisToggle.removeClass('show-toggle');
+      }
     }
     showToggle();
 
