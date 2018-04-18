@@ -60,8 +60,25 @@ export default function (window,document,$,undefined) {
           .then(template => template.renderAsync(data))
           .then(markup => {
             $element.html(markup)
-            $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
-          })
+              $(document).trigger('ma:AjaxPattern:Render', [{'el': $element}]);
+          });
+    };
+
+    /**
+     * Returns the gettable path to a pattern based on its namespaced path.
+     *
+     * @param pattern
+     *   The namespaced path to a pattern (i.e. @atoms/decorative-link.twig)
+     *
+     * @returns {string}
+     *   The path to a pattern which can be used in a get request (i.e. /assets/patterns/atoms/decorative-link.twig )
+     */
+    self.getPatternPath = function(pattern) {
+      let pathParts = pattern.split("/");
+      let namespace = pathParts.shift();
+      let patternPath = pathParts.join("/");
+      // Set ma.patternPaths in your implementation's env.js file (see /source/_meta/_00-foot.twig)
+      return ma.patternPaths[namespace] + patternPath;
     };
 
     /**

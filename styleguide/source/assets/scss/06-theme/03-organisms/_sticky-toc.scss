@@ -175,8 +175,13 @@
       svg {
         fill: rgba($c-theme-primary, 0.5);
         transform: rotate(-90deg);
+        width: 11px;
         height: 12px;
         margin-bottom: 5px;
+
+        use > svg {// For the bug in Firefox 55>
+          transform: rotate(0deg);
+        }
       }
 
       span {

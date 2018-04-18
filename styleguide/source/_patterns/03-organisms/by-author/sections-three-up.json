@@ -10,7 +10,7 @@
     "sections": [{
       "id": "GUIDasjdhf1",
       "catIcon": {
-        "icon":"@atoms/05-icons/svg-lg-fishing.twig",
+        "icon":"lg-fishing",
         "small": true
       },
       "title" : {
@@ -35,7 +35,7 @@
     {
       "id": "GUIDasjdhf2",
       "catIcon": {
-        "icon":"@atoms/05-icons/svg-lg-picnic-table.twig",
+        "icon":"lg-picnic-table",
         "small": true
       },
       "title" : {
@@ -63,7 +63,7 @@
     {
       "id": "GUIDasjdhf3",
       "catIcon": {
-        "icon":"@atoms/05-icons/svg-lg-map-location.twig",
+        "icon":"lg-map-location",
         "small": true
       },
       "title" : {

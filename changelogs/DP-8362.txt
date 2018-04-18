@@ -1,0 +1,7 @@
+___DESCRIPTION___
+Changed
+Minor
+- DP-8362: Replace svg templates and template calls with icon() function. Added a processor for icons inserted in alert ajax version.
+
+Removed
+- DP-8362: Remove svg icon twig templates which replaced with svg files under assets.
