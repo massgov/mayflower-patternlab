@@ -44,8 +44,12 @@ class ArtifactRegistry extends MayflowerRegistry {
 
         const commit = function() {
             // We only need to run a commit if the working copy is dirty.
-            return exec("git diff --exit-code", {cwd: self.resolveDest()})
-                .catch(() => exec(`git add . && git commit -m ${e(self.getCommitMessage())}`, {cwd: self.resolveDest()}));
+            return exec("git status --porcelain", {cwd: self.resolveDest()})
+                .then((res) => {
+                    if(res.stdout.trim().length > 0) {
+                        return exec(`git add . && git commit -m ${e(self.getCommitMessage())}`, {cwd: self.resolveDest()});
+                    }
+                });
         };
         const pushBranch = function() {
             return exec(`git push origin ${e(self.getBranch())}`, {cwd: self.resolveDest()});
