@@ -31,6 +31,9 @@ jobs:
       - persist_to_workspace:
           root: /var/www
           paths: [code]
+      - run: mkdir -p /tmp/artifacts && tar -cvzf /tmp/artifacts/archive.tar.gz styleguide/public
+      - store_artifacts:
+          path: /tmp/artifacts
 
   test:
     working_directory: /home/circleci/code
