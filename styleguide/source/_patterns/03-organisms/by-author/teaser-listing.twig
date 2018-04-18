@@ -29,16 +29,18 @@
         {% endfor %}
       </div>
     {% endif %}
-    {% if teaserListing.items %}
-      <ul class="ma__teaser-listing__items {{ gridTwoColumns }}">
-        {% for generalTeaser in teaserListing.items %}
-          <li class="ma__teaser-listing__item">
-            {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
-            {% include "@molecules/general-teaser.twig" %}
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+    {% block teaserListingItems %}
+      {% if teaserListing.items %}
+        <ul class="ma__teaser-listing__items {{ gridTwoColumns }}">
+          {% for generalTeaser in teaserListing.items %}
+            <li class="ma__teaser-listing__item">
+              {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
+              {% include "@molecules/general-teaser.twig" %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endblock %}
     {% if teaserListing.more %}
       <div class="ma__teaser-listing__more">
         {% set link = teaserListing.more %}
