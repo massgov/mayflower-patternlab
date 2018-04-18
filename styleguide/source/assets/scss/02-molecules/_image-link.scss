@@ -27,6 +27,6 @@
         line-height: 1.2;
     }
     svg {
-        vertical-align: middle;
+        @include ma-link-arrow;
     }
 }

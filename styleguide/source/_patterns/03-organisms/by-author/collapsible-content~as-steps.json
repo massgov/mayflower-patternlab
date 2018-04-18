@@ -23,7 +23,7 @@
       "collapsibleHeader": {
         "info": "Expand step for doing this in person",
         "title": "In Person at State Parks",
-        "icon": "@atoms/05-icons/svg-profile.twig"
+        "icon": "profile"
       },
       "more": null,
       "includes": [{
@@ -46,7 +46,7 @@
       "collapsibleHeader": {
         "info": "",
         "title":"Some Other Method",
-        "icon":"@atoms/05-icons/svg-circle-chevron.twig"
+        "icon":"circle-chevron"
       },
       "more": null,
       "includes": [{
@@ -68,7 +68,7 @@
       "expanded": false,
       "collapsibleHeader": {
         "info": "",
-        "icon":"@atoms/05-icons/svg-laptop.twig",
+        "icon":"laptop",
         "title":"Online"
       },
       "more": null,
@@ -91,7 +91,7 @@
       "expanded": false,
       "collapsibleHeader": {
         "info": "",
-        "icon":"@atoms/05-icons/svg-phone.twig",
+        "icon":"phone",
         "title":"By Phone"
       },
       "more": null,
@@ -114,7 +114,7 @@
       "expanded": false,
       "collapsibleHeader": {
         "info": "",
-        "icon":"@atoms/05-icons/svg-mail.twig",
+        "icon":"mail",
         "title":"By Mail"
       },
       "more": null,
@@ -137,7 +137,7 @@
       "expanded": false,
       "collapsibleHeader": {
         "info": "",
-        "icon":"@atoms/05-icons/svg-fax-icon.twig",
+        "icon":"fax-icon",
         "title":"By Fax"
       },
       "more": null,

@@ -13,12 +13,12 @@
           "items": [{
             "altText": "Follow our Blog Feed",
             "href": "#",
-            "icon": "@atoms/05-icons/svg-blog.twig",
+            "icon": "blog",
             "linkType": "blog"
           },{
             "altText": "Get our emails",
             "href": "#",
-            "icon": "@atoms/05-icons/svg-mail.twig",
+            "icon": "mail",
             "linkType": "email"
           }]
         }

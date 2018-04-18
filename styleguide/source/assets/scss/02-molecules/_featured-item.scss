@@ -64,7 +64,7 @@
   line-height: 1.25;
 
   svg {
-    vertical-align: middle;
+    @include ma-link-arrow;
   }
 }
 
