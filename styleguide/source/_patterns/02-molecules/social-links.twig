@@ -8,7 +8,7 @@
         <li class="ma__social-links__item">
           <a href="{{ item.href }}" class="ma__social-links__link js-social-share" data-social-share="{{ item.linkType }}">
             <span class="visually-hidden">{{ item.altText }}</span>
-            {% include item.icon %}
+            {{ icon(item.icon) }}
           </a>
         </li>
       {% endfor %}

@@ -156,7 +156,7 @@
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -170,7 +170,7 @@
                 "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "email",
@@ -260,7 +260,7 @@
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -274,7 +274,7 @@
                 "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "online",
@@ -364,7 +364,7 @@
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -378,7 +378,7 @@
                 "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "online",
@@ -401,7 +401,7 @@
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -415,7 +415,7 @@
                 "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "online",
@@ -542,7 +542,7 @@
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -556,7 +556,7 @@
                 "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "online",
@@ -626,7 +626,7 @@
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -640,7 +640,7 @@
                 "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "online",
@@ -665,7 +665,7 @@
       "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
-          "icon": "@atoms/05-icons/svg-wait-time.twig",
+          "icon": "wait-time",
           "text": "This usually takes approximately 4 weeks"
         }
       }
@@ -732,7 +732,7 @@
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
@@ -746,7 +746,7 @@
                 "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "items": [{
                 "type": "online",

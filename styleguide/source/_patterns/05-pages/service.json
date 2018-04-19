@@ -96,21 +96,21 @@
           "centered": ""
         },
         "items": [{
-          "icon": "@atoms/05-icons/svg-twitter.twig",
+          "icon": "twitter",
           "link": {
             "href": "#",
             "text": "Optional Socia Media",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-flickr.twig",
+          "icon": "flickr",
           "link": {
             "href": "#",
             "text": "ScreenName",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-blog.twig",
+          "icon": "blog",
           "link": {
             "href": "#",
             "text": "ScreenName",
@@ -273,7 +273,7 @@
         "text": "Department of Conservation and Recreation"
       },
       "groups": [{
-        "icon": "@atoms/05-icons/svg-phone.twig",
+        "icon": "phone",
         "name": "Phone",
         "items": [{
           "type": "phone",
@@ -321,7 +321,7 @@
           "details":""
         }]
       },{
-        "icon": "@atoms/05-icons/svg-laptop.twig",
+        "icon": "laptop",
         "name": "Online",
         "hidden": "",
         "items": [{
@@ -348,7 +348,7 @@
           "details":""
         }]
       },{
-        "icon": "@atoms/05-icons/svg-fax-icon.twig",
+        "icon": "fax-icon",
         "name": "Fax",
         "items": [{
           "type": "fax",
@@ -363,7 +363,7 @@
           "details":"Please allow 24 hours for a response"
         }]
       },{
-        "icon": "@atoms/05-icons/svg-marker.twig",
+        "icon": "marker",
         "name": "Address",
         "items": [{
           "type": "address",
@@ -387,7 +387,7 @@
         "text": "Department of Conservation and Recreation"
       },
       "groups": [{
-        "icon": "@atoms/05-icons/svg-phone.twig",
+        "icon": "phone",
         "name": "Phone",
         "items": [{
           "type": "phone",
@@ -435,7 +435,7 @@
           "details":""
         }]
       },{
-        "icon": "@atoms/05-icons/svg-laptop.twig",
+        "icon": "laptop",
         "name": "Online",
         "hidden": "",
         "items": [{
@@ -462,7 +462,7 @@
           "details":""
         }]
       },{
-        "icon": "@atoms/05-icons/svg-fax-icon.twig",
+        "icon": "fax-icon",
         "name": "Fax",
         "items": [{
           "type": "fax",
@@ -477,7 +477,7 @@
           "details":"Please allow 24 hours for a response"
         }]
       },{
-        "icon": "@atoms/05-icons/svg-marker.twig",
+        "icon": "marker",
         "name": "Address",
         "items": [{
           "type": "address",

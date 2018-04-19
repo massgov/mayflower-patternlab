@@ -14,7 +14,7 @@
       "property": "url"
     },
     "phone": {
-      "icon": "@atoms/05-icons/svg-phone.twig",
+      "icon": "phone",
       "name": "Phone",
       "items": [{
         "type": "phone",
@@ -43,7 +43,7 @@
       }]
     },
     "online": {
-      "icon": "@atoms/05-icons/svg-laptop.twig",
+      "icon": "laptop",
       "name": "Online",
       "items": [{
         "type": "email",
@@ -60,7 +60,7 @@
       }]
     },
     "fax": {
-      "icon": "@atoms/05-icons/svg-fax-icon.twig",
+      "icon": "fax-icon",
       "name": "Fax",
       "items": [{
         "type": "fax",

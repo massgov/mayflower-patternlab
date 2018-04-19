@@ -21,7 +21,7 @@
       "accordion": true,
       "isExpanded": false,
       "accordionLabel": "Expand step for doing this in person",
-      "icon":"@atoms/05-icons/svg-profile.twig",
+      "icon":"profile",
       "title":"In Person at State Parks",
       "richText": {
         "rteElements": [{
@@ -37,7 +37,7 @@
       "accordion": true,
       "isExpanded": true,
       "accordionLabel": "Expand step for doing this in person",
-      "icon":"@atoms/05-icons/svg-circle-chevron.twig",
+      "icon":"circle-chevron",
       "title":"Some Other Method",
       "richText": {
         "rteElements": [{
@@ -53,7 +53,7 @@
       "accordion": true,
       "isExpanded": false,
       "accordionLabel": "Expand step for doing this in person",
-      "icon":"@atoms/05-icons/svg-laptop.twig",
+      "icon":"laptop",
       "title":"Online",
       "richText": {
         "rteElements": [{
@@ -69,7 +69,7 @@
       "accordion": true,
       "isExpanded": false,
       "accordionLabel": "Expand step for doing this in person",
-      "icon":"@atoms/05-icons/svg-phone.twig",
+      "icon":"phone",
       "title":"By Phone",
       "richText": {
         "rteElements": [{
@@ -85,7 +85,7 @@
       "accordion": true,
       "isExpanded": false,
       "accordionLabel": "Expand step for doing this in person",
-      "icon":"@atoms/05-icons/svg-mail.twig",
+      "icon":"mail",
       "title":"By Mail",
       "richText" : {
         "rteElements": [{
@@ -101,7 +101,7 @@
       "accordion": true,
       "isExpanded": false,
       "accordionLabel": "Expand step for doing this in person",
-      "icon":"@atoms/05-icons/svg-fax-icon.twig",
+      "icon":"fax-icon",
       "title":"By Fax",
       "richText": {
         "rteElements": [{
