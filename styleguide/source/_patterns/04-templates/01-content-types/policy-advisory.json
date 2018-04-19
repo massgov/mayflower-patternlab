@@ -183,7 +183,7 @@
           "text": "Person to Contact"
         },
         "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
+          "icon": "phone",
           "name": "Phone",
           "items": [{
             "type": "phone",
@@ -198,7 +198,7 @@
             "details":""
           }]
         },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "icon": "laptop",
           "name": "Online",
           "hidden": "",
           "items": [{
@@ -294,7 +294,7 @@
           "text": "Person to Contact"
         },
         "groups": [{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "icon": "laptop",
           "name": "Online",
           "hidden": "",
           "items": [{

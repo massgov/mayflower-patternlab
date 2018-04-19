@@ -254,21 +254,21 @@
               "centered": ""
             },
             "items": [{
-              "icon": "@atoms/05-icons/svg-facebook.twig",
+              "icon": "facebook",
               "link": {
                 "href": "#",
                 "text": "Facebook",
                 "chevron": ""
               }
             },{
-              "icon": "@atoms/05-icons/svg-twitter.twig",
+              "icon": "twitter",
               "link": {
                 "href": "#",
                 "text": "Twitter",
                 "chevron": ""
               }
             },{
-              "icon": "@atoms/05-icons/svg-instagram.twig",
+              "icon": "instagram",
               "link": {
                 "href": "#",
                 "text": "Instagram",
@@ -328,11 +328,7 @@
           },{
             "href":"#",
             "text":"Lorem ipsum dolor sit amet.",
-            "info": "",
-            "image": {
-              "src": "../../assets/images/placeholder/250x250.png",
-              "alt": "logo"
-            }
+            "info": ""
           },{
             "href":"#",
             "text":"Lorem ipsum dolor sit amet, consectetur.",
@@ -359,20 +355,8 @@
             }
           },{
             "href":"#",
-            "text":"Lorem ipsum dolor sit amet",
-            "info": "",
-            "image": {
-              "src": "../../assets/images/placeholder/250x250.png",
-              "alt": "logo"
-            }
-          },{
-            "href":"#",
-            "text":"Lorem ipsum dolor sit amet, consectetur.",
-            "info": "",
-            "image": {
-              "src": "../../assets/images/placeholder/250x250.png",
-              "alt": "logo"
-            }
+            "text":"Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            "info": ""
           }]
         }
       }

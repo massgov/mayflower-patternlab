@@ -1,0 +1,3 @@
+___DESCRIPTION___
+Changed
+- Branched off from release-5.19.0. Fix social media icon colors in Firefox.

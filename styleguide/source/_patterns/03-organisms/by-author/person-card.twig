@@ -1,8 +1,10 @@
 <div class="ma__person-card">
   <div class="ma__person-card__wrapper">
     <div class="ma__person-card__image">
-      {% set image = person.image %}
-      {% include "@atoms/09-media/image.twig" %}
+      {% block personCardImage %}
+        {% set image = person.image %}
+        {% include "@atoms/09-media/image.twig" %}
+      {% endblock %}
     </div>
     <div class="ma__person-card__person-info">
       <div class="ma__person-card__name">

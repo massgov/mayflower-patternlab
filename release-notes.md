@@ -13,6 +13,28 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.19.0 (4/18/2018)
+
+### Added
+- Adds the current mass.gov site logo for the header of the website to mayflower's image assets and allow hiding back-to button in header.
+
+### Changed
+- DP-8362: Replace svg templates and template calls with icon() function. Added a processor for icons inserted in alert ajax version.
+- DP-8440: Add component spacing to quote organism.
+- DP-8454: Switch to TwigJS for rendering result-headings in javascript.
+- DP-8454: Switch to TwigJS for rendering pagination in javascript.
+- DP-8517: Updates image link rows layout.
+- DP-8519: Updates rough transition on expansion.
+- DP-8522: Modifies image link grid layout.
+- DP-8524: Clean up the release to production documentation in Mayflower.
+- DP-8586: Reduce minimum spacing for about section.
+
+### Fixed
+- DP-8453: Prevent loading of result heading template until it is required.
+
+### Removed
+- DP-8362: Remove svg icon twig templates which replaced with svg files under assets.
+
 ## 5.18.1 (4/5/2018)
 
 ### Changed
@@ -20,7 +42,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
 ## 5.18.0 (4/5/2018)
 
-### Added 
+### Added
 - DP-7564: Fixes issue with black line over "Who we serve" stacked row on Elected org page. Fixes issue with media queries on Elected org page.
 - DP-8051: Adds page banner variation for use in elected and org detail pages.
 - DP-8176: People in curated lists
@@ -32,7 +54,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - DP-8402: Use dynamic Pattern Lab variables to reduce the amount of files that need to change during the release workflow.
 - DP-8455: Make image URLs optional on search banner to allow setting randomized image in javascript.
 
-### Fixed 
+### Fixed
 - DP-7624: Adds cover page example of binder
 - DP-8126: Avoid making two ajax calls to the same endpoint when there are two ajax patterns on the same page.
 - DP-8378: Fix the page banner display issue in mobile for Topic, Organizaion and Service pages.

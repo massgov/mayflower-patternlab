@@ -20,6 +20,32 @@ export default (function(Twig, ma) {
     }
 
     /**
+     * Returns the gettable path to an icon based on its name.
+     *
+     * @param name
+     *   The name of an icon (i.e. arrow)
+     *
+     * @returns {string}
+     *   The path to an icon SVG file which can be used in a get request (i.e. /images/svg-icons/arrow.svg )
+     */
+    function getIconPath(name) {
+        return ma.iconPath + '/' + name + '.svg';
+    };
+
+    /**
+     * Extend Twig with an icon function that embeds an SVG directly.
+     */
+    Twig.extendFunction('icon', function(name) {
+        // Just use Twig to fetch the SVG and render it like a template.
+        var svg = Twig.twig({
+            href: getIconPath(name),
+            async: false,
+        });
+        // Don't choke here if we aren't able to load the SVG.
+        return svg ? svg.render() : '';
+    });
+
+    /**
      * Asynchronously loads a Twig template based on the internal name.
      *
      * @param patternName

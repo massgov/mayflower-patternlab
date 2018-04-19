@@ -8,7 +8,7 @@
       "level": ""
     },
     "groups": [{
-      "icon": "@atoms/05-icons/svg-phone.twig",
+      "icon": "phone",
       "name": "Phone",
       "level": "",
       "contactName": "Department of Conservation and Recreation",
@@ -50,7 +50,7 @@
         "details":""
       }]
     },{
-      "icon": "@atoms/05-icons/svg-laptop.twig",
+      "icon": "laptop",
       "name": "Online",
       "level": "",
       "contactName": "Department of Conservation and Recreation",
@@ -74,7 +74,7 @@
         "details":""
       }]
     },{
-      "icon": "@atoms/05-icons/svg-fax-icon.twig",
+      "icon": "fax-icon",
       "name": "Fax",
       "level": "",
       "contactName": "Department of Conservation and Recreation",
@@ -89,7 +89,7 @@
         "details":"Please allow 24 hours for a response"
       }]
     },{
-      "icon": "@atoms/05-icons/svg-marker.twig",
+      "icon": "marker",
       "name": "Address",
       "level": "",
       "contactName": "Department of Conservation and Recreation",

@@ -1,6 +1,6 @@
 {
   "contactGroup": {
-    "icon": "@atoms/05-icons/svg-marker.twig",
+    "icon": "marker",
     "name": "Address",
     "items": [{
       "type": "address",
