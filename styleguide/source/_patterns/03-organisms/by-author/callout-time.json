@@ -1,6 +1,6 @@
 {
   "calloutTime": {
-    "icon": "@atoms/05-icons/svg-dog.twig",
+    "icon": "dog",
     "text": "Text preceded by a variable icon which wraps on narrow screens"
   }
 }

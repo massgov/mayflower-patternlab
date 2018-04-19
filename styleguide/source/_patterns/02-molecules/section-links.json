@@ -2,7 +2,7 @@
   "sectionLinks": {
     "id": "GUIDasjdhf1",
     "catIcon": {
-      "icon":"@atoms/05-icons/svg-lg-fishing.twig",
+      "icon":"lg-fishing",
       "small": true
     },
     "title": {

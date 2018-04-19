@@ -209,7 +209,7 @@
       "downloadLinks": [{
           "downloadLink": {
             "iconSize": "",
-            "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+            "icon": "doc-pdf",
             "decorativeLink": {
               "text": "Stretch Code Adoption by Community",
               "href": "http://www.mass.gov/eea/docs/doer/green-communities/grant-program/stretch-code-towns-adoption-by-community-map-and-list.pdf",
@@ -222,7 +222,7 @@
         },{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-docx.twig",
+          "icon": "doc-docx",
           "decorativeLink": {
             "text": "Name of Doc",
             "href": "#",
@@ -235,7 +235,7 @@
       },{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "icon": "doc-pdf",
           "decorativeLink": {
             "text": "Work Search Activity Log",
             "href": "#",
@@ -248,7 +248,7 @@
       },{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-docx.twig",
+          "icon": "doc-docx",
           "decorativeLink": {
             "text": "Name of another doc",
             "href": "#",
@@ -261,7 +261,7 @@
       },{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+          "icon": "doc-pdf",
           "decorativeLink": {
             "text": "Another pdf",
             "href": "#",
@@ -274,7 +274,7 @@
       },{
         "downloadLink": {
           "iconSize": "",
-          "icon": "@atoms/05-icons/svg-doc-docx.twig",
+          "icon": "doc-docx",
           "decorativeLink": {
             "text": "Helpful resource",
             "href": "#",
