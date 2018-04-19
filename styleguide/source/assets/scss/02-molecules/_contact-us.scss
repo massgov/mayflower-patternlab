@@ -131,51 +131,65 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    // set reasonable width at large breakpoint to avoid too-wide contact groups
+    @media ($bp-large-min) {
+      width: 80%;
+    }
 
     .ma__contact-group {
-      padding-right: 60px;
-    }
-
-    @media ($bp-medium-min) {
-      .ma__contact-group {
+      width: 100%;
+      @media ($bp-medium-min) {
         width: 50%;
       }
-      // .ma__contact-group:nth-child(even) {
-      //   // border-right: 1px solid #dcdcdc;
-      //   padding-right: 30px;
-      // }
-      .ma__contact-group:nth-child(odd) {
-        padding-right: 0;
-      }
     }
 
-    @media ($bp-large-min) {
-      .ma__contact-group {
-        width: 33%;
-        // padding-left: 30px;
-        // padding-right: 30px;
+    > .ma__contact-group {
+      @media ($bp-medium-min) {
+        &:nth-child(even) {
+          padding-right: 30px;
+          border-right: 1px solid #dcdcdc;
+        }
+        &:nth-child(odd) {
+          padding-left: 30px;
+        }
+        &:first-child {
+          padding-left: 0;
+          width: 100%;
+        }
       }
-      // .ma__contact-group:nth-child(1 + 3n) {
-      //   // border-right: 1px solid #dcdcdc;
-      //   padding-left: 0;
-      // }
     }
-
-
 
     .ma__contact-us__expand {
       width: 100%;
     }
 
-    > .ma__contact-group:first-child {
+    .ma__contact-us__extra {
+      // need the flex display here to override the default block layout
+      // so when jquery computes height for the slideDown fn, it is correct
+      display: flex;
+      // display: none;
+      flex-wrap: wrap;
       width: 100%;
-      padding-left: 0;
+
+      .ma__contact-group {
+        margin-bottom: 20px;
+        @media ($bp-medium-min) {
+          &:nth-child(even) {
+            padding-left: 30px;
+          }
+          &:nth-child(odd) {
+            padding-right: 30px;
+            border-right: 1px solid #dcdcdc;
+          }
+        }
+      }
+
     }
 
-    &.is-open .ma__contact-us__extra {
+    &.is-open .ma__contact-us__extra{
       display: flex !important; // need important to override jQuery adding display:block in slideUp/Down
-      width: 100%;
     }
+
   }
 
 

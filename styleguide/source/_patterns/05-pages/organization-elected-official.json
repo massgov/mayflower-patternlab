@@ -123,7 +123,7 @@
           "contacts":[{
             "accordion": false,
             "columns": true,
-            "isExpanded": true,
+            "isExpanded": false,
             "groups": [{
               "icon": "",
               "name": "",
