@@ -134,10 +134,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    // set reasonable width at large breakpoint to avoid too-wide contact groups
-    @media ($bp-large-min) {
-      width: 80%;
-    }
 
     .ma__contact-group {
       width: 100%;

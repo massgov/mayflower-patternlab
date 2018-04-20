@@ -199,7 +199,12 @@
             "id": "contact us",
             "centered": ""
           },
-
+          "image": {
+            "alt": "eohhs logo",
+            "src": "../../assets/images/placeholder/230x130.png",
+            "height": "130",
+            "width": "230"
+          },
           "contacts":[{
             "accordion": false,
             "columns": true,
