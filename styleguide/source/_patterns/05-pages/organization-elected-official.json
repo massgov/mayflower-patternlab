@@ -166,21 +166,35 @@
               "icon": "facebook",
               "link": {
                 "href": "#",
-                "text": "Facebook",
+                "text": "MassRevenue Facebook",
                 "chevron": ""
               }
             },{
               "icon": "twitter",
               "link": {
                 "href": "#",
-                "text": "Twitter",
+                "text": "MassRevenue Twitter",
                 "chevron": ""
               }
             },{
-              "icon": "instagram",
+              "icon": "youtube",
               "link": {
                 "href": "#",
-                "text": "Instagram",
+                "text": "DOR Media YouTube",
+                "chevron": ""
+              }
+            },{
+              "icon": "blog",
+              "link": {
+                "href": "#",
+                "text": "OpenDOR Blog in which we write way too much for a social link",
+                "chevron": ""
+              }
+            },{
+              "icon": "linkedin",
+              "link": {
+                "href": "#",
+                "text": "MassRevenue Linkedin",
                 "chevron": ""
               }
             }]
