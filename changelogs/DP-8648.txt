@@ -1,0 +1,3 @@
+Changed
+Patch
+- DP-8648: Fix gap with image background on Elected Official Organization page for wide-widths.
