@@ -7,7 +7,6 @@ const debug = require("gulp-debug");
 const css = require("./pipelines/css");
 const js = require("./pipelines/js");
 const git = require("./helpers/git");
-const mainBowerFiles = require("main-bower-files");
 
 /**
  * This is a Gulp Task Registry.
@@ -99,10 +98,11 @@ class MayflowerTaskRegistry extends DefaultRegistry {
     }
     buildJSVendorTask(dest, name) {
         const config = this.config;
-        let task = () => gulp.src(mainBowerFiles({paths: config.sources.bower}))
-            .pipe(js.vendor(this.config.minify))
-            .pipe(gulp.dest(dest))
-            .pipe(this.debug(name));
+        let task = () => {
+            return gulp.src(config.sources.js_vendor.map(resolveJS))
+                .pipe(js.vendor(this.config.minify))
+                .pipe(gulp.dest(dest));
+        }
         task.displayName = name;
         return task;
     }
@@ -116,6 +116,19 @@ class MayflowerTaskRegistry extends DefaultRegistry {
         return task;
     }
 
+}
+
+/**
+ * Optionally resolve a file path via require.resolve().
+ *
+ * If passed an absolute path, this function will return it.  Otherwise,
+ * the path will be resolved using require.resolve().
+ *
+ * @param string file
+ * @return string
+ */
+function resolveJS(file) {
+    return path.isAbsolute(file) ? file : require.resolve(file);
 }
 
 module.exports = MayflowerTaskRegistry;
