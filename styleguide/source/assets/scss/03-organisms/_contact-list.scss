@@ -9,7 +9,7 @@
   &--view-specific {
 
     .main-content--two .page-content & {
-      
+
       @media ($bp-large-min) {
         display: none;
 
@@ -20,7 +20,7 @@
     }
 
     .sidebar & {
-      
+
       @media ($bp-large-max) {
         display: none;
 
@@ -40,6 +40,13 @@
       @media ($bp-large-max) {
         margin-top: 0;
       }
+    }
+  }
+
+  .ma__image {
+    margin-bottom: 1rem;
+    @media ($bp-large-min) {
+      float: right;
     }
   }
 }
