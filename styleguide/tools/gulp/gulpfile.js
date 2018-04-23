@@ -43,7 +43,7 @@ const defaults = {
         // compiled into vendor-generated.js.
         bower: path.resolve(source, "assets/js/vendor"),
         // The following paths will be run through browserify/babelify.
-        js: path.resolve(source, "assets/js/*.js"),
+        js: path.resolve(source, "assets/js/index.js"),
         // The following paths will be run through SASS.
         scss: path.resolve(source, "assets/scss/**/*.scss")
     },
