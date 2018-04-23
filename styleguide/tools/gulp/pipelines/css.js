@@ -8,7 +8,8 @@ var sass          = require("gulp-sass"),
     normalizePaths= require("node-normalize-scss").includePaths,
     neatPaths     = require("node-neat").includePaths,
     gulpIf        = require("gulp-if"),
-    lazypipe      = require("lazypipe");
+    lazypipe      = require("lazypipe"),
+    path          = require('path');
 
 /**
  * Contains pipeline definitions for transforming CSS.
@@ -23,7 +24,8 @@ module.exports = function(minify) {
         outputStyle: minify ? "compressed" : "nested",
         includePaths: [].concat(
             normalizePaths,
-            neatPaths
+            neatPaths,
+            [path.dirname(require.resolve('pikaday/scss/pikaday.scss'))]
         )
     };
     return lazypipe()
