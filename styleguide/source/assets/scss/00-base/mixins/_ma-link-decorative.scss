@@ -1,16 +1,19 @@
 // applied to the container holding the a tag
 // adds a underline on hover
 // prevents the external or arrow icon from becoming an orphan
-// basic structure expected => <div><a>text&nbsp;<svg></svg></a></div>
+// with an absolutely positioned link icon
 
 @mixin ma-link-decorative {
 
   a {
     @include ma-link-underline;
+    position: relative;
     display: inline;
 
     svg {
       display: inline-block;
+      position: absolute;
+      bottom: 5px;
       height: .6em;
       width: .6em;
       margin-left: 0.25em;
