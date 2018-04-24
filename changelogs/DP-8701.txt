@@ -1,0 +1,3 @@
+Fixed
+Patch
+- DP-8701: Replace lost image link styles
