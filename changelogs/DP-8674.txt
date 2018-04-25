@@ -1,3 +1,0 @@
-___DESCRIPTION___
-Added:
-- DP-8674: Adds and uses WOFF2 variants for webfonts.
