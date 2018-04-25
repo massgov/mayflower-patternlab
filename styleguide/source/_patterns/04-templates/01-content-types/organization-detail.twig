@@ -14,33 +14,10 @@
   </div>
   <div class="ma__organization-detail__sections">
     {% block organizationDetailContent %}
+      {% set divider = false %}
       {% for stackedRow in stackedRows %}
-        <section class="ma__organization-detail__section">
-          {% if loop.first != true %}
-            {% include "@atoms/divider.twig" %}
-          {% endif %}
-          <div class="main-content main-content--two">
-            <div class="ma__organization-detail__title">
-              {% set compHeading = {
-                  "title": stackedRow.title,
-                }
-              %}
-              {% include "@atoms/04-headings/comp-heading.twig" %}
-            </div>
-            <div class="page-content">
-              {% for content in stackedRow.pageContent %}
-                {% include content.path with content.data %}
-              {% endfor %}
-            </div>
-            {% if stackedRow.sideBar|length %}
-            <aside class="sidebar">
-              {% for sidebar in stackedRow.sideBar %}
-                {% include sidebar.path with sidebar.data %}
-              {% endfor %}
-            </aside>
-            {% endif %}
-          </div>
-        </section>
+        {% include "@organisms/by-author/org-detail-section.twig" %}
+        {% set divider = true %}
       {% endfor %}
     {% endblock %}
   </div>
