@@ -45,12 +45,30 @@
     }
   }
 
-  .ma__person-card {
+  &__person {
 
     @media ($bp-x-large-min) {
       position: absolute;
       right: 0;
       top: -130px;
+    }
+  }
+
+  &__people {
+
+    @media ($bp-x-large-min) {
+      @include ma-container();
+      margin-top: 2rem;
+      display: flex;
+    }
+
+    .primary {
+      margin-bottom: 1rem;
+
+      @media ($bp-x-large-min) {
+        margin-bottom: 0;
+        margin-right: 4rem;
+      }
     }
   }
 
