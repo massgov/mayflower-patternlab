@@ -1,3 +1,0 @@
-Added
-Patch
-- DP-8569: Add missing header on binder cover page template.
