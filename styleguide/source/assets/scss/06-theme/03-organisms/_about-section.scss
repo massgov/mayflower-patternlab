@@ -1,21 +1,21 @@
 .ma__about-section {
   @include ma-container();
 
-  @media ($bp-x-large-min) {
+  @media ($bp-large-extended-min) {
     max-width: none;
     min-height: 500px;
   }
 
   &__title {
 
-    @media ($bp-x-large-min) {
+    @media ($bp-large-extended-min) {
       @include ma-container();
     }
   }
 
   &__content {
 
-    @media ($bp-x-large-min) {
+    @media ($bp-large-extended-min) {
       background-color: $c-bg-section;
     }
 
@@ -32,7 +32,7 @@
   &__content-container {
     position: relative;
 
-    @media ($bp-x-large-min) {
+    @media ($bp-large-extended-min) {
       @include ma-container();
       padding-top: 3rem;
     }
@@ -40,14 +40,14 @@
 
   &__content-text {
 
-    @media ($bp-x-large-min) {
+    @media ($bp-large-extended-min) {
       max-width: 60%;
     }
   }
 
   &__person {
 
-    @media ($bp-x-large-min) {
+    @media ($bp-large-extended-min) {
       position: absolute;
       right: 0;
       top: -130px;
@@ -56,7 +56,7 @@
 
   &__people {
 
-    @media ($bp-x-large-min) {
+    @media ($bp-large-extended-min) {
       @include ma-container();
       margin-top: 2rem;
       display: flex;
@@ -65,9 +65,13 @@
     .primary {
       margin-bottom: 1rem;
 
-      @media ($bp-x-large-min) {
+      @media ($bp-large-extended-min) {
         margin-bottom: 0;
         margin-right: 4rem;
+      }
+
+      .ma__person-card::after {
+        background-color: transparent;
       }
     }
   }
@@ -75,7 +79,7 @@
   &__social {
     margin-top: 20px;
 
-    @media ($bp-x-large-min) {
+    @media ($bp-large-extended-min) {
       @include ma-container();
     }
 
@@ -92,7 +96,7 @@
           flex-wrap: wrap;
         }
 
-        @media ($bp-x-large-min) {
+        @media ($bp-large-extended-min) {
           padding-right: 325px;
         }
       }
