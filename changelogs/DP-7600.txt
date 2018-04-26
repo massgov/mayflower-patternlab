@@ -1,5 +1,0 @@
-___DESCRIPTION___
-Changed
-Patch
-- DP-7600: Extracts looped items into separate patterns.
-- DP-7600: Provides twig blocks to support overrides and template mapping of data.

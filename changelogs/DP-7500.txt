@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Patch
-- DP-7500: Update image-link-list to allow overriding the links without losing functionality.
