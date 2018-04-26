@@ -26,8 +26,10 @@ about: {
     type: icon links
   }]
 
-  people: [{
-    type: person card / 1 required, 2 optional
-  }]
+  person:
+    type: person card /required
+
+  secondary_person:
+    type: person card
 }
 ~~~
