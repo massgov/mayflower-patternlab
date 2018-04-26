@@ -9,7 +9,7 @@ An about section for the Elected Officials
 * link
 * icon link
 * rich text
-* person card
+* person card (1 required, 2 optional)
 
 
 
@@ -25,5 +25,11 @@ about: {
   socialLinks: [{
     type: icon links
   }]
+
+  person:
+    type: person card /required
+
+  secondary_person:
+    type: person card
 }
 ~~~
