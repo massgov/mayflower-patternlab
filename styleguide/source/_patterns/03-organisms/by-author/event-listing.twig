@@ -15,12 +15,14 @@
     {% endif %}
     {% if eventListing.events %}
       <ul class="ma__event-listing__items js-event-listing-items">
-        {% for eventTeaser in eventListing.events %}
-          {% set eventTeaser = eventTeaser|merge({"level":teaserHeading}) %}
-          <li class="ma__event-listing__item js-event-listing-item">
-            {% include "@molecules/event-teaser.twig" %}
-          </li>
-        {% endfor %}
+        {% block eventList %}
+          {% for eventTeaser in eventListing.events %}
+            {% set eventTeaser = eventTeaser|merge({"level":teaserHeading}) %}
+            <li class="ma__event-listing__item js-event-listing-item">
+              {% include "@molecules/event-teaser.twig" %}
+            </li>
+          {% endfor %}
+        {% endblock %}
       </ul>
     {% endif %}
     {% if eventListing.emptyText %}

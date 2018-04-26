@@ -71,7 +71,7 @@
               "downloadLinks": [{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "icon": "doc-pdf",
                   "decorativeLink": {
                     "text": "PDF resource item",
                     "href": "#",
@@ -84,7 +84,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "icon": "laptop",
                   "decorativeLink": {
                     "text": "Link to an online form",
                     "href": "#",
@@ -148,6 +148,14 @@
                 "text": "occasional catastrophic windstorms"
               }
             ]
+          }
+        },
+        {
+          "path": "@organisms/by-author/pullquote.twig",
+          "data": {
+            "pullquoteCallout": {
+              "content": "Native grassland and shrubland birds are declining at an alarming rate. Even some forest nesting birds are declining, despite the fact that Massachusetts has more forestland now (nearly 3 million acres) than at any time in the past 300 years."
+            }
           }
         },
         {
@@ -253,7 +261,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [
                 {
@@ -271,7 +279,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [
@@ -290,7 +298,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
+              "icon": "fax-icon",
               "name": "Fax",
               "items": [
                 {
@@ -308,7 +316,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-marker.twig",
+              "icon": "marker",
               "name": "Address",
               "items": [
                 {
@@ -453,7 +461,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [
                 {
@@ -471,7 +479,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [

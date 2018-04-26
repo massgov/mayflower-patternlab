@@ -87,7 +87,7 @@
               "downloadLinks": [{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "icon": "doc-pdf",
                   "decorativeLink": {
                     "text": "PDF resource item",
                     "href": "#",
@@ -100,7 +100,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "icon": "laptop",
                   "decorativeLink": {
                     "text": "Link to an online form",
                     "href": "#",
@@ -246,7 +246,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [
                 {
@@ -264,7 +264,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [
@@ -283,7 +283,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
+              "icon": "fax-icon",
               "name": "Fax",
               "items": [
                 {
@@ -301,7 +301,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-marker.twig",
+              "icon": "marker",
               "name": "Address",
               "items": [
                 {
@@ -428,7 +428,7 @@
           },
           "groups": [
             {
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [
                 {
@@ -446,7 +446,7 @@
               ]
             },
             {
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
               "hidden": "",
               "items": [

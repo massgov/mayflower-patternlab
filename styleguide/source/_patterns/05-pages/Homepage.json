@@ -1,6 +1,6 @@
 {
-  "hideHeaderSearch": true,
-
+  "hideHeaderSearch": false,
+  "hideBackTo": true,
   "searchBanner": {
     "bgWide": "../../assets/images/placeholder/1600x800.png",
     "bgNarrow": "../../assets/images/placeholder/800x800.png",
@@ -72,7 +72,7 @@
         }
       }
     }],
-    
+
     "sideBar": null
   }]
 }

@@ -51,13 +51,13 @@
       "id": "handicapped",
       "label": "Wheelchair accessible",
       "checked": "false",
-      "icon": "@atoms/05-icons/svg-wheelchair.twig"
+      "icon": "wheelchair"
     },{
       "value": "open",
       "id": "open",
       "label": "Open now",
       "checked": "false",
-      "icon": "@atoms/05-icons/svg-open-now.twig"
+      "icon": "open-now"
     }],
     "submitButton": "Submit"   
   }

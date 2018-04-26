@@ -3,7 +3,7 @@
 
   @media ($bp-x-large-min) {
     max-width: none;
-    min-height: 620px;
+    min-height: 500px;
   }
 
   &__title {
@@ -71,11 +71,17 @@
 
         @media ($bp-small-min) {
           display: flex;
+          flex-wrap: wrap;
+        }
+
+        @media ($bp-x-large-min) {
+          padding-right: 325px;
         }
       }
 
       .ma__icon-links__item {
-        margin-right: 1rem;
+        margin-left: 1rem;
+        max-width: 45%;
       }
     }
 
@@ -88,7 +94,6 @@
 
       @media ($bp-small-min) {
         margin-bottom: 0;
-        margin-right: 1rem;
       }
 
       &::after {

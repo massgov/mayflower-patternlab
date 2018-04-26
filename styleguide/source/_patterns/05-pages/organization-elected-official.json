@@ -10,11 +10,16 @@
     "icon": null,
     "title": "Office of the Treasurer & Receiver General",
     "titleSubText": "(TRE)",
-    "description": "Treasurer & Receiver General",
-    "link": {
+    "primaryLink": {
+      "text": "Charlie Baker",
+      "info": "",
+      "description": "Governor"
+    },
+    "secondaryLink": {
       "text": "Deborah B. Goldberg",
       "href": "#",
-      "info": ""
+      "info": "",
+      "description": "Treasurer & Receiver General"
     }
   },
 
@@ -163,28 +168,138 @@
               "centered": ""
             },
             "items": [{
-              "icon": "@atoms/05-icons/svg-facebook.twig",
+              "icon": "facebook",
               "link": {
                 "href": "#",
-                "text": "Facebook",
+                "text": "MassRevenue Facebook",
                 "chevron": ""
               }
             },{
-              "icon": "@atoms/05-icons/svg-twitter.twig",
+              "icon": "twitter",
               "link": {
                 "href": "#",
-                "text": "Twitter",
+                "text": "MassRevenue Twitter",
                 "chevron": ""
               }
             },{
-              "icon": "@atoms/05-icons/svg-instagram.twig",
+              "icon": "youtube",
               "link": {
                 "href": "#",
-                "text": "Instagram",
+                "text": "DOR Media YouTube",
+                "chevron": ""
+              }
+            },{
+              "icon": "blog",
+              "link": {
+                "href": "#",
+                "text": "OpenDOR Blog in which we write way too much for a social link",
+                "chevron": ""
+              }
+            },{
+              "icon": "linkedin",
+              "link": {
+                "href": "#",
+                "text": "MassRevenue Linkedin",
                 "chevron": ""
               }
             }]
           }
+        }
+      }
+    },{
+      "path": "@organisms/by-author/contact-list.twig",
+      "data": {
+        "contactList": {
+          "viewSpecific": false,
+          "compHeading": {
+            "title": "Contact Us",
+            "sub": "",
+            "color": "",
+            "id": "contact us",
+            "centered": ""
+          },
+          "image": {
+            "alt": "eohhs logo",
+            "src": "../../assets/images/placeholder/230x130.png",
+            "height": "130",
+            "width": "230"
+          },
+          "contacts":[{
+            "accordion": false,
+            "columns": true,
+            "isExpanded": false,
+            "groups": [{
+              "icon": "",
+              "name": "",
+              "items": [{
+                "type": "address",
+                "label": "",
+                "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+                "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
+                "details": ""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "value":"(413) 499-4262",
+                "link":"14134994262",
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "email",
+                "label":"Email:",
+                "value":"email@email.com",
+                "link":"email@email.com",
+                "details":""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "value":"(413) 499-4262",
+                "link":"14134994262",
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "email",
+                "label":"Email:",
+                "value":"email@email.com",
+                "link":"email@email.com",
+                "details":""
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-phone.twig",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "label":"Main:",
+                "value":"(413) 499-4262",
+                "link":"14134994262",
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              }]
+            },{
+              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "name": "Online",
+              "items": [{
+                "type": "email",
+                "label":"Email:",
+                "value":"email@email.com",
+                "link":"email@email.com",
+                "details":""
+              }]
+            }]
+          }]
         }
       }
     },{
@@ -237,11 +352,7 @@
           },{
             "href":"#",
             "text":"Lorem ipsum dolor sit amet.",
-            "info": "",
-            "image": {
-              "src": "../../assets/images/placeholder/250x250.png",
-              "alt": "logo"
-            }
+            "info": ""
           },{
             "href":"#",
             "text":"Lorem ipsum dolor sit amet, consectetur.",
@@ -268,20 +379,8 @@
             }
           },{
             "href":"#",
-            "text":"Lorem ipsum dolor sit amet",
-            "info": "",
-            "image": {
-              "src": "../../assets/images/placeholder/250x250.png",
-              "alt": "logo"
-            }
-          },{
-            "href":"#",
-            "text":"Lorem ipsum dolor sit amet, consectetur.",
-            "info": "",
-            "image": {
-              "src": "../../assets/images/placeholder/250x250.png",
-              "alt": "logo"
-            }
+            "text":"Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            "info": ""
           }]
         }
       }
@@ -642,250 +741,6 @@
             "info": "view all past events for Office of the Treasurer & Receiver General",
             "chevron": true
           }
-        }
-      }
-    },{
-      "path":"@organisms/by-author/contact-list.twig",
-      "data": {
-        "contactList": {
-          "viewSpecific": false,
-          "compHeading": {
-            "title": "Get in touch",
-            "sub": "",
-            "color": "",
-            "id": "contacts",
-            "centered": ""
-          },
-
-          "contacts":[{
-            "accordion": true,
-            "isExpanded": false,
-            "subTitle": {
-              "href":"",
-              "text": "Department of Conservation and Recreation"
-            },
-            "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
-              "name": "Phone",
-              "items": [{
-                "type": "phone",
-                "property": "",
-                "label":"Main:",
-                "link": {
-                  "href": "+14134994262",
-                  "text": "(413) 499-4262",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"Toll Free:",
-                "link":{
-                  "href": "+18004324321",
-                  "text": "(800) 432-4321",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"TTY:",
-                "link": {
-                  "href":"+16175557777",
-                  "text": "(617) 555-7777",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"For those who need accessible services"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"Voice Relay:",
-                "link":{
-                  "href":"16175555255",
-                  "text": "(617) 555-5255",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "name": "Online",
-              "hidden": "",
-              "items": [{
-                "type": "email",
-                "property": "",
-                "label":"Email:",
-                "link": {
-                  "href":"email@email.com",
-                  "text": "email@email.com",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              },{
-                "type": "online",
-                "property": "",
-                "label":"Web:",
-                "link": {
-                  "href":"#",
-                  "text": "Contact Form",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
-              "name": "Fax",
-              "items": [{
-                "type": "fax",
-                "property": "",
-                "label":"Main:",
-                "link": {
-                  "href":"+14134994262",
-                  "text": "(413) 499-4262",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"Please allow 24 hours for a response"
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-marker.twig",
-              "name": "Address",
-              "items": [{
-                "type": "address",
-                "property": "",
-                "label": "",
-                "address": "555 Park Drive\nBoston, MA 02231",
-                "link": {
-                  "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-                  "text": "directions",
-                  "info": "",
-                  "property": ""
-                },
-                "details": ""
-              }]
-            }]
-          },{
-            "accordion": true,
-            "isExpanded": false,
-            "subTitle": {
-              "href":"",
-              "text": "Department of Conservation and Recreation"
-            },
-            "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
-              "name": "Phone",
-              "items": [{
-                "type": "phone",
-                "property": "",
-                "label":"Main:",
-                "link": {
-                  "href": "+14134994262",
-                  "text": "(413) 499-4262",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"Toll Free:",
-                "link":{
-                  "href": "+18004324321",
-                  "text": "(800) 432-4321",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"TTY:",
-                "link": {
-                  "href":"+16175557777",
-                  "text": "(617) 555-7777",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"For those who need accessible services"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"Voice Relay:",
-                "link":{
-                  "href":"16175555255",
-                  "text": "(617) 555-5255",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "name": "Online",
-              "hidden": "",
-              "items": [{
-                "type": "email",
-                "property": "",
-                "label":"Email:",
-                "link": {
-                  "href":"email@email.com",
-                  "text": "email@email.com",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              },{
-                "type": "online",
-                "property": "",
-                "label":"Web:",
-                "link": {
-                  "href":"#",
-                  "text": "Contact Form",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
-              "name": "Fax",
-              "items": [{
-                "type": "fax",
-                "property": "",
-                "label":"Main:",
-                "link": {
-                  "href":"+14134994262",
-                  "text": "(413) 499-4262",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"Please allow 24 hours for a response"
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-marker.twig",
-              "name": "Address",
-              "items": [{
-                "type": "address",
-                "property": "",
-                "label": "",
-                "address": "555 Park Drive\nBoston, MA 02231",
-                "link": {
-                  "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-                  "text": "directions",
-                  "info": "",
-                  "property": ""
-                },
-                "details": ""
-              }]
-            }]
-          }]
         }
       }
     }]

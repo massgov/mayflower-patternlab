@@ -16,17 +16,17 @@
       "items": [{
         "altText": "Follow us on Facebook",
         "href": "#",
-        "icon": "@atoms/05-icons/svg-facebook.twig",
+        "icon": "facebook",
         "linkType": "facebook"
       },{
         "altText": "Follow us on Twitter",
         "href": "#",
-        "icon": "@atoms/05-icons/svg-twitter.twig",
+        "icon": "twitter",
         "linkType": "twitter"
       },{
         "altText": "Follow us on LinkedIn",
         "href": "#",
-        "icon": "@atoms/05-icons/svg-linkedin.twig",
+        "icon": "linkedin",
         "linkType": "linkedin"
       }]
     },
@@ -83,7 +83,7 @@
       "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
-          "icon": "@atoms/05-icons/svg-alert.twig",
+          "icon": "alert",
           "text": "Public testimony begins at 10:30 a.m."
         }
       }

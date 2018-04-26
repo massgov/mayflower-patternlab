@@ -9,7 +9,18 @@ $function = new Twig_SimpleFunction('icon', function($name) {
     $name = preg_replace('/^svg-/', '', $iconname);
   }
   $path = sprintf('%s/../../assets/images/svg-icons/%s.svg', __DIR__, $name);
-  return file_get_contents($path);
+
+  // Return two SVGs:
+  // <svg><use id="abc" /></svg>
+  // <svg><symbol id="abc">...</symbol></svg>
+  // This allows us to mirror what mass.gov is doing for styling purposes.
+  $helper = new \PatternLab\IconHelper();
+  $id = $helper->getId($path);
+  $svg = $helper->load($path);
+  $svg->setAttribute('id', $id);
+  $symbol = $helper->exportAsSymbol($svg);
+
+  return $helper->getSvgUse($id) . $helper->wrapSymbols([$symbol]);
 }, [
   'is_safe' => ['html']
 ]);

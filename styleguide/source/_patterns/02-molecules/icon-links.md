@@ -6,7 +6,7 @@ This is a list of links with a corresponding icon.
 
 ### Pattern Contains
 * Comp Heading
-* Decorative Link
+* Icon List Item
 
 ### Variables
 ~~~

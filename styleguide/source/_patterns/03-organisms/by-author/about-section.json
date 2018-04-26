@@ -52,21 +52,21 @@
         "centered": ""
       },
       "items": [{
-        "icon": "@atoms/05-icons/svg-facebook.twig",
+        "icon": "facebook",
         "link": {
           "href": "#",
           "text": "Facebook",
           "chevron": ""
         }
       },{
-        "icon": "@atoms/05-icons/svg-twitter.twig",
+        "icon": "twitter",
         "link": {
           "href": "#",
           "text": "Twitter",
           "chevron": ""
         }
       },{
-        "icon": "@atoms/05-icons/svg-instagram.twig",
+        "icon": "instagram",
         "link": {
           "href": "#",
           "text": "Instagram",

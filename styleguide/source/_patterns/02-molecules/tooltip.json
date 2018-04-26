@@ -4,7 +4,7 @@
     "location": "",
     "info": "show more information about this thing",
     "openText": "Show Tooltip",
-    "openIcon": "@atoms/05-icons/svg-question-mark.twig",
+    "openIcon": "question-mark",
     "closeText": "Close",
     "title": "What does this term mean?",
     "level": "",

@@ -3,7 +3,7 @@
     {% if imageLink.image %}
       <img class="ma__image-link__image" src="{{imageLink.image.src}}" alt="{{imageLink.image.alt}}">
     {% endif %}
-    <span class="ma__image-link__text">{{imageLink.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</span>
+    <span class="ma__image-link__text">{{imageLink.text}}&nbsp;{{ icon('arrow') }}</span>
   </a>
 {% else %}
   <div class="ma__image-link">
