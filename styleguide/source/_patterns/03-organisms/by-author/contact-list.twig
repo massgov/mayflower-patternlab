@@ -13,6 +13,10 @@
     {% set contactHeading = (sidebarHeading.level ? : contactHeading) + 1 %}
   {% endif %}
 
+  {% if contactList.image %}
+    {% set image = contactList.image %}
+    {% include "@atoms/09-media/image.twig" %}
+  {% endif %}
   {% block contactListContacts %}
     {% for contact in contactList.contacts %}
       {% set contactUs = contact|merge({"level": contactHeading}) %}

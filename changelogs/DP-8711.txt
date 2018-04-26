@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Added
+minor
+- DP-8711: Added support for multiple entries in the page-banner-linked organism.
