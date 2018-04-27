@@ -11,8 +11,8 @@
   //  vertical-align: middle;
 
     img {
-      width: 47px;
-      height: 47px;
+      width: 45px;// 47px
+      height: 45px;// 47px
 
       // TO DO:  SET UP VIEW PORT FOR
       @media ($bp-small-max) {
@@ -22,15 +22,16 @@
     }
 
     span {
-      font-size: 2rem;
+      font-size: 1.9rem;
       display: inline-block;
       width: 153px;
       margin-left: 0.3rem;
       line-height: 1;
 
-      font-size: 2rem;
       font-weight: 400;
       line-height: 1;
+ //     letter-spacing: 0.05rem;
+      padding-bottom: 0.1rem;
 
 
       @media ($bp-small-max) {
