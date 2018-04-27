@@ -43,7 +43,20 @@ const defaults = {
         // compiled into vendor-generated.js.
         bower: path.resolve(source, "assets/js/vendor"),
         // The following paths will be run through browserify/babelify.
-        js: path.resolve(source, "assets/js/*.js"),
+        js: path.resolve(source, "assets/js/index.js"),
+        // The following paths will be included in the vendor JS bundle.
+        // Note: We've excluded most polyfills here.  Those should be loaded
+        // via polyfill.io.
+        js_vendor: [
+            'jquery',
+            'handlebars/dist/handlebars.js',
+            'fitvids/dist/fitvids.js',
+            'moment',
+            'pikaday',
+            'svg4everybody',
+            'twig',
+            path.resolve(source, 'assets/js/vendor/polyfill-init.js')
+        ],
         // The following paths will be run through SASS.
         scss: path.resolve(source, "assets/scss/**/*.scss")
     },

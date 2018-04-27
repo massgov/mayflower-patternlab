@@ -1,5 +1,5 @@
 export default function (window,document,$,undefined) {
 
-  $('.js-ma-responsive-video').fitVids();
+  fitvids('.js-ma-responsive-video');
 
 }(window,document,jQuery);
