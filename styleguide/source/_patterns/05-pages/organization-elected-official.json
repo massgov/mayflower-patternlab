@@ -10,11 +10,16 @@
     "icon": null,
     "title": "Office of the Treasurer & Receiver General",
     "titleSubText": "(TRE)",
-    "description": "Treasurer & Receiver General",
-    "link": {
+    "primaryLink": {
+      "text": "Charlie Baker",
+      "info": "",
+      "description": "Governor"
+    },
+    "secondaryLink": {
       "text": "Deborah B. Goldberg",
       "href": "#",
-      "info": ""
+      "info": "",
+      "description": "Treasurer & Receiver General"
     }
   },
 

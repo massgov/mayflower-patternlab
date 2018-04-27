@@ -2,7 +2,7 @@
 
 {% set colorClass = pageBanner.color ? "ma__page-banner--" ~ pageBanner.color : '' %}
 
-{% set linkedClass = pageBanner.link ? "ma__page-banner--linked" : '' %}
+{% set linkedClass = pageBanner.primaryLink ? "ma__page-banner--linked" : '' %}
 
 <section class="ma__page-banner {{ sizeClass }} {{ colorClass }} {{ linkedClass }}">
   {% if pageBanner.size == "columns" %}
@@ -47,9 +47,35 @@
             <abbr title="{{ pageBanner.title }}"> {{ pageBanner.titleSubText }}</abbr>
           {% endif %}
         </h1>
-        {% if pageBanner.link and not (pageBanner.size == "columns") %}
-          {% set decorativeLink = pageBanner.link %}
-          {% include "@atoms/decorative-link.twig" %}
+        {% if pageBanner.primaryLink and not (pageBanner.size == "columns") %}
+          {% set decorativeLink = pageBanner.primaryLink %}
+          {% if pageBanner.primaryLink.href %}
+            {% include "@atoms/decorative-link.twig" %}
+          {% else %}
+            <p class="ma__page-banner__unlinked-title">
+              {{pageBanner.primaryLink.text}}
+            </p>
+          {% endif %}
+          {% if pageBanner.primaryLink.description %}
+            <div class="ma__page-banner__description">
+              {{pageBanner.primaryLink.description}}
+            </div>
+          {% endif %}
+        {% endif %}
+        {% if pageBanner.secondaryLink and not (pageBanner.size == "columns") %}
+          {% set decorativeLink = pageBanner.secondaryLink %}
+          {% if pageBanner.secondaryLink.href %}
+            {% include "@atoms/decorative-link.twig" %}
+          {% else %}
+            <p class="ma__page-banner__unlinked-title">
+              {{pageBanner.secondaryLink.text}}
+            </p>
+          {% endif %}
+          {% if pageBanner.secondaryLink.description %}
+            <div class="ma__page-banner__description">
+              {{pageBanner.secondaryLink.description}}
+            </div>
+          {% endif %}
         {% endif %}
         {% if pageBanner.description and not (pageBanner.size == "columns") %}
           <p class="ma__page-banner__description">
