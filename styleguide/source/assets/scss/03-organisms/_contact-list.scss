@@ -1,4 +1,5 @@
 .ma__contact-list {
+  overflow: auto;
 
   .pre-content > &,
   .post-content > &,
@@ -9,7 +10,7 @@
   &--view-specific {
 
     .main-content--two .page-content & {
-      
+
       @media ($bp-large-min) {
         display: none;
 
@@ -20,7 +21,7 @@
     }
 
     .sidebar & {
-      
+
       @media ($bp-large-max) {
         display: none;
 
@@ -42,4 +43,12 @@
       }
     }
   }
+
+  .ma__image {
+    margin-bottom: 1rem;
+    @media ($bp-large-min) {
+      float: right;
+    }
+  }
+
 }
