@@ -4,17 +4,15 @@
     display: inline-block;
     font-size: 0px;
     width: 164px;
+   margin: 0 auto;
 
     display: flex;
     align-items: center;
-
-  //  vertical-align: middle;
 
     img {
       width: 45px;// 47px
       height: 45px;// 47px
 
-      // TO DO:  SET UP VIEW PORT FOR
       @media ($bp-small-max) {
         width: 42px;
         height: 42px;
@@ -30,7 +28,6 @@
 
       font-weight: 400;
       line-height: 1;
- //     letter-spacing: 0.05rem;
       padding-bottom: 0.1rem;
 
 
