@@ -5,7 +5,7 @@
 {% set linkedClass = pageBanner.primaryLink ? "ma__page-banner--linked" : '' %}
 
 <section class="ma__page-banner {{ sizeClass }} {{ colorClass }} {{ linkedClass }}">
-  {% if pageBanner.size == "columns" %}
+  {% if pageBanner.size == "columns" or linkedClass %}
     <style>
       .ma__page-banner__image {
         background-image: url('{{ pageBanner.bgNarrow }}');
@@ -31,7 +31,7 @@
     </style>
   {% endif %}
   <div class="ma__page-banner__container">
-    {% if pageBanner.size and pageBanner.size == "columns" %}
+    {% if (pageBanner.size and pageBanner.size == "columns") or linkedClass %}
       <div class="ma__page-banner__image"></div>
     {% endif %}
     <div class="ma__page-banner__content" property="mainEntityOfPage">

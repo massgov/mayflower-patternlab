@@ -1,9 +1,14 @@
 {% set noBgClass = "" %}
+{% set colorClass = "" %}
 
 {% if not actionFinder.bgWide %}
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
-<section class="ma__action-finder {{ noBgClass }}" id="{{ actionFinder.id }}">
+
+{% if actionFinder.color %}
+  {% set colorClass = "ma__action-finder--color-" ~ actionFinder.color %}
+{% endif %}
+<section class="ma__action-finder {{ noBgClass }} {{ colorClass }}" id="{{ actionFinder.id }}">
   {% if actionFinder.bgWide %}
     <style>
       #{{ actionFinder.id }} {

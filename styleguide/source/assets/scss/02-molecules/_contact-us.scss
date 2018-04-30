@@ -135,6 +135,27 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    // non accordions (1 or 2 items)
+    .ma__contact-us__content-wrap {
+      .ma__contact-group:first-child {
+        border-left: 0;
+        padding-left: 0;
+      }
+
+      .ma__contact-group:first-child:last-child {
+        width: 100%;
+        max-width: none;
+      }
+
+      @media ($bp-small-max) {
+        .ma__contact-group {
+          width: 100%;
+          padding-left: 0;
+          border-left: 0;
+        }
+      }
+    }
+
     .ma__contact-group {
       width: 100%;
       @media ($bp-medium-min) {
@@ -144,7 +165,7 @@
 
     > .ma__contact-group {
       @media ($bp-medium-min) {
-        &:nth-child(even) {
+        &:nth-child(even):not(:last-child) {
           padding-right: 30px;
           border-right: 1px solid #dcdcdc;
         }
@@ -176,7 +197,7 @@
           &:nth-child(even) {
             padding-left: 30px;
           }
-          &:nth-child(odd) {
+          &:nth-child(odd):not(:last-child) {
             padding-right: 30px;
             border-right: 1px solid #dcdcdc;
           }

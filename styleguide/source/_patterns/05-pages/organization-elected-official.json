@@ -10,11 +10,16 @@
     "icon": null,
     "title": "Office of the Treasurer & Receiver General",
     "titleSubText": "(TRE)",
-    "description": "Treasurer & Receiver General",
-    "link": {
+    "primaryLink": {
+      "text": "Charlie Baker",
+      "info": "",
+      "description": "Governor"
+    },
+    "secondaryLink": {
       "text": "Deborah B. Goldberg",
       "href": "#",
-      "info": ""
+      "info": "",
+      "description": "Treasurer & Receiver General"
     }
   },
 
@@ -234,16 +239,6 @@
                 "details": ""
               }]
             },{
-              "icon": "@atoms/05-icons/svg-phone.twig",
-              "name": "Phone",
-              "items": [{
-                "type": "phone",
-                "label":"Main:",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              }]
-            },{
               "icon": "@atoms/05-icons/svg-laptop.twig",
               "name": "Online",
               "items": [{
@@ -254,16 +249,6 @@
                 "details":""
               }]
             },{
-              "icon": "@atoms/05-icons/svg-phone.twig",
-              "name": "Phone",
-              "items": [{
-                "type": "phone",
-                "label":"Main:",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              }]
-            },{
               "icon": "@atoms/05-icons/svg-laptop.twig",
               "name": "Online",
               "items": [{
@@ -272,16 +257,6 @@
                 "value":"email@email.com",
                 "link":"email@email.com",
                 "details":""
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-phone.twig",
-              "name": "Phone",
-              "items": [{
-                "type": "phone",
-                "label":"Main:",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
               }]
             },{
               "icon": "@atoms/05-icons/svg-laptop.twig",
@@ -387,6 +362,7 @@
           "id": "GUID831741781374893",
           "bgWide": null,
           "bgNarrow": null,
+          "color": "green",
           "title": "What would you like to do?",
           "featuredHeading":"Top actions and services",
           "generalHeading":"Other actions and services",
