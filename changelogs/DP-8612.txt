@@ -1,3 +1,0 @@
-Added
-Minor
-- DP-8612: Add column-layout variation to 'contact us'
