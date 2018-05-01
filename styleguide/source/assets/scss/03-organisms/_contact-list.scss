@@ -52,7 +52,7 @@
 
   .ma__image {
     margin-bottom: 1rem;
-    @media ($bp-large-min) {
+    @media ($bp-medium-min) {
       float: right;
     }
   }
