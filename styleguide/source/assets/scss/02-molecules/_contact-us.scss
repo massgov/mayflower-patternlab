@@ -130,6 +130,46 @@
     padding-top: 20px;
   }
 
+  &--columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .ma__contact-group,
+    .ma__contact-us__extra {
+      width: 100%;
+      @media ($bp-medium-min) {
+        width: calc(50% - 15px); // account for margin on desktop
+      }
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    .ma__contact-us__expand {
+      @media ($bp-small-min) {
+        display: none;
+      }
+    }
+
+    .ma__contact-us__extra {
+      @media ($bp-small-min) {
+        display: block !important;
+      }
+      @media ($bp-medium-min) {
+        padding-left: 30px;
+        margin-left: 30px;
+        border-left: 1px solid #dcdcdc;
+      }
+      .ma__contact-group {
+        margin-bottom: 20px;
+      }
+
+    }
+  }
+
+
   &__expand {
     padding-top:20px;
     text-align: left;

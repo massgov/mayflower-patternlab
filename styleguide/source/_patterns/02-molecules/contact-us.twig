@@ -12,7 +12,7 @@
 {% set groupHeading = contactUs.level ? : 2 %}
 
 <section
-  class="ma__contact-us {{ accordionClass }} {{ contactUs.isExpanded ? 'is-open':'' }}">
+  class="ma__contact-us {{ accordionClass }} {{ contactUs.isExpanded ? 'is-open':'' }} {{ contactUs.columns ? 'ma__contact-us--columns':'' }}">
 
   {% if contactUs.subTitle %}
     {% if outerAccordion %}
