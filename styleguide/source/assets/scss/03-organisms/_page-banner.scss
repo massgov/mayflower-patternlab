@@ -47,7 +47,7 @@ $page-banner-height: 330px;
 
   &--linked {
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     height: auto;
     min-height: 240px;
     @media ($bp-large-extended) {
@@ -67,6 +67,10 @@ $page-banner-height: 330px;
       bottom: 0;
       left: 500px;
       background-size: cover;
+      background-position: center;
+      @media (min-width: $max-width) {
+        right: calc(-100vw + #{$max-width});
+      }
       @media ($bp-large-extended) {
         left: 0;
         top: 100%;
