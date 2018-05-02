@@ -6,11 +6,11 @@
     "icon": null,
     "title": "Office of the Treasurer & Receiver General",
     "titleSubText": "(TRE)",
-    "description": "Treasurer & Receiver General",
-    "link": {
+    "primaryLink": {
       "text": "Deborah B. Goldberg",
       "href": "#",
-      "info": ""
+      "info": "",
+      "description": "Treasurer & Receiver General"
     }
   },
   "stackedRows": [
