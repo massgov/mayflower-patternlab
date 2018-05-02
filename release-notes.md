@@ -27,6 +27,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - DP-8730: Elected--services heading color change.
 - DP-8738: Elected--limit space of contact section logo.
 
+### Removed
+- DP-8602: Remove unused slick plugin
+
 ## 5.20.1 (4/26/2018)
 
 ### Fixed
