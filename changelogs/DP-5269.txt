@@ -1,0 +1,2 @@
+Changed
+- DP-5269: Changed the `margin-top` from 65px to 30px in the sidebar heading.
