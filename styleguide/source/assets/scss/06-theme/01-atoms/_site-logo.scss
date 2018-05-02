@@ -4,12 +4,14 @@
 
     span {
       font-weight: 400;
-      line-height: 1;
-      padding-bottom: 0.1rem;
       color: $c-theme-green;
 
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: $c-theme-green;
+
+      @media ($bp-small-max) {
+        -webkit-text-stroke-width: 0.03rem;
+      }
     }
   }
 }
