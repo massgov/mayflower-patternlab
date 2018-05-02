@@ -10,9 +10,11 @@
     </div>
   {% endif %}
   <div class="ma__sections-3up__container">
-    {% for sectionLinks in sectionThreeUp.sections %}
-      {% set sectionLinks = sectionLinks|merge({'level': linkHeading }) %}
-      {% include "@molecules/section-links.twig" with sectionLinks %}
-    {% endfor %}
+    {% block sectionLinks %}
+      {% for sectionLinks in sectionThreeUp.sections %}
+        {% set sectionLinks = sectionLinks|merge({'level': linkHeading }) %}
+        {% include "@molecules/section-links.twig" with sectionLinks %}
+      {% endfor %}
+    {% endblock %}
   </div>
 </section>

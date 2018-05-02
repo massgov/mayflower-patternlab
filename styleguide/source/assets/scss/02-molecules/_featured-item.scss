@@ -1,6 +1,6 @@
 .ma__featured-item {
   @include ma-aspect-ratio(4, 3);
-  display: flex;
+  display: block;
   max-width: 100%;
   width: 100%;
   overflow: hidden;
