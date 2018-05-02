@@ -3,7 +3,7 @@
 {% if outerAccordion %}
   {% set accordionClass = "ma__contact-us--accordion js-accordion" %}
 {% else %}
-  {% if contactUs.groups|length > 2 or contactUs.groups > 2 %}
+  {% if contactUs.groups|length > 2 or contactUs.showMore %}
     {% set accordionClass = "js-accordion" %}
     {% set inlineAccordion = true %}
   {% endif %}
