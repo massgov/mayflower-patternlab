@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Changed
+Patch
+- DP-7761: Allows the title / hover of a map marker to be passed in separate from the name within the window info.

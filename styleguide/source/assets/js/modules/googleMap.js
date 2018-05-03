@@ -154,7 +154,7 @@ export default function (window,document,$,undefined) {
    */
   function initMarkers(map, markers) {
     let initializedMarkers = [];
-    markers.forEach(function(data) {
+    markers.forEach((data) => {
       let markerData = {
         position: new google.maps.LatLng({
           lat: data.position.lat,
@@ -162,7 +162,7 @@ export default function (window,document,$,undefined) {
         }),
         label: data.label,
         infoWindow: data.infoWindow,
-        title: 'Marker: ' + data.infoWindow.name
+        title: 'Marker: ' + (data.hasOwnProperty('title') ? data.title : data.infoWindow.name)
       };
       let marker =  new google.maps.Marker(markerData);
       let infoData = infoTransform(markerData.infoWindow);
