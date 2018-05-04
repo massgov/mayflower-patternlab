@@ -10,7 +10,7 @@
     "markers": [{
       "position": {
         "lat": 42.366565,
-        "lng": -71.058940 
+        "lng": -71.058940
       },
       "label": "A",
       "infoWindow": {
@@ -24,16 +24,17 @@
     },{
       "position": {
         "lat": 42.358795,
-        "lng": -71.063858 
+        "lng": -71.063858
       },
       "label": "B",
       "infoWindow": {
-        "name": "Department of Recreation and Fun",
+        "name": "<a href=\"#\">Department of Recreation and Fun</a>",
         "phone": "16176261250",
         "fax": "",
         "email": "mass.parks@state.ma.us",
         "address": "24 Beacon St\nBoston, MA 02133"
-      }
+      },
+      "title": "Department of Recreation and Fun"
     }]
   }
 }
