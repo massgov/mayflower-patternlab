@@ -10,11 +10,16 @@
     "icon": null,
     "title": "Office of the Treasurer & Receiver General",
     "titleSubText": "(TRE)",
-    "description": "Treasurer & Receiver General",
-    "link": {
+    "primaryLink": {
+      "text": "Charlie Baker",
+      "info": "",
+      "description": "Governor"
+    },
+    "secondaryLink": {
       "text": "Deborah B. Goldberg",
       "href": "#",
-      "info": ""
+      "info": "",
+      "description": "Treasurer & Receiver General"
     }
   },
 
@@ -224,8 +229,8 @@
             "columns": true,
             "isExpanded": false,
             "groups": [{
-              "icon": "",
-              "name": "",
+              "icon": "marker",
+              "name": "Address",
               "items": [{
                 "type": "address",
                 "label": "",
@@ -234,64 +239,94 @@
                 "details": ""
               }]
             },{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
               "items": [{
                 "type": "phone",
+                "property": "",
                 "label":"Main:",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
                 "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "name": "Online",
-              "items": [{
-                "type": "email",
-                "label":"Email:",
-                "value":"email@email.com",
-                "link":"email@email.com",
-                "details":""
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-phone.twig",
-              "name": "Phone",
-              "items": [{
+              },{
                 "type": "phone",
-                "label":"Main:",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
+                "property": "",
+                "label":"Toll Free:",
+                "link":{
+                  "href": "+18004324321",
+                  "text": "(800) 432-4321",
+                  "info": "",
+                  "property": ""
+                },
                 "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
-              "name": "Online",
-              "items": [{
-                "type": "email",
-                "label":"Email:",
-                "value":"email@email.com",
-                "link":"email@email.com",
-                "details":""
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-phone.twig",
-              "name": "Phone",
-              "items": [{
+              },{
                 "type": "phone",
-                "label":"Main:",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+                "property": "",
+                "label":"TTY:",
+                "link": {
+                  "href":"+16175557777",
+                  "text": "(617) 555-7777",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"For those who need accessible services"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"Voice Relay:",
+                "link":{
+                  "href":"16175555255",
+                  "text": "(617) 555-5255",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
+              "hidden": "",
               "items": [{
                 "type": "email",
+                "property": "",
                 "label":"Email:",
-                "value":"email@email.com",
-                "link":"email@email.com",
+                "link": {
+                  "href":"email@email.com",
+                  "text": "email@email.com",
+                  "info": "",
+                  "property": ""
+                },
                 "details":""
+              },{
+                "type": "online",
+                "property": "",
+                "label":"Web:",
+                "link": {
+                  "href":"#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
+            },{
+              "icon": "fax-icon",
+              "name": "Fax",
+              "items": [{
+                "type": "fax",
+                "property": "",
+                "label":"Main:",
+                "link": {
+                  "href":"+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"Please allow 24 hours for a response"
               }]
             }]
           }]
@@ -387,6 +422,7 @@
           "id": "GUID831741781374893",
           "bgWide": null,
           "bgNarrow": null,
+          "color": "green",
           "title": "What would you like to do?",
           "featuredHeading":"Top actions and services",
           "generalHeading":"Other actions and services",

@@ -18,8 +18,8 @@
       "columns": true,
       "isExpanded": false,
       "groups": [{
-        "icon": "",
-        "name": "",
+        "icon": "marker",
+        "name": "Address",
         "items": [{
           "type": "address",
           "label": "",
@@ -116,22 +116,6 @@
             "property": ""
           },
           "details":"Please allow 24 hours for a response"
-        }]
-      },{
-        "icon": "marker",
-        "name": "Address",
-        "items": [{
-          "type": "address",
-          "property": "",
-          "label": "",
-          "address": "555 Park Drive\nBoston, MA 02231",
-          "link": {
-            "href": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-            "text": "directions",
-            "info": "",
-            "property": ""
-          },
-          "details": ""
         }]
       }]
     }]
