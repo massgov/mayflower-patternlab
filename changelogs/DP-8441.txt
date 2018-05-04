@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Minor
-- DP-8441: Use explicit height instead of responsive iframe container if height is provided.

@@ -13,6 +13,28 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.21.0 (5/2/2018)
+
+### Added
+- DP-8711: Added support for multiple entries in the page-banner-linked organism.
+
+### Changed
+- DP-8441: Use explicit height instead of responsive iframe container if height is provided.
+- DP-8516: Provides twig blocks to support overrides and template mapping of data for person bio page.
+- DP-8712: Support 2nd executive in elected official About Row as option.
+- DP-8738: Add additional blocks to contact us pattern.
+- DP-8612: Elected--contact row adjustments.
+- DP-8730: Elected--services heading color change.
+- DP-8738: Elected--limit space of contact section logo.
+
+### Removed
+- DP-8602: Remove unused slick plugin
+
+## 5.20.1 (4/26/2018)
+
+### Fixed
+- Reverted the DP-8612: Add column-layout variation to 'contact us'.
+
 ## 5.20.0 (4/25/2018)
 
 ### Added
