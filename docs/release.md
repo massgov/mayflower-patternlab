@@ -17,7 +17,7 @@ Mayflower release managers with the necessary repo permissions can follow these 
     1. Run `npm install` in case the release includes new packages.
     1. Update the version of the npm package by editing the `version` field in the `package.json` with `#.#.#` for the release.
     1. Commit your version change from `package.json`.
-    1. Push release branch to `massgov/mayflower` (i.e. `git push <remote> release-#.#.#`). *Note that once this release branch has been pushed to GitHub a `http://mayflower.digital.mass.gov/b/release-#.#.#/index.html` will be deployed to Production for testing.*
+    1. Push release branch to `massgov/mayflower` (i.e. `git push <remote> release-#.#.#`). 
 
 ## Deployment  
 1. Wait for [the circle build](https://circleci.com/gh/massgov/mayflower) to pass, which will deploy your release branch to staging automagically :).
