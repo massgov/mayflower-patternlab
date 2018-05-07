@@ -46,12 +46,3 @@ Mayflower release managers with the necessary repo permissions can follow these 
     1. Go to the list of issues contained within the release version and copy the URL (link to this issue from release notes).
 1. Follow the [Communicate Releases](https://wiki.state.ma.us/display/massgovredesign/Communicating+Releases) instructions for Deployment Completed to email Release Notes to the team.
 1. Celebrate!!
-
-## Rollback
-In the event that a release needs to be rolled back from production, follow these steps:
-
-1. Pull down and checkout the prior release tag and check it out by running `git pull --tags` then `git checkout <prior-release-tag>` (*Note: you should see a message from git that you are in a [detached head state](https://www.git-tower.com/learn/git/faq/detached-head-when-checkout-commit) and that is okay.*)
-1. Make sure you are in `/styleguide` directory
-1. Deploy prior release tag to S3 (note: you must have the S3 credentials to do this):
-    1. `gulp patternlab:release`
-1. Validate rollback by browsing to [Prod](http://mayflower.digital.mass.gov) as well as `https://mayflower.digital.mass.gov/<current-major>/` and verifying that the home page reflects the correct version
