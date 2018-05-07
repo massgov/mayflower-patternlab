@@ -25,7 +25,27 @@
 
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
-  "stackedRows": [
+  "stackedRows": [{
+    "title": "",
+    "id": "",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+        "data": {
+          "richText": {
+            "rteElements": [{
+              "path": "atoms-paragraph",
+              "data": {
+                "paragraph" : {
+                  "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. "
+                }
+              }
+            }]
+          }
+        }
+    }],
+
+    "sideBar": []
+  },
   {
     "title":"",
     "id":"",

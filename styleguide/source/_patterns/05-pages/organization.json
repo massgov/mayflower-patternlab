@@ -12,66 +12,29 @@
     "titleSubText": "(EOHHS)"
   },
 
-  "pageHeader": {
-    "divider": true,
-    "title": "Executive Office of Health and Human Services",
-    "titleNote": "(EOHHS)",
-    "subTitle": "EOHHS oversees health and general support services to help people in Massachusetts - from young children to seniors - meet basic needs.",
-    "headerTags": null,
-    "optionalContents": [{
-      "path": "@molecules/contact-us.twig",
-      "data": {
-        "contactUs": {
-          "groups": [{
-            "icon": "",
-            "name": "",
-            "items": [{
-              "type": "address",
-              "label": "",
-              "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
-              "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
-              "details": ""
-            }]
-          },{
-            "icon": "phone",
-            "name": "Phone",
-            "items": [{
-              "type": "phone",
-              "label":"Main:",
-              "value":"(413) 499-4262",
-              "link":"14134994262",
-              "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-            }]
-          },{
-            "icon": "laptop",
-            "name": "Online",
-            "items": [{
-              "type": "email",
-              "label":"Email:",
-              "value":"email@email.com",
-              "link":"email@email.com",
-              "details":""
-            }]
-          }]
-        }
-      }
-    }],
-    "widgets": [{
-      "path": "@atoms/09-media/image.twig",
-      "data": {
-        "image": {
-          "alt": "eohhs logo",
-          "src": "../../assets/images/placeholder/230x130.png",
-          "height": "130",
-          "width": "230"
-        }
-      }
-    }]
-  },
-
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
 
   "stackedRows": [{
+    "title": "",
+    "id": "",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+        "data": {
+          "richText": {
+            "rteElements": [{
+              "path": "atoms-paragraph",
+              "data": {
+                "paragraph" : {
+                  "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. "
+                }
+              }
+            }]
+          }
+        }
+    }],
+
+    "sideBar": []
+  },{
     "title":"",
     "id":"",
     "pageContent": [{

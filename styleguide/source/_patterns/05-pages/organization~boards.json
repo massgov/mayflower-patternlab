@@ -9,78 +9,30 @@
     "title": "Forester Licensing Board",
     "titleSubText": "(FLB)"
   },
-  "pageHeader": {
-    "divider": true,
-    "title": "Forester Licensing Board",
-    "titleNote": "(FLB)",
-    "subTitle": "The Forester Licensing Board licenses people who offer professional services requiring the application of forestry principles and techniques.",
-    "headerTags": null,
-    "optionalContents": [
-      {
-        "path": "@molecules/contact-us.twig",
-        "data": {
-          "contactUs": {
-            "groups": [
-              {
-                "icon": "marker",
-                "name": "Address",
-                "items": [
-                  {
-                    "type": "address",
-                    "label": "",
-                    "value": "180 Beaman St., West Boylston, MA 01583",
-                    "link": "https://www.google.com/maps/place/180+Beaman+St,+West+Boylston,+MA+01583",
-                    "details": ""
-                  }
-                ]
-              },
-              {
-                "icon": "phone",
-                "name": "Phone",
-                "items": [
-                  {
-                    "type": "phone",
-                    "label": "Main:",
-                    "value": "508-792-7806 x318",
-                    "link": "5087927806",
-                    "details": "This line is open during certain hours"
-                  }
-                ]
-              },
-              {
-                "icon": "laptop",
-                "name": "Online",
-                "items": [
-                  {
-                    "type": "email",
-                    "label": "Email:",
-                    "value": "russell.wilmot@state.ma.us",
-                    "link": "russell.wilmot@state.ma.us",
-                    "details": ""
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    ],
-    "widgets": [
-      {
-        "path": "@atoms/09-media/image.twig",
-        "data": {
-          "image": {
-            "alt": "eohhs logo",
-            "src": "../../assets/images/placeholder/230x130.png",
-            "height": "130",
-            "width": "230"
-          }
-        }
-      }
-    ]
-  },
+
   "COMMENT": "****PAGE CONTENT COMPONENTS****",
   "stackedRows": [
+    {
+    "title": "",
+    "id": "",
+    "pageContent": [{
+      "path": "@organisms/by-author/rich-text.twig",
+        "data": {
+          "richText": {
+            "rteElements": [{
+              "path": "atoms-paragraph",
+              "data": {
+                "paragraph" : {
+                  "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. "
+                }
+              }
+            }]
+          }
+        }
+    }],
+
+    "sideBar": []
+    },
     {
       "title": "About Us",
       "id": "",
