@@ -18,8 +18,8 @@ Please follow the steps in [Contributing docs](.github/CONTRIBUTING.md) to set u
 
 ### Developer Deployment
 
-Please see [Deployment docs](docs/developer-deploy.md) for steps on deploying development work to a fork of Mayflower's Github Pages.
- 
+Every time a branch passes CircleCI it will deploy the code to a staging environment by creating the following URL `http://mayflower.digital.mass.gov/b/<branch name>/index.html` which allows the developer to share the link with reviewers to test their code.
+
 ### Production Deployment
 
 Mayflower release managers with the necessary repo permissions can see [Release docs](docs/release.md) for steps on deploying code to production (i.e. do a release).
