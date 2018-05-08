@@ -159,6 +159,10 @@
             "teaserListing": {
               "stacked": false,
               "contained": true,
+              "shownNumber": 4,
+              "expandable": true,
+              "moreItemsLabel": "Show all board members",
+              "lessItemsLabel": "Show fewer board members",
               "gridTwoColumns": true,
               "featuredItems": [
                 {
@@ -213,16 +217,6 @@
                           "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
                         }
                       }
-                    },{
-                      "path": "@atoms/decorative-link.twig",
-                      "data": {
-                        "decorativeLink": {
-                          "href": "#",
-                          "text": "More",
-                          "chevron": true,
-                          "label": ""
-                        }
-                      }
                     }
                   ]
                 }
@@ -252,16 +246,6 @@
                       "data": {
                         "paragraph": {
                           "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
-                        }
-                      }
-                    },{
-                      "path": "@atoms/decorative-link.twig",
-                      "data": {
-                        "decorativeLink": {
-                          "href": "#",
-                          "text": "More",
-                          "chevron": true,
-                          "label": ""
                         }
                       }
                     }
@@ -408,9 +392,10 @@
               "stacked": false,
               "contained": true,
               "gridTwoColumns": true,
+              "shownNumber": 2,
               "expandable": true,
-              "itemsLabel": "board members",
-              "accordionLabel": "show more board members",
+              "moreItemsLabel": "Show all board members",
+              "lessItemsLabel": "Show fewer board members",
               "compHeading": {
                 "title": "Subsection of boards",
                 "sub": "",
@@ -418,6 +403,9 @@
                 "id": "",
                 "level": 3,
                 "centered": ""
+              },
+              "description": {
+                "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
               },
               "items": [
                 {
@@ -444,16 +432,6 @@
                       "data": {
                         "paragraph": {
                           "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
-                        }
-                      }
-                    },{
-                      "path": "@atoms/decorative-link.twig",
-                      "data": {
-                        "decorativeLink": {
-                          "href": "#",
-                          "text": "More",
-                          "chevron": true,
-                          "label": ""
                         }
                       }
                     }

@@ -2,8 +2,10 @@
   "teaserListing": {
     "stacked": true,
     "expandable": true,
-    "accordionLabel": "Show more board members",
-    "itemsLabel": "board members",
+    "shownNumber": 4,
+    "gridTwoColumns": true,
+    "moreItemsLabel": "Show all board members",
+    "lessItemsLabel": "Show fewer board members",
     "compHeading": {
       "title": "Teaser Listing",
       "sub": "",

@@ -2,6 +2,7 @@
 {% set stacked = teaserListing.stacked ? 'stacked': 'side-by-side' %}
 {% set columnCount = teaserListing.contained and teaserListing.gridTwoColumns ? 2 : 3 %}
 {% set columnClass = 2 ? 'ma__teaser-listing__2-col-grid' : 'ma__teaser-listing__3-col-grid' %}
+{% set shownNumber = teaserListing.shownNumber ? teaserListing.shownNumber : columnCount %}
 
 
 <section class="ma__teaser-listing">
@@ -33,17 +34,17 @@
     {% if teaserListing.items %}
       {% if teaserListing.expandable %}
         <ul class="ma__teaser-listing__items {{ columnClass }}">
-          {% for generalTeaser in teaserListing.items[:columnCount] %}
+          {% for generalTeaser in teaserListing.items[:shownNumber] %}
             <li class="ma__teaser-listing__item">
               {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
               {% include "@molecules/general-teaser.twig" %}
             </li>
           {% endfor %}
         </ul>
-        {% if teaserListing.items|length > columnCount %}
+        {% if teaserListing.items|length > shownNumber %}
           <div class="ma__teaser-listing__extra js-accordion-content">
             <ul class="ma__teaser-listing__items {{columnClass}}">
-            {% for generalTeaser in teaserListing.items[columnCount:last] %}
+            {% for generalTeaser in teaserListing.items[shownNumber:last] %}
               <li class="ma__teaser-listing__item">
                 {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
                 {% include "@molecules/general-teaser.twig" %}
@@ -54,8 +55,9 @@
         {% endif %}
         <button
         class="ma__content-link ma__content-link--chevron ma__content-link__acordion-toggle js-accordion-link"
-        aria-label="{{ teaserListing.accordionLabel }}">
-          Show <span class="more">more</span><span class="less">less</span> {{teaserListing.itemsLabel}}
+        aria-label="{{ teaserListing.moreItemsLabel }}">
+          <span class="more">{{teaserListing.moreItemsLabel}}</span>
+          <span class="less">{{teaserListing.lessItemsLabel}}</span>
         </button>
       {% else %}
         <ul class="ma__teaser-listing__items {{ columnClass }}">

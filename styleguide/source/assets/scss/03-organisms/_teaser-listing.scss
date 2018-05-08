@@ -18,7 +18,8 @@
     }
   }
 
-  &__description + *, &__featured-items + &__items {
+  &__description + *,
+  &__featured-items + &__items {
     border-top-width: 1px;
     border-top-style: solid;
     margin-top: 0;
@@ -37,6 +38,10 @@
       margin-top: 20px;
       padding-top: 20px;
     }
+  }
+
+  &__description + &__items{
+    border-top: 0;
   }
 
   &__featured-items.side-by-side, &__items {
