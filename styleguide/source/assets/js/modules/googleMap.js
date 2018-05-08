@@ -26,6 +26,13 @@ export default function (window,document,$,undefined) {
     clearInterval(checkForGoogleMaps);
   }, 2 * 60 * 1000);
 
+  // Clear out any potential HTML tags in text
+  function sanitizeText (potentialHTML) {
+    let d = document.createElement("div");
+    d.innerHTML = potentialHTML;
+    return d.innerText;
+  }
+
   // Initialize the map
   function initMaps () {
     // Stop checking for google maps library.
@@ -162,7 +169,7 @@ export default function (window,document,$,undefined) {
         }),
         label: data.label,
         infoWindow: data.infoWindow,
-        title: 'Marker: ' + data.infoWindow.name
+        title: 'Marker: ' + sanitizeText(data.infoWindow.name)
       };
       let marker =  new google.maps.Marker(markerData);
       let infoData = infoTransform(markerData.infoWindow);
