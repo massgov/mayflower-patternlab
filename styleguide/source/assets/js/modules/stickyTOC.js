@@ -91,13 +91,15 @@ export default function (window,document,$,undefined) {
         else {
           // Identify the section to show for the heading.
           const active = $tocSections.filter((index, section) => {
-            return $(section).siblings('.sticky-toc-jump-target').offset().top < 20;
+            const $target = $(section).siblings('.sticky-toc-jump-target');
+            const top = $target.offset().top;
+            // Works with Firefox.
+            return top - windowTop < 20;
           });
           $stickyToc.text($(active.last()).text());
         }
       }
     });
-
     // Back to top button
     $(".stickyTOC-top").on('click',function(e) {
       e.preventDefault();
