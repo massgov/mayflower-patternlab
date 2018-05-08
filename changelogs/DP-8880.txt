@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Changed
+Patch
+- DP-8880: Allow a block to be overridden for the sidebar of the stacked row section pattern.
