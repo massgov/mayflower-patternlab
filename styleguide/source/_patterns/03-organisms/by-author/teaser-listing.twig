@@ -51,13 +51,13 @@
             {% endfor %}
             </ul>
           </div>
+          <button
+          class="ma__content-link ma__content-link--chevron ma__content-link__acordion-toggle js-accordion-link"
+          aria-label="{{ teaserListing.moreItemsLabel }}">
+            <span class="more">{{teaserListing.moreItemsLabel}}</span>
+            <span class="less">{{teaserListing.lessItemsLabel}}</span>
+          </button>
         {% endif %}
-        <button
-        class="ma__content-link ma__content-link--chevron ma__content-link__acordion-toggle js-accordion-link"
-        aria-label="{{ teaserListing.moreItemsLabel }}">
-          <span class="more">{{teaserListing.moreItemsLabel}}</span>
-          <span class="less">{{teaserListing.lessItemsLabel}}</span>
-        </button>
       {% else %}
         <ul class="ma__teaser-listing__items {{ columnClass }}">
           {% for generalTeaser in teaserListing.items %}

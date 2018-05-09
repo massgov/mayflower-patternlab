@@ -159,10 +159,10 @@
             "teaserListing": {
               "stacked": false,
               "contained": true,
-              "shownNumber": 4,
+              "shownNumber": 6,
               "expandable": true,
-              "moreItemsLabel": "Show all board members",
-              "lessItemsLabel": "Show fewer board members",
+              "moreItemsLabel": "Show all members",
+              "lessItemsLabel": "Show fewer members",
               "gridTwoColumns": true,
               "featuredItems": [
                 {
@@ -394,8 +394,8 @@
               "gridTwoColumns": true,
               "shownNumber": 2,
               "expandable": true,
-              "moreItemsLabel": "Show all board members",
-              "lessItemsLabel": "Show fewer board members",
+              "moreItemsLabel": "Show all members",
+              "lessItemsLabel": "Show fewer members",
               "compHeading": {
                 "title": "Subsection of boards",
                 "sub": "",
