@@ -1,7 +1,7 @@
 ___DESCRIPTION___
 Changed
 Patch
-- DP-8891: re-orders Mayflower elements for the ORg page variations
+- DP-8891: re-orders and adds new Mayflower elements for the Org page variations
 
 ___SEMANTIC VERSION (see below)___
 
