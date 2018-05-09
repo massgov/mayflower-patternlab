@@ -1,4 +1,0 @@
-Changed
-Patch
-- DP-8877: MF create front end code to support display of short description on org page that is separate from contact row
-
