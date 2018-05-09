@@ -35,20 +35,19 @@
       {% if teaserListing.expandable %}
         <ul class="ma__teaser-listing__items {{ columnClass }}">
           {% for generalTeaser in teaserListing.items[:shownNumber] %}
+            {% block teaserListItem %}
             <li class="ma__teaser-listing__item">
               {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
               {% include "@molecules/general-teaser.twig" %}
             </li>
+            {% endblock %}
           {% endfor %}
         </ul>
         {% if teaserListing.items|length > shownNumber %}
           <div class="ma__teaser-listing__extra js-accordion-content">
             <ul class="ma__teaser-listing__items {{columnClass}}">
             {% for generalTeaser in teaserListing.items[shownNumber:last] %}
-              <li class="ma__teaser-listing__item">
-                {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
-                {% include "@molecules/general-teaser.twig" %}
-              </li>
+              {{ block('teaserListItem') }}
             {% endfor %}
             </ul>
           </div>
@@ -62,10 +61,7 @@
       {% else %}
         <ul class="ma__teaser-listing__items {{ columnClass }}">
           {% for generalTeaser in teaserListing.items %}
-            <li class="ma__teaser-listing__item">
-              {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
-              {% include "@molecules/general-teaser.twig" %}
-            </li>
+            {{ block('teaserListItem') }}
           {% endfor %}
         </ul>
       {% endif %}
