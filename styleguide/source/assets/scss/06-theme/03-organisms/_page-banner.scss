@@ -95,6 +95,10 @@ $page-banner-inner-width: 612px;
 
   }
 
+  &__unlinked-title {
+    color: $c-font-inverse;
+  }
+
   &--columns &__description {
     color: $c-font-base;
     font-weight: 400;

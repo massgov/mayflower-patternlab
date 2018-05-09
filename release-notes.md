@@ -13,6 +13,60 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.22.0 (5/9/2018)
+
+### Added
+- DP-6715: Allow main content of image-promos to be overwritten.
+
+### Changed
+- DP-7761: Take html out of map pin title.
+- DP-8363: Replace the site logo image with the seal image + text.
+- DP-8877: MF create front end code to support display of short description on org page that is separate from contact row.
+- DP-8880: Allow a block to be overridden for the sidebar of the stacked row section pattern.
+- DP-8891: re-orders Mayflower elements for the Org page variations.
+
+## 5.21.0 (5/2/2018)
+
+### Added
+- DP-8711: Added support for multiple entries in the page-banner-linked organism.
+
+### Changed
+- DP-8441: Use explicit height instead of responsive iframe container if height is provided.
+- DP-8516: Provides twig blocks to support overrides and template mapping of data for person bio page.
+- DP-8712: Support 2nd executive in elected official About Row as option.
+- DP-8738: Add additional blocks to contact us pattern.
+- DP-8612: Elected--contact row adjustments.
+- DP-8730: Elected--services heading color change.
+- DP-8738: Elected--limit space of contact section logo.
+
+### Removed
+- DP-8602: Remove unused slick plugin
+
+## 5.20.1 (4/26/2018)
+
+### Fixed
+- Reverted the DP-8612: Add column-layout variation to 'contact us'.
+
+## 5.20.0 (4/25/2018)
+
+### Added
+- DP-8569: Add missing header on binder cover page template.
+- DP-8594: Adds twig blocks for overriding during implementation of the row reorder for elected officials.
+- DP-8612: Add column-layout variation to 'contact us'.
+- DP-8674: Adds and uses WOFF2 variants for webfonts.
+
+### Changed
+- DP-7500: Update image-link-list to allow overriding the links without losing functionality.
+- DP-7600: Extracts looped items into separate patterns.
+- DP-7600: Provides twig blocks to support overrides and template mapping of data.
+- DP-8597: Social links on elected org page overlap executive area when the links are long or more than x number.
+- DP-8642: Fix erroneous width limitation on page-intro sub-title affecting the bio page.
+- DP-8648: Fix gap with image background on Elected Official Organization page for wide-widths.
+
+### Fixed
+- DP-8701: Replace lost image link styles.
+- Fix social media icon colors in Firefox.
+
 ## 5.19.0 (4/18/2018)
 
 ### Added

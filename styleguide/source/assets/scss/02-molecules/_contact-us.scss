@@ -135,60 +135,38 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    .ma__contact-group {
+    .ma__contact-group,
+    .ma__contact-us__extra {
       width: 100%;
       @media ($bp-medium-min) {
-        width: 50%;
+        width: calc(50% - 15px); // account for margin on desktop
       }
-    }
 
-    > .ma__contact-group {
-      @media ($bp-medium-min) {
-        &:nth-child(even) {
-          padding-right: 30px;
-          border-right: 1px solid #dcdcdc;
-        }
-        &:nth-child(odd) {
-          padding-left: 30px;
-        }
-        &:first-child {
-          padding-left: 0;
-          width: 100%;
-        }
+      &:first-child {
+        width: 100%;
       }
     }
 
     .ma__contact-us__expand {
-      width: 100%;
+      @media ($bp-small-min) {
+        display: none;
+      }
     }
 
     .ma__contact-us__extra {
-      // need the flex display here to override the default block layout
-      // so when jquery computes height for the slideDown fn, it is correct
-      display: flex;
-      // display: none;
-      flex-wrap: wrap;
-      width: 100%;
-
+      @media ($bp-small-min) {
+        display: block !important;
+      }
+      @media ($bp-medium-min) {
+        padding-left: 30px;
+        margin-left: 30px;
+        border-left: 1px solid #dcdcdc;
+      }
       .ma__contact-group {
         margin-bottom: 20px;
-        @media ($bp-medium-min) {
-          &:nth-child(even) {
-            padding-left: 30px;
-          }
-          &:nth-child(odd) {
-            padding-right: 30px;
-            border-right: 1px solid #dcdcdc;
-          }
-        }
       }
 
     }
-
-    &.is-open .ma__contact-us__extra{
-      display: flex !important; // need important to override jQuery adding display:block in slideUp/Down
-    }
-
   }
 
 
