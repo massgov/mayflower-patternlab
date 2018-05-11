@@ -5,14 +5,16 @@
     width: 100%;
     min-width: 50%;
 
-    @media ($bp-medium-min) {
+    @media ($bp-large-extended-min) {
       display: flex;
+      align-self: flex-start;
+      padding-right: 2rem;
     }
   }
 
   &--terms {
 
-     @media ($bp-medium-min) {
+     @media ($bp-large-extended-min) {
       display: flex;
       flex-wrap: wrap;
     }

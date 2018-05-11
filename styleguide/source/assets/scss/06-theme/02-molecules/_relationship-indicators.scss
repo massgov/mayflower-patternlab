@@ -26,6 +26,7 @@
       padding-left: 10px;
       font-size: 1rem;
       font-weight: 600;
+      display: none;
 
       &:after {
         opacity: 0.5;
@@ -35,9 +36,20 @@
         width: 8px;
         transform: translateY(-45%) rotate(45deg);
       }
+
+      &.is-open::after {
+        transform: translateY(-55%) rotate(-135deg);
+      }
     }
 
     &.offered-by {
+
+      .ma__relationship-indicators--term {
+
+        &:nth-child(n+2) {
+          display: none;
+        }
+      }
 
       a {
         color: $c-theme-green;
@@ -54,6 +66,14 @@
     }
 
     &.related-to {
+
+      .ma__relationship-indicators--term {
+
+        &:nth-child(n+3) {
+          display: none;
+        }
+      }
+
       a {
         border-color: rgba($c-theme-blue, 0.2);
 

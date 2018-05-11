@@ -10,11 +10,12 @@
       </div>
     {% endfor %}
     <button type="button" class="js-relationship-indicator-button">
-      Show <span class="tag-count"></span> More
+      Show <span class="tag-count"></span> <span class="tag-state">More</span
     </button>
     </div>
   </div>
 
+  {% if relationshipIndicators.relatedTo is not empty %}
   <div class="ma__relationship-indicators--section related-to">
     <span class="ma__relationship-indicators--label">
       Related To:
@@ -26,8 +27,9 @@
       </div>
     {% endfor %}
     <button type="button" class="js-relationship-indicator-button">
-      Show <span class="tag-count"></span> More
+      Show <span class="tag-count"></span> <span class="tag-state">More</span>
     </button>
     </div>
   </div>
+  {% endif %}
 </div>
