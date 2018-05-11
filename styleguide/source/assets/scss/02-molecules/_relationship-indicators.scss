@@ -1,0 +1,24 @@
+.ma__relationship-indicators {
+  display: flex;
+
+  &--section {
+    width: 100%;
+    min-width: 50%;
+
+    @media ($bp-medium-min) {
+      display: flex;
+    }
+  }
+
+  &--terms {
+
+     @media ($bp-medium-min) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &--term {
+    margin: 0 5px 10px 0;
+  }
+}

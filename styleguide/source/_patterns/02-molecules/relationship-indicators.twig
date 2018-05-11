@@ -1,0 +1,33 @@
+<div class="ma__relationship-indicators">
+  <div class="ma__relationship-indicators--section offered-by">
+    <span class="ma__relationship-indicators--label">
+      Offered By:
+    </span>
+    <div class="ma__relationship-indicators--terms">
+      {% for item in relationshipIndicators.offered_by %}
+      <div class="ma__relationship-indicators--term">
+        <a href="{{ item.href }}">{{ item.text }}</a>
+      </div>
+    {% endfor %}
+    <button type="button" class="js-relationship-indicator-button">
+      Show <span class="tag-count"></span> More
+    </button>
+    </div>
+  </div>
+
+  <div class="ma__relationship-indicators--section related-to">
+    <span class="ma__relationship-indicators--label">
+      Related To:
+    </span>
+    <div class="ma__relationship-indicators--terms">
+    {% for item in relationshipIndicators.relatedTo %}
+      <div class="ma__relationship-indicators--term">
+        <a href="{{ item.href }}">{{ item.text }}</a>
+      </div>
+    {% endfor %}
+    <button type="button" class="js-relationship-indicator-button">
+      Show <span class="tag-count"></span> More
+    </button>
+    </div>
+  </div>
+</div>
