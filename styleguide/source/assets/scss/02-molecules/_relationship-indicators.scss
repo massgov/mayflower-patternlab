@@ -5,6 +5,11 @@
 
 .ma__relationship-indicators {
   display: flex;
+  flex-direction: column;
+
+  @media ($bp-large-extended-min) {
+    flex-direction: row;
+  }
 
   &--section {
     width: 100%;
