@@ -15,6 +15,12 @@
       {% endif %}
     </div>
   {% endif %}
+  {% if pageHeader.relationshipIndicators.offered_by %}
+  <div class="ma__page-header__relationshipIndicators">
+    {% set relationshipIndicators = pageHeader.relationshipIndicators %}
+    {% include "@molecules/relationship-indicators.twig" %}
+  </div>
+  {% endif %}
   <div class="ma__page-header__content">
     {% if pageHeader.publishState %}
       <div class="ma__page-header__publish-state">
