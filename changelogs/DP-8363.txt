@@ -1,3 +1,0 @@
-___DESCRIPTION___
-Major
-- DP-8363: Replace the site logo image with the seal image + text.
