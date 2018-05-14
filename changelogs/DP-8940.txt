@@ -1,0 +1,4 @@
+Changed
+Patch
+- DP-8940: Increases font size of short description on org pages to match production website
+
