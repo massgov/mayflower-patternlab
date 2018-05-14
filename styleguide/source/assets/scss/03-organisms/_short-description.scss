@@ -1,4 +1,9 @@
-.ma__short-description * {
-  font-size: 1.813rem;
-  font-weight: 700;
+.ma__short-description {
+
+  & * {
+    font-size: 1.813rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
 }
+
