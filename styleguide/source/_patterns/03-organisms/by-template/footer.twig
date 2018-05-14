@@ -1,17 +1,26 @@
 <footer class="ma__footer js-footer" id="footer" role="contentinfo">
   <div class="ma__footer__container">
     {{ page.footer }}
-{#
-    {{ page.footer_navigation }}
-footer_navigatioin is a region in mass_theme.
-It's tied to region--footer-navigation.html.twig.
-The template contains
-  -   <div class="ma__footer__nav">
- #}
-{# region--footer-navigation #}
-    <div class="ma__footer__nav">
-      {% include "@molecules/footer-links.twig" %}
-    </div>
+  {% block footer_navigation %}
+    {% if page.footer_navigation %}
+
+
+<p style="color: red;">DRUPAL</p>
+
+
+      {{ page.footer_navigation }}
+    {% else %}
+
+
+<p style="color: red;">MAYFLOWER</p>
+
+
+
+      <div class="ma__footer__nav">
+        {% include "@molecules/footer-links.twig" %}
+      </div>
+    {% endif %}
+  {% endblock %}
 
     <section class="ma__footer__info">
       <div class="ma__footer__logo">
@@ -42,18 +51,16 @@ The template contains
   {% include "@molecules/floating-action.twig" %}
 {% endif %}
 
-{% if googleLanguages %}
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: '{{ languages }}', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-      document.querySelector('#google_translate_element') !== null ? document.querySelector('#google_translate_element').classList.add('has-rendered') : '';
-    }
-    (function() {
-      var script = document.createElement('script');
-      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      element = document.getElementsByTagName('head')[0];
-      element.appendChild(script);
-    })();
-    </script>
-{% endif %}
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: '{{ languages }}', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    document.querySelector('#google_translate_element') !== null ? document.querySelector('#google_translate_element').classList.add('has-rendered') : '';
+  }
+  (function() {
+    var script = document.createElement('script');
+    script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    script.async = true;
+    element = document.getElementsByTagName('head')[0];
+    element.appendChild(script);
+  })();
+</script>
