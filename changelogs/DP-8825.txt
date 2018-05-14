@@ -1,0 +1,3 @@
+Added
+Minor
+- DP-8825: Adds an expandable/accordion variation to the teaser listing organism.
