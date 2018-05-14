@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Fixed
+Patch
+- DP-8890: Always print expander and let JavaScript control visibility
