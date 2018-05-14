@@ -328,58 +328,6 @@
                       }
                     }
                   }]
-                },
-                {
-                  "layout": "inline-image",
-                  "image": {
-                    "src": "../../assets/images/placeholder/72x96.png",
-                    "alt": "placeholder image",
-                    "width": "72",
-                    "height": "96"
-                  },
-                  "eyebrow": "Board Member",
-                  "title": {
-                    "text": "Board Member's Name",
-                    "info": "",
-                    "property": ""
-                  },
-                  "emphasizedText": [
-                    "Board Member's Title"
-                  ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
-                      }
-                    }
-                  }]
-                },
-                {
-                  "layout": "inline-image",
-                  "image": {
-                    "src": "../../assets/images/placeholder/72x96.png",
-                    "alt": "placeholder image",
-                    "width": "72",
-                    "height": "96"
-                  },
-                  "eyebrow": "Board Member",
-                  "title": {
-                    "text": "Board Member's Name",
-                    "info": "",
-                    "property": ""
-                  },
-                  "emphasizedText": [
-                    "Board Member's Title"
-                  ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
-                      }
-                    }
-                  }]
                 }
               ]
             }
