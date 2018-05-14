@@ -16,7 +16,7 @@
     "contacts":[{
       "accordion": false,
       "columns": true,
-      "showMore": true,
+      "showMore": false,
       "isExpanded": false,
       "groups": [{
         "icon": "marker",
