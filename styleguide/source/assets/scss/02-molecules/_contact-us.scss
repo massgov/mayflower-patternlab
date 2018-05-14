@@ -139,7 +139,7 @@
     .ma__contact-us__extra {
       width: 100%;
       @media ($bp-medium-min) {
-        width: calc(50% - 15px); // account for margin on desktop
+        width: calc(36% - 15px); // account for margin on desktop
       }
 
       &:first-child {
@@ -164,6 +164,7 @@
       }
       .ma__contact-group {
         margin-bottom: 20px;
+        width: 100%;
       }
 
     }
