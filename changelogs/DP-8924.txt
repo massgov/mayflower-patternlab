@@ -1,0 +1,3 @@
+Changed
+Patch
+DP-8924: reorder sections in organization page to have featured topics above news.
