@@ -18,7 +18,7 @@ Please follow the steps in [Contributing docs](.github/CONTRIBUTING.md) to set u
 
 ### Developer Deployment
 
-Every time a branch passes CircleCI it will deploy the code to a staging environment by creating the following URL `http://mayflower.digital.mass.gov/b/<branch name>/index.html`. Which will allow the developer to share the URL with reviewers to test their code.
+Every time a branch passes CircleCI it will deploy the code to a the following URL `http://mayflower.digital.mass.gov/b/<branch name>/index.html` which will allow the developer to share the URL with reviewers to test their code.
 
 ### Production Deployment
 
