@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Fixed
+Patch
+- DP-8956: Update contact us to provide a way to keep address above other information even if there is only two contact groups.
