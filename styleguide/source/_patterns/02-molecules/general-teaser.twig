@@ -3,20 +3,22 @@
 
 <section class="ma__general-teaser {{ imageClass }} {{ layout }}">
   {% if generalTeaser.image %}
+
     {% if generalTeaser.title.href %}
-      <a
-        class="ma__general-teaser__image-wrapper"
-        href="{{ generalTeaser.title.href }}"
-        title="{{ generalTeaser.title.text }}">
+    <a
+      class="ma__general-teaser__image-wrapper"
+      href="{{ generalTeaser.title.href }}"
+      title="{{ generalTeaser.title.text }}">
     {% else %}
-      <span class="ma__general-teaser__image-wrapper">
+    <span class="ma__general-teaser__image-wrapper">
     {% endif %}
+
     {% set image = generalTeaser.image %}
     {% include "@atoms/09-media/image.twig" %}
     {% if generalTeaser.title.href %}
       </a>
     {% else %}
-      </span>
+    </span>
     {% endif %}
   {% endif %}
 
@@ -33,17 +35,13 @@
     {% endif %}
   {% endblock %}
 
+    {% block title %}
     {% if generalTeaser.title.text %}
+      {% set title = generalTeaser.title %}
       {% set headingLevel = generalTeaser.level ? : 2 %}
-      <h{{ headingLevel }} class="ma__general-teaser__title">
-        {% if generalTeaser.title.href %}
-          {% set decorativeLink = generalTeaser.title %}
-          {% include "@atoms/decorative-link.twig" %}
-        {% else %}
-          {{ generalTeaser.title.text }}
-        {% endif %}
-      </h{{ headingLevel }}>
+      {% include "@molecules/general-teaser-title.twig" %}
     {% endif %}
+    {% endblock %}
 
     {% block emphasizedText %}
     {% if generalTeaser.emphasizedText %}
@@ -56,6 +54,7 @@
       </div><!-- end ma__general-teaser__header -->
       <div class="ma__general-teaser__details">
     {% endif %}
+
     {% if generalTeaser.contents and layout != 'contents-stacked' %}
       <div class="ma__general-teaser__contents">
         {% for content in generalTeaser.contents %}
