@@ -15,9 +15,9 @@
   "short_description": {
      "richText": {
       "rteElements": [{
-        "path": "@atoms/04-headings/heading-6.twig",
+        "path": "@atoms/04-headings/heading-4.twig",
         "data": {
-           "heading6" : {
+           "heading4" : {
             "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. "
           }
         }
@@ -103,6 +103,10 @@
             "teaserListing": {
               "stacked": false,
               "contained": true,
+              "shownNumber": 6,
+              "expandable": true,
+              "moreItemsLabel": "Show all members",
+              "lessItemsLabel": "Show fewer members",
               "gridTwoColumns": true,
               "featuredItems": [
                 {
@@ -157,16 +161,6 @@
                           "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
                         }
                       }
-                    },{
-                      "path": "@atoms/decorative-link.twig",
-                      "data": {
-                        "decorativeLink": {
-                          "href": "#",
-                          "text": "More",
-                          "chevron": true,
-                          "label": ""
-                        }
-                      }
                     }
                   ]
                 }
@@ -198,14 +192,138 @@
                           "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
                         }
                       }
-                    },{
-                      "path": "@atoms/decorative-link.twig",
+                    }
+                  ]
+                },
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "text": "Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Member's title"
+                  ],
+                  "contents": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                      }
+                    }
+                  }]
+                },
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "text": "Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
+                  "contents": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                      }
+                    }
+                  }]
+                },
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "text": "Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
+                  "contents": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                      }
+                    }
+                  }]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "path": "@organisms/by-author/teaser-listing.twig",
+          "data": {
+            "teaserListing": {
+              "stacked": false,
+              "contained": true,
+              "gridTwoColumns": true,
+              "shownNumber": 2,
+              "expandable": true,
+              "moreItemsLabel": "Show all members",
+              "lessItemsLabel": "Show fewer members",
+              "compHeading": {
+                "title": "Subsection of boards",
+                "sub": "",
+                "color": "",
+                "id": "",
+                "level": 3,
+                "centered": ""
+              },
+              "description": {
+                "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+              },
+              "items": [
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board member",
+                  "title": {
+                    "href": "#",
+                    "text": "Sally Testperson",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Awesome board member"
+                  ],
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
                       "data": {
-                        "decorativeLink": {
-                          "href": "#",
-                          "text": "More",
-                          "chevron": true,
-                          "label": ""
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
                         }
                       }
                     }
@@ -341,13 +459,7 @@
                     }
                   }]
                 }
-              ],
-              "more": {
-                "href": "#",
-                "text": "See all board members",
-                "chevron": true,
-                "label": "See all the members of this-a-here board"
-              }
+              ]
             }
           }
         }
