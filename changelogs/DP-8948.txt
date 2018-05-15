@@ -1,5 +1,0 @@
-___DESCRIPTION___
-Changed
-Patch
-- DP-8948: Close up contact information on org pages extra horizontal spacing
-
