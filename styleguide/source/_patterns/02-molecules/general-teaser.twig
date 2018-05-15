@@ -25,11 +25,14 @@
   {% else %}
     <div class="ma__general-teaser__details">
   {% endif %}
+
+  {% block eyebrow %}
     {% if generalTeaser.eyebrow %}
-      <div class="ma__general-teaser__eyebrow">
-        <span>{{ generalTeaser.eyebrow }}</span>
-      </div>
+      {% set eyebrow = generalTeaser.eyebrow %}
+      {% include "@molecules/general-teaser-eyebrow.twig" %}
     {% endif %}
+  {% endblock %}
+
     {% if generalTeaser.title.text %}
       {% set headingLevel = generalTeaser.level ? : 2 %}
       <h{{ headingLevel }} class="ma__general-teaser__title">
