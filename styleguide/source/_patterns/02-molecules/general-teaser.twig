@@ -5,21 +5,23 @@
   {% if generalTeaser.image %}
 
     {% if generalTeaser.title.href %}
-    <a
+      <a
       class="ma__general-teaser__image-wrapper"
       href="{{ generalTeaser.title.href }}"
       title="{{ generalTeaser.title.text }}">
     {% else %}
-    <span class="ma__general-teaser__image-wrapper">
+      <span class="ma__general-teaser__image-wrapper">
     {% endif %}
 
     {% set image = generalTeaser.image %}
     {% include "@atoms/09-media/image.twig" %}
+
     {% if generalTeaser.title.href %}
       </a>
     {% else %}
-    </span>
+      </span>
     {% endif %}
+
   {% endif %}
 
   {% if layout == 'inline-image' %}
@@ -35,25 +37,25 @@
     {% endif %}
   {% endblock %}
 
-    {% block title %}
+  {% block title %}
     {% if generalTeaser.title.text %}
       {% set title = generalTeaser.title %}
       {% set headingLevel = generalTeaser.level ? : 2 %}
       {% include "@molecules/general-teaser-title.twig" %}
     {% endif %}
-    {% endblock %}
+  {% endblock %}
 
-    {% block emphasizedText %}
+  {% block emphasizedText %}
     {% if generalTeaser.emphasizedText %}
       {% set emphasizedText = generalTeaser.emphasizedText %}
       {% include "@molecules/general-teaser-emphasizedText.twig" %}
     {% endif %}
   {% endblock %}
 
-    {% if layout == 'inline-image' %}
-      </div><!-- end ma__general-teaser__header -->
-      <div class="ma__general-teaser__details">
-    {% endif %}
+  {% if layout == 'inline-image' %}
+    </div><!-- end ma__general-teaser__header -->
+    <div class="ma__general-teaser__details">
+  {% endif %}
 
     {% if generalTeaser.contents and layout != 'contents-stacked' %}
       <div class="ma__general-teaser__contents">
@@ -62,7 +64,9 @@
         {% endfor %}
       </div>
     {% endif %}
-  </div>
+
+    </div><!-- ma__general-teaser__details -->
+
   {% if generalTeaser.contents and layout == 'contents-stacked' %}
     <div class="ma__general-teaser__contents">
       {% for content in generalTeaser.contents %}
@@ -70,4 +74,5 @@
       {% endfor %}
     </div>
   {% endif %}
+
 </section>
