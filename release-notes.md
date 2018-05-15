@@ -13,6 +13,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.23.0 (5/15/2018)
+
+### Added
+- DP-8825: Adds an expandable/accordion variation to the teaser listing organism.
+- DP-8942: Add missing content examples in JSON for elected official page.
+
+### Changed
+- DP-8924: reorder sections in organization page to have featured topics above news.
+- DP-8940: Increases font size of short description on org pages to match production website
+- DP-8948: Close up contact information on org pages extra horizontal spacing
+
+### Fixed
+- DP-8890: Always print expander and let JavaScript control visibility.
+
+
 ## 5.22.0 (5/9/2018)
 
 ### Added
