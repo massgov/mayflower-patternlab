@@ -7,17 +7,9 @@
       "id": "contact us",
       "centered": ""
     },
-    "image": {
-      "alt": "eohhs logo",
-      "src": "../../assets/images/placeholder/230x130.png",
-      "height": "130",
-      "width": "230"
-    },
     "contacts":[{
-      "accordion": false,
+      "static": true,
       "columns": true,
-      "showMore": false,
-      "isExpanded": false,
       "groups": [{
         "icon": "marker",
         "name": "Address",
@@ -75,48 +67,6 @@
             "property": ""
           },
           "details":""
-        }]
-      },{
-        "icon": "laptop",
-        "name": "Online",
-        "hidden": "",
-        "items": [{
-          "type": "email",
-          "property": "",
-          "label":"Email:",
-          "link": {
-            "href":"email@email.com",
-            "text": "email@email.com",
-            "info": "",
-            "property": ""
-          },
-          "details":""
-        },{
-          "type": "online",
-          "property": "",
-          "label":"Web:",
-          "link": {
-            "href":"#",
-            "text": "Contact Form",
-            "info": "",
-            "property": ""
-          },
-          "details":""
-        }]
-      },{
-        "icon": "fax-icon",
-        "name": "Fax",
-        "items": [{
-          "type": "fax",
-          "property": "",
-          "label":"Main:",
-          "link": {
-            "href":"+14134994262",
-            "text": "(413) 499-4262",
-            "info": "",
-            "property": ""
-          },
-          "details":"Please allow 24 hours for a response"
         }]
       }]
     }]

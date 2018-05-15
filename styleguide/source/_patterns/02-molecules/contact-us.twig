@@ -1,5 +1,5 @@
 {% set outerAccordion = contactUs.accordion %}
-{% set static = (not contactUs.accordion) and (not contactUs.showMore) %}
+{% set static = contactUs.static %}
 
 {% if outerAccordion %}
   {% set accordionClass = "ma__contact-us--accordion js-accordion" %}
