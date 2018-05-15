@@ -3,19 +3,8 @@
     {{ page.footer }}
   {% block footer_navigation %}
     {% if page.footer_navigation %}
-
-
-<p style="color: red;">DRUPAL</p>
-
-
       {{ page.footer_navigation }}
     {% else %}
-
-
-<p style="color: red;">MAYFLOWER</p>
-
-
-
       <div class="ma__footer__nav">
         {% include "@molecules/footer-links.twig" %}
       </div>
