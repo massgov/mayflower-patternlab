@@ -44,15 +44,14 @@
         {% endif %}
       </h{{ headingLevel }}>
     {% endif %}
+
+    {% block emphasizedText %}
     {% if generalTeaser.emphasizedText %}
-      <div class="ma__general-teaser__emph-text-wrapper">
-        {% for emphasizedText in generalTeaser.emphasizedText %}
-          <span class="ma__general-teaser__emph-text">
-            {{ emphasizedText }}
-          </span>
-        {% endfor %}
-      </div>
+      {% set emphasizedText = generalTeaser.emphasizedText %}
+      {% include "@molecules/general-teaser-emphasizedText.twig" %}
     {% endif %}
+  {% endblock %}
+
     {% if layout == 'inline-image' %}
       </div><!-- end ma__general-teaser__header -->
       <div class="ma__general-teaser__details">
