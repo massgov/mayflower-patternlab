@@ -6,14 +6,19 @@
     text-transform: uppercase;
     margin-right: 10px;
     white-space: nowrap;
+
+    @media ($bp-medium-min) {
+      padding-top: 6px;
+    }
   }
 
   &--section {
 
     a {
+      display: block;
       border: 2px solid;
       padding: 3px 5px;
-      white-space: nowrap;;
+      width: 100%;
     }
 
     button {
@@ -22,7 +27,7 @@
       @include ma-chevron;
       margin-top: -6px;
       padding-top: 0;
-      padding-left: 10px;
+      padding-left: 0;
       font-size: 1rem;
       font-weight: 600;
       display: none;
@@ -38,6 +43,12 @@
 
       &.is-open::after {
         transform: translateY(-55%) rotate(-135deg);
+      }
+
+      @media ($bp-medium-min) {
+        align-self: flex-start;
+        padding-top: 14px;
+        padding-left: 10px;
       }
     }
 
@@ -65,10 +76,15 @@
     }
 
     &.related-to {
+      padding-top: 15px;
+
+      @media ($bp-medium-min) {
+        padding-top: 0;
+      }
 
       .ma__relationship-indicators--term {
 
-        &:nth-child(n+3) {
+        &:nth-child(n+2) {
           display: none;
         }
       }
