@@ -4,6 +4,6 @@
     {% set decorativeLink = title %}
     {% include "@atoms/decorative-link.twig" %}
   {% else %}
-    {{ text }}
+    {{ title.text }}
   {% endif %}
 </h{{ headingLevel }}>
