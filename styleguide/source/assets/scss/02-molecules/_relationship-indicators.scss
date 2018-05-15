@@ -1,11 +1,9 @@
-.ma__page-header__relationshipIndicators {
-  padding-top: 18px;
-  margin-bottom: 20px;
-}
-
 .ma__relationship-indicators {
+  @include ma-container;
+  @include clearfix;
   display: flex;
   flex-direction: column;
+  padding: 18px 0;
 
   @media ($bp-large-extended-min) {
     flex-direction: row;
