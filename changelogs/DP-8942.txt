@@ -1,0 +1,3 @@
+Added
+Patch
+DP-8942: Add missing content examples in JSON for elected official page.

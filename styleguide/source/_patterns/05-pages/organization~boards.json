@@ -9,77 +9,21 @@
     "title": "Forester Licensing Board",
     "titleSubText": "(FLB)"
   },
-  "pageHeader": {
-    "divider": true,
-    "title": "Forester Licensing Board",
-    "titleNote": "(FLB)",
-    "subTitle": "The Forester Licensing Board licenses people who offer professional services requiring the application of forestry principles and techniques.",
-    "headerTags": null,
-    "optionalContents": [
-      {
-        "path": "@molecules/contact-us.twig",
-        "data": {
-          "contactUs": {
-            "groups": [
-              {
-                "icon": "marker",
-                "name": "Address",
-                "items": [
-                  {
-                    "type": "address",
-                    "label": "",
-                    "value": "180 Beaman St., West Boylston, MA 01583",
-                    "link": "https://www.google.com/maps/place/180+Beaman+St,+West+Boylston,+MA+01583",
-                    "details": ""
-                  }
-                ]
-              },
-              {
-                "icon": "phone",
-                "name": "Phone",
-                "items": [
-                  {
-                    "type": "phone",
-                    "label": "Main:",
-                    "value": "508-792-7806 x318",
-                    "link": "5087927806",
-                    "details": "This line is open during certain hours"
-                  }
-                ]
-              },
-              {
-                "icon": "laptop",
-                "name": "Online",
-                "items": [
-                  {
-                    "type": "email",
-                    "label": "Email:",
-                    "value": "russell.wilmot@state.ma.us",
-                    "link": "russell.wilmot@state.ma.us",
-                    "details": ""
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      }
-    ],
-    "widgets": [
-      {
-        "path": "@atoms/09-media/image.twig",
-        "data": {
-          "image": {
-            "alt": "eohhs logo",
-            "src": "../../assets/images/placeholder/230x130.png",
-            "height": "130",
-            "width": "230"
-          }
-        }
-      }
-    ]
-  },
+
   "COMMENT": "****PAGE CONTENT COMPONENTS****",
+
+  "short_description": {
+     "richText": {
+      "rteElements": [{
+        "path": "@atoms/04-headings/heading-4.twig",
+        "data": {
+           "heading4" : {
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. "
+          }
+        }
+      }]
+    }
+  },
   "stackedRows": [
     {
       "title": "About Us",
@@ -159,6 +103,10 @@
             "teaserListing": {
               "stacked": false,
               "contained": true,
+              "shownNumber": 6,
+              "expandable": true,
+              "moreItemsLabel": "Show all members",
+              "lessItemsLabel": "Show fewer members",
               "gridTwoColumns": true,
               "featuredItems": [
                 {
@@ -213,16 +161,6 @@
                           "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
                         }
                       }
-                    },{
-                      "path": "@atoms/decorative-link.twig",
-                      "data": {
-                        "decorativeLink": {
-                          "href": "#",
-                          "text": "More",
-                          "chevron": true,
-                          "label": ""
-                        }
-                      }
                     }
                   ]
                 }
@@ -254,14 +192,138 @@
                           "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
                         }
                       }
-                    },{
-                      "path": "@atoms/decorative-link.twig",
+                    }
+                  ]
+                },
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "text": "Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Member's title"
+                  ],
+                  "contents": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                      }
+                    }
+                  }]
+                },
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "text": "Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
+                  "contents": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                      }
+                    }
+                  }]
+                },
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board Member",
+                  "title": {
+                    "text": "Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Board Member's Title"
+                  ],
+                  "contents": [{
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                      }
+                    }
+                  }]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "path": "@organisms/by-author/teaser-listing.twig",
+          "data": {
+            "teaserListing": {
+              "stacked": false,
+              "contained": true,
+              "gridTwoColumns": true,
+              "shownNumber": 2,
+              "expandable": true,
+              "moreItemsLabel": "Show all members",
+              "lessItemsLabel": "Show fewer members",
+              "compHeading": {
+                "title": "Subsection of boards",
+                "sub": "",
+                "color": "",
+                "id": "",
+                "level": 3,
+                "centered": ""
+              },
+              "description": {
+                "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+              },
+              "items": [
+                {
+                  "layout": "inline-image",
+                  "image": {
+                    "src": "../../assets/images/placeholder/72x96.png",
+                    "alt": "placeholder image",
+                    "width": "72",
+                    "height": "96"
+                  },
+                  "eyebrow": "Board member",
+                  "title": {
+                    "href": "#",
+                    "text": "Sally Testperson",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Awesome board member"
+                  ],
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
                       "data": {
-                        "decorativeLink": {
-                          "href": "#",
-                          "text": "More",
-                          "chevron": true,
-                          "label": ""
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
                         }
                       }
                     }
@@ -397,13 +459,7 @@
                     }
                   }]
                 }
-              ],
-              "more": {
-                "href": "#",
-                "text": "See all board members",
-                "chevron": true,
-                "label": "See all the members of this-a-here board"
-              }
+              ]
             }
           }
         }
@@ -557,7 +613,132 @@
               ]
             }
           }
-        },
+        },{ "path": "@organisms/by-author/contact-list.twig",
+      "data": {
+        "contactList": {
+          "viewSpecific": false,
+          "compHeading": {
+            "title": "Contact Us",
+            "sub": "",
+            "color": "",
+            "id": "contact us",
+            "centered": ""
+          },
+          "image": {
+            "alt": "eohhs logo",
+            "src": "../../assets/images/placeholder/230x130.png",
+            "height": "130",
+            "width": "230"
+          },
+          "contacts":[{
+            "accordion": false,
+            "columns": true,
+            "isExpanded": false,
+            "groups": [{
+              "icon": "marker",
+              "name": "Address",
+              "items": [{
+                "type": "address",
+                "label": "",
+                "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+                "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
+                "details": ""
+              }]
+            },{
+              "icon": "phone",
+              "name": "Phone",
+              "items": [{
+                "type": "phone",
+                "property": "",
+                "label":"Main:",
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"Toll Free:",
+                "link":{
+                  "href": "+18004324321",
+                  "text": "(800) 432-4321",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"TTY:",
+                "link": {
+                  "href":"+16175557777",
+                  "text": "(617) 555-7777",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"For those who need accessible services"
+              },{
+                "type": "phone",
+                "property": "",
+                "label":"Voice Relay:",
+                "link":{
+                  "href":"16175555255",
+                  "text": "(617) 555-5255",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
+            },{
+              "icon": "laptop",
+              "name": "Online",
+              "hidden": "",
+              "items": [{
+                "type": "email",
+                "property": "",
+                "label":"Email:",
+                "link": {
+                  "href":"email@email.com",
+                  "text": "email@email.com",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              },{
+                "type": "online",
+                "property": "",
+                "label":"Web:",
+                "link": {
+                  "href":"#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
+                "details":""
+              }]
+            },{
+              "icon": "fax-icon",
+              "name": "Fax",
+              "items": [{
+                "type": "fax",
+                "property": "",
+                "label":"Main:",
+                "link": {
+                  "href":"+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"Please allow 24 hours for a response"
+              }]
+            }]
+          }]
+        }
+      }
+    },
         {
           "path": "@organisms/by-author/press-listing.twig",
           "data": {

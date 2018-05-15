@@ -24,11 +24,13 @@
         {% endfor %}
       {% endblock %}
     </div>
-    {% if stackedRowSection.sideBar|length %}
+    {% if stackedRowSection.sideBar|length or stackedRowSection.overrideSideBar %}
       <aside class="sidebar">
-        {% for sidebar in stackedRowSection.sideBar %}
-          {% include sidebar.path with sidebar.data %}
-        {% endfor %}
+        {% block sidebar %}
+          {% for sidebar in stackedRowSection.sideBar %}
+            {% include sidebar.path with sidebar.data %}
+          {% endfor %}
+        {% endblock %}
       </aside>
     {% endif %}
   </div>
