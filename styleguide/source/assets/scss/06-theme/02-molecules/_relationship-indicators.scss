@@ -30,6 +30,7 @@
       padding-left: 0;
       font-size: 1rem;
       font-weight: 600;
+      white-space: nowrap;
       display: none;
 
       &:after {
@@ -69,6 +70,8 @@
           border-color: $c-theme-green;
         }
       }
+
+
 
       button {
         color: $c-theme-green;
