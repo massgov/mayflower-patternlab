@@ -41,14 +41,12 @@
   &__image-wrapper {
     flex-shrink: 0;
     flex-grow: 0;
-    flex-basis: auto;
     font-size: 0;
     margin-right: 30px;
     margin-bottom: 10px;
   }
 
   &__image-wrapper + &__details {
-    flex-basis: 60%;
     flex-shrink: 1;
     flex-grow: 1;
   }

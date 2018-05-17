@@ -8,8 +8,8 @@ This repository uses [BackstopJS](https://garris.github.io/BackstopJS/) for visu
 * [Docker and Docker Compose](https://www.docker.com/community-edition#/download) must be installed.
 
 ### Workflow:
-
-To check how your current work compares with the reference screenshots that are committed to the repository, run the following:
+First, ensure you've run a pattern lab build.
+Then, to check how your current work compares with the reference screenshots that are committed to the repository, run the following:
 
 ```bash
 docker-compose run backstop test
