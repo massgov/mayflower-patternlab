@@ -5,12 +5,12 @@
   {% set compHeading = contactRow.compHeading %}
   {% include "@atoms/04-headings/comp-heading.twig" %}
 
-  {% if contactRow.image %}
-    {% block contactImage %}
+  {% block contactImage %}
+    {% if contactRow.image %}
       {% set image = contactRow.image %}
       {% include "@atoms/09-media/image.twig" %}
-    {% endblock %}
-  {% endif %}
+    {% endif %}
+  {% endblock %}
 
   {% if contactRow.primaryContact %}
     <div class="ma__contact-row__primary">
