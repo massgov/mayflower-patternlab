@@ -30,6 +30,29 @@ export default function (window,document,$,undefined) {
           $dynamicItems.hide();
         }
       });
-
   });
+
+  $('.ma__relationship-indicators--terms').each(function() {
+    let $tagWrapper = $(this);
+    let $button = $tagWrapper.find('.js-relationship-indicator-button');
+    let $buttonCounter = $button.find('.tag-count');
+    let $hiddenTag = $tagWrapper.find('.ma__relationship-indicators--term:hidden');
+    let tagCount = $hiddenTag.length;
+    let $tagState = $button.find('.tag-state');
+
+    if (tagCount) {
+      $button.toggle();
+    }
+
+    $buttonCounter.text(tagCount);
+
+    $button.on('click', function() {
+      let $tagStateText = $tagState.text();
+
+      $button.toggleClass('is-open');
+      $tagState.text($tagStateText === 'fewer' ? 'more' : 'fewer');
+      $hiddenTag.toggle();
+    });
+  });
+
 }(window,document,jQuery);
