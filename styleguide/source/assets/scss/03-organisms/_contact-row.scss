@@ -17,8 +17,8 @@ $contact-row-image-max-width: 300px;
     }
   }
 
-
   .ma__contact-row__primary {
+    margin-bottom: 20px;
     @media ($bp-medium-min) {
       margin-bottom: 40px;
     }
