@@ -25,9 +25,9 @@ contactList: {
     type: compHeading / requited
   },
   primaryContact: {
-      type: contactGroup / required
+      type: contactGroup / optional
   }
-  hasManyAdditioanl: {
+  hasManyAdditional: {
     type: boolean / optional
   }
   additionalContacts:[{
