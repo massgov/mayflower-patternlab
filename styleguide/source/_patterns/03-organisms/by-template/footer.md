@@ -24,7 +24,7 @@ socialLinks {
   type: socialLinks / required
 }
 
-privacyPlicy {
-  type: privacyPlicy / required
+privacyPolicy {
+  type: privacyPolicy / required
 }
 ~~~
