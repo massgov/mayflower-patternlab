@@ -1,4 +1,4 @@
 ___DESCRIPTION___
 Changed
 Minor
-- DP-8854: Add a twig block to footer.twig to separate the implementation for the footer nav between Drupal and Mayflower where their data structures are different.
+- DP-8854: Update the footer template to match the one in Drupal.
