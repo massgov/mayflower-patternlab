@@ -1,6 +1,17 @@
 <img
-    class="ma__image{% if image.shape %} {{ image.shape }}{% endif %}"
-    alt="{{ image.alt }}"
-    src="{{ image.src }}"
+  class="ma__image{% if image.shape %} {{ image.shape }}{% endif %}"
+  alt="{{ image.alt }}"
+  src="{{ image.src }}"
+  {% if image.srcset %}
+    srcset="{{ image.srcset }}"
+    {% if image.sizes %}
+      sizes="{{ image.sizes }}"
+    {% endif %}
+  {% endif %}
+  {% if image.height %}
     height="{{ image.height }}"
-    width="{{ image.width }}" />
+  {% endif %}
+  {% if image.width %}
+    width="{{ image.width }}"
+  {% endif %}
+/>

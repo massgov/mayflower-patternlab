@@ -1,0 +1,7 @@
+{
+  "image": { 
+    "alt": "alt text", 
+    "src": "../../assets/images/placeholder/800x400.png",
+    "srcset": "../../assets/images/placeholder/400x200.png 620w, ../../assets/images/placeholder/700x350.png 780w, ../../assets/images/placeholder/800x400.png 910w"
+  }
+}
