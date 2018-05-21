@@ -1,16 +1,8 @@
 <footer class="ma__footer js-footer" id="footer" role="contentinfo">
   <div class="ma__footer__container">
-    {{ page.footer }}
-  {% block footer_navigation %}
-    {% if page.footer_navigation %}
-      {{ page.footer_navigation }}
-    {% else %}
-      <div class="ma__footer__nav">
-        {% include "@molecules/footer-links.twig" %}
-      </div>
-    {% endif %}
-  {% endblock %}
-
+    <div class="ma__footer__nav">
+      {% include "@molecules/footer-links.twig" %}
+    </div>
     <section class="ma__footer__info">
       <div class="ma__footer__logo">
         <a href="/" title="Mass.gov home page">
@@ -24,7 +16,7 @@
       <div class="ma__footer__copyright">
         <p><b>&copy; {{ "now"|date("Y") }} Commonwealth of Massachusetts.</b></p>
         <p>Mass.Gov&#x00AE; is a registered service mark of the Commonwealth of Massachusetts.</p>
-        <a href="/privacypolicy">Mass.gov Privacy Policy</a>
+        <a href="{{ privacypolicy | default('/privacypolicy') }}">Mass.gov Privacy Policy</a>
       </div>
     </section>
   </div>

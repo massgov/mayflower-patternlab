@@ -8,9 +8,7 @@ This is a site wide footer.
 * Floating Action
 * Footer Links
 * Social Links
-
-### JavaScript Used
-* This pattern includes JavaScript to generate the Google translate dropdown.
+* Privacy Policy
 
 ### Variables
 ~~~
@@ -24,5 +22,9 @@ footerLinks: {
 
 socialLinks {
   type: socialLinks / required
+}
+
+privacyPlicy {
+  type: privacyPlicy / required
 }
 ~~~
