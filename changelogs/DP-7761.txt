@@ -1,3 +1,0 @@
-Changed
-Patch
-- DP-7761: Take html out of map pin title

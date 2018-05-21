@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Added
-Patch
-- DP-6715: Allow main content of image-promos to be overwritten.

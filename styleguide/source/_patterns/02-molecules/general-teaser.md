@@ -13,6 +13,10 @@ If a teaser image is provided, it will link to the title's href, if set.
 * Decorative Link
 * Image
 * Rich Text
+* [General Teaser Title](/?p=molecules-general-teaser-title)
+* [General Teaser Eyebrow](/?p=molecules-general-teaser-eyebrow)
+* [General Teaser Emphasized Text ](/?p=molecules-general-teaser-emphasizedText)
+
 
 ### Variables
 ~~~
@@ -21,7 +25,7 @@ generalTeaser : {
     type: string / optional
   image:
     type: image / optional
-  eyebrow: 
+  eyebrow:
     type: string / optional
   title : {
     type: decorativeLink / required
