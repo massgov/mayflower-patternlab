@@ -19,8 +19,8 @@
     {% endif %}
     {% if teaserListing.description %}
       <div class="ma__teaser-listing__description">
-      {% set paragraph = teaserListing.description %}
-      {% include "@atoms/11-text/paragraph.twig" %}
+        {% set paragraph = teaserListing.description %}
+        {% include "@atoms/11-text/paragraph.twig" %}
       </div>
     {% endif %}
     {% if teaserListing.featuredItems %}
@@ -37,24 +37,24 @@
           <ul class="ma__teaser-listing__items {{ columnClass }}">
             {% for generalTeaser in teaserListing.items[:shownNumber] %}
               {% block teaserListItem %}
-              <li class="ma__teaser-listing__item">
-                {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
-                {% include "@molecules/general-teaser.twig" %}
-              </li>
+                <li class="ma__teaser-listing__item">
+                  {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
+                  {% include "@molecules/general-teaser.twig" %}
+                </li>
               {% endblock %}
             {% endfor %}
           </ul>
           {% if teaserListing.items|length > shownNumber %}
             <div class="ma__teaser-listing__extra js-accordion-content">
               <ul class="ma__teaser-listing__items {{columnClass}}">
-              {% for generalTeaser in teaserListing.items[shownNumber:last] %}
-                {{ block('teaserListItem') }}
-              {% endfor %}
+                {% for generalTeaser in teaserListing.items[shownNumber:last] %}
+                  {{ block('teaserListItem') }}
+                {% endfor %}
               </ul>
             </div>
             <button
-            class="ma__content-link ma__content-link--chevron ma__content-link__acordion-toggle js-accordion-link"
-            aria-label="{{ teaserListing.moreItemsLabel }}">
+                class="ma__content-link ma__content-link--chevron ma__content-link__acordion-toggle js-accordion-link"
+                aria-label="{{ teaserListing.moreItemsLabel }}">
               <span class="more">{{teaserListing.moreItemsLabel}}</span>
               <span class="less">{{teaserListing.lessItemsLabel}}</span>
             </button>
