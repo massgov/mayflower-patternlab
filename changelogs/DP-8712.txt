@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Minor
-- DP-8712: Support 2nd executive in elected official About Row as option
