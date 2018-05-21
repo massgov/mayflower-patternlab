@@ -1,5 +1,6 @@
 <footer class="ma__footer js-footer" id="footer" role="contentinfo">
   <div class="ma__footer__container">
+    {% block footer %}{# for the Footer region content #}{% endblock %}
     {% block footer_navigation %}
       <div class="ma__footer__nav">
         {% include "@molecules/footer-links.twig" %}
