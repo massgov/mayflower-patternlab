@@ -124,8 +124,16 @@ export default function (window,document,$,undefined) {
       // Append sticky menu when first called
       if ($('.ma__sticky-toc__stuck-menu').length == 0) {
         $tocColumn.clone(true).addClass('ma__sticky-toc__stuck-menu').appendTo('#main-content');
+
+        // wait a beat so the slide in can work on first click
+        setTimeout(function(){
+          menuToggle();
+        }, 100);
       }
-      menuToggle();
+      else {
+        menuToggle();
+      }
+
     });
 
     // Close button
