@@ -1,0 +1,3 @@
+Fixed
+Patch
+DP-9057 - Fix IE11 bug where featured image in mosaic was not appearing.
