@@ -51,10 +51,12 @@
           {% include "@base/placeholder.twig" with {'placeholder':{'text':'Page Content'}} %}
         {% endblock %}
 
-        {% if mainContent.roles %}
-          {% set linkList = mainContent.roles %}
-          {% include "@organisms/by-author/link-list.twig" %}
-        {% endif %}
+        {% block personRoles %}
+          {% if mainContent.roles %}
+            {% set linkList = mainContent.roles %}
+            {% include "@organisms/by-author/link-list.twig" %}
+          {% endif %}
+        {% endblock %}
 
         {% if mainContent.personalMessage %}
           {% set personalMessage = mainContent.personalMessage %}
