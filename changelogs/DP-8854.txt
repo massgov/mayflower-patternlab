@@ -1,0 +1,4 @@
+___DESCRIPTION___
+Changed
+Minor
+- DP-8854: Update the footer template to match the one in Drupal.
