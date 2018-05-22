@@ -19,8 +19,8 @@
     {% endif %}
     {% if teaserListing.description %}
       <div class="ma__teaser-listing__description">
-      {% set paragraph = teaserListing.description %}
-      {% include "@atoms/11-text/paragraph.twig" %}
+        {% set paragraph = teaserListing.description %}
+        {% include "@atoms/11-text/paragraph.twig" %}
       </div>
     {% endif %}
     {% if teaserListing.featuredItems %}
@@ -31,41 +31,43 @@
         {% endfor %}
       </div>
     {% endif %}
-    {% if teaserListing.items %}
-      {% if teaserListing.expandable %}
-        <ul class="ma__teaser-listing__items {{ columnClass }}">
-          {% for generalTeaser in teaserListing.items[:shownNumber] %}
-            {% block teaserListItem %}
-            <li class="ma__teaser-listing__item">
-              {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
-              {% include "@molecules/general-teaser.twig" %}
-            </li>
-            {% endblock %}
-          {% endfor %}
-        </ul>
-        {% if teaserListing.items|length > shownNumber %}
-          <div class="ma__teaser-listing__extra js-accordion-content">
-            <ul class="ma__teaser-listing__items {{columnClass}}">
-            {% for generalTeaser in teaserListing.items[shownNumber:last] %}
+    {% block teaserListingItems %}
+      {% if teaserListing.items %}
+        {% if teaserListing.expandable %}
+          <ul class="ma__teaser-listing__items {{ columnClass }}">
+            {% for generalTeaser in teaserListing.items[:shownNumber] %}
+              {% block teaserListItem %}
+                <li class="ma__teaser-listing__item">
+                  {% set generalTeaser = generalTeaser|merge({"level":teaserHeading}) %}
+                  {% include "@molecules/general-teaser.twig" %}
+                </li>
+              {% endblock %}
+            {% endfor %}
+          </ul>
+          {% if teaserListing.items|length > shownNumber %}
+            <div class="ma__teaser-listing__extra js-accordion-content">
+              <ul class="ma__teaser-listing__items {{columnClass}}">
+                {% for generalTeaser in teaserListing.items[shownNumber:last] %}
+                  {{ block('teaserListItem') }}
+                {% endfor %}
+              </ul>
+            </div>
+            <button
+                class="ma__content-link ma__content-link--chevron ma__content-link__acordion-toggle js-accordion-link"
+                aria-label="{{ teaserListing.moreItemsLabel }}">
+              <span class="more">{{teaserListing.moreItemsLabel}}</span>
+              <span class="less">{{teaserListing.lessItemsLabel}}</span>
+            </button>
+          {% endif %}
+        {% else %}
+          <ul class="ma__teaser-listing__items {{ columnClass }}">
+            {% for generalTeaser in teaserListing.items %}
               {{ block('teaserListItem') }}
             {% endfor %}
-            </ul>
-          </div>
-          <button
-          class="ma__content-link ma__content-link--chevron ma__content-link__acordion-toggle js-accordion-link"
-          aria-label="{{ teaserListing.moreItemsLabel }}">
-            <span class="more">{{teaserListing.moreItemsLabel}}</span>
-            <span class="less">{{teaserListing.lessItemsLabel}}</span>
-          </button>
+          </ul>
         {% endif %}
-      {% else %}
-        <ul class="ma__teaser-listing__items {{ columnClass }}">
-          {% for generalTeaser in teaserListing.items %}
-            {{ block('teaserListItem') }}
-          {% endfor %}
-        </ul>
       {% endif %}
-    {% endif %}
+    {% endblock %}
     {% if teaserListing.more %}
       <div class="ma__teaser-listing__more">
         {% set link = teaserListing.more %}
