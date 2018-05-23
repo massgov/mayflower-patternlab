@@ -34,21 +34,5 @@ export default function (window,document,$,undefined) {
       });
     }
   });
-
-  // Loop through ol tags to add custom list style types
-  let olCounter = 0;
-  $('li').find('ol').each(function(){
-    let $thisOl = $(this);
-
-    // loop through ols in sets of three
-    if (olCounter < 3) {
-      olCounter++;
-    }
-    else {
-      olCounter = 1;
-    }
-
-    $thisOl.addClass('level-' + olCounter);
-  });
 }
 (window,document,jQuery);

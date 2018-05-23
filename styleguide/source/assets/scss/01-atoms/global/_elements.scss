@@ -53,18 +53,46 @@ ol ul {
   margin-bottom: 1em;
 }
 
+// Custom ol list style types out to 9 levels
+// All decimals after that
+
 ol {
+  list-style-type: decimal;
 
-  &.level-1 {
+  ol {
     list-style-type: lower-alpha;
-  }
 
-  &.level-2 {
-    list-style-type: lower-roman;
-  }
+    ol {
+      list-style-type: lower-roman;
 
-  &.level-3 {
-    list-style-type: decimal;
+        ol {
+          list-style-type: decimal;
+
+          ol {
+            list-style-type: lower-alpha;
+
+            ol {
+              list-style-type: lower-roman;
+
+              ol {
+                list-style-type: decimal;
+
+                ol {
+                  list-style-type: lower-alpha;
+
+                  ol {
+                    list-style-type: lower-roman;
+
+                    ol {
+                      list-style-type: decimal;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
   }
 }
 
