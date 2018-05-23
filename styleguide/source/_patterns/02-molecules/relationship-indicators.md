@@ -1,12 +1,16 @@
 ### Description
-This is a set of related links for Organization pages to inculded the Organization links and optional related links
+This is a set of related links for Organization pages to inculded the Organization links and optional related links.
 
 ### Status
 * Stable as of 5.0.0
 
+### Notes
+Offered By: at least one tag required
+Related To: optional
+
 ### Variables
 ~~~
-relationshipIndicators: {
+headerTags: {
 
   offeredBy: [{
     href:
@@ -16,9 +20,9 @@ relationshipIndicators: {
   }],
    relatedTo: [{
     href:
-      type: string / required
+      type: string / optional
     text:
-      type: string / required
+      type: string / optional
   }]
 }
 ~~~
