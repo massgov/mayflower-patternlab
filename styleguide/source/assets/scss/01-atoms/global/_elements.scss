@@ -47,18 +47,24 @@ ul, ol {
 }
 
 ul ul,
-ol ol,
 ol ul {
   list-style-type: circle;
   padding-left: 30px;
   margin-bottom: 1em;
 }
 
-ol ol {
-  list-style-type: lower-alpha;
+ol {
 
-  ol {
+  &.level-1 {
+    list-style-type: lower-alpha;
+  }
+
+  &.level-2 {
     list-style-type: lower-roman;
+  }
+
+  &.level-3 {
+    list-style-type: decimal;
   }
 }
 
