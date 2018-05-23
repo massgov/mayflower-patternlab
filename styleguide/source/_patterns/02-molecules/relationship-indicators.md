@@ -4,6 +4,10 @@ This is a set of related links for Organization pages to inculded the Organizati
 ### Status
 * Stable as of 5.0.0
 
+### Notes
+Offered By: at least one tag required
+Related To: optional
+
 ### Variables
 ~~~
 headerTags: {
@@ -16,9 +20,9 @@ headerTags: {
   }],
    relatedTo: [{
     href:
-      type: string / required
+      type: string / optional
     text:
-      type: string / required
+      type: string / optional
   }]
 }
 ~~~
