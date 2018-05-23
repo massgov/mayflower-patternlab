@@ -1,3 +1,0 @@
-Changed
-Minor
-- DP-8949: Mayflower Subpatterns for General Teaser
