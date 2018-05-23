@@ -35,7 +35,7 @@
 
   @media ($bp-small-min) {
     .ma__featured-item__image--large {
-      display: initial;
+      display: block;
     }
     .ma__featured-item__image {
       display: none;
