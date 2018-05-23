@@ -1,5 +1,5 @@
 ### Description
-This is a set of related links for Organization pages to inculded the Organization links and optional related links
+This is a set of related links for Organization pages to inculded the Organization links and optional related links.
 
 ### Status
 * Stable as of 5.0.0
