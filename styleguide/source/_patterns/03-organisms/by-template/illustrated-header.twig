@@ -30,11 +30,13 @@
         background-image: url('{{ illustratedHeader.bgImage }}');
       }
 
+      {% if illustratedHeader.retinaBgImage %}
       @media (-webkit-min-device-pixel-ratio: 2) {
         .ma__illustrated-header__image {
           background-image: url('{{ illustratedHeader.retinaBgImage }}');
         }
       }
+      {% endif %};
     </style>
     <div
       class="ma__illustrated-header__image"
