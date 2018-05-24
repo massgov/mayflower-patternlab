@@ -2,9 +2,16 @@
   class="ma__image{% if image.shape %} {{ image.shape }}{% endif %}"
   alt="{{ image.alt }}"
   src="{{ image.src }}"
-  {% if image.srcset %}
-    srcset="{{ image.srcset }}"
+  {% if image.versions %}
+    srcset="
+    {% for version in image.versions %}
+      {% if version.url and version.width %}
+        {{ version.url }} {{ version.width }},
+      {% endif %}
+    {% endfor %}
+    "
     {% if image.sizes %}
+      {# Only use sizes if #}
       sizes="{{ image.sizes }}"
     {% endif %}
   {% endif %}
