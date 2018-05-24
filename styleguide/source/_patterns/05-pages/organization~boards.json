@@ -341,6 +341,106 @@
       ]
     },
     {
+      "title": "",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@organisms/by-author/image-link-list.twig",
+          "data": {
+            "imageLinkList": {
+              "blocks": true,
+              "compHeading": {
+                "title": "Our Organizations",
+                "sub": "",
+                "color": "",
+                "id": "",
+                "centered": false
+              },
+              "itemPluralName": "organizations",
+              "description": {
+                "rteElements": [
+                  {
+                    "path": "@atoms/11-text/paragraph.twig",
+                    "data": {
+                      "paragraph": {
+                        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, perspiciatis, similique? Reprehenderit vel praesentium est, tempora animi mollitia non quae. Quasi, inventore. Dolores maxime consequatur dolorum voluptatem, natus dolorem blanditiis."
+                      }
+                    }
+                  }
+                ]
+              },
+              "links": [
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor sit amet.",
+                  "info": "",
+                  "image": {
+                    "src": "../../assets/images/placeholder/250x250.png",
+                    "alt": "logo"
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor sit amet.",
+                  "info": "",
+                  "image": {
+                    "src": "../../assets/images/placeholder/250x250.png",
+                    "alt": "logo"
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor sit amet.",
+                  "info": "",
+                  "image": {
+                    "src": "../../assets/images/placeholder/250x250.png",
+                    "alt": "logo"
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor sit amet.",
+                  "info": ""
+                },
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor sit amet, consectetur.",
+                  "info": "",
+                  "image": {
+                    "src": "../../assets/images/placeholder/250x250.png",
+                    "alt": "logo"
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor sit.",
+                  "info": "",
+                  "image": {
+                    "src": "../../assets/images/placeholder/250x250.png",
+                    "alt": "logo"
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor",
+                  "info": "",
+                  "image": {
+                    "src": "../../assets/images/placeholder/250x250.png",
+                    "alt": "logo"
+                  }
+                },
+                {
+                  "href": "#",
+                  "text": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+                  "info": ""
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
       "title": "Board Members",
       "id": "",
       "pageContent": [
