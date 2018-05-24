@@ -1,6 +1,6 @@
 {
   "urlPath": "/?p=pages-ORG-Health-Services",
-  "COMMENT": "****PRECONTENT COMPONENTS****",
+  "COMMENT": "****PAGE CONTENT COMPONENTS****",
   "pageBanner": {
     "bgWide": "../../assets/images/placeholder/1600x400.png",
     "bgNarrow": "../../assets/images/placeholder/800x400.png",
@@ -9,22 +9,111 @@
     "title": "Forester Licensing Board",
     "titleSubText": "(FLB)"
   },
-
-  "COMMENT": "****PAGE CONTENT COMPONENTS****",
-
   "short_description": {
-     "richText": {
-      "rteElements": [{
-        "path": "@atoms/04-headings/heading-4.twig",
-        "data": {
-           "heading4" : {
-            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. "
+    "richText": {
+      "rteElements": [
+        {
+          "path": "@atoms/04-headings/heading-4.twig",
+          "data": {
+            "heading4": {
+              "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. "
+            }
           }
         }
-      }]
+      ]
     }
   },
   "stackedRows": [
+    {
+      "title": "",
+      "id": "",
+      "pageContent": [
+        {
+          "path": "@organisms/by-author/featured-item-mosaic.twig",
+          "data": {
+            "featuredItemMosaic": {
+              "compHeading": {
+                "title": "Featured Items",
+                "sub": "",
+                "color": "",
+                "id": "",
+                "centered": ""
+              },
+              "columns": [
+                [
+                  {
+                    "href": "#",
+                    "text": "First action",
+                    "image": {
+                      "alt": "alt text",
+                      "src": "../../assets/images/placeholder/400x300.png",
+                      "height": "",
+                      "width": ""
+                    },
+                    "featuredImage": {
+                      "alt": "alt text",
+                      "src": "../../assets/images/placeholder/300x500.png",
+                      "height": "",
+                      "width": ""
+                    }
+                  }
+                ],
+                [
+                  {
+                    "href": "#",
+                    "text": "Second action which has a very long title",
+                    "image": {
+                      "alt": "alt text",
+                      "src": "../../assets/images/placeholder/400x300.png",
+                      "height": "",
+                      "width": ""
+                    }
+                  },
+                  {
+                    "href": "#",
+                    "text": "Third action",
+                    "image": {
+                      "alt": "alt text",
+                      "src": "../../assets/images/placeholder/400x300.png",
+                      "height": "",
+                      "width": ""
+                    }
+                  }
+                ],
+                [
+                  {
+                    "href": "#",
+                    "text": "Fourth action",
+                    "image": {
+                      "alt": "alt text",
+                      "src": "../../assets/images/placeholder/400x300.png",
+                      "height": "",
+                      "width": ""
+                    }
+                  },
+                  {
+                    "href": "#",
+                    "text": "Fifth action is truncated because it's over 60 characters...",
+                    "image": {
+                      "alt": "alt text",
+                      "src": "../../assets/images/placeholder/400x300.png",
+                      "height": "",
+                      "width": ""
+                    }
+                  }
+                ]
+              ],
+              "more": {
+                "href": "#",
+                "text": "view all events at this location",
+                "info": "",
+                "chevron": true
+              }
+            }
+          }
+        }
+      ]
+    },
     {
       "title": "About Us",
       "id": "",
@@ -34,7 +123,6 @@
           "data": {
             "richText": {
               "rteElements": [
-
                 {
                   "path": "@atoms/11-text/paragraph.twig",
                   "data": {
@@ -56,44 +144,51 @@
           }
         }
       ],
-      "sideBar": [{
-        "path": "@molecules/icon-links.twig",
-        "data": {
-          "iconLinks": {
-            "compHeading": {
-              "title": "Social",
-              "sub": true,
-              "color": "",
-              "id": "",
-              "centered": "",
-              "titleContext": "links for Executive Office of Health and Human Services"
-            },
-            "items": [{
-              "icon": "twitter",
-              "link": {
-                "href": "https://twitter.com/MassHHS",
-                "text": "@MassHHS",
-                "chevron": ""
-              }
-            },{
-              "icon": "flickr",
-              "link": {
-                "href": "https://www.flickr.com/photos/mass_hhs/",
-                "text": "Mass_HHS",
-                "chevron": ""
-              }
-            },{
-              "icon": "blog",
-              "link": {
-                "href": "https://blog.mass.gov/hhs",
-                "text": "blog.mass.gov/hhs",
-                "chevron": ""
-              }
-            }]
+      "sideBar": [
+        {
+          "path": "@molecules/icon-links.twig",
+          "data": {
+            "iconLinks": {
+              "compHeading": {
+                "title": "Social",
+                "sub": true,
+                "color": "",
+                "id": "",
+                "centered": "",
+                "titleContext": "links for Executive Office of Health and Human Services"
+              },
+              "items": [
+                {
+                  "icon": "twitter",
+                  "link": {
+                    "href": "https://twitter.com/MassHHS",
+                    "text": "@MassHHS",
+                    "chevron": ""
+                  }
+                },
+                {
+                  "icon": "flickr",
+                  "link": {
+                    "href": "https://www.flickr.com/photos/mass_hhs/",
+                    "text": "Mass_HHS",
+                    "chevron": ""
+                  }
+                },
+                {
+                  "icon": "blog",
+                  "link": {
+                    "href": "https://blog.mass.gov/hhs",
+                    "text": "blog.mass.gov/hhs",
+                    "chevron": ""
+                  }
+                }
+              ]
+            }
           }
         }
-      }]
-    },{
+      ]
+    },
+    {
       "title": "Board Members",
       "id": "",
       "pageContent": [
@@ -126,14 +221,16 @@
                   "emphasizedText": [
                     "Featured Board Member's Title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 },
                 {
                   "layout": "stacked",
@@ -212,14 +309,16 @@
                   "emphasizedText": [
                     "Member's title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 },
                 {
                   "layout": "inline-image",
@@ -238,14 +337,16 @@
                   "emphasizedText": [
                     "Board Member's Title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 },
                 {
                   "layout": "inline-image",
@@ -264,14 +365,16 @@
                   "emphasizedText": [
                     "Board Member's Title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 }
               ]
             }
@@ -346,14 +449,16 @@
                   "emphasizedText": [
                     "Member's title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 },
                 {
                   "layout": "inline-image",
@@ -372,14 +477,16 @@
                   "emphasizedText": [
                     "Board Member's Title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 },
                 {
                   "layout": "inline-image",
@@ -398,14 +505,16 @@
                   "emphasizedText": [
                     "Board Member's Title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 },
                 {
                   "layout": "inline-image",
@@ -424,14 +533,16 @@
                   "emphasizedText": [
                     "Board Member's Title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 },
                 {
                   "layout": "inline-image",
@@ -450,14 +561,16 @@
                   "emphasizedText": [
                     "Board Member's Title"
                   ],
-                  "contents": [{
-                    "path": "@atoms/11-text/paragraph.twig",
-                    "data": {
-                      "paragraph": {
-                        "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                  "contents": [
+                    {
+                      "path": "@atoms/11-text/paragraph.twig",
+                      "data": {
+                        "paragraph": {
+                          "text": "Optional descriptive text. Vel impetus tamquam equidem cu, ei possit possim constituam eos, mea ut rebum iudico. Soluta bonorum partiendo est ne, nominati postulant argumentum ius no, quo ne quaeque sanctus."
+                        }
                       }
                     }
-                  }]
+                  ]
                 }
               ]
             }
@@ -465,7 +578,8 @@
         }
       ],
       "sideBar": null
-    },{
+    },
+    {
       "title": "",
       "id": "",
       "pageContent": [
@@ -474,45 +588,48 @@
           "data": {
             "eventListing": {
               "grid": true,
-              "compHeading":{
+              "compHeading": {
                 "title": "Upcoming Events"
               },
-              "events":[{
-                "title": {
-                  "href": "#",
-                  "text": "Forester Licensing Board monthly meeting",
-                  "info": "",
-                  "property": ""
+              "events": [
+                {
+                  "title": {
+                    "href": "#",
+                    "text": "Forester Licensing Board monthly meeting",
+                    "info": "",
+                    "property": ""
+                  },
+                  "location": "",
+                  "date": {
+                    "summary": "March 30, 2018",
+                    "startMonth": "Mar",
+                    "startDay": "30",
+                    "endMonth": "",
+                    "endDay": ""
+                  },
+                  "time": "",
+                  "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
                 },
-                "location": "",
-                "date": {
-                  "summary": "March 30, 2018",
-                  "startMonth": "Mar",
-                  "startDay": "30",
-                  "endMonth": "",
-                  "endDay": ""
-                },
-                "time": "",
-                "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-              },{
-                "title": {
-                  "href": "#",
-                  "text": "Forester Licensing Board monthly meeting",
-                  "info": "",
-                  "property": ""
-                },
-                "location": "",
-                "date": {
-                  "summary": "April 30, 2018",
-                  "startMonth": "Apr",
-                  "startDay": "30",
-                  "endMonth": "",
-                  "endDay": ""
-                },
-                "time": "",
-                "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-              }],
-              "more":{
+                {
+                  "title": {
+                    "href": "#",
+                    "text": "Forester Licensing Board monthly meeting",
+                    "info": "",
+                    "property": ""
+                  },
+                  "location": "",
+                  "date": {
+                    "summary": "April 30, 2018",
+                    "startMonth": "Apr",
+                    "startDay": "30",
+                    "endMonth": "",
+                    "endDay": ""
+                  },
+                  "time": "",
+                  "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                }
+              ],
+              "more": {
                 "href": "#",
                 "text": "See all events",
                 "chevron": true,
@@ -523,7 +640,6 @@
         }
       ],
       "sidebar": null
-
     },
     {
       "title": "",
@@ -551,27 +667,32 @@
                   "text": "Request Public Records",
                   "type": "external",
                   "href": "#"
-                },{
+                },
+                {
                   "image": "",
                   "text": "Top Action/Service",
                   "type": "external",
                   "href": "#"
-                },{
+                },
+                {
                   "image": "",
                   "text": "Top Action/Service",
                   "type": "external",
                   "href": "#"
-                },{
+                },
+                {
                   "image": "",
                   "text": "Top Action/Service",
                   "type": "external",
                   "href": "#"
-                },{
+                },
+                {
                   "image": "",
                   "text": "Top Action/Service",
                   "type": "external",
                   "href": "#"
-                },{
+                },
+                {
                   "image": "",
                   "text": "Top Action/Service",
                   "type": "external",
@@ -613,132 +734,153 @@
               ]
             }
           }
-        },{ "path": "@organisms/by-author/contact-list.twig",
-      "data": {
-        "contactList": {
-          "viewSpecific": false,
-          "compHeading": {
-            "title": "Contact Us",
-            "sub": "",
-            "color": "",
-            "id": "contact us",
-            "centered": ""
-          },
-          "image": {
-            "alt": "eohhs logo",
-            "src": "../../assets/images/placeholder/230x130.png",
-            "height": "130",
-            "width": "230"
-          },
-          "contacts":[{
-            "accordion": false,
-            "columns": true,
-            "isExpanded": false,
-            "groups": [{
-              "icon": "marker",
-              "name": "Address",
-              "items": [{
-                "type": "address",
-                "label": "",
-                "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
-                "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
-                "details": ""
-              }]
-            },{
-              "icon": "phone",
-              "name": "Phone",
-              "items": [{
-                "type": "phone",
-                "property": "",
-                "label":"Main:",
-                "link": {
-                  "href": "+14134994262",
-                  "text": "(413) 499-4262",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"Toll Free:",
-                "link":{
-                  "href": "+18004324321",
-                  "text": "(800) 432-4321",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"TTY:",
-                "link": {
-                  "href":"+16175557777",
-                  "text": "(617) 555-7777",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"For those who need accessible services"
-              },{
-                "type": "phone",
-                "property": "",
-                "label":"Voice Relay:",
-                "link":{
-                  "href":"16175555255",
-                  "text": "(617) 555-5255",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              }]
-            },{
-              "icon": "laptop",
-              "name": "Online",
-              "hidden": "",
-              "items": [{
-                "type": "email",
-                "property": "",
-                "label":"Email:",
-                "link": {
-                  "href":"email@email.com",
-                  "text": "email@email.com",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              },{
-                "type": "online",
-                "property": "",
-                "label":"Web:",
-                "link": {
-                  "href":"#",
-                  "text": "Contact Form",
-                  "info": "",
-                  "property": ""
-                },
-                "details":""
-              }]
-            },{
-              "icon": "fax-icon",
-              "name": "Fax",
-              "items": [{
-                "type": "fax",
-                "property": "",
-                "label":"Main:",
-                "link": {
-                  "href":"+14134994262",
-                  "text": "(413) 499-4262",
-                  "info": "",
-                  "property": ""
-                },
-                "details":"Please allow 24 hours for a response"
-              }]
-            }]
-          }]
-        }
-      }
-    },
+        },
+        {
+          "path": "@organisms/by-author/contact-list.twig",
+          "data": {
+            "contactList": {
+              "viewSpecific": false,
+              "compHeading": {
+                "title": "Contact Us",
+                "sub": "",
+                "color": "",
+                "id": "contact us",
+                "centered": ""
+              },
+              "image": {
+                "alt": "eohhs logo",
+                "src": "../../assets/images/placeholder/230x130.png",
+                "height": "130",
+                "width": "230"
+              },
+              "contacts": [
+                {
+                  "accordion": false,
+                  "columns": true,
+                  "isExpanded": false,
+                  "groups": [
+                    {
+                      "icon": "marker",
+                      "name": "Address",
+                      "items": [
+                        {
+                          "type": "address",
+                          "label": "",
+                          "value": "One Ashburton Place, 11th Floor, Boston, MA 02108",
+                          "link": "https://www.google.com/maps/place/1+Ashburton+Pl,+Boston,+MA+02108",
+                          "details": ""
+                        }
+                      ]
+                    },
+                    {
+                      "icon": "phone",
+                      "name": "Phone",
+                      "items": [
+                        {
+                          "type": "phone",
+                          "property": "",
+                          "label": "Main:",
+                          "link": {
+                            "href": "+14134994262",
+                            "text": "(413) 499-4262",
+                            "info": "",
+                            "property": ""
+                          },
+                          "details": "This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+                        },
+                        {
+                          "type": "phone",
+                          "property": "",
+                          "label": "Toll Free:",
+                          "link": {
+                            "href": "+18004324321",
+                            "text": "(800) 432-4321",
+                            "info": "",
+                            "property": ""
+                          },
+                          "details": "This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+                        },
+                        {
+                          "type": "phone",
+                          "property": "",
+                          "label": "TTY:",
+                          "link": {
+                            "href": "+16175557777",
+                            "text": "(617) 555-7777",
+                            "info": "",
+                            "property": ""
+                          },
+                          "details": "For those who need accessible services"
+                        },
+                        {
+                          "type": "phone",
+                          "property": "",
+                          "label": "Voice Relay:",
+                          "link": {
+                            "href": "16175555255",
+                            "text": "(617) 555-5255",
+                            "info": "",
+                            "property": ""
+                          },
+                          "details": ""
+                        }
+                      ]
+                    },
+                    {
+                      "icon": "laptop",
+                      "name": "Online",
+                      "hidden": "",
+                      "items": [
+                        {
+                          "type": "email",
+                          "property": "",
+                          "label": "Email:",
+                          "link": {
+                            "href": "email@email.com",
+                            "text": "email@email.com",
+                            "info": "",
+                            "property": ""
+                          },
+                          "details": ""
+                        },
+                        {
+                          "type": "online",
+                          "property": "",
+                          "label": "Web:",
+                          "link": {
+                            "href": "#",
+                            "text": "Contact Form",
+                            "info": "",
+                            "property": ""
+                          },
+                          "details": ""
+                        }
+                      ]
+                    },
+                    {
+                      "icon": "fax-icon",
+                      "name": "Fax",
+                      "items": [
+                        {
+                          "type": "fax",
+                          "property": "",
+                          "label": "Main:",
+                          "link": {
+                            "href": "+14134994262",
+                            "text": "(413) 499-4262",
+                            "info": "",
+                            "property": ""
+                          },
+                          "details": "Please allow 24 hours for a response"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
         {
           "path": "@organisms/by-author/press-listing.twig",
           "data": {
@@ -1138,7 +1280,8 @@
                 {
                   "href": "#",
                   "text": "Related Board 2"
-                },{
+                },
+                {
                   "href": "#",
                   "text": "Related Board 3"
                 }
