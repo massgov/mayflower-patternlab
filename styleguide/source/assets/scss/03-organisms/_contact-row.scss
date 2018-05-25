@@ -31,7 +31,7 @@ $contact-row-image-max-width: 300px;
         .ma__contact-group {
           width: 50%;
         }
-        .ma__contact-group:first-child {
+        .ma__contact-group:first-child:not(:last-child) {
           border-right: 1px solid #dcdcdc;
           float: left;
           padding-right: 20px;
