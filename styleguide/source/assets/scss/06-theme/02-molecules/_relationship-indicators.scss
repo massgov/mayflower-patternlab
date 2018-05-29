@@ -19,6 +19,11 @@
       border: 2px solid;
       padding: 3px 5px;
       width: 100%;
+
+      @media ($bp-x-small-min) {
+        width: auto;
+        display: inline-block;
+      }
     }
 
     button {
@@ -54,11 +59,21 @@
     }
 
     &.offered-by {
+      display: flex;
+
+      @media ($bp-medium-min) {
+        flex-wrap: nowrap;
+      }
 
       .ma__relationship-indicators--term {
+        display: none;
 
-        &:nth-child(n+2) {
-          display: none;
+        @media ($bp-large-min) {
+          display: block;
+
+          &:nth-child(n+2) {
+            display: none;
+          }
         }
       }
 
@@ -73,13 +88,22 @@
 
       button {
         color: $c-theme-green;
+
+        .tag-count {
+          display: none;
+
+          @media ($bp-large-min) {
+            display: inline-block;
+          }
+        }
       }
     }
 
     &.related-to {
       padding-top: 15px;
+      flex-wrap: wrap;
 
-      @media ($bp-medium-min) {
+      @media ($bp-large-min) {
         padding-top: 0;
       }
 

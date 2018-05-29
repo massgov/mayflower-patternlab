@@ -23,11 +23,18 @@
 
      @media ($bp-medium-min) {
       display: flex;
+    }
+
+    &.tags-open {
       flex-wrap: wrap;
     }
   }
 
   &--term {
     margin: 0 5px 10px 0;
+
+     .tags-open & {
+      display: block;
+     }
   }
 }
