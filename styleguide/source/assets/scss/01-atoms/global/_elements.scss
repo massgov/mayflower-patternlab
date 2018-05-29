@@ -47,15 +47,53 @@ ul, ol {
 }
 
 ul ul,
-ol ol,
 ol ul {
   list-style-type: circle;
   padding-left: 30px;
   margin-bottom: 1em;
 }
 
-ol ol {
-  list-style-type: lower-alpha;
+// Custom ol list style types out to 9 levels
+// All decimals after that
+
+ol {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+
+        ol {
+          list-style-type: decimal;
+
+          ol {
+            list-style-type: lower-alpha;
+
+            ol {
+              list-style-type: lower-roman;
+
+              ol {
+                list-style-type: decimal;
+
+                ol {
+                  list-style-type: lower-alpha;
+
+                  ol {
+                    list-style-type: lower-roman;
+
+                    ol {
+                      list-style-type: decimal;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+  }
 }
 
 
