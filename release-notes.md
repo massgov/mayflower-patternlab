@@ -13,6 +13,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+## 5.25.0 (5/23/2018)
+
+### Changed
+- DP-8631: Provides twig blocks to support overrides and template mapping of data.
+- DP-8854: Update the footer template to match the one in Drupal.
+- DP-8949: Mayflower Subpatterns for General Teaser.
+
+### Fixed 
+- DP-9057 - Fix IE11 bug where featured image in mosaic was not appearing.
+
 ## 5.24.0 (5/16/2018)
 
 ### Fixed
