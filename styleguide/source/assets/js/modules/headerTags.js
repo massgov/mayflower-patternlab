@@ -40,6 +40,7 @@ export default function (window,document,$,undefined) {
     let tagCount = $hiddenTag.length;
     let $tagState = $button.find('.tag-state');
 
+    // if hidden  tags exist, show button
     if (tagCount) {
       $button.toggle();
     }
