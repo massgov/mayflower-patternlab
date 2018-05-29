@@ -14,6 +14,10 @@
     min-width: 50%;
     display: flex;
 
+    &.tags-open {
+      flex-direction: column;
+    }
+
     @media ($bp-medium-min) {
       padding-right: 2rem;
     }
@@ -21,17 +25,27 @@
 
   &--terms {
     display: flex;
+    flex-wrap: wrap;
 
-    &.tags-open {
-      flex-wrap: wrap;
+    @media ($bp-large-min) {
+      flex-wrap: nowrap;
+
+      .tags-open & {
+        flex-wrap: wrap;
+      }
     }
   }
 
   &--term {
     margin: 0 5px 10px 0;
+    width: 100%;
 
-     .tags-open & {
+    @media ($bp-x-small-min) {
+      width: auto;
+    }
+
+    .tags-open & {
       display: block;
-     }
+    }
   }
 }

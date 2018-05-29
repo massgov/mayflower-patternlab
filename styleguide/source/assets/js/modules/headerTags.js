@@ -45,12 +45,13 @@ export default function (window,document,$,undefined) {
       $button.toggle();
     }
 
+    // use hidden tags to populate button label
     $buttonCounter.text(tagCount);
 
     $button.on('click', function() {
       let $tagStateText = $tagState.text();
 
-      $tagWrapper.toggleClass('tags-open');
+      $tagWrapper.parent().toggleClass('tags-open');
       $button.toggleClass('is-open');
       $tagState.text($tagStateText === 'fewer' ? 'more' : 'fewer');
       $hiddenTag.toggle();
@@ -61,7 +62,7 @@ export default function (window,document,$,undefined) {
       $buttonCounter.removeAttr('style');
       $hiddenTag.removeAttr('style');
 
-      // recount the hidden tags and upadte the button text
+      // recount the hidden tags and update the button text
       setTimeout(function(){
         $hiddenTag = $tagWrapper.find('.ma__relationship-indicators--term:hidden');
         $buttonCounter.text(tagCount);

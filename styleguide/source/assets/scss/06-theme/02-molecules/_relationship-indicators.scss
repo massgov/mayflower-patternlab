@@ -47,7 +47,7 @@
         transform: translateY(-45%) rotate(45deg);
       }
 
-      &.is-open::after {
+      .is-open::after {
         transform: translateY(-55%) rotate(-135deg);
       }
 
@@ -89,6 +89,10 @@
       button {
         color: $c-theme-green;
         align-self: flex-end;
+
+        .tags-open & {
+          align-self: basline;
+        }
 
         @media ($bp-large-min) {
           align-self: baseline;
