@@ -1,0 +1,37 @@
+.ma__relationship-indicators {
+  @include ma-container;
+  @include clearfix;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 10px;
+
+  @media ($bp-large-min) {
+    flex-direction: row;
+  }
+
+  &--section {
+    width: 100%;
+    min-width: 50%;
+    display: flex;
+
+    @media ($bp-medium-min) {
+      padding-right: 2rem;
+    }
+  }
+
+  &--terms {
+    display: flex;
+
+    &.tags-open {
+      flex-wrap: wrap;
+    }
+  }
+
+  &--term {
+    margin: 0 5px 10px 0;
+
+     .tags-open & {
+      display: block;
+     }
+  }
+}
