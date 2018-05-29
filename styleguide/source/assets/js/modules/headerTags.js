@@ -43,6 +43,7 @@ export default function (window,document,$,undefined) {
     if (tagCount) {
       $button.toggle();
     }
+
     $buttonCounter.text(tagCount);
 
     $button.on('click', function() {
@@ -54,16 +55,16 @@ export default function (window,document,$,undefined) {
       $hiddenTag.toggle();
     });
 
-     $(window).resize(function () {
-        // remove all the screen width specific styles
-        $buttonCounter.removeAttr('style');
-        $hiddenTag.removeAttr('style');
+    $(window).resize(function () {
+      // remove all the screen width specific styles
+      $buttonCounter.removeAttr('style');
+      $hiddenTag.removeAttr('style');
 
-        // recount the hidden tags and upadte the button text
-        $hiddenTag = $tagWrapper.find('.ma__relationship-indicators--term:hidden');
-        $buttonCounter.text(tagCount);
-        $tagState.text('more');
-     });
+      // recount the hidden tags and upadte the button text
+      $hiddenTag = $tagWrapper.find('.ma__relationship-indicators--term:hidden');
+      $buttonCounter.text(tagCount);
+      $tagState.text('more');
+    });
 
   });
 
