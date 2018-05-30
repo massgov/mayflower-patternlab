@@ -28,6 +28,14 @@
         {% include "@molecules/contact-group.twig" %}
       {% endfor %}
     {% endblock %}
+    {% if contactRow.moreLink %}
+      <div class="ma__contact-group">
+        {% block moreLink %}
+          {% set decorativeLink = contactRow.moreLink %}
+          {% include "@atoms/decorative-link.twig" %}
+        {% endblock %}
+      </div>
+    {% endif %}
   </div>
 
   {% if contactRow.hasManyAdditional %}
@@ -38,14 +46,6 @@
     </div>
   {% endif %}
 
-  {% if contactRow.moreLink %}
-    <div class="ma__contact-row__more-info">
-      {% block moreLink %}
-        {% set decorativeLink = contactRow.moreLink %}
-        {% include "@atoms/decorative-link.twig" %}
-      {% endblock %}
-    </div>
-  {% endif %}
 
 
 </section>
