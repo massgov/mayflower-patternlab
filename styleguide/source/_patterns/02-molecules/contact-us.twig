@@ -40,22 +40,24 @@
         {% endfor %}
       {% endblock %}
 
-      {# Show 3rd+ contact groups inside of accordion (if they exist) #}
-      <div class="ma__contact-us__extra js-accordion-content">
-        {% block secondaryContactGroups %}
-          {% for group in contactUs.groups[2:last] %}
-            {% set contactGroup = group|merge({
-                               "level": groupHeading,
-                               "contactName": contactName })  %}
-            {% include "@molecules/contact-group.twig" %}
-          {% endfor %}
-        {% endblock %}
-      </div>
-      <div class="ma__contact-us__expand">
-        <button type="button" class="js-accordion-link">
-          <span>more</span><span>less</span> contact info
-        </button>
-      </div>
+      {% if not contactUs.hideSecondary %}
+        {# Show 3rd+ contact groups inside of accordion (if they exist) #}
+        <div class="ma__contact-us__extra js-accordion-content">
+          {% block secondaryContactGroups %}
+            {% for group in contactUs.groups[2:last] %}
+              {% set contactGroup = group|merge({
+                                 "level": groupHeading,
+                                 "contactName": contactName })  %}
+              {% include "@molecules/contact-group.twig" %}
+            {% endfor %}
+          {% endblock %}
+        </div>
+        <div class="ma__contact-us__expand">
+          <button type="button" class="js-accordion-link">
+            <span>more</span><span>less</span> contact info
+          </button>
+        </div>
+      {% endif %}
     {% else %}
       <div class="ma__contact-us__content js-accordion-content">
         <div class="ma__contact-us__content-wrap">
