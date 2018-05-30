@@ -13,6 +13,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 **For example**
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
+
+## 5.26.0 (5/30/2018)
+
+### Fixed
+- DP-8574: Update jQuery version for stickyTOC Firefox bug.
+
+### Added
+- DP-7363: Enable srcset on the image pattern and demonstrate usage on Press Release with Image Page.
+
+### Changed
+- DP-6907: Change default ordered list type styling in rich text fields.
+- DP-9010: MF Update row order for boards page.
+
+
 ## 5.25.0 (5/23/2018)
 
 ### Changed
@@ -20,7 +34,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - DP-8854: Update the footer template to match the one in Drupal.
 - DP-8949: Mayflower Subpatterns for General Teaser.
 
-### Fixed 
+### Fixed
 - DP-9057 - Fix IE11 bug where featured image in mosaic was not appearing.
 
 ## 5.24.0 (5/16/2018)
