@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Added
-Minor
-- DP-7363: Enable srcset on the image pattern and demonstrate usage on Press Release with Image Page
