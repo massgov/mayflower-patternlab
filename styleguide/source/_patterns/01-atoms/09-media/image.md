@@ -14,10 +14,14 @@ image {
     type: string / required
   src:
     type: string (url) / required
+  srcset:
+    type: string / optional
+  sizes:
+    type: string / optional
   height:
-    type: string / required
+    type: string / optional
   width:
-    type: string / required
+    type: string / optional
   shape:
     type: string / optional
 }
