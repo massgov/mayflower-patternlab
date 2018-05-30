@@ -1,5 +1,0 @@
-___DESCRIPTION___
-Fixed
-Minor
-- DP-8574: Update jQuery version for stickyTOC Firefox bug
-
