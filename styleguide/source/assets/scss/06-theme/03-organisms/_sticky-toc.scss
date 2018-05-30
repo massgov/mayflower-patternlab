@@ -282,9 +282,9 @@
 
   .ma__sticky-toc__secondary-label {
     display: flex;
-    position: fixed;
     z-index: 99;
-    top:0;
+    position: fixed;
+    right: -600px;
     align-items: center;
     justify-content: space-between;
     border: 0;
@@ -331,6 +331,12 @@
 
   &.sticky-nav-open {
     right: 0;
+
+    .ma__sticky-toc__secondary-label {
+      top:0;
+      right: 0;
+      transition: right 0.3s ease-out;
+    }
   }
 }
 
