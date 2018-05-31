@@ -8,6 +8,7 @@ This is an example of an Organization page for Mass.gov using a stacked row temp
 * Header
 * Footer
 * Stacked Row (template)
+* Relationship Indicators
 * Page Header - location
 * Page Banner - large
 * Rich Text
@@ -21,6 +22,9 @@ This is an example of an Organization page for Mass.gov using a stacked row temp
 ### Variables
 See Patterns above
 ~~~
+relationshipIndicators: {
+  type: relationshipIndicator / optional
+}
 pageBanner: {
   type: pageBanner / required
 },
