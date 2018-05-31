@@ -1,0 +1,3 @@
+Minor
+Added
+DP-8992, DP-8993, DP-8969: Adds a new 'contact row' organism to get around limitations of existing contact component options.
