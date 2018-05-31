@@ -64,7 +64,8 @@ export default function (window,document,$,undefined) {
 
       // recount the hidden tags and update the button text
       setTimeout(function(){
-        $hiddenTag = $tagWrapper.find('.ma__relationship-indicators--term:hidden');
+        let $hiddenTag = $tagWrapper.find('.ma__relationship-indicators--term:hidden');
+        let tagCount = $hiddenTag.length;
         $buttonCounter.text(tagCount);
         $tagState.text('more');
       }, 500);
