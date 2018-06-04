@@ -32,7 +32,7 @@
       @include ma-button-reset;
       @include ma-link-underline;
       @include ma-chevron;
-      text-transform: uppercase;
+      text-transform: capitalize;
       margin-top: -6px;
       padding-top: 0;
       padding-left: 0;
@@ -40,6 +40,10 @@
       font-weight: 600;
       white-space: nowrap;
       display: none;
+
+      .tag-state {
+        text-transform: none;
+      }
 
       &:after {
         opacity: 0.5;
