@@ -1,5 +1,0 @@
-___DESCRIPTION___
-Changed
-Minor
-- DP-8897: Relationship indicator change to expose organization on public pages
-- DP-9077: Relationship indicator changes
