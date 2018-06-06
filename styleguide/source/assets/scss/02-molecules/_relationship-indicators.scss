@@ -13,6 +13,7 @@
     width: 100%;
     min-width: 50%;
     display: flex;
+    flex-wrap: nowrap;
 
     &.tags-open {
       flex-direction: column;
@@ -25,14 +26,14 @@
 
   &--terms {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+
+    .tags-open & {
+      flex-wrap: wrap;
+    }
 
     @media ($bp-large-min) {
       flex-wrap: nowrap;
-
-      .tags-open & {
-        flex-wrap: wrap;
-      }
     }
   }
 

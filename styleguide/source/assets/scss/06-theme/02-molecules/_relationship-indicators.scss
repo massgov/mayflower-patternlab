@@ -33,7 +33,7 @@
       @include ma-link-underline;
       @include ma-chevron;
       text-transform: capitalize;
-      margin-top: -6px;
+      align-self: baseline;
       padding-top: 0;
       padding-left: 0;
       font-size: 1rem;
@@ -131,7 +131,6 @@
 
     &.related-to {
       padding-top: 15px;
-      flex-wrap: wrap;
 
       @media ($bp-large-min) {
         padding-top: 0;
