@@ -14,6 +14,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - DP-1234: The short description text on a [service detail](http://mayflower.digital.mass.gov/?p=pages-detail-for-service-howto-location) page banner ([@organisms/by-template/page-banner](http://mayflower.digital.mass.gov/?p=organisms-page-banner)) should now render ([PR #493](https://github.com/massgov/mayflower/pull/493))
 
 
+## 5.27.0 (6/06/2018)
+
+### Added
+- DP-8992, DP-8993, DP-8969: Adds a new 'contact row' organism to get around limitations of existing contact component options.
+
+### Changed
+- DP-8897: Relationship indicator change to expose organization on public pages
+- DP-9077: Relationship indicator changes
+
+
 ## 5.26.0 (5/30/2018)
 
 ### Fixed
