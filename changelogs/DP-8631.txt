@@ -1,4 +1,0 @@
-___DESCRIPTION___
-Changed
-Patch
-- DP-8631: Provides twig blocks to support overrides and template mapping of data.
