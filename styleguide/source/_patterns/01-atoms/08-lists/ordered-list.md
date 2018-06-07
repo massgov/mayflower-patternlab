@@ -1,15 +1,22 @@
 ### Description
 An `<ol>`  element with its child `<li>` elements and optional nested child `<ol>` and `<li>` elements.
 
+### List Style Types
+The list style type loop through 3 different counters:
+
+* digits
+* lower-alpha
+* lower-roman
+
 ### Status
 * Stable as of 5.0.0
 
 ### Variables:
 ~~~
-orderedList [{ 
+orderedList [{
   text:
     type: string / required
-  sublist (optional) [{ 
+  sublist (optional) [{
     text:
       type: string / required
   }]

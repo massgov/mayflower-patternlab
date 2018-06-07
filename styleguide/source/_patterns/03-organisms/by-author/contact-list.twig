@@ -17,6 +17,7 @@
     {% set image = contactList.image %}
     {% include "@atoms/09-media/image.twig" %}
   {% endif %}
+
   {% block contactListContacts %}
     {% for contact in contactList.contacts %}
       {% set contactUs = contact|merge({"level": contactHeading}) %}

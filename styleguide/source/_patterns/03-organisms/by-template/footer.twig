@@ -1,19 +1,25 @@
-<footer class="ma__footer js-footer" id="footer">
+<footer class="ma__footer js-footer" id="footer" role="contentinfo">
   <div class="ma__footer__container">
-    <div class="ma__footer__nav">
-      {% include "@molecules/footer-links.twig" %}
-    </div>
+    {% block footer %}{# for the Footer region content #}{% endblock %}
+    {% block footer_navigation %}
+      <div class="ma__footer__nav">
+        {% include "@molecules/footer-links.twig" %}
+      </div>
+    {% endblock %}
     <section class="ma__footer__info">
       <div class="ma__footer__logo">
-        <img src="{{ url.domain }}/{{ url.assetsPath }}/images/stateseal.png" alt="Massachusetts State Seal" width="120" height="120" />
+        <a href="/" title="Mass.gov home page">
+          <img src="{{ urlDomain ~ '/' ~ directory }}/images/stateseal.png" alt="Massachusetts State Seal" width="100" height="100" />
+        </a>
       </div>
       <div class="ma__footer__social">
         {% set socialLinks = footerSocialLinks %}
         {% include "@molecules/social-links.twig" %}
       </div>
       <div class="ma__footer__copyright">
-        <p><b>&copy; 2016 Commonwealth of Massachusetts.</b></p>
-        <p>Mass.Gov&#x00AE; is a registered service mark of the Commonwealth of Massachusetts.</p>
+        <p><b>&copy; {{ "now"|date("Y") }} Commonwealth of Massachusetts.</b></p>
+        <p>Mass.gov&#x00AE; is a registered service mark of the Commonwealth of Massachusetts.</p>
+        <a href="{{ privacyPolicy | default('/privacypolicy') }}">Mass.gov Privacy Policy</a>
       </div>
     </section>
   </div>
@@ -27,22 +33,4 @@
 </footer>
 {% if floatingAction %}
   {% include "@molecules/floating-action.twig" %}
-{% endif %}
-
-{% if googleLanguages %}
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: '{{ googleLanguages }}', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-
-      document.querySelector('#google_translate_element').classList.add('has-rendered');
-    }
-
-    (function() {
-      var script = document.createElement('script');
-      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-      script.async = true;
-      element = document.getElementsByTagName('head')[0];
-      element.appendChild(script);
-    })();
-  </script>
 {% endif %}
