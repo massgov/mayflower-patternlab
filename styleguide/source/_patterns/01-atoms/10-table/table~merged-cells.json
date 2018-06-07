@@ -1,5 +1,6 @@
 {
   "table": {
+    "mergedCells": true,
     "head": {
       "rows": [{
         "rowSpanOffset":false,
