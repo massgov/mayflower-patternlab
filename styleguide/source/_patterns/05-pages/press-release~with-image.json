@@ -56,8 +56,25 @@
       "image": { 
         "alt": "alt text", 
         "src": "../../assets/images/placeholder/820x460.png",
-        "height": "",
-        "width": ""
+        "versions": [
+          {
+            "url": "../../assets/images/placeholder/565x282.png",
+            "width": "565w"
+          },
+          {
+            "url": "../../assets/images/placeholder/820x460.png",
+            "width": "820w"
+          },
+          {
+            "url": "../../assets/images/placeholder/835x467.png",
+            "width": "835w"
+          },
+          {
+            "url": "../../assets/images/placeholder/1670x835.png",
+            "width": "1670w"
+          }
+        ],
+        "sizes": "(min-width: 910px) 820px, 100vw"
       },
       "caption": "This is an optional caption that can wrap to multiple lines."
     },
