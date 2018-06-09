@@ -45,10 +45,6 @@
     }
   }
 
-  @media print {
-    display: none;
-  }
-
   &[data-sticky='middle'] {
     position: fixed;
       top: 40px;
