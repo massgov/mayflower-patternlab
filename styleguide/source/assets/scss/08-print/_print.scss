@@ -149,9 +149,11 @@ h4 {
     overflow: visible;
 }
 
-.ma__action-finder .ma__callout-link  {
-  width: 100% !important;
-  background-color: transparent !important;
+.ma__callout-link  {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  break-inside: avoid;
 }
 
 .ma__callout-stats {
