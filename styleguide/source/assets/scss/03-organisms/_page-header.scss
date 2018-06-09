@@ -258,7 +258,7 @@ $page-header-widget-width: 350px;
           content: "true";
         }
 
-        @media print, ($bp-small-min) {
+        @media ($bp-small-min) {
           &:before {
             content: "false";
           }
