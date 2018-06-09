@@ -443,6 +443,19 @@ h4 {
   display: none;
 }
 
+.ma__action-finder--no-background .ma__action-finder__header {
+  background-color: transparent;
+  transform: none;
+}
+
+.ma__action-finder--no-background .ma__action-finder__title {
+  transform: none;
+}
+
+.ma__action-finder--no-background .ma__action-finder__header:before {
+  background-color: transparent;
+}
+
 .ma__page-banner__title {
   transform: none;
   width: 100%;
