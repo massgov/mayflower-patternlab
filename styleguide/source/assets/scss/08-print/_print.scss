@@ -57,7 +57,7 @@ h1,
 .ma__quick-actions,
 .ma__wait-time,
 .fluid-width-video-wrapper,
-.ma__header-alert__container
+.ma__header-alerts,
 #feedback,
 .ma__floating-action {
   display: none !important;
@@ -403,6 +403,7 @@ h4 {
 .ma__page-banner--small .ma__page-banner__content,
 .ma__page-banner--large .ma__page-banner__content {
   padding: 0;
+  transform: none;
 }
 
 .ma__page-banner__container {
@@ -424,6 +425,10 @@ h4 {
   top: auto;
   transform: none;
   width: 100%;
+}
+
+.ma__page-banner__description {
+  color: $c-font-dark;
 }
 
 .ma__page-banner--large .ma__page-banner__title, .ma__page-banner--small .ma__page-banner__title,
