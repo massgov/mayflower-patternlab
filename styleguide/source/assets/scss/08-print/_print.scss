@@ -1,5 +1,11 @@
 @media print {
 
+* {
+  -webkit-transition: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
 html {
   font-size: 13px;
 }
@@ -9,10 +15,17 @@ body {
   width: 7.65in;
 }
 
+a::after {
+  content: " (" attr(href) ") ";
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
 img,
 .ma__google-map,
 .ma__mapped-locations,
-.ma__section-links {
+.ma__section-links,
+.ma__contact-us--accordion {
    page-break-inside: avoid;
 }
 
@@ -34,6 +47,7 @@ h1,
 .ma__footer,
 .ma__action-details__anchor-links,
 .ma__header-tags,
+.ma__header__container,
 .ma__emergency-alerts,
 .ma__illustrated-header__image,
 .ma__jump-links,
@@ -50,6 +64,7 @@ h1,
 .ma__quick-actions,
 .ma__wait-time,
 .fluid-width-video-wrapper,
+.ma__header-alerts,
 #feedback,
 .ma__floating-action {
   display: none !important;
@@ -74,13 +89,17 @@ h1,
     width: auto;
 }
 
+.ma__header__button-container {
+  display: none;
+}
+
 .page-content,
 .ma__page-header,
 .sidebar {
   float: none !important;
-  margin-bottom: 30px !important;
   padding: 0 !important;
   width: 100% !important;
+  margin-top: 20px !important;
 }
 
 .ma__action-details__content {
@@ -116,6 +135,7 @@ h4 {
 
 .ma__rich-text {
     margin-bottom: 30px;
+    padding-right: 0 !important;
   }
 
 .ma__rich-text h4,
@@ -136,6 +156,13 @@ h4 {
     overflow: visible;
 }
 
+.ma__callout-link  {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  break-inside: avoid;
+}
+
 .ma__callout-stats {
   border: 3px solid $c-bd-divider;
   padding: 20px;
@@ -147,6 +174,10 @@ h4 {
   &:before {
     display: none;
   }
+}
+
+.ma__split-columns__column {
+  width: 100%;
 }
 
 .sidebar .ma__colored-heading {
@@ -249,7 +280,11 @@ h4 {
 }
 
 .ma__split-columns__container, .ma__key-actions__container {
-  padding: 0;
+  padding: 0 !important;
+}
+
+.ma__key-actions {
+  margin-top: 20px !important;
 }
 
 .main-content--two .ma__split-columns__column:first-child:nth-last-child(2), .main-content--two .ma__split-columns__column:first-child:nth-last-child(2) ~ .ma__split-columns__column,
@@ -270,6 +305,11 @@ h4 {
     padding-bottom: 0;
     padding-top: 20px;
   }
+}
+
+.ma__callout-alert {
+  padding-right: 0 !important;
+  margin-top: 20px;
 }
 
 .ma__key-actions__items .ma__callout-link {
@@ -351,26 +391,20 @@ h4 {
 }
 
 .ma__header-alert {
-  background-color: transparent;
-  margin-bottom: 30px;
-
-  &__container {
-    border: 3px solid $c-bd-divider;
-    padding: 10px;
-    text-align: left;
-  }
-
-  &__hide {
-    display: none;
-  }
+  display: none;
 }
 
 .ma__sidebar-promo__view-more {
   text-align: left;
 }
 
-.ma__stacked-row-section__container {
+.ma__stacked-row__container {
   padding: 0;
+
+  &::before {
+    display: none;
+    padding-top: 20px !important;
+  }
 }
 
 .ma__stacked-row-section ~ .ma__stacked-row-section .ma__stacked-row-section__title {
@@ -391,6 +425,16 @@ h4 {
 .ma__page-banner--small .ma__page-banner__content,
 .ma__page-banner--large .ma__page-banner__content {
   padding: 0;
+  transform: none !important;
+}
+
+.ma__page-banner__container {
+  background-color: transparent;
+  color: $c-font-dark;
+}
+
+.ma__page-banner__container:before {
+  height: auto;
 }
 
 .ma__page-banner__content {
@@ -401,8 +445,12 @@ h4 {
   padding: 0;
   position: relative;
   top: auto;
-  transform: none;
+  transform: none !important;
   width: 100%;
+}
+
+.ma__page-banner__description {
+  color: $c-font-dark;
 }
 
 .ma__page-banner--large .ma__page-banner__title, .ma__page-banner--small .ma__page-banner__title,
@@ -415,6 +463,19 @@ h4 {
 
 .ma__page-banner__content:before {
   display: none;
+}
+
+.ma__action-finder--no-background .ma__action-finder__header {
+  background-color: transparent;
+  transform: none;
+}
+
+.ma__action-finder--no-background .ma__action-finder__title {
+  transform: none;
+}
+
+.ma__action-finder--no-background .ma__action-finder__header:before {
+  background-color: transparent;
 }
 
 .ma__page-banner__title {
@@ -437,7 +498,8 @@ h4 {
 }
 
 .ma__action-finder__header {
-  padding-bottom: 30px;
+  padding-bottom:0;
+  margin-bottom: 0;
 }
 
 .ma__action-finder__container {
@@ -558,5 +620,13 @@ h4 {
   .ma__action-step--accordion .ma__action-step__content,
   .ma__contact-us--accordion .ma__contact-us__content  {
     display: block !important;
+  }
+}
+
+.ma__contact-us__content-wrap {
+  display: block;
+
+  .ma__contact-group {
+    max-width: none;
   }
 }
