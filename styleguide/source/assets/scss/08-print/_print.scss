@@ -1,5 +1,10 @@
 @media print {
 
+  * {
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+
 html {
   font-size: 13px;
 }
