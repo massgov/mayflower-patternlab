@@ -425,7 +425,7 @@ h4 {
 .ma__page-banner--small .ma__page-banner__content,
 .ma__page-banner--large .ma__page-banner__content {
   padding: 0;
-  transform: none;
+  transform: none !important;
 }
 
 .ma__page-banner__container {
