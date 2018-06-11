@@ -3,6 +3,7 @@
 * {
   -webkit-transition: none !important;
   transition: none !important;
+  transform: none !important;
 }
 
 html {
@@ -444,7 +445,7 @@ h4 {
   padding: 0;
   position: relative;
   top: auto;
-  transform: none;
+  transform: none !important;
   width: 100%;
 }
 
