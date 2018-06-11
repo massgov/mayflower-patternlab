@@ -1,0 +1,5 @@
+___DESCRIPTION___
+Change
+Patch
+- DP-9243: MF fix info details to show contact and related in sidebar as well as bottom on desktop
+
