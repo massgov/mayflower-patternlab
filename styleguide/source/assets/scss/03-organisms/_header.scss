@@ -25,7 +25,7 @@ body {
   padding-top: 43px; // height of the util nav
   position: relative;
 
-  @media print {
+  @media {
     padding-top: 0;
   }
 
@@ -176,11 +176,6 @@ body {
     @media ($bp-header-toggle-min){
       display: none;
     }
-
-    @media print {
-      display: none;
-    }
-
   }
 
   &__back-button {

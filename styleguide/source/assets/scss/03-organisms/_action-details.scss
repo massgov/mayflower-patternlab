@@ -54,9 +54,6 @@
       margin-left: -$column-with-gutter * 2;
       width: $column-with-gutter * 2;
     }
-    @media print {
-      display: none;
-    }
 
     &[data-sticky='middle'] {
       position: fixed;
