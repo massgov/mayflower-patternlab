@@ -25,10 +25,6 @@ body {
   padding-top: 43px; // height of the util nav
   position: relative;
 
-  @media {
-    padding-top: 0;
-  }
-
   &__skip-nav {
     display: block;
     margin: 0 auto;
