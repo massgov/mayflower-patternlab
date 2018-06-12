@@ -124,13 +124,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 150ms ease-in-out;
     z-index: 50;
     width: auto; /* Prevent table from stretching to full size */
     background: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 0 2px #dcdcdc;
+
+    th {
+        border-right: 2px solid #fff;
+    }
 }
 .ma__table--responsive .sticky-thead {
-    box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);
     z-index: 50;
     width: 100%; /* Force stretch */
 }
@@ -153,12 +157,10 @@
     background:white;
     z-index: 50;
     height: 50px;
-    transition: all 150ms ease-in-out;
-    box-shadow: 0 -0.25em 0.1em -0.1em rgba(0,0,0,.125);
-
     justify-content: space-between;
     align-items: center;
     display: none;
+    border-top: 2px solid #dcdcdc;
 
     .has-horizontal-scroll & {
         display: flex;
@@ -188,13 +190,13 @@
     }
     &__left {
         &:after {
-            transform: translateY(-3px) rotate(135deg);
+            transform: translateY(-3px)  translateX(-6px) rotate(135deg);
         }
     }
 
     &__right {
         &:after {
-            transform: translateY(-3px) rotate(-45deg);
+            transform: translateY(-3px) translateX(-6px) rotate(-45deg);
         }
     }
 
@@ -205,7 +207,6 @@
     width:100%;
     height: 10px;
     border: 2px solid #14558f;
-    transition: all 150ms ease-in-out;
     overflow: hidden;
     opacity: 0.5;
 

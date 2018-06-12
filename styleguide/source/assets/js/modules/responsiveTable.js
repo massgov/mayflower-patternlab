@@ -196,9 +196,9 @@ export default function (window,document,$,undefined) {
   $('.js-ma-responsive-table').each((i, el) => initializeTable(el));
 
 
-  $window.on("resize", throttle(handleWindowResize, 200));
+  $window.on("resize", handleWindowResize);
 
-  $window.on("scroll", throttle(handleScroll, 100));
+  $window.on("scroll", handleScroll);
   // fire on horizontal scroll of container as well
   $(".ma__table--responsive__wrapper").on("scroll", throttle(handleScroll, 100));
 
