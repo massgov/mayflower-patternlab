@@ -364,8 +364,29 @@
                             }
                           }
                         }
-                      ]
-                    },
+                      }
+                    }
+                  ]
+                },
+                {
+                  "layout": "stacked",
+                  "image": {
+                    "src": "",
+                    "alt": "placeholder image",
+                    "width": "172",
+                    "height": "228"
+                  },
+                  "eyebrow": "Featured Board Member",
+                  "title": {
+                    "href": "#",
+                    "text": "Featured Board Member's Name",
+                    "info": "",
+                    "property": ""
+                  },
+                  "emphasizedText": [
+                    "Featured Board Member's title"
+                  ],
+                  "contents": [
                     {
                       "layout": "stacked",
                       "image": {
