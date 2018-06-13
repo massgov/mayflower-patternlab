@@ -193,12 +193,51 @@ export default function (window,document,$,undefined) {
     });
   }
 
+  function handleBeginScrolling() {
+    responsiveTables.forEach((rt) => {
+      rt.$root.addClass('is-scrolling');
+    });
+  }
+
+  function handleEndScrolling() {
+    responsiveTables.forEach(rt => {
+      rt.$root.removeClass("is-scrolling");
+    });
+  }
+
   $('.js-ma-responsive-table').each((i, el) => initializeTable(el));
 
 
   $window.on("resize", handleWindowResize);
 
   $window.on("scroll", handleScroll);
+
+
+
+  var lastScrollAt = Date.now()
+    , scrollTimeout;
+
+  function scrollStartStop() {
+    var $this = $(this);
+
+    if (Date.now() - lastScrollAt > 100) {
+      handleBeginScrolling();
+    }
+
+    lastScrollAt = Date.now();
+
+    clearTimeout(scrollTimeout);
+
+    scrollTimeout = setTimeout(function () {
+      if (Date.now() - lastScrollAt > 20) {
+        handleEndScrolling();
+      }
+    }, 100);
+  }
+
+  $(document).on('scroll', scrollStartStop);
+
+
   // fire on horizontal scroll of container as well
   $(".ma__table--responsive__wrapper").on("scroll", throttle(handleScroll, 100));
 
