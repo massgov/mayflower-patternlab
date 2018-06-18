@@ -20,6 +20,7 @@ import keywordSearch              from "./modules/keywordSearch.js";
 import linkListToggle            from "./modules/linkListToggle.js";
 import locationFilters            from "./modules/locationFilters.js";
 import locationListing            from "./modules/locationListing.js";
+import linkPaths                  from "./modules/linkPaths.js";
 import mainNav                    from "./modules/mainNav.js";
 import mobileNav                  from "./modules/mobileNav.js";
 import orgSelector                from "./modules/orgSelector.js";
