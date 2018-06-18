@@ -29,7 +29,6 @@
   .ma__content-eyebrow__tags,
   .ma__page-header__tags,
   .ma__footer,
-  .ma__header-alerts,
   #feedback,
   .messages--error,
   *[aria-hidden="true"],
@@ -114,14 +113,22 @@
   .ma__google-map,
   .ma__mapped-locations,
   .ma__section-links,
-  .ma__contact-us--accordion,
-  .ma__contact-list  {
+  .ma__contact-us--accordion {
      page-break-inside: avoid;
   }
 
   .ma__colored-heading {
     padding: 0;
     color: $c-font-heading;
+  }
+
+  .ma__rich-text,
+  table {
+    margin-bottom: 2rem;
+  }
+
+  .ma__footnote-list {
+    margin: 2rem 0;
   }
 
   .ma__callout-link  {
@@ -166,6 +173,10 @@
   .ma__contact-group {
     padding: 0;
     margin: 0;
+  }
+
+  .ma__contact-list {
+    margin-top: 2rem !important;
   }
 
   .ma__split-columns__column {
@@ -239,7 +250,6 @@
   }
 
   .ma__toc--hierarchy {
-    page-break-inside: avoid;
 
     .ma__toc--hierarchy__title::after {
       display: none;
