@@ -86,7 +86,7 @@ export default function (window,document,$,undefined) {
     let canScrollHorizontally = rt.$table.width() > rt.$table.parent().width();
     rt.$root.toggleClass('has-horizontal-scroll', canScrollHorizontally);
 
-    if (canScrollHorizontally && visibleParams.bottomOutOfView && !visibleParams.entirelyOutOfView && scrolledBottom - rt.$table.offset().top > 300) {
+    if (canScrollHorizontally && visibleParams.bottomOutOfView && !visibleParams.entirelyOutOfView && scrolledBottom - rt.$table.offset().top > 100) {
       rt.$root.find(".ma__table__horizontal-nav").css({
         bottom: (tableBottom - scrolledBottom) + 65
       });
@@ -133,7 +133,7 @@ export default function (window,document,$,undefined) {
 
     let topOutOfView = elementTop < pageTop;
     let bottomOutOfView = elementBottom > pageBottom;
-    let entirelyOutOfView = elementTop > pageTop || elementBottom < pageBottom;
+    let entirelyOutOfView = pageTop > elementBottom || pageBottom < elementTop;
     return {
       topOutOfView: topOutOfView,
       bottomOutOfView: bottomOutOfView,
