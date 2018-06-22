@@ -1,6 +1,8 @@
 {
   "coloredHeading": {
-    "text":"action component",
-    "color":""
+    "text": "Colored Heading",
+    "titleContext": "",
+    "color": "",
+    "level": ""
   }
 }

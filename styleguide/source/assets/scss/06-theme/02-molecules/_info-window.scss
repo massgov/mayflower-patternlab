@@ -1,20 +1,8 @@
 .ma__info-window {
   font-family: "Texta", "Helvetica", "Arial", "sans-serif";
 
-  &__name {
-
-  }
-
-  &__contact {
-
-  }
-
   &__label {
     font-weight: 500;
-  }
-
-  &__value {
-
   }
 
   &__phone {
@@ -22,11 +10,7 @@
     font-weight: inherit;
   }
 
-  &__email {
-
-  }
-
-  &__address {
-
+  &__email-link:hover {
+    border-color: rgba($c-font-link, .5);
   }
 }

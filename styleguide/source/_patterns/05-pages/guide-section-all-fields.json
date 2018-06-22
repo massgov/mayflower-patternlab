@@ -43,7 +43,7 @@
 
   "illustratedHeader": {
     "bgTitle": "Forest of the Berkshires",
-    "bgImage": "/assets/images/placeholder/800x450.png",
+    "bgImage": "../../assets/images/placeholder/800x450.png",
     "category": "Guide",
     "pageHeader": {
       "divider": false,
@@ -68,9 +68,9 @@
       "widgets": null
     }
   },
-  
+
   "COMMENT":"****PAGE CONTENT COMPONENTS****",
-  
+
   "jumpLinks": {
     "title": "In this guide",
     "links": [{
@@ -79,7 +79,7 @@
     }]
   },
 
-  "stackedRowSections": [{
+  "stackedRows": [{
       "title": "Section with Everything",
       "id": "another-section-name6",
       "pageContent": [
@@ -87,6 +87,7 @@
           "path": "@organisms/by-author/callout-time.twig",
           "data": {
             "calloutTime": {
+              "icon": "wait-time",
               "text": "This usually takes approximately 4 weeks"
             }
           }
@@ -118,7 +119,7 @@
                     "align": "",
                     "image": {
                       "alt": "alt text",
-                      "src": "/assets/images/placeholder/800x400.png",
+                      "src": "../../assets/images/placeholder/800x400.png",
                       "height": "",
                       "width": ""
                     },
@@ -133,10 +134,8 @@
           "path":"@organisms/by-author/callout-alert.twig",
           "data":{
             "calloutAlert": {
-              "decorativeLink": {
-                "href": "",
-                "text": "Massachusetts requires you to license your dog"
-              }
+              "href": "",
+              "text": "Massachusetts requires you to license your dog"
             }
           }
         },
@@ -146,7 +145,8 @@
             "keyActions": {
               "compHeading": {
                 "title": "Key Actions",
-                "sub":true
+                "sub":true,
+                "titleContext": "for Section with Everything"
               },
               "links":[{
                 "text": "Related Action to important Page Name",
@@ -162,12 +162,13 @@
             "formDownloads": {
               "compHeading": {
                 "title": "Downloads & Links",
-                "sub": true
+                "sub": true,
+                "titleContext": "for Section with Everything"
               },
               "downloadLinks": [{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "icon": "laptop",
                   "decorativeLink": {
                     "text": "Online Form: Out-of-Country Driver's License Conversion",
                     "href": "#",
@@ -180,7 +181,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-laptop.twig",
+                  "icon": "laptop",
                   "decorativeLink": {
                     "text": "Online Form: External link",
                     "href": "#",
@@ -193,7 +194,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                  "icon": "doc-docx",
                   "decorativeLink": {
                     "text": "Word download item",
                     "href": "#",
@@ -206,7 +207,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-generic.twig",
+                  "icon": "doc-generic",
                   "decorativeLink": {
                     "text": "Generic download item",
                     "href": "#",
@@ -219,7 +220,7 @@
               },{
                 "downloadLink": {
                   "iconSize": "",
-                  "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                  "icon": "doc-pdf",
                   "decorativeLink": {
                     "text": "RMV-1 Form",
                     "href": "#",
@@ -236,69 +237,55 @@
       ],
 
       "sideBar": [{
-        "path": "@atoms/04-headings/sidebar-heading.twig",
-        "data": {
+      "path": "@organisms/by-author/contact-list.twig",
+      "data": {
+        "contactList": {
+          "viewSpecific": false,
           "sidebarHeading": {
-            "title": "Key Agencies"
-          }
-        }
-      },{
-        "path": "@molecules/contact-us.twig",
-        "data": {
-          "contactUs": {
+            "title": "Key Agencies",
+            "titleContext": "for Section with Everything"
+          },
+          "contacts": [{
+            "accordion": false,
+            "isExpanded": false,
             "subTitle": {
               "href":"#",
               "text": "Massachusetts Registry of Motor Vehicles (RMV)",
               "chevron":""
             },
             "groups": [{
-              "icon": "@atoms/05-icons/svg-phone.twig",
+              "icon": "phone",
               "name": "Phone",
-              "hidden": "",
               "items": [{
                 "type": "phone",
                 "label":"Main:",
-                "value":"(617) 625-1250",
-                "link":"14134994262",
-                "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
+                "link": {
+                  "href": "+14134994262",
+                  "text": "(413) 499-4262",
+                  "info": "",
+                  "property": ""
+                },
+                "details":"This line is open from 9 a.m. - 5 p.m., M-F"
               }]
             },{
-              "icon": "@atoms/05-icons/svg-laptop.twig",
+              "icon": "laptop",
               "name": "Online",
-              "hidden": "",
               "items": [{
                 "type": "online",
                 "label":"",
-                "value":"Contact Form",
-                "link":"#",
+                "link": {
+                  "href": "#",
+                  "text": "Contact Form",
+                  "info": "",
+                  "property": ""
+                },
                 "details":""
               }]
-            },{
-              "icon": "@atoms/05-icons/svg-fax-icon.twig",
-              "name": "Fax",
-              "hidden": "true",
-              "items": [{
-                "type": "fax",
-                "label":"",
-                "value":"(413) 499-4262",
-                "link":"14134994262",
-                "details":"Please allow 24 hours for a response"
-              }]
-            },{
-              "icon": "@atoms/05-icons/svg-marker.twig",
-              "name": "Address",
-              "hidden": "true",
-              "items": [{
-                "type": "address",
-                "label": "",
-                "value": "555 Park Drive\nBoston, MA 02231",
-                "link": "https://www.google.com/maps/place/555+Park+Dr,+Boston,+MA+02215",
-                "details": ""
-              }]
             }]
-          }
+          }]
         }
-      }]
+      }
+    }]
     }
   ],
 
@@ -306,14 +293,19 @@
 
   "suggestedPages": {
     "title": "Related Guides",
+    "titleContext": "to Moving to Massachusetts: Planning Your Move",
     "view":"guide",
     "buttonMinor" : {
       "href": "#",
       "text": "See All Guides"
     },
     "pages": [{
-      "image": "/assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image",
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -321,8 +313,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image",
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",
@@ -330,8 +326,12 @@
         "label": "Guide:"
       }
     },{
-      "image": "/assets/images/placeholder/130x160.png",
-      "altTag": "Place Holder Image",
+      "image": {
+        "alt": "Place Holder Image",
+        "src": "../../assets/images/placeholder/130x160.png",
+        "height": "160",
+        "width": "130"
+      },
       "link": {
         "type": "",
         "href": "#",

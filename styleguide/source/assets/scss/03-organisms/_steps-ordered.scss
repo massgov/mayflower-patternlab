@@ -1,6 +1,12 @@
 $steps-ordered-icon-border: 3px;
+
 .ma__steps-ordered {
-  @include ma-component-spacing;
+
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container('restricted');
+  }
 
   &__items {
     @include ma-reset-list;

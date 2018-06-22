@@ -1,6 +1,7 @@
 {
   "selectBox":{
     "label":"Color Scheme:",
+    "required": false,
     "id":"color-select",
     "options":[{
       "value":"",

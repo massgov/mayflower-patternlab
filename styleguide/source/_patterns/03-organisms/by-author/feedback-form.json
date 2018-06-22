@@ -1,7 +1,7 @@
 {
   "feedbackForm": {
-    "bgWide":"/assets/images/placeholder/1600x600-lighthouse-blur.jpg",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "bgWide":"../../assets/images/placeholder/1600x600-lighthouse-blur.jpg",
+    "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "title":"Have Feedback for Us?",
     "description":"Mass.gov is for you, and we want to know what you think about it.",
     "permissionLegend":"Are you interested in helping us test our designs for new sections of Mass.Gov? If so, we will contact you by email with more information.",
@@ -11,7 +11,24 @@
       "required": true,
       "id": "name-input",
       "name": "name",
+      "type": "text",
       "placeholder": ""
+    },
+
+    "email": {
+      "labelText": "Your Email Address*",
+      "required": true,
+      "id": "email-input",
+      "name": "email-input",
+      "type": "email",
+      "placeholder": ""
+    },
+
+    "textarea":  {
+      "labelText": "Feedback*",
+      "required": true,
+      "id": "textarea",
+      "name": "textarea"
     },
 
     "radioButtons":[{

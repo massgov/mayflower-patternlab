@@ -1,13 +1,6 @@
-{% set modifier = modifier ? " ma__decorative-link--" ~ modifier : "" %}
-<span class="ma__decorative-link{{ modifier }}">
-  <a 
-    href="{{decorativeLink.href}}" 
+<span class="ma__decorative-link">
+  <a
+    href="{{decorativeLink.href}}"
     class="js-clickable-link"
-    {% if decorativeLink.property %} 
-      property="{{decorativeLink.property}}"
-    {% endif %}
-    {% if decorativeLink.info %}
-      aria-label="{{ decorativeLink.info }}"
-    {% endif %}
-    >{{decorativeLink.text}}&nbsp;{% include "@atoms/05-icons/svg-arrow.twig" %}</a>
+    title="{{ decorativeLink.info }}">{{decorativeLink.text}}&nbsp;{{ icon('arrow') }}</a>
 </span>

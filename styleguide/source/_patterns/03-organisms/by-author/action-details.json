@@ -1,7 +1,9 @@
 {
+  "titleContext": "",
   "actionDetails" : {
     "sections": [{
       "title":"Overview",
+      "titleContext": "",
       "intro": "",
       "id":"overview",
       "path": "organisms-rich-text",
@@ -42,10 +44,11 @@
             }
           }]
         }
-      } 
+      }
     },
     {
       "title":"Fees",
+      "titleContext": "",
       "intro": "",
       "id":"fees",
       "path": "organisms-rich-text",
@@ -72,6 +75,7 @@
     },
     {
       "title":"Eligibility",
+      "titleContext": "",
       "intro": "",
       "id":"fees",
       "path": "organisms-rich-text",
@@ -91,13 +95,14 @@
     },
     {
       "title":"Get it Done",
+      "titleContext": "",
       "intro": "",
       "id":"get-it-done",
       "path": "@organisms/by-author/steps-unordered.twig",
       "data": {
         "stepsUnordered": {
           "steps": [{
-            "icon":"atoms-svg-profile",
+            "icon":"profile",
             "title":"In Person at State Parks",
             "richText": {
               "rteElements": [{
@@ -111,7 +116,7 @@
             }
           },
           {
-            "icon":"atoms-svg-laptop",
+            "icon":"laptop",
             "title":"Online",
             "richText":{
               "rteElements": [{
@@ -135,7 +140,7 @@
             }
           },
           {
-            "icon":"atoms-svg-phone",
+            "icon":"phone",
             "title":"By Phone",
             "richText":{
               "rteElements": [{
@@ -149,7 +154,7 @@
             }
           },
           {
-            "icon":"atoms-svg-mail",
+            "icon":"mail",
             "title":"By Mail",
             "richText": {
               "rteElements": [{
@@ -167,6 +172,7 @@
     },
     {
       "title":"Forms",
+      "titleContext": "",
       "intro": "Here are some helpful downloads to get you started.",
       "id":"downloads",
       "path": "@organisms/by-author/form-downloads.twig",
@@ -175,7 +181,7 @@
           "downloadLinks": [{
             "downloadLink": {
               "iconSize": "",
-              "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+              "icon": "doc-pdf",
               "decorativeLink": {
                 "text": "Park Pass Application",
                 "href": "#",
@@ -188,7 +194,7 @@
           },{
             "downloadLink": {
               "iconSize": "",
-              "icon": "@atoms/05-icons/svg-doc-docx.twig",
+              "icon": "doc-docx",
               "decorativeLink": {
                 "text": "Park Pass Application",
                 "href": "#",
@@ -201,7 +207,7 @@
           },{
             "downloadLink": {
               "iconSize": "",
-              "icon": "@atoms/05-icons/svg-doc-xlsx.twig",
+              "icon": "doc-xlsx",
               "decorativeLink": {
                 "text": "Calculate your personal return on investment with a seasonal pass.",
                 "href": "#",
@@ -217,6 +223,7 @@
     },
     {
       "title":"Additonal Information",
+      "titleContext": "",
       "intro": "",
       "id":"additional-info",
       "path": "organisms-rich-text",
@@ -234,5 +241,5 @@
         }
       }
     }]
-  }  
+  }
 }

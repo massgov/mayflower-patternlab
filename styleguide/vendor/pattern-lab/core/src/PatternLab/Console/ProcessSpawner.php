@@ -19,7 +19,9 @@ use \PatternLab\Console\Commands\WatchCommand;
 use \PatternLab\Console\ProcessSpawnerEvent;
 use \PatternLab\Dispatcher;
 use \PatternLab\Timer;
+use \Symfony\Component\Process\Exception\ProcessTimedOutException;
 use \Symfony\Component\Process\Process;
+
 
 class ProcessSpawner {
 	
@@ -71,9 +73,22 @@ class ProcessSpawner {
 			// check on them and produce output
 			while (true) {
 				foreach ($processes as $process) {
-					if ($process["process"]->isRunning()) {
-						if (!$quiet && $process["output"]) {
-							print $process["process"]->getIncrementalOutput();
+					try {
+						if ($process["process"]->isRunning()) {
+							$process["process"]->checkTimeout();
+							if (!$quiet && $process["output"]) {
+								print $process["process"]->getIncrementalOutput();
+								$cmd = $process["process"]->getCommandLine();
+								if (strpos($cmd,"router.php") != (strlen($cmd) - 10)) {
+									print $process["process"]->getIncrementalErrorOutput();
+								}
+							}
+						}
+					} catch (ProcessTimedOutException $e) {
+						if ($e->isGeneralTimeout()) {
+							Console::writeError("pattern lab processes should never time out. yours did...");
+						} else if ($e->isIdleTimeout()) {
+							Console::writeError("pattern lab processes automatically time out if their is no command line output in 30 minutes...");
 						}
 					}
 				}
@@ -100,7 +115,7 @@ class ProcessSpawner {
 			$cwd         = isset($commandOptions["cwd"])     ? $commandOptions["cwd"]     : null;
 			$env         = isset($commandOptions["env"])     ? $commandOptions["env"]     : null;
 			$input       = isset($commandOptions["input"])   ? $commandOptions["input"]   : null;
-			$timeout     = isset($commandOptions["timeout"]) ? $commandOptions["timeout"] : 60;
+			$timeout     = isset($commandOptions["timeout"]) ? $commandOptions["timeout"] : null;
 			$options     = isset($commandOptions["options"]) ? $commandOptions["options"] : array();
 			$idle        = isset($commandOptions["idle"])    ? $commandOptions["idle"]    : null;
 			$output      = isset($commandOptions["output"])  ? $commandOptions["output"]  : true;

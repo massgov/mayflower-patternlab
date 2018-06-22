@@ -6,7 +6,20 @@
         "required": false,
         "id": "find-nearby",
         "name": "find-nearby",
+        "type": "text",
         "placeholder": "City, town, or ZIP code"
+      },
+      "placeAutocomplete": {
+        "bounds": {
+          "sw": {
+            "lat": 40.727093,
+            "lng": -73.97864
+          },
+          "ne": {
+            "lat": 43.004778,
+            "lng": -69.845299
+          }
+        }
       }
     },
     "activity": {
@@ -29,6 +42,7 @@
         "required": false,
         "id": "filter-by-keyword",
         "name": "filter-by-keyword",
+        "type": "text",
         "placeholder": ""
       }
     },
@@ -37,13 +51,13 @@
       "id": "handicapped",
       "label": "Wheelchair accessible",
       "checked": "false",
-      "icon": "@atoms/05-icons/svg-wheelchair.twig"
+      "icon": "wheelchair"
     },{
       "value": "open",
       "id": "open",
       "label": "Open now",
       "checked": "false",
-      "icon": "@atoms/05-icons/svg-open-now.twig"
+      "icon": "open-now"
     }],
     "submitButton": "Submit"   
   }

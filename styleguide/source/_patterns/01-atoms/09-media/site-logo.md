@@ -1,16 +1,5 @@
----
-title: Site logo
----
-Description: an atom for the site logo.
-## State: STABLE
+### Description
+A site wide logo
 
-### Used In:
-- [@organisms/by-template/header](/?p=organisms-header)
-- [@templates/narrow-template](/?p=organisms-narrow-template)
-- [@pilot/header](/?p=pilot-header)
-
-
-### Required Variables
-~~~
-None
-~~~
+### Status
+* Stable as of 5.0.0

@@ -1,5 +1,6 @@
 {
   "calloutTime": {
-    "text": "This usually takes approximately 4 weeks"
+    "icon": "dog",
+    "text": "Text preceded by a variable icon which wraps on narrow screens"
   }
 }

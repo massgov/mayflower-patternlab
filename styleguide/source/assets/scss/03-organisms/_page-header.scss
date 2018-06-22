@@ -13,6 +13,9 @@ $page-header-widget-width: 350px;
     overflow: hidden;
     margin-bottom: -20px;
     padding-top: 18px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-bottom: 20px;
 
     .ma__header-tags,
     .ma__social-links {
@@ -21,15 +24,61 @@ $page-header-widget-width: 350px;
       min-height: 48px;
       position: relative;
         top: 1px;
+      @media ($bp-medium-min) {
+        border: 0;
+      }
     }
 
     .ma__header-tags {
       flex-grow: 1;
       margin-bottom: 30px;
+      @media ($bp-medium-min) {
+        margin-bottom: 10px;
+      }
     }
 
     .ma__social-links {
       flex-grow: 0;
+
+      @media ($bp-small-max) {
+        width: 100%;
+      }
+
+      &__link[data-social-share="facebook"] {
+
+        svg,
+        svg path {
+          fill: #395999;
+        }
+      }
+
+      &__link[data-social-share="twitter"] {
+
+        svg,
+        svg path {
+          fill: #16a2f3;
+        }
+      }
+
+      &__link[data-social-share="linkedin"] {
+
+        svg,
+        svg path {
+          fill: #0078b6;
+        }
+      }
+
+      &__link[data-social-share="youtube"] {
+
+        svg,
+        svg path {
+          fill: #CC181E;
+        }
+      }
+    }
+
+    @media ($bp-medium-max) {
+      border: 0;
     }
   }
 
@@ -99,9 +148,17 @@ $page-header-widget-width: 350px;
       padding-bottom: 60px;
       width: $page-header-widget-width;
     }
-    
+
     @media ($bp-x-large-min){
       padding-top: 85px;
+    }
+
+    & > * {
+      margin-top: 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
 
     .ma__image {
@@ -113,11 +170,6 @@ $page-header-widget-width: 350px;
   }
 
   &__tags ~ &__widgets {
-    padding-top: 30px;
-
-    @media ($bp-medium-min){
-      padding-top: 40px;
-    }
 
     @media ($bp-large-min){
       padding-top: 50px;
@@ -129,10 +181,15 @@ $page-header-widget-width: 350px;
   }
 
   .ma__page-banner ~ & &__widgets {
-    
+
     @media ($bp-large-min){
       padding-top: 20px;
     }
+  }
+
+  &__publish-state {
+    margin-top: -20px;
+    margin-bottom: 35px;
   }
 
   &__category {
@@ -158,7 +215,7 @@ $page-header-widget-width: 350px;
     font-size: 1.813rem;
     line-height: 1.2;
     margin-bottom: 1em;
-    
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -180,7 +237,7 @@ $page-header-widget-width: 350px;
   }
 
   &__optional-content {
-    
+
     .main-content {
       margin: 0;
       padding: 0;
@@ -191,16 +248,7 @@ $page-header-widget-width: 350px;
       }
     }
 
-    .ma__rich-text {
-      margin-bottom: 1rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
     .ma__contact-us {
-      @include ma-component-spacing;
 
       &.js-accordion {
         @include clearfix;

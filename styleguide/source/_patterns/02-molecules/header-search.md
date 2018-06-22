@@ -1,23 +1,23 @@
----
-Title: Header search
----
-Description: The search form that displays in the header.
+### Description
+The search form that displays in the header.
 
-## Status: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Used in:
-- [@molecules/header-search](/?p=molecules-header-search)
-- [@organisms/by-template/header](/?p=organisms-header)
+### Pattern Contains
+* Button Search
 
-### Contains:
-- [@atoms/01-buttons/button-search](/?p=atoms-button-search)
+### JavaScript Used
+* Header Search (js/modules/mobileNav.js) 
 
-### Required Variables
+### Variables
 ~~~
-headerSearch: {
-  id:
-    string/required
+headerSearch : {
   placeholder:
-    string/required
+    type: string / required,
+  id:
+    type: string (unique per page) / required,
+  label: 
+    type: string / required
 }
 ~~~

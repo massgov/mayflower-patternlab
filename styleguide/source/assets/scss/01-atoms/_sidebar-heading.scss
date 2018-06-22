@@ -1,7 +1,8 @@
 .ma__sidebar-heading {
-  border-bottom: 2px solid;
-  font-size: 1.188rem;
-  letter-spacing: .09em;
-  padding-bottom: .5em;
-  text-transform: uppercase;
+  @include ma-sidebar-heading;
+
+  .sidebar--colored & {
+    @include ma-heading-colored($direction: left);
+    border: none;
+  }
 }

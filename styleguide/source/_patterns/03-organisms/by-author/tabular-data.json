@@ -7,6 +7,38 @@
       "id": "",
       "centered": ""
     },
+    "description": {
+      "property": "",
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is an optional description. Lorem ipsum ..."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is an optional description. Lorem ipsum ..."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is an optional description. Lorem ipsum ..."
+          }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "This is an optional description. Lorem ipsum ..."
+          }
+        }
+      }]
+    },
     "table": {
       "head": {
         "rows": [{

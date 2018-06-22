@@ -1,6 +1,6 @@
----
-title: DEPRECATED - Action Image
----
+### Status
+* Obsolete as of 5.0.0
+
 Description: An image with an optional title and caption.
 ## State: DEPRECATED
 ### Notes

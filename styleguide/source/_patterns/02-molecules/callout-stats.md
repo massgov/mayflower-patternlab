@@ -1,23 +1,22 @@
----
-title: Callout stats
----
-Description: A stat displayed within a paragraph of content floated either left or right.
+### Description
+This is Pattern is used to highlight important stats.
 
-## Status: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Used in:
-- [@organisms/by-author/action-detai;s](/?p=organisms-action-details)
-- [@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
-- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
 
-### Required Variables
+### Variant options
+* This pattern can be floated [left](./?p=molecules-callout-stats-left) or [right](./?p=molecules-callout-stats-right)
+
+
+### Variables
 ~~~
 statsCallout: {
   pull:
-    NULL or 'left' or 'right'
+    type: string ('', 'left', 'right')
   stat:
-    string/required
+    type: string / required
   content:
-    string/required
+    type: string / required
 }
 ~~~

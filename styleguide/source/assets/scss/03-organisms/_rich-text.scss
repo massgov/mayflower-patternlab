@@ -1,9 +1,13 @@
 $rich-text-spacing: 1.75rem;
 $rich-text-spacing-mobile: 1.5rem;
+$heading-indent: $gutter;
 
 .ma__rich-text {
   @include clearfix;
-  @include ma-component-spacing;
+
+  &__flame {
+    text-transform: uppercase;
+  }
 
   &--description {
     margin-bottom: 1rem;
@@ -18,12 +22,29 @@ $rich-text-spacing-mobile: 1.5rem;
   .main-content--full .page-content > & {
     @include ma-container('restricted');
   }
-  
+
   .ma__split-columns__column > & {
     margin-bottom: 1em;
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  // extra specificity was needed to override & a { ... }
+  & &__footnote {
+    border-style: solid;
+    border-width: 2px;
+    font-size: .6em;
+    line-height: 1;
+    padding: 0 .3em;
+    position: relative;
+    top: .25em;
+    vertical-align: top;
+    transition: all ease .4s;
+
+    &:hover {
+      border-width: 2px;
+    }
   }
 
   // rich text has an optional title
@@ -32,14 +53,35 @@ $rich-text-spacing-mobile: 1.5rem;
   h3:not(.ma__sidebar-heading),
   h4 {
     @include ma-comp-heading;
+    display: block;
   }
 
   h2 {
     padding-top: .75em;
+
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
-  &:first-child h2 {
-    padding-top: 0;
+  /**
+   * Rich text content can be styled like an outline when a modifier class is added by rich-text.js
+   * 1. Headings will be indented
+   * 2. Content nested under each heading will be further indented
+   */
+
+  &__indent[data-ma-heading-parent='H2'] {
+    margin-left: $heading-indent; // 2.
+  }
+
+  h3 {
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H3'] {
+    margin-left: $heading-indent * 2; // 2.
   }
 
   h4 {
@@ -49,10 +91,39 @@ $rich-text-spacing-mobile: 1.5rem;
     &:after {
       width: 1.5em;
     }
+
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent * 2; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H4'] {
+    margin-left: $heading-indent * 3; // 2.
   }
 
   h5 {
+    display: block;
     margin-bottom: 0;
+
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent * 3; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H5'] {
+    margin-left: $heading-indent * 4; // 2.
+  }
+
+  h6 {
+    display: block;
+
+    &.ma__rich-text__indent {
+      margin-left: $heading-indent * 4; // 1.
+    }
+  }
+
+  &__indent[data-ma-heading-parent='H6'] {
+    margin-left: $heading-indent * 5; // 2.
   }
 
   p {
@@ -75,7 +146,7 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
 
-// List styles
+  // List styles
   ul {
     list-style-type: disc;
     margin-bottom: $rich-text-spacing-mobile;
@@ -83,6 +154,10 @@ $rich-text-spacing-mobile: 1.5rem;
 
     @media ($bp-small-min) {
       margin-bottom: $rich-text-spacing;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -92,6 +167,10 @@ $rich-text-spacing-mobile: 1.5rem;
 
     @media ($bp-small-min) {
       margin-bottom: $rich-text-spacing;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -104,33 +183,21 @@ $rich-text-spacing-mobile: 1.5rem;
     }
   }
 
-  ul ul,
-  ol ol,
-  ol ul {
-    list-style-type: circle;
-    padding-left: 30px;
-    margin-bottom: 1em;
-  }
+  // end list styles
 
-  ol ol {
-    list-style-type: lower-alpha;
-  }
-
-// end list styles
-
-// link styles
+  // link styles
   a {
     @include ma-link-underline;
     border-bottom-width: 1px;
     overflow-wrap: break-word;
     transition: border .3s;
     word-wrap: break-word;
-    word-break: break-word;
+    word-break: normal;
   }
 
-// end link styles
+  // end link styles
 
-// TABLE styles
+  // TABLE styles
   table {
     margin-bottom: $rich-text-spacing-mobile;
     min-width: 450px;
@@ -149,9 +216,9 @@ $rich-text-spacing-mobile: 1.5rem;
       margin-bottom: 0;
     }
   }
-// end Table styles
+  // end Table styles
 
-// last element in the rich text content
+  // last element in the rich text content
   & > :last-child {
     margin-bottom: 0 !important;
   }

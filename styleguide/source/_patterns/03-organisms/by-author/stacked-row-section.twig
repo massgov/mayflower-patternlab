@@ -1,7 +1,9 @@
-{% set containerModifier = stackedRowSection.sideBar|length ? '' : 'ma__stacked-row-section__container--restricted' %}
-<section class="ma__stacked-row-section">
+{% set stackRowRestriction = stackedRowSection.sideBar|length ? '' : ' ma__stacked-row-section--restricted' %}
+{% set stackRowBorderless = stackedRow.borderless ? ' ma__stacked-row__section--borderless' : ''  %}
+
+<section class="ma__stacked-row__section{{ stackRowBorderless }}{{ stackRowRestriction }}">
   {% if stackedRowSection.title %}
-    <div class="ma__stacked-row-section__container {{ containerModifier }}">
+    <div class="ma__stacked-row-section__container">
       <div class="ma__stacked-row-section__title">
         {% set compHeading = {
             "title": stackedRowSection.title,
@@ -16,15 +18,19 @@
   {% endif %}
   <div class="main-content {{ stackedRowSection.sideBar|length ? 'main-content--two' : 'main-content--full' }}">
     <div class="page-content">
-      {% for content in stackedRowSection.pageContent %}
-        {% include content.path with content.data %}
-      {% endfor %}
-    </div>
-    {% if stackedRowSection.sideBar|length %}
-      <aside class="sidebar">
-        {% for sidebar in stackedRowSection.sideBar %}
-          {% include sidebar.path with sidebar.data %}
+      {% block stackedRowContentOverride %}
+        {% for content in stackedRowSection.pageContent %}
+          {% include content.path with content.data %}
         {% endfor %}
+      {% endblock %}
+    </div>
+    {% if stackedRowSection.sideBar|length or stackedRowSection.overrideSideBar %}
+      <aside class="sidebar">
+        {% block sidebar %}
+          {% for sidebar in stackedRowSection.sideBar %}
+            {% include sidebar.path with sidebar.data %}
+          {% endfor %}
+        {% endblock %}
       </aside>
     {% endif %}
   </div>

@@ -1,11 +1,12 @@
 {
   "details": {
-    "contentTitle": "The Details"
+    "contentTitle": "The Details",
+    "titleContext": ""
   },
 
   "pageHeader": {
     "divider": false,
-    "title": "How To page Title",
+    "title": "Page Title",
     "subTitle": "teaser text",
     "headerTags": {
       "label": "More about:",
@@ -24,9 +25,10 @@
       }]
     },
     "optionalContents": [{
-      "path": "@molecules/callout-time.twig",
+      "path": "@organisms/by-author/callout-time.twig",
       "data": {
         "calloutTime": {
+          "icon": "wait-time",
           "text": "turn around time for completion"
         }
       }
@@ -50,6 +52,7 @@
   },
 
   "stickyNav": {
+    "titleContext": "",
     "anchorLinks":[{
       "href": "jump link",
       "text": "jump-link",
@@ -66,18 +69,24 @@
   },
 
   "sidebar": {
+    "coloredHeadings": true,
+
     "contactList": {
-      "sidebarHeading":{
-        "title": "Contact"
+      "viewSpecific": true,
+      "sidebarHeading": {
+        "title": "Contact",
+        "titleContext": ""
       },
       "contacts":[{
+        "accordion": false,
+        "isExpanded": false,
         "subTitle": {
           "href":"",
           "text": "Department name",
           "chevron":""
         },
         "groups": [{
-          "icon": "@atoms/05-icons/svg-phone.twig",
+          "icon": "phone",
           "name": "Phone",
           "items": [{
             "type": "phone",
@@ -92,7 +101,7 @@
             "details":"This line is open from 9:00 a.m. - 5:00 p.m., M-F"
           }]
         },{
-          "icon": "@atoms/05-icons/svg-laptop.twig",
+          "icon": "laptop",
           "name": "Online",
           "hidden": "",
           "items": [{

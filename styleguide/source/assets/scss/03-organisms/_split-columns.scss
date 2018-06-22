@@ -43,6 +43,7 @@
       
       @media($bp-large-min) {
         @include span-columns(2 of 6);
+        margin-top: 0;
       }
     }
       

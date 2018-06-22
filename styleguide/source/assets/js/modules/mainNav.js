@@ -13,133 +13,106 @@ export default function (window,document,$,undefined) {
         $parent = $(this),
         $mainNavToggle = $parent.find('.js-main-nav-toggle'),
         $mainNavItems = $parent.find('.js-main-nav-toggle, .js-main-nav-top-link'),
-        previousKey = null,
-        breakpoint = 800; // matches CSS breakpoint for Main Nav
+        breakpoint = 840; // matches CSS breakpoint for Main Nav
 
     $mainNavItems.on('keydown', function(e) {
-      if(windowWidth <= breakpoint) {
-        // only for desktop
-        return;
-      }
-
       // Grab all the DOM info we need...
       let $link = $(this),
           $topLevelLinks = $parent.find('.ma__main-nav__top-link'),
           open = $link.hasClass(openClass),
           $openContent = $parent.find('.js-main-nav-content.' + openClass),
           $focusedElement = $(document.activeElement),
+          menuFlipped = (windowWidth < breakpoint),
       // relevant if open..
           $topLevelItem = $focusedElement.parents('.ma__main-nav__item'),
           $topLevelLink = $topLevelItem.find('.ma__main-nav__top-link'),
           $dropdownLinks = $link.find('.ma__main-nav__subitem .ma__main-nav__link'),
+          dropdownLinksLength = $dropdownLinks.length,
           focusIndexInDropdown = $dropdownLinks.index($focusedElement),
-          isShift = !!e.shiftKey; // typecast to boolean
+      // Easy access to the key that was pressed.
+          keycode = e.keyCode,
+          action = {
+            'skip': keycode === 9,
+            'close': keycode === 27,
+            'left': keycode === 37,
+            'right': keycode === 39,
+            'up': keycode === 38,
+            'down': keycode === 40
+          };
 
-      // down arrow or tab key
-      if((e.keyCode === 40) || (e.keyCode === 9 && !isShift)) {
-        // hide content
-        // If menubar focus
-        //  - Open pull down menu and select first menu item
-        //
-        // If dropdown focus
-        //  - Select next menu item
+      // Default behavior is prevented for all actions except 'skip'.
+      if (action.close || action.left || action.right || action.up || action.down) {
         e.preventDefault();
-        if(open) {
-          if(focusIndexInDropdown === ($dropdownLinks.length-1) ) {
-            return;
-          } else {
-            if(focusIndexInDropdown === -1) {
-              $dropdownLinks[1].focus();
-            } else {
-              $dropdownLinks[focusIndexInDropdown+1].focus();
-            }
-            return;
-          }
-        } else {
+      }
+
+      // Skip out of the menu and close any currently-open submenus.
+      if(action.skip) {
+        hide($openContent);
+        $link.removeClass(openClass);
+        $topLevelLink.attr('aria-expanded','false');
+        return;
+      }
+
+      // Navigate into or within a submenu. This is needed on up/down actions
+      // (unless the menu is flipped and closed) and when using the right arrow
+      // while the menu is flipped and submenu is closed.
+      if(((action.up || action.down) && !(menuFlipped && !open))
+        || (action.right && menuFlipped && !open)) {
+        // Open pull down menu if necessary.
+        if (!open) {
           show($topLevelItem.find('.js-main-nav-content'));
           $topLevelLink.attr('aria-expanded', 'true');
           $link.addClass(openClass);
-          if($dropdownLinks[1]) {
-            $dropdownLinks[1].focus();
-          }
-          return;
         }
-      }
 
-       // up arrow or shift+tab keys
-       if((e.keyCode === 38) || (e.keyCode === 9 && isShift)) {
-        // hide content
-        // If menubar focus
-        //  - Open pull down menu and select first menu item
-        //
-        // If dropdown focus
-        //  - Select previous menu item
-        e.preventDefault();
-        if(open) {
-          if(focusIndexInDropdown <= 1 ) { // not 0 bc of hidden first link
-            hide($openContent);
-            $topLevelLink.focus().attr('aria-expanded', 'false');
-            return;
-          } else {
-            $dropdownLinks[focusIndexInDropdown-1].focus();
-            return;
+        // Adjust index of active menu item based on performed action.
+        focusIndexInDropdown += (action.up ? -1 : 1);
+        // If the menu is flipped, skip the last item in each submenu. Otherwise,
+        // skip the first item. This is done by repeating the index adjustment.
+        if(menuFlipped) {
+          if(focusIndexInDropdown === dropdownLinksLength - 1) {
+            focusIndexInDropdown += (action.up ? -1 : 1);
           }
         } else {
-          show($topLevelItem.find('.js-main-nav-content'));
-          $topLevelLink.focus().attr('aria-expanded', 'true');
-          $link.addClass(openClass);
-          return;
+          if(focusIndexInDropdown === 0 || focusIndexInDropdown >= dropdownLinksLength) {
+            focusIndexInDropdown += (action.up ? -1 : 1);
+          }
         }
+        // Wrap around if at the end of the submenu.
+        focusIndexInDropdown = ((focusIndexInDropdown % dropdownLinksLength) + dropdownLinksLength) % dropdownLinksLength;
+        $dropdownLinks[focusIndexInDropdown].focus();
+        return;
       }
 
-      // esc key
-      if(e.keyCode === 27) {
-        // Close menu and return focus to menubar
-        e.preventDefault();
+      // Close menu and return focus to menubar
+      if(action.close || (menuFlipped && action.left)) {
         hide($openContent);
         $link.removeClass(openClass);
         $topLevelLink.focus().attr('aria-expanded','false');
         return;
       }
 
-      // left arrow key
-      if(e.keyCode === 37) {
-        e.preventDefault();
+      // Navigate between submenus. This is needed for left/right actions in
+      // normal layout, or up/down actions in flipped layout (when nav is closed).
+      if(((action.left || action.right) && !menuFlipped) ||
+         ((action.up || action.down) && menuFlipped && !open)) {
+        let index = $topLevelLinks.index($topLevelLink),
+            prev = action.left || action.up,
+            linkCount = $topLevelLinks.length;
+
         // hide content
         // If menubar focus
-        //  - Previous menubar item
+        //  - Change menubar item
         //
         // If dropdown focus
         //  - Open previous pull down menu and select first item
         hide($openContent);
         $topLevelLink.attr('aria-expanded','false');
-        let index = $topLevelLinks.index($topLevelLink)-1;
-        if($topLevelLinks[index]) {
-          $topLevelLinks[index].focus();
-        }
-        return;
-
-      }
-      // right arrow key
-      if(e.keyCode === 39) {
-        e.preventDefault();
-        // hide content
-        // If menubar focus
-        //  - Next menubar item
-        //
-        // If dropdown focus
-        //  - Open next pull menu and select first item
-        hide($openContent);
-        $topLevelLink.attr('aria-expanded','false');
-        let index = $topLevelLinks.index($topLevelLink)+1;
-        if($topLevelLinks[index]) {
-          $topLevelLinks[index].focus();
-        }
-        return;
-      }
-
-      // key code 9 is the tab key
-      if(open || (typeof(e.keycode) !== "undefined" && e.keycode !== 9)) {
+        // Get previous item if left arrow, next item if right arrow.
+        index += (prev ? -1 : 1);
+        // Wrap around if at the end of the set of menus.
+        index = ((index % linkCount) + linkCount) % linkCount;
+        $topLevelLinks[index].focus();
         return;
       }
 
@@ -161,11 +134,11 @@ export default function (window,document,$,undefined) {
       }
     });
     $mainNavToggle.children('button, a').on('click', function(e) {
-      let $el = $(this);
-      let $elParent = $(this).parent();
-      let $content = $elParent.find('.js-main-nav-content');
-      let $openContent = $parent.find('.js-main-nav-content.' + openClass);
-      let isOpen = $content.hasClass(openClass);
+      let $el = $(this),
+          $elParent = $el.parent(),
+          $content = $elParent.find('.js-main-nav-content'),
+          $openContent = $parent.find('.js-main-nav-content.' + openClass),
+          isOpen = $content.hasClass(openClass);
 
       // mobile
       if(windowWidth <= breakpoint) {
@@ -184,18 +157,6 @@ export default function (window,document,$,undefined) {
         }
       }
     });
-    $mainNavToggle.last()
-      .find('.js-main-nav-content li')
-        .last()
-          .find('a').on('keydown', function(e) {
-            e.stopPropagation();
-            // previous key was not a shift
-            if(e.keyCode === 9 && previousKey !== 16) {  // tab arrow\
-              let $openContent = $parent.find('.js-main-nav-content.' + openClass);
-              hide($openContent);
-            }
-            previousKey = e.keyCode;
-      });
 
     $('.js-close-sub-nav').on('click', function(){
       let $openContent = $parent.find('.js-main-nav-content.' + openClass);

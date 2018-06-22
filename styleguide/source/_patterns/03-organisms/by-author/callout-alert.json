@@ -1,9 +1,7 @@
 {
   "calloutAlert": {
-    "decorativeLink": {
-      "type": "external",
-      "href": "http://www.cityofboston.gov/animals/doglicense/",
-      "text": "Massachusetts requires you to license your dog"
-    }
+    "href": "http://www.cityofboston.gov/animals/doglicense/",
+    "text": "Massachusetts requires you to license your dog",
+    "info": ""
   }
 }

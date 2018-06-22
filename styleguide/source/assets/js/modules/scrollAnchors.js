@@ -31,22 +31,20 @@ export default function (window,document,$,undefined) {
     $links.on('click',function(e) {
       e.preventDefault();
 
+      let $link = $(this);
+
       // is the menu closed on mobile
-      if(!$el.hasClass('is-open') && isMobile) {     
+      if(!$el.hasClass('is-open') && isMobile) {
         // just show the menu
         $el.addClass('is-open');
         return;
       }
-       
+
       activeAnchorIndex = $(this).data('index');
       // find the location of the desired link and scroll the page
       let position = anchors[activeAnchorIndex].position;
       // close the menu
       $el.removeClass('is-open');
-      // remove active flag from other links
-      $el.find('.' + activeClass).removeClass(activeClass);
-      // mark this link as active
-      $(this).addClass(activeClass);
       // prevent the scroll event from updating active links
       linkScrolling = true;
 
@@ -56,10 +54,16 @@ export default function (window,document,$,undefined) {
         let hash = anchors[activeAnchorIndex].hash;
         // bring focus to the item we just scrolled to
         $(hash).focus();
+        // timing issue with window.scroll event firing.
+        setTimeout(function(){
+          // set this link as active.
+          $el.find('.' + activeClass).removeClass(activeClass);
+          $link.addClass(activeClass);
+        },30);
       });
     });
 
-    // if the content contains accordions, 
+    // if the content contains accordions,
     // readjust settings when there state changes.
     $('.js-accordion-link').on('click',function() {
       if(typeof debounceTimer === "number") {
@@ -90,7 +94,10 @@ export default function (window,document,$,undefined) {
 
     $(window).scroll(function () {
       setPosition();
-      activateLink();
+
+      if(!linkScrolling){
+        activateLink();
+      }
     });
 
     function setVariables() {
@@ -104,7 +111,7 @@ export default function (window,document,$,undefined) {
       if($elParent[0].hasAttribute("style") && !isMobile) {
         $elParent.removeAttr('style');
       }
- 
+
       if(isMobile) {
         headerBuffer = $('.js-sticky-header').height() || 0;
         upperLimit -= headerBuffer;
@@ -133,10 +140,10 @@ export default function (window,document,$,undefined) {
     function setPosition() {
       let windowTop = $(window).scrollTop(),
           attr = $el.attr('data-sticky'),
-          top = attr !== 'top' && windowTop <= upperLimit, 
+          top = attr !== 'top' && windowTop <= upperLimit,
           middle = attr !== 'middle' && windowTop < lowerLimit && windowTop > upperLimit,
           bottom = attr !== 'bottom' && windowTop >= lowerLimit;
-      
+
       if($elParent[0].hasAttribute("style") && !isMobile) {
         $elParent.removeAttr('style');
       }
@@ -151,14 +158,14 @@ export default function (window,document,$,undefined) {
         if(isMobile){
           $elParent.removeAttr('style');
         }
-      } 
+      }
       else if (middle) {
         $el.attr('data-sticky','middle');
 
         if(isMobile){
           $elParent.css({'paddingTop':elHeight});
         }
-      } 
+      }
       else if (bottom) {
         $el.attr('data-sticky','bottom');
 
@@ -177,11 +184,11 @@ export default function (window,document,$,undefined) {
       // get the current scroll position and offset by half the view port
       let windowTop = $(window).scrollTop() + (window.innerHeight/2),
           currentAnchor = activeAnchorIndex;
-      
+
       // is there a prev target
-      // and 
+      // and
       // is the current scroll position above the current target
-      if(currentAnchor > 0 && windowTop < anchors[activeAnchorIndex].position) { 
+      if(currentAnchor > 0 && windowTop < anchors[activeAnchorIndex].position) {
         // make the prev link active
         --activeAnchorIndex;
       }
@@ -189,7 +196,7 @@ export default function (window,document,$,undefined) {
       // is there a next target
       // and
       // is the current scroll position below the next target
-      else if(currentAnchor < numAnchors-1 && windowTop > anchors[activeAnchorIndex+1].position) { 
+      else if(currentAnchor < numAnchors-1 && windowTop > anchors[activeAnchorIndex+1].position) {
         // make the next link active
         ++activeAnchorIndex;
       }
@@ -200,7 +207,5 @@ export default function (window,document,$,undefined) {
         $links.eq(activeAnchorIndex).addClass(activeClass);
       }
     }
-
   });
-
 }(window,document,jQuery);

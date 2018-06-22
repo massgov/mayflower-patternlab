@@ -1,21 +1,7 @@
 {
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Working",
-      "href": ""
-    },{
-      "text": "Unemployment",
-      "href": ""
-    },{
-      "text": "Unemployment Benefits",
-      "href": ""
-    }]
-  },
-
   "pageBanner": {
-    "bgWide": "/assets/images/placeholder/1600x400.png",
-    "bgNarrow": "/assets/images/placeholder/800x400.png",
+    "bgWide": "../../assets/images/placeholder/1600x400.png",
+    "bgNarrow": "../../assets/images/placeholder/800x400.png",
     "size": "overlay",
     "icon": "",
     "title": "Unemployment Benefits",
@@ -28,8 +14,8 @@
     "video": {
       "src": "https://www.youtube.com/embed/dEkUq-Rs-Tc",
       "label": "Using a gas grill safely",
-      "height": "853",
-      "width": "480",
+      "height": "480",
+      "width": "853",
       "position": "right",
       "link": {
         "href": "/patterns/05-pages-GEN-Building-Energy-Codes/05-pages-GEN-Building-Energy-Codes.html",
@@ -39,25 +25,23 @@
       }
     },
 
-    "teaserText": {
-      "richText": {
-        "property": "",
-        "rteElements": [{
-          "path": "@atoms/11-text/paragraph.twig",
-          "data": {
-            "paragraph" : {
-              "text": "Need some help staying on your feet while  you look for a new job? If you’re out of work and able to work, you may be eligible for temporary income called unemployment insurance (UI). If you qualify, you receive weekly payments to help cover your living expenses. The amount is based on what you were paid in the last year. Donec lacinia vulputate magna. Vivamus suscipit lectus at quam. In lectus est, viverra a, ultricies ut, pulvinar vitae, tellus. Donec et lectus et sem rutrum sodales. Morbi cursus. Aliquam a odio. Sed tortor velit, convallis eget, porta interdum, convallis sed, tortor. Phasellus ac libero a lorem auctor mattis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
-            }
+    "intro": {
+      "property": "",
+      "rteElements": [{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "Need some help staying on your feet while  you look for a new job? If you’re out of work and able to work, you may be eligible for temporary income called unemployment insurance (UI). If you qualify, you receive weekly payments to help cover your living expenses. The amount is based on what you were paid in the last year. Donec lacinia vulputate magna. Vivamus suscipit lectus at quam. In lectus est, viverra a, ultricies ut, pulvinar vitae, tellus. Donec et lectus et sem rutrum sodales. Morbi cursus. Aliquam a odio. Sed tortor velit, convallis eget, porta interdum, convallis sed, tortor. Phasellus ac libero a lorem auctor mattis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit."
           }
-        }]
-      },
-
-      "decorativeLink": {
-        "href": "#",
-        "text": "Learn More",
-        "info": "Learn More about unemployment Benefits",
-        "property": ""
-      }
+        }
+      },{
+        "path": "@atoms/11-text/paragraph.twig",
+        "data": {
+          "paragraph" : {
+            "text": "<a href=\"#\">Learn more</a>"
+          }
+        }
+      }]
     },
 
     "keyActions": {
@@ -66,7 +50,7 @@
         "sub": true
       },
       "links":[{
-        "image": "/assets/images/placeholder/130x160.png",
+        "image": "../../assets/images/placeholder/130x160.png",
         "text": "Name of Optional Guide",
         "href": "#",
         "label": "Guide:"
@@ -78,37 +62,41 @@
         "label": ":"
       }]
     }
- },
+  },
 
   "introSidebar": {
     "logo": {
-      "alt": "alt text", 
-      "src": "/assets/images/placeholder/230x130.png",
+      "alt": "alt text",
+      "src": "../../assets/images/placeholder/230x130.png",
       "height": "130",
       "width": "230"
     },
 
     "social": {
-      "sidebarHeading": {
-        "title": "Social"
-      },
       "iconLinks": {
+        "compHeading": {
+          "title": "Social",
+          "sub": true,
+          "color": "",
+          "id": "",
+          "centered": ""
+        },
         "items": [{
-          "icon": "@atoms/05-icons/svg-twitter.twig",
+          "icon": "twitter",
           "link": {
             "href": "#",
             "text": "Optional Socia Media",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-flickr.twig",
+          "icon": "flickr",
           "link": {
             "href": "#",
             "text": "ScreenName",
             "chevron": ""
           }
         },{
-          "icon": "@atoms/05-icons/svg-blog.twig",
+          "icon": "blog",
           "link": {
             "href": "#",
             "text": "ScreenName",
@@ -124,7 +112,7 @@
       },
       "stacked": true,
       "links" : [{
-        "url":"#",
+        "href":"#",
         "text":"Department of Unemployment Assistance (DUA)"
       }]
     }
@@ -137,7 +125,7 @@
       "bgNarrow":"",
       "title": "What Would You Like to Do?",
       "featuredHeading":"Featured:",
-      "generalHeading":"All tasks:",
+      "generalHeading":"All How-Tos:",
       "hideFilter": true,
 
       "seeAll": null,
@@ -188,7 +176,7 @@
       "featuredLinks": "",
 
       "links": [{
-        "image": "/assets/images/placeholder/130x160.png",
+        "image": "../../assets/images/placeholder/130x160.png",
         "text": "Name of optional guide",
         "href": "#",
         "label": "Guide:"
@@ -230,7 +218,7 @@
       "markers": [{
         "position": {
           "lat": 42.366565,
-          "lng": -71.058940 
+          "lng": -71.058940
         },
         "label": "A",
         "infoWindow": {
@@ -243,7 +231,7 @@
       },{
         "position": {
           "lat": 42.358795,
-          "lng": -71.063858 
+          "lng": -71.063858
         },
         "label": "B",
         "infoWindow": {
@@ -254,6 +242,58 @@
           "address": "24 Beacon St\nBoston, MA 02133"
         }
       }]
+    }
+  },
+
+  "eventListing": {
+    "grid": true,
+    "compHeading":{
+      "title": "Upcoming Events",
+      "sub": "",
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
+    "events":[{
+      "title": {
+        "href": "#",
+        "text": "Winter Birding Event",
+        "info": "",
+        "property": ""
+      },
+      "location": "Lanesborough, MA",
+      "date": {
+        "summary": "March 30, 2017",
+        "startMonth": "Mar",
+        "startDay": "30",
+        "endMonth": "",
+        "endDay": ""
+      },
+      "time": "12 p.m. - 2 p.m.",
+      "description": "Event description. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora itaque fuga quasi vero sint, sapiente soluta sit molestias architecto deleniti sunt eum incidunt laboriosam quos repudiandae nesciunt eligendi? Aliquid."
+    },{
+      "title": {
+        "href": "#",
+        "text": "First Day Hike",
+        "info": "",
+        "property": ""
+      },
+      "location": "Lanesborough, MA",
+      "date": {
+        "summary": "March 30, 2017 - April 10, 2017",
+        "startMonth": "Mar",
+        "startDay": "30",
+        "endMonth": "Apr",
+        "endDay": "10"
+      },
+      "time": "12 p.m. - 2 p.m.",
+      "description": ""
+    }],
+    "more":{
+      "href": "#",
+      "text": "See all events",
+      "chevron": true,
+      "label": "See all events for Executive Office of Health and Human Services"
     }
   },
 
@@ -268,13 +308,13 @@
             },
             "stacked": true,
             "links" : [{
-              "url":"#",
+              "href":"#",
               "text":"Job Search Help"
             },{
-              "url":"#",
+              "href":"#",
               "text":"Job Training"
             },{
-              "url":"#",
+              "href":"#",
               "text":"Career Counseling"
             }]
           }
@@ -291,7 +331,7 @@
             "downloadLinks": [{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-pdf.twig",
+                "icon": "doc-pdf",
                 "decorativeLink": {
                   "text": "Work Search Activity Log",
                   "href": "#",
@@ -304,7 +344,7 @@
             },{
               "downloadLink": {
                 "iconSize": "small",
-                "icon": "@atoms/05-icons/svg-doc-docx.twig",
+                "icon": "doc-docx",
                 "decorativeLink": {
                   "text": "Name of Doc",
                   "href": "#",
@@ -321,6 +361,3 @@
     }]
   }
 }
-
-
-

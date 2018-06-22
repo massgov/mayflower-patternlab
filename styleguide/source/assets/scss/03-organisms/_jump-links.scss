@@ -14,7 +14,7 @@
   &__inner {
 
     @media ($bp-small-min) {
-      padding-bottom: 45px;
+      padding-bottom: 35px;
     }
   }
 
@@ -34,6 +34,10 @@
 
     @media ($bp-small-max) {
       display: none;
+    }
+
+    @media ($bp-small-min) {
+      margin-bottom: 15px;
     }
   }
 
@@ -81,8 +85,8 @@
     overflow: hidden;
     position: absolute;
       right: 10px;
-      top: 14px;
-    transition: all .2s ease;
+      top: 9px;
+    transition: transform .2s ease;
     transform-origin: center center;
     z-index: 1;
 
@@ -140,14 +144,17 @@
       height: 22px;
       position: absolute;
         left: 0;
-        top: 1px;
+        top: 4px;
       transform: rotate(90deg);
       width: 22px;
     }
 
     a {
       @include ma-link-underline;
-      line-height: 1.5;
+
+      @media ($bp-small-min) {
+        line-height: 1.5;
+      }
     }
 
     @media ($bp-small-max) {

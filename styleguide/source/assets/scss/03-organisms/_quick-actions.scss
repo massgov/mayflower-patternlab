@@ -18,6 +18,10 @@
 
     @media print, ($bp-large-min) {
       display: none;
+
+      & + * {
+        margin-top: 0 !important;
+      }
     }
   }
 

@@ -13,4 +13,8 @@
   &__file-spec {
     font-weight: 500;
   }
+
+  .ma__form-downloads--listing & {
+    border-color: $c-bd-divider;
+  }
 }

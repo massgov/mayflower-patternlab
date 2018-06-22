@@ -51,9 +51,8 @@ class Annotations {
 		// set-up the comments store
 		self::$store["comments"] = array();
 		
-		// iterate over all of the files in the annotations dir
+		// create the annotations dir if it doesn't exist
 		if (!is_dir($annotationsDir)) {
-			Console::writeWarning("<path>".Console::getHumanReadablePath($annotationsDir)."</path><warning> doesn't exist so you won't have annotations...");
 			mkdir($annotationsDir);
 		}
 		
@@ -90,6 +89,7 @@ class Annotations {
 		}
 		
 		// read in the old style annotations.js, modify the data and generate JSON array to merge
+		$data = array();
 		$oldStyleAnnotationsPath = $annotationsDir.DIRECTORY_SEPARATOR."annotations.js";
 		if (file_exists($oldStyleAnnotationsPath)) {
 			$text = trim(file_get_contents($oldStyleAnnotationsPath));
@@ -103,8 +103,10 @@ class Annotations {
 			}
 		}
 		
-		// merge in any data from the old file
-		self::$store["comments"] = array_merge(self::$store["comments"],$data["comments"]);
+		// merge in any data from the old file if the json decode was successful
+		if (is_array($data) && isset($data["comments"])) {
+			self::$store["comments"] = array_merge(self::$store["comments"],$data["comments"]);
+		}
 		
 		$dispatcherInstance->dispatch("annotations.gatherEnd");
 		

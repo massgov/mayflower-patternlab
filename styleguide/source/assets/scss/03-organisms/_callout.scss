@@ -7,6 +7,11 @@
     padding-left:38px;
   }
 
+  .pre-content > &,
+  .post-content > &,
+  .main-content--full .page-content > & {
+    @include ma-container();
+  }
 
   &__header {
 

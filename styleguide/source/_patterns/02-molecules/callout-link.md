@@ -1,25 +1,34 @@
----
-title: Callout link
----
-Description: An decorative link `<a>` element which wraps a styled container.
+Description: This pattern shows a link styled as a card
 
-## Status: BETA
+### Status
+* Stable as of 6.0.0
 
-### Used in:
-- [@organisms/by-author/action-finder](/?p=organisms-action-finder)
-- [@organisms/by-author/key-actions](/?p=organisms-key-actions)
-- [@organisms/by-author/top-actions](/?p=organisms-top-actions)
+### Pattern Contains
+* SVG Arrow atom
 
-### Required Variables
+### Variant options
+* With [description](./?p=molecules-callout-link-as-description) text.
+* With theme set to [white](./?p=molecules-callout-link-as-white)
+* With [details](./?p=molecules-callout-link-with-details) with the `theme` set to "white", and a string supplied to the eyebrow, details, and emphasized properties.
+
+### Variables
 ~~~
 calloutLink: {
   href:
-    type: string/required
+    type: string / required
   text:
-    type: string/required
-  type:
-    type: string/optional ("external")
+    type: string / required
   info:
-    type: string/optional
+    type: string (adds more description about the link) / optional
+  description:
+    type: string (adds a short description under the title text) / optional
+  theme:
+    type: string (" " or "white") / optional
+  eyebrow:
+  	type: string / optional
+  emphasized:
+  	type: string / optional
+  time:
+  	type: string / optional
 }
 ~~~

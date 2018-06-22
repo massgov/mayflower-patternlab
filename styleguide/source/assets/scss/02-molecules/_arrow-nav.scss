@@ -34,15 +34,6 @@
     @media ($bp-small-min) {
       width: 50px;
     }
-
-    @media ($bp-small-max) {
-
-      &:after {
-        border-width: 3px;
-        height: 9px;
-        width: 9px;
-      }
-    }
   }
 
   &--right .ma__arrow-button {
@@ -71,12 +62,15 @@
       }
     }
   }
-
+  
   &__link {
-    @include ma-link-underline;
-
     @media ($bp-small-max) {
       @include ma-visually-hidden;
     }
+  }
+
+  // backward compatible with v.5.6 - replaced with link Atom
+  a.ma__arrow-nav__link {
+    @include ma-link-underline;
   }
 }

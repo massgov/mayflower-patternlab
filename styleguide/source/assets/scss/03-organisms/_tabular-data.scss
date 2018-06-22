@@ -1,9 +1,12 @@
 .ma__tabular-data {
-  @include ma-component-spacing;
 
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
     @include ma-container();
+  }
+
+  .ma__rich-text {
+    margin-bottom: 45px;
   }
 }

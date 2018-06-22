@@ -1,5 +1,4 @@
 .ma__callout-time {
-  @include ma-component-spacing;
   position: relative;
 
   .pre-content > &,
@@ -16,10 +15,13 @@
     font-size: 0;
     height: 30px;
     position: absolute;
-      top: 50%;
+      top: 16%;
       left: 0;
-    transform: translateY(-50%);
     width: 30px;
+
+    @media ($bp-medium-min) {
+      top: 10%;
+    }
 
     & > svg {
       height: 30px;
@@ -30,7 +32,7 @@
   &__text {
     font-size: 1.438rem;
     font-style: italic;
-    margin-bottom: 0;
+    display: inline-block;
     padding-left: 42px; // width of icon and margin
   }
 }

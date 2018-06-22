@@ -1,26 +1,32 @@
 {
   "imagePromos": {
+    "promoHeading": "",
+    "compHeading": {
+      "title": "Image Promos",
+      "sub": false,
+      "color": "",
+      "id": "",
+      "centered": ""
+    },
     "items": [{
       "title": {
         "text": "Hiking & Walking",
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "hiking image",
         "href": "#"
       },
       "description": {
-        "richText":{
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph" : {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-              }
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
             }
-          }]
-        }
+          }
+        }]
       },
       "link": {
         "text": "Details & Maps",
@@ -33,21 +39,19 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "camping image",
         "href": "#"
       },
       "description": {
-        "richText":{
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph" : {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-              }
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
             }
-          }]
-        }
+          }
+        }]
       },
       "link": {
         "text": "More",
@@ -60,21 +64,19 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "wintery image",
         "href": "#"
       },
       "description": {
-        "richText":{
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph" : {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-              }
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
             }
-          }]
-        }
+          }
+        }]
       },
       "link": {
         "text": "More",
@@ -87,21 +89,19 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "hunting image",
         "href": "#"
       },
       "description": {
-        "richText":{
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph" : {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-              }
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
             }
-          }]
-        }
+          }
+        }]
       },
       "link": {
         "text": "More",
@@ -114,21 +114,19 @@
         "href": "#"
       },
       "image": {
-        "src": "/assets/images/placeholder/190x107.png",
+        "src": "../../assets/images/placeholder/190x107.png",
         "alt": "bird image",
         "href": "#"
       },
       "description": {
-        "richText":{
-          "rteElements": [{
-            "path": "@atoms/11-text/paragraph.twig",
-            "data": {
-              "paragraph" : {
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
-              }
+        "rteElements": [{
+          "path": "@atoms/11-text/paragraph.twig",
+          "data": {
+            "paragraph" : {
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu tellus sit amet turpis convallis finibus at id nulla."
             }
-          }]
-        }
+          }
+        }]
       },
       "link": {
         "text": "More",

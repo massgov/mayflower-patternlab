@@ -1,94 +1,70 @@
 input {
   border: 2px solid;
-  min-height: 46px;
+  max-width: 100%;
+  min-height: 40px;
   padding: 0 18px;
+
+  &.has-error:not(:focus) {
+    background-position: center right 10px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+}
+
+input[type=file] {
+  border: none;
+  min-height: 0;
+  padding: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0; /* Removes leftover margin */
 }
 
 textarea {
   border: 2px solid;
+  min-height: 135px;
   padding: 18px;
 }
 
+legend,
 label {
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: .25em;
 }
 
-.ma__input-radio {
-  display: inline-block;
-  position: relative;
 
-  input {
-    @include ma-visually-hidden;
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+// override if an input label combo is added directly to the page-content area
+// This is mainly for Pattern Lab
+.main-content .page-content > label:not(.ma__label--hidden) {
+  
+  & + textarea,
+  & + .ma__textarea__wrapper,
+  & + .ma__input-number,
+  & + input {
+    margin-top: 0;
   }
 
-  label {
-    font-size: 1.375rem;
-    line-height: 1rem;
-    padding-left: 1.5em;
+  & + .ma__error-msg {
+    margin-top: 0;
 
-    &:before {
-      border: 2px solid;
-      border-radius: 50%;
-      content: "\2022";
-      display: inline-block;
-      height: .45em;
-      font-size: 2.5em;
-      line-height: calc(.45em - 11px);
-      margin-right: .125em;
-      position: absolute;
-        top: -.05em;
-        left: 0;
-      text-align: center;
-      width: .45em;
-      overflow: hidden;
-    }
-
-    span {
-      line-height: 1.2em;
+    & + textarea,
+    & + .ma__textarea__wrapper,
+    & + .ma__input-number,
+    & + input {
+      margin-top: 0;
     }
   }
 }
-
-.ma__input-checkbox {
-  display: inline-block;
-  position: relative;
-
-  input {
-    @include ma-visually-hidden;
-  }
-
-  label {
-    font-size: 1.375rem;
-    line-height: 1rem;
-    padding-left: 1.25em;
-
-    &:before {
-      border: 2px solid;
-      content: ""; 
-      display: inline-block;
-      height: 2em;
-      font-size: .5em;
-      line-height: 1.5;
-      padding-top: .25em;
-      position: absolute;
-        top: 0;
-        left: 0;
-      text-align: center;
-      width: 2em;
-    }
-
-    span {
-      line-height: 1.2em;
-    }
-  }
-
-  input:checked ~ label {
-
-    &:before {
-      content: url("../images/checkmark.svg"); //"✔";
-    }
-  }
-
-}
-

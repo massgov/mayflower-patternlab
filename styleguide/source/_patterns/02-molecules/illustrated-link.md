@@ -1,12 +1,15 @@
----
-title: Illustrated link
----
-Description: a molecule for an illustrated link.
-## Status: ALPHA
-### Used in:
-- [@organisms/by-author/action-finder](/?p=organisms-action-finder)
-- [@organisms/by-author/suggested-pages](/?p=organisms-suggested-pages)
-### Required Variables
+### Description: Displays a link as a card with an optional category label.
+
+### Status
+* Stable as of 4.0.0
+
+### Pattern Contains
+* Decorative Link
+
+### Variant options
+* if the image variable is set to null a [blue background](./?p=molecules-illustrated-link-without-image) will show in it's place.
+
+### Variables
 ~~~
 illustratedLink {
   text:

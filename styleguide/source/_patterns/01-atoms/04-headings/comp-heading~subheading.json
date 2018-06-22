@@ -1,9 +1,9 @@
 {
   "compHeading": {
-    "title": "Key Actions",
-    "sub": true,
+    "title": "Title text",
+    "level": 3,
     "color": "",
-    "id": "key-actions",
+    "id": "",
     "centered": ""
   }
 }

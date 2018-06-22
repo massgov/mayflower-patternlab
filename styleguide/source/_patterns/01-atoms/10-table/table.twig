@@ -6,15 +6,15 @@
 <table class="ma__table {{ tableWideClass }}">
   <thead>
     {% for row in table.head.rows %}
-    <tr>
-      {% for cell in row.cells %}
-        <th 
-          scope="col" 
-          {% if cell.colspan %}colspan="{{cell.colspan}}"{% endif %} 
-          {% if cell.rowspan %}rowspan="{{cell.rowspan}}"{% endif %}>{{ cell.text }}</th>
-      {% endfor %}
-    </tr>
-  {% endfor %}
+      <tr>
+        {% for cell in row.cells %}
+          <th 
+            scope="col" 
+            {% if cell.colspan %}colspan="{{cell.colspan}}"{% endif %} 
+            {% if cell.rowspan %}rowspan="{{cell.rowspan}}"{% endif %}>{{ cell.text }}</th>
+        {% endfor %}
+      </tr>
+    {% endfor %}
   </thead>
   {% for body in table.bodies %}
     <tbody>

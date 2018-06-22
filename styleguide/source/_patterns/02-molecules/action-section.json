@@ -1,6 +1,7 @@
 {
   "actionSection": {
     "title":"Overview",
+    "titleContext": "",
     "id":"overview:",
     "path":"organisms-rich-text",
     "data": {

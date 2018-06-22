@@ -1,19 +1,11 @@
 {
   "urlPath": "/?p=pages-ACTION-get-a-state-park-pass",
 
-  "breadcrumbs":{
-    "light": "",
-    "links": [{
-      "text": "Visiting & Exploring",
-      "href": "/?p=pages-visiting-and-exploring"
-    }]
-  },
-
   "pageBanner": {
-    "bgWide":"/assets/images/placeholder/1600x400.png",
-    "bgNarrow":"/assets/images/placeholder/800x400.png",
+    "bgWide":"../../assets/images/placeholder/1600x400.png",
+    "bgNarrow":"../../assets/images/placeholder/800x400.png",
     "size":"",
-    "icon":"@atoms/05-icons/svg-lg-park.twig",
+    "icon":"lg-park",
     "title":"Visiting & Exploring"
   },
 
@@ -32,8 +24,8 @@
     "sections": [{
       "id": "GUIDasjdhf1",
       "catIcon": {
-        "icon":"@atoms/05-icons/svg-lg-fishing.twig",
-        "small":"true"
+        "icon":"lg-fishing",
+        "small": true
       },
       "title" : {
         "href" : "#",
@@ -51,13 +43,18 @@
       {
         "href" : "#",
         "text" : "Hunting"
-      }]
+      }],
+      "seeAll" : {
+        "href" : "#",
+        "text" : "more",
+        "info": "learn more about Recreational License & Permits"
+      }
     },
     {
       "id": "GUIDasjdhf2",
       "catIcon": {
-        "icon":"@atoms/05-icons/svg-lg-picnic-table.twig",
-        "small":"true"
+        "icon":"lg-picnic-table",
+        "small": true
       },
       "title" : {
         "href" : "#",
@@ -82,14 +79,15 @@
       }],
       "seeAll" : {
         "href" : "#",
-        "text" : "more"
+        "text" : "more",
+        "info": "learn more about State Parks & Recreation"
       }
     }, 
     {
       "id": "GUIDasjdhf3",
       "catIcon": {
-        "icon":"@atoms/05-icons/svg-lg-map-location.twig",
-        "small":"true"
+        "icon":"lg-map-location",
+        "small": true
       },
       "title" : {
         "href" : "#",
@@ -114,7 +112,8 @@
       }],
       "seeAll" : {
         "href" : "#",
-        "text" : "more"
+        "text" : "more",
+        "info": "learn more about Travel & Tourism"
       }
     }]
   }

@@ -19,7 +19,8 @@ use \Symfony\Component\Finder\Finder;
 class TwigUtil {
 	
 	protected static $instance = '';
-	
+	protected static $loaders = array();
+
 	/**
 	* Get an instance of the Twig environment
 	*
@@ -46,7 +47,46 @@ class TwigUtil {
 		}
 		
 		self::$instance = $instance;
-		
+
+	}
+
+	/**
+	* Get an instance of the Twig loaders
+	*
+	* @return {Array}       List of Twig Loaders
+	*/
+	public static function getLoaders() {
+
+		if (empty(self::$loaders)) {
+			return false;
+		}
+
+		return self::$loaders;
+
+	}
+
+	/**
+	* Set an instance of the Twig loaders
+	* @param  {Array}       List of Twig Loaders
+	*/
+	public static function setLoaders($loaders = array()) {
+
+		if (empty($loaders)) {
+			Console::writeError("please set the loaders");
+		}
+
+		self::$loaders = $loaders;
+
+	}
+
+	/**
+	* Add a loader to the Twig Loaders array
+	* @param  {Loader}       A Twig Loader
+	*/
+	public static function addLoader($loader) {
+
+		self::$loaders[] = $loader;
+
 	}
 	
 	/**
@@ -61,7 +101,8 @@ class TwigUtil {
 		$finder = new Finder();
 		$finder->directories()->depth(0)->in($patternSourceDir);
 		foreach ($finder as $file) {
-			$patternBits = explode("-",$file->getRelativePathName(),2);
+			$pattern = $file->getRelativePathName();
+			$patternBits = explode("-",$pattern,2);
 			$patternTypePath = (((int)$patternBits[0] != 0) || ($patternBits[0] == '00')) ? $patternBits[1] : $pattern;
 			$filesystemLoader->addPath($file->getPathName(), $patternTypePath);
 		}

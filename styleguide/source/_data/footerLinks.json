@@ -2,6 +2,7 @@
   "footerLinks": {
     "items": [{
       "heading": "FooterLinks1",
+      "id": "FooterLinks1",
       "links": [{
         "href": "#",
         "text": "Living"
@@ -20,6 +21,7 @@
       }]
     },{
       "heading": "FooterLinks2",
+      "id": "FooterLinks2",
       "links": [{
         "href": "#",
         "text": "Contact Us"
@@ -32,6 +34,7 @@
       }]
     },{
       "heading": "FooterLinks3",
+      "id": "FooterLinks3",
       "links": [{
         "href": "#",
         "text": "Sitemap"

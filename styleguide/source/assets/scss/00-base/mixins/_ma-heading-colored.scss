@@ -2,9 +2,9 @@
 // $c-bg is the color you want the title background to be
 // $c-page is the color of the page it is being rendered on
 
-@mixin ma-heading-colored($c-bg:transparent,$c-page:white) {
+@mixin ma-heading-colored($c-bg:transparent,$direction:right,$c-page:white) {
   $offset: 55px;
-
+  
   @if($c-bg == transparent) {
     font-size: 1.375rem;
     letter-spacing: .1em;
@@ -70,8 +70,33 @@
         padding-left: $offset;
       }
     }
+
+    @if($direction == left) {
+      @media ($bp-large-max) {
+        padding-right: $offset;
+      }
+
+      @media ($bp-large-min) {
+        padding-left: $offset;
+        margin-left: -$offset + 20px;
+
+        &:after {
+          top: auto;
+          right: 100%;
+          bottom: 0;
+          left: auto;
+          transform-origin: bottom right;
+        }
+      }
+
+      @media($bp-x-large-min) {
+        margin-left: -$offset;
+        padding-left: $offset;
+      }
+    }
   }
-  @else {
+
+  @if($c-bg != transparent) {
     background-color: $c-bg;
     color: white;
 

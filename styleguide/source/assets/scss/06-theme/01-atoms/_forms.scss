@@ -37,20 +37,24 @@ textarea {
   font-weight: 400;
 }
 
-
 input {
   background-color: $c-white;
   border-color: $c-bd-input;
   color: $c-font-base;
 
-  &[data-valid ="is-invalid"] {
-    border-color: red;
+  &.has-error:not(:focus) {
+    background-image: url('../images/svg-icons/input-error.svg');
+    border-color: $c-bd-error;
   }
 
   .ma__form--light & {
     background-color: rgba($c-white, 0.1);
     border-color: rgba($c-bd-input,.5);
     color: $c-font-inverse;
+
+    &.has-error {
+      border-color: $c-bd-error;
+    }
   }
 }
 
@@ -58,81 +62,23 @@ textarea {
   background-color: $c-white;
   border-color: $c-bd-input;
 
-  &[data-valid ="is-invalid"] {
-    border-color: rgba(red,.7);
+  &.has-error {
+    border-color: $c-bd-error;
   }
 
   .ma__form--light & {
     background-color: rgba($c-white, 0.1);
     border-color: rgba($c-bd-input,.5);
     color: $c-font-inverse;
+
+    &.has-error {
+      border-color: $c-bd-error;
+    }
   }
 }
 
+legend,
 label {
   font-weight: 500;
 }
 
-.ma__input-radio {
-
-  label {
-
-    &:before {
-      background-color: $c-white;
-      border-color: $c-bd-input-dark;
-      color: transparent;
-
-      .ma__form--light & {
-        background-color: rgba($c-white, 0.1);
-        border-color: rgba($c-bd-input,.5);
-      }
-    }
-  }
-
-  input:checked ~ label {
-
-    &:before {
-      color: $c-font-base;
-
-      .ma__form--light & {
-        color: $c-font-inverse;
-      }
-    }
-  }
-
-  input:focus ~ label:before {
-    border-color: Highlight !important;
-
-    /* WebKit gets its native focus styles.
-     */
-    @media (-webkit-min-device-pixel-ratio:0) {
-      outline: -webkit-focus-ring-color auto 5px;
-    }
-  }
-}
-
-.ma__input-checkbox {
-
-  label {
-
-    &:before {
-      background-color: $c-white;
-      border-color: $c-bd-input-dark;
-
-      .ma__form--light & {
-        background-color: rgba($c-white, 0.1);
-        border-color: rgba($c-bd-input,.5);
-      }
-    }
-  }
-
-  input:focus ~ label:before {
-    border-color: Highlight !important;
-
-    /* WebKit gets its native focus styles.
-     */
-    @media (-webkit-min-device-pixel-ratio:0) {
-      outline: -webkit-focus-ring-color auto 5px;
-    }
-  }
-}

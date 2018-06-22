@@ -1,9 +1,13 @@
----
-title: Main nav
----
-Description: The main navigation for the site.
-## State: BETA
-### Required variables
+### Description
+The main navigation for the site.
+
+### Status
+* Stable as of 5.0.0
+
+### JavaScript Used
+* Main Nav (js/modules/mainNav.js)
+
+### Variables
 ~~~
 mainNav: [{
   href:

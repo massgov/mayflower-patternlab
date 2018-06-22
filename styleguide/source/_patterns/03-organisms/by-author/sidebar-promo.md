@@ -1,6 +1,5 @@
----
-Title: Sidebar Promo
----
+### Status
+* Obsolete as of 6.0.0
 
 ##Fields:
 * image - optional - containing:

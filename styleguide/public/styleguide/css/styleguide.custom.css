@@ -89,3 +89,25 @@
   border-top: 1px solid #ccc;
 }
 
+.sg-tabs-panel code[class*=language-], 
+.sg-tabs-panel pre[class*=language-] {
+  font-size: 16px;
+}
+
+.sg-pattern-desc {
+  font-size: 16px;
+}
+
+.sg-pattern-lineage {
+  font-size: 14px;
+}
+
+.sg-pattern-lineage:first-of-type:before {
+  content: "Lineage";
+  display: block;
+  font-size: 1.34em;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

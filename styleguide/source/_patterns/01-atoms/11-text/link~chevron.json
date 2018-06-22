@@ -1,8 +1,8 @@
 {
   "link": {
     "href": "#",
-    "target": "",
-    "text":"This is a link with a chevron",
-    "chevron": "true"
+    "text": "This is a link with a chevron",
+    "info": "",
+    "chevron": true
   }
 }

@@ -1,6 +1,5 @@
 .ma__action-image {
   @include clearfix;
-  @include ma-component-spacing;
 
   &__title {
     margin-bottom: 15px;

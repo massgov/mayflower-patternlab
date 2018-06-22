@@ -1,6 +1,5 @@
 .ma__test-feed {
   @include ma-container;
-  @include ma-component-padding;
 
   &__title {
     @include ma-border-decorative;

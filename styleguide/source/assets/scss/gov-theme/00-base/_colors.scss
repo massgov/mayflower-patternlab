@@ -1,43 +1,5 @@
-// Primary colors
-$c-blue-primary: #14558f;
-$c-green-primary: #43956f;
-$c-gray-primary: #535353;
-$c-cranberry-primary: #680a1d;
-
-//secondary colors
-$c-yellow-secondary: #f6c51b;
-
-//other global colors
-$c-red: red;
-$c-white: white;
-$c-black: #141414;
-$c-gray-f2f2f2: #f2f2f2;
-$c-gray-dcdcdc: #dcdcdc;
-$c-gray-707070: #707070;
-$c-gray-757575: #757575;
+// Theme colors
+$c-theme-cranberry: #680a1d;
 
 // 18F compliance we can't use variables with the color in the name
-$c-theme-primary: $c-blue-primary;
-$c-theme-secondary: $c-cranberry-primary;
-$c-theme-quaternary: $c-gray-primary;
-$c-theme-tertiary: $c-yellow-secondary;
-
-$c-font-base: $c-gray-primary;
-$c-font-dark: $c-black;
-$c-font-medium: $c-gray-707070;
-
-$c-font-heading: $c-black;
-$c-font-inverse: $c-white;
-$c-font-link: $c-blue-primary;
-$c-font-error: $c-red;
-
-$c-bg-comp-title: $c-gray-primary;
-$c-bg-subtle: $c-gray-f2f2f2;
-$c-bg-section: $c-gray-f2f2f2;
-
-$c-bd-divider: $c-gray-dcdcdc;
-$c-bd-divider-dark: $c-gray-primary;
-$c-bd-input: $c-gray-dcdcdc;
-$c-bd-input-dark: $c-gray-757575;
-
-
+$c-theme-secondary: $c-theme-cranberry;

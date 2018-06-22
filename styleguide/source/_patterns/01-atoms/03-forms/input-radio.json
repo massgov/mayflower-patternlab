@@ -1,9 +1,9 @@
 {
   "inputRadio": {
-    "name": "gender",
-    "value": "male",
-    "id": "gender-male",
-    "label": "Male",
-    "checked": "true"
+    "name": "radio-test",
+    "value": "radio-button",
+    "id": "radio-test",
+    "label": "Radio Button",
+    "checked": true
   }
 }

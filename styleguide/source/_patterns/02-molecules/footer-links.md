@@ -1,13 +1,23 @@
----
-title: Footer links
----
+### Description
+Displays a multi-column list of links used in the footer
 
-Description: Displays the links in the footer.
+### Status
+* Stable as of 5.0.0
 
-## State: Alpha
-
-### Notes:
-- The links are currently hard coded and do not link to an actual URL.
-
-### Used in:
-- [@molecules/footer](/?p=molecules-footer)
+### Variables
+~~~
+footerLinks: {
+  items: [{
+    heading: 
+      type: string / required
+    id:
+      type: string (unique ID) / required
+    links: [{
+      href: 
+        type: string (url) / required
+      text:
+        type: string / required
+    }]
+  }]
+}
+~~~

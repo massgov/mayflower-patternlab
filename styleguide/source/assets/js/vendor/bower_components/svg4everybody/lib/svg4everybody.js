@@ -1,13 +1,13 @@
-/*! svg4everybody v2.0.3 | github.com/jonathantneal/svg4everybody */
+/*! svg4everybody v2.1.9 | github.com/jonathantneal/svg4everybody */
 
-function embed(svg, target) {
+function embed(parent, svg, target) {
 	// if the target exists
 	if (target) {
 		// create a document fragment to hold the contents of the target
 		var fragment = document.createDocumentFragment();
 
 		// cache the closest matching viewBox
-		var viewBox = !svg.getAttribute('viewBox') && target.getAttribute('viewBox');
+		var viewBox = !svg.hasAttribute('viewBox') && target.getAttribute('viewBox');
 
 		// conditionally set the viewBox on the svg
 		if (viewBox) {
@@ -23,7 +23,7 @@ function embed(svg, target) {
 		}
 
 		// append the fragment into the svg
-		svg.appendChild(fragment);
+		parent.appendChild(fragment);
 	}
 }
 
@@ -55,7 +55,7 @@ function loadreadystatechange(xhr) {
 				}
 
 				// embed the target into the svg
-				embed(item.svg, target);
+				embed(item.parent, item.svg, target);
 			});
 		}
 	};
@@ -94,13 +94,16 @@ function svg4everybody(rawopts) {
 	var newerIEUA = /\bTrident\/[567]\b|\bMSIE (?:9|10)\.0\b/;
 	var webkitUA = /\bAppleWebKit\/(\d+)\b/;
 	var olderEdgeUA = /\bEdge\/12\.(\d+)\b/;
+	var edgeUA = /\bEdge\/.(\d+)\b/;
+	//Checks whether iframed
+	var inIframe = window.top !== window.self;
 
 	if ('polyfill' in opts) {
 		polyfill = opts.polyfill;
 	} else if (LEGACY_SUPPORT) {
-		polyfill = olderIEUA.test(navigator.userAgent) || newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537;
+		polyfill = olderIEUA.test(navigator.userAgent) || newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537 || edgeUA.test(navigator.userAgent) && inIframe;
 	} else {
-		polyfill = newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537;
+		polyfill = newerIEUA.test(navigator.userAgent) || (navigator.userAgent.match(olderEdgeUA) || [])[1] < 10547 || (navigator.userAgent.match(webkitUA) || [])[1] < 537 || edgeUA.test(navigator.userAgent) && inIframe;
 	}
 
 	// create xhr requests object
@@ -111,6 +114,7 @@ function svg4everybody(rawopts) {
 
 	// get a live collection of use elements on the page
 	var uses = document.getElementsByTagName('use');
+	var numberOfSvgUseElementsToBypass = 0;
 
 	function oninterval() {
 		// get the cached <use> index
@@ -122,10 +126,15 @@ function svg4everybody(rawopts) {
 			var use = uses[index];
 
 			// get the current <svg>
-			var svg = use.parentNode;
+			var parent = use.parentNode;
+			var svg = getSVGAncestor(parent);
+			var src = use.getAttribute('xlink:href') || use.getAttribute('href');
 
-			if (svg && /svg/i.test(svg.nodeName)) {
-				var src = use.getAttribute('xlink:href');
+			if (!src && opts.attributeName) {
+				src = use.getAttribute(opts.attributeName);
+			}
+
+			if (svg && src) {
 
 				// if running with legacy support
 				if (LEGACY_SUPPORT && nosvg) {
@@ -143,11 +152,11 @@ function svg4everybody(rawopts) {
 					img.src = fallback(src, svg, use);
 
 					// replace the <use> with the fallback image
-					svg.replaceChild(img, use);
+					parent.replaceChild(img, use);
 				} else if (polyfill) {
 					if (!opts.validate || opts.validate(src, svg, use)) {
 						// remove the <use> element
-						svg.removeChild(use);
+						parent.removeChild(use);
 
 						// parse the src and get the url and id
 						var srcSplit = src.split('#');
@@ -172,6 +181,7 @@ function svg4everybody(rawopts) {
 
 							// add the svg and id as an item to the xhr embeds list
 							xhr._embeds.push({
+								parent: parent,
 								svg: svg,
 								id: id
 							});
@@ -180,8 +190,12 @@ function svg4everybody(rawopts) {
 							loadreadystatechange(xhr);
 						} else {
 							// embed the local id into the svg
-							embed(svg, document.getElementById(id));
+							embed(parent, svg, document.getElementById(id));
 						}
+					} else {
+						// increase the index when the previous value was not "valid"
+						++index;
+						++numberOfSvgUseElementsToBypass;
 					}
 				}
 			} else {
@@ -191,11 +205,24 @@ function svg4everybody(rawopts) {
 		}
 
 		// continue the interval
-		requestAnimationFrame(oninterval, 67);
+		if (!uses.length || uses.length - numberOfSvgUseElementsToBypass > 0) {
+			requestAnimationFrame(oninterval, 67);
+		}
 	}
 
 	// conditionally start the interval if the polyfill is active
 	if (polyfill) {
 		oninterval();
 	}
+}
+
+function getSVGAncestor(node) {
+	var svg = node;
+	while (svg.nodeName.toLowerCase() !== 'svg') {
+		svg = svg.parentNode;
+		if (!svg) {
+			break;
+		}
+	}
+	return svg;
 }

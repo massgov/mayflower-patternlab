@@ -1,22 +1,23 @@
----
-title: Utility Panel
----
-Description: A Rich Text field followed by 1-3 decorative links.
+### Description
+A Rich Text field followed by 1-3 optional decorative links.
 
-## State: Alpha
+### Status
+* In Progress as of 5.0.0
 
-### Contains
-- [@organisms/by-author/rich-text](?p=organisms-rich-text)
-- [@atoms/decorative-link](?p=atoms-decorative-link)
+### Pattern Contains
+* Rich Text
+* Decorative Link
 
-### Required Variables
+### JavaScript Used
+* Clickable object (js/modules/clickable.js)
+
+### Variables
 ~~~
-
-description: 
-  See: [@organisms/by-author/rich-text](?p=organisms-rich-text)
-
-(optional) links: [{
-  See: [@atoms/decorative-link](?p=atoms-decorative-link)
-}]
-
+contactList: {
+  description: 
+    type: richText / required
+  },
+  links:[{
+    type: decorativeLink / optional
+  }]
 ~~~

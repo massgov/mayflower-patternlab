@@ -1,9 +1,10 @@
 {
   "compHeading": {
-    "title": "Employment",
-    "sub": "",
+    "title": "Title text",
+    "titleContext": "",
+    "level": "",
     "color": "",
-    "id": "employment",
+    "id": "GUID9827924",
     "centered": ""
   }
 }

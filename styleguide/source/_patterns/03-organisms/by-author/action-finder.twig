@@ -1,15 +1,14 @@
 {% set noBgClass = "" %}
-{% set filterClass = "" %}
+{% set colorClass = "" %}
 
 {% if not actionFinder.bgWide %}
   {% set noBgClass = "ma__action-finder--no-background" %}
 {% endif %}
 
-{% if actionFinder.links|length <= 6 and hideFilter %}
-  {% set filterClass = "ma__action-finder--no-filter" %}
+{% if actionFinder.color %}
+  {% set colorClass = "ma__action-finder--color-" ~ actionFinder.color %}
 {% endif %}
-
-<section class="ma__action-finder {{ noBgClass }} {{ filterClass }}" id="{{ actionFinder.id }}">
+<section class="ma__action-finder {{ noBgClass }} {{ colorClass }}" id="{{ actionFinder.id }}">
   {% if actionFinder.bgWide %}
     <style>
       #{{ actionFinder.id }} {
@@ -27,43 +26,43 @@
     <header class="ma__action-finder__header">
       <h2 class="ma__action-finder__title">
         {{ actionFinder.title }}
+        {% if actionFinder.contextPositionTop and actionFinder.titleContext %}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span>{% endif %}
       </h2>
-      {% if actionFinder.links|length > 6 and not hideFilter %}
-        <div class="ma__action-finder__search">
-          {% include "@molecules/keyword-search.twig" %}
-        </div>
-      {% endif %}
     </header>
     {% if actionFinder.featuredLinks %}
       {% if actionFinder.featuredHeading %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}</h3>
+        <h3 class="ma__action-finder__category">{{ actionFinder.featuredHeading }}{% if actionFinder.contextPositionTop == false and actionFinder.titleContext %}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span>{% endif %}</h3>
       {% endif %}
       <div class="ma__action-finder__items">
-        {% for link in actionFinder.featuredLinks %}
-          {% if link.image %}
-            {% set illustratedLink = link %}
-            {% include "@molecules/illustrated-link.twig" %}
-          {% else %}
-            {% set calloutLink = link %}
-            {% include "@molecules/callout-link.twig" %}
-          {% endif %}
-        {% endfor %}
+        {% block featuredLinksList %}
+          {% for link in actionFinder.featuredLinks %}
+            {% if link.image %}
+              {% set illustratedLink = link %}
+              {% include "@molecules/illustrated-link.twig" %}
+            {% else %}
+              {% set calloutLink = link %}
+              {% include "@molecules/callout-link.twig" %}
+            {% endif %}
+          {% endfor %}
+        {% endblock %}
       </div>
     {% endif %}
     {% if actionFinder.links %}
-      {% if actionFinder.generalHeading %}
-        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}</h3>
+      {% if actionFinder.generalHeading and actionFinder.featuredLinks %}
+        <h3 class="ma__action-finder__category">{{ actionFinder.generalHeading }}{% if actionFinder.contextPositionTop == false and actionFinder.titleContext %}<span class="visually-hidden"> {{ actionFinder.titleContext }}</span>{% endif %}</h3>
       {% endif %}
       <div class="ma__action-finder__items ma__action-finder__items--all">
-        {% for link in actionFinder.links %}
-          {% if link.image %}
-            {% set illustratedLink = link %}
-            {% include "@molecules/illustrated-link.twig" %}
-          {% else %}
-            {% set calloutLink = link %}
-            {% include "@molecules/callout-link.twig" %}
-          {% endif %}
-        {% endfor %}
+        {% block actionFinderLinksList %}
+          {% for link in actionFinder.links %}
+            {% if link.image %}
+              {% set illustratedLink = link %}
+              {% include "@molecules/illustrated-link.twig" %}
+            {% else %}
+              {% set calloutLink = link %}
+              {% include "@molecules/callout-link.twig" %}
+            {% endif %}
+          {% endfor %}
+        {% endblock %}
       </div>
     {% endif %}
   </div>

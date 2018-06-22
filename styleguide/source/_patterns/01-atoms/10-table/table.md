@@ -1,52 +1,43 @@
----
-title: Table
----
-Description: an atom for `<table>` elements with child `<thead>`, `<tbody>`, `<tr>`, and `<td>` elements.
+### Description
+This Displays a styled table that converts to a list on narrow screens
 
-## State: ALPHA
-
-## Used In:
-- [@organisms/by-author/rich-text](/?p=organisms-rich-text)
-- [@organisms/by-author/rich-text-description](/?p=organisms-rich-text-description)
-
-## Notes:
+### Status
+* Stable as of 5.0.0
 
 ### Variables
 ~~~
 table {
-    head {
-        rows [
-            {
-                rowSpanOffset:
-                    type: boolean
-                cells [
-                    heading:
-                        type: boolean
-                    colspan:
-                        type: string (number)
-                    rowspan:
-                        type: string (number)
-                    text:
-                        type: string / required
-                ], / required (at least 1)
-            }, / required (at least 1)
-        ] / required
-    } / required
-    bodies [
-        rows [
-            rowSpanOffset:
-                type: boolean
-            cells [
-                heading:
-                    type: string ("true" || "false") / required
-                colspan:
-                    type: string (number)
-                rowspan:
-                    type: string (number)
-                text:
-                    type: string / required
-            ], / required (at least 1)
-        ] / required (at least 1)
-    ] / required (at least 1)
+  head {
+    rows [{
+      rowSpanOffset:
+        type: boolean
+      cells [{
+        heading:
+          type: boolean
+        colspan:
+          type: string (number) / optional
+        rowspan:
+          type: string (number) / optional
+        text:
+          type: string / required
+      }]
+    }]
+  }
+  bodies [{
+    rows [{
+      rowSpanOffset:
+        type: boolean
+      cells [
+        heading:
+          type: string ("true" || "false") / required
+        colspan:
+          type: string (number) / optional
+        rowspan:
+          type: string (number) / optional
+        text:
+          type: string / required
+      }]
+    }]
+  }]
 }
 ~~~

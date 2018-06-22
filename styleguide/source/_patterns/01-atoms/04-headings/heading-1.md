@@ -1,19 +1,13 @@
----
-title: DEPRECATED - Heading - Level 1
----
-Description: An `<h1>` element with no CSS class.
+### Description
+This is a H1 tag typically used as a Page Title.
 
-## State: DEPRECATED
+### Status
+* Stable as of 1.0.0
 
-### Notes:
-All base elements with no class or id are being moved into base pattern directory.
-
-### Used In:
-
-### Variables:
+### Variables
 ~~~
 heading1: {
-    text:
-        type: string / required
+  text:
+    type: string / required
   }
 ~~~

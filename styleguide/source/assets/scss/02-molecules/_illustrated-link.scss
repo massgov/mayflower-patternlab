@@ -65,6 +65,7 @@ $illustrated-link-image-width: 130px;
   &__image {
     background-position: center right;
     background-size: cover;
+    background-repeat: no-repeat;
     width: $illustrated-link-image-width;
     flex-grow: 0;
     flex-shrink: 0;

@@ -1,6 +1,10 @@
 .ma__stacked-row-section {
 
-  & ~ & &__title { // divider needs to match content width
+  & ~ & {
     border-color: $c-bd-divider;
+    
+    &__container:before {
+      border-color: $c-bd-divider;
+    }
   }
 }

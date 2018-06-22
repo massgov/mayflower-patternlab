@@ -18,10 +18,10 @@
     }
 
     &--blue {
-      background-color: $c-blue-primary;
+      background-color: $c-theme-blue;
 
       &:hover {
-        background-color: rgba($c-blue-primary,.8);
+        background-color: rgba($c-theme-blue,.8);
       
         a {
           border-bottom-color: $c-font-inverse;
@@ -30,10 +30,10 @@
     }
 
     &--green {
-      background-color: $c-green-primary;
+      background-color: $c-theme-green;
 
       &:hover {
-        background-color: rgba($c-green-primary,.8);
+        background-color: rgba($c-theme-green,.8);
         
         a {
           border-bottom-color: $c-font-inverse;
@@ -42,10 +42,10 @@
     }
 
     &--dark-gray {
-      background-color: $c-gray-primary;
+      background-color: $c-theme-gray;
 
       &:hover {
-        background-color: rgba($c-gray-primary,.8);
+        background-color: rgba($c-theme-gray,.8);
       
         a {
           border-bottom-color: $c-font-inverse;

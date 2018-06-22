@@ -37,6 +37,7 @@ class LineageHelper extends \PatternLab\PatternData\Helper {
 		$foundLineages    = array();
 		$patternSourceDir = Config::getOption("patternSourceDir");
 		$patternExtension = Config::getOption("patternExtension");
+		$suffixRendered   =	Config::getOption("outputFileSuffixes.rendered");
 		
 		// check for the regular lineages in only normal patterns
 		$store = PatternData::get();
@@ -52,10 +53,55 @@ class LineageHelper extends \PatternLab\PatternData\Helper {
 					
 					foreach ($foundLineages as $lineage) {
 						
+					/**
+						* Fix for Pattern Lab Lineages when using Twig Namespaces. 
+						* Converts the full file path to PL-friendly shorthand so 
+						* they are internally registered.
+						*
+						* 1.  Only handle instances where we aren't or can't use the 
+						*     shorthand PL path reference in templates, specifically 
+						*     in Twig / D8 when we need to use Twig namespaces in 
+						*     our template paths.
+						* 2.  Strip off the @ sign at the beginning of our $lineage string.
+						* 3.  Break apart the full lineage path based on any slashes that
+						*     may exist.
+						* 4.  Store the length of our broken up path for reference below
+						* 5.  Store the first part of the string up to the first slash "/"
+						* 6.  Now grab the last part of the pattern key, based on the length
+						*     of the path we previously exploded.
+						* 7.  Remove any "_" from pattern Name.
+						* 8.  Remove any potential prefixed numbers or number + dash 
+						*     combos on our Pattern Name.
+						* 9.  Strip off the pattern path extension (.twig, 
+						*     .mustache, etc) if it exists.
+						* 10. If the pattern name parsed had an extension, 
+						*     re-assign our Pattern Name to that.
+						* 11. Finally, re-assign $lineage to the default PL pattern key.
+						*/
+
+						if ($lineage[0] == '@') {                    /* [1] */
+							$lineage = ltrim($lineage, '@');           /* [2] */
+							$lineageParts = explode('/', $lineage);    /* [3] */
+							$length = count($lineageParts);            /* [4] */
+							$patternType = $lineageParts[0];           /* [5] */
+
+							$patternName = $lineageParts[$length - 1]; /* [6] */
+							$patternName = ltrim($patternName, '_');   /* [7] */
+							$patternName = preg_replace('/^[0-9\-]+/', '', 
+							$patternName); /* [8] */
+
+							$patternNameStripped = explode('.' . $patternExtension, $patternName); /* [9] */
+
+							if (count($patternNameStripped) > 1) { /* [10] */
+								$patternName = $patternNameStripped[0];
+							}
+							$lineage = $patternType . "-" . $patternName;	/* [11] */
+						}
+
 						if (PatternData::getOption($lineage)) {
 							
 							$patternLineages[] = array("lineagePattern" => $lineage,
-													   "lineagePath"    => "../../patterns/".$patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].".html");
+													   "lineagePath"    => "../../patterns/".$patternStoreData["pathDash"]."/".$patternStoreData["pathDash"].$suffixRendered.".html");
 							
 						} else {
 							
@@ -124,7 +170,7 @@ class LineageHelper extends \PatternLab\PatternData\Helper {
 										
 										$path = PatternData::getPatternOption($haystackKey,"pathDash");
 										$patternLineagesR[] = array("lineagePattern" => $haystackKey,
-																	"lineagePath"    => "../../patterns/".$path."/".$path.".html");
+																	"lineagePath"    => "../../patterns/".$path."/".$path.$suffixRendered.".html");
 																
 									}
 								

@@ -15,6 +15,7 @@
   }
 
   &__label {
+    display: block;
     flex-shrink: 0;
     flex-basis: auto;
     letter-spacing: .1em;
@@ -50,6 +51,7 @@
   }
 
   &__title {
+    display: block;
     font-size: 1.5rem;
     line-height: 1.4;
     margin-bottom: 0;

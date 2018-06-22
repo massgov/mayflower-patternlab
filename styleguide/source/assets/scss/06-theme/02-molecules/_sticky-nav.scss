@@ -5,15 +5,22 @@
 
 
   &__link {
-    font-weight: 500;
+    a {
+      font-weight: 500;
+    }
 
-    &.is-active {
+    &:hover a {
+      border-bottom-color: rgba($c-font-link,.5);
+    }
+
+    &.is-active a {
       color: $c-font-dark;
       font-weight: 700;
     }
 
-    &:hover {
+    &.is-active:hover a {
       color: $c-font-dark;
+      border-bottom-color: transparent;
     }
   }
 

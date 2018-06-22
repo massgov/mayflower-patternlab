@@ -46,6 +46,57 @@ ul, ol {
   margin-top: 0;
 }
 
+ul ul,
+ol ul {
+  list-style-type: circle;
+  padding-left: 30px;
+  margin-bottom: 1em;
+}
+
+// Custom ol list style types out to 9 levels
+// All decimals after that
+
+ol {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+
+        ol {
+          list-style-type: decimal;
+
+          ol {
+            list-style-type: lower-alpha;
+
+            ol {
+              list-style-type: lower-roman;
+
+              ol {
+                list-style-type: decimal;
+
+                ol {
+                  list-style-type: lower-alpha;
+
+                  ol {
+                    list-style-type: lower-roman;
+
+                    ol {
+                      list-style-type: decimal;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+  }
+}
+
+
 // Heading styles
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -71,7 +122,25 @@ h6 {
 
 // end heading styles
 
+.ma__visually-hidden,
 .visually-hidden {
   @include ma-visually-hidden;
 }
 
+// To disabled scrolling (for use when another scrollable container is in the foreground)
+.scroll-disabled {
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+main,
+div {
+  &[tabindex="-1"]:focus {
+    outline: none;
+  }
+}

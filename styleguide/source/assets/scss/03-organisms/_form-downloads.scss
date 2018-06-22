@@ -1,9 +1,12 @@
 .ma__form-downloads {
-  @include ma-component-spacing;
 
   .pre-content > &,
   .post-content > &,
   .main-content--full .page-content > & {
-    @include ma-container;
+    @include ma-container('restricted');
+  }
+
+  &__see-all {
+    margin-top: 1rem;
   }
 }

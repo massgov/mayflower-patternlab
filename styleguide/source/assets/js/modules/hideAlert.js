@@ -3,6 +3,19 @@ import cookies from "../helpers/cookies.js";
 export default function (window,document,$,undefined) {
 
   $('.js-header-alert').each(function(){
+    init.apply(this);
+  });
+
+  $(document).on('ma:AjaxPattern:Render', function(e,data){
+    let $context = data.el;
+    if ($context.find('.js-header-alert').length) {
+      $context.find('.js-header-alert').each(function(){
+        init.apply(this);
+      })
+    }
+  });
+
+  function init(){
     let $el = $(this),
         $link = $el.find('.js-header-alert-link'),
         id = $el.data('id'),
@@ -20,6 +33,6 @@ export default function (window,document,$,undefined) {
       cookies.setCookie(cookieName,"hide",cookieExpires);
       $el.stop(true,true).fadeOut();
     })
-  });
+  }
 }(window,document,jQuery);
 

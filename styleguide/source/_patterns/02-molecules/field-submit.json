@@ -5,6 +5,7 @@
       "required": false,
       "id": "filter-by-location",
       "name": "filter-by-location",
+      "type": "text",
       "placeholder": ""
     },
     "buttonSearch": {

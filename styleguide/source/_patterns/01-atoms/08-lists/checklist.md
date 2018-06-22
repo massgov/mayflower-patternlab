@@ -1,19 +1,13 @@
----
-title: Checklist
----
-Description: An `<ul>`  element with its child `<li>` elements, with special print styles (checkboxes) designated by a CSS class.
+### Description
+An `<ul>`  element with its child `<li>` elements, with special print styles (checkboxes) designated by a CSS class.
 
-## State: ALPHA
+### Status
+* Stable as of 5.0.0
 
-### Notes:
-
-### Used In:
-
-### Required Variables:
+### Variables
 ~~~
-checklist [
-    { text:
-        type: string / required
-    }, / required (at least 1)
-]
+checklist [{ 
+  text:
+    type: string / required
+}]
 ~~~

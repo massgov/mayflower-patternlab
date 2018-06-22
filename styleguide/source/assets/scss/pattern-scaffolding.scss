@@ -73,13 +73,3 @@
   display: block;
   width: 100%;
 }
-
-.pl__styleguide {
-
-  & > .ma__helpful-links,
-  & > .ma__rich-text,
-  & > .ma__action-map .ma__action-map__header {
-    @include ma-container;
-  }
-}
-

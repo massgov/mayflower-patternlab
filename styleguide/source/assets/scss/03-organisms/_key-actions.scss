@@ -1,18 +1,10 @@
 .ma__key-actions {
-  @include ma-component-spacing;
   clear: both;
 
-  @media ($bp-small-min) {
-    margin-bottom: 15px;
-  }
-
-  &__container {
-    @include ma-container;
-
-    .main-content--two & {
-      padding-left: 0;
-      padding-right: 0;
-    }
+  .pre-content > & &__container,
+  .post-content > & &__container,
+  .main-content--full .page-content > & &__container {
+    @include ma-container();
   }
 
   &__items {
@@ -22,6 +14,7 @@
         flex-wrap: wrap;
         align-items: stretch;
       margin-left: -2.43902%;
+      margin-bottom: -20px;
     }
 
     @media ($bp-large-min) {
@@ -38,7 +31,7 @@
 
   .ma__illustrated-link,
   .ma__callout-link {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     height: auto;
     width: 100%;
 
@@ -73,6 +66,7 @@
         width: 50% - 2.43902%;
       }
 
+      // stacked (two column was too narrow)
       @media ($bp-large-min) and ($bp-x-large-max) {
         width: 100% - 2.43902%; 
       }

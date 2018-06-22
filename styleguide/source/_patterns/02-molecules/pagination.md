@@ -1,33 +1,29 @@
----
-title: Pagination
----
-Description: Used on listing pages as controls to adjust which results shown.
+### Description
+This Pattern contains a set of links used on other Patterns to navigate a list of content organized into groups (pages).
 
-## State: Alpha
+### Status
+* Stable as of 5.0.0
 
-### Required variables
+### Variables
 ~~~
 pagination: {
-  "next": {
-    type: object/optional
-    "disabled": 
+  next: {
+    disabled: 
       type: boolean,
-    "text": 
-      type: string/required
+    text: 
+      type: string / required
   },
-  "prev": {
-    type: object/optional
-    "disabled": 
+  prev: {
+    disabled: 
       type: boolean,
-    "text": 
-      type: string/required
+    text: 
+      type: string / required
   },
-  "pages": [{
-    type: array/required
-    "active": 
+  pages (optional): [{
+    active: 
       type: boolean,
-    "text": 
-      type: string/required
+    text: 
+      type: string / required
   }]
 }
 ~~~
