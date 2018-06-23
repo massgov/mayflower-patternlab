@@ -148,9 +148,9 @@ export default function (window,document,$,undefined) {
     let visiblePercentage = (containerWidth/ tableWidth) * 100;
     let leftVisiblePercentage = Math.abs( (rt.$table.offset().left - rt.$table.parent().offset().left) / tableWidth) * 100;
 
-    rt.$root.find(".ma__scroll-indicator__button").width(`${visiblePercentage}%`);
+    rt.$root.find(".ma__scroll-indicator__button").width(`calc(${visiblePercentage}% + 2px)`);
     rt.$root.find(".ma__scroll-indicator__button").css({
-      left: `${leftVisiblePercentage}%`
+      left: `calc(${leftVisiblePercentage}% - 2px)`
     });
   }
 
@@ -306,7 +306,7 @@ export default function (window,document,$,undefined) {
 
   $(".ma__scroll-indicator__button").on("mousedown", handleScrollerInteraction);
   // deaden clicking on the scroll button, handle clicking in the trough
-  $(".ma__scroll-indicator__button").on("click", e => e.preventDefault() );
+  $(".ma__scroll-indicator__button").on("click", e => e.stopPropagation() );
   $(".ma__scroll-indicator").on('click', handleScrollerClick);
 
   handleWindowResize();
