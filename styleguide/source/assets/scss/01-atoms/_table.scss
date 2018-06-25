@@ -24,7 +24,6 @@
     background: #fff;
     border-collapse: collapse;
     box-shadow: 0 0 0 2px #dcdcdc;
-    transition: all 250ms ease-in-out;
 
     &:before {
         content: '';
@@ -73,7 +72,6 @@
     align-items: center;
     display: none;
     border-top: 2px solid #dcdcdc;
-    transition: all 250ms ease-in-out;
 
     &:after {
         content: '';
