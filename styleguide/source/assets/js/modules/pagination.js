@@ -16,22 +16,40 @@ export default function (window,document,$,undefined) {
 
     // Listen for previous page button click and trigger pagination event.
     $el.on('click', prevButton, function () {
-      $el.trigger('ma:Pagination:Pagination', ['previous']);
+      let targetPageNumber = history.state.page - 1;
+      pushPaginationState(targetPageNumber);
+      $el.trigger('ma:Pagination:Pagination', [history.state.page]);
     });
     // Listen for next button click and trigger pagination event.
     $el.on('click', nextButton, function () {
-      $el.trigger('ma:Pagination:Pagination', ['next']);
+      let targetPageNumber = history.state.page + 1;
+      pushPaginationState(targetPageNumber);
+      $el.trigger('ma:Pagination:Pagination', [history.state.page]);
     });
     // Listen for page number button click and trigger pagination event;
     $el.on('click', pageButton, function (e) {
       let targetPageNumber = $(e.target).data('page');
-      $el.trigger('ma:Pagination:Pagination', [targetPageNumber]);
+      pushPaginationState(targetPageNumber);
+      $el.trigger('ma:Pagination:Pagination', [history.state.page]);
     });
 
     // Listen for new data, render new pagination.
     $el.on('ma:Pagination:DataUpdated', function (e, data) {
       renderPagination({data: data, $el: $el});
     });
+
+
+    // if we already have a state or a query parameter, initialize things
+    let targetPageNumber = 1;
+    let params = new URLSearchParams(window.location.search);
+    if (history.state && history.state.page) {
+      targetPageNumber = history.state.page;
+    } else if (params.has('page')) {
+      targetPageNumber = params.get('page');
+    }
+
+    pushPaginationState(targetPageNumber);
+
   });
 
   /**
@@ -56,6 +74,18 @@ export default function (window,document,$,undefined) {
     // Create new markup using handlebars template, helper.
     let markup = compiledTemplate(args.data);
     args.$el.html(markup);
+  }
+
+
+  function pushPaginationState(pageNum) {
+    console.log('PUSH!');
+    let params = new URLSearchParams(window.location.search);
+    params.set('page', pageNum);
+
+    history.pushState(
+      { page: pageNum },
+      `${document.title} | page ${pageNum}`,`${window.location.origin}${window.location.pathname}?${params.toString()}`
+    );
   }
 
 }(window,document,jQuery);

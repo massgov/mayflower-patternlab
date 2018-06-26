@@ -116,18 +116,9 @@ export default function (window,document,$,undefined) {
         });
       });
 
-      // Handle pagination event (triggered by pagination.js), render targetPage.
-      $pagination.on('ma:Pagination:Pagination', function (e, target) {
-        let nextPage = target;
-
-        // Get the current page, default to first page if not in global data object.
-        let currentPage = masterData.pagination.currentPage ? masterData.pagination.currentPage : 1;
-        if (target === "next") {
-          nextPage = currentPage + 1;
-        }
-        if (target === "previous") {
-          nextPage = currentPage - 1;
-        }
+      function handlePagination(e, target) {
+        let nextPage = parseInt(target, 10);
+        console.log('nextPage ',nextPage);
 
         masterData.pagination = listings.transformPaginationData({data: masterData, targetPage: nextPage});
         masterData.resultsHeading = listings.transformResultsHeading({data: masterData, page: nextPage});
@@ -136,7 +127,12 @@ export default function (window,document,$,undefined) {
         let markers = getActiveMarkers({data: masterData, page: nextPage});
         // Trigger child components render with updated data
         updateChildComponents({data: masterData, markers: markers});
-      });
+      }
+
+      // Handle pagination event (triggered by pagination.js), render targetPage.
+      $pagination.on('ma:Pagination:Pagination', handlePagination);
+      handlePagination(null, history.state.page || new URLSearchParams(window.location.search).get('page') || 1);
+
     });
 
     // Trigger events to update child components with new data.
@@ -192,13 +188,6 @@ export default function (window,document,$,undefined) {
     $.map(listing.pagination.pages, function(val, index) { pages[index] = val; });
     listing.pagination.pages = pages;
 
-    // Get the current page from the initial data structure, default to 1 if none passed.
-    let currentPage = 1;
-    pages.forEach(function(page) {
-      if (page.active) {
-        currentPage = Number(page.text);
-      }
-    });
 
     // Get the listing imagePromos, generate markup for each
     let masterListing = listing.imagePromos.items,
@@ -210,9 +199,8 @@ export default function (window,document,$,undefined) {
     masterData.resultsHeading = listing.resultsHeading;
     // The array of items and their respective page, in/active status, marker data, imagePromo data, and markup
     masterData.items = getMasterListingWithMarkupAndMarkers(masterListing, masterListingMarkup, markers, masterData.maxItems);
-    // The initial pagination data structure + currentPage;
+    // The initial pagination data structure;
     masterData.pagination = listing.pagination;
-    masterData.pagination.currentPage = currentPage;
     // The total number of pages, given the number of items and the maxItems variable
     masterData.totalPages = Math.ceil(masterData.items.length / masterData.maxItems);
     // Set the selector properties necessary to render
