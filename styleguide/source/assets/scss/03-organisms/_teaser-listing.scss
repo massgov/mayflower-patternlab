@@ -18,7 +18,10 @@
     }
   }
 
-  &__description + *,
+  &__description + * {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
   &__featured-items + &__items {
     border-top-width: 1px;
     border-top-style: solid;
@@ -30,8 +33,8 @@
     }
 
     @media ($bp-large-min) {
-      margin-top: 45px;
-      padding-top: 45px;
+      margin-top: 20px;
+      padding-top: 20px;
     }
 
     .sidebar & {
@@ -206,7 +209,7 @@
       }
     }
     .ma__teaser-listing__items {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     .ma__teaser-listing__items:last-child {
       margin-bottom: 0;
