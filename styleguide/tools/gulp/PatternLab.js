@@ -123,7 +123,10 @@ class PatternLabRegistry extends MayflowerRegistry {
             if(url && url.length) {
                 opts.env.BASE_URL = url;
             }
-            return exec(`php ${e(self.resolve("core/console"))} --generate --patternsonly`, opts);
+            return exec(`php ${e(self.resolve("core/console"))} --generate --patternsonly`, opts)
+                    .catch(function (err) {
+                        console.error(err.stdout);
+                    });
         };
         task.displayName = "patternlab:patterns";
         return task;
